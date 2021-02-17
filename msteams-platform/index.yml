@@ -119,7 +119,7 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
           text: Integrate Share-to-Teams button for your website
-        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
+        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
           itemType: reference
           text: Integrate a Teams tab with SharePoint
         - url: /microsoftteams/platform/resources/moodleinstructions
