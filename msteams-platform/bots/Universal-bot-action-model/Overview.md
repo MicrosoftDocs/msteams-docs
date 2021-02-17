@@ -64,7 +64,7 @@ In client-side views, an adaptive card includes all the information that is disp
 
 #### Server-side views
 
-In server-side views, the [refresh mechanism](#refresh-feature) is a functional alternative to the client-side model. As a card is viewed by a user, it is refreshed to only show what that user is supposed to see.
+In server-side views, the [refresh model](#refresh-model) is a functional alternative to the client-side model. As a card is viewed by a user, it is refreshed to only show what that user is supposed to see.
 
 ### Data-driven views
 
@@ -92,4 +92,4 @@ With traditional bots, authentication is handled in a separate login card. Where
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Develop universal bot action model](Develop-universal-bot-action-model.md)
+> [Work with universal bot action model](Work-with-universal-bot-action-model.md)

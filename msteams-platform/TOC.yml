@@ -238,8 +238,8 @@
     items:
     - name: Overview
       href: bots/Universal-bot-action-model/overview.md
-    - name: Develop universal bot action model
-      href: bots/Universal-bot-action-model/Develop-universal-bot-action-model.md
+    - name: Work with universal bot action model
+      href: bots/Universal-bot-action-model/Work-with-universal-bot-action-model.md
 - name: Build messaging extensions
   items:
   - name: Overview
