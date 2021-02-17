@@ -1017,6 +1017,95 @@ async def on_teams_team_unarchived(
 
 * * *
 
+## Installation update events
+
+The installation update event is sent to your bot when the bot is installed or uninstalled from a thread. On installation the event is issued with an **action** field set to *add* and when the bot is uninstalled the event is sent with the **action** field set to *remove*. The event is also issued when a bot is added or removed as part of an application upgrade. The **action** field for the upgrade add scenario is set to *add-upgrade*, and for remove it is set to *remove-upgrade*. 
+
+You can use this event to send an introductory message from your bot on installation and subsequently clean up and delete user or thread data when uninstalled. Use the installation update events to meet privacy and data retention requirements on your side.
+
+> [!IMPORTANT]
+> Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. To see the installation update events, you can move your Teams client to public developer preview, and add your app personally or to a team or a chat.
+
+### Add an installation event
+ 
+# [C#/.NET](tab/dotnet)
+
+```csharp
+protected override async Task
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActi
+vity> turnContext, CancellationToken cancellationToken) {
+var activity = turnContext.Activity; if
+(string.Equals(activity.Action, "Add",
+StringComparison.InvariantCultureIgnoreCase)) {
+// TO:DO Installation workflow }
+else
+{ // TO:DO Uninstallation workflow
+} return; }
+```
+You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
+
+```csharp
+protected override async Task
+OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity>
+turnContext, CancellationToken cancellationToken) {
+// TO:DO Installation workflow return;
+}
+```
+**Sample installation response**
+
+```
+{ 
+  "action": "add", 
+  "type": "installationUpdate", 
+  "timestamp": "2020-10-20T22:08:07.869Z", 
+  "id": "f:3033745319439849398", 
+  "channelId": "msteams", 
+  "serviceUrl": "https://smba.trafficmanager.net/amer/", 
+  "from": { 
+    "id": "sample id", 
+    "aadObjectId": "sample AAD Object ID" 
+  },
+  "conversation": { 
+    "isGroup": true, 
+    "conversationType": "channel", 
+    "tenantId": "sample tenant ID", 
+    "id": "sample conversation Id@thread.skype" 
+  }, 
+
+  "recipient": { 
+    "id": "sample reciepent bot ID", 
+    "name": "bot name" 
+  }, 
+  "entities": [ 
+    { 
+      "locale": "en", 
+      "platform": "Windows", 
+      "type": "clientInfo" 
+    } 
+  ], 
+  "channelData": { 
+    "settings": { 
+      "selectedChannel": { 
+        "id": "sample channel ID@thread.skype" 
+      } 
+    }, 
+    "channel": { 
+      "id": "sample channel ID" 
+    }, 
+    "team": { 
+      "id": "sample team ID" 
+    }, 
+    "tenant": { 
+      "id": "sample tenant ID" 
+    }, 
+    "source": { 
+      "name": "message" 
+    } 
+  }, 
+  "locale": "en" 
+}
+```
+
 ## Message reaction events
 
 The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the specific message, and the `Type` is the type of reaction in text format.  The types of reactions include: "angry", "heart", "laugh", "like", "Sad", "surprised". This event does not contain the contents of the original message, so if processing reactions to your messages is important for your bot you'll need to store the messages when you send them.
@@ -1026,7 +1115,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 | messageReaction | reactionsAdded   | [Reaction to bot message](#reactions-to-a-bot-message)                   | All   |
 | messageReaction | reactionsRemoved | [Reaction removed from bot message](#reactions-removed-from-bot-message) | All   |
 
-### Reactions to a bot message
+### Reactions added to a bot message
 
 # [C#/.NET](#tab/dotnet)
 
@@ -1242,10 +1331,11 @@ async def on_reactions_removed(
 
 * * *
 
-## Samples
-For sample code showing the bots conversation events, see:
+## Code sample
 
-[Microsoft Teams bots conversation events sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+| **Sample name** | **Description** | **C#** |
+|-----------------|-----------------|---------|
+|Microsoft Teams bots conversation events | Sample for bot events | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 
 
