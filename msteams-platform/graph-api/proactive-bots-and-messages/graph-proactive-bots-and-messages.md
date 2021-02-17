@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft Graph to enable proactive bot installation and messaging in Teams
+title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
 description: Describes proactive messaging in Teams and how to implement.
 localization_priority:  Normal
 author: laujan
@@ -56,10 +56,10 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### ✔ Create and publish your proactive messaging bot for Teams
 
-To get started, you must need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities and  [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is [published](../../concepts/deploy-and-publish/overview.md) in your organization's [app catalog](../../concepts/deploy-and-publish/overview.md#publish-to-your-organizations-app-catalog) or in [AppSource](https://appsource.microsoft.com/).
 
 >[!TIP]
-> The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template enables broadcast messaging and is a good foundation for building your proactive bot application.
+> The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good foundation for building your proactive bot application.
 
 ### ✔ Get the `teamsAppId` for your app
 
