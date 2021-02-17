@@ -1051,6 +1051,9 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+* * *
+
 **Sample installation response**
 
 ```
@@ -1112,10 +1115,10 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaction to bot message](#reactions-to-a-bot-message)                   | All   |
+| messageReaction | reactionsAdded   | [Reaction added to bot message](#reactions-added-to-bot-message)                   | All   |
 | messageReaction | reactionsRemoved | [Reaction removed from bot message](#reactions-removed-from-bot-message) | All   |
 
-### Reactions added to a bot message
+### Reactions added to bot message
 
 # [C#/.NET](#tab/dotnet)
 
