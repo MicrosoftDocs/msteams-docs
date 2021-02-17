@@ -168,6 +168,8 @@ Grids are useful for showing elements which are highly visual. It helps to inclu
 
 ## Best practices
 
+# [Desktop](#tab/desktop)
+
 ### Collaboration
 
 :::row:::
@@ -182,7 +184,7 @@ Include content and components people can talk about. If it doesn’t fit within
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
 
-#### Don't: Treat your tab like any other webpage
+#### Don't: Treat your tab like a webpage
 
 A tab isn’t a webpage someone might view once. A tab should display your most important, relevant content that people need to accomplish something together.
 
@@ -251,6 +253,12 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
    :::column-end:::
 :::row-end:::
+
+# [Mobile](#tab/mobile)
+
+Mobile-specific best practices ...
+
+---
 
 ## Validate your design
 
