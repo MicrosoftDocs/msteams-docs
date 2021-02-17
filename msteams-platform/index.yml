@@ -116,7 +116,7 @@ conceptualContent:
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate a Power Virtual Agents chatbot
-        - url: /microsoftteams/platform/tabs/how-to/tabs-in-sharepoint
+        - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
           itemType: reference
           text: Integrate Share-to-Teams button for your website
         - url: /microsoftteams/platform/concepts/build-and-test/share-to-teams
