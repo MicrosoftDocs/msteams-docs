@@ -46,8 +46,7 @@ You can use the same terminal window to run the commands in this tutorial.
 You can get started with a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-cd samples/app-hello-world/csharp/
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
@@ -57,7 +56,7 @@ cd samples/app-hello-world/csharp/
 
 ## Build and run the sample
 
-After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the '/samples/app-hello-world/csharp' directory of the sample and select `Build Solution` from the `Build` menu. To run the sample press `F5` or choose `Start Debugging` from the `Debug` menu.
+After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the 'Microsoft-Teams-Samples/samples/app-hello-world/csharp' directory of the sample and select `Build Solution` from the `Build` menu. To run the sample press `F5` or choose `Start Debugging` from the `Debug` menu.
 
 When the app starts, a browser window opens with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 
