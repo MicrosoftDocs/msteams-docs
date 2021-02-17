@@ -4,9 +4,9 @@ description: A quick overview of universal bot action model.
 ms.topic: overview
 ---
 
-# What is universal bot action model?
+# Universal bot action model
 
-A universal bot action model makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Now action handling is also provided universally along with layout and rendering.
+A universal bot action model makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Now action handling is also provided universally along with layout and rendering. Now let us understand the importance of adaptive cards for the universal bot action model.
 
 ## Adaptive cards and the universal bot action model
 
@@ -22,7 +22,16 @@ The following image shows the lifecycle of the new universal bot action model th
 
 Now you can identify the features of universal bot action model and understand the `Action.Execute` model.
 
-## Features
+## Enhance user experience with universal bot action model
+
+Universal bot action model enhances user experience with the following:
+
+* [Universal actions](#universal-actions)
+* [Contextual views](#contextual-views)
+* [Data-driven views](#data-driven-views)
+* [Sequential workflow support](#sequential-workflow-support)
+* [Refresh model](#refresh-model)
+* [Authentication](#authentication)
 
 ### Universal actions
 
@@ -70,9 +79,9 @@ Progressive  workflow scenarios in a chat or channel were not supported. With se
 
 ![Sequential workflow](~/assets/images/bots/sequentialworkflow.png)
 
-### Refresh feature
+### Refresh model
 
-Along with `Action.Execute` a new refresh mechanism is now supported. With the refresh feature, you can create adaptive cards that update automatically at the time they are displayed. A typical refresh use case is an approval request. After approval, users must not be presented with a card prompting them to approve, but instead must provide details about the request approval time and who approved the request.
+Along with `Action.Execute` a new refresh feature is now supported. With the refresh feature, you can create adaptive cards that update automatically at the time they are displayed. A typical refresh use case is an approval request. After approval, users must not be presented with a card prompting them to approve, but instead must provide details about the request approval time and who approved the request.
 
 ### Authentication
 

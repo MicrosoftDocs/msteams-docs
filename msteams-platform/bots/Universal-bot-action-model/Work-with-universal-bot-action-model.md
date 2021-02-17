@@ -1,25 +1,22 @@
 ---
-title: Develop universal bot action model
-description: Develop universal bot action model.
+title: Work with universal bot action model
+description: Work with the universal bot action model.
 ms.topic: conceptual
 ---
 
-# Develop universal bot action model
+# Work with universal bot action model
 
-The universal bot action model provides the following:
+A universal bot action model is implemented using the existing bot builder SDK. Developers can reuse their code. The main difference is they can only use `adaptiveCard/action` invoke activities for their bots to be universal.
 
-* The generalization of bots and the Bot Framework as the way to implement adaptive card-based scenarios for both Teams and Outlook.
-* `Action.Execute` replaces both `Action.Submit` used by bots and `Action.Http` used by actionable messages.
-* Popular features only supported by actionable messages made available to bots, namely:
-    * The ability of a card to be refreshed at the time it is displayed.
-    * The ability of `Action.Execute` actions to return an updated card to be displayed in the client.
+To work with universal bot action model and implement the `Action.Execute` model, follow these steps:
 
-For more information, see [actionable message documentation](https://docs.microsoft.com/outlook/actionable-messages/send-via-email).
+1. Use `Action.Execute` instead of `Action.Submit`. To update an existing scenario on Teams, replace all instances of `Action.Submit` with `Action.Execute`.
+2. For cards to surface on Outlook, add the `originator` field, see [sample JSON](#sample-json).
+3. Add a `refresh` clause to your adaptive card if you want to leverage the automatic refresh model or if your scenario requires contextual views. Be sure to specify the `userIds` property to identify which users get automatic updates.
+4. Handle `adaptiveCard/action` Invoke requests in your bot.
+5. Whenever your bot needs to return a new card as a result of processing an `Action.Execute`, you can use the Invoke request's context to generate cards that are specifically crafted for a given user. Make sure the response conforms to the [response format](#response-format).
 
->[!NOTE]
-> If you are already using adaptive cards on Teams with bot, you can use the same bot with a few changes to support `Action.Execute`. If you are using actionable messages on Outlook, you must develop a bot that supports `Action.Execute`.
-
-This document covers the schema used to develop universal bot action model, JSON sample of `Action.Execute` command, refresh mechanism, `adaptiveCard/action` invoke activity, and backward compatibility.
+This document covers the schema used for universal bot action model, JSON sample of `Action.Execute` command, refresh model, `adaptiveCard/action` invoke activity, and backward compatibility.
 
 ## Schema for universal bot action model
 
@@ -37,13 +34,13 @@ If you use the `refresh` property, use the `Action.Execute` command, and specify
 
 For more information, see [backward compatibility](#backward-compatibility).
 
-Next you can work with the `Action.Execute` command and identify the differences between the `Action.Execute`, `Action.Submit` and `Action.Http`.
+Next you can work with the `Action.Execute` command and identify the differences between `Action.Execute`, `Action.Submit` and `Action.Http`.
 
-## Action.Execute command
+### Action.Execute command
 
 When authoring adaptive cards, use `Action.Execute` in place of both `Action.Submit` and `Action.Http`. The schema for `Action.Execute` is similar to that of `Action.Submit`.
 
-### Example JSON
+#### Example JSON
 
 ```json
 {
@@ -80,7 +77,7 @@ When authoring adaptive cards, use `Action.Execute` in place of both `Action.Sub
 }
 ```
 
-### Properties
+#### Properties
 
 | Property | Type | Required | Description |
 | :-- | :-- | :-- | :-- |
@@ -95,20 +92,9 @@ When authoring adaptive cards, use `Action.Execute` in place of both `Action.Sub
 
 Now that you have identified the `Action.Execute` command and its properties, you can determine how the refresh mechanism is used to create adaptive cards that update automatically.
 
-## Refresh mechanism
+## Refresh model
 
 To automatically refresh your adaptive card, define its refresh property, which embeds an action of type `Action.Execute` and a `userIds` array.
-
-| Property | Type | Required | Description |
-| :-- | :-- | :-- | :-- |
-| action | `Action.Execute` | Yes | Must be an action instance of type `Action.Execute`. |
-| userIds | Array<string> | Yes | An array of `MRIs` of users for whom auto refresh must be enabled. |
-
->[!IMPORTANT]
-> If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a button is displayed to the user to manually refresh the card. This is because channels in Teams can include a large number of members. If many members are all viewing the channel at the same time, an unconditional automatic refresh would result in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs.
-
->[!NOTE]
-> The `userIds` property is ignored in Outlook, and the refresh property is always automatically honored. There is no scale issue in Outlook because users view the card at different times.
 
 ### Sample JSON
 
@@ -155,6 +141,19 @@ To automatically refresh your adaptive card, define its refresh property, which 
   ]
 }
 ```
+
+### Properties
+
+| Property | Type | Required | Description |
+| :-- | :-- | :-- | :-- |
+| action | `Action.Execute` | Yes | This property must be an action instance of type `Action.Execute`. |
+| userIds | Array<string> | Yes | This property is an array of `MRIs` of users for whom auto refresh must be enabled. |
+
+>[!IMPORTANT]
+> If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a button is displayed to the user to manually refresh the card. This is because channels in Teams can include a large number of members. If many members are all viewing the channel at the same time, an unconditional automatic refresh would result in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs.
+
+>[!NOTE]
+> The `userIds` property is ignored in Outlook, and the refresh property is always automatically honored. There is no scale issue in Outlook because users view the card at different times.
 
 ### Important note for Outlook actionable message developers
 
@@ -267,11 +266,3 @@ The version property of the card is set to 1.2 and `Action.Execute` is defined w
   ]
 }
 ```
-
-## A quick recap of universal bot action model
-
-1. Use `Action.Execute` instead of `Action.Submit`. To update an existing scenario on Teams, replace all instances of `Action.Submit` with `Action.Execute`.
-2. For cards to surface on Outlook add the `originator` field, see [sample JSON](#sample-json).
-3. Add a `refresh` clause to your Adaptive Card if you want to leverage the automatic refresh mechanism or if your scenario requires contextual views. Be sure to specify the `userIds` property to identify which users get automatic updates.
-4. Handle `adaptiveCard/action` Invoke requests in your bot.
-5. Whenever your bot needs to return a new card as a result of processing an `Action.Execute`, you can use the Invoke request's context to generate cards that are specifically crafted for a given user. Make sure the response conforms to the [response format](#response-format).
