@@ -43,32 +43,28 @@ The `ScanBarCode` API invokes scanner control that enables the user to scan diff
 To customize the barcode scanning experience, optional barcode configuration is passed as input to `ScanBarCode` API. You can specify the scan time-out interval in seconds using **timeOutIntervalInSec**. Its default value is 30 seconds and the maximum value is 60 seconds.
 
 The **scanBarCode()** API supports the following barcode types:
+
 | Barcode Type | Supported on Android | Supported on iOS |
-| -- | -- | -- |
-|Aztec | No | No |
-|Codebar | Yes | No |
-|Code 39 | Yes | Yes | 
-|Code 93 | Yes | Yes |
-|Code 128 | Yes | Yes |
-|Data Matrix | No | No |
-|EAN-13 | Yes | Yes |
-|EAN-8 | Yes | Yes |
-|ITF | No | Yes |
-|MaxiCode | No | No |
-|PDF 417 | No | No |
-|QR Code | Yes | Yes |
-|RSS Expanded | Yes | No |
-|RSS-14 | Yes | No |
-|UPC-A | Yes | Yes |
-|UPC-E | Yes | Yes |
+| ---------- | ---------- | ------------ |
+| Aztec | No | No |
+| Codebar | Yes | No |
+| Code 39 | Yes | Yes | 
+| Code 93 | Yes | Yes |
+| Code 128 | Yes | Yes |
+| Data Matrix | No | No |
+| EAN-13 | Yes | Yes |
+| EAN-8 | Yes | Yes |
+| ITF | No | Yes |
+| MaxiCode | No | No |
+| PDF 417 | No | No |
+| QR Code | Yes | Yes |
+| RSS Expanded | Yes | No |
+| RSS-14 | Yes | No |
+| UPC-A | Yes | Yes |
+| UPC-E | Yes | Yes |
 
 **Web app experience for `ScanBarCode` API for QR or barcode scanner capability**
 ![web app experience for qr or barcode scanner capability](../../assets/images/tabs/qr-barcode-scanner-capability.png)
-
-Following are the steps to scan an asset code in an app: 
-1. Select the barcode button in an incident reporting workflow.
-1. After the scanner opens, align the barcode within the central frame for scanning.
-1. After successful scan, the asset code is shared back with the app. 
 
 ## Error handling
 
