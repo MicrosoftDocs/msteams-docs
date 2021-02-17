@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.topic: Overview
 keywords: teams proactive messaging chat installation Graph
 ---
-# Proactively install apps using Graph API and send messages
+# Proactive installation of apps using Graph API and send messages
 
 >[!IMPORTANT]
 > Microsoft Graph and Microsoft Teams public previews are available for early access and feedback. Although this release has undergone extensive testing, it is not intended for use in production.
