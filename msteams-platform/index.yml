@@ -54,7 +54,7 @@ conceptualContent:
   # Card
     - title: Audience
       links:
-        - url: /microsoftteams/microsoft-teams
+        - url: https://developer.microsoft.com/microsoft-teams
           itemType: concept
           text: Developers
         - url: /microsoftteams/microsoft-teams
