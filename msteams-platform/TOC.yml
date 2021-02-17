@@ -332,7 +332,7 @@
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Enable proactive bot installation and messaging
+  - name: Proactively install apps using Graph API and send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
