@@ -78,7 +78,7 @@ conceptualContent:
           text: Build a Teams app using Node.js
         - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
           itemType: how-to-guide
-          text: Build a Teams app using C#/.NET and App Studio
+          text: Build a Teams app using C#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
