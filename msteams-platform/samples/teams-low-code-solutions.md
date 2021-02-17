@@ -78,7 +78,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ### ✔ Project Oakdale (preview)
 
-> ![NOTE]
+> [!NOTE]
 > Project **Oakdale** is renamed to project **Dataverse for Teams**.
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
