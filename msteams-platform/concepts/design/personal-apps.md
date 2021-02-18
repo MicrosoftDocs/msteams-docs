@@ -157,7 +157,7 @@ On the left side of Teams, users can right click the personal app to pin, remove
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
-## Learn more
+## Related
 
 These other design guidelines may help depending on the scope of your personal app:
 
@@ -166,7 +166,7 @@ These other design guidelines may help depending on the scope of your personal a
 
 ## Validate your design
 
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
+If you plan to publish your app to the Teams store, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+> [Check store validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

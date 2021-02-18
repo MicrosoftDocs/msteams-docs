@@ -138,6 +138,8 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
+Following these best practices helps ensure a quality app experience. In some cases, a best practice might be required for Teams store publishing and is indicated with an asterisk (*).
+
 ### Collaboration
 
 :::row:::
@@ -173,7 +175,7 @@ Tabs work best when they address specific needs. Include a limited set of tasks 
    :::column span="":::
 :::image type="content" source="../../assets/images/tabs/design-tab-nav-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
 
-#### Don't: Embed your entire app
+#### Don't: Embed your entire app*
 
 Using a tab to display an entire app with multi-level navigation and complex interactions leads to information overload.
 
@@ -224,7 +226,7 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
 ## Validate your design
 
-If you plan to publish your app to the Teams store (AppSource), you should understand the design issues that commonly cause apps to fail during submission.
+If you plan to publish your app to the Teams store, you should understand the design issues that commonly cause apps to fail during submission.
 
 > [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+> [Check store validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

@@ -160,17 +160,15 @@ See comprehensive [tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
-Tab set up must not dead-end the new user. A way forward message should be provided to complete the workflow.
-
-Authentication should happen during tab setup and not after.
-
-Tabs must have a Help tab with instructions on how to do things such as sign up, configure, and use your app.
+* Tab setup must not dead-end the new user. A way forward message should be provided to complete the workflow.
+* Authentication should happen during tab setup and not after.
+* Tabs must have a Help tab with instructions on how to do things such as sign up, configure, and use your app.
 
 ### 5.2 Views
 
-* The available tab sign-in screen area use must not use large logos or display an entire webpage.
-* The tab view can be simplified by breaking them into multiple tabs to reduce the complexity.
-* The personal app should not have a duplicate header. Remove the logo from the iframe since the personal app framework already displays the app icon and app name.
+* The sign-in screen area use must not use large logos or display an entire webpage.
+* The canvas can be simplified by breaking them into multiple tabs to reduce the complexity.
+* Personal app tabs should not have a duplicate header. Remove the logo from the iframe since the personal app framework already displays the app icon and app name.
 
 ### 5.3 Navigation
 
@@ -185,11 +183,11 @@ Tabs must have a Help tab with instructions on how to do things such as sign up,
 ### 5.4 Usability
 
 * Users must be able to undo their last action in the app.
-* Personal apps may aggregate content from team or group chat scoped instances of that app in a single view.
+* Personal app tabs may aggregate content from team or group chat scoped instances of that app in a single view.
 * Tabs must be responsive to Teams themes. When the Teams theme is changed, the theme within the app must also change to reflect that theme.
-* Personal apps must use Teams-styled components (adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.) whenever possible.
-* Please include a Settings tab in the app header.
-* Tabs can use Teams interaction behaviors (in-page navigation, position and use of dialogs, information hierarchies, etc.) whenever possible.
+* Personal app tabs must use Teams-styled components (adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.) whenever possible.
+* Include a Settings tab.
+* Tabs must use Teams interaction behaviors (in-page navigation, position and use of dialogs, information hierarchies, etc.) whenever possible.
 
 ## 6.0 Bot design
 
