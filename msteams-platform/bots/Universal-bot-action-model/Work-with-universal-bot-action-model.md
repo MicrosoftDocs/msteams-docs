@@ -293,4 +293,4 @@ The version property of the card is set to 1.2 and `Action.Execute` is defined w
 ## See also
 
 * [Adaptive card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
-* [How bots work](azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0)
+* [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
