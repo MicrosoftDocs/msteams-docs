@@ -11,10 +11,12 @@ For a richer collaborative experience, you can integrate the location capability
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs to integrate the location capability within your app. 
 
-## Advantage of integrating location capability
+## Advantages of integrating location capability
 
 * The integration allows web app developers on Teams platform to leverage location functionality with Teams JavaScript client SDK.
-* 
+* Tracking attendance of frontline workers
+* Capturing health data of cellular towers
+
 
 To integrate location capability, you must update the app manifest file and call the `getLocation` and `showLocation` APIs. For effective integration, you must have a good understanding of [code snippet](#code-snippet) for calling the location APIs, which allow you to use native location capability. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
@@ -37,6 +39,12 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## Location capability APIs
 
+You must use the following set of APIs to enable your device's location capability:
+
+| API      | Description   |
+| --- | --- |
+|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) | Gives user’s current device location or opens native location picker and returns the location chosen by user |
+|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation) | Shows location on map |
 
 
 **Web app experience for location capability**
@@ -55,12 +63,32 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
 
-## Code snippet
+## Code snippets
 
-**Calling location API:
+**Calling `getLocation` API** to retrieve location:
 
 ```javascript
+let locationProps = {"allowChooseLocation":true,"showMap":true};
+microsoftTeams.location.getLocation(locationProps, (err: microsoftTeams.SdkError, location: microsoftTeams.location.Location) => {
+          if (err) {
+            output(err);
+            return;
+          }
+          output(JSON.stringify(location));
+});
+```
 
+**Calling `showLocation` API** to display the location:
+
+```javascript
+let location = {"latitude":17,"longitude":17};
+microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, result: boolean) => {
+          if (err) {
+            output(err);
+            return;
+          }
+     output(result);
+});
 ```
 
 ## See also
