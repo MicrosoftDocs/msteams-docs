@@ -234,7 +234,7 @@ Now that you have worked on the `adaptiveCard/action` invoke activity you can de
 
 ## Backward compatibility
 
-
+The universal bot action model includes some features that make it backward compatible such that it supports older versions of Outlook and Teams.
 
 ### Outlook
 
