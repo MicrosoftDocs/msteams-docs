@@ -227,7 +227,7 @@ In case of token exchange failure, use the following code:
     "body": 
     {​​ 
         "id":"<unique Id>", 
-        "connectionName": "<connection Name on the bot (from the OAuth Card)>", 
+        "connectionName": "<connection Name on the bot (from the OAuth card)>", 
         "failureDetail": "<failure reason if status code is not 200, null otherwise>" 
     }​​ 
 }​​
@@ -239,7 +239,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
 > No user action is required to be taken as the bot takes the actions when the token exchange fails.
 
 1. The client starts a conversation with the bot triggering an OAuth scenario.
-2. The bot sends back an OAuth Card to the client.
+2. The bot sends back an OAuth card to the client.
 3. The client intercepts the OAuth card before displaying it to the user and checks if it contains a `TokenExchangeResource` property.
 4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user, which must be an Azure AD v2 token and whose audience must be the same as `TokenExchangeResource.Uri` property. The client sends an invoke activity to the bot with the following code:
 
@@ -250,7 +250,7 @@ To understand what the bot does when the token exchange fails to trigger a conse
         "value": 
         {
             "id": "<any unique Id>",
-            "connectionName": "<connection Name on the skill bot (from the OAuth Card)>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
             "token": "<exchangeable token>"
         }
     }
@@ -264,13 +264,13 @@ To understand what the bot does when the token exchange fails to trigger a conse
         "body": 
         {
             "id":"<unique Id>",
-            "connectionName": "<connection Name on the skill bot (from the OAuth Card)>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
             "failureDetail": "<failure reason if status code is not 200, null otherwise>"
         }
     }
     ```
 
-6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](https://docs.microsoft.com/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
 
 
 ### Update the auth sample
