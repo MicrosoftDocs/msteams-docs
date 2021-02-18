@@ -48,16 +48,16 @@ To purchase an app, as a user you can follow these steps:
 
 1. Navigate to an app that supports purchases and click **Subscription plans**.
 
-    ![Subscription plan image required]
+    ![Subscription plan](~/assets/images/subscriptionplan.png)
 
 2. In the **Choose a subscription plan** window that appears, view the respective plans and pricing supported by the offer and purchase it.
 
-    ![View plan image required]
+    ![View plan image required](~/assets/images/viewplan.png)
 
 3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the licenses purchased.
 
-    ![Configure now image required]
-
+    ![Configure now](~/assets/images/configurenow.png)
+    
 ## See also
 
 [Maintaining and supporting your published app](../post-publish/overview.md).
