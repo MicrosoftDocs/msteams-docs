@@ -203,7 +203,7 @@ Once you install the app into a team, you will need to configure it to show cont
 
 You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`, followed by your message. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply.
 
-<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+<img width="450px" alt-text="Bot responses" src="~/assets/images/samples-hello-world-bot.png" alt-text="Screenshot of bot responses" />
 
 <a name="ComposeRichMessages"></a>
 
@@ -211,10 +211,10 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation.
 
-<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt-text="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" alt-text="Screenshot of messaging extension menu" />
 
-<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt-text="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" alt-text="Screenshot of messaging extension result" />
 
 Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
 
-<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+<img width="430px" alt-text="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" alt-text="Screenshot of messaging extension send" />
