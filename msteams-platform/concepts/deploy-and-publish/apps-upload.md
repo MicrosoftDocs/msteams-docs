@@ -119,10 +119,10 @@ The default install scope selection helps you to specify the `defaultInstallScop
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
-The `defaultInstallScope` property supports values, such as team, meetings, groupchat, or personal.
+The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
 
 > [!NOTE]
->`defaultGroupCapability` provides the default capability that is added to the team, meetings or groupchat. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+>`defaultGroupCapability` provides the default capability that is added to the team, groupchat or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 
 ## Remove or update your app
 
