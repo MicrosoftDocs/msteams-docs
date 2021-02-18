@@ -33,7 +33,7 @@ Now with the universal bot action model you can enhance user experience of inter
 Universal bot action model enhances user experience with the following:
 
 * [Universal actions](#universal-actions)
-* [Contextual views](#contextual-views)
+* [Contextual views](#contextual-views-or-role-based-views)
 * [Data-driven views](#data-driven-views)
 * [Sequential workflow support](#sequential-workflow-support)
 * [Refresh model](#refresh-model)

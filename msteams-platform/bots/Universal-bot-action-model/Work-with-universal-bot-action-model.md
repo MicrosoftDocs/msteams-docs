@@ -6,30 +6,33 @@ ms.topic: conceptual
 
 # Work with universal bot action model
 
-A universal bot action model is implemented using the existing bot builder SDK. You can reuse your code from bot builder SDK that is specific to `adaptiveCard/action` invoke activities for your bots to be universal.
+A universal bot action model is implemented using the existing bot builder SDK. You can reuse your code from bot builder SDK that is specific to `adaptiveCard/action` invoke activities for your bots to be universal. This document covers the following:
 
-To work with universal bot action model and implement the `Action.Execute` command, follow these steps:
+* [Schema used for universal bot action model](#schema-for-universal-bot-action-model)
+* [Refresh model](#refresh-model), 
+* [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
+* [Backward compatibility](#backward-compatibility).
+
+**To work with universal bot action model and implement the `Action.Execute` command**
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
-2. Add the `originator` field for cards to surface on Outlook. See [sample JSON](#sample-json).
+2. Add the `originator` field for cards to surface on Outlook.
 3. Add a `refresh` clause to your adaptive card, if you want to leverage the automatic refresh model or if your scenario requires contextual views.
 
     >[!NOTE]
-    > Specify the `userIds` property to identify which users get automatic updates.
+    > Specify the `userIds` property to identify, which users get automatic updates.
 
 4. Handle `adaptiveCard/action` invoke requests in your bot.
 5. Use the Invoke request's context to generate cards that are specifically created for a user.
  
-    >[!NOTE]
+    > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the [response format](#response-format).
-
-This document covers the [schema used for universal bot action model](#schema-for-universal-bot-action-model), [refresh model](#refresh-model), [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity), and [backward compatibility](#backward-compatibility).
 
 ## Schema for universal bot action model
 
 The universal bot action model is introduced in the adaptive cards schema version 1.4. To use the adaptive card effectively, the `version` property of your adaptive card must be set to 1.4 or higher.
 
->[!NOTE]
+> [!NOTE]
 > Setting the `version` property to 1.4 makes your adaptive card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the universal bot action model.
 
 If you set the card version to less than 1.4 and use either or both, `refresh` property and the `Action.Execute` command the following happens:
@@ -45,7 +48,7 @@ For more information on how to support older clients, see [backward compatibilit
 
 When authoring adaptive cards, replace `Action.Submit` and `Action.Http` with `Action.Execute`. The schema for `Action.Execute` is similar to that of `Action.Submit`. See the following JSON example:
 
-#### Example JSON
+#### Sample JSON
 
 The schema for `Action.Execute` request is as follows:
 
@@ -257,7 +260,7 @@ To ensure backward compatibility of your adaptive cards with older versions of T
 > * When rendered in a Teams client that supports adaptive cards 1.4, the `Action.Execute` command works as expected.
 > * In Teams clients that do not support adaptive cards 1.4, the `Action.Submit` is rendered instead of `Action.Execute`.
 
-### Example JSON
+### Sample JSON
 
 The schema for backward compatibility request is as follows:
 
