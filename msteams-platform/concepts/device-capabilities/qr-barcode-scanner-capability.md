@@ -45,17 +45,13 @@ The **scanBarCode()** API supports the following barcode types:
 
 | Barcode Type | Supported on Android | Supported on iOS |
 | ---------- | ---------- | ------------ |
-| Aztec | No | No |
 | Codebar | Yes | No |
 | Code 39 | Yes | Yes | 
 | Code 93 | Yes | Yes |
 | Code 128 | Yes | Yes |
-| Data Matrix | No | No |
 | EAN-13 | Yes | Yes |
 | EAN-8 | Yes | Yes |
 | ITF | No | Yes |
-| MaxiCode | No | No |
-| PDF 417 | No | No |
 | QR Code | Yes | Yes |
 | RSS Expanded | Yes | No |
 | RSS-14 | Yes | No |
