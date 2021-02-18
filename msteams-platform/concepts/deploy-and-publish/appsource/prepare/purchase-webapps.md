@@ -46,11 +46,11 @@ The purchasable web apps are available for purchase and installation on the Team
 
 To purchase an app, as a user you can follow these steps:
 
-1. Navigate to an app that supports purchases and click **Subscription plans**.
+1. Navigate to an app that supports purchases and select **Subscription plans**.
 
     ![Subscription plan](~/assets/images/subscriptionplan.png)
 
-2. In the **Choose a subscription plan** window that appears, view the respective plans and pricing supported by the offer and purchase it.
+2. In the **Choose a subscription plan** window, view the respective plans and pricing supported by the offer and purchase it.
 
     ![View plan image required](~/assets/images/viewplan.png)
 
