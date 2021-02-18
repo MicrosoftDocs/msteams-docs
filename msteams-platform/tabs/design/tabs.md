@@ -144,7 +144,7 @@ Notify users of tab activity one of the following ways:
 * **Bot**: This method is preferred especially if the tab thread is targeted. The tab’s threaded conversation is moved into view as recently active. This method also allows for some sophistication in how the notification is sent.
 * **Message**: A message shows up in the user’s activity feed with a [deep link to the tab](../../concepts/build-and-test/deep-links.md?view=msteams-client-js-latest&preserve-view=true).
 
-## Mobile considerations
+## Platform considerations
 
 On mobile, tab content takes up all of the screen besides the main Teams navigation.
 
