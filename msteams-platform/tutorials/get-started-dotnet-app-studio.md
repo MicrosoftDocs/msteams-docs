@@ -43,20 +43,20 @@ You can use the same terminal window to run the commands in this tutorial.
 
 ## Download the sample
 
-You can get started with a simple [Hello, World!](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) sample in C#. In a terminal window, run the following command to clone the sample repository to your local machine:
+You can get started with a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. In a terminal window, run the following command to clone the sample repository to your local machine:
 
 ```bash
-git clone https://github.com/OfficeDev/msteams-samples-hello-world-csharp.git
+git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/msteams-samples-hello-world-csharp) to modify and save your changes to GitHub for reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub for reference.
 
 <a name="BuildRun"></a>
 
 ## Build and run the sample
 
-After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the root directory of the sample and select `Build Solution` from the `Build` menu. To run the sample press `F5` or choose `Start Debugging` from the `Debug` menu.
+After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample and select `Build Solution` from the `Build` menu. To run the sample press `F5` or choose `Start Debugging` from the `Debug` menu.
 
 When the app starts, a browser window opens with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
 

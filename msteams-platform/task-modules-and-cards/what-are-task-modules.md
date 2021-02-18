@@ -240,3 +240,6 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 
 > [!div class="nextstepaction"]
 > [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
