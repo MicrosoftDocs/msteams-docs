@@ -88,6 +88,7 @@ The context variable will look like the following example.
     "teamSiteUrl": "The root SharePoint site associated with the team",
     "teamSiteDomain": "The domain of the root SharePoint site associated with the team",
     "teamSitePath": "The relative path to the SharePoint site associated with the team",
+    "teamTemplateId": "The Team Template associated with the creation of the team",
     "channelRelativeUrl": "The relative path to the SharePoint folder associated with the channel",
     "sessionId": "The unique ID for the current Teams session for use in correlating telemetry data",
     "userTeamRole": "The user's role in the team",
