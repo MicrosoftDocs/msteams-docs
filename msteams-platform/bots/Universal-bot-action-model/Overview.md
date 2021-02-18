@@ -6,9 +6,9 @@ ms.topic: overview
 
 # Universal bot action model
 
-A universal bot action model makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Now action handling is also provided universally along with layout and rendering. Now let us understand the importance of adaptive cards for the universal bot action model.
+A universal bot action model makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Now action handling is also provided universally along with layout and rendering. The UI of universal bot action model is done entirely declaratively using adaptive cards.
 
-## Adaptive cards and the universal bot action model
+## Adaptive cards and the new universal bot action model
 
 Adaptive cards are a combination of content such as text and graphics, and actions that can be performed by a user. As a developer, you can add adaptive cards to a conversation through a bot or messaging extension. Adaptive cards are cross-platform and cross-app snippets of UI, authored using a lightweight JSON format, that apps and services can share. For more information, see [adaptive cards](http://adaptivecards.io/).
 
