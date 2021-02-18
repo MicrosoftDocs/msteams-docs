@@ -6,17 +6,23 @@ ms.topic: overview
 
 # Universal bot action model
 
-A universal bot action model makes adaptive cards available across different platforms like Outlook, Teams, WebChat, Cortana, Timeline, and your applications through one `Action.Execute` command. Now action handling is also provided universally along with layout and rendering. The UI of universal bot action model is done entirely declaratively using adaptive cards.
+A universal bot action model makes adaptive cards available across different platforms and applications through one `Action.Execute` command. The model is available across Outlook, Teams, WebChat, Cortana, Timeline, and so on. The new model provides action handling universally along with layout and rendering.
+
+This document helps you to understand how the different layouts used for adaptive cards can be combined into a single layout with the universal bot action model. In addition, learn how using the model enhances user experience.
 
 ## Adaptive cards and the new universal bot action model
 
 Adaptive cards are a combination of content such as text and graphics, and actions that can be performed by a user. As a developer, you can add adaptive cards to a conversation through a bot or messaging extension. Adaptive cards are cross-platform and cross-app snippets of UI, authored using a lightweight JSON format, that apps and services can share. For more information, see [adaptive cards](http://adaptivecards.io/).
 
-The following image shows the lifecycle of the current inconsistent action model that uses separate adaptive cards for Outlook and Teams:
+As adaptive cards grew in popularity, different hosts started supporting separate action models leading to multiple instances for Teams and Outlook. To solve this problem, the Teams, Outlook and adaptive cards teams created a new universal bot action model compatible across hosts.
+
+The following two lifecycle models illustrate the differences between adaptive cards and the new model:
+* **Current inconsistent action model:** It uses separate adaptive cards for Outlook and Teams. Its common card layout provides `Action.Http` for Outlook and `Action.Submit` for Teams. For Outlook, explicit Http requests are generated to your Web service. While for Teams, requests are generated with the bot using the bot activity protocol.
+* **New universal bot action model:** It uses one common adaptive card for Outlook and Teams. It provides a unified card layout with one `Action.Execute` command. For both Outlook and Teams, requests are generated with the bot using the bot activity protocol.
+
+The following images show the lifecycle of the current and the new model:
 
 ![Inconsistent action model lifecycle](~/assets/images/bots/inconsistent-action-model-lifecycle.png)
-
-The following image shows the lifecycle of the new universal bot action model that uses one common adaptive card for Outlook and Teams:
 
 ![Universal bot action model lifecycle](~/assets/images/bots/universal-action-model-lifecycle.png)
 
@@ -89,7 +95,14 @@ OAuth authentication for universal bot action model uses the existing OAuth mode
 
 With traditional bots, authentication is handled in a separate login card. Whereas the universal bot action model uses a single adaptive card and operates outside the context of a conversation. Due to this, the ability to initiate the authentication flow from within the adaptive card itself is required. All communication for universal bot action model must be initiated from the client through an invoke. The client must be notified when the authentication flow is completed so that it can request a refreshed view of the card.
 
-## Next steps
+## See also
+
+* [What are bots](~/bots/what-are-bots.md)
+* [Adaptive cards overview](~/task-modules-and-cards/what-are-cards.md)
+* [Adaptive cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
+* [Adaptive cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Work with universal bot action model](Work-with-universal-bot-action-model.md)
