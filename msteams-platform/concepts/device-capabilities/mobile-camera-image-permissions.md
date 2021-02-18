@@ -247,3 +247,8 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
     }
 });
 ```
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
