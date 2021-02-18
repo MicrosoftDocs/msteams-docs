@@ -9,9 +9,9 @@ ms.topic: conceptual
 A universal bot action model is implemented using the existing bot builder SDK. You can reuse your code from bot builder SDK that is specific to `adaptiveCard/action` invoke activities for your bots to be universal. This document covers the following:
 
 * [Schema used for universal bot action model](#schema-for-universal-bot-action-model)
-* [Refresh model](#refresh-model), 
+* [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
-* [Backward compatibility](#backward-compatibility).
+* [Backward compatibility](#backward-compatibility)
 
 **To work with universal bot action model and implement the `Action.Execute` command**
 
