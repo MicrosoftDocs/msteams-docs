@@ -100,3 +100,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 > [!div class="nextstepaction"]
 > [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Integrate location capability in Teams](location-capability.md)

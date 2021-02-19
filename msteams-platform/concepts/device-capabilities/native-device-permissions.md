@@ -12,6 +12,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 > [!NOTE]
 > * To integrate media capabilities within your Microsoft Teams mobile app, see [Integrate media capabilities](mobile-camera-image-permissions.md).
 > * To integrate QR or barcode scanner capability within your Microsoft Teams mobile app, see [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+> * To integrate location capability within your Microsoft Teams mobile app, see [Integrate  location capability](location-capability.md).
 
 ## Native device permissions
 
@@ -187,3 +188,6 @@ Device permissions are stored for every login session. It means that if you sign
 
 > [!div class="nextstepaction"]
 > [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrate location capability in Teams](location-capability.md)

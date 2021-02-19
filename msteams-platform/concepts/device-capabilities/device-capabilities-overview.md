@@ -32,4 +32,4 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Capture and share images
 * Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md)
 * Record audio through microphone
-* Share the location information using [location-capability(location-capability.md)].
+* Share the location information using [location capability](location-capability.md).
