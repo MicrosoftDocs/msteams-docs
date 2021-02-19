@@ -52,7 +52,7 @@ To purchase an app, as a user you can follow these steps:
 
 2. In the **Choose a subscription plan** window, view the respective plans and pricing supported by the offer and purchase it.
 
-    ![View plan image required](~/assets/images/viewplan.png)
+    ![View plan](~/assets/images/viewplan.png)
 
 3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the licenses purchased.
 
