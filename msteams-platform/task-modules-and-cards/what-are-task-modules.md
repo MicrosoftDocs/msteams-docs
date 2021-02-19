@@ -236,7 +236,10 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 * [C#/.NET sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
 
 > [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)
+> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[Learn more: Camera and image gallery permissions](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)

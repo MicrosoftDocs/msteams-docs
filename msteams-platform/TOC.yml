@@ -54,7 +54,7 @@
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
     - name: Create a Virtual Assistant
       href: samples/virtual-assistant.md 
-  - name: Production-ready app templates
+  - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
@@ -68,10 +68,14 @@
     href: concepts/build-and-test/deep-links.md
   - name: Device capabilities
     items:
+    - name: Overview
+      href: concepts/device-capabilities/device-capabilities-overview.md
     - name: Request device permissions
       href: concepts/device-capabilities/native-device-permissions.md
-    - name: Using the camera and photo gallery
+    - name: Integrate media capabilities
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
+    - name: Integrate QR or barcode scanner capability
+      href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Design your app
   items:
   - name: Overview

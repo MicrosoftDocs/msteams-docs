@@ -7,18 +7,21 @@ ms.author: lajanuar
 author: laujan
 ---
 
-# App Templates for Microsoft Teams
+# App templates for Microsoft Teams
 
-App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each contains detailed instructions for deploying and installing that app for your organization, providing a ready-to-use app that you can install and begin using immediately. The complete source code is available as well, so you can explore it in detail, or fork the code and alter it to meet your specific needs.
+App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing that app for your organization. It also provides a sample app that you can install and begin using immediately. The complete source code is available too, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
+All app templates are provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) terms.
+>[!NOTE] 
+>You, not Microsoft must license and support apps created from app templates for your users and organizations.
 
 **&#9734; Indicates newly released app templates.**
 
 ### Key benefits
 
-* **Plug and play experience:** All app templates include deployments scripts that will allow you to host all necessary services in Microsoft Azure. No coding is required to deploy the apps.
-* **Production-ready code:** The app templates conform to recommended best practices around security and infrastructure, and all community submitted changes to them are reviewed to ensure continued conformance.
-* **Customizable and extensible:** While all app templates are ready to deploy as they are, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
-* **Detailed documentation & support:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps. The repositories are monitored as well, so please report any issues you encounter by raising an Issue on GitHub.
+* **Deploy directly to the cloud:** All app templates include deployment scripts that allows you to host all required services in Microsoft Azure or the Power Platform. 
+* **Recommended sample code:** The app templates conform to recommended best practices around security and infrastructure. All community submitted changes to the app templates are reviewed to ensure conformance.
+* **Customizable and extensible:** While all app templates can be deployed with minimal configuration, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
+* **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
 ## Adoption Bot &#9734;
 
@@ -216,18 +219,6 @@ E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app)-
 :::column-end:::
 :::row-end:::
 
-
-## Emergency Button Power &#9734;
-
-The Emergency Button Power app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
--   Requesting assistance on different categories from a Power App
--   Notifications sent to requestors informing them of who has been assigned 
--   Notifications sent to assigned supervisors informing them of who needs assistance 
--   Viewing audit trails held in SharePoint
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-emergency-button-app)
-
-
 ## Employee Training 
 
 Employee training is a Microsoft Teams app that enables organizers to easily publish,  track, and promote learning and training events for your organization.  With the app, event planners can send reminders and notifications to event registrants and employees can indicate interest in upcoming events, stay updated on current events, and share event details with colleagues via the Teams messaging extension.
@@ -273,6 +264,18 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
+
+## Get Support App &#9734;
+
+The Get Support app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
+-   Requesting assistance on different categories from a Power App
+-   Notifications sent to requestors informing them of who has been assigned 
+-   Notifications sent to assigned supervisors informing them of who needs assistance 
+-   Analyzing escalations and patterns in SharePoint and PowerBI
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
+
+![Get Support Gif](../assets/images/get-support.gif)
 
 ## Goal Tracker
 

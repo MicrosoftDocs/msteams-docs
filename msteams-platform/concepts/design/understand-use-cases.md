@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases
 author: heath-hamilton
-description: Decide how to distribute your app
+description: When planning your Microsoft Teams app, you should first understand what problems your app is trying to solve.
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -48,4 +48,3 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 
 * [Design effective tabs](~/tabs/design/tabs.md)
 * [Create amazing bots](~/bots/design/bots.md)
-
