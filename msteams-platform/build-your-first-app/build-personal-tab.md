@@ -8,7 +8,7 @@ ms.topic: tutorial
 ---
 # Build a personal tab for Microsoft Teams
 
-Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
+Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.hkjkn
 
 There are two types of tabs in Teams. In this tutorial, you'll build basic a *personal tab*, a full-screen content page for individual users. (Personal tabs are the closest thing to a traditional website experience in Teams.)
 
