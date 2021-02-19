@@ -9,7 +9,15 @@ ms.date: 11/09/2018
 
 # Create your first Teams app using C# or .NET
 
-This tutorial helps you to create a Microsoft Teams app using C# or .NET.
+This tutorial helps you to create a Microsoft Teams app using C# or .NET. To do this, you must:
+
+* Prepare your environment
+* Get prerequisites
+* Download the sample
+* Build and run the sample
+* Host the sample app
+* Update the credentials for your hosted app
+* Configure the app tab
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -17,12 +25,12 @@ This tutorial helps you to create a Microsoft Teams app using C# or .NET.
 
 ## Get prerequisites
 
-To complete this tutorial, you need to get the following tools:
+To complete this tutorial, you need to install the following tools:
 
 - [Install Git](https://git-scm.com/downloads)
 - [Install Visual Studio](https://www.visualstudio.com/downloads/). You can install the free community edition.
 
-During installation, if there is an option to add `git` to the PATH, choose it.
+During installation, if there is an option to add `git` to the path, choose it.
 
 In a terminal window, run the following command to verify your `git` installation:
 
@@ -33,9 +41,9 @@ git version 2.17.1.windows.2
 ```
 
 > [!NOTE]
-> Use a suitable terminal window on your platform. These examples use Bash but run on most platforms.
+> Use a suitable terminal window on your platform. These examples use Git Bash but can be run on most platforms.
 
-Make sure to launch the latest version of Visual Studio and install any updates.
+Open the latest version of Visual Studio and install any updates.
 
 You can use the same terminal window to run the commands in this tutorial.
 
@@ -43,22 +51,22 @@ You can use the same terminal window to run the commands in this tutorial.
 
 ## Download the sample
 
-You can get started with a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. In a terminal window, run the following command to clone the sample repository to your local machine:
+You can get started with a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. In a terminal window, run the following command to clone the sample repository to your computer:
 
 ```bash
 git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 ```
 
 > [!TIP]
-> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub for reference.
+> You can [fork](https://help.github.com/articles/fork-a-repo/) this [repo](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
 
 <a name="BuildRun"></a>
 
 ## Build and run the sample
 
-After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample and select `Build Solution` from the `Build` menu. To run the sample press `F5` or choose `Start Debugging` from the `Debug` menu.
+After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample. Then, select **Build Solution** from the **Build** menu. To run the sample, press **F5** or select **Start Debugging** from the **Debug** menu.
 
-When the app starts, a browser window opens with the root of the app launched. You can navigate to the following URLs to verify that all the app URLs are loading:
+When the app starts, a browser window opens with the root of the app launched. You can go to the following URLs to verify that all the app URLs are loading:
 
 - [https://localhost:44327/](https://localhost:44327/)
 - [https://localhost:44327/hello](https://localhost:44327/hello)
@@ -68,15 +76,15 @@ When the app starts, a browser window opens with the root of the app launched. Y
 <a name="HostSample"></a>
 
 > [!Note]
-> If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on StackOverflow](https://stackoverflow.com/questions/32780315).
+> If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).
 
 ## Host the sample app
 
-Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your development machine using `ngrok`. When you finish hosting your app, note its root URL. For example, `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, note its root URL. For example, `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
-For quick testing, you can run the app on your local machine and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool with which you can get a web address such as `https://d0ac14a5.ngrok.io`. You can [download and install](https://ngrok.com/download) ngrok. Make sure you add it to a location in your `PATH`.
+For quick testing, you can run the app on your computer and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool with which you can get a web address such as `https://d0ac14a5.ngrok.io`. You can [download and install](https://ngrok.com/download) ngrok and add it to a location in your `PATH`.
 
 After you install ngrok, open a new terminal window and run the following command to create a tunnel:
 
@@ -84,21 +92,19 @@ After you install ngrok, open a new terminal window and run the following comman
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-The sample uses port 44327 be sure to specify it.
-
 Ngrok listens to requests from the internet and routes them to your app running on port 44327. To verify, open your browser and go to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Instead of this URL, use the forwarding address displayed by ngrok in your console session.
 
 > [!NOTE]
 > If you have used a different port in the [build and run](#build-and-run-the-sample) step, make sure you use the same port number to setup the `ngrok` tunnel.
 
 > [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window. This is done to keep ngrok from running without interfering with the app, which you have to stop, rebuild, and rerun. The `ngrok` session provides useful debugging information in this window.
+> It is a good idea to run `ngrok` in a different terminal window. This is done to keep `ngrok` from running without interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
 
-The app is only available during the current session on your development machine. If the machine is shut down or goes to sleep, the service is no longer available. Remember this when you share the app for testing to other users. If you have to restart the service, the app returns a new address and you must update every location that uses that address. The paid version of ngrok does not have this limitation.
+The app is only available during the current session on your computer. If the machine is shut down or goes to sleep, the service is no longer available. Remember this when you share the app for testing to other users. If you have to restart the service, the app returns a new address and you must update every location that uses that address. The paid version of `ngrok` does not have this limitation.
 
 ### Host in Azure
 
-Microsoft Azure hosts your .NET application on a free tier using shared infrastructure. This is sufficient to run the `Hello World` sample. For more information, see [creating a new free account](https://azure.microsoft.com/free/).
+Microsoft Azure hosts your .NET application on a free tier using shared infrastructure. This is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
 Visual Studio has built-in support for app deployment to different providers, including Azure.
 

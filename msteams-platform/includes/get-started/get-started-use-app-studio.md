@@ -10,11 +10,11 @@ Select the **App Studio** tile and choose **Install**. The App Studio is install
 
 <img  width="450px" alt="Installing App Studio" src="~/assets/images/get-started/InstallingAppStudio.png"/>
 
-Select the **Manifest editor** tab to create the app package for your Teams app.
+To create the app package for your Teams app, select the **Manifest editor** tab in **App Studio**.
 
 <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-The sample comes with its own pre-made manifest and is designed to build an app package when the project is built. On .NET this is done in Visual Studio, and on Node JS this is done by typing `gulp` at the command line in the root directory of the project.
+The sample comes with its own manifest and is designed to build an app package when the project is built. On .NET this is done in Visual Studio and on Node.js this is done by typing `gulp` at the command line in the root directory of the project.
 
 ```bash
 $ gulp
@@ -30,11 +30,11 @@ Build completed. Output in manifest folder
 
 The name of the generated app package is **helloworldapp.zip**. You can search for this file if the location is not clear in the tool you are using.
 
-Now to modify this app package, select the **Import an existing app** tile in the **Manifest editor**.
+Now to modify this app package, select **Import an existing app** in the **Manifest editor**.
 
 <img  width="450px" alt="Importing an existing app" src="~/assets/images/get-started/Importinganapp.png"/>
 
-Click the **Hello World** tile for your newly imported app.
+Select the **Hello World** tile for your newly imported app.
 
 <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
@@ -42,19 +42,19 @@ The following image shows the imported app package in App Studio:
 
 <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-There is a list of steps on the left-hand side of the Manifest editor and on the right-hand side, a list of properties that need to be filled in for each of those steps. Since you started with a sample app, much of the information is already filled out. The next steps will walk you through changing the parts that still need to be updated.
+There is a list of steps on the left-hand side of the Manifest editor. On the right-hand side there is a list of properties that need to be filled in for each step. As you started with a sample app, much of the information is already completed. The next steps will enable you to update the properties of the Hello World app.
 
 #### App details
 
-Click on the *App details* entry under *Details*. Click the *Generate* button to create a new app id.
+Select **App details** under **Details**. Select the **Generate** button to create a new app id.
 
-Your new app id should look something like: `2322041b-72bf-459d-b107-f4f335bc35bd`.
+Your new app id is similar to `2322041b-72bf-459d-b107-f4f335bc35bd`.
 
-Look through the rest of the App details in the right-hand pane, and familiarize yourself with some of the entries such as *Developer information* and *Branding*. These sections are important if you are writing a new app for distribution.
+Go through the app details in the right-hand pane including **Developer information** and **Branding** details. These details are important if you are writing a new app for distribution.
 
 #### Capabilities: Tabs
 
-Tabs are among the simplest elements to add to a Teams app. The sample app already supports several tabs, and you can enable them as follows.
+It is simple to add tabs to a Teams app. The sample app already supports several tabs, and you can enable them as follows:
 
 ##### Team tab
 
@@ -89,13 +89,13 @@ The bot that was imported from the sample does not have an App ID associated wit
 
 Click the *delete* button next to the *Imported bot* in the bot list.
 
-Now there are no bots left to show. Click *Setup*. This will display the *Set up a bot* dialog.
+Now there are no bots left to show. Click *Setup*. This will display the *Bot* dialog.
 
 <img  width="450px" alt="Adding a bot dialog" src="~/assets/images/get-started/Setupbot.png"/>
 
-Add a bot name such as `Contoso bot`, and select all three buttons under **Scope**.
+Select all three buttons under **Scope**.
 
-Choose *Create bot* to exit the dialog. App Studio registers your bot with Microsoft and displays your new bot in the bot list. Now would be a good time to open a text file in notepad and copy and paste your new bot id into it. You will need this id later.
+Choose *Save* to exit the dialog. App Studio registers your bot with Microsoft and displays your new bot in the bot list. Now would be a good time to open a text file in notepad and copy and paste your new bot id into it. You will need this id later.
 
 Click *Generate New Password*, and make a note of the password in the same text file you noted your Bot app ID in. This is the only time your password will be shown, so be sure to do this now.
 
