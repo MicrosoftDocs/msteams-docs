@@ -41,6 +41,8 @@ Tabs allow team members to access services and content in a dedicated space with
 
 ### Pre-meeting app experience
 
+
+
 #### Pre-meeting experience
 
 The following image displays the **Weekly planning** meeting page including details of meeting attendees, date and time of meeting and so on. From this page you can add a tab to the meeting.
@@ -49,7 +51,7 @@ The following image displays the **Weekly planning** meeting page including deta
 
 #### Pre-meeting tab
 
-The following image displays the **Weekly planning** meeting page with the **Contoso** tab added to the page.
+The following image displays the **Weekly planning** meeting page with the **Contoso** tab added to the pre-meeting page.
 
 ![pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
 
