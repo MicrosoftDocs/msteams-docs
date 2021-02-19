@@ -10,42 +10,54 @@ keywords: teams apps meetings user participant role api
 
 Meetings are key to productivity in Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum.
 
-As a developer, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [message extension](../messaging-extensions/what-are-messaging-extensions.md) applications to enhance and enrich a Teams meeting experience. Meeting users can access apps, via the tab gallery, to enable relevant scenarios such as pre-staging a Kanban board, launching an in-meeting actionable dialog, or creating a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle based upon attendee status.
+To enhance a Teams meeting experience, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) applications. Meeting users can access apps using the tab gallery to pre-stage a Kanban board, launch an in-meeting actionable dialog, or create a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle, depending on attendee status.
 
-Teams also offers you to [create apps for teams meetings](create-apps-for-teams-meetings.md) and work in the Microsoft Teams Together Mode. With the Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information on Together Mode, see [Together Mode in Teams](teams-together-mode.md).
+Teams also offers you to [create apps for teams meetings](create-apps-for-teams-meetings.md) and work in the Microsoft Teams Together Mode. With the Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information, see [Together Mode in Teams](teams-together-mode.md).
 
-Teams’ meeting app extensibility centers on three concepts:
+Teams’ meeting app extensibility is based on the following three concepts:
 
-✔ **Meeting lifecycle** — before, during, and after meeting time frame.  
-✔ **Participant role** — meeting organizer, presenter, or attendee.  
-✔ **User type** — in-tenant, guest, federated, or anonymous Teams user.
+✔ **Meeting lifecycle**: Includes these stages, before, during, and after meeting time frame.  
+✔ **Participant role**: Includes these participant roles, meeting organizer, presenter, or attendee.  
+✔ **User types in a meeting**: Includes these user types, in-tenant, guest, federated, or anonymous Teams user.
 
 <!-- markdownlint-disable MD001 -->
-### Meeting lifecycle scenarios
+## Meeting lifecycle
 
-## Tabs
+You can include tabs, bots and messaging extensions in each stage of the meeting lifecycle. There are three stages of the meeting lifecycle:
+
+* Pre-meeting app experience
+* In-meeting app experience
+* Post-meeting app experience
+
+### Tabs
+
+Tabs allow team members to access services and content in a dedicated space within a channel or chat. This lets the team work directly with tools and data and have conversations about the tools and data. In your Teams meeting, you can add a tab using a plus icon (➕) button and by selecting the app that you want to install as a tab.
 
 > [!IMPORTANT]
-> As with all tab applications, Your app will need to follow the Teams [SSO authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
+> As with all tab applications, your app will need to follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
 > [!NOTE]
-> Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon
+> Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel on mobile are currently not available.
 
 ### Pre-meeting app experience
 
-**Pre-meeting experience:**
+#### Pre-meeting experience
+
+The following image displays the **Weekly planning** meeting page including details of meeting attendees, date and time of meeting and so on. From this page you can add a tab to the meeting.
 
 ![pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
-**Pre-meeting tab:**
+#### Pre-meeting tab
+
+The following image displays the **Weekly planning** meeting page with the **Contoso** tab added to the page.
 
 ![pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
 
-✔ Permissioned users can add apps to a meeting via the tab gallery in two ways:
+✔ Permissioned users can add apps to a meeting using the tab gallery in two ways:
 
-&emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form.
+&emsp;&emsp;&#9679; Using the **Details** tab on the Teams scheduling form.
 
-&emsp;&emsp;&#9679;  Via the meeting **Chat** tab in an existing meeting.</br> </br>
+&emsp;&emsp;&#9679;  Using the meeting **Chat** tab in an existing meeting.</br> </br>
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus icon (➕) button.|
 
@@ -53,7 +65,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### In-meeting app experience
 
-✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are **during meeting** experiences will be surfaced.
+✔ Meeting apps will be hosted in the top upper bar of the chat window and as in-meeting tab experience via the in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are in-meeting experiences will be surfaced.
 
 ✔ Permissioned users can add apps while in the meeting.
 
@@ -100,7 +112,7 @@ For bot implementation, please see our [Bots in Teams meetings](../bots/how-to/c
 
 For messaging extension implementation, please see our [Messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings) documentation.
 
-## Participant roles and user types in a meeting
+## Participant roles
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
@@ -122,7 +134,7 @@ You can access the  **Meeting options** page as follows:
 
 &#11200; During a meeting, select **Show participants** ![show participants icon](../assets/images/apps-in-meetings/show-participants.png) in the meeting controls. Then, above the list of participants, choose **Manage permissions**.
 
-### User types
+## User types in a meeting
 
 > [!NOTE]
 > User types can join meetings and assume one of the participant roles described above. The User type is not exposed as part of the **getParticipantRole** API.

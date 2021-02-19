@@ -103,9 +103,74 @@ You must have the ability to ship a scene package that includes the following:
 
 * **Visual no-code designer experience:** Users can build their own filters using Snap's GUI. It is a challenge to ship a scene generic enough for all teachers to use it. At present teachers can create custom scenes that serve the purpose.
 
-Scene JSON along with the images indicates the exact position of the seats. Following is the scene JSON sample:
+### Sample JSON
 
-![JSON sample](../assets/images/apps-in-meetings/json-sample.png)
+Scene JSON along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest z-value, so higher z-value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
+
+Following is the scene JSON sample:
+
+```json
+{
+   "protocolVersion": "1.0",
+   "id": "A",
+   "autoZoom": true,
+   "mirrorParticipants ": true,
+   "extent":{
+      "left":0.0,
+      "top":0.0,
+      "width":16.0,
+      "height":9.0
+   },
+   "sprites":[
+      {
+         "filename":"background.png",
+         "cx":8.0,
+         "cy":4.5,
+         "width":16.0,
+         "height":9.0,
+         "zOrder":0.0,
+   "isAlpha":false
+      },
+      {
+         "filename":"table.png",
+         "cx":8.0,
+         "cy":7.0,
+         "width":12.0,
+         "height":4.0,
+         "zOrder":3.0,
+   "isAlpha":true
+      },
+      {
+         "filename":"row0.png",
+         "cx":12.0,
+         "cy":15.0,
+         "width":8.0,
+         "height":4.0,
+         "zOrder":2.0,
+   "isAlpha":true
+      }
+
+   ],
+   "participants":[
+      {
+         "cx":5.0,
+         "cy":4.0,
+         "width":4.0,
+         "height":2.25,
+         "zOrder":1.0,
+         "seatingOrder":0
+      },
+      {
+         "cx":11.0,
+         "cy":4.0,
+         "width":4.0,
+         "height":2.25,
+         "zOrder":1.0,
+         "seatingOrder":1
+      }
+   ]
+}
+```
 
 Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and positions on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and positions on the X and Y-axis. The seating order is generated automatically for each seat when it is created. The seating order must be altered according to the preferred order.
 
