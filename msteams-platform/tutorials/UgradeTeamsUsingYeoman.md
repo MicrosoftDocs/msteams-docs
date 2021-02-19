@@ -10,10 +10,10 @@ The yo command lists out various options ranging from creating project to updati
  yo
 ```
 Use the arrow keys to choose **Update Generators**.
-![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/YoSelectUpdateGen.png)
+![image](/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
 The list displays all the available generators. To select or unselect Teams version from the available options, use the **space bar** and choose a specific generator.
-![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams//UseSpaceToSelectGenerators.png)
+![image](/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams//UseSpaceToSelectGenerators.png)
 
 It takes few seconds to minutes for Teams installation to complete.
 
@@ -22,4 +22,4 @@ After the installation is complete, use the following command to check the insta
 ```PowerShell
 yo teams --version
 ```
-![image](https://github.com/divya-akula/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/FindVersionAfterInstallation.png)
+![image](/msteams-docs/blob/master/msteams-platform/assets/images/Update-Teams/FindVersionAfterInstallation.png)
