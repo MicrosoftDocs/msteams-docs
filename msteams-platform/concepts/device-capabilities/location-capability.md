@@ -7,15 +7,15 @@ ms.author: lajanuar
 
 # Integrate location capability 
 
-For a richer collaborative experience, you can integrate the location capability provided in the Teams platform with your Teams app. This document guides you on how to integrate the capability.  
+For a richer collaborative experience, you can integrate the location capability provided in the Teams platform with your Teams app. This document guides you on how to integrate the same.  
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs to integrate the location capability within your app. 
 
 ## Advantages of integrating location capability
 
 The integration allows web app developers on Teams platform to leverage location functionality with Teams JavaScript client SDK.
-* The integration of location capability with your app enables to track daily attendance of factory workers. The worker has to take selfie in the vicinity of the factory and share it through the app. 
-* The location capability enables to share authentic health data of cellular towers and track any mismatches with actual and captured location through a custom-built app.
+* The integration of location capability with your app enables to track the daily attendance of factory workers. The worker has to take a selfie in the vicinity of the factory and share it through the app. 
+* The location capability enables the maintenance staff to share authentic health data of cellular towers and the management to track any mismatch of captured location with actual one through a custom-built app.
 
 To integrate location capability, you must update the app manifest file and call the location capability APIs. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs, which allow you to use native location capability. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
@@ -42,9 +42,10 @@ You must use the following set of APIs to enable your device's location capabili
 
 | API      | Description   |
 | --- | --- |
-|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) | Gives user’s current device location or opens native location picker and returns the location chosen by user |
+|[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_) | Gives user’s current device location or opens native location picker and returns the location chosen by the user. |
 |[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation) | Shows location on map |
 
+The user location is displayed based on the value of location properties `allowChooseLocation` and `showMap`. If the value of `allowChooseLocation` is true, the user can pick any location of choice. If the value is false, the user can not change the current location. If value of `showMap` is true, a confirmation map screen is shown that points to user’s current location. If the value of `allowChooseLocation` is false, the default value for `showMap` is false.
 
 **Web app experience for location capability**
 ![web app experience for location capability](../../assets/images/tabs/location-capability.png)
