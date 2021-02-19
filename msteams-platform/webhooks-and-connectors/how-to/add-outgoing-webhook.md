@@ -116,5 +116,5 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 ## Code sample
 |**Sample name** | **Description** | **C#** | **Node.js** |
 |----------------|------------------|--------|----------------|
-| Outgoing webhooks	| Teams sample for outgoing webhook.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+| Outgoing webhooks	| Samples to create **Custom Bots** to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
