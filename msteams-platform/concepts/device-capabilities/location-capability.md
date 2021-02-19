@@ -7,7 +7,7 @@ ms.author: lajanuar
 
 # Integrate location capability 
 
-For a richer collaborative experience, you can integrate the location capability provided in the Teams platform with your Teams app. This document guides you on how to integrate the same.  
+For a richer collaborative experience, you can integrate the location capability provided in the Teams platform with your Teams app. This document guides you on how to integrate the location capability.  
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs to integrate the location capability within your app. 
 
