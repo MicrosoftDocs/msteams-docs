@@ -28,11 +28,9 @@ This tutorial helps you to create a Microsoft Teams app using C# or .NET. To do 
 To complete this tutorial, you need to install the following tools:
 
 - [Install Git](https://git-scm.com/downloads)
-- [Install Visual Studio](https://www.visualstudio.com/downloads/). You can install the free community edition.
+- [Install Visual Studio](https://www.visualstudio.com/downloads/)
 
-During installation, if there is an option to add `git` to the path, choose it.
-
-In a terminal window, run the following command to verify your `git` installation:
+You can install the free community edition of Visual Studio. During installation, if there is an option to add `git` to the path, select it. In a terminal window, run the following command to verify your `git` installation:
 
 ```bash
 $ git --version
@@ -64,7 +62,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## Build and run the sample
 
-After the repo is cloned, use Visual Studio to open the solution file `Microsoft.Teams.Samples.HelloWorld.sln` from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample. Then, select **Build Solution** from the **Build** menu. To run the sample, press **F5** or select **Start Debugging** from the **Debug** menu.
+After the repo is cloned, use Visual Studio to open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample. Then, select **Build Solution** from the **Build** menu. To run the sample, press **F5** or select **Start Debugging** from the **Debug** menu.
 
 When the app starts, a browser window opens with the root of the app launched. You can go to the following URLs to verify that all the app URLs are loading:
 
@@ -80,22 +78,22 @@ When the app starts, a browser window opens with the root of the app launched. Y
 
 ## Host the sample app
 
-Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, note its root URL. For example, `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be available on the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, note its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
-For quick testing, you can run the app on your computer and create a tunnel to it through a web endpoint. [ngrok](https://ngrok.com) is a free tool with which you can get a web address such as `https://d0ac14a5.ngrok.io`. You can [download and install](https://ngrok.com/download) ngrok and add it to a location in your `PATH`.
+For quick testing, you can run the app on your computer and create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool with which you can get a web address, such as `https://d0ac14a5.ngrok.io`. You can [download and install](https://ngrok.com/download) ngrok and add it to a location in your `PATH`.
 
-After you install ngrok, open a new terminal window and run the following command to create a tunnel:
+After you install `ngrok`, open a new terminal window and run the following command to create a tunnel:
 
 ```bash
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-Ngrok listens to requests from the internet and routes them to your app running on port 44327. To verify, open your browser and go to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Instead of this URL, use the forwarding address displayed by ngrok in your console session.
+`Ngrok` listens to requests from the internet and routes them to your app running on port 44327. To verify, open your browser and go to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Instead of this URL, use the forwarding address displayed by `ngrok` in your console session.
 
 > [!NOTE]
-> If you have used a different port in the [build and run](#build-and-run-the-sample) step, make sure you use the same port number to setup the `ngrok` tunnel.
+> If you have used a different port in the [build and run](#build-and-run-the-sample) step, ensure you use the same port number to setup the `ngrok` tunnel.
 
 > [!TIP]
 > It is a good idea to run `ngrok` in a different terminal window. This is done to keep `ngrok` from running without interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
@@ -142,6 +140,6 @@ To test your messaging extension, you can select **...** below the input box in 
 
 <img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-Select one of the random text, and a card formatted and ready to send with your own message is shown.
+Select one of the random text. A card formatted and ready to send with your own message is shown.
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

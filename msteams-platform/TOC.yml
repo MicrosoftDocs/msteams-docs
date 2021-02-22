@@ -24,7 +24,7 @@
   items:
   - name: Tutorials
     href: tutorials/code-samples.md   
-  - name: Create an app using C#
+  - name: Create an app using C# or .NET
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
