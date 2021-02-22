@@ -12,7 +12,7 @@ Meetings are key to productivity in Microsoft Teams. They enable collaboration, 
 
 To enhance a Teams meeting experience, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) applications. Meeting users can access apps using the tab gallery to pre-stage a Kanban board, launch an in-meeting actionable dialog, or create a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle, depending on attendee status.
 
-Teams also offers you to [create apps for Teams meetings](create-apps-for-teams-meetings.md) and work in the Microsoft Teams Together Mode. With the Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information, see [Together Mode in Teams](teams-together-mode.md).
+Teams also offers you to [work with apps for Teams meetings](create-apps-for-teams-meetings.md) and work in the Microsoft Teams Together Mode. With the Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information, see [Together Mode in Teams](teams-together-mode.md).
 
 Teams’ meeting app extensibility is based on the following three concepts:
 

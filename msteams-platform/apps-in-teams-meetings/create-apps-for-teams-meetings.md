@@ -1,50 +1,64 @@
 ---
-title: Create apps for teams meetings
+title: Work with apps for Teams meetings
 author: laujan
-description: create apps for teams meetings 
+description: Work with apps for Teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: teams apps meetings user participant role api 
+keywords: teams apps meetings user participant role api
 ---
-# Create apps for Teams meetings
+# Work with apps for Teams meetings
 
-## Prerequisites and considerations
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers the following:
 
-* Apps in meetings require some basic knowledge of [Teams app development](../overview.md). An app in a meeting can comprise of [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md), and [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md) features and will require updates to the Teams [app manifest](#update-your-app-manifest) to indicate that the app is available for meetings
+* [Get prerequisites and considerations](#get-prerequisites-and-considerations)
+* [Use the meeting apps API references](#use-the-meeting-apps-API-references)
+* [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings)
+* [Configure your app for meeting scenarios](#configure-your-app-for-meeting-scenarios)
+* [Refer to the meeting app sample](#refer-to-the-meeting-app-sample)
 
-* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) (see how to [build a group tab](../build-your-first-app/build-channel-tab.md)). Supporting the `groupchat` scope will enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats.
+For information on meeting lifecycle, participant roles and user types, see [Apps in Teams meetings](teams-apps-in-meetings.md). Teams also offers you the ability to interact collaboratively in meetings with the new auditorium view using [Together Mode](teams-together-mode.md).
 
-* Meeting API URL parameters may require `meetingId`, `userId`, and the [tenantId](/onedrive/find-your-office-365-tenant-id) These are available as part of the Teams Client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+## Get prerequisites and considerations
 
-* Some meeting APIs, such as `GetParticipant`, require a [bot registration and ID](../build-your-first-app/build-bot.md) to generate auth tokens.
+Before you work with apps for Teams meetings, you must have a basic understanding of the following prerequisites:
+
+* Apps in meetings require some basic knowledge of [Teams app development](../overview.md). An app in a meeting can comprise of [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md), and [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md) features. An app in a meeting requires updates to the Teams [app manifest](#update-your-app-manifest) to indicate that the app is available for meetings.
+
+* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs). For more information, see how to [build a group tab](../build-your-first-app/build-channel-tab.md)). To enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats, you must support the `groupchat` scope.
+
+* Meeting API URL parameters require `meetingId`, `userId`, and [tenantId](/onedrive/find-your-office-365-tenant-id). These are available as part of the Teams client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+
+* The `GetParticipant` API requires a [bot registration and ID](../build-your-first-app/build-bot.md) to generate auth tokens.
 
 * You must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) design guidelines.
 
-* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog (refer to completion `bot Id` parameter in `Notification Signal API`) and other surfaces across the meeting lifecycle
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog and other stages across the meeting lifecycle. For in-meeting dialog, refer to completion `bot Id` parameter in `Notification Signal API`.
 
-## Meeting apps API reference
+## Use the meeting apps API references
+
+The new meeting extensibilities provide you with APIs that could transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. The following table provides a list of these APIs:
 
 |API|Description|Request|Source|
 |---|---|----|---|
-|**GetUserContext**| Get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
-|**GetParticipant**|This API allows a bot to fetch a participant information by meeting id and participant id.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** |Meeting signals will be delivered using the following existing conversation notification API (for user-bot chat). This API allows developers to signal based on end-user action to show-case an in-meeting dialog bubble.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+|**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 
-### GetUserContext
+### GetUserContext API
 
-Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library) documentation for guidance on identifying and  retrieving contextual information for your tab content. As part of meetings extensibility, a new value has been added for the response payload:
-
-✔ **meetingId**: used by a tab when running in the meeting context.
+To identify and  retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). As part of meetings extensibility, a new value **meetingId** has been added for the response payload. **meetingId** is used by a tab when running in the meeting context.
 
 ### GetParticipant API
 
 > [!NOTE]
->
 > * Do not cache participant roles since the meeting organizer can change a role at any point in time.
->
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
 
+The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, C# or .NET, JavaScript, and JSON examples, and response codes.
+
 #### Query parameters
+
+The `GetParticipant` API includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -54,7 +68,9 @@ Please refer to our [Get context for your Teams tab](../tabs/how-to/access-teams
 
 #### Example
 
-# [C#/.NET](#tab/dotnet)
+The `GetParticipant` API includes the following C# or .NET, JavaScript, and JSON examples:
+
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -126,24 +142,26 @@ The response body is:
 
 #### Response codes
 
-* **403**: The app is not allowed to get participant information.  This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.
-* **200**: Participant information successfully retrieved.
-* **401**: Invalid token.
-* **404**: Participant cannot be found.
-* **500**: The meeting has either expired (more than 60 days since the meeting ended) or the participant does not have permissions based on their role.
+The `GetParticipant` API includes the following response codes:
 
-
-**Coming Soon**
-
-* **404**: The meeting has either expired or participant cannot be found.
-
+|Response code|Description|
+|---|---|
+| **403** | The app is not allowed to get participant information. This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.|
+| **200** | The participant information is successfully retrieved.|
+| **401** | The app responds with an invalid token.|
+| **404** | The meeting has either expired or participant cannot be found.|
+| **500** | The meeting has either expired more than 60 days since the meeting ended or the participant does not have permissions based on their role.|
 
 ### NotificationSignal API
 
 > [!NOTE]
-> When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
+> When an in-meeting dialog is invoked, the content is presented as a chat message.
+
+`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameters, C# or .NET, JavaScript, and JSON examples, and response codes.
 
 #### Query parameters
+
+The `NotificationSignal` API includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -152,12 +170,13 @@ The response body is:
 #### Example
 
 > [!NOTE]
->
-The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
+> * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
 > * The URL is the page loaded as an `<iframe>` in the in-meeting dialog. The domain must be in the app's `validDomains` array in your app manifest.
 
-# [C#/.NET](#tab/dotnet)
+The `NotificationSignal` API includes the following C# or .NET, JavaScript, and JSON examples:
+
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
@@ -208,21 +227,25 @@ POST /v3/conversations/{conversationId}/activities
 
 * * *
 
-#### Response Codes
+#### Response codes
 
-* **201**: activity with signal is successfully sent  
-* **401**: invalid token  
-* **201**: Activity with signal is successfully sent. 
-* **401**: Invalid token.
-* **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
-* **404**: Meeting chat doesn't exist.
+The `NotificationSignal` API includes the following response codes:
+
+|Response code|Description|
+|---|---|
+| **201** | The activity with signal is successfully sent |
+| **401** | The app responds with an invalid token. |
+| **201** | The activity with signal is successfully sent. |
+| **401** | The app responds with an invalid token. |
+| **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
+| **404** | The meeting chat does not exist. |
  
 
 ## Enable your app for Teams meetings
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
+The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app is available.
 
 > [!NOTE]
 > Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
@@ -259,14 +282,14 @@ The tab `context` and `scopes` properties work in harmony to allow you to determ
 * **meetingSidePanel**: an in-meeting panel opened via the unified bar (u-bar).
 
 > [!NOTE]
-> "Context" property is currently not supported and thus will be ignored on mobile clients
+> "Context" property is currently not supported and is ignored on mobile clients.
 
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
 > * For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
 >
-> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The in-meeting experiences (in-meeting dialog and tab) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
+> * Mobile clients support Tabs only in Pre and Post Meeting stages. The in-meeting experiences (in-meeting dialog and tab) on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
 ### Before a meeting
 
@@ -274,9 +297,9 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ The user identity *must* be confirmed via [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Following this authentication, the app can retrieve the user role via the GetParticipant API.
 
- ✔ Based on the user role, the app will now have the capability to present role specific experiences. For example, a polling app can allow only organizers and presenters to create a new poll.
+ ✔ Based on the user role, the app now has the capability to present role specific experiences. For example, a polling app can allow only organizers and presenters to create a new poll.
 
-> **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
+> **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 ### During a meeting
 
@@ -284,16 +307,16 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 ✔ In your app manifest add **sidePanel** to the **context** array as described above.
 
-✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
-)
+✔ In the meeting as well as in all scenarios, the app is rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. For more information, see [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+).
 
 ✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly.
 
 ✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. Thus, tabs can use OAuth 2.0 directly. *See also*, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-✔ Message extension should work as expected when a user is in an in-meeting view and should be able to post compose message extension cards.
+✔ Message extension works as expected when a user is in an in-meeting view and the user can post compose message extension cards.
 
-✔ AppName in-meeting - Tooltip should state the app name in-meeting U-bar.
+✔ AppName in-meeting - Tooltip states the app name in-meeting U-bar.
 
 #### **In-meeting dialog**
 
@@ -317,7 +340,7 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 The post-meeting and pre-meeting configurations are equivalent.
 
-## Meeting app sample
+## Refer to the meeting app sample
 
  > [!div class="nextstepaction"]
 > [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
