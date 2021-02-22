@@ -1019,21 +1019,21 @@ async def on_teams_team_unarchived(
 
 ## Installation update events
 
-The installation update event is sent to your bot when the bot is installed or uninstalled from a thread. On installation the event is issued with an **action** field set to *add* and when the bot is uninstalled the event is sent with the **action** field set to *remove*. The event is also issued when a bot is added or removed as part of an application upgrade. The **action** field for the upgrade add scenario is set to *add-upgrade*, and for remove it is set to *remove-upgrade*. 
-
-You can use this event to send an introductory message from your bot on installation and subsequently clean up and delete user or thread data when uninstalled. Use the installation update events to meet privacy and data retention requirements on your side.
+The `installationUpdate` event is sent to your bot when the bot is installed or uninstalled from a thread. On installation, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*. 
+> [!NOTE]
+> Application upgrade can also trigger the `installationUpdate` event if a bot is added or removed during the upgrade process. If you upgrade the application and add a bot to it, then the **action** field is set to *add-upgrade*, and if you remove a bot, the **action** field is set to *remove-upgrade*. 
 
 > [!IMPORTANT]
 > Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. To see the installation update events, you can move your Teams client to public developer preview, and add your app personally or to a team or a chat.
 
-### Add an installation event
- 
-# [C#/.NET](tab/dotnet)
+### Add an installation update event
+Use the add an installation update event to send an introductory message from your bot on installation. You can also clean up and delete user or thread data when the bot is uninstalled. Use the installation update events to meet your privacy and data retention requirements.. 
+
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override async Task
-OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActi
-vity> turnContext, CancellationToken cancellationToken) {
+OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken) {
 var activity = turnContext.Activity; if
 (string.Equals(activity.Action, "Add",
 StringComparison.InvariantCultureIgnoreCase)) {
@@ -1042,6 +1042,7 @@ else
 { // TO:DO Uninstallation workflow
 } return; }
 ```
+
 You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
 
 ```csharp
@@ -1052,11 +1053,9 @@ turnContext, CancellationToken cancellationToken) {
 }
 ```
 
-* * *
+# [JSON](#tab/json)
 
-**Sample installation response**
-
-```
+```json
 { 
   "action": "add", 
   "type": "installationUpdate", 
@@ -1108,6 +1107,7 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
+* * *
 
 ## Message reaction events
 
