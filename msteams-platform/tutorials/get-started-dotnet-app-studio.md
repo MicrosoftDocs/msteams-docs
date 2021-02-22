@@ -114,34 +114,34 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 ## Update the credentials for your hosted app
 
-The sample app requires the following environment variables to be set to the values you made a note of earlier.
+The sample app requires the environment variables to be set to the values that you saved in the [text file](~/includes/get-started/get-started-use-app-studio.md#bots).
 
-Open up the appsettings.json file. Update the *MicrosoftAppId* value with your Bot ID that you saved earlier. Update the *MicrosoftAppPassword* with the Bot password you saved earlier.
+Open the appsettings.json file. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. Update the **MicrosoftAppPassword** with the bot password you saved.
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
-Once these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure redeploy the app.
+After these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure, redeploy the app.
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team where you installed the sample app and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` then you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you must configure it to show content. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choose **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to choose the tab to display in this channel. After you select the tab and select **Save** the `Hello World` tab is loaded with the tab.
 
 <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### Test your bot in Teams
 
-You can now interact with the bot in Teams. Choose a channel in the team where you registered your app and type `@your-bot-name`. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply.
+Now you can test the bot in Teams. Select a channel in the team where you registered your app and type `@your-bot-name`. This is called an **\@mention**. The bot replies to any message that you send.
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### Test your messaging extension
 
-To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a bunch of random texts showing up. You can choose any one of them and it is inserted into your conversation.
+To test your messaging extension, you can select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed. When you select it, a set of random texts is displayed. You can select one of the random text and that is inserted into your conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="530px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
+Select one of the random text, and a card formatted and ready to send with your own message is shown.
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
