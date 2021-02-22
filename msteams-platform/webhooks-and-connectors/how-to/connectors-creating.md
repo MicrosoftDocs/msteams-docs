@@ -208,7 +208,7 @@ Once you've uploaded your app package, to configure and use the connector in a T
 1. To configure or modify the connector select the **Configure** bar.
 
 ## Code sample
-|**Sample name** | **Description** | **.NET** | **Node.js** |
+|**Sample name** | **Description** | **C# .NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Connectors	| Sample Office 365 Connector generating notifications to teams channel.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
 | Generic connectors sample |Sample code for a generic connector that's easy to customize for any system which supports webhooks.|	| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|
