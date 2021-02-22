@@ -239,6 +239,6 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 4. Zip the manifest with the profile images and install it in Teams.
 
 ## Code sample
-|**Sample name** | **Description** |**C#** | 
+|**Sample name** | **Description** |**.NET** | 
 |----------------|-----------------|--------------|
 |Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
