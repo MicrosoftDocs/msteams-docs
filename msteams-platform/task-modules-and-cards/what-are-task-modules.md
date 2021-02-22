@@ -231,7 +231,7 @@ With HTML/JavaScript-based task modules it is your responsibility to ensure your
 Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.
 
 ## Code sample
-|**Sample name** | **Description** |**C# .NET** | **Node.js**|
+|**Sample name** | **Description** | **.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |Task module sample (Bots-V4) | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
 |Task module sample (Tabs + Bots-V3) | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
