@@ -152,8 +152,8 @@ To include a mention in an Adaptive Card your app needs to include the following
 }
 ```
 
-### Full width Adaptive Cards
-You can use this proprety to expand the width of an adaptive card and make use of addtional canvas space (see example below).
+### Full width Adaptive card
+You can use the `msteams` property to expand the width of an Adaptive card and make use of additional canvas space. For information on how to use the property, see the following example:
 
 #### Constructing full width cards
 To make a full width Adaptive Card your app needs to include the following elements
