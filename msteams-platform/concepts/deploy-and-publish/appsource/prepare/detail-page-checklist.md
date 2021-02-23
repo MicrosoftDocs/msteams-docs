@@ -84,7 +84,7 @@ The following example highlights where an app's short description displays in a 
 
 The long description can provide an engaging narrative that highlights your app's main features, the problems it solves, and its target audience. While this description can be as long as 4000 characters, most users will only read between 300-500 words.
 
-The following example highlights where an app's long description displays in a store listing.
+The following example highlights where an app's long description displays in a store listing:
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 
