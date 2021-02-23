@@ -19,10 +19,10 @@ You can include an inline image with any Teams card. Images an be formatted as  
 There are two card types that support Markdown in Teams:
 
 > [!div class="checklist"]
-> * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
+> * **Adaptive cards**: Markdown is supported in Adaptive card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive cards.
 > * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
-# [**Markdown formatting: Adaptive Cards**](#tab/adaptive-md)
+# [**Markdown formatting: Adaptive cards**](#tab/adaptive-md)
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
@@ -45,27 +45,27 @@ The following Markdown tags are not supported:
 > [!IMPORTANT]
 > Adaptive cards do not support HTML formatting.
 
-### Newlines for Adaptive Cards
+### Newlines for Adaptive cards
 
 In lists you can use the `\r` or `\n` escape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
-### Mobile and desktop differences for Adaptive Cards
+### Mobile and desktop differences for Adaptive cards
 
 Formatting is slightly different between the desktop and the mobile versions of Teams.
 
-On the desktop, Adaptive Card Markdown formatting appears like this in both web browsers and in the Teams client application:
+On the desktop, Adaptive card Markdown formatting appears like this in both web browsers and in the Teams client application:
 
-![Adaptive Card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Adaptive card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-On iOS, Adaptive Card Markdown formatting appears like this:
+On iOS, Adaptive card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Adaptive card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 On Android, Adaptive Card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+![Adaptive card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### More information on Adaptive Cards
+### More information on Adaptive cards
 
 [Text features in Adaptive cards](/adaptive-cards/create/textfeatures)
 The date and localization features mentioned in this topic are not supported in Teams.
@@ -106,7 +106,7 @@ The date and localization features mentioned in this topic are not supported in 
 
 ### Mention support within Adaptive cards v1.2
 
-Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an Adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -116,9 +116,9 @@ Bots and messaging extensions can include mentions within the card content in [T
 
 ### Constructing mentions
 
-To include a mention in an Adaptive Card your app needs to include the following elements
+To include a mention in an Adaptive card your app needs to include the following elements
 
-* `<at>username</at>` in the supported adaptive card elements
+* `<at>username</at>` in the supported Adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
 
 ### Sample Adaptive card with a mention
@@ -151,6 +151,28 @@ To include a mention in an Adaptive Card your app needs to include the following
   }
 }
 ```
+
+### Information masking in Adaptive cards
+Use the information masking property to mask specific information, such as password or sensitive information from users.
+
+#### Mask information
+To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
+
+#### Sample Adaptive card with masking property
+
+```json
+{
+    "type": "Input.Text",
+    "id": "secretThing",
+    "style": "password",
+    "isMasked": true
+  },
+```
+
+The following image is an example of masking information in Adaptive cards:
+
+![Masking information image](../../assets/images/cards/masking-information-view.png)
+
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
