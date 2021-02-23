@@ -1242,17 +1242,18 @@ async def on_reactions_removed(
 
 * * *
 
-## Installation update events
+## Installation update event
 
-The `installationUpdate` event is sent to your bot when the bot is installed or uninstalled from a thread. On installation, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*. 
+The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+ 
 > [!NOTE]
-> Application upgrade triggers the `installationUpdate` event if a bot is added or removed during the upgrade process. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot. 
+> When you upgrade an application, and then add or remove a bot, the action also triggers the `installationUpdate` event. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot. 
 
 > [!IMPORTANT]
 > Installation update events are in developer preview today and will be Generally Available (GA) in March 2021. To see the installation update events, you can move your Teams client to public developer preview, and add your app personally or to a team or a chat.
 
-### Add an installation update event
-Use the add an installation update event to send an introductory message from your bot on installation. You can also clean up and delete user or thread data when the bot is uninstalled. Use the installation update events to meet your privacy and data retention requirements.
+### Install update event
+Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -1336,9 +1337,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## Code sample
 
-| **Sample name** | **Description** | **C#** |
+| **Sample name** | **Description** | **.NET** |
 |-----------------|-----------------|---------|
-|Microsoft Teams bots conversation events | Sample for bot events | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+|Microsoft Teams bots conversation events | Sample for bot events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
 
 
 
