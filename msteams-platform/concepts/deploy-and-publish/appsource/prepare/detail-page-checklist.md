@@ -48,10 +48,10 @@ You need a short and long description of your app.
 **Do:**
 
 * Reference Microsoft product names only when necessary. For more information on the guidelines, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-* If you need to reference "Teams", write the first reference as "Microsoft Teams". Subsequent references can be shortened to "Teams".
-* Refer to "Microsoft 365" instead of "Office 365".
+* If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
+* Refer to **Microsoft 365** instead of **Office 365**.
 * Avoid typos and grammatical errors.
-* Avoid unnecessary capitalizations (for example, "Users" instead of "users").
+* Avoid unnecessary capitalizations (for example, **Users** instead of **users**).
 * Avoid acronyms.
 
 **Don't:**
