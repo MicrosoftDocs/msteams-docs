@@ -56,7 +56,7 @@ You need a short and long description of your app.
 
 **Don't:**
 
-* Abbreviate Microsoft as "MS" or "MSFT".
+* Abbreviate Microsoft as **MS** or **MSFT**.
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 * Use copyrighted brand names you don't own.
 
