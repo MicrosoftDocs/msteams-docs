@@ -26,7 +26,7 @@ The following example highlights where an app's short name displays in a store l
 
 * Choose a simple, memorable name that hints at what your app does.
 * Be distinctive.
-* If needed, reference "Microsoft 365" instead of "Office 365".
+* If needed, reference **Microsoft 365** instead of **Office 365**.
 * Avoid typos and grammatical errors.
 
 **Don't:**
