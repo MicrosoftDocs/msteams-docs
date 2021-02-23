@@ -155,6 +155,9 @@ To include a mention in an Adaptive card your app needs to include the following
 ### Information masking in Adaptive cards
 Use the information masking property to mask specific information, such as password or sensitive information from users.
 
+> [!NOTE]
+> The information masking property is currently available in the developer preview only.
+
 #### Mask information
 To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
 
