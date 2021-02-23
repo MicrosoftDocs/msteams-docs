@@ -64,7 +64,7 @@ You need a short and long description of your app.
 
 A concise summary of your app that should be original, engaging, and directed at your target audience. Ideally, keep the short description to one sentence.
 
-The following example highlights where an app's short description displays in a store listing.
+The following example highlights where an app's short description displays in a store listing:
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
 
