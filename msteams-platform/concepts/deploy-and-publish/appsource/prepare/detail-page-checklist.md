@@ -39,7 +39,7 @@ The following example highlights where an app's short name displays in a store l
 > [!NOTE]
 > If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, *Salesforce Connector for Microsoft Teams*).
 
-## 2. Write descriptions
+## Write descriptions
 
 You need a short and long description of your app.
 
