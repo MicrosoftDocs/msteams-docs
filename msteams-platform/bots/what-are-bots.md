@@ -1,21 +1,21 @@
 ---
-title: What are conversational bots?
+title: Conversational bots
 author: clearab
 description: An overview of conversational bots in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
-# What are conversational bots in Microsoft Teams?
+# Conversational bots in Microsoft Teams
 
-Conversational bots allow users to interact with your web service through text, interactive cards, and task modules. They're incredibly flexible — conversational bots can be scoped to handling a few simple commands or complex, artificial-intelligence-powered and natural-language-processing virtual assistants. They can be one aspect of a larger application, or completely stand-alone.
+Conversational bots allow users to interact with your web service through text, interactive cards, and task modules. Conversational bots are incredibly flexible and can be scoped to handle a few simple commands or complex, artificial-intelligence-powered and natural-language-processing virtual assistants. They can be one aspect of a larger application, or be completely stand-alone.
 
-The GIF below shows a user conversing with a bot in a one-to-one chat using both text and interactive cards. Finding the right mix of cards, text, and task modules is key to creating a useful bot. Don't forget, bots are much more than just text!
+The GIF below shows a user conversing with a bot in a one-to-one chat using both text and interactive cards. Finding the right mix of cards, text, and task modules is key to creating a useful bot. Bots are much more than just text.
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
 ## Build  a bot for Teams with the Microsoft Bot Framework
 
-The [Microsoft Bot Framework](https://dev.botframework.com/) is a rich SDK for building bots using C#, Java, Python, and JavaScript. If you already have a bot that's based on the Bot Framework, you can easily adapt it to work in Microsoft Teams. We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
+The [Microsoft Bot Framework](https://dev.botframework.com/) is a rich SDK for building bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Microsoft Teams. We recommend you use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
 * Use specialized card types like the Office 365 Connector card.
 * Consume and set Teams-specific channel data on activities.
@@ -25,13 +25,13 @@ Your Teams bot consists of three elements:
 
 * A publicly accessible web service that you host.
 * Your bot registration with the Bot Framework.
-* Your Teams app package with your app manifest. This is what your users will install and connects the Teams client to your web service, routed through the Bot Service.
+* Your Teams app package with your app manifest. This is what your users will install and connect the Teams client to your web service, routed through the bot service.
 
 > [!IMPORTANT]
-> You can develop Teams apps in any web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling yourself.
+> You can develop Teams apps in any web-programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform all token handling.
 
 > [!TIP]
-> Teams App Studio* helps you create and configure your app manifest, and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. *See* [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> Teams App Studio helps you create and configure your app manifest, and can register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. For more information, see [Getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## Create a chatbot for Teams with Microsoft Power Virtual Agents
 
