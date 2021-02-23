@@ -7,14 +7,17 @@ ms.topic: how-to
 ---
 # Create required documentation for your Microsoft Teams app
 
-To list your app on the Microsoft Teams store, your must provide the following resources to your users:
+To list your app on the Microsoft Teams store, you must provide the following resources to your users:
+
 - [Privacy policy](#create-a-privacy-policy)
 - [Terms of use](#create-a-terms-of-use)
 - [Support URLs](#include-support-links)
 
-## 1. Create a privacy policy
+When a user adds your app, they automatically agree to your privacy policy and terms of use.
 
-Use the following checklist when creating your privacy policy:
+## Create a privacy policy
+
+A privacy policy can help your users understand how you handle their data. Use the following checklist when creating your privacy policy:
 
 > [!div class="checklist"]
 >
@@ -24,11 +27,11 @@ Use the following checklist when creating your privacy policy:
 > * Must include your contact information.
 > * Should not contain broken, beta, or staging URLs.
 
-## 2. Create a terms of use
+## Create a terms of use
 
-Your terms of use should be specific and applicable to your app offering.
+Your terms of use should be specific and applicable to your offering.
 
-## 3. Include support links
+## Include support links
 
 Your support URLs should not require authentication for a user to get help or contact you.
 
