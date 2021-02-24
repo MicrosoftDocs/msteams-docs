@@ -158,7 +158,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 For more best practices, see [craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images).
 
-## 5. Create a video
+## Create a video
 
 A video can be the most effective way to communicate why people should use your app. You should address the following questions in a video:
 
