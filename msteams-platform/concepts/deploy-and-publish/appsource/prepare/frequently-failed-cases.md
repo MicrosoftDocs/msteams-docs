@@ -156,7 +156,7 @@ Your package must include a localization file that includes language translation
 
 ## 5.0 Tab design
 
-To ensure app quality, follow the [tab design guidelines](~/tabs/design/tabs.md).
+To ensure app quality, follow the more comprehensive [tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
