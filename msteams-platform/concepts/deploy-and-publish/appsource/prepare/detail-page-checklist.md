@@ -174,7 +174,7 @@ If you include a video, it appears before your screenshots in the listing.
 * Keep your video between 30-90 seconds.
 * Aim for quality. In a listing, users will see your video before screenshots.
 
-## 6. Localize your store listing
+## Localize your store listing
 
 Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).
 
