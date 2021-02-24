@@ -33,7 +33,7 @@ Detail all of the capabilities the app offers within Teams and steps for testing
 ### Accounts
 
 * Credentials for at least two account (one admin and one non-admin). For verification purposes, the accounts should have sufficient pre-populated data.
-*A test account is required if your app only allows licensed accounts or safelisting from the backend. Also, if your app has a team or group chat scope, you must provide two test accounts in the same tenant to validate the collaboration scenario.
+* A test account is required if your app only allows licensed accounts or safelisting from the backend. Also, if your app has a team or group chat scope, you must provide two test accounts in the same tenant to validate the collaboration scenario.
 * For apps that require a subscription, have an Microsoft 365 tenant/domain dependency, or are for enterprise users, you must provide a third account in the same domain that isn't pre-configured for your app so that we can validate the first-run user experience.
 * If your app has premium features, an account with the necessary access must be provided to test that experience.
 
