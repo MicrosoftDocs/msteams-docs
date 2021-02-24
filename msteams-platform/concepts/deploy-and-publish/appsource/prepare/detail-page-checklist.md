@@ -146,7 +146,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * Focus on your app's capabilities (for example, how people can communicate with your bot).
 * Include content that accurately represents your app.
 * Use text judiciously.
-* Frame screenshots with a color that reflects your brand and include marketing content, similar to the following [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example. (Dimension requirements apply to the whole image and not just the screenshot.)
+* Frame screenshots with a color that reflects your brand and include marketing content, similar to the following [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example (dimension requirements apply to the whole image and not just the screenshot):
     :::image type="content" source="../../../../assets/images/freshdesk.png" alt-text="Screenshot example of third-party app Freshdesk":::
 
 **Don't:**
