@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 # Prepare your Microsoft Teams store and AppSource submission  
 
-You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it.
+You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), read the following instructions.
 
