@@ -42,7 +42,7 @@ Teams apps must complete Publisher Attestation in Partner Center. See the Micros
 
 ### 2.2 Financial information
 
-Your Teams app must not ask users to make a payment directly within Teams interface. No financial instrument details must not be transmitted through the user to bot interface. Links to secure payment services may only be transmitted to users if disclosure has been made in the app’s Terms of Use, Privacy Policy, and any profile page or website before the user agrees to use the bot.
+Your app must not ask users to make a payment directly within the Teams interface. Financial instrument details must not be transmitted through the user to the bot interface. Links to secure payment services may only be transmitted to users if disclosure has been made in the app’s terms of use, privacy policy, or any profile page or website before the user agrees to use the bot.
 
 ### 2.3 Bot Framework
 
