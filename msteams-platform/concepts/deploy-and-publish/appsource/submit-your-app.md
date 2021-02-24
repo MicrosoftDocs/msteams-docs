@@ -13,9 +13,9 @@ After preparing your store submission, you can officially submit your app for re
 
 To publish your app to the Teams store and AppSource, you must [first set up a developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
 
-## 2. Submit your app
+## Submit your app
 
-Follow these [step-by-step store submission instructions](https://docs.microsoft.com/office/dev/store/add-in-submission-guide). When creating a new submission, specify you're submitting a Teams app.
+To submit your app, follow these [step-by-step store submission instructions](https://docs.microsoft.com/office/dev/store/add-in-submission-guide). When creating a new submission, specify you're submitting a Teams app.
 
 ### App category mapping
 
