@@ -173,7 +173,7 @@ To ensure app quality, follow the [tab design guidelines](~/tabs/design/tabs.md)
 ### 5.3 Navigation
 
 * Tabs must not have more than three levels of navigation.
-* The secondary and tertiary pages in a tab must be opened in a level two and level three view in the main tab area that is navigated via breadcrumbs or a left nav. You can also include these components to aid tab navigation:
+* The secondary and tertiary pages in a tab must be opened in a level two and level three view in the main tab area that is navigated via breadcrumbs or left nav. You can also include these components to aid tab navigation:
     * Back buttons
     * Page headers
     * Hamburger menus
