@@ -132,7 +132,7 @@ App packages must be correctly formatted and include all required information an
 
 * The app manifest must conform to the [latest manifest schema](~/resources/schema/manifest-schema.md).
 * If your app includes a bot or messaging extension, the manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory (AD) for authentication, include the Azure AD ID in the manifest ([see how](~/resources/schema/manifest-schema.md#webapplicationinfo)).
+* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD ID in the manifest. For more information, see [manifest schema](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### 4.2 App icons
 
