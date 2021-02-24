@@ -7,13 +7,15 @@ ms.author: anclear
 ---
 # Bot basics
 
-This document provides an introduction to bots in Microsoft Teams that builds on the article [How bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
+This document provides an introduction to bots in Microsoft Teams that builds on the article [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
+
+To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Microsoft Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
 ## Teams activity handlers
 
 Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
-When a bot for Teams receives an activity, it is directed to the *activity handlers*. All activities are routed through one base handler called the *turn handler*. The *turn handler* calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+When a bot for Teams receives an activity, it is directed to the *activity handlers*. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
 # [C#](#tab/csharp)
 
@@ -50,7 +52,7 @@ The bot logic processes incoming activities from one or more of your bot channel
 #### Core Bot Framework handlers
 
 >[!NOTE]
-> Except for the *added* and *removed* members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
 
 Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
 
@@ -103,7 +105,7 @@ The invoke activities listed in this section are for conversational bots in Team
 #### Core Bot Framework handlers
 
 >[!NOTE]
-> Except for the *added* and *removed* members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
@@ -155,7 +157,7 @@ The invoke activities listed in this section are for conversational bots in Team
 #### Core Bot Framework handlers
 
 >[!NOTE]
-> Except for the *added* and *removed* members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
 
 Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
 
@@ -204,3 +206,8 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to messaging extensions. For more information, see [What are messaging extensions](https://aka.ms/azure-bot-what-are-messaging-extensions).
 
 ---
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
