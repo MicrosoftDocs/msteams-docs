@@ -11,7 +11,7 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), read the following instructions.
 
-## 1. Validate your app manifest
+## Validate your app manifest
 
 While your app may be working in a test environment, you should check your app manifest again to avoid running into issues during the submission process.
 
