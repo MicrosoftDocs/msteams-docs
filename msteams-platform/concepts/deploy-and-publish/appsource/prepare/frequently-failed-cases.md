@@ -82,7 +82,7 @@ Apps catering to a patient’s health records, diseases, wellness, nutrition, or
 
 Your app must not post sensitive data, such as credit card or financial payment instrument data. The app also must not display health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view that content.
 
-Warn users before your app downloads any files or executables (.exe ) into the user's machine or environment.
+Warn users before your app downloads any files or executables (.exe) into the user's machine or environment.
 
 ## 3.0 General functionality and performance
 
