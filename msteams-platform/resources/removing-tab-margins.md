@@ -9,7 +9,7 @@ ms.author: lomeybur
 
 # Removing all tab margins (2021 update)
 
-Microsoft Teams is removing the margins around all tabs. This will allow developers to build apps that look more native to Teams. This will also align with our [UI kit designs](~/tabs/design/tabs.md). Most apps already look better without the margins surrounding their experiences. However, some tabs are visually affected by this change and developers should make the neccessary changes.
+Microsoft Teams is removing the margins around all tabs. This will allow developers to build apps that look more native to Teams. This will also align with our [UI kit designs](~/tabs/design/tabs.md). Most apps already look better without the margins surrounding their experiences. However, some tabs are visually affected by this change and developers should make the necessary changes.
 
 :::image type="content" source="../../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
 
@@ -20,7 +20,7 @@ Microsoft Teams is removing the margins around all tabs. This will allow develop
 
 ## Guidelines
 
-Microsoft Teams apps that use tabs will be affected by this change. Developers should switch to [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) in order to determine how their tabs are affected and make the neccessary changes.
+Microsoft Teams apps that use tabs will be affected by this change. Developers should switch to [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) in order to determine how their tabs are affected and make the necessary changes.
 
 Tab developers should not rely on Teams to provide margins surrounding their tabs. Developers are encouraged to add margins around their tab designs where it makes sense. App designs in production may look like there's extra padding (i.e.: margins provided by Teams, and margins provided by the tab), but this is only temporary and will go away in a few weeks, leaving only the app's provided padding.
 
