@@ -9,11 +9,11 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users. Use either an Adaptive Card or an embedded web view.
+You must create the task module for users if you are not populating it with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
-Using this method your service will receive an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either the adaptive card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
+Using the initial invoke request method, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either the adaptive card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -196,7 +196,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request must contain the details of the message your messaging extension is invoked from. See the following section  for the example of this object . The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
+When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request must contain the details of the message that your messaging extension is invoked from. See the following section for the example of this object. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -472,7 +472,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### With an embedded web view
 
-When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form you'd like to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
+When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -629,6 +629,8 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 If you allow your users to send a response back from the task module, you must handle the submit action.
 
-* [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [!div class="nextstepaction"] 
+> [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [!div class="nextstepaction"]
+> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

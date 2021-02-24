@@ -146,10 +146,13 @@ The below is an example of a `composeExtensions` object defining two action comm
 
 If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you'll want to:
 
-* [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
+> [!div class="nextstepaction"]
+> [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
 If you are using parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
 
-* [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [!div class="nextstepaction"]
+> [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [!div class="nextstepaction"]
+> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

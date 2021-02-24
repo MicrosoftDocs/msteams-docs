@@ -578,6 +578,8 @@ The following section is a description of the entities in the `OnBehalfOf` of Ar
 
 Add a search command
 
-* [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+> [!div class="nextstepaction"]
+> [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [!div class="nextstepaction"]
+> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
