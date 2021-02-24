@@ -36,7 +36,7 @@ During submission, you're asked to categorize your app. The following table maps
 
 If your app fails submission, you receive a failure report so you know what to fix and resubmit. Microsoft also provides a white-glove service to help get your app listed.
 
-## Frequently asked questions
+## FAQs
 
 ### How do I create a Partner Center account?
 
