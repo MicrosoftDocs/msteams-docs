@@ -72,7 +72,7 @@ Teams apps that require authentication with an external service to share content
 
 #### 2.6.3 Government Community Cloud listings
 
-To make your app available for Government Community Cloud (GCC) users (and to avoid duplicate app listings in the store), the authentication process must identify and route GCC users to the specified or expected content URL.
+To make your app available for Government Community Cloud (GCC) users and to avoid duplicate app listings in the store, the authentication process must identify and route GCC users to the specified or expected content URL.
 
 ### 2.7 Health information sources
 
