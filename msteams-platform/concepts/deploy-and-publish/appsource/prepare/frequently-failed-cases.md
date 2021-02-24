@@ -48,7 +48,7 @@ Your Teams app must not ask users to make a payment directly within Teams interf
 
 For apps with bots or messaging extensions, you must follow all requirements (including privacy notice requirements) as defined in the Microsoft Bot Framework Developer Code of Conduct and Online Services Agreement.
 
-Bots should always ask permission to upload a file and show a confirmation message after the file is uploaded.
+Bots must always ask permission to upload a file and display a confirmation message after the file is uploaded.
 
 ### 2.4 External domains
 
