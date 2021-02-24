@@ -9,7 +9,7 @@ ms.topic: how-to
 
 After preparing your store submission, you can officially submit your app for review.
 
-## 1. Create a Partner Center account
+## Create a Partner Center account
 
 To publish your app to the Teams store and AppSource, you must [first set up a developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
 
