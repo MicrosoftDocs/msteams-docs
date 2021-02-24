@@ -285,7 +285,7 @@ See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings
 * Should be used sparingly and for scenarios that are light and task-oriented.
 * Must display content in a single column and not have multiple navigation levels.
 * Must not use task modules.
-* Should align with the center of the meeting stage.
+* Must align with the center of the meeting stage.
 * Should be dismissed once a user selects a button or performs an action.
 
 ## 10.0 Notification design
