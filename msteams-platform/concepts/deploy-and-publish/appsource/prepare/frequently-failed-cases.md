@@ -137,8 +137,7 @@ App packages must be correctly formatted and include all required information an
 ### 4.2 App icons
 
 * Your app package must include two PNG versions of your app icon: a color icon and an outline icon.
-* A correctly sized and formatted icons must be specified in the app package or manifest. The icons in the package or manifest must match the icon submitted with the offer metadata.
-* For detailed information, refer to the [icons documentation](~/concepts/build-and-test/apps-package.md#app-icons).
+* Correctly sized and formatted icons must be specified in your app package. The icons must match what's submitted with the store listing metadata. For more information, see the Teams app [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ### 4.3 App description
 
