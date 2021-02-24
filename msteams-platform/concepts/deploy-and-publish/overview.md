@@ -14,9 +14,11 @@ There are three options for distributing the app after it is created:
 
 ## Enterprise organizations
 
+You can test and distribute your custom app within the organization.
+
 ### Upload your app directly
 
-This is the easiest way to test and use your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you must send them your app package and ask them to upload it independently.
+This is the easiest way to test and use your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you must send your app package and ask them to upload it independently.
 
 If you want to distribute your app more broadly,Teams provides an in-app gallery for users to find or discover high-quality Teams apps. To have your solution available in the gallery, you must either [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md).
 
@@ -30,9 +32,11 @@ AppSource, formerly known as Office Store provides a convenient location for you
 
 ## Government Community Cloud (GCC) organizations
 
+Choose where to upload your custom app package as a GCC administrator.
+ 
 ### Upload your custom app directly to Teams
 
- As a GCC tenant administrator, you can choose whether to upload a custom app to your tenant environment or to publish it to your tenant app catalog. Microsoft doesn't own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you must complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
+ As a GCC tenant administrator, you can choose whether to upload a custom app to your tenant environment or to publish it to your tenant app catalog. Microsoft does not own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you must complete the [Bot Framework](https://dev.botframework.com/) registration as follows:
 
 1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
 1. Navigate to the **Configure MSTeams** page, see following image:
@@ -47,7 +51,7 @@ AppSource, formerly known as Office Store provides a convenient location for you
 > [!NOTE]
 >
 > * The uploading instructions for GCC environment, also apply to Teams custom apps. </br>
-> * Compliant Microsoft apps are permitted in the GCC environment and by default, in Teams.
+> * Only Microsoft compliant apps are permitted in the GCC environment and in Teams.
 > * Third-party apps are disabled at the tenant level and are managed through your organization's [app permission policies](/microsoftteams/teams-app-permission-policies). You must review all third-party apps to ensure they align with your organization's policies and procedures.
 
 > [!TIP]
