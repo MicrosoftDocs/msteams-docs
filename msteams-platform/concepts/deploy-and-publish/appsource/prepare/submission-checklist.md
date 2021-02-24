@@ -22,7 +22,7 @@ The Microsoft Teams App Validator tool helps you identify and fix issues before 
 1. Go to the **Preliminary checklist** and review the list of test cases that are difficult to automate.
 1. If present, [fix issues with your manifest](~/resources/schema/manifest-schema.md) or app in general.
 
-## 2. Provide notes for testing your app
+## Provide notes for testing your app
 
 Include the following information with your submission. If you upload test notes to SharePoint, you must provide a public link.
 
