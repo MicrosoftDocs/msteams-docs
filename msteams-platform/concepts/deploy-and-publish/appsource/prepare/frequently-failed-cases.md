@@ -36,9 +36,9 @@ Teams apps must focus on the Teams experience and must not include names, icons,
 
 ### 2.1 Publisher attestation
 
-Microsoft 365 App compliance program that is intended to help organizations assess and manage risk in using apps by collecting security, data handling, and compliance information. App gets Badge in AppSource & provides added confidence in the security and compliance measures of your application.
+The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk using apps by evaluating security, data handling, and compliance information. Apps that participate in the program get badges that display in Teams store and AppSource listings, increasing confidence in the security and compliance measures in your app.
 
-Teams apps must complete Publisher Attestation in Partner Center. See the Microsoft 365 App Compliance Program documentation to learn how to complete the Publisher Attestation workflow.
+Teams apps must complete Publisher Attestation in Partner Center. See the [Microsoft 365 App Compliance Program documentation](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation) to learn how to complete the Publisher Attestation workflow.
 
 ### 2.2 Financial information
 
