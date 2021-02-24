@@ -39,7 +39,9 @@ Detail all of the capabilities the app offers within Teams and steps for testing
 
 ### Integration steps
 
-If pre-configuration by a tenant admin is required to use the app, include the steps and/or provide configured admin and non-admin accounts for validation. Note: you can sign up for an [Office 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity.
+If a Teams tenant requires configuration to use the app, include the configuration steps and admin and non-admin accounts for validation.
+
+You can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and renews as long as you're using it for development activities.
 
 ### Video (optional)
 
