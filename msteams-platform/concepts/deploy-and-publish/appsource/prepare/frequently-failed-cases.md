@@ -182,7 +182,7 @@ To ensure app quality, follow the [tab design guidelines](~/tabs/design/tabs.md)
 
 ### 5.4 Usability
 
-* Users must be able to undo their last action in the app.
+* Users must be able to undo their last action in the tab.
 * Personal app tabs may aggregate content from team or group chat scoped instances of that app in a single view.
 * Tabs must be responsive to Teams themes. When the Teams theme is changed, the theme within the app must also change to reflect that theme.
 * Personal app tabs must use Teams-styled components (adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.) whenever possible.
