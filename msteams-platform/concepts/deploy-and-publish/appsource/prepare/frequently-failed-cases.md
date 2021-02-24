@@ -62,8 +62,9 @@ Apps that request permissions during the Azure Active Directory (Azure AD) conse
 
 #### 2.6.1 Signing out
 
-* The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](~/concepts/authentication/authentication.md).
-* When a user logs out, they should log out only from the app and not the Teams client.
+The ability to sign out from any authenticated external services must be present within the app. For more information, see [authentication in Teams](~/concepts/authentication/authentication.md).
+
+When a user logs out, they must log out only from the app and not from the Teams client.
 
 #### 2.6.2 Unsharing content
 
