@@ -17,4 +17,9 @@ After going through all the articles, you will learn the following:
 * Access your uploaded package: After uploading the app package, you can test if it works fine by accessing the app. This article explains how to access your tab, bot, connector, and messaging extension.
 * Distribute your app: This article gives you the options to distribute your apps. It provides information on how you can upload your app directly to Teams.
 * Publish to organization: You can use the **Manage apps** page to publish apps that are built for your organization. The two ways to publish a custom app to your organization's app store are also provided.
+* Publish to AppSource: This article helps you to publish your app to AppSource. It also provides pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are given.
+
+## Prerequisites
+
+You must have the right account for building Teams app and install some recommended development tools.
 

@@ -372,6 +372,8 @@
     href: concepts/build-and-test/apps-package.md
   - name: Upload your app for a team or user
     href: concepts/deploy-and-publish/apps-upload.md
+  - name: Access your uploaded app
+    href: concepts/deploy-and-publish/apps-access.md
   - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
   - name: Publish to the Teams store (AppSource)
