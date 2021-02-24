@@ -99,7 +99,7 @@ Apps must be fully functional on the following operating systems and browsers:
 * Microsoft Windows 7 and later
 * macOS 10.10 and later
 * Microsoft Edge 12 and later
-* Internet Explorer 11 & later
+* Internet Explorer 11 and later
 * Mozilla Firefox 47.0 and later
 * Google Chrome 51.0 and later
 
