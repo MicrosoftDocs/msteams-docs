@@ -191,7 +191,7 @@ To ensure app quality, follow the [tab design guidelines](~/tabs/design/tabs.md)
 
 ## 6.0 Bot design
 
-See comprehensive [bot design guidelines](~/bots/design/bots.md).
+To ensure app quality, follow the more comprehensive [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
