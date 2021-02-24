@@ -126,7 +126,7 @@ The following phrases are examples of what's allowed when writing long descripti
 
 Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand purpose while also adhering to Teams requirements.
 
-For more information, see [specific guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
+For more information, see [specific guidance on designing Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ## Capture screenshots
 
