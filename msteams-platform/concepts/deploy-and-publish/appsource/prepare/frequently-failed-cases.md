@@ -88,9 +88,7 @@ Warn users before your app downloads any files or executables (.exe) into the us
 
 ### 3.1 Launching external functionality
 
-Apps must not take the user out of Teams for core user scenarios. Task modules, cards or tabs are recommended to display information to the user within Teams. Link targets in apps should not link to an external browser but should link to div elements contained within Teams (for example, inside task modules and tabs).
-
-Apps must have explicit user permission before launching functionality outside of the Teams environment.
+Apps must not take the user out of Teams for core user scenarios. Task modules, cards or tabs are recommended to display information to the user within Teams. Link targets in apps must not link to an external browser but must link to `div` elements contained within Teams, for example, inside task modules and tabs.
 
 ### 3.2 Compatibility
 
