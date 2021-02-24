@@ -107,10 +107,10 @@ Apps must be fully functional on the following operating systems and browsers:
 
 Teams apps must respond within a reasonable timeframe, which varies depending on the capability.
 
-* Tabs must respond within 3 seconds or display a loading message or warning.
-* Bots must respond to user commands within 2 seconds or display a typing indicator.
-* Messaging extensions must respond to user commands within 5 seconds.
-* Notification must load within 5 seconds of the user action.
+* Tabs must respond within three seconds or display a loading message or warning.
+* Bots must respond to user commands within two seconds or display a typing indicator.
+* Messaging extensions must respond to user commands within five seconds.
+* Notification must load within five seconds of the user action.
 
 ### 3.4 Platform interoperability
 
