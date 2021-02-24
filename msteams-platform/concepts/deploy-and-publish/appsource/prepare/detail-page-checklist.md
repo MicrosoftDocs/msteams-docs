@@ -122,7 +122,7 @@ The following phrases are examples of what's allowed when writing long descripti
   * "... certified for ..."
   * " ... powered by ..."
 
-## 3. Adhere to icon design guidelines
+Adhere to icon design guidelines
 
 Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand purpose while also adhering to Teams requirements.
 
