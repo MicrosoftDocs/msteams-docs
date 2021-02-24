@@ -68,7 +68,7 @@ When a user logs out, they must log out only from the app and not from the Teams
 
 #### 2.6.2 Unsharing content
 
-Teams apps that depend on authentication with an external service to allow content sharing in channels must clearly state in their help documentation or similar resources how a user can disconnect or unshare any content if the same feature is supported on the external service. The ability to unshare content does not have to be present in your app, but the process should be clearly documented in a location that's accessible from the app.
+Teams apps that require authentication with an external service to share content in channels must clearly state in help documentation (or similar resources) how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to unshare content must be present in your Teams app.
 
 #### 2.6.3 Government Community Cloud listings
 
