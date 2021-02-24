@@ -38,7 +38,7 @@ await turnContext.updateActivity(newActivity);
 
 # [Python](#tab/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](link to Python API ref docs).
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
 
 ```python
 
@@ -66,45 +66,35 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-## Update adaptive cards
+## Update cards
 
-Follow the steps to update the adaptive card on click on button:
+In order to update existing card on button click you can use replyToId of incoming activity.
 
-1. Create an adaptive card and add unique ID (GUID) in the adaptive card action.
-
-```json
-var Card = new AdaptiveCard()
-{
-    Body = new List<AdaptiveElement>()
-    {
-        new AdaptiveTextBlock(){Text="This is a test adaptive card"},
-    },
-    Actions = new List<AdaptiveAction>() 
-    {
-    new AdaptiveSubmitAction()
-    {
-        Title="UpdateMe",
-        DataJson= @"{'id':'uniqueId'}"
-    }
-    }
-};
+# [C#/.NET](#tab/dotnet)
+To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+```csharp
+var activity = MessageFactory.Attachment(card.ToAttachment());
+activity.Id = turnContext.Activity.ReplyToId;
+await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-2. After sending the message, continue mapping the adaptive card's unique ID and message ID.
-
-```json
-connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-reply = activity.CreateReply();
-reply.Attachments.Add(Card.ToAttachment());
-var msgToUpdate = await connector.Conversations.ReplyToActivityAsync(reply);
-// Keep mapping of uniqueId and messageToUpdate.Id
-// UniqueId1 => messageId1
-// UniqueId2 => messageId2
+# [TypeScript/Node.js](#tab/typescript)
+To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+```typescript
+const message = MessageFactory.attachment(card);
+message.id = context.activity.replyToId;
+await context.updateActivity(message);
 ```
 
-3. When a user selects **UpdateMe** action button, check the mapping for `uniqueId` in the `activity.Value`.
+# [Python](#tab/python)
+To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
 
-4. Create new card and call `connector.Conversations.UpdateActivityAsync` with the updated code.
+```python
+updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
+updated_activity.id = turn_context.activity.reply_to_id
+await turn_context.update_activity(updated_activity)
+
+```
 
 ## Delete messages
 
@@ -155,3 +145,11 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 | **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---
+
+## Code samples
+
+The official conversation basics are as follows:
+
+| Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
+|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
