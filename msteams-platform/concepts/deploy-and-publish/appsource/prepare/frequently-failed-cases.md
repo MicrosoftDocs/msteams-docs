@@ -1,15 +1,15 @@
 ---
-title: Store (AppSource) validation guidelines
+title: Teams store and AppSource validation guidelines
 description: Describes the guidelines every app submitted to the Teams store (AppSource) must follow.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ---
-# Microsoft Teams store (AppSource) validation guidelines
+# Microsoft Teams store and AppSource validation guidelines
 
-Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. These guidelines, which complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies), are specific to Teams apps and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
+Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) but are specific to Teams apps. These guidelines will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
-If your app doesn't pass review according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report on why your submission failed. The team works 24 hours a day, five days a week and can provide white-glove service to help your app meet our criteria.
+If your app doesn't pass review according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report on why your submission failed. The team can provide white-glove service to help your app meet passing criteria.
 
 > [!TIP]
 > Some of these guidelines may not be applicable to you. For example, if your app doesn't have a bot, you can ignore those guidelines.
