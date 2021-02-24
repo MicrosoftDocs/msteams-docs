@@ -180,7 +180,7 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 
 [See how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md)
 
-## Related
+## See also
 
 * [Create effective Microsoft 365 Stores listings](/office/dev/store/create-effective-office-store-listings)
 * Teams app design guidelines for [copy and content](~/concepts/design/design-teams-app-fundamentals.md#copy-and-content) and [brand expression](~/concepts/design/design-teams-app-fundamentals.md#brand-expression)
