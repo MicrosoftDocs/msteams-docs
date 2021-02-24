@@ -50,20 +50,20 @@ The uploaded package must now be available for use in the team or conversation s
 
 ## Upload your package into a team using the Apps tab
 
-1. In the target team, choose **More options** (**&#8943;**) and choose **Manage team**.
+1. In the target team, choose **More options** (**&#8943;**) and select **Manage team**.
 
-   > [!NOTE]
-   > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
+> [!NOTE]
+> You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
 
 2. Select the Apps tab, and then choose **Upload a custom app** on the lower right.
 
-   ![Upload entry point](../../assets/images/UploadACustomApp.png)
+![Upload entry point](../../assets/images/UploadACustomApp.png)
 
 3. Browse to and select your .zip package from your computer.
 
 4. After a brief pause, you can see your uploaded app in the list.
 
-   ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
+![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
 If your app does not load, the most common reason is an error in the manifest, particularly IDs for the app, bot and messaging extensions.
 
@@ -71,11 +71,11 @@ If your app does not load, the most common reason is an error in the manifest, p
 
 If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
 
-If you change manifest information, you must first remove the app and then add the updated package (per [Load your package into a team](#load-your-package-into-teams)). Note that, in general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates (such as changes to the URL or the Microsoft app ID for its bot).
+If you change manifest information, you must first remove the app and then add the updated package through [Load your package into Teams](#load-your-package-into-teams). In general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
 
 > [!NOTE]
-> There is no way to completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot will append to the previous conversation.
+> There is no way to completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot appends to the previous conversation.
 
-## Troubleshooting notes
+## Troubleshoot notes
 
 * If the manifest fails to load, check that you followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).

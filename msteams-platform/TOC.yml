@@ -365,7 +365,9 @@
     - name: Resource-specific consent JSON test file
       href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
-  items:    
+  items:
+  - name: Publish your app overview
+    href: concepts/deploy-and-publish/apps-publish-overview.md   
   - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
   - name: Create your app package

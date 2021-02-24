@@ -11,7 +11,8 @@ This topic helps you to create your app and publish them to your organization an
 
 ## What do you learn?
 
-After going through all the articles, you will learn the following:
+Each article helps you to learn the following:
+
 * Create your app package: Learn to configure your manifest with App Studio. Design your **App icons** with **Color icon** and **Outline icon**.
 * Upload your app for a team: You can test your app experience within Microsoft Teams by uploading it to Teams. The article gives you steps to upload your app package using the Store icon and the Apps tab. Also, information on removing and updating your app is provided.
 * Access your uploaded package: After uploading the app package, you can test if it works fine by accessing the app. This article explains how to access your tab, bot, connector, and messaging extension.
