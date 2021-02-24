@@ -22,9 +22,9 @@ An app's name plays a critical role in how users discover it in the AppSource ap
 
 ### 1.2 Suitable for workplace consumption
 
-Your app may work for team to drive collaboration and/or for individual users to improve their productivity.
+Your app can facilitate group collaboration, improve an individual's productivity, or both.
 
-Apps catering to team bonding and socializing needs of Microsoft Teams users may be published. Such apps should not require intense time investment or perceptively impact productivity. These apps must be collaborative and designed for multiple participants. All content should be suitable for general workplace consumption.
+Apps catering to team bonding and socializing needs of Teams users may be published. Such apps should not require intense time investment or perceptively impact productivity. These apps must be collaborative and designed for multiple participants. All content should be suitable for general workplace consumption.
 
 Apps must abide by all restrictions in [100.10 Inappropriate Content](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content) of the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
@@ -156,7 +156,7 @@ Your package must include a localization file that includes language translation
 
 ## 5.0 Tab design
 
-To ensure app quality, follow the more comprehensive [tab design guidelines](~/tabs/design/tabs.md).
+To ensure app quality, see the more comprehensive [tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
@@ -191,7 +191,7 @@ To ensure app quality, follow the more comprehensive [tab design guidelines](~/t
 
 ## 6.0 Bot design
 
-To ensure app quality, follow the more comprehensive [bot design guidelines](~/bots/design/bots.md).
+To ensure app quality, see the more comprehensive [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
@@ -201,11 +201,9 @@ To ensure app quality, follow the more comprehensive [bot design guidelines](~/b
 
 ### 6.2 Bot welcome messages
 
-Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better usability. [How to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
-
-Channel bot welcome messages are optional during first run, especially if bot is available in personal scope performing similar actions. This bot must not send a personal message to all members of the team or channel as that will be considered as spamming. The welcome message should also mention the person who installed/added the bot to the channel.
-
-Notification-only bots must send a welcome message that includes a message conveying, "I am a notification-only bot and will not be able to reply to your chats".
+* Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
+* Channel bot welcome messages are optional during first run, especially if bot is available in personal scope performing similar actions. This bot must not send a personal message to all members of the team or channel as that will be considered as spamming. The welcome message should also mention the person who installed/added the bot to the channel.
+* Notification-only bots must send a welcome message that includes a message conveying, "I am a notification-only bot and will not be able to reply to your chats".
 
 ### 6.3 Bot message spamming
 
@@ -229,7 +227,7 @@ See the following resources for more information:
 
 ## 7.0 Messaging extension design
 
-See comprehensive [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+To ensure app quality, see the more comprehensive [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### 7.1 Action commands
 
@@ -254,11 +252,11 @@ For more information, see the [design best practices for search commands](~/mess
 
 A task module must include an icon and short name of the app in which it is associated.
 
-See comprehensive [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
+To ensure app quality, see the more comprehensive [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ## 9.0 Meeting extension design
 
-See comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+To ensure app quality, see the more comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### 9.1 Pre- and post-meeting experience
 
