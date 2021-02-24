@@ -110,7 +110,7 @@ The following phrases are examples of what's allowed when writing long descripti
 
 * Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.
 * List features with bullet points so it's easier to scan the description.
-* Use active voice and speak to users directly (for example, "You can ...").
+* Use active voice and speak to users directly (for example, *You can ...*).
 * Include a help or support link.
 * Identify the following if applicable: limitations, set up information, account dependencies, and release updates.
 
