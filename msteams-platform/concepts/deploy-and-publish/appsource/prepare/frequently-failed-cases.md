@@ -141,7 +141,7 @@ App packages must be correctly formatted and include all required information an
 
 ### 4.3 App description
 
-The app descriptions in your manifest and store should be same and follow these guidelines:
+The app descriptions in your manifest and store must be the same and follow these guidelines:
 
 * Use "Microsoft Teams" on first reference. Subsequent references can be shortened to ”Teams”.
 * Do not abbreviate "Microsoft" (such as "MS" or "MSFT").
