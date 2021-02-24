@@ -12,7 +12,7 @@ The information that you submit to [Partner Center](https://partner.microsoft.co
 
 A store listing may be someone's first impression of your app. Increase your installations with a listing that effectively conveys your app's benefits, functionality, and brand.
 
-## 1. Come up with a short name
+## Specify a short name
 
 Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.
 
@@ -42,23 +42,6 @@ The following example highlights where an app's short name displays in a store l
 ## Write descriptions
 
 You need a short and long description of your app.
-
-### Best practices for all descriptions
-
-**Do:**
-
-* Reference Microsoft product names only when necessary. For more information on the guidelines, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-* If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
-* Refer to **Microsoft 365** instead of **Office 365**.
-* Avoid typos and grammatical errors.
-* Avoid unnecessary capitalizations (for example, **Users** instead of **users**).
-* Avoid acronyms.
-
-**Don't:**
-
-* Abbreviate Microsoft as **MS** or **MSFT**.
-* Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
-* Use copyrighted brand names you don't own.
 
 ### Short description
 
@@ -122,13 +105,30 @@ The following phrases are examples of what's allowed when writing long descripti
   * "... certified for ..."
   * " ... powered by ..."
 
-Adhere to icon design guidelines
+### Best practices for all descriptions
+
+**Do:**
+
+* Reference Microsoft product names only when necessary. For more information on the guidelines, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+* If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
+* Refer to **Microsoft 365** instead of **Office 365**.
+* Avoid typos and grammatical errors.
+* Avoid unnecessary capitalizations (for example, **Users** instead of **users**).
+* Avoid acronyms.
+
+**Don't:**
+
+* Abbreviate Microsoft as **MS** or **MSFT**.
+* Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
+* Use copyrighted brand names you don't own.
+
+## Adhere to icon design guidelines
 
 Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand purpose while also adhering to Teams requirements.
 
-[See specific guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
+For more information, see [specific guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
 
-## 4. Capture screenshots
+## Capture screenshots
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
 
