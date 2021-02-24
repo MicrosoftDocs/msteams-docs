@@ -176,9 +176,7 @@ If you include a video, it appears before your screenshots in the listing.
 
 ## Localize your store listing
 
-Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions).
-
-[See how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md)
+Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
 ## See also
 
