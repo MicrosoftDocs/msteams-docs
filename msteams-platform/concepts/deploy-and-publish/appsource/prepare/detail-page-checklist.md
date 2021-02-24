@@ -167,7 +167,7 @@ A video can be the most effective way to communicate why people should use your 
 * How does your app work?
 * What other benefits do you get from using your app?
 
-If you include a video, it displays before your screenshots in the listing.
+If you include a video, it appears before your screenshots in the listing.
 
 ### Best practices for videos
 
