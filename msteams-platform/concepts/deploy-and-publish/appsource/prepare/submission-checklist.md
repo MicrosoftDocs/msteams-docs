@@ -5,7 +5,7 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ---
-# Prepare your Microsoft Teams store (AppSource) submission  
+# Prepare your Microsoft Teams store and AppSource submission  
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it.
 
