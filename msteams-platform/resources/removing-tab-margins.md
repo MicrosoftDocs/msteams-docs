@@ -15,8 +15,8 @@ Microsoft Teams is removing the margins around all tabs. This will allow develop
 
 ## Timelines
 
-* 3/1 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md)
-* 5/1 - Margins will be removed in production
+* March 1st, 2021 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md)
+* May 1st, 2021 - Margins will be removed in production
 
 ## Guidelines
 
