@@ -23,6 +23,16 @@ Each article helps you to learn the following:
 
 * [**Publish to the organization**](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json#publish-a-custom-app-to-your-organizations-app-store): You can use the **Manage apps** page to publish apps that are built for your organization. Information on apps submission approval and updating the app after it is uploaded are available.
 
-* [**Publish to AppSource**](): This article helps you to publish your app to AppSource. It also provides a pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are available.
+* [**Publish to AppSource**](~/concepts/deploy-and-publish/appsource/publish.md): This article helps you to publish your app to AppSource. It also provides a pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are available.
 
 ## Next step
+
+> [!div class="nextstepaction"]
+> [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+
+[!div class="nextstepaction"]
+> [Build a great app details page](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)
+
+[!div class="nextstepaction"]
+> [App manifest checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md)
+
