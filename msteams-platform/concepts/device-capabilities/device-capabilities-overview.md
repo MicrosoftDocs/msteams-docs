@@ -1,7 +1,7 @@
 ---
 title: Overview of device capabilities
-description:  Overview of native device  capabilities.
-keywords: camera image media microphone mic qr code qrcode bar code barcode scan scanner location capabilities native device permissions 
+description:  Overview of native device capabilities.
+keywords: camera image media microphone mic qr code qrcode bar code barcode scan scanner location map capabilities native device permissions 
 ms.topic: overview
 ---
 
@@ -32,4 +32,4 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Capture and share images
 * Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md)
 * Record audio through microphone
-* Share the location information using [location capability](location-capability.md).
+* Share location using [location picker](location-capability.md).
