@@ -6,21 +6,18 @@ ms.topic: conceptual
 
 # Create an app package for your Microsoft Teams app
 
-Apps in Teams are defined by an app manifest JSON file and bundled in an app package with their icons. You need an app package to upload and install your app in Teams and publish to either your line of business app catalog or to AppSource.
+Apps in Teams are defined by an app manifest JSON file and bundled in an app package with their icons. You need an app package to upload and install your app in Teams and publish to either your line of business App Store or to AppSource.
 
 A Teams app package is a .zip file containing the following:
 
-* A manifest file named `manifest.json`, which specifies attributes of your app and points to needed resources for your experience. For example, the location of its tab configuration page or the Microsoft app ID for its bot.
+* A manifest file named `manifest.json`, which specifies attributes of your app and points to needed resources for your experience. For example, location of the tab configuration page or the Microsoft app ID for the bot.
 * [Color and outline icons for your app](#app-icons).
 
 ## Create a manifest
 
-Teams App Studio can help configure your manifest. It also contains a react control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
+Teams App Studio help you to configure your manifest. It also contains a react control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
 
-Your manifest file must be at the top level of the uploaded package with the name manifest.json. For Teams apps and AppSource submission, use the current [manifest schema](~/resources/schema/manifest-schema.md).
-
-> [!NOTE]
-> Manifests and packages built previously might support an older version of the schema.
+Your manifest file must be at the top level of the uploaded package with the name manifest.json. For Teams App Store and AppSource submission, use the current [manifest schema](~/resources/schema/manifest-schema.md).
 
 > [!TIP]
 > Mention the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
@@ -32,7 +29,7 @@ Your manifest file must be at the top level of the uploaded package with the nam
 Your app package must include two PNG versions of app icon. A color icon and an outline icon. For your app to pass the AppSource review, these icons must meet the following size requirements.
 
 > [!Note]
-> If your app has a bot or messaging extension, the icons must be included in your Microsoft Azure Bot Service registration.
+> If your app has a bot or messaging extension, the icons must be included in your [Microsoft Azure Bot Service registration](https://aka.ms/aadapplist).
 
 ### Color icon
 
@@ -46,7 +43,7 @@ Teams automatically crops your icon to display a square with rounded corners in 
 
 An outline icon displays in two scenarios:
 
-* When your app is in use and hoisted on the app bar at the left of Teams.
+* When your app is in use and hoisted, on the left side of Teams app bar.
 * When a user pins your app's messaging extension.
 
 The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background. No other colors are permitted. The outline icon must not have any extra padding around the symbol.
@@ -92,4 +89,6 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 
 ## Next step
 
-After creating an app package [upload your app to the Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Upload your app to the Teams](~/concepts/deploy-and-publish/apps-upload.md)
+

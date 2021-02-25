@@ -366,7 +366,7 @@
       href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
   items:
-  - name: Publish your app overview
+  - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md   
   - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
@@ -374,7 +374,7 @@
     href: concepts/build-and-test/apps-package.md
   - name: Upload your app for a team or user
     href: concepts/deploy-and-publish/apps-upload.md
-  - name: Access your uploaded app
+  - name: Access your app
     href: concepts/deploy-and-publish/apps-access.md
   - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json

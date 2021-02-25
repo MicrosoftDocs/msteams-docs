@@ -14,13 +14,13 @@ There are three options for distributing the app after it is created:
 
 ## Enterprise organizations
 
-You can test and distribute your custom app within the organization.
+You can test and distribute your custom app within Teams App Store.
 
 ### Upload your app directly
 
-This is the easiest way to test and use your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload (or sideload)](./apps-upload.md) the app and start using it right away. However, if you want to share the app with others, you must send your app package and ask them to upload it independently.
+This is the easiest way to use and test your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload or sideload](./apps-upload.md) the app and start using it. However, if you want to share the app with others, you must send your app package and ask them to upload it independently.
 
-If you want to distribute your app more broadly,Teams provides an in-app gallery for users to find or discover high-quality Teams apps. To have your solution available in the gallery, you must either [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md).
+If you want to distribute your app broadly, Teams provides an in-app gallery for users to find or discover high-quality Teams apps. For the solution to appear in the gallery, you must [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md).
 
 ### Publish to your organization's app catalog
 
@@ -28,12 +28,12 @@ Your organization's app catalog contains apps that are unique to your organizati
 
 ### Publish to AppSource
 
-AppSource, formerly known as Office Store provides a convenient location for you to distribute your Microsoft Teams app, as well as other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. Follow our guidelines to [submit your app to AppSource](./appsource/publish.md).
+AppSource, formerly known as Office Store provides a convenient location for you to distribute your Microsoft Teams app and other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. Follow our guidelines to [submit your app to AppSource](./appsource/publish.md).
 
 ## Government Community Cloud (GCC) organizations
 
 Choose where to upload your custom app package as a GCC administrator.
- 
+
 ### Upload your custom app directly to Teams
 
  As a GCC tenant administrator, you can choose whether to upload a custom app to your tenant environment or to publish it to your tenant app catalog. Microsoft does not own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. Additionally, if the app solution includes a bot or message extension, you must complete the [Bot Framework](https://dev.botframework.com/) registration as follows:

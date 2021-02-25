@@ -6,25 +6,18 @@ keywords: teams apps Upload
 ---
 # Upload an app package to Microsoft Teams
 
-To test your app experience within Microsoft Teams, you need to upload your app to Teams. Uploading adds the app to the team you select and you and your team members can interact with it like end users.
+You must upload your app package and test the app experience within Microsoft Teams.
+Uploading the app adds the app to the team you select. You and your team members can interact with the app easily.
 
 > [!NOTE]
-> Uploading an updated package for an existing app with a bot might not show tab changes when viewed through the conversation window. It is recommended to access it through the Apps fly-out or test on a clean test environment.
-
-## Create your upload package
-
-For development and AppSource submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
-
-To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
-
-After the package is created, you can now upload it into a team. After uploading, the package is available for all users in the selected team and only the users of that team.
+> Uploading an updated package for an existing app with a bot might not show the tab changes when viewed through the conversation window. It is recommended to access it through the Apps fly-out or test on a clean test environment.
 
 ## Load your package into Teams
 
-You can test your package by uploading it into Teams.
+Upload your app package and test in within Teams environment. After uploading, the package is available to all users in the selected team and only the users of that team.
 
 > [!NOTE]
-> For uploading to work, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).
+> To successfully upload your app, your tenant admin must first [enable uploading of apps](/microsoftteams/admin-settings).
 
 There are two ways to upload your app to Teams:
 
@@ -41,7 +34,7 @@ There are two ways to upload your app to Teams:
 
    ![Add menu](../../assets/images/NewappAddmenudropdown.png)
 
-The uploaded package must now be available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot and messaging extensions. If the app is not scoped for conversations, that option does not appear.
+The uploaded package is available for use in the team or conversation specified in the consent dialog. If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot and messaging extensions. If the app is not scoped for conversations, that option does not appear.
 
 >[!NOTE]
 > Apps in conversations is currently in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), and the option does not appear if Teams is not running in that mode.
@@ -59,7 +52,7 @@ The uploaded package must now be available for use in the team or conversation s
 
 ![Upload entry point](../../assets/images/UploadACustomApp.png)
 
-3. Browse to and select your .zip package from your computer.
+3. Select your .zip package from your computer.
 
 4. After a brief pause, you can see your uploaded app in the list.
 
@@ -69,12 +62,12 @@ If your app does not load, the most common reason is an error in the manifest, p
 
 ## Remove or update your app
 
-If you want to remove your app, select the trash-can icon next to the app name in the View Teams bots list.
+If you want to remove your app, select the trash-can icon next to the app name in the **View Teams** bots list.
 
-If you change manifest information, you must first remove the app and then add the updated package through [Load your package into Teams](#load-your-package-into-teams). In general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
+If you change the manifest information, you must first remove the app and then add the updated package through [Load your package into Teams](#load-your-package-into-teams). In general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
 
 > [!NOTE]
-> There is no way to completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot appends to the previous conversation.
+> You can't completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot appends to the previous conversation.
 
 ## Troubleshoot notes
 
@@ -82,4 +75,6 @@ If you change manifest information, you must first remove the app and then add t
 
 ## Next step
 
-Now that the app is uploaded successfully, you can [access your uploaded app](~/concepts/deploy-and-publish/apps-access.md) to test the experience.
+> [!div class="nextstepaction"]
+> [Access your uploaded app](~/concepts/deploy-and-publish/apps-access.md)
+
