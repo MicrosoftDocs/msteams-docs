@@ -25,7 +25,7 @@ Each article helps you to learn the following:
 
 * [**Publish to AppSource**](~/concepts/deploy-and-publish/appsource/publish.md): This article helps you to publish your app to AppSource. It also provides a pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are available.
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
@@ -35,4 +35,7 @@ Each article helps you to learn the following:
 
 > [!div class="nextstepaction"]
 > [App manifest checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md)
+
+> [!div class="nextstepaction"]
+> [Application Certification program](~/concepts/deploy-and-publish/appsource/post-publish/application-certification.md)
 
