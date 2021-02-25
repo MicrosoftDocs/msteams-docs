@@ -53,4 +53,4 @@ An uploaded app with a messaging extension automatically appears in the **More o
 
 ## Next step
 
-Publish your app to AppSource or Teams Store. See also Managing your app after publishing.
+[Publish your app](../../OfficeDocs-SkypeForBusiness/blob/live/Teams/manage-apps.md) to AppSource or Teams Store. See also Managing your app after publishing.
