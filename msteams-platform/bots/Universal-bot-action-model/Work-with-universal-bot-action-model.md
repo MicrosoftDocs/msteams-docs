@@ -35,7 +35,7 @@ The universal bot action model is introduced in the adaptive cards schema versio
 > [!NOTE]
 > Setting the `version` property to 1.4 makes your adaptive card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the universal bot action model.
 
-If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute` the following happens:
+If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute`, the following happens:
 
 | Client | Behavior |
 | :-- | :-- |
@@ -246,7 +246,7 @@ The universal bot action model allows you to set properties that enable backward
 
 ### Outlook
 
-Actionable messages in Outlook can either use the existing model or the universal bot action model. If you are using the existing model, the actions are encoded as explicit HTTP calls and use the `Action.Http` command to implement the adaptive card scenarios. If you use the universal bot action model, `Action.Execute` must be implemented as bots and subscribe to Outlook actionable messages channel.
+Actionable messages in Outlook can either use the existing model or the universal bot action model. If you are using the existing model, the actions are encoded as explicit HTTP calls and use `Action.Http` to implement the adaptive card scenarios. If you use the universal bot action model, `Action.Execute` must be implemented as bots and subscribe to Outlook actionable messages channel.
 
 ### Teams
 

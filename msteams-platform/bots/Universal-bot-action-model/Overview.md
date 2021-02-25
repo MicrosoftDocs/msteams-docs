@@ -41,9 +41,9 @@ Universal bot action model enhances user experience by bringing the possibility 
 
 Before the universal bot action model, different hosts provided different action models as follows:
 
-* Teams or bots used the `Action.Submit` model, an approach which defers the actual communication model to the underlying channel.
+* Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.
 * Windows also used `Action.Submit`, but required a special set of named verbs to be used.
-* Outlook used the `Action.Http` model to communicate with the backend service explicitly specified in the adaptive card payload.
+* Outlook used `Action.Http` to communicate with the backend service explicitly specified in the adaptive card payload.
 
 >[!NOTE]
 > Currently search does not support `Action.Execute`, `Action.Submit`, and `Action.Http`.
