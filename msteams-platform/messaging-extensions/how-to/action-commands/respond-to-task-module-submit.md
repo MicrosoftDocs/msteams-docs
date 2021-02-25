@@ -13,14 +13,14 @@ After a user submits the task module, your web service receives a `composeExtens
 
 You have the following options for responding:
 
-* No response - You can choose to use the submit action to trigger a process in an external system, and not provide any feedback to the user. This can be useful for long-running processes, and you may choose to provide feedback in another manner (for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* No response - Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.
-* [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can then interact with and/or insert into a message.
+* [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
 * [Request the user authenticate](~/messaging-extensions/how-to/add-authentication.md)
 * [Request the user provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
 
-For authentication or configuration, after the user completes the flow the original invoke is re-sent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
+For authentication or configuration, after the user completes the flow the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -87,7 +87,7 @@ This is an example of the JSON object you receive. The `commandContext` paramete
 
 ## Respond with a card inserted into the compose message area
 
-The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user can then choose to submit the card to the conversation. For more information on using cards see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+The most common way to respond to the `composeExtension/submitAction` request is with a card inserted into the compose message area. The user submits the card to the conversation. For more information on using cards, see [cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 # [C#/.NET](#tab/dotnet)
 
@@ -178,32 +178,32 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another task module
 
-You can choose to respond to the `submitAction` event with an additional task module. This can be useful when:
+You can choose to respond to the `submitAction` event with an additional task module. This is useful when:
 
 * You need to collect large amounts of information.
-* If you need to dynamically change what information you are collecting based on user input
+* If you need to dynamically change what information you are collecting based on user input.
 * If you need to validate the information submitted by the user and potentially resend the form with an error message if something is wrong. 
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you are using the Bot Framework SDK the same event triggers for both submit actions. This means you must add logic which determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you are using the Bot Framework SDK the same event triggers for both submit actions. This means you must add logic that determines the correct response.
 
 ## Bot response with Adaptive Card
 
->[!Note]
->This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot. Use the same ID as your messaging extension for your bot.
+> [!NOTE]
+> This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot. Use the same ID as your messaging extension for your bot.
 
-You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit or interact with it as well. This can be very useful in scenarios where you gather information from your users before creating an adaptive card response, or when you update the card after someone interacts with it. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation:
+You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it. This is very useful in scenarios where you gather information from your users before creating an adaptive card response, or when you update the card after someone interacts with it. The following scenario shows how the app Polly uses this flow to configure a poll without including the configuration steps in the channel conversation:
 
 1. The user selects the messaging extension to trigger the task module.
-2. The user configures the poll with the task module.
-3. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
-4. The user can then preview the adaptive card message before the bot inserts it into the channel. If the app is not already a member of the channel, selecting `Send` adds it.
-   1. The user can also choose to `Edit` the message, which returns them to the original task module.
-5. Interacting with the adaptive card changes the message before sending it.
-6. After the user selects `Send` the bot posts the message to the channel.
+1. The user configures the poll with the task module.
+1. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
+1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
+   *  The user can also choose to `Edit` the message, which returns them to the original task module.
+1. Interacting with the adaptive card changes the message before sending it.
+1. After the user selects `Send` the bot posts the message to the channel.
 
 ### Respond to initial submit action
 
-To enable this flow your task module should respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot send to the channel. This gives the user the opportunity to verify the card before sending, and also attempt to install your bot in the conversation if it is not already installed.
+To enable this flow your task module should respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user gets  the opportunity to verify the card before sending, and also attempt to install your bot in the conversation if it is not already installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -582,4 +582,4 @@ Add a search command
 > [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
 > [!div class="nextstepaction"]
-> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> !include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

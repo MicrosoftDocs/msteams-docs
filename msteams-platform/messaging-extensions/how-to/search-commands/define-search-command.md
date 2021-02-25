@@ -11,11 +11,12 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
-[!Note] Result card size limit is 28kb. If the result card size is over 28kb, it will not be sent.
+[!NOTE]
+> Result card size limit is 28kb. If the result card size is over 28kb, it will not be sent.
 
 ## Choose messaging extension invoke locations
 
-The first thing you need to decide is where your search command can be triggered (or specifically, *invoked*) from. Your search command can be invoked from one or both of the following locations:
+The first thing you need to decide is where your search command can be invoked from. Your search command can be invoked from one or both of the following locations:
 
 * The buttons at the bottom of the compose message area
 * By @mentioning in the command box
@@ -41,18 +42,18 @@ The following steps assume you've already [created a messaging extension](~/mess
 
 ### Manually create a command
 
-To manually add your messaging extension search command to your app manifest, you'll need to add the following parameters to your `composeExtension.commands` array of objects.
+To manually add your messaging extension search command to your app manifest, you need to add the following parameters to your `composeExtension.commands` array of objects.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to this command. The user request will include this ID. | Yes | 1.0 |
+| `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
 | `title` | Command name. This value appears in the UI. | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | Must be `query` | No | 1.4 |
 |`initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
 
-You'll also need to add the details of the search parameter, which will define the text visible to your user in the Teams client.
+You also need to add the details of the search parameter, which defines the text visible to your user in the Teams client.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -64,7 +65,7 @@ You'll also need to add the details of the search parameter, which will define t
 
 #### App manifest example
 
-Below is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
+Following is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest. For the full app manifest schema see[App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 {
