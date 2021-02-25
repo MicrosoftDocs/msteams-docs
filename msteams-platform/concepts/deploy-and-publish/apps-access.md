@@ -21,7 +21,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 4. Configure your tab through the [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md) and select **Save**.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs](../../assets/images/tab_gallery.png)
+  ![The Add a tab dialog box](../../assets/images/tab_gallery.png) features a gallery of available tabs.
 
 ## Access your uploaded bot
 
@@ -43,7 +43,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 3. Configure your Connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.
 
-  ![The Add a tab dialog box, featuring a gallery of available tabs.](../../assets/images/connector_gallery.png)
+  ![The Add a tab dialog box](../../assets/images/connector_gallery.png) features a gallery of available tabs.
 
 ## Access your uploaded messaging extension
 
