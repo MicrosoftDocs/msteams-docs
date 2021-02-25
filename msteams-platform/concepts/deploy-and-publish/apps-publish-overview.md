@@ -30,9 +30,9 @@ Each article helps you to learn the following:
 > [!div class="nextstepaction"]
 > [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 
-[!div class="nextstepaction"]
+> [!div class="nextstepaction"]
 > [Build a great app details page](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)
 
-[!div class="nextstepaction"]
+> [!div class="nextstepaction"]
 > [App manifest checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md)
 
