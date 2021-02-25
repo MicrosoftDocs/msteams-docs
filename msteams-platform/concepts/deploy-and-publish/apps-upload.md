@@ -13,7 +13,7 @@ To test your app experience within Microsoft Teams, you need to upload your app 
 
 ## Create your upload package
 
-For development as well as AppSource submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
+For development and AppSource submission you must create an uploadable package that contains the information to describe your experience. The package, a .zip file, contains the application manifest and icons that uniquely define your experience.
 
 To create an upload package, see [Create the package for your Microsoft Teams app](../build-and-test/apps-package.md).
 
@@ -79,3 +79,7 @@ If you change manifest information, you must first remove the app and then add t
 ## Troubleshoot notes
 
 * If the manifest fails to load, check that you followed all the instructions in [Create the package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
+
+## Next step
+
+Now that the app is uploaded successfully, you can [access your uploaded app](~/concepts/deploy-and-publish/apps-access.md) to test the experience.

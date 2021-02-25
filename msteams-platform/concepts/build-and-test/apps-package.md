@@ -89,3 +89,7 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 #### Messaging extension
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
+
+## Next step
+
+After creating an app package [upload your app to the Teams](~/concepts/deploy-and-publish/apps-upload.md)

@@ -31,7 +31,7 @@ For a teams-enabled bot, you can start by invoking your bot by @mentioning the n
 
 To test direct chats with your bot, you can either access it through the App home, @mention it in a channel, or search for it in the **New Chat** window.
 
-When you add your bot to a conversation to test direct chats with your bot, you can @mention the bot name in a conversation, or search for it in the **New Chat** window.
+To add your bot to a conversation, you can @mention the bot name in a conversation or search for it in the **New Chat** window.
 
 ## Access your uploaded Connector
 
@@ -39,7 +39,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 
 1. Go to a channel in the team. Select **More options** (*&#8943;*) and choose **Connectors**.
 
-2. Select your Connector from the **Sideloaded** section at the bottom.
+2. Select your Connector from the sideloaded section at the bottom.
 
 3. Configure your Connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.
 
@@ -50,3 +50,7 @@ With the app loaded in the team or conversation, users can set up a Connector us
 An uploaded app with a messaging extension automatically appears in the **More options** (*&#8943;*) menu in the compose box.
 
 ![Messaging extensions](../../assets/images/compose-extensions/cesampleapp.png)
+
+## Next step
+
+Publish your app to AppSource or Teams Store. See also Managing your app after publishing.
