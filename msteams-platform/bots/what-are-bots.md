@@ -9,7 +9,13 @@ ms.author: anclear
 
 A bot also referred to as chat bot or conversational bot is an app that runs simple and repetitive automated tasks performed by users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, take dinner reservations, or provide travel information. A bot interaction can be a quick question and answer or it can be a complex conversation that provides access to services.
 
-Conversational bots allow users to interact with your web service through text, interactive cards, and task modules. Conversational bots are incredibly flexible and can be scoped to handle a few simple commands or complex, artificial-intelligence-powered and natural-language-processing tasks. They can be one aspect of a larger application, or be completely stand-alone.
+Conversational bots allow users to interact with your web service through text, interactive cards, and task modules.
+
+![Invoke bot using text](~/assets/images/invokebotwithtext.png)
+
+![Invoke bot using card](~/assets/images/invokebotwithcard.png)
+
+Conversational bots are incredibly flexible and can be scoped to handle a few simple commands or complex, artificial-intelligence-powered and natural-language-processing tasks. They can be one aspect of a larger application, or be completely stand-alone.
 
 Finding the right mix of cards, text, and task modules is key to creating a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using both text and interactive cards:
 
@@ -57,6 +63,8 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 ## Advantages of bots
 
 Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a Team. Each scope provides unique opportunities and challenges for your conversational bot.
+
+![Bot advantages](~/assets/images/botadvantages.png)
 
 ### In a channel
 
