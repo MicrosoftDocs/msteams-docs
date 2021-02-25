@@ -34,6 +34,12 @@ Yes, this is fine and encouraged. This helps the app feel native.
 
 No, you should provide your own padding/margins to the left and right of all app content to ensure it doesn't touch the edges of your UI. You may also need to add margins at the top of your tab.
 
+> What's the size of the margins Teams previously applied?
+
+* Left and right: 20px
+* Top: 16px
+* Bottom: 0px
+
 ## Important notes
 
 * All tabs have their margins removed: personal tabs, (group)chat tabs, meeting tabs and channel tabs.
