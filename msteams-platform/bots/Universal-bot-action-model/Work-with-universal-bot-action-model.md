@@ -6,14 +6,14 @@ ms.topic: conceptual
 
 # Work with universal bot action model
 
-A universal bot action model is implemented using the existing bot builder SDK. You can reuse your code from bot builder SDK that is specific to `adaptiveCard/action` invoke activities for your bots to be universal. This document covers the following:
+A universal bot action model provides a way to generalize bots and the Bot Framework to implement adaptive card-based scenarios for both Teams and Outlook. This document covers the following:
 
 * [Schema used for universal bot action model](#schema-for-universal-bot-action-model)
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
 * [Backward compatibility](#backward-compatibility)
 
-**To work with universal bot action model and implement the `Action.Execute` command**
+**To work with universal bot action model and implement `Action.Execute`**
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
 2. Add the `originator` field for cards to surface on Outlook.
@@ -35,16 +35,16 @@ The universal bot action model is introduced in the adaptive cards schema versio
 > [!NOTE]
 > Setting the `version` property to 1.4 makes your adaptive card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the universal bot action model.
 
-If you set the card version to less than 1.4 and use either or both, `refresh` property and the `Action.Execute` command the following happens:
+If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute` the following happens:
 
 | Client | Behavior |
 | :-- | :-- |
 | Outlook | Your card stops working. Card is not refreshed and `Action.Execute` does not render or your card is rejected. |
-| Teams | Your card stops working. Card is not refreshed and the `Action.Execute` action does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define your `Action.Execute` actions with an `Action.Submit` action in the fallback property. |
+| Teams | Your card stops working. Card is not refreshed and `Action.Execute` does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define `Action.Execute` with an `Action.Submit` in the fallback property. |
 
 For more information on how to support older clients, see [backward compatibility](#backward-compatibility).
 
-### Action.Execute command
+### Action.Execute
 
 When authoring adaptive cards, replace `Action.Submit` and `Action.Http` with `Action.Execute`. The schema for `Action.Execute` is similar to that of `Action.Submit`. See the following JSON example:
 
@@ -174,7 +174,7 @@ The refresh model includes the following properties:
 > [!IMPORTANT]
 > When developing Outlook actionable message scenarios, the adaptive card's `originator` property must be specified. `originator` is a Globally Unique Identifier (GUID) generated at the time a bot subscribes to the Outlook channel. It is used by Outlook to validate that the adaptive card was sent by an authorized bot. The adaptive card is not rendered in Outlook if `originator` is absent. `originator` is ignored in Teams.
 
-Next step is to use the `adaptiveCard/action` invoke activity to understand what request must be made after the `Action.Execute` command is executed.
+Next step is to use the `adaptiveCard/action` invoke activity to understand what request must be made after `Action.Execute` is executed.
 
 ## `adaptiveCard/action` invoke activity
 
@@ -246,7 +246,7 @@ The universal bot action model allows you to set properties that enable backward
 
 ### Outlook
 
-Actionable messages in Outlook can either use the existing model or the universal bot action model. If you are using the existing model, the actions are encoded as explicit HTTP calls and use the `Action.Http` command to implement the adaptive card scenarios. If you use the universal bot action model, the `Action.Execute` command must be implemented as bots and subscribe to Outlook actionable messages channel.
+Actionable messages in Outlook can either use the existing model or the universal bot action model. If you are using the existing model, the actions are encoded as explicit HTTP calls and use the `Action.Http` command to implement the adaptive card scenarios. If you use the universal bot action model, `Action.Execute` must be implemented as bots and subscribe to Outlook actionable messages channel.
 
 ### Teams
 
@@ -257,8 +257,8 @@ To ensure backward compatibility of your adaptive cards with older versions of T
 
 > [!NOTE]
 > * If the `version` property of the card is set to 1.2, `Action.Execute` is defined with an `Action.Submit` as its fallback. 
-> * When rendered in a Teams client that supports adaptive cards 1.4, the `Action.Execute` command works as expected.
-> * In Teams clients that do not support adaptive cards 1.4, the `Action.Submit` is rendered instead of `Action.Execute`.
+> * When rendered in a Teams client that supports adaptive cards 1.4, `Action.Execute` works as expected.
+> * In Teams clients that do not support adaptive cards 1.4, `Action.Submit` is rendered instead of `Action.Execute`.
 
 ### Sample JSON
 
