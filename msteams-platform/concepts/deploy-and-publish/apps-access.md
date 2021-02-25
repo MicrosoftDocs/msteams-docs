@@ -1,6 +1,6 @@
 ---
 title: Access your uploaded app
-description: Describes the steps to access your uploaded app
+description: Describes how to access your uploaded app
 ms author: laujan 
 keywords: access upload apps tabs connectors bots
 ---
