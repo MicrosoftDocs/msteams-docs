@@ -138,7 +138,7 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
-Following these best practices can help ensure a quality user experience. If want to list your app in the Teams store and AppSource, make sure your design also adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
+These recommendations can help ensure a high-quality app experience. While there may be some overlap, you should also make sure your app adheres to the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
 
 ### Collaboration
 
@@ -223,10 +223,3 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to the Teams store, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check store validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
