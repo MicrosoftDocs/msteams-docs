@@ -7,11 +7,15 @@ ms.author: lajanuar
 
 # Integrate QR or barcode scanner capability 
 
-Barcode is a method of representing data in a visual and machine-readable form. The barcode contains information about a product, such as a type, size, manufacturer, and Country of origin in the form of bars and spaces. The code is read using the optical scanner on your native device camera. For a richer collaborative experience, you can integrate the QR or barcode scanner capability provided in the Teams platform with your Teams app. This document guides you on how to integrate the capability.  
+This document guides you on how to integrate the QR or barcode scanner capability. 
+
+Barcode is a method of representing data in a visual and machine-readable form. The barcode contains information about a product, such as a type, size, manufacturer, and Country of origin in the form of bars and spaces. The code is read using the optical scanner on your native device camera. For a richer collaborative experience, you can integrate the QR or barcode scanner capability provided in the Teams platform with your Teams app.   
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the `scanBarCode` API to integrate the scanner capability within your app. 
 
 ## Advantage of integrating QR or barcode scanner capability
+
+Following are the advantages of integration of QR or barcode scanner capabilities: 
 
 * The integration allows web app developers on Teams platform to leverage QR or barcode scanning functionality with Teams JavaScript client SDK.
 * With this feature, the user only needs to align a QR or barcode within a frame at the center of the scanner UI and the code gets scanned automatically. The stored data is shared back with the calling web app. This avoids the inconvenience and human-errors of entering lengthy product codes or other relevant information manually.
