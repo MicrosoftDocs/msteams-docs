@@ -154,15 +154,17 @@ The app descriptions in your manifest and store must be the same and follow thes
 
 Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
-## 5.0 Tab design
+## 5.0 Tabs
 
-To ensure app quality, see the more comprehensive [tab design guidelines](~/tabs/design/tabs.md).
+If your app includes a tab, following these guidelines can increase the likelihood your app will pass submission.
+
+For information on creating a high-quality experience, see the [tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
 * Tab setup must not dead-end the new user. A way forward message should be provided to complete the workflow.
 * Authentication should happen during tab setup and not after.
-* Tabs must have a Help tab with instructions on how to do things such as sign up, configure, and use your app.
+* Tabs must have a help tab with instructions on how to use and configure your app.
 
 ### 5.2 Views
 
@@ -189,9 +191,11 @@ To ensure app quality, see the more comprehensive [tab design guidelines](~/tabs
 * Include a Settings tab.
 * Tabs must use Teams interaction behaviors (in-page navigation, position and use of dialogs, information hierarchies, etc.) whenever possible.
 
-## 6.0 Bot design
+## 6.0 Bots
 
-To ensure app quality, see the more comprehensive [bot design guidelines](~/bots/design/bots.md).
+If your app includes a bot, following these guidelines can increase the likelihood your app will pass submission.
+
+For information on creating a high-quality experience, see the [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
@@ -225,9 +229,11 @@ See the following resources for more information:
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
-## 7.0 Messaging extension design
+## 7.0 Messaging extensions
 
-To ensure app quality, see the more comprehensive [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+If your app includes a messaging extension, following these guidelines can increase the likelihood your app will pass submission.
+
+For information on creating a high-quality experience, see the [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### 7.1 Action commands
 
@@ -248,15 +254,17 @@ Search-based messaging extensions must provide text that helps users effectively
 
 For more information, see the [design best practices for search commands](~/messaging-extensions/design/messaging-extension-design.md#searches).
 
-## 8.0 Task module design
+## 8.0 Task modules
 
 A task module must include an icon and short name of the app in which it is associated.
 
-To ensure app quality, see the more comprehensive [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
+For information on creating a high-quality experience, see the [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
-## 9.0 Meeting extension design
+## 9.0 Meeting extensions
 
-To ensure app quality, see the more comprehensive [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+If your app includes a meeting extension, following these guidelines can increase the likelihood your app will pass submission.
+
+For information on creating a high-quality experience, see the [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### 9.1 Pre- and post-meeting experience
 
@@ -286,9 +294,9 @@ To ensure app quality, see the more comprehensive [meeting extension design guid
 * Must align with the center of the meeting stage.
 * Should be dismissed once a user selects a button or performs an action.
 
-## 10.0 Notification design
+## 10.0 Notifications
 
-Follow these guidelines if your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications).
+If your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), following these guidelines can increase the likelihood your app will pass submission.
 
 ### 10.1 General
 
