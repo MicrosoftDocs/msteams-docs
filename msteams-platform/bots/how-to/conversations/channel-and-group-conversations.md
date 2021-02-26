@@ -269,4 +269,5 @@ There are also additional events that your bot can subscribe and respond to. For
 
 ## Next step
 
-* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [!div class="nextstepaction"]
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

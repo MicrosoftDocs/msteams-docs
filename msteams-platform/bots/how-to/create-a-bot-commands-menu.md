@@ -195,3 +195,8 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)

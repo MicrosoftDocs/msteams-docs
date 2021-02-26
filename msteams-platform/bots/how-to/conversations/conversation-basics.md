@@ -408,5 +408,8 @@ Following are the code samples for Teams conversation bot:
 
 ## Next steps
 
-* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [!div class="nextstepaction"]
+> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+
+> [!div class="nextstepaction"]
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
