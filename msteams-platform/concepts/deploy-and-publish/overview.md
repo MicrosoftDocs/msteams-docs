@@ -4,64 +4,68 @@ description: Describes the three options for distributing your app
 ms.topic: conceptual
 keywords: teams publish store office distribute AppSource sideload upload app
 ---
-# Distribute your Microsoft Teams app
+# Distribute your app
+This document guides you on the methods you can use to distribute your app to different organizations, such as Enterprise and US Government. 
 
-There are three options for distributing the app after it is created:
+For Enterprise organizations you can directly upload your app or publish it your organization's app catalog, or publish it through the AppSource. For Government organizations that are members of the Government Cloud Community (GCC), the GCC tenant administrator decides if an app must be uploaded and published.
 
-1. [Upload your app directly](#upload-your-app-directly).
-2. [Publish your app to your organization's app catalog](#publish-to-your-organizations-app-catalog).
-3. [Publish your app through AppSource](#publish-to-appsource).
+## Distribute apps to an Enterprise organization
+In an Enterprise organization you can distribute the app using any one of the following methods:
 
-## Enterprise organizations
-
-You can test and distribute your custom app within Teams App Store.
+* If only you want to use the app, [upload your app directly](#upload-your-app-directly).
+* If you want to distribute your app broadly, Teams provides an in-app gallery for users to find or discover high-quality Teams apps. For the solution to appear in the gallery, you must either:
+    * [Publish to your organization's app catalog](#publish-to-your-organizations-app-catalog).<br/>
+    Or
+    * [Publish to AppSource](#publish-to-appsource).
 
 ### Upload your app directly
 
-This is the easiest way to use and test your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload or sideload](./apps-upload.md) the app and start using it. However, if you want to share the app with others, you must send your app package and ask them to upload it independently.
-
-If you want to distribute your app broadly, Teams provides an in-app gallery for users to find or discover high-quality Teams apps. For the solution to appear in the gallery, you must [publish to your organization's app catalog](#publish-to-your-organizations-app-catalog) or [publish to AppSource](./appsource/publish.md).
+This is the easiest way to use and test your app. If you are the team owner and [uploading custom apps is enabled](/microsoftteams/admin-settings), you can [directly upload or sideload](apps-upload.md) the app and start using it. However, if you want to share the app with others, you must send your app package and ask them to upload it independently.
 
 ### Publish to your organization's app catalog
 
-Your organization's app catalog contains apps that are unique to your organization and is completely under your organization's control. You can find more information in the article [Publish apps to your organization's app catalog](/microsoftteams/tenant-apps-catalog-teams). This feature can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
+Your organization's app catalog contains apps that are unique to your organization and is completely under your organization's control. For more information on publishing the app to your organization's app catalog, see [manage your apps in the Microsoft Teams admin center](/microsoftteams/tenant-apps-catalog-teams). 
+> [!NOTE]
+> This feature can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
 
 ### Publish to AppSource
 
-AppSource, formerly known as Office Store provides a convenient location for you to distribute your Microsoft Teams app and other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. Follow our guidelines to [submit your app to AppSource](./appsource/publish.md).
+AppSource provides a convenient location from which you can distribute your apps and other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. For more information on how to publish your app to AppSource, see [submit your app to AppSource](../appsource/publish.md).
 
-## Government Community Cloud (GCC) organizations
+## Distribute to Government Community Cloud (GCC) organizations
 
-GCC implements strict compliance measures to the US Government's requirements. You can choose where to upload your app package as a GCC administrator.
+A government organization that fulfills specific compliance requirements is a member of the GCC. The decision to upload an app or to publish an app is taken by the GCC tenant administrator. To upload the apps to your organization environment or publish the apps to your organization app catalog follow the steps in [uploading your app directly to Teams](#upload-your-app-directly-to-teams).
 
-### Upload your custom app directly to Teams
+### Upload your app directly to Teams
+Microsoft does not own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. In addition, if the app solution includes a bot or message extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
 
- As a GCC tenant administrator, you can choose whether to upload a custom app to your tenant environment or to publish it to your tenant app catalog. Microsoft does not own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. In addition, if the app solution includes a bot or message extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
-
-Follow the steps to upload your app to GCC environment:
+**To upload an app to your organization's environment**
 
 1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
-1. Navigate to the **Configure MSTeams** page.
-1. Under **Messaging** select **Microsoft Teams for Government Customers**.
-1. In the lower left corner of the page, select **Save**.
-
->[!IMPORTANT]
-> You cannot use the Teams commercial configuration to upload or sideload your custom app to a GCC environment. You must select **Microsoft Teams for Government Customers** for a GCC compliant configuration.
-
+2. Navigate to the **Configure MSTeams** page.
+3. Under **Messaging**, select *Microsoft Teams for Government*.
 ![Teams messaging configuration page](../../assets/images/gcc-configure.png)
+   > [!IMPORTANT]
+   > You cannot use the *Microsoft Teams Commercial* configuration to upload or sideload your custom app to a GCC environment.
+4. In the lower left corner of the page, select **Save**.
 
 > [!NOTE]
->
 > * The uploading instructions for the GCC environment also apply to Teams custom apps. </br>
 > * Only Microsoft compliant apps are permitted in the GCC environment and in Teams.
 > * Third-party apps are disabled at the tenant level and are managed through your organization's [app permission policies](/microsoftteams/teams-app-permission-policies). You must review all third-party apps to ensure they align with your organization's policies and procedures.
 
 > [!TIP]
->
-> Microsoft 365 developer partners provide security, data handling, and compliance details for their third-party Teams apps through the [Microsoft 365 App Certification Program](/microsoft-365-app-certification/overview). See also [Microsoft Teams App Certification](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification).
-</br></br>
+> Microsoft 365 developer partners provide security, data handling, and compliance details for their third-party Teams apps through the [Microsoft 365 App Certification Program](/microsoft-365-app-certification/overview). For more information on Teams app certification, see [Microsoft Teams app certification](/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/application-certification).
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Maintain published app](../appsource/post-publish/overview.md)
+
+> [!div class="nextstepaction"]
+> [Publish your apps](apps-publish-overview.md)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Maintain published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [Create your app package](../build-and-test/apps-package.md)
