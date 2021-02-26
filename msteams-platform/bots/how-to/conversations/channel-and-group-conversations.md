@@ -5,40 +5,46 @@ description: How to send, receive, and handle messages for a bot in a channel or
 ms.topic: overview
 ms.author: anclear
 ---
-# Channel and group chat conversations with a Microsoft Teams bot
+# Channel and group chat conversations with a bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-By adding the `teams` or `groupchat` scope to your bot, it can be available to be installed in a team or group chat. This allows all members of the conversation to interact with your bot. Once installed, it will also have access to metadata about the conversation like the list of conversation members, and when installed in a team details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
 
-Bots in a group or channel only receive messages when they are mentioned (@botname), they do not receive any other messages sent to the conversation.
+Bots in a group or channel only receive messages when they are mentioned `@botname`. They do not receive any other messages sent to the conversation.
 
 > [!NOTE]
-> The bot must be @mentioned directly. Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
+> The bot must be `@mentioned` directly. Your bot will not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
+
+This document covers the following:
+* Design guidelines
+* Create new conversation threads
+* Work with mentions
+* Send a message on installation
 
 ## Design guidelines
 
-See how to [design bot conversations in channels and chats](~/bots/design/bots.md).
+Unlike personal chats, in group chats and channels, your bot must provide a quick introduction of itself. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
-## Creating new conversation threads
+## Create new conversation threads
 
-When your bot is installed in a team, it can sometimes be necessary to create a new conversation thread rather than replying to an existing one. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than replying to an existing one. At times it is difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md). 
 
-## Working with mentions
+## Work with mentions
 
-Every message to your bot from a group or channel will contain an @mention with its own name in the message text, so you'll need to ensure your message parsing handles that. Your bot can also retrieve other users mentioned in a message, and add mentions to any messages it sends.
+Every message to your bot from a group or channel will contain an @mention with its own name in the message text. So ensure that your message parsing handles that. Your bot can also retrieve other users mentioned in a message, and add mentions to any messages it sends.
 
-### Stripping mentions from message text
+You must also strip out the @mentions from the text of the message your bot receives.
 
-You may find it necessary to strip out the @mentions from the text of the message your bot receives.
+### Retrieve mentions
 
-### Retrieving mentions
+Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message will also include the mention like `<at>@John Smith<at>`. However, you should not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Instead, use the `entities` object.
 
-Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and, in most cases, the name of user mentioned. The text of the message will also include the mention like `<at>@John Smith<at>`. However, you should not rely on the text in the message to retrieve any information about the user; it is possible for the person sending the message to alter it. Instead, use the `entities` object.
+You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.
 
-You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK which returns an array of `Mention` objects.
+The following code shows an example of retrieving mentions:
 
-# [C#/.NET](#tab/dotnet)
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -56,7 +62,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -129,18 +135,20 @@ def get_mentions(activity: Activity) -> List[Mention]:
 
 * * *
 
-### Adding mentions to your messages
+### Add mentions to your messages
 
-Your bot can mention other users in messages posted into channels. To do this, your message must do the following:
+Your bot can mention other users in messages posted into channels.
 
-The `Mention` object has two properties that you will need to set:
+The `Mention` object has two properties that you will need to set using the following:
 
-* Include <at>@username</at> in the message text
-* Include the mention object inside the entities collection
+* Include <at>@username</at> in the message text.
+* Include the mention object inside the entities collection.
 
-The Bot Framework SDK provides helper methods and objects to make constructing the mention easier.
+The Bot Framework SDK provides helper methods and objects to create mentions.
 
-# [C#/.NET](#tab/dotnet)
+The following code shows an example of adding mentions to your messages:
+
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -158,7 +166,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -179,7 +187,7 @@ this.onMessage(async (turnContext, next) => {
 
 # [JSON](#tab/json)
 
-The `text` field in the object in the `entities` array must *exactly* match a portion of the message `text` field. If it does not, the mention will be ignored.
+The `text` field in the object in the `entities` array must match a portion of the message `text` field. If it does not, the mention will be ignored.
 
 ```json
 {
@@ -238,23 +246,27 @@ async def _mention_activity(self, turn_context: TurnContext):
 
 * * *
 
-## Sending a message on installation
+## Send a message on installation
 
-When your bot is first added to the group or team, it may be useful to send a message introducing it. The message should provide a brief description of the bot's features, and how to use them. You'll want to subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  Since the event is sent when any new team member is added, you need to check to determine if the new member added is the bot. See [Sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md) for more details.
+When your bot is first added to the group or team, send a message to introduce it. The message should provide a brief description of the bot's features, and how to use them. You must subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
-You might also want to send a personal message to each member of the team when the bot is added. To do this, you could get the team roster and send each user a direct message.
+Send a personal message to each team member when the bot is added. To do this, get the team roster and send each user a direct message.
 
-It is not recommended to send a message in the following situations:
+Do not send a message in the following situations:
 
-* The team is large (obviously subjective, but for example larger than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel (versus being first added to a team)
-* A group or channel is renamed
-* A team member is added to a group or channel
+* The team is large, for example larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* Your bot is first mentioned in a group or channel instead of being first added to a team.
+* A group or channel is renamed.
+* A team member is added to a group or channel.
 
 ## Learn more
 
-Your bot has access to additional information about the group chat or team it is installed in. See [get teams context](~/bots/how-to/get-teams-context.md) for additional APIs available for your bot.
+Your bot can get additional information about the group chat or team it is installed in. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
 
-There are also additional events that your bot can subscribe and respond to. See [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md) to learn how.
+There are also additional events that your bot can subscribe and respond to. For more information, see [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## Next step
+
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

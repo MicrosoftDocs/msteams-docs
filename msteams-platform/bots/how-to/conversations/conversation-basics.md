@@ -49,7 +49,7 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
-The following code shows an example:
+The following code shows an example of receiving a message:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -136,7 +136,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when someone is added to a conversation:
 
-# [C#/.NET](#tab/dotnet)
+The following code shows an example of sending a message:
+
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -146,7 +148,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
 ```typescript
 
@@ -244,6 +246,8 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 
 ### Example channelData object (channelCreated event)
 
+The following code shows an example of channelData object:
+
 ```json
 "channelData": {
     "eventType": "channelCreated",
@@ -279,7 +283,9 @@ You can also add notifications to your message using the `Notification.Alert` pr
 
 Notifications alert users about new tasks, mentions, and comments. These alerts are related to what they are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
 
-# [C#/.NET](#tab/dotnet)
+The following code shows an example of adding notifications to your message:
+
+# [C# or .NET](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -291,7 +297,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -363,7 +369,7 @@ Specify the height and width of each image by using XML. In markdown, the image 
 
 ## Adaptive cards
 
-Use the following code to send a simple adaptive card:
+The following code shows an example of sending a simple adaptive card:
 
 ```json
 {
