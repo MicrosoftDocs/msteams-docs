@@ -7,7 +7,7 @@ keywords: access upload apps tabs connectors bots
 
 # Access the uploaded app
 
-You can access the uploaded tab, bot, messaging extension, and connectors, after the app package is uploaded successfully using Teams Store.
+By accessing the app you can test the app experience. You can access the uploaded tab, bot, messaging extension, and connectors, after the app package is uploaded successfully.
 
 ## Access your uploaded configurable tab
 
@@ -27,7 +27,7 @@ If the app contains tabs, users can pin them to any conversation or team channel
 
 When you add a bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members can see a post in the **General** channel indicating that the bot has been added to the team.
 
-For a teams-enabled bot, you can start by invoking your bot by @mentioning the name of the bot, which must autocomplete.
+For a Microsoft Teams bot, you can start the conversation by invoking your bot. You must @mention the name of the bot which must autocomplete.
 
 To test direct chats with your bot, you can either access it through the App home, @mention it in a channel, or search for it in the **New Chat** window.
 

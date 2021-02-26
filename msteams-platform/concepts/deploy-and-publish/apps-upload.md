@@ -6,7 +6,7 @@ keywords: teams apps Upload
 ---
 # Upload an app package to Microsoft Teams
 
-You must upload your app package and test the app experience within Microsoft Teams.
+You can upload your app package and test the app experience within Microsoft Teams.
 Uploading the app adds the app to the team you select. You and your team members can interact with the app easily.
 
 > [!NOTE]
@@ -26,6 +26,8 @@ There are two ways to upload your app to Teams:
 
 ## Upload your package into a team or conversation using the Store
 
+Follow the steps to upload your package using Store:
+
 1. In the lower left corner of Teams, choose the **Store** icon. On the **Store** page, choose **Upload a custom app**.
 
   ![View team](../../assets/images/store-upload-a-custom-app2.png)
@@ -42,6 +44,8 @@ The uploaded package is available for use in the team or conversation specified 
 ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
 ## Upload your package into a team using the Apps tab
+
+Follow the steps to upload your package using Apps tab:
 
 1. In the target team, choose **More options** (**&#8943;**) and select **Manage team**.
 

@@ -1,5 +1,5 @@
 ---
-title: Overview of publish your apps
+title: Overview of publish your app
 description: This is an overview of how to create and publish your custom app.
 ms.topic: conceptual 
 keywords: teams apps Upload
