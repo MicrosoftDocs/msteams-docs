@@ -9,7 +9,7 @@ keywords: teams apps Upload
 
 This topic helps you to create your app package and publish it to both App Store and AppSource. Each article takes you through detailed information on creating the app package, uploading the app, accessing the package, and publishing it to the App Store or AppSource.
 
-## Topics to cover
+## Topics covered
 
 Each article helps you to learn the following:
 
@@ -25,7 +25,7 @@ Each article helps you to learn the following:
 
 * [**Publish to AppSource**](~/concepts/deploy-and-publish/appsource/publish.md): This article helps you to publish your app to AppSource. It also provides a pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are available.
 
-## Next steps
+## See also
 
 > [!div class="nextstepaction"]
 > [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
