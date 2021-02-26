@@ -12,9 +12,9 @@ ms.author: anclear
 
 ## Update messages
 
-Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
+Your bot can dynamically update messages after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
+The new message need not match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -51,7 +51,7 @@ update_result = await context.update_activity(new_activity)
 # [REST API](#tab/rest)
 
 >[!NOTE]
->You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you'll need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
+>You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
 
 To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original POST call.
 
@@ -68,9 +68,10 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 ## Update cards
 
-In order to update existing card on button click you can use replyToId of incoming activity.
+To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
 # [C#/.NET](#tab/dotnet)
+
 To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
@@ -79,6 +80,7 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
 # [TypeScript/Node.js](#tab/typescript)
+
 To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 ```typescript
 const message = MessageFactory.attachment(card);
@@ -87,6 +89,7 @@ await context.updateActivity(message);
 ```
 
 # [Python](#tab/python)
+
 To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
 
 ```python
