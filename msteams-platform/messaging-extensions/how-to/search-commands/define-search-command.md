@@ -65,7 +65,7 @@ You also need to add the details of the search parameter, which defines the text
 
 #### App manifest example
 
-Following is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest. For the full app manifest schema see[App manifest schema](~/resources/schema/manifest-schema.md).
+Following is an example of a `composeExtensions` object defining a search command. It is an example of the simple manifest. For the complete  app manifest schema, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 {
@@ -94,6 +94,7 @@ Following is an example of a `composeExtensions` object defining a search comman
 
 ## Next steps
 
-Now that you've added your search command, you'll need to [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+After adding the search command, you must [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [!div class="nextstepaction"]
+> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

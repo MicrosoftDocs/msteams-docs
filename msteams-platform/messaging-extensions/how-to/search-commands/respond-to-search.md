@@ -9,12 +9,12 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Your web service will receive a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered:
+Your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* If `initialRun` is set to true in your app manifest, you'll receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
+* If `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
 
-The request parameters itself are found in the `value` object in the request, which includes the following properties:
+The request parameters are found in the `value` object in the request, which includes the following properties:
 
 | Property name | Purpose |
 |---|---|
@@ -70,9 +70,9 @@ The JSON below is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has 5 seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
-Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application/json object with the following body:
+Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or json object with the following body:
 
 |Property name|Purpose|
 |---|---|
@@ -85,25 +85,25 @@ Your service should respond with the results matching the user query. The respon
 
 ### Response card types and previews
 
-We support the following attachment types:
+Teams supports the following attachment types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
+See [what are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
 
-To learn how to use the thumbnail and hero card types, see [Add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
+To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional documentation regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For additional information regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list simply by its preview property. This is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card will fail and nothing will be displayed.
+You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
 
 ### Response example
 
@@ -304,9 +304,9 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This can be useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
 
-The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as in the object below.
+The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 
 ```json
 {
@@ -331,13 +331,18 @@ The default query has the same structure as any regular user query, with the `na
 
 ## Next Steps
 
-Add authentication and/or configuration
+Add authentication and configuration
 
-* [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
-* [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
+> [!div class="nextstepaction"]
+> [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+
+> [!div class="nextstepaction"]
+> [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
 
 Deploy configuration
 
-* [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [!div class="nextstepaction"]
+> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
