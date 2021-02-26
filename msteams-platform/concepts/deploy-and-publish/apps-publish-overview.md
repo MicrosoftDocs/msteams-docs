@@ -1,41 +1,39 @@
 ---
 title: Overview of publish your app
-description: This is an overview of how to create and publish your custom app.
+description: This is an overview of how to package and publish your app.
 ms.topic: conceptual 
 keywords: teams apps Upload
 ---
 
-# Publish your app
+# Publish your apps
+This document provides an overview of the steps you must take to publish your app successfully to an App Store or AppSource, formerly Office Store.
 
-This topic helps you to create your app package and publish it to both App Store and AppSource. Each article takes you through detailed information on creating the app package, uploading the app, accessing the package, and publishing it to the App Store or AppSource.
+Apps that you develop need to be published to your organization for the users to use them. There is a complete process to publish your apps that includes, distribution of apps, packaging and uploading of apps, and finally publishing of apps.
 
-## Topics to cover
+## Distribute your apps
+You can distribute your apps to an Enterprise organization, for example, a corporate or US Government organizations, such as federal, state, territorial, and tribal bodies. There are three methods to distribute your app. When distributing the apps, you must ensure that you adhere to the compliance policies of the selected organization. For more information, see [distribute your app](overview.md).
 
-Each article helps you to learn the following:
+## Create your app package
+After selecting the method to distribute your app, you need to create an app package. An app package helps you upload all core components of your app to the App Store or AppSource at one go. For more information, see [create your app package](../build-and-test/apps-package.md).
 
-* [**Create your app package**](~/concepts/deploy-and-publish/apps-package.md): Information on creating the app package and configuring your manifest with App Studio is given. Guidance on **App icons** with **Color icon** and **Outline icon** are provided.
+## Upload your app package
+You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app](apps-upload.md).
 
-* [**Upload your app for a team**](~/concepts/deploy-and-publish/apps-upload.md): You can learn to upload your app within Teams and test your app experience. The article gives you steps to upload your app package using the Store icon and the Apps tab. Information on removing and updating your app are also provided.
+## Access the components of your app package 
+After uploading your app package, access it and test the components before publishing to your organization. For more information, see [access your app package components](apps-access.md).
 
-* [**Access your uploaded package**](~/concepts/deploy-and-publish/apps-access.md): After uploading the app package, you can test it by accessing the app. This article explains how to access your tab, bot, connector, and messaging extension.
+ ## Publish your app to your organization
+The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
-* [**Distribute your app**](~/concepts/deploy-and-publish/overview.md): This article gives you the options to distribute your apps. It provides details on how you can directly upload the package to your organization's app catalog. It also gives the uploading instructions for the Government Community Cloud (GCC) environment.
 
-* [**Publish to the organization**](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json#publish-a-custom-app-to-your-organizations-app-store): You can use the **Manage apps** page to publish apps that are built for your organization. Information on apps submission approval and updating the app after it is uploaded are available.
-
-* [**Publish to AppSource**](~/concepts/deploy-and-publish/appsource/publish.md): This article helps you to publish your app to AppSource. It also provides a pre-submission checklist and app manifest checklist. Examples of failed cases and how to maintain your app after it is published are available.
-
-## Next steps
+## See also
 
 > [!div class="nextstepaction"]
 > [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 
 > [!div class="nextstepaction"]
-> [Build a great app details page](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md)
-
-> [!div class="nextstepaction"]
 > [App manifest checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md)
 
+## Next step
 > [!div class="nextstepaction"]
-> [Application Certification program](~/concepts/deploy-and-publish/appsource/post-publish/application-certification.md)
-
+> [Distribute your app](overview.md)
