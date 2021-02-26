@@ -20,7 +20,6 @@ Teams’ meeting app extensibility is based on the following three concepts:
 ✔ **Participant roles in a meeting**: Includes these participant roles, meeting organizer, presenter, or attendee.  
 ✔ **User types in a meeting**: Includes these user types, in-tenant, guest, federated, or anonymous Teams user.
 
-<!-- markdownlint-disable MD001 -->
 ## Meeting lifecycle
 
 With meeting extensibilities, you can integrate tabs, bots and messaging extensions in each stage of the meeting lifecycle. There are three stages of the meeting lifecycle:
