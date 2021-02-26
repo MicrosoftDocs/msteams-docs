@@ -9,7 +9,7 @@ keywords: teams apps Upload
 
 This topic helps you to create your app package and publish it to both App Store and AppSource. Each article takes you through detailed information on creating the app package, uploading the app, accessing the package, and publishing it to the App Store or AppSource.
 
-## What do you learn
+## Topics to cover
 
 Each article helps you to learn the following:
 
