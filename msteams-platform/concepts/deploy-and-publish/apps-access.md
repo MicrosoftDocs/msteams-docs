@@ -7,7 +7,7 @@ keywords: access upload apps tabs connectors bots
 
 # Access the uploaded app
 
-By accessing the app you can test the app experience. You can access the uploaded tab, bot, messaging extension, and connectors, after the app package is uploaded successfully.
+By accessing the uploaded app you can test the app experience. You can access the tab, bot, messaging extension, and connectors, after the app package is uploaded successfully.
 
 ## Access your uploaded configurable tab
 
@@ -29,7 +29,7 @@ When you add a bot to a team, it must be usable by anyone on that team, inside a
 
 For a Microsoft Teams bot, you can start the conversation by invoking your bot. You must @mention the name of the bot which must autocomplete.
 
-To test direct chats with your bot, you can either access it through the App home, @mention it in a channel, or search for it in the **New Chat** window.
+To test direct chats with your bot, you can either access it through the App home or @mention the bot name in a channel. You can also search for it in the **New Chat** window.
 
 To add your bot to a conversation, you can @mention the bot name in a conversation or search for it in the **New Chat** window.
 

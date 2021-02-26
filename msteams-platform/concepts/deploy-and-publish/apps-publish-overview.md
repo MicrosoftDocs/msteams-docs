@@ -25,7 +25,6 @@ After uploading your app package, access it and test the components before publi
  ## Publish your app to your organization
 The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
-
 ## See also
 
 > [!div class="nextstepaction"]
