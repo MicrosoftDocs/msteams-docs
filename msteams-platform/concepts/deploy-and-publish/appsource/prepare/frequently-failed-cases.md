@@ -7,42 +7,42 @@ ms.topic: reference
 ---
 # Microsoft Teams store and AppSource validation guidelines
 
-Following these guidelines increases the chances your app will pass Microsoft Teams store (and AppSource) submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) but are specific to Teams apps. These guidelines will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
-
-If your app doesn't pass review according to these guidelines and the commercial marketplace certification policies, the Microsoft validation team will contact you with a report on why your submission failed. The team can provide white-glove service to help your app meet passing criteria.
+Reviewing these guidelines can help you avoid issues that frequently cause apps to fail Microsoft Teams store and AppSource submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
 > [!TIP]
-> Some of these guidelines may not be applicable to you. For example, if your app doesn't have a bot, you can ignore those guidelines.
+> Some guidelines may not be applicable to you. For example, if your app doesn't include a bot, you can ignore that section.
 
 ## 1.0 Value proposition
 
-### 1.1 App title
+### 1.1 App name
 
-An app's name plays a critical role in how users discover it in the AppSource app store. Your app's short name is displayed on the details page. App title must have relevant terms, must not copy an existing app in the store, must not use "Teams" or Microsoft product names to falsely indicate co-branding or co-selling, and meet all the guidelines for app names. When referring to Microsoft trademarks and the names of Microsoft software, products, and services, follow the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
+An app's name plays a critical role in how users discover it in the store. Remember the following about app names:
+
+* The name must include terms relevant to your users.
+* It must not copy the name of an existing app in the store.
+* It must not use **Teams** or other Microsoft product names that could falsely indicate co-branding or co-selling. (For more information about referencing Microsoft software, products, and services, see the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
 
 ### 1.2 Suitable for workplace consumption
 
-Your app can facilitate group collaboration, improve an individual's productivity, or both.
+Your app can facilitate group collaboration, improve an individual's productivity, or both. This includes apps intended for team bonding and socializing. Such apps should not require intense time investment or perceptively impact productivity. These apps must be collaborative and designed for multiple participants. 
 
-Apps catering to team bonding and socializing needs of Teams users may be published. Such apps should not require intense time investment or perceptively impact productivity. These apps must be collaborative and designed for multiple participants. All content should be suitable for general workplace consumption.
+All content should be suitable for general workplace consumption and must abide by all restrictions listed in the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content). Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
-Apps must abide by all restrictions in [100.10 Inappropriate Content](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content) of the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
+### 1.3 Similar platforms and services
 
-### 1.3 Other platforms and services
-
-Teams apps must focus on the Teams experience and must not include names, icons, or imagery of other similar chat-based collaborative platforms or services unless the apps provide specific interoperability.
+Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services unless the apps provide specific interoperability.
 
 ## 2.0 Security
 
-### 2.1 Publisher attestation
+### 2.1 Publisher Attestation
 
-The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk using apps by evaluating security, data handling, and compliance information. Apps that participate in the program get badges that display in Teams store and AppSource listings, increasing confidence in the security and compliance measures in your app.
+The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app.
 
-Teams apps must complete Publisher Attestation in Partner Center. See the [Microsoft 365 App Compliance Program documentation](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation) to learn how to complete the Publisher Attestation workflow.
+Teams app developers must complete the Publisher Attestation portion of the program. For more information, see the [Microsoft 365 App Compliance Program documentation](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation).
 
 ### 2.2 Financial information
 
-Your app must not ask users to make a payment directly within the Teams interface. Financial instrument details must not be transmitted through the user to the bot interface. Links to secure payment services may only be transmitted to users if disclosure has been made in the app’s terms of use, privacy policy, or any profile page or website before the user agrees to use the bot.
+Your app must not ask users to make payments within the Teams interface. Financial instrument details must not be transmitted through the user to the bot interface. Links to secure payment services may only be transmitted to users if disclosure has been made in the app’s terms of use, privacy policy, or any profile page or website before the user agrees to use the bot.
 
 ### 2.3 Bot Framework
 
@@ -319,6 +319,10 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 
 * The right pane experience in the feed must be self-contained and not break the feed experience.
 * On click, user must be directed to the relevant content within the Teams app and should not be taken out of Teams experience.
+
+## Failed submissions
+
+If your app doesn't pass review, the Microsoft validation team contacts you with a report on why your submission failed. The team can provide white-glove service to help your app meet passing criteria.
 
 ## Next step
 
