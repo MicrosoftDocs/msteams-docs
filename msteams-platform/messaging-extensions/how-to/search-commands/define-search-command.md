@@ -32,15 +32,15 @@ To add the search command to your app manifest, you must add a new `composeExten
 Follow the succeeding steps to create a command after [creating a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
-2. If you have already created your app package in App Studio, choose it from the list. If not, you can import an existing app package.
-3. Select the **Add** button in the Command section.
-4. Choose **Allow users to query your service for information and insert that into a message**.
-5. Add a **Command ID** and a **Title**.
-6. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
-7. Add your search parameter.
-8. Select **Save**.
+1. If you have already created your app package in App Studio, choose it from the list. If not, you can import an existing app package.
+1. Select the **Add** button in the Command section.
+1. Choose **Allow users to query your service for information and insert that into a message**.
+1. Add a **Command ID** and a **Title**.
+1. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
+1. Add your search parameter.
+1. Select **Save**.
 
-### Manually create a command
+### Create a command manually 
 
 To manually add your messaging extension search command to your app manifest, you must add the following parameters to your `composeExtension.commands` array of objects.
 
@@ -65,11 +65,7 @@ You must add the details of the search parameter, which defines the text visible
 
 #### App manifest example
 
-<<<<<<< Updated upstream
 Following is an example of a `composeExtensions` object defining a search command. It is an example of the simple manifest. For the complete  app manifest schema, see [App manifest schema](~/resources/schema/manifest-schema.md).
-=======
-Following is an example of a `composeExtensions` object defining a search command. It is not an example of the complete manifest. For the full app manifest schema see [App manifest schema](~/resources/schema/manifest-schema.md).
->>>>>>> Stashed changes
 
 ```json
 {
@@ -96,13 +92,9 @@ Following is an example of a `composeExtensions` object defining a search comman
 }
 ```
 
-## Next steps
-
-<<<<<<< Updated upstream
-After adding the search command, you must [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
-=======
-After adding search command, you must [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
->>>>>>> Stashed changes
+## Next step
 
 > [!div class="nextstepaction"]
-> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+> [handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

@@ -12,9 +12,9 @@ ms.author: anclear
 > [!NOTE]
 > Currently, Link unfurling is not supported on Mobile clients.
 
-With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
+With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
 
-The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
+The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following screenshot, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -25,16 +25,17 @@ The Azure DevOps messaging extension uses link unfurling to look for URLs pasted
 > [!NOTE]
 > Do not add domains that are outside your control, either directly or through wildcards. For example, yourapp.onmicrosoft.com is valid, but *.onmicrosoft.com is not valid. Also, the top-level domains are prohibited. For example, *.com, *.org.
 
-### Using App Studio
+### Add link unfurling using App Studio
 
 1. In App Studio, on the Manifest editor tab, load your app manifest.
-1. On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the screenshot below.
+1. On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the following screenshot.
 
 ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
 
-### Manually
+### Add link unfurling manually
 
-To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below. This example is not the complete manifest, see [manifest reference](~/resources/schema/manifest-schema.md) for a complete manifest example.
+To enable your messaging extension to interact with links you first need to add the `messageHandlers` array to your app manifest as in the following example: 
+
 
 ```json
 ...
@@ -56,9 +57,11 @@ To enable your messaging extension to interact with links this way you'll first 
 ...
 ```
 
+This preceding section is not an example of complete manifest. For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+
 ## Handle the `composeExtension/queryLink` invoke
 
-Once you've added the domain to listen on to the app manifest, you'll need to update your web service code to handle the invoke request. Use the URL you receive to search your service and create a card response. If you respond with more than one card, only the first will be used.
+After adding the domain to listen on to the app manifest, you need to update your web service code to handle the invoke request. Use the URL you receive to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
 We support the following card types:
 

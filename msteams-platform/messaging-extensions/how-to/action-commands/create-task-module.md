@@ -632,5 +632,4 @@ If you allow your users to send a response back from the task module, you must h
 > [!div class="nextstepaction"] 
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-> [!div class="nextstepaction"]
-> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

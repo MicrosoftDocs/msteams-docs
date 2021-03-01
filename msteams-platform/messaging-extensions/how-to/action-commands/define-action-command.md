@@ -48,15 +48,15 @@ Now that you've decided how users will interact with your action command, it is 
 The following steps assume you've already [created a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
-2. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
-3. Click the **Add** button in the Command section.
-4. Choose **Allow users to trigger actions in external services while inside of Teams**.
-5. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
-6. Add a **Command Id** and a **Title**.
-7. Select where you want your action command to be triggered from.
-8. If you're using parameters for your task module, add the first one.
-9. Click Save
-10. If you need to add more parameters, click the **Add** button in the **Parameters** section to add them.
+1. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
+1. Click the **Add** button in the Command section.
+1. Choose **Allow users to trigger actions in external services while inside of Teams**.
+1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
+1. Add a **Command Id** and a **Title**.
+1. Select where you want your action command to be triggered from.
+1. If you're using parameters for your task module, add the first one.
+1. Click Save
+1. If you need to add more parameters, click the **Add** button in the **Parameters** section to add them.
 
 ### Manually create a command
 
@@ -92,7 +92,7 @@ If you are using an embedded web view, you can optionally add the `taskInfo` obj
 
 #### App manifest example
 
-The below is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest, for the full app manifest schema see: [App manifest schema](~/resources/schema/manifest-schema.md).
+The following section is an example of a `composeExtensions` object defining two action commands. It is not an example of the complete manifest. For the complete app manifest schema see [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ```json
 ...
@@ -144,15 +144,14 @@ The below is an example of a `composeExtensions` object defining two action comm
 
 ## Next steps
 
-If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you'll want to:
+If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you want to:
 
 > [!div class="nextstepaction"]
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-If you are using parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
+If you are using the parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-> [!div class="nextstepaction"]
-> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

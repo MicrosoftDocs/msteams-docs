@@ -7,7 +7,7 @@ ms.author: anclear
 ---
 # Messaging extensions
 
-Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search, or initiate actions, in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
+Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search, or initiate actions, in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, in the form of a richly formatted card.
 
 The following screenshot shows the locations from where you can invoke the messaging extensions:
 
@@ -30,7 +30,7 @@ The following examples describe the scenarios where messaging extensions are use
 
 A messaging extension consists of a web service you host and your app manifest which defines where your web service is invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you need to register your web service as a bot in the Bot Framework. Use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol though you can create your web service completely by hand.
 
-In the app manifest for your Microsoft Teams app you'll define a single messaging extension with up to ten different commands. Each command defines a type (action or search), and the locations in the client it can be invoked from (compose message area, command bar, and/or message). Once invoked, your web service will receive an HTTPS message with a JSON payload including all the relevant information. You respond with a JSON payload, letting the Teams client know what interaction to enable next.
+In the app manifest for your Microsoft Teams app you define a single messaging extension with up to ten different commands. Each command defines a type, such as action or search, and the locations in the client that it is invoked from, such as  compose message area, command bar, and message. After  invoking, your web service receives an HTTPS message with a JSON payload including all the relevant information. You respond with a JSON payload, allowing the Teams client to know what interaction to enable next.
 
 ## Types of messaging extension commands
 
@@ -40,7 +40,7 @@ The type of messaging extension command defines the UI elements and interaction 
 
 Action commands allow you to present your users with a modal popup to collect or display information. When they submit the form, your web service can respond by inserting a message into the conversation directly, or by inserting a message into the compose message area and allowing the user to submit the message. You can even chain multiple forms together for more complex workflows.
 
-They can be triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot will include the entire message it was invoked from.
+They can be triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from.
 
 ![messaging extension action command task module](~/assets/images/task-module.png)
 

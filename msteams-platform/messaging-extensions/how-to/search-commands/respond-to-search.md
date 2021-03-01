@@ -344,5 +344,4 @@ Deploy configuration
 > [!div class="nextstepaction"]
 > [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
 
-> [!div class="nextstepaction"]
-> [!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
