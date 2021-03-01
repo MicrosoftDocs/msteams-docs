@@ -86,6 +86,12 @@ If you change the manifest information, you must first remove the app and then a
 
 If the manifest fails to load, check that you followed all the instructions in [create the app package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
 
+## See also
+
+> [!div class="nextstepaction"]
+> [Create your app package](../../build-and-test/apps-package.md)
+
+
 ## Next step
 
 > [!div class="nextstepaction"]
