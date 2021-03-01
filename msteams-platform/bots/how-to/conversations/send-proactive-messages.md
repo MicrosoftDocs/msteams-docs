@@ -26,7 +26,7 @@ Sending a proactive message is different from sending a regular message. There i
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-For using proactive message effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [examples](#examples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and group or channels, see [code samples](#code-samples).
+For using proactive message effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and group or channels, see [code samples](#code-samples).
 
 ## Get the user ID, team ID or channel ID
 
@@ -42,17 +42,25 @@ Regardless of how you get the information, you must store the `tenantId` and eit
 
 The `userId` is unique to your bot ID and a particular user. You cannot reuse the `userId` between bots. The `channelId` is global. However, your bot must be installed in the team before you can send a proactive message to a channel.
 
+After you have the user or channel information, you must create the conversation.
+
 ## Create the conversation
 
-After you have the user or channel information, you need to create the conversation if it does not exist or you do not know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
+You must create the conversation if it does not exist or you do not know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
+
+After the conversation is created, you must get the conversation ID.
 
 ## Get the conversation ID
 
-After the conversation is created, use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any activity sent to you from that context. Store this ID for reference.
+Use either the `conversationReference` object or `conversationId` and `tenantId` to send the message. You can get this ID by either creating the conversation or storing it from any activity sent to you from that context. Store this ID for reference.
+
+After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-After you get the appropriate address information, you can send your message. If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See [examples](#examples) or use one of the samples listed in [code samples](#code-samples).
+If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message. See [examples](#examples) or use one of the samples listed in [code samples](#code-samples).
+
+Now that you have sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
 ## Best practices for proactive messaging
 
@@ -78,6 +86,8 @@ To send notifications using proactive messaging, ensure your users have a clear 
 * **What can users do in response**: Make it easy for your users to take actions based on your notifications.
 * **How can users opt out**: You must provide a path for users to opt out of additional notifications.
 
+To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
+
 ## Proactively install your app using Graph
 
 > [!Note]
@@ -89,7 +99,9 @@ You can only install apps that are in your organizational app catalog or the Tea
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Microsoft Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
-## Examples
+The next section illustrates a simple code sample that proactively installs your app using Graph.
+
+## Samples
 
 The following code shows an example of proactively installing your app using Graph:
 
@@ -234,6 +246,8 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 ```
 
 ---
+
+The next section illustrates simple code samples that incorporates basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams.
 
 ## Code samples
 

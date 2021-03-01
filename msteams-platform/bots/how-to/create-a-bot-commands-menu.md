@@ -50,12 +50,12 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
     ![App Studio Command Menu Add button](./conversations/media/AppStudio-NewCommandMenu.png)
 
-### Create a command menu for your bot by editing **Manifest.json**
+### Create a command menu for your bot by editing Manifest.json
 
 Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. When using this method, follow these points:
 
 * Each menu supports up to 10 commands.
-* Create a single command menu that will work in all scopes.
+* Create a single command menu that works in all scopes.
 * Create a different command menu for each scope.
 
 #### Manifest example for single menu for both scopes
@@ -148,6 +148,8 @@ The manifest example code for the menu for each scope is as follows:
 }
 ```
 
+You must handle menu commands in your bot code as you would handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
+
 ## Handle menu commands in your bot code
 
 Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its own name in the message text returned. Your message parsing must handle the message received by a bot with its own name before handling the command being returned.
@@ -187,10 +189,12 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 * * *
 
+To enable smooth functioning of your bot code, there are few best practices that you must follow.
+
 ## Command menu best practices
 
 * **Keep it simple**: The bot menu is meant to present the key capabilities of your bot.
-* **Keep it short**: Menu options must not be long and must not be complex natural language statements. They should be simple commands.
+* **Keep it short**: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
 * **Keep it invokable**: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
 
 > [!NOTE]

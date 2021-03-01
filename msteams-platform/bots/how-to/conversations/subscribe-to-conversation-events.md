@@ -1,15 +1,16 @@
 ---
-title: Subscribe to conversation events
+title: Conversation events
 author: WashingtonKayaker
-description: How to subscribe to conversation events from your Microsoft Teams bot.
+description: How to work with conversation events from your Microsoft Teams bot.
 ms.topic: overview
 ms.author: anclear
 ---
-# Subscribe to conversation events
+
+# Conversation events in your Teams bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Microsoft Teams sends notifications to your bot for events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
+When building your conversational bots for Microsoft Teams, you can work with conversation events. Microsoft Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
 
 * Trigger a welcome message when your bot is added to a team.
 * Trigger a welcome message when a new team member is added or removed.
@@ -20,10 +21,12 @@ This document covers [conversation update events](#conversation-update-events), 
 
 ## Conversation update events
 
+You can use conversation update events to provide better notifications and more effective bot actions.
+
 > [!IMPORTANT]
 > New events can be added at any time and your bot begins to receive them.
 > You must design your bot to receive unexpected events.
-> If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you do not choose to handle.
+> If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -539,7 +542,7 @@ async def on_teams_members_added(
 
 ### Team members removed
 
-The `teamMemberRemoved` event is sent to your bot if it is removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user. The bot's `Id` will generally be `28:<MicrosoftAppId>`.
+The `teamMemberRemoved` event is sent to your bot if it is removed from a team. The event is sent to your bot every time any user is removed from a team where your bot is a member. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`.  If the `Id` field of the `MembersRemoved` object is the same as the `Id` field of the `Recipient` object, then the member removed is the bot, else it is a user. The bot's `Id` generally is `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -1046,6 +1049,8 @@ async def on_teams_team_unarchived(
 
 * * *
 
+Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
+
 ## Message reaction events
 
 The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include: "angry", "heart", "laugh", "like", "sad", "surprised". This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects.
@@ -1274,6 +1279,8 @@ async def on_reactions_removed(
 ```
 
 * * *
+
+The next section illustrates a simple code sample that incorporates bots conversation events into a Teams application.
 
 ## Samples
 

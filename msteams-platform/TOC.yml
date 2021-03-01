@@ -196,9 +196,9 @@
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
   items:
-  - name: Overview
+  - name: Bots in Microsoft Teams
     href: bots/what-are-bots.md
-  - name: How bots work
+  - name: Bot basics
     href: bots/bot-basics.md
   - name: Bot conversations
     items:
@@ -208,7 +208,7 @@
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
-    - name: Subscribe to conversation events
+    - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md

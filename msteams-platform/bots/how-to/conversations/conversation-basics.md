@@ -39,6 +39,7 @@ This document covers the following:
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following:
+
 * Easy access to the Bot Framework connector.
 * Additional functionality to manage conversation flow and state.
 * Simple ways to incorporate cognitive services such as Natural Language Processing (NLP).
@@ -356,6 +357,8 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
+To enhance your message, you can include pictures as attachments to that message.
+
 ## Picture messages
 
 Pictures are sent by adding attachments to a message. For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
@@ -367,7 +370,11 @@ Specify the height and width of each image by using XML. In markdown, the image 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
+A conversational bot can include adaptive cards that simplify business workflows as adaptive cards offer rich customizable text, speech, images, buttons and input fields.
+
 ## Adaptive cards
+
+Adaptive cards can be authored in a bot and shown in multiple apps such as Teams, your website and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 The following code shows an example of sending a simple adaptive card:
 
@@ -398,6 +405,8 @@ The following code shows an example of sending a simple adaptive card:
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
+The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
+
 ## Code sample
 
 Following are the code samples for Teams conversation bot:
@@ -407,6 +416,9 @@ Following are the code samples for Teams conversation bot:
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## Next steps
+
+> [!div class="nextstepaction"]
+> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
 
 > [!div class="nextstepaction"]
 > [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
