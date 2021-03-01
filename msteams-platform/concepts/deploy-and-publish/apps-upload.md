@@ -71,7 +71,7 @@ You can also upload your app package using the **Apps** tab.
    ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
    > [!NOTE]
-   >If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
+   > If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
 
 ## Remove or update your app
 
@@ -82,7 +82,7 @@ If you change the manifest information, you must first remove the app and then a
 > [!NOTE]
 > You cannot completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot appends to the previous conversation.
 
-## Troubleshoot notes
+## Troubleshoot
 
 If the manifest fails to load, check that you followed all the instructions in [create the app package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
 
