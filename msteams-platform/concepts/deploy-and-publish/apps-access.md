@@ -5,9 +5,9 @@ ms author: laujan
 keywords: access upload apps tabs connectors bots
 ---
 
-# Access the uploaded app
+# Access the uploaded app package
 
-You can access and test your uploaded app. The testing helps you ensure that your app is successfully uploaded. You can access the tab, bot, messaging extension, and connectors in your app package.
+You can access and test your uploaded app package. The testing helps you ensure that your app is successfully uploaded. You can access the tab, bot, messaging extension, and connectors in your app package.
 
 ## Access your uploaded configurable tab
 
@@ -26,7 +26,6 @@ If your app contains tabs, you can pin them to any conversation or team channel 
 3. Accept the consent prompt.
 
 4. Configure your tab through the [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md), and select **Save**.
-
 
 ## Access your uploaded bot
 
