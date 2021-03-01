@@ -7,43 +7,51 @@ keywords: access upload apps tabs connectors bots
 
 # Access the uploaded app
 
-By accessing the uploaded app you can test the app experience. You can access the tab, bot, messaging extension, and connectors, after the app package is uploaded successfully.
+You can access and test your uploaded app. The testing helps you ensure that your app is successfully uploaded. You can access the tab, bot, messaging extension, and connectors in your app package.
 
 ## Access your uploaded configurable tab
 
-If the app contains tabs, users can pin them to any conversation or team channel using the standard tab gallery flow:
+If your app contains tabs, you can pin them to any conversation or team channel using the standard tab gallery flow.
+
+**To access a tab**
 
 1. Go to a channel in the team. Select **+** and **Add a tab** to the right of the existing tabs.
 
-2. Select your tab from the gallery that appears.
+[Screenshots for the steps would be helpful.]
+
+2. Select your tab from the **Add a tab** gallery that appears.
+
+![The Add a tab dialog box](../../assets/images/tab_gallery.png)
 
 3. Accept the consent prompt.
 
-4. Configure your tab through the [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md) and select **Save**.
+4. Configure your tab through the [configuration page](../../tabs/how-to/create-tab-pages/configuration-page.md), and select **Save**.
 
-  ![The Add a tab dialog box](../../assets/images/tab_gallery.png) features a gallery of available tabs.
 
 ## Access your uploaded bot
 
-When you add a bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on bot scope definition. You and other team members can see a post in the **General** channel indicating that the bot has been added to the team.
+When you add a bot to a team, it must be usable by anyone on that team, inside and outside the team channels, depending on the bot scope definition. You and other team members can see a post in the **General** channel indicating that the bot has been added to the team.
 
-For a Microsoft Teams bot, you can start the conversation by invoking your bot. You must @mention the name of the bot which must autocomplete.
+For a Microsoft Teams bot, you can start the conversation by invoking your bot. You must @mention the name of the bot, which must autocomplete.
 
-To test direct chats with your bot, you can either access it through the App home or @mention the bot name in a channel. You can also search for it in the **New Chat** window.
+To test direct chats with your bot, you can either access it through the app home or @mention the bot name in a channel. You can also search for it in the **New Chat** window.
 
 To add your bot to a conversation, you can @mention the bot name in a conversation or search for it in the **New Chat** window.
 
-## Access your uploaded Connector
+## Access your uploaded connector
 
-With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow:
+With the app loaded in the team or conversation, users can set up a Connector using the standard Connectors gallery flow.
 
-1. Go to a channel in the team. Select **More options** (*&#8943;*) and choose **Connectors**.
+**To access your uploaded connector**
 
-2. Select your Connector from the sideloaded section at the bottom.
+1. Go to a channel in the team. Select **More options** (*&#8943;*), and choose **Connectors**.
+[Screenshots for each step would be helpful.]
 
-3. Configure your Connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md) and select **Save**.
+2. Select your connector from the sideloaded section at the bottom.
 
-  ![The Add a tab dialog box](../../assets/images/connector_gallery.png) features a gallery of available tabs.
+3. Configure your connector through its [configuration page](../../webhooks-and-connectors/how-to/connectors-creating.md), and select **Save**.
+
+    ![The add connector dialog box](../../assets/images/connector_gallery.png).
 
 ## Access your uploaded messaging extension
 
@@ -51,8 +59,15 @@ An uploaded app with a messaging extension automatically appears in the **More o
 
 ![Messaging extensions](../../assets/images/compose-extensions/cesampleapp.png)
 
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Upload your app](apps-upload.md)
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json#publish-a-custom-app-to-your-organizations-app-store)
+
 
