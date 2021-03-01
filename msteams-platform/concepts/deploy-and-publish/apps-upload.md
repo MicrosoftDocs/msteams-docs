@@ -70,7 +70,7 @@ You can also upload your app package using the **Apps** tab.
 
    ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
-> [!NOTE]
+   > [!NOTE]
    >If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
 
 ## Remove or update your app
