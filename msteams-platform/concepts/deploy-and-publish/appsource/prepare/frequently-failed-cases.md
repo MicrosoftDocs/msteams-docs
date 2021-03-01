@@ -19,8 +19,11 @@ Reviewing these guidelines can help you avoid issues that frequently cause apps 
 An app's name plays a critical role in how users discover it in the store. Remember the following about app names:
 
 * The name must include terms relevant to your users.
-* It must not copy the name of an existing app in the store.
+* It must not copy the name of an existing app in the store or other offer in the commercial marketplace.
+* Common nouns must be prefixed or suffixed with the publisher’s name (for example, “XYZ Tasks” rather than “Tasks”)
 * It must not use **Teams** or other Microsoft product names that could falsely indicate co-branding or co-selling. (For more information about referencing Microsoft software, products, and services, see the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
+* If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, Salesforce Connector for Microsoft Teams).
+
 
 ### 1.2 Suitable for workplace consumption
 
