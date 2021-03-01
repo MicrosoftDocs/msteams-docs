@@ -4,10 +4,11 @@ description: Describes the three options for distributing your app
 ms.topic: conceptual
 keywords: teams publish store office distribute AppSource sideload upload app
 ---
+
 # Distribute your app
 This document guides you on the methods you can use to distribute your app to different organizations, such as Enterprise and US Government. 
 
-For Enterprise organizations you can directly upload your app or publish it your organization's app catalog, or publish it through the AppSource. For Government organizations that are members of the Government Cloud Community (GCC), the GCC tenant administrator decides if an app must be uploaded and published.
+For Enterprise organizations you can directly upload your app or publish it your organization's app catalog, or publish it through the AppSource. For Government organizations, they need to be members of the Government Cloud Community (GCC). Depending on the fulfillment of the GCC compliance criteria, the GCC tenant administrator decides if an app must be uploaded and published.
 
 ## Distribute apps to an Enterprise organization
 In an Enterprise organization you can distribute the app using any one of the following methods:
@@ -60,10 +61,10 @@ Microsoft does not own or control your custom applications, therefore, you must 
 ## See also
 
 > [!div class="nextstepaction"]
-> [Maintain published app](../appsource/post-publish/overview.md)
+> [Publish your apps](apps-publish-overview.md)
 
 > [!div class="nextstepaction"]
-> [Publish your apps](apps-publish-overview.md)
+> [Maintain published app](../appsource/post-publish/overview.md)
 
 ## Next step
 
