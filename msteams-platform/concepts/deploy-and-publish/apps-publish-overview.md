@@ -6,9 +6,9 @@ keywords: teams apps Upload
 ---
 
 # Publish your apps
-This document provides an overview of the steps you must take to publish your app successfully to an App Store or AppSource, formerly Office Store.
-
 Apps that you develop need to be published to your organization for the users to use them. There is a complete process to publish your apps that includes, selecting methods of distribution, packaging and uploading, and finally publishing.
+
+This document provides an overview of the steps you must take to publish your app successfully to an App Store or AppSource, formerly Office Store.
 
 ## Distribute your apps
 You can distribute your apps to an Enterprise organization, for example, a corporate or US Government organizations, such as federal, state, territorial, and tribal bodies. When distributing the apps, you must ensure that you adhere to the compliance policies of the selected organization. There are different methods to distribute your app. For more information, see [distribute your app](overview.md).
@@ -17,10 +17,13 @@ You can distribute your apps to an Enterprise organization, for example, a corpo
 After selecting the method to distribute your app, you need to create an app package. An app package helps you upload all core components of your app to the App Store or AppSource at one go. For more information, see [create your app package](../build-and-test/apps-package.md).
 
 ## Upload your app package
-You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app](apps-upload.md).
+You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app package](apps-upload.md).
 
 ## Access your uploaded app 
 After uploading your app package, access it and test the components before publishing to your organization. For more information, see [access your uploaded app](apps-access.md).
+
+## Publish your app to AppSource
+
 
  ## Publish your app to your organization
 The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
