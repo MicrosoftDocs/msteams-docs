@@ -24,12 +24,11 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * It must not use **Teams** or other Microsoft product names that could falsely indicate co-branding or co-selling. (For more information about referencing Microsoft software, products, and services, see the [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general)).
 * If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, Salesforce Connector for Microsoft Teams).
 
-
 ### 1.2 Suitable for workplace consumption
 
-Your app can facilitate group collaboration, improve an individual's productivity, or both. This includes apps intended for team bonding and socializing. Such apps should not require intense time investment or perceptively impact productivity. These apps must be collaborative and designed for multiple participants. 
+App content must be suitable for general workplace consumption and abide by all restrictions listed in the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content). Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
-All content should be suitable for general workplace consumption and must abide by all restrictions listed in the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content). Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
+Your app must facilitate group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. These types of apps also should not require a substantial time investment or perceptively impact productivity.
 
 ### 1.3 Similar platforms and services
 
@@ -55,7 +54,10 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 ### 2.4 External domains
 
-Tunneling services and domains outside of an organization’s control, including wildcards, must not be included in the valid domains of the app manifest.
+In most cases, you must not include domains outside of your organization's control (including wildcards) and tunneling services in the valid domains section of your app manifest. The following exceptions include:
+
+* If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button will not work.
+* If your app requires a SharePoint URL to function, you can include `{teamsitedomain}` as a valid domain.
 
 ### 2.5 App permissions
 
@@ -102,9 +104,10 @@ Apps must be fully functional on the following operating systems and browsers:
 * Microsoft Windows 7 and later
 * macOS 10.10 and later
 * Microsoft Edge 12 and later
-* Internet Explorer 11 and later
 * Mozilla Firefox 47.0 and later
 * Google Chrome 51.0 and later
+* iOS 9.0 and later
+* Android 4.4 and later
 
 ### 3.3 Response time
 
@@ -114,18 +117,6 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
 * Bots must respond to user commands within two seconds or display a typing indicator.
 * Messaging extensions must respond to user commands within five seconds.
 * Notification must load within five seconds of the user action.
-
-### 3.4 Platform interoperability
-
-* Apps must be fully responsive to a variety of screen sizes.
-* App must not include any direct references to in-app purchases, trial offers, offers for paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
-* The iOS or Android version of the app must not show any UI or language or link to any other apps, add-ins, or websites that ask the user to pay.
-* The associated privacy policy and terms of use pages must also be free of any commerce UI or store links.
-* If your app contains tabs, they must follow the mobile design guidelines.
-* App should function on the following platforms:
-    * iOS 9.0 and later
-    * Android 4.4 and later
-    * Windows Phone 10.0.10586 and later
 
 ## 4.0 App package and store listing
 
@@ -309,7 +300,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 
 ### 10.2 Avatars
 
-* The notification avatar should match the app icon provided in the manifest.
+* The notification avatar should match your app's color icon.
 * Notifications triggered by an app user should contain the avatar of the user who initiated it.
 
 ### 10.3 Spamming
