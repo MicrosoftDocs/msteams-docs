@@ -10,15 +10,17 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-## Updating messages
+Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
-Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. You can use dynamic message updates for scenarios such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
+## Update messages
 
-The new message need not match the original in type. For instance, if the original message contained an attachment, the new message can be a simple text message.
+You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-# [C#/.NET](#tab/dotnet)
+The new message need not match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. *See* [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable)
+# [C# or .NET](#tab/dotnet)
+
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. For more information, see [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable).
 
 ```csharp
 var newActivity = MessageFactory.Text("The new text for the activity");
@@ -26,9 +28,9 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. *See* [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--)
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--).
 
 ```typescript
 const newActivity = MessageFactory.text('The new text for the activity');
@@ -38,7 +40,7 @@ await turnContext.updateActivity(newActivity);
 
 # [Python](#tab/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](link to Python API ref docs).
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
 
@@ -50,30 +52,26 @@ update_result = await context.update_activity(new_activity)
 
 # [REST API](#tab/rest)
 
->[!NOTE]
->You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). To do so, you'll need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) security procedures with your API requests.
+> [!NOTE]
+> You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0) security procedures with your API requests.
 
-To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you should cache the activity ID returned by the original POST call.
+To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
 
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| | |
-|----|----|
-| **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object |
-| **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object |
+For information on REST API request body, see [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object. For information on what REST API returns, see [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object.
 
 ---
 
-## Deleting messages
+## Delete messages
 
-In the Bot Framework, every message has its own unique activity identifier.
-Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
+In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C#/.NET](#tab/dotnet)
+# [C# or .NET](#tab/dotnet)
 
-To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. *See* [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable)
+To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable).
 
 ```csharp
 foreach (var activityId in _list)
@@ -82,9 +80,9 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript)
 
-To delete that message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. *See* [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
+To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--)
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
@@ -94,7 +92,7 @@ for (let i = 0; i < activityIds.length; i++) {
 
 # [Python](#tab/python)
 
-To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. See [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
+To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. For more information, see [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
 ```python
 for each activity_id in _list:
@@ -109,9 +107,6 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| | |
-|----|----|
-| **Request body** | n/a |
-| **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
+For REST API, request body is not applicable and it returns an HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
 
 ---

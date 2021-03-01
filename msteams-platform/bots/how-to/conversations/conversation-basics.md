@@ -411,7 +411,7 @@ The next section illustrates a simple code sample that incorporates basic conver
 
 Following are the code samples for Teams conversation bot:
 
-|**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
+|Sample name | Description | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

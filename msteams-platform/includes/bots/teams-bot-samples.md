@@ -2,7 +2,7 @@
 
 For fully working samples demonstrating the functionality, see the following Teams samples for Bot Framework:
 
-| Sample | Description | .NET Core | JavaScript | Python |
+| Sample | Description | .NET Core | Node.js | Python |
 |--------|------------- |---|---|---|
 | Teams conversation bot | Messaging and conversation event handling. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/57.teams-conversation-bot) |
 | Authentication with OAuthPrompt| Authentication and basic messaging in Bot Framework v4. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/python/46.teams-auth) |

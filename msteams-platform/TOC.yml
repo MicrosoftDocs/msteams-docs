@@ -212,7 +212,7 @@
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-    - name: Formatting your bot messages
+    - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
       href: bots/how-to/update-and-delete-bot-messages.md     
@@ -220,7 +220,7 @@
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
-  - name: Handling bot rate limiting
+  - name: Handle bot rate limiting
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
     items:
