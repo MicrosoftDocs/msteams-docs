@@ -48,7 +48,7 @@ Your app must not ask users to make payments within the Teams interface. Financi
 
 ### 2.3 Bot Framework
 
-For apps with bots or messaging extensions, you must follow all requirements (including privacy notice requirements) as defined in the Microsoft Bot Framework Developer Code of Conduct and Online Services Agreement.
+For apps that use Azure Bot Services (bots and messaging extensions), you must follow all requirements as defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message after the file is uploaded.
 
