@@ -10,7 +10,7 @@ ms.topic: reference
 Reviewing these guidelines can help you avoid issues that frequently cause apps to fail Microsoft Teams store and AppSource submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
 > [!TIP]
-> Some guidelines may not be applicable to you. For example, if your app doesn't include a bot, you can ignore that section.
+> Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 
 ## 1.0 Value proposition
 
@@ -57,7 +57,7 @@ Bots must always ask permission to upload a file and display a confirmation mess
 In most cases, you must not include domains outside of your organization's control (including wildcards) and tunneling services in the valid domains section of your app manifest. The following exceptions include:
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button will not work.
-* If your app requires a SharePoint URL to function, you can include `{teamsitedomain}` as a valid domain.
+* If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` variable.
 
 ### 2.5 App permissions
 
