@@ -42,11 +42,13 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 
 ## Next steps
 
-* [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
-* [Choose how to distribute your app](../deploy-and-publish/overview.md)
+> [!div class="nextstepaction"]
+> [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
+> [Choose how to distribute your app](../deploy-and-publish/overview.md)
 
 ## Learn More
 
-* [Design effective tabs](~/tabs/design/tabs.md)
-* [Create amazing bots](~/bots/design/bots.md)
+> [!div class="nextstepaction"]
+> [Design effective tabs](~/tabs/design/tabs.md)
+> [Create amazing bots](~/bots/design/bots.md)
 

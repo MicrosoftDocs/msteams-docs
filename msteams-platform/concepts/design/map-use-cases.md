@@ -5,6 +5,7 @@ description: Decide how to distribute your app
 ms.topic: conceptual
 ms.author: anclear
 ---
+
 # Map your use cases to teams app capabilities
 
 Imagine a user trying to execute a specific task using your app. It must be easy for the user to initiate the workflow. You must ensure to [consider your use cases](~/concepts/design/map-use-cases.md) carefully. You must also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. After you have figured out what you are trying to solve and who are you solving it for, it is time to start thinking about how to solve.
@@ -13,15 +14,15 @@ You can find some common scenarios and a selection of extensibility points and U
 
 ## Create, share and collaborate on items in an external system
 
-App for Microsoft Teams is a great way to interact with your data, and there are a variety of integration points to choose from.
+App for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
 
 * Messaging extensions with search commands - Search external systems and share the results as an interactive card.
 
 * Messaging extensions with action commands - Collect information to insert into a data store or perform advanced searches.
 
-* Tabs - Create embedded web experiences to view, work with, and share data.
+* Tabs - Create embedded web experiences to view, work with and share data.
 
-* Connectors and webhooks - A simple way to push data into, and send data out of the Teams client.
+* Connectors and webhooks - A simple way to push data and send data out of the Teams client.
 
 * Task modules - Interactive modal forms from wherever you need them to collect or display information.
 
@@ -47,7 +48,7 @@ Send asynchronous notifications and alerts to your users in Teams. Use interacti
 
 ## Ask questions and get answers
 
-People have questions. You probably got a lot of the answers stored away somewhere. Unfortunately, it's often quite difficult to connect the two.
+People have questions and you probably got a lot of the answers stored away somewhere. Unfortunately, it's often quite difficult to connect the two.
 
 * Conversational bots - Natural language processing, AI, Machine Learning (ML), all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need.
 
@@ -55,8 +56,7 @@ People have questions. You probably got a lot of the answers stored away somewhe
 
 ## Get social
 
-A collaboration platform is inherently a social platform. Let your creative side be free, and add some fun into your workplace.
-All of them - Send jokes, give kudos, get some memes, toss out some emojis, or whatever else strikes your fancy.
+A collaboration platform is inherently a social platform. Let your creative side be free and add some fun into your workplace. All users must be able to send jokes, give kudos, get some memes, toss out some emojis, or anything else that strikes your fancy.
 
 ## Work with Single Page App (SPA)
 

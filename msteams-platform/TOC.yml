@@ -34,6 +34,8 @@
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
+  - name: App fundamentals overview
+    href: concepts/app-fundamentals-overview.md
   - name: Teams app capabilities
     href: concepts/capabilities-overview.md
   - name: Teams app entry points
