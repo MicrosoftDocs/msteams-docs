@@ -1,10 +1,10 @@
 ---
-title: Rate limiting
+title: Optimize your bot with rate limiting in Teams
 description: Rate limiting and best practices in Microsoft Teams
 keywords: teams bots rate limiting
 ---
 
-# Optimize your bot: rate limiting and best practices in Microsoft Teams
+# Optimize your bot with rate limiting in Teams
 
 As a general principle, your application should limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience that doesn't feel “spammy” to your end users.
 
@@ -12,7 +12,7 @@ To protect Microsoft Teams and its users, the bot APIs rate-limit incoming reque
 
 Because the exact values of rate limits are subject to change, we recommend your application implement the appropriate backoff behavior when the API returns `HTTP 429 Too Many Requests`.
 
-## Handling rate limits
+## Handle rate limits
 
 When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOperationException` and check for the status code.
 
@@ -37,7 +37,7 @@ In general, you should take simple precautions to avoid receiving `HTTP 429` res
 
 Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests don't introduce collisions on retries.
 
-## Example: detecting transient exceptions
+## Detect transient exceptions example
 
 Here is a sample using exponential backoff via the Transient Fault Handling Application Block.
 
@@ -66,7 +66,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-## Example: backoff
+## Backoff example
 
 In addition to detecting rate limits, you can also perform an exponential backoff.
 
@@ -100,7 +100,7 @@ For more information, check out this handy guide on various retry patterns: [Ret
 
 This limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
 
-| **Scenario** | **Time-period (sec)** | **Max allowed operations** |
+| Scenario | Time-period (sec) | Max allowed operations |
 | --- | --- | --- |
 | Send to Conversation | 1 | 7 |
 | Send to Conversation | 2 | 8 |

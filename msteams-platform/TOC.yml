@@ -220,7 +220,7 @@
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
-  - name: Handle bot rate limiting
+  - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
   - name: Calling and meeting bots
     items:
