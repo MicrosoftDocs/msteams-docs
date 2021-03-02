@@ -12,14 +12,14 @@ ms.topic: how-to
 
 There are two ways to send files to and receive files from a bot:
 
-* **Using the Microsoft Graph APIs:** This method works for bots in all Microsoft Teams scopes:
+* [**Use the Microsoft Graph APIs:**](#use-the-graph-apis) This method works for bots in all Microsoft Teams scopes:
   * `personal`
   * `channel`
   * `groupchat`
 
-* **Using the Teams bot APIs:** These only support files in `personal` context.
+* [**Use the Teams bot APIs:**](#use-the-teams-bot-apis) These only support files in `personal` context.
 
-## Using the Graph APIs
+## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
 * A user's OneDrive folder for `personal` and `groupchat` files.
@@ -27,7 +27,9 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 
 Graph APIs work in all Teams scopes.
 
-## Using the Teams bot APIs
+Alternately you can send files to and receive files from a bot using the Teams bot APIs.
+
+## Use the Teams bot APIs
 
 > [!NOTE]
 > Teams bot APIs work only in the `personal` context. They do not work in the `channel` or `groupchat` context.
@@ -36,17 +38,19 @@ Using Teams APIs, the bot can directly send and receive files with users in the 
 
 The following sections describe how to send file content as a direct user interaction, like sending a message. This API is provided as part of the Teams bot platform.
 
-### Configuring the bot to support files
+### Configure the bot to support files
 
 To send and receive files in the bot, set the `supportsFiles` property in the manifest to `true`. This property is described in the [bots](~/resources/schema/manifest-schema.md#bots) section of the Manifest reference.
 
 The definition looks like this, `"supportsFiles": true`. If the bot does not enable `supportsFiles`, the features listed in this section do not work.
 
-### Receiving files in personal chat
+### Receive files in personal chat
 
-When a user sends a file to the bot, the file is first uploaded to the user's OneDrive for Business storage. The bot then receives a message activity notifying the user about the user upload. The activity contains file metadata, such as its name and the content URL. The user can directly read from this URL to fetch its binary content.
+When a user sends a file to the bot, the file is first uploaded to the user's OneDrive for business storage. The bot then receives a message activity notifying the user about the user upload. The activity contains file metadata, such as its name and the content URL. The user can directly read from this URL to fetch its binary content.
 
 #### Message activity with file attachment example
+
+The following code shows an example of message activity with file attachment:
 
 ```json
 {
@@ -74,9 +78,9 @@ The following table describes the content properties of the attachment:
 
 As a best practice, acknowledge the file upload by sending a message back to the user.
 
-### Uploading files to personal chat
+### Upload files to personal chat
 
-The following steps are required to upload a file to a user:
+**To upload a file to a user**
 
 1. Send a message to the user requesting permission to write the file. This message must contain a `FileConsentCard` attachment with the name of the file to be uploaded.
 2. If the user accepts the file download, the bot receives an invoke activity with a location URL.
@@ -123,7 +127,7 @@ The following table describes the content properties of the attachment:
 
 An invoke activity is sent to the bot if and when the user accepts the file. It contains the OneDrive for Business placeholder URL that the bot can then issue a `PUT` to transfer the file contents. For information on uploading to the OneDrive URL, see [upload bytes to the upload session](/onedrive/developer/rest-api/api/driveitem_createuploadsession#upload-bytes-to-the-upload-session).
 
-The following example shows a concise version of the invoke activity that the bot receives:
+The following code shows an example of a concise version of the invoke activity that the bot receives:
 
 ```json
 {
@@ -184,11 +188,13 @@ The following table describes the content properties of the attachment:
 | `uniqueId` | OneDrive or SharePoint drive item ID. |
 | `fileType` | Type of file, such as .pdf or .docx. |
 
-### Fetching inline images from message
+### Fetch inline images from message
 
 Fetch inline images that are part of the message using the Bot's access token.
 
 ![Inline image](../../assets/images/bots/inline-image.png)
+
+The following code shows an example of fetching inline images from message:
 
 ```csharp
 private async Task ProcessInlineImage(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -227,7 +233,7 @@ private static Attachment GetInlineAttachment()
 
 ### Basic example in C#
 
-The following sample shows how to handle file uploads and send file consent requests in the bot's dialog:
+The following code shows an example of how to handle file uploads and send file consent requests in the bot's dialog:
 
 ```csharp
 
@@ -304,6 +310,8 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 ```
 
 ### Code sample
+
+The following code sample demonstrates how to obtain file consent and upload files to Teams from a bot:
 
 |**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
