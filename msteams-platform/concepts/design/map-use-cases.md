@@ -8,7 +8,7 @@ ms.author: anclear
 
 # Map your use cases to teams app capabilities
 
-Imagine a user trying to execute a specific task using your app. It must be easy for the user to initiate the workflow. You must ensure to [consider your use cases](~/concepts/design/map-use-cases.md) carefully. You must also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. After you have figured out what you are trying to solve and who are you solving it for, it is time to start thinking about how to solve.
+Imagine a user trying to execute a specific task using your app. It must be easy for the user to initiate the workflow. You must ensure to [consider your use cases](~concepts/design/understand-use-cases.md) carefully. You must also have a good understanding of the [extensibility points and UI elements](~/concepts/extensibility-points.md) available for your app. After you have figured out what you are trying to solve and who are you solving it for, it is time to start thinking about how to solve.
 
 You can find some common scenarios and a selection of extensibility points and UI elements that work well with the Teams app. It is not an exhaustive list, just to help you think through some of the possibilities available to you and the Teams platform.
 

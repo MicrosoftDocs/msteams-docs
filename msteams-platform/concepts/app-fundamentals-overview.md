@@ -8,13 +8,15 @@ ms.author: lajanuar
 
 # Teams platform development fundamentals
 
-This article provides some important information that you need to create your first Microsoft Teams app. You can understand the required framework to plan your Teams app. Go through all the sections in each article and learn to [build your first Microsoft Teams app](~/build-your-first-app/build-first-app-overview.md).
+Microsoft Teams app fundamentals gives the direction you need to create your custom Teams app. You can recognize the framework required to plan your Teams app. The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process.
 
-After you have gone through the document, you know Teams app can have [multiple capabilities](~/concepts/capabilities-overview.md) and [entry points](~/concepts/extensibility-points.md). You get to know the extension points for building your apps. Important app project components help you to configure your app page. The information about all the core capabilities are given in this article for you to familiarize yourself with Teams app development.
+## Capabilities overview and entry points
+
+This article talks about the multiple ways to extend your Teams app. It gives you needed guidance on all the core capabilities and the entry points that work in a collaborative space. Teams app can have [multiple capabilities](~/concepts/capabilities-overview.md) and [entry points](~/concepts/extensibility-points.md). You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. The information about all the core capabilities are given in this article for you to familiarize yourself with Teams app development.
 
 ## Understand use cases
 
-You can recognize user issues and identify the answers to some common problems the users face. [Understand use cases](~/concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You can build your Teams app by finding the right combination to meet your user's needs. You learn to understand the user and the problem. Some common questions answered are as follows:
+You can recognize user issues and identify the answers to some common problems the users face. [Understand use cases](~/concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You can build your Teams app by finding the right combination to meet your user's needs. You learn to understand the user and their problem. Some common questions answered are as follows:
 
 * Do you need authentication?
 * What problem is your app going to solve?
@@ -30,3 +32,4 @@ Here you can find some common scenarios and a selection of extensibility points.
 > [!div class="nextstepaction"]
 > [Integrate web apps with Teams](~/samples/integrating-web-apps.md)
 
+ Go through all the sections in each article and learn to [build your first Microsoft Teams app](~/build-your-first-app/build-first-app-overview.md).
