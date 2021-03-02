@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You must create the task module for users if you are not populating it with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view.
+You must create the task module for users if you are not populating the task module with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 

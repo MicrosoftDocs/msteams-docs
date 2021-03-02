@@ -34,7 +34,7 @@ To add the search command to your app manifest, you must add a new `composeExten
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
 1. If you have already created your app package in App Studio, choose it from the list. If not, you can import an existing app package.
 1. Select the **Add** button in the Command section.
-1. Choose **Allow users to query your service for information and insert that into a message**.
+1. Choose **Allow users** to query your service for information and insert that into a message.
 1. Add a **Command ID** and a **Title**.
 1. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
 1. Add your search parameter.
