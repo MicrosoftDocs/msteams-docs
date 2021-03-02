@@ -28,7 +28,7 @@ Now that you've decided how users will interact with your search command, it is 
 
 ### Create a command using App Studio
 
-The following steps assume that you have already [created a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md):
+**To create a search command after [creating a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)**
 
 1. From the Microsoft Teams client, open **App Studio** and select the **Manifest editor** tab.
 1. Choose the app package from the list, if you have already created it in App Studio. Otherwise, you can import an existing app package.
