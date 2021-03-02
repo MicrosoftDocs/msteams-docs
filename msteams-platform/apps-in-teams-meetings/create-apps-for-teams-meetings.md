@@ -93,7 +93,7 @@ export class MyBot extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 ```http
-GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
 The response body is:
