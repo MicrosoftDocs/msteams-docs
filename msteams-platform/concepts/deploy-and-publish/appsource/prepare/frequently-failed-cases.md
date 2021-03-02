@@ -296,7 +296,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 
 * All the notification triggers specified in your app manifest should get a notification in the app.
 * The notifications must be localized as per the supported languages declared in the app manifest.
-* A notification must load within 5 seconds of a user action.
+* A notification must load within five seconds of a user action.
 
 ### 10.2 Avatars
 
@@ -305,14 +305,18 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 
 ### 10.3 Spamming
 
-* Apps must not send more than 10 notifications per minute to an individual user.
+* Apps must not send more than 10 notifications per minute to a user.
 * Bots and the activity feed should not trigger duplicate notifications.
 * Notifications must provide some value to users and not be used for trivial or irrelevant events.
 
 ### 10.4 Navigation and layout
 
-* The right pane experience in the feed must be self-contained and not break the feed experience.
-* On click, user must be directed to the relevant content within the Teams app and should not be taken out of Teams experience.
+* Notifications must adhere to the Teams activity feed layout and experience.
+* When selecting a notification, the user must be directed to relevant content within Teams and not taken out of the Teams experience.
+
+## 11.0 Advertising
+
+Apps must not display advertising, including dynamic ads, banner ads, and ads in messages.
 
 ## Failed submissions
 
