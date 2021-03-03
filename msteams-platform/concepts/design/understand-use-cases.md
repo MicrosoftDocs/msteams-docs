@@ -40,7 +40,7 @@ Remember that users can discover your app in a variety of ways. They might be th
 
 Above all else, remember that nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
 
-## Next steps
+## See also
 
 > [!div class="nextstepaction"]
 > [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
