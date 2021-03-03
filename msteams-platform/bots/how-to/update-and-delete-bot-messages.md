@@ -110,3 +110,8 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 For REST API, request body is not applicable and it returns an HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
 
 ---
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update and delete bot messages](~/bots/how-to/get-teams-context.md)

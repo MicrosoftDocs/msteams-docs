@@ -362,3 +362,8 @@ Response body
 After you get the list of channels in a team, you can go through the Teams samples for Bot Framework.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)

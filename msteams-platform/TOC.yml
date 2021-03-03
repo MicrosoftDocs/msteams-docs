@@ -222,11 +222,11 @@
     href: bots/how-to/bots-filesv4.md
   - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
-  - name: Calling and meeting bots
+  - name: Calls and meetings bots
     items:
     - name: Overview
       href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media concepts
+    - name: Real-time media calls and meetings
       href: bots/calls-and-meetings/real-time-media-concepts.md
     - name: Register a calling bot
       href: bots/calls-and-meetings/registering-calling-bot.md

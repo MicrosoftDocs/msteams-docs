@@ -76,3 +76,8 @@ The following table provides a list of styles and which of these styles are supp
 ### Cards
 
 For card support, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Update and delete bot messages](~/bots/how-to/update-and-delete-bot-messages.md)

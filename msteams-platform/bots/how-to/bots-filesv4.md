@@ -316,3 +316,8 @@ The following code sample demonstrates how to obtain file consent and upload fil
 |**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md)
