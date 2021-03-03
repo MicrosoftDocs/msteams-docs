@@ -9,7 +9,8 @@ ms.date: 09/22/2020
 
 # Understand Teams app capabilities
 
-After you have gone through Microsoft Teams app fundamentals, you can understand the potential of the app and how it all works. Capabilities are the extension points for building apps on the Microsoft Teams platform.
+You must have a good sense of what your app can do after following the Microsoft Teams app fundamentals overview. This article helps you to understand which Teams app feature you can use to develop your app's functionality. Capabilities are the extension points for building apps on the Microsoft Teams platform.
+
 There are multiple ways to extend Teams, so every app is unique. Some only have one capability, such as a webhook, while others have a few to give users various options. For instance, your app can display data in a central location **tab** and present that same information through a conversational interface **bot**.
 
 ## App capabilities
