@@ -43,8 +43,8 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 ## See also
 
 > [!div class="nextstepaction"]
-> [Map your use cases to functionality](../concepts/design/map-use-cases.md)
+> [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
 > [Choose how to distribute your app](../deploy-and-publish/overview.md)
-> [Design effective tabs](../tabs/design/tabs.md)
-> [Create amazing bots](../bots/design/bots.md)
+> [Design effective tabs](~/tabs/design/tabs.md)
+> [Create amazing bots](~/bots/design/bots.md)
 
