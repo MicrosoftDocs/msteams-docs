@@ -74,7 +74,7 @@ Here is more information on how to create and test calls and online meetings bot
 * [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
 * [Registering a bot that supports calls and online meetings](./registering-calling-bot.md) and [Microsoft Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-microsoft-graph-permissions)
 * [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-* [More information on real-time media processing](./real-time-media-concepts.md), and [what is needed to support application-hosted media](./requirements-considerations-application-hosted-media-bots.md)
+* [What is needed to support application-hosted media](./requirements-considerations-application-hosted-media-bots.md)
 * [Technical information on handling incoming call notifications](./call-notifications.md)
 
 ## Next step
