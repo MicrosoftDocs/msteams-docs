@@ -28,12 +28,14 @@ Now that you've decided how users will interact with your search command, it is 
 
 ### Create a command using App Studio
 
-**To create a search command after [creating a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)**
+The prerequisite to creating a search command is that you already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-1. From the Microsoft Teams client, open **App Studio** and select the **Manifest editor** tab.
-1. Choose the app package from the list, if you have already created it in App Studio. Otherwise, you can import an existing app package.
-1. After importing app package, select **Messaging extensions** under **Capabilities** section.
-1. Select the **Add** button in the Command section.
+**To create a search command**
+
+1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
+1. If you created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
+1. After importing app package, select **Messaging extensions** under **Capabilities**.
+1. Select **Add** in the **Command** section.
 1. Choose **Allow users to query your service for information and insert that into a message**.
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command.
