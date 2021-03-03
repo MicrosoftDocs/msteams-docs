@@ -22,8 +22,8 @@ You can upload your app package to a team or a conversation through the App Stor
 ## Access your uploaded app 
 After uploading your app package, access it and test the components before publishing to your organization. For more information, see [access your uploaded app](apps-access.md).
 
-## Publish your app to AppSource
-
+## Publish your app to Teams store (AppSource)
+You can publish your app to Teams store, also called AppSource, and make it available on the web. For information on how to publish the app to the Teams store, see [submit your app to AppSource](../../appsource/publish.md).
 
  ## Publish your app to your organization
 The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
