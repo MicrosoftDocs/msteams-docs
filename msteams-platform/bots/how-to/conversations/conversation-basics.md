@@ -207,7 +207,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent at the same time. The two messages are split into text and an attachment. Due to this message splitting, you will not receive the message ID, as we cannot update the message proactively. The attachment is sent after the text message.
+> Message splitting occurs when a text message and an attachment are sent at the same time. The two messages are split into text and an attachment. Due to this message splitting, you do not receive the message ID, as we cannot update the message proactively. The attachment is sent after the text message.
 
 ## Teams channel data
 
@@ -255,7 +255,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Rich text | ✔                | ✔                |                                                                                         |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
 | Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16 (such as U+1F600 for grinning face)          |
 
 ## Adding notifications to your message
 
@@ -338,7 +338,7 @@ Pictures are sent by adding attachments to a message. You can find more informat
 
 Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
-Always specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+Always mention the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
