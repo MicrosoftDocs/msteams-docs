@@ -216,14 +216,14 @@ POST /v3/conversations/{conversationId}/activities
 * **201**: Activity with signal is successfully sent. 
 * **401**: Invalid token.
 * **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
-* **404**: Meeting chat doesn't exist.
+* **404**: Meeting chat does not exist.
  
 
 ## Enable your app for Teams meetings
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
+The meetings app capabilities are declared in your app manifest through the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 > [!NOTE]
 > Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
