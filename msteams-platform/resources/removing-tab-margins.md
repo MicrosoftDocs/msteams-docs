@@ -33,7 +33,7 @@ Yes, this is fine and encouraged. This helps the app feel native.
 
 > Is it OK for app content, such as text, logos, and images, to touch the left and right edges of our designs?
 
-No, you should provide your own padding/margins to the left and right of all app content to ensure it doesn't touch the edges of your UI. You may also need to add margins at the top of your tab.
+No, you must provide your own padding or margins to the left and right of all app content to ensure it does not touch the edges of your UI. You can also add margins at the top of your tab, if required.
 
 > What's the size of the margins Teams previously applied?
 
