@@ -207,7 +207,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent at the same time. The two messages are split into text and an attachment. Due to this message splitting, you do not receive the message ID, as we cannot update the message proactively. The attachment is sent after the text message.
+> Message splitting occurs when a text message and an attachment are sent in same activity payload. This activity is split into separate activities by Microsoft Teams. One with just text message and another one with an attachment. Due to this you do not receive the message ID in response which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. Workaround is to send separate activities instead of relying on message splitting.
 
 ## Teams channel data
 
