@@ -24,7 +24,7 @@ The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. B
 
 ## How to do silent authentication
 
-The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).
+The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
 ### include and configure ADAL
 
