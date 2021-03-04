@@ -33,7 +33,7 @@ The prerequisite to create a search command is that you must already create a me
 **To create a search command**
 
 1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
-1. If you created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
+1. If you already created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
 1. After importing app package, select **Messaging extensions** under **Capabilities**.
 1. Select **Add** in the **Command** section in the messaging extension page.
 1. Choose **Allow users to query your service for information and insert that into a message**.
