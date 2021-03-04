@@ -15,6 +15,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|03/04/2021|Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |11/30/2020|New: Identity platform integration with Teams Toolkit and Visual Studio Code for tabs|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md)|
