@@ -6,9 +6,9 @@ ms.topic: overview
 
 # Universal bot action model
 
-Universal bot action model evolved from developer feedback that even though layout and rendering for adaptive cards was universal, action handling was not. Thus even if a developer wanted to send the exact same card to different places, they would have to handle actions differently.
+Universal bot action model evolved from developer feedback that even though layout and rendering for adaptive cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they would have to handle actions differently.
 
-With the Universal bot action model, this problem is now addressed with bot becoming the common backend for handling actions along with the introduction of the new action type: Action.Execute which would work across apps starting from Teams and Outlook.
+With the Universal bot action model, this problem is now addressed with bot becoming the common backend for handling actions along with the introduction of the new action type, Action.Execute, which would work across apps starting from Teams and Outlook.
 
 This document helps you to understand how you can use the universal bot action model to enhance user experience of interacting with adaptive cards across platforms and applications.
 
@@ -17,7 +17,7 @@ This document helps you to understand how you can use the universal bot action m
 Universal bot action model enhances user experience by enabling the following scenarios:
 
 * [Universal actions](#universal-actions)
-* [Contextual or role based viewsviews](#contextual-or-role-based-views)
+* [Contextual or role based views](#contextual-or-role-based-views)
 * [Sequential workflow support](#sequential-workflow-support)
 * [Up-to-date views](#up-to-date-views)
 
@@ -36,7 +36,7 @@ With the universal bot action model, you can use `Action.Execute` for action han
 
 ### Contextual or role-based views
 
-Today every user in the Teams chat/channel sees the exact same view and button actions on the adaptive card, however in certain scenarios there is need for certain users to act differently and having access to different information within the same chat/channel. For example, in the case of an approval request sent in a chat/channel, only the manager/approver should be shown the option to approve/reject and add comments while the other users should only be able to view details of the same. This is made possible by contextual views which is enabled by the refresh property defined in the next section. Illustrated below is an example of a Ticketing ME. Different users in the chat are shown different actions based on the requirement here.
+Today every user in the Teams chat or channel sees the exact same view and button actions on the adaptive card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel. For example, in the case of an approval request sent in a chat or channel, only the manager or approver must be shown the option to approve or reject and add comments. The other users must only be able to view details of the approval request. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a Ticketing ME where different users in the chat are shown different actions based on the requirement.
 
 ![Contextual view](~/assets/images/bots/contextual-views.png)
 
@@ -44,7 +44,7 @@ Today every user in the Teams chat/channel sees the exact same view and button a
 
 ### Sequential workflow support
 
-With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of Action.Execute to return an adaptive card in response to action. Also, any user in the chat/channel can progress through their workflow without modifying the card for other users in the chat. This is illustrated with the help of the below food ordering bot example:
+With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. The following image illustrates a food ordering bot example:
 
 ![Sequential workflow](~/assets/images/bots/sequentialworkflow.png)
 
