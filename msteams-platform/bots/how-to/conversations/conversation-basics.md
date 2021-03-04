@@ -206,6 +206,9 @@ async def on_members_added_activity(
 
 ---
 
+> [!NOTE]
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one activity with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You may need to cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
@@ -252,7 +255,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Rich text | ✔                | ✔                |                                                                                         |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
 | Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16 (such as U+1F600 for grinning face)          |
 
 ## Adding notifications to your message
 
@@ -369,9 +372,9 @@ Use the following code to send a simple adaptive card:
 ```
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
-When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
 ## Code sample
+
 |**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |

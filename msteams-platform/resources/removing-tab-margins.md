@@ -15,8 +15,8 @@ Microsoft Teams is removing the margins around all tabs. This will allow develop
 
 ## Timelines
 
-* March 1st, 2021 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md)
-* May 1st, 2021 - Margins will be removed in production
+* March 5, 2021 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
+* May 1, 2021 - Margins will be removed in production.
 
 ## Guidelines
 
@@ -40,8 +40,7 @@ No, you should provide your own padding/margins to the left and right of all app
 * Top: 16px
 * Bottom: 0px
 
-## Important notes
-
-* All tabs have their margins removed: personal tabs, (group)chat tabs, meeting tabs and channel tabs.
-* There is no way to opt-in or opt-out of this change. It will apply to all tabs.
-* This may affect some tabs that relied on Microsoft Teams to provide margins surrounding their UI.
+> [!IMPORTANT]
+> * All tabs have their margins removed: personal tabs, (group) chat tabs, meeting tabs, and channel tabs.
+> * There is no way to opt-in or opt-out of this change. It will apply to all tabs.
+> * This change can affect tabs that rely on Microsoft Teams to provide margins surrounding their UI.
