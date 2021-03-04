@@ -1,24 +1,26 @@
 ---
 title: Conversation basics
-author: clearab
-description: How to have a conversation with a Microsoft Teams bot
+description: describes ways to have a conversation with a Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
+keyword: conversations basics receive message send message picture message channel data adaptive cards
 ---
 # Conversation basics
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
+A conversation is a series of messages sent between your bot and one or more users. There are three types of conversations, also called scopes in Teams:
 
-* `teams` Also called channel conversations, visible to all members of the channel.
-* `personal` Conversations between bots and a single user.
-* `groupChat` Chat between a bot and two or more users. Also enables your bot in meeting chats.
+| Conversation type | Description |
+| ------- | ----------- |
+|  `teams` | Also called channel conversations, visible to all members of the channel. |
+| `personal` | Conversations between bots and a single user. |
+| `groupChat` | Chat between a bot and two or more users. Also enables your bot in meeting chats. |
 
 A bot behaves slightly differently depending on what kind of conversation it is involved in:
 
 * Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.
-* Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user will be routed to your bot.
+* Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user routes to your bot.
 
 To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).
 
@@ -26,13 +28,13 @@ To enable your bot in a particular scope, add that scope to your [app manifest](
 
 Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Basic conversation is handled through the Bot Framework Connector, a single REST API to enable your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as natural language processing (NLP).
+Basic conversations are handled through the Bot Framework Connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as Natural Language Processing (NLP).
 
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
-The code below shows an example.
+The following code shows an example.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -117,7 +119,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handlers, use the turn context object's `SendActivityAsync` method to send a single message response. You can also use the object's `SendActivitiesAsync` method to send multiple responses at once. The code below shows an example of sending a message when someone is added to a conversation  
+To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when someone is added to a conversation.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -204,21 +206,24 @@ async def on_members_added_activity(
 
 ---
 
+> [!NOTE]
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one activity with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is the definitive source for team and channel IDs. You may need to cache and use these ids as keys for local storage. The `TeamsActivityHandler` in the SDK will typically pull out important information from the `channelData` object to make it more easily accessible, however you can always access the original information from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You may need to cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
-The `channelData` object is not included in messages in personal conversations since these take place outside of any channel.
+The `channelData` object is not included in messages in personal conversations, as these take place outside of any channel.
 
 A typical channelData object in an activity sent to your bot contains the following information:
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `tenant.id` Azure Active Directory tenant ID; passed in all contexts
+* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id` Azure Active Directory tenant ID, passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
-  * `id` GUID for the channel
-  * `name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added
-  * `id` GUID for the channel
+  * `id` GUID for the channel.
+  * `name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
+  * `id` GUID for the channel.
   * `name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
 * `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
@@ -250,11 +255,11 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Rich text | ✔                | ✔                |                                                                                         |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
 | Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis via UTF-16 (such as U+1F600 for grinning face)          |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16 (such as U+1F600 for grinning face)          |
 
 ## Adding notifications to your message
 
-Notifications alert users about new tasks, mentions and comments related to what they are working on, or need to look at by inserting a notice into their Activity Feed. You can set notifications to trigger from your bot message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised will ultimately depend on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification will be either a banner or both a banner and an email.
+Notifications alert users about new tasks, mentions, and comments related to what they are working on or need to look at by inserting a notice into their activity feed. You can set notifications to trigger from your bot-message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised ultimately depends on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification is either a banner or both a banner and an email.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -329,17 +334,48 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments?view=azure-bot-service-3.0&preserve-view=true).
+Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF is not supported.
+Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
-We recommend that you specify the height and width of each image by using XML. If you use Markdown, the image size defaults to 256×256. For example:
+Always specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
+## Adaptive cards
+
+Use the following code to send a simple adaptive card:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
+
+To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
+
 ## Code sample
-|**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
+
+|**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 

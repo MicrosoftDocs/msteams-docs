@@ -67,4 +67,10 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 > [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[Learn more: Camera and image gallery permissions](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
