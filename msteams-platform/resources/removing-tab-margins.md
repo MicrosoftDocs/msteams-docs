@@ -1,7 +1,7 @@
 ---
 title: Removing tab margins in Microsoft Teams
 author: laujan
-description: 
+description: Describes how the removal of tab margins will enhance developer's experience."
 keywords: tab removing margins padding
 ms.topic: reference
 ms.author: lomeybur
