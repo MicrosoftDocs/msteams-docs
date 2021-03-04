@@ -32,7 +32,7 @@ Here's how Teams app capabilities are commonly used in collaborative contexts:
 
 [Personal apps](../concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user.
 
-Here's how Teams capabilities are commonly used in personal contexts:
+Check how Teams capabilities are commonly used in personal contexts:
 
 * [**Bots**](~/bots/what-are-bots.md) have one-on-one conversations with a user. Bots that require multi-turn conversations or provide notifications relevant only to a specific user are best suited in personal apps.
 
