@@ -574,12 +574,14 @@ The following section is a description of the entities in the `OnBehalfOf` of Ar
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> via \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
-## Next Steps
+## Code samples
+
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+## Next Step
 
 Add a search command
 
 > [!div class="nextstepaction"]
 > [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-> [!div class="nextstepaction"]
-> !include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

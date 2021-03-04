@@ -625,11 +625,14 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 * * *
 
-## Next steps
+## Code samples
+
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
+## Next step
 
 If you allow your users to send a response back from the task module, you must handle the submit action.
 
 > [!div class="nextstepaction"] 
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

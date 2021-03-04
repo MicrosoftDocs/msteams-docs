@@ -142,6 +142,10 @@ The following section is an example of a `composeExtensions` object defining two
 ...
 ```
 
+## Code samples
+
+[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+
 ## Next steps
 
 If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you want to:
@@ -154,4 +158,3 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]

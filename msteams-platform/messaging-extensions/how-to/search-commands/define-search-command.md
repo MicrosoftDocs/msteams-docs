@@ -23,49 +23,50 @@ The search command is invoked from any one or both of the following locations:
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
-## Add the command to your app manifest
+## Add thesearch  command to your app manifest
 
 To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can  do this either with the help of App Studio, or do it manually.
 
-### Create a command using App Studio
+### Create a search command using App Studio
 
-**To create a command after [creating a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)**
+The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
-1. If you have already created your app package in App Studio, choose it from the list. If not, you can import an existing app package.
-1. Select the **Add** button in the Command section.
-1. Choose **Allow users** to query your service for information and insert that into a message.
-1. Add a **Command ID** and a **Title**.
-1. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
-1. Add your search parameter.
-1. Select **Save**.
+**To create a search command**
+1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
+1. If you created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
+1. After importing app package, select **Messaging extensions** under **Capabilities**.
+1. Select **Add** in the **Command** section of the messaging extension page.
+1. Choose **Allow users to query your service for information and insert that into a message**.
+1. Add a **Command Id** and a **Title**.
+1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command.
+1. Add your search parameter and select **Save**.
 
-### Create a command manually 
+### Create a search command manually 
 
 To manually add your messaging extension search command to your app manifest, you must add the following parameters to your `composeExtension.commands` array of objects:
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `id` | Unique ID that you assign to this command. The user request includes this ID. | Yes | 1.0 |
-| `title` | Command name. This value appears in the user interface (UI). | Yes | 1.0 |
-| `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-| `type` | Must be `query` | No | 1.4 |
-|`initialRun` | If set to **true**, indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
-| `context` | Optional array of values that defines the context the search action is available in. Possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
+| `id` | This property is an unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
+| `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
+| `description` | This property is a help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
+| `type` | This property must be a `query` | No | 1.4 |
+|`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
+| `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
 You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
-| `parameters` | Static list of parameters for the command. | No | 1.0 |
-| `parameter.name` | The name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
-| `parameter.description` | Describes this parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
-| `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
-| `parameter.inputType` | Set to the type of input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
+| `parameters` | This property defines a static list of parameters for the command. | No | 1.0 |
+| `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
+| `parameter.description` | This property describes this parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
+| `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
+| `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
 #### App manifest example
 
-Following is an example of the simpleapp manifest of the `composeExtensions` object defining a search command: 
+Example of the simple app manifest of the `composeExtensions` object defining a search command: 
 
 ```json
 {
