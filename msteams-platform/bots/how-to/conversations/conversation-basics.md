@@ -206,6 +206,9 @@ async def on_members_added_activity(
 
 ---
 
+> [!NOTE]
+> Message splitting occurs when a text message and an attachment are sent at the same time. The two messages are split into text and an attachment. Due to this message splitting, you will not receive the message ID, as we cannot update the message proactively. The attachment is sent after the text message.
+
 ## Teams channel data
 
 The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You may need to cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
@@ -369,9 +372,9 @@ Use the following code to send a simple adaptive card:
 ```
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
-When a response contains text messages and attachments, both responses are sent separately. The attachment is sent after the text message.
 
 ## Code sample
+
 |**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
