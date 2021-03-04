@@ -207,7 +207,7 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in same activity payload. This activity is split into separate activities by Microsoft Teams. One with just text message and another one with an attachment. Due to this you do not receive the message ID in response which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. Workaround is to send separate activities instead of relying on message splitting.
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one activity with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 
 ## Teams channel data
 
@@ -338,7 +338,7 @@ Pictures are sent by adding attachments to a message. You can find more informat
 
 Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
-Always mention the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+Always specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
