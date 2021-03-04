@@ -27,7 +27,7 @@ Tab developers must not rely on Teams to provide margins surrounding their tabs.
 
 ## FAQ
 
-> Is it OK for app chrome (header bar, task bar, etc) to touch the edges of our designs?
+> Is it OK for app chrome, such as header bar or taskbar, to touch the edges of our designs?
 
 Yes, this is fine and encouraged. This helps the app feel native.
 
