@@ -22,7 +22,7 @@ The Microsoft Teams App Validator tool helps you identify and fix issues before 
 1. Go to the **Preliminary checklist** and review the list of test cases that are difficult to automate.
 1. If present, [fix issues with your manifest](~/resources/schema/manifest-schema.md) or app in general.
 
-## Provide notes for testing your app
+## Create notes for testing your app
 
 Include the following information with your submission. If you upload test notes to SharePoint, you must provide a public link.
 
@@ -47,7 +47,26 @@ You can sign up for a [Microsoft 365 Developer Program](https://developer.micros
 
 You can provide a recording of the product so we can fully understand its functionality.
 
+## Create a Partner Center account
+
+To publish your app to the Teams store and AppSource, you must [set up your Partner Center account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
+
+### Partner Center app category mapping
+
+During submission, you're asked to categorize your app. The following table maps Teams store categories to the categories listed in Partner Center.
+
+| Teams categories       | Partner Center categories  |
+|:---------------------|:---------------|
+| Analytics and BI | Analytics, Data Visualization and BI |
+| Developer and IT | Developer Tools, IT Admin |
+| Education | Education |
+| Human resources | Human Resources and Recruiting |
+| Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
+| Project management | Communication, Project Management, Workflow, and Business Management |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
+| Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
+
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Submit your app](~/concepts/deploy-and-publish/appsource/submit-your-app.md)
+> [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)

@@ -144,9 +144,26 @@ The app descriptions in your manifest and store must be the same and follow thes
 * Follow the [long description guidelines](~/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md#long-description).
 * Clearly describe any limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the customer acquires your offer. The capabilities you declare must relate to the core functions and description of your offer.
 
-### 4.4 Localization
+### 4.4 Privacy policy
 
-Your package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+The policy can be specific to your Teams app or an overall policy for all of your services.
+
+* If you use a generic privacy policy template, you must reference "services", "applications", and "platforms" to include your Teams app and your website or service.
+* Must include how you handle user data storage, retention, and deletion. You also must describe the security controls you use for data protection.
+* Must include your contact information.
+* Should not contain broken, beta, or staging URLs.
+
+### 4.5 Terms of use
+
+Your terms of use should be specific and applicable to your offering.
+
+### 4.6 Support links
+
+Your app's support URLs should not require authentication. For example. users should not have to log in to contact you.
+
+### 4.7 Localization
+
+Your app package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
 ## 5.0 Tabs
 
