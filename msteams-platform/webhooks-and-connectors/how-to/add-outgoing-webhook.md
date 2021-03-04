@@ -113,14 +113,8 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 >* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 >* The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
-## Code samples
+## Code sample
+|**Sample name** | **Description** | **.NET** | **Node.js** |
+|----------------|------------------|--------|----------------|
+| Outgoing webhooks	| Samples to create **Custom Bots** to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
-You can view outgoing webhook code samples on GitHub:
-
-### Node.js
-
-[OfficeDev/msteams-samples-outgoing-webhook-nodejs](https://github.com/OfficeDev/msteams-samples-outgoing-webhook-nodejs)
-
-### C\#
-
-[OfficeDev/microsoft-teams-sample-outgoing-webhook](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook)

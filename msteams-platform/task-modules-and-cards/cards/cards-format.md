@@ -114,14 +114,14 @@ Bots and messaging extensions can include mentions within the card content in [T
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 > * Channel & Team mentions are not supported in bot messages.
 
-### Constructing mentions
+#### Constructing mentions
 
 To include a mention in an Adaptive card your app needs to include the following elements
 
 * `<at>username</at>` in the supported Adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
 
-### Sample Adaptive card with a mention
+#### Sample Adaptive card with a mention
 
 ``` json
 {
@@ -152,6 +152,7 @@ To include a mention in an Adaptive card your app needs to include the following
 }
 ```
 
+
 ### Information masking in Adaptive cards
 Use the information masking property to mask specific information, such as password or sensitive information from users.
 
@@ -175,6 +176,43 @@ To mask information in Adaptive cards, add the `isMasked` property to **type** `
 The following image is an example of masking information in Adaptive cards:
 
 ![Masking information image](../../assets/images/cards/masking-information-view.png)
+
+### Full width Adaptive card
+You can use the `msteams` property to expand the width of an Adaptive card and make use of additional canvas space. For information on how to use the property, see the following example:
+
+#### Constructing full width cards
+To make a full width Adaptive card the `width` object in `msteams` property in the card content must be set to `Full`.
+In addition, your app must include the following elements:
+
+#### Sample adaptive card with full width
+
+``` json
+{
+    "type": "AdaptiveCard",
+    "body": [{
+        "type": "Container",
+        "items": [{
+            "type": "TextBlock",
+            "text": "Digest card",
+            "size": "Large",
+            "weight": "Bolder"
+        }]
+    }],
+    
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+A full width Adaptive Card appears as follows:
+![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
+
+If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
+![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
+
 
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
