@@ -29,7 +29,8 @@ Here you can find some common scenarios and a selection of extensibility points.
 
 ## See also
 
+Go through all the sections in each article and learn to:
+
 > [!div class="nextstepaction"]
 > [Integrate web apps with Teams](../samples/integrating-web-apps.md)
-
- Go through all the sections in each article and learn to [build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md).
+> [build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
