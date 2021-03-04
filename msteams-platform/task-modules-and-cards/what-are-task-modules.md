@@ -246,3 +246,6 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 
 > [!div class="nextstepaction"]
 > [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
