@@ -25,7 +25,7 @@ The following screenshot displays the locations from where messaging extensions 
 
 A messaging extension consists of a web service that you host and your app manifest which defines where your web service is invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. Use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol though you can create your web service manually.
 
-In the app manifest for your Microsoft Teams app, you define a single messaging extension with up to ten different commands. Each command defines a type and the locations in the client from where it is invoked. The command types are **action** or **search**. The locations are **compose message area, command bar, and message**. After invoking, your web service receives an HTTPS message with a JSON payload including all the relevant information. You respond with a JSON payload and allow the Teams client to know what interaction to enable next.
+In the app manifest for your Microsoft Teams app, you define a single messaging extension with up to ten different commands. Each command defines a type and the locations in the client from where it is invoked. The command types are **action** or **search**. The locations are **compose message area, command bar, and message**. After invoking, your web service receives an HTTPS message with a JSON payload including all the relevant information. You respond with a JSON payload and allow the Teams client to know what interaction to enable next. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 ## Types of messaging extension commands
 
@@ -33,7 +33,7 @@ The type of messaging extension command defines the UI elements and interaction 
 
 ### Action commands
 
-Use [action commands](define-action-command.md) to present your users with a modal popup to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly, or by inserting a message into the compose message area. After that, the user can submit the message. You can chain multiple forms together for more complex workflows.
+Use action commands]to present your users with a modal popup to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly, or by inserting a message into the compose message area. After that, the user can submit the message. You can chain multiple forms together for more complex workflows.
 
 They are triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from.
 
