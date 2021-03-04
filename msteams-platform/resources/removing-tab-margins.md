@@ -41,15 +41,7 @@ No, you must provide your own padding or margins to the left and right of all ap
 * Top: 16px
 * Bottom: 0px
 
-<<<<<<< HEAD
 > [!IMPORTANT]
 > * All tabs have their margins removed: personal tabs, (group) chat tabs, meeting tabs, and channel tabs.
 > * There is no way to opt-in or opt-out of this change. It will apply to all tabs.
 > * This change can affect tabs that rely on Microsoft Teams to provide margins surrounding their UI.
-=======
-## Important notes
-
-* All tabs have their margins removed: personal tabs, (group)chat tabs, meeting tabs and channel tabs.
-* There is no way to opt-in or opt-out of this change. It will apply to all tabs.
-* This may affect some tabs that relied on Microsoft Teams to provide margins surrounding their UI.
->>>>>>> 03888fdda6b5df8ee25030f1829949de981d19c0

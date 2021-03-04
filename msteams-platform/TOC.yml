@@ -412,6 +412,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
+    - name: Tab margin updates
+      href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Contributing to Teams docs
