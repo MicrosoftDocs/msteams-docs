@@ -10,14 +10,15 @@ The cards listed in this section are supported in bots for Microsoft Teams. They
 
 ## Card examples
 
-You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v4). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
+You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
-  * [Add cards as attachments to messages](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+  * [Add cards as attachments to messages](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
   * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+
 * Node.js
-  * [Add cards as attachments to messages](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
-  * [Cards sample code (Bot Builder v4)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+  * [Add cards as attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
+  * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## Types of cards
 
@@ -61,7 +62,7 @@ See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more i
 
 ## Adaptive card
 
-An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v4.0](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card).
+An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for adaptive cards
 
@@ -273,8 +274,8 @@ A card that typically contains a single large image, one or more buttons and tex
 
 Bot Framework reference:
 
-* [Hero card Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card)
-* [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card)
+* [Hero card Node](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
+* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
 
 ## List card
 
