@@ -9,7 +9,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (Office 365, Outlook, etc). You can take advantage of this by allowing a single sign-on to authorize your Microsoft Teams tab (or task module) on desktop or mobile clients. Thus, if a user consents to use your app, they won’t have to consent again on another device — they will be signed in automatically. In addition, we prefetch your access token to improve performance and load times.
 
->[!NOTE]
+> [!NOTE]
 > **Teams mobile client versions supporting SSO**  
 >
 > ✔Teams for Android (1416/1.0.0.2020073101 and later)
@@ -18,11 +18,10 @@ Users sign in to Microsoft Teams via their work, school, or Microsoft accounts (
 >
 > For the best experience with Teams, please use the latest version of iOS and Android.
 
->[!NOTE]
+> [!NOTE]
 > **Quickstart**  
 >
 > The simplest path to getting started with tab SSO is with the Microsoft Teams Toolkit for Visual Studio Code. [Learn more](../../../toolkit/visual-studio-code-tab-sso.md)
-
 
 ## How SSO works at runtime
 
@@ -156,17 +155,17 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and additional user consent is required (for user-level permissions) - we will show a dialog to the user encouraging them to grant additional consent. 
 
-Once you've received the access token in the success callback you can decode the access token to view the claims associated with that token. (Optionally, you can manually copy/paste the access token into a tool such as [JWT.io](https://jwt.io/) to inspect its contents). If you are not receiving the UPN (User Principal Name) in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the User Principal Name (UPN) in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
 
-## Sample code
+## Code sample
 
-Visit our sample application: [MSTeams PnP SSO Sample](https://github.com/pnp/teams-dev-samples/tree/master/samples/tab-sso)
-
-The README explains how to set up your development environment and how to configure your application in Azure AD. You can also find further information on how the sample is structured in the [app structure section](https://github.com/OfficeDev/msteams-tabs-sso-sample-nodejs#app-structure) to help familiarize yourself with the codebase.
+|**Sample name**|**Description**|**C#**|**TypeScript**|
+|---------------|---------------|------|--------------|
+| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
 ## Known Limitations
 
@@ -199,3 +198,6 @@ Another approach for getting additional Microsoft Graph scopes is to present a c
 ### Non-Azure AD Authentication
 
 The above-described authentication solution only works for apps and services that support Azure AD as an identity provider. Apps that want to authenticate using non-Azure AD based services need to continue using the pop-up-based [web authentication flow](~/concepts/authentication.md).
+
+> [!NOTE] 
+> SSO is supported for customer owned apps within the Azure AD B2C tenants.
