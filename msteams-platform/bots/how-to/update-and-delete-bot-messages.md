@@ -40,7 +40,7 @@ await turnContext.updateActivity(newActivity);
 
 # [Python](#tab/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. For more information, see [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. For more information, see [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
 
 ```python
 
@@ -96,7 +96,7 @@ await context.updateActivity(message);
 
 # [Python](#tab/python)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
+To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
@@ -109,7 +109,7 @@ await turn_context.update_activity(updated_activity)
 
 In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C# or .NET](#tab/dotnet, 2)
+# [C# or .NET](#tab/dotnet)
 
 To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -120,7 +120,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript, 2)
+# [TypeScript or Node.js](#tab/typescript)
 
 To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)
 
@@ -130,7 +130,7 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# [Python](#tab/python, 2)
+# [Python](#tab/python)
 
 To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. For more information, see [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
@@ -151,11 +151,6 @@ For REST API, request body is not applicable and it returns an HTTP Status code 
 
 ---
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Update and delete bot messages](~/bots/how-to/get-teams-context.md)
-
 ## Code samples
 
 The official conversation basics are as follows:
@@ -164,3 +159,7 @@ The official conversation basics are as follows:
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
 |Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get teams context](~/bots/how-to/get-teams-context.md)
