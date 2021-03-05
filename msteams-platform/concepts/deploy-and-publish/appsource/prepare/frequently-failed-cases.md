@@ -1,11 +1,11 @@
 ---
-title: Teams store and AppSource validation guidelines
+title: Microsoft Teams store validation guidelines
 description: Describes the guidelines every app submitted to the Teams store (AppSource) must follow.
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ---
-# Microsoft Teams store and AppSource validation guidelines
+# Microsoft Teams store validation guidelines
 
 Reviewing these guidelines can help you avoid issues that frequently cause apps to fail Microsoft Teams store and AppSource submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
 
@@ -169,7 +169,8 @@ Your app package must include a localization file that includes language transla
 
 If your app includes a tab, following these guidelines can increase the likelihood your app will pass submission.
 
-For information on creating a high-quality experience, see the [tab design guidelines](~/tabs/design/tabs.md).
+> [!TIP]
+> If you want information on creating a high-quality experience, see the [tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
@@ -206,7 +207,8 @@ For information on creating a high-quality experience, see the [tab design guide
 
 If your app includes a bot, following these guidelines can increase the likelihood your app will pass submission.
 
-For information on creating a high-quality experience, see the [bot design guidelines](~/bots/design/bots.md).
+> [!TIP]
+> If you want information on creating a high-quality experience, see the [bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
@@ -244,7 +246,8 @@ See the following resources for more information:
 
 If your app includes a messaging extension, following these guidelines can increase the likelihood your app will pass submission.
 
-For information on creating a high-quality experience, see the [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+> [!TIP]
+> If you want information on creating a high-quality experience, see the [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### 7.1 Action commands
 
@@ -263,19 +266,19 @@ See how to [implement link unfurling](~/messaging-extensions/how-to/link-unfurli
 
 Search-based messaging extensions must provide text that helps users effectively search.
 
-For more information, see the [design best practices for search commands](~/messaging-extensions/design/messaging-extension-design.md#searches).
-
 ## 8.0 Task modules
 
 A task module must include an icon and short name of the app in which it is associated.
 
-For information on creating a high-quality experience, see the [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
+> [!TIP]
+> If you want information on creating a high-quality experience, see the [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ## 9.0 Meeting extensions
 
 If your app includes a meeting extension, following these guidelines can increase the likelihood your app will pass submission.
 
-For information on creating a high-quality experience, see the [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+> [!TIP]
+> If you want information on creating a high-quality experience, see the [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### 9.1 Pre- and post-meeting experience
 

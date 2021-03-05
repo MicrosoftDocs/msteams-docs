@@ -221,6 +221,8 @@ Send an email to **teamsubm@microsoft.com** with the following details:
     * Your seller ID
     * A screenshot of the issue (if possible)
 
+</details>
+
 <details>
 
 <summary><b>Where else can I go for Partner Center help?</b></summary>
