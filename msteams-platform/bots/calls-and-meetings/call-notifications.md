@@ -15,7 +15,7 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in legacy format and reply with the following:
+The incoming notification is provided in legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in legacy format and reply with the following:
 
 ```http
 HTTP/1.1 204 No Content

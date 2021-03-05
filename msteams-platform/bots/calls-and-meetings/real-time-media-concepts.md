@@ -64,7 +64,7 @@ The next section provides details about what you must install and the requiremen
 
 To develop an application-hosted media bot, you must install the [Microsoft.Graph.Calls.Media .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) NuGet package within your Visual Studio project.
 
-Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#application-hosted-media-bot-development-requires-cnet-and-windows-server).
+Application-hosted media bots require .NET or C# and Windows Server. For more information, see [requirements and considerations for application-hosted media bots](requirements-considerations-application-hosted-media-bots.md#c-or-net-and-windows-server-for-development).
 
 ## Next step
 

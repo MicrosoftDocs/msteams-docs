@@ -58,7 +58,7 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message. See [examples](#examples) or use one of the samples listed in [code samples](#code-samples).
+If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message. See [samples](#samples) or use one of the samples listed in [code samples](#code-samples).
 
 Now that you have sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
@@ -103,7 +103,7 @@ The next section illustrates a simple code sample that proactively installs your
 
 ## Samples
 
-The following code shows an example of proactively installing your app using Graph:
+The following code shows a sample of proactively installing your app using Graph:
 
 # [C# or .NET](#tab/dotnet)
 

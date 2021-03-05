@@ -69,7 +69,7 @@ Bots in channels receive messages only when they are explicitly @mentioned, even
 
 ### My bot doesn't understand my commands when in a channel
 
-Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [mentions](../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions) for tips on how to handle this case.
+Because bots in channels only receive messages when they are @mentioned, all messages that your bot receives in a channel include that @mention in the text field. It is a best practice to strip the bot name itself out of all incoming text messages before passing along to your parsing logic. Review [mentions](../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions) for tips on how to handle this case.
 
 ## Issues with packaging and uploading
 

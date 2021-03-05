@@ -17,7 +17,7 @@ This document covers the following:
 * [Handle `HTTP 429` responses](#handle-http-429-responses)
 * [Detect transient exceptions example](#detect-transient-exceptions-example)
 * [Backoff example](#backoff-example)
-* [Per bot per thread limit]([#per-bot-per-thread-limit])
+* [Per bot per thread limit](#per-bot-per-thread-limit)
 * [Per thread limit for all bots](#per-thread-limit-for-all-bots)
 
 ## Handle rate limits

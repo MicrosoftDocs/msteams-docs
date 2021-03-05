@@ -48,7 +48,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 6. Select the **Scope** check box(es) to select where this command menu must appear and select **Save**.
 
-    ![App Studio Command Menu Add button](./conversations/media/AppStudio-NewCommandMenu.png)
+    ![App Studio New Command Menu button](./conversations/media/AppStudio-NewCommandMenu.png)
 
 ### Create a command menu for your bot by editing Manifest.json
 
