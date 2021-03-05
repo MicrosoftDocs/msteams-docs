@@ -40,7 +40,7 @@ await turnContext.updateActivity(newActivity);
 
 # [Python](#tab/python)
 
-To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
+To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class. For more information, see [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
 
 ```python
 
@@ -64,6 +64,46 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 For information on REST API request body, see [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. For information on what REST API returns, see [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object.
 
 ---
+
+| | |
+|----|----|
+| **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object |
+| **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object |
+
+---
+
+## Update cards
+
+To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
+
+# [C#/.NET](#tab/dotnet)
+
+To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+```csharp
+var activity = MessageFactory.Attachment(card.ToAttachment());
+activity.Id = turnContext.Activity.ReplyToId;
+await turnContext.UpdateActivityAsync(activity, cancellationToken);
+```
+
+# [TypeScript/Node.js](#tab/typescript)
+
+To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+```typescript
+const message = MessageFactory.attachment(card);
+message.id = context.activity.replyToId;
+await context.updateActivity(message);
+```
+
+# [Python](#tab/python)
+
+To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest).
+
+```python
+updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
+updated_activity.id = turn_context.activity.reply_to_id
+await turn_context.update_activity(updated_activity)
+
+```
 
 ## Delete messages
 
@@ -115,3 +155,12 @@ For REST API, request body is not applicable and it returns an HTTP Status code 
 
 > [!div class="nextstepaction"]
 > [Update and delete bot messages](~/bots/how-to/get-teams-context.md)
+
+## Code samples
+
+The official conversation basics are as follows:
+
+| Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
+|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
+|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+
