@@ -15,6 +15,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021 | Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|Reorder personal app tabs|[Reorder the chat tab in personal apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
 |03/04/2021|Information masking in Adaptive cards is in developer preview.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
