@@ -217,6 +217,62 @@ The response with the token is sent through an invoke activity with the same sch
 
 The `turnContext.activity.value` is of type [TokenExchangeInvokeRequest](/dotnet/api/microsoft.bot.schema.tokenexchangeinvokerequest?view=botbuilder-dotnet-stable&preserve-view=true) and contains the token that can be further used by your bot. You must store the tokens for performance reasons and refresh them.
 
+### Token exchange failure
+
+In case of token exchange failure, use the following code:
+
+```json
+{​​ 
+    "status": "<response code>", 
+    "body": 
+    {​​ 
+        "id":"<unique Id>", 
+        "connectionName": "<connection Name on the bot (from the OAuth card)>", 
+        "failureDetail": "<failure reason if status code is not 200, null otherwise>" 
+    }​​ 
+}​​
+```
+
+To understand what the bot does when the token exchange fails to trigger a consent prompt, see the following steps:
+
+>[!NOTE]
+> No user action is required to be taken as the bot takes the actions when the token exchange fails.
+
+1. The client starts a conversation with the bot triggering an OAuth scenario.
+2. The bot sends back an OAuth card to the client.
+3. The client intercepts the OAuth card before displaying it to the user and checks if it contains a `TokenExchangeResource` property.
+4. If the property exists, the client sends a `TokenExchangeInvokeRequest` to the bot. The client must have an exchangeable token for the user, which must be an Azure AD v2 token and whose audience must be the same as `TokenExchangeResource.Uri` property. The client sends an invoke activity to the bot with the following code:
+
+    ```json
+    {
+        "type": "Invoke",
+        "name": "signin/tokenExchange",
+        "value": 
+        {
+            "id": "<any unique Id>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
+            "token": "<exchangeable token>"
+        }
+    }
+    ```
+
+5. The bot processes the `TokenExchangeInvokeRequest` and returns a `TokenExchangeInvokeResponse` back to the client. The client must wait till it receives the `TokenExchangeInvokeResponse`.
+
+    ```json
+    {
+        "status": "<response code>",
+        "body": 
+        {
+            "id":"<unique Id>",
+            "connectionName": "<connection Name on the skill bot (from the OAuth card)>",
+            "failureDetail": "<failure reason if status code is not 200, null otherwise>"
+        }
+    }
+    ```
+
+6. If the `TokenExchangeInvokeResponse` has a `status` of `200`, then the client does not show the OAuth card. See the [normal flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). For any other `status` or if the `TokenExchangeInvokeResponse` is not received, then the client shows the OAuth card to the user. See the [fallback flow image](/azure/bot-service/bot-builder-concept-sso?view=azure-bot-service-4.0#sso-components-interaction&preserve-view=true). This ensures that the SSO flow falls back to normal OAuthCard flow in case of any errors or unmet dependencies like user consent.
+
+
 ### Update the auth sample
 
 Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) and then complete the following steps to update it:
@@ -238,6 +294,7 @@ Open [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/ma
 3. Update the manifest and ensure that `token.botframework.com` is in the valid domains list. For more information, see [Teams auth sample](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth).
 4. Zip the manifest with the profile images and install it in Teams.
 
-#### Additional code samples
-
-* [C# sample using the Bot Framework SDK](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore).
+## Code sample
+|**Sample name** | **Description** |**.NET** | 
+|----------------|-----------------|--------------|
+|Bot framework SDK | Sample for using the bot framework SDK. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/experimental/teams-sso/csharp_dotnetcore)|
