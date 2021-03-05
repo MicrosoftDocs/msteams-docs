@@ -90,7 +90,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### Bots
 
-For bot implementation, please see our [Bots in Teams meetings](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings) documentation.
+For bot implementation, start with the [build a bot section](../build-your-first-app/build-bot.md) and then continue with [create apps for teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
 
 ### Messaging Extensions
 
