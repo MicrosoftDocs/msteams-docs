@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 
 # Work with apps for Teams meetings
 
-To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations) and [meeting apps API references](#meeting-apps-API-references).
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations) and [meeting apps API references](#meeting-apps-api-references).
 
 For information on meeting lifecycle, participant roles and user types, see [Apps in Teams meetings](teams-apps-in-meetings.md). Also, see [enabling and configuring your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md). Teams also offers you the ability to interact collaboratively in meetings with the new auditorium view using [Together Mode](teams-together-mode.md).
 
@@ -17,7 +17,7 @@ For information on meeting lifecycle, participant roles and user types, see [App
 
 Before you work with apps for Teams meetings, you must have a basic understanding of the following prerequisites:
 
-* Apps in meetings require some basic knowledge of [Teams app development](../overview.md). An app in a meeting can comprise of [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md), and [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md) features. An app in a meeting requires updates to the Teams [app manifest](#update-your-app-manifest) to indicate that the app is available for meetings.
+* Apps in meetings require some basic knowledge of [Teams app development](../overview.md). An app in a meeting can comprise of [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md), and [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md) features. An app in a meeting requires updates to the Teams [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest) to indicate that the app is available for meetings.
 
 * For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs). For more information, see how to [build a group tab](../build-your-first-app/build-channel-tab.md)). To enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats, you must support the `groupchat` scope.
 
