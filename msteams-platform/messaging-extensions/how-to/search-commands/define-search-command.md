@@ -11,10 +11,10 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
-[!NOTE]
-> Result card size limit is 28 KB. Beyond this limit, message is not sent.  
+> [!NOTE]
+> The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
 
-## Choose messaging extension invoke locations
+## Choose search command invoke locations
 
 The search command is invoked from any one or both of the following locations:
 
@@ -34,7 +34,9 @@ The prerequisite to create a search command is that you must already have create
 **To create a search command**
 1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
 1. If you created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
-1. After importing app package, select **Messaging extensions** under **Capabilities**.
+1. After importing app package, select **Messaging extensions** under **Capabilities**.You get a pop-up window to set up the messaging extension.
+1. Select **Set up** in the window to include the messaging extension in your app experience.
+1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**.
 1. Select **Add** in the **Command** section of the messaging extension page.
 1. Choose **Allow users to query your service for information and insert that into a message**.
 1. Add a **Command Id** and a **Title**.
@@ -56,11 +58,11 @@ To manually add your messaging extension search command to your app manifest, yo
 
 You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
 
-| Property name | Purpose | Required? | Minimum manifest version |
+| Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
 | `parameters` | This property defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
-| `parameter.description` | This property describes this parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
+| `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
