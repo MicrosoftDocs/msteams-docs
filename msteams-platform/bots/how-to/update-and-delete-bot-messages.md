@@ -69,7 +69,7 @@ For information on REST API request body, see [activity](/azure/bot-service/rest
 
 In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C# or .NET](#tab/dotnet)
+# [C# or .NET](#tab/dotnet, 2)
 
 To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -80,7 +80,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript or Node.js](#tab/typescript, 2)
 
 To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)
 
@@ -90,7 +90,7 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python, 2)
 
 To delete that message, pass that activity's ID to the `delete_activity` method of the `TurnContext` object. For more information, see [activity-update-and-delete](https://github.com/microsoft/botbuilder-python/blob/c04ecacb22c1f4b43a671fe2f1e4782218391975/tests/teams/scenarios/activity-update-and-delete/bots/activity_update_and_delete_bot.py).
 
