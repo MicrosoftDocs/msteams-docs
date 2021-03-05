@@ -574,9 +574,12 @@ The following section is a description of the entities in the `OnBehalfOf` of Ar
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> via \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
-## Code samples
+## Code sample
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+| Sample Name           | .NET    | Node.js   |   
+|:---------------------|:--------|:-------------|
+|Messaging extension with action-based commands| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Messaging extension with search-based commands    |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next Step
 

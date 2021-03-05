@@ -49,7 +49,7 @@ The cards can be triggered from the compose message area or the command box. Unl
 
 For more information on 
 
-### Link unfurling
+## Link unfurling
 
 You can also invoke your service when a URL is pasted in the compose message area. This functionality is known as **link unfurling**. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow your users to immediately take action without leaving the Microsoft Teams client. For more information on link unfurling, see [link unfurling](link-unfurling.md)
 

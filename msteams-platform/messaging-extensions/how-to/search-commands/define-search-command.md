@@ -23,7 +23,7 @@ The search command is invoked from any one or both of the following locations:
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
-## Add thesearch  command to your app manifest
+## Add the search  command to your app manifest
 
 To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can  do this either with the help of App Studio, or do it manually.
 
@@ -96,9 +96,12 @@ Example of the simple app manifest of the `composeExtensions` object defining a 
 ```
 For the complete  app manifest schema, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
-## Code samples
+## Code sample
 
-[!include[messaging-extension-learn-more](~/includes/messaging-extensions/learn-more.md)]
+| Sample Name           | .NET    | Node.js   |   
+|:---------------------|:--------|:-------------|
+|Messaging extension with action-based commands| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Messaging extension with search-based commands    |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next step
 
