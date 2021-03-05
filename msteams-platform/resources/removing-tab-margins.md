@@ -1,18 +1,18 @@
 ---
 title: Removing tab margins in Microsoft Teams
 author: laujan
-description: Describes how the removal of tab margins will enhance developer's experience."
+description: Describes how the removal of tab margins will enhance developer's experience.
 keywords: tab removing margins padding
 ms.topic: reference
 ms.author: lomeybur
 ---
 
-# Removing all tab margins (2021 update)
+# Tab margin changes
 
 This document describes how the removal of margins around all tabs in Microsoft Teams will enhance the developer's experience when building apps. This is an enhancement introduced in Microsoft Teams in 2021.
 Removing the margins around all tabs will allow developers to build apps that look more native to Teams. This will also align with our [UI kit designs](~/tabs/design/tabs.md). Most apps already look better without the margins surrounding their experiences. However, some tabs are visually affected by this change, and developers must make the necessary changes.
 
-:::image type="content" source="../../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
+:::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
 
 ## Timelines
 
@@ -27,15 +27,15 @@ Tab developers must not rely on Teams to provide margins surrounding their tabs.
 
 ## FAQ
 
-> Is it OK for app chrome, such as header bar or taskbar, to touch the edges of our designs?
+**Is it OK for app chrome, such as header bar or taskbar, to touch the edges of our designs?**
 
 Yes, this is fine and encouraged. This helps the app feel native.
 
-> Is it OK for app content, such as text, logos, and images, to touch the left and right edges of our designs?
+**Is it OK for app content, such as text, logos, and images, to touch the left and right edges of our designs?**
 
 No, you must provide your own padding or margins to the left and right of all app content to ensure it does not touch the edges of your UI. You can also add margins at the top of your tab, if required.
 
-> What's the size of the margins Teams previously applied?
+**What's the size of the margins Teams previously applied?**
 
 * Left and right: 20px
 * Top: 16px
