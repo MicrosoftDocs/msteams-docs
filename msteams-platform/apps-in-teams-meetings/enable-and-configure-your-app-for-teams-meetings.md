@@ -7,12 +7,16 @@ ms.topic: conceptual
 
 # Enable and configure your apps for Teams meetings
 
+Every team has a different way of communicating and collaborating on tasks. You can achieve these different tasks by customizing Teams with apps for meetings. You can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
+
 This document covers the following:
 * [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings)
 * [Configure your app for meeting scenarios](#configure-your-app-for-meeting-scenarios)
 * [Refer to the meeting app sample](#refer-to-the-meeting-app-sample)
 
 ## Enable your app for Teams meetings
+
+To enable your app for Teams meetings, you must update your app manifest and use the context properties to determine where your app must appear.
 
 ### Update your app manifest
 
@@ -57,11 +61,15 @@ The tab `context` and `scopes` properties enable you to determine where your app
 > [!NOTE]
 > `Context` property is currently not supported and is ignored on mobile clients.
 
+After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
+
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
 > * For your app to be visible in the tab gallery it must **support configurable tabs** and the **group chat scope**.
 > * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and tab on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
+
+Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios such as before a meeting you can add tabs, bots and messaging extensions.
 
 ### Before a meeting
 

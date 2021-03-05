@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 
 # Work with apps for Teams meetings
 
-To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#get-prerequisites-and-considerations) and [meeting apps API references](#use-the-meeting-apps-API-references).
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations) and [meeting apps API references](#meeting-apps-API-references).
 
 For information on meeting lifecycle, participant roles and user types, see [Apps in Teams meetings](teams-apps-in-meetings.md). Also, see [enabling and configuring your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md). Teams also offers you the ability to interact collaboratively in meetings with the new auditorium view using [Together Mode](teams-together-mode.md).
 
@@ -240,101 +240,6 @@ The `NotificationSignal` API includes the following response codes:
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
-
-## Enable your app for Teams meetings
-
-### Update your app manifest
-
-The meetings app capabilities are declared in your app manifest through the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
-
-> [!NOTE]
-> Use [developer preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
-
-```json
-
-"configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/teamstab/configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "team",
-        "groupchat"
-      ],
-      "context":[
-        "channelTab",
-        "privateChatTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel"
-     ]
-    }
-  ]
-```
-
-### Context property
-
-The tab `context` and `scopes` properties work in harmony to allow you to determine where you want your app to appear. Tabs in the `team` or `groupchat` scope can have more than one context. The possible values for the context property are as follows:
-
-* **channelTab**: a tab in the header of a team channel.
-* **privateChatTab**: a tab in the header of a group chat between a set of users not in the context of a team or meeting.
-* **meetingChatTab**: a tab in the header of a group chat between a set of users in the context of a scheduled meeting.
-* **meetingDetailsTab**: a tab in the header of the meeting details view of the calendar.
-* **meetingSidePanel**: an in-meeting panel opened via the unified bar (u-bar).
-
-> [!NOTE]
-> "Context" property is currently not supported and thus will be ignored on mobile clients.
-
-## Configure your app for meeting scenarios
-
-> [!NOTE]
-> * For your app to be visible in the tab gallery it needs to **support configurable tabs** and the **group chat scope**.
->
-> * Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The in-meeting experiences (in-meeting dialog and tab) on mobile will be available soon. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
-
-### Before a meeting
-
-Users with organizer and/or presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **details** pages. Messaging extensions are added to via the ellipses/overflow menu &#x25CF;&#x25CF;&#x25CF; located beneath the compose message area in the chat. Bots are added to a meeting chat using the "**@**" key and selecting **Get bots**.
-
-✔ The user identity *must* be confirmed via [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). Following this authentication, the app can retrieve the user role via the GetParticipant API.
-
- ✔ Based on the user role, the app will now have the capability to present role specific experiences. For example, a polling app can allow only organizers and presenters to create a new poll.
-
-> **NOTE**: Role assignments can be changed while a meeting is in progress.  *See* [Roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019). 
-
-### During a meeting
-
-#### **sidePanel**
-
-✔ In your app manifest add **sidePanel** to the **context** array as described above.
-
-✔ In the meeting as well as in all scenarios, the app will be rendered in an in-meeting tab that is 320px in width. Your tab must be optimized for this. *See*, [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
-)
-
-✔Refer to the [Teams SDK](../tabs/how-to/access-teams-context.md#user-context) to use the **userContext** API to route requests accordingly.
-
-✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. Thus, tabs can use OAuth 2.0 directly. *See also*, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
-
-✔ Message extension should work as expected when a user is in an in-meeting view and should be able to post compose message extension cards.
-
-✔ AppName in-meeting - Tooltip should state the app name in-meeting U-bar.
-
-#### **In-meeting dialog**
-
-✔ You must adhere to the [in-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
-
-✔ Refer to the [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md).
-
-✔ Use the [NotificationSignal API](create-apps-for-teams-meetings.md#notificationsignal-api) to signal that a bubble notification needs to be triggered.
-
-✔ As part of the notification request payload, include the URL where the content to be showcased is hosted.
-
-✔ In-meeting dialog must not use task module.
-
-> [!NOTE]
->
-> * These notifications are persistent in nature. You must invoke the [**submitTask()**](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to auto-dismiss after a user takes an action in the web-view. This is a requirement for app submission. *See also*, [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
->
-> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id`  (ID of the user) request metadata in the `from` object, not the `from.aadObjectId` (Azure Active Directory ID of the user) request metadata. *See* [Using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [Create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ## Next steps
 
