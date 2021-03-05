@@ -79,7 +79,7 @@ With the in-meeting app experience, you can engage participants during the meeti
 ✔ An app is visible in a Teams meeting in the side panel or the in-meeting dialog box. Use the in-meeting dialog to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
 > [!NOTE]
-> Your app manifest specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#during-a-meeting), that is where it will be displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+> Your app manifest specifies that your tab is [optimized for side panel](enable-and-configure-your-app-for-teams-meetings.md#during-a-meeting), that is where it will be displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 #### In-meeting experience
 
