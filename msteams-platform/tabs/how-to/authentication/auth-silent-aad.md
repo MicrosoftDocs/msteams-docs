@@ -7,24 +7,24 @@ keywords: teams authentication SSO silent AAD
 # Silent authentication
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, you need to ensure you're using at least the 1.4.1 version of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.
 
-Silent authentication in Azure Active Directory (Azure AD) minimizes the number of times a user needs to enter their login credentials by silently refreshing the authentication token. (For true single sign-on support, view our [SSO Documentation](~/tabs/how-to/authentication/auth-aad-sso.md))
+Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-If you want to keep your code completely client-side, you can use the [Azure Active Directory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to attempt to acquire an Azure AD access token silently. This means that the user may never see a popup dialog if they have signed in recently.
+If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
 
 Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
 
 > [!NOTE]
-> Currently, silent authentication only works for tabs. It does not yet work when signing in from a bot.
+> Currently, silent authentication only works for tabs. It does not work when signing in from a bot.
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow, but it specifies `prompt=none` so that Azure AD never shows the login page. If user interaction is required because the user needs to log in or grant access to the application, Azure AD will immediately return an error that ADAL.js then reports to your app. At this point your app can show a login button if needed.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point your app can show a sign in button if required.
 
 ## How to do silent authentication
 
-The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node).
+The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
 ### include and configure ADAL
 
@@ -46,7 +46,7 @@ Include the ADAL.js library in your tab pages and configure ADAL with your clien
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a login hint for the current user. This will be used as a login_hint in the call to Azure AD.
+In the tab's content page, call `microsoftTeams.getContext()` to get a sign in hint for the current user. This is used as a loginHint in the call to AAD.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -61,9 +61,9 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has an unexpired token cached for the user, use that. Otherwise, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js will call your callback function with the requested token, or an error if authentication fails.
+If ADAL has an unexpired token cached for the user, use the token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js will call your callback function with the requested token, or give an error if authentication fails.
 
-If you get an error in the callback function, show a login button and fall back to an explicit login.
+If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -96,9 +96,9 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### Process the return value
 
-Let ADAL.js take care of parsing the result from Azure AD by calling `AuthenticationContext.handleWindowCallback(hash)` in the login callback page.
+ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign in callback page.
 
-Check that we have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report status back to your main tab content page.
+Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {

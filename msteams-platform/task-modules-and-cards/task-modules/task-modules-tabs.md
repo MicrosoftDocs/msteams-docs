@@ -32,7 +32,7 @@ To invoke a task module from a tab use `microsoftTeams.tasks.startTask()` passin
 
 ## Example: Invoking a task module
 
-The code below is adapted from [the task module sample](~/task-modules-and-cards/what-are-task-modules.md#task-module-samples). Here's what the task module looks like:
+The code below is adapted from [the task module sample](~/task-modules-and-cards/what-are-task-modules.md#code-sample). Here's what the task module looks like:
 
 ![Task Module - Custom Form](~/assets/images/task-module/task-module-custom-form.png)
 

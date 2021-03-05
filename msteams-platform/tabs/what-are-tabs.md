@@ -68,3 +68,9 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 > [!div class="nextstepaction"]
 > [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
