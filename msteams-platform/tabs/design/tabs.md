@@ -138,7 +138,7 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
-These recommendations can help you create a quality app experience. While there may be some overlap, you should also make sure your app adheres to the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md).
+Use these recommendations to create a quality app experience.
 
 ### Collaboration
 

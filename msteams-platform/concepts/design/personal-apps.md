@@ -75,6 +75,8 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Tab priority
 
 #### Do: Show the most relevant content in the first tab
@@ -157,16 +159,9 @@ On the left side of Teams, users can right click the personal app to pin, remove
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
-## Related
+## See also
 
 These other design guidelines may help depending on the scope of your personal app:
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-
-## Validate your design
-
-If you plan to publish your app to the Teams store, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check store validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

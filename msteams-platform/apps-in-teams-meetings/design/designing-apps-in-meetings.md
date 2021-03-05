@@ -159,6 +159,8 @@ You can go back to a meeting after it ends and view app content. In this example
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Interactions
 
 :::row:::
@@ -337,10 +339,3 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to the Teams store (AppSource), you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

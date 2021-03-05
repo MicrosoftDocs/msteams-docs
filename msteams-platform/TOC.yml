@@ -374,19 +374,17 @@
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
-  - name: Publish to the Teams store (AppSource)
+  - name: Publish to the Teams store
     items:
     - name: Overview
       href: concepts/deploy-and-publish/appsource/publish.md
     - name: Review store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Create a store listing
-      href: concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md
     - name: Prepare your store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: Submit your app
       href: https://docs.microsoft.com/office/dev/store/add-in-submission-guide
-    - name: Maintain and support your app
+    - name: Maintain your app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
 - name: Resources
   items:

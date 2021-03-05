@@ -102,6 +102,8 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Primary and secondary actions
 
 :::row:::

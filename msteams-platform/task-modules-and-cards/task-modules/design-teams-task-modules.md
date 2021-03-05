@@ -99,6 +99,8 @@ This example shows poll results launched from an Adaptive Card. The poll can be 
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Usability
 
 :::row:::

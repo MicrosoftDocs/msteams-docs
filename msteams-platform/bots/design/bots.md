@@ -190,6 +190,8 @@ Users should be able to change a bot's settings. You can provide this functional
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Content
 
 :::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Example showing a bot best practice." border="false":::
@@ -301,17 +303,10 @@ Your bot shouldn’t reveal sensitive information to a group of people.
    :::column-end:::
 :::row-end:::
 
-## Learn more
+## See also
 
 These other guidelines may help with your bot design:
 
 * [Designing your personal app](../../concepts/design/personal-apps.md)
 * [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
 * [Designing task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-
-## Validate your design
-
-If you plan to publish your app to the Teams store (AppSource), you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

@@ -342,4 +342,4 @@ If your app doesn't pass review, the Microsoft validation team contacts you with
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create app documentation](~/concepts/deploy-and-publish/appsource/prepare/create-app-docs.md)
+> [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
