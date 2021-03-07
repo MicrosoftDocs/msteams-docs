@@ -34,6 +34,8 @@ With the universal bot action model, you can use `Action.Execute` for action han
 
 ![New universal action model](~/assets/images/bots/new-universal-action-model.png)
 
+This means you can now send the same card to both Teams and Outlook and keep them in sync with each other using the underlying bot. Any action taken on either platform will get reflected to the other with this build once, deploy anywhere model.
+
 ### Contextual or role-based views
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the adaptive card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel. For example, in the case of an approval request sent in a chat or channel, only the manager or approver must be shown the option to approve or reject and add comments. The other users must only be able to view details of the approval request. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a Ticketing ME where different users in the chat are shown different actions based on the requirement.
@@ -69,6 +71,8 @@ The new universal bot action model enables a common handling of the adaptive car
 The following image shows the lifecycle of the new model:
 
 ![Universal bot action model lifecycle](~/assets/images/bots/universal-action-model-lifecycle.png)
+
+The next section will take you through the steps to start using these capabilities for your solution.
 
 ## See also
 
