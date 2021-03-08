@@ -69,7 +69,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 2. Select **New Registration**. The **Register an application** page appears.
 3. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
-    2. Choose the **Supported account types**, select single tenant or multitenant account type.
+    2. Choose the **Supported account types**, select single tenant or multitenant account type. ¹
     * Leave **Redirect URI** empty.
     3. Choose **Register**.
 4. On the overview page, copy and save the **Application (client) ID**. You must have it later when updating your Teams application manifest.
@@ -111,8 +111,8 @@ Congratulations! You have completed the app registration prerequisites to procee
 
 > [!NOTE]
 >
-> * ¹ If your Azure AD app is registered in the same tenant where you are making an authentication request in Teams, the user cannot be asked to consent and is granted an access token right away. Users only consent to these permissions if the AAD app is registered in a different tenant.
-> * ² If you get an error stating that the domain is already owned and you are the owner, follow the procedure at [quickstart: add a custom domain name to Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 5, above. This error can also occur if you are not signed in with Admin credentials in the Office 365 tenancy.
+> * ¹ If your AAD app is registered in the same tenant where you are making an authentication request in Teams, the user cannot be asked to consent and is granted an access token right away. Users only consent to these permissions if the AAD app is registered in a different tenant.
+> * ² If the custom domain is not added to AAD, you get an error stating that the host name should not be based on already owned domain. So, to add custom domain to AAD, follow the procedure at [quickstart: add a custom domain name to AAD](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 5. This error can also occur if you are not signed in with Admin credentials in the Office 365 tenancy.
 > * If you are not receiving the user principal name (UPN)) in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 ### 2. Update your Teams application manifest
