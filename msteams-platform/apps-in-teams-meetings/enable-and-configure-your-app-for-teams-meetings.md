@@ -12,7 +12,7 @@ Every team has a different way of communicating and collaborating on tasks. You 
 This document covers the following:
 * [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings)
 * [Configure your app for meeting scenarios](#configure-your-app-for-meeting-scenarios)
-* [Refer to the meeting app sample](#refer-to-the-meeting-app-sample)
+* [Meeting app code sample](#meeting-app-code-sample)
 
 ## Enable your app for Teams meetings
 
@@ -126,7 +126,13 @@ The in-meeting dialog box can be used to engage participants during the meeting 
 
 The post-meeting and pre-meeting configurations are the same.
 
-## Refer to the meeting app sample
+### Meeting app code sample
 
- > [!div class="nextstepaction"]
-> [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
+|Sample name | Description | Sample |
+|----------------|-----------------|--------------|----------------|-----------|
+| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token, which is generated sequentially so that each participant has a fair opportunity to interact. This can be useful in situations like scrum meetings, Q&A sessions, and so on. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)

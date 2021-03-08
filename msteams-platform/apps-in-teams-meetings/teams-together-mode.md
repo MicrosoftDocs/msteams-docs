@@ -6,8 +6,6 @@ ms.topic: conceptual
 
 # Together Mode in Teams
 
-Be together even when you are apart.
-
 Teams Together Mode provides a simple, innovative, and user-friendly meeting environment. It digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. It makes meetings more engaging in the auditorium view.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]

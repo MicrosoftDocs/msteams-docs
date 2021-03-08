@@ -1,5 +1,5 @@
 ---
-title: Work with apps for Teams meetings
+title: Prerequisites and API references for apps in Teams meetings
 author: laujan
 description: Work with apps for Teams meetings 
 ms.topic: conceptual
@@ -7,27 +7,31 @@ ms.author: lajanuar
 keywords: teams apps meetings user participant role api
 ---
 
-# Work with apps for Teams meetings
+# Prerequisites and API references for apps in Teams meetings
 
 To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations) and [meeting apps API references](#meeting-apps-api-references).
-
-For information on meeting lifecycle, participant roles and user types, see [Apps in Teams meetings](teams-apps-in-meetings.md). Also, see [enabling and configuring your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md). Teams also offers you the ability to interact collaboratively in meetings with the new auditorium view using [Together Mode](teams-together-mode.md).
 
 ## Prerequisites and considerations
 
 Before you work with apps for Teams meetings, you must have a basic understanding of the following prerequisites:
 
-* Apps in meetings require some basic knowledge of [Teams app development](../overview.md). An app in a meeting can comprise of [tabs](../tabs/what-are-tabs.md), [bots](../bots/what-are-bots.md), and [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md) features. An app in a meeting requires updates to the Teams [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest) to indicate that the app is available for meetings.
+* Apps in meetings require some basic knowledge of Teams app development. For more information, see [Teams app development](../overview.md).
 
-* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs). For more information, see how to [build a group tab](../build-your-first-app/build-channel-tab.md)). To enable your app in [pre-meeting](teams-apps-in-meetings.md#pre-meeting-app-experience) and [post-meeting](teams-apps-in-meetings.md#post-meeting-app-experience) chats, you must support the `groupchat` scope.
+* An app in a meeting requires updates to the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)
 
-* Meeting API URL parameters require `meetingId`, `userId`, and [tenantId](/onedrive/find-your-office-365-tenant-id). These are available as part of the Teams client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the groupchat scope. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md)).
 
-* The `GetParticipant` API requires a [bot registration and ID](../build-your-first-app/build-bot.md) to generate auth tokens.
+* To enable your app in pre-meeting and post-meeting chats, you must support the `groupchat` scope. With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting such as poll survey results or feedback.
 
-* You must adhere to general [Teams tab design guidelines](../tabs/design/tabs.md) for pre- and post-meeting scenarios. For experiences during meetings, refer to the [in-meeting tab](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog) design guidelines.
+* Meeting API URL parameters require `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams client SDK and bot activity. Additionally, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+
+* The `GetParticipant` API requires a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
+
+* You must adhere to general Teams tab design guidelines for pre- and post-meeting scenarios. For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines. For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 * For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog and other stages across the meeting lifecycle. For in-meeting dialog, refer to completion `bot Id` parameter in `Notification Signal API`.
+
+After you refer to the prerequisites and considerations, you can work with the meeting apps API references `GetUserContext`, `GetParticipant` and `NotificationSignal` to enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API references
 
@@ -41,7 +45,7 @@ The new meeting extensibilities provide you with APIs that could transform the m
 
 ### GetUserContext API
 
-To identify and  retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). As part of meetings extensibility, a new value **meetingId** has been added for the response payload. **meetingId** is used by a tab when running in the meeting context.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). As part of meetings extensibility, a new value **meetingId** has been added for the response payload. **meetingId** is used by a tab when running in the meeting context.
 
 ### GetParticipant API
 
@@ -241,9 +245,12 @@ The `NotificationSignal` API includes the following response codes:
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
 
-## Next steps
+## See also
+
+* [Apps in Teams meetings](teams-apps-in-meetings.md)
+* [Together Mode](teams-together-mode.md)
+
+## Next step
 
 > [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
-> [!div class="nextstepaction"]
-> [Together Mode in Teams](teams-together-mode.md)
+> [Together Mode](teams-together-mode.md)

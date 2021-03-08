@@ -22,13 +22,18 @@ Teams’ meeting app extensibility is based on the following three concepts:
 
 ## Meeting lifecycle
 
-With meeting extensibilities, you can integrate tabs, bots and messaging extensions in each stage of the meeting lifecycle. There are three stages of the meeting lifecycle:
+With meeting extensibilities, there are three stages of the meeting lifecycle:
 
 * Pre-meeting app experience
 * In-meeting app experience
 * Post-meeting app experience
 
-### Tabs
+In this section you can integrate the following in each stage of the meeting lifecycle:
+* Tabs
+* Bots
+* Messaging extensions
+
+### Integrate tabs into the meeting lifecycle
 
 Tabs allow team members to access services and content in a dedicated space within a channel or chat. This lets the team work directly with tools and data and have conversations about the tools and data. In your Teams meeting, you can add a tab using a plus icon (➕) button and by selecting the app that you want to install as a tab.
 
@@ -44,9 +49,11 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 #### Pre-meeting experience
 
-The following image displays the **Weekly planning** meeting page including details of meeting attendees, date and time of meeting and so on. From this page you can add a tab to the meeting.
+The following image displays the **Weekly planning** meeting page including details of meeting attendees, date and time of meeting and so on:
 
 ![pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
+
+From this page you can add a tab to the meeting.
 
 #### Pre-meeting tab
 
@@ -109,11 +116,11 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ✔  Tab layout must be organized when there are more than ten polls or surveys.
 
-### Bots
+### Integrate bots into the meeting lifecycle
 
 For bot implementation, see [bots in Teams meetings](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings).
 
-### Messaging Extensions
+### Integrate messaging extensions into the meeting lifecycle
 
 For messaging extension implementation, see [messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings).
 
@@ -149,11 +156,11 @@ The following user types identify what each user can do and what they can access
 1. **Federated/External**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Since these users have valid credentials with federated partners, they are authorized by Teams. But they do not have access to your teams or other shared resources from your organization. If you want external users to have access to teams and channels, guest access is a better option. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access)
 1. **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participant is like an external user, but their identity is not projected in the meeting. Anonymous users will not be able to access apps in a meeting window.
 
-## Next steps
+## See also
 
-> [!div class="nextstepaction"]
-> [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-> [!div class="nextstepaction"]
-> [Build your app](create-apps-for-teams-meetings.md)
-> [!div class="nextstepaction"]
-> [Together Mode in Teams](teams-together-mode.md)
+* [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Together Mode in Teams](teams-together-mode.md)
+
+## Next step
+
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
