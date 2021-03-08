@@ -38,7 +38,7 @@ The following image shows how the SSO process works:
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [additional Graph scopes](#apps-that-require-additional-microsoft-graph-scopes).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [additional Graph scopes](#apps-that-require-additional-graph-scopes).
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -58,7 +58,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > [!NOTE]
 > There are some important restrictions that you must know:
 >
-> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [recommended workaround](#apps-that-require-additional-microsoft-graph-scopes).
+> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [recommended workaround](#apps-that-require-additional-graph-scopes).
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
 > * Applications that use the `azurewebsites.net` domain are not supported as it is too common and can be a security risk.
