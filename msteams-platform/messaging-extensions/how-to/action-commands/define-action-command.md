@@ -11,9 +11,9 @@ ms.author: anclear
 
 Action commands allow you present your users with a modal popup called a task module in Teams to collect or display information, then process their interaction and send information back to Teams. Before creating the action command you need to decide:
 
-1. Where can the action command be triggered from?
-1. How is the task module created?
-1. Will the final message or card be sent to the channel from a bot, or inserted into the compose message area for the user to submit?
+1. Where can the [action command be triggered from?](#choose-action-command-invoke-locations)
+1. How is the [task module created?](#choose-how-to-build-your-task-module)
+1. Will the [final message or card be sent](#choose-how-the-final-message-is-sent) to the channel from a bot, or inserted into the compose message area for the user to submit?
 
 ## Choose action command invoke locations
 
@@ -35,7 +35,7 @@ If you choose to create your task module with a static list of parameters, the f
 
 ## Choose how the final message is sent
 
-In most cases, your action command results in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot will not be able to edit or update the card further.
+In most cases, your action command results in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot can not edit or update the card further.
 
 If your messaging extension is triggered from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the adaptive card comes from the bot, the bot will be able to update it, and the bot can also reply to the conversation thread if needed. You will need to add the `bot` object to your app manifest using the same Id and defining the appropriate scopes.
 
@@ -51,7 +51,9 @@ The prerequisite to create a search command is that you must already create a me
 1. If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
+
 ![messaging extension set up](../../assets/images/messaging-extension/messaging-extension-set-up.png)
+
 1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**.The following screenshot displays bot creation for messaging extension:
     ![create bot for messaging extension](../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
 
@@ -154,10 +156,10 @@ The following section is an example of a `composeExtensions` object defining two
 
 ## Code sample
 
-| Sample Name           | .NET    | Node.js   |   
-|:---------------------|:--------|:-------------|
-|Messaging extension with action-based commands| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Messaging extension with search-based commands    |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample Name           | Description | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Messaging extension with action-based commands| Describes how to define action commands, create task module, and  respond to task module submit action  |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Messaging extension with search-based commands   |  Describes how to define search commands and respond to searches        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next steps
 

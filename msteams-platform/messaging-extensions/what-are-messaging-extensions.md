@@ -21,7 +21,7 @@ The following screenshot displays the locations from where messaging extensions 
 |You need to find something in an external system, and you want to share the results with the conversation.|  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.|
 | You need to complete a complex task involving multiple steps or lots of information in an external system, and share the results with a conversation.| Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details.|
 
-## Work with messaging extensions 
+## Understand working of messaging extensions 
 
 A messaging extension consists of a web service that you host and your app manifest which defines where your web service is invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. Use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol though you can create your web service manually.
 

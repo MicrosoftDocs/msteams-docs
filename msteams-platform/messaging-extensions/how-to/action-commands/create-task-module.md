@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You must create the task module for users if you are not populating the task module with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view.
+You must create the task module for users if you are not populating the task module with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view to create the task module.
 
 ## The initial invoke request
 
@@ -21,7 +21,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
@@ -37,7 +37,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
@@ -53,7 +53,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
@@ -69,7 +69,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
@@ -87,7 +87,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
@@ -105,7 +105,7 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object id of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`value.commandId` | Contains the Id of the command that was invoked. |
@@ -627,10 +627,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## Code sample
 
-| Sample Name           | .NET    | Node.js   |   
-|:---------------------|:--------|:-------------|
-|Messaging extension with action-based commands| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Messaging extension with search-based commands    |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+| Sample Name           | Description | .NET    | Node.js   |   
+|:---------------------|:--------------|:---------|:--------|
+|Messaging extension with action-based commands| Describes how to define action commands, create task module, and  respond to task module submit action  |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Messaging extension with search-based commands   |  Describes how to define search commands and respond to searches        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
 ## Next step
 
