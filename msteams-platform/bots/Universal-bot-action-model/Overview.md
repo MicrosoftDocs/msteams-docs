@@ -48,9 +48,9 @@ Today every user in the Teams chat or channel sees the exact same view and butto
 
 With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. The following images illustrate a food ordering bot example:
 
-![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
-
 ![Sequential workflow](~/assets/images/bots/sequentialworkflowsupport.gif)
+
+![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
 
 ### Up-to-date views
 
