@@ -1,13 +1,13 @@
 ---
-title: Bot basics
+title: Bot activity handlers
 author: clearab
-description: Understand the basics of bots in Teams.
+description: Understand the bot activity handlers in Teams.
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Bot basics
+# Bot activity handlers
 
-This document provides an introduction to bots in Microsoft Teams that builds on the article [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
+This document builds on the article [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
 To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Microsoft Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 

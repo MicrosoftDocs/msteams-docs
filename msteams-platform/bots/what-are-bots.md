@@ -64,7 +64,11 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 
 Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a Team. Each scope provides unique opportunities and challenges for your conversational bot.
 
-![Bot advantages](~/assets/images/botadvantages.png)
+| In a channel | In a group chat | In a one-to-one chat |
+| :-- | :-- | :-- |
+| Massive reach | Fewer members | Traditional way |
+| Concise individual interactions | @mention to bot  | Q&A bots |
+| @mention to bot | Similar to channel | Bots that tell jokes and take notes |
 
 ### In a channel
 
@@ -119,13 +123,15 @@ One of the disadvantages of bots is that it is difficult to maintain a large ret
 
 The following are some bot samples that are created using the Bot Framework:
 
-* [Teams conversation bot in C# or dotnet](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)
-* [Teams conversation bot in JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)
+|Sample name | Description | .NETCore | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot)|
 
-## Next steps
+## See also
+
+[Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+
+## Next step
 
 > [!div class="nextstepaction"]
-> [The basics of bots in Teams](~/bots/bot-basics.md)
-
-> [!div class="nextstepaction"]
-> [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+> [Bot activity handlers](~/bots/bot-basics.md)

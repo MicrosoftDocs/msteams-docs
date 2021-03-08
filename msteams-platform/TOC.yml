@@ -200,9 +200,9 @@
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
   items:
-  - name: Bots in Microsoft Teams
+  - name: Overview
     href: bots/what-are-bots.md
-  - name: Bot basics
+  - name: Bot activity handlers
     href: bots/bot-basics.md
   - name: Bot conversations
     items:
