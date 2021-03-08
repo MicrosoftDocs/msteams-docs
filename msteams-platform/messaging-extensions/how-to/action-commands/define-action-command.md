@@ -60,12 +60,14 @@ The prerequisite to create a search command is that you must already create a me
 
 1. Select **Add** in the **Command section** of the messaging extensions page.
 1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following screenshot displays the action command parameter selection:
+
     ![action command parameter selection](../../assets/images/messaging-extension/action-command-parameter-selection.png)
 
 1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
 1. Add a **Command Id** and a **Title**.
 1. Select where you want your action command to be triggered from.
 1. If you are using parameters for your task module, add the first one.The following screenshot displays the task module parameter selection:
+
     ![parameter selection to create task module](../../assets/images/messaging-extension/task-module-parameter-selection.png)
 
 1. Select **Save**
@@ -159,17 +161,17 @@ The following section is an example of a `composeExtensions` object defining two
 
 | Sample Name           | Description | .NET    | Node.js   |   
 |:---------------------|:--------------|:---------|:--------|
-|Messaging extension with action-based commands| Describes how to define action commands, create task module, and  respond to task module submit action  |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
-|Messaging extension with search-based commands   |  Describes how to define search commands and respond to searches        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+|Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
+|Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## Next steps
+## Next step
 
-If you are using either an adaptive card or an embedded web view without a `taskInfo` object, you want to:
+If you are using either an adaptive card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
-If you are using the parameters or an embedded web view with a `taskInfo` object, the next step for you is to:
+If you are using the parameters or an embedded web view with a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
