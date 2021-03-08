@@ -124,6 +124,8 @@ For bot implementation, see [bots in Teams meetings](../bots/how-to/create-a-bot
 
 For messaging extension implementation, see [messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings).
 
+In addition to integrating tabs, bots and messaging extensions into the meeting lifecycle, Teams meeting app extensibility enables you to design your app based on participant roles in a meeting.
+
 ## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
@@ -143,6 +145,8 @@ You can access the  **Meeting options** page using one of the following methods:
 &#11200; In a meeting invitation, select **Meeting options**.
 
 &#11200; During a meeting, select **Show participants** ![show participants icon](../assets/images/apps-in-meetings/show-participants.png) in the meeting controls. Then, select **Manage permissions** on top of the list of participants.
+
+After you design your app based on participant roles in a meeting, you can identify each user type for meetings and what they can access.
 
 ## User types in a meeting
 
