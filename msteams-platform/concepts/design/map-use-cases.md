@@ -75,3 +75,9 @@ Not sure where to start? Feeling a bit overwhelmed with the awesome variety of o
 ## Put it all together
 
 That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. You must not force any functionality into a place it does not belong. Just because you have a good one-to-one conversational bot does not mean you add it to any team. Different extensibility points are good for different things, play to their strengths for creating a successful app.
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Build apps for Microsoft Teams](../overview.md)
+> 
