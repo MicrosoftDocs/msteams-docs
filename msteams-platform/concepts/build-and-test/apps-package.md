@@ -15,7 +15,7 @@ A Teams app package is a .zip file containing the following:
 * A manifest file named **manifest.json**, which specifies attributes of your app and points to needed resources for your experience. For example, location of the tab configuration page or the Microsoft app ID for the bot.
 * [Color and outline icons for your app](#app-icons).
 
-## Create a manifest
+## App manifest
 
 Teams App Studio help you to configure your manifest. It also contains a react control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -99,5 +99,4 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 
 > [!div class="nextstepaction"]
 > [Upload your app to the Teams](~/concepts/deploy-and-publish/apps-upload.md)
-
 
