@@ -7,7 +7,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams via their work, school, or Microsoft accounts that is Office 365, Outlook, and so on. You can take advantage of this by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user consents to use your app, they do not have to consent again on another device as they are signed in automatically. In addition, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that is Office 365, Outlook, and so on. You can take advantage of this by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user consents to use your app, they do not have to consent again on another device as they are signed in automatically. In addition, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -112,7 +112,7 @@ Congratulations! You have completed the app registration prerequisites to procee
 > [!NOTE]
 >
 > * ¹ If your AAD app is registered in the same tenant where you are making an authentication request in Teams, the user cannot be asked to consent and is granted an access token right away. Users only consent to these permissions if the AAD app is registered in a different tenant.
-> * ² If the custom domain is not added to AAD, you get an error stating that the host name should not be based on already owned domain. So, to add custom domain to AAD, follow the procedure at [quickstart: add a custom domain name to AAD](/azure/active-directory/fundamentals/add-custom-domain) to register the domain, and then repeat step 5. This error can also occur if you are not signed in with Admin credentials in the Office 365 tenancy.
+> * ² If the custom domain is not added to AAD, you get an error stating that the host name must not be based on already owned domain. To add custom domain and register the domain to AAD, follow the [add a custom domain name to AAD](/azure/active-directory/fundamentals/add-custom-domain) procedure, and then repeat step 5. You can get this error if you are not signed in with Admin credentials in the Office 365 tenancy.
 > * If you are not receiving the user principal name (UPN)) in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 ### 2. Update your Teams application manifest
