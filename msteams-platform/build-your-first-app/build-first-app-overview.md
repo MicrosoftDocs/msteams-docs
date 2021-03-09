@@ -22,7 +22,7 @@ Here's an idea of what you'll know after going through the lessons.
 > * **Get experience with Teams tools and SDKs**: Customize your app with help from the Teams JavaScript client SDK. For example, change your app's color scheme to match the Teams theme. Also, learn about common tools for creating and managing bots.
   > * **Expand on your app**: Throughout the lessons, you'll find related topics you're probably interested in (such as authentication and design guidelines).
 
-## Teams app fundamentals
+## Teams app fundamental
 
 Before you begin the tutorials, you should know the following about building apps for Teams.
 
