@@ -12,7 +12,6 @@ After you [create an app package](../build-and-test/apps-package.md), upload you
 
 Before uploading the app package, ensure that the [prerequisite](#prerequisite) is fulfilled. Now, use one of the following methods to upload your apps to Teams:
 * [Upload using the App Store](#upload-your-package-into-a-team-or-conversation-using-the-store)
-* [Upload using the Apps tab](#upload-your-package-into-a-team-using-the-apps-tab)
 
 > [!NOTE]
 > If you upload an updated package for an existing app with a bot it might not show the tab changes when viewed through the conversation window. It is, therefore, recommended to access it through the Apps fly-out or test on a clean test environment.
