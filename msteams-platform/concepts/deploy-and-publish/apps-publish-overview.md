@@ -14,7 +14,7 @@ This document provides an overview of the steps you must take to publish your ap
 You can distribute your apps to an Enterprise organization, for example, a corporate or US Government organizations, such as federal, state, territorial, and tribal bodies. When distributing the apps, you must ensure that you adhere to the compliance policies of the selected organization. There are different methods to distribute your app. For more information, see [distribute your app](overview.md).
 
 ## Create your app package
-After selecting the method to distribute your app, you need to create an app package. An app package helps you upload all core components of your app to the App Store or AppSource at one go. For more information, see [create your app package](../build-and-test/apps-package.md).
+After selecting the method to distribute your app, you need to create package that includes your app's configurations and core assets. For more information, see [create your app package](../build-and-test/apps-package.md).
 
 ## Upload your app package
 You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app package](apps-upload.md).
