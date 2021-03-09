@@ -6,13 +6,19 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 
-# Map your use cases to teams app capabilities
+# Map your use cases to Teams app capabilities
 
-Imagine a user trying to execute a specific task using your app. It must be easy for the user to initiate the workflow. You must ensure to [consider your use cases](~/concepts/design/understand-use-cases.md) carefully. You must also have a good understanding of the [entry points and UI elements](~/concepts/extensibility-points.md) available for your app. After you have figured out what you are trying to solve and who are you solving it for, it is time to start thinking about how to solve.
+After you have identified *who* the user is and *what* problem you will solve, it is time to decide  *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities.
 
-You can find some common scenarios and a selection of extensibility points and UI elements that work well with the Teams app. It is not an exhaustive list, just to help you think through some of the possibilities available to you and the Teams platform.
+> [!NOTE]
+> You must have a good understanding of the [entry points and UI elements](../../concepts/extensibility-points.md) available for your app. You must also make sure that you [considered your use cases](../../concepts/design/understand-use-cases.md) carefully. 
 
-## Create, share and collaborate on items in an external system
+The following scenarios will guide you in understanding the selection of extensibility points and UI elements that work well with Teams app capabilities:
+
+> [!NOTE]
+> It is not an exhaustive list, but will help you think through some of the possibilities available to you and the Teams platform.
+
+## Create, share, and collaborate on items in an external system
 
 App for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
 
