@@ -60,11 +60,8 @@ Microsoft does not own or control your custom applications, therefore, you must 
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Publish your apps](apps-publish-overview.md)
-
-> [!div class="nextstepaction"]
-> [Maintain published app](../appsource/post-publish/overview.md)
+* [Publish your apps](apps-publish-overview.md)
+* [Maintain and support your app](../appsource/post-publish/overview.md)
 
 ## Next step
 
