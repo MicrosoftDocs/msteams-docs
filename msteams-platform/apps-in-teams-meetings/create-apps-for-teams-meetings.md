@@ -111,7 +111,9 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-The response body is:
+* * *
+
+The JSON response body for `GetParticipant` API is:
 
 ```json
 {
@@ -136,8 +138,6 @@ The response body is:
    }
 }
 ```
-
-* * *
 
 #### Response codes
 
