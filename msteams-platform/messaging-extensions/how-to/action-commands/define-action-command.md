@@ -59,9 +59,9 @@ The prerequisite to create an action command is that you must already create a m
     ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
 
 1. Select **Add** in the **Command section** of the messaging extensions page.
-1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following screenshot displays the action command parameter selection:
+1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following screenshot displays the action command  selection:
 
-    ![action command parameter selection](../../../assets/images/messaging-extension/action-command-selection.png)
+    ![action command selection](../../../assets/images/messaging-extension/action-command-selection.png)
 
 1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**. The following screenshot displays the action command parameter selection:
 
