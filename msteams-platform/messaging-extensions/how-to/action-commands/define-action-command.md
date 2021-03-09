@@ -45,30 +45,33 @@ Now that you have decided how users interacts with your action command, it is ti
 
 ### Create an action command using App Studio
 
-The prerequisite to create a search command is that you must already create a messaging extension. For information on how to create a messaging extension, see [created a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create an action command is that you must already create a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
 
-    ![messaging extension set up](~/assets/images/messaging-extension/messaging-extension-set-up.png)
+    ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
 
-1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**.The following screenshot displays bot creation for messaging extension:
+1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following screenshot displays bot creation for messaging extension:
 
     ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
 
 1. Select **Add** in the **Command section** of the messaging extensions page.
 1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following screenshot displays the action command parameter selection:
 
-    ![action command parameter selection](../../assets/images/messaging-extension/action-command-parameter-selection.png)
+    ![action command parameter selection](../../../assets/images/messaging-extension/action-command-selection.png)
 
-1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**.
+1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**. The following screenshot displays the action command parameter selection:
+
+    ![action command parameter selection](../../../assets/images/messaging-extension/action-command-parameter-selection.png)
+
 1. Add a **Command Id** and a **Title**.
 1. Select where you want your action command to be triggered from.
-1. If you are using parameters for your task module, add the first one.The following screenshot displays the task module parameter selection:
+1. If you are using parameters for your task module, add the first one. The following screenshot displays the task module parameter selection:
 
-    ![parameter selection to create task module](../../assets/images/messaging-extension/task-module-parameter-selection.png)
+    ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
 
 1. Select **Save**
 1. If you need to add more parameters, select the **Add** button in the **Parameters** section to add them.

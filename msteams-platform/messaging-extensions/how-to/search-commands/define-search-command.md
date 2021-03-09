@@ -32,15 +32,28 @@ To add the search command to your app manifest, you must add a new `composeExten
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **To create a search command**
-1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
-1. If you created an app package in the **App Studio**, choose it from the app package list. If no app package is created, import an existing app package.
+
+1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
+1.  If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**.You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience.
-1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**.
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
+
+    ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
+
+1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following screenshot displays bot creation for messaging extension:
+
+    ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
+
 1. Select **Add** in the **Command** section of the messaging extension page.
-1. Choose **Allow users to query your service for information and insert that into a message**.
+1. Choose **Allow users to query your service for information and insert that into a message**. The following screenshot displays the search command parameter selection:
+
+    ![search command parameter selection](../../../assets/images/messaging-extension/search-command-parameter-selection.png)
+
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command.
+1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following screenshot displays the task module parameter selection:
+
+    ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
+
 1. Add your search parameter and select **Save**.
 
 ### Create a search command manually 
