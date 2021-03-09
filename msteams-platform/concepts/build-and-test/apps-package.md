@@ -28,7 +28,7 @@ Your manifest file must be at the top level of the uploaded package with the nam
 
 ## App icons
 
-Your app package must include two PNG versions of app icon. A color icon and an outline icon. 
+Your app package must include two PNG versions of your app icon: A color and outline version. 
 
 > [!Note]
 > If your app has a bot or messaging extension, the icons must be included in your [Microsoft Azure Bot Service registration](https://aka.ms/aadapplist).
