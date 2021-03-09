@@ -5,7 +5,7 @@ ms.topic: how-to
 keywords: teams apps Upload
 ---
 
-# Upload an app package to Microsoft Teams
+# Upload your app to Microsoft Teams
 This document guides you on the process to upload your apps to your organization environment through different methods.
 
 After you [create an app package](../build-and-test/apps-package.md), upload your app package and test the app experience within Microsoft Teams. After uploading, the package is available to all users of the selected team, and only users of that team.
@@ -96,4 +96,3 @@ If the manifest fails to load, check that you followed all the instructions in [
 
 > [!div class="nextstepaction"]
 > [Access your uploaded app](apps-access.md)
-
