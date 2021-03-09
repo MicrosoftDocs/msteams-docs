@@ -41,7 +41,8 @@ Tabs allow team members to access services and content in a dedicated space with
 > As with all tab applications, your app will need to follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
 > [!NOTE]
-> Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel on mobile are currently not available.
+> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel on mobile are currently not available.
+> * Apps are supported only in private scheduled meetings.
 
 ### Pre-meeting app experience
 
@@ -118,11 +119,11 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-For bot implementation, see [bots in Teams meetings](../bots/how-to/create-a-bot-for-teams.md#bots-in-teams-meetings).
+For bot implementation, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
-For messaging extension implementation, see [messaging extensions in Teams meetings](../messaging-extensions/how-to/create-messaging-extension.md#messaging-extensions-in-teams-meetings).
+For messaging extension implementation, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
 
 In addition to integrating tabs, bots and messaging extensions into the meeting lifecycle, Teams meeting app extensibility enables you to design your app based on participant roles in a meeting.
 

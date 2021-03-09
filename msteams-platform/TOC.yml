@@ -31,7 +31,7 @@
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Upgrade Microsoft Teams using the Yeoman generator
-    href: tutorials/UpgradeTeamsUsingYeoman.md
+    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
