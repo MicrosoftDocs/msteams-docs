@@ -28,13 +28,6 @@ The final step is to publish your app to your organization, such that the users 
 ## Publish your app to Teams store (AppSource)
 You can publish your app to Teams store, also called AppSource, and make it available on the web. For information on how to publish the app to the Teams store, see [submit your app to AppSource](../../appsource/publish.md).
 
-## See also
-
-> [!div class="nextstepaction"]
-> [Pre-submission checklist](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
-
-> [!div class="nextstepaction"]
-> [App manifest checklist](~/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md)
 
 ## Next step
 > [!div class="nextstepaction"]
