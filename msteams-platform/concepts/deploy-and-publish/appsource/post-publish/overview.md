@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 # Maintain your published Microsoft Teams app
 
-Your app successfully validated and is listed on the Microsoft Teams store and AppSource. It's time to start thinking about how you'll maintain the app going forward and also increase downloads and usage.
+Now that your app is listed on the Microsoft Teams store and AppSource, it's time to start thinking about how you'll maintain the app going forward and also increase downloads and usage.
 
 ## Publish updates to your app
 
