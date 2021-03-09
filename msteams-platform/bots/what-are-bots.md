@@ -21,16 +21,24 @@ Finding the right mix of cards, text, and task modules is key to creating a usef
 
 ![FAQ Plus gif](~/assets/images/FAQPlusEndUser.gif)
 
+Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. For more information, see [bot activity handlers](~/bots/bot-basics.md). In addition, bots are apps that have a conversational interface. You can interact with a bot using text, interactive cards, and speech. A bot behaves differently depending on whether the conversation is a channel or group chat conversation or it is a one-to-one conversation. Conversations are handled through the Bot Framework connector. For more information, see [conversation basics](~/bots/how-to/conversations/conversation-basics.md).
+
+Your bot requires contextual information, such as user profile details to access relevant content and enhance the bot experience. For more information, see [get Teams context](~/bots/how-to/get-teams-context.md). You can also send and receive files through the bot using Graph APIs or Teams bot APIs. For more information, see [send and receive files through the bot](~/bots/how-to/bots-filesv4.md).
+
+In addition, rate limiting is used to optimize bots used for your Teams application. To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. For more information, see [optimize your bot with rate limiting in Teams](~/bots/how-to/rate-limit.md).
+
+With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps can now interact with users using voice and video. For more information, see [calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md). You can use the Teams bot APIs to get information for one or more members of a chat or team. For more information, see [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+
 To create a bot that works in Microsoft Teams, you can use an existing bot based on the Microsoft Bot Framework.
 
 This document covers the following:
 
-* Bots and the Microsoft Bot Framework
-* Bots and the Microsoft Power Virtual Agents
-* Bots and Webhooks and connectors
-* Advantages of bots
-* Disadvantages of bots
-* Get started with bot samples
+* [Bots and the Microsoft Bot Framework](#bots-and-the-microsoft-bot-framework)
+* [Bots and the Microsoft Power Virtual Agents](#bots-and-the-microsoft-power-virtual-agents)
+* [Bots and webhooks and connectors](#bots-and-webhooks-and-connectors)
+* [Advantages of bots](#advantages-of-bots)
+* [Disadvantages of bots](#disadvantages-of-bots)
+* [Get started with bot samples](#get-started-with-bot-samples)
 
 ## Bots and the Microsoft Bot Framework
 
@@ -38,7 +46,7 @@ Your Teams bot consists of three elements:
 
 * A publicly accessible web service that you host.
 * Your bot registration with the Bot Framework.
-* Your Teams app package with your app manifest. This is what your users will install and connect the Teams client to your web service, routed through the bot service.
+* Your Teams app package with your app manifest. This is what your users install and connect the Teams client to your web service, routed through the bot service.
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Microsoft Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
@@ -93,7 +101,7 @@ One-to-one chat is a traditional way for a conversational bot to interact with a
 
 ## Disadvantages of bots
 
-An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, will not be successful or viewed positively by users.
+An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, are not successful or viewed positively by users.
 
 ### Have multi-turn experiences in chat
 
@@ -113,7 +121,7 @@ BOT: On which day?
 
 ### Support too many commands
 
-Since there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant will work and fare better.
+Since there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
 
 ### Maintain a large knowledge base
 
@@ -121,7 +129,7 @@ One of the disadvantages of bots is that it is difficult to maintain a large ret
 
 ## Get started with bot samples
 
-The following are some bot samples that are created using the Bot Framework:
+The following are some bot samples created using the Bot Framework:
 
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|

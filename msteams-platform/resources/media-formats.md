@@ -24,4 +24,4 @@ Bots on Microsoft Teams supports only the following media formats for audio and 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Changes to Teams Bot APIs for fetching Team or chat members](~/resources/team-chat-member-api-changes.md)
+> [Changes to Teams bot APIs for fetching Team or chat members](~/resources/team-chat-member-api-changes.md)

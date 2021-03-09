@@ -162,4 +162,4 @@ The official conversation basics are as follows:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get teams context](~/bots/how-to/get-teams-context.md)
+> [Get Teams context](~/bots/how-to/get-teams-context.md)
