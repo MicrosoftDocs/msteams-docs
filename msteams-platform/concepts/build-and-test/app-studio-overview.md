@@ -84,6 +84,9 @@ Each command requires a title and an ID. The command can optionally contain a de
 * A user-friendly title
 * An optional description
 
+> [!NOTE]
+> To create messaging extensions using app studio, see [create messaging extension using app studio](../resources/create-messaging-extension-using-appstudio.md).
+
 #### Test and Distribute
 
 Once you have finished defining your application, the Test and Distribute section allows you export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as *appname.zip* in your default download directory.
