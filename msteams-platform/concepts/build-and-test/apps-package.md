@@ -33,7 +33,7 @@ Your app package must include two PNG versions of your app icon: A color and out
 > [!Note]
 > If your app has a bot or messaging extension, the icons must be included in your [Microsoft Azure Bot Service registration](https://aka.ms/aadapplist).
 
-For your app to pass the AppSource review, these icons must meet the following size requirements:
+For your app to pass Teams store review, these icons must meet the following size requirements:
 
 ### Color icon
 
