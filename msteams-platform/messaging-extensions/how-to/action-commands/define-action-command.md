@@ -52,7 +52,7 @@ The prerequisite to create a search command is that you must already create a me
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
 
-    ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
+    ![messaging extension set up](~/assets/images/messaging-extension/messaging-extension-set-up.png)
 
 1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**.The following screenshot displays bot creation for messaging extension:
 

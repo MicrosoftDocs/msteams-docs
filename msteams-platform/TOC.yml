@@ -246,7 +246,7 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Create action commands
+  - name: Action commands
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,7 +254,7 @@
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to action commands
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-  - name: Create search commands
+  - name: Search commands
     items:
     - name: Add a configuration page
       href: messaging-extensions/how-to/add-configuration-page.md
