@@ -23,7 +23,7 @@ Ensure the following when publishing updates:
 
 When a user adds your app, they must give the app permission to access the services and information it requires to function. In most cases, users only have to do this once&#8212;new versions of your app install automatically.
 
-If you make any of the following changes to your app, however, existing users must accept another permission request:
+If you make any of the following changes to your app, your existing users must accept another permission request:
 
 * Add or remove a bot.
 * Change the bot ID.
