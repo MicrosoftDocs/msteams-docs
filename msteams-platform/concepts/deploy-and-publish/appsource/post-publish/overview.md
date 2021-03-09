@@ -33,7 +33,7 @@ If you make any of the following changes to your app, your existing users must a
 * Add a personal app tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Azure Active Directory (AD) app ID. See [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo) for more information.
+* Modify configurations related to your Azure Active Directory (AD) app ID. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Create a download link for your app
 
