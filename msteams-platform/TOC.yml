@@ -24,12 +24,14 @@
   items:
   - name: Tutorials
     href: tutorials/code-samples.md   
-  - name: Create an app using C#
+  - name: Create an app using C# or .NET
     href: tutorials/get-started-dotnet-app-studio.md
   - name: Create an app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
+  - name: Upgrade Microsoft Teams using the Yeoman generator
+    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
@@ -76,6 +78,8 @@
       href: concepts/device-capabilities/mobile-camera-image-permissions.md
     - name: Integrate QR or barcode scanner capability
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+    - name: Integrate location capabilities
+      href: concepts/device-capabilities/location-capability.md
 - name: Design your app
   items:
   - name: Overview
@@ -334,7 +338,7 @@
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Enable proactive bot installation and messaging
+  - name: Proactive installation of apps using Graph API and send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -412,6 +416,8 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
+    - name: Tab margin changes
+      href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Contributing to Teams docs

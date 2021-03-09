@@ -2,7 +2,8 @@
 title: Upload your custom app
 description: Describes how to upload your app in Microsoft Teams
 ms.topic: how-to
-keywords: teams apps Upload
+ms.author: lajanuar
+keywords: teams apps upload
 ---
 
 # Upload your app to Microsoft Teams
@@ -36,7 +37,6 @@ This section guides you through the steps to upload your app package using the A
     ![Add menu](../../assets/images/NewappAddmenudropdown.png)
 
    The uploaded package is available for use in the team or conversation specified in the consent dialog. 
-
    > [!NOTE]
    >If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.<br/>
    If the app is not scoped for conversations, the **Add to a chat** option does not appear.
@@ -45,6 +45,7 @@ This section guides you through the steps to upload your app package using the A
 
 >[!NOTE]
 > **Apps** tab in conversations is currently in [Developer Preview](../../resources/dev-preview/developer-preview-intro.md), and the option does not appear if Teams is not running in that mode.
+
 ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
 confirmation required, **Is the above note still applicable?** 
@@ -56,7 +57,7 @@ You can also upload your app package using the **Apps** tab.
 1. In the target team, choose **More options** (**&#8943;**) and select **Manage team**.
 
    > [!NOTE]
-   > You must be the team owner, or the owner must allow users to add the appropriate app types for this functionality to appear.
+   > You must be the team owner or the owner must give access to users to add the appropriate app types for this functionality to appear.
 
 2. Select the **Apps** tab, and then choose **Upload a custom app** on the lower right.
 
@@ -73,7 +74,6 @@ You can also upload your app package using the **Apps** tab.
    > If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
 
 ## Remove or update your app
-
 If you want to remove your app, select the **trash-can** icon next to the app name in the **View Teams** bots list.
 
 If you change the manifest information, you must first remove the app and then add the updated package through load your package into Teams [App Store](#upload-your-package-into-a-team-or-conversation-using-the-Store) and [Apps tab](#upload-your-package-into-a-team-using-the-apps-tab). In general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
@@ -85,10 +85,28 @@ If you change the manifest information, you must first remove the app and then a
 
 If the manifest fails to load, check that you followed all the instructions in [create the app package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
 
-## See also
+## Add a default install scope and group capability
 
-> [!div class="nextstepaction"]
-> [Create your app package](../../build-and-test/apps-package.md)
+> [!NOTE]
+> The default install scope and group capability is currently available in developer preview only.
+
+Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
+Some of these apps are intended to work in a team, meetings, or a groupchat, with personal app experience being secondary.
+The default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
+
+![Add an app](../../assets/images/compose-extensions/addanapp.png)
+
+The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
+
+> [!NOTE]
+>`defaultGroupCapability` provides the default capability that is added to the team, groupchat or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+
+## Remove or update your app
+
+To remove your app, select the delete icon next to the app name in the **View Teams** bots list. If you change manifest information, first remove the app and then add the updated package, see [Load your package into a team](#load-your-package-into-teams). Code changes on your service do not require you to upload your manifest again. However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.
+
+> [!NOTE]
+> You cannot remove a bot from a personal context entirely. If the bot is removed and added again, additional communication with the bot appends to the previous conversation.
 
 
 ## Next step
