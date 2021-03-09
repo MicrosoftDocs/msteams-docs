@@ -8,15 +8,15 @@ ms.author: anclear
 
 # Understand your use cases
 
-The Microsoft Teams platform offers a large variety of [extensibility points and UI elements](~/concepts/extensibility-points.md) your app can take advantage of.
+The Microsoft Teams platform offers a large variety of [extensibility points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
 > [!NOTE]
-> You must have a good understanding of Teams capabilities and what is possible on the Teams platform using them.
+> Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them.
 
 Each method of interacting with your users has its strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you are going to meet those needs, you first need to understand them.
 
 ## Understand the problem
 
-Every good app has a core problem or needs it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that solve collaboration problems are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve.
+Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that solve collaboration problems are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve.
 
 ## Understand your user
 
@@ -33,7 +33,7 @@ Sometimes the answer is, *We want to solve this problem for all Teams users ever
 
 You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now.
 
-## Build entire app be within Teams
+## Build entire app within Teams
 
 Whether you are building something new or bringing an existing solution into Teams, it is important to decide if the entire app is going to be inside the Teams client. Check if it makes sense to only bring in a portion of the experience. With a combination of tabs, messaging extensions, task modules, interactive cards, and conversational bots you can build complex apps completely in Teams.
 Remember who your users are and the problem you are trying to solve. Do they already have a system for solving most of the problem or you just need to extend a sub-set of the functionality into Teams? Typically, if you are going to bring in a portion of your solution, you must focus on sharing, collaborating, initiating, and monitoring workflows.
@@ -54,12 +54,12 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 > [Choose how to distribute your app](../deploy-and-publish/overview.md)
 
 > [!div class="nextstepaction"]
-> [Design effective tabs](~/tabs/design/tabs.md)
+> [Design effective tabs](../../tabs/design/tabs.md)
 
 > [!div class="nextstepaction"]
-> [Create amazing bots](~/bots/design/bots.md)
+> [Design amazing bots](../../bots/design/bots.md)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Map your use cases to functionality](~/concepts/design/map-use-cases.md)
+> [Map your use cases](../../concepts/design/map-use-cases.md)
