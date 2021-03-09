@@ -25,7 +25,8 @@ Teams’ meeting app extensibility centers on three concepts:
 > As with all tab applications, Your app will need to follow the Teams [SSO authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
 > [!NOTE]
-> Mobile clients support Tabs only in Pre and Post Meeting Surfaces. The In-meeting experiences (in-meeting dialog and panel) on mobile will be available soon
+> * Mobile clients support tabs only in pre-meeting and post-meeting surfaces. The in-meeting experiences, such as in-meeting dialog and panel on mobile will be available soon.
+> * Apps are supported only in private scheduled meetings.
 
 ### Pre-meeting app experience
 
