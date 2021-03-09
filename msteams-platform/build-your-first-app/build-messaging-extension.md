@@ -145,4 +145,4 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 ## See also
 
 > [!div class="nextstepaction"]
-> [Create messaging extension using app store](../../resources/create-message-extension.md)
+> [Create messaging extension using app store](../../resources/create-message-extension-using-appstore.md)

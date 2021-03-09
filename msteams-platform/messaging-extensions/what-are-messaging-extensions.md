@@ -55,6 +55,11 @@ You can also invoke your service when a URL is pasted in the compose message are
 
 Build a messaging extension:
 
-* [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
-* [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+> [!div class="nextstepaction"]
+> [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
+
+> [!div class="nextstepaction"]
+> [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+> [!div class="nextstepaction"]
+> [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
