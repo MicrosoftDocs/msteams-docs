@@ -90,11 +90,11 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ### Bots
 
-For bot implementation, start with the [build a bot section](../build-your-first-app/build-bot.md) and then continue with [create apps for teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
+For bot implementation, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
 
 ### Messaging extensions
 
-For messaging extension implementation, start with the [build a messaging extension section](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
+For messaging extension implementation, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-reference).
 
 ## Participant roles and user types in a meeting
 
