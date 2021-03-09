@@ -16,7 +16,7 @@ You can distribute your apps to an Enterprise organization, for example, a corpo
 ## Create your app package
 After selecting the method to distribute your app, you need to create package that includes your app's configurations and core assets. For more information, see [create your app package](../build-and-test/apps-package.md).
 
-## Upload your app package
+## Upload your app for a team or user
 You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app package](apps-upload.md).
 
 ## Access your uploaded app 
