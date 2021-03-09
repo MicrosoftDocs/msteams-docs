@@ -13,7 +13,7 @@ Now that your app is listed on the Microsoft Teams store and AppSource, it's tim
 
 You can submit changes to your app in Partner Center. Updates must undergo a new review and validation process.
 
-Remember the following when publishing updates:
+Ensure the following when publishing updates:
 
 * Don't select **Add a new app** to do the update. Go to your app's page instead.
 * Don't change your app ID.
