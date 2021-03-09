@@ -6,7 +6,7 @@ keywords: teams publish store office distribute AppSource sideload upload app
 ---
 
 # Choose how to distribute your Microsoft Teams app
-This document guides you on the methods you can use to distribute your app to different organizations, such as Enterprise and US Government. 
+You can distribute your Microsoft Teams app to an individual, team, organization, or people everywhere.
 
 For Enterprise organizations you can directly upload your app or publish it your organization's app catalog, or publish it through the AppSource. For Government organizations, they need to be members of Government Cloud Community (GCC). Depending on the fulfillment of the GCC compliance criteria, the GCC tenant administrator decides if an app must be uploaded and published.
 
