@@ -7,7 +7,7 @@ ms.topic: reference
 ---
 # Microsoft Teams store validation guidelines
 
-Reviewing these guidelines can help you avoid issues that frequently cause apps to fail Microsoft Teams store and AppSource submission. These guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and will be updated frequently to reflect new Teams capabilities, user feedback, and changes to business rules.
+Making sure your app follows these guidelines increases the likelihood you'll pass the Microsoft Teams store submission process. These Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
 > [!TIP]
 > Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
