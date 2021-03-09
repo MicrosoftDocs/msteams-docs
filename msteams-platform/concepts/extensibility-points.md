@@ -4,7 +4,6 @@ author: heath-hamilton
 description: Describes where people can discover and use your app in Teams.
 ms.topic: conceptual
 ms.author: lajanuar
-ms.date: 09/22/2020
 ---
 
 # Entry points for Teams apps
@@ -48,4 +47,4 @@ The following list shows how Teams capabilities are commonly used in personal co
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Understand your use cases](../concepts/design/understand-use-cases.md)
+> [Understand use cases](../concepts/design/understand-use-cases.md)
