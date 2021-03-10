@@ -96,7 +96,9 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-The response body is:
+* * *
+
+The JSON response body for `GetParticipant` API is:
 
 ```json
 {
@@ -122,7 +124,6 @@ The response body is:
 }
 ```
 
-* * *
 
 #### Response codes
 
@@ -322,3 +323,9 @@ The post-meeting and pre-meeting configurations are equivalent.
 
  > [!div class="nextstepaction"]
 > [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
+
+## Code sample
+
+|Sample name | Description | C# |
+|----------------|-----------------|--------------|----------------|-----------|
+| Content bubble | Demonstrates how to implement content bubble in-meeting experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
