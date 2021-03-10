@@ -52,17 +52,17 @@ You can have a maximum of one (1) channel/group tab and up to sixteen (16) perso
 If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
 Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
-| **App Capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
+| **Tab Type** | **Behavior of App if it is optimized for mobile clients** | **Behavior of App if it is not optimized for mobile clients** |
 | --- | --- | --- |
-| **Static Tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
-| **Configurable Tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
+| **Static Tabs** or **Personal Tabs**|App appears in the bottom bar of the mobile clients. The tabs open in an in-app webview within the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Configurable Tabs** | The tabs open in an in-app webview within the Teams client using the `contentUrl`. | Clicking on the tab opens the content in an external browser using the `websiteUrl`. |
 
 
->[!NOTE]
+> [!NOTE]
 >
->- The default behavior of the apps is only applicable if they are distributed through the Teams store (AppSource). There is no approval process for apps distributed through other [distribution methods](~/concepts/deploy-and-publish/overview.md). By default, all tabs open in the Teams client.
->- To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
-
+> * [Apps distributed through the AppSource](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are automatically evaluated if they are optimized for mobile clients. For any queries, reach out to teamsubm@microsoft.com. 
+> * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+ 
 > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
