@@ -8,10 +8,9 @@ ms.date: 11/01/2019
 
 # Add test data to your Office 365 test tenant
 
-Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.  It will help you:
+Set up your Microsoft 365 developer account (or other test tenant) to make it easy for you to test the Microsoft Teams apps you build. It will help you:
 
 - Create new teams and channels in your organization
-
 - Add the users that are created via the User content pack to those teams.
 
 ## Before you start
@@ -24,17 +23,9 @@ If you don't already have a test tenant, you will need to join the Office 365 de
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
-### Optional step: allow upload of custom apps
+## (Optional) Allow upload of custom apps
 
-By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.  You can also enable all users to upload custom apps for their own use or to teams for testing.
-
-To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.
-
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
-
-For more information see:
-
- - [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
+By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also enable all users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels
 

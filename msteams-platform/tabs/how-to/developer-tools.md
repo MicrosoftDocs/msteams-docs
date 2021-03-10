@@ -14,24 +14,22 @@ When Teams is running in a browser, it’s easy to access the browser's DevTools
 
 The feature is only available in desktop and Android clients after Developer Preview has been enabled. See [How do I enable Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for more information.
 
-## Accessing DevTools in the Desktop
+## Access DevTools on the desktop
 
 While the web version of Teams and the desktop version of teams are almost exactly the same, there are some differences, particularly with respect to authentication. Sometimes the only way to figure out what’s going on is to use the DevTools. Here's how to get to them from the Teams desktop client. To use DevTools in the desktop client:
 
 1. Make sure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md)
 1. Open up a tab so you have something to inspect with the DevTools.
-1. Open the DevTools
-    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:
-
+1. Open the DevTools one of the following ways:
+    * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray:<br>
   ![Right-click to open DevTools](~/assets/images/dev-preview/devtools-right-click.png)
-
     * On MacOS, click on the Microsoft Teams icon in the Dock.
 
-Here’s what a sample tab looks like with the DevTools open and an element selected:
+The following example shows DevTools open and inspecting a tab configuration dialog:
 
 ![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
 
-## Accessing DevTools from an Android client
+## Access DevTools from an Android device
 
 You can also enable the DevTools from the Teams Android client. To do so:
 

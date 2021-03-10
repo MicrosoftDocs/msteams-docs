@@ -293,7 +293,7 @@ Remember the following about screenshots:
 
 For best practices, see the following resources:
 
-* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-4-screenshots).
+* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots).
 * [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video

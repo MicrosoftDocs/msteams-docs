@@ -68,8 +68,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 ## Deleting messages
 
-In the Bot Framework, every message has its own unique activity identifier.
-Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
+In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
 
 # [C#/.NET](#tab/dotnet)
 
