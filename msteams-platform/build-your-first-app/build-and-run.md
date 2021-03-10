@@ -52,7 +52,7 @@ Once complete, there's a **Compiled successfully!** message in the terminal. You
 Your app is ready to test in Teams. To do this, you must have a [Microsoft 365 development account that allows sideloading](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account) and [enable sideloading in your Teams tenant](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 > [!TIP]
-> Check for issues before sideloading your app with the [validation tool in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#1-validate-your-app-manifest), which is included with the toolkit.
+> Check for issues before sideloading your app with the [validation tool in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-manifest), which is included with the toolkit.
 
 1. Select the **F5** key to launch a Teams web client in Visual Studio Code.
 1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:

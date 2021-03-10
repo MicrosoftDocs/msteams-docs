@@ -59,10 +59,9 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| | |
+|Request |Response |
 |----|----|
-| **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object |
-| **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object |
+| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object. |
 
 ---
 
@@ -108,9 +107,8 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| | |
+|Request |Response |
 |----|----|
-| **Request body** | n/a |
-| **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
+| N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---

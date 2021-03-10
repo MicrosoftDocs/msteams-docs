@@ -309,7 +309,7 @@ The unique Microsoft-generated identifier for this app. If you have registered a
 
 **Required** — object
 
-Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [publishing guidelines](~/concepts/deploy-and-publish/appsource/prepare/publish.md).
+Specifies information about your company. For apps submitted to the Teams store, these values must match the information in your store listing. For more information, see the [Teams store publishing guidelines](~/concepts/deploy-and-publish/appsource/publish.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
