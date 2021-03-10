@@ -7,23 +7,26 @@ ms.author: anclear
 ---
 # Messaging extensions
 
-Messaging extensions permit users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card.
+Messaging extensions permit users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card. This document gives an overview of the messaging extension, tasks performed under different scenarios, its working, types of commands widely used, and link unfurling.
 
 The following screenshot displays the locations from where messaging extensions are invoked:
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
-## Advantages of messaging extensions
+## Understand scenarios where messaging extensions are used
 
-| Scenarios | Examples |
-|:---------- |:---------|
-| You need some external system to do an action  and you want the result of the action to be sent back to your conversation.| Reserve a resource and allow the channel to know what day and time you reserved it for.|
-|You need to find something in an external system, and you want to share the results with the conversation.|  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.|
-| You need to complete a complex task involving multiple steps or lots of information in an external system, and share the results with a conversation.| Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details.|
+**Scenario:** You want some external system to do an action  and the result of the action to be sent back to your conversation.
+**Example:** Reserve a resource and allow the channel to know the reserved time slot.
+**Scenario:** You want to find something in an external system, and share the results with the conversation.
+**Example:** Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
+**Scenario:** You want to complete a complex task involving multiple steps or lots of information in an external system, and share the results with a conversation.
+**Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details.
 
 ## Understand working of messaging extensions 
 
-A messaging extension consists of a web service that you host and your app manifest which defines where your web service is invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. Use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol though you can create your web service manually.
+A messaging extension consists of a web service that you host and an app manifest which defines where your web service is invoked from in the Microsoft Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. 
+> [!NOTE]
+> Use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol though you can create your web service manually.
 
 In the app manifest for your Microsoft Teams app, you define a single messaging extension with up to ten different commands. Each command defines a type and the locations in the client from where it is invoked. The command types are **action** or **search**. The locations are **compose message area, command bar, and message**. After invoking, your web service receives an HTTPS message with a JSON payload including all the relevant information. You respond with a JSON payload and allow the Teams client to know what interaction to enable next. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
