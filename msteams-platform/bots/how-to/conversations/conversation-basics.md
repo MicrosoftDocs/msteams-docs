@@ -417,13 +417,12 @@ Following are the code samples for Teams conversation bot:
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## Next steps
+## See also
+
+* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## Next step
 
 > [!div class="nextstepaction"]
 > [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
-
-> [!div class="nextstepaction"]
-> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-
-> [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
