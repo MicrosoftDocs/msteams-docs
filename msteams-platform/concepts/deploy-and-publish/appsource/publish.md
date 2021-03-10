@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 To list your app on the Microsoft Teams store (and [AppSource](https://appsource.microsoft.com)), use the following steps to guide you through the process:
 
-1. [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md) to increase the chances your app will be approved for listing.
+1. [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to increase the chances your app will be approved for listing.
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating store listing details, and completing other important tasks before submitting your app.
 1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
 1. [Maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
@@ -25,4 +25,4 @@ To list your app on the Microsoft Teams store (and [AppSource](https://appsource
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+> [Review store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

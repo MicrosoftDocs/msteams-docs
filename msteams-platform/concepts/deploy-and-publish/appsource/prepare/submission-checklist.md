@@ -76,8 +76,8 @@ Get answers to some common questions about using Partner Center.
 
 You can create a Partner Center account one of the following ways:
 
-* If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](#create-an-account-using-the-partner-center-enrollment-page).
-* If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](#create-an-account-using-an-existing-partner-center-enrollment).
+* If you're new to Partner Center and don't have a Microsoft Network Account, [create an account using the Partner Center enrollment page](/office/dev/store/open-a-developer-account#create-an-account-using-the-partner-center-enrollment-page).
+* If you're already enrolled in the Microsoft Partner Network, [create an account directly from Partner Center using existing Microsoft Partner Center enrollments](/office/dev/store/open-a-developer-account#create-an-account-using-an-existing-partner-center-enrollment).
 
 </details>
 
@@ -133,7 +133,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
-![Partner Center verification status](../../../assets/images/partner-center-verification-status.png)
+![Partner Center verification status](~/assets/images/partner-center-verification-status.png)
 
 </details>
 
@@ -248,7 +248,7 @@ The following example highlights where an app's short name displays in a store l
 
 :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
 
-For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#1-1-app-name).
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).
 
 ### Write descriptions
 
@@ -262,7 +262,7 @@ The following example highlights where an app's short description displays in a 
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
 
-For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-3-1-short-description).
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).
 
 #### Long description
 
@@ -272,7 +272,7 @@ The following example highlights where an app's long description displays in a s
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 
-For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-3-2-long-description).
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).
 
 ### Adhere to icon design guidelines
 
