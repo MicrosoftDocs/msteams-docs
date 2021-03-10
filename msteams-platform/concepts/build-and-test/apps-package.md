@@ -34,7 +34,7 @@ The color version of your icon displays in most Teams scenarios and must be 192x
 
 Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 48 pixels of padding around your symbol.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon design guidance." border="false":::
+:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams icon color design guidance." border="false":::
 
 ### Outline icon
 
@@ -86,7 +86,7 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 
 ## See also
 > [!div class="nextstepaction"]
-> [Distribute your app](../../deploy-and-publish/overview.md)
+> [Distribute your app](~/deploy-and-publish/overview.md)
 
 ## Next step
 
