@@ -30,8 +30,6 @@ This section guides you through the steps to upload your app package using the A
    ![View team](../../assets/images/store-upload-a-custom-app2.png)
 
 2. In the **Open** dialog, navigate to the package you want to upload and choose **Open**.
-  ![Screenshot of the Open dialog box is required]()
-
 3. After the package is uploaded, select if you want to add it to a team or chat. 
    
     ![Add menu](../../assets/images/NewappAddmenudropdown.png)
@@ -62,22 +60,13 @@ You can also upload your app package using the **Apps** tab.
    ![Upload entry point](../../assets/images/UploadACustomApp.png)
 
 3. In the **Open** dialog, navigate to your .zip package, and then select it.
-   ![Screenshot of the Open dialog box is required]()
-
+  
 4. Select **Open** and your uploaded app appears in the list.
 
    ![Example of bot in list of uploaded bots](../../assets/images/botinlist.jpg)
 
    > [!NOTE]
    > If your app does not appear, the most common reason is an error in the manifest, particularly IDs for the app, bot, and messaging extensions.
-
-## Remove or update your app
-If you want to remove your app, select the **trash-can** icon next to the app name in the **View Teams** bots list.
-
-If you change the manifest information, you must first remove the app and then add the updated package through load your package into Teams [App Store](#upload-your-package-into-a-team-or-conversation-using-the-Store) and [Apps tab](#upload-your-package-into-a-team-using-the-apps-tab). In general, code changes on your service do not require you to re-upload your manifest, unless those changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot.
-
-> [!NOTE]
-> You cannot completely remove a bot from personal context. If the bot is removed and re-added, additional communication with the bot appends to the previous conversation.
 
 ## Troubleshoot
 
@@ -160,4 +149,4 @@ To remove your app, select the delete icon next to the app name in the **View Te
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Access your uploaded app](apps-access.md)
+> [Publish to your orgranization](/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json)
