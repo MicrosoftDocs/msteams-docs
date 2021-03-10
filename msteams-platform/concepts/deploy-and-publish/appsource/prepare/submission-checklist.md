@@ -236,7 +236,7 @@ The following resources can also assist:
 
 ## Create your store listing details
 
-The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and AppSource listing for your app.
+The information that you submit to [Partner Center](https://partner.microsoft.com)&#8212;including your name, descriptions, icons, and images&#8212;becomes the Teams store and Microsoft AppSource listing for your app.
 
 A store listing may be someone's first impression of your app. Increase installations with a listing that effectively conveys your app's benefits, functionality, and brand.
 
@@ -248,47 +248,21 @@ The following example highlights where an app's short name displays in a store l
 
 :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
 
-#### Best practices for names
-
-**Do:**
-
-* Choose a simple, memorable name that hints at what your app does.
-* Be distinctive.
-* Avoid typos and grammatical errors.
-
-**Don't:**
-
-* Use profane or derogatory terms.
-* Use racially or culturally insensitive language.
-* Use generic terms or names similar to existing apps.
-* Include "Teams", "Microsoft", existing/upcoming Microsoft product names, or  "app" in the name.
-
-> [!NOTE]
-> If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, *Salesforce Connector for Microsoft Teams*).
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#1-1-app-name).
 
 ### Write descriptions
 
-You need a short and long description of your app.
+You must have a short and long description of your app.
 
 #### Short description
 
-A concise summary of your app that should be original, engaging, and directed at your target audience. Ideally, keep the short description to one sentence.
+A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
 The following example highlights where an app's short description displays in a store listing:
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
 
-#### Best practices for short descriptions
-
-**Do:**
-
-* Put the most important information first.
-* Include keywords that customers are likely to search for.
-
-**Don't:**
-
-* Repeat your app name.
-* Rely on jargon or specialized terminology. (You can't assume users know what to look for.)
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-3-1-short-description).
 
 #### Long description
 
@@ -298,92 +272,29 @@ The following example highlights where an app's long description displays in a s
 
 :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
 
-#### Usage examples of long descriptions
-
-The following phrases are examples of what's allowed when writing long descriptions:
-
-* "<*Your app name*> works with Microsoft Teams"
-* "... a <*type of app*> for Microsoft Teams"
-* "<*Your app name*> integrates with Microsoft Teams"
-* "... integrated with Microsoft Teams"
-* "... for users working with Microsoft Teams"
-* "... for <*specific task*> within Microsoft Teams"
-* "... built on ..."
-* "... runs on ..."
-* "... enabled by ..."
-* "... developed for ..."
-* "... designed for ..."
-
-#### Best practices for long descriptions
-
-**Do:**
-
-* Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.
-* List features with bullet points so it's easier to scan the description.
-* Use active voice and speak to users directly (for example, *You can ...*).
-* Include a help or support link.
-* Identify the following if applicable: limitations, set up information, account dependencies, and release updates.
-
-**Don't:**
-
-* Exceed 500 words.
-* Include too many keywords. (It's distracting and won't help people find your app.)
-* Use the following language unless the app has gone through an official certification process:
-  * "... certified for ..."
-  * " ... powered by ..."
-
-#### Best practices for all descriptions
-
-**Do:**
-
-* Reference Microsoft product names only when necessary. For more information on the guidelines, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-* If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
-* Refer to **Microsoft 365** instead of **Office 365**.
-* Avoid typos and grammatical errors.
-* Avoid unnecessary capitalizations (for example, **Users** instead of **users**).
-* Avoid acronyms.
-
-**Don't:**
-
-* Abbreviate Microsoft as **MS** or **MSFT**.
-* Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
-* Use copyrighted brand names you don't own.
+For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-3-2-long-description).
 
 ### Adhere to icon design guidelines
 
-Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand purpose while also adhering to Teams requirements.
+Icons are one of the main elements users see when browsing the store. Your icons should communicate your app's brand and purpose while also adhering to Teams requirements.
 
-For more information, see [specific guidance on designing Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
+For more information, see [specific guidance on creating Teams app icons](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ### Capture screenshots
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
 
-#### Requirements for screenshots
+Remember the following about screenshots:
 
-* Up to five screenshots per listing.
+* You can have up to five screenshots per listing.
 * Supported file types include PNG, JPEG, and GIF.
 * Dimensions should be 1366x768 pixels.
 * Maximum size of 1,024 KB.
 
-#### Best practices for screenshots
+For best practices, see the following resources:
 
-**Do:**
-
-* Focus on your app's capabilities (for example, how people can communicate with your bot).
-* Include content that accurately represents your app.
-* Use text judiciously.
-* Frame screenshots with a color that reflects your brand and include marketing content, similar to the following [Freshdesk](https://appsource.microsoft.com/product/office/WA104381505?src=office&tab=Overview) example (dimension requirements apply to the whole image and not just the screenshot):
-    :::image type="content" source="../../../../assets/images/freshdesk.png" alt-text="Screenshot example of third-party app Freshdesk":::
-
-**Don't:**
-
-* Show specific devices, such as phones or laptops.
-* Display chrome or UI that isn't in your app.
-* Capture any Teams or browser UI in your screenshots.
-* Include mockups that inaccurately reflect your app's actual UI, such as showing your app in  a browser instead of a Teams tab.
-
-For more best practices, see [craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images).
+* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#4-4-screenshots).
+* [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video
 
@@ -393,8 +304,6 @@ A video can be the most effective way to communicate why people should use your 
 * What problems can your app solve?
 * How does your app work?
 * What other benefits do you get from using your app?
-
-If you include a video, it appears before your screenshots in the listing.
 
 #### Best practices for videos
 
@@ -407,11 +316,11 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 
 ## Complete Publisher Verification
 
-[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) helps admins and end users understand the authenticity of application developers integrating with the Microsoft identity platform.
+[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store. For more information, see how to [mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified) and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
 ## Complete Publisher Attestation
 
-[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is required for Teams apps listed in the store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices.
+[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.
 
 ## Next step
 
