@@ -5,7 +5,7 @@ keywords: teams run debug apps
 ms.topic: conceptual
 ---
 
-# Choosing a setup to test and debug your Microsoft Teams app
+# Choose a setup to test and debug your Microsoft Teams app
 
 Microsoft Teams apps can contain one or more capabilities, and the ways to run or even host them may be different. When it comes to debugging, in general, we have the following ways to run your Microsoft Teams app:
 
@@ -46,7 +46,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 To use ngrok in your project, and depending on the capabilities you are using, you must replace all URL references in your code, configuration, and/or manifest.json file to use this URL endpoint.
 
-For example, for bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.)
+For example, for bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing bot response in the Bot Framework portal's Test chat window. (Again, like the emulator, this test doesn't allow you to access Teams-specific functionality.
 
 > [!NOTE]
 > To update the messaging endpoint for a bot, you must use the Bot Framework. Click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
@@ -58,9 +58,9 @@ You can use any externally addressable service to host your development and prod
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference, and those domains must be in your control. For example, `*.azurewebsites.net` would not be recommended, but `contoso.azurewebsites.net` would.
 
-## Loading and running
+## Load and run your experience
 
-In general, to load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following guidance:
+To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following guidance:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md)
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)

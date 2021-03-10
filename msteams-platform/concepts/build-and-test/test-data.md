@@ -8,15 +8,15 @@ ms.date: 11/01/2019
 
 # Add test data to your Office 365 test tenant
 
-Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.  It will help you:
+Set up your Microsoft 365 developer program subscription or other test tenant to simplify your app's test process:
 
-- Create new teams and channels in your organization
+* Create new teams and channels in your organization.
 
-- Add the users that are created via the User content pack to those teams.
+* Add the users that are created through the user content pack to those teams.
 
-## Before you start
+## Join the developer program
 
-If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary PowerShell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
+If you do not have a test tenant, you must join the Microsoft 365 developer program and sign up for a developer subscription. You must also install the necessary PowerShell modules. For any tenant that you use, you must get the global administrator permissions to run the scripts.
 
 1. [Join the Office 365 Developer Program](/office/developer-program/office-365-developer-program)
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
@@ -24,21 +24,9 @@ If you don't already have a test tenant, you will need to join the Office 365 de
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
-### Optional step: allow upload of custom apps
-
-By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.  You can also enable all users to upload custom apps for their own use or to teams for testing.
-
-To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.
-
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
-
-For more information see:
-
- - [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
-
 ## Create teams and channels
 
-Save the following snippet as an XML (.xml) and note where you've saved it.  This XML defines the structure of the teams and channels that will be created - along with its members.
+Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the teams and channels that is created along with its members.
 
 ```xml
 <?xml version="1.0"?>
@@ -152,7 +140,7 @@ Save the following snippet as an XML (.xml) and note where you've saved it.  Thi
 </Teams>
 ```
 
-Save the following snippet as a PowerShell script (.ps1) and note where you've saved it.  This script executes the steps to create the teams and channels and add members to them.
+Save the following snippet as a PowerShell script (.ps1) and note where you have saved it. This script executes the steps to create the teams and channels and add members to them.
 
 ```powershell
 Param(
@@ -169,7 +157,7 @@ if ($XmlDocument.Teams.Team.Count -gt 0) {
 
     try {
         
-        # 1. Login with the global administrator account for your O365 Developer Program tenant.  This script will then use these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+        # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
         
         $creds = Get-Credential
 
@@ -246,6 +234,16 @@ else {
 Open a Windows PowerShell session in Administrator mode.  Run the script that you just saved.  You'll be prompted to provide the credentials - use the Global Administrator credentials you received when you first signed up for your developer subscription.
 
 > [!Note]
-> The script will take several minutes to execute - do not close your PowerShell session.  If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.  As the script executes it will output successful or failed actions.
+> The script takes several minutes to execute - do not close your PowerShell session.  If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams. As the script executes it displays successful or failed actions.
 
-Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
+After the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
+
+## Optional step: allow upload of custom apps
+
+As default, only global admins or teams service admins can upload custom apps into the tenant app catalog. You can also enable all users to upload custom apps for their own use or to teams for testing.
+
+To enable this setting, you must update the global App Setup Policy in your Teams Admin Portal.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
+
+For more information see [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies).
