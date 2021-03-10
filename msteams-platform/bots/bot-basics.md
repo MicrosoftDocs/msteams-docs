@@ -207,6 +207,8 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ---
 
+* * *
+
 Now that you have familiarized yourself with bot activity handlers, let us see how bots behave differently depending on the conversation and the messages it receives or sends.
 
 ## Next step
