@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 
 # Prerequisites and API references for apps in Teams meetings
 
-To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations), [meeting apps API references](#meeting-apps-api-references) and [content bubble code sample](#content-bubble-code-sample).
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations), [meeting apps API references](#meeting-apps-api-references) and [code sample](#code-sample).
 
 ## Prerequisites and considerations
 
@@ -245,7 +245,7 @@ The `NotificationSignal` API includes the following response codes:
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
 
-## Content bubble code sample
+## Code sample
 
 |Sample name | Description | C# |
 |----------------|-----------------|--------------|----------------|-----------|
