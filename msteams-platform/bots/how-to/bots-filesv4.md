@@ -27,7 +27,7 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 
 Graph APIs work in all Teams scopes.
 
-Alternately you can send files to and receive files from a bot using the Teams bot APIs.
+Alternately, you can send files to and receive files from a bot using the Teams bot APIs.
 
 ## Use the Teams bot APIs
 

@@ -206,7 +206,7 @@
     href: bots/bot-basics.md
   - name: Bot conversations
     items:
-    - name: Conversation basics
+    - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md

@@ -12,6 +12,8 @@ ms.author: anclear
 
 Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
+This document covers update messages, update cards, update delete messages and code samples.
+
 ## Update messages
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
@@ -72,6 +74,8 @@ For information on REST API request body, see [activity](/azure/bot-service/rest
 
 ---
 
+Now that you have updated messages, update the existing card on button selection for incoming activities.
+
 ## Update cards
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
@@ -104,6 +108,10 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 
 ```
+
+* * *
+
+Now that you have updated cards, you can delete messages using the Bot Framework.
 
 ## Delete messages
 
@@ -150,6 +158,8 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 For REST API, request body is not applicable and it returns an HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
 
 ---
+
+The next section illustrates simple code samples that demonstrate basics of conversations.
 
 ## Code samples
 
