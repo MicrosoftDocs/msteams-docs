@@ -12,7 +12,7 @@ Every team has a different way of communicating and collaborating on tasks. You 
 This document covers the following:
 * [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings)
 * [Configure your app for meeting scenarios](#configure-your-app-for-meeting-scenarios)
-* [Meeting app code sample](#meeting-app-code-sample)
+* [Code sample](#code-sample)
 
 ## Enable your app for Teams meetings
 
@@ -126,7 +126,7 @@ The in-meeting dialog box can be used to engage participants during the meeting 
 
 The post-meeting and pre-meeting configurations are the same.
 
-### Meeting app code sample
+### Code sample
 
 |Sample name | Description | Sample |
 |----------------|-----------------|--------------|----------------|-----------|

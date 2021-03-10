@@ -168,4 +168,5 @@ The following user types identify what each user can do and what they can access
 
 ## Next step
 
+> [!div class="nextstepaction"]
 > [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
