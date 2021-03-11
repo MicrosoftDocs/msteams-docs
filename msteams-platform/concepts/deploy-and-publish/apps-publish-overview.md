@@ -9,7 +9,7 @@ keywords: teams apps Upload
 # Publish your apps
 Apps that you develop must be made available to an individual, team, or an organization for the users to use them. You achieve this by publishing your apps. There is a complete process to publish your apps that includes, selecting methods of distribution, packaging and uploading, and finally publishing.
 
-This document provides an overview of the steps you must take to publish your app successfully to an App Store or AppSource, formerly Office Store.
+This document provides an overview of the steps you must take to publish your app successfully to an Teams store or AppSource, formerly Office Store.
 
 ## Distribute your apps
 You can choose to distribute your apps to individuals, teams, or organizations. When distributing the apps to organizations, you must ensure that you adhere to the compliance policies of the selected organization. There are different methods to distribute your app. For more information, see [distribute your app](overview.md).
