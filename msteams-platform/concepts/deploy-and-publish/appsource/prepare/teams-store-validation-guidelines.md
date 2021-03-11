@@ -7,7 +7,7 @@ ms.topic: reference
 ---
 # Microsoft Teams store validation guidelines
 
-Making sure your app follows these guidelines increases the likelihood you'll pass the Microsoft Teams store submission process. These Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
+Following these guidelines increases the likelihood your app will pass the Microsoft Teams store submission process. These Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
 > [!TIP]
 > Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
@@ -34,7 +34,7 @@ Your app must facilitate group collaboration, improve an individual's productivi
 
 ### 1.3 Similar platforms and services
 
-Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services unless the apps provide specific interoperability.
+Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services unless the app provides specific interoperability.
 
 ### 1.4 Feature names
 
@@ -56,55 +56,57 @@ You must complete [Publisher Verification](/azure/active-directory/develop/publi
 
 #### 2.2.2 Publisher Attestation
 
-You must complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), a process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. For more information, see the [Publisher Attestation process](https://docs.microsoft.com/microsoft-365-app-certification/docs/attestation).
+You must complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), a process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
-### 2.3 Financial information
-
-Your app must not ask users to make payments within the Teams interface. Financial instrument details must not be transmitted to users through a bot interface. 
-
-You may link to secure, external payment services only if you made the appropriate disclosure in your terms of use, privacy policy, or any profile page or website before the user agreed to use the app.
-
-### 2.4 Bot Framework
+### 2.3 Bots
 
 For apps that use the Microsoft Azure Bot Service (bots and messaging extensions), you must follow all requirements as defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
-Bots must always ask permission to upload a file and display a confirmation message after the file is uploaded.
+Bots must always ask permission to upload a file and display a confirmation message after the file uploads.
 
-### 2.5 External domains
+### 2.4 External domains
 
 In most cases, you must not include domains outside of your organization's control (including wildcards) and tunneling services in the valid domains section of your app manifest. The following exceptions include:
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
 * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` variable.
 
-### 2.6 Authentication
+### 2.5 Authentication
 
 For implementation details, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
-#### 2.6.1 External service experiences
+#### 2.5.1 External service experiences
+
+Remember the following if your app authenticates users with an external service.
 
 * **Sign in, sign out, and sign up experiences**:
-  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experiences. 
+  * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experiences.
   * When a user signs out, they must sign out only from the app and not the Teams client.
 * **Content sharing**: Apps that require authentication with an external service to share content in channels must clearly state in help documentation (or similar resources) how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to unshare content must be present in your Teams app.
 
-#### 2.6.2 Government Community Cloud listings
+#### 2.5.2 Government Community Cloud listings
 
-To make your app available for Government Community Cloud (GCC) users and to avoid duplicate app listings in the store, the authentication process must identify and route GCC users to the specified or expected content URL.
+To distribute your app to Government Community Cloud (GCC) users while avoiding duplicate listings in the Teams store, the authentication process must identify and route users to a GCC-specific or expected URL.
 
-### 2.7 Sensitive content
+### 2.6 Sensitive content
 
 Your app must not post sensitive data, such as credit card or financial payment instrument data. The app also must not display health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view that content.
 
 Warn users before your app downloads any files or executables (.exe) into the user's machine or environment.
 
+### 2.7 Financial information
+
+Apps must not ask users to make payments within the Teams interface. Financial instrument details must not be transmitted to users through a bot interface.
+
+You may link to secure, external payment services only if you made the appropriate disclosure in your terms of use, privacy policy, or any profile page or website before the user agreed to use the app.
+
 ## 3.0 General functionality and performance
 
 ### 3.1 Launching external functionality
 
-Apps must not take the user out of Teams for core user scenarios. Task modules, cards or tabs are recommended to display information to the user within Teams. Link targets in apps must not link to an external browser but must link to `div` elements contained within Teams, for example, inside task modules and tabs.
+Apps must not take users out of Teams for core user scenarios. App content and interactions can occur within Teams capabilities, such as cards, task modules, and tabs. 
 
-For scenarios that require external functionality, your app must have explicit user permission to launch functionality outside of Teams.
+You should link users somewhere in Teams and not to an external site or app. For scenarios that require external functionality, your app must have explicit user permission to launch that functionality.
 
 ### 3.2 Compatibility
 
@@ -125,7 +127,7 @@ Teams apps must respond within a reasonable timeframe, which varies depending on
 * Tabs must respond within three seconds or display a loading message or warning.
 * Bots must respond to user commands within two seconds or display a typing indicator.
 * Messaging extensions must respond to user commands within five seconds.
-* Notification must load within five seconds of the user action.
+* Notifications must display within five seconds of the user action.
 
 ## 4.0 App package and store listing
 
@@ -135,13 +137,13 @@ App packages must be correctly formatted and include all required information an
 
 * The app manifest must conform to the [latest manifest schema](~/resources/schema/manifest-schema.md).
 * If your app includes a bot or messaging extension, the manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD ID in the manifest. For more information, see [manifest schema](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD ID in the manifest. For more information, see the [manifest schema](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### 4.2 App icons
 
 Icons are one of the main elements people see when browsing the store. Your icons should communicate your app's brand and purpose while also adhering to the following requirements:
 
-* Your app package must include two PNG versions of your app icon: a color icon and an outline icon.
+* Your app package must include two PNG versions of your app icon: A color icon and an outline icon.
 * The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color or colors, but it must sit on a solid or fully transparent square background.
 * The outline version of your icon displays when your app is in use and “hoisted” on the app bar on the left of Teams and when a user pins your app's messaging extension. It must be 32x32 pixels and can be white with a transparent background or transparent with a white background (no other colors are permitted). The icon should not have any extra padding around the symbol.
 * Correctly sized and formatted icons must be specified in your app package. The icons must match what's submitted with the store listing metadata.
@@ -166,7 +168,7 @@ A short description is a concise summary of your app that highlights its value p
 **Don't:**
 
 * Repeat your app name.
-* Use the word "app" in the name.
+* Use the word **app** in the name.
 
 #### 4.3.2 Long description
 
@@ -208,9 +210,7 @@ The long description can provide an engaging narrative that highlights your app'
 
 ### 4.4 Screenshots
 
-Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
-
-Remember the following about screenshots:
+Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions. Remember the following about screenshots:
 
 * You can have up to five screenshots per listing.
 * Supported file types include PNG, JPEG, and GIF.
@@ -233,13 +233,13 @@ Remember the following about screenshots:
 
 ### 4.5 Privacy policy
 
-The policy can be specific to your Teams app or an overall policy for all of your services.
+The privacy policy can be specific to your Teams app or an overall policy for all of your services.
 
-* If you use a generic privacy policy template, you must reference "services", "applications", and "platforms" to include your Teams app and your website or service.
+* If you use a generic privacy policy template, you must reference **services**, **applications**, and **platforms** to include your Teams app and your website or service.
 * Must include how you handle user data storage, retention, and deletion. You also must describe the security controls you use for data protection.
 * Must include your contact information.
 * Should not contain broken, beta, or staging URLs.
-* Must not include links to AppSource in the privacy policy.
+* Must not include links to AppSource.
 
 ### 4.6 Terms of use
 
@@ -247,15 +247,15 @@ Your terms of use should be specific and applicable to your offering.
 
 ### 4.7 Support links
 
-Your app's support URLs should not require authentication. For example. users should not have to log in to contact you.
+An app's support URLs should not require authentication. For example. users should not have to log in to contact you.
 
 ### 4.8 Localization
 
-Your app package must include a localization file that includes language translations that display based on the Teams language settings. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+App packages must include a file with language translations that display based on the Teams language setting. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
 ## 5.0 Tabs
 
-If your app includes a tab, following these guidelines can increase the likelihood your app will pass submission.
+If your app includes a tab, make sure it adheres to these guidelines.
 
 > [!TIP]
 > For information on creating a high-quality experience, see the [tab design guidelines](~/tabs/design/tabs.md).
@@ -297,7 +297,7 @@ If your app includes a tab, following these guidelines can increase the likeliho
 
 ## 6.0 Bots
 
-If your app includes a bot, following these guidelines can increase the likelihood your app will pass submission.
+If your app includes a bot, make sure it adheres to these guidelines.
 
 > [!TIP]
 > For information on creating a high-quality experience, see the [bot design guidelines](~/bots/design/bots.md).
@@ -338,7 +338,7 @@ See the following resources for more information:
 
 ## 7.0 Messaging extensions
 
-If your app includes a messaging extension, following these guidelines can increase the likelihood your app will pass submission.
+If your app includes a messaging extension, make sure it adheres to these guidelines.
 
 > [!TIP]
 > For information on creating a high-quality experience, see the [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
@@ -354,8 +354,6 @@ Action-based messaging extensions should do the following:
 
 Messaging extensions should preview recognized links in the Teams compose box. Do not add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` is not valid. Top-level domains also are prohibited (for example, `*.com` or `*.org`).
 
-See how to [implement link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
-
 ### 7.3 Search commands
 
 * Search-based messaging extensions must provide text that helps users effectively search.
@@ -363,21 +361,21 @@ See how to [implement link unfurling](~/messaging-extensions/how-to/link-unfurli
 
 ## 8.0 Task modules
 
-A task module must include an icon and short name of the app in which it is associated.
+A task module must include an icon and the short name of the app it's associated with.
 
 > [!TIP]
 > For information on creating a high-quality experience, see the [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ## 9.0 Meeting extensions
 
-If your app includes a meeting extension, following these guidelines can increase the likelihood your app will pass submission.
+If your app includes a meeting extension, make sure it adheres to these guidelines.
 
 > [!TIP]
 > For information on creating a high-quality experience, see the [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### 9.1 Pre- and post-meeting experience
 
-* Tabs must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
+* Pre- and post-meeting screens must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
 * Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
@@ -405,18 +403,18 @@ If your app includes a meeting extension, following these guidelines can increas
 
 ## 10.0 Notifications
 
-If your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), following these guidelines can increase the likelihood your app will pass submission.
+If your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), make sure it adheres to these guidelines.
 
 ### 10.1 General
 
 * All the notification triggers specified in your app manifest should get a notification in the app.
 * The notifications must be localized as per the supported languages declared in the app manifest.
-* A notification must load within five seconds of a user action.
+* Notifications must display within five seconds of the user action.
 
 ### 10.2 Avatars
 
 * The notification avatar should match your app's color icon.
-* Notifications triggered by an app user should contain the avatar of the user who initiated it.
+* Notifications triggered by an app user should include the user's avatar.
 
 ### 10.3 Spamming
 
@@ -434,17 +432,13 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 Apps running in the iOS or Android version of Teams must adhere to the following guidelines:
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell to paid versions or links to online stores where users can purchase or acquire other content, apps, or add-ins.
-* If your app requires an account, users must be able to do so with no charge. The use of the term "free" or "free account" is prohibited.
+* If your app requires an account, users must be able to do so with no charge. The use of the term **free** or **free account** is prohibited.
 * You may determine whether an account is active indefinitely or for a limited time, but if the account expires, no UI, text, or links indicating the need to pay may be shown.
-* Your app's privacy policy and terms of use pages must be free of any commerce UI or store links.
+* Your app's privacy policy and terms of use pages must be free of any commerce-related UI or links.
 
 ## 12.0 Advertising
 
 Apps must not display advertising, including dynamic ads, banner ads, and ads in messages.
-
-## Failed submissions
-
-If your app doesn't pass review, the Microsoft validation team contacts you with a report on why your submission failed. The team can provide white-glove service to help your app meet passing criteria.
 
 ## Next step
 

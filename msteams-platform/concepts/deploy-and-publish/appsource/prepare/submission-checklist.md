@@ -1,15 +1,15 @@
 ---
-title: Prepare your store (AppSource) submission  
+title: Prepare your store submission  
 description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ---
-# Prepare your Microsoft Teams store and AppSource submission
+# Prepare your Microsoft Teams store submission
 
 You've designed, built, and tested your Microsoft Teams app. Now you're ready to list it so people can discover and start using your app.
 
-Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), go through the following information.
+Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
 ## Validate your app manifest
 
@@ -244,9 +244,17 @@ A store listing may be someone's first impression of your app. Increase installa
 
 Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.
 
-The following example highlights where an app's short name displays in a store listing.
+The following example highlights where an app's short name displays in a store listing:
 
-:::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="../../../../assets/images/store-detail-page/AppName-02.png" alt-text="Example screenshot highlights where an app's short name displays in a store listing.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
 
 For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).
 
@@ -260,7 +268,15 @@ A concise summary of your app that should be original, engaging, and directed at
 
 The following example highlights where an app's short description displays in a store listing:
 
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's short description displays in a store listing.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
 
 For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).
 
@@ -270,7 +286,15 @@ The long description can provide an engaging narrative that highlights your app'
 
 The following example highlights where an app's long description displays in a store listing:
 
-:::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
 
 For more information, see the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).
 
@@ -293,7 +317,7 @@ Remember the following about screenshots:
 
 For best practices, see the following resources:
 
-* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots).
+* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
 * [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video
