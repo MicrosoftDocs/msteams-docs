@@ -27,10 +27,10 @@ Publishing to your organization's app catalog can only be managed by Teams users
 Your organization's app catalog contains apps that are unique to your organization and is completely under your organization's control. For more information on publishing the app to your organization's app catalog, see [manage your apps in the Microsoft Teams admin center](/microsoftteams/tenant-apps-catalog-teams). 
 
 ### Government Community Cloud (GCC) organization
-If your organization is a member of the GCC then it is GCC tenant administrator who decides if you can upload or publish an app.
+If your organization is part of the GCC, the GCC tenant admin determines if you can publish an app.
 
 > [!NOTE]
-> Microsoft does not own or control your custom applications, therefore, you must ensure that all endpoints are compliant with your organization's requirements. In addition, if the app solution includes a bot or message extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
+> Microsoft does not own or control your apps, so you must ensure that all endpoints are compliant with your organization's requirements. In addition, if your app includes a bot or messaging extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
 
 **To configure a Government Community Cloud (GCC) distribution**
 
