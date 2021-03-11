@@ -372,7 +372,7 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md   
-  - name: Choose how to distribute your app
+  - name: Distribute your app
     href: concepts/deploy-and-publish/overview.md
   - name: Create your app package
     href: concepts/build-and-test/apps-package.md
