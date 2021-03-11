@@ -2,25 +2,44 @@
 title: Microsoft Teams developer support and feedback
 description: The Microsoft Teams product team responds to the developer community across several feedback and support channels.
 ms.topic: reference
-keywords: teams feedback developer questions issues contact support request bugs contributions community
+keywords: teams feedback developer questions issues contact support request bugs contributions community discussions
 ---
 
-# Microsoft Teams Developer Community channels
+# Microsoft Teams developer community channels
 
-The Microsoft Teams product team responds to the developer community across several feedback and support channels.
+Many common questions about developing, testing and publishing the Microsoft Teams app are answered in this article. Our broad and supportive community of Teams developers  help and discuss app development on this platform. You can avail assistance at any stage of your app development. **Microsoft Teams Community Help** is an open source library to share inputs on Teams developer platform. Following are the ways on how you can submit your questions and get support:
 
+## Support type
+Go through all the support type to keep yourself updated with the app development.
 
-|            **Support type**            |               **Contact**                                                                                  |
-|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         **Community support**          |<ol><li> Questions can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) using the `microsoft-teams` tag. Please note that Stack Overflow has guidelines such as requiring a descriptive title, a complete and concise problem statement, and sufficient details to reproduce your issue. Feature requests or overly broad questions are off-topic; new users should visit the [Stack Overflow Help Center](https://stackoverflow.com/help/how-to-ask) for more details. </li>                                                                                                                                                                       <li> Questions can also be posted at [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) using the `office-teams-app-dev` tag. We love Stack Overflow. We will continue supporting our customers who ask questions there. However, Stack Overflow has specific criteria about what questions are appropriate for the community and [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) will have a more open policy regarding this.  </li> </ol>                                                                                                  |
-|        **Tab SDK issues/suggestions**        |  Submit issues and feature requests to the SDK repo for [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) using the `microsoft-teams` tag.                                                                                                                                                                                                                       |
-|            **Bot & Messaging Extension SDK issues/suggestions**             |       Submit issues and feature requests to the SDK repo for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [Javascript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework & microsoft-teams` tag.                                                                                            |
-| **Samples** |             Submit issues with samples to respective [Microsoft Teams Samples](/microsoftteams/platform/tutorials/code-samples) repo.                                                                                                                                                                                            |
-| **Features suggestions**             |      Please make your features suggestions on the [Microsoft Teams feedback portal on UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).                                                                                                                                                            |
-|        **Documentation issues**        |                                                                                                                                                                      Choose `This page` option in the **Submit and view feedback for** section, available at bottom of respective documentation to open an [issue](https://github.com/MicrosoftDocs/msteams-docs/issues) on the Microsoft Teams documentation GitHub repo.                                                                                                                                                                      |
-|       **Documentation updates**        | Select the Edit link on an article and submit a pull request to the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repo.                                                                                                                                                                      |
-|       **Community chat group**        | Select **SIGN IN TO START TALKING** to join the informal community chat room for [Microsoft Teams app developers](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev), if you are logging in for the first time. Select **JOIN ROOM**, if you are already logged in. |
-|          **General questions**         |          General questions about the Microsoft Teams developer platform, please send an email to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on channels mentioned above and use email only if none of the above are applicable.                                                                                                                                                                          |
+### Community support
+* Questions can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) using the `microsoft-teams` tag.  Stack Overflow has guidelines, such as requiring a descriptive title, a complete and concise problem statement, and sufficient details to reproduce your issue. Feature requests or overly broad questions are off-topic. New users should visit the [Stack Overflow Help Center](https://stackoverflow.com/help/how-to-ask) for more details.
+* Questions can also be posted at [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) using the `office-teams-app-dev` tag. We love Stack Overflow. We will continue supporting our customers who ask questions there. However, Stack Overflow has specific criteria about what questions are appropriate for the community and [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) has an open policy regarding this. 
+
+### Tab SDK issues or suggestions
+Submit issues and feature requests to the SDK repository for [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) using the `microsoft-teams` tag. 
+
+### Bot & Messaging Extension SDK issues/suggestions
+ Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [Javascript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework & microsoft-teams` tag.
+ 
+### Samples
+Submit issues with samples to respective [Microsoft Teams Samples](/microsoftteams/platform/tutorials/code-samples) repository.
+
+### Features suggestions
+Please make your features suggestions on the [Microsoft Teams feedback portal on UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).
+
+### Documentation issues
+Choose `This page` option in the **Submit and view feedback for** section, available at bottom of respective documentation to open an [issue](https://github.com/MicrosoftDocs/msteams-docs/issues) on the Microsoft Teams documentation GitHub repo.
+
+### Documentation updates
+Select the Edit link on an article and submit a pull request to the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repo. 
+
+### Community chat group
+Select **SIGN IN TO START TALKING** to join the informal community chat room for [Microsoft Teams app developers](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev), if you are logging in for the first time. Select **JOIN ROOM**, if you are already logged in.
+
+### General questions
+General questions about the Microsoft Teams developer platform, please send an email to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on channels mentioned above and use email only if none of the above are applicable.
+
 
 ## Product Support channels
 |            **Support type**            |               **Contact**                                                                                  |
