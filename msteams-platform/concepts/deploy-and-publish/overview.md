@@ -20,7 +20,7 @@ This is the easiest way to use and test your app. If you are the team owner and 
 The steps to publish your apps can vary depending on the organization to which you are publishing them.
 
 ### Enterprise organization
-The publishing to your organization's app catalog can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
+Publishing to your organization's app catalog can only be managed by Teams users with Microsoft Office 365 tenant admin privileges.
 
 **To publish to your organization's app catalog**
 
