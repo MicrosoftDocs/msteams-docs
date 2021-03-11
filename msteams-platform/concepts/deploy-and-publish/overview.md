@@ -30,9 +30,12 @@ Your organization's app catalog contains apps that are unique to your organizati
 If your organization is part of the GCC, the GCC tenant admin determines if you can publish an app.
 
 > [!NOTE]
-> Microsoft does not own or control your apps, so you must ensure that all endpoints are compliant with your organization's requirements. In addition, if your app includes a bot or messaging extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
+> * Microsoft does not own or control your apps, so you must ensure that all endpoints are compliant with your organization's requirements. 
+* If your app includes a bot or messaging extension, you must complete the [Bot Framework registration](https://dev.botframework.com/).
 
 **To configure a Government Community Cloud (GCC) distribution**
+> [!NOTE]
+> The steps in this section are only for apps with bots and messaging extensions.
 
 1. On the **Connect to channels** page, under **Add a featured channel**, select **Teams**.
 2. Navigate to the **Configure MSTeams** page.
