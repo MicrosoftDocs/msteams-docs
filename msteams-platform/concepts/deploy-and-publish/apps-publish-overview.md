@@ -21,7 +21,7 @@ After selecting the method to distribute your app, you must create a package tha
 You can upload your app package to a team or a conversation through the Teams store or AppSource. For more information, see [upload your app package](apps-upload.md).
 
 ## Publish your app to your organization
-The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+Publish your app to your organization, so that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ## Publish your app to Teams store
 To make your app available to anyone, you can [publish your app to the Teams store](../../appsource/publish.md).
