@@ -18,7 +18,7 @@ You can choose to distribute your apps to individuals, teams, or organizations. 
 After selecting the method to distribute your app, you must create a package that includes your app's configurations and core assets. For more information, see [create your app package](../build-and-test/apps-package.md).
 
 ## Upload your app for a team or user
-You can upload your app package to a team or a conversation through the App Store. You can also upload it using the AppSource. For more information, see [upload your app package](apps-upload.md).
+You can upload your app package to a team or a conversation through the Teams store or AppSource. For more information, see [upload your app package](apps-upload.md).
 
 ## Publish your app to your organization
 The final step is to publish your app to your organization, such that the users can start using your app. For more information, see [publish your app](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
