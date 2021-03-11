@@ -28,7 +28,8 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
    > [!NOTE]
    > Use your bots OAuth connection when setting up your messaging extensions.
 3. In the [TeamsMessagingExtensionsSearchAuthConfigBot.cs](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config/Bots/TeamsMessagingExtensionsSearchAuthConfigBot.cs) file, update the value from *auth* to *silentAuth*.
-   You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload:
+
+    You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
