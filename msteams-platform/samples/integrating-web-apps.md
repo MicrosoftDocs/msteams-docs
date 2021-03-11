@@ -8,25 +8,19 @@ title: Integrate a web app with Microsoft Teams
 ---
 # Integrate web apps with Teams
 
-To make your web app to fit with Teams' social and collaborative features, you must understand different types of apps and how to integrate them with Teams platform.
+Do you have a web app you think would fit naturally with Teams' social and collaborative features? These guidelines can help you understand how to integrate the following types of apps:
 
-Following are the different types of apps that integrate with Teams: 
-
-* **Stand-alone apps**: The stand-alone app is a single-page app or large, and complex app. The user can use some aspects of it in Teams.
+* **Standalone apps**: Could be a single-page app or large, complex app you want people to use some aspects of in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
-* **SharePoint**: A SharePoint page that you want to surface in Teams.
+* **SharePoint**: A SharePoint page you want to surface in Teams.
 
-For each guideline, see if it is applicable to your integration scenario.
+For each guideline, you can see if it's applicable to your integration scenario.
 
 ## Get to know Teams platform capabilities
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-<<<<<<< Updated upstream
 Your Teams app must include required and expected collaborative features. To work with app integration, it is important to familiarize with Teams development terminology.
-=======
-Your Teams app can include features that the users want and expect when collaborating, but you may be unfamiliar with Teams development terminology.
->>>>>>> Stashed changes
 
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
@@ -44,7 +38,7 @@ Your Teams app can include features that the users want and expect when collabor
 ***Integration scenarios**: Standalone apps*
 
 Integrating all features of an existing application into Teams often leads to a forced or unnatural user experience, particularly in larger apps. Consider starting with the most impactful features and those that will integrate more naturally with Teams. Remember, you can always allow users to launch the main app and access its full set of features.
-
+Prerequisites to work with 
 Before you begin any technical work, do some planning for your Teams app:
 
 1. [Map your app's use cases to Teams platform capabilities](../concepts/design/map-use-cases.md).
