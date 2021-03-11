@@ -20,7 +20,7 @@ Before uploading the app package, ensure that the [prerequisite](#prerequisite) 
 The tenant administrator must first [enable uploading of custom apps](/microsoftteams/admin-settings) to successfully upload your app package and test it within the Teams environment. 
 
 ## Upload your package into a team or conversation using the Store
-This section guides you through the steps to upload your app package using the App Store.
+This section guides you through the steps to upload your app package using the Teams store.
 
 **To upload your app package**
 
