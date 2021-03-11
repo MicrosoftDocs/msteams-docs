@@ -259,4 +259,4 @@ The `NotificationSignal` API includes the following response codes:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Together Mode](teams-together-mode.md)
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)

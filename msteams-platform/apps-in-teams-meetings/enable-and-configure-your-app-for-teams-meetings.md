@@ -66,14 +66,14 @@ After you enable your app for Teams meetings, you must configure your app before
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> * For your app to be visible in the tab gallery it must **support configurable tabs** and the **group chat scope**.
+> * For your app to be visible in the tab gallery it must support configurable tabs and the group chat scope.
 > * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and tab on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
-Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios such as before a meeting you can add tabs, bots and messaging extensions.
+Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios such as before a meeting you can add tabs, bots and messaging extensions. The next section provides details on what actions can be taken before a meeting.
 
 ### Before a meeting
 
-Before a meeting, you can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **Details** pages. Messaging extensions are added using the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat. Bots are added to a meeting chat using the **@** key and selecting **Get bots**.
+Before a meeting, users can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **Details** pages. Messaging extensions are added using the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat. Bots are added to a meeting chat using the **@** key and selecting **Get bots**.
 
 ✔ The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 
@@ -126,7 +126,7 @@ The in-meeting dialog box can be used to engage participants during the meeting 
 
 The post-meeting and pre-meeting configurations are the same.
 
-### Code sample
+## Code sample
 
 |Sample name | Description | Sample |
 |----------------|-----------------|--------------|----------------|-----------|
@@ -135,4 +135,4 @@ The post-meeting and pre-meeting configurations are the same.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+> [Together Mode](teams-together-mode.md)

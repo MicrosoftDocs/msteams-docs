@@ -1,16 +1,14 @@
 ---
-title: Apps in Teams meetings 
+title: Apps for Teams meetings 
 author: laujan
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar
 keywords: teams apps meetings user participant role api  
 ---
-# Apps in Teams meetings
+# Apps for Teams meetings
 
-Meetings are key to productivity in Microsoft Teams. They enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum.
-
-To enhance a Teams meeting experience, you can create [configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work), [bot](../bots/what-are-bots.md), and [messaging extension](../messaging-extensions/what-are-messaging-extensions.md) applications. Meeting users can access apps using the tab gallery to pre-stage a Kanban board, launch an in-meeting actionable dialog, or create a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle, depending on attendee status.
+Meetings are key to productivity in Microsoft Teams. Meetings enable collaboration, partnership, informed communication, and share feedback in an inclusive and active forum. To enhance the meeting experience, you can create a configurable tab, bot, and messaging extension application. Teams end-users can access apps during meetings using the tab gallery to pre-stage a Kanban board, launch an in-meeting actionable dialog, or create a post-meeting poll. Your meeting app can deliver a user experience for each stage of the meeting lifecycle, depending on the attendee's status.
 
 Teams also offers you to [work with apps for Teams meetings](create-apps-for-teams-meetings.md) and work in the Microsoft Teams Together Mode. With the Together Mode feature you can collaborate with your team in one place without being separated by boxes. For more information, see [Together Mode in Teams](teams-together-mode.md).
 
@@ -163,10 +161,13 @@ The following user types identify what each user can do and what they can access
 
 ## See also
 
+* [Configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Bot](../bots/what-are-bots.md)
+* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Together Mode in Teams](teams-together-mode.md)
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
