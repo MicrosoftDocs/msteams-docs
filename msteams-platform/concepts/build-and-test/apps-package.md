@@ -86,7 +86,7 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 
 ## See also
 > [!div class="nextstepaction"]
-> [Distribute your app](../concepts/deploy-and-publish/overview.md)
+> [Distribute your app](~/concepts/deploy-and-publish/overview.md)
 
 ## Next step
 
