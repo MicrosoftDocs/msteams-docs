@@ -109,4 +109,6 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 > [!div class="nextstepaction"]
 > [Add authentication to your messaging extensions](add-authentication.md)
 
- 
+> [!div class="nextstepaction"]
+> [Link unfurling](link-unfurling.md)
+
