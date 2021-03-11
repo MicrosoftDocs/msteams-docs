@@ -17,7 +17,7 @@ A Teams app package is a .zip file containing the following:
 
 ## App manifest
 
-Your manifest file must be at the top level of the uploaded package with the name **manifest.json**. For Teams App Store and AppSource submission, use the current [manifest schema](~/resources/schema/manifest-schema.md).
+Your manifest file must be at the top level of the uploaded package with the name **manifest.json**. For Teams store and AppSource submission, use the current [manifest schema](~/resources/schema/manifest-schema.md).
 
 ## App icons
 
