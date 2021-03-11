@@ -17,7 +17,7 @@ There are two methods for uploading your app. You can either use [App Studio](~/
 
 ## Debug your bot locally
 
-If you are hosting your bot locally during development you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service (you may need to add ngrok to your path).
+If you are hosting your bot locally during development, you need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. After you download and install ngrok, run the following command to start the tunneling service. You must add the ngrok to your path.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -75,4 +75,4 @@ To stop your bot from receiving messages go to your **Bot Dashboard** and edit t
 
 ## Delete a bot from Teams
 
-To remove your bot completely from Teams, go to your **Bot Dashboard** and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, or interacting with your bot. Note that this does not remove the bot from other users' Teams instances, although it will cease functioning for them as well.
+To remove your bot completely from Teams, go to your **Bot Dashboard** and edit the Microsoft Teams channel. Choose the **Delete** button at the bottom. This prevents users from discovering, adding, and interacting with your bot. This does not remove the bot from other user's Teams instances, although it stops functioning for them as well.
