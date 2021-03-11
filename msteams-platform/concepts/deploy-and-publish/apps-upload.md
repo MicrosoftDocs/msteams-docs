@@ -72,6 +72,22 @@ You can also upload your app package using the **Apps** tab.
 
 If the manifest fails to load, check that you followed all the instructions in [create the app package](../../concepts/build-and-test/apps-package.md) and validated your manifest against the [schema](../../resources/schema/manifest-schema.md).
 
+## Add a default install scope and group capability
+
+> [!NOTE]
+> The default install scope and group capability is currently available in developer preview only.
+
+Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
+Some of these apps are intended to work in a team, meetings, or a groupchat, with personal app experience being secondary.
+The default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
+
+![Add an app](../../assets/images/compose-extensions/addanapp.png)
+
+The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
+
+> [!NOTE]
+>`defaultGroupCapability` provides the default capability that is added to the team, groupchat or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+
 ## Remove or update your app
 
 To remove your app, select the delete icon next to the app name in the **View Teams** bots list. If you change manifest information, first remove the app and then add the updated package. Code changes on your service do not require you to upload your manifest again. However, if the code changes require manifest updates, such as changes to the URL or the Microsoft app ID for its bot, you must upload the manifest again.
