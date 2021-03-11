@@ -101,10 +101,12 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
            }
           return true;
         }
-     
-
-
+    
     ```    
 
+## See also
+
+> [!div class="nextstepaction"]
+> [Add authentication to your messaging extensions](add-authentication.md)
 
  
