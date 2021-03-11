@@ -21,7 +21,7 @@ Removing the margins around all tabs will allow developers to build apps that lo
 
 ## Guidelines
 
-Microsoft Teams apps that use tabs will be affected by this change. Developers should switch to [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) in order to determine how their tabs are affected and make the necessary changes.
+Microsoft Teams apps that use tabs will be affected by this change. Developers must switch to [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) in order to determine how their tabs are affected and make the necessary changes.
 
 Tab developers must not rely on Teams to provide margins surrounding their tabs. Developers are encouraged to add margins around their tab designs where it is required. App designs in production can look like there is extra padding, that is, margins provided by Teams and margins provided by the tab. However, the extra padding is only temporary and will go away in a few weeks, leaving only the app's provided padding.
 
