@@ -52,12 +52,12 @@ If your organization is part of the GCC, the GCC tenant admin determines if you 
 
 ## Publish to the Teams store
 
-AppSource provides a convenient location from which you can distribute your apps and other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. For more information on how to publish your app to AppSource, see [submit your app to AppSource](../appsource/publish.md).
+AppSource provides a convenient location from which you can distribute your apps and other Office 365 extensibility types, such as Office add-ins and SharePoint add-ins. For more information on how to publish your app to AppSource, see [submit your app to AppSource](../../../appsource/publish.md).
 
 ## See also
 
 > [!div class="nextstepaction"]
-> [Maintain and support your app](~/appsource/post-publish/overview.md)
+> [Maintain and support your app](../../../appsource/post-publish/overview.md)
 
 > [!div class="nextstepaction"]
 > [Microsoft Teams app certification](~/appsource/post-publish/application-certification.md)
@@ -65,4 +65,4 @@ AppSource provides a convenient location from which you can distribute your apps
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create your app package](../build-and-test/apps-package.md)
+> [Create your app package](../../build-and-test/apps-package.md)
