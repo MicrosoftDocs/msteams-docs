@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 
 # Prerequisites and API references for apps in Teams meetings
 
-To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. This document covers [prerequisites and considerations](#prerequisites-and-considerations), [meeting apps API references](#meeting-apps-api-references) and [code sample](#code-sample).
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings.
 
 ## Prerequisites and considerations
 
@@ -158,7 +158,7 @@ All users in a meeting receive the notifications sent through the NotificationSi
 > [!NOTE]
 > * When an in-meeting dialog is invoked, the content is presented as a chat message.
 > * Currently, sending targetted notifications is not supported.
-> * When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
+> * When an in-meeting dialog is invoked, the same content is also presented as a chat message.
 
 `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameters, C# or .NET, JavaScript, and JSON examples, and response codes.
 

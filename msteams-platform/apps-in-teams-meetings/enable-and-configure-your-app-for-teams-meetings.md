@@ -9,21 +9,18 @@ ms.topic: conceptual
 
 Every team has a different way of communicating and collaborating on tasks. You can achieve these different tasks by customizing Teams with apps for meetings. You can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
 
-This document covers the following:
-* [Enable your app for Teams meetings](#enable-your-app-for-teams-meetings)
-* [Configure your app for meeting scenarios](#configure-your-app-for-meeting-scenarios)
-* [Code sample](#code-sample)
-
 ## Enable your app for Teams meetings
 
 To enable your app for Teams meetings, you must update your app manifest and use the context properties to determine where your app must appear.
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest using the **configurableTabs** -> **scopes** and **context** arrays. Scope defines to whom and context defines where your app is available.
+The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. Scope defines to whom and context defines where your app is available.
 
 > [!NOTE]
-> Please use [developer preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> Use [manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+
+The app manifest must include the following code snippet:
 
 ```json
 
@@ -59,7 +56,7 @@ The tab `context` and `scopes` properties enable you to determine where your app
 | **meetingSidePanel** | An in-meeting panel opened via the unified bar (U-bar). |
 
 > [!NOTE]
-> `Context` property is currently not supported and is ignored on mobile clients.
+> `Context` property is currently not supported on mobile clients.
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -73,7 +70,7 @@ Teams meetings provides a unique collaborative experience for your organization.
 
 ### Before a meeting
 
-Before a meeting, users can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles add tabs to a meeting using the plus ➕ button in the meeting **Chat** and meeting **Details** pages. Messaging extensions are added using the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat. Bots are added to a meeting chat using the **@** key and selecting **Get bots**.
+Before a meeting, users can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles add tabs to a meeting using the plus **+** button in the meeting **Chat** and meeting **Details** pages. Messaging extensions are added using the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat. Bots are added to a meeting chat using the **@** key and selecting **Get bots**.
 
 ✔ The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 
@@ -84,7 +81,7 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
 
 ### During a meeting
 
-During a meeting, you can use the sidePanel or the In-meeting dialog box to build unique experiences for your apps.
+During a meeting, you can use the **sidePanel** or the **In-meeting** dialog box to build unique experiences for your apps.
 
 #### sidePanel
 
