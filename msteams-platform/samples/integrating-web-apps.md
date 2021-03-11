@@ -20,7 +20,7 @@ For each guideline, you can see if it's applicable to your integration scenario.
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Your Teams app can include features users want and might expect when collaborating, but you may be unfamiliar with Teams development terminology.
+Your Teams app must include required and expected collaborative features. To work with app integration, it is important to familiarize with Teams development terminology.
 
 |Common app features   |Teams platform capabilities   |
 |----------|-----------|
