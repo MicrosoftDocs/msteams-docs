@@ -25,7 +25,7 @@ ngrok http <port> -host-header=localhost:<port>
 
 Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart you'll get a new URL, and you'll need to update your bot endpoint address to use that one as well.
 
-## Testing your bot without uploading to Teams
+## Test your bot without uploading to Teams
 
 Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it wont allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, please follow the instructions for [testing by uploading](#test-by-uploading-to-teams).
 
