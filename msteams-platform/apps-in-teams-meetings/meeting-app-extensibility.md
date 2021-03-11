@@ -108,7 +108,7 @@ For messaging extension implementation, start with [build a messaging extension]
 
 In addition to integrating tabs, bots and messaging extensions into the meeting lifecycle, Teams meeting app extensibility enables you to design your app based on participant roles in a meeting.
 
-### Participant roles in a meeting
+## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
@@ -130,7 +130,7 @@ You can access the **Meeting options** page using one of the following methods:
 
 After you design your app based on participant roles in a meeting, you can identify each user type for meetings and what they can access.
 
-### User types in a meeting
+## User types in a meeting
 
 > [!NOTE]
 > Users with specific user types assigned to them can join meetings and assume one of the participant roles described in [participant roles in a meeting](#participant-roles-in-a-meeting). The user type is not included in the **getParticipantRole** API.
