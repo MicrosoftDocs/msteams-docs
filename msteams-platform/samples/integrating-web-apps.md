@@ -8,13 +8,14 @@ title: Integrate a web app with Microsoft Teams
 ---
 # Integrate web apps with Teams
 
-Do you have a web app you think would fit naturally with Teams' social and collaborative features? These guidelines can help you understand how to integrate the following types of apps:
 
-* **Standalone apps**: Could be a single-page app or large, complex app you want people to use some aspects of in Teams.
+Do you have a web app you think would fit naturally with Teams' social and collaborative features? Follow the guidelines to understand how to integrate the following types of apps:
+
+* **Standalone apps**: A stand alone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
 * **SharePoint**: A SharePoint page you want to surface in Teams.
 
-For each guideline, you can see if it's applicable to your integration scenario.
+Map and use appropriate guideline applicable to your integration scenario.
 
 ## Get to know Teams platform capabilities
 
