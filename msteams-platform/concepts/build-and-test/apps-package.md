@@ -91,4 +91,10 @@ Samples of app icons that appear in different Teams capabilities and contexts.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Upload your app to the Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [Upload your app to Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Publish your app to your organization](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+)
+> [!div class="nextstepaction"]
+> [Publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md
+)
