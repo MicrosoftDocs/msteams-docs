@@ -9,11 +9,14 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-You must create the task module for users if you are not populating the task module with parameters defined in the app manifest. Use either an Adaptive Card or an embedded web view to create the task module.
+This document guides you on how to create a task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the initial invoke request. This document covers 
+The initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel(new post), channe(reply to thread) and command box. 
+> [!NOTE]
+> if you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
-Using the initial invoke request method, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either the adaptive card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
+Using the initial invoke request method, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -29,7 +32,9 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
+### Payload activity properties when invoked a task module from 1:1 chat 
+
+Payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -45,7 +50,9 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a group chat are listed in the following section:
+### Payload activity properties when invoked a task module from a group chat 
+
+Payload activity properties when invoked a task module from a group chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -61,25 +68,9 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
+### Payload activity properties when invoked a task module from a channel (new post) 
 
-|Property name|Purpose|
-|---|---|
-|`type`| Type of request. It must be `invoke`. |
-|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
-|`from.id`| ID of the user that sent the request. |
-|`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
-|`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`channelData.source.name`| The source name from where task module is invoked. |
-|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. It must be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
-
-### Payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
+Payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -97,7 +88,29 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a command box are listed in the following section:
+### Payload activity properties when invoked a task module from a channel (reply to thread) 
+
+Payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
+|`channelData.team.id`| Team ID (if the request was made in a channel). |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when invoked a task module from a command box 
+
+Payload activity properties when invoked a task module from a command box are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -112,7 +125,9 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Example fetchTask request
+### Example 
+
+The following code section is an exampole of `fetchTask` request:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -196,7 +211,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message rather than the compose area or the command bar, the `value` object in the initial request must contain the details of the message that your messaging extension is invoked from. See the following section for the example of this object. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
+When your bot is invoked from a message,  the `value` object in the initial request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.  The following section is an example of the `value` object.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -314,11 +329,13 @@ The schema for the taskInfo object is:
 |`url`| The URL to be opened inside of the task module as an embedded web view.|
 |`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
 
-### With an adaptive card
+### Respond to the fetchTask with an Adaptive Card
 
-When using an adaptive card, you must respond with a `task` object with the `value` object containing an adaptive card.
+When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
 
-#### Example fetchTask response with an adaptive card
+#### Example
+
+The following code section is an example to `fetchTask` response with an adaptive card:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -470,9 +487,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-### With an embedded web view
+### Create a task module with an embedded web view
 
-When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. See the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md) for complete information on building your embedded web view.
+When using an embedded web view, you must respond with a `task` object with the `value` object containing the URL to the web form that you want to load. The domains of any URL you want to load must be included in the `validDomains` array in your app's manifest. For more information on building your embedded web view, see the [task module documentation](~/task-modules-and-cards/what-are-task-modules.md). 
 
 # [C#/.NET](#tab/dotnet)
 
@@ -548,11 +565,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Request to install your conversational bot
 
-If the app contains a conversational bot, install the bot in the conversation before loading the task module. It is useful to get additional context for the task module. Typical example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
+If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. See the action in the following example. The user must have permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
+When the messaging extension receives the `composeExtension/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
-#### Example of the response:
+#### Example 
+
+The following code section is an example of the response:
 
 ```json
 {
@@ -578,9 +597,11 @@ When the messaging extension receives the `composeExtension/fetchTask` invoke, c
 }
 ```
 
-After the installation, the bot receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
+After the installation of conversational bot, it receives another invoke message with `name = composeExtension/submitAction`, and `value.data.msteams.justInTimeInstall = true`.
 
-#### Example of the invoke:
+#### Example 
+
+The following code section is an example of the task response to the invoke:
 
 ```json
 {
@@ -606,7 +627,9 @@ After the installation, the bot receives another invoke message with `name = com
 
 The task response to the invoke must be similar to that of the installed bot.
 
-#### Example of just-in time installation of app with Adaptive card: 
+#### Example 
+
+The following code section is an example of just-in time installation of app with Adaptive card: 
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
@@ -634,8 +657,6 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## Next step
 
-If you allow your users to send a response back from the task module, you must handle the submit action.
-
 > [!div class="nextstepaction"] 
-> [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 

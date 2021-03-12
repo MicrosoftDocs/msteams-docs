@@ -9,43 +9,50 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Action commands allow you present your users with a modal popup called a task module in Teams to collect or display information, then process their interaction and send information back to Teams. Before creating the action command you need to decide:
+Use action commands to present your users with a modal popup called a task module in Teams. The task module collects or displays information, then process the interaction and send the information back to Teams. Before creating the action command you must decide the following:
 
-1. Where can the [action command be triggered from?](#choose-action-command-invoke-locations)
-1. How is the [task module created?](#choose-how-to-build-your-task-module)
-1. Will the [final message or card be sent](#choose-how-the-final-message-is-sent) to the channel from a bot, or inserted into the compose message area for the user to submit?
+1. [Choose action command invoke locations](#choose-action-command-invoke-locations)
+1. [Choose how to create your task module](#choose-how-to-create-your-task-module)
+1. [Choose how to send final message or card](#choose-how-the-final-message-is-sent) to the channel from a bot, or inserted into the compose message area for the user to submit?
 
 ## Choose action command invoke locations
 
 By specifying the `context` in your app manifest, the action command is invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area.
-* By @mentioning your app in the command box. You can not respond with a bot message inserted directly into the conversation if your messaging extension is invoked from the command box.
-* Directly from an existing message through the overflow menu on a message. The initial invoke to your bot includes a JSON object containing the message from which it was invoked, which you can process before presenting them with a task module.
+* By @mentioning your app in the command box. 
 
-## Choose how to build your task module
+> [!NOTE]
+> If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+* Directly from an existing message through the overflow menu on a message. 
 
-In addition to choosing where your command is invoked from, you must also choose how to populate the form in the task module for your users. You have three options for creating the form that is rendered inside the task module:
+> [!NOTE]
+> The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
 
-* **Static list of parameters** - This is the simplest option. You can define a list of parameters input fields in your app manifest the Teams client renders. You can not control the formatting with this option.
-* **Adaptive card** - You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
+## Choose how to create your task module
+
+Choose how to populate the form in the task module for the users. Following are the ways to create the form that is rendered inside the task module:
+
+* **Static list of parameters** - This is the simplest method. You can define a list of parameters input fields in your app manifest the Teams client renders, but cannot control the formatting in this case.
+* **Adaptive Card** - You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
 * **Embedded web view** - If you need complete control over the UI and controls, you can choose to embed a custom web view in the task module.
 
-If you choose to create your task module with a static list of parameters, the first call to your messaging extension will be when a user submits the task module. When using an embedded web view or an adaptive card, your messaging extension will need to handle an initial invoke event from the user, create the task module, and return it back to the client.
+If you choose to create the task module with a static list of parameters and submits, the messaging extension is called. When using an embedded web view or an adaptive card, your messaging extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
 
 ## Choose how the final message is sent
 
-In most cases, your action command results in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot can not edit or update the card further.
+In most cases, your action command results in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot cannot edit or update the card further.
 
-If your messaging extension is triggered from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the adaptive card comes from the bot, the bot will be able to update it, and the bot can also reply to the conversation thread if needed. You will need to add the `bot` object to your app manifest using the same Id and defining the appropriate scopes.
+If your messaging extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You wmust add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
 
 ## Add the action command to your app manifest
 
-Now that you have decided how users interacts with your action command, it is time to add it to your app manifest. To do this you'll add a new `composeExtension` object to the top level of your app manifest JSON. You can either do so with the help of App Studio, or manually.
+To add the action command to the app manifest, you must add a new `composeExtension` object to the top level of the app manifest JSON. You can either do so with the help of App Studio, or manually.
 
 ### Create an action command using App Studio
 
 The prerequisite to create an action command is that you must already create a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+**To create an action command**
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
