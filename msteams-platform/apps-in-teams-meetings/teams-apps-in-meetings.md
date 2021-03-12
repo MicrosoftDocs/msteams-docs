@@ -9,21 +9,27 @@ keywords: teams apps meetings user participant role api
 
 # Apps for Teams meetings
 
-Meetings are key to productivity in Microsoft Teams. Meetings enable collaboration, partnership, informed communication, and share feedback in an inclusive and active forum. To enhance the meeting experience, you can create a configurable tab, bot, and messaging extension application. Teams end-users can access apps during meetings using the tab gallery to do either of the following:
+Meetings enable collaboration, partnership, informed communication, and share feedback in an inclusive and active forum. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting and post-meeting app experience, depending on the attendee's status.
+
+Teams end-users can access apps during meetings using the tab gallery, for example:
 
 * Pre-stage a Kanban board
 * Launch an in-meeting actionable dialog
 * Create a post-meeting poll
 
-Your meeting app can deliver a user experience for each stage of the meeting lifecycle, depending on the attendee's status.
+This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and Together Mode in Teams.
 
-With meetings extensibility, you can now integrate your apps with meetings and not just within the channels, 1:1 chats, and group chats. Meeting app extensibility includes the various stages of a meeting lifecycle where you can integrate tabs, bots and messaging extensions. It also includes participant roles and user types.
+You can enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes the various stages of a meeting lifecycle where you can integrate tabs, bots, and messaging extensions. With meeting extensibility, you can identify different participant roles and user types.
 
-Teams offers users to use API references to work with apps for Teams meetings. It offers users to enable and configure apps, and work in the Microsoft Teams Together Mode. With the Together Mode feature users can collaborate with their team in one place without being separated by boxes.
+The new meeting extensibilities provide you with APIs that transform the meeting experience. You can use API references to work with apps for Teams meetings.
+
+To customize Teams with apps for meetings and to achieve different tasks, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
+
+The new Together Mode feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.
 
 ## See also
 
-* [Configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
