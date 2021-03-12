@@ -71,7 +71,7 @@ Your app is ready to test in Teams. To be able to sideload apps in Teams:
 
 or
 
-* You have a Microsoft 365 development account that allows app sideloading (for more information on account opening, see [Teams development account](../build-first-app-overview.md#set-up-your-development-account)) 
+* You have a Microsoft 365 development account that allows app sideloading (for more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)) 
 
 Also, you must have enabled sideloading. Follow the steps in [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). 
 
@@ -88,7 +88,7 @@ Alternatively, you can skip the installation process in **App Studio** by pressi
 
 Once the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams. 
 
-:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client with the Visual Studio Code Teams Toolkit.":::
+:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
 
 🎉 Congratulations! Your app is running in Teams.
 
