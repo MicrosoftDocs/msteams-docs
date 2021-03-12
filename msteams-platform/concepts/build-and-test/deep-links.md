@@ -159,6 +159,7 @@ The query parameters are:
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
 
-Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
+> [!NOTE]
+> Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
