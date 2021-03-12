@@ -8,6 +8,9 @@ ms.author: ojchoudh
 ---
 # Changes to Teams Bot APIs for Fetching Team/Chat Members
 
+>[!NOTE]
+> We've started with deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. Initially, they will be throttled to 5 requests per minute and return a maximum of 10K members per team. This can result in the full roster not being returned as the team size [increases](https://blogs.microsoft.com/2020/09/22/whats-new-in-microsoft-teams-microsoft-ignite-2020/). Please refer to the [steps below](https://docs.microsoft.com/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) to update your SDK and code to use the latest paginated API endpoints.
+
 Currently, bot developers who want to retrieve information for one or more members of a chat or team use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` (for C#) or `TeamsInfo.getMembers` (for TypeScript/Node.js) APIs [(documented here)](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile). These APIs have several shortcomings today:
 
 * **For large teams, performance is poor and timeouts are more likely.** The maximum team size has grown considerably since Microsoft Teams was released in early 2017. Since `GetMembersAsync`/`getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it’s not uncommon for the call to time out and you have to try again.
