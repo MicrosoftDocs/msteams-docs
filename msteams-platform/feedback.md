@@ -60,7 +60,7 @@ Tenant Admin can reach out to [Microsoft 365 Product Support](/microsoft-365/adm
 
 ### General questions about Microsoft Teams
 
-Submit your questions on [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).
+Submit your questions on [Microsoft Teams Community](https://answers.microsoft.com/msteams/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
 
 ## See also
 
