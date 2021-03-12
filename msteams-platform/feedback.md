@@ -22,7 +22,7 @@ Choose the correct support type to submit your issue and keep yourself updated w
 
 Submit issues and feature requests to the SDK repository for [Microsoft Teams JavaScript Library](https://github.com/OfficeDev/microsoft-teams-library-js/issues). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams) using the `microsoft-teams` tag. 
 
-### Bot & Messaging Extension SDK issues/suggestions
+### Bot and Messaging Extension SDK issues or suggestions
 
 Submit issues and feature requests to the SDK repository for your bot's language ([C#](https://github.com/Microsoft/botbuilder-dotnet/), [Javascript](https://github.com/Microsoft/botbuilder-js), or [Python](https://github.com/Microsoft/botbuilder-python)). How-to questions about the SDK can be posted at [Stack Overflow](https://stackoverflow.com/questions/tagged/botframework%20microsoft-teams) using the `botframework & microsoft-teams` tag.
  
@@ -32,7 +32,7 @@ Submit issues with samples to respective [Microsoft Teams Samples](/microsofttea
 
 ### Features suggestions
 
-Please make your features suggestions on the [Microsoft Teams feedback portal on UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).
+Make your features suggestions on the [Microsoft Teams feedback portal on UserVoice](https://microsoftteams.uservoice.com/forums/555103-public-preview/category/182881-developer-platform).
 
 ### Documentation issues
 
@@ -48,13 +48,13 @@ Select **SIGN IN TO START TALKING** to join the informal community chat room for
 
 ### General questions
 
-General questions about the Microsoft Teams developer platform, please send an email to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on channels mentioned above and use email only if none of the above are applicable.
+General questions about the Microsoft Teams developer platform must be sent to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on channels mentioned and use email only if none of the above are applicable.
 
 ## Product Support channels
 
 Support channels to submit your Teams product related questions:
 
-### Microsoft Teams product issues/failures
+### Microsoft Teams product issues or failures
 
 Tenant Admin can reach out to [Microsoft 365 Product Support](/microsoft-365/admin/contact-support-for-business-products).
 
