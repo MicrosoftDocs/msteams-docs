@@ -2,8 +2,8 @@
 title: Get started - Build your first app overview and prerequisites
 author: girliemac
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
-ms.author: heath-hamilton
-ms.date: 03/10/2020
+ms.author: timura
+ms.date: 03/10/2021
 ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
@@ -25,7 +25,7 @@ Here's an idea of what you'll know after going through the lessons.
 
 ## Teams app fundamentals
 
-The [Teams developer platform](../overview) lets you build custom apps. Some common scenarios that a custom Microsoft Teams app can help with are: 
+The [Teams developer platform](../overview.md) lets you build custom apps. Some common scenarios that a custom Microsoft Teams app can help with are: 
 
 * Embed your website or web app directly in the Teams client 
 * Help users quickly look up information in another system and add the results to a conversation in Teams 
