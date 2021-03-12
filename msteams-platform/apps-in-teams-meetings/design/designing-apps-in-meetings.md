@@ -146,8 +146,11 @@ There are two header variants. When possible, use the variant with the avatar to
 
 In-meeting dialogs can vary in size to account for different scenarios. Make sure to maintain padding and component sizes.
 
-* **Width**: The iframe width is an absolute value within the range you specify.
-* **Height**: The height of the dialog is determined by the content in the iframe. Vertical scroll takes over for content that exceeds the maximum height.
+* **Width**: The iframe width of the dialog is an absolute value within the range you specify.
+* **Height**: The iframe height of the dialog is an absolute value within the range you specify.
+
+> [!NOTE]
+> The values that you define for the width and height are used in `externalResourceURL` of in-meeting dialog.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
