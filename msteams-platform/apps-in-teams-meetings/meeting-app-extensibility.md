@@ -47,9 +47,9 @@ The following image displays the **Weekly planning** meeting page with the **Con
 
 ✔ With appropriate permissions, you can add apps to a meeting using the tab gallery in two ways:
 
-    * Using the **Details** tab on the Teams scheduling form.
+   * Using the **Details** tab on the Teams scheduling form.
 
-    * Using the meeting **Chat** tab in an existing meeting.
+   * Using the meeting **Chat** tab in an existing meeting.
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus **+** button.
 
