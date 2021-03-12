@@ -7,7 +7,7 @@ keywords: teams what's new latest
 # What's new for developers in Microsoft Teams
 
 >[!TIP]
-> Check out our production-ready templates in the   [**Teams App Templates catalog**](samples/app-templates.md). The catalog is alphabetized and the newest additions are tagged with a  star **&#9734;**.
+> Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
 ## Change Log
 
