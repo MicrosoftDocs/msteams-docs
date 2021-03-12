@@ -22,11 +22,11 @@ The following image gives an overview of adding a scene to an app:
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
 
-This document covers prerequisites, steps to build a scene using Scene Design Studio, assemble a scene package, create an app package and use the scene in Teams, and activate Together Mode.
+Now you can go through the prerequisites required for using Together Mode.
 
 ## Prerequisites
 
-As a developer you must have a basic understanding of the following prerequisites for using Together Mode:
+You must have a basic understanding of the following prerequisites for using Together Mode:
 
 * Scene
 * Scene Design Studio
@@ -99,11 +99,11 @@ You must have the ability to ship a scene package that includes the following:
 
 * **Moving images:** You can support scenes that are in motion to simulate moving objects. One way of doing this is to support GIF format in Together Mode. Advanced scene rendering is more like a movie being played.
 
-* **Visual no-code designer experience:** Users can build their own filters using Snap's GUI. It is a challenge to ship a scene generic enough for all teachers to use it. At present teachers can create custom scenes that serve the purpose.
+* **Visual no-code designer experience:** Users can build their own filters using Snap's graphical user interface (GUI). It is a challenge to ship a scene generic enough for all teachers to use it. At present teachers can create custom scenes that serve the purpose.
 
 ### Sample JSON
 
-Scene JSON along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest z-value, so higher z-value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
+Scene JSON along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
 
 Following is the scene JSON sample:
 

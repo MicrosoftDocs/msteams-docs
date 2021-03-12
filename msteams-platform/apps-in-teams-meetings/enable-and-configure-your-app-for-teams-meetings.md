@@ -45,7 +45,7 @@ The app manifest must include the following code snippet:
 
 ### Context property
 
-The tab `context` and `scopes` properties enable you to determine where your app must appear. Tabs in the `team` or `groupchat` scope can have more than one context. The following are the possible values for the `context` property:
+The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. Tabs in the `team` or `groupchat` scope can have more than one context. The following are the possible values for the `context` property:
 
 |Value|Description|
 |---|---|
@@ -64,7 +64,7 @@ After you enable your app for Teams meetings, you must configure your app before
 
 > [!NOTE]
 > * For your app to be visible in the tab gallery it must support configurable tabs and the group chat scope.
-> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and tab on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
+> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog box and tab on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios such as before a meeting you can add tabs, bots and messaging extensions. The next section provides details on what actions can be taken before a meeting.
 
@@ -81,13 +81,13 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
 
 ### During a meeting
 
-During a meeting, you can use the **sidePanel** or the **In-meeting** dialog box to build unique experiences for your apps.
+During a meeting, you can use the sidePanel or the in-meeting dialog box to build unique experiences for your apps.
 
 #### sidePanel
 
 With the sidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions.
 
-✔ In your app manifest, add **sidePanel** to the **context** array.
+✔ In your app manifest, add sidePanel to the context array.
 
 ✔ In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. Your tab must be optimized for this. For more information, see [FrameContext interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
 ).
@@ -117,7 +117,7 @@ The in-meeting dialog box can be used to engage participants during the meeting 
 > [!NOTE]
 >
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web-view. This is a requirement for app submission. For more information, see [Teams SDK: task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### After a meeting
 

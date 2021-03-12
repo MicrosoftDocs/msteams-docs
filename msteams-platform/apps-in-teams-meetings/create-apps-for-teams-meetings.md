@@ -17,9 +17,9 @@ Before you work with apps for Teams meetings, you must have a basic understandin
 
 * Apps in meetings require some basic knowledge of Teams app development. For more information, see [Teams app development](../overview.md).
 
-* An app in a meeting requires updates to the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest)
+* An app in a meeting requires updates to the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
-* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the groupchat scope. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md)).
+* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the groupchat scope. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
 * To enable your app in pre-meeting and post-meeting chats, you must support the `groupchat` scope. With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting such as poll survey results or feedback.
 
@@ -29,13 +29,13 @@ Before you work with apps for Teams meetings, you must have a basic understandin
 
 * You must adhere to general Teams tab design guidelines for pre- and post-meeting scenarios. For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines. For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog and other stages across the meeting lifecycle. For in-meeting dialog, refer to completion `bot Id` parameter in `Notification Signal API`.
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, refer to completion `bot Id` parameter in `Notification Signal API`.
 
 After you refer to the prerequisites and considerations, you can work with the meeting apps API references `GetUserContext`, `GetParticipant` and `NotificationSignal` to enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API references
 
-The new meeting extensibilities provide you with APIs that could transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. The following table provides a list of these APIs:
+The new meeting extensibilities provide you with APIs that transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can choose which APIs you want to use to enhance the meeting experience. The following table provides a list of these APIs:
 
 |API|Description|Request|Source|
 |---|---|----|---|
@@ -45,12 +45,12 @@ The new meeting extensibilities provide you with APIs that could transform the m
 
 ### GetUserContext API
 
-To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). As part of meetings extensibility, a new value **meetingId** has been added for the response payload. **meetingId** is used by a tab when running in the meeting context.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). As part of meetings extensibility, a new value `meetingId` has been added for the response payload. `meetingId` is used by a tab when running in the meeting context.
 
 ### GetParticipant API
 
 > [!NOTE]
-> * Do not cache participant roles since the meeting organizer can change a role at any point in time.
+> * Do not cache participant roles since the meeting organizer can change a role any time.
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
 
 The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, C# or .NET, JavaScript, and JSON examples, and response codes.
@@ -62,8 +62,8 @@ The `GetParticipant` API includes the following query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| string | Yes | The participantId is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a participantId from the Tab SSO. |
-|**tenantId**| string | Yes | The tenantId is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is highly recommended to get a tenantId from the Tab SSO. |
+|**participantId**| string | Yes | The participantId is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a participantId from the Tab SSO. |
+|**tenantId**| string | Yes | The tenantId is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a tenantId from the Tab SSO. |
 
 #### Example
 
@@ -153,12 +153,12 @@ The `GetParticipant` API includes the following response codes:
 
 ### NotificationSignal API
 
-All users in a meeting receive the notifications sent through the NotificationSignal API.
+All users in a meeting receive the notifications sent through the `NotificationSignal` API.
 
 > [!NOTE]
-> * When an in-meeting dialog is invoked, the content is presented as a chat message.
-> * Currently, sending targetted notifications is not supported.
-> * When an in-meeting dialog is invoked, the same content is also presented as a chat message.
+> * When an in-meeting dialog box is invoked, the content is presented as a chat message.
+> * Currently, sending targeted notifications is not supported.
+> * When an in-meeting dialog box is invoked, the same content is also presented as a chat message.
 
 `NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameters, C# or .NET, JavaScript, and JSON examples, and response codes.
 
@@ -172,12 +172,12 @@ The `NotificationSignal` API includes the following query parameters:
 
 #### Example
 
-The `Bot ID` is declared in the manifest and the bot receives a result object. In the following example, the `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload:
+The `Bot ID` is declared in the manifest and the bot receives a result object. In the example, the `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload.
 
 > [!NOTE]
 > * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The `externalResourceUrl` width and height parameters must be in pixels. To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).
-> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog. The domain must be in the app's `validDomains` array in your app manifest.
+> * The URL is the page loaded as an `<iframe>` in the in-meeting dialog box. The domain must be in the app's `validDomains` array in your app manifest.
 
 The `NotificationSignal` API includes the following C# or .NET, JavaScript, and JSON examples:
 
