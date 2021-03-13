@@ -155,7 +155,7 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 
 You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between a the pre- and post-meeting tab experience.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example shows a post-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
 
 ## Best practices
 
