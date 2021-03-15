@@ -202,6 +202,8 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
+  - name: Bots and SDKs
+    href: bots/bot-features.md  
   - name: Bot activity handlers
     href: bots/bot-basics.md
   - name: Bot conversations
