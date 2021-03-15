@@ -550,7 +550,7 @@ The **signin action** can be used from any card in Teams, not just the signin ca
 
 Bot Framework reference:
 
-* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin card Node](https://docs.microsoft.com/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [Signin card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Thumbnail card
@@ -634,7 +634,7 @@ Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLay
 
 ## Carousel collection
 
-The [carousel layout](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for carousel collections
 
