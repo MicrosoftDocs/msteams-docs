@@ -61,10 +61,9 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 > [!NOTE]
 >
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
-
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
- 
-> [!div class="nextstepaction"]
+
+ > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
