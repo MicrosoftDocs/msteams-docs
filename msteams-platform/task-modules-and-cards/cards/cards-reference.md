@@ -529,7 +529,7 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Signin card
