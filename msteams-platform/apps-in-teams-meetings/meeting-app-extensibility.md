@@ -24,7 +24,7 @@ Meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app expe
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus **+**, and choosing the app that they want to install as a tab.
+Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus ![plus button](../assets/images/apps-in-meetings/plusbutton.png), and choosing the app that they want to install as a tab.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
@@ -40,7 +40,7 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 **To add tabs to an existing meeting**
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select plus **+**. The tab gallery appears.
+1. Select the **Details** tab and select plus ![plus button](../assets/images/apps-in-meetings/plusbutton.png). The tab gallery appears.
 
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
@@ -54,32 +54,25 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps or taking polls.
+With the in-meeting app experience, you can engage participants during the meeting by using apps or taking polls. Meeting apps are hosted in the top upper bar of the chat window as an in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are in-meeting experiences are displayed. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-✔ Meeting apps are hosted in the top upper bar of the chat window as an in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are in-meeting experiences are displayed.
+**To use tabs during a meeting**
 
-✔ With the appropriate permissions, you can add apps while in the meeting.
+1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use. An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
+1. In the in-meeting dialog box, enter your response as a feedback.
 
-✔ Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
+    ![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-✔ If the result of a survey or poll is exported, you are notified that the results successfully downloaded.
-
-✔ An app is visible in a Teams meeting in the side panel or the in-meeting dialog box. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
-
-> [!NOTE]
-> Your app manifest specifies that your tab is [optimized for side panel](enable-and-configure-your-app-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+    > [!NOTE]
+    > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
+    > * If the result of a survey or poll is exported, you are notified that the results successfully downloaded.
+    > * Your app manifest specifies that your tab is [optimized for side panel](enable-and-configure-your-app-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 The following images display the app as an in-meeting dialog box and as a separate side panel:
 
-![in-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
+![In-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
 
-![In-meeting-dialog view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
-
-#### In-meeting actionable dialog for users
-
-The following image displays the app as an actionable in-meeting dialog box with feedback:
-
-![Dialog view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+![In-meeting dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
 #### Post-meeting app experience
 
