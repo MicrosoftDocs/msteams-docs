@@ -30,7 +30,7 @@ By default, only global admins or teams service admins can upload custom apps in
 
 To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
 
 For more information see:
 

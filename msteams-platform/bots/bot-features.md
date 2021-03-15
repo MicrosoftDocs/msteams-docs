@@ -1,7 +1,7 @@
 ---
 title: Bots and SDKs
 author: clearab
-description: An overview of bots in Microsoft Teams.
+description: Bots and SDKs in Microsoft Teams.
 ms.topic: overview
 ms.author: anclear
 ---
