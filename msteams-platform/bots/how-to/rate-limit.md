@@ -12,14 +12,6 @@ To protect Microsoft Teams and its users, the bot APIs provide a rate limit for 
 
 As the exact values of rate limits are subject to change, your application must implement the appropriate backoff behavior when the API returns `HTTP 429 Too Many Requests`.
 
-This document covers the following:
-* [Handle rate limits](#handle-rate-limits)
-* [Handle `HTTP 429` responses](#handle-http-429-responses)
-* [Detect transient exceptions example](#detect-transient-exceptions-example)
-* [Backoff example](#backoff-example)
-* [Per bot per thread limit](#per-bot-per-thread-limit)
-* [Per thread limit for all bots](#per-thread-limit-for-all-bots)
-
 ## Handle rate limits
 
 When issuing a Bot Builder SDK operation, you can handle `Microsoft.Rest.HttpOperationException` and check for the status code.

@@ -11,11 +11,6 @@ A bot that participates in audio or video calls and online meetings is a regular
 * [Microsoft Graph permissions](./registering-calling-bot.md#add-graph-permissions) must be configured for your bot's Microsoft App ID.
 * The Graph calls and online meetings APIs permissions require tenant admin consent.
 
-This document covers the following:
-* [New manifest settings](#new-manifest-settings)
-* [Create a new bot or add calling capabilities](#create-new-bot-or-add-calling-capabilities)
-* [Add Graph permissions](#add-graph-permissions)
-
 ## New manifest settings
 
 Calls and online meetings bots have the following two additional settings in the manifest.json that enable audio or video for your bot in Teams.

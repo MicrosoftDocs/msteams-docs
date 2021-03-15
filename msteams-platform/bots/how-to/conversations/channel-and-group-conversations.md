@@ -16,12 +16,6 @@ Bots in a group or channel only receive messages when they are mentioned `@botna
 > [!NOTE]
 > The bot must be `@mentioned` directly. Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
-This document covers the following:
-* Design guidelines
-* Create new conversation threads
-* Work with mentions
-* Send a message on installation
-
 ## Design guidelines
 
 Unlike personal chats, in group chats and channels, your bot must provide a quick introduction of itself. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).

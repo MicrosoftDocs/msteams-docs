@@ -17,8 +17,6 @@ When building your conversational bots for Microsoft Teams, you can work with co
 * Trigger a notification when a channel is created, renamed, or deleted.
 * When a bot message is liked by a user.
 
-This document covers [conversation update events](#conversation-update-events), [message reaction events](#message-reaction-events) and [code sample for bot conversation events](#samples).
-
 ## Conversation update events
 
 You can use conversation update events to provide better notifications and more effective bot actions.

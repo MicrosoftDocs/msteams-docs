@@ -12,14 +12,6 @@ For example, in a 1:1 call with a bot, as the user speaks, the bot receives 50 a
 
 The platform provides a simple socket-like API for the bot to send and receive media. It handles the real-time encoding and decoding of audio or video packets using codecs such as SILK and G.722 for audio and H.264 for video. The platform also handles all media packet encryption or decryption and packet network transmission automatically. The bot is only concerned with the actual audio or video content. A real-time media bot participates in 1:1 calls as well as meetings with multiple participants.
 
-This document introduces the following key concepts related to building a bot that can conduct real-time audio or video calls with Microsoft Teams:
-
-* Media session
-* Frames and frame rate
-* Audio and video format
-* Active and dominant speakers
-* Video subscription
-
 ## Media session
 
 When a real-time media bot answers an incoming call or joins a Microsoft Teams meeting, it must declare what modalities it must support. For each supported modality, the bot declares whether it can send and receive media, receive only, or send only. For example, a bot designed to handle 1:1 Teams calls, requires to both send and receive audio, but only send video as it does not require to receive the video of the caller. The set of audio and video modalities established between the bot and the Teams caller or meeting is called the media session.

@@ -24,19 +24,9 @@ A bot behaves differently depending on the conversation it is involved in:
 
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
-This document covers the following:
-
-* [Messages](#messages)
-* [Teams channel data](#teams-channel-data)
-* [Message content](#message-content)
-* [Notifications to your message](#notifications-to-your-message)
-* [Picture messages](#picture-messages)
-* [Adaptive cards](#adaptive-cards)
-* [Code sample](#code-sample)
-
 ## Messages
 
-Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following:
 

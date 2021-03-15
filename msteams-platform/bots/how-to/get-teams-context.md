@@ -9,13 +9,7 @@ ms.author: lajanuar
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A bot can access additional context data about a team or chat where it is installed. This information can be used to enrich the bot's functionality and provide a more personalized experience. This document covers the following:
-
-* Fetch the roster or user profile
-* Get single member details
-* Get team's details
-* Get the list of channels in a team
-* Teams bot samples
+A bot can access additional context data about a team or chat where it is installed. This information can be used to enrich the bot's functionality and provide a more personalized experience.
 
 ## Fetch the roster or user profile
 
