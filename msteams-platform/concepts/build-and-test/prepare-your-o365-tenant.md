@@ -4,6 +4,7 @@ description: How to get started with Teams in Microsoft 365
 ms.topic: how-to
 keywords: Configure Microsoft 365 tenant Teams uploading
 ---
+
 # Prepare your Microsoft 365 tenant
 
 If you are a Microsoft 365 subscriber, you can develop apps for Microsoft Teams with one of the following [plans](https://products.office.com/business/compare-more-office-365-for-business-plans):
@@ -22,7 +23,7 @@ If you do not have a Microsoft 365 account, you must sign up for a [Microsoft 36
 
 ## Enable Microsoft Teams for your organization
 
-If Microsoft Teams has not been enabled for your organization, you need to do that first. Take a look at our detailed guidance for [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
+Enable Microsoft Teams for your organization and take a look at our detailed guidance for [enabling Teams for your organization](/microsoftteams/enable-features-office-365).
 
 ## Enable custom Teams apps and turn on custom app uploading
 
@@ -30,14 +31,14 @@ Turn on the custom app uploading or sideloading for your developer tenant:
 
 1. Login to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credential.
 
-2. Select **Show All** > **Teams**. 
+2. Select **Show All** > **Teams**.
 
 ![image of admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
 > [!Note]
-> It can take up to 24 hours for the **Teams** option to appear. During interim, you can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation.
+> It can take up to 24 hours for the **Teams** option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
 
-3. Navigate to **Teams apps** > **Setup Policies** > **Global(Org-wide default)**  
+3. Navigate to **Teams apps** > **Setup Policies** > **Global(Org-wide default)**.
 
 ![turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
@@ -48,7 +49,7 @@ Turn on the custom app uploading or sideloading for your developer tenant:
 That's it! Your test tenant can permit custom app sideloading.
 
 > [!Note]
-> It can take up to 24 hours before sideloading is enabled. During interim, you can use **upload for \<your tenant>** to test your app.
+> It can take up to 24 hours for the sideloading to be active. During interim, you can use **upload for \<your tenant>** to test your app.
 
 ![updload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 

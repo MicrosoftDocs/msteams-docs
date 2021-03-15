@@ -24,10 +24,10 @@ After choosing a test setup, add the test data to Microsoft 365 test tenant. Lin
 [Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md) and learn about the differences between a browser and a desktop version. To test and debug your bot with IDE, see [debug your bot locally with an IDE](~/bots/how-to/debug/locally-with-an-ide.md).
 You can also debug your bot with [inspection middleware](https://docs.microsoft.com/azure/bot-service/bot-service-debug-inspection-middleware?view=azure-bot-service-4.0&tabs=csharp) and [adaptive tools](https://docs.microsoft.com/azure/bot-service/bot-service-debug-adaptive-tools?view=azure-bot-service-4.0). You can learn [how to develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md).
 
-## See also
+To test your Resource Specific Consent (RSC), follow:
 
 > [!div class="nextstepaction"]
-> [Test resource-specific consent permissions in Teams](../graph-api/rsc/test-resource-specific-consent.md)
+> [Test RSC permissions in Teams](https://docs.microsoft.com/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent)
 
 > [!div class="nextstepaction"]
 > [Test RSC Postman collection JSON](../graph-api/rsc/test-rsc-json-file.md)

@@ -5,6 +5,7 @@ description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
 ms.author: anclear
 ---
+
 # Test and debug your bot locally
 
 When testing your bot you need to take into consideration both the context(s) you want your bot to run in, as well as any functionality you may have added to your bot that requires data specific to Microsoft Teams. Make sure that the method you chose to test your bot aligns with its functionality.
@@ -23,7 +24,7 @@ If you are hosting your bot locally during development, you need to use a tunnel
 ngrok http <port> -host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart you'll get a new URL, and you'll need to update your bot endpoint address to use that one as well.
+Use the https endpoint provided by ngrok in your app manifest. If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
 
 ## Test your bot without uploading to Teams
 
@@ -31,7 +32,7 @@ Occasionally it may be necessary to test your bot without installing it as an ap
 
 ### Use the Bot Emulator
 
-The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding. However, the emulator does not permit you to test any Teams-specific functionality you have added to the bot, nor the responses from your bot are an accurate visual representation of how they are rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
+The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding. However, the emulator does not permit you to test any Teams-specific functionality you have added to the bot, nor the responses from your bot are an accurate visual representation of how they are rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
 
 See also [complete instructions on the Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
 
@@ -41,6 +42,8 @@ See also [complete instructions on the Bot Framework Emulator](/azure/bot-servic
 >Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
 
 You can also initiate a conversation with your bot by using its ID. Two methods for doing so are mentioned in this article. When a bot has been added through one of these methods it is not addressable in channel conversations and you cannot take advantage of other Microsoft Teams app capabilities like tabs or messaging extensions.
+
+Chat with your bot using ID:
 
 1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Microsoft Teams launches a personal chat with your bot.
 2. Directly reference your bot's app ID from within Microsoft Teams:
@@ -52,12 +55,13 @@ You can also initiate a conversation with your bot by using its ID. Two methods 
   
      ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
 
-     The app ID should resolve to your bot name.
+     The app ID must resolve to your bot name.???
 
    * Select your bot and send a message to initiate a conversation.
    * Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the **People** tab to see your bot and to start chatting with it.
 
-Your bot receives the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
+> [!NOTE]
+> Your bot receives the `conversationUpdate` event as you add the bots to a team, without the team information in the `channelData` object.
 
 ## Block a bot in personal chat
 
