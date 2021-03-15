@@ -213,8 +213,10 @@ An adaptive card is a customizable card that can contain any combination of text
 
 #### Additional information on adaptive cards
 
-* [Adaptive cards overview](/adaptive-cards/)
-* [Adaptive card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+Bot Framework reference:
+
+* [Adaptive cards Node](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Adaptive card C#](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## Hero card
 
@@ -632,7 +634,7 @@ Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLay
 
 ## Carousel collection
 
-The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for carousel collections
 
