@@ -9,15 +9,15 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Use action commands to present your users with a modal popup called a task module in Teams. The task module collects or displays information, then process the interaction and send the information back to Teams. Before creating the action command you must decide the following:
+Use action commands to present the users with a modal popup called a task module in Teams. The task module collects or displays information, then processes the interaction and sends the information back to Teams. Before creating the action command you must decide the following factors:
 
 1. [Choose action command invoke locations](#choose-action-command-invoke-locations)
 1. [Choose how to create your task module](#choose-how-to-create-your-task-module)
-1. [Choose how to send final message or card](#choose-how-the-final-message-is-sent) to the channel from a bot, or inserted into the compose message area for the user to submit?
+1. [Choose how to send final message or card](#choose-how-the-final-message-is-sent)
 
 ## Choose action command invoke locations
 
-By specifying the `context` in your app manifest, the action command is invoked from one or more of the following locations:
+Specify the `context` in your app manifest, the action command is invoked from one or more of the following locations:
 
 * The buttons at the bottom of the compose message area.
 * By @mentioning your app in the command box. 
@@ -41,9 +41,9 @@ If you choose to create the task module with a static list of parameters and sub
 
 ## Choose how the final message is sent
 
-In most cases, your action command results in a card inserted into the compose message box. Your user can then decide to send it into the channel or chat. The message in this case comes from the user, and your bot cannot edit or update the card further.
+In most cases, the action command results in a card inserted into the compose message box. The  user can send it into the channel or chat. In this case, the message comes from the user, and the bot cannot edit or update the card further.
 
-If your messaging extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You wmust add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
+If the messaging extension is invoked from the compose box or directly from a message, your web service can insert the final response directly into the channel or chat. In this case, the Adaptive Card comes from the bot, the bot updates it, and replies to the conversation thread if needed. You must add the `bot` object to the app manifest using  the same ID and defining the appropriate scopes.
 
 ## Add the action command to your app manifest
 
@@ -52,6 +52,7 @@ To add the action command to the app manifest, you must add a new `composeExtens
 ### Create an action command using App Studio
 
 The prerequisite to create an action command is that you must already create a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+
 **To create an action command**
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
@@ -85,7 +86,7 @@ The prerequisite to create an action command is that you must already create a m
 
 ### Create an action command manually
 
-To manually add your action-based messaging extension command to your app manifest, you must  add the follow parameters to your `composeExtension.commands` array of objects.
+To manually add your action-based messaging extension command to your app manifest, you must  add the follow parameters to the `composeExtension.commands` array of objects.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|
@@ -95,11 +96,11 @@ To manually add your action-based messaging extension command to your app manife
 | `fetchTask` | This property is set to `true` for an adaptive card or embedded web view for your task module, and`false` for a static list of parameters or when loading the web view by a `taskInfo` | No | 1.4 |
 | `context` | This property is an optional array of values that defines where the messaging extension is invoked from. The possible values are `message`, `compose`, or `commandBox`. Default is `["compose", "commandBox"]`. | No | 1.5 |
 
-If you are using a static list of parameters, you must add them as well.
+If you are using a static list of parameters, you must add them also.
 
 | Property name | Purpose | Is required? | Minimum manifest version |
 |---|---|---|---|
-| `parameters` | Static list of parameters for the command. Only use when `fetchTask` is `false` | No | 1.0 |
+| `parameters` | This property describes the static list of parameters for the command. Only use when `fetchTask` is `false` | No | 1.0 |
 | `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that should be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
