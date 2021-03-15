@@ -1,51 +1,43 @@
 ---
 title: Get started - Build a personal tab
-author: heath-hamilton
+author: girliemac
 description: Quickly create a Microsoft Teams personal tab using the Microsoft Teams Toolkit.
-ms.author: lajanuar
-ms.date: 11/03/2020
+ms.author: timura
+ms.date: 03/16/2020
 ms.topic: tutorial
 ---
 # Build a personal tab for Microsoft Teams
 
-Tabs are a simple way to surface content in your app by essentially embedding a webpage in Teams.
+Tabs are a simple way to surface information in your app by essentially hosting web content in Teams. 
 
-There are two types of tabs in Teams. In this tutorial, you'll build basic a *personal tab*, a full-screen content page for individual users. (Personal tabs are the closest thing to a traditional website experience in Teams.)
+There are two types of tabs in Teams. In this tutorial, you'll build a basic personal tab, a common feature of personal apps that provides a private workspace for individual users. (Personal tabs are the closest thing to a traditional web experience in Teams.) 
 
 ## Before you begin
 
 You need a basic running personal tab to get started. If you don't have one, see [build and run your first Teams app](../build-your-first-app/build-and-run.md).
-
-## Your assignment
-
-People in your organization have trouble finding basic contact information for important functions (help desk, HR, etc.). You're in charge of making sure they can quickly find this information in one place. How would you do that? A Teams personal tab, of course.
 
 ## What you'll learn
 
 > [!div class="checklist"]
 >
 > * Identify some of the app configurations and scaffolding relevant to personal tabs
-> * Create tab content
+> * Create tab content with a contact list of your organization
 > * Update a tab's color theme based on user preference
 
 ## 1. Identify relevant app project components
 
-Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a personal tab.
+You will begin this tutorial with what you left at the previous section, [Create a “Hello, world!” app](../build-your-first-app/build-and-run.md). 
 
-### App configurations
-
-In the toolkit, go to **App Studio** to view and update your app configurations.
-
-### App scaffolding
-
-The app scaffolding provides the components for rendering your personal tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
+The generated app scaffold provides the components for rendering your personal tab in Teams. There's a lot you can work with, but for now you only need to focus on the following: 
 
 * `Tab.js` file in the `src/components` directory of your project. This is for rendering your tab content page.
 * Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
 
+As you may notice from the `import` section of the top of Tabs.js, the sample code uses [React](https://reactjs.org/), an open-source JavaScript library for building user-interface. (Although using React is _not_ required for Teams development, this tutorial will walk you through with React!) 
+
 ## 2. Customize your tab content page
 
-Compile a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is.
+You are going to render a list of important contacts in your organization. Copy and update the following snippet with information that's relevant to you or, for the sake of time, use the code as is. 
 
 ```JSX
 <div>
@@ -58,14 +50,12 @@ Compile a list of important contacts in your organization. Copy and update the f
 </div>
 ```
 
-Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your content inside `return()` (as shown).
+Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and replace the "Hello World!" template content by pasting the snippet inside `return()` (as shown).
+
 
 ```JavaScript
 render() {
-
-    let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
-
-    return (
+  return (
     <div>
       <h1>Important Contacts</h1>
         <ul>
@@ -74,7 +64,7 @@ render() {
           <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
         </ul>
     </div>
-    );
+  );
 }
 ```
 
@@ -98,23 +88,23 @@ The [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@mic
 
 ### Get context about the Teams client
 
-In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme. Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
+In your `Tab.js` file, there's a `microsoftTeams.getContext()` call that provides some [`context`](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) about, among other details, the configured client theme (such as dark theme). Thanks to the app scaffolding, use this code as is to access the `context` interface and its properties.
 
 ```JavaScript
 componentDidMount(){
   // Get the user context from Teams and set it in the state
   microsoftTeams.getContext((context, error) => {
     this.setState({
-      context: context
+      context: context,
+      theme: context.theme
     });
   });
-  // Next steps: Error handling using the error object
 }
 ```
 
 ### Create a theme change handler
 
-With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. But the app still doesn't know its appearance should reflect whatever theme a user chooses.
+With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. But the app still doesn't know its appearance should reflect whatever theme a user changes.
 
 You need a handler so that your app's state changes with the theme. Insert the following theme change handler immediately after the `microsoftTeams.getContext()` call.
 
