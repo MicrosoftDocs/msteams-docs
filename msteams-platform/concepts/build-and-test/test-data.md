@@ -140,6 +140,8 @@ Save the following snippet as a **.xml** file and note the file path. This XML d
 </Teams>
 ```
 
+## PowerShell script (.ps1)
+
 Save the following snippet as a PowerShell script (.ps1) and note where you have saved it. This script executes the steps to create the teams and channels and add members to them.
 
 ```powershell
@@ -238,7 +240,7 @@ Open a Windows PowerShell session in Administrator mode.  Run the script that yo
 
 After the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
 
-## Optional step: allow upload of custom apps
+## Optional step: Permit upload of custom apps
 
 As default, only global admins or teams service admins can upload custom apps into the tenant app catalog. You can also enable all users to upload custom apps for their own use or to teams for testing.
 
