@@ -13,11 +13,11 @@ The cards listed in this section are supported in bots for Microsoft Teams. They
 You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
-  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card)
+  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
   * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
 
 * Node.js
-  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card)
+  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
   * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## Types of cards
