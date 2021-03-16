@@ -6,7 +6,7 @@ keywords: bot framework apis team members roster
 ms.topic: reference
 ms.author: ojchoudh
 ---
-# Changes to Teams Bot APIs for Fetching Team/Chat Members
+# Changes to Teams bot APIs for fetching team and chat members
 
 >[!NOTE]
 > We've started with deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. Initially, they will be throttled to 5 requests per minute and return a maximum of 10K members per team. This can result in the full roster not being returned as the team size [increases](https://blogs.microsoft.com/2020/09/22/whats-new-in-microsoft-teams-microsoft-ignite-2020/). Please refer to the [steps below](https://docs.microsoft.com/microsoftteams/platform/resources/team-chat-member-api-changes#api-changes) and update to version 4.8 (or above) of the Bot Framework SDK and switch to the paginated API endpoints or the `TeamsInfo.GetMemberAsync` single user API.
