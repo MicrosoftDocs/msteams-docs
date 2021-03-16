@@ -38,7 +38,7 @@ Teams’ meeting app extensibility centers on three concepts:
 
 ![pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
 
-✔ Permissioned users can add apps to a meeting via the tab gallery in two ways:
+✔ Permissioned users are users who can add tabs to a meeting during different stages of the meeting lifecycle. These users can add apps to a meeting via the tab gallery in two ways:
 
 &emsp;&emsp;&#9679; Via the **Details** tab on the Teams scheduling form.
 
