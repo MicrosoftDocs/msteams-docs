@@ -7,8 +7,7 @@ keywords: teams feedback developer questions issues contact support request bugs
 
 # Microsoft Teams developer community channels
 
-Microsoft Teams community is an open-source library to share inputs on Teams development. Many common questions about developing, testing, and publishing the Microsoft Teams app are answered in this article. Microsoft Teams broad and supportive community of developers use several platforms to help and discuss the app development. You can avail of assistance at any stage of your app development and also suggest your ideas for Teams app development. Following are the support types where you can submit your issues related to the Teams app development and get support.
-
+This article provides you with contacts or sites where you can submit your queries, doubts, or clarifications. Microsoft Teams supportive community of developers use sites, such as Stack Overflow to connect with other developers working to develop apps using Teams platform features.
 ## Support type
 
 Choose the correct support type to submit your issue and keep yourself updated with the Teams app development.
