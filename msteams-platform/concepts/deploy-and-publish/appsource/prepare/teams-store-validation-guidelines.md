@@ -9,7 +9,7 @@ ms.topic: reference
 
 Following these guidelines increases the likelihood your app will pass the Microsoft Teams store submission process. These Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
-> [!TIP]
+> [!NOTE]
 > Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 
 ## 1.0 Value proposition
@@ -26,6 +26,8 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * It must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * It must not contain profane or derogatory terms. It also must not include racially or culturally insensitive language.
 
+See also: [4.0 App package and store listing](#40-app-package-and-store-listing)
+
 ### 1.2 Suitable for workplace consumption
 
 App content must be suitable for general workplace consumption and abide by all restrictions listed in the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content). Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
@@ -38,44 +40,38 @@ Apps must focus on the Teams experience and not include the names, icons, or ima
 
 ### 1.4 Feature names
 
-When referring to your app's features in buttons and other UI text, you must include your product name. For example, instead of **Start Meeting**, use **Start Contoso Meeting**.
+App feature names in buttons and other UI text must not conflict with terminology reserved for Teams and other Microsoft products (for example, **Start meeting**, **Make call**, or **Start chat**). Include your app name if you can't completely avoid this, such as **Start Contoso meeting** instead of **Start meeting**.
 
 ## 2.0 Security
 
-### 2.1 App permissions
+### 2.1 Microsoft App Compliance Program
 
-Apps that request permissions during the Azure Active Directory (Azure AD) consent process must provide business justification for these requests.
+The [Microsoft 365 App Compliance Program](https://docs.microsoft.com/microsoft-365-app-certification/overview) is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. As a Teams app developer, you must complete the following tiers of the program:
 
-### 2.2 Microsoft App Compliance Program
+* [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview): Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue "verified" badge displays on the Azure AD consent dialog and other screens. For more information, see the [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified) and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
+* [Publisher Attestation](/microsoft-365-app-certification/docs/attestation): A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
-The [Microsoft 365 App Compliance Program](https://docs.microsoft.com/microsoft-365-app-certification/overview) is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. As a Teams app developer, you must complete the following tiers of the program.
+> [!NOTE]
+> If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.
 
-#### 2.2.1 Publisher Verification
-
-You must complete [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview), which helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. For more information, see how to [mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified) and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
-
-#### 2.2.2 Publisher Attestation
-
-You must complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), a process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
-
-### 2.3 Bots
+### 2.2 Bots
 
 For apps that use the Microsoft Azure Bot Service (bots and messaging extensions), you must follow all requirements as defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message after the file uploads.
 
-### 2.4 External domains
+### 2.3 External domains
 
 In most cases, you must not include domains outside of your organization's control (including wildcards) and tunneling services in the valid domains section of your app manifest. The following exceptions include:
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
 * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` variable.
 
-### 2.5 Authentication
+### 2.4 Authentication
 
 For implementation details, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
-#### 2.5.1 External service experiences
+#### 2.4.1 External service experiences
 
 Remember the following if your app authenticates users with an external service.
 
@@ -84,21 +80,28 @@ Remember the following if your app authenticates users with an external service.
   * When a user signs out, they must sign out only from the app and not the Teams client.
 * **Content sharing**: Apps that require authentication with an external service to share content in channels must clearly state in help documentation (or similar resources) how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to unshare content must be present in your Teams app.
 
-#### 2.5.2 Government Community Cloud listings
+#### 2.4.2 Government Community Cloud listings
 
 To distribute your app to Government Community Cloud (GCC) users while avoiding duplicate listings in the Teams store, the authentication process must identify and route users to a GCC-specific or expected URL.
 
-### 2.6 Sensitive content
+### 2.5 Sensitive content
 
 Your app must not post sensitive data, such as credit card or financial payment instrument data. The app also must not display health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view that content.
 
 Warn users before your app downloads any files or executables (.exe) into the user's machine or environment.
 
-### 2.7 Financial information
+### 2.6 Financial information
 
 Apps must not ask users to make payments within the Teams interface. Financial instrument details must not be transmitted to users through a bot interface.
 
 You may link to secure, external payment services only if you made the appropriate disclosure in your terms of use, privacy policy, or any profile page or website before the user agreed to use the app.
+
+Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
+
+* Apps must not include in-app purchases, trial offers, or UI that aims to upsell to paid versions or links to online stores where users can purchase or acquire other content, apps, or add-ins.
+* If your app requires an account, users must be able to do so with no charge. The use of the term **free** or **free account** is prohibited.
+* You may determine whether an account is active indefinitely or for a limited time, but if the account expires, no UI, text, or links indicating the need to pay may be shown.
+* Your app's privacy policy and terms of use pages must be free of any commerce-related UI or links.
 
 ## 3.0 General functionality and performance
 
@@ -231,6 +234,9 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * Capture any Teams or browser UI in your screenshots.
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app in  a browser instead of a Teams tab.
 
+> [!TIP]
+> A video can be the most effective way to communicate why people should use your app and will be the first thing users see before your screenshots. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md###create-a-video).
+
 ### 4.5 Privacy policy
 
 The privacy policy can be specific to your Teams app or an overall policy for all of your services.
@@ -293,7 +299,12 @@ If your app includes a tab, make sure it adheres to these guidelines.
 * Tabs must use Teams-styled components (adopting Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, etc.) whenever possible.
 * You must include a **Settings** tab.
 * Tabs must use Teams interaction behaviors (in-page navigation, position and use of dialogs, information hierarchies, etc.) whenever possible.
-* Tabs must use core Teams capabilities (bots for conversations, message extensions for search & share, deeplink, calling, meeting etc.) if applicable
+* Tabs must not include features that mimic core Teams capabilities (for example, bots, messaging extensions, calling, meeting, deep linking, etc.).
+
+> [!TIP]
+>
+> * Include a personal bot alongside a personal tab.
+> * Allow users to share content from their personal tab.
 
 ## 6.0 Bots
 
@@ -304,16 +315,22 @@ If your app includes a bot, make sure it adheres to these guidelines.
 
 ### 6.1 Bot commands
 
-* All commands that your bot supports must work correctly, including the "Hi", "Hello", and "Help" command.
-* You should include supported bot commands in your app manifest to help users converse efficiently with your bot across all devices.
-* Supported bot commands must be listed in the app manifest.
-* Use command lists. Analyzing user input or predicting user intent is hard. Instead of letting users guess what your bot can do, provide a list of commands your bot understands.
+Analyzing user input and predicting user intent is difficult. Bot commands provide users a set of words or phrases your bot understands so they (and your bot) don't have to guess.
+
+* Listing supported bot commands in the app manifest is highly recommended. These commands display in the compose box when a user tries to message your bot.
+* All commands that your bot supports must work correctly, including the **Hi**, **Hello**, and **Help** command.
+
+> [!TIP]
+> For personal bots, include a **Help** tab that elaborates on what your bot can do.
 
 ### 6.2 Bot welcome messages
 
 * Bots should almost always send first-run welcome messages. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the messaging using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 * Channel bot welcome messages are optional during first run, especially if bot is available in personal scope performing similar actions. This bot must not send a personal message to all members of the team or channel as that will be considered as spamming. The welcome message should also mention the person who installed/added the bot to the channel.
 * Notification-only bots must send a welcome message that includes a message conveying, "I am a notification-only bot and will not be able to reply to your chats".
+
+> [!TIP]
+> In one-on-one welcome messages, a carousel tour can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged (for example, **Create a task**).
 
 ### 6.3 Bot message spamming
 
@@ -329,7 +346,7 @@ Bot notifications must include content relevant for the scope you define for the
 
 ### 6.5 Bots and Adaptive Cards
 
-Adaptive Cards are a common way to display bot messages and highly recommended. Your cards must be lightweight and include only 1-3 actions. If you need to display more content, consider using a task module or tab.
+Adaptive Cards are a highly recommended way to display bot messages. Your cards must be lightweight and include only 1-3 actions. If you need to display more content, consider using a task module or tab.
 
 See the following resources for more information:
 
@@ -427,16 +444,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 * Notifications must adhere to the Teams activity feed layout and experience.
 * When selecting a notification, the user must be directed to relevant content within Teams and not taken out of the Teams experience.
 
-## 11.0 In-app purchases
-
-Apps running in the iOS or Android version of Teams must adhere to the following guidelines:
-
-* Apps must not include in-app purchases, trial offers, or UI that aims to upsell to paid versions or links to online stores where users can purchase or acquire other content, apps, or add-ins.
-* If your app requires an account, users must be able to do so with no charge. The use of the term **free** or **free account** is prohibited.
-* You may determine whether an account is active indefinitely or for a limited time, but if the account expires, no UI, text, or links indicating the need to pay may be shown.
-* Your app's privacy policy and terms of use pages must be free of any commerce-related UI or links.
-
-## 12.0 Advertising
+## 11.0 Advertising
 
 Apps must not display advertising, including dynamic ads, banner ads, and ads in messages.
 

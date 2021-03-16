@@ -1,41 +1,38 @@
 ---
 title: Package your app
 description: Learn how to package your Microsoft Teams app for testing, uploading, and store publishing.
-ms.topic: conceptual
+author: heath-hamilton
+ms.author: surbhigupta
+ms.topic: how-to
 ---
 
 # Create an app package for your Microsoft Teams app
 
-Apps in Teams are defined by an app manifest JSON file, and bundled in an app package with their icons. You'll need an app package to upload and install your app in Teams and publish to either your Line of Business app catalog or to AppSource.
+However you plan to publish your Microsoft Teams app, you need an app package. A package is a ZIP file that includes the following:
 
-A Teams app package is a .zip file containing the following:
+* **App manifest**: Specifies your Teams app's attributes and points to required resources, such as a web app URL or bot messaging endpoint.
+* **App icons**: Each package requires a color and outline icon for your app.
 
-* A manifest file named `manifest.json`, which specifies attributes of your app and points to required resources for your experience, such the location of its tab configuration page or the Microsoft app ID for its bot.
-* [Color and outline icons for your app](#app-icons).
+## App manifest
 
-## Creating a manifest
+Your app manifest file must be at the top level of the package with the name `manifest.json`.
 
-*Teams App Studio* can help configure your manifest. It also contains a React control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
-
-Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema.md).
-
-> [!TIP]
-> Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
->
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+When publishing to the Microsoft Teams store, make sure your manifest references the current [schema](~/resources/schema/manifest-schema.md).
 
 ## App icons
 
-Your app package must include two PNG versions of your app icon—a color icon and an outline icon. For your app to pass the AppSource review, these icons must meet the following size requirements.
+Your app package must include two PNG versions of your app icon: A color and outline version.
 
 > [!Note]
 > If your app has a bot or messaging extension, your icons also will be included in your Microsoft Azure Bot Service registration.
 
+For your app to pass Teams store review, these icons must meet the following size requirements.
+
 ### Color icon
 
-The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color or colors, but it must sit on a solid or fully transparent square background.
+The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color, but it must sit on a solid or fully transparent square background.
 
-Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. Include 48 pixels of padding around your symbol so these crops can be made without losing any detail.
+Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 48 pixels of padding around your symbol.
 
 :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon design guidance." border="false":::
 
@@ -90,3 +87,16 @@ Here's how app icons appear in different Teams capabilities and contexts.
 #### Messaging extension
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
+
+## See also
+
+* [Choose how to distribute your app](~/oncepts/deploy-and-publish/overview.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Sideload your app to Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [!div class="nextstepaction"]
+> [Publish your app to an organization](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+> [!div class="nextstepaction"]
+> [Publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md)

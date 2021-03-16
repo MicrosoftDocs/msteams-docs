@@ -346,6 +346,9 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 
 [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.
 
+> [!NOTE]
+> If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.
+
 ## Next step
 
 > [!div class="nextstepaction"]
