@@ -319,13 +319,9 @@ Users with organizer and/or presenter roles add tabs to a meeting using the plus
 
 The post-meeting and pre-meeting configurations are equivalent.
 
-## Meeting app sample
-
- > [!div class="nextstepaction"]
-> [Meeting token generator app](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token)
-
 ## Code sample
 
 |Sample name | Description | C# |
 |----------------|-----------------|--------------|----------------|-----------|
-| Content bubble | Demonstrates how to implement content bubble in-meeting experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
+| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
