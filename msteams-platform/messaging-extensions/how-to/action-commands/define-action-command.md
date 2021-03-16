@@ -177,7 +177,7 @@ The following section is an example of a `composeExtensions` object defining two
 
 ## Next step
 
-If you are using either an adaptive card or an embedded web view without a `taskInfo` object, the next step is to:
+If you are using either an Adaptive Card or an embedded web view without a `taskInfo` object, the next step is to:
 
 > [!div class="nextstepaction"]
 > [Create and respond with a task module](~/messaging-extensions/how-to/action-commands/create-task-module.md)

@@ -9,14 +9,14 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to create a task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the initial invoke request. This document covers 
-The initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel(new post), channe(reply to thread) and command box. 
+You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process, called the initial invoke request. This document covers 
+the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel(new post), channel(reply to thread) and command box. 
 > [!NOTE]
-> if you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
+> If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
-Using the initial invoke request method, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
+In the process of the initial invoke request, your service receives an `Activity` object of type `composeExtension/fetchTask`, and you must respond with a `task` object containing either an Adaptive Card or a URL to the embedded web view. Along with the standard bot activity properties, the initial invoke payload contains the following request metadata:
 
 |Property name|Purpose|
 |---|---|
@@ -28,13 +28,13 @@ Using the initial invoke request method, your service receives an `Activity` obj
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from 1:1 chat 
 
-Payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
+The payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -46,13 +46,13 @@ Payload activity properties when invoked a task module from 1:1 chat are listed 
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a group chat 
 
-Payload activity properties when invoked a task module from a group chat are listed in the following section:
+The payload activity properties when invoked a task module from a group chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -64,13 +64,13 @@ Payload activity properties when invoked a task module from a group chat are lis
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a channel (new post) 
 
-Payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
+The payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -84,13 +84,13 @@ Payload activity properties when invoked a task module from a channel (new post)
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a channel (reply to thread) 
 
-Payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
+The payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -104,13 +104,13 @@ Payload activity properties when invoked a task module from a channel (reply to 
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Payload activity properties when invoked a task module from a command box 
 
-Payload activity properties when invoked a task module from a command box are listed in the following section:
+The payload activity properties when invoked a task module from a command box are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -121,13 +121,13 @@ Payload activity properties when invoked a task module from a command box are li
 |`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
-|`value.commandId` | Contains the Id of the command that was invoked. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
 ### Example 
 
-The following code section is an exampole of `fetchTask` request:
+The following code section is an example of `fetchTask` request:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -211,7 +211,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message,  the `value` object in the initial request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.  The following section is an example of the `value` object.
+When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.  The following section is an example of the `value` object.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -311,7 +311,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond to the fetchTask
 
-Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the adaptive card or web URL, or a simple string message.
+Respond to the invoke request with a `task` object that contains either a `taskInfo` object with the Adaptive Card or web URL, or a simple string message.
 
 |Property name|Purpose|
 |---|---|
@@ -654,6 +654,12 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 |:---------------------|:--------------|:---------|:--------|
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
+
+## See also
+
+> [!div class="nextstepaction"] 
+> [Define action command](../how-to/messaging-extensions/how-to/action-commands/define-action-command.md)
+
 
 ## Next step
 
