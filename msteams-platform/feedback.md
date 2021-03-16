@@ -7,10 +7,8 @@ keywords: teams feedback developer questions issues contact support request bugs
 
 # Microsoft Teams developer community channels
 
-This article provides you with contacts or sites where you can submit your queries, doubts, or clarifications. Microsoft Teams supportive community of developers uses sites, such as Stack Overflow to connect with other developers working to develop apps using Teams platform features.
-## Support type
+Microsoft Teams community of developers use Stack Overflow to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use one of the following contacts or sites depending on the type of support required to submit your queries, doubts, or clarifications. You can also get product specific information, such as issues, failures, and general questions about Microsoft Teams: 
 
-Choose the correct support type to submit your issue and keep yourself updated with the Teams app development.
 
 |            **Support type**            |               **Contact**                                                                                  |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -24,12 +22,12 @@ Choose the correct support type to submit your issue and keep yourself updated w
 |       **Community chat group**        | Select **SIGN IN TO START TALKING** to join the informal community chat room for [Microsoft Teams app developers](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev) if you are signing in for the first time. Select **JOIN ROOM** if you are already logged in. |
 |          **General questions**         |          Send general questions about the Microsoft Teams developer platform to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on channels mentioned and use email only if no other mode of communication is applicable.                                                                                                                                                                          |
 
-## Product Support channels
+## Product support channels
 The following table lists the support channels to submit Teams product related queries:
 
 |            **Support type**            |               **Contact**                                                                                  |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         **Microsoft Teams product issues/failures**          | Tenant Admin can reach out to [Microsoft 365 Product Support](/microsoft-365/admin/contact-support-for-business-products).                                                            |
+|         **Microsoft Teams product issues and failures**          | Tenant Admin can reach out to [Microsoft 365 Product Support](/microsoft-365/admin/contact-support-for-business-products).                                                            |
 |        **General questions about Microsoft Teams**        |  Submit your questions on [Microsoft Teams Community](https://answers.microsoft.com/en-us/msteams/forum).               |                                                           
 
 ## See also
