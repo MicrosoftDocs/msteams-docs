@@ -5,11 +5,12 @@ description: Describes how to respond to the task module submit action from a me
 ms.topic: conceptual
 ms.author: anclear
 ---
+
 # Respond to the task module submit action
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message *Unable to reach the app*, and any reply to the invoke is ignored by the Teams client.
+After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message **Unable to reach the app** and any reply to the invoke is ignored by the Teams client.
 
 You have the following options for responding:
 
@@ -28,6 +29,10 @@ For authentication or configuration, after the user completes the flow the origi
 |Another task module | x | x | x |
 |Bot with Adaptive Card | x |  | x |
 | No response | x | x | x |
+
+> [!NOTE]
+> * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
+> * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
 ## The submitAction invoke event
 
