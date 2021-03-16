@@ -235,7 +235,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app in  a browser instead of a Teams tab.
 
 > [!TIP]
-> A video can be the most effective way to communicate why people should use your app and will be the first thing users see before your screenshots. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md###create-a-video).
+> A video can be the most effective way to communicate why people should use your app and will be the first thing users see before your screenshots. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
 ### 4.5 Privacy policy
 

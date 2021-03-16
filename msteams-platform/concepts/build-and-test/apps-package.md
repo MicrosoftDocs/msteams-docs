@@ -90,7 +90,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 ## See also
 
-* [Choose how to distribute your app](~/oncepts/deploy-and-publish/overview.md)
+* [Choose how to distribute your app](~/concepts/deploy-and-publish/overview.md)
 
 ## Next step
 

@@ -28,7 +28,7 @@ If your app includes a bot or messaging extension, you must select the **Microso
 
 ## Publish your app to Teams store
 
-Make your app available to everyone by [publishing to the Teams store](../../appsource/publish.md).
+Make your app available to everyone by [publishing to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
 ## See also
 
