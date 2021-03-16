@@ -6,9 +6,6 @@ keywords: calling calls audio video IVR voice online meetings
 
 # Calls and online meetings bots
 
-> [!NOTE]
-> Support for calls and online meeting bots is currently not supported on the Microsoft Teams mobile platform. 
-
 With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
 To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand some core concepts, terminology, and conventions:
