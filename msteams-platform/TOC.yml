@@ -289,9 +289,9 @@
     - name: Universal actions for adaptive cards
       items:
       - name: Overview
-        href: bots/Universal-actions-for-adaptive-cards/overview.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
       - name: Work with universal actions for adaptive cards
-        href: bots/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
   - name: Build task modules
     items:
     - name: Overview
