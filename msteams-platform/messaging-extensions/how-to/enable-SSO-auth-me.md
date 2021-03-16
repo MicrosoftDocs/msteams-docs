@@ -8,15 +8,18 @@ ms.author: lajanuar
 
 # Single sign-on (SSO) support for messaging extensions
  
-**Single sign-on** support is now available for messaging extensions and link unfurling. Enabling **Single sign-on (SSO)** for messaging extensions silently refreshes the authentication token, which minimizes the number of times you need to enter your sign in credentials for Microsoft Teams.
+Single sign-on support is now available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions silently refreshes the authentication token, which minimizes the number of times you need to enter your sign in credentials for Microsoft Teams.
 
-This document guides you on how to enable the SSO and store your authentication token, if required. 
+This document guides you on how to enable the SSO and store your authentication token, if required.
 
 ## Prerequisites
 
 The prerequisite to enable SSO for messaging extensions and link unfurling are as follows:
 * You must have an [Azure](https://azure.microsoft.com/en-us/free/) account.
-* The [app manifest](../bots/how-to/authentication/add-authentication.md#prepare-the-bot-sample-code) must be updated with details about SSO support for bots. 
+* The [app manifest](../bots/how-to/authentication/add-authentication.md#prepare-the-bot-sample-code) must be updated with details about SSO support for bots.
+
+> [!NOTE]
+> For more information on creating an Azure account and updating your app manifest, see [Single sign-on (SSO) support for bots](../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 ## Enable SSO for messaging extensions and link unfurling
 
@@ -108,6 +111,9 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 
 > [!div class="nextstepaction"]
 > [Add authentication to your messaging extensions](add-authentication.md)
+
+> [!div class="nextstepaction"]
+> [Use SSO for bots](../bots/how-to/authentication/auth-aad-sso-bots.md)
 
 > [!div class="nextstepaction"]
 > [Link unfurling](link-unfurling.md)
