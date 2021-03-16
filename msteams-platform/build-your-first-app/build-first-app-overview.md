@@ -57,24 +57,21 @@ You will only install an app package that contains a configuration file, called 
 
 ## Get prerequisites
 
-### Set up your Teams development account
+### Set up your Teams development tenant
 
-Verify you have the right account for building Teams apps and install some recommended development tools.
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. And this is also where you can sideload and test your apps. Let’s verify if you are ready to develop with the tenant or create a new tenant for developing and testing. 
 
-1. If you have a Teams account and have the admin access, verify if you can sideload apps in Teams:
-    1. In the Teams client, select **Apps**.
-    1. Look for an option to **Upload a custom app**.
+_Do you already have a tenant, and do you have the admin access? If yes to both:_
+
+Verify if you can sideload apps in Teams: 
+1.In the Teams client, select **Apps**. 
+1. Look for an option to **Upload a custom app**. 
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
     
-2. If you don’t have a Teams account, or don’t have the admin access, sign up for a [Microsoft 365 developer account](https://developer.microsoft.com/microsoft-365/dev-program).  
+_Did you answer no, or just want to create a test account anyway:_
 
-<!-- markdownlint-disable MD033 -->
-<details>
-
-<summary><b>Expand here</b> for the instruction to get the developer account.</summary>
-
-You can get a free Teams test account that allows app sideloading by joining the Microsoft 365 developer program. (The registration process takes approximately two minutes.)
+Join the Microsoft 365 developer program and get a free Teams test account that allows app sideloading. (The registration process takes approximately two minutes.)
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
@@ -83,8 +80,6 @@ You can get a free Teams test account that allows app sideloading by joining the
 :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 1. Log in to Teams using the administrator account you just set up.
 1. Verify if you now have the **Upload a custom app** option.
-
-</details>
 
 > [!Note]
 > If you still can't sideload apps, see [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
