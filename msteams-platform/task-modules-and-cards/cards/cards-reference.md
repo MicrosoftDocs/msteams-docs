@@ -13,11 +13,11 @@ The cards listed in this section are supported in bots for Microsoft Teams. They
 You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
-  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
   * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
 
 * Node.js
-  * [Add cards as attachments to messages](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
   * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## Types of cards
@@ -215,8 +215,8 @@ An adaptive card is a customizable card that can contain any combination of text
 
 Bot Framework reference:
 
-* [Adaptive cards Node](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-* [Adaptive card C#](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+* [Adaptive cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Adaptive card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## Hero card
 
@@ -276,8 +276,8 @@ A card that typically contains a single large image, one or more buttons and tex
 
 Bot Framework reference:
 
-* [Hero card Node](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
-* [Hero card C#](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
+* [Hero card Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## List card
 
@@ -531,8 +531,8 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Receipt card Node](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Signin card
 
@@ -550,8 +550,8 @@ The **signin action** can be used from any card in Teams, not just the signin ca
 
 Bot Framework reference:
 
-* [Signin card Node](https://docs.microsoft.com/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Signin card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Signin card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Thumbnail card
 
@@ -623,8 +623,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 Bot Framework reference:
 
-* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Thumbnail card Node](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Thumbnail card C#](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Card collections
 
@@ -634,7 +634,7 @@ Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLay
 
 ## Carousel collection
 
-The [carousel layout](https://docs.microsoft.com/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for carousel collections
 
