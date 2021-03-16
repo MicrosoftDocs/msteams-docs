@@ -75,7 +75,7 @@ Once added, users can open your messaging extension by selecting your app icon b
 Once added, users can select the **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: icon on the chat message or channel post to find your extension’s action commands. Your extension may be listed under **More actions** based on usage.
 
 > [!NOTE]
-> Support for more actions from a chat message or channel post is available on Microsoft Teams mobile platform. 
+> Support for more actions from a chat message or channel post is not available on Microsoft Teams mobile platform. 
 
 #### Chat message
 
