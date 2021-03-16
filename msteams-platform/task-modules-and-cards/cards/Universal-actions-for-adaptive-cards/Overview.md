@@ -1,20 +1,20 @@
 ---
-title: Overview of universal bot action model
-description: A quick overview of universal bot action model.
+title: Overview of universal actions for adaptive cards
+description: A quick overview of universal actions for adaptive cards.
 ms.topic: overview
 ---
 
-# Universal bot action model
+# Universal actions for adaptive cards
 
-Universal bot action model evolved from developer feedback that even though layout and rendering for adaptive cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they would have to handle actions differently.
+Universal actions for adaptive cards evolved from developer feedback that even though layout and rendering for adaptive cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they would have to handle actions differently.
 
-With the Universal bot action model, this problem is now addressed with bot becoming the common backend for handling actions along with the introduction of the new action type, Action.Execute, which would work across apps starting from Teams and Outlook.
+With the Universal actions for adaptive cards, this problem is now addressed with bot becoming the common backend for handling actions along with the introduction of the new action type, `Action.Execute`, which would work across apps starting from Teams and Outlook.
 
-This document helps you to understand how you can use the universal bot action model to enhance user experience of interacting with adaptive cards across platforms and applications.
+This document helps you to understand how you can use the universal actions for adaptive cards to enhance user experience of interacting with adaptive cards across platforms and applications.
 
-## Enhance user experience with universal bot action model
+## Enhance user experience with universal actions for adaptive cards
 
-Universal bot action model enhances user experience by enabling the following scenarios:
+Universal actions for adaptive cards enhances user experience by enabling the following scenarios:
 
 * [Universal actions](#universal-actions)
 * [Contextual or role based views](#contextual-or-role-based-views)
@@ -23,14 +23,14 @@ Universal bot action model enhances user experience by enabling the following sc
 
 ### Universal actions
 
-Before the universal bot action model, different hosts provided different action models as follows:
+Before the universal actions for adaptive cards, different hosts provided different action models as follows:
 
 * Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.
 * Outlook used `Action.Http` to communicate with the backend service explicitly specified in the adaptive card payload.
 
 ![Inconsistent action model](~/assets/images/bots/inconsistent-action-model.png)
 
-With the universal bot action model, you can use `Action.Execute` for action handling throughout different platforms.
+With the universal actions for adaptive cards, you can use `Action.Execute` for action handling throughout different platforms.
 
 ![New universal action model](~/assets/images/bots/Newuniversalactionmodel.png)
 
@@ -56,25 +56,13 @@ With sequential workflow support, users can progress through a series of workflo
 
 You can create adaptive cards that update automatically, for example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
-Now you can understand how adaptive cards can be transformed with the new universal bot action model to provide a unique and enhanced user experience.
+Now you can understand how adaptive cards can be transformed with the new universal actions for adaptive cards to provide a unique and enhanced user experience.
 
-## Adaptive cards and the new universal bot action model
+## Adaptive cards and the new universal actions for adaptive cards
 
-Adaptive cards are a combination of content, such as text and graphics, and actions that can be performed by a user. You can add adaptive cards to a conversation through a bot or messaging extension. Adaptive cards are cross-platform and cross-app snippets of the user interface, authored using a lightweight JSON format that apps and services can share. For more information, see [adaptive cards](http://adaptivecards.io/).
+Adaptive cards are a combination of content, such as text and graphics, and actions that can be performed by a user. You can add adaptive cards to a conversation through a bot or messaging extension. For more information, see [adaptive cards](http://adaptivecards.io/). The new universal actions for adaptive cards enables a common handling of the adaptive card actions across platforms and applications. For more information, see [universal actions for adaptive cards](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
 
-The current action model maintains consistency in rendering, whereas actions and their handling differ significantly. In `Action.Http`, requests are made to a web service and in `Action.Submit`, requests are sent to the bot.
-
-The following image shows the lifecycle of the current model:
-
-![Inconsistent action model lifecycle](~/assets/images/bots/inconsistent-action-model-lifecycle.png)
-
-The new universal bot action model enables a common handling of the adaptive card actions across platforms and applications. Using a standard action `Action.Execute` allows the cards to be consistent across hosts.
-
-The following image shows the lifecycle of the new model:
-
-![Universal bot action model lifecycle](~/assets/images/bots/universal-action-model-lifecycle.png)
-
-The next section will take you through the steps to use these capabilities for your solution.
+The next section will take you through the steps to use the capabilities of universal actions for adaptive cards for your solution.
 
 ## See also
 
@@ -86,4 +74,4 @@ The next section will take you through the steps to use these capabilities for y
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Work with universal bot action model](Work-with-universal-bot-action-model.md)
+> [Work with universal actions for adaptive cards](Work-with-universal-actions-for-adaptive-cards.md)
