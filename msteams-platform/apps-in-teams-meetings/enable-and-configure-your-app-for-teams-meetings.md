@@ -18,7 +18,7 @@ To enable your app for Teams meetings, you must update your app manifest and use
 The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. Scope defines to whom and context defines where your app is available.
 
 > [!NOTE]
-> Use [manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.
+> Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 
 The app manifest must include the following code snippet:
 
@@ -45,7 +45,7 @@ The app manifest must include the following code snippet:
 
 ### Context property
 
-The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. Tabs in the `team` or `groupchat` scope can have more than one context. The following are the possible values for the `context` property:
+The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. Tabs in the `team` or `groupchat` scope can have more than one context. Following are the values for the `context` property from which you can use all or some of the values:
 
 |Value|Description|
 |---|---|
@@ -64,7 +64,8 @@ After you enable your app for Teams meetings, you must configure your app before
 
 > [!NOTE]
 > * For your app to be visible in the tab gallery it must support configurable tabs and the group chat scope.
-> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog box and tab on mobile are currently not available. Follow the [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
+> * Mobile clients support tabs only in pre and post meeting stages.
+> * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios such as before a meeting you can add tabs, bots and messaging extensions. The next section provides details on what actions can be taken before a meeting.
 
