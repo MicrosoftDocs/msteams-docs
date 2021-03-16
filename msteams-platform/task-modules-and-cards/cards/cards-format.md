@@ -212,6 +212,27 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
+### Typeahead support
+Within the [Input Choiceset](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can signnificantly slow down task completion. Typeahead support within adaptive cards can simplfy input selection by narrowing (filtering) the set of input choices as a users is typing input. 
+
+#### Enable typeahaead in adaptive cards
+To enable typeahead within the Input choiceset set `style` to `filtered` and ensure `isMultiSelect` is set to `false`. 
+
+#### Sample adaptive card with typeahead support
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
 
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
