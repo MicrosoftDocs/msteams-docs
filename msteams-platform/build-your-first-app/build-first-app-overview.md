@@ -3,7 +3,7 @@ title: Get started - Build your first app overview and prerequisites
 author: girliemac
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: timura
-ms.date: 03/10/2021
+ms.date: 03/16/2021
 ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
@@ -41,11 +41,13 @@ Depending on what capabilities you want for your app, you will need an appropria
 
 | **App Capabilities**| **User interactions** | **Recommended Tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
-| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension |[Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client) | Web technology in general—HTML, CSS, and JavaScript |
-| Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension  |[Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python | 
-| Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
+| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) |[Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client) | Web technology in general—HTML, CSS, and JavaScript |
+| Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  |[Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python | 
+| Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 
-Tutorials in this Get started section will walk you through with recommended tool sets and commonly used technologies— React.js for tabs, and Node.js for bots and messaging extensions, although _you are not limited to using these particular stacks_.  
+Tutorials in this Get started section will walk you through with recommended tool sets and commonly used technologies— Visual Studio Code with Teams extension, with React.js for tabs, and Node.js for bots and messaging extensions, although _you are not limited to using these particular stacks_. 
+
+If you prefer using a command-line interface (CLI), read [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md) 
 
 ### Teams doesn't host your app
 
