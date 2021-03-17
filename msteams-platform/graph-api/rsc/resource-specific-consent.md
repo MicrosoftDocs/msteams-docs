@@ -41,7 +41,7 @@ The steps for enabling RSC in your application are as follows:
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
-1. [Install your app directly in Teams](#install-your-app-directly-in-teams).
+1. [Install your app directly in Teams](#sideload-your-app-in-teams).
 1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
 
 ## Configure group owner consent settings in the Azure AD portal
