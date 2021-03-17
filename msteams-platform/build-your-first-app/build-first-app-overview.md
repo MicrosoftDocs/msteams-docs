@@ -51,11 +51,13 @@ You need a Teams account that allows custom app sideloading. (Your account may a
     1. Look for an option to **Upload a custom app**.
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
+    
+    If you don't see the button, you don't have permission to install custom apps in your organization. Read the next section to learn how to acquire your own free test subscription.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 
-<summary><b>Select here</b> if you can't see the sideload option or don't have a Teams account.</summary>
+<summary><b>Get a free Microsoft Teams subscription</b></summary>
 
 You can get a free Teams test account that allows app sideloading by joining the Microsoft 365 developer program. (The registration process takes approximately two minutes.)
 
