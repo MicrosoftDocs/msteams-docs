@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 # Maintain your published Microsoft Teams app
 
-Now that your app is listed on the Microsoft Teams store, it's time to start thinking about how you'll maintain the app going forward and also increase downloads and usage.
+With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
 
 ## Publish updates to your app
 
@@ -44,3 +44,7 @@ You can create the link with the following format that appends your app ID:
 ```
 https://teams.microsoft.com/l/app/<appId>
 ```
+
+## See also
+
+* [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

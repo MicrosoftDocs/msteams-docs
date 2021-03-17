@@ -12,21 +12,22 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 
 ## Sideload your app in Teams
 
-Share your app with a user, group of users, or specific team. For more information, see [sideload your app to Teams](apps-upload.md).
+Use an app or share it with others without going through a formal publishing process. For more information, see [sideload your app in Teams](apps-upload.md).
 
 ## Publish your app to your organization
 
 Make your app available to your enterprise or Government Community Cloud (GCC) organization.
 
-In the Teams admin center, you can approve or reject custom apps and set up related app permission and setup policies for your organization. For more information, see [manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+In the Teams admin center, you can approve or reject apps and set up related app permission and setup policies for your organization. For more information, see [manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
 In GCC Teams environments, compliant Microsoft apps are enabled by default. Before publishing a custom app, however, make sure that all app endpoints comply with your GCC organization's requirements.
 
-If your app includes a bot or messaging extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
+> [!IMPORTANT]
+>If your app includes a bot or messaging extension, you must select the **Microsoft Teams for Government** option when setting up a channel between your bot and Teams in Azure. For more information, see [connect a bot to channels](/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0).
 
-## Publish your app to Teams store
+## Publish your app to the Teams store
 
 Make your app available to everyone by [publishing to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 

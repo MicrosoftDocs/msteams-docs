@@ -6,9 +6,9 @@ ms.author: surbhigupta
 ms.topic: how-to
 ---
 
-# Create an app package for your Microsoft Teams app
+# Create a Microsoft Teams app package
 
-However you plan to publish your Microsoft Teams app, you need an app package. A package is a ZIP file that includes the following:
+However you plan to distribute your Microsoft Teams app, you need an app package. A valid package is a ZIP file that includes the following:
 
 * **App manifest**: Specifies your Teams app's attributes and points to required resources, such as a web app URL or bot messaging endpoint.
 * **App icons**: Each package requires a color and outline icon for your app.
@@ -17,7 +17,7 @@ However you plan to publish your Microsoft Teams app, you need an app package. A
 
 Your app manifest file must be at the top level of the package with the name `manifest.json`.
 
-When publishing to the Microsoft Teams store, make sure your manifest references the current [schema](~/resources/schema/manifest-schema.md).
+When publishing to the Teams store, make sure your manifest references the current [schema](~/resources/schema/manifest-schema.md).
 
 ## App icons
 
@@ -88,14 +88,10 @@ Here's how app icons appear in different Teams capabilities and contexts.
 
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
 
-## See also
-
-* [Choose how to distribute your app](~/concepts/deploy-and-publish/overview.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Sideload your app to Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [Sideload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
 > [!div class="nextstepaction"]
 > [Publish your app to an organization](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
