@@ -56,7 +56,7 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 ### ✔ Create and publish your proactive messaging bot for Teams
 
-To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that's in your [organization's app store](~/concepts/deploy-and-publish/app-publish-overview.md#publish-your-app-to-your-organization) or the [Teams store](~/concepts/deploy-and-publish/appsource/app-publish-overview.md#publish-your-app-to-the-teams-store).
+To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that's in your [organization's app store](~/concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-organization) or the [Teams store](~/concepts/deploy-and-publish/appsource/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
 >[!TIP]
 > The production-ready [**Company Communicator**](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good foundation for building your proactive bot application.
