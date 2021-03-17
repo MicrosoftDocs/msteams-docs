@@ -88,7 +88,6 @@ Here's a sample HTML to create a Connector configuration page without the CSS:
         });
 
         microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
-            var removeCalled = true;
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
@@ -206,3 +205,9 @@ Once you've uploaded your app package, to configure and use the connector in a T
 1. Select the **Set up a connector** bar from the bottom right corner of dialog window.
 1. The connector will be available in the  section &#9679;&#9679;&#9679; => *More options* => *Connectors* => *All* => *Connectors for you team* for that team. You can navigate by scrolling to this section or search for the connector app.
 1. To configure or modify the connector select the **Configure** bar.
+
+## Code sample
+|**Sample name** | **Description** | **.NET** | **Node.js** |
+|----------------|------------------|--------|----------------|
+| Connectors	| Sample Office 365 Connector generating notifications to teams channel.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|
+| Generic connectors sample |Sample code for a generic connector that's easy to customize for any system which supports webhooks.|	| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-generic/nodejs)|

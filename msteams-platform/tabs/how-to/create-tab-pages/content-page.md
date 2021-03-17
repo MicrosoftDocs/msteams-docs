@@ -24,7 +24,7 @@ For more information, see the [tab design guidelines](~/tabs/design/tabs.md) and
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
@@ -61,6 +61,28 @@ A task module is a modal popup-like experience that you can trigger from your ta
 ### Valid Domains
 
 Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
+
+## Reorder static personal tabs
+
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
+
+If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
 
 ## Show a native loading indicator
 

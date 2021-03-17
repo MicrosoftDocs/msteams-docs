@@ -11,7 +11,8 @@ ms.author: anclear
 
 Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
 
-[!Note] Result card size limit is 28kb. If the result card size is over 28kb, it will not be sent.
+> [!NOTE]
+> The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB. 
 
 ## Choose messaging extension invoke locations
 
@@ -28,17 +29,19 @@ Now that you've decided how users will interact with your search command, it is 
 
 ### Create a command using App Studio
 
-The following steps assume you've already [created a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create a search command is that you must already create a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
-1. From the Microsoft Teams client, open **App Studio** and select the **Manifest Editor** tab.
-2. If you've already created your app package in App Studio, chose it from the list. If not, you can import an existing app package.
-3. Select the **Add** button in the Command section.
-4. Choose **Allow users to query your service for information and insert that into a message**.
-5. Add a **Command Id** and a **Title**.
-6. Select where you want your search command to be triggered from. Selecting **message** does not currently alter the behavior of your search command.
-7. Add your search parameter.
-8. Select **Save**.
+**To create a search command**
 
+1. From the Microsoft Teams client, open **App Studio**, and select the **Manifest editor** tab.
+1. If you already created an app package in the **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
+1. After importing an app package, select **Messaging extensions** under **Capabilities**.
+1. Select **Add** in the **Command** section in the messaging extensions page.
+1. Choose **Allow users to query your service for information and insert that into a message**.
+1. Add a **Command Id** and a **Title**.
+1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command.
+1. Add your search parameter and select **Save**.
+ 
 ### Manually create a command
 
 To manually add your messaging extension search command to your app manifest, you'll need to add the following parameters to your `composeExtension.commands` array of objects.
