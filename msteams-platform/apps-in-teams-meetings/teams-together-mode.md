@@ -57,38 +57,40 @@ In the Scene Design Studio, each seat represents an avatar for design purposes. 
 
 **To build a scene using the Scene Design Studio**
 
-1. Select **Tools** from the left-hand section and then select **Scene editor** under **Tools** to open the Scene Design Studio.
+1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/home).
 
-2. From the **Scenes Editor** page, select **Create a new scene**.
+2. Select **Tools** from the left-hand section and then select **Scene editor** under **Tools** to open the Scene Design Studio.
 
-3. Select **Participants** under **Layers** in the upper-right corner.
+3. From the **Scenes Editor** page, select **Create a new scene**.
 
-4. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
+4. Select **Participants** under **Layers** in the upper-right corner.
 
-5. Drag and drop the image into the environment as displayed in the following image:
+5. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
+
+6. Drag and drop the image into the environment as displayed in the following image:
  
     >[!NOTE]
     > Alternately, you can add background images to the scene using **Add images**.
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-6. Select an image that you have placed in the scene. From the rightmost pane, select an alignment for the image or use the **Size & rotation** slider to adjust the image size.
+7. Select an image that you have placed in the scene. From the rightmost pane, select an alignment for the image or use the **Size & rotation** slider to adjust the image size.
 
     >[!NOTE]
     > Alternately, you can drag the images around the scene and place them in the required position and resize them using the resize arrow.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-7. Select any participant image, select the **Assign Spot** check box, and select **Meeting Organizer** and **Presenter** to assign that spot to the participant.
+8. Select any participant image, select the **Assign Spot** check box, and select **Meeting Organizer** and **Presenter** to assign that spot to the participant.
 
     >[!NOTE]
     > Alternately, you can select either **Meeting Organizer** or **Presenter** options for that participant.
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-8. In the **Scene Name** box, enter a name for the scene.
+9. In the **Scene Name** box, enter a name for the scene.
 
-9. Select **Export the Scene** from the **Save** drop-down menu. A .ZIP file, that is the scene package, is downloaded.
+10. Select **Export the Scene** from the **Save** drop-down menu. A .ZIP file, that is the scene package, is downloaded.
  
     >[!NOTE]
     > Alternately, you can select **Save** to save the scene.
