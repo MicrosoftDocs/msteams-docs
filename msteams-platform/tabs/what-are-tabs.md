@@ -54,14 +54,14 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 | **Tab Type** | **Behavior of App if it is optimized for mobile clients** | **Behavior of App if it is not optimized for mobile clients** |
 |:-----|:-----|:-----|
-| **Static Tabs** or **Personal Tabs**|App appears in the bottom bar of the mobile clients. The tabs open in an in-app WebView within the Teams client. | App does not show up in mobile clients. |
-| **Configurable Tabs** | The tabs open in an in-app webview within the Teams client using the `contentUrl`. | Selecting the Tab opens the content using the `websiteUrl` in the default web browser on the device. |
+| **Static Tabs** or **Personal Tabs**|App appears in the bottom bar of the mobile clients. The tabs open in an in-app webview within the Teams client. | App does not show up in mobile clients. |
+| **Configurable Tabs** | The tabs open in an in-app webview within the Teams client using the `contentUrl`. | Selecting **Tab** opens the content using the `websiteUrl` in the default web browser on the device. |
 
 
 > [!NOTE]
 >
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
-> * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app WebView within the Teams clients by default and there is no separate approval process required.
+> * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 
 > [!div class="nextstepaction"]
 > [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
