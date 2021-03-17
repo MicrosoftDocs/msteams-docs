@@ -121,9 +121,9 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
   }
 ```
 
-## Install your app directly in Teams
+## Sideload your app in Teams
 
-Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.  To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team.
 
 ## Check your app for added RSC permissions
 

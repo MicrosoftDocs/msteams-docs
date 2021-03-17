@@ -16,7 +16,7 @@ Your bot can dynamically update messages after sending them. You can use dynamic
 
 The new message need not match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -26,7 +26,7 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 
@@ -69,7 +69,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 ```csharp
@@ -98,11 +98,25 @@ await turn_context.update_activity(updated_activity)
 
 ```
 
+# [REST API](#tab/rest)
+
+To update an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint. To complete this scenario, you must cache the activity ID returned by the original post call.
+
+```http
+PUT /v3/conversations/{conversationId}/activities/{activityId}
+```
+
+|Request |Response |
+|----|----|
+| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object) object. |
+
+---
+
 ## Delete messages
 
 In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method as shown here.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To delete that message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. See [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
 

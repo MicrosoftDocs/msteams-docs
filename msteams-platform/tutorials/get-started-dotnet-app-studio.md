@@ -7,9 +7,9 @@ ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Create your first Teams app using C# or .NET
+# Create your first Teams app using C#
 
-This tutorial helps you to create a Microsoft Teams app using C# or .NET. To do this, you must:
+This tutorial helps you to create a Microsoft Teams app using C#. To do this, you must:
 
 * Prepare your environment
 * Get prerequisites
@@ -112,9 +112,9 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 ## Update the credentials for your hosted app
 
-The sample app requires the environment variables to be set to the values that you saved in the [text file](~/includes/get-started/get-started-use-app-studio.md#bots).
+The sample app requires the environment variables to be set to the values that you saved in the text file.
 
-Open the appsettings.json file. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. Update the **MicrosoftAppPassword** with the bot password you saved.
+Open the `appsettings.json` file. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. Update the **MicrosoftAppPassword** with the bot password you saved.
 
 <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 

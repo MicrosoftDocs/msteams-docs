@@ -16,9 +16,7 @@ Use an app or share it with others without going through a formal publishing pro
 
 ## Publish your app to your organization
 
-Make your app available to your enterprise or Government Community Cloud (GCC) organization.
-
-In the Teams admin center, you can approve or reject apps and set up related app permission and setup policies for your organization. For more information, see [manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
+List your app in your organization's internal app store. This process requires getting approval by your Teams admin. For more information, see [manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
 ### Government Community Cloud (GCC) organizations
 
