@@ -120,8 +120,7 @@ This limit controls the traffic that a bot is allowed to generate on a single co
 | Get Conversations | 3600 | 3600 |
 
 >[!NOTE]
->[!NOTE]
-> Previous versions of the `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` are being deprecated and will be throttled to 5 requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and code to use the latest paginated API endpoints, see [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md).
+> Previous versions of the `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` are being deprecated and will be throttled to 5 requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API Changes for Team/Chat Members](../../resources/team-chat-member-api-changes.md).
 
 ## Per thread limit for all bots
 
