@@ -17,6 +17,8 @@ Teams end-users can access apps during meetings using the tab gallery, for examp
 * Launch an in-meeting actionable dialog
 * Create a post-meeting poll
 
+> [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
+
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and Together Mode in Teams.
 
 You can enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes the various stages of a meeting lifecycle where you can integrate tabs, bots, and messaging extensions. With meeting extensibility, you can identify different participant roles and user types.
@@ -30,19 +32,19 @@ The new Together Mode feature enables users to collaborate in a meeting with the
 ## See also
 
 > [!div class="nextstepaction"]
-> * [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+> [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
 
 > [!div class="nextstepaction"]
-> * [Bot](../bots/what-are-bots.md)
+> [Bot](../bots/what-are-bots.md)
 
 > [!div class="nextstepaction"]
-> * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+> [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 
 > [!div class="nextstepaction"]
-> * [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
 > [!div class="nextstepaction"]
-> * [Together Mode in Teams](teams-together-mode.md)
+> [Together Mode in Teams](teams-together-mode.md)
 
 ## Next step
 
