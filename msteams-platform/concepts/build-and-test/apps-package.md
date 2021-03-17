@@ -8,7 +8,7 @@ ms.topic: how-to
 
 # Create a Microsoft Teams app package
 
-However you plan to distribute your Microsoft Teams app, you need an app package. A valid package is a ZIP file that includes the following:
+You need an app package no matter how you plan to distribute your Microsoft Teams app. A valid package is a ZIP file that includes the following:
 
 * **App manifest**: Specifies your Teams app's attributes and points to required resources, such as a web app URL or bot messaging endpoint.
 * **App icons**: Each package requires a color and outline icon for your app.
@@ -89,6 +89,8 @@ Here's how app icons appear in different Teams capabilities and contexts.
 :::image type="content" source="../../assets/images/icons/messaging-extension-icon-example.png" alt-text="<alt text>" border="false":::
 
 ## Next step
+
+Choose how you plan to distribute your app:
 
 > [!div class="nextstepaction"]
 > [Sideload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
