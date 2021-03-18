@@ -24,7 +24,7 @@ Meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app expe
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="20"/>, and choosing the app that they want to install as a tab.
+Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and choosing the app that they want to install as a tab.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
@@ -40,7 +40,7 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 **To add tabs to an existing meeting**
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select plus ![plus button](../assets/images/apps-in-meetings/plusbutton.png). The tab gallery appears.
+1. Select the **Details** tab and select plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
