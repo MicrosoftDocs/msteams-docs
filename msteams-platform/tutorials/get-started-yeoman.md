@@ -169,7 +169,5 @@ You can also upgrade your current Microsoft Teams version to the latest version 
     yo teams --version
    ```
 
-   ![image of FindVersionAfterInstallation](~/assets/images/Update-Teams/FindVersionAfterInstallation.png)
-
-
+   
 **Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.**
