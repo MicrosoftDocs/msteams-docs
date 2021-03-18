@@ -130,19 +130,19 @@ A guest or anonymous user cannot add, remove, or uninstall apps.
 ## See also
 
 > [!div class="nextstepaction"]
-> * [Configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+> [Configurable tab](../tabs/what-are-tabs.md#how-do-tabs-work)
 
 > [!div class="nextstepaction"]
-> * [Bot](../bots/what-are-bots.md)
+> [Bot](../bots/what-are-bots.md)
 
 > [!div class="nextstepaction"]
-> * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+> [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 
 > [!div class="nextstepaction"]
-> * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+> [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
 > [!div class="nextstepaction"]
-> * [Together Mode in Teams](teams-together-mode.md)
+> [Together Mode in Teams](teams-together-mode.md)
 
 ## Next step
 

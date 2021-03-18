@@ -87,7 +87,7 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
 
 **To add a messaging extension to a meeting**
 
-1. Select the ellipses or overflow menu &#x15CF;&#x15CF;&#x15CF; located in the compose message area in the chat.
+1. Select the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
 
 **To add a bot to a meeting**
