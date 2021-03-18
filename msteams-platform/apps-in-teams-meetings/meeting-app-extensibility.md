@@ -24,7 +24,7 @@ Meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app expe
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus ![plus button](../assets/images/apps-in-meetings/plusbutton.png), and choosing the app that they want to install as a tab.
+Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="50"/>, and choosing the app that they want to install as a tab.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
