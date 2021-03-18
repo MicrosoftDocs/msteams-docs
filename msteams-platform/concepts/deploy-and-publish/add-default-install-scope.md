@@ -20,7 +20,7 @@ The default install scope selection helps you to specify the `defaultInstallScop
 The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
 
 > [!NOTE]
->`defaultGroupCapability` provides the default capability that is added to the team, groupchat or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+>`defaultGroupCapability` provides the default capability that is added to the team, group chat, or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 
 ## Next step
 
