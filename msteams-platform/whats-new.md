@@ -15,6 +15,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|03/18/2021| Update: Minor updates to manifest schema document. | [Manifest schema](resources/manifest-schema.md) |
 |03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021 | Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|Reorder personal app tabs|[Reorder the chat tab in personal apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
