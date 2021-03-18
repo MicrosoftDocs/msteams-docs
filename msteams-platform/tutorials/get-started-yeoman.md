@@ -137,7 +137,7 @@ Choose your tab and follow the instructions to add it. Notice that you have a cu
 
 ![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
-## Upgrade Microsoft Teams using Yeoman generator
+## Upgrade Microsoft Teams
 You can also upgrade your current Microsoft Teams version to the latest version using the Microsoft Teams Yeoman generator.
 
 **To upgrade Microsoft Teams**
