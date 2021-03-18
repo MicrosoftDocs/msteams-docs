@@ -30,4 +30,4 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 ## See also
 
 [!div class="nextstepaction"]
-[Manifest schema](../resources/manifest-schema.md)
+[Manifest schema](../../resources/schema/manifest-schema.md)
