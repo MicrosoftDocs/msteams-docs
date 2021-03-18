@@ -3,7 +3,7 @@ title: Get started - Build your first app overview and prerequisites
 author: girliemac
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: timura
-ms.date: 03/16/2021
+ms.date: 03/18/2021
 ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
@@ -86,7 +86,8 @@ Join the Microsoft 365 developer program and get a free Teams test account that 
 
 
 ## Next step
-Once you set up your account, let's set up your development environment and start building!
+
+Now, let's set up your development environment and start building!
 
 > [!div class="nextstepaction"]
 > [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
