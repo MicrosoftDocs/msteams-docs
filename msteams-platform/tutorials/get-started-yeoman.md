@@ -70,28 +70,29 @@ This section walks you through the steps for generating your project.
 
     ![item selection](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Based on what items you select, you will be asked a set of follow-up questions.
+1. Respond to the next set of follow-up questions that appear based on the items you selected in step 2.
 1. Enter a URL of where you will host your solution. 
 
    > [!NOTE]
    > The URL can be any URL, but by default the generator suggests an Azure web site URL.
 
-The generator has a lot of built-in advanced features that you can opt-in or opt-out of. Following the URL question you will be asked if you want to include unit-testing for your solution, default is *yes*. If you choose this the generated project will have a unit testing framework and some default unit tests for the different items being scaffolded. 
-> [!NOTE]
-> For this tutorial choose not to include a test framework.
+1. In the next question, confirm if you want to include unit-testing for your solution. The default response is *yes*. If you choose to include unit-testing, the generated project will have a unit testing framework and some default unit tests for the different items being scaffolded. 
+   > [!NOTE]
+   > * For this tutorial choose not to include a test framework.
+   > * The generator has a lot of built-in advanced features that you can opt-in or opt-out of.
 
-In order to make signing-in easy for you, you will also be asked if you want to use Azure Application Insights for signing-in. If you choose *Yes*, you will need to provide an Azure Application Insights key. 
+1. In order to make signing-in easy for you, you will also be asked if you want to use Azure Application Insights for signing-in. If you choose *Yes*, you will need to provide an Azure Application Insights key. 
 
-> [!NOTE]
-> For this tutorial opt-out of using Application Insights.
+   > [!NOTE]
+   > For this tutorial opt-out of using Application Insights.
 
-The next set of questions will be based on the previously selected items. For a tab you only need to provide a name and optionally choose if you want to be able to use this app as a SharePoint Online web part. After you have provided the name the generator will generate the project and install all dependencies. This will take a minute or two.
+The next set of questions will be based on the previously selected items. For a tab you only need to provide a name and optionally choose if you want to be able to use this app as a SharePoint Online web part. After you provide the name the generator will generate the project and install all dependencies. This will take a minute or two.
 
 ## Add some code to your tab
 
 After the generator is done you can open up the solution in your favorite code editor. Take a minute or two and familiarize yourself with how the code is organized. For more information, see [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-Your Tab will be located in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This is the TypeScript React based class for your Tab. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like this:
+Your tab will be located in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This is the TypeScript React based class for your Tab. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like this:
 
 ``` TypeScript
 <PanelBody>
