@@ -695,5 +695,28 @@ Define the properties your app uses to post a user activity feed.
 ```
 
 ***
->
->
+
+## defaultInstallScope
+
+**Required** - string
+
+It helps you to specify the default install scopes for the apps that you publish.
+
+| **Name** | **Type** | **Maximum size** | **Required** | **Description** |
+|----------|----------|------------------|--------------|-----------------|
+| `enum` | array of strings | 4 | ✔ | Specifies whether the scope offers an experience in the context of an individual user alone (personal), a team, a groupchat, or meetings.|
+| `description` | string | 128 characters | ✔ | The description that appears to users to indicate the purpose of this command. | 
+
+## defaultGroupCapability
+
+**Required** - object
+
+It provides the default capability that is added to the team, groupchat, or meetings. Choose a tab, bot, or connector as the default capability for your app.
+
+| **Name** | **Type** | **Maximum size** | **Required** | **Description** |
+|----------|----------|------------------|--------------|-----------------|
+| `properties` | string | 128 characters | ✔ | Specifies the default install scope, that is, team, groupchat, or meetings and the capability, that is, bot, tab, or connector available with the selected scope, and its description.|
+| `description` | string | 128 characters | ✔ | Defines the default capability when the user installs the app. |
+| `additionalProperties` | boolean | | | Indicates if additional properties are required. Default: **false** | 
+
+
