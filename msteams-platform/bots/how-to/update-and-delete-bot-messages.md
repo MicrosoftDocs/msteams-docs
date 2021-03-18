@@ -18,7 +18,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 The new message need not match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. For more information, see [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -28,7 +28,7 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object. For more information, see [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 
@@ -78,7 +78,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
 ```csharp
@@ -87,7 +87,7 @@ activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
 ```typescript
@@ -128,7 +128,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 To delete a message, pass that activity's ID to the `DeleteActivityAsync` method of the `TurnContext` class. For more information, see [TurnContext.DeleteActivityAsync Method](/dotnet/api/microsoft.bot.builder.turncontext.deleteactivityasync?view=botbuilder-dotnet-stable&preserve-view=true).
 
@@ -139,7 +139,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)
 
