@@ -17,7 +17,7 @@ Your bot can query for the list of members and their basic user profiles, includ
 
 The following sample code uses the paged endpoint for fetching the roster:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -38,7 +38,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -122,7 +122,7 @@ After you fetch the roster or user profile, you can get details of a single memb
 
 You can also retrieve the details of a particular user using their Teams user ID, UPN, or AAD Object ID.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -134,7 +134,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -204,7 +204,7 @@ After you get details of a single member, you can get details of the team. Curre
 
 When installed in a team, your bot can query for metadata about that team including the Azure AD group ID.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -222,7 +222,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -281,7 +281,7 @@ Your bot can query the list of channels in a team.
 >* The name of the default General channel is returned as `null` to allow for localization.
 >* The channel ID for the General channel always matches the team ID.
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 public class MyBot : TeamsActivityHandler
@@ -295,7 +295,7 @@ public class MyBot : TeamsActivityHandler
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {

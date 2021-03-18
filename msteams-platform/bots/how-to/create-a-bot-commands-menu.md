@@ -151,7 +151,7 @@ Bots in a group or channel respond only when they are mentioned `@botname` in a 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they would do for any other message.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
 
@@ -161,7 +161,7 @@ The C# code to parse out the **\@Mention** portion of the message text is as fol
 var modifiedText = turnContext.Activity.RemoveRecipientMention();
 ```
 
-# [JavaScript/Node.js](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
 You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `TurnContext` class named `removeMentionText`.
 

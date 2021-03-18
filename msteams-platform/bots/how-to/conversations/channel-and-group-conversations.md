@@ -42,7 +42,7 @@ You can retrieve all mentions in the message by calling the `GetMentions` functi
 
 The following code shows an example of retrieving mentions:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -60,7 +60,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -146,7 +146,7 @@ The Bot Framework SDK provides helper methods and objects to create mentions.
 
 The following code shows an example of adding mentions to your messages:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -164,7 +164,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {

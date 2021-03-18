@@ -56,7 +56,7 @@ The channel created event is sent to your bot whenever a new channel is created 
 
 The following code shows an example of channel created event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -66,7 +66,7 @@ protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -145,7 +145,7 @@ The channel renamed event is sent to your bot whenever a channel is renamed in a
 
 The following code shows an example of channel renamed event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -155,7 +155,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -227,7 +227,7 @@ The channel deleted event is sent to your bot whenever a channel is deleted in a
 
 The following code shows an example of channel deleted event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -237,7 +237,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -311,7 +311,7 @@ The channel restored event is sent to your bot whenever a channel that was previ
 
 The following code shows an example of channel restored event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -321,7 +321,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -400,7 +400,7 @@ The `teamMemberAdded` event is sent to your bot the first time it is added to a 
 
 The following code shows an example of team members added event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -422,7 +422,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -547,7 +547,7 @@ The `teamMemberRemoved` event is sent to your bot if it is removed from a team. 
 
 The following code shows an example of team members removed event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -568,7 +568,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 
@@ -656,7 +656,7 @@ Your bot is notified when the team it is in has been renamed. It receives a `con
 
 The following code shows an example of team renamed event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -666,7 +666,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -736,7 +736,7 @@ Your bot is notified when the team it is in has been deleted. It receives a `con
 
 The following code shows an example of team deleted event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -745,7 +745,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -812,7 +812,7 @@ The bot receives a notification when a team is restored after being deleted. It 
 
 The following code shows an example of team restored event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -822,7 +822,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -892,7 +892,7 @@ The bot receives a notification when the team it is installed in is archived. It
 
 The following code shows an example of team archived event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -902,7 +902,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -973,7 +973,7 @@ The bot receives a notification when the team it is installed in is unarchived. 
 
 The following code shows an example of team unarchived event:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -983,7 +983,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -1062,7 +1062,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 The following code shows an example of reactions to a bot message:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1076,7 +1076,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 <!-- Verify -->
 
@@ -1173,7 +1173,7 @@ async def on_reactions_added(
 
 The following code shows an example of reactions removed from bot message:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
@@ -1187,7 +1187,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 <!-- Verify -->
 

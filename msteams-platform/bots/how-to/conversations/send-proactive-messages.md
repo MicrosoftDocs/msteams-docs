@@ -105,7 +105,7 @@ The next section illustrates a simple code sample that proactively installs your
 
 The following code shows a sample of proactively installing your app using Graph:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 [Route("api/notify")]
@@ -148,7 +148,7 @@ public class NotifyController : ControllerBase
 }
 ```
 
-# [TypeScript or Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```javascript
 
