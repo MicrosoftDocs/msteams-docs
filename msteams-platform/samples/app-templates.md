@@ -25,7 +25,7 @@ All app templates are provided under the [MIT License](https://github.com/Office
 
 ## Adoption Bot &#9734;
 
-Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams (PVA). It can be considered as the PVA version of FAQPlus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors.This bot can be installed on it's own or built into a custom app like the [Adoption Hub](https://github.com/aka.ms/theadoptionhub).
+Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams (PVA). It can be considered as the PVA version of FAQPlus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors.This bot can be installed on it's own or built into a custom app like the [Adoption Hub](https://github.com/akporzondek/adoption_hub).
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
@@ -598,6 +598,15 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
     ![Create survey in Teams view](../assets/images/survey-app-template-compose-view.gif)
 :::column-end:::
 :::row-end:::
+
+## Time Tally &#9734
+
+Time Tally app enables users to ease timesheet filling. Multiple tasks can be included in a project, and multiple projects assigned to employees, so that it is super easy for them to fill timesheet using mobile device and managers do not have to check with employees on timesheet entry. Historical data and utilization will also be shown for analytics. Managers get to view the project utilization based on resource and approve or reject the entries. Reminder notifications will also be sent to ensure timesheet compliance. Historical data and utilizations will also be shown for analytics.
+
+Link to code: OfficeDev/microsoft-teams-apps-timetally (github.com) (Still private, will make it public upon approval from Adrian)
+
+Supporting image: https://microsoftapc-my.sharepoint.com/:f:/g/personal/shridharp_microsoft_com/Ep3pZ5gnoiFLh5Iy16lj1ksBAEpf8ILbfQFEM04x9CgMDg?e=JXyUC0
+
 
 ## Virtual Rounding &#9734;
 
