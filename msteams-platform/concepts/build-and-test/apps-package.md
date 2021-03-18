@@ -95,6 +95,6 @@ Choose how you plan to distribute your app:
 > [!div class="nextstepaction"]
 > [Sideload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
 > [!div class="nextstepaction"]
-> [Publish your app to an organization](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+> [Publish your app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
-> [Publish your app to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md)
+> [Publish your app to the store](~/concepts/deploy-and-publish/appsource/publish.md)
