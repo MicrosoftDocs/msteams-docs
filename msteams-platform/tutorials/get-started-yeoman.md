@@ -152,6 +152,7 @@ You can also upgrade your current Microsoft Teams version to the latest version 
     yo
    ```
 3. Use the  arrow keys to choose **Update your Generators**.
+
    ![image of YoSelectUpdatGen](~/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
 4. Select the generator you want from the list of generators.
@@ -159,6 +160,7 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    > Use the space bar to select or clear a selected Teams version from the available options.
 
     ![image of UseSpaceToSelectGenerators](~/assets/images/Update-Teams/UseSpaceToSelectGenerators.png)
+    
 
    > [!NOTE]
    > It takes few seconds to minutes for Teams installation to complete.
