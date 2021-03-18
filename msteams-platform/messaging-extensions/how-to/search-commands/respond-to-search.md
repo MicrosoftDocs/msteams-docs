@@ -9,10 +9,10 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered with the following conditions:
+After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* If `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
+* `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
@@ -72,7 +72,7 @@ The JSON below is shortened to highlight the most relevant sections.
 
 When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
-Your service should respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or json object with the following body:
+Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or json object with the following properties:
 
 |Property name|Purpose|
 |---|---|
@@ -85,14 +85,14 @@ Your service should respond with the results matching the user query. The respon
 
 ### Response card types and previews
 
-Teams supports the following attachment types:
+Teams supports the following card types:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [what are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
+To have a better understandingand overview  on cards, see[what are cards](~/task-modules-and-cards/what-are-cards.md).
 
 To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 

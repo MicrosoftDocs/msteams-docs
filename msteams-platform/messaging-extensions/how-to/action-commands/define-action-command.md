@@ -22,8 +22,12 @@ Specify the `context` in your app manifest, the action command is invoked from o
 * The buttons at the bottom of the compose message area.
 * By @mentioning your app in the command box. 
 
+The following image displays the locations from where messaging extensions are invoked:
+
+![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+
 > [!NOTE]
-> If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+> * If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 * Directly from an existing message through the overflow menu on a message. 
 
 > [!NOTE]
@@ -35,7 +39,7 @@ Choose how to populate the form in the task module for the users. Following are 
 
 * **Static list of parameters** - This is the simplest method. You can define a list of parameters input fields in your app manifest the Teams client renders, but cannot control the formatting in this case.
 * **Adaptive Card** - You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
-* **Embedded web view** - If you need complete control over the UI and controls, you can choose to embed a custom web view in the task module.
+* **Embedded web view** - You can choose to embed a custom web view in the task module to have a complete control over the UI and controls. 
 
 If you choose to create the task module with a static list of parameters and submits, the messaging extension is called. When using an embedded web view or an adaptive card, your messaging extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
 
@@ -58,26 +62,39 @@ The prerequisite to create an action command is that you must already create a m
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up window: 
 
     ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
 
-1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following screenshot displays bot creation for messaging extension:
+1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for messaging extension:
 
     ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
 
 1. Select **Add** in the **Command section** of the messaging extensions page.
-1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following screenshot displays the action command  selection:
+1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
 
     ![action command selection](../../../assets/images/messaging-extension/action-command-selection.png)
 
-1. If you want to use a static set of parameters to create your task module, select that option. Otherwise, choose to **Fetch a dynamic set of parameters from your bot**. The following screenshot displays the action command parameter selection:
+1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**. 
+The following image displays the action command static parameter selection:
+  
+   ![action command static parameter selection](../../../assets/images/messaging-extension/action-command-static-parameter-selection.png)
 
-    ![action command parameter selection](../../../assets/images/messaging-extension/action-command-parameter-selection.png)
+   The following image displays an example static parameter set-up: 
+
+   ![action command static parameter set-up](../../../assets/images/messaging-extension/setting-up-of-static-parameter.png)
+
+   The following image displays an example static parameter testing:
+
+   ![action command static parameter testing](../../../assets/images/messaging-extension/static-parameter-testing.png)
+
+1. To use dynamic parameters, choose to **Fetch a dynamic set of parameters from your bot**. The following image displays the action command parameter selection:
+
+    ![action command dynamic parameter selection](../../../assets/images/messaging-extension/action-command-parameter-selection.png)
 
 1. Add a **Command Id** and a **Title**.
 1. Select where you want your action command to be triggered from.
-1. If you are using parameters for your task module, add the first one. The following screenshot displays the task module parameter selection:
+1. If you are using parameters for your task module, add the first one. The following image displays the task module parameter selection:
 
     ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
 

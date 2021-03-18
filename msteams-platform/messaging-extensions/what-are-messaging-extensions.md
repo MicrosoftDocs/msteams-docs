@@ -7,19 +7,24 @@ ms.author: anclear
 ---
 # Messaging extensions
 
-Messaging extensions permit users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card. This document gives an overview of the messaging extension, tasks performed under different scenarios, its working, types of commands widely used, and link unfurling.
+Messaging extensions permit users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card. This document gives an overview of the messaging extension, tasks performed under different scenarios, working, types of commands widely used, and link unfurling.
 
-The following screenshot displays the locations from where messaging extensions are invoked:
+The following image displays the locations from where messaging extensions are invoked:
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
 ## Understand scenarios where messaging extensions are used
 
 **Scenario:** You want some external system to do an action  and the result of the action to be sent back to your conversation.
+
 **Example:** Reserve a resource and allow the channel to know the reserved time slot.
+
 **Scenario:** You want to find something in an external system, and share the results with the conversation.
-**Example:** Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
+
+**Example:** Search for a work item in Azure DevOps, and share it with the group as an Adaptive Card.
+
 **Scenario:** You want to complete a complex task involving multiple steps or lots of information in an external system, and share the results with a conversation.
+
 **Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details.
 
 ## Understand working of messaging extensions 

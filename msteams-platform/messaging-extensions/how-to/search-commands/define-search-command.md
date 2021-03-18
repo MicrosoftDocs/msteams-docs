@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Messaging extension search commands allow your users to search external systems and insert the results of that search into a message in the form of a card.
+Messaging extension search commands allow the users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
@@ -23,7 +23,7 @@ The search command is invoked from any one or both of the following locations:
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
-## Add the search  command to your app manifest
+## Add the search command to your app manifest
 
 To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can  do this either with the help of App Studio, or do it manually.
 
@@ -35,22 +35,22 @@ The prerequisite to create a search command is that you must already have create
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
 1.  If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
-1. After importing app package, select **Messaging extensions** under **Capabilities**.You get a pop-up window to set up the messaging extension.
-1. Select **Set up** in the window to include the messaging extension in your app experience. The following screenshot displays the messaging extension set up window: 
+1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
+1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
 
     ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
 
-1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following screenshot displays bot creation for messaging extension:
+1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for messaging extension:
 
     ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
 
 1. Select **Add** in the **Command** section of the messaging extension page.
-1. Choose **Allow users to query your service for information and insert that into a message**. The following screenshot displays the search command parameter selection:
+1. Choose **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
 
     ![search command parameter selection](../../../assets/images/messaging-extension/search-command-parameter-selection.png)
 
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following screenshot displays the task module parameter selection:
+1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following image displays the task module parameter selection:
 
     ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
 
@@ -79,9 +79,9 @@ You must add the details of the search parameter, that defines the text visible 
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
 
-#### App manifest example
+#### Example
 
-Example of the simple app manifest of the `composeExtensions` object defining a search command: 
+Following section is an example of the simple app manifest of the `composeExtensions` object defining a search command: 
 
 ```json
 {
@@ -119,5 +119,5 @@ For the complete  app manifest schema, see [App manifest schema](~/resources/sch
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Handle the search request](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+> [Respond to the search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
