@@ -173,7 +173,7 @@ The `NotificationSignal` API includes the following query parameter:
 
 #### Example
 
-The `Bot ID` is declared in the manifest and the bot receives a result object. In the example, the `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload.
+The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 > [!NOTE]
 > * The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
