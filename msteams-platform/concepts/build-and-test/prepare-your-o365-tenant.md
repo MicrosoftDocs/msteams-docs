@@ -7,7 +7,7 @@ keywords: Configure Microsoft 365 tenant Teams uploading
 
 # Prepare your Microsoft 365 tenant
 
-If you are a Microsoft 365 subscriber, you can develop apps for Microsoft Teams with one of the following [plans](https://products.office.com/business/compare-more-office-365-for-business-plans):
+Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the following [plans](https://products.office.com/business/compare-more-office-365-for-business-plans):
 
 * Basic
 * Standard

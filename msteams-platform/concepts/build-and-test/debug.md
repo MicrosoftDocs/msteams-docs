@@ -7,13 +7,13 @@ ms.topic: conceptual
 
 # Choose a setup to test and debug your Microsoft Teams app
 
-Microsoft Teams apps contains one or more capabilities and the ways to run or even host them are different. When it comes to debugging in general, we have the following ways to run your Microsoft Teams app:
+Microsoft Teams apps contains one or more capabilities and the ways to run or even host them are different. When it comes to debugging, we have the following ways to run your Microsoft Teams app:
 
 * **Purely local** For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
 * **Locally hosted, in Teams** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
 * **Cloud-hosted, in Teams** This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
-Run the experience from your own compute for purely local or local Teams testing. By doing this, you can compile and run within your IDE and take full advantage of techniques, such as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
+Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
 Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
 
@@ -36,10 +36,10 @@ Microsoft Teams is an entirely cloud-based product, it requires all services it 
 
 Although you can use any tool of choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. To set up ngrok in preparation for running your Microsoft Teams app locally:
 
-* In a terminal application, go to the directory where you have ngrok.exe installed. You may want to add it as a path variable to avoid this step.
+* Go to the directory where you have ngrok.exe is installed in a terminal application. You may want to add it as a path variable to avoid this step.
 * Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
 
-This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL valid for as long as ngrok is running.
+This launches ngrok to list on the port you specify. In return, it gives you an externally addressable URL valid for as long as ngrok is running.
 
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes.
@@ -49,7 +49,7 @@ To use ngrok in your project based on the capabilities you are using, you must r
 For bots registered in the Microsoft Bot Framework, update the bot's messaging endpoint to use this new ngrok endpoint. For example, `https://2d1224fb.ngrok.io/api/messages`. You can validate that ngrok is working by testing the bot response in the Bot Framework portal's Test chat window. Again, like the emulator, this test does not permit you to access Teams-specific functionality.
 
 > [!NOTE]
-> To update the messaging endpoint for a bot, you must use the Bot Framework. Click on your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+> To update the messaging endpoint for a bot, you must use the Bot Framework. Select your bot in [your list of bots in Bot Framework](https://dev.botframework.com/bots). You do not need to migrate your bot to Microsoft Azure. You can also update your messaging endpoint through [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## Cloud-hosted
 
