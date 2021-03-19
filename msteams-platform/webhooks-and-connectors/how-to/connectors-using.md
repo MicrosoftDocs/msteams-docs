@@ -127,10 +127,12 @@ The `ActionCard` action supports three input types:
 
 If you want a multiselect list initially displayed in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
 
+For all other details about Connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+
 > [!NOTE]
 > Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 
-For all other details about Connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+> For HttpPOST action, the bearer token included with all requests includes the Azure AD identity of the Office 365 user who took the action.
 
 ## Setting up a custom incoming webhook
 
