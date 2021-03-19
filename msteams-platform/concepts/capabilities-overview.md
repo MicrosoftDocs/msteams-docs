@@ -12,8 +12,7 @@ ms.date: 09/22/2020
 
 There are multiple ways to extend Teams, so every app is unique: Some only have one capability (such as a webhook), while others have a few to give users options. For instance, your app could display data in a central location (tab) and present that same information through a conversational interface (bot).
 
-Your Teams app 
-have one or all of the following core capabilities:
+Your Teams app have one or all of the following core capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md)
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)
