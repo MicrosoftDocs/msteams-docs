@@ -335,10 +335,10 @@
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
   - name: Microsoft Graph Toolkit
-        name: Microsoft Graph Toolkit
-        href: https://docs.microsoft.com/graph/toolkit/overview
-        name: Microsoft Teams and Graph Toolkit
-        href: https://github.com/OfficeDev/M365Bootcamp-TeamsOneProductivityHub
+       - name: UI Components and Authentication Providers
+         href: https://docs.microsoft.com/graph/toolkit/overview
+       - name: Microsoft Teams and Graph Toolkit
+         href: https://github.com/OfficeDev/M365Bootcamp-TeamsOneProductivityHub
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
