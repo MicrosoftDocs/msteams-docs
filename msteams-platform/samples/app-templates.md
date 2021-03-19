@@ -601,11 +601,11 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
 
 ## Time Tally &#9734;
 
-Time Tally app enables users to ease timesheet filling. Multiple tasks can be included in a project, and multiple projects assigned to employees, so that it is super easy for them to fill timesheet using mobile device and managers do not have to check with employees on timesheet entry. Managers get to view the project utilization based on resource & approve/reject the entries. Reminder notifications will also be sent to ensure timesheet compliance. Historical data and utilizations will also be shown for analytics.
+A project can include multiple tasks and various projects can be assigned to employees. Managers are required to have an understanding of the project progress through the time spent by the employees on these tasks. This can be a cumbersome activity, as the employees need to fill the timesheets. Time Tally app enables employees to fill their timesheets easily, using the mobile device, and managers do not have to follow up with employees on the timesheet entry. Managers get to view the project utilization based on resources, and they can approve or reject the entries. Reminder notifications are sent to ensure timesheet compliance. Also, historical data and utilizations are available for analytics.
 
-Link to code: OfficeDev/microsoft-teams-apps-timetally (github.com) (Still private, will make it public upon approval from Adrian)
+[Get it on GitHub](/OfficeDev/microsoft-teams-apps-timetally) (github.com) (Still private, will make it public upon approval from Adrian)
 
-Supporting image: https://microsoftapc-my.sharepoint.com/:f:/g/personal/shridharp_microsoft_com/Ep3pZ5gnoiFLh5Iy16lj1ksBAEpf8ILbfQFEM04x9CgMDg?e=JXyUC0
+![Time Tally](../assets/images/11zon_gif.gif)
 
 
 ## Virtual Rounding
