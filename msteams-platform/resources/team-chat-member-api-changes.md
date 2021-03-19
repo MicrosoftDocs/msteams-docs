@@ -10,16 +10,15 @@ ms.author: ojchoudh
 # Teams bot API changes to fetch team or chat members
 
 >[!NOTE]
-> We've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs. Initially, they will be heavily throttled to 5 requests per minute and return a maximum of 10K members per team. This will result in the full roster not being returned as team size increases. 
-> 
-> **You must update to version 4.10 or higher of the Bot Framework SDK** and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you're not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes). 
+> The deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs has started. Initially, they are heavily throttled to 5 requests per minute and return a maximum of 10K members per team. This results in the full roster not being returned as team size increases.
+> You must update to version 4.10 or higher of the Bot Framework SDK and switch to the paginated API endpoints, or the `TeamsInfo.GetMemberAsync` single user API. This also applies to your bot even if you are not directly using these APIs, as older SDKs call these APIs during [membersAdded](../bots/how-to/conversations/subscribe-to-conversation-events.md#team-members-added) events. To view the list of upcoming changes, see [API changes](team-chat-member-api-changes.md#api-changes). 
 
-Currently, bot developers who want to retrieve information for one or more members of a chat or team use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` (for C#) or `TeamsInfo.getMembers` (for TypeScript/Node.js) APIs [(documented here)](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile). These APIs have several shortcomings today:
+Currently, bot developers who want to retrieve information for one or more members of a chat or team use the Microsoft Teams bot APIs `TeamsInfo.GetMembersAsync` (for C#) or `TeamsInfo.getMembers` (for TypeScript/Node.js) APIs [(documented here)](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). These APIs have several shortcomings.
 
-Currently, if you want to retrieve information for one or more members of a chat or team, you can use the [Microsoft Teams bot APIs](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript or Node.js APIs. These APIs have the following shortcomings:
+Currently, if you want to retrieve information for one or more members of a chat or team, you can use the [Microsoft Teams bot APIs](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript or Node.js APIs. These APIs have the following shortcomings:
 
-* **For large teams, performance is poor and timeouts are more likely**: The maximum team size has grown considerably since Teams was released in early 2017. Since `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it is common for the call to time out and you have to try again.
-* **Getting profile details for a single user is cumbersome**: To get the profile information for a single user, you have to retrieve the entire member list and then search for the one you want. There is a helper function in the Bot Framework SDK to make it simpler, but it is not efficient.
+* For large teams, performance is poor and timeouts are more likely: The maximum team size has grown considerably since Teams was released in early 2017. Since `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it is common for the call to time out and you have to try again.
+* Getting profile details for a single user is cumbersome: To get the profile information for a single user, you have to retrieve the entire member list and then search for the one you want. There is a helper function in the Bot Framework SDK to make it simpler, but it is not efficient.
 
 With the introduction of organization wide teams, there is a requirement to better align these APIs with Office 365 privacy controls. Bots used in large teams are able to retrieve basic profile information similar to the `User.ReadBasic.All` Microsoft Graph permission. Tenant administrators have a great deal of control over which apps and bots can be used in their tenant, but these settings are different from Microsoft Graph.
 
@@ -56,7 +55,7 @@ The following code provides a sample JSON representation of what is returned by 
 
 Following are the upcoming API changes:
 
-* A new API is created [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetching-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Bot Framework 4.8 SDK. For development in all other versions use the [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
+* A new API is created [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Bot Framework 4.8 SDK. For development in all other versions use the [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
 
     > [!NOTE]
     > In either v3 or v4, the best action is to upgrade to the latest point release that is 3.30.2 or 4.8 respectively.
