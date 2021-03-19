@@ -18,7 +18,7 @@ You have the following options for responding:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md)
-* [Request the userto provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
+* [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
 
 For authentication or configuration, after the user completes the flow the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
@@ -57,7 +57,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is an example of the JSON object you receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object here is shortened to highlight the most relevant fields.
+This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object here is shortened to highlight the most relevant fields.
 
 ```json
 {
@@ -189,12 +189,11 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 ## Bot response with Adaptive Card
 
 > [!NOTE]
+> The prerequisite to get the bot response with an Adaptive card fis that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your messaging extension for your bot.
+ 
+You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is very useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it. 
 
-> This flow requires that you add the `bot` object to your app manifest, and that you have the necessary scope defined for the bot. Use the same ID as your messaging extension for your bot.
-
-You can also respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it. This is very useful in scenarios where you gather information from your users before creating an Adaptive Card response, or when you update the card after someone interacts with it. 
-
-The following scenario shows how the app Polly  configures a poll without including the configuration steps in the channel conversation:
+The following scenario shows how the app Polly configures a poll without including the configuration steps in the channel conversation:
 
 **To configure the poll**
 1. The user selects the messaging extension to invoke the task module.
@@ -202,13 +201,13 @@ The following scenario shows how the app Polly  configures a poll without includ
 1. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
 
-    > [!NOTE] The user can also choose to `Edit` the message, which returns them to the original task module.
+    > [!NOTE] The users can also choose to `Edit` the message, which returns them to the original task module.
 1. Interacting with the Adaptive Card changes the message before sending it.
 1. After the user selects `Send` the bot posts the message to the channel.
 
 ### Respond to initial submit action
 
-To enable the flow your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot  is not already installed.
+To enable the flow your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not already installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -387,7 +386,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending by selecting the **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must  respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to pre-populate the task module so the user does not have to fill out all  information from scratch.
+If the user edits the card before sending by selecting the **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to pre-populate the task module so the user does not have to fill out all  information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
@@ -531,7 +530,7 @@ In the following image, on the left is a card message sent by a bot *without* us
 
 ![Screenshot](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
-To use the user attribution in teams, you must  add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
+To use the user attribution in teams, you must add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
 # [C#/.NET](#tab/dotnet-1)
 
@@ -575,7 +574,7 @@ The following section is a description of the entities in the `OnBehalfOf` of Ar
 |:---|:---|:---|
 |`itemId`|Integer|Should be 0|
 |`mentionType`|String|Should be "person"|
-|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> via \<bot name\>".|
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## Code sample
