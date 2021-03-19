@@ -77,7 +77,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     >
     > You must be aware of the following important restrictions:
     >
-    > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-microsoft-graph-scopes).
+    > * Only user-level Microsoft Graph API permissions, such as email, profile, offline_access, and OpenId are supported. If you need access to other Microsoft Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](../../../tabs/how-to/authentication/auth-aad-sso.md#apps-that-require-additional-graph-scopes).
     > * Your application's domain name must be same as the domain name that you have registered for your AAD application.
     > * Multiple domains per app are currently not supported.
     > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.

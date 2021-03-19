@@ -135,6 +135,9 @@ The following table provides the per bot per thread limits:
 
 You can also handle rate limit using the per thread limit for all bots.
 
+>[!NOTE]
+> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They will be throttled to 5 requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
+
 ## Per thread limit for all bots
 
 The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
