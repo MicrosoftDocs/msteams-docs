@@ -22,6 +22,6 @@ Replace `<hostname>` with your actual host. This might be a dedicated hosting si
 
 ## Other authentication providers
 
-* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](https://developer.linkedin.com/docs/oauth2)
+* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
 
 * **Google** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
