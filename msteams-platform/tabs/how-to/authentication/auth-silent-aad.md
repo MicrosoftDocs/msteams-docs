@@ -61,7 +61,7 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has an unexpired token cached for the user, use the token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls your callback function with the requested token, or gives an error if authentication fails.
+If ADAL has a token cached for the user that has not expired, use that token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
 If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
 
