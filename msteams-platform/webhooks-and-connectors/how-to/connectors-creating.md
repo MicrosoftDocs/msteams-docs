@@ -88,7 +88,6 @@ Here's a sample HTML to create a Connector configuration page without the CSS:
         });
 
         microsoftTeams.settings.registerOnRemoveHandler(function (removeEvent) {
-            var removeCalled = true;
             alert("Removed" + JSON.stringify(removeEvent));
         });
 
