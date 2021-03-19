@@ -14,7 +14,7 @@ Before you create apps for Teams meetings, you must have an understanding of the
 
 * You must have knowledge of how to develop Teams apps. For more information, see [Teams app development](../overview.md).
 
-* You must update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
+* You must update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](#update-your-app-manifest).
 
 * For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the groupchat scope. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
