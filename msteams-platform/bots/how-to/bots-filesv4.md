@@ -36,7 +36,7 @@ Alternately, you can send files to and receive files from a bot using the Teams 
 
 Using Teams APIs, the bot can directly send and receive files with users in the `personal` context, also known as personal chats. Implement features, such as expense reporting, image recognition, file archival, and e-signatures involving the editing of file content. Files shared in Teams typically appear as cards and allow rich in-app viewing.
 
-The following sections describe how to send file content as a direct user interaction, like sending a message. This API is provided as part of the Teams bot platform.
+The next sections describe how to send file content as a direct user interaction, like sending a message. This API is provided as part of the Teams bot platform.
 
 ### Configure the bot to support files
 
@@ -95,7 +95,7 @@ The following desktop message contains a simple attachment object requesting use
 
 The following mobile message contains an attachment object requesting user permission to upload the file:
 
-![Consent card requesting user permission to upload file on mobile](../../assets/images/bots/mobile-bot-file-consent-card.png)
+<img src="../../assets/images/bots/mobile-bot-file-consent-card.png" alt="Consent card requesting user permission to upload file on mobile" width="350"/>
 
 ```json
 {
