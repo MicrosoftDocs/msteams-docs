@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang=en>
+
+<head>
+    <title>Your work | Adobe Creative Cloud</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script nonce="17044c79-acf4-4037-b4f4-7defc2b20778">
+        window.typeKitId = "kje2hgq";
+    </script>
+    <script src="/configureTypekit.js"></script>
+    <style>
+        html {
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .content {
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #707070;
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.3;
+            font-style: normal;
+            letter-spacing: 0;
+            text-transform: none;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(245, 245, 245);
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            -webkit-align-items: center;
+            align-items: center;
+            font-family: 'adobe-clean',Tahoma, Helvetica, Arial, sans-serif;
+        }
+
+        body:lang(zh-Hant) {
+            font-family: 'adobe-clean-han-traditional','MingLiu','Heiti TC Light','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body:lang(zh-Hans) {
+            font-family: 'adobe-clean-han-simplified-c','SimSun','Heiti SC Light','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body:lang(ja) {
+            font-family: 'adobe-clean-han-japanese','Yu Gothic','\30E1 \30A4 \30EA \30AA',
+'\30D2 \30E9 \30AE \30CE \89D2 \30B4  Pro W3','Hiragino Kaku Gothic Pro W3','Osaka',
+'\FF2D \FF33 \FF30 \30B4 \30B7 \30C3 \30AF','MS PGothic','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body:lang(ko) {
+            font-family: 'adobe-clean-han-korean','Malgun Gothic','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+
+        body.adobe-rebrand {
+            font-family: 'adobe','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body.adobe-rebrand:lang(zh-Hant) {
+            font-family: 'adobe-han-tc','adobe-clean-han-traditional','MingLiu','Heiti TC Light','adobe','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body.adobe-rebrand:lang(zh-Hans) {
+            font-family: 'adobe-han-sc','adobe-clean-han-simplified-c','SimSun','Heiti SC Light','adobe','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+
+        }
+        body.adobe-rebrand:lang(ja) {
+            font-family: 'adobe-han','adobe-clean-han-japanese','Yu Gothic','\30E1 \30A4 \30EA \30AA',
+'\30D2 \30E9 \30AE \30CE \89D2 \30B4  Pro W3','Hiragino Kaku Gothic Pro W3','Osaka',
+'\FF2D \FF33 \FF30 \30B4 \30B7 \30C3 \30AF','MS PGothic','adobe','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+        body.adobe-rebrand:lang(ko) {
+            font-family: 'adobe-han-k','adobe-clean-han-korean','Malgun Gothic','adobe','adobe-clean',Tahoma,Helvetica,Arial,sans-serif;
+        }
+
+        header {
+            display: flex;
+            height: 64px;
+            min-height: 64px;
+            position: relative;
+            padding: 0 24px;
+            border-bottom: 1px solid #e1e1e1;
+            background-color: #fff;
+            align-items: center;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <div class="content ">To view this page, update your browser to the latest version or try a different browser.</div>
+</body>
