@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 Microsoft Teams apps contains one or more capabilities and the ways to run or even host them are different. When it comes to debugging in general, we have the following ways to run your Microsoft Teams app:
 
-* **Purely local**&emsp;For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
-* **Locally hosted, in Teams**&emsp;This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
+* **Purely local** For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
+* **Locally hosted, in Teams** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
 * **Cloud-hosted, in Teams** This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
-For purely local or local Teams testing, you run the experience from your own computer. By doing this, you can compile and run within your IDE and take full advantage of techniques, such as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
+Run the experience from your own compute for purely local or local Teams testing. By doing this, you can compile and run within your IDE and take full advantage of techniques, such as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
 
 Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
 
