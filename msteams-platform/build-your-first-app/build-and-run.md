@@ -73,18 +73,17 @@ Once the installation modal is opened on Teams client in browser, click **Add** 
 > App Studio is also available as a stand-alone app for Teams client. Read [Quickly develop apps with App Studio for Microsoft Teams](../concepts/build-and-test/app-studio-overview.md). 
 > 
 
-## Troubleshooting
+## Troubleshoot App Studio Installation
 
 ### Installation failed
 
-If you get an error dialog that says, "Something went wrong" or "Manifest parsing has failed", while installing your app, check if you corrently entered the app info. 
-Go to Teams Toolkit, click **App Studio** > **app Details**, then check if you have all required info.
+If you get a *Something went wrong* or *Manifest parsing has failed* error message while installing your app, check if you have entered the app informatiom correctly. 
+* Go to Teams Toolkit, click **App Studio** > **app Details**, and check if you have all the required information.
+* If you have manually edited the manifest.json file, check **App Manifest** in App Studio to see if the JSON is well-formed.
 
-Or, check **App Manifest** in App Studio to see if the JSON is well-formed, if you manually have edited the `manifest.json` file.
+### Tab content not displayed
 
-### Tab content isn't loaded
-
-Check if your web app is running. If not, go to terminal and run `npm start`.
+Check if your web app is running. If not, go to terminal and run **npm start**.
 
 ## Next step
 
