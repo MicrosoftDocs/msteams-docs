@@ -54,10 +54,10 @@ Channels contain threaded conversations between multiple people even up to two t
 
 Bots work better in a channel in the following cases:
 
-* **Notifications**, where you provide an interactive card for users to take additional information.
-* **Feedback scenarios** such as polls and surveys.
-* **single request/response cycle** resolves interactions and the results are useful for multiple members of the conversation.
-* **Social/fun bots**, where you get an awesome cat image, randomly pick a winner, and so on.
+* Notifications, where you provide an interactive card for users to take additional information.
+* Feedback scenarios such as polls and surveys.
+* Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
+* Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 
 ### In a group chat
 
@@ -75,7 +75,7 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ### Have multi-turn experiences in chat
 
-An extensive dialog also requires the developer to maintain state. To exit this state a user must either time-out or type **Cancel**. Also the process is unnecessarily tedious. For example, see the following conversation scenario:
+An extensive dialog also requires the developer to maintain state. To exit this state a user must either time-out or enter **Cancel**. Also the process is unnecessarily tedious. For example, see the following conversation scenario:
 
 USER: Schedule a meeting with Megan.
 

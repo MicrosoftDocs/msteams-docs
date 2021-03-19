@@ -30,7 +30,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. In App Studio, select the **Manifest editor** tab. For more information on creating an app package, see [update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. In App Studio, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/tutorials/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
 
 3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
 
@@ -40,7 +40,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 5. The **New Command** screen appears. Enter the **Command text** that must appear as the command menu for your bot. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
 
-6. Select the **Scope** check box(es) to select where this command menu must appear and select **Save**.
+6. Select the **Scope** check boxes to select where this command menu must appear and select **Save**.
 
     ![App Studio New Command Menu button](./conversations/media/AppStudio-NewCommandMenu.png)
 

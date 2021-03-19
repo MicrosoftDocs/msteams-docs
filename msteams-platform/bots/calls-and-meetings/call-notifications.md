@@ -7,7 +7,7 @@ ms.date: 04/02/2019
 
 # Incoming call notifications
 
-In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the **Webhook (for calling)** URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
+In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the Webhook (for calling) URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
 
 ## Protocol determination
 
