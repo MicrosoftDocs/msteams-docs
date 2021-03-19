@@ -54,9 +54,9 @@ Tabs allow team members to access services and content in a specific space withi
 
 ✔ Permissioned users are users who can add apps to a meeting during different stages of the meeting lifecycle. These users can add apps to a meeting through the tab gallery in two ways:
 
-    * Using the **Details** tab on the Teams scheduling form.
+   * Using the **Details** tab on the Teams scheduling form.
 
-    * Using the meeting **Chat** tab in an existing meeting.
+   * Using the meeting **Chat** tab in an existing meeting.
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus ➕ button.
 
@@ -74,8 +74,8 @@ Tabs allow team members to access services and content in a specific space withi
 
 ✔ An app is visible in a Teams meeting in the side panel or the in-meeting dialog box. Use the in-meeting dialog to showcase actionable content for meeting participants. *See* [Create Apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-    > [!NOTE]
-    > Your app manifest specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+   > [!NOTE]
+   > Your app manifest specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 The following images display the app as an in-meeting dialog box and as a separate side panel:
 
@@ -132,7 +132,7 @@ You can access the  **Meeting options** page as follows:
 ### User types
 
 > [!NOTE]
-> Users with specific user types assigned to them can join meetings and assume one of the participant roles described in [participant roles in a meeting](#participant-roles-in-a-meeting). The user type is not included in the **getParticipantRole** API.
+> Users with specific user types assigned to them can join meetings and assume one of the participant roles described in [participant roles](#participant-roles). The user type is not included in the **getParticipantRole** API.
 
 The following user types identify what each user can do and what they can access:
 
