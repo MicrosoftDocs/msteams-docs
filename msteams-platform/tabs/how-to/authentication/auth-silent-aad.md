@@ -117,9 +117,12 @@ if (authContext.isCallback(window.location.hash)) {
 
 Use the following code to handle sign out flow in AAD Auth:
 
+> [!NOTE]
+> While logout for Teams tab or bot is done, the current session is also cleared.
+
 ```javascript
-function logoutV1() {
+function logout() {
 localStorage.clear();
-window.location.href = "@Url.Action("ChooseAuth", "Home")";
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
