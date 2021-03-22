@@ -16,8 +16,7 @@ Build and run your first Teams app using the following steps:
 * Before you begin, ensure that you have an an account that allows app sideloading and you have the required tools installed, see [overview and prerequisite](../build-your-first-app/build-first-app-overview.md.
 * Ensure that you have installed the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.) You can build Teams apps with your preferred tools, but these lessons show how you can get started quickly with the Microsoft Teams Toolkit for Visual Studio Code (VS Code).  
 * Launch VS Code and now install an extension that helps you develop Teams apps.  
-Select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**: 
-:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-01.png" alt-text="Screenshot showing how to install Teams Toolkit on Visual Studio Code":::
+Select **Extensions** on the left Activity Bar and install the **Microsoft Teams Toolkit**.
 
 ## Create your app project
 
