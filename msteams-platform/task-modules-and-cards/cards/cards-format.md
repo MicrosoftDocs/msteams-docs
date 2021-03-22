@@ -198,7 +198,7 @@ In addition, your app must include the following elements:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -213,7 +213,35 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
+### Stage View for images in Adaptive cards
+You can also use the `msteams` property to selectively add the ability to enlarge images, in an Adaptive card, in stage view. Users would see an expand icon when they hover over the images, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+When users hover over the image, they would see an expand icon at top right corner of the image.
+![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+The image would be shown in stage view when clicking on the expand button.
+![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In the stage view, users would be able to zoom in and zoom out of the image.
+You can choose which images in your Adaptive card need to have this capability.
+Please note that this ability applies only to image elements (Image type) in an Adaptive card.
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
