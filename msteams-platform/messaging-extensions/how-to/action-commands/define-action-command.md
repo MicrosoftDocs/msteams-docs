@@ -93,13 +93,12 @@ The following image displays the action command static parameter selection:
     ![action command dynamic parameter selection](../../../assets/images/messaging-extension/action-command-parameter-selection.png)
 
 1. Add a **Command Id** and a **Title**.
-1. Select where you want your action command to be triggered from.
-1. If you are using parameters for your task module, add the first one. The following image displays the task module parameter selection:
+1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
 
-    ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
+    ![action-command-invoke-location](../../../assets/images/messaging-extension/action-command-invoke-location.png)
 
-1. Select **Save**
-1. If you need to add more parameters, select the **Add** button in the **Parameters** section to add them.
+1. Select **Save**.
+1. To add more parameters, select the **Add** button in the **Parameters** section.
 
 ### Create an action command manually
 

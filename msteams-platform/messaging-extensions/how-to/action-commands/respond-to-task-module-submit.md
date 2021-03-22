@@ -24,10 +24,10 @@ For authentication or configuration, after the user completes the flow the origi
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
-|Card response | x | x | x |
-|Another task module | x | x | x |
-|Bot with Adaptive Card | x |  | x |
-| No response | x | x | x |
+|Card response | ✔ | ✔ | ✔ |
+|Another task module | ✔ | ✔ | ✔ |
+|Bot with Adaptive Card | ✔ | x | ✔ |
+| No response | ✔ | ✔ | ✔ |
 
 ## The submitAction invoke event
 
@@ -196,6 +196,7 @@ You can also respond to the `submitAction` by inserting a message with an Adapti
 The following scenario shows how the app Polly configures a poll without including the configuration steps in the channel conversation:
 
 **To configure the poll**
+
 1. The user selects the messaging extension to invoke the task module.
 1. The user configures the poll with the task module.
 1. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.

@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Messaging extension search commands allow the users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, add the search command to your app manifest.
+Messaging extension search commands allow the users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
@@ -50,9 +50,9 @@ The prerequisite to create a search command is that you must already have create
     ![search command parameter selection](../../../assets/images/messaging-extension/search-command-parameter-selection.png)
 
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following image displays the task module parameter selection:
+1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke locatio:
 
-    ![parameter selection to create task module](../../../assets/images/messaging-extension/task-module-parameter-selection.png)
+    ![parameter selection to create task module](../../../assets/images/messaging-extension/search-command-invoke-location.png)
 
 1. Add your search parameter and select **Save**.
 

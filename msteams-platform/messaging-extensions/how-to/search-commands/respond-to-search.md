@@ -12,7 +12,9 @@ ms.author: anclear
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. See [default query](#default-query).
+* `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+
+This document givea a walk through on respond to user requests in the form of cards and previews. The conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
@@ -304,7 +306,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a "default" query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
 
 The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 
