@@ -85,7 +85,7 @@ Each command requires a title and an ID. The command can optionally contain a de
 * An optional description
 
 > [!NOTE]
-> To create messaging extension using app studio, see [create messaging extension using app studio](../resources/create-messaging-extension-using-appstudio.md).
+> To create messaging extension using app studio, see [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### Test and Distribute
 
