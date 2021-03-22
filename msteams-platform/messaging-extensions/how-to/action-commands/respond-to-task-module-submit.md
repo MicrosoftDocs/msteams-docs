@@ -5,6 +5,7 @@ description: Describes how to respond to the task module submit action from a me
 ms.topic: conceptual
 ms.author: anclear
 ---
+
 # Respond to the task module submit action
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
@@ -29,6 +30,10 @@ For authentication or configuration, after the user completes the flow the origi
 |Another task module | ✔ | ✔ | ✔ |
 |Bot with Adaptive Card | ✔ | x | ✔ |
 | No response | ✔ | ✔ | ✔ |
+
+> [!NOTE]
+> * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
+> * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
 ## The submitAction invoke event
 

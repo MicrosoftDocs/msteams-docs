@@ -137,18 +137,6 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
-### Generating a deep link to a call
-
-Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
-
-`https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>`
-
-Example: `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
-The query parameters are:
-
-* `users`: The comma-separated list of user IDs representing the participants of the call. The user that performs the action is always included as a participant. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address only.
-
 ## Linking to the scheduling dialog
 
 > [!Note]
@@ -171,6 +159,7 @@ The query parameters are:
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
 
-Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
+> [!NOTE]
+> Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
