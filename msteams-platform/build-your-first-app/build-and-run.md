@@ -2,8 +2,8 @@
 title: Get started - Build and run your first app
 author: girliemac
 description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit.
-ms.author: lajanuar
-ms.date: 03/12/2021
+ms.author: timura
+ms.date: 03/22/2021
 ms.topic: quickstart
 ---
 # Build and run your first Microsoft Teams app
@@ -22,7 +22,7 @@ Select **Extensions** on the left Activity Bar and install the **Microsoft Teams
 
 1. Select **Microsoft Teams Toolkit** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account that [you previously have set up](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). 
-1. On the **Select project** screen, select **Personal app** > **JavaScript** then **Next**.
+1. On the **Select project** screen, at **Personal app**, click **JS** (JavaScript).
 1. Enter a name for your Teams app and select **Finish** at the bottom of the screen to configure your project. Save your project on your local machine.
 
 ## Understand app project components
