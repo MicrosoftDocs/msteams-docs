@@ -198,6 +198,7 @@ In addition, your app must include the following elements:
             "weight": "Bolder"
         }]
     }],
+
     "msteams": {
         "width": "Full"
     },
