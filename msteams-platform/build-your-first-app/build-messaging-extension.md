@@ -30,7 +30,7 @@ Your organization's help desk communicates with users through Teams, but the tic
 
 If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
 
-## 1. Create your app project
+## Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
 
@@ -45,12 +45,12 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 1. On the **Add capabilities** screen, select **Messaging Extension** then **Next**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. On the **Configure messaging extension** screen, do the following:
-    1. Choose only the **Search-based** option for the type of messaging extension.
+    1. Choose the **Search-based** option for the type of messaging extension.
     1. Select **Create a new Bot** then **Create Bot Registration**. If successful, your new bot will have a **Registered** status.
     1. For now, select **No** for the link unfurling option.
 1. Select **Finish** at the bottom of the screen to configure your project.
 
-## 2. Identify relevant app project components
+## Identify relevant app project components
 
 Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit.
 
@@ -62,7 +62,7 @@ To view or update your messaging extension's configurations, select **App Studio
 
 The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your messaging extension (or technically, the [messaging extension's bot](#4-configure-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
 
-## 3. Set up a secure tunnel to your app
+## Set up a secure tunnel to your app
 
 For testing purposes, let's host your messaging extension on a local web server (port 3978).
 
@@ -72,7 +72,7 @@ For testing purposes, let's host your messaging extension on a local web server 
 
 With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
 
-## 4. Configure the bot for your messaging extension
+## Configure the bot for your messaging extension
 
 Messaging extensions rely on bots to send and process user requests from Teams to your hosted service. The bot must be registered with the Azure Bot Service, which was done when you set up your app using the Teams Toolkit.
 
@@ -84,28 +84,28 @@ You still must specify a bot endpoint URL to receive and process search queries 
 
 Your bot will be able to handle queries in your messaging extension.
 
-## 5. Build and run your app
+## Build and run your app
 
 You've set up a URL to host your messaging extension and configured it to handle searches. It's time to get your app up and running.
 
-1. In a terminal, go to the root directory of your app project and run `npm install`.
+1. In terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
 
 If successful, you see the following message indicating your messaging extension service is listening for activity at your `localhost`:
 
 `Bot/ME service listening at http://localhost:3978`
 
-## 6. Sideload your messaging extension in Teams
+## Sideload your messaging extension in Teams
 
 With your messaging extension running, you can install it in Teams.
 
 > [!TIP]
-> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
+> If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#sideload-your-app-in-teams).
 
 1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
 1. In the app install dialog, select **Add for me**.
 
-## 7. Test your messaging extension
+## Test your messaging extension
 
 Learn how messaging extensions work in a Teams chat.
 
