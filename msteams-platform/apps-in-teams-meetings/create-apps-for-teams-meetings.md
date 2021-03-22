@@ -93,7 +93,7 @@ export class MyBot extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 ```http
-GET /v3/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
 The response body is:
@@ -126,7 +126,7 @@ The response body is:
 
 #### Response codes
 
-* **403**: The app is not allowed to get participant information.  This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.
+* **403**: The app is not allowed to get participant information. This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during livesite mitigation.
 * **200**: Participant information successfully retrieved.
 * **401**: Invalid token.
 * **404**: Participant cannot be found.
@@ -140,7 +140,10 @@ The response body is:
 
 ### NotificationSignal API
 
+All users in a meeting receive the notifications sent through the NotificationSignal API.
+
 > [!NOTE]
+> Currently, sending targetted notifications is not supported.
 > When an in-meeting dialog is invoked, the same content will also be presented as a chat message.
 
 #### Query parameters
@@ -151,10 +154,10 @@ The response body is:
 
 #### Example
 
+The `Bot ID` is declared in the manifest and the bot receives a result object. In the following example, the `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload:
+
 > [!NOTE]
->
-The `completionBotId` parameter of the `externalResourceUrl` is optional in the requested payload example. `Bot ID` is declared in the manifest and the bot receives a result object.
-> * The externalResourceUrl width and height parameters must be in pixels. Refer to the [design guidelines](design/designing-apps-in-meetings.md) to ensure the dimensions are within the allowed limits.
+> * The `externalResourceUrl` width and height parameters must be in pixels. To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page loaded as an `<iframe>` in the in-meeting dialog. The domain must be in the app's `validDomains` array in your app manifest.
 
 # [C#/.NET](#tab/dotnet)
@@ -210,19 +213,17 @@ POST /v3/conversations/{conversationId}/activities
 
 #### Response Codes
 
-* **201**: activity with signal is successfully sent  
-* **401**: invalid token  
 * **201**: Activity with signal is successfully sent. 
 * **401**: Invalid token.
 * **403**: The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. 
-* **404**: Meeting chat doesn't exist.
+* **404**: Meeting chat does not exist.
  
 
 ## Enable your app for Teams meetings
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest via the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
+The meetings app capabilities are declared in your app manifest through the **configurableTabs** -> **scopes** and **context** arrays. *Scope* defines to whom and *context* defines where your app will be available.
 
 > [!NOTE]
 > Please use [Developer Preview manifest schema](../resources/schema/manifest-schema-dev-preview.md) to try this in your app manifest.

@@ -17,14 +17,14 @@ This document introduces the core capabilities  that you can use to build your T
 
 ## App capabilities
 
-Your Teams app can have one or all of the following core capabilities:
+Your Teams app have one or all of the following core capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md)
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Bots](../bots/what-are-bots.md)
 * [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Your app can also take advantage of the advanced capabilities, such as the [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
+Your app can also take advantage of advanced capabilities, such as the [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
 
 The following illustration gives you an idea of which capabilities will provide the features you want in your app.
 
