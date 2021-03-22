@@ -1,20 +1,14 @@
 ---
 title: Get started - Build a channel and group tab
-author: heath-hamilton
+author: girliemac
 description: Quickly create a Microsoft Teams channel and group tab using the Microsoft Teams Toolkit.
-ms.author: lajanuar
-ms.date: 10/09/2020
+ms.author: timura
+ms.date: 03/22/2020
 ms.topic: tutorial
 ---
 # Build a channel and group tab for Microsoft Teams
 
 In this tutorial, you'll build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat. Unlike a personal tab, users can configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel).
-
-## Your assignment
-
-Not long ago, your organization created a Teams app that uses a tab to display important contact information (help desk, HR, etc.). However, since it's a personal tab, each user must install the tab to see it and adoption is lower than expected. In other words, too many workers still don't know how to reach the help desk.
-
-You can make this information easier to find by building a channel tab, which will remove the burden of requiring everyone to install an app. Instead, one user can add the tab in a channel or chat for the benefit of an entire group.
 
 ## What you'll learn
 
@@ -22,29 +16,24 @@ You can make this information easier to find by building a channel tab, which wi
 >
 > * Create an app project using the Microsoft Teams Toolkit for Visual Studio Code
 > * Identify some of the app configurations and scaffolding relevant to channel tabs
-> * Create tab content
-> * Create content for a tab's configuration page
-> * Provide a suggested tab name
+> * Create tab content and tab configuration 
 > * Build and run your app locally
 > * Sideload your app in Teams for testing
 
 ## Before you begin
 
-If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
+You need know how to set up and build Teams app. If you haven’t, please read [Create a "Hello, world" app](../build-your-first-app/build-and-run.md) first. 
 
 ## 1. Create your app project
 
 The Microsoft Teams Toolkit helps configure your app and set up scaffolding relevant to channel and group tabs, including a basic configuration page and content page that displays a "Hello, World!" message.
 
-> [!TIP]
-> If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.
-
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account.
-1. On the **Add capabilities** screen, select **Tab** then **Next**.
+1. On the **Select project** screen, at **Channel and group app**, click **JS** (JavaScript).
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 Select **Group or Teams channel tab**.
-1. Select **Finish** at the bottom of the screen to configure your project.  
+1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.  
 
 ## 2. Identify relevant app project components
 
