@@ -60,7 +60,7 @@ To view or update your messaging extension's configurations, select **App Studio
 
 ### App scaffolding
 
-The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your messaging extension (or technically, the [messaging extension's bot](#4-configure-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
+The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your messaging extension (or technically, the [messaging extension's bot](#configure-the-bot-for-your-messaging-extension)) responds to search queries in Teams.
 
 ## Set up a secure tunnel to your app
 
