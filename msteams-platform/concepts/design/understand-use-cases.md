@@ -16,11 +16,16 @@ Each method of interacting with your users has its strengths and weaknesses. Bui
 
 ## Understand the problem
 
-Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that solve collaboration problems are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve.
+Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that solve collaboration problems are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve. Before you start building an app, ask relevant questions, such as:
+
+* What are the pros and cons of the current app?
+* What are the pain points when interacting with the app?
+* Which are the features that are regularly used?
 
 ## Understand your user
 
 Understand who your user is and you can identify the right distribution model but more importantly, it helps you to identify how users use Teams. Ask relevant questions, such as:
+
 * Are the users primarily front-line workers on mobile clients?
 * Do you expect a lot of guest users to need access to your app?
 * Do they use teams and channels or primarily group chats?
@@ -29,9 +34,23 @@ Understand who your user is and you can identify the right distribution model bu
 
 Sometimes the answer is, *We want to solve this problem for all Teams users everywhere.* If that is the case for you, spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
+## Understand the limitations of the app
+
+Knowing the limitations of the apps in terms of data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture. Again, ask relevant questions, such as:
+
+* What are the challenges with back end integration of the current app?
+* Who owns the back end data? In-house or third-party.
+* Are there firewalls that impact the functioning of the app?
+* Does it have APIs? 
+
 ## Provide authentication
 
-You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now.
+You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as: 
+
+* Will the users access different views of data based on their roles?
+* Is there PII involved?
+* Will the interactions also be based on the user roles?
+* Will external users access the app?
 
 ## Build entire app within Teams
 
@@ -47,6 +66,10 @@ Knowing who your users are helps you to craft the right experience. Do you expec
 Remember, users can discover your app in a variety of ways. They might be the ones installing it or they might be introduced to your app when another user uses it to share content. If you want more users to use your app, you must look for ways to introduce yourself to everyone.
 
 Above all else, remember that nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
+
+## Plan for the future
+
+Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
 
 ## See also
 
