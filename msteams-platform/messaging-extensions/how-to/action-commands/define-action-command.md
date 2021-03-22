@@ -95,7 +95,7 @@ The following image displays the action command static parameter selection:
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where you want to invoke the action command. The following image displays the action command invoke location:
 
-    ![action-command-invoke-location](../../../assets/images/messaging-extension/action-command-invoke-location.png)
+    ![action command invoke location](../../../assets/images/messaging-extension/action-command-invoke-location.png)
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.

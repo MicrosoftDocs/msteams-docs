@@ -52,7 +52,7 @@ The prerequisite to create a search command is that you must already have create
 1. Add a **Command Id** and a **Title**.
 1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke locatio:
 
-    ![parameter selection to create task module](../../../assets/images/messaging-extension/search-command-invoke-location.png)
+    ![search command invoke location](../../../assets/images/messaging-extension/search-command-invoke-location.png)
 
 1. Add your search parameter and select **Save**.
 

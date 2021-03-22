@@ -9,6 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
+This document gives a walk through on how youe app responds to the user's task module submit action.
 After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message *Unable to reach the app*, and any reply to the invoke is ignored by the Teams client.
 
 You have the following options for responding:
@@ -202,13 +203,14 @@ The following scenario shows how the app Polly configures a poll without includi
 1. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
 
-    > [!NOTE] The users can also choose to `Edit` the message, which returns them to the original task module.
+    > [!NOTE] 
+    > The users can also choose to `Edit` the message, which returns them to the original task module.
 1. Interacting with the Adaptive Card changes the message before sending it.
 1. After the user selects `Send` the bot posts the message to the channel.
 
-### Respond to initial submit action
+## Respond to initial submit action
 
-To enable the flow your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not already installed.
+Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not already installed.
 
 # [C#/.NET](#tab/dotnet)
 
