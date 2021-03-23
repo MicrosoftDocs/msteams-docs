@@ -1242,10 +1242,11 @@ async def on_reactions_removed(
 
 * * *
 
-## Samples
-For sample code showing the bots conversation events, see:
+## Code sample
 
-[Microsoft Teams bots conversation events sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)
+| **Name** | **Description** | **.NET** |
+|----------|-----------------|----------|
+|Microsoft Teams bots conversation events | Sample code for bots conversation events | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  |
 
 
 
