@@ -32,27 +32,9 @@ In the process of the initial invoke request, your service receives an `Activity
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from 1:1 chat 
+### Payload activity properties when a task module is invoked from 1:1 chat 
 
-The payload activity properties when invoked a task module from 1:1 chat are listed in the following section:
-
-|Property name|Purpose|
-|---|---|
-|`type`| Type of request. It must be `invoke`. |
-|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
-|`from.id`| ID of the user that sent the request. |
-|`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.source.name`| The source name from where task module is invoked. |
-|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
-|`value.commandId` | Contains the ID of the command that was invoked. |
-|`value.commandContext` | The context that triggered the event. It must be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
-
-### Payload activity properties when invoked a task module from a group chat 
-
-The payload activity properties when invoked a task module from a group chat are listed in the following section:
+The payload activity properties when a task module is invoked from 1:1 chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -68,9 +50,9 @@ The payload activity properties when invoked a task module from a group chat are
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a channel (new post) 
+### Payload activity properties when a task module is invoked from a group chat 
 
-The payload activity properties when invoked a task module from a channel (new post) are listed in the following section:
+The payload activity properties when a task module is invoked from a group chat are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -80,17 +62,15 @@ The payload activity properties when invoked a task module from a channel (new p
 |`from.name`| Name of the user that sent the request. |
 |`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
 |`channelData.tenant.id`| Azure Active Directory tenant ID. |
-|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
-|`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a channel (reply to thread) 
+### Payload activity properties when a task module is invoked from a channel (new post) 
 
-The payload activity properties when invoked a task module from a channel (reply to thread) are listed in the following section:
+The payload activity properties when a task module is invoked from a channel (new post) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -108,9 +88,29 @@ The payload activity properties when invoked a task module from a channel (reply
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when invoked a task module from a command box 
+### Payload activity properties when a task module is invoked from a channel (reply to thread) 
 
-The payload activity properties when invoked a task module from a command box are listed in the following section:
+The payload activity properties when a task module is invoked from a channel (reply to thread) are listed in the following section:
+
+|Property name|Purpose|
+|---|---|
+|`type`| Type of request. It must be `invoke`. |
+|`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
+|`from.id`| ID of the user that sent the request. |
+|`from.name`| Name of the user that sent the request. |
+|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
+|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`channelData.channel.id`| Channel ID (if the request was made in a channel). |
+|`channelData.team.id`| Team ID (if the request was made in a channel). |
+|`channelData.source.name`| The source name from where task module is invoked. |
+|`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
+|`value.commandId` | Contains the ID of the command that was invoked. |
+|`value.commandContext` | The context that triggered the event. It must be `compose`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
+
+### Payload activity properties when a task module is invoked from a command box 
+
+The payload activity properties when a task module is invoked from a command box are listed in the following section:
 
 |Property name|Purpose|
 |---|---|

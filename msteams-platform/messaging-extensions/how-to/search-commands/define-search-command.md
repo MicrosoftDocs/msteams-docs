@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Messaging extension search commands allow the users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, and add the search command to your app manifest.
+Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.

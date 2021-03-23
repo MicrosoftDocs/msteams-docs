@@ -10,12 +10,12 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document gives a walk through on how youe app responds to the user's task module submit action.
+This document gives a walk through on how your app responds to the user's task module submit action.
 After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message *Unable to reach the app*, and any reply to the invoke is ignored by the Teams client.
 
 You have the following options for responding:
 
-* No response - Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately for example, with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* No response - Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
@@ -187,7 +187,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 You can choose to respond to the `submitAction` event with an additional task module. This is useful when:
 
 * You need to collect large amounts of information.
-* You need to dynamically change what information you are collecting based on user input.
+* You need to dynamically change the information you are collecting based on user input.
 * You need to validate the information submitted by the user and resend the form with an error message if something is wrong. 
 
 The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you are using the Bot Framework SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
@@ -195,7 +195,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 ## Bot response with Adaptive Card
 
 > [!NOTE]
-> The prerequisite to get the bot response with an Adaptive card fis that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your messaging extension for your bot.
+> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your messaging extension for your bot.
  
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is very useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it. 
 

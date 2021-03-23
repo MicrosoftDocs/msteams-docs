@@ -14,7 +14,7 @@ After the user submits the search command, your web service receives a `composeE
 * As characters are entered into the search box.
 * `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-This document givea a walk through on respond to user requests in the form of cards and previews. The conditions under which Microsoft Teams issues a default query.
+This document gives a walk through on respond to user requests in the form of cards and previews. The conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
