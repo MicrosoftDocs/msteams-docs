@@ -495,6 +495,7 @@ The `configurableProperties` block defines the app properties that an admin can 
 |`type`|array|            |✔|                     |
 |`description`|String|128 characters|✔|Description of the list of properties.|
 |`maxItems`| array of enum|9|✔| List of configurable properties.|
+|`items`| | |✔| |
 
 > [!NOTE]
 > The `smallImageUrl` is the `outline` and `largeImageUrl` is the `color` property in the `icons` block of the manifest.
