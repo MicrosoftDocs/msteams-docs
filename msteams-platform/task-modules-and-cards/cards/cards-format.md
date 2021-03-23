@@ -213,7 +213,7 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
-### Stage View for images in Adaptive cards
+### Stage view for images in Adaptive Cards
 You can also use the `msteams` property to selectively add the ability to enlarge images, in an Adaptive card, in stage view. Users would see an expand icon when they hover over the images, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
 ``` json
