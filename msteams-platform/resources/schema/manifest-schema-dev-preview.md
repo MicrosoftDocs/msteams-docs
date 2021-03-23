@@ -178,6 +178,26 @@ For more information on the features available see: [Features in the Public Deve
      "contoso.com",
      "mysite.someplace.com",
      "othersite.someplace.com"
+  ],
+   "configurableProperties": {
+       "type": "array",
+       "description": "A list of tenant configured properties for an app.",
+       "maxItems": 9,
+       "items": {
+         "enum": [
+           "name"
+           "shortDescription",
+           "longDescription",
+           "smallImage",
+           "largeImage",
+           "accentColor",
+           "websiteUrl",
+           "privacyUrl",
+           "termsOfUseUrl"        
+              ]          
+            }
+          }      
+      } 
   ]
 }
 ```
@@ -460,3 +480,24 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+
+## configurableProperties
+
+**Required**
+
+The `configurableProperties` block defines the app properties that an admin can customize. The developer must define them in the manifest.
+
+> [!NOTE]
+> A minimum of one property must be defined. The developer can define a maximum of nine properties in this block.
+
+|Name| Type| Maximum size | Required | Description|
+|----|-----|--------------|----------|------------|
+|`type`|array|            |✔|                     |
+|`description`|String|128 characters|✔|Description of the list of properties.|
+|`maxItems`| array of enum|9|✔| List of configurable properties.|
+
+> [!NOTE]
+> The `smallImageUrl` is the `outline` and `largeImageUrl` is the `color` property in the `icons` block of the manifest.
+
+
+
