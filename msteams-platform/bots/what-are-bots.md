@@ -17,7 +17,7 @@ Conversational bots allow users to interact with your web service through text, 
 
 ![Invoke bot using card](~/assets/images/invokebotwithcard.png)
 
-<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="300"/>
+<img src="~/assets/images/task-module-example.png" alt="Invoke bot using task module" width="400"/>
 
 Conversational bots are incredibly flexible and can be scoped to handle a few simple commands or complex, artificial-intelligence-powered and natural-language-processing tasks. They can be one aspect of a larger application, or be completely stand-alone.
 
