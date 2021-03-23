@@ -239,9 +239,10 @@ When users hover over the image, they would see an expand icon at top right corn
 The image is shown in stage view when the user clicks on the expand button.
 ![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
 
-In the stage view, users would be able to zoom in and zoom out of the image.
-You can choose which images in your Adaptive card need to have this capability.
-Please note that this ability applies only to image elements (Image type) in an Adaptive card.
+In the stage view, users can zoom in and zoom out of the image. You can select which images in your Adaptive card needs to have this capability.
+
+> [!NOTE]
+> Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
