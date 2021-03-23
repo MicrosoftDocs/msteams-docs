@@ -71,7 +71,7 @@ Note that if you have defined your bot to only support one scope, commands speci
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
 
 > [!NOTE]
-> Microsoft Teams provides apps to improve the Teams experience. The Teams admin can customize the look-and-feel of the app. However, this customization affects change in the look-and-feel of other components except for connectors. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+> App customization affects a change in the look-and-feel of apps loaded through bots, messaging extensions, and so on except for connectors. For example, the Team admin customizes the name of an app from *Contoso* to *Contoso agent*, then the app will show the new name *Contoso agent* when called through a bot. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### Messaging Extensions
 
