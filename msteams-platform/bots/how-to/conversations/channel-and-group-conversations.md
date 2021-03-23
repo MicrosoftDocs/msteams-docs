@@ -2,14 +2,14 @@
 title: Channel and group conversations with a bot
 author: clearab
 description: How to send, receive, and handle messages for a bot in a channel or group chat.
-ms.topic: overview
+ms.topic: conceptual
 ms.author: anclear
 ---
 # Channel and group chat conversations with a bot
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
 
 Bots in a group or channel only receive messages when they are mentioned `@botname`. They do not receive any other messages sent to the conversation.
 
@@ -24,19 +24,19 @@ Now you can create new conversation threads and easily manage different conversa
 
 ## Create new conversation threads
 
-When your bot is installed in a team, you must create a new conversation thread rather than replying to an existing one. At times it is difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it is difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Next you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its own name in the message text. So ensure that your message parsing handles that. Your bot can also retrieve other users mentioned in a message, and add mentions to any messages it sends.
+Every message to your bot from a group or channel contains an @mention with its own name in the message text. Ensure that your message parsing handles @mention. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
 
 You must also strip out the @mentions from the text of the message your bot receives.
 
 ### Retrieve mentions
 
-Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention like `<at>@John Smith<at>`. However, do not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Instead, use the `entities` object.
+Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention, such as `<at>@John Smith<at>`. However, do not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Instead, use the `entities` object.
 
 You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.
 
@@ -254,7 +254,7 @@ Send a personal message to each team member when the bot is added. To do this, g
 
 Do not send a message in the following cases:
 
-* The team is large, for example larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* The team is large, for example, larger than 100 members. Your bot can be seen as spam and the person who added it can get complaints. You must clearly communicate your bot's value proposition to everyone who sees the welcome message.
 * Your bot is first mentioned in a group or channel instead of being first added to a team.
 * A group or channel is renamed.
 * A team member is added to a group or channel.
