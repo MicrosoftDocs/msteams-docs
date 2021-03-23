@@ -136,10 +136,11 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 ## App customization
 
-Understand how the admin can customize the apps look-and-feel, if the developer has defined the configurable properties in the manifest schema. For more information on `configurableProperties`, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+Understand how the Teams admin can customize or rebrand the app based on the organization's need. This customization is enabled if you define the `configurableProperties` in the manifest schema. For more information, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > The `configurableProperties` is currently available in developer's preview only.
+> App customization affects a change in the look-and-feel of apps loaded through bots, messaging extensions, and so on except for connectors. For example, the Team admin customizes the name of an app from *Contoso* to *Contoso agent*, then the app will show the new name *Contoso agent* when called through a bot. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*.
 
 ## Tools and samples
 
