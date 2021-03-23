@@ -174,8 +174,18 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-  - name: Tab requirements
-    href: tabs/how-to/tab-requirements.md
+  - name: Create a tab 
+    items:
+    - name: Tab requirements
+      href: tabs/how-to/tab-requirements.md
+    - name: Create a content page
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Create a configuration page
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Create a removal page
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Get context for your tab
+      href: tabs/how-to/access-teams-context.md  
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -190,14 +200,8 @@
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
     - name: Channel tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-  - name: Create a content page
-    href: tabs/how-to/create-tab-pages/content-page.md
-  - name: Create a configuration page
-    href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create a removal page
-    href: tabs/how-to/create-tab-pages/removal-page.md
-  - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md
+  - name: Build Adaptive Card tabs
+    href: tabs/how-to/build-adaptive-card-tabs.md
 - name: Build bots
   items:
   - name: Overview
