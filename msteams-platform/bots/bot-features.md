@@ -25,7 +25,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Process messaging extension requests.
 
 > [!IMPORTANT]
-> You can develop Teams apps in any web-programming technologies and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform token handling in all cases.
+> You can develop Teams apps in any web programming technologies and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform token handling in all cases.
 
 > [!TIP]
 > Teams App Studio helps you create and configure your app manifest, and register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. For more information, see [getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
