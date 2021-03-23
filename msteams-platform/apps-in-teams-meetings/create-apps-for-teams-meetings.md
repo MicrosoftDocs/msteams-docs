@@ -71,7 +71,7 @@ The `GetParticipant` API includes the following query parameters:
 
 The `GetParticipant` API includes the following C# or .NET, JavaScript, and JSON examples:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -182,7 +182,7 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 
 The `NotificationSignal` API includes the following C# or .NET, JavaScript, and JSON examples:
 
-# [C# or .NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");

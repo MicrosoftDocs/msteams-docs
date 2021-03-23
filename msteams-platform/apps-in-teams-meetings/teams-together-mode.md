@@ -68,7 +68,7 @@ In the Scene Design Studio, each seat represents an avatar for design purposes. 
 5. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
 
 6. Drag and drop the image into the environment as displayed in the following image:
- 
+
     >[!NOTE]
     > Alternately, you can add background images to the scene using **Add images**.
 
@@ -91,7 +91,7 @@ In the Scene Design Studio, each seat represents an avatar for design purposes. 
 9. In the **Scene Name** box, enter a name for the scene.
 
 10. Select **Export the Scene** from the **Save** drop-down menu. A .ZIP file, that is the scene package, is downloaded.
- 
+
     >[!NOTE]
     > Alternately, you can select **Save** to save the scene.
 
