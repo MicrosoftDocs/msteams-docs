@@ -39,6 +39,10 @@ There are two types of tabs available in Teams — channel/group and personal. C
 
 ## How do tabs work?
 
+There are two methods to create tabs. You can use either of the following methods to build tabs:
+
+### Declare custom tab in app manifest
+
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you need to add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Doing so will tell Teams to display your page, give you access to Teams-specific information (for example if the Teams client is running the *dark theme*), and allow you to take action based on the results.
 
 Whether you choose to expose your tab within the channel/group or personal scope, you'll need to present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users.
@@ -46,6 +50,10 @@ Whether you choose to expose your tab within the channel/group or personal scope
 For channel/group tabs, you also need to create an additional configuration page that allows users to configure your content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel/group tab can be added to multiple different teams or group chats. On each subsequent install, your users will be able to configure the tab, allowing you to tailor the experience as needed. When users add or configure a tab, a URL is being associated with the tab that is presented in the Teams UI. Configuring a tab is simply adding additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose which board the tab will load. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
 You can have a maximum of one (1) channel/group tab and up to sixteen (16) personal tabs per app.
+
+### Use Adaptive Cards to build tabs
+
+When developing a tab using the traditional method, a developer needs to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, developers can render Adaptive Cards to a tab. While the front-end is rendered as Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Cards to render.
 
 ## Mobile clients
 
@@ -59,18 +67,14 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 
 
 > [!NOTE]
->
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 
-> [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+## See also
 
 > [!div class="nextstepaction"]
-> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Tab requirements](../../how-to/tab-requirements.md)
 
 > [!div class="nextstepaction"]
-> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+> [Build Adaptive Card tabs](../../how-to/build-adaptive-card-tabs.md)
 
-> [!div class="nextstepaction"]
-> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
