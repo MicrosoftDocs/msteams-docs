@@ -62,13 +62,16 @@ This section allows you to add a [conversational bot](~/bots/what-are-bots.md) t
 
 If you have not yet registered a bot with the Bot Framework, click *Register* to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
 
-Once you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
+Once you have supplied your bots information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
 
 Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scopes your bot supports at any time.
 
 ##### Connectors
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
+
+> [!NOTE]
+> Microsoft Teams provides apps to improve the Teams experience. The Teams admin can customize the look-and-feel of the app. However, this customization affects change in the look-and-feel of other components except for connectors. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### Messaging Extensions
 
