@@ -45,7 +45,7 @@ Whether you choose to expose your tab within the channel/group or personal scope
 
 For channel/group tabs, you also need to create an additional configuration page that allows users to configure your content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel/group tab can be added to multiple different teams or group chats. On each subsequent install, your users will be able to configure the tab, allowing you to tailor the experience as needed. When users add or configure a tab, a URL is being associated with the tab that is presented in the Teams UI. Configuring a tab is simply adding additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose which board the tab will load. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
-You can have more than one (1) channel/group tab and up to sixteen (16) personal tabs per app.
+You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
 ## Mobile clients
 
