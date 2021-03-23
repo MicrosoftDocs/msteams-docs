@@ -210,6 +210,8 @@
     items:
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
+    - name: Messages in bot conversations
+      href: bots/how-to/conversations/conversation-messages.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations

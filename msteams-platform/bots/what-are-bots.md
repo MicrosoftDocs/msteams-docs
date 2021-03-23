@@ -7,13 +7,15 @@ ms.author: anclear
 ---
 # Bots in Microsoft Teams
 
-A bot also referred to as chat bot or conversational bot is an app that runs simple and repetitive automated tasks performed by users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, take dinner reservations, or provide travel information. A bot interaction can be a quick question and answer or it can be a complex conversation that provides access to services.
+A bot also referred to as chatbot or conversational bot is an app that runs simple and repetitive automated tasks performed by users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, make dinner reservations, or provide travel information. A bot interaction can be a quick question and answer or it can be a complex conversation that provides access to services.
 
 Conversational bots allow users to interact with your web service through text, interactive cards, and task modules.
 
 ![Invoke bot using text](~/assets/images/invokebotwithtext.png)
 
 ![Invoke bot using card](~/assets/images/invokebotwithcard.png)
+
+![Invoke bot using task module](~/assets/images/task-module-example.png)
 
 Conversational bots are incredibly flexible and can be scoped to handle a few simple commands or complex, artificial-intelligence-powered and natural-language-processing tasks. They can be one aspect of a larger application, or be completely stand-alone.
 

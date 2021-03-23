@@ -34,19 +34,21 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
 
-4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**.
+4. In the right pane of the **Manifest editor** and in the **Commands** section, select **Add**. The **New Command** screen appears.
 
     ![App Studio Command Menu Add button](./conversations/media/AppStudio-CommandMenu-Add.png)
 
-5. The **New Command** screen appears. Enter the **Command text** that must appear as the command menu for your bot. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
+5. Enter the **Command text** that must appear as the command menu for your bot.
 
-6. Select the **Scope** check boxes to select where this command menu must appear and select **Save**.
+6. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
+
+7. Select the **Scope** check boxes to select where this command menu must appear and select **Save**.
 
     ![App Studio New Command Menu button](./conversations/media/AppStudio-NewCommandMenu.png)
 
 ### Create a command menu for your bot by editing Manifest.json
 
-Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. When using this method, follow these points:
+Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
 * Each menu supports up to 10 commands.
 * Create a single command menu that works in all scopes.
@@ -187,9 +189,9 @@ To enable smooth functioning of your bot code, there are few best practices that
 
 ## Command menu best practices
 
-* **Keep it simple**: The bot menu is meant to present the key capabilities of your bot.
-* **Keep it short**: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
-* **Keep it invokable**: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
+* Keep it simple: The bot menu is meant to present the key capabilities of your bot.
+* Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
+* Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
 
 > [!NOTE]
 > If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.

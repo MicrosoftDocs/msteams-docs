@@ -3,6 +3,7 @@ title: Incoming call notifications
 description: Detailed technical information on handling notifications from incoming calls
 keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
+ms.topic: conceptual
 ---
 
 # Incoming call notifications
@@ -11,7 +12,7 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in legacy format and reply with the following:
+The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and reply with the following:
 
 ```http
 HTTP/1.1 204 No Content
@@ -32,13 +33,13 @@ HTTP/1.1 302 Found
 Location: your-new-location
 ```
 
-Enable your bot to answer an incoming call using the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition and you want to embed this information in the `callbackUri` for routing to the right instance.
+Enable your bot to answer an incoming call using the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
 
 The next section provides details on authenticating the callback by inspecting the token posted to your webhook.
 
 ## Authenticate the callback
 
-Your bot must inspect the token posted to your webhook to validate the request. Every time the API posts to the webhook, the HTTP POST message contains an OAuth token in the Authorization header as a bearer token, with audience as your application's App ID.
+Your bot must inspect the token posted to your webhook to validate the request. Every time the API posts to the webhook, the HTTP POST message contains an OAuth token in the Authorization header as a bearer token, with the audience as your application's App ID.
 
 Your application must validate this token before accepting the callback request.
 
@@ -72,13 +73,13 @@ The OAuth token has the following values, and is signed by Skype:
 }
 ```
 
-The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each of the OAuth token values are used as follows:
+The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each OAuth token value is used as follows:
 
-* **aud** audience is the App ID URI specified for the application.
-* **tid** is the tenant id for Contoso.com.
-* **iss** is the token issuer, `https://api.botframework.com`.
+* aud where audience is the App ID URI specified for the application.
+* tid is the tenant id for Contoso.com.
+* iss is the token issuer, `https://api.botframework.com`.
 
-Your code handling the webhook must validate the token, ensure it has not expired, and check whether it has been signed by our published OpenID configuration. You must also check whether **aud** matches your App ID before accepting the callback request.
+For your code handling, the webhook must validate the token, ensure it has not expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
 
 For more information, see [validate inbound requests](https://github.com/microsoftgraph/microsoft-graph-comms-samples/blob/master/Samples/Common/Sample.Common/Authentication/AuthenticationProvider.cs).
 

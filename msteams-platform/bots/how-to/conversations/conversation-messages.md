@@ -107,7 +107,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when someone is added to a conversation:
+To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when a user is added to a conversation:
 
 The following code shows an example of sending a message:
 
@@ -196,10 +196,10 @@ async def on_members_added_activity(
 
 ---
 
-Messages sent between users and bots include internal channel data within the message. This data allows the bot to properly communicate on that channel. The Bot Builder SDK allows you to modify the message structure.
-
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one activity with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+
+Messages sent between users and bots include internal channel data within the message. This data allows the bot to properly communicate on that channel. The Bot Builder SDK allows you to modify the message structure.
 
 ## Teams channel data
 
@@ -249,15 +249,15 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                |                                                                                         |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
-| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16 (such as U+1F600 for grinning face)          |
+| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported.  |
+| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 You can also add notifications to your message using the `Notification.Alert` property.
 
 ## Notifications to your message
 
-Notifications alert users about new tasks, mentions, and comments. These alerts are related to what they are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
+Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
 
 The following code shows an example of adding notifications to your message:
 
@@ -345,7 +345,7 @@ Specify the height and width of each image by using XML. In markdown, the image 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
-A conversational bot can include adaptive cards that simplify business workflows as adaptive cards offer rich customizable text, speech, images, buttons and input fields.
+A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons and input fields.
 
 ## Adaptive cards
 
@@ -391,8 +391,10 @@ Following are the code samples for Teams conversation bot:
 
 ## See also
 
-* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [!div class="nextstepaction"]
+> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+> [!div class="nextstepaction"]
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## Next step
 
