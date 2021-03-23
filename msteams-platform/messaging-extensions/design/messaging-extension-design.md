@@ -9,7 +9,6 @@ ms.topic: conceptual
 # Designing your Microsoft Teams messaging extension
 
 Messaging extensions are shortcuts for inserting app content or acting on a message without navigating away from the conversation.
-Hi anuj here
 To guide your app design, the following information describes and illustrates how people can add, use, and manage messaging extensions in Teams.
 
 ## Microsoft Teams UI Kit
