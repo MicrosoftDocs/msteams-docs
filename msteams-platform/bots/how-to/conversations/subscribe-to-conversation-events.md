@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Microsoft Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
+When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them, such as the following:
 
 * Trigger a welcome message when your bot is added to a team.
 * Trigger a welcome message when a new team member is added or removed.
@@ -22,7 +22,7 @@ When building your conversational bots for Microsoft Teams, you can work with co
 You can use conversation update events to provide better notifications and more effective bot actions.
 
 > [!IMPORTANT]
-> New events can be added at any time and your bot begins to receive them.
+> You can add new events any time and your bot begins to receive them.
 > You must design your bot to receive unexpected events.
 > If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
@@ -221,7 +221,7 @@ async def on_teams_channel_renamed(
 
 * * *
 
-### Channel Deleted
+### Channel deleted
 
 The channel deleted event is sent to your bot whenever a channel is deleted in a team where your bot is installed.
 
@@ -396,7 +396,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID is unique for your bot and can be cached for future use by your service such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -486,7 +486,7 @@ This is the message your bot receives when the bot is added **to a team**.
 }
 ```
 
-This is the message your bot receives when the bot is added **to a one-to-one chat*.
+This is the message your bot receives when the bot is added to a one-to-one chat.
 
 ```json
 {
@@ -1051,7 +1051,7 @@ Now that you have worked with the conversation update events, you can understand
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include: "angry", "heart", "laugh", "like", "sad", "surprised". This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects.
+The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include "angry", "heart", "laugh", "like", "sad", and "surprised". This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1280,9 +1280,9 @@ async def on_reactions_removed(
 
 The next section illustrates a simple code sample that incorporates bots conversation events into a Teams application.
 
-## Samples
+## Sample code
 
-For sample code showing the bots conversation events, see [Microsoft Teams bots conversation events sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot).
+For sample code showing the bots conversation events, see [Teams bots conversation events sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot).
 
 ## Next step
 
