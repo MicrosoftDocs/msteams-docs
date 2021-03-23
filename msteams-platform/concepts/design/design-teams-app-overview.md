@@ -134,6 +134,13 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 * [Task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
 
+## App customization
+
+Understand how the admin can customize the apps look-and-feel, if the developer has defined the configurable properties in the manifest schema. For more information on `configurableProperties`, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+> [!NOTE]
+> The `configurableProperties` is currently available in developer's preview only.
+
 ## Tools and samples
 
 The following tools can help designers and developers get started.
