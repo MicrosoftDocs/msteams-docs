@@ -199,11 +199,11 @@ async def on_members_added_activity(
 > [!NOTE]
 > Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 
-Messages sent between users and bots include internal channel data within the message. This data allows the bot to properly communicate on that channel. The Bot Builder SDK allows you to modify the message structure.
+Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You must cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You must cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
 The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
@@ -211,14 +211,14 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 
 * `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `tenant.id`: Azure Active Directory tenant ID passed in all contexts.
-* `team`: Passed only in channel contexts not in personal chat.
+* `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
   * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channel`: Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
   * `id`: GUID for the channel.
   * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: Deprecated. This property is only included for backwards compatibility.
-* `channelData.teamsChannelId`: Deprecated. This property is only included for backwards compatibility.
+* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
 ### Example channelData object (channelCreated event)
 
@@ -249,7 +249,7 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                |                                                                                         |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported.  |
+| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
 | Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
@@ -345,11 +345,11 @@ Specify the height and width of each image by using XML. In markdown, the image 
 * Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
 * Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
 
-A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons and input fields.
+A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
 ## Adaptive cards
 
-Adaptive cards can be authored in a bot and shown in multiple apps such as Teams, your website and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Adaptive cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 The following code shows an example of sending a simple adaptive card:
 

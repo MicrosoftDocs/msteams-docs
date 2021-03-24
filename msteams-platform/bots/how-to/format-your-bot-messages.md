@@ -33,9 +33,9 @@ After you format text content, ensure that your formatting works across all plat
 
 ## Cross-platform support
 
-Some styles are not currently supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
+Some styles are currently not supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
 
-| Style                     | Text-only messages | Rich cards (XML only) |
+| Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |
 | Bold                      | ✔ | ✖ |
 | Italic                    | ✔ | ✔ |
@@ -57,7 +57,7 @@ Support for text formatting varies by type of message and by platform.
 
 ### Text-only messages
 
-The following table provides a list of styles and which of these styles are supported on desktop, iOS and Android:
+The following table provides a list of styles and which of these styles are supported on desktop, iOS, and Android:
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |

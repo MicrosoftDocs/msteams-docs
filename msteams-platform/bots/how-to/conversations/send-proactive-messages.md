@@ -15,14 +15,14 @@ A proactive message is any message sent by a bot that is not in response to a re
 * Notifications
 * Scheduled messages
 
-For your bot to send a proactive message to a user, group chat or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed to that location. You can [proactively install your app using Graph](#proactively-install-your-app-using-graph) in a team, if required or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
+For your bot to send a proactive message to a user, group chat or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if required or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
 
 Sending a proactive message is different from sending a regular message. There is no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You cannot create a new group chat or a new channel in a team with proactive messaging.
 
 **To send a proactive message**
 
-1. [Get the user ID, team ID or channel ID](#get-the-user-id-team-id-or-channel-id) if required.
-1. [Create the conversation](#create-the-conversation) if required.
+1. [Get the user ID, team ID or channel ID](#get-the-user-id-team-id-or-channel-id), if required.
+1. [Create the conversation](#create-the-conversation), if required.
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
@@ -68,11 +68,11 @@ Sending proactive messages to users is a very effective way to communicate with 
 
 ### Welcome messages
 
-When proactive messaging are used to send a welcome message to a user, there is no context for why the users receive the message. This is also the first time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. This is also the first time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
 
-* **Why a user is receiving the message**: It must be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and who installed it.
-* **What do you offer**: Users must be able to identify what they can do with your app and what value can you bring to them.
-* **What should they do next**: Invite users to try out a command, or interact with your app.
+* Why a user is receiving the message: It must be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and who installed it.
+* What do you offer: Users must be able to identify what they can do with your app and what value can you bring to them.
+* What should they do next: Invite users to try out a command, or interact with your app.
 
 Poor welcome messages can lead to users blocking your bot. Write to the point and clear welcome messages. Iterate on the welcome messages if they are not having the desired effect.
 
@@ -80,24 +80,24 @@ Poor welcome messages can lead to users blocking your bot. Write to the point an
 
 To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they have received a notification. Good notification messages generally include:
 
-* **What happened**: A clear indication of what happened to cause the notification.
-* **What was the result**: It must be clear what item or thing was updated to cause the notification.
-* **Who or what triggered it**: Who or what took action that caused the notification to be sent.
-* **What can users do in response**: Make it easy for your users to take actions based on your notifications.
-* **How can users opt out**: You must provide a path for users to opt out of additional notifications.
+* What happened: A clear indication of what happened to cause the notification.
+* What was the result: It must be clear what item was updated to cause the notification.
+* Who or what triggered it: Who or what took action that caused the notification to be sent.
+* What can users do in response: Make it easy for your users to take actions based on your notifications.
+* How can users opt out: You must provide a path for users to opt out of additional notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
 ## Proactively install your app using Graph
 
 > [!Note]
-> Proactively installing apps using the Microsoft Graph is currently in beta.
+> Proactively installing apps using Graph is currently in beta.
 
 Proactively message users that have previously not installed or interacted with your app. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. In this case, you can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
 
 You can only install apps that are in your organizational app catalog or the Teams app store.
 
-See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Microsoft Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
+See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
 The next section illustrates a simple code sample that proactively installs your app using Graph.
 

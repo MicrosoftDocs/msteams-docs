@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or groupchat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
 
 Bots in a group or channel only receive messages when they are mentioned `@botname`. They do not receive any other messages sent to the conversation.
 
@@ -26,13 +26,13 @@ Now you can create new conversation threads and easily manage different conversa
 
 When your bot is installed in a team, you must create a new conversation thread rather than reply to an existing one. At times it is difficult to differentiate between two conversations. If the conversation is threaded, it is easier to organize and manage different conversations in channels. This is a form of [proactive messaging](~/bots/how-to/conversations/send-proactive-messages.md).
 
-Next you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
+Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its own name in the message text. Ensure that your message parsing handles @mention. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
+Every message to your bot from a group or channel contains an @mention with its name in the message text. Ensure that your message parsing handles @mention. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
 
-You must also strip out the @mentions from the text of the message your bot receives.
+You must also strip out the @mentions from the content of the message your bot receives.
 
 ### Retrieve mentions
 
@@ -261,7 +261,7 @@ Do not send a message in the following cases:
 
 ## Learn more
 
-Your bot can get additional information about the group chat or team where it is installed. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
+Your bot can get additional information about the groupchat or team where it is installed. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
 
 There are also additional events that your bot can subscribe and respond to. For more information, see [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 

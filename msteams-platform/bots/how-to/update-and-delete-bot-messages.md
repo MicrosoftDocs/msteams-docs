@@ -67,7 +67,7 @@ For information on REST API request body, see [activity](/azure/bot-service/rest
 
 |Request body | Returns |
 |----|----|
-| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object |
+| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object |
 
 ---
 * * *
@@ -80,7 +80,8 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 
 # [C#](#tab/dotnet)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+To update existing card on a button selection, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
 activity.Id = turnContext.Activity.ReplyToId;
@@ -89,7 +90,8 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 
 # [TypeScript](#tab/typescript)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+To update existing card on a button selection, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+
 ```typescript
 const message = MessageFactory.attachment(card);
 message.id = context.activity.replyToId;
@@ -98,7 +100,7 @@ await context.updateActivity(message);
 
 # [Python](#tab/python)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
+To update existing card on a button selection, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class. See [TurnContextClass](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true).
 
 ```python
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
@@ -166,7 +168,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-For REST API, request body is not applicable and it returns an HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
+For REST API, request body is not applicable and it returns an HTTP status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
 
 ---
 
@@ -178,7 +180,7 @@ The official conversation basics are as follows:
 
 | Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
+|Teams conversation basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
 
 ## Next step
 

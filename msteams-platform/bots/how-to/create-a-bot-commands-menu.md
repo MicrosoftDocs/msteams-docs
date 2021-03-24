@@ -18,11 +18,11 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 ## Create a command menu for your bot
 
-Command menus are defined in your app manifest. You can either use **App Studio** to create them, or add them manually in the app manifest.
+Command menus are defined in your app manifest. You can either use **App Studio** to create them or add them manually in the app manifest.
 
 ### Create a command menu for your bot using App Studio
 
-A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps for adding a command menu are the same, whether you are creating a new manifest or editing an existing one.
+A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you are create a new manifest or edit an existing one.
 
 **To create a command menu for your bot using App Studio**
 
@@ -148,7 +148,7 @@ You must handle menu commands in your bot code as you would handle any message f
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its own name in the message text returned. Your message parsing must handle the message received by a bot with its own name before handling the command being returned.
+Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text returned. Your message parsing must handle the message received by a bot with its own name before handling the command being returned.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they would do for any other message.
