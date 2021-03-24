@@ -321,21 +321,54 @@ The following code snippets are examples of `task/submit` request and response:
 In the previous sections of this article, you have seen that most of the development paradigms could be extrapolated from Task Module requests and responses into tab requests and responses. However, when it comes to handling authentication, the workflow for Adaptive Card Tabs follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md). 
 When a `tab/fetch` request is triggered and receives a tab **auth** response a sign-in page is rendered.  
 
-**To send an authentication code to Teams**
+**To get an authentication code through `tab/fetch` invoke**
 
-1. Select **Log In**. A pop-up window hosting your webpage 
+1. Open your app. The sign in page appears.
 
-In the above screenshot, the app logo is provided via the icon definition in the app manifest, and the title string below the icon is provided via the title property returned in the tab “auth” response body. Clicking the login button will redirect the user to the url provided in the value property of the tab “auth” response body.
-Clicking the Log In button launches a pop up window hosting your webpage using the given authentication URL. After the user signs in, you should close your window and send an “authentication code” to the Teams client. The Teams client then reissues the “tab/fetch” request to your service, which includes the authentication code provided by your hosted web page. 
+    > [!NOTE]
+    > The app logo is provided through the `icon` property defined in the app manifest, and the title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
+
+1. Select **Sign in**. You are redirected to the authentication URL provided in the `value` property of the **auth** response body. 
+1. A pop-up window appears. This pop-up window hosts your web page using the authentication URL.
+1. After you sign in, close the window. An *authentication code* is sent to the Teams client.
+1. The Teams client then reissues the `tab/fetch` request to your service, which includes the authentication code provided by your hosted web page. 
 
 ### `tab/fetch` authentication data flow
 
-The following image provides information on how the authentication data flow works for a `tab/fetch` invoke.
+The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-submit-action.png" alt-text="Example of handling submits from an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of handling submits from an Adaptive Card." border="false":::
 
+**`tab/fetch` auth response**
 
+The following code snippet is an example of `tab/fetch` auth response:
 
+```json
+// tab/auth POST response (openURL)
+{
+    "tab": {
+        "type": "auth",
+        "suggestedActions":{
+            "actions":[
+                {
+                    "type": "openUrl",
+                    "value": "https://example.com/auth",
+                    "title": "Sign in to this app"
+                }
+            ]
+        }
+    }
+}
+```
 
+### Example
 
+The following is a reissued request example:
+
+```json
+{
+    name: 'tab/fetch'
+
+}
+```
 
