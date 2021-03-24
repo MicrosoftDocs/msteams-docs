@@ -91,7 +91,7 @@ The following image displays the tab content with red icon:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
-Choosing the relative button fires either `saveGray()` or `saveRed()`, and invokes the following:
+Choosing the relative button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
