@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Incoming call notifications
 
-In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the Webhook (for calling) URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
+In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the Webhook for calling URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
 
 ## Protocol determination
 
@@ -42,6 +42,8 @@ The next section provides details on authenticating the callback by inspecting t
 Your bot must inspect the token posted to your webhook to validate the request. Every time the API posts to the webhook, the HTTP POST message contains an OAuth token in the Authorization header as a bearer token, with the audience as your application's App ID.
 
 Your application must validate this token before accepting the callback request.
+
+The following sample code is used to authenticate the callback:
 
 ```http
 POST https://bot.contoso.com/api/calls

@@ -8,7 +8,7 @@ ms.date: 11/16/2018
 
 # Requirements and considerations for application-hosted media bots
 
-An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure.
+An application-hosted media bot requires the [`Microsoft.Graph.Communications.Calls.Media` .NET library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) to access the audio and video media streams. The bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure.
 
 > [!NOTE]
 > * The guidance for developing messaging and Interactive Voice Response (IVR) bots does not completely apply to building application-hosted media bots.
@@ -33,7 +33,7 @@ The next section provides details on where real-time media calls are located.
 
 ## Real-time media calls stay where they are created
 
-Real-time media calls stay on the machine where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Microsoft Teams call or meeting flows to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can gracefully end the calls.
+Real-time media calls stay on the computer where they were created. A real-time media call is pinned to the virtual machine (VM) instance that accepted or started the call. Media from a Microsoft Teams call or meeting flows to that VM instance, and media the bot sends back to Microsoft Teams must also originate from that VM. If there are any real-time media calls in progress when the VM is stopped, those calls are abruptly terminated. If the bot has prior knowledge of the pending VM shutdown, it can gracefully end the calls.
 
 The next section provides details on accessibility of application-hosted media bots.
 
@@ -57,7 +57,7 @@ Application-hosted media bots require the following scalability and performance 
 
 - The bots require more compute and network bandwidth capacity than messaging bots and incur significantly higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot does not accept more simultaneous calls than it can manage. A video-enabled bot can sustain only one or two concurrent media sessions per CPU core if using the raw RGB24 or NV12 video formats.
 - The Real-time Media Platform does not currently take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding or decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot takes advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
-- The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the minimum size required. For more information about Azure VM types, se [Azure documentation](/azure/virtual-machines/windows/sizes-general).
+- The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the minimum size required. For more information about Azure VM types, see [Azure documentation](/azure/virtual-machines/windows/sizes-general).
 
 The next section provides samples that illustrate different local media scenarios.
 

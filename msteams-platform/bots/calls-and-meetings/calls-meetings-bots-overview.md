@@ -38,7 +38,7 @@ Calls are either peer-to-peer between a person and your bot, or multiparty betwe
 
 ![Calling types](~/assets/images/calls-and-meetings/call-types.png)
 
-* A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. Multiparty call is not enabled yet in the Teams user interface.
+* A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. The multiparty call is not enabled yet in the Teams user interface.
 * Graph permissions are not necessary for a user to initiate a peer-to-peer call with your bot. Additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
 * A call can start as peer-to-peer and eventually become a multiparty call. Your bot can initiate multiparty calls by inviting others, provided your bot has the proper permissions. If your bot does not have permissions to participate in group calls and if a participant adds another participant to the call, your bot is dropped from the call.
 
@@ -61,9 +61,9 @@ From a Teams user's perspective, there are two kinds of online meetings, ad hoc 
 
 When a bot is participating in a call or online meeting, it must deal with audio and video streams. When users talk on a call, show themselves on a webcam, or present their screens in a meeting, to a bot it is shown as audio and video streams. If a bot wants to say something as simple as, **press 0 to reach the operator** in an interactive voice response (IVR) scenario, it requires playing a .WAV file. Collectively, this is referred to as media or real-time media.
 
-Real-time media refers to scenarios where media must be processed in real time, as opposed to playback of previously recorded audio or video. Dealing with media streams, particularly real-time media streams, is extremely complex. Microsoft has created the Real-time Media Platform to handle these scenarios and to offload as much of the traditional heavy lifting of real-time media processing as possible. When the bot answers an incoming call, or joins a new or existing call, it needs to tell the Real-time Media Platform how media will be handled. If you are building an IVR application, you can offload the expensive audio processing to Microsoft. Alternately, if your bot requires direct access to media streams, that scenario is also supported. There are the two types of media processing:
+Real-time media refers to scenarios where media must be processed in real time, as opposed to playback of previously recorded audio or video. Dealing with media streams, particularly real-time media streams, is extremely complex. Microsoft has created the Real-time Media Platform to handle these scenarios and to offload as much of the traditional heavy lifting of real-time media processing as possible. When the bot answers an incoming call or joins a new or existing call, it needs to tell the Real-time Media Platform how media will be handled. If you are building an IVR application, you can offload the expensive audio processing to Microsoft. Alternately, if your bot requires direct access to media streams, that scenario is also supported. There are two types of media processing:
 
-* Service-hosted media: Bots focus on managing application workflow, such as, routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use APIs, such as the following:
+* Service-hosted media: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use APIs, such as the following:
 
     * `PlayPrompt` for playing an audio clip.
     * `Record` for recording audio clips.
@@ -71,7 +71,7 @@ Real-time media refers to scenarios where media must be processed in real time, 
 
 For example, knowing when a user has pressed **0** to reach the operator.
 
-* Application-hosted media: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/) and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
+* Application-hosted media: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
 
 ## See also
 
