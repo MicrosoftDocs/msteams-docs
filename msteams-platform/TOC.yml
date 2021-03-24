@@ -334,6 +334,8 @@
   items:
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
+  - name: Microsoft Graph Toolkit
+    href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
