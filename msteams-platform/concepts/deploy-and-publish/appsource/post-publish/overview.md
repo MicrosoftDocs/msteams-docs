@@ -34,13 +34,13 @@ When a user installs your application one of the first things they do is consent
 >
 > * A bot is added or removed.
 > * An existing bot's unique `botId` value is changed.
-> * An existing bot's `isNotificationOnly` property is changed.
-> * An existing bot's `supportsFiles` `supportsCalling` properties are changed.
+> * An existing bot's `isNotificationOnly` boolean value is changed.
+> * An existing bot's `supportsFiles` and `supportsCalling` boolean values are changed.
 > * A messaging extension `composeExtensions` is added or removed.
 > * A new connector is added.
 > * A new static or personal tab is added.
 > * A new configurable group or channel tab is added.
-> * The properties inside `webApplicationInfo` are changed. For changes to `webApplicationInfo`, consent is only required in Team scope.
+> * The properties inside `webApplicationInfo` are changed. For changes to `webApplicationInfo`, consent is only required in the Teams scope.
 
 ### Images of user consent flow:
 
