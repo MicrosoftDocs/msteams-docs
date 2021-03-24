@@ -22,7 +22,7 @@ The application must reference the [Microsoft Teams JavaScript client SDK](/java
 
 An example of a configuration page is shown in the following image: 
 
-![configuration page](../../assets/images/tab-images/configuration-page.png)
+![configuration page](~/assets/images/tab-images/configuration-page.png)
 
 
 The corresponding code for configuration page is shown in the following section:
@@ -85,10 +85,10 @@ The corresponding code for configuration page is shown in the following section:
 Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon. 
 
 The following image displays the tab content with gray icon:
-![configure tab with select gray](../../assets/images/tab-images/configure-tab-with-gray.png)
+![configure tab with select gray](~/assets/images/tab-images/configure-tab-with-gray.png)
 
 The following image displays the tab content with red icon:
-![configure tab with select red](../../assets/images/tab-images/configure-tab-with-red.png)
+![configure tab with select red](~/assets/images/tab-images/configure-tab-with-red.png)
 
 Choosing the relative button fires either `saveGray()` or `saveRed()`, and invokes the following:
 
