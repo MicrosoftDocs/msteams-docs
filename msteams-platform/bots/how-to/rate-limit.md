@@ -2,6 +2,7 @@
 title: Optimize your bot with rate limiting in Teams
 description: Rate limiting and best practices in Microsoft Teams
 keywords: teams bots rate limiting
+ms.topic: conceptual
 ---
 
 # Optimize your bot with rate limiting in Teams
@@ -108,7 +109,7 @@ You can also handle rate limit using the per bot per thread limit.
 ## Per bot per thread limit
 
 >[!NOTE]
->Message splitting at the service level results in higher than expected requests per second (RPS). If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
+> Message splitting at the service level results in higher than expected requests per second (RPS). If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
 The per bot per thread limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
 
@@ -133,14 +134,14 @@ The following table provides the per bot per thread limits:
 | Get conversations | 30 | 120 |
 | Get conversations | 3600 | 3600 |
 
-You can also handle rate limit using the per thread limit for all bots.
-
 >[!NOTE]
 > Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They will be throttled to 5 requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
 
+You can also handle rate limit using the per thread limit for all bots.
+
 ## Per thread limit for all bots
 
-The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
+The per thread limit for all bots controls the traffic that all bots are allowed to generate across a single conversation. A conversation here is 1:1 between bot and user, a group chat, or a channel in a team.
 
 The following table provides the per thread limit for all bots:
 

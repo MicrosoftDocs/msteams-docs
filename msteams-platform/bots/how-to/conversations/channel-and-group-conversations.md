@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To install the Microsoft Teams bot in a team or groupchat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
+To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
 
 Bots in a group or channel only receive messages when they are mentioned `@botname`. They do not receive any other messages sent to the conversation.
 
@@ -261,7 +261,7 @@ Do not send a message in the following cases:
 
 ## Learn more
 
-Your bot can get additional information about the groupchat or team where it is installed. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
+Your bot can get additional information about the group chat or team where it is installed. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
 
 There are also additional events that your bot can subscribe and respond to. For more information, see [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 

@@ -22,6 +22,7 @@ There are two ways to send files to and receive files from a bot:
 ## Use the Graph APIs
 
 Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
+
 * A user's OneDrive folder for `personal` and `groupchat` files.
 * The files in a team's channel for `channel` files.
 
@@ -313,7 +314,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 
 The following code sample demonstrates how to obtain file consent and upload files to Teams from a bot:
 
-|**Sample name** | **Description** | **.NETCore** | **Javascript** | **Python**|
+|Sample name | Description | .NETCore | Javascript | Python |
 |----------------|-----------------|--------------|----------------|-----------|
 | File upload | Demonstrates how to obtain file consent and upload files to Teams from a bot. Also, how to receive a file sent to a bot. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/56.teams-file-upload) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/56.teams-file-upload) |
 

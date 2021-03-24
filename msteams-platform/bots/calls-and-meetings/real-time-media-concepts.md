@@ -2,6 +2,7 @@
 title: Real-time media calls and online meetings with Microsoft Teams
 description: Understand key concepts in building bot that can conduct real-time audio and video calls and online meetings.
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media
+ms.topic: conceptual
 ---
 
 # Real-time media calls and meetings with Microsoft Teams
@@ -14,11 +15,11 @@ The platform provides a simple socket-like API for the bot to send and receive m
 
 ## Media session
 
-When a real-time media bot answers an incoming call or joins a Microsoft Teams meeting, it must declare what modalities it must support. For each supported modality, the bot declares whether it can send and receive media, receive only, or send only. For example, a bot designed to handle 1:1 Teams calls, requires to both send and receive audio, but only send video as it does not require to receive the video of the caller. The set of audio and video modalities established between the bot and the Teams caller or meeting is called the media session.
+When a real-time media bot answers an incoming call or joins a Teams meeting, it must declare what modalities it must support. For each supported modality, the bot declares whether it can send and receive media, receive only, or send only. For example, a bot designed to handle 1:1 Teams calls, requires to both send and receive audio, but only send video as it does not require to receive the video of the caller. The set of audio and video modalities established between the bot and the Teams caller or meeting is called the media session.
 
 Two types of video modalities are supported, main video and video-based screen sharing. Main video is used to transport the video from a user's webcam. Video-based screen sharing allows a user to share his or her screen as a video stream. The platform allows a bot to send and receive both video types.
 
-When joined to a Teams meeting, a bot can receive multiple main video streams simultaneously up to 10 per media session. This allows the bot to see more than one participant in the meeting.
+When joined to a Teams meeting, a bot can receive multiple main video streams simultaneously up to ten per media session. This allows the bot to see more than one participant in the meeting.
 
 The next section provides details about the bot sending and receiving media as a sequence of frames.
 
