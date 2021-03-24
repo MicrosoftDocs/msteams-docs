@@ -33,7 +33,7 @@ The sequence is as follows:
 1. If the user is not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
 1. The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
-1. The Teams client then reissues the query to your service, which includes the authentication code that passed in step 5.
+1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
 
 Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 

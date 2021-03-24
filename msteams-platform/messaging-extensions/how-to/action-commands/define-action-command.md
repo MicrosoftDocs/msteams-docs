@@ -102,7 +102,7 @@ The following image displays the action command static parameter selection:
 
 ### Create an action command manually
 
-To manually add your action-based messaging extension command to your app manifest, you must  add the follow parameters to the `composeExtension.commands` array of objects.
+To manually add your action-based messaging extension command to your app manifest, you must add the follow parameters to the `composeExtension.commands` array of objects.
 
 | Property name | Purpose | Required? | Minimum manifest version |
 |---|---|---|---|

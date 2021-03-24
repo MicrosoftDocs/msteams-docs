@@ -300,7 +300,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 # [JSON](#tab/json)
 
 > [!NOTE]
-> * The `activityPreview` must contain a `message` activity with exactly 1 Adaptive Card attachment. The `<< Card Payload >>` value is a placeholder for the card you want to send.
+> * The `activityPreview` must contain a `message` activity with exactly one Adaptive Card attachment. The `<< Card Payload >>` value is a placeholder for the card you want to send.
 
 ```json
 {
@@ -394,7 +394,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending by selecting the **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to pre-populate the task module so the user does not have to fill out all  information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to update the task module so that the user does not have to fill out all information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
