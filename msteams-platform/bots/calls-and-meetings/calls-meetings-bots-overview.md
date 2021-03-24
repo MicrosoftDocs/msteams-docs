@@ -69,7 +69,7 @@ Real-time media refers to scenarios where media must be processed in real time, 
     * `Record` for recording audio clips.
     * `SubscribeToTone` for subscribing to DTMF tones.
 
-For example, knowing when a user has pressed **0** to reach the operator.
+    For example, knowing when a user has pressed **0** to reach the operator.
 
 * Application-hosted media: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
 
