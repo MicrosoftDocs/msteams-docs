@@ -1,9 +1,9 @@
 ---
 title: SSO support for your messaging extensions
-author: clearab
+author: KirtiPereira
 description: How to enable SSO support for your messaging extensions
 ms.topic: conceptual
-ms.author: lajanuar
+ms.author: surbhigupta
 ---
 
 # Single sign-on (SSO) support for messaging extensions
@@ -46,63 +46,61 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
   
     If you want to store the token, add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file:
 
-   ```json
-   protected override async Task<InvokeResponse>OnInvokeActivityAsync(ITurnContext<InvokeActivity>turnContext, CancellationToken cancellationToken)
+   ```C#
+   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
-          JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
-          if(valueObject["authentication"] !=null)
-          {
-             JObject authenticationObject=JObject.FromObject(valueObject["authentication"]);
-             if(authenticationObject["token"] !=null)
-               {
-                  //If the token is NOT exchangeable, then do NOT deduplicate requests.
-                  if(await TokenIsExchangeable(turnContext, cancellationToken))
-                  {
-                     return await base.OnInvokeActivtiyAsync(turnContext, cancellationToken).ConfigureAwait(false);
-                     //do something
-                  }
-                else
-                  {
-                     var response=new InvokeResponse();
-                     response.Status=412;
-                     return response;
-                  }
-               }
-           }
-        return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+            JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+            if (valueObject["authentication"] != null)
+            {
+                JObject authenticationObject = JObject.FromObject(valueObject["authentication"]);
+                if (authenticationObject["token"] != null)
+                {
+                    //If the token is NOT exchangeable, then return 412 to require user consent
+                    if (await TokenIsExchangeable(turnContext, cancellationToken))
+                    {
+                        return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
+                    }
+                    else
+                    {
+                        var response = new InvokeResponse();
+                        response.Status = 412;
+                        return response;
+                    }
+                }
+            }
+            return await base.OnInvokeActivityAsync(turnContext, cancellationToken).ConfigureAwait(false);
         }
-    private async Task<bool>TokenExchangeable(ITurnContext turnContext, CancellationToken cancellationToken)
+        private async Task<bool> TokenIsExchangeable(ITurnContext turnContext, CancellationToken cancellationToken)
         {
-          TokenResponse tokenExchangeResponse=null;
-          try
-          {
-            JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
-            var tokenExchangeRequest=
-            ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-            
-            tokenExchangeResponse=await(turnContext.Adapter as IExtendedUserProvider).ExchangeTokenAsync(
-             turnContext,
-             _connectionName,
-             turnContext.Activity.From.Id,
-             new TokenExchangeRequest
-             {
-               Token=tokenExchangeRequest.Token,
-             },
-             cancellationToken).ConfigureAwait(false);
-          }
+            TokenResponse tokenExchangeResponse = null;
+            try
+            {
+                JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
+                var tokenExchangeRequest =
+                ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
+                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
+                 turnContext,
+                 _connectionName,
+                 turnContext.Activity.From.Id,
+                 new TokenExchangeRequest
+                 {
+                     Token = tokenExchangeRequest.Token,
+                 },
+                 cancellationToken).ConfigureAwait(false);
+            }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
-    catch
+            catch
     #pragma warning restore CA1031 //Do not catch general exception types
-        {
-          //ignore exceptions
-          //if token exchange failed for any reason, tokenExchangeResponse above remains null, and a failure invoke response is sent to the caller.
-         //This ensures the caller knows that the invoke has failed.
-        }
-        if (tokenExchangeResponse==null || string.IsNullOrEmpty(TokenExchangeResponse.Token))
-           {
-             return false;
-           }
-          return true;
+            {
+                //ignore exceptions
+                //if token exchange failed for any reason, tokenExchangeResponse above remains null, and a failure invoke response is sent to the caller.
+                //This ensures the caller knows that the invoke has failed.
+            }
+            if (tokenExchangeResponse == null || string.IsNullOrEmpty(tokenExchangeResponse.Token))
+            {
+                return false;
+            }
+            return true;
         }
     
     ```    
