@@ -22,7 +22,7 @@ If you do not have a test tenant, you must join the Microsoft 365 developer prog
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
 3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs)
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
+5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
 ## Create teams and channels
 
@@ -246,6 +246,6 @@ As default, only global admins or Teams service admins can upload custom apps in
 
 To enable this setting, you must update the global App Setup Policy in your Teams Admin Portal.
 
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy" />
 
 For more information, see [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies).
