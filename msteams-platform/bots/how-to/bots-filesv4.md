@@ -26,7 +26,7 @@ Post messages with card attachments that refer to existing SharePoint files, usi
 * A user's OneDrive folder for `personal` and `groupchat` files.
 * The files in a team's channel for `channel` files.
 
-Graph APIs work in all Teams scopes. For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments).
+Graph APIs work in all Teams scopes. For more information, see [send chat message file attachments](/graph/api/chatmessage-post?view=graph-rest-beta&tabs=http#example-4-file-attachments&preserve-view=true).
 
 Alternately, you can send files to and receive files from a bot using the Teams bot APIs.
 
