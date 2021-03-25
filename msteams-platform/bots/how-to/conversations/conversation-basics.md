@@ -402,21 +402,9 @@ The next section provides status code responses for errors generated from Bot AP
 
 ## Status code responses
 
-A sample 403 status code response includes the following:
+The following image shows a sample 403 status code response:
 
-Sample 403 response:
-
-HTTP/1.1 403 Forbidden
-
-Content-Length: 102
-
-Content-Type: application/json; charset=utf-8
-
-Server: Microsoft-HTTPAPI/2.0
-
-Date: Fri, 30 Aug 2019 17:02:01 GMT
-
-{“error”:{“code”:”ConversationBlockedByUser”,”message”:”User blocked the conversation with the bot.”}}
+![Sample 403 response](~/assets/images/sample403response.png)
 
 Following are the status codes and their error code and message values:
 
