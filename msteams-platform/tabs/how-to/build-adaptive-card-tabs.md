@@ -27,7 +27,7 @@ Personal apps that render tabs must include a `staticTabs` array in their app ma
 > [!NOTE]
 > The `contentBotId` property is currently available in the developer preview manifest schema only. 
 
-Provide the `contentBotId` property with the `botId` the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tab that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#staticTab).
+Provide the `contentBotId` property with the `botId` the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tab that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
 Following is a sample Adaptive Card Tab manifest:
 
@@ -338,7 +338,7 @@ In the [invoke activities](#invoke-activities) section, you were informed that `
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of handling submits from Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow." border="false":::
 
 **`tab/fetch` auth response**
 
