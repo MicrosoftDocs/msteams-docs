@@ -51,9 +51,9 @@ For channel/group tabs, you also need to create an additional configuration page
 
 You can have a maximum of one (1) channel/group tab and up to sixteen (16) personal tabs per app.
 
-### Use Adaptive Cards to build tabs
+### Use Adaptive Card to build tabs
 
-When developing a tab using the traditional method, a developer needs to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, developers can render Adaptive Cards to a tab. While the front-end is rendered as Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Cards to render.
+When developing a tab using the traditional method, a developer needs to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, developers can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card to render.
 
 ## Mobile clients
 
@@ -73,8 +73,9 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 ## See also
 
 > [!div class="nextstepaction"]
-> [Tab requirements](../../../how-to/tab-requirements.md)
+> [Tab requirements](../../../how-to/tab-requirements)
 
 > [!div class="nextstepaction"]
-> [Build Adaptive Card tabs](../../../how-to/build-adaptive-card-tabs.md)
+> [Build Adaptive Card tabs](../../../how-to/build-adaptive-card-tabs)
+> 
 
