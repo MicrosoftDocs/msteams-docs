@@ -54,16 +54,14 @@ They can be triggered from the compose message area or the command box. Unlike a
 
 You also have the option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
 
-## Get Started
+## Code sample
 
 Ready to get started building? Try one of our quickstarts:
 
-* **C#**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
+| **Sample name** | **Description** | **.NET** | **Node.js** |
+|------------|-------------|----------------|------------|
+| Messaging extension with action-based commands | This sample illustrates how to build an action-based messaging extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) |
+| Messaging extension with search-based commands | This sample illustrates how to build a Search-based Messaging Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) |
 
 ## Learn more
 

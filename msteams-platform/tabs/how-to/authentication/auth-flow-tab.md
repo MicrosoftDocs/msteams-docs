@@ -38,12 +38,13 @@ Similar to other application auth flows in Teams, the start page must be on a do
 
 Although the tab context provides helpful information regarding the user, do not use this information to authenticate the user. Do authenticate the user even if you get the information as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters. The actor can also invoke a web page impersonating Microsoft Teams to load your tab content URL in an iframe and return its own data to the `getContext()` function. You must treat the identity-related information in the tab context simply as hints and validate them before use. Refer to the notes in [navigate to the authorization page from your pop-up page](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page).
 
-## Samples
+## Code sample
 
-For sample code showing the tab authentication process, see:
+Sample code showing the tab authentication process.
 
-* [Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node)
-* [Teams tab authentication sample (C#)](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp)
+| **Sample name** | **Description** | **Node.js** | **csharp** |
+|-----------------|-----------------|-------------|------------|
+| Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) |
 
 ## More details
 

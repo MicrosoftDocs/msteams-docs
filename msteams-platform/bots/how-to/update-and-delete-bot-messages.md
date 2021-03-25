@@ -149,7 +149,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-## Code samples
+## Code sample
 
 The official conversation basics are as follows:
 

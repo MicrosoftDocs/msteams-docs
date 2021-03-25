@@ -233,7 +233,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ---
 
-## Code samples
+## Code sample
 
 The official proactive messaging samples are as follows:
 

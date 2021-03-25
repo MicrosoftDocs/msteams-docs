@@ -43,11 +43,13 @@ for an example that demonstrates authentication flow for bots using Node.js and 
     > [!NOTE]
     > If you experience issues with authentication on mobile, ensure your JavaScript SDK is updated to version 1.4.1 or later.
 
-## Samples
+## Code sample
 
-For sample code showing the bot authentication process see:
+Sample code showing the bot authentication process:
 
-[Microsoft Teams bot authentication sample (Node.js)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+| **Sample name** | **Description** | **Node.js** |
+|-----------------|----------------|--------------|
+| Microsoft Teams bot authentication sample | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) |
 
 ## More details
 

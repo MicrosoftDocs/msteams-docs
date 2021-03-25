@@ -543,10 +543,12 @@ Book-a-room bot is designed for private chats (personal/1:1 scope) only. Since w
 
 You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0)   for Virtual Assistant and skills architecture.
 
-## Sample code to get started
+## Code sample
 
-- [Updated visual studio template](https://github.com/nebhagat/msteams-virtual-assistant-dotnet)
-- [Book-a-room bot skill code](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill)
+| **Sample name** | **Description** | **.NET** | **ASP.NET** |
+|----------|-----------------|----------|------------------|
+| Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+| Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. |  | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
 
 ## Virtual Assistant known limitations
 
