@@ -37,9 +37,9 @@ The following image displays the locations from where messaging extensions are i
 
 Choose how to populate the form in the task module for the users. Following are the ways to create the form that is rendered inside the task module:
 
-* **Static list of parameters** - This is the simplest method. You can define a list of parameters input fields in your app manifest the Teams client renders, but cannot control the formatting in this case.
-* **Adaptive Card** - You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
-* **Embedded web view** - You can choose to embed a custom web view in the task module to have a complete control over the UI and controls. 
+* **Static list of parameters**: This is the simplest method. You can define a list of parameters input fields in your app manifest the Teams client renders, but cannot control the formatting in this case.
+* **Adaptive Card**:  You can choose to use an adaptive card, which provides greater control over the UI, but still limits you on the available controls and formatting options.
+* **Embedded web view**:  You can choose to embed a custom web view in the task module to have a complete control over the UI and controls. 
 
 If you choose to create the task module with a static list of parameters and submits, the messaging extension is called. When using an embedded web view or an adaptive card, your messaging extension must handle an initial invoke event from the user, create the task module, and return it back to the client.
 
