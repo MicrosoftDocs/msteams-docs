@@ -337,7 +337,7 @@ When a `tab/fetch` request is triggered and receives a tab **auth** response a s
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of handling submits from Adaptive Cards." border="false":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of handling authentication." border="false":::
 
 **`tab/fetch` auth response**
 
