@@ -1,9 +1,9 @@
 ---
 title: Get started - Build a messaging extension
-author: heath-hamilton
+author: girliemac
 description: Quickly create a Microsoft Teams messaging extension using the Microsoft Teams Toolkit.
-ms.author: lajanuar
-ms.date: 11/04/2020
+ms.author: timura
+ms.date: 03/25/2021
 ms.topic: tutorial
 ---
 # Build a messaging extension for Microsoft Teams
@@ -11,10 +11,6 @@ ms.topic: tutorial
 There are two types of Teams app *messaging extensions*: [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
 In this lesson, you'll create a *search command* (also known as a *search-based messaging extension*), which is a shortcut for finding external content and sharing it in Teams. Users can access search commands from the [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md).
-
-## Your assignment
-
-Your organization's help desk communicates with users through Teams, but the tickets reside in a separate system. This means support staff must constantly go back and forth between apps. You'll investigate how you might reduce this much context switching by creating a simple search-based messaging extension for Teams.
 
 ## What you'll learn
 
@@ -30,6 +26,8 @@ Your organization's help desk communicates with users through Teams, but the tic
 
 If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
 
+You need know how to set up and build Teams app. If you haven’t, please complete the ["Hello, world"](../build-your-first-app/build-and-run.md) first, then try [building a bot](../build-your-first-app/build-bot.md) before proceeding this tutorial.  
+
 ## 1. Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
@@ -37,18 +35,12 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 * **App configurations and scaffolding** relevant to messaging extensions
 * **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
 
-> [!TIP]
-> If you haven't created a Teams app project before, you might find it helpful to follow [these instructions](../build-your-first-app/build-and-run.md) that explain projects in more detail.
-
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account.
-1. On the **Add capabilities** screen, select **Messaging Extension** then **Next**.
+1. On the **Select project** screen, at **Messaging Extensions** > **Search**, click **JS (JavaScript)**. 
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
-1. On the **Configure messaging extension** screen, do the following:
-    1. Choose only the **Search-based** option for the type of messaging extension.
-    1. Select **Create a new Bot** then **Create Bot Registration**. If successful, your new bot will have a **Registered** status.
-    1. For now, select **No** for the link unfurling option.
-1. Select **Finish** at the bottom of the screen to configure your project.
+1. Select **Create a new Bot** then click **Create Bot Registration** button. If successful, your new bot will have a *Registered* status. Now your bot is automatically registered with the Microsoft Azure Bot Service. 
+1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.
 
 ## 2. Identify relevant app project components
 
@@ -64,7 +56,7 @@ The app scaffolding provides a `botActivityHandler.js` file, located in the root
 
 ## 3. Set up a secure tunnel to your app
 
-For testing purposes, let's host your messaging extension on a local web server (port 3978).
+For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure localhost tunneling. Read [Build a bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel to-your-app) for details. 
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
