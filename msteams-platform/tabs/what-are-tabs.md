@@ -73,8 +73,8 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 ## See also
 
 > [!div class="nextstepaction"]
-> [Tab requirements](../../how-to/tab-requirements.md)
+> [Tab requirements](../../tabs/how-to/tab-requirements.md)
 
 > [!div class="nextstepaction"]
-> [Build Adaptive Card tabs](../../how-to/build-adaptive-card-tabs.md)
+> [Build Adaptive Card tabs](../../tabs/how-to/build-adaptive-card-tabs.md)
 
