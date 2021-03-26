@@ -327,8 +327,8 @@ The post-meeting and pre-meeting configurations are equivalent.
 
 |Sample name | Description | C# |
 |----------------|-----------------|--------------|
-| Content bubble | Demonstrates how to implement content bubble in-meeting experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
-| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token, which is generated sequentially so that each participant has a fair opportunity to interact. This can be useful in situations like scrum meetings, Q&A sessions, and so on. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
+| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
 
 ## See also
 
