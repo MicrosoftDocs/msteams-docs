@@ -46,7 +46,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > The `title` is optional in the deeplink. If you donot include the `title`, your app name replaces it.
 ## Tab link unfurling scenarios
-Scope of the Feature
+
 
 Following are the scenarios under which a link is unfurled and pinned as Tab:
 
@@ -60,12 +60,6 @@ Following are the scenarios under which a link is unfurled and pinned as Tab:
 
 1. Use the tab link unfurling service to configure a new website tab as an app. 
 
-## Feature goals
-
-* You can get the UI and the tab information through an Adaptive Card. This comes through the BOT SDK from the bot developer. 
-* Stage the URL in a new component called a Stage. If the tab information is passed in then the stage is pinned as a tab.
-* When a website tab is opened, and if there is a matching URL then the user gets an **Update** button in the banner. the user can switch to using the app instead of the website tab.
-* When a new website tab is being configured if there is a matching URL then we will show a new UI inside the dialog and ask the user to use the app instead.
 
 ## Tab information property              
 
