@@ -62,7 +62,7 @@ This section allows you to add a [conversational bot](~/bots/what-are-bots.md) t
 
 If you have not yet registered a bot with the Bot Framework, click *Register* to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
 
-Once you have supplied your bots information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
+After you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
 
 Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scopes your bot supports at any time.
 
@@ -71,7 +71,7 @@ Note that if you have defined your bot to only support one scope, commands speci
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
 
 > [!NOTE]
-> App customization affects a change in the look-and-feel of apps loaded through bots, messaging extensions, and so on except for connectors. For example, the Team admin customizes the name of an app from *Contoso* to *Contoso agent*, then the app will show the new name *Contoso agent* when called through a bot. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+> App customization enables admins to modify the look-and-feel of apps loaded through bots, messaging extensions, tabs and connectors. For example, the Team admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### Messaging Extensions
 
