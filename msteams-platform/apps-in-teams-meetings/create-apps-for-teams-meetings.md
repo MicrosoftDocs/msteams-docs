@@ -79,7 +79,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
-            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
             let conversation = participant.conversation;
