@@ -410,10 +410,10 @@ Following are the status codes and their error code and message values:
 
 | Status code | Error code and message values | Description |
 |----------------|-----------------|-----------------|
-| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. |
-| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot is not part of the conversation roster. | The bot is not part of the conversation. |
-| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot. | Tenant blocked the bot. |
-| 401 | **Code**: `BotNotRegistered` <br/> **Message**: “No registration found for this bot” | The registration for this bot was not found. |
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: "User blocked the conversation with the bot." | User blocked the bot in 1:1 chat or a channel through moderation settings. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: "The bot is not part of the conversation roster." | The bot is not part of the conversation. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: "The tenant admin disabled this bot." | Tenant blocked the bot. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: “No registration found for this bot.” | The registration for this bot was not found. |
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: “Precondition failed, please try again.” | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: “Conversation not found.” | The conversation was not found. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: “Message size too large.” | The size on the incoming request was too large. |
