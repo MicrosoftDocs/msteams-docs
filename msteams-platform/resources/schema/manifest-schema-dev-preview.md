@@ -188,8 +188,8 @@ For more information on the features available see: [Features in the Public Deve
            "name"
            "shortDescription",
            "longDescription",
-           "smallImage",
-           "largeImage",
+           "smallImageUrl", // The `smallImageUrl` is the `outline` property in the `icons` block of the manifest.
+           "largeImageUrl", // The `largeImageUrl` is the `color` property in the `icons` block of the manifest.
            "accentColor",
            "websiteUrl",
            "privacyUrl",
@@ -495,7 +495,7 @@ The `configurableProperties` block defines the app properties that an admin can 
 |`type`|array|            |✔|                     |
 |`description`|String|128 characters|✔|Description of the list of properties.|
 |`maxItems`| array of enum|9|✔| List of configurable properties.|
-|`items`| | |✔| |
+|`items`| string enum | 9 |✔|Specifies the properties that a Teams admin can customize. Customizable properties are: </br> * name </br> * shortDescription </br> * longDescription </br> * smallImage </br> * largeImage </br> * accentColor </br> * websiteUrl </br> * privacyUrl </br> * termsOfUseUrl |
 
 > [!NOTE]
 > The `smallImageUrl` is the `outline` and `largeImageUrl` is the `color` property in the `icons` block of the manifest.
