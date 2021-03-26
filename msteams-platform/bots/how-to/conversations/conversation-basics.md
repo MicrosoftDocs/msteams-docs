@@ -408,16 +408,16 @@ The following image shows a sample 403 status code response:
 
 Following are the status codes and their error code and message values:
 
-| Status code | Description | Error code and message values |
+| Status code | Error code and message values | Description |
 |----------------|-----------------|-----------------|
-| 403 | User blocked the bot in 1:1 chat or a channel through moderation settings | Code: ConversationBlockedByUser, message: User blocked the conversation with the bot. |
-| 403 | The bot is not part of the conversation | Code: BotNotInConversationRoster, message: The bot is not part of the conversation roster. |
-| 403 | Tenant blocked the bot: Code: BotDisabledByAdmin, message | The tenant admin disabled this bot. |
-| 401 | The registration for this bot was not found | Code: BotNotRegistered, message: “No registration found for this bot” |
-| 412 | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation | Code: PreconditionFailed, message: “Precondition failed, please try again.” |
-| 404 | The conversation was not found | Code: ConversationNotFound, message: “Conversation not found.” |
-| 413 | The size on the incoming request was too large | Code: MessageSizeTooBig, message: “Message size too large.” |
-| 429 | Too many requests were sent by the bot | Code: Throttled, message: “Too many requests.” Also returns when to retry after. |
+| 403 | Code: `ConversationBlockedByUser` <br/> Message: User blocked the conversation with the bot. | User blocked the bot in 1:1 chat or a channel through moderation settings. |
+| 403 | Code: `BotNotInConversationRoster` <br/> Message: The bot is not part of the conversation roster. | The bot is not part of the conversation. |
+| 403 | Tenant blocked the bot: Code: `BotDisabledByAdmin` <br/> Message | The tenant admin disabled this bot. |
+| 401 | Code: `BotNotRegistered` <br/> Message: “No registration found for this bot” | The registration for this bot was not found. |
+| 412 | Code: `PreconditionFailed` <br/> Message: “Precondition failed, please try again.” | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
+| 404 | Code: `ConversationNotFound` <br/> Message: “Conversation not found.” | The conversation was not found. |
+| 413 | Code: `MessageSizeTooBig` <br/> Message: “Message size too large.” | The size on the incoming request was too large. |
+| 429 | Code: `Throttled` <br/> Message: “Too many requests.” Also returns when to retry after. | Too many requests were sent by the bot. |
 
 The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
 
