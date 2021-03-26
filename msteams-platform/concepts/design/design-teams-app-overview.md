@@ -140,7 +140,7 @@ Understand how the Teams admin can customize or rebrand the app based on the org
 
 > [!NOTE]
 > The `configurableProperties` is currently available in developer's preview only.
-> App customization affects a change in the look-and-feel of apps loaded through bots, messaging extensions, and so on except for connectors. For example, the Team admin customizes the name of an app from *Contoso* to *Contoso agent*, then the app will show the new name *Contoso agent* when called through a bot. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*.
+> App customization enables admins to modify the look-and-feel of apps loaded through bots, messaging extensions, tabs and connectors. For example, the Team admin customizes the name of an app from Contoso to Contoso Agent, then the app will appear with the new name Contoso agent to users. However, if you load the app through a connector page then it will still show the name of the app as *Contoso*.
 
 ## Tools and samples
 
