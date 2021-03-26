@@ -85,12 +85,17 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::row:::
    :::column span="2":::
 
+## Build solutions for Microsoft Teams apps
+ 
+Extensibility look book offers a scenario library of Teams apps by industry. Each scenario in the library paints a picture of a business scenario, personas involved, their pain points and offers a Teams app solution catering to business needs.
+The scenarios in look book are accompanied by high fidelity concept mocks demonstrating user experience for each solution. They can be used as an inspiration for building apps on Teams platform and understanding platform capabilities.
+
 ## Start building
 
-   Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
+Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
-   > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/build-first-app-overview.md)
+> [!div class="nextstepaction"]
+> [Build your first app now](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -103,10 +108,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Integrate with Teams
 
-   Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
+Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
-   > [!div class="nextstepaction"]
-   > [Integrate an existing app](samples/integrating-web-apps.md)
+> [!div class="nextstepaction"]
+> [Integrate an existing app](samples/integrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -119,10 +124,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## A little code goes a long way
 
-   You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
+You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
-   > [!div class="nextstepaction"]
-   > [Create a low-code app](samples/teams-low-code-solutions.md)
+> [!div class="nextstepaction"]
+> [Create a low-code app](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::
