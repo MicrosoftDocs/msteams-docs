@@ -137,17 +137,23 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
-### Generating a deep link to a call
+## Deep links for SharePoint Framework tabs
 
-Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
+The following deep link format can be used in a bot, connector or messaging extension card:
+`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
 
-`https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>`
-
-Example: `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
+> [!NOTE]
+> When a bot sends a TextBlock message with a deep link, a new browser tab opens when users select the link. This happens in Chrome and Microsoft Teams desktop app running on Linux.
+> If the bot sends the same deep link URL into an `Action.OpenUrl`, the Teams tab opens in the current browser when the user selects the link. No new browser tab is opened.
 
 The query parameters are:
 
-* `users`: The comma-separated list of user IDs representing the participants of the call. The user that performs the action is always included as a participant. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address only.
+* `appID` - Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
+* `entityWebUrl` - An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityName` - A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
+
+Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
 ## Linking to the scheduling dialog
 
@@ -171,6 +177,7 @@ The query parameters are:
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
 
-Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
+> [!NOTE]
+> Currently, specifying the location is not supported. You must specify the UTC offset, it means time zones when generating your start and end times.
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
