@@ -98,7 +98,6 @@ To update existing card on a button click, pass a new `Activity` object with upd
 updated_activity = MessageFactory.attachment(CardFactory.hero_card(card))
 updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
-
 ```
 
 ---
@@ -157,6 +156,6 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 The official conversation basics are as follows:
 
-| **Sample Name** | **Description** | **.NET** | **JavaScript** | **Python** |
+| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
 | Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including message update and delete. | [.NET&nbsp;Core](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [JavaScript](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [Python](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
