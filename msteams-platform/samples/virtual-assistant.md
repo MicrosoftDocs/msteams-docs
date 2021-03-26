@@ -11,7 +11,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ![Virtual Assistant overview diagram](../assets/images/bots/virtual-assistant/overview.png)
 
-Text message activities are routed to associated skills by the Virtual Assistant core using a [dispatch](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs) model. 
+Text message activities are routed to associated skills by the Virtual Assistant core using a [dispatch](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) model. 
 
 ## Implementation considerations
 
@@ -118,7 +118,7 @@ Virtual Assistant can handle interruptions in cases where a user tries to invoke
 
 To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill. 
 
-Request forwarding is done via the  [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
+Request forwarding is done via the  [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -509,7 +509,7 @@ The allowed callers array can restrict which skill consumers can access the skil
 ```
 "AllowedCallers": [ "*" ],
 ```
-Detailed documentation for adding claims validation to a skill can be found [here](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator).
+Detailed documentation for adding claims validation to a skill can be found [here](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
 
 ### Card refresh limitation
 
@@ -541,7 +541,7 @@ Book-a-room bot is designed for private chats (personal/1:1 scope) only. Since w
     }
 ```
 
-You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0)   for Virtual Assistant and skills architecture.
+You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
 
 ## Code sample
 
