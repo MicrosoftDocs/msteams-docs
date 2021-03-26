@@ -15,6 +15,9 @@ keywords: teams import messages api graph microsoft migrate migration post
 
 With Microsoft Graph, you can migrate users' existing message history and data from an external system into a Teams channel. By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.
 
+> [!NOTE] 
+> In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported.
+
 ## Import overview
 
 At a high level, the import process consists of the following:
@@ -376,5 +379,7 @@ HTTP/1.1 204 No Content
 ||Quotes|
 ||Cross posts between channels|
 
+
+## See also
 > [!div class="nextstepaction"]
 >[Learn more about Microsoft Graph and Teams integration](/graph/teams-concept-overview)
