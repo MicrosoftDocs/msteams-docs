@@ -185,7 +185,7 @@ For more information on the features available see: [Features in the Public Deve
        "maxItems": 9,
        "items": {
          "enum": [
-           "name"
+           "name",
            "shortDescription",
            "longDescription",
            "smallImageUrl", // The `smallImageUrl` is the `outline` property in the `icons` block of the manifest.
