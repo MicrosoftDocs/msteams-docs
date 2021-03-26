@@ -45,8 +45,10 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 > [!NOTE]
 > The `title` is optional in the deeplink. If you donot include the `title`, your app name replaces it.
-## Tab link unfurling scenarios
 
+## Tab information property
+
+## Tab link unfurling scenarios
 
 Following are the scenarios under which a link is unfurled and pinned as Tab:
 
@@ -59,15 +61,8 @@ Following are the scenarios under which a link is unfurled and pinned as Tab:
 1. Use the tab link unfurling service to upgrade the website tab into a Teams app 
 
 1. Use the tab link unfurling service to configure a new website tab as an app. 
-
-
-## Tab information property              
-
-
-
-
-
-## Open a stage from the Adaptive Card and pin a tab
+         
+### Open a stage from the Adaptive Card and pin a tab
 
 * When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. 
 * After a stage is launched, and the tab information is passed in, then you must add the ability to pin the stage as a tab.
@@ -90,12 +85,12 @@ The `overflow to true` decides whether the button will show up as an overflow in
 1.	When the user selects **View**, that sends an `invoke` request to bot. 
 1. The bot can respond with a `200` code.
 
-## Pin a tab directly from the Adaptive Card through a button or overflow
+### Pin a tab directly from the Adaptive Card through a button or overflow
 
 * When the user enters a URL, it invokes a bot.The bot returns an Adaptive Card with the option to pin it as a tab.
 * The overflow to true decides whether the button shows up as an overflow in the card or as a button in the body of the card.
 
-### Schema for Adaptive Card
+#### Schema for Adaptive Card
 
 
 
@@ -103,41 +98,45 @@ The `overflow to true` decides whether the button will show up as an overflow in
 
 * Set `pinTab` to `true` for this workflow.
 
-## Deeplink to a stage
+### Deeplink to a stage
 
-•	This is the deeplink format : https://teams.microsoft.com/l/stage/appId/0?context={ "contentURL": contentURL, "websiteURL": websiteURL, "title": title}
-•	We resolve the deeplink from our deeplinkservice and open the stage.
-•	No option to pin the tab from here.
-•	 Its difficult to include the entire tabInfo object in the deeplink URL.
-•	The entityId will be 0 in this case.
+* This is the deeplink format : https://teams.microsoft.com/l/stage/appId/0?context={ "contentURL": contentURL, "websiteURL": websiteURL, "title": title}
+* We resolve the deeplink from our deeplinkservice and open the stage.
+* No option to pin the tab from here.
+* Its difficult to include the entire `tabInfo` object in the deeplink URL.
+* The entityId is 0 in this case.
 
 ## Open a stage with no option to pin the tab
 
 You can open a stage with no option to pin the tab with the following schema:
-
+#### Schema
 * `OpenURL` action with the stage deeplink. It opens the stage with the URL.
 
-##  OpenURL action which opens the url in a browser 
-Schema for this will be: 
+###  OpenURL action which opens the url in a browser 
+
+#### Schema 
 
 
 
-## Upgrade a website tab to an app
+### Upgrade a website tab to an app
 
-Schema 
+#### Schema 
 
 
 * When there is a website tab that matches an app, you get **Use the app** option in a banner. 
 
-If you select **Use the app**, it triggers an `invoke` request to the bot. You can use  `handleExecuteBotQuery` API to get the response from bot.
+* If you select **Use the app**, it triggers an `invoke` request to the bot. You can use  `handleExecuteBotQuery` API to get the response from bot.
 
-When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
+* When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
 
-## Add a tab of an app instead of the website tab. 
+### Add a tab of an app instead of the website tab 
 
 Similar to the above scenario.
 
+#### Schema
+
 ## API
-You must update the bot SDK API.
+
+You must update the BOT SDK API.
 
 
