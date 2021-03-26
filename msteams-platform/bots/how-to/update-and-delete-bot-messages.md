@@ -59,6 +59,7 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
+| **Request and Responce** | **Description** |
 |----|----|
 | **Request body** | An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object |
 | **Returns** | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object |
@@ -72,6 +73,7 @@ To update the existing card on button selection, you can use `ReplyToId` of inco
 # [C#/.NET](#tab/dotnet)
 
 To update existing card on a button click, pass a new `Activity` object with updated card and `ReplyToId` as activity ID to the `UpdateActivityAsync` method of the `TurnContext` class. See [TurnContextClass](/dotnet/api/microsoft.bot.builder.turncontext?view=botbuilder-dotnet-stable&preserve-view=true).
+
 ```csharp
 var activity = MessageFactory.Attachment(card.ToAttachment());
 activity.Id = turnContext.Activity.ReplyToId;
@@ -81,6 +83,7 @@ await turnContext.UpdateActivityAsync(activity, cancellationToken);
 # [TypeScript/Node.js](#tab/typescript)
 
 To update existing card on a button click, pass a new `Activity` object with updated card and `replyToId` as activity ID to the `updateActivity` method of the `TurnContext` object. See [updateActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#updateactivity-partial-activity--&preserve-view=true).
+
 ```typescript
 const message = MessageFactory.attachment(card);
 message.id = context.activity.replyToId;
@@ -97,6 +100,8 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 
 ```
+
+---
 
 ## Delete messages
 
@@ -141,6 +146,7 @@ for each activity_id in _list:
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
+| **Request and Responce** | **Description** |
 |----|----|
 | **Request body** | n/a |
 | **Returns** | An HTTP Status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
