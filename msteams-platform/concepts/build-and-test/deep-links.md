@@ -121,7 +121,7 @@ You can create deep links to private chats between users by specifying the set o
 
 As an example use case, if you are returning an Office 365 user profile from your bot as a card, this deep link can allow the user to easily chat with that person.
 
-### Generating a deep link to a chat
+### Generate a deep link to a chat
 
 Use this format for a deep link that you can use in a bot, connector, or messaging extension card:
 
@@ -137,6 +137,35 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
+## Generate deep links to file in channel
+
+The following deep link format can be used in a bot, connector or messaging extension card:
+`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupID=<GroupId>`
+
+The query parameters are:
+
+* `tenantId` - Tenant ID example:**42f988bf-86f1-51af-91ab-2d7cd011db67**.
+* `filetype` - Supported file type, such as Word, PPT, PDF and Excel. 
+* `objectUrl` - Object URL of the file, https://microsoft.sharepoint.com/teams/<filepath>.
+* `baseUrl` - Base URL of the file, https://microsoft.sharepoint.com/teams.
+* `serviceName` - Name of the service. For example, Teams.
+* `threadId` - Thread ID of the file. For example, 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `groupId` - Group ID of the file. For example, ae063b79-5315-4ddb-ba70-27328ba6c31e.
+
+Sample format of deeplink to files: https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e
+
+### Serialization of this object:
+```
+{
+tenantId: “72f988bf-86f1-41af-91ab-2d7cd011db47”,
+filetype: = “pptx”,
+objectUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx”,
+baseUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform”,
+serviceName: “teams”,
+threadId: = “19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype”,
+groupId: “ae063b79-5315-4ddb-ba70-27328ba6c31e”
+}
+```
 ## Deep links for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or messaging extension card:
