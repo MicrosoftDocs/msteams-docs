@@ -44,6 +44,6 @@ Here's more information on how to create and test calls and online meetings bots
 
 The following code sample demonstrates how to create and test calls and online meetings bots:
 
-| **Sample name** | **Description** | **Platform** |
+| **Sample name** | **Description** | **Graph** |
 |---------------|----------|--------|
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |

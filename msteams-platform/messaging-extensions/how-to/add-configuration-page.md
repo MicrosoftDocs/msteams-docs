@@ -13,9 +13,10 @@ ms.author: anclear
 
 The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and Bot Service authentication. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
 
-| **Sample name** | **Description** | **Node.js** | **.NET** |
+| **Sample name** | **Description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|--------------|
-| Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) |
+| Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) |
+
 
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/microsoft/BotBuilder-Samples)

@@ -51,7 +51,7 @@ Not all guidance for developing messaging and Interactive Voice Response (IVR) b
 
 Application-hosted media bots samples are as follows:
 
-| **Sample name** | **Description** | **Platform** |
+| **Sample name** | **Description** | **Graph** |
 |------------|-------------|-----------|
 | Local media sample | Samples that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 

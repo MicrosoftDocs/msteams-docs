@@ -42,9 +42,9 @@ Although the tab context provides helpful information regarding the user, do not
 
 Sample code showing the tab authentication process.
 
-| **Sample name** | **Description** | **Node.js** | **csharp** |
+| **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|
-| Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) |
+| Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp) | [View](https://github.com/OfficeDev/microsoft-teams-sample-complete-node) |
 
 ## More details
 

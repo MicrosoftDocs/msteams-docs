@@ -545,10 +545,12 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** | **ASP.NET** |
+| **Sample name** | **Description** | **C#** | **.NET** |
 |----------|-----------------|----------|------------------|
-| Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
-| Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. |  | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
+| Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
+| Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+
+
 
 ## Virtual Assistant known limitations
 
