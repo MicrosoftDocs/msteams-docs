@@ -35,7 +35,7 @@ When a user installs your application one of the first things they do is consent
 > * A bot is added or removed.
 > * An existing bot's unique `botId` value is changed.
 > * An existing bot's `isNotificationOnly` boolean value is changed.
-> * An existing bot's `supportsFiles` and `supportsCalling` boolean values are changed.
+> * An existing bot's `supportsFiles` or `supportsCalling` boolean value is changed.
 > * A messaging extension `composeExtensions` is added or removed.
 > * A new connector is added.
 > * A new static or personal tab is added.
