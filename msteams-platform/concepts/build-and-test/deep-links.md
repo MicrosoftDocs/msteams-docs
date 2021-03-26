@@ -144,7 +144,7 @@ The following deep link format can be used in a bot, connector or messaging exte
 
 The query parameters are:
 
-* `tenantId` - Tenant ID example:**42f988bf-86f1-51af-91ab-2d7cd011db67**.
+* `tenantId` - Tenant ID example: **42f988bf-86f1-51af-91ab-2d7cd011db67**.
 * `filetype` - Supported file type, such as Word, PPT, PDF and Excel. 
 * `objectUrl` - Object URL of the file, https://microsoft.sharepoint.com/teams/<filepath>.
 * `baseUrl` - Base URL of the file, https://microsoft.sharepoint.com/teams.
