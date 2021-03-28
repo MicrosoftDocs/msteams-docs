@@ -74,8 +74,8 @@ Content-Type: application/json
 
 ```http
 HTTP/1.1 202 Accepted
-Location: /teams/{teamId}/operations/{operationId}
-Content-Location: /teams/{teamId}
+Location: /teams/{team-id}/operations/{operation-id}
+Content-Location: /teams/{team-id}
 ```
 
 #### Error messages
@@ -102,7 +102,7 @@ Creating a channel for the imported messages is similar to the create team scena
 #### Request (create a channel in migration state)
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/{id}/channels
+POST https://graph.microsoft.com/v1.0/teams/{team-id}/channels
 
 Content-Type: application/json
 {
@@ -120,8 +120,8 @@ Content-Type: application/json
 HTTP/1.1 202 Accepted
 
 {
-   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('9cc6d6ab-07d8-4d14-bc2b-7db8995d6d23')/channels/$entity",
-   "id":"19:e90f6814ce674072a4126206e7de485e@thread.tacv2",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels/$entity",
+   "id":"id-value",
    "createdDateTime":null,
    "displayName":"Architecture Discussion",
    "description":"This channel is where we debate all future architecture plans",
@@ -153,7 +153,7 @@ After the team and channel have been created, you can begin sending back-in-time
 #### Request (POST message that is text-only)
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
    "createdDateTime":"2019-02-04T19:58:15.511Z",
@@ -177,7 +177,7 @@ POST https://graph.microsoft.com/v1.0/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+   "@odata.context":"https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
    "id":"id-value",
    "replyToId":null,
    "etag":"id-value",
@@ -224,7 +224,7 @@ HTTP/1.1 200 OK
 > **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/teamId/channels/channelId/messages
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
 
 {
   "body": {
@@ -247,7 +247,7 @@ POST https://graph.microsoft.com/v1.0/teams/teamId/channels/channelId/messages
 HTTP/1.1 200 OK
 
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('teamId')/channels('channelId')/messages/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('team-id')/channels('channel-id')/messages/$entity",
     "id": "id-value",
     "replyToId": null,
     "etag": "id-value",
@@ -287,7 +287,7 @@ Once the message migration process has completed, both the team and channel are 
 #### Request (end channel migration mode)
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/teamId/channels/channelId/completeMigration
+POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/completeMigration
 
 ```
 
@@ -300,8 +300,7 @@ HTTP/1.1 204 NoContent
 #### Request (end team migration mode)
 
 ```http
-POST https://graph.microsoft.com/v1.0/teams/teamId/completeMigration
-
+POST https://graph.microsoft.com/v1.0/teams/team-id/completeMigration
 ```
 
 #### Response
@@ -319,7 +318,7 @@ You can add a member to a team [using the Teams UI](https://support.microsoft.co
 #### Request (add member)
 
 ```http
-POST https://graph.microsoft.com/beta/teams/{id}/members
+POST https://graph.microsoft.com/beta/teams/{team-id}/members
 Content-type: application/json
 Content-length: 30
 {
