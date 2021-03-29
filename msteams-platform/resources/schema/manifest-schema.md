@@ -711,12 +711,11 @@ It helps you to specify the default install scopes for the apps that you publish
 
 **Required** - object
 
-It provides the default capability that is added to the team, groupchat, or meetings. Choose a tab, bot, or connector as the default capability for your app.
+Specifies the default capability for each collaboration scope your app supports.
 
 | **Name** | **Type** | **Maximum size** | **Required** | **Description** |
 |----------|----------|------------------|--------------|-----------------|
 | `properties` | string | 128 characters | ✔ | Specifies the default install scope, that is, team, groupchat, or meetings and the capability, that is, bot, tab, or connector available with the selected scope, and its description.|
 | `description` | string | 128 characters | ✔ | Defines the default capability when the user installs the app. |
 | `additionalProperties` | boolean | | | Indicates if additional properties are required. Default: **false** | 
-
 
