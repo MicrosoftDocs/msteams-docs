@@ -233,10 +233,10 @@ In an Adaptive card, you can use the `msteams` property to add the ability to di
 }
 ```
 
-When users hover over the image, they would see an expand icon at top right corner of the image.
+When users hover over the image, an expand icon appears at top right corner of the image:
 ![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
-The image is shown in stage view when the user clicks on the expand button.
+The image appears in stage view when the user selects the expand button:
 ![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
 
 In the stage view, users can zoom in and zoom out of the image. You can select which images in your Adaptive card needs to have this capability.
