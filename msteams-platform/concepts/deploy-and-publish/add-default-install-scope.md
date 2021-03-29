@@ -5,7 +5,6 @@ ms.topic: how-to
 ms.author: surbhigupta
 ---
 
-
 # Add a default install scope and group capability
 
 > [!NOTE]
