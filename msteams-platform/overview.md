@@ -87,7 +87,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Build solutions for Microsoft Teams apps
  
-Microsoft offers an extensibility look book,  a scenarios library for Teams apps organized by industry. It describes a business scenario, personas that contribute to it, and their challenges. It also provides a Teams apps solution that addresses the business need.
+Microsoft offers an extensibility look book, a scenarios library for Teams apps organized by industry. It describes a business scenario, personas that contribute to it, and their challenges. It also provides a Teams apps solution that addresses the business need.
 
 The scenarios contain high-fidelity concept mocks, which can be used as a model for building apps on the Teams platform and understanding its capabilities. For more information, see [extensibility look book](https://adoption.microsoft.com/extensibility-look-book/scenarios/). 
 
