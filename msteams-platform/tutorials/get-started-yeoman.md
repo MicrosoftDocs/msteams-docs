@@ -29,7 +29,7 @@ You need a code editor. Most of this documentation and images refer to using [Vi
 
 ### Install Yeoman and Gulp CLI
 
-To be able to scaffold projects using the Teams generator you need to install the Yeoman tool and the Gulp CLI task manager.
+To scaffold projects using the generator, you must install the Yeoman tool and Gulp CLI task manager.
 
 Open up a command prompt and type the following:
 
