@@ -84,7 +84,7 @@ To send notifications using proactive messaging, ensure your users have a clear 
 * What was the result: It must be clear what item was updated to cause the notification.
 * Who or what triggered it: Who or what took action that caused the notification to be sent.
 * What can users do in response: Make it easy for your users to take actions based on your notifications.
-* How can users opt-out: You must provide a path for users to opt out of additional notifications.
+* How can users opt-out: You must provide a path for users to opt-out of additional notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 

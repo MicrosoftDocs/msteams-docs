@@ -22,7 +22,7 @@ Command menus are defined in your app manifest. You can either use **App Studio*
 
 ### Create a command menu for your bot using App Studio
 
-A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you are create a new manifest or edit an existing one.
+A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
 **To create a command menu for your bot using App Studio**
 
@@ -144,14 +144,14 @@ The manifest example code for the menu for each scope is as follows:
 }
 ```
 
-You must handle menu commands in your bot code as you would handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
+You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text returned. Your message parsing must handle the message received by a bot with its own name before handling the command being returned.
+Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text returned. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
-> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they would do for any other message.
+> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 

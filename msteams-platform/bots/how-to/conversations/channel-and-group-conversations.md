@@ -18,7 +18,7 @@ Bots in a group or channel only receive messages when they are mentioned `@botna
 
 ## Design guidelines
 
-Unlike personal chats, in group chats and channels, your bot must provide a quick introduction of itself. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
 Now you can create new conversation threads and easily manage different conversations in channels.
 
@@ -248,7 +248,7 @@ Now you can send an introduction message when your bot is first installed or add
 
 ## Send a message on installation
 
-When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event, with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
+When your bot is first added to the group or team, an introduction message must be sent. The message must provide a brief description of the bot's features and how to use them. You must subscribe to the `conversationUpdate` event with the `teamMemberAdded` eventType.  The event is sent when any new team member is added. Check if the new member added is the bot. For more information, see [sending a welcome message to a new team member](~/bots/how-to/conversations/send-proactive-messages.md).
 
 Send a personal message to each team member when the bot is added. To do this, get the team roster and send each user a direct message.
 

@@ -1282,7 +1282,11 @@ The next section illustrates a simple code sample that incorporates bots convers
 
 ## Sample code
 
-For sample code showing the bots conversation events, see [Teams bots conversation events sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot).
+For sample code showing the bots conversation events, see the following Teams bots conversation events sample:
+
+| Sample | Description | .NET Core |
+|--------|------------- |---|
+| Teams bots conversation events sample | Bot Framework v4 Conversation Bot sample for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
 
 ## Next step
 
