@@ -6,23 +6,26 @@ keywords: Share Teams Share-to-Teams
 ---
 # Create a Share-to-Teams button for your website
 
->[!NOTE]
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching context.
+
+> [!NOTE]
 > * Only the desktop versions of Edge and Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
-
-Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages which will launch the Share to Teams experience in a popup window when clicked. This will allow you to share a link directly to any person or Microsoft Teams channel without switching context.
+The the following image displays the Share to Teams pop-up experience:
 
 ![Share to Teams popup](~/assets/images/share-to-teams-popup.png)
 
-## How to embed a Share to Teams button
+## Embed a Share to Teams button
 
-First, you'll need to add the `launcher.js` script on your webpage.
+To embed a Share to Teams button, you must follow the following process:
+
+* Add the `launcher.js` script on your webpage.
 
 ```html
 <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
 ```
 
-Next, add an HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
+* Add a HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
 
 ```html
 <div
@@ -31,11 +34,11 @@ Next, add an HTML element on your webpage with the `teams-share-button` class at
 </div>
 ```
 
-This will add the Microsoft Teams icon to your website.
+After completing this, the Microsoft Teams icon gets added to your website.
 
 ![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 
-Optionally, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
+Alternatively, if you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 
 ```html
 <div
@@ -44,8 +47,8 @@ Optionally, if you want a different icon size for the Share to Teams button, use
   data-icon-px-size="64">
 </div>
 ```
-
-If you know that the URL preview from your link to be shared won't render well in Teams (for example the link would require user authentication) you can disable the URL preview by adding the `data-preview` attribute set to `false`.
+If the shared link requires user authentication, 
+If you know that the URL preview from your link to be shared does not render well in Teams (for example the link would require user authentication) you can disable the URL preview by adding the `data-preview` attribute set to `false`.
 
 ```html
 <div
@@ -57,14 +60,16 @@ If you know that the URL preview from your link to be shared won't render well i
 
 If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
 
-## Crafting your website preview
+## Craft your website preview
 
-When your website is shared to Teams, the card that is inserted into the selected channel will contain a preview of your website. You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared (the `data-href` URL). The table below outlines the necessary tags. You can use either the html default versions, or the Open Graph version.
+When your website is shared to Teams, the card that is inserted into the selected channel contains a preview of your website. You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared, such as the `data-href` URL.  
 
-In order for the preview to be displayed you must:
+**To display the preview**
 
-* Include either a Thumbnail image, or both a Title and Description (for best results, include all three).
-* The URL being shared cannot require authentication. If it does you can still share it, but the preview will not be created.
+* You must include either a **Thumbnail image**, or both a **Title** and **Description**. For best results, include all three.
+* The shared URL being doesnot require authentication. If it requires authentication, you can share it, but the preview is not created.
+
+The following table outlines the necessary tags:
 
 |Value|Meta tag| Open Graph|
 |----|----|----|
@@ -72,9 +77,11 @@ In order for the preview to be displayed you must:
 |Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Thumbnail Image| none |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
+You can use either the html default versions, or the Open Graph version.
+
 ## Share to Teams for Education
 
-For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
+For teachers using the Share to Teams button there is an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team, based on the shared link.
 
 ![Share to Teams popup](~/assets/images/share-to-teams-popup-edu.png)
 
@@ -97,15 +104,17 @@ For teachers using the Share to Teams button you'll be given an additional optio
 
 Renders all share buttons currently on the page. If an optional `options` object is supplied with a list of elements, those elements will be rendered into share buttons.
 
-### Setting default form values
+### Set default form values
 
-Optionally, you can choose to set default values for the following fields on the Share to Teams form:
+You can choose to set default values for the following fields on the Share to Teams form:
 
-* Say something about this (`msgText`)
-* Assignment Instructions (`assignInstr`)
-* Assignment Title (`assignTitle`)
+* Say something about this: `msgText`
+* Assignment Instructions: `assignInstr`
+* Assignment Title: `assignTitle`
 
-#### Example: Default form values
+#### Example
+
+ Default form values are given in the following example:
 
 ```html
 <span
