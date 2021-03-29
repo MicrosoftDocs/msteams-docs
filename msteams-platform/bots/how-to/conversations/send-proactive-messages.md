@@ -78,6 +78,8 @@ When using proactive messaging to send notifications you must ensure your users 
 * **What can users do in response.** Make it easy for your users to take actions based on your notifications.
 * **How can users opt out.** You must provide a path for users to opt out of additional notifications.
 
+### Scheduled messages
+
 ## Proactively install your app using Graph
 
 > [!Note]
