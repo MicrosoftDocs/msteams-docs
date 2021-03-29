@@ -221,7 +221,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
     - Set the `connectionName` to the name of the identity provider connection.
-
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
