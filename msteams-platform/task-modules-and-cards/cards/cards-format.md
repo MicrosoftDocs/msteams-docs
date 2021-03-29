@@ -154,7 +154,10 @@ To include a mention in an Adaptive card your app needs to include the following
 
 
 ### Information masking in Adaptive cards
-Use the information masking property to mask specific information, such as password or sensitive information from users within the adaptive card [Input Text](https://adaptivecards.io/explorer/Input.Text.html) input element. Also note that feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](https://docs.microsoft.com/microsoftteams/platform/build-your-first-app/build-bot#4-configure-your-bot). 
+Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 
+
+> [!NOTE]
+> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot#4-configure-your-bot). 
 
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.
