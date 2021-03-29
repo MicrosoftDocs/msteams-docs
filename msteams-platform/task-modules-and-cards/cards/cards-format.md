@@ -216,7 +216,8 @@ If you have not set the `width` property to *Full*, then the default view of the
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### Typeahead support
-Within the [Input Choiceset](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can signnificantly slow down task completion. Typeahead support within adaptive cards can simplfy input selection by narrowing (filtering) the set of input choices as a users is typing input. 
+
+Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion. Typeahead support within Adaptive cards can simplify input selection by narrowing or filtering the set of input choices as a user is typing the input. 
 
 #### Enable typeahead in Adaptive cards
 
