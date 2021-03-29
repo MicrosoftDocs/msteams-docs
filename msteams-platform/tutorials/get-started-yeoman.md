@@ -8,8 +8,8 @@ ms.custom: scenarios:getting-started
 
 # Create your first Microsoft Teams app using the Yeoman generator
 
->[!Note]
->This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
+> [!Note]
+> This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
 
 In this tutorial, we will walk through creating your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the process of upgrading your Teams using the Yeoman generator. The prerequisite to start with this tutorial is that you have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
@@ -52,6 +52,7 @@ npm install generator-teams@preview --global
 ```
 
 ## Generate your project
+
 This section walks you through the steps for generating your project.
 
 **To generate your project**
@@ -139,9 +140,11 @@ Choose your tab and follow the instructions to add it. Notice that you have a cu
 ![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
 ## Upgrade Microsoft Teams
+
 You can also upgrade your current Microsoft Teams version to the latest version using the Microsoft Teams Yeoman generator.
 
 **To upgrade Microsoft Teams**
+
 1. Get current version of Teams with the following command:
 
    ```PowerShell
@@ -171,6 +174,5 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    ```PowerShell
     yo teams --version
    ```
-
    
 **Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.**
