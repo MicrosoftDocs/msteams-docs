@@ -10,7 +10,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Rather than have your messages be static snapshots of data, your bot can dynamically update messages after sending them. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
 ## Update messages
 
@@ -128,7 +128,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 ## Delete messages
 
-In the Bot Framework, every message has its own unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
+In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
 # [C#](#tab/dotnet)
 
@@ -143,7 +143,7 @@ foreach (var activityId in _list)
 
 # [TypeScript](#tab/typescript)
 
-To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true)
+To delete a message, pass that activity's ID to the `deleteActivity` method of the `TurnContext` object. For more information, see [deleteActivity](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#deleteactivity-string---partial-conversationreference--&preserve-view=true).
 
 ```typescript
 for (let i = 0; i < activityIds.length; i++) {
@@ -174,9 +174,9 @@ For REST API, request body is not applicable and it returns an HTTP status code 
 
 The next section illustrates simple code samples that demonstrate basics of conversations.
 
-## Code samples
+## Code sample
 
-The official conversation basics are as follows:
+The code sample for Teams conversation basics are as follows:
 
 | Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|

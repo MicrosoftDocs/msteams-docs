@@ -251,14 +251,14 @@ The next section illustrates simple code samples that incorporate basic conversa
 
 ## Code samples
 
-The official proactive messaging samples are as follows:
+The code samples for proactive messaging are as follows:
 
 | Sample name           | Description                                                                      | .NET    | Node.js   | Python  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
 |Teams conversation basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
 |Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-### View additional code samples
+### View additional code sample
 
 > [!div class="nextstepaction"]
 > [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)

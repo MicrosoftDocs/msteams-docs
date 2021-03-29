@@ -71,7 +71,7 @@ public class BotSdkTransientExceptionDetectionStrategy : ITransientErrorDetectio
     }
 ```
 
-You can perform backoff and retries using [transient fault handling](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). For guidelines on obtaining and installing the NuGet package, see [adding the transient fault handling application block to your solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN)). See also [transient fault handling](/azure/architecture/best-practices/transient-faults).
+You can perform backoff and retries using [transient fault handling](/previous-versions/msp-n-p/hh675232%28v%3dpandp.10%29). For guidelines on obtaining and installing the NuGet package, see [adding the transient fault handling application block to your solution](/previous-versions/msp-n-p/dn440719(v=pandp.60)?redirectedfrom=MSDN). See also [transient fault handling](/azure/architecture/best-practices/transient-faults).
 
 After you go through the example for detecting transient exceptions, go through the exponential backoff example. You can use exponential backoff instead of retrying on failures.
 
@@ -111,7 +111,7 @@ You can also handle rate limit using the per bot per thread limit.
 >[!NOTE]
 > Message splitting at the service level results in higher than expected requests per second (RPS). If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
-The per bot per thread limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group-chat, or a channel in a team.
+The per bot per thread limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group chat, or a channel in a team.
 
 The following table provides the per bot per thread limits:
 
@@ -135,7 +135,7 @@ The following table provides the per bot per thread limits:
 | Get conversations | 3600 | 3600 |
 
 >[!NOTE]
-> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They will be throttled to 5 requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
+> Previous versions of `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync` APIs are being deprecated. They will be throttled to five requests per minute and return a maximum of 10K members per team. To update your Bot Framework SDK and the code to use the latest paginated API endpoints, see [Bot API changes for team and chat members](../../resources/team-chat-member-api-changes.md).
 
 You can also handle rate limit using the per thread limit for all bots.
 
