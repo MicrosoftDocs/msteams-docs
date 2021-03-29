@@ -194,10 +194,10 @@ For more information on the features available see: [Features in the Public Deve
            "websiteUrl",
            "privacyUrl",
            "termsOfUseUrl"        
-              ]          
-            }
-          }      
-      } 
+          ]          
+        }
+      }      
+    } 
   ]
 }
 ```
