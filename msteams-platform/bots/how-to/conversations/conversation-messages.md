@@ -342,8 +342,8 @@ Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animate
 
 Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
 
-* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
