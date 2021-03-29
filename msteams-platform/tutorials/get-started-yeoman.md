@@ -92,7 +92,7 @@ The next set of questions will be based on the previously selected items. For a 
 
 After the generator is done you can open up the solution in your favorite code editor. Take a minute or two and familiarize yourself with how the code is organized. For more information, see [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-Your tab will be located in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This is the TypeScript React based class for your Tab. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like this:
+Your tab is in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This is the TypeScript React-based class for your tab. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like this:
 
 ``` TypeScript
 <PanelBody>
