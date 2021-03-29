@@ -218,8 +218,9 @@ If you have not set the `width` property to *Full*, then the default view of the
 ### Typeahead support
 Within the [Input Choiceset](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can signnificantly slow down task completion. Typeahead support within adaptive cards can simplfy input selection by narrowing (filtering) the set of input choices as a users is typing input. 
 
-#### Enable typeahaead in adaptive cards
-To enable typeahead within the Input choiceset set `style` to `filtered` and ensure `isMultiSelect` is set to `false`. 
+#### Enable typeahead in Adaptive cards
+
+To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and ensure `isMultiSelect` is set to `false`. 
 
 #### Sample adaptive card with typeahead support
 
