@@ -8,7 +8,7 @@ ms.topic: tutorial
 ---
 # Build a channel and group tab for Microsoft Teams
 
-In this tutorial, you'll build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat. Unlike a personal tab, users can configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel).
+This tutorial teaches you to build a basic *channel tab* (also known as a *group tab*), which is a full-screen page for a team channel or chat. You can also configure some aspects of this kind of tab (for example, rename the tab so it's meaningful to their channel) which you cannot do in a Personal Tab.
 
 ## What you'll learn
 
@@ -22,17 +22,17 @@ In this tutorial, you'll build a basic *channel tab* (also known as a *group tab
 
 ## Before you begin
 
-You need know how to set up and build Teams app. If you haven’t, please read [Create a "Hello, world" app](../build-your-first-app/build-and-run.md) first. 
+You need to understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md). 
 
 ## Create your app project
 
-The Microsoft Teams Toolkit helps configure your app and set up scaffolding relevant to channel and group tabs, including a basic configuration page and content page that displays a "Hello, World!" message.
+The Microsoft Teams Toolkit helps you to configure your app and set up the scaffolding relevant to channel and group tabs. It also contains a basic configuration page and content page that displays a "Hello, World!" message.
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
-1. When prompted, sign in with your Microsoft 365 development account.
-1. On the **Select project** screen, at **Channel and group app**, click **JS** (JavaScript).
+1. Sign in with your Microsoft 365 development account when prompted to do so.
+1. Select **JS** (JavaScript) on the **Select project** screen, under **Channel and group app**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
-Select **Group or Teams channel tab**.
+1. Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.  
 
 ## Identify relevant app project components
@@ -41,11 +41,11 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ### App configurations
 
-In the toolkit, go to **App Studio** to view and update your app configurations.
+In the toolkit, access **App Studio** to view and update your app configurations.
 
 ### App scaffolding
 
-The app scaffolding provides the components for rendering your channel tab in Teams. There's a lot you can work with, but for now you only need to focus on the following:
+The app scaffolding provides the components needed for rendering your channel tab in Teams. There's a lot you can work with, but for now we will only focus on the following:
 
 * Two files located in the `src/components` directory of your project:
   * `Tab.js` for rendering your tab's content page.
@@ -54,7 +54,9 @@ The app scaffolding provides the components for rendering your channel tab in Te
 
 ## Customize your tab content page
 
-Copy and update the following snippet with information that's relevant to your organization or, you can use the code as is.
+You can customize your tab content page by following the steps given here:
+
+1. Copy and update the following snippet with information that's relevant to your organization. You can also use the snippet as it is.
 
 ```JSX
 <div>
@@ -67,7 +69,7 @@ Copy and update the following snippet with information that's relevant to your o
 </div>
 ```
 
-Go to the `src/components` directory and open `Tab.js`. Locate the `render()` function and paste your content inside `return()` (as shown).
+1. Open `Tab.js` file from the`src/components` directory. Locate the `render()` function and paste your content inside `return()` (as shown).
 
 ```JavaScript
 render() {
@@ -87,7 +89,7 @@ render() {
 }
 ```
 
-Add the following rule to `App.css` (also located in `src/components`) so the email links are easier to read no matter which theme is used.
+1. Open the `App.css` file from the `src/components` directory and update the CSS for color as shown here.
 
 ```CSS
 a {
@@ -97,9 +99,9 @@ a {
 
 ## Customize your tab configuration page
 
-Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed.
+Every tab in a channel or chat has a configuration page, a modal with at least one setup option that displays when users add your app. The configuration page by default asks users if they want to notify the channel or chat when the tab is installed. You can customize the configuration page by adding some custom content.
 
-Add some custom content to your configuration page. Go to your project's `src/components` directory, open `TabConfig.js`, and update the placeholder content inside `return()` (as shown in the following example).
+To add custom content, open `TabConfig.js` file from the `src/components` directory and update the placeholder content inside `return()` (as shown in the following example).
 
 ```JavaScript
 return (
@@ -113,17 +115,14 @@ return (
 ```
  
 > [!TIP]
-> At minimum, provide some brief information about your app on this page since this may be the first time users are learning about it. You also could include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
+> Give a brief information about your app on this page since this would be the first time users are reading about it. You can also include custom configuration options or an [authentication workflow](../tabs/how-to/authentication/auth-aad-sso.md), which is common on tab configuration pages.
 
 ## Provide a suggested tab name
 
-When you add a channel tab, by default the app name displays (for example, **first-app**).
+When you add a channel tab, the app name displays by default(for example, **first-app**). You can als provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
 
-This may be fine depending on what you call your app, but you may want to provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
-
-1. In `TabConfig.js`, go to `microsoftTeams.settings.setSettings`.
-2. Add the `suggestedDisplayName` property with the tab name you want to display by default. 
-3. Use the name provided in the following example or type your name. (By default, users can change the name.)
+1. Open `TabConfig.js` file from the `src/components` directory.
+1. Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the example here.
 
 ```JavaScript
 microsoftTeams.settings.setSettings({
@@ -134,24 +133,25 @@ microsoftTeams.settings.setSettings({
 
 ## Build and run your app
 
-In the interest of time, you'll build and run your app locally.
+This tutorial will teach you to build and run your app locally. This information is also present in the `README` section of the toolkit.
 
-(This information is also available in the toolkit `README`.)
-
-1. In a terminal, go to the root directory of your app project and run `npm install`.
+1. Access the root directory of your app project in Terminal.
+1. Run `npm install`.
 1. Run `npm start`.
 
-Once complete, there's a **Compiled successfully!** message in the terminal. Your app is running on `https://localhost:3000`.
+Your app is running on `https://localhost:3000` once the **Compiled successfully!** message is displayed in the terminal. 
 
 ## Sideload your app in Teams
 
 Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 
-1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
-1. To display your app content in Teams, specify that where your app is running (`localhost`) is trustworthy:
-   1. Open a new tab in the same browser window (Google Chrome by default) which opened after pressing **F5**.
-   1. Go to `https://localhost:3000/tab` and proceed to the page.
-1. Go back to Teams. In the modal, select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing.
+1. Launch a Teams web client in Visual Studio Code with the **F5** key.
+1. Add (`localhost`) as trustworthy by following these steps to enable your app content to display in Teams:
+
+   1. Open a new tab in the same browser window (Google Chrome by default) which opened with the **F5** key.
+   1. Access `https://localhost:3000/tab` and proceed to the page.
+
+1. Select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing from the modal in Teams.
 1. Select **Set up a tab**. The configuration page displays in a modal.<br/>
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot of a channel tab configuration page.":::
 1. Select **Save** to configure the tab. The content page displays.<br/>

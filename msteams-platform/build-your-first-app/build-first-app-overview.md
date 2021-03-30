@@ -8,7 +8,8 @@ ms.topic: quickstart
 ---
 # Build your first Microsoft Teams app overview
 
-In the **get started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
+This tutorial teaches you to create basic Teams apps. It contains a series of lessons that begin with a "Hello World" app and further introduces you to common tools, fundemental concepts, and more advanced features of Teams.
+[Here is a short video](https://support.microsoft.com/en-us/office/welcome-to-microsoft-teams-b98d533f-118e-4bae-bf44-3df2470c2b12?wt.mc_id=otc_microsoft_teams) of Teams and its features.
 
 ## What you'll learn
 
@@ -45,21 +46,24 @@ Depending on what capabilities you want for your app, you will need an appropria
 | Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  |[Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python | 
 | Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 
-Tutorials in this Get started section will walk you through with recommended tool sets and commonly used technologies— Visual Studio Code with Teams extension, with React.js for tabs, and Node.js for bots and messaging extensions, although _you are not limited to using these particular stacks_. 
+Tutorials in this Get started section will walk you through with recommended tool sets and commonly used technologies:
+* Visual Studio Code with Teams extension
+* React.js for tabs
+* Node.js for bots and messaging extensions
 
-If you prefer using a command-line interface (CLI), read [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md) 
+You are however not limited to using these particular stacks. If you prefer using a command-line interface (CLI), read [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md) 
 
 ### Teams doesn't host your app
 
 You will only install an app package that contains a configuration file, called manifest and app icons to Teams client, and the rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Your app in the cloud (or localhost during your development) accesses Teams via HTTPS.
 
-:::image type="content" source="../assets/images/build-your-first-app/your-app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+:::image type="content" source="../../assets/images/build-your-first-app/your-app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-## Get prerequisites
+## Prerequisites
 
 ### Set up your Teams development tenant
 
-A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. And this is also where you can sideload and test your apps. Let’s verify if you are ready to develop with the tenant or create a new tenant for developing and testing. 
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This is also where you can sideload and test your apps. Let’s verify if you are ready to develop with the tenant or create a new tenant for developing and testing. 
 
 _Do you already have a tenant, and do you have the admin access? If yes to both:_
 
@@ -84,11 +88,22 @@ Join the Microsoft 365 developer program and get a free Teams test account that 
 > [!Note]
 > If you still can't sideload apps, see [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
+### Install your development tools
 
-## Next step
+The Get Started lessons show how how to get started quickly with the Microsoft Teams Toolkit for Visual Studio Code. However, you can build Teams apps with your preffered tools as well.
+
+1. Install [Node.js](https://nodejs.org/en/).
+1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension.
+1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
+1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+
+    :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration showing where in Visual Studio Code you can install the Microsoft Teams Toolkit extension.":::
+
+Teams displays app content only through HTTPS connections. To debug certain types of apps locally, such as a bot, you'll learn how to use [ngrok to set up a secure tunnel](../concepts/build-and-test/debug.md#locally-hosted) between Teams and your app. (Production Teams apps are hosted in the cloud.)
+
+## Next Lesson
 
 Now, let's set up your development environment and start building!
 
 > [!div class="nextstepaction"]
 > [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
-
