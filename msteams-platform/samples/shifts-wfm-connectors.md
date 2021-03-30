@@ -55,6 +55,6 @@ With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 an
 
 1. Enable rich scheduling scenarios, including requesting shift swaps and time off.
 
-1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta) .
+1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
 
 For more information on contribution and suggestion, see [Get it on GitHub](https://aka.ms/JDAShiftsConnector)</br></br>
