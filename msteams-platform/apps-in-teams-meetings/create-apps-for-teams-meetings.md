@@ -283,8 +283,8 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
-> [!NOTE] 
-> Currently, in meetings tab, getting meeting details and participant information is not supported.
+    > [!NOTE] 
+    > Currently, in meetings tab, getting meeting details and participant information is not supported.
 
 **To add a messaging extension to a meeting**
 
