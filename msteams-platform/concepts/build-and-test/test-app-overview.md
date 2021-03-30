@@ -27,7 +27,7 @@ You can also debug your bot with [inspection middleware](https://docs.microsoft.
 ## See also
 
 > [!div class="nextstepaction"]
-> [Test RSC permissions in Teams](~/graph-api/rsc/test-resource-specific-consent)
+> [Test RSC permissions in Teams](~/graph-api/rsc/test-resource-specific-consent.md)
 
 > [!div class="nextstepaction"]
 > [Test RSC Postman collection JSON](~/graph-api/rsc/test-rsc-json-file.md)
