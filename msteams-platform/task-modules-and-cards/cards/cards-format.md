@@ -198,7 +198,7 @@ In addition, your app must include the following elements:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -213,7 +213,39 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
+### Stage view for images in Adaptive Cards
+In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+When users hover over the image, an expand icon appears at top right corner of the image:
+![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+The image appears in stage view when the user selects the expand button:
+![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In the stage view, users can zoom in and zoom out of the image. You can select which images in your Adaptive card needs to have this capability.
+
+> [!NOTE]
+> Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.
+
+> [!NOTE]
+> For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default and users will be able to view Adaptive card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
