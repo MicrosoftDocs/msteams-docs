@@ -17,7 +17,7 @@ Forms reverse proxy performance must not be affected so the payload in request b
 
 Currently, the request headers include the Authentication standard header and an optional non-standard header called ContextId which is copied from the original request made by the user.
 
-![Current headers of the bots](../../assets/images/bots/currentheadersofbots.png)
+![Current headers of the bots](~/assets/images/bots/currentheadersofbots.png)
 
 ## New headers of the bot
 
@@ -29,7 +29,7 @@ You can add the tenant ID and the conversation ID to the request headers of the 
 - If the tenant or conversation ID is not present in the activity, the value for the key is empty.
 - The values are added for both asynchronous flow that is user messages and events and synchronous flow that is for invokes.
 
-![New headers of the bot](../../assets/images/bots/newheadersofbots.png)
+![New headers of the bot](~/assets/images/bots/newheadersofbots.png)
 
 > [!NOTE]
 > Always send a hash of the conversation ID and name it routing-id so that it is not required to check if it is valid or not.
@@ -38,7 +38,7 @@ You can add the tenant ID and the conversation ID to the request headers of the 
 
 The BotNotificationService creates the bot activity request. During the creation add BotActivity.Conversation.TenantId value as a nonstandard request header with the name x-ms-tenant-id. Similarly, add BotActivity.Conversation.ConversationId with the name x-ms-conversation-id.
 
-The changes are behind a feature switch TenantIdAndConversationIdHeadersEnabled, that allows blacklisting and gradual deployment.
+The changes are behind a feature switch TenantIdAndConversationIdHeadersEnabled, that allows gradual deployment.
 
 > [!NOTE]
 > The header is in addition and must not cause any backward compatibility issues.
@@ -48,10 +48,10 @@ The changes are behind a feature switch TenantIdAndConversationIdHeadersEnabled,
 Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values.
 
 | Field key | Value |
-|----------------|-----------------|--------------|----------------|-----------|
+|----------------|-----------------|
 | x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
 | x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
 
 If the tenant or conversation ID is not present in the activity, the value is empty.
 
-![Request header fields](../../assets/images/bots/requestheaderfields.png)
+![Request header fields](~/assets/images/bots/requestheaderfields.png)
