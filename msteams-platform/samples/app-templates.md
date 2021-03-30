@@ -652,4 +652,29 @@ Workplace Awards is a Teams app template that provides a positive framework to f
 :::column-end:::
 :::row-end:::
 
+## Training  &#9734;
+
+Training is a custom [Teams messaging
+extension ](../messaging-extensions/what-are-messaging-extensions.md) app that enables customers to publish a training within a chat or a channel for offline knowledge sharing and upskilling. The app is supported across all Teams platform clients - desktop, browser, iOS, and Android and is ready for deployment as part of your Microsoft 365 subscription.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Create Training in Teams view](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
+## Quiz  &#9734;
+
+Quiz is a custom [Teams messaging extension ](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to create a quiz within a chat or a channel for knowledge check and instantaneous results. Use Quiz for – In-class and offline exams, Knowledge check within team and for fun quizzes within team. Quiz app is supported across all platforms – Teams desktop, browser, iOS, and Android clients. It is ready for deployment as part of your existing Microsoft 365 subscription.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Create Quiz in Teams view](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
 Have an idea for an app template you'd like to see? [Please let us know](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
