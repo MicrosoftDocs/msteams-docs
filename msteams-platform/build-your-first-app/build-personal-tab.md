@@ -81,7 +81,7 @@ a {
 
 You can view the new content in your app's tab in Teams.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-content.png" alt-text="Screenshot of a personal tab with static content.":::
+:::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-content.png" alt-text="Screenshot of a personal tab with static content.":::
 
 ## Update the tab theme
 
@@ -155,7 +155,7 @@ if (isTheme === "default") {
 
 Check your tab in Teams. The appearance now closely matches the dark theme.
 
-:::image type="content" source="../assets/images/tabs/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot of a personal tab with static content view.":::
+:::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot of a personal tab with static content view.":::
 
 ## Well done
 

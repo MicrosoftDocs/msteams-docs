@@ -26,7 +26,7 @@ Your workplace created a Teams app that uses [tabs](../build-your-first-app/buil
 
 ## Before you begin
 
-If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
+If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#prerequisites).
 
 ## Create your app project
 
