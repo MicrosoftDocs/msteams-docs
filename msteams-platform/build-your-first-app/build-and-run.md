@@ -24,7 +24,7 @@ For more information, see [overview and prerequisite](../build-your-first-app/bu
 
 :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create your app project with the Visual Studio Code Teams Toolkit.":::
 
-1. Sign in with your Microsoft 365 development account that [you previously have set up](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account). 
+1. Sign in with your Microsoft 365 development account that [you previously have set up](../build-your-first-app/build-first-app-overview.md). 
 1. Select **JS** (JavaScript) On the **Select project** screen and click **Next**.
 
 :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-03.png" alt-text="Screenshot showing how to configure your app project with the Visual Studio Code Teams Toolkit.":::
@@ -59,7 +59,7 @@ Your app is ready to test in Teams. To be able to sideload apps in Teams:
 
 * You have a Teams account and with admin access 
 or
-* You have a Microsoft 365 development account that allows app sideloading (for more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account)) 
+* You have a Microsoft 365 development account that allows app sideloading (for more information on account opening, see [Teams development account](../build-your-first-app/build-first-app-overview.md)) 
 
 * You must enable sideloading. Follow the steps in [Turn on app sideloading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). 
 
