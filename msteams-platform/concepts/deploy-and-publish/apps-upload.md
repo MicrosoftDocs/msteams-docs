@@ -1,14 +1,14 @@
 ---
-title: Sideload your app
-description: Learn how to upload your custom app in Microsoft Teams.
+title: Upload your app
+description: Learn how to sideload your app in Microsoft Teams.
 ms.topic: how-to
 author: KirtiPereira
 ms.author: surbhigupta
 ---
 
-# Sideload your app in Microsoft Teams
+# Upload your app in Microsoft Teams
 
-You can install Microsoft Teams apps without having to publish to your organization or the Teams store. Sideloading makes sense in the following scenarios:
+You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store. This makes sense in the following scenarios:
 
 * You built an app just for yourself (for example, to automate a workflow).
 * You built an app for a small set of users (such as your work group).
@@ -17,10 +17,10 @@ You can install Microsoft Teams apps without having to publish to your organizat
 ## Prerequisites
 
 * Create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
-* [Enable sideloading in your Teams tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+* [Enable custom app uploading in your Teams tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 * Make sure your app services are running and accessible via HTTPs.
 
-## Sideload your app
+## Upload your app
 
 In the install dialog, you can add your app to a team, chat, meeting, or for personal use depending on how you configure your app's scope.
 
@@ -30,7 +30,7 @@ In the install dialog, you can add your app to a team, chat, meeting, or for per
 :::image type="content" source="~/assets/images/build-your-first-app/add-teams-app.png" alt-text="Screenshot showing an example of a Teams app install dialog.":::
 1. Select **Add** to install your app.
 
-## Troubleshoot sideloading issues
+## Troubleshoot upload issues
 
 If your app fails to sideload, do the following until the issue resolves:
 
@@ -38,15 +38,15 @@ If your app fails to sideload, do the following until the issue resolves:
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html) again.
 1. Make sure your app manifest matches the latest [schema](../../resources/schema/manifest-schema.md).
 
-## Access your sideloaded app
+## Access your app
 
 Teams provides several ways to open apps. For more information, see [access your apps in Teams](https://support.microsoft.com/office/access-your-apps-in-teams-0758cb09-9e85-40e7-a974-51df7734646a).
 
-## Update your sideloaded app
+## Update your app
 
-You can update your app service code without having to sideload the app again. However, you must reinstall if you change any app configurations in the manifest.
+You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations in the manifest.
 
-## Remove your sideloaded app
+## Remove your app
 
 To remove your app, right click the app icon in Teams and select **Uninstall**.
 

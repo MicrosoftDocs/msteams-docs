@@ -374,7 +374,7 @@
     href: concepts/deploy-and-publish/apps-publish-overview.md
   - name: Create your app package
     href: concepts/build-and-test/apps-package.md
-  - name: Sideload your app
+  - name: Upload your app
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your organization
     href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
