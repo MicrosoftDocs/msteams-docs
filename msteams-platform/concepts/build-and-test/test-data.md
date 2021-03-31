@@ -24,17 +24,9 @@ If you don't already have a test tenant, you will need to join the Office 365 de
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module)
 
-### Optional step: allow upload of custom apps
+## (Optional) Enable custom app uploading
 
-By default, only global admins or teams service admins can upload custom apps into the tenant app catalog.  You can also enable all users to upload custom apps for their own use or to teams for testing.
-
-To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.
-
-<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" title="Screenshot of App Setup Policy" />
-
-For more information see:
-
- - [Manage app setup policies in Microsoft Teams](/microsoftteams/teams-app-setup-policies)
+By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
 ## Create teams and channels
 
