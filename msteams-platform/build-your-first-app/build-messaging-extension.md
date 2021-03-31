@@ -28,7 +28,7 @@ Your organization's help desk communicates with users through Teams, but the tic
 
 ## Before you begin
 
-If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
+If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#prerequisites).
 
 ## Create your app project
 
