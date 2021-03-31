@@ -86,22 +86,6 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::row:::
    :::column span="2":::
 
-## Get ideas for your app
-
-Looking for inspiration? Browse our list of real-world scenarios and industry solutions to understand the ways Teams apps can help your users.
-
-> [!div class="nextstepaction"]
-> [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
 ## Start building
 
 Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
@@ -140,6 +124,22 @@ You don't need to be an expert programmer to build a great Teams app. Try one of
 
 > [!div class="nextstepaction"]
 > [Create a low-code app](samples/teams-low-code-solutions.md)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="2":::
+
+## Get ideas for your app
+
+Looking for inspiration? Browse our list of real-world scenarios and industry solutions to understand the ways Teams apps can help your users.
+
+> [!div class="nextstepaction"]
+> [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
 
    :::column-end:::
    :::column span="":::
