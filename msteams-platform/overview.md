@@ -69,6 +69,8 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 :::row:::
    :::column span="":::
+   :::column-end:::
+:::row-end:::
 
 ### Microsoft Graph for Teams
 
