@@ -69,6 +69,8 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 :::row:::
    :::column span="":::
+   :::column-end:::
+:::row-end:::
 
 ### Microsoft Graph for Teams
 
@@ -79,18 +81,23 @@ Some apps are simple (send notifications), while others are complex (manage pati
    :::column-end:::
    :::column span="":::
 
+:::row:::
+   :::column span="2":::
    :::column-end:::
 :::row-end:::
 
-:::row:::
-   :::column span="2":::
+## Build solutions for Microsoft Teams apps
+ 
+Microsoft offers an extensibility look book, a scenario library for Teams apps organized by industry. This book helps you build apps on the Teams platform and understand different possible scenarios using various Teams platform capabilities. The look book scenarios start with a business problem, the personas involved along with their challenges, and end with a Teams app solution addressing the business needs.
+
+Each scenario in this library is accompanied by a set of high-fidelity design concept mocks, which can serve as an inspiration for designing your apps and enhancing user experience. In addition, the look book highlights the design and architecture best practices followed in building each app. For more information, see the extensibility look book. For more information, see [extensibility look book](https://adoption.microsoft.com/extensibility-look-book/scenarios/). 
 
 ## Start building
 
-   Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
+Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
 
-   > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/build-first-app-overview.md)
+> [!div class="nextstepaction"]
+> [Build your first app now](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -103,10 +110,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Integrate with Teams
 
-   Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
+Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
-   > [!div class="nextstepaction"]
-   > [Integrate an existing app](samples/integrating-web-apps.md)
+> [!div class="nextstepaction"]
+> [Integrate an existing app](samples/integrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -119,10 +126,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## A little code goes a long way
 
-   You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
+You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
-   > [!div class="nextstepaction"]
-   > [Create a low-code app](samples/teams-low-code-solutions.md)
+> [!div class="nextstepaction"]
+> [Create a low-code app](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::
