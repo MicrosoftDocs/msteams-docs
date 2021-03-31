@@ -41,8 +41,6 @@ Detail all of the capabilities the app offers within Teams and steps for testing
 
 If a Teams tenant requires configuration to use the app, include the configuration steps and admin and non-admin accounts for validation.
 
-You can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and renews as long as you're using it for development activities.
-
 ### Video (optional)
 
 You can provide a recording of the product so we can fully understand its functionality.
@@ -282,7 +280,7 @@ For more information, see the [store validation guidelines](~/concepts/deploy-an
 
 #### Long description
 
-The long description can provide an engaging narrative that highlights your app's main features, the problems it solves, and its target audience. While this description can be as long as 4000 characters, most users will only read between 300-500 words.
+The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience. While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
 
 The following example highlights where an app's long description displays in a store listing:
 
