@@ -149,7 +149,7 @@ for each activity_id in _list:
 
 # [REST API](#tab/rest)
 
- To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
+To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
 
 ```http
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
