@@ -270,7 +270,6 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tab setup must not dead-end the new user. A way forward message should be provided to complete the workflow.
 * Authentication should happen during tab setup and not after.
-* Tabs must have a help tab with instructions on how to use and configure your app.
 
 ### 5.2 Views
 
