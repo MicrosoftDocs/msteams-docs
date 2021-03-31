@@ -81,11 +81,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
    :::column-end:::
    :::column span="":::
 
-   :::column-end:::
-:::row-end:::
-
 :::row:::
    :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 ## Build solutions for Microsoft Teams apps
  
