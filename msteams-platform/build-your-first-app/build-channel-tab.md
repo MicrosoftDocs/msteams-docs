@@ -89,7 +89,7 @@ render() {
 }
 ```
 
-1. Open the `App.css` file from the `src/components` directory and update the CSS for color as shown here.
+1. Update the `App.css` file from the `src/components` directory with the following rule to make the email links are easier to read no matter which theme is used.
 
 ```CSS
 a {
@@ -143,7 +143,7 @@ Your app is running on `https://localhost:3000` once the **Compiled successfully
 
 ## Sideload your app in Teams
 
-Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
+Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. (If you aren't sure you have that, learn about getting a [Teams development account](../build-your-first-app/build-first-app-overview.md#Prerequisites).)
 
 1. Launch a Teams web client in Visual Studio Code with the **F5** key.
 1. Add (`localhost`) as trustworthy by following these steps to enable your app content to display in Teams:
