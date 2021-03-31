@@ -467,6 +467,19 @@ Quick Responses is a Microsoft Teams app that delivers a robust solution for eff
 
 ![Sample view of responses](../assets/images/quick-responses.png)
 
+
+## Quiz  &#9734;
+
+Quiz is a custom [Teams messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables you to create a quiz within a chat or a channel for knowledge check and instantaneous results. You can use Quiz for, In-class and offline exams, Knowledge check within team, and for fun quizzes within a team. Quiz app is supported across multiple platforms, such as Teams desktop, browser, iOS, and Android clients. This app is ready for deployment as part of your existing Microsoft 365 subscription.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-quiz)
+
+:::row:::
+  :::column span="1":::
+    ![Create Quiz in Teams view](../assets/images/quiz-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
+
 ## Rapid Assist
 
 Rapid Assist is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/) based app that allows customer facing associates to rapidly connect with the experts to get quick answers, search for information, follow up open requests, and allow experts to receive notifications to quickly get on a call to help answer questions. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to enable organizations to easily connect frontline workers with corporate liaisons to resolve customer queries and deliver a great customer experience. 
@@ -607,6 +620,18 @@ A project can include multiple tasks, and various projects can be assigned to em
 
 ![Time Tally](../assets/images/11zon_gif.gif)
 
+
+## Training  &#9734;
+
+Training is a custom [Teams messaging extension](../messaging-extensions/what-are-messaging-extensions.md) app that enables users to publish a training within a chat or a channel for offline knowledge sharing and upskilling. The app is supported across multiple Teams platform clients, such as desktop, browser, iOS, and Android. This app is ready for deployment as part of your Microsoft 365 subscription.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-training)
+
+:::row:::
+  :::column span="1":::
+    ![Create Training in Teams view](../assets/images/training-app-template-compose-view.gif)  
+:::column-end:::
+:::row-end:::
 
 ## Virtual Rounding
 
