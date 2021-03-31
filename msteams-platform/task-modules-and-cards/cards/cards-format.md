@@ -239,6 +239,10 @@ To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and e
 ``` 
 
 ### Stage view for images in Adaptive Cards
+
+> [!NOTE]
+> This feature is currently available in developer's preview only.
+ 
 In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
 ``` json
