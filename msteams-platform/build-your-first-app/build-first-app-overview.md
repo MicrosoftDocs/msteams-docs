@@ -57,7 +57,7 @@ You need a Teams account that allows custom app sideloading. (Your account may a
 <!-- markdownlint-disable MD033 -->
 <details>
 
-<summary><b>Get a free Microsoft Teams subscription</b></summary>
+<summary><b>Get your free Microsoft 365 developer subscription</b></summary>
 
 You can get a free Teams test account that allows app sideloading by joining the Microsoft 365 developer program. (The registration process takes approximately two minutes.)
 
