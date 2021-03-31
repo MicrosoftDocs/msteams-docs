@@ -34,12 +34,13 @@ The deeplink must follow the following syntax:
 https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”, “title”:”[title]”}
 
 ### Examples
+The following examples show the sample deep links to invoke the **Stage View**:
 
-#### Example 1:
+#### Example 1
 
 https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
-#### Example 2:
+#### Example 2
 
 https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
@@ -69,8 +70,46 @@ Following are the scenarios under which a link is unfurled and pinned as Tab:
 
 ### Schema for Adaptive Card
 
-
-
+```json
+{
+    type: "Action.Submit",
+    title: "View",
+    data: {
+          msteams: {
+            type: "invoke",
+            value: {
+                type: "tab/tabInfoAction",
+                tabInfo: {
+                    contentUrl: contentUrl,
+                    websiteUrl: websiteUrl,
+                    name: "Tasks",
+                    entityId: "entityId"
+                 }
+                }
+            }
+        }
+}, 
+{   
+    type: "Action.Submit",
+    title: "Pin as Tab",
+     data: {
+        msteams: {
+            type: "invoke",
+            overflow: "true",
+            value: {        
+                  type: "tab/tabInfoAction",
+                  tabInfo: {
+                    contentUrl: contentUrl,
+                    websiteUrl: websiteUrl,
+                    name: "Tasks",
+                    entityId: "entityId",
+                    pinTab: true
+                           }
+            }
+        }
+    }    
+}
+```
 
 The invoke type should be of `composeExtension/queryLink` type. It is like the current `appLinking` workflow. 
 
@@ -92,37 +131,89 @@ The `overflow to true` decides whether the button will show up as an overflow in
 
 #### Schema for Adaptive Card
 
-
-
-
+```json
+{
+    type: "Action.Submit",
+    title: "Pin as Tab",
+     data: {
+        msteams: {
+            type: "invoke",
+            overflow: "true",
+            value: {
+                  type: "tab/tabInfoAction",
+                  tabInfo: {
+                    contentUrl: contentUrl,
+                    websiteUrl: websiteUrl,
+                    name: "Tasks",
+                    entityId: "entityId",
+                    pinTab: true
+                  }
+            }
+        }
+    }
+}         
+```
 
 * Set `pinTab` to `true` for this workflow.
 
 ### Deeplink to a stage
 
-* This is the deeplink format : https://teams.microsoft.com/l/stage/appId/0?context={ "contentURL": contentURL, "websiteURL": websiteURL, "title": title}
+* This is the deeplink format: https://teams.microsoft.com/l/stage/appId/0?context={ "contentURL": contentURL, "websiteURL": websiteURL, "title": title}
 * We resolve the deeplink from our deeplinkservice and open the stage.
 * No option to pin the tab from here.
 * Its difficult to include the entire `tabInfo` object in the deeplink URL.
-* The entityId is 0 in this case.
+* The `entityId` is `zero` in this case.
 
-## Open a stage with no option to pin the tab
+### Open a stage with no option to pin the tab
 
 You can open a stage with no option to pin the tab with the following schema:
+
 #### Schema
+
 * `OpenURL` action with the stage deeplink. It opens the stage with the URL.
 
 ###  OpenURL action which opens the url in a browser 
 
 #### Schema 
 
-
+```json
+{
+  type: "Action.OpenUrl",  
+ title: "View",
+ url: contentUrl
+}
+```
 
 ### Upgrade a website tab to an app
 
 #### Schema 
 
-
+```json
+{
+	“title”: “View”,
+	“type”: “Action.Submit”,
+    “data”:{
+     “msteams”:{
+	  “type”: “invoke”
+         “overflow”: “true”,
+              “value”:{
+                    “type”: “tab/tabInfoFetch”,
+                    “anything”: “any contextual information you would like to add”
+               }
+        }
+    }
+},
+{
+    "tabInfo": {
+ “contentUrl”: “contentUrl",
+ “websiteUrl”: “websiteUrl”,
+ “removeUrl”: “removeUrl”,
+ "name": "Tasks",
+ "entityId": "entityId",
+ “pinTab”: “true”
+ }
+}
+```
 * When there is a website tab that matches an app, you get **Use the app** option in a banner. 
 
 * If you select **Use the app**, it triggers an `invoke` request to the bot. You can use  `handleExecuteBotQuery` API to get the response from bot.
