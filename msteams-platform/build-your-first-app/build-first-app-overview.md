@@ -57,7 +57,7 @@ You are however not limited to using these particular stacks. If you prefer usin
 
 You will only install an app package that contains a configuration file, called manifest and app icons to Teams client, and the rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Your app in the cloud (or localhost during your development) accesses Teams via HTTPS.
 
-:::image type="content" source="../../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
 ## Prerequisites
 
