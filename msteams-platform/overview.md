@@ -84,7 +84,6 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::row:::
    :::column span="2":::
    :::column-end:::
-:::row-end:::
 
 ## Build solutions for Microsoft Teams apps
  
@@ -101,10 +100,7 @@ Quickly familiarize yourself with building for Teams by creating a simple app an
 
    :::column-end:::
    :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
+   
 :::row:::
    :::column span="2":::
 
