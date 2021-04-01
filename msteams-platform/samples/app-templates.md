@@ -26,7 +26,7 @@ All app templates are provided under the [MIT License](https://github.com/Office
 
 ## Adoption Bot &#9734;
 
-Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app like the [Adoption Hub](aka.ms/theadoptionhub).
+Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](aka.ms/theadoptionhub).
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
