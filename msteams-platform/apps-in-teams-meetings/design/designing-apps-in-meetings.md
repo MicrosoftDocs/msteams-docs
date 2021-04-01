@@ -147,7 +147,7 @@ There are two header variants. When possible, use the variant with the avatar to
 In-meeting dialogs can vary in size to account for different scenarios. Make sure to maintain padding and component sizes.
 
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
-* **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. Users can scroll vertically if your app content exceeds the maximum height.
+* **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
 To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) key.
 
