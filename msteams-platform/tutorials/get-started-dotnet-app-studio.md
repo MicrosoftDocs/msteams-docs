@@ -69,7 +69,7 @@ When the app starts, a browser window opens with the root of the app launched. Y
 - [https://localhost:44327/](https://localhost:44327/)
 - [https://localhost:44327/hello](https://localhost:44327/hello)
 - [https://localhost:44327/first](https://localhost:44327/first)
-- [https://localhost:44327/second]https://localhost:44327/second)
+- [https://localhost:44327/second](https://localhost:44327/second)
 
 <a name="HostSample"></a>
 
