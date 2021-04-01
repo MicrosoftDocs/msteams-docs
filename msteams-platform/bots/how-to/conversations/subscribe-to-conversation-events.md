@@ -784,7 +784,7 @@ async def on_teams_team_deleted(
 
 ### Team restored
 
-The bot receives a notification when it is restored from deletion. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
+The bot receives a notification when the team it is restored from deletion. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.
 
 # [C#/.NET](#tab/dotnet)
 
