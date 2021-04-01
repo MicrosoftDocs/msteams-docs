@@ -3,7 +3,7 @@ title: Tabs- Link unfurling
 author: Rajeshwari-v
 description: How to perform link unfurling with tab in a Microsoft Teams app.
 ms.topic: conceptual
-ms.author: surbhigupta12
+ms.author: surbhigupta
 ---
 
 # Leverage link unfurling service for tabs
@@ -172,7 +172,7 @@ You can open a stage with no option to pin the tab with the following schema:
 
 * `OpenURL` action with the stage deeplink. It opens the stage with the URL.
 
-###  OpenURL action which opens the url in a browser 
+###  OpenURL action which opens the URL in a browser 
 
 #### Schema 
 
