@@ -60,7 +60,7 @@ You will only install an app package that contains a configuration file called m
 
   :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-## Additional Resource
+## Additional Resources
 
 * [Teams developer platform](../overview.md)
 * [Platform capabilities](../concepts/capabilities-overview.md)
