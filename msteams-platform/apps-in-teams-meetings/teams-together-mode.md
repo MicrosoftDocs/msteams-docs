@@ -6,18 +6,20 @@ ms.topic: conceptual
 
 # Together Mode in Teams
 
-Teams Together Mode provides a simple, innovative, and user-friendly meeting environment. It digitally combines participants into a single virtual space instead of being shown separately in boxes. It creates your virtual image and places the image in a virtual environment where you can easily interact with your peers. It makes meetings more engaging in the auditorium view.
+Microsoft Teams Together Mode provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined spots designed and fixed by the scene creator.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-You can create scene only apps or extend your current app to have scenes for Together Mode. A scene is a virtual view of the auditorium or meeting venue where the attendees are placed and includes the seats for attendees.
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene Design Studio that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
 
-The following image gives an overview of adding a scene to an app:
+The following image gives an overview to create a scene only app:
 
 ![Add scene to app](../assets/images/apps-in-meetings/scene-added-to-app.png)
+
+A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene Design Studio handles the app package creation in the background.
 
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
@@ -28,67 +30,75 @@ There are prerequisites that you must complete before using the Together Mode.
 
 You must have a basic understanding of the following to use Together Mode:
 
-* Scene
-* Scene Design Studio
-* Create apps in App Studio
-* Sideload or upload apps in Teams
-
-Now you can create or build a scene in the Scene Design Studio using Scene editor, where you can add meeting participants, add background images, and align images to the scene.
+* Definition of scene and seats in a scene.
+* Have a Microsoft Developer account and be familiar with the Microsoft Teams Dev Center and App Studio.
+* [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 
 ## Build a scene using the Scene Design Studio
 
-Microsoft has a Scene Design Studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/home).
+>[!NOTE]
+> This document is referring to Scene Design Studio in the Microsoft Teams Dev Center. The interface and functionalities are all same in App Studio Scene Designer.
 
-Together Mode allows you to apply different scenes while conducting meetings in a virtual environment.
+Microsoft has a Scene Design Studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-A scene is an artifact that contains the following:
+A scene in the context of the Scene Design Studio is an artifact that contains the following:
 
-* Seats of meeting participants if their videos are turned on.
-* Each seat is placed on an XY canvas.
+* Seats reserved for meeting organizer and meeting presenters. Presenters does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Each seat and image have a width and height. PNG is the only supported format.
+* The xyz coordinates of all the seats and images.
 * A collection of images that are camouflaged as one image.
-* Each seat and image has width and height.
-* Optionally, you can reserve a spot for the meeting organizer and a set of reserved spots for participants.
+
+The following image shows each seat represented as an avatar for development purposes:
 
 ![Scene Design Studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
-In the Scene Design Studio, each seat represents an avatar for design purposes. Each seat and image has a placement in the third dimension, that is the Z-axis to give a sense of depth in scenes that require them.
+The seat dimensions become the canvas for rendering the participant video stream.
+
+The following image shows you how to get the scene package as a zip file that contains all the scene assets:
+
+![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
+
+Assets include PNG images used to create the scene and a scene.json file that captures the scene metadata.
+
+>[!NOTE]
+> Scene package can be used for sharing and allowing other co-creators to continue enhancing the scene. The **Import a scene** option can be used for this purpose.
 
 ![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
 **To build a scene using the Scene Design Studio**
 
-1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/home).
+1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-2. Select **Tools** from the left-hand section and then select **Scene editor** under **Tools** to open the Scene Design Studio.
+2. Select **Tools** from the menu and then select **Scene editor** under **Tools** to open the Scene Design Studio.
 
 3. From the **Scenes Editor** page, select **Create a new scene**.
 
-4. Select **Participants** under **Layers** in the upper-right corner.
+4. On the right side, in the **Scene Name** box, enter a name for the scene.
 
-5. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
-
-6. Drag and drop the image into the environment as displayed in the following image:
+5. Drag and drop the image into the environment as displayed in the following image:
 
     >[!NOTE]
     > Alternately, you can add background images to the scene using **Add images**.
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-7. Select an image that you have placed in the scene. From the rightmost pane, select an alignment for the image or use the **Size & rotation** slider to adjust the image size.
-
-    >[!NOTE]
-    > Alternately, you can drag the images around the scene and place them in the required position and resize them using the resize arrow.
+6. Select an image that you have placed in the scene. From the rightmost pane, select an alignment for the image or use the **Size & rotation** slider to adjust the image size.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-8. Select any participant image, select the **Assign Spot** check box, and select **Meeting Organizer** and **Presenter** to assign that spot to the participant.
+7. Select **Participants** under **Layers** in the upper-right corner.
+
+8. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
+
+    >[!NOTE]
+    > You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
+
+9. Select any participant image, select the **Assign Spot** check box, and select **Meeting Organizer** and **Presenter** to assign that spot to the participant.
 
     >[!NOTE]
     > Alternately, you can select either **Meeting Organizer** or **Presenter** options for that participant.
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
-
-9. In the **Scene Name** box, enter a name for the scene.
 
 10. Select **Export the Scene** from the **Save** drop-down menu. A .ZIP file, that is the scene package, is downloaded.
 
