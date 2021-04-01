@@ -8,10 +8,11 @@ ms.topic: quickstart
 ---
 # Build and run your first Microsoft Teams app
 
-This Get Started Lesson teaches you to build a personal tab that displays "Hello, World!".
-Build and run your first Teams app using the following steps:
+This tutorial teaches you to build and run your firt Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
 
-## Set up your development environment with Visual Studio Code
+## Prerequisites
+
+You have to set up your development environment by setting up your development tenant and installing the required development tools. Follow the steps in this section to set it up.
 
 ### Set up your Teams development tenant
 
@@ -20,7 +21,7 @@ A **tenant** is like a space, or a container for your organization in Teams, whe
 _Do you already have a tenant, and do you have the admin access? If yes to both:_
 
 Verify if you can sideload apps in Teams: 
-1.In the Teams client, select **Apps**. 
+1. In the Teams client, select **Apps**. 
 1. Look for an option to **Upload a custom app**. 
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
@@ -29,13 +30,12 @@ _Did you answer no, or just want to create a test account anyway:_
 
 Join the Microsoft 365 developer program and get a free Teams test account that allows app sideloading. (The registration process takes approximately two minutes.)
 
-1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Access the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
-1. When you get to the welcome screen, select **Set up E5 subscription**.
+1. Select **Set up E5 subscription** in the Welcome screen.
 1. Set up your administrator account. Once you finish, you should see a screen like this.
-:::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
-1. Log in to Teams using the administrator account you just set up.
-1. Verify if you now have the **Upload a custom app** option.
+    :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+1. Log in to Teams using the administrator account you just set up. Verify if you now have the **Upload a custom app** option.
 
 > [!Note]
 > If you still can't sideload apps, see [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
@@ -47,7 +47,7 @@ The Get Started lessons show how how to get started quickly with the Microsoft T
 1. Install [Node.js](https://nodejs.org/en/).
 1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension.
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
-1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+1. Select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit** in the Visual Studio Code.
 
     :::image type="content" source="../assets/images/build-your-first-app/vsc-install-toolkit.png" alt-text="Illustration showing where in Visual Studio Code you can install the Microsoft Teams Toolkit extension.":::
 

@@ -27,7 +27,7 @@ Here's an idea of what you'll know after going through the lessons.
 
 ## Teams app fundamentals
 
-The [Teams developer platform](../overview.md) lets you build custom apps. Some common scenarios that a custom Microsoft Teams app can help with are: 
+The Teams developer platoform lets you build custom apps. Some common scenarios that a custom Microsoft Teams app can help with are: 
 
 * Embed your website or web app directly in the Teams client 
 * Look up information quickly in another system and add the results to a conversation in Teams 
@@ -37,22 +37,22 @@ Before you begin the tutorials, you should know the following about building app
 
 ### App capabilities
 
-A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) and [and user interactions points](../concepts/extensibility-points.md).
+A Teams app is made up of one or more platform capabilities and user interaction points.
 
 Depending on what capabilities you want for your app, you will need an appropriate development toolset.  
 
 | **App Capabilities**| **User interactions** | **Recommended Tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
-| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) |[Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client) | Web technology in general—HTML, CSS, and JavaScript |
-| Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  |[Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python | 
-| Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
+| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | Teams client SDK | Web technology in general—HTML, CSS, and JavaScript |
+| Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | Bot Franework SDK | Node.js, C#, or Python | 
+| Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | Bot Framework SDK | Node.js, C#, or Python |
 
 Tutorials in this Get started section will walk you through with the recommended tool sets and commonly used technologies:
 * Visual Studio Code with Teams extension
 * React.js for tabs
 * Node.js for bots and messaging extensions
 
-You can also use any other technologies of your choice. If you prefer using a command-line interface (CLI), refer to [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md).
+You can also use any other technologies of your choice. If you prefer using a command-line interface (CLI), you are free to do so.
 
 ### Teams doesn't host your app
 
@@ -60,9 +60,19 @@ You will only install an app package that contains a configuration file called m
 
   :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
+## Additional Resource
+* [Teams developer platform](../overview.md)
+* [Platform capabilities](../concepts/capabilities-overview.md)
+* [User interactions points](../concepts/extensibility-points.md)
+* [Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client)
+* [Bot Framework SDK](https://dev.botframework.com/)
+* [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
+
+
+
 ## Next Lesson
 
 Now, let's set up your development environment and start building!
 
 > [!div class="nextstepaction"]
-> [Build a "Hello, World!" app](../build-your-first-app/build-and-run.md)
+> [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md)
