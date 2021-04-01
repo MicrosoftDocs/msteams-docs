@@ -85,6 +85,9 @@ conceptualContent:
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
+        - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
+          itemType: reference
+          text: Build solutions for Microsoft Teams apps
       
     # Card
     - title: Learn

@@ -13,11 +13,12 @@ The cards listed in this section are supported in bots for Microsoft Teams. They
 You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
-  * [Add cards as attachments to messages](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments)
-  * [Cards sample code (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/CSharp/cards-RichCards)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+  * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+
 * Node.js
-  * [Add cards as attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards)
-  * [Cards sample code (Bot Builder v3)](https://github.com/Microsoft/BotBuilder-Samples/tree/v3-sdk-samples/Node/cards-RichCards)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+  * [Cards sample code (Bot Builder v4)](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
 ## Types of cards
 
@@ -212,8 +213,10 @@ An adaptive card is a customizable card that can contain any combination of text
 
 #### Additional information on adaptive cards
 
-* [Adaptive cards overview](/adaptive-cards/)
-* [Adaptive card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
+Bot Framework reference:
+
+* [Adaptive cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Adaptive card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## Hero card
 
@@ -231,7 +234,7 @@ A card that typically contains a single large image, one or more buttons and tex
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines. |
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
+| text | Rich text | Text appears under the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 | tap | Action object | This action will be activated when the user taps on the card itself. |
@@ -273,8 +276,8 @@ A card that typically contains a single large image, one or more buttons and tex
 
 Bot Framework reference:
 
-* [Hero card Node](https://docs.microsoft.com/javascript/api/botframework-schema/herocard)
-* [Hero card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.herocard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Hero card Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
+* [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
 ## List card
 
@@ -364,7 +367,7 @@ The Office 365 Connector card is supported in Teams, not in Bot Framework. This 
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines. |
 | summary | Rich text | Summary of the card. Maximum 2 lines. |
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
+| text | Rich text | Text appears under the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
 | themeColor | HEX string | Color that overrides the accentColor provided from the application manifest. |
 
 ### Notes on the Office 365 connector card
@@ -373,7 +376,7 @@ Office 365 connector cards function properly in Microsoft Teams, including [Acti
 
 One important difference between using connector cards from a connector and using connector cards in your bot is the handling of card actions.
 
-* For a connector, the endpoint receives the card payload via HTTP POST.
+* For a connector, the endpoint receives the card payload through HTTP POST.
 * For a bot, the `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.
 
 Each connector card can display a maximum of 10 sections, and each section can contain a maximum of 5 images and 5 actions.
@@ -528,14 +531,14 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 Bot Framework reference:
 
-* [Receipt card Node](https://docs.microsoft.com/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Receipt card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.receiptcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Receipt card Node](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Signin card
 
 Signin card enables a bot to request a user to sign in. Supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions: `signin` and `openUrl`.
 
-The *signin action* can be used from any card in Teams, not just the signin card. For more details on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The **signin action** can be used from any card in Teams, not just the signin card. For more details on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for Signin cards
 
@@ -548,7 +551,7 @@ The *signin action* can be used from any card in Teams, not just the signin card
 Bot Framework reference:
 
 * [Signin card Node](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Signin card C#](/dotnet/api/microsoft.bot.connector.signincard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Signin card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Thumbnail card
 
@@ -568,7 +571,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | --- | --- | --- |
 | title | Rich text | Title of the card. Maximum 2 lines.|
 | subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
-| text | Rich text | Text appears just below the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
+| text | Rich text | Text appears under the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square). |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 | tap | Action object | This action will be activated when the user taps on the card itself. |
@@ -620,8 +623,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 Bot Framework reference:
 
-* [Thumbnail card Node](https://docs.microsoft.com/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
-* [Thumbnail card C#](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.thumbnailcard?view=botbuilder-dotnet-3.0&preserve-view=true)
+* [Thumbnail card Node](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
+* [Thumbnail card C#](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Card collections
 
@@ -631,7 +634,7 @@ Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLay
 
 ## Carousel collection
 
-The [carousel layout](/azure/bot-service/dotnet/bot-builder-dotnet-add-rich-card-attachments?view=azure-bot-service-3.0&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
+The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
 ### Support for carousel collections
 

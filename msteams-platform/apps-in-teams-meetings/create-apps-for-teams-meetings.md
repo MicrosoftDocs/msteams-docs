@@ -94,7 +94,7 @@ export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onMessage(async (context, next) => {
-            TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
             let member = participant.user;
             let meetingInfo = participant.meeting;
             let conversation = participant.conversation;
@@ -247,8 +247,9 @@ The `NotificationSignal` API includes the following response codes:
 ## Code sample
 
 |Sample name | Description | C# |
-|----------------|-----------------|--------------|----------------|-----------|
-| Content bubble | Demonstrates how to implement content bubble in-meeting experience. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|----------------|-----------------|--------------|
+| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
+| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
 
 ## See also
 
@@ -262,3 +263,4 @@ The `NotificationSignal` API includes the following response codes:
 
 > [!div class="nextstepaction"]
 > [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
+

@@ -335,11 +335,17 @@
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Messaging extensions
-    href: messaging-extensions/how-to/add-authentication.md
+    items:
+    - name: Add authentication to your messaging extension
+      href: messaging-extensions/how-to/add-authentication.md
+    - name: Enable SSO for messaging extensions
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
+  - name: Microsoft Graph Toolkit
+    href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent

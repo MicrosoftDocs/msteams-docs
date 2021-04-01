@@ -7,7 +7,7 @@ keywords: teams what's new latest
 # What's new for developers in Microsoft Teams
 
 >[!TIP]
-> Check out our production-ready templates in the   [**Teams App Templates catalog**](samples/app-templates.md). The catalog is alphabetized and the newest additions are tagged with a  star **&#9734;**.
+> Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
 ## Change Log
 
@@ -15,6 +15,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|03/18/2021|Notice: **Please update to version 4.10 or above of the Bot Framework SDK** as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021 | Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
 |03/05/2021|Reorder personal app tabs|[Reorder the chat tab in personal apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
