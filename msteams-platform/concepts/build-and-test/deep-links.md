@@ -140,6 +140,24 @@ The query parameters are:
 
 To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
+## Deep links for SharePoint Framework tabs
+
+The following deep link format can be used in a bot, connector or messaging extension card:
+`https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
+
+> [!NOTE]
+> When a bot sends a TextBlock message with a deep link, a new browser tab opens when users select the link. This happens in Chrome and Microsoft Teams desktop app running on Linux.
+> If the bot sends the same deep link URL into an `Action.OpenUrl`, the Teams tab opens in the current browser when the user selects the link. No new browser tab is opened.
+
+The query parameters are:
+
+* `appID` - Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `entityID` - The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
+* `entityWebUrl` - An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityName` - A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
+
+Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
+
 ## Linking to the scheduling dialog
 
 > [!NOTE]
