@@ -62,11 +62,11 @@ You will only install an app package that contains a configuration file called m
 
 ## Additional Resources
 
-* [Teams developer platform](../overview.md)
-* [Platform capabilities](../concepts/capabilities-overview.md)
-* [User interactions points](../concepts/extensibility-points.md)
-* [Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client)
-* [Bot Framework SDK](https://dev.botframework.com/)
+* [Build apps for Microsoft Teams](../overview.md)
+* [Understanding Teams app capabilities](../concepts/capabilities-overview.md)
+* [Entry points for Teams apps](../concepts/extensibility-points.md)
+* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client)
+* [Microsoft Bot Framework](https://dev.botframework.com/)
 * [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
 
 ## Next Lesson
