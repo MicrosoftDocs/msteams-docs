@@ -61,14 +61,13 @@ You will only install an app package that contains a configuration file called m
   :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
 ## Additional Resource
+
 * [Teams developer platform](../overview.md)
 * [Platform capabilities](../concepts/capabilities-overview.md)
 * [User interactions points](../concepts/extensibility-points.md)
 * [Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client)
 * [Bot Framework SDK](https://dev.botframework.com/)
 * [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
-
-
 
 ## Next Lesson
 
