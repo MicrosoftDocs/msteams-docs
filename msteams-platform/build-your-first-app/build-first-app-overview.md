@@ -10,7 +10,7 @@ ms.topic: quickstart
 
 The Get Started tutorial teaches you to create basic Teams apps. It contains a series of lessons that begin with building and running a basic app and further introduces you to common tools, fundemental concepts, and more advanced features of Teams.
 
-> [!VIDEO https://support.microsoft.com/en-us/office/embed/welcome-to-microsoft-teams-b98d533f-118e-4bae-bf44-3df2470c2b12?wt.mc_id=otc_microsoft_teams]
+> [!VIDEO https://www.youtube-nocookie.com/embed/jugBQqE_2sM]
 
 ## What you'll learn
 
@@ -52,7 +52,7 @@ Tutorials in this Get started section will walk you through with recommended too
 * React.js for tabs
 * Node.js for bots and messaging extensions
 
-You are however not limited to using these particular stacks. If you prefer using a command-line interface (CLI), read [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
+You are however not limited to using these particular stacks. If you prefer using a command-line interface (CLI), see [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md) for more information.
 
 ### Teams doesn't host your app
 
