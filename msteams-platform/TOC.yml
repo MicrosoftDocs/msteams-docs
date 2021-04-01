@@ -8,7 +8,7 @@
 - name: Get started
   expanded: true
   items:
-  - name: Overview and prerequisites
+  - name: Overview
     href: build-your-first-app/build-first-app-overview.md
   - name: Create a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
