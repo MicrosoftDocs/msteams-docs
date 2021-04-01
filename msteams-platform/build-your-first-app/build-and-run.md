@@ -21,8 +21,8 @@ A **tenant** is like a space, or a container for your organization in Teams, whe
 _Do you already have a tenant, and do you have the admin access? If yes to both:_
 
 Verify if you can sideload apps in Teams: 
-1. In the Teams client, select **Apps**. 
-1. Look for an option to **Upload a custom app**. 
+1. Select **Apps** in the Teams Client. 
+1. Select **Upload a custom app**. 
 
     :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
     
