@@ -26,7 +26,11 @@ You can use the link unfurling service to upgrade the website tab into a Teams a
 
 **Stage View** is a large canvas that you can invoke to surface the web content.
 
-To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API.
+To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API.   
+The following image displays a Stage View invoked through a deep link:
+
+![invoke a Stage View through a deep link](../../assets/images/tab-images/invoke-stage-view-through-deep-link.png)
+
 
 ### Syntax 
 
@@ -49,11 +53,17 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## Tab information property
 
+| Property name | Type | Number of characters | Description |
+|:-----------|:---------|:------------|:-----------------------|
+| entityId | String | 64 | A unique identifier for the entity that the tab displays. |
+| name | String | 128 | The display neme of the tab in the channel interface. |
+| contentUrl | String | 2048 | The https:// URL that points to the entity UI to be displayed in the Teams canvas. |
+| websiteUrl? | String | 2048 | The https:// URL to point at if a user opts to view in a browser. |
+| removeUrl? | String | 2048 | The https:// URL that points to the UI to be displayed when the user tries to delete the tab. |
+
+
 ## Tab link unfurling scenarios
-
-Following are the scenarios under which a link is unfurled and pinned as Tab:
-
-1. Build a tab link unfurling service that can be used to turn any URL into a tab using an adaptive card and chat service. 
+  unfurling service that can be used to turn any URL into a tab using an adaptive card and chat service. 
 
 1. Use the tab link unfurling service to stage a URL in a new component. 
 
@@ -63,10 +73,17 @@ Following are the scenarios under which a link is unfurled and pinned as Tab:
 
 1. Use the tab link unfurling service to configure a new website tab as an app. 
          
-### Open a stage from the Adaptive Card and pin a tab
+### Open a stage from Adaptive Card and pin a tab
 
 * When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. 
-* After a stage is launched, and the tab information is passed in, then you must add the ability to pin the stage as a tab.
+* After a stage is launched, and the tab information is passed in, then you must add the ability to pin the stage as a tab.  
+
+The following images display a stage opened from Adaptive Card and pinned in a tab:
+
+![Open a stage from Adaptive Card](../../assets/images/tab-images/open-stage-from-adaptive-card.png)
+
+
+![pin a tab](../../assets/images/tab-images/pin-a-tab.png)
 
 ### Schema for Adaptive Card
 
@@ -186,6 +203,10 @@ You can open a stage with no option to pin the tab with the following schema:
 
 ### Upgrade a website tab to an app
 
+You can upgrade a website tab to an app. The following image displays how a website tab is upgraded to an app:
+
+![upgrade a website tab to an app](../../assets/images/tab-images/upgrade-a-website-tab-to-an-app.png)
+
 #### Schema 
 
 ```json
@@ -221,13 +242,17 @@ You can open a stage with no option to pin the tab with the following schema:
 * When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
 
 ### Add a tab of an app instead of the website tab 
+In this work flow, you can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#upgrade-a-website-tab-to-an-app).   
 
-Similar to the above scenario.
+The following image displays how to add a tab of an app instead of the website tab: 
 
-#### Schema
+![add a tab of an app instead of the website tab](../../assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
 
 ## API
 
 You must update the BOT SDK API.
 
+## See also
 
+> [!div class="nextstepaction"]
+> [Messaging extensions link unfurling](../../messaging-extensions/how-to/link-unfurling.md)

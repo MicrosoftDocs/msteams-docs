@@ -174,6 +174,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tabs-link unfurling
+    href: tabs/tabs-link-unfurling.md
   - name: Tab requirements
     href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
