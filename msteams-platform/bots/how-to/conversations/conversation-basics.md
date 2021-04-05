@@ -14,7 +14,7 @@ A conversation is a series of messages sent between your Microsoft Teams bot and
 
 | Conversation type | Description |
 | ------- | ----------- |
-| `teams` | This conversation type is also called channel conversations, visible to all members of the channel. |
+| `teams` | This conversation type is visible to all members of the channel. |
 | `personal` | This conversation type includes conversations between bots and a single user. |
 | `groupChat` | This conversation type includes chat between a bot and two or more users. It also enables your bot in meeting chats. |
 
@@ -222,7 +222,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You must cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
 The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
@@ -402,10 +402,6 @@ The next section provides status code responses for errors generated from Bot AP
 
 ## Status code responses
 
-The following image shows a sample 403 status code response:
-
-![Sample 403 response](~/assets/images/sample403response.png)
-
 Following are the status codes and their error code and message values:
 
 | Status code | Error code and message values | Description |
@@ -417,7 +413,7 @@ Following are the status codes and their error code and message values:
 | 412 | **Code**: `PreconditionFailed` <br/> **Message**: “Precondition failed, please try again.” | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
 | 404 | **Code**: `ConversationNotFound` <br/> **Message**: “Conversation not found.” | The conversation was not found. |
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: “Message size too large.” | The size on the incoming request was too large. |
-| 429 | **Code**: `Throttled` <br/> **Message**: “Too many requests.” Also returns when to retry after. | Too many requests were sent by the bot. |
+| 429 | **Code**: `Throttled` <br/> **Message**: “Too many requests.” Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
 
 The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
 
