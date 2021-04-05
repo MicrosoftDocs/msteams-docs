@@ -23,7 +23,7 @@ Conversational bots are incredibly flexible and can be scoped to handle a few si
 
 Finding the right mix of cards, text, and task modules are key to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using both text and interactive cards:
 
-:::image type="content" source=".~/assets/images/FAQPlusEndUser.gif" alt-text="FAQ Plus gif" border="true":::
+:::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="FAQ Plus gif" border="true":::
 
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. For more information, see [bot activity handlers](~/bots/bot-basics.md). In addition, bots are apps that have a conversational interface. You can interact with a bot using text, interactive cards, and speech. A bot behaves differently depending on whether the conversation is a channel or group chat conversation, or it is a one-to-one conversation. Conversations are handled through the Bot Framework connector. For more information, see [conversation basics](~/bots/how-to/conversations/conversation-basics.md).
 
