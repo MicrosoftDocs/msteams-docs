@@ -136,7 +136,7 @@ You don't need to be an expert programmer to build a great Teams app. Try one of
 
 ## Get ideas for your app
 
-Looking for inspiration? Browse our list of real-world scenarios and industry solutions to understand the ways Teams apps can help your users.
+Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand various ways Teams apps can help your users.
 
 > [!div class="nextstepaction"]
 > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
