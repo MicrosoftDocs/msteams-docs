@@ -243,7 +243,7 @@ You can upgrade a website tab to an app. The following image displays how a webs
 * When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
 
 ### 5. Add a tab of an app instead of the website tab 
-In this work flow, you can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#upgrade-a-website-tab-to-an-app).   
+In this work flow, you can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#6-upgrade-a-website-tab-to-an-app).   
 
 The following image displays how to add a tab of an app instead of the website tab: 
 
