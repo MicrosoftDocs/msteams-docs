@@ -179,26 +179,17 @@ For more information on the features available see: [Features in the Public Deve
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
-   "configurableProperties": {
-       "type": "array",
-       "description": "A list of tenant configured properties for an app.",
-       "maxItems": 9,
-       "items": {
-         "enum": [
-           "name",
-           "shortDescription",
-           "longDescription",
-           "smallImageUrl", // The `smallImageUrl` is the `outline` property in the `icons` block of the manifest.
-           "largeImageUrl", // The `largeImageUrl` is the `color` property in the `icons` block of the manifest.
-           "accentColor",
-           "websiteUrl",
-           "privacyUrl",
-           "termsOfUseUrl"        
-          ]          
-        }
-      }      
-    } 
-  ]
+   "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", // The `smallImageUrl` is the `outline` property in the `icons` block of the manifest.
+     "largeImageUrl", // The `largeImageUrl` is the `color` property in the `icons` block of the manifest.
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -483,22 +474,23 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 ## configurableProperties
 
-**Required**
+**Optional** - array
 
-The `configurableProperties` block defines the app properties that an admin can customize. The developer must define them in the manifest.
-
-> [!NOTE]
-> A minimum of one property must be defined. The developer can define a maximum of nine properties in this block.
-
-|Name| Type| Maximum size | Required | Description|
-|----|-----|--------------|----------|------------|
-|`type`|array|            |✔|                     |
-|`description`|String|128 characters|✔|Description of the list of properties.|
-|`maxItems`| array of enum|9|✔| List of configurable properties.|
-|`items`| string enum | 9 |✔|Specifies the properties that a Teams admin can customize. Customizable properties are: </br> * name </br> * shortDescription </br> * longDescription </br> * smallImage </br> * largeImage </br> * accentColor </br> * websiteUrl </br> * privacyUrl </br> * termsOfUseUrl |
+The `configurableProperties` block defines the app properties that Teams admin can customize.
 
 > [!NOTE]
-> The `smallImageUrl` is the `outline` and `largeImageUrl` is the `color` property in the `icons` block of the manifest.
+> A minimum of one property must be defined. You can define a maximum of nine properties in this block.
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. 
 
+You can define any of the following properties:
+* `name`: Allows admin to change the app's display name.
+* `shortDescription`: Allows admin to change the app's short description.
+* `longDescription`: Allows admin to change the app's detailed description.
+* `smallImageUrl`: It is `outline` property in the `icons` block of the manifest.
+* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
+* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: It is the https:// URL to the developer's website.
+* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
+* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
 
