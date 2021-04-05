@@ -227,7 +227,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 
 > [!NOTE]
 > Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
-> Apps in meetings need groupchat scope. The "team" scope works for tabs in channels only
+> Apps in meetings need *groupchat* scope. The *team* scope works for tabs in channels only.
 
 ```json
 
@@ -251,7 +251,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
   ]
 ```
 > [!NOTE]
-> meetingStage is currently in insider dev preview only
+> `meetingStage` is currently available in developer preview only.
 
 ### Context property
 
