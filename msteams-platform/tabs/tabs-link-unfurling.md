@@ -29,7 +29,7 @@ You can use the link unfurling service to upgrade the website tab into a Teams a
 To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API.   
 The following image displays a Stage View invoked through a deep link:
 
-![invoke a Stage View through a deep link](../../assets/images/tab-images/invoke-stage-view-through-deep-link.png)
+![invoke a Stage View through a deep link](~/assets/images/tab-images/invoke-stage-view-through-deep-link.png)
 
 
 ### Syntax 
@@ -80,10 +80,10 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 The following images display a stage opened from Adaptive Card and pinned in a tab:
 
-![Open a stage from Adaptive Card](../../assets/images/tab-images/open-stage-from-adaptive-card.png)
+![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card.png)
 
 
-![pin a tab](../../assets/images/tab-images/pin-a-tab.png)
+![pin a tab](~/assets/images/tab-images/pin-a-tab.png)
 
 ### Schema for Adaptive Card
 
@@ -205,7 +205,7 @@ You can open a stage with no option to pin the tab with the following schema:
 
 You can upgrade a website tab to an app. The following image displays how a website tab is upgraded to an app:
 
-![upgrade a website tab to an app](../../assets/images/tab-images/upgrade-a-website-tab-to-an-app.png)
+![upgrade a website tab to an app](~/assets/images/tab-images/upgrade-a-website-tab-to-an-app.png)
 
 #### Schema 
 
@@ -246,7 +246,7 @@ In this work flow, you can add a tab of an app instead of website tab. This work
 
 The following image displays how to add a tab of an app instead of the website tab: 
 
-![add a tab of an app instead of the website tab](../../assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
+![add a tab of an app instead of the website tab](~/assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
 
 ## API
 
@@ -255,4 +255,4 @@ You must update the BOT SDK API.
 ## See also
 
 > [!div class="nextstepaction"]
-> [Messaging extensions link unfurling](../../messaging-extensions/how-to/link-unfurling.md)
+> [Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
