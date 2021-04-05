@@ -160,7 +160,7 @@ Following is the sample format of deeplink to files:
 ### Serialization of this object:
 ```
 {
-tenantId: “72f988bf-86f1-41af-91ab-2d7cd011db47”,
+tenantId: “0d9b645f-597b-41f0-a2a3-ef103fbd91bb”,
 filetype: = “pptx”,
 objectUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx”,
 baseUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform”,
