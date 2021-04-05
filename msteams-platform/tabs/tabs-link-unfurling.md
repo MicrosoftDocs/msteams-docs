@@ -62,11 +62,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | removeUrl? | String | 2048 | The https:// URL that points to the UI to be displayed when the user deletes the tab. |
 
 
-## Tab link unfurling scenarios
+## Advantages of tab link unfurling service
 
-The tab link unfurling service is used to turn any URL into a tab using an adaptive card and chat service. You can unfurl the link in tabs with the following scenarios:
+The tab link unfurling service is used to turn any URL into a tab using an adaptive card and chat service. 
 
-**Tab link unfurling scenarios**
+Following are the advantages of tab link unfurling service:
 
 1. Use the tab link unfurling service to stage a URL in a new component. 
 
@@ -75,7 +75,11 @@ The tab link unfurling service is used to turn any URL into a tab using an adapt
 1. Use the tab link unfurling service to upgrade the website tab into a Teams app 
 
 1. Use the tab link unfurling service to configure a new website tab as an app. 
-         
+
+## Tab link unfurling scenarios
+
+You can unfurl the link in tabs with the following scenarios:
+
 ### 1. Open a stage from Adaptive Card and pin a tab
 
 * When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. 
@@ -88,7 +92,9 @@ The following images display a stage opened from Adaptive Card and pinned in a t
 
 ![pin a tab](~/assets/images/tab-images/pin-a-tab.png)
 
-### Schema for Adaptive Card
+### Example 
+
+Following is an example to open a stage from Adaptive Card and pin a tab:
 
 ```json
 {
@@ -149,7 +155,9 @@ The `overflow to true` decides whether the button shows up as an overflow in the
 * When the user enters a URL, it invokes a bot. The bot returns an Adaptive Card with the option to pin it as a tab.
 * The `overflow to true` decides whether the button shows up as an overflow in the card or as a button in the body of the card.
 
-#### Schema for Adaptive Card
+#### Example 
+
+Following is an example to pin a tab directly from the Adaptive Card through a button or overflow:
 
 ```json
 {
@@ -174,7 +182,8 @@ The `overflow to true` decides whether the button shows up as an overflow in the
 }         
 ```
 
-* Set `pinTab` to `true` for this workflow.
+> [!NOTE] 
+> Set `pinTab` to `true` for this workflow.
 
 ### 3. Deeplink to a stage
 
@@ -186,13 +195,13 @@ The `overflow to true` decides whether the button shows up as an overflow in the
 
 ### 4. Open a stage with no option to pin the tab
 
-You can open a stage with no option to pin the tab with the following schema:
+Use `OpenURL` action with the stage deeplink to open the stage with the URL.
 
-* `OpenURL` action with the stage deeplink. It opens the stage with the URL.
+**`OpenURL`action which opens the URL in a browser** 
 
-### 5. OpenURL action which opens the URL in a browser 
+#### Example 
 
-#### Schema 
+Following is an example of `OpenURL`action which opens the URL in a browser:
 
 ```json
 {
@@ -202,13 +211,15 @@ You can open a stage with no option to pin the tab with the following schema:
 }
 ```
 
-### 6. Upgrade a website tab to an app
+### 5. Upgrade a website tab to an app
 
 You can upgrade a website tab to an app. The following image displays how a website tab is upgraded to an app:
 
 ![upgrade a website tab to an app](~/assets/images/tab-images/upgrade-a-website-tab-to-an-app.png)
 
-#### Schema 
+#### Example 
+
+Following is an example to upgrade a website tab to an app:
 
 ```json
 {
@@ -242,16 +253,13 @@ You can upgrade a website tab to an app. The following image displays how a webs
 
 * When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
 
-### 5. Add a tab of an app instead of the website tab 
-In this work flow, you can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#6-upgrade-a-website-tab-to-an-app).   
+### 6. Add a tab of an app instead of the website tab
+
+You can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#5-upgrade-a-website-tab-to-an-app).   
 
 The following image displays how to add a tab of an app instead of the website tab: 
 
 ![add a tab of an app instead of the website tab](~/assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
-
-## API
-
-You must update the BOT SDK API.
 
 ## See also
 
