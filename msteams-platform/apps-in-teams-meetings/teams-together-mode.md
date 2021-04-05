@@ -17,7 +17,7 @@ Scenes in Together Mode is an artifact created by the scene developer using the 
 
 The following image gives an overview to create a scene only app:
 
-![Add scene to app](../assets/images/apps-in-meetings/scene-added-to-app.png)
+:::image type="content" source="../assets/images/apps-in-meetings/scene-added-to-app.png" alt-text="Add scene to app" border="false":::
 
 A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene Design Studio handles the app package creation in the background.
 
