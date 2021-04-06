@@ -112,7 +112,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 ## Update the credentials for your hosted app
 
-The sample app requires the environment variables to be set to the values that you saved in the [text file](~/includes/get-started/get-started-use-app-studio.md#bots).
+The sample app requires the environment variables to be set to the values that you saved in the text file.
 
 Open the appsettings.json file. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. Update the **MicrosoftAppPassword** with the bot password you saved.
 
