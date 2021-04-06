@@ -120,7 +120,9 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-For information on REST API request body, see [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. For information on what REST API returns, see [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object.
+|Request |Response |
+|----|----|
+| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
 
 * * *
 
@@ -162,13 +164,15 @@ for each activity_id in _list:
 
 # [REST API](#tab/rest)
 
- To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
+To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
 
 ```http
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-For REST API, request body is not applicable and it returns an HTTP status code that indicates the outcome of the operation. Nothing is specified in the body of the response.
+|Request |Response |
+|----|----|
+| N/A | An HTTP status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---
 
@@ -178,7 +182,7 @@ The next section illustrates simple code samples that demonstrate basics of conv
 
 The code sample for Teams conversation basics are as follows:
 
-| Sample Name           | Description                                                                      | .NET    | JavaScript   | Python  |
+| Sample name           | Description                                                                      | .NET    | Node.js   | Python  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
 |Teams conversation basics  | Demonstrates basics of conversations in Teams, including message update and delete.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot)|
 
@@ -186,3 +190,4 @@ The code sample for Teams conversation basics are as follows:
 
 > [!div class="nextstepaction"]
 > [Get Teams context](~/bots/how-to/get-teams-context.md)
+

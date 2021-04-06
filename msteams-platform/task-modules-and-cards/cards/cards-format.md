@@ -4,6 +4,7 @@ description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
 ms.date: 03/29/2018
 ---
+
 # Format cards in Teams
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.
@@ -154,12 +155,14 @@ To include a mention in an Adaptive card your app needs to include the following
 
 
 ### Information masking in Adaptive cards
-Use the information masking property to mask specific information, such as password or sensitive information from users.
+Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 
+
+> [!NOTE]
+> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-configure-your-bot). 
 
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.
 
-#### Mask information
 To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
 
 #### Sample Adaptive card with masking property
@@ -198,7 +201,7 @@ In addition, your app must include the following elements:
             "weight": "Bolder"
         }]
     }],
-    
+
     "msteams": {
         "width": "Full"
     },
@@ -213,7 +216,66 @@ A full width Adaptive Card appears as follows:
 If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
+### Typeahead support
 
+Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion. Typeahead support within Adaptive cards can simplify input selection by narrowing or filtering the set of input choices as a user is typing the input. 
+
+#### Enable typeahead in Adaptive cards
+
+To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and ensure `isMultiSelect` is set to `false`. 
+
+#### Sample adaptive card with typeahead support
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### Stage view for images in Adaptive Cards
+
+> [!NOTE]
+> This feature is currently available in developer preview only.
+ 
+In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+When users hover over the image, an expand icon appears at top right corner of the image:
+![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+The image appears in stage view when the user selects the expand button:
+![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In the stage view, users can zoom in and zoom out of the image. You can select which images in your Adaptive card needs to have this capability.
+
+> [!NOTE]
+> Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.
+
+> [!NOTE]
+> For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default and users will be able to view Adaptive card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 
