@@ -145,7 +145,7 @@ The following deep link format can be used in a bot, connector, or messaging ext
 
 The query parameters are:
 
-* `tenantId`: Tenant ID example, 42f988bf-86f1-51af-91ab-2d7cd011db67
+* `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `filetype`: Supported file type, such as Word, PPT, PDF, and Excel
 * `objectUrl`: Object URL of the file, https://microsoft.sharepoint.com/teams/(filepath)
 * `baseUrl`: Base URL of the file, https://microsoft.sharepoint.com/teams
@@ -155,7 +155,7 @@ The query parameters are:
 
 Following is the sample format of deeplink to files:
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
 ### Serialization of this object:
 ```
@@ -180,7 +180,7 @@ The following deep link format can be used in a bot, connector or messaging exte
 
 The query parameters are:
 
-* `appID` - Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID` - Your manifest ID fe4a8eba-2a31-4737-8e33-e5fae6fee194.
 * `entityID` - The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
 * `entityWebUrl` - An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
 * `entityName` - A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
