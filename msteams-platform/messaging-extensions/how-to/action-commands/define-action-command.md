@@ -30,8 +30,9 @@ Specify the `context` in your app manifest, the action command is invoked from o
     > [!NOTE] 
     > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
 
-The following image displays the locations from where messaging extensions are invoked:
-<img src="~/assets/images/messaging-extension/messaging-extension-invoke-locations.png" alt="messaging extension invoke locations" width="400"/>
+The following image displays the locations from where action command is invoked:
+
+<img src="~/assets/images/messaging-extension-invoke-locations.png" alt="action command invoke locations" width="400"/>
 
 ## Choose how to create your task module
 
