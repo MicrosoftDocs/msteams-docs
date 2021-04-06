@@ -18,7 +18,8 @@ To enable your app for Teams meetings, you must update your app manifest and use
 The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. Scope defines to whom and context defines where your app is available.
 
 > [!NOTE]
-> Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
+> * Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
+> * Apps in meetings require groupchat scope. The team scope works for tabs in channels only.
 
 The app manifest must include the following code snippet:
 
@@ -37,11 +38,15 @@ The app manifest must include the following code snippet:
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+
+> [!NOTE]
+> `meetingStage` is currently available in developer preview only.
 
 ### Context property
 
@@ -54,6 +59,7 @@ The `context` property determines what must be shown when a user invokes an app 
 | **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. |
 | **meetingSidePanel** | An in-meeting panel opened via the unified bar (U-bar). |
+| **meetingStage** | An app from the sidepanel can be shared to the meeting stage. |
 
 > [!NOTE]
 > `Context` property is currently not supported on mobile clients.
@@ -74,7 +80,7 @@ Teams meetings provides a unique collaborative experience for your organization.
 
 ### Before a meeting
 
-Before a meeting, users can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles can add tabs to a meeting.
+Before a meeting, users can add tabs, bots, and messaging extensions to a meeting. Users with organizer and presenter roles can add tabs to a meeting.
 
 **To add a tab to a meeting**
 
@@ -84,6 +90,9 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
+
+    > [!NOTE]
+    > Currently, in meetings tab, getting meeting details and participant information is not supported.
 
 **To add a messaging extension to a meeting**
 
@@ -116,10 +125,20 @@ Messaging extension works as expected when a user is in an in-meeting view and t
 
 The in-meeting dialog box can be used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification must be triggered. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
+In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
+
 > [!NOTE]
-> * In-meeting dialog must not use task module.
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web-view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+
+#### Share to stage
+
+> [!NOTE]
+> This capability is avaialable only in insider dev preview.
+
+This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time.
+
+The required context is meetingStage in the app manifest. A pre-requisite for this is to have the meetingSidePanel context. This enables the **Share** button in the sidePanel.
 
 ### After a meeting
 
