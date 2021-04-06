@@ -145,9 +145,11 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
   ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
 
 ## Code sample
-| **Sample name** | **Description** | **C#** |
-|-----------------|-----------------|----------------|
-| Resource Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|
+| **Sample name** | **Description** | **.NET** |**Node.js** |
+|-----------------|-----------------|----------------|----------------|
+| Resource Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+
+
 
 ## Test resource-specific consent
  

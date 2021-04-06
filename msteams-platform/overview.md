@@ -68,9 +68,8 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
-   :::column-end:::
-:::row-end:::
 
 ### Microsoft Graph for Teams
 
@@ -79,25 +78,20 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
-:::row:::
-   :::column span="2":::
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
-## Build solutions for Microsoft Teams apps
- 
-Microsoft offers an extensibility look book, a scenario library for Teams apps organized by industry. This book helps you build apps on the Teams platform and understand different possible scenarios using various Teams platform capabilities. The look book scenarios start with a business problem, the personas involved along with their challenges, and end with a Teams app solution addressing the business needs.
-
-Each scenario in this library is accompanied by a set of high-fidelity design concept mocks, which can serve as an inspiration for designing your apps and enhancing user experience. In addition, the look book highlights the design and architecture best practices followed in building each app. For more information, see the extensibility look book. For more information, see [extensibility look book](https://adoption.microsoft.com/extensibility-look-book/scenarios/). 
+:::row:::
+   :::column span="2":::
 
 ## Start building
 
-Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
+Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
 > [!div class="nextstepaction"]
-> [Build your first app now](build-your-first-app/build-first-app-overview.md)
+> [Build your first app](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -137,7 +131,23 @@ You don't need to be an expert programmer to build a great Teams app. Try one of
    :::column-end:::
 :::row-end:::
 
-## Resources
+:::row:::
+   :::column span="2":::
+
+## Get ideas for your app
+
+Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways Teams apps can help your users.
+
+> [!div class="nextstepaction"]
+> [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## See also
 
 * [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
 * [Design your Teams app](concepts/design/design-teams-app-overview.md)
