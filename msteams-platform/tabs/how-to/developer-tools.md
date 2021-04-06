@@ -30,7 +30,7 @@ The following screenshot shows DevTools inspecting an element in a tab configura
 
 ## Accessing DevTools from an Android client
 
-You can also enable the DevTools from the Teams Android client. To do so:
+You can also enable the DevTools from the Teams Android client.
 
 1. Make sure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md)
 1. Connect your device to your desktop computer, and setup your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/)

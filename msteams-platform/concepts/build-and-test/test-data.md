@@ -1,30 +1,26 @@
 ---
-title: Add test data to your Office 365 test tenant
+title: Add test data to your Microsoft 365 test tenant
 description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps
 ms.topic: how-to
 keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
 
-# Add test data to your Office 365 test tenant
+# Add test data to your Microsoft 365 test tenant
 
-Set up your O365 developer program subscription (or other test tenant) to make it easy for you to test the apps that you've built.  It will help you:
-
-- Create new teams and channels in your organization
-
-- Add the users that are created via the User content pack to those teams.
+With a Microsoft 365 developer subscription, you can use your Microsoft Teams app with test teams, channels, and users.
 
 ## Before you start
 
 If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary PowerShell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
 
-1. [Join the Office 365 Developer Program](/office/developer-program/office-365-developer-program)
+1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program)
 2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
-3. [Use sample data packs with your Office 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs)
+3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs)
 4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
 
-## (Optional) Enable custom app uploading
+## (Optional) Enable custom app sideloading
 
 By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
