@@ -22,7 +22,7 @@ You have the following options for responding:
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md)
 * [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
 
-For authentication or configuration, after the user completes the flow the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
+For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
 |Response Type | compose | command bar | message |
 |--------------|:-------------:|:-------------:|:---------:|
@@ -205,7 +205,7 @@ The following scenario shows how the app Polly configures a poll without includi
 
 1. The user selects the messaging extension to invoke the task module.
 1. The user configures the poll with the task module.
-1. After submitting the task module the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
+1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
 
     > [!NOTE] 
@@ -394,7 +394,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to update the task module so that the user does not have to fill out all information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to update the task module so that the user need not fill out all information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
@@ -576,12 +576,12 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 
 #### Details of  `OnBehalfOf` entity schema
 
-The following section is a description of the entities in the `OnBehalfOf` of Array:
+The following section is a description of the entities in the `OnBehalfOf` Array:
 
 |Field|Type|Description|
 |:---|:---|:---|
-|`itemId`|Integer|Should be 0|
-|`mentionType`|String|Should be "person"|
+|`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
+|`mentionType`|String|Describes the mention of a "person"|
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   

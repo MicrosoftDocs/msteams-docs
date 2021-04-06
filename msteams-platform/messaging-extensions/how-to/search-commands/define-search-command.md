@@ -22,10 +22,13 @@ The search command is invoked from any one or both of the following locations:
 * By @mentioning in the command box.
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+The following image displays the invoke locations of the search command:
+
+<img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="400"/>
 
 ## Add the search command to your app manifest
 
-To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can  do this either with the help of App Studio, or do it manually.
+To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of App Studio, or manually.
 
 ### Create a search command using App Studio
 
@@ -38,21 +41,21 @@ The prerequisite to create a search command is that you must already have create
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
 
-    ![messaging extension set up](../../../assets/images/messaging-extension/messaging-extension-set-up.png)
+    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="400"/>
 
 1. To create the messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for messaging extension:
 
-    ![create bot for messaging extension](../../../assets/images/messaging-extension/create-bot-for-messaging-extension.png)
+    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="400"/>
 
 1. Select **Add** in the **Command** section of the messaging extension page.
 1. Choose **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
 
-    ![search command parameter selection](../../../assets/images/messaging-extension/search-command-parameter-selection.png)
+    <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="400"/>
 
 1. Add a **Command Id** and a **Title**.
-1. Select the location from where your search command must be triggered. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke locatio:
+1. Select the location from where your search command must be invoked. Selecting **message** does not currently alter the behavior of your search command. The following image displays the search command invoke location:
 
-    ![search command invoke location](../../../assets/images/messaging-extension/search-command-invoke-location.png)
+    <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="400"/>
 
 1. Add your search parameter and select **Save**.
 
@@ -107,7 +110,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 ...
 }
 ```
-For the complete  app manifest schema, see [App manifest schema](~/resources/schema/manifest-schema.md).
+For the complete  app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 

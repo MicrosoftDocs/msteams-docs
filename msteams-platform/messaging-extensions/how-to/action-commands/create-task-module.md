@@ -211,7 +211,8 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.  The following section is an example of the `value` object.
+When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your messaging extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message. 
+The following section is an example of the `value` object:
 
 # [C#/.NET](#tab/dotnet)
 

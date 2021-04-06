@@ -14,7 +14,7 @@ After the user submits the search command, your web service receives a `composeE
 * As characters are entered into the search box.
 * `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-This document gives a walk through on respond to user requests in the form of cards and previews. The conditions under which Microsoft Teams issues a default query.
+This document gives a walk through on respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
@@ -74,7 +74,7 @@ The JSON below is shortened to highlight the most relevant sections.
 
 When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
 
-Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or json object with the following properties:
+Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
 |Property name|Purpose|
 |---|---|
@@ -94,18 +94,18 @@ Teams supports the following card types:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-To have a better understandingand overview  on cards, see[what are cards](~/task-modules-and-cards/what-are-cards.md).
+To have a better understanding and overview on cards, see[what are cards](~/task-modules-and-cards/what-are-cards.md).
 
 To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 For additional information regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of two ways:
+The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
 
 * Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
 * Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview is not necessary if the results are already hero or thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
+You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview property is not necessary if the results are already Hero or Thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
 
 ### Response example
 
