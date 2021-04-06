@@ -4,7 +4,7 @@ description: Links and descriptions of app templates for the Microsoft Teams pla
 ms.topic: reference
 keywords: Microsoft Teams templates samples demo
 ms.author: lajanuar
-author: laujan
+author: surbhigupta
 ---
 
 # App templates for Microsoft Teams
