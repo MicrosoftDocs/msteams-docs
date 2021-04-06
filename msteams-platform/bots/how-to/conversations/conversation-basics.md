@@ -14,7 +14,7 @@ A conversation is a series of messages sent between your Microsoft Teams bot and
 
 | Conversation type | Description |
 | ------- | ----------- |
-| `teams` | This conversation type is visible to all members of the channel. |
+| `channel` | This conversation type is visible to all members of the channel. |
 | `personal` | This conversation type includes conversations between bots and a single user. |
 | `groupChat` | This conversation type includes chat between a bot and two or more users. It also enables your bot in meeting chats. |
 
@@ -222,7 +222,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
 The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
@@ -361,8 +361,10 @@ Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animate
 
 Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
 
-* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
 A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
@@ -425,7 +427,14 @@ Following are the code samples for Teams conversation bot:
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## Next steps
+## See also
 
-* [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [!div class="nextstepaction"]
+> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+> [!div class="nextstepaction"]
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)

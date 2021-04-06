@@ -158,7 +158,7 @@ async def _show_members(
 
 # [JSON](#tab/json)
 
-You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. This can be used for regualr users and anonymous users.
+You can directly issue a GET request on `/v3/conversations/{conversationId}/members/{userId}`, using the value of `serviceUrl` as the endpoint. The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value for `serviceUrl`. This can be used for regular users and anonymous users.
 
 Below is a response sample for regular user
 
