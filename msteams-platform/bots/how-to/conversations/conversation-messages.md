@@ -379,6 +379,23 @@ The following code shows an example of sending a simple adaptive card:
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
+The next section provides status code responses for errors generated from Bot APIs.
+
+## Status code responses
+
+Following are the status codes and their error code and message values:
+
+| Status code | Error code and message values | Description |
+|----------------|-----------------|-----------------|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: "User blocked the conversation with the bot." | User blocked the bot in 1:1 chat or a channel through moderation settings. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: "The bot is not part of the conversation roster." | The bot is not part of the conversation. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: "The tenant admin disabled this bot." | Tenant blocked the bot. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: “No registration found for this bot.” | The registration for this bot was not found. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message**: “Precondition failed, please try again.” | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: “Conversation not found.” | The conversation was not found. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: “Message size too large.” | The size on the incoming request was too large. |
+| 429 | **Code**: `Throttled` <br/> **Message**: “Too many requests.” Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
+
 The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
 
 ## Code sample
