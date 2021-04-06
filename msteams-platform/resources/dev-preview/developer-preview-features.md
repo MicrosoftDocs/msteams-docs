@@ -11,7 +11,7 @@ The developer preview includes the following new features:
 
 ## App customization
 
-You can now enable Teams admin to customize your apps based on the organization's need. Use the [app customization feature](~/concepts/design/design-teams-app-overview.md) to rebrand the apps.
+As a Teams admin, you can now customize your apps based on your organization's need. Use the [app customization feature](~/concepts/design/design-teams-app-overview.md) to rebrand the apps.
 
 ## Tabs single sign-on (SSO)
 
