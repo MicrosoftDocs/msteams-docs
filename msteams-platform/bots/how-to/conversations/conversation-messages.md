@@ -203,7 +203,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You must cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
 The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
