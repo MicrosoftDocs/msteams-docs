@@ -51,6 +51,9 @@ Images must be at most 1024×1024, in PNG, JPEG, or GIF format, and do not suppo
 | url | URL | HTTPS URL to the image. |
 | alt | String | Accessible description of the image. |
 
+> [!NOTE]
+> If a card includes an image URL that goes through a redirect before the final image, the redirect in image URL is not supported. This occurs for images shared publicly on Google Drive.
+
 ### Buttons
 
 Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card are not shown.
