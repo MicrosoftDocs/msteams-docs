@@ -52,7 +52,7 @@ Images must be at most 1024×1024, in PNG, JPEG, or GIF format, and do not suppo
 | alt | String | Accessible description of the image. |
 
 > [!NOTE]
-> If a card includes an image URL that goes through a redirect before the final image, the redirect in image URL is not supported. This occurs for images shared publicly on Google Drive.
+> If a card includes an image URL that goes through a redirect before the final image, the redirect in image URL is not supported. This occurs for images shared on the public cloud.
 
 ### Buttons
 
