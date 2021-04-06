@@ -14,7 +14,7 @@ A conversation is a series of messages sent between your Microsoft Teams bot and
 
 | Conversation type | Description |
 | ------- | ----------- |
-| `teams` | This conversation type is also called channel conversations, visible to all members of the channel. |
+| `channel` | This conversation type is visible to all members of the channel. |
 | `personal` | This conversation type includes conversations between bots and a single user. |
 | `groupChat` | This conversation type includes chat between a bot and two or more users. It also enables your bot in meeting chats. |
 
