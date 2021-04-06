@@ -85,7 +85,7 @@ The following image displays the action command static parameter selection:
    
 The following image displays an example static parameter set-up: 
 
-   <img src="~/assets/images/messaging-extension/action-command-static-parameter-set-up.png" alt="action command static parameter set-up" width="400"/>
+   <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="400"/>
 
 The following image displays an example static parameter testing:
 
