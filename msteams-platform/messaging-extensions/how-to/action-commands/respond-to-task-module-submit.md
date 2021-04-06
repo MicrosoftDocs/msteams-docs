@@ -536,7 +536,7 @@ In scenarios where a bot sends messages on behalf of a user, attributing the mes
 
 In the following image, on the left is a card message sent by a bot *without* user attribution and on the right is a card sent by a bot *with* user attribution.
 
-![Screenshot](../../../assets/images/messaging-extension/user-attribution-bots.png)
+![user attribution bots](../../../assets/images/messaging-extension/user-attribution-bots.png)
 
 To use the user attribution in teams, you must add the `OnBehalfOf` mention entity to `ChannelData` in your `Activity` payload that is sent to Teams.
 
@@ -581,7 +581,7 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
-|`mentionType`|String|Describes the mention of a "person"|
+|`mentionType`|String|Describes the mention of a  "person"|
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   

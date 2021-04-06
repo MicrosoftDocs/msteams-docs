@@ -23,18 +23,15 @@ Specify the `context` in your app manifest, the action command is invoked from o
 
 * The buttons at the bottom of the compose message area.
 * By @mentioning your app in the command box. 
-
-The following image displays the locations from where messaging extensions are invoked:
-
-![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
-
    > [!NOTE]
-   > * If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+   > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
 * Directly from an existing message through the overflow menu on a message. 
-
     > [!NOTE] 
     > The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting them with a task module.
+
+The following image displays the locations from where messaging extensions are invoked:
+<img src="~/assets/images/messaging-extension/messaging-extension-invoke-locations.png" alt="messaging extension invoke locations" width="400"/>
 
 ## Choose how to create your task module
 
@@ -67,27 +64,29 @@ The prerequisite to create an action command is that you must already create a m
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up window:
 
-  <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="400"/>
+    <img src="~/assets/images/messaging-extension/messaging-extension-set-up.png" alt="messaging extension set up" width="400"/>
     
 1. To create a messaging extension, you need a Microsoft registered bot. You can either use an existing bot or create a new bot. Select **Create new bot** option, give a name for the new bot, and select **Create**. The following image displays bot creation for messaging extension:
 
-  <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="400"/>
+    <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="400"/>
 
 1. Select **Add** in the **Command section** of the messaging extensions page.
 1. Choose **Allow users to trigger actions in external services while inside of Teams**. The following image displays the action command selection:
 
-  <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="400"/>
+    <img src="~/assets/images/messaging-extension/action-command-selection.png" alt="action command selection" width="400"/>
     
 1. To use a static set of parameters to create your task module, select **Define a set of static parameters for the command**. 
-The following image displays the action command static parameter selection:
+
+    The following image displays the action command static parameter selection:
 
    <img src="~/assets/images/messaging-extension/action-command-static-parameter-selection.png" alt="action command static parameter selection" width="400"/> 
    
-The following image displays an example static parameter set-up: 
+   
+    The following image displays an example static parameter set-up: 
 
    <img src="~/assets/images/messaging-extension/setting-up-of-static-parameter.png" alt="action command static parameter set-up" width="400"/>
 
-The following image displays an example static parameter testing:
+    The following image displays an example static parameter testing:
 
    <img src="~/assets/images/messaging-extension/static-parameter-testing.png" alt="action command static parameter testing" width="400"/>
 

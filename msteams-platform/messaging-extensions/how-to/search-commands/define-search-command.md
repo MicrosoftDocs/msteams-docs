@@ -22,9 +22,10 @@ The search command is invoked from any one or both of the following locations:
 * By @mentioning in the command box.
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+
 The following image displays the invoke locations of the search command:
 
-<img src="~/assets/images/messaging-extension/action-command-invoke-location.png" alt="action command invoke location" width="400"/>
+<img src="~/assets/images/messaging-extension/search-command-invoke-locations.png" alt="search command invoke locations" width="400"/>
 
 ## Add the search command to your app manifest
 
