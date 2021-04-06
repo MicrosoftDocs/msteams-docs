@@ -5,38 +5,45 @@ ms.topic: overview
 ms.author: anclear
 keyword: conversations basics receive message send message picture message channel data adaptive cards
 ---
+
 # Conversation basics
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-A conversation is a series of messages sent between your bot and one or more users. There are three types of conversations, also called scopes in Teams:
+A conversation is a series of messages sent between your Microsoft Teams bot and one or more users. There are three types of conversations, also called scopes in Teams:
 
 | Conversation type | Description |
 | ------- | ----------- |
-|  `teams` | Also called channel conversations, visible to all members of the channel. |
-| `personal` | Conversations between bots and a single user. |
-| `groupChat` | Chat between a bot and two or more users. Also enables your bot in meeting chats. |
+| `channel` | This conversation type is visible to all members of the channel. |
+| `personal` | This conversation type includes conversations between bots and a single user. |
+| `groupChat` | This conversation type includes chat between a bot and two or more users. It also enables your bot in meeting chats. |
 
-A bot behaves slightly differently depending on what kind of conversation it is involved in:
+A bot behaves differently depending on the conversation it is involved in:
 
 * Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.
 * Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user routes to your bot.
 
-To enable your bot in a particular scope, add that scope to your [app manifest](~/resources/schema/manifest-schema.md).
+For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
-## Activities
+## Messages in bot conversations
 
-Each message is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot; specifically, it sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot. Teams sends a JSON object to your bot's messaging endpoint. Your bot examines the message to determine its type and responds accordingly.
 
-Basic conversations are handled through the Bot Framework Connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides easy access to this API, additional functionality to manage conversation flow and state, and simple ways to incorporate cognitive services such as Natural Language Processing (NLP).
+Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following:
+
+* Easy access to the Bot Framework connector.
+* Additional functionality to manage conversation flow and state.
+* Simple ways to incorporate cognitive services such as Natural Language Processing (NLP).
+
+Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
 ## Receive a message
 
 To receive a text message, use the `Text` property of the `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
-The following code shows an example.
+The following code shows an example of receiving a message:
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -46,7 +53,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 
@@ -119,9 +126,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when someone is added to a conversation.
+To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when a user is added to a conversation:
 
-# [C#/.NET](#tab/dotnet)
+The following code shows an example of sending a message:
+
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
@@ -131,7 +140,7 @@ protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersA
 
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 
@@ -207,28 +216,32 @@ async def on_members_added_activity(
 ---
 
 > [!NOTE]
-> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one activity with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+> Message splitting occurs when a text message and an attachment are sent in the same activity payload. This activity is split into separate activities by Microsoft Teams, one with just a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
+
+Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. You may need to cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK, typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
-The `channelData` object is not included in messages in personal conversations, as these take place outside of any channel.
+The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
-A typical channelData object in an activity sent to your bot contains the following information:
+A typical `channelData` object in an activity sent to your bot contains the following information:
 
-* `eventType` Teams event type; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id` Azure Active Directory tenant ID, passed in all contexts.
-* `team` Passed only in channel contexts, not in personal chat.
-  * `id` GUID for the channel.
-  * `name` Name of the team; passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channel` Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
-  * `id` GUID for the channel.
-  * `name` Channel name; passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId` Deprecated. This property is included only for backwards compatibility.
-* `channelData.teamsChannelId` Deprecated. This property is included only for backwards compatibility.
+* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id`: Azure Active Directory tenant ID passed in all contexts.
+* `team`: Passed only in channel contexts, not in personal chat.
+  * `id`: GUID for the channel.
+  * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channel`: Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
+  * `id`: GUID for the channel.
+  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
 ### Example channelData object (channelCreated event)
+
+The following code shows an example of channelData object:
 
 ```json
 "channelData": {
@@ -246,6 +259,8 @@ A typical channelData object in an activity sent to your bot contains the follow
 }
 ```
 
+Messages received from or sent to your bot can include different types of message content.
+
 ## Message content
 
 Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
@@ -253,15 +268,19 @@ Your bot can send rich text, pictures, and cards. Users can send rich text and p
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
 | Rich text | ✔                | ✔                |                                                                                         |
-| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format; animated GIF are not supported  |
-| Cards     | ✖                | ✔                | See the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards |
-| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16 (such as U+1F600 for grinning face)          |
+| Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
+| Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
-## Adding notifications to your message
+You can also add notifications to your message using the `Notification.Alert` property.
 
-Notifications alert users about new tasks, mentions, and comments related to what they are working on or need to look at by inserting a notice into their activity feed. You can set notifications to trigger from your bot-message by setting the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised ultimately depends on the individual user's Teams settings and you cannot programmatically override these settings. The type of notification is either a banner or both a banner and an email.
+## Notifications to your message
 
-# [C#/.NET](#tab/dotnet)
+Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
+
+The following code shows an example of adding notifications to your message:
+
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -273,7 +292,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [TypeScript/Node.js](#tab/typescript)
+# [TypeScript](#tab/typescript)
 
 ```typescript
 this.onMessage(async (turnContext, next) => {
@@ -332,20 +351,26 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
+To enhance your message, you can include pictures as attachments to that message.
+
 ## Picture messages
 
-Pictures are sent by adding attachments to a message. You can find more information on attachments in the [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+Pictures are sent by adding attachments to a message. For more information on attachments, see [Bot Framework documentation](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
 Pictures can be at most 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
-Always specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+Specify the height and width of each image by using XML. In markdown, the image size defaults to 256×256. For example:
 
-* Use - `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`
-* Don't use - `![Duck on a rock](http://aka.ms/Fo983c)`
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
 ## Adaptive cards
 
-Use the following code to send a simple adaptive card:
+Adaptive cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+The following code shows an example of sending a simple adaptive card:
 
 ```json
 {
@@ -373,13 +398,41 @@ Use the following code to send a simple adaptive card:
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
+The next section provides status code responses for errors generated from Bot APIs.
+
+## Status code responses
+
+Following are the status codes and their error code and message values:
+
+| Status code | Error code and message values | Description |
+|----------------|-----------------|-----------------|
+| 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: "User blocked the conversation with the bot." | User blocked the bot in 1:1 chat or a channel through moderation settings. |
+| 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: "The bot is not part of the conversation roster." | The bot is not part of the conversation. |
+| 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: "The tenant admin disabled this bot." | Tenant blocked the bot. |
+| 401 | **Code**: `BotNotRegistered` <br/> **Message**: “No registration found for this bot.” | The registration for this bot was not found. |
+| 412 | **Code**: `PreconditionFailed` <br/> **Message**: “Precondition failed, please try again.” | A precondition failed on one of our dependencies due to multiple concurrent operations on the same conversation. |
+| 404 | **Code**: `ConversationNotFound` <br/> **Message**: “Conversation not found.” | The conversation was not found. |
+| 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: “Message size too large.” | The size on the incoming request was too large. |
+| 429 | **Code**: `Throttled` <br/> **Message**: “Too many requests.” Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
+
+The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
+
 ## Code sample
 
-|**Sample name** | **Description** | **.NETCore** | **JavaScript** | **Python**|
+Following are the code samples for Teams conversation bot:
+
+|Sample name | Description | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
-| Teams Conversation Bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
+| Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## Next steps
+## See also
 
-* [Sending proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+> [!div class="nextstepaction"]
+> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+> [!div class="nextstepaction"]
+> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
