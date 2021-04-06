@@ -33,7 +33,7 @@ Join the Microsoft 365 developer program and get a free Teams test account that 
 1. Access the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. Select **Set up E5 subscription** in the Welcome screen.
-1. Set up your administrator account. Once you finish, you should see a screen like this.
+1. Set up your administrator account. After you finish, the following screen is displayed.
     :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 1. Log in to Teams using the administrator account you just set up. Verify if you now have the **Upload a custom app** option.
 
@@ -69,7 +69,7 @@ Teams displays app content only through HTTPS connections. To debug certain type
 
 ## Understand app project components
 
-Once the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of the Visual Studio Code. 
+After the toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of the Visual Studio Code. 
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
 
@@ -80,11 +80,11 @@ If you create a Tab during setup, the `App.js` file in the `src/components` dire
 
 Build and run your app locally to try out the sample app. The information is also available in the toolkit `README`. Build and run your app using the following steps: 
 
-1. Open a terminal (In VS Code, **View** > **Terminal**)  
+1. Select **View** > **Terminal** in VS Code  
 1. Run `npm install`
 1. Run `npm start`
 
-Once complete, a **Compiled successfully!** message is displayed in the terminal. Your app is now running on your localhost at `https://localhost:3000`. 
+A **Compiled successfully!** message is displayed in the terminal after the compiling. Your app is now running on your localhost at `https://localhost:3000`. 
 
 ## Sideload your app in Teams
 
@@ -128,7 +128,7 @@ You have to install App Studio after enabling custom app sideloading for your te
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-appstudio.png" alt-text="Screenshot showing how to sideload your app to Teams client with the Visual Studio Code Teams Toolkit.":::
 
-    You can also skip the installation process in **App Studio** with the **F5** key to open your browser window (Google Chrome by default) and install!. Once the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams. 
+    You can also skip the installation process in **App Studio** with the **F5** key to open your browser window (Google Chrome by default) and install!. After the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams. 
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
 
@@ -148,7 +148,7 @@ If *Something went wrong* or *Manifest parsing has failed* error message is disp
 
 Check if your web app is running. If not, go to terminal and run **npm start**.
 
-## See Also
+## See also
 
 * [Prepare your Microsoft 365 tenant](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)
 * [Choosing a setup to test and debug your Microsoft Teams app](../concepts/build-and-test/debug.md)
@@ -166,8 +166,3 @@ Expand on the personal tab you just created or build another type of Teams app.
 
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/build-channel-tab.md)
-
-Or try building a bot. 
-
-> [!div class="nextstepaction"]
-> [Build a bot](../build-your-first-app/build-bot.md)

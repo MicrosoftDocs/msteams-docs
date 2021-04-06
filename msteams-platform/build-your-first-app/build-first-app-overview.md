@@ -60,7 +60,7 @@ You will only install an app package that contains a configuration file called m
 
   :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-## See Also
+## See also
 
 * [Build apps for Microsoft Teams](../overview.md)
 * [Understanding Teams app capabilities](../concepts/capabilities-overview.md)
@@ -69,9 +69,17 @@ You will only install an app package that contains a configuration file called m
 * [Microsoft Bot Framework](https://dev.botframework.com/)
 * [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
 
-## Next Lesson
+## Next lesson
 
 Now, let's set up your development environment and start building!
 
 > [!div class="nextstepaction"]
 > [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md)
+
+Or try building a bot or a messaging extention.
+
+> [!div class="nextstepaction"]
+> [Build a bot](../build-your-first-app/build-bot.md)
+> [!div class="nextstepaction"]
+> [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)
+
