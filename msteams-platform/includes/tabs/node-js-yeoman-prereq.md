@@ -56,6 +56,10 @@ Your company name will be used in the app manifest.
 
 Select the default schema.
 
+**Quick scaffolding? (Y/n)**
+
+The default is yes; enter **n** to enter your Microsoft Partner Id.
+
 **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
 This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
