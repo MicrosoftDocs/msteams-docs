@@ -278,6 +278,9 @@ You can also add notifications to your message using the `Notification.Alert` pr
 
 Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
 
+> [!NOTE]
+> The Summary field displays any text from the user as a notification message in the feed.
+
 The following code shows an example of adding notifications to your message:
 
 # [C#](#tab/dotnet)
