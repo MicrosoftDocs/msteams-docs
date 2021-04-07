@@ -10,14 +10,14 @@ Microsoft Teams Together Mode provides an immersive and engaging meeting environ
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](/build-scene-in-scene-studio.md) that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
+Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
 
 The following image gives an overview to create a scene only app:
 
-<img src="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt="Create scene only app" width="700"/>
+<img src="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt="Create scene only app" width="2000"/>
 
 A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
 
@@ -252,4 +252,4 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Microsoft Scene studio](/build-scene-in-scene-studio.md)
+> [Microsoft Scene studio](build-scene-in-scene-studio.md)
