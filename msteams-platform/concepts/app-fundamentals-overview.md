@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Teams platform development fundamentals
+# Microsoft Teams app development fundamentals
 
 Microsoft Teams app fundamentals give the direction you need to create your custom Teams app. You can recognize the framework required to plan your Teams app. The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
 
