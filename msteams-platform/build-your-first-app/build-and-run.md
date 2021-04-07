@@ -167,12 +167,12 @@ You have to install App Studio after enabling custom app sideloading for your te
 
 #### Installation failed
 
-If *Something went wrong* or *Manifest parsing has failed* error message is displayed while installing app studio, check if you have entered the app informatiom correctly. 
+If *Something went wrong* or *Manifest parsing has failed* error message appears while installing app studio, check if you have entered the app informatiom correctly. 
 
 **To check the app information**
 
 * In Microsoft Teams Toolkit, select **App Studio** > **app Details**, and check if you have all the required information.
-* if you have manually edited the manifest.json file, check **App Manifest** in App Studio to see if the JSON is well-defined.
+* If you have manually edited the manifest.json file, check **App Manifest** in App Studio to see if the JSON is well-defined.
 
 #### Tab content not displayed
 
