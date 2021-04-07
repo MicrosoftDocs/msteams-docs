@@ -47,7 +47,7 @@ If you already have a tenant with admin access to the Teams client, verify if yo
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
     
-```
+---
 ### Install your development tools
 
 To help you get started quickly, Microsoft provides development tools such as Microsoft Teams Toolkit for Visual Studio Code. However, you can build Teams apps with your preffered tools as well.
