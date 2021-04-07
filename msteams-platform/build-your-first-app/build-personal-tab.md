@@ -33,49 +33,49 @@ You can customize your tab content page to render a list of important contacts i
 
 1. Copy and modify the following code sample with information that's relevant to you. You can also use the code as is. 
 
-  ```JSX
-  <div>
-    <h1>Important Contacts</h1>
-      <ul>
-        <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-        <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-        <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-      </ul>
-  </div>
-  ```
-1. Got to `src/components` directory and open the `Tab.js` file. 
-1. Go to `render()` and replace the "Hello World!" template content with the modified code inside `return()` (as shown here).
+    ```JSX
+    <div>
+      <h1>Important Contacts</h1>
+        <ul>
+          <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+          <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+          <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+        </ul>
+    </div>
+    ```
+1. Got to the `src/components` directory and open the `Tab.js` file. 
+1. Go to `render()` and replace the template code with the modified code inside `return()` (as shown here).
 
-  ```JavaScript
-  render() {
-    return (
-      <div>
-        <h1>Important Contacts</h1>
-          <ul>
-            <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-            <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-            <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-          </ul>
-      </div>
-    );
-  }
-  ```
-1. Go to `src/components` directory and modify the `App.css` file with the following code to make the email links easier to read with any theme that is used.
+    ```JavaScript
+    render() {
+      return (
+        <div>
+          <h1>Important Contacts</h1>
+            <ul>
+              <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+              <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+              <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+            </ul>
+        </div>
+      );
+    }
+    ```
+1. Go to the `src/components` directory and modify the `App.css` file with the following code to make the email links easier to read with any theme that is used.
 
-  ```CSS
-  a {
-    color: inherit;
-  }
-  ```
+    ```CSS
+    a {
+      color: inherit;
+    }
+    ```
 1. Save your changes. 
 
 You can view the new content in your app's tab in Teams.
 
   :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-content.png" alt-text="Screenshot of a personal tab with static content.":::
 
-## 3. Update the tab theme
+## 3. Update your tab theme
 
-It is important for your tab have a theme that feels native to Teams and blend your tab with the Teams theme. Your users generally prefer default (light), dark, or high contrast themes. As you might have noticed in the last screenshot, your tab still has a light background when your user is using the dark theme. This is not a recommended user experience.
+It is important for your tab to have a theme that feels native to Teams and blend your tab with the Teams theme. Your users generally prefer default (light), dark, or high contrast themes. As you might have noticed in the last screenshot, your tab still has a light background when your user is using the dark theme. This is not a recommended user experience.
 
 The Teams JavaScript client SDK can make your app aware of and react to theme changes in the client. Let's walk through how to do this.
 
@@ -123,29 +123,29 @@ In the `render()` function, store the state provided by the theme change handler
 ```
 
 After storing the state provided by the theme change handler, provide the conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
-1. Check the current theme in `isTheme`.
+1. Check the current theme under `isTheme`.
 1. Create a `newTheme` object with CSS properties relevant to the current theme.
 1. Apply the CSS to your tab content's root HTML element (`<div style={newTheme}>`).
 
-  ```JavaScript
-  let newTheme
+    ```JavaScript
+    let newTheme
 
-  if (isTheme === "default") {
-    newTheme = {
-      backgroundColor: "#EEF1F5",
-      color: "#16233A"
-    };
-  } else {
-    newTheme = {
-      backgroundColor: "#2B2B30",
-      color: "#FFFFFF"
-    };
-  }
-  ```
+    if (isTheme === "default") {
+      newTheme = {
+        backgroundColor: "#EEF1F5",
+        color: "#16233A"
+      };
+    } else {
+      newTheme = {
+        backgroundColor: "#2B2B30",
+        color: "#FFFFFF"
+      };
+    }
+    ```
 
 Check your tab in Teams. The appearance now closely matches the dark theme.
 
-  :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot of a personal tab with static content view.":::
+   :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot of a personal tab with static content view.":::
 
 ## See also
 
