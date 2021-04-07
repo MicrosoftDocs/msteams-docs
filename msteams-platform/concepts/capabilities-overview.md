@@ -7,7 +7,7 @@ ms.author: lajanuar
 ms.date: 09/22/2020
 ---
 
-# Understand Teams app capabilities
+# Understand Microsoft Teams app capabilities
 
 Capabilities are the extension points for building apps on the Microsoft Teams platform. The various capabilities used to build your Teams app allow you to increase its usage scope.
 
