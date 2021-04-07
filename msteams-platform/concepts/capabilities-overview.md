@@ -35,7 +35,7 @@ The core capabilities together with the entry points enable you to create a coll
 ## Always consider your user
 
 As you familiarize yourself with Teams app development, you understand its core fundamentals. You understand that there is more than one way to build certain features. In such scenarios, consider how you can provide a more native experience to your user.
-For example, collecting user input. You can collect user input by embedding a web-based form in a tab using an `<iframe>`. You can also do this in a tab using a task module, a Teams UI convention. Using the task module to develop the app will provide a more native experience to your user. Therefore, you must do the right thing for your user.
+For example, you can collect user input by with a form using an iframe. You can also do this using a task module, a dialog in Teams, which may provide a more native experience to your user.
 
 ## See also
 
