@@ -1,5 +1,5 @@
 ---
-title: Teams platform development fundamentals overview
+title: App development fundamentals overview
 author: heath-hamilton
 description: Describe the foundational concepts of Teams platform development.
 ms.topic: conceptual
