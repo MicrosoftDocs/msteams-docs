@@ -10,16 +10,16 @@ Microsoft Teams Together Mode provides an immersive and engaging meeting environ
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene Design Studio that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
 
 The following image gives an overview to create a scene only app:
 
-:::image type="content" source="../assets/images/apps-in-meetings/scene-added-to-app.png" alt-text="Add scene to app" border="false":::
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
-A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene Design Studio handles the app package creation in the background.
+A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
 
 >[!NOTE]
 > Multiple scenes in a single app package appear as a flat list of scenes to users.
@@ -34,14 +34,14 @@ You must have a basic understanding of the following to use Together Mode:
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams Dev Center and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 
-## Build a scene using the Scene Design Studio
+## Build a scene using the Scene studio
 
 >[!NOTE]
-> This document is referring to Scene Design Studio in the Microsoft Teams Dev Center. The interface and functionalities are all same in App Studio Scene Designer.
+> This document is referring to Scene studio in the Microsoft Teams Dev Center. The interface and functionalities are all same in App Studio Scene Designer.
 
-Microsoft has a Scene Design Studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
+Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-A scene in the context of the Scene Design Studio is an artifact that contains the following:
+A scene in the context of the Scene studio is an artifact that contains the following:
 
 * Seats reserved for meeting organizer and meeting presenters. Presenters does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 * Each seat and image have a width and height. PNG is the only supported format.
@@ -50,7 +50,7 @@ A scene in the context of the Scene Design Studio is an artifact that contains t
 
 The following image shows each seat represented as an avatar for development purposes:
 
-![Scene Design Studio](../assets/images/apps-in-meetings/scene-design-studio.png)
+![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
 The seat dimensions become the canvas for rendering the participant video stream.
 
@@ -65,11 +65,11 @@ Assets include PNG images used to create the scene and a scene.json file that ca
 
 ![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
-**To build a scene using the Scene Design Studio**
+**To build a scene using the Scene studio**
 
 1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-2. Select **Tools** from the menu and then select **Scene editor** under **Tools** to open the Scene Design Studio.
+2. Select **Tools** from the menu and then select **Scene editor** under **Tools** to open the Scene studio.
 
 3. From the **Scenes Editor** page, select **Create a new scene**.
 
@@ -106,7 +106,7 @@ Assets include PNG images used to create the scene and a scene.json file that ca
     >[!NOTE]
     > Alternately, you can select **Save** to save the scene.
 
-After you have built a scene using the Scene Design Studio, you can assemble a scene package.
+After you have built a scene using the Scene studio, you can assemble a scene package.
 
 ## Assemble a scene package
 
