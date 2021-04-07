@@ -107,7 +107,7 @@ To add custom content, open `TabConfig.js` file from the `src/components` direct
 
 When you add a channel tab, the app name displays by default(for example, **first-app**). You can als provide a name that makes more sense in the context of group collaboration (for example, **Team Contacts**).
 
-1. Open `TabConfig.js` file from the `src/components` directory.
+1. Go to the `src/components` directory and Open the `TabConfig.js` file.
 1. Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the example here.
 
   ```JavaScript
@@ -121,7 +121,7 @@ When you add a channel tab, the app name displays by default(for example, **firs
 
 This tutorial will teach you to build and run your app locally. This information is also present in the `README` section of the toolkit.
 
-1. Access the root directory of your app project in Terminal.
+1. Go to the root directory of your app project in Terminal.
 1. Run `npm install`.
 1. Run `npm start`.
 
@@ -131,11 +131,11 @@ Your app is running on `https://localhost:3000` once the **Compiled successfully
 
 Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. 
 
-1. Launch a Teams web client in Visual Studio Code with the **F5** key.
+1. Open a Teams web client in Visual Studio Code with the **F5** key.
 1. Add (`localhost`) as trustworthy by following these steps to enable your app content to display in Teams:
 
    1. Open a new tab in the same browser window (Google Chrome by default) which opened with the **F5** key.
-   1. Access `https://localhost:3000/tab` and proceed to the page.
+   1. Open `https://localhost:3000/tab` and proceed to the page.
 
 1. Select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing from the modal in Teams.
 1. Select **Set up a tab**. The configuration page displays in a modal.<br/>
