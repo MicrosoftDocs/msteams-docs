@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 Microsoft Teams app fundamentals give the direction you need to create your custom Teams app. You can recognize the framework required to plan your Teams app. The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
 
-## Capabilities overview and entry points
+## Capabilities and entry points
 
 This article talks about the multiple ways to extend your Teams app. It gives you needed guidance on all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md). The information about all the core capabilities is given in this article for you to familiarize yourself with Teams app development.
 
