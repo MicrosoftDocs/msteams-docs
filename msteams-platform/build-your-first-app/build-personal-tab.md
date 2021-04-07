@@ -32,7 +32,6 @@ You can customize your tab content page to render a list of important contacts i
 **To customize your tab content page**
 
 1. Copy and modify the following code sample with information that's relevant to you. You can also use the code as is. 
-
     ```JSX
     <div>
       <h1>Important Contacts</h1>
@@ -45,7 +44,6 @@ You can customize your tab content page to render a list of important contacts i
     ```
 1. Got to the `src/components` directory and open the `Tab.js` file. 
 1. Go to `render()` and replace the template code with the modified code inside `return()` (as shown here).
-
     ```JavaScript
     render() {
       return (
@@ -61,7 +59,6 @@ You can customize your tab content page to render a list of important contacts i
     }
     ```
 1. Go to the `src/components` directory and modify the `App.css` file with the following code to make the email links easier to read with any theme that is used.
-
     ```CSS
     a {
       color: inherit;
@@ -123,7 +120,7 @@ In the `render()` function, store the state provided by the theme change handler
 ```
 
 After storing the state provided by the theme change handler, provide the conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
-1. Check the current theme under `isTheme`.
+1. Go to `render()` and check the current theme in `isTheme`.
 1. Create a `newTheme` object with CSS properties relevant to the current theme.
 1. Apply the CSS to your tab content's root HTML element (`<div style={newTheme}>`).
 
