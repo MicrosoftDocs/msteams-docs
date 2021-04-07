@@ -19,9 +19,9 @@ You need to understand how to set up and build Teams app before you begin to bui
 
 The Microsoft Teams Toolkit helps you to configure your app and set up the scaffolding relevant to channel and group tabs. It also contains a basic configuration page and content page that displays a "Hello, World!" message.
 
-1. Select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and select **Create a new Teams app** in Visual Studio Code.
+1. Go to Visual Studio Code and select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar.
 1. Sign in with your Microsoft 365 development account when prompted to do so.
-1. Select **JS** (JavaScript) on the **Select project** screen, under **Channel and group app**.
+1. On the **Select project** screen, select **JS** (JavaScript) under **Channel and group app**.
 1. Enter a name for your Teams app. (This is the default name for your app and also the name of the app project directory on your local machine.)
 1. Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.  
@@ -47,7 +47,7 @@ The app scaffolding provides the components needed for rendering your channel ta
 
 You can customize your tab content page by following the steps given here:
 
-1. Copy and update the following snippet with information that's relevant to your organization. You can also use the snippet as it is.
+1. Copy and modify the following code sample with information that's relevant to your organization. You can also use the snippet as it is.
     ```JSX
     <div>
       <h1>Important Contacts</h1>
@@ -58,7 +58,7 @@ You can customize your tab content page by following the steps given here:
         </ul>
     </div>
     ```
-1. Open `Tab.js` file from the`src/components` directory. Locate the `render()` function and paste your content inside `return()` (as shown).
+1. Go to the `src/components` directory and open the `Tab.js` file. Locate the `render()` function and paste your code inside `return()` (as shown).
     ```JavaScript
     render() {
 
@@ -76,7 +76,7 @@ You can customize your tab content page by following the steps given here:
         );
     }
     ```
-1. Update the `App.css` file from the `src/components` directory with the following rule to make the email links easier to read, no matter which theme is used.
+1. Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used.
     ```CSS
     a {
       color: inherit;
