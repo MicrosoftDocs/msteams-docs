@@ -18,7 +18,7 @@ For more information, see [sideload your app in Teams](apps-upload.md).
 
 ## Publish your app to your organization
 
-Make your app available only for people in your org. This kind of distribution requires your Teams admin's approval.
+Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
 
 For more information, see [manage your apps in the Teams admin center](https://docs.microsoft.com/MicrosoftTeams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2FMicrosoftTeams%2Fbreadcrumb%2Ftoc.json).
 
