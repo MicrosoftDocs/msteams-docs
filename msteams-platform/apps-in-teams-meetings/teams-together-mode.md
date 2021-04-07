@@ -76,7 +76,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 5. Drag and drop the image into the environment as displayed in the following image:
 
     >[!NOTE]
-    > * You can download the Sample-Scene-1.zip and Sample App-1.zip files with the images from [sample scene and sample app](/apps-in-teams-meetings).
+    > * You can download the Sample Scene.zip and Sample App.zip files with the images from [sample scene and sample app](/apps-in-teams-meetings).
     > * Alternately, you can add background images to the scene using **Add images**.
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
