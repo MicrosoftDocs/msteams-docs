@@ -25,7 +25,7 @@ This article talks about understanding the use cases. You can recognize user iss
 
 ## Map your use cases to Teams app capabilities
 
-This article talks about some common scenarios and selection of extensibility points. Information to share your app and collaborate on items in an external system is provided. You can also learn to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, Single Page App (SPA), and combining multiple features. [Map your use cases](../concepts/design/map-use-cases.md) with the possibilities available to you and the Teams platform to build your successful app.
+[Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
 ## See also
 
