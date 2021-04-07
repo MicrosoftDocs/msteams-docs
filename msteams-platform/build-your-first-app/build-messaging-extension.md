@@ -134,4 +134,4 @@ See the following pages to continue and build a fully featured messaging extensi
 > [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md)
 
 > [!div class="nextstepaction"]
-> [respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md)
+> [Respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md)
