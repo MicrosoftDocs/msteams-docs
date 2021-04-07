@@ -48,43 +48,40 @@ The app scaffolding provides the components needed for rendering your channel ta
 You can customize your tab content page by following the steps given here:
 
 1. Copy and update the following snippet with information that's relevant to your organization. You can also use the snippet as it is.
-
-  ```JSX
-  <div>
-    <h1>Important Contacts</h1>
-      <ul>
-        <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-        <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-        <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-      </ul>
-  </div>
-  ```
+    ```JSX
+    <div>
+      <h1>Important Contacts</h1>
+        <ul>
+          <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+          <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+          <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+        </ul>
+    </div>
+    ```
 1. Open `Tab.js` file from the`src/components` directory. Locate the `render()` function and paste your content inside `return()` (as shown).
+    ```JavaScript
+    render() {
 
-  ```JavaScript
-  render() {
+        let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
 
-      let userName = Object.keys(this.state.context).length > 0 ? this.state.context['upn'] : "";
-
-      return (
-      <div>
-        <h1>Important Contacts</h1>
-          <ul>
-            <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
-            <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
-            <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
-          </ul>
-      </div>
-      );
-  }
-  ```
+        return (
+        <div>
+          <h1>Important Contacts</h1>
+            <ul>
+              <li>Help Desk: <a href="mailto:support@company.com">support@company.com</a></li>
+              <li>Human Resources: <a href="mailto:hr@company.com">hr@company.com</a></li>
+              <li>Facilities: <a href="mailto:facilities@company.com">facilities@company.com</a></li>
+            </ul>
+        </div>
+        );
+    }
+    ```
 1. Update the `App.css` file from the `src/components` directory with the following rule to make the email links easier to read, no matter which theme is used.
-
-  ```CSS
-  a {
-    color: inherit;
-  }
-  ```
+    ```CSS
+    a {
+      color: inherit;
+    }
+    ```
 
 ## 4. Customize your tab configuration page
 
@@ -163,3 +160,5 @@ You know how to build a tab for collaboration. Want to try building a different 
 
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/build-bot.md)
+> [!div class="nextstepaction"]
+> [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)
