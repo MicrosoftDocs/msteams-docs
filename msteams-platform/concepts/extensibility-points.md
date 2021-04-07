@@ -11,7 +11,7 @@ ms.author: lajanuar
 The Teams platform provides a flexible set of entry points, such as team, channel, and chat where people can discover and use your app. Your app can be as simple as embedding existing web content in a tab or a multi-faceted app that users interact with across several contexts.
 The most successful apps are native to Teams, so choose your app's entry points carefully.
 
-## Collaborate with team, channel, and chat
+## Shared app experiences
 
 Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows or unlocking new social interactions.
 
