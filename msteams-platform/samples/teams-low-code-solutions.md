@@ -9,7 +9,7 @@ ms.topic: conceptual
 
 [Microsoft Teams](/microsoftteams/platform) is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low-code custom apps saves time, provide speedy solutions and meet the demand when compared with the apps created from scratch.
 
-Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to back-end services, and a built-in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides several innovative gateways to rapidly build Teams-compatible apps using low-code attributes:
+Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to back-end services, and a built-in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low-code attributes:
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams app templates](#teams-app-templates)
@@ -46,7 +46,7 @@ Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, 
 
 ### ✔ App template catalog
 
-[App templates](../samples/app-templates.md) are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions for deploying and installing the app for your organization, providing a ready-to-use application that you can install and start using immediately. The complete source code is available, so you can explore it in detail, or fork the code and alter it to meet your specific needs.
+[App templates](../samples/app-templates.md) are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions for deploying and installing the app for your organization. It provides a ready-to-use application that you can install and start using immediately. The complete source code is available in the GitHub repository. You can explore the code in detail. You can fork the code and change it to meet your specific needs.
 
 ### ✔ Virtual Assistant for Teams
 
@@ -58,7 +58,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ### ✔ Teams Shift Connectors
 
-[Teams Shifts Work Force Management connectors](../samples/shifts-wfm-connectors.md) are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in the GitHub repository. You can explore the code in detail. You can fork the code and change it to meet your specific needs.
+[Teams Shifts Work Force Management connectors](../samples/shifts-wfm-connectors.md) are production-ready, open-source, and community-driven integrations. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in the GitHub repository. You can explore the code in detail. You can fork the code and change it to meet your specific needs.
 
 ### ✔ Power Platform Learn modules
 
@@ -82,7 +82,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 > Project **Oakdale** is renamed to project **Dataverse for Teams**.
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) is a new low-code data platform coming soon to Microsoft Teams. It will allow developers to create Teams Power Platform solutions directly within Teams. *See* [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
+) is a new low-code data platform coming soon to Microsoft Teams. It allows developers to create Teams Power Platform solutions directly within Teams. For more information on Project Oakdale, see [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### ✔ Microsoft Blog insights
 
