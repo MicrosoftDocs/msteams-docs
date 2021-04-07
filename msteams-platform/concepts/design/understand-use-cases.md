@@ -52,7 +52,7 @@ You must identify early on if you need to protect the services you are exposing 
 * Will the interactions also be based on the user roles?
 * Will external users access the app?
 
-## Build entire app within Teams
+## Decide what goes in Teams
 
 Whether you are building something new or bringing an existing solution into Teams, it is important to decide if the entire app is going to be inside the Teams client. Check if it makes sense to only bring in a portion of the experience. With a combination of tabs, messaging extensions, task modules, interactive cards, and conversational bots you can build complex apps completely in Teams.
 Remember who your users are and the problem you are trying to solve. Do they already have a system for solving most of the problem or you just need to extend a sub-set of the functionality into Teams? Typically, if you are going to bring in a portion of your solution, you must focus on sharing, collaborating, initiating, and monitoring workflows.
