@@ -18,7 +18,7 @@ Ensure that you have [set up your Teams development tenant](#set-up-your-Teams-d
 
 A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This is also where you can sideload and test your apps. 
 
-# [Do not have a tenant](#do-not-have-a-tenant/have-a-tenant)
+# [Do not have a tenant](#tab/do-not-have-a-tenant)
 
 Join the Microsoft 365 developer program and get a tenant (free Teams test account) that allows app sideloading. The registration process takes approximately two minutes.
 
@@ -36,7 +36,7 @@ Join the Microsoft 365 developer program and get a tenant (free Teams test accou
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
-# [Have a tenant and admin access](#do-not-have-a-tenant/have-a-tenant)
+# [Have a tenant and admin access](#tab/have-a-tenant)
 
 If you already have a tenant with admin access to the Teams client, verify if you can sideload your apps.
 
@@ -94,7 +94,7 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 
 After the toolkit configures your project, the components to build a basic personal tab for Teams are now available. The project directories and files appear in the **EXPLORER** section of the Visual Studio Code. 
 
-   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
+   :::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
 
 The toolkit automatically creates an app scaffold for you in the `src` directory based on the capabilities you added during setup. 
 If you create a tab during setup, the `App.js` file in the `src/components` directory handles the initialization and routing of your app. It calls the Microsoft Teams JavaScript client SDK to establish communication between your app and Teams. 
@@ -156,7 +156,7 @@ You have to install App Studio after enabling custom app sideloading for your te
 
    Alternatively,
 
-   1. select the **F5** key to open browser window (Google Chrome by default) to install. This will skip the installation process in the **App Studio**.
+   1. Select the **F5** key to open browser window (Google Chrome by default) to install. This will skip the installation process in the **App Studio**.
    1. After the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
