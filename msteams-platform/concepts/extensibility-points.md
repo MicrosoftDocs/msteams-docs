@@ -29,7 +29,7 @@ The following list shows how Teams app capabilities are commonly used in collabo
 
 * [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
 
-## Collaborate using Personal apps
+## Personal app experiences
 
 [Personal apps](../concepts/design/personal-apps.md) focus on interactions with a single user. The experience in this context is unique to each user.
 
