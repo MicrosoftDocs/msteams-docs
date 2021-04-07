@@ -75,8 +75,7 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 1. Open Visual Studio Code.
 1. Select **Microsoft Teams Toolkit** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: > **Create a new Teams app**.
 
-  :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create your app project with the Visual Studio Code Teams Toolkit.":::
-
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create your app project with the Visual Studio Code Teams Toolkit.":::
 1. Sign in with your Microsoft 365 development account.
 1. On the **Select project** screen, select **JS** (JavaScript) > **Next**.
 
@@ -94,7 +93,7 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 
 After the toolkit configures your project, the components to build a basic personal tab for Teams are now available. The project directories and files appear in the **EXPLORER** section of the Visual Studio Code. 
 
-   :::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
+   :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
 
 The toolkit automatically creates an app scaffold for you in the `src` directory based on the capabilities you added during setup. 
 If you create a tab during setup, the `App.js` file in the `src/components` directory handles the initialization and routing of your app. It calls the Microsoft Teams JavaScript client SDK to establish communication between your app and Teams. 
