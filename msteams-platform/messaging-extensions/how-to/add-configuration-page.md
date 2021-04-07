@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document provides guides you on how to create messaging extensions that include a configuration page and Bot Service authentication using Bot Framework Teams search Auth Configuration samples. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
+This document guides you on how to create messaging extensions that include a configuration page and Bot Service authentication using Bot Framework Teams search Auth Configuration samples. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
 
 ## Code sample
 

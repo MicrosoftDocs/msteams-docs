@@ -36,8 +36,8 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. Load your app manifest.
 1. On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section. See the process in the following image:
 
-    <img src="~/assets/images/link-unfurling.png" alt="message handlers section in App Studio" width="400"/>
-
+    ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+    
 ### Add link unfurling manually
 
 To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following code section is an example for adding link unfurling manually: 

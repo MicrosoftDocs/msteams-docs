@@ -340,8 +340,6 @@ The default query has the same structure as any regular user query, with the `na
 
 ## Next Step
 
-Add authentication and configuration
-
 > [!div class="nextstepaction"]
 > [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
 
@@ -349,9 +347,4 @@ Add authentication and configuration
 
 > [!div class="nextstepaction"]
 > [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
-
-Deploy configuration
-
-> [!div class="nextstepaction"]
-> [Deploy your app package](~/concepts/deploy-and-publish/apps-upload.md)
 
