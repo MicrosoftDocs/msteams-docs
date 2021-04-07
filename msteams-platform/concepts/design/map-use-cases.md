@@ -19,7 +19,7 @@ This article provides guidance on the app scope and some scenarios that will hel
 Before choosing the app scope, consider the following:
 
 * An app can exist across scopes.
-* App capabilities, such as Messaging extensions follow you across scopes.
+* App capabilities, such as messaging extensions, follow users across scopes.
 * Users are often hesitant to add apps to Teams or channels.
 * Guest users can access content exposed in Teams or channels.
 
