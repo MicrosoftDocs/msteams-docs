@@ -183,8 +183,8 @@ For more information on the features available see: [Features in the Public Deve
      "name",
      "shortDescription",
      "longDescription",
-     "smallImageUrl", // The `smallImageUrl` is the `outline` property in the `icons` block of the manifest.
-     "largeImageUrl", // The `largeImageUrl` is the `color` property in the `icons` block of the manifest.
+     "smallImageUrl", 
+     "largeImageUrl", 
      "accentColor",
      "websiteUrl",
      "privacyUrl",
@@ -476,7 +476,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admin can customize.
+The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](https://github.com/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
