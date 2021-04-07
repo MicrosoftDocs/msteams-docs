@@ -14,7 +14,7 @@ This article provides guidance on the app scope and some scenarios that will hel
 > [!NOTE]
 > You must have a good understanding of the [entry points and UI elements](../../concepts/extensibility-points.md) available for your app. You must also make sure that you [considered your use cases](../../concepts/design/understand-use-cases.md) carefully.
 
-## Choose the correct app scope
+## Choose the correct scope for your app
 
 Before choosing the app scope, consider the following:
 
