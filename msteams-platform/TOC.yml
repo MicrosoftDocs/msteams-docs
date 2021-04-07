@@ -276,7 +276,7 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Together Mode in Teams
     href: apps-in-teams-meetings/teams-together-mode.md  
-  - name: Build scene in Scene studio
+  - name: Build a scene in Scene studio
     href: apps-in-teams-meetings/build-scene-in-scene-studio.md      
 - name: Build webhooks and connectors
   items:

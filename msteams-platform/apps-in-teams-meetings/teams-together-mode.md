@@ -10,7 +10,7 @@ Microsoft Teams Together Mode provides an immersive and engaging meeting environ
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings together people along with their video stream in a creative setting as conceived by the scene creator. A scene brings people together with designated seats in the conceived scene setting and with participant video streams rendered in those seats.
+Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
@@ -19,10 +19,9 @@ The following image gives an overview to create a scene only app:
 
 <img src="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt="Create scene only app" width="7000"/>
 
-A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
-
 >[!NOTE]
-> Multiple scenes in a single app package appear as a flat list of scenes to users.
+> * A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
+> * Multiple scenes in a single app package appear as a flat list of scenes to users.
 
 There are prerequisites that you must complete before using the Together Mode.
 
@@ -36,32 +35,31 @@ You must have a basic understanding of the following to use Together Mode:
 
 ## Build a scene using the Scene studio
 
->[!NOTE]
-> This document is referring to Scene studio in the Microsoft Teams Dev Center. The interface and functionalities are all same in App Studio Scene Designer.
-
 Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
+
+>[!NOTE]
+> This document is referring to Scene studio in the Microsoft Teams Dev Center. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following:
 
-* Seats reserved for meeting organizer and meeting presenters. Presenters does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
-* Each seat and image have a width and height. PNG is the only supported format.
+* Seats reserved for meeting organizer and meeting presenters.
+
+    >[!NOTE]
+    > Presenter does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+
+* Seat and image for each participant. Each seat and image has an adjustable width and height.
+
+    >[!NOTE]
+    > PNG is the only supported format.
+
 * The xyz coordinates of all the seats and images.
 * A collection of images that are camouflaged as one image.
 
-The following image shows each seat represented as an avatar for development purposes:
+The following image shows each seat represented as an avatar for building scenes:
 
 ![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
 
 The seat dimensions become the canvas for rendering the participant video stream.
-
-The following image shows you how to get the scene package as a zip file that contains all the scene assets:
-
-![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
-
-Assets include PNG images used to create the scene and a scene.json file that captures the scene metadata.
-
->[!NOTE]
-> Scene package can be used for sharing and allowing other co-creators to continue enhancing the scene. The **Import a scene** option can be used for this purpose.
 
 ![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
@@ -69,7 +67,7 @@ Assets include PNG images used to create the scene and a scene.json file that ca
 
 1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-2. Select **Tools** from the menu and then select **Scene editor** under **Tools** to open the Scene studio.
+2. Select **Tools** from the menu, and select **Scene editor** under **Tools** to open the Scene studio.
 
 3. From the **Scenes Editor** page, select **Create a new scene**.
 
@@ -83,34 +81,46 @@ Assets include PNG images used to create the scene and a scene.json file that ca
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-6. Select an image that you have placed in the scene. From the rightmost pane, select an alignment for the image or use the **Size & rotation** slider to adjust the image size.
+6. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-7. Select **Participants** under **Layers** in the upper-right corner.
+7. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
 
-8. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
-
-    >[!NOTE]
-    > You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
-
-9. Select any participant image, select the **Assign Spot** check box, and select **Meeting Organizer** and **Presenter** to assign that spot to the participant.
+8. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
 
     >[!NOTE]
-    > Alternately, you can select either **Meeting Organizer** or **Presenter** options for that participant.
+    > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
+    > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
+
+9. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+
+10. Select **Meeting Organizer** or **Presenter** role for the participant.
+
+    >[!NOTE]
+    > In a meeting, one participant must be assigned the role of a meeting organizer.
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-10. Select **Export the Scene** from the **Save** drop-down menu. A .ZIP file, that is the scene package, is downloaded.
+11. Select **Export the Scene** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
 
     >[!NOTE]
     > Alternately, you can select **Save** to save the scene.
+
+To further enhance your scene you can also import the scene package. The following image shows you how to get the scene package as a zip file that contains all the scene assets:
+
+![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
+
+Assets include PNG images used to create the scene and a scene.json file that captures the scene metadata.
+
+>[!NOTE]
+> Scene package can be used for sharing and allowing other co-creators to continue enhancing the scene. The **Import a scene** option can be used for this purpose.
 
 After you have built a scene using the Scene studio, you can assemble a scene package.
 
 ## Assemble a scene package
 
-A scene package is a collection of images, scene JSON, and all assets. A scene package is used to build the scene and a scene JSON to indicate the exact position of the seats.
+A scene package is a collection of images, scene JSON, and all assets. A scene package is used to build the scene. The scene JSON in the scene package indicates the exact position of the seats.
 
 You can ship a scene package that includes the following:
 
@@ -214,13 +224,13 @@ An app package contains the scene package. App Studio simplifies app packaging.
 
 **To create an app package and use the scene in Teams**
 
-1. Go to **Apps** in **App Studio** in Teams.
+1. Go to **Teams**, and select **App Studio**.
 
-2. Create a new app and enter the necessary details in the app details page.
+2. Create a new app and enter the necessary details in the app details page or select an existing app.
 
 3. In the **Microsoft Teams Developer Center** page, go to **Scenes** under **Configuration** in **Apps**.
 
-4. Select the scene you built and import the package.
+4. Select the scene you built and import the app package.
 
 5. Sideload this package in Teams.
 
@@ -252,4 +262,4 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Microsoft Scene studio](build-scene-in-scene-studio.md)
+> [Build a scene in Scene studio](build-scene-in-scene-studio.md)
