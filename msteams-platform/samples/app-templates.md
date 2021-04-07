@@ -29,17 +29,13 @@ Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams (P
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## Adoption Tool &#9734;
-
-Adoption Tool consists of the following two app templates:
-
-### Champion Management Platform
+## Adoption Tool- Champion Management Platform &#9734;
 
 The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard and event types for logging, and tools to overlay digital badges to program participants.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
 
-### Get Started
+## Adoption Tool- Microsoft 365 Learning Pathways (Get Started) &#9734;
 
 The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Microsoft Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
 
