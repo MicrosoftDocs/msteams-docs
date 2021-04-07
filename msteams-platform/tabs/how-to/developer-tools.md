@@ -20,6 +20,7 @@ While the web version and the desktop version of teams are almost exactly the sa
 
 1. Ensure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 1. Open up a tab so you have something to inspect with the DevTools.
+
 1. Open the DevTools.
     * On Windows, open DevTools through the Microsoft Teams icon in the desktop tray:
 
@@ -29,11 +30,17 @@ While the web version and the desktop version of teams are almost exactly the sa
 
 Example of sample tab with open DevTools and an element selected:
 
+1. Open the DevTools one of the following ways:
+    * **Windows**: Select the Teams icon in the desktop tray.
+    * **macOS**: Select the Teams icon in the Dock.
+
+The following screenshot shows DevTools inspecting an element in a tab configuration dialog:
+
 ![Tab and DevTools](~/assets/images/dev-preview/tab-and-devtools.png)
 
 ## Access DevTools from an Android client
 
-You can also enable the DevTools from the Teams Android client. To do so:
+You can also enable the DevTools from the Teams Android client.
 
 1. Enable the [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 1. Connect your device to your desktop computer and setup your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
