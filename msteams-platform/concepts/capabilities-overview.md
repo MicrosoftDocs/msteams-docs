@@ -1,5 +1,5 @@
 ---
-title: Understand Teams app capabilities
+title: Understand app capabilities
 author: heath-hamilton
 description: Teams app capabilities explained
 ms.topic: conceptual
