@@ -95,7 +95,7 @@ With your messaging extension running, you can install it in Teams.
 1. In Visual Studio Code, select the **F5** key to launch a Teams web client.
 1. In the app install dialog, select **Add for me**.
 
-## 6. Test your messaging extension
+## 7. Test your messaging extension
 
 Learn how messaging extensions work in a Teams chat.
 
