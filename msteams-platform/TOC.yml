@@ -344,7 +344,7 @@
     href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Test your app
   items:
-  - name: Test your app overview
+  - name: Overview
     href: concepts/build-and-test/test-app-overview.md
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
