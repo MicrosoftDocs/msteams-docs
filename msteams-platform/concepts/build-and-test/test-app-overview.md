@@ -29,7 +29,18 @@ Test your bot locally. For more information, see [debug your bot locally with an
 
 To view the console logs, view or modify html, css, and network requests during runtime, add breakpoints to your JavaScript code, and perform interactive debugging access the DevTools. For more information, see [Access the DevTools for Teams tabs](~/tabs/how-to/developer-tools.md). 
 
+## See also
+
+> [!div class="nextstepaction"]
+> [Debug your tab](~/tabs/how-to/developer-tools.md)
+ 
+> [!div class="nextstepaction"]
+> [Debug your bots](~/debug/locally-with-an-ide.md)
+
+> [!div class="nextstepaction"]
+> [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
+
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare your Microsoft 365 tenant](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant)
+> [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md)
