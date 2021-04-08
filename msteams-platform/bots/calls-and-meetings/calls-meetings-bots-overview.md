@@ -1,5 +1,5 @@
 ---
-title: Calls and Online Meetings Bots
+title: Calls and online meetings bots
 description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings.
 keywords: calling calls audio video IVR voice online meetings
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.topic: conceptual
 > [!NOTE]
 > Support for calls and online meeting bots is currently not supported on the Microsoft Teams mobile platform.
 
-Bots can interact with Microsoft Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
+Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
 * Interactive voice response (IVR).
 * Call control.
@@ -69,7 +69,7 @@ From a Teams user's perspective, there are two kinds of online meetings, ad hoc 
 
 When a bot is participating in a call or online meeting, it must deal with audio and video streams. When users talk on a call, show themselves on a webcam, or present their screens in a meeting, to a bot it is shown as audio and video streams. If a bot wants to say something as simple as, **press 0 to reach the operator** in an interactive voice response (IVR) scenario, it requires playing a .WAV file. Collectively, this is referred to as media or real-time media.
 
-Real-time media refers to scenarios where media must be processed in real-time, as opposed to playback of previously recorded audio or video. Dealing with media streams, particularly real-time media streams, is extremely complex. Microsoft has created the Real-time Media Platform to handle these scenarios and to offload as much of the traditional heavy lifting of real-time media processing as possible. When the bot answers an incoming call or joins a new or existing call, it needs to tell the Real-time Media Platform how media will be handled. If you are building an IVR application, you can offload the expensive audio processing to Microsoft. Alternately, if your bot requires direct access to media streams, that scenario is also supported. There are two types of media processing:
+Real-time media refers to scenarios where media must be processed in real-time, as opposed to playback of previously recorded audio or video. Dealing with media streams, particularly real-time media streams, is extremely complex. Microsoft has created the Real-time Media Platform to handle these scenarios and to offload as much of the traditional heavy lifting of real-time media processing as possible. When the bot answers an incoming call or joins a new or existing call, it needs to tell the Real-time Media Platform how media is handled. If you are building an IVR application, you can offload the expensive audio processing to Microsoft. Alternately, if your bot requires direct access to media streams, that scenario is also supported. There are two types of media processing:
 
 * Service-hosted media: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use APIs, such as the following:
 
@@ -83,15 +83,20 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## See also
 
-Here is more information on how to create and test calls and online meetings bots:
-
-* [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-* [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-* [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-* [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
-* [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-* [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-* [Technical information on handling incoming call notifications](./call-notifications.md)
+> [!div class="nextstepaction"]
+> [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+> [!div class="nextstepaction"]
+> [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+> [!div class="nextstepaction"]
+> [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
+> [!div class="nextstepaction"]
+> [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
+> [!div class="nextstepaction"]
+> [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
+> [!div class="nextstepaction"]
+> [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
+> [!div class="nextstepaction"]
+> [Technical information on handling incoming call notifications](./call-notifications.md)
 
 ## Next step
 

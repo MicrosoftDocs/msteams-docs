@@ -30,7 +30,7 @@ For using proactive messages effectively, see [best practices for proactive mess
 
 ## Get the user ID, team ID or channel ID
 
-To create a new conversation or conversation thread in a channel, you need the correct ID. You can receive or retrieve this ID using any of the following:
+To create a new conversation or conversation thread in a channel, you must have the correct ID. You can receive or retrieve this ID using any of the following:
 
 * When your app is installed in any particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * When a new user is added to a context where your app is installed, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -261,7 +261,7 @@ The code samples for proactive messaging are as follows:
 ### View additional code sample
 
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
 ## Next step
 

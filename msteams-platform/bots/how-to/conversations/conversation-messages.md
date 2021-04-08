@@ -14,7 +14,7 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 
 * Easy access to the Bot Framework connector.
 * Additional functionality to manage conversation flow and state.
-* Simple ways to incorporate cognitive services such as Natural Language Processing (NLP).
+* Simple ways to incorporate cognitive services such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
@@ -107,9 +107,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. The following code shows an example of sending a message when a user is added to a conversation:
+To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. 
 
-The following code shows an example of sending a message:
+The following code shows an example of sending a message when a user is added to a conversation:
 
 # [C#](#tab/dotnet)
 
@@ -203,7 +203,7 @@ Messages sent between users and bots include internal channel data within the me
 
 ## Teams channel data
 
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK typically pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it easily accessible. However, you can always access the original data from the `turnContext` object.
 
 The `channelData` object is not included in messages in personal conversations, as these take place outside of a channel.
 
@@ -220,7 +220,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
 * `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
 
-### Example channelData object (channelCreated event)
+### Example channelData object or channelCreated event
 
 The following code shows an example of channelData object:
 
@@ -258,6 +258,9 @@ You can also add notifications to your message using the `Notification.Alert` pr
 ## Notifications to your message
 
 Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
+
+> [!NOTE]
+> The **Summary** field displays any text from the user as a notification message in the feed.
 
 The following code shows an example of adding notifications to your message:
 

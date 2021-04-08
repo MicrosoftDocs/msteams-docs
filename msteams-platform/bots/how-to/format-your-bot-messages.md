@@ -2,7 +2,7 @@
 title: Format your bot messages
 author: clearab
 description: Add rich formatting to your bot messages
-ms.topic: overview
+ms.topic: conceptual
 ms.author: anclear
 ---
 # Format your bot messages
@@ -21,7 +21,7 @@ Microsoft Teams supports the following formatting options:
 | markdown | The text must be treated as markdown formatting and rendered on the channel as appropriate. |
 | xml | The text is simple XML markup. |
 
-Microsoft Teams supports a subset of markdown and XML or HTML formatting tags.
+Teams supports a subset of markdown and XML or HTML formatting tags.
 
 Currently, the following limitations apply:
 

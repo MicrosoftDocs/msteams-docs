@@ -25,14 +25,14 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Process messaging extension requests.
 
 > [!IMPORTANT]
-> You can develop Teams apps in any web programming technologies and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly, but you must perform token handling in all cases.
+> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
 
 > [!TIP]
 > Teams App Studio helps you create and configure your app manifest, and register your web service as a bot on the Bot Framework. It also contains a React control library and an interactive card builder. For more information, see [getting started with Teams App Studio](~/concepts/build-and-test/app-studio-overview.md).
 
 ## Bots and the Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate your Power Virtual Agents chatbot with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). To get started with Power Virtual Agents chatbot, see [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). To get started, see [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
 
 ## Bots and webhooks and connectors
 
@@ -50,7 +50,7 @@ Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand people. This potentially gives your bot massive reach, but individual interactions need to be concise. Traditional multi-turn interactions do not work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation if you need to collect lots of information. Your bot only has access to messages where it's `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions do not work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it is `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
 
 Bots work better in a channel in the following cases:
 
@@ -61,7 +61,7 @@ Bots work better in a channel in the following cases:
 
 ### In a group chat
 
-Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it's `@mentioned` directly.
+Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it is `@mentioned` directly.
 
 In the cases where bots work better in a channel also work better in a group chat.
 
@@ -95,7 +95,7 @@ Since there are only six visible commands in the current bot menu, anything more
 
 ### Maintain a large knowledge base
 
-One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, not sifting through long lists looking for an answer.
+One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
 ## Get started with bot samples
 

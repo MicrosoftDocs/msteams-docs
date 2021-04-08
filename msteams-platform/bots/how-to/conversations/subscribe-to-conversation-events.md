@@ -22,9 +22,9 @@ When building your conversational bots for Microsoft Teams, you can work with co
 You can use conversation update events to provide better notifications and more effective bot actions.
 
 > [!IMPORTANT]
-> You can add new events any time and your bot begins to receive them.
-> You must design your bot to receive unexpected events.
-> If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * You can add new events any time and your bot begins to receive them.
+> * You must design your bot to receive unexpected events.
+> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -447,7 +447,7 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is the message your bot receives when the bot is added **to a team**.
+This is the message your bot receives when the bot is added to a team.
 
 ```json
 {
@@ -1051,12 +1051,12 @@ Now that you have worked with the conversation update events, you can understand
 
 ## Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include "angry", "heart", "laugh", "like", "sad", and "surprised". This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event does not contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reaction to bot message](#reactions-to-a-bot-message)                   | All   |
-| messageReaction | reactionsRemoved | [Reaction removed from bot message](#reactions-removed-from-bot-message) | All   |
+| messageReaction | reactionsAdded   | [Reactions to a bot message](#reactions-to-a-bot-message)                   | All   |
+| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message) | All   |
 
 ### Reactions to a bot message
 
@@ -1282,11 +1282,11 @@ The next section illustrates a simple code sample that incorporates bots convers
 
 ## Sample code
 
-For sample code showing the bots conversation events, see the following Teams bots conversation events sample:
+The following table provides the sample code for Teams bots conversation events:
 
 | Sample | Description | .NET Core |
 |--------|------------- |---|
-| Teams bots conversation events sample | Bot Framework v4 Conversation Bot sample for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
+| Teams bots conversation events sample | Bot Framework v4 conversation bot sample for Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|
 
 ## Next step
 

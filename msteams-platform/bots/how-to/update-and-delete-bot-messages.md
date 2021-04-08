@@ -16,7 +16,7 @@ Your bot can dynamically update messages after sending them instead of having th
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-The new message need not match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
+It is not necessary for the new message to match the original in type. For example, if the original message contained an attachment, the new message can be a simple text message.
 
 # [C#](#tab/dotnet)
 
@@ -60,10 +60,6 @@ To update an existing activity within a conversation, include the `conversationI
 ```http
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
-
-For information on REST API request body, see [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. For information on what REST API returns, see [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object.
-
----
 
 |Request body | Returns |
 |----|----|
@@ -122,7 +118,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 |Request |Response |
 |----|----|
-| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
+| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
 
 * * *
 

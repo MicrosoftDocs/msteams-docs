@@ -5,6 +5,7 @@ description: How to create a command menu for your Microsoft Teams bot
 ms.topic: how-to
 ms.author: anclear
 ---
+
 # Bot command menus
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
@@ -26,7 +27,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 **To create a command menu for your bot using App Studio**
 
-1. Open **App Studio** from the **...** More added apps menu on the leftmost pane. If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
+1. Open **App Studio** from the **...** More added apps menu on the left pane. If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
     ![App Studio](./conversations/media/AppStudio.png)
 

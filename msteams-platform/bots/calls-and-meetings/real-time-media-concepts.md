@@ -62,4 +62,4 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Real-time media calls and meetings](~/bots/calls-and-meetings/registering-calling-bot.md)
+> [Register a calling bot](~/bots/calls-and-meetings/registering-calling-bot.md)
