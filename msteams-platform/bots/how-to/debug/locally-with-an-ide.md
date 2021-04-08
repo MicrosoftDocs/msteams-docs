@@ -60,9 +60,9 @@ You can also initiate a conversation with your bot by using its ID. When a bot h
   
    2. Open Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
   
-     ![Uploading bots](~/assets/images/bots_uploading.png)
+      ![Uploading bots](~/assets/images/bots_uploading.png)
 
-     The app ID must resolve to your bot name.
+      The app ID must resolve to your bot name.
 
    3. Select your bot and send a message to initiate a conversation.
       Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the **People** tab to see your bot and to start chatting with it.
@@ -90,7 +90,7 @@ To remove your bot completely from Teams, go to your **Bot Dashboard** and edit 
 ## See also
 
 > [!div class=nextstep]
-> [Debug your bot with inspection middleware](azure/bot-service/bot-service-debug-inspection-middleware)
+> [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
 
 > [!div class=nextstep]
 > [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
