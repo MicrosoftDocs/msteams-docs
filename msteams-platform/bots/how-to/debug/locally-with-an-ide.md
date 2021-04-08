@@ -14,7 +14,7 @@ When testing your bot you need to take into consideration both the context(s) yo
 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
-There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to help you, or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#deleting-a-bot-from-teams) before uploading your altered app package.
+There are two methods for uploading your app. You can either use [App Studio](~/concepts/build-and-test/app-studio-overview.md) to help you, or you can manually [create an app package](~/concepts/build-and-test/apps-package.md) and [upload your app](~/concepts/deploy-and-publish/apps-upload.md). If you need to alter your manifest and re-upload your app, you should [delete your bot](#delete-a-bot-from-teams) before uploading your altered app package.
 
 ## Debug your bot locally
 
@@ -34,7 +34,7 @@ Occasionally it may be necessary to test your bot without installing it as an ap
 
 The Bot Framework Emulator is a desktop application that permits bot developers to test and debug their bots locally or remotely. The emulator helps you to chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding. However, the emulator does not permit you to test any Teams-specific functionality you have added to the bot, nor the responses from your bot are an accurate visual representation of how they are rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
 
-See also [complete instructions on the Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
+See also [complete instructions on the Bot Framework Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
 ### Talk to your bot directly by ID
 
@@ -53,7 +53,7 @@ Chat with your bot using ID:
   
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
-     ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
+     ![Uploading bots](~/assets/images/bots_uploading.png)
 
      The app ID must resolve to your bot name.???
 
