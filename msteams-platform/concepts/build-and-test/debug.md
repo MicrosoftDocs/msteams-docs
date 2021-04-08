@@ -29,15 +29,15 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 
 1. Run the code locally.
 2. Launch the Bot Emulator and set the URL:
-  * Node.js: `http://localhost:3978/api/messages`
-  * .NET/C#: `http://localhost:3979/api/messages`
+   * Node.js: `http://localhost:3978/api/messages`
+   * .NET/C#: `http://localhost:3979/api/messages`
 3. Leave the Microsoft app ID and Microsoft app password blank, to match the default environment variables.
 
 ## Locally hosted
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software.
 
-Although you can use any tool of choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
+Although you can use any tool of your choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
 
 **To set up ngrok in preparation for running your Microsoft Teams app locally**
 
@@ -57,14 +57,14 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 
 ## Cloud-hosted
 
-You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the manifest.json file.
+You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
 
 ## Load and run your experience
 
-To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following:
+To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams. For more information, see:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md)
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)
