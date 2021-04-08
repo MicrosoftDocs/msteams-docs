@@ -13,8 +13,6 @@ Capabilities are the extension points for building apps on the Microsoft Teams p
 
 There are multiple ways to extend Teams, so every app is unique. Some only have one capability, such as a webhook, while others have more than one feature to give users various options. For example, your app can display data in a central location, that is, the **tab** and present that same information through a conversational interface, that is, the **bot**.
 
-This document introduces the core capabilities  that you can use to build your Teams app.
-
 ## App capabilities
 
 Your Teams app have one or all of the following core capabilities:
@@ -29,8 +27,6 @@ Your app can also take advantage of advanced capabilities, such as the [Microsof
 The following illustration gives you an idea of which capabilities will provide the features you want in your app.
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
-
-The core capabilities together with the entry points enable you to create a collaboration hub that can provide a native experience to your users. 
 
 ## Always consider your user
 
