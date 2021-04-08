@@ -271,27 +271,11 @@ The following schema sample shows all extensibility options.
       }
     ]
   },
-  "defaultInstallScope": {
-     "type": "string",
-     "enum": [
-        "personal",
-        "team",
-        "groupchat",
-        "meetings"
-      ],
-      "description": "The install scope is defined for this app by default. It is the option displayed on the button when a user tries to add the app."
-    },
+  "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
-      "type": "object",
-      "properties": {
-        "team": {
-          "type": "string",
-          "enum": [
-            "tab",
-            "bot",
-            "connector"
-          ],
-          "description": "When the selected install scope is Team, this field specifies the default capability available."
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
     },
     "groupchat": {
       "type": "string",
@@ -698,24 +682,20 @@ Define the properties your app uses to post a user activity feed.
 
 ## defaultInstallScope
 
-**Required** - string
+**Optional** - string
 
-It helps you to specify the default install scopes for the apps that you publish.
-
-| **Name** | **Type** | **Maximum size** | **Required** | **Description** |
-|----------|----------|------------------|--------------|-----------------|
-| `enum` | array of strings | 4 | ✔ | Specifies whether the scope offers an experience in the context of an individual user alone (personal), a team, a groupchat, or meetings.|
-| `description` | string | 128 characters | ✔ | The description that appears to users to indicate the purpose of this command. | 
+Specifies whether the scope offers an experience in the context of an individual user alone (personal), a team, a groupchat, or meetings. Options are:
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
 
 ## defaultGroupCapability
 
-**Required** - object
+**Optional** - object
 
-Specifies the default capability for each collaboration scope your app supports.
-
-| **Name** | **Type** | **Maximum size** | **Required** | **Description** |
-|----------|----------|------------------|--------------|-----------------|
-| `properties` | string | 128 characters | ✔ | Specifies the default install scope, that is, team, groupchat, or meetings and the capability, that is, bot, tab, or connector available with the selected scope, and its description.|
-| `description` | string | 128 characters | ✔ | Defines the default capability when the user installs the app. |
-| `additionalProperties` | boolean | | | Indicates if additional properties are required. Default: **false** | 
-
+Specifies the default capability for each collaboration scope your app supports. Options are:
+* `meetings`: `tab`
+* `team`: `bot`
+* `groupchat`: `bot` 
+ 
