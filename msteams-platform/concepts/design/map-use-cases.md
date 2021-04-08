@@ -100,5 +100,5 @@ That being said, the best apps usually combine multiple features, creating an ap
 ## See also
 
 > [!div class="nextstepaction"]
-> [Build apps for Microsoft Teams](~/overview.md)
+> [Build apps for Microsoft Teams](../../overview.md)
  
