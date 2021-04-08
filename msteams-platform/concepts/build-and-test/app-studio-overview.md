@@ -28,6 +28,8 @@ Once you are in App Studio, click on the *Manifest editor* tab where you can eit
 
 ## App Studio Features
 
+This section covers features, such as conversation, manifest editor, details, and capabilities. You can customize your capabilities using app customization.
+
 ### Conversation
 
 This is where you can see what [cards you create in App Studio](#card-editor) look like in Teams when you test them by sending them to yourself.
@@ -45,6 +47,9 @@ The details section of the Manifest Editor defines the high-level description of
 #### Capabilities
 
 The capabilities section of the Manifest Editor is where the app's capabilities are defined and where details of each of those capabilities are listed.
+
+> [!NOTE]
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ##### Tabs
 
@@ -72,8 +77,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 > [!NOTE]
 > App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as *Contoso*.
-> 
-> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
 
 ##### Messaging Extensions
 
