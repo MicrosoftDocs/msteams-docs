@@ -476,7 +476,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](https://github.com/MicrosoftTeams/customize-apps).
+The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
