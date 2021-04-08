@@ -49,7 +49,7 @@ The prerequisite to create a search command is that you must already have create
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
 1. Select **Add** in the **Command** section of the messaging extension page.
-1. Choose **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
+1. Select **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
 
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
 
@@ -69,7 +69,7 @@ To manually add your messaging extension search command to your app manifest, yo
 | `id` | This property is an unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | This property is a help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-| `type` | This property must be a `query` | No | 1.4 |
+| `type` | This property must be a `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
@@ -81,7 +81,7 @@ You must add the details of the search parameter, that defines the text visible 
 | `parameter.name` | This property describes the name of the parameter. This is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | This property describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | This property is a short user-friendly parameter title or label. | Yes | 1.0 |
-| `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text` | No | 1.4 |
+| `parameter.inputType` | This property is set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 
 #### Example
 
@@ -111,7 +111,7 @@ Following section is an example of the simple app manifest of the `composeExtens
 ...
 }
 ```
-For the complete  app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
+For the complete app manifest, see [App manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Code sample
 
@@ -123,5 +123,5 @@ For the complete  app manifest, see [App manifest schema](~/resources/schema/man
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to the search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
+> [Respond to the search commands](~/messaging-extensions/how-to/search-commands/respond-to-search.md).
 
