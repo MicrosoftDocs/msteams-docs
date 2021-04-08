@@ -5,7 +5,7 @@ description: How to respond to the search command from a messaging extension in 
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Respond to the search command
+# Respond to search command
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -14,7 +14,7 @@ After the user submits the search command, your web service receives a `composeE
 * As characters are entered into the search box.
 * `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
-This document gives a walk through on respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
+This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
 
 The request parameters are found in the `value` object in the request, which includes the following properties:
 
@@ -22,7 +22,7 @@ The request parameters are found in the `value` object in the request, which inc
 |---|---|
 | `commandId` | The name of the command invoked by the user, matching one of the commands declared in the app manifest. |
 | `parameters` | Array of parameters. Each parameter object contains the parameter name, along with the parameter value provided by the user. |
-| `queryOptions` | Pagination parameters: <br>`skip`: skip count for this query <br>`count`: number of elements to return |
+| `queryOptions` | Pagination parameters: <br>`skip`: Skip count for this query <br>`count`: Number of elements to return. |
 
 # [C#/.NET](#tab/dotnet)
 
@@ -79,9 +79,9 @@ Your service must respond with the results matching the user query. The response
 |Property name|Purpose|
 |---|---|
 |`composeExtension`|Top-level response envelope.|
-|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: displays a list of search results <br>`auth`: asks the user to authenticate <br>`config`: asks the user to set up the messaging extension <br>`message`: displays a plain text message |
-|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently the following types are supported: <br>`list`: a list of card objects containing thumbnail, title, and text fields <br>`grid`: a grid of thumbnail images |
-|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
+|`composeExtension.type`|Type of response. The following types are supported: <br>`result`: Displays a list of search results <br>`auth`: Asks the user to authenticate <br>`config`: Asks the user to set up the messaging extension <br>`message`: Displays a plain text message |
+|`composeExtension.attachmentLayout`|Specifies the layout of the attachments. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`list`: A list of card objects containing thumbnail, title, and text fields <br>`grid`: A grid of thumbnail images |
+|`composeExtension.attachments`|Array of valid attachment objects. Used for responses of type `result`. <br>Currently, the following types are supported: <br>`application/vnd.microsoft.card.thumbnail` <br>`application/vnd.microsoft.card.hero` <br>`application/vnd.microsoft.teams.card.o365connector` <br>`application/vnd.microsoft.card.adaptive`|
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
@@ -338,13 +338,15 @@ The default query has the same structure as any regular user query, with the `na
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## Next Step
-
-> [!div class="nextstepaction"]
-> [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
-
 ## See also
 
 > [!div class="nextstepaction"]
 > [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
+ 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+
+
 
