@@ -4,6 +4,7 @@ description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
 ms.topic: overview
 ---
+
 # Quickly develop apps with App Studio for Microsoft Teams
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
