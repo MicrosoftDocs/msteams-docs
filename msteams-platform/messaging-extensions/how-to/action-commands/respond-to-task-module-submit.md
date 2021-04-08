@@ -10,22 +10,22 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document gives a walk through on how your app responds to the user's task module submit action.
+This document gives a walk through on how your app responds to the action commands, such as user's task module submit action.
 After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message **Unable to reach the app**, and any reply to the invoke is ignored by the Teams client.
 
-You have the following options for responding:
+You have the following options to respond:
 
-* No response - Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Another task module](#respond-with-another-task-module) - You can respond with an additional task module as part of a multi-step interaction.
-* [Card response](#respond-with-a-card-inserted-into-the-compose-message-area) - You can respond with a card that the user can interact with or insert into a message.
-* [Adaptive Card from bot](#bot-response-with-adaptive-card) - Insert an Adaptive Card directly into the conversation.
+* No response: Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* [Another task module](#respond-with-another-task-module): You can respond with an additional task module as part of a multi-step interaction.
+* [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
+* [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md)
 * [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
-|Response Type | compose | command bar | message |
-|--------------|:-------------:|:-------------:|:---------:|
+|Response Type | Compose | Command bar | Message |
+|:--------------:|:-------------:|:-------------:|:---------:|
 |Card response | ✔ | ✔ | ✔ |
 |Another task module | ✔ | ✔ | ✔ |
 |Bot with Adaptive Card | ✔ | x | ✔ |
@@ -210,7 +210,7 @@ The following scenario shows how the app Polly configures a poll without includi
 
     > [!NOTE] 
     > The users can also choose to `Edit` the message, which returns them to the original task module.
-1. Interacting with the Adaptive Card changes the message before sending it.
+   Interaction with the Adaptive Card changes the message before sending it.
 1. After the user selects `Send` the bot posts the message to the channel.
 
 ## Respond to initial submit action
@@ -581,7 +581,7 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
-|`mentionType`|String|Describes the mention of a  "person"|
+|`mentionType`|String|Describes the mention of a "person".|
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>".|
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
