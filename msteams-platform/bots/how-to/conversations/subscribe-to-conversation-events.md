@@ -1282,7 +1282,7 @@ The next section illustrates a simple code sample that incorporates bots convers
 
 ## Sample code
 
-For sample code showing the bots conversation events, see the following Teams bots conversation events sample:
+The following table provides the sample code for the Teams bots conversation events:
 
 | Sample | Description | .NET Core |
 |--------|------------- |---|
