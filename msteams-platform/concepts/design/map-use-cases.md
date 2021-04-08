@@ -9,7 +9,6 @@ ms.author: anclear
 # Map your use cases to Teams app capabilities
 
 After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received and then decide which capability is best suited to build your app.
-This article provides guidance on the app scope and some scenarios that will help you build your app solution.
 
 > [!NOTE]
 > You must have a good understanding of the [entry points and UI elements](../../concepts/extensibility-points.md) available for your app. You must also make sure that you [considered your use cases](../../concepts/design/understand-use-cases.md) carefully.
@@ -44,43 +43,43 @@ The following scenarios will guide you in understanding the selection of extensi
 
 App for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
 
-* Messaging extensions with search commands - Search external systems and share the results as an interactive card.
+* **Messaging extensions with search commands**: Search external systems and share the results as an interactive card.
 
-* Messaging extensions with action commands - Collect information to insert into a data store or perform advanced searches.
+* **Messaging extensions with action commands**: Collect information to insert into a data store or perform advanced searches.
 
-* Tabs - Create embedded web experiences to view, work with and share data.
+* **Tabs**: Create embedded web experiences to view, work with and share data.
 
-* Connectors and webhooks - A simple way to push data and send data out of the Teams client.
+* **Connectors and webhooks**: A simple way to push data and send data out of the Teams client.
 
-* Task modules - Interactive modal forms from wherever you need them to collect or display information.
+* **Task modules**: Interactive modal forms from wherever you need them to collect or display information.
 
 ## Initiate workflows and processes
 
 Sometimes you just need a quick way to start a process or workflow in an external system.
 
-* Messaging extensions action commands - Trigger from messages, allowing your users to quickly send the contents of a message to your web services.
+* **Messaging extensions action commands**: Trigger from messages, allowing your users to quickly send the contents of a message to your web services.
 
-* Task modules - Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow.
+* **Task modules**: Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow.
 
-* Conversational bots - Interact with your users through text and rich cards.
+* **Conversational bots**: Interact with your users through text and rich cards.
 
-* Outgoing webhooks - A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot.
+* **Outgoing webhooks**: A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot.
 
 ## Send notifications and alerts
 
 Send asynchronous notifications and alerts to your users in Teams. Use interactive cards to provide quick access to commonly used actions and links to additional information.
 
-* Conversational bots - Send proactive messages to groups, channels, or individual users.
+* **Conversational bots**: Send proactive messages to groups, channels, or individual users.
 
-* Connectors and incoming webhooks - Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page.
+* **Connectors and incoming webhooks**: Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page.
 
 ## Ask questions and get answers
 
 People have questions and you probably got a lot of the answers stored away somewhere. Unfortunately, it's often quite difficult to connect the two.
 
-* Conversational bots - Natural language processing, AI, Machine Learning (ML), all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need.
+* **Conversational bots**: Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need.
 
-* Tabs - Embed your existing web portal in Teams or create a Teams-specific version for added functionality.
+* **Tabs**: Embed your existing web portal in Teams or create a Teams-specific version for added functionality.
 
 ## Get social
 
@@ -102,4 +101,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 > [!div class="nextstepaction"]
 > [Build apps for Microsoft Teams](../concepts/overview.md)
-> 
+ 
