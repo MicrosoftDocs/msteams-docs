@@ -36,7 +36,7 @@ Use the https endpoint provided by ngrok in your app manifest.
 
 ## Test your bot without uploading to Teams
 
-Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
+Occasionally, it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
