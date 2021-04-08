@@ -4,6 +4,7 @@ description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
 ms.topic: overview
 ---
+
 # Quickly develop apps with App Studio for Microsoft Teams
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
@@ -28,6 +29,8 @@ Once you are in App Studio, click on the *Manifest editor* tab where you can eit
 
 ## App Studio Features
 
+This section covers features, such as conversation, manifest editor, details, and capabilities. You can customize your capabilities using app customization.
+
 ### Conversation
 
 This is where you can see what [cards you create in App Studio](#card-editor) look like in Teams when you test them by sending them to yourself.
@@ -46,6 +49,12 @@ The details section of the Manifest Editor defines the high-level description of
 
 The capabilities section of the Manifest Editor is where the app's capabilities are defined and where details of each of those capabilities are listed.
 
+> [!NOTE]
+> The app customization feature is currently available in developer preview only.
+> 
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+
 ##### Tabs
 
 * **Team Tabs.** A team tab becomes part of a channel and provides quick access to team information and resources. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
@@ -62,13 +71,17 @@ This section allows you to add a [conversational bot](~/bots/what-are-bots.md) t
 
 If you have not yet registered a bot with the Bot Framework, click *Register* to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
 
-Once you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
+After you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
 
 Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scopes your bot supports at any time.
 
 ##### Connectors
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
+
+> [!NOTE]
+> App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as *Contoso*.
+
 
 ##### Messaging Extensions
 

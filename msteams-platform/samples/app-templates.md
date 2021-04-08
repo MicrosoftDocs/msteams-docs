@@ -11,8 +11,8 @@ author: laujan
 
 App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing that app for your organization. It also provides a sample app that you can install and begin using immediately. The complete source code is available too, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
 All app templates are provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) terms.
->[!NOTE] 
->You, not Microsoft must license and support apps created from app templates for your users and organizations.
+> [!NOTE] 
+> You must license and support apps created from app templates for your users and organizations. Microsoft is not responsible for licenses and support.
 
 **&#9734; Indicates newly released app templates.**
 
@@ -23,13 +23,25 @@ All app templates are provided under the [MIT License](https://github.com/Office
 * **Customizable and extensible:** While all app templates can be deployed with minimal configuration, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
-## Adoption Bot &#9734;
+## Adoption Bot 
 
 Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams (PVA). It can be considered as the PVA version of FAQPlus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors.This bot can be installed on it's own or built into a custom app like the [Adoption Hub](https://github.com/akporzondek/adoption_hub).
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
 
-## Appointment Manager &#9734;
+## Adoption Tool- Champion Management Platform &#9734;
+
+The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard and event types for logging, and tools to overlay digital badges to program participants.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
+
+## Adoption Tool- Microsoft 365 Learning Pathways (Get Started) &#9734;
+
+The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Microsoft Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
+
+[Get it on GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
+
+## Appointment Manager 
 
 Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they can quickly be assigned and reassigned to staff in a team. Appointment requests can be viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time.
 
@@ -120,7 +132,7 @@ Checklist is a custom Microsoft Teams [messaging extension](../messaging-extensi
 :::column-end:::
 :::row-end:::
 
-## Classroom Drop-in &#9734;
+## Classroom Drop-in 
 
 Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.com/blog/now-in-preview-customize-teams-with-built-in-power-platform-capabilities/)-based app that enables system leaders to find class teams (virtual classrooms) and add themselves or others to these class teams for a specified drop-in period, as needed. The app built using Microsoft [Power Apps](/powerapps/powerapps-overview) and [Power Automate](/power-automate/getting-started), deeply integrates with Microsoft Teams to ensure educational institutes can optimize their operations in a hybrid learning environment by providing access to relevant stakeholders for class teams per business requirements.
 
@@ -157,7 +169,7 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
 :::column-end:::
 :::row-end:::
 
-## Co-worker Appreciation &#9734;
+## Co-worker Appreciation 
 
 Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This can be considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
 
@@ -265,7 +277,7 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 ![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
 
-## Get Support App &#9734;
+## Get Support App
 
 The Get Support app can be used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes various features, such as:
 -   Requesting assistance on different categories from a Power App
@@ -388,7 +400,7 @@ Incident Reporter is a [Microsoft Teams bot](../bots/what-are-bots.md)  that opt
 :::column-end:::
 :::row-end:::
 
-## Inspection &#9734;
+## Inspection 
 
  Inspection is a Microsoft Teams app that enables front line workers to inspect anything from  locations to assets and equipments. For example, a retail store, manufacturing plant, or vehicles and machines. There are two apps in this solution, each intended for different types of users.
 
@@ -600,7 +612,7 @@ Survey is a custom Microsoft Teams [messaging extension](../messaging-extensions
 :::column-end:::
 :::row-end:::
 
-## Time Tally &#9734;
+## Time Tally 
 
 A project can include multiple tasks, and various projects can be assigned to employees. Managers are required to understand the project progress through the time spent by the employees on these tasks. This can be a cumbersome activity, as the employees need to fill in the timesheets. Time Tally app enables employees to fill their timesheets quickly, using the mobile device, and managers do not have to follow up with employees on the timesheet entry. Managers get to view the project utilization based on resources, and they can approve or reject the entries. Reminder notifications are sent to ensure timesheet compliance. Also, historical data and utilizations are available for analytics.
 
