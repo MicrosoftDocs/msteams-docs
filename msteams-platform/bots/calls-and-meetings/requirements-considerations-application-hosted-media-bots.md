@@ -54,6 +54,7 @@ Application-hosted media bots samples are as follows:
 | **Sample name** | **Description** | **Graph** |
 |------------|-------------|-----------|
 | Local media sample | Samples that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Remote media sample | Samples that illustrates different remote media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
 ## See also
 

@@ -1244,9 +1244,9 @@ async def on_reactions_removed(
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------|-----------------|----------|
-| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  |
+| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 
 

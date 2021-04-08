@@ -154,4 +154,4 @@ Sample code showing the tab authentication process using Azure AD:
 
 | **Sample name** | **description** | **Node.js** |
 |-----------------|-----------------|-------------|
-| Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) |
+| Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
