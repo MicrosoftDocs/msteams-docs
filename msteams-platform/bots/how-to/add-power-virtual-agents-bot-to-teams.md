@@ -49,12 +49,27 @@ App Studio is a Teams app. Install App Studio  from the Teams store that simplif
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 1. **Create the Teams app manifest in App Studio**  
-Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.
+Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.  
+The following image guides you to create a new app in App Studio:  
+
+   ![create a new app](../../assets/images/get-started/create-new-app.png)
+
 1. **Add your bot details**  
-Complete all the required fields. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md). 
+Complete all the required fields. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).   
+
+The following image guides you to add the app details:  
+
+   ![add app details](../../assets/images/get-started/add-app-details.png)
 
 1. **Set up your bot**                            
-Navigate to the **Bots** tab, select the **Setup** button, choose **Existing bot**, and enter your bot name.
+Navigate to the **Bots** tab, select the **Setup** button, choose **Existing bot**, and enter your bot name. 
+The following image guides you to set-up a bot:    
+
+   ![Bot set-up](../../assets/images/get-started/bot-set-up.png) 
+
+The following image guides you to set-up an existing bot:    
+
+   ![existing bot set-up](../../assets/images/get-started/existing-bot-set-up.png)    
 
 1. **Add your App ID**  
 Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
