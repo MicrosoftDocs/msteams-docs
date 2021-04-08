@@ -7,24 +7,27 @@ ms.topic: conceptual
 
 # Choose a setup to test and debug your Microsoft Teams app
 
-Microsoft Teams apps contains one or more capabilities and the ways to run or even host them are different. When it comes to debugging, we have the following ways to run your Microsoft Teams app:
+Microsoft Teams apps contain one or more capabilities and the ways to run or even host them are different. For debugging, use one of the following ways:
 
-* **Purely local** For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
-* **Locally hosted, in Teams** This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
-* **Cloud-hosted, in Teams** This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
+* **Purely local**: For bots, you can test your experience in the Bot Emulator. For other content, you can run locally in your browser and address content through `http://localhost`.
+* **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
+* **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
-Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging. For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
+Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging. 
 
-Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
+> [!NOTE]
+> For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
+
+Use multiple manifests and packages to maintain separation between production and development services. For example, you might choose to register separate development and production bots and create appropriate packages to upload them in your testing environment. We also recommend, you upload and test your production package before submitting your app for publishing in our app store or distributing to customers.
 
 ## Purely local
 
 > [!NOTE]
-> Running the bot this way does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
+> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Microsoft Teams.
 
 Your bot can run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Following are the steps:
 
-1. Run the code locally
+1. Run the code locally.
 2. Launch the Bot Emulator and set the URL:
   * Node.js: `http://localhost:3978/api/messages`
   * .NET/C#: `http://localhost:3979/api/messages`
@@ -34,12 +37,13 @@ Your bot can run within the Bot Emulator. This enables you to test some of the c
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available publicly using HTTPS endpoints. Therefore, to enable your app to work within Teams, you need to either publish the code to the cloud of your choice or make our local running instance externally accessible. We can do the latter with tunneling software.
 
-Although you can use any tool of choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. To set up ngrok in preparation for running your Microsoft Teams app locally:
+Although you can use any tool of choice, we use and recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine. 
 
-* Go to the directory where you have ngrok.exe is installed in a terminal application. You may want to add it as a path variable to avoid this step.
-* Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
+**To set up ngrok in preparation for running your Microsoft Teams app locally**
 
-This launches ngrok to list on the port you specify. In return, it gives you an externally addressable URL valid for as long as ngrok is running.
+1. Go to the directory where you have ngrok.exe installed in a terminal application. You may want to add it as a path variable to avoid this step.
+2. Run, for example, `ngrok http 3978 --host-header=localhost:3978`, or replace the port number as needed.
+   This launches ngrok to list on the port you specify. In return, it gives you an externally addressable URL valid for as long as ngrok is running.
 
 > [!NOTE]
 > If you stop and restart ngrok, the URL changes.
@@ -56,11 +60,17 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There is no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Microsoft Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the manifest.json file.
 
 > [!NOTE]
-> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, but `contoso.azurewebsites.net` is recommended.
+> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
 
 ## Load and run your experience
 
-To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following guidance:
+To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams, using the following:
 
 * [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md)
 * [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)
+
+## Next step
+
+> [!div class="nextstepaction"] 
+> [Add test data to your environment](~/concepts/build-and-test/test-data.md)
+
