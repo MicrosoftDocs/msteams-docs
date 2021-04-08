@@ -49,7 +49,9 @@ The details section of the Manifest Editor defines the high-level description of
 The capabilities section of the Manifest Editor is where the app's capabilities are defined and where details of each of those capabilities are listed.
 
 > [!NOTE]
+> The app customization feature is currently available in developer preview only.
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
 
 ##### Tabs
 
