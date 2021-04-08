@@ -9,7 +9,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Use action commands to present the users with a modal popup called a task module in Teams. The task module collects or displays information, then processes the interaction and sends the information back to Teams. This documents guides you on how to select action command invoke locations, create your task module, send final message or card, create action command using app studio, and create manually. 
+Use action commands to present the users with a modal popup called a task module in Teams. The task module collects or displays information,  processes the interaction and sends the information back to Teams. This documents guides you on how to select action command invoke locations, create your task module, send final message or card, create action command using app studio, and manually. 
 
 Before creating the action command you must decide the following factors:
 
@@ -60,7 +60,7 @@ The prerequisite to create an action command is that you must already create a m
 
 **To create an action command**
 
-1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
+1. Open **App Studio** from the Microsoft Teams client and select the **Manifest Editor** tab.
 1. If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
 1. After importing an app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up window:

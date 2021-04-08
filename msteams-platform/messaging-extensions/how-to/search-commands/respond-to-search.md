@@ -94,7 +94,7 @@ Teams supports the following card types:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-To have a better understanding and overview on cards, see[what are cards](~/task-modules-and-cards/what-are-cards.md).
+To have a better understanding and overview on cards, see [what are cards](~/task-modules-and-cards/what-are-cards.md).
 
 To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
