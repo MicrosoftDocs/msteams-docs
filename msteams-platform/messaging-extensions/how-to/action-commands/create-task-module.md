@@ -10,7 +10,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers 
-the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel(new post), channel(reply to thread) and command box. 
+the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box. 
 > [!NOTE]
 > If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
 
@@ -66,7 +66,7 @@ The code for the initial invoke request is given in the following example:
 
 ## Payload activity properties when a task module is invoked from 1:1 chat 
 
-The payload activity properties when a task module is invoked from 1:1 chat are listed in the following section:
+The payload activity properties when a task module is invoked from 1:1 chat are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -116,7 +116,7 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 ```
 ## Payload activity properties when a task module is invoked from a group chat 
 
-The payload activity properties when a task module is invoked from a group chat are listed in the following section:
+The payload activity properties when a task module is invoked from a group chat are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -171,9 +171,9 @@ The payload activity properties when a task module is invoked from a group chat 
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel(new post) 
+## Payload activity properties when a task module is invoked from a channel (new post) 
 
-The payload activity properties when a task module is invoked from a channel(new post) are listed in the following section:
+The payload activity properties when a task module is invoked from a channel (new post) are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -189,11 +189,11 @@ The payload activity properties when a task module is invoked from a channel(new
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast`, or `dark`. |
 
 ### Example
 
-The payload activity properties when a task module is invoked from a channel(new post) are given in the following example:
+The payload activity properties when a task module is invoked from a channel (new post) are given in the following example:
 
 ```json
 {
@@ -237,9 +237,9 @@ The payload activity properties when a task module is invoked from a channel(new
 }
 ```
 
-## Payload activity properties when a task module is invoked from a channel(reply to thread) 
+## Payload activity properties when a task module is invoked from a channel (reply to thread) 
 
-The payload activity properties when a task module is invoked from a channel(reply to thread) are listed in the following section:
+The payload activity properties when a task module is invoked from a channel (reply to thread) are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -259,7 +259,7 @@ The payload activity properties when a task module is invoked from a channel(rep
 
 ### Example
 
-The payload activity properties when a task module is invoked from a channel(reply to thread) are given in the following example:
+The payload activity properties when a task module is invoked from a channel (reply to thread) are given in the following example:
 
 ```json
 {
@@ -348,7 +348,7 @@ The payload activity properties when a task module is invoked from a channel(rep
 
 ## Payload activity properties when a task module is invoked from a command box 
 
-The payload activity properties when a task module is invoked from a command box are listed in the following section:
+The payload activity properties when a task module is invoked from a command box are listed as follows:
 
 |Property name|Purpose|
 |---|---|
@@ -361,7 +361,7 @@ The payload activity properties when a task module is invoked from a command box
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
-|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
+|`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast`, or `dark`. |
 
 ### Example
 
@@ -942,11 +942,11 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 ## See also
 
 > [!div class="nextstepaction"] 
-> [Define action command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+> [Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
 
 ## Next step
 
 > [!div class="nextstepaction"] 
-> [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
