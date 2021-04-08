@@ -56,3 +56,11 @@ Enable Microsoft Teams for your organization and take a look at our detailed gui
     ![updload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
 For complete information on how these settings interact, see [Manage custom app policies and settings in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [Manage app setup policies in Microsoft Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+
+## Next step
+
+> [!div class="nextstepaction"] 
+> [Choose a test setup](~/concepts/build-and-test/debug.md)
+> 
+
+
