@@ -39,3 +39,4 @@ You can recognize user issues and identify the answers to some common problems t
 
 > [!div class="nextstepaction"]
 > [Understand Teams app capabilities](capabilities-overview.md)
+
