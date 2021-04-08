@@ -260,7 +260,7 @@
       href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
-    - name: Receive and respond to search queries
+    - name: Respond to search commands
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md

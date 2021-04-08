@@ -32,7 +32,39 @@ In the process of the initial invoke request, your service receives an `Activity
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when a task module is invoked from 1:1 chat 
+### Example
+
+The code for the initial invoke request is given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:bc319b1d-571a-194d-9ffb-11d7ab37c9ff",
+  "from": {
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  }
+  "channelData": {
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "Test",
+    "commandContext": "compose",
+    "requestId": "fe50f49e5c74440bb2ebf07f49e9553c",
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+```
+
+## Payload activity properties when a task module is invoked from 1:1 chat 
 
 The payload activity properties when a task module is invoked from 1:1 chat are listed in the following section:
 
@@ -50,7 +82,39 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when a task module is invoked from a group chat 
+### Example
+
+The payload activity properties when a task module is invoked from 1:1 chat are given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:bc319b1d-571a-194d-9ffb-11d7ab37c9ff",
+  "from": {
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  }
+  "channelData": {
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "Test",
+    "commandContext": "compose",
+    "requestId": "fe50f49e5c74440bb2ebf07f49e9553c",
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+}
+```
+## Payload activity properties when a task module is invoked from a group chat 
 
 The payload activity properties when a task module is invoked from a group chat are listed in the following section:
 
@@ -68,9 +132,48 @@ The payload activity properties when a task module is invoked from a group chat 
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when a task module is invoked from a channel (new post) 
+### Example
 
-The payload activity properties when a task module is invoked from a channel (new post) are listed in the following section:
+The payload activity properties when a task module is invoked from a group chat are given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:bf72031f-a17e-f99c-48dc-5c0714950d87",
+  "from": {
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "groupChat",
+    "id": "19:d77be72390a1416e9644261e9064fa00@thread.skype",
+    "tenantId": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+  },
+  "channelData": {
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "Test",
+    "commandContext": "compose",
+    "requestId": "213167a1e3b6428b93e186ea5407c759",
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+}
+```
+
+## Payload activity properties when a task module is invoked from a channel(new post) 
+
+The payload activity properties when a task module is invoked from a channel(new post) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -88,9 +191,55 @@ The payload activity properties when a task module is invoked from a channel (ne
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when a task module is invoked from a channel (reply to thread) 
+### Example
 
-The payload activity properties when a task module is invoked from a channel (reply to thread) are listed in the following section:
+The payload activity properties when a task module is invoked from a channel(new post) are given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:a5fbb109-c989-c449-ee83-71ac99919d4b",
+  "from": {
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "channel",
+    "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype",
+    "name": "parsable",
+    "tenantId": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+  },
+  "channelData": {
+    "channel": {
+      "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype"
+    },
+    "team": {
+      "id": "19:acca514e83cb497e960e0b014d405336@thread.skype"
+    },
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "Test",
+    "commandContext": "compose",
+    "requestId": "5336640edc7748b28ce2df43f5b45963",
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+}
+```
+
+## Payload activity properties when a task module is invoked from a channel(reply to thread) 
+
+The payload activity properties when a task module is invoked from a channel(reply to thread) are listed in the following section:
 
 |Property name|Purpose|
 |---|---|
@@ -108,7 +257,96 @@ The payload activity properties when a task module is invoked from a channel (re
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
 
-### Payload activity properties when a task module is invoked from a command box 
+### Example
+
+The payload activity properties when a task module is invoked from a channel(reply to thread) are given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:19ccc884-c792-35ef-2f40-d0ff43dcca71",
+  "from": {
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "channel",
+    "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype;messageid=1611060744833",
+    "name": "parsable",
+    "tenantId": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+  },
+  "channelData": {
+    "channel": {
+      "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype"
+    },
+    "team": {
+      "id": "19:acca514e83cb497e960e0b014d405336@thread.skype"
+    },
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "TEst",
+    "commandContext": "message",
+    "requestId": "7f7d22efe5414818becebcec649a7912",
+    "messagePayload": {
+      "linkToMessage": "https://teams.microsoft.com/l/message/19:6decf54d86d945e4b3924b63a9161a78@thread.skype/1611060744833",
+      "id": "1611060744833",
+      "replyToId": null,
+      "createdDateTime": "2021-01-19T12:52:24.833Z",
+      "lastModifiedDateTime": null,
+      "deleted": false,
+      "summary": null,
+      "importance": "normal",
+      "locale": "en-us",
+      "body": {
+        "contentType": "html",
+        "content": "<div><div><at id=\"0\">Testing outgoing Webhook-Nikitha</at> - Hi</div>\n</div>"
+      },
+      "from": {
+        "device": null,
+        "conversation": null,
+        "user": {
+          "userIdentityType": "aadUser",
+          "id": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc",
+          "displayName": "Olo Brockhouse"
+        },
+        "application": null
+      },
+      "reactions": [],
+      "mentions": [
+        {
+          "id": 0,
+          "mentionText": "Testing outgoing Webhook-Nikitha",
+          "mentioned": {
+            "device": null,
+            "conversation": null,
+            "user": null,
+            "application": {
+              "applicationIdentityType": "webhook",
+              "id": "b8c1c68c-e290-4bdd-81c3-266f310751dc",
+              "displayName": "Testing outgoing Webhook-Nikitha"
+            }
+          }
+        }
+      ],
+      "attachments": []
+    },
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+}
+```
+
+## Payload activity properties when a task module is invoked from a command box 
 
 The payload activity properties when a task module is invoked from a command box are listed in the following section:
 
@@ -124,6 +362,51 @@ The payload activity properties when a task module is invoked from a command box
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
 |`value.context.theme` | The user's client theme, useful for embedded web view formatting. It must be `default`, `contrast` or `dark`. |
+
+### Example
+
+The payload activity properties when a task module is invoked from a command box are given in the following example:
+
+```json
+{
+  "type": "invoke",
+  "id": "f:172560f1-95f9-3189-edb2-b7612cd1a3cd",
+    "id": "29:1aBjVi5MwCFfhPIV03E5uDdfpBFXp_2Yz-sjrvVg12oavg96cqpE_DiMhOpmN9zHeZpYbJcuUEKuSDy2AYWPz1A",
+    "name": "Olo Brockhouse",
+    "aadObjectId": "b130c271-d2eb-45f9-83ab-9eb3fe3788bc"
+  },
+  "conversation": {
+    "isGroup": true,
+    "conversationType": "channel",
+    "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype",
+    "name": "parsable",
+    "tenantId": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+  },
+  "channelData": {
+    "channel": {
+      "id": "19:6decf54d86d945e4b3924b63a9161a78@thread.skype"
+    },
+    "team": {
+      "id": "19:acca514e83cb497e960e0b014d405336@thread.skype"
+    },
+    "tenant": {
+      "id": "0d9b645f-597b-41f0-a2a3-ef103fbd91bb"
+    },
+    "source": {
+      "name": "compose"
+    }
+  },
+  "value": {
+    "commandId": "TEst",
+    "commandContext": "compose",
+    "requestId": "d2ce690cdc2b4920a538e75882610a30",
+    "context": {
+      "theme": "default"
+    }
+  },
+  "name": "composeExtension/fetchTask"
+}
+```
 
 ### Example 
 
