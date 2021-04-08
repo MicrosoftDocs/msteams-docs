@@ -1,16 +1,16 @@
 ---
-title: Post external requests to Microsoft Teams with incoming webhooks
+title: Create an incoming webhook
 author: laujan
 description: how to add incoming webhook to Teams app
-keywords: teams tabs outgoing webhook*
+keywords: teams tabs outgoing webhook
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Post external requests to Teams with incoming webhooks
+# Create an incoming webhook and post external requests to Microsoft Teams
 
-## What are incoming webhooks in Teams?
+## Incoming webhooks in Teams
 
-Incoming webhooks are special type of Connector in Teams that provide a simple way for an external app to share content in team channels and are often used as tracking and notification tools. Teams provides a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user-interface (UI) containers that contain content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within three capabilities:
+ Incoming webhooks are special type of Connector that provide a simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user-interface (UI) containers that contain content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within three capabilities:
 
 * Bots
 * Messaging extensions
