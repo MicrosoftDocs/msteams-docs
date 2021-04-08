@@ -50,6 +50,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
 > [!NOTE]
 > The app customization feature is currently available in developer preview only.
+> 
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 
