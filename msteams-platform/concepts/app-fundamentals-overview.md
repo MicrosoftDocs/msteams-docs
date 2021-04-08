@@ -12,11 +12,11 @@ Microsoft Teams app fundamentals give the direction you need to create your cust
 
 ## Capabilities and entry points
 
-This article talks about the multiple ways to extend your Teams app. It gives you needed guidance on all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md). The information about all the core capabilities is given in this article for you to familiarize yourself with Teams app development.
+You can extend your Teams app in multiple ways. To be able to extend your app you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
 
 ## Understand your use cases
 
-This article talks about understanding the use cases. You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
 
 * Do you need authentication?
 * What problem is your app going to solve?
