@@ -48,7 +48,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 
 In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 
-:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create an app in the Teams Toolkit.":::
+:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="Screenshot showing how to create an app in the Teams Toolkit.":::
 
 When prompted, sign in with your Microsoft 365 development account. 
 
@@ -96,17 +96,17 @@ server.post('/api/messages', (req, res) => {
 }); 
 ```
 
-To forward the requests to your bot's logic, you must set up a publicly accessible URL, such as `https://example.com/api/messages`. 
+To forward the requests to your bot's logic, you _must_ set up a publicly accessible URL, such as `https://example.com/api/messages`, instead of `https://localhost`.  Because your app is running from your localhost currently, you will need to **tunnel** the network.
 
-Since your app will be running from your localhost during development until you deploy, you must use a tool called **ngrok** to securely tunnel from your localhost to the Teams client. This will give you a secure URL. 
+> 📝 _**What is tunneling?**_— tunneling is a protocol that allows you to transport data across a network. And localhost tunneling gives you a connection between your local machine and a remote connection. To securely expose your localhost to the internet, we recommend you to use the 3rd party tool called, **ngrok**. This will give you a secure URL. 
 
-For testing purpose, let's host your app on a local web server (port 3978):
+First, let's go to the [ngrok.com](https://ngrok.com/download) site to install and set up ngrok on your environment. 
 
-First, go to [ngrok.com](https://ngrok.com/download) to install and set up ngrok. 
+Once you finished set it up, now you are going to host your app on a local web server at port 3978:
 
 Then, in a terminal, run `ngrok http -host-header=rewrite 3978`.  
 
-Now ngrok provides you a public, secure URL that forwards to your localhost at port 3978, so copy the HTTPS URL (for example, `https://08e000c0a7dc.ngrok.io`) since Teams requires HTTPS connections: 
+Now ngrok provides you a public, secure URL that forwards to your localhost at port 3978, so copy the HTTPS URL (for example, `https://287a4f4223bc.ngrok.io` as seen in the screenshot below) since Teams requires HTTPS connections: 
 
 :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-ngrok-06.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
 
@@ -120,7 +120,7 @@ You still must specify an endpoint address to receive and process user messages 
 
 Go back to **Microsoft Teams Toolkit**, then click **Bots**. Scroll to **Existing bot registrations** and select the bot you created during setup. 
 
-In the **Bot endpoint address** field, enter the ngrok URL (for example, `https://08e000c0a7dc.ngrok.io`) where you're hosting the bot and append `/api/messages` to it:
+In the **Bot endpoint address** field, enter the ngrok URL (for example, `https://287a4f4223bc.ngrok.io`) where you're hosting the bot and append `/api/messages` to it:
 
  :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-07.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
 
@@ -130,7 +130,7 @@ Your bot will be able to respond to messages in Teams, once you set up the endpo
 
 You've set up a URL to host your bot and configured it to handle messages. It's time to get your app up and running.
 
-1. In a terminal, go to the root directory of your app project and run `npm install`.
+1. In another terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
 
 If successful, you see the following message indicating your bot is listening for activity at your `localhost`:
@@ -144,13 +144,13 @@ With your bot running, you can install it in Teams.
 > [!TIP]
 > If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
 
-In Visual Studio Code, press the **F5** key to launch a Teams web client in a browser.
+In Visual Studio Code, you can either use **App Studio to install**, or press the **F5** key to launch a Teams web client in a browser. (See a step-by-step instruction of how to use App Studio at [Hello World](../build-your-first-app/build-and-run?#install-app-studio))
 
 Once Teams client is launched with app installation modal, click **Add**. 
 
 _By default, the app is added to your 1:1 direct chat message, however you can choose to install it to a team or chat by clicking the little arrow on the right of the button. In this tutorial, let’s just click Add._
 
-:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install-01.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
+:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install-08.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
 
 ## 7. Test your bot
 
@@ -178,7 +178,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 Next, try building an app with messaging extensions, which also uses Bot Framework. 
 
 > [!div class="nextstepaction"]
-> [Build a messaging extension] ](../build-your-first-app/build-messaging-extension.md)
+> [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)
 
 ## Learn more
 
