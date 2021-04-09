@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 ## Incoming webhooks in Teams
 
- Incoming webhooks are special type of Connector that provide a simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user-interface (UI) containers that contain content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within three capabilities:
+ Incoming webhooks are connector that provide a simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user-interface (UI) containers that contain content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within three capabilities:
 
 * Bots
 * Messaging extensions
@@ -20,7 +20,7 @@ ms.author: lajanuar
 
 | Feature | Description |
 | ------- | ----------- |
-|Scoped Configuration|Incoming webhooks are scoped and configured at the channel level (e.g., outgoing webhooks are scoped and configured at the team level).|
+|Scoped Configuration|Incoming webhooks are scoped and configured at the channel level. Outgoing webhooks are scoped and configured at the team level.|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the injection of malicious code as there is no code execution on the client.|
 |Actionable messaging support|If you choose to send messages via cards, you must use the **actionable message card** format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and the [Message card playground](https://messagecardplayground.azurewebsites.net).|
 |Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests can send messages to Teams via an incoming webhook.|
