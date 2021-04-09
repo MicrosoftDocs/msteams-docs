@@ -15,17 +15,17 @@ After a user submits the task module, your web service receives a `composeExtens
 
 You have the following options to respond:
 
-* No response: Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can choose to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* No response: Use the submit action to trigger a process in an external system, and not provide any feedback to the user. This is useful for long-running processes, and you can select to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Another task module](#respond-with-another-task-module): You can respond with an additional task module as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
-* [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md)
-* [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md)
+* [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
+* [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md).
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
 |Response Type | Compose | Command bar | Message |
-|:--------------:|:-------------:|:-------------:|:---------:|
+|--------------|:-------------:|:-------------:|:---------:|
 |Card response | ✔ | ✔ | ✔ |
 |Another task module | ✔ | ✔ | ✔ |
 |Bot with Adaptive Card | ✔ | x | ✔ |
@@ -184,7 +184,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another task module
 
-You can choose to respond to the `submitAction` event with an additional task module. This is useful when:
+You can select to respond to the `submitAction` event with an additional task module. This is useful when:
 
 * You need to collect large amounts of information.
 * You need to dynamically change the information you are collecting based on user input.
@@ -209,8 +209,8 @@ The following scenario shows how the app Polly configures a poll without includi
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
 
     > [!NOTE] 
-    > The users can also choose to `Edit` the message, which returns them to the original task module.
-   Interaction with the Adaptive Card changes the message before sending it.
+    > * The users can also select to `Edit` the message, which returns them to the original task module. 
+    > * Interaction with the Adaptive Card changes the message before sending it.
 1. After the user selects `Send` the bot posts the message to the channel.
 
 ## Respond to initial submit action
