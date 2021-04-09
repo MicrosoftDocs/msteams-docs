@@ -18,7 +18,7 @@ Bots in a group or channel only receive messages when they are mentioned `@botna
 
 ## Design guidelines
 
-Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
+Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. For more information on how to design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
 Now, you can create new conversation threads and easily manage different conversations in channels.
 
@@ -36,7 +36,7 @@ You must also strip out the @mentions from the content of the message your bot r
 
 ### Retrieve mentions
 
-Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention, such as `<at>@John Smith<at>`. However, do not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Instead, use the `entities` object.
+Mentions are returned in the `entities` object in payload and contain both the unique ID of the user and the name of the user mentioned. The text of the message also includes the mention, such as `<at>@John Smith<at>`. However, do not rely on the text in the message to retrieve any information about the user. It is possible for the person sending the message to alter it. Therefore, use the `entities` object.
 
 You can retrieve all mentions in the message by calling the `GetMentions` function in the Bot Builder SDK, which returns an array of `Mention` objects.
 
