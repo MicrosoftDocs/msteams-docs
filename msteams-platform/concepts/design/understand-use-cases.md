@@ -8,7 +8,7 @@ ms.author: anclear
 
 # Understand your use cases
 
-The Microsoft Teams platform offers a large variety of [extensibility points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
+The Microsoft Teams platform offers a large variety of [entry points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
 > [!NOTE]
 > Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them.
 
