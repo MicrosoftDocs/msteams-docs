@@ -35,11 +35,11 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ## Bots and the Microsoft Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). To get started, see [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a chatbot service built on the Microsoft Power platform and Bot Framework. The Power Virtual Agent development process uses a guided, no-code, and graphical interface approach that empowers your team members to easily create and maintain an intelligent virtual agent. After creating your chatbot in the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com), you can easily [integrate it with Teams](how-to/add-power-virtual-agents-bot-to-teams.md). For more information on getting started, see [Power Virtual Agents documentation](https://docs.microsoft.com/power-virtual-agents/).
 
 ## Bots and webhooks and connectors
 
-Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors?](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Advantages of bots
 
@@ -78,7 +78,7 @@ An extensive dialog between your bot and the user is a slow and complex way to g
 
 ### Have multi-turn experiences in chat
 
-An extensive dialog requires the developer to maintain state. To exit this state a user must either time-out or enter **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
+An extensive dialog requires the developer to maintain state. To exit this state a user must either time-out or select **Cancel**. Also, the process is tedious. For example, see the following conversation scenario:
 
 USER: Schedule a meeting with Megan.
 
@@ -94,15 +94,13 @@ BOT: On which day?
 
 ### Support too many commands
 
-Since there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
+As there are only six visible commands in the current bot menu, anything more is unlikely to be used with any frequency. Bots that go deep into a specific area rather than trying to be a broad assistant work and fare better.
 
 ### Maintain a large knowledge base
 
 One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
 
-## Get started with bot samples
-
-The following are some bot samples created using the Bot Framework:
+## Code sample
 
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|----------------|
