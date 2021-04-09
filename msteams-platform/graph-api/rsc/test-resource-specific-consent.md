@@ -54,13 +54,11 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
-  > [!div class="checklist"]
-  >
-  > * In the Teams client, select **Teams** from the far left navigation bar .
-  > * Select the team where the app is installed from the dropdown menu.
-  > * Select the **More options** icon (&#8943;)
-  > * Select **Get link to team**. 
-  > * Copy and save the **groupId** value from the string.
+    1. In the Teams client, select **Teams** from the far left navigation bar.
+    2. Select the team where the app is installed from the dropdown menu.
+    3. Select the **More options** icon (&#8943;).
+    4. Select **Get link to team**. 
+    5. Copy and save the **groupId** value from the string.
 
 ### Use Postman
 
