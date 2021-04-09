@@ -30,19 +30,19 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Upgrade Microsoft Teams using the Yeoman generator
-    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
+  - name: Overview
+    href: concepts/app-fundamentals-overview.md
   - name: Teams app capabilities
     href: concepts/capabilities-overview.md
   - name: Teams app entry points
     href: concepts/extensibility-points.md
-  - name: Understanding your use cases
+  - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams app capabilities
+  - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
@@ -329,11 +329,17 @@
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
   - name: Messaging extensions
-    href: messaging-extensions/how-to/add-authentication.md
+    items:
+    - name: Add authentication to your messaging extension
+      href: messaging-extensions/how-to/add-authentication.md
+    - name: Enable SSO for messaging extensions
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
     href: https://docs.microsoft.com/graph/teams-concept-overview
+  - name: Microsoft Graph Toolkit
+    href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
@@ -344,9 +350,11 @@
     href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Test your app
   items:
+  - name: Overview
+    href: concepts/build-and-test/test-app-overview.md
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
-  - name: Choosing a test setup
+  - name: Choose a test setup
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md

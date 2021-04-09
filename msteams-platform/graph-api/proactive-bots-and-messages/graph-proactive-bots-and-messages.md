@@ -134,6 +134,8 @@ This request returns an empty array if the app is not installed and an array wit
 
 ```http
 POST https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps
+Content-Type: application/json
+
 {
    "teamsApp@odata.bind" : "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/{teamsAppId}"
 }
@@ -164,7 +166,7 @@ The **id** property of the response is the `teamsAppInstallationId`.
 **HTTP GET** request (permission — `TeamsAppInstallation.ReadWriteSelfForUser.All`):  
 
 ```http
- GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
+GET https://graph.microsoft.com/beta/users/{user-id}/teamwork/installedApps/{teamsAppInstallationId}/chat
 ```
 
 The **id** property of the response is the `chatId`.

@@ -298,7 +298,7 @@ The following schema sample shows all extensibility options.
     },
     "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
     "additionalProperties": false
-
+  }
 }
 ```
 
@@ -314,7 +314,7 @@ The https:// URL referencing the JSON Schema for the manifest.
 
 **Required** — string
 
-The version of manifest schema this manifest is using. It must be 1.7.
+The version of manifest schema this manifest is using. It must be 1.9.
 
 ## version
 
@@ -704,3 +704,5 @@ When a group install scope is selected, it will define the default capability wh
 |`team`|string|||When the install scope selected is Team, this field specifies the default capability available. Options: tab, bot, or connector.|
 |`groupchat`|string|||When the install scope selected is GroupChat, this field specifies the default capability available. Options: tab, bot or connector|
 |`meetings`|string|||When the install scope selected is Meetings, this field specifies the default capability available. Options: tab, bot, or connector.|
+
+

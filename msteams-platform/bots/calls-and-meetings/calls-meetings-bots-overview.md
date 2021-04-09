@@ -6,9 +6,6 @@ keywords: calling calls audio video IVR voice online meetings
 
 # Calls and online meetings bots
 
-> [!NOTE]
-> Support for calls and online meeting bots is currently not supported on the Microsoft Teams mobile platform. 
-
 With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
 To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and specify some additional information and permissions which we'll describe elsewhere, but first, it's important to understand some core concepts, terminology, and conventions:
@@ -17,6 +14,10 @@ To use these Microsoft Graph APIs in a Microsoft Teams app, you create a bot and
 * **Call types.** Calls are either peer-to-peer (between a person and your bot) or multiparty (your bot and two or more people in a group call).
   ![CallingTypes](~/assets/images/calls-and-meetings/call-types.png):
   * A user may initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call (although the latter is not yet enabled in the Microsoft Teams UI).
+  
+  > [!NOTE]
+  > User initiated calls to a bot are currently not supported on Microsoft Teams mobile platform. 
+  
   * Microsoft Graph permissions aren't necessary for a user to initiate a peer-to-peer call with your bot, but additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
   * A call may start as peer-to-peer and escalate to multiparty. Your bot can initiate this escalation by inviting others, provided your bot has the proper permissions. If your bot doesn't have permissions to participate in group calls and one participant adds another party, your bot is dropped from the call.
 * **Signaling.** There are two types of signals — incoming call and in-call:
