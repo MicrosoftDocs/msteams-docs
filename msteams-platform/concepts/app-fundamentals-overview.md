@@ -21,7 +21,7 @@ You can recognize user issues and identify the answers to some common problems t
 * Do you need authentication?
 * What problem is your app going to solve?
 * Who are the end-users of the app?
-* The onboarding experience and what else the app can do?
+* How should the onboarding experience be and what else the app can do?
 
 ## Map your use cases to Teams app capabilities
 
