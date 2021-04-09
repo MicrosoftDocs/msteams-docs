@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Build and run your first Microsoft Teams app
 
-This tutorial teaches you to build and run your firt Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
+This tutorial teaches you to build and run your first Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
 
 ## Prerequisites
 
@@ -29,7 +29,9 @@ Join the Microsoft 365 developer program and get a tenant (free Teams test accou
 1. In the Welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. 
    After you finish, the following screen appears:
+
    :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+
 1. Sign in to Teams using your administrator account.
 1. In the Teams client, select **Apps**.
 1. Verify that **Upload a custom app** appears.
@@ -40,7 +42,7 @@ Join the Microsoft 365 developer program and get a tenant (free Teams test accou
 
 If you already have a tenant with admin access to the Teams client, verify if you can sideload your apps.
 
-**To verify if you can sideload your apps** 
+**Verify that you can sideload your apps** 
 
 1. In the Teams Client, select **Apps**. 
 1. Verify that **Upload a custom app** appears. 
@@ -100,26 +102,28 @@ If you create a tab during setup, the `App.js` file in the `src/components` dire
 
 ## 3. Build and run your app
 
-Build and run your app locally to save time. This information is also available in the `README` file of the toolkit.
+Build and run your app locally to save time. 
 
 **To build and run your app**
 
 1. In Visual Studio Code, select **View** > **Terminal**.
 1. Run `npm install`.
 1. Run `npm start`.
-   A **Compiled successfully!** message appears in the terminal. Your app is now running on your localhost at `https://localhost:3000`. 
+  
+  A **Compiled successfully!** message appears in the terminal. Your app is now running on your localhost at `https://localhost:3000`. 
+
+This information is also available in the `README` file of the toolkit.
 
 ## 4. Sideload your app in Teams
 
-You have to sideload your app to test it in Teams. Before you turn on custom app sideloading for your development tenant, you must:
+You have to sideload your app to test it in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
 
-* Ensure to have a Teams account and with admin access
-or
+* Ensure to have a Teams account and with admin access.
 * Ensure to have a Microsoft 365 development account that allows app sideloading. 
 
-**To Sideload your app in Teams:**
+**To Sideload your app in Teams**
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credential. 
+1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials. 
 1. Select **Show All** > **Teams**. 
 
    ![image of admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
@@ -127,7 +131,7 @@ or
    > [!Note] 
    > It can take up to 24 hours for the **Teams** option to appear. Meanwhile, you can [Upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation.
 
-1. Go to **Teams apps** > **Setup Policies** > **Global(Org-wide default)**  
+1. Go to **Teams apps** > **Setup policies** > **Global** (Org-wide default).
 
    ![turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png)
 
@@ -135,48 +139,47 @@ or
 
 1. Select **Save** to save the changes.
 
-Your test tenant will now allow custom app sideloading.
+   Your test tenant now allows custom app sideloading.
 
 > [!Note]
 > Check for issues before sideloading your app using the validation feature in App Studio, which is included in the toolkit. Fix the errors to successfully sideload the app.
 
 
-### Install App Studio
-
-You have to install App Studio after enabling custom app sideloading for your test tenant.
-
-**To install App Studio**
+### Install your app
 
 1. Go to Teams Toolkit in Visual Studio Code.
 1. Select **App Studio**.  
-1. Select **Test and Distribute** > **Install**. A warning message message appears because you are currently running the app in localhost. Ignore the warning for now (but eventually, you will have to host your app in a web service).  
+1. Select **Test and Distribute** > **Install**.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-appstudio.png" alt-text="Screenshot showing how to sideload your app to Teams client with the Visual Studio Code Teams Toolkit.":::
 
-   Alternatively,
+**Alternatively**
 
-   1. Select the **F5** key to open browser window (Google Chrome by default) to install. This will skip the installation process in the **App Studio**.
-   1. After the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams.
+1. Select the **F5** key to open browser window to install. This will skip the installation process in the **App Studio**.
+1. After the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
 
 > [Note]
-> App Studio is also also available as a stand-alone app for Teams client.
+> App Studio is also available as a stand-alone app for Teams client.
 
 ### Troubleshoot App Studio
 
 #### Installation failed
 
-If *Something went wrong* or *Manifest parsing has failed* error message appears while installing app studio, check if you have entered the app informatiom correctly. 
+If the following error message appears while installing App Studio, verify that the app information is correctly entered:
 
-**To check the app information**
+* Something went wrong
+* Manifest parsing has failed 
 
-* In Microsoft Teams Toolkit, select **App Studio** > **app Details**, and check if you have all the required information.
-* If you have manually edited the manifest.json file, check **App Manifest** in App Studio to see if the JSON is well-defined.
+**To verify the app information**
+
+* In Microsoft Teams Toolkit, select **App Studio** > **app Details**, and verify that all the required information is correctly entered.
+* If you have manually edited the `manifest.json` file, verify that the JSON is well-defined in **App Manifest** in App Studio.
 
 #### Tab content not displayed
 
-Check if your web app is running. If not, go to terminal and run **npm start**.
+Verify that your web app is running. If the web app is not running, go to the terminal and run **npm start**.
 
 ## See also
 
@@ -189,7 +192,5 @@ Check if your web app is running. If not, go to terminal and run **npm start**.
 
 ## Next step
 
-Expand on the personal tab you just created or build another type of Teams app.
-
 > [!div class="nextstepaction"]
-> [Add to your personal tab](../build-your-first-app/build-personal-tab.md)
+> [Build a personal tab for Microsoft Teams](../build-your-first-app/build-personal-tab.md)

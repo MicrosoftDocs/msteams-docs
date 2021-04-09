@@ -74,12 +74,14 @@ Your bot will be able to respond to messages in Teams.
 
 You've set up a URL to host your bot and configured it to handle messages. It's time to get your app up and running.
 
+**To build and run your app**
+
 1. In a terminal, go to the root directory of your app project and run `npm install`.
 1. Run `npm start`.
 
-If successful, the following message appears indicating your bot is listening for activity at your `localhost`:
+    If successful, the following message appears indicating your bot is listening for activity at your `localhost`:
 
-`Bot/ME service listening at http://localhost:3978`
+    `Bot/ME service listening at http://localhost:3978`
 
 ## 6. Sideload your bot in Teams
 
@@ -97,11 +99,11 @@ Now for the fun part: Let's say "Hello" to your bot.
 
 * In the compose box, send a `Hello` message.
 
-Your bot replies with something like the following message.
+  Your bot replies with something like the following message:
 
-:::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response.":::
+    :::image type="content" source="../assets/images/build-your-first-app/contoso-chatbot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response.":::
 
-You now have a basic Teams bot that can communicate with users one-on-one or in group settings (channels and chats).
+  You now have a basic Teams bot that can communicate with users one-on-one or in group settings (channels and chats).
 
 ## 8. Troubleshooting your bot
 

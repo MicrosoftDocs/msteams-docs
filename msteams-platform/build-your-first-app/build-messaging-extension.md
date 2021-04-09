@@ -104,7 +104,7 @@ Learn how messaging extensions work in a Teams chat.
 1. Try searching for something (for example, **Tickets**). If your app is working, you'll see sample search results (you can add your own later).<br/>
    :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
 
-## 7. Troubleshooting
+## 8. Troubleshoot your messaging extension
 
 The following information may help if you had issues completing this tutorial.
 
