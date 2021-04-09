@@ -27,7 +27,9 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 **To create a command menu for your bot using App Studio**
 
-1. Open **App Studio** from the **...** More added apps menu on the left pane. If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search of **App Studio**, and select **Open**. 
+   > [!NOTE]
+   > If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
     ![App Studio](./conversations/media/AppStudio.png)
 
@@ -43,7 +45,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 6. Enter the **Help text** that must appear under the command text in the menu. **Help text** must be a brief explanation of the purpose of the command.
 
-7. Select the **Scope** check boxes to select where this command menu must appear and select **Save**.
+7. Select the **Scope** check boxes to select where this command menu must appear, and select **Save**.
 
     ![App Studio new commands menu button](./conversations/media/AppStudio-NewCommandMenu.png)
 
