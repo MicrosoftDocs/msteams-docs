@@ -77,9 +77,9 @@ The OAuth token has the following values, and is signed by Skype:
 
 The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each OAuth token value is used as follows:
 
-* aud where audience is the App ID URI specified for the application.
-* tid is the tenant id for Contoso.com.
-* iss is the token issuer, `https://api.botframework.com`.
+* `aud` where audience is the App ID URI specified for the application.
+* `tid` is the tenant id for Contoso.com.
+* `iss` is the token issuer, `https://api.botframework.com`.
 
 For your code handling, the webhook must validate the token, ensure it has not expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
 
