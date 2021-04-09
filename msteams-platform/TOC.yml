@@ -30,19 +30,19 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Upgrade Microsoft Teams using the Yeoman generator
-    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
+  - name: Overview
+    href: concepts/app-fundamentals-overview.md
   - name: Teams app capabilities
     href: concepts/capabilities-overview.md
   - name: Teams app entry points
     href: concepts/extensibility-points.md
-  - name: Understanding your use cases
+  - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams app capabilities
+  - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
