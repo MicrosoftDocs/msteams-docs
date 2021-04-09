@@ -8,14 +8,14 @@ ms.author: anclear
 
 # Map your use cases to Teams app capabilities
 
-After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received and then decide which capability is best suited to build your app.
+After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received from the user to your queries, and then decide which capability is best suited to build your app.
 
 > [!NOTE]
 > You must have a good understanding of the [entry points and UI elements](../../concepts/extensibility-points.md) available for your app. You must also make sure that you [considered your use cases](../../concepts/design/understand-use-cases.md) carefully.
 
 ## Choose the correct scope for your app
 
-Before choosing the app scope, consider the following:
+While choosing the app scope, consider the following:
 
 * An app can exist across scopes.
 * App capabilities, such as messaging extensions, follow users across scopes.
@@ -25,16 +25,16 @@ Before choosing the app scope, consider the following:
 You can choose between personal scope and team or channel scope for your app depending on the following:
 
 * For selecting personal scope, answer questions, such as:
-  * Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance.
-  * Is there going to be collaboration between users who might not have any common Teams? For example, finding upcoming events in a company.
-  * Are there any personal notifications or messages that will need to be sent to a user throughout the Teams app experience? For example, reminders for approvals or registrations.
+  * Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information.
+  * Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company.
+  * Are there any personalized notifications or messages that will need to be sent to a user throughout the Teams app experience? For example, reminders for approvals or registrations.
 
 * For selecting team or channel scope, answer questions, such as: 
   * Is the information presented by the app, either in tab or through a bot, relevant and useful for most members in a Team? For example, Scrum app.
   * Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. 
   * Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket.
 
-The following scenarios will guide you in understanding the selection of extensibility points and UI elements that work well with Teams app capabilities:
+The following scenarios will guide you in understanding the selection of extension points or entry points, and UI elements that work well with Teams app capabilities:
 
 > [!NOTE]
 > It is not an exhaustive list, but will help you think through some of the possibilities available to you.
