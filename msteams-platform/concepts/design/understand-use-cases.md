@@ -16,11 +16,11 @@ Each method of interacting with your users has its strengths and weaknesses. Bui
 
 ## Understand the problem
 
-Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that solve collaboration problems are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve. Before you start building an app, ask relevant questions, such as:
+Every good app has a core problem or a need it is trying to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that bridge gaps in achieving effective collaboration are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you are trying to solve. Before you start building an app, ask relevant questions, such as:
 
-* What are the pros and cons of the current app?
-* What are the pain points when interacting with the app?
-* Which are the features that are regularly used?
+* What are the pros and cons of the current state system used by your users?
+* What are the pain points your users face as of today that you wish to address?
+* What features or capabilities your users like and love in their current way of doing the process?
 
 ## Understand your user
 
@@ -29,7 +29,7 @@ Understand who your user is and you can identify the right distribution model bu
 * Are the users primarily front-line workers on mobile clients?
 * Do you expect a lot of guest users to need access to your app?
 * Do they use teams and channels or primarily group chats?
-* How technically sophisticated are they?
+* How technically sophisticated are your primary users?
 * Do you need a thorough onboarding experience or a few pointers might do?
 
 Sometimes the answer is, *We want to solve this problem for all Teams users everywhere.* If that is the case for you, spend some time understanding [what it takes to get published to AppSource](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
@@ -41,7 +41,7 @@ Knowing the limitations of the apps in terms of data accessibility and data resi
 * What are the challenges with back end integration of the current app?
 * Who owns the back end data? In-house or third-party.
 * Are there firewalls that impact the functioning of the app?
-* Does it have APIs? 
+* Are there APIs to access the data you need for functioning of your app? 
 
 ## Provide authentication
 
