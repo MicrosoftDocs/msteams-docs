@@ -59,4 +59,4 @@ Adaptive cards with incoming webhooks enables you to use the rich and flexible c
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Format cards in Teams](~/cards/cards-format.md)
+> [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
