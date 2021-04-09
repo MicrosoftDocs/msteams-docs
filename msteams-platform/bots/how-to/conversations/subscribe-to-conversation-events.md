@@ -1278,7 +1278,7 @@ async def on_reactions_removed(
 
 * * *
 
-## Sample code
+## Code sample
 
 The following table provides a simple code sample that incorporates bots conversation events into a Teams application:
 
