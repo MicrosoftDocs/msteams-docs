@@ -444,7 +444,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`configurationUrl`|string|2048 characters|✔|The https:// URL to use when configuring the tab.|
 |`scopes`|array of enums|1|✔|Currently, configurable tabs support only the `team` and `groupchat` scopes. |
 |`canUpdateConfiguration`|boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
-|`context` |array of enums|6||The set of `contextItem` scopes where a tab is supported. Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
+|`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|array of enums|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
 
