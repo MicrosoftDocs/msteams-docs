@@ -34,7 +34,7 @@ You can choose between personal scope and team or channel scope for your app dep
   * Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. 
   * Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket.
 
-The following scenarios will guide you in understanding the selection of extension points or entry points, and UI elements that work well with Teams app capabilities:
+The following scenarios will guide you in understanding the selection of entry points and UI elements that work well with Teams app capabilities:
 
 > [!NOTE]
 > It is not an exhaustive list, but will help you think through some of the possibilities available to you.
