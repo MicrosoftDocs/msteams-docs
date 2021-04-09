@@ -310,9 +310,7 @@ private async Task SendFileCardAsync(ITurnContext turnContext, string filename, 
 }
 ```
 
-### Code sample
-
-The following code sample demonstrates how to obtain file consent and upload files to Teams from a bot:
+## Code sample
 
 |Sample name | Description | .NETCore | Javascript | Python |
 |----------------|-----------------|--------------|----------------|-----------|
