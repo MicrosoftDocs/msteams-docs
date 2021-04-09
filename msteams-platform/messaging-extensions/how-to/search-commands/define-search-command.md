@@ -9,17 +9,17 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to choose search command invoke locations, and add the search command to your app manifest.
+Messaging extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select  search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card is not sent if its size exceeds 28 KB.
 
-## Choose search command invoke locations
+## Select search command invoke locations
 
 The search command is invoked from any one or both of the following locations:
 
-* The buttons at the bottom of the compose message area.
-* By @mentioning in the command box.
+* Compose message area: The buttons at the bottom of the compose message area.
+* Command box: By @mentioning in the command box.
 
 When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -38,7 +38,7 @@ The prerequisite to create a search command is that you must already have create
 **To create a search command**
 
 1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
-1.  If you already created your app package in **App Studio**, choose it from the list. If you have not created an app package, import an existing one.
+1.  If you already created your app package in **App Studio**, select from the list. If you have not created an app package, import an existing one.
 1. After importing app package, select **Messaging extensions** under **Capabilities**. You get a pop-up window to set up the messaging extension.
 1. Select **Set up** in the window to include the messaging extension in your app experience. The following image displays the messaging extension set up page: 
 
@@ -48,7 +48,10 @@ The prerequisite to create a search command is that you must already have create
 
     <img src="~/assets/images/messaging-extension/create-bot-for-messaging-extension.png" alt="create bot for messaging extension" width="500"/>
 
-1. Select **Add** in the **Command** section of the messaging extension page.
+1. Select **Add** in the **Command section** of the messaging extensions page to include the commands which decides the behaviour of messaging extension.   
+The following image displays command addition for messaging extension:
+
+   <img src="~/assets/images/messaging-extension/include-command.png" alt="include command" width="500"/>
 1. Select **Allow users to query your service for information and insert that into a message**. The following image displays the search command parameter selection:
 
     <img src="~/assets/images/messaging-extension/search-command-parameter-selection.png" alt="search command parameter selection" width="500"/>
@@ -70,7 +73,7 @@ To manually add your messaging extension search command to your app manifest, yo
 | `title` | This property is a command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | This property is a help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
 | `type` | This property must be a `query`. | No | 1.4 |
-|`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user chooses this command in the UI. | No | 1.0 |
+|`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | This property is an optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `["compose", "commandBox"]`. | No | 1.5 |
 
 You must add the details of the search parameter, that defines the text visible to your user in the Teams client.
