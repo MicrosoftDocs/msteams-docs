@@ -10,7 +10,8 @@ ms.topic: tutorial
 
 This tutorial teaches you to build a basic *channel tab* also known as a *group tab*, which is a full-screen page for a team channel or chat. You can also configure some aspects of this kind of tab, for example, rename the tab so it's meaningful to their channel, which you cannot do in a Personal Tab.
 
-This tutorial teaches you to:
+**This tutorial teaches you to:**
+
 * Create an app project using the Microsoft Teams Toolkit for Visual Studio Code.
 * Understand the app configurations and scaffolding relevant to channel tabs.
 * Create tab content and tab configuration.
@@ -46,7 +47,7 @@ Much of the app configurations and scaffolding are set up automatically when you
     * `TabConfig.js` for rendering your tab's configuration page.
   * Microsoft Teams JavaScript client SDK, which comes pre-loaded in your project's front-end components.
 
-## 3.Customize your tab content page
+## 3. Customize your tab content page
 
 1. Copy and modify the following code sample with information that's relevant to your organization. You can also use the snippet as it is:
     ```JSX
@@ -129,7 +130,7 @@ This tutorial teaches you to build and run your app locally.
 This information is also present in the `README` section of the toolkit.
 Your app is running on `https://localhost:3000` after the **Compiled successfully!** message appears in the terminal. 
 
-## 7.Sideload your app in Teams
+## 7. Sideload your app in Teams
 
 Your app is ready to test in Teams. To do this, you must have an account that allows app sideloading. 
 

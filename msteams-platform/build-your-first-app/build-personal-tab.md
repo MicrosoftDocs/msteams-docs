@@ -10,7 +10,11 @@ ms.topic: tutorial
 
 This tutorial teaches you to build a basic personal tab in Microsoft Teams. Tabs are a simple way to surface information in your app by hosting web content in Teams. Tabs are a common feature of personal apps that provide a private workspace for individual users. Personal tabs are the closest thing to a traditional web experience in Teams. 
 
-This tutorial takes you through some of the app configurations and scaffolding relevant to personal tabs. It also teaches you to create a tab content with a contact list of your organization. Finally, you will update a tab's color theme based on user preference.
+**This tutorial teaches you to:**
+
+* Understand some of the app configurations and scaffolding relevant to personal tabs.
+* Create a tab content with a contact list of your organization.
+* Update a tab's color theme based on user preference.
 
 ## Prerequisites
 
@@ -79,7 +83,7 @@ It is important for your tab to have a theme that feels native to Teams. You mus
 
 The Teams JavaScript client SDK can make your app aware of and react to theme changes in the client. To do this, follow these steps:
 
-1. Get context about the configured Teams client theme
+1. **Get context about the configured Teams client theme**
   The `microsoftTeams.getContext()` call in your `Tab.js` file, provides some context about the configured client theme (such as dark theme). The following code accesses the `context` interface and its properties:
 
   ```JavaScript
@@ -93,7 +97,7 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
     });
   }
   ```
-1. Create a theme change handler
+1. **Create a theme change handler**
    With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. However, the app still doesn't have an appearance reflecting the theme when a user updates it.
 
    You need a handler to update your app's state with the theme. To create a handler, insert the following theme change handler immediately after the `microsoftTeams.getContext()` call:
@@ -105,8 +109,7 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
         }
       });
     ```
-1. Match the theme styles
-
+1. **Match the theme styles**
    Your theme change handler is in place, however, you still have to respond to changes and align your tab's colors with the current theme.
 
    In the `render()` function, store the state provided by the theme change handler in `isTheme`:

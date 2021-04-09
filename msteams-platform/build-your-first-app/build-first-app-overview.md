@@ -14,16 +14,14 @@ The Get Started tutorial teaches you to create basic Teams apps. It contains a s
 
 ## What you'll learn
 
-Here's an idea of what you'll know after going through the lessons.
+Here's an idea of what you'll know after going through the lessons:
 
-> [!div class="checklist"]
-  >
-  > * Get up and running quickly with the Teams Toolkit (a Visual Studio Code extension) 
-  > * Configure your app with App Studio 
-  > * Get experience with Teams tools and SDKs 
-  > * Expand on your app such as authentication and design guidelines 
+* Get up and running quickly with the Teams Toolkit (a Visual Studio Code extension) 
+* Configure your app with App Studio 
+* Get experience with Teams tools and SDKs 
+* Expand on your app such as authentication and design guidelines 
 
-  :::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'get started' lessons." border="false":::
+:::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'get started' lessons." border="false":::
 
 ## Teams app fundamentals
 
@@ -82,4 +80,3 @@ Or try building a bot or a messaging extention.
 > [Build a bot](../build-your-first-app/build-bot.md)
 > [!div class="nextstepaction"]
 > [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)
-

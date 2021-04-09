@@ -12,18 +12,24 @@ This tutorial teaches you to build a basic *bot* app. A bot acts as an intermedi
 
 Your workplace created a Teams app that uses tabs to surface important contact information. For example, colleagues have quick access to the help desk phone number. But instead of calling, what if people could contact the help desk using a chatbot? Your boss asks you to look at how quickly you can get a basic conversational bot up and running in Teams.
 
-In this tutorial you will learn how to create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code. You will also understand some of the app configurations and scaffolding relevant to bots. You will learn to host an app locally, configure a bot for Teams, and sideload and test a bot in Teams.
+**This tutorial teaches you to:**
+
+* Create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code.
+* Understand some of the app configurations and scaffolding relevant to bots.
+* Learn to host an app locally.
+* Configure a bot for Teams.
+* Sideload and test your bot in Teams.
 
 ## Prerequisites
 
-You should have set up your development tenant and have installed the development tools.
+Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md).
 
 ## 1. Create your app project
 
 The Microsoft Teams Toolkit helps you to set up the following components for your app:
 
-* **App configurations and scaffolding** relevant to bots
-* **Bot** that's automatically registered with the Microsoft Azure Bot Service
+* **App configurations and scaffolding** relevant to bots.
+* **Bot** that's automatically registered with the Microsoft Azure Bot Service.
 
 > [!TIP]
 > If you haven't created a Teams app project before, you might find it helpful build your first teams app before going ahead.
@@ -39,13 +45,8 @@ The Microsoft Teams Toolkit helps you to set up the following components for you
 
 Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a bot.
 
-### App configurations
-
-To view or update your bot's configurations, select **App Studio** in the toolkit and go to **Bots**.
-
-### App scaffolding
-
-The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams (for example, how the bot responds to specific messages such as "Hello").
+* App configurations: To view or update your bot's configurations, select **App Studio** in the toolkit and go to **Bots**.
+* App scaffolding: The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your bot processes activities in Teams, for example, how the bot responds to specific messages such as "Hello".
 
 ## 3. Set up a secure tunnel to your app
 
@@ -53,9 +54,9 @@ For testing purposes, let's host your app on a local web server (port 3978).
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
-1. Copy the HTTPS URL in the output (for example, `https://468b9ab725e9.ngrok.io`) since Teams requires HTTPS connections.
+1. Copy the HTTPS URL in the output, for example, `https://468b9ab725e9.ngrok.io`, since Teams requires HTTPS connections.
 
-With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
+    With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
 
 ## 4. Configure your bot
 
@@ -66,9 +67,10 @@ You must still specify an endpoint address to receive and process user messages 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and select **Open Microsoft Teams Toolkit**.
 1. Go to **Bots** > **Existing bot registrations** and select the bot you created during setup.
 1. In the **Bot endpoint address** field, enter the ngrok URL (for example, `https://468b9ab725e9.ngrok.io`) where you're hosting the bot and append `/api/messages` to it.<br/>
+
     :::image type="content" source="../assets/images/build-your-first-app/bot-config-endpoint-url.png" alt-text="Illustration showing where you can configure the bot endpoint URL in the Teams Toolkit.":::
 
-Your bot will be able to respond to messages in Teams.
+    Your bot will be able to respond to messages in Teams.
 
 ## 5. Build and run your app
 
@@ -109,7 +111,7 @@ Now for the fun part: Let's say "Hello" to your bot.
 
 The following information may help if you had issues completing this tutorial.
 
-### Bot isn't connected to Teams
+**Bot isn't connected to Teams**
 
 If you installed your app but the bot isn't working, make sure the bot is [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -117,6 +119,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 
 ## See also
 
+* [Build a bot](../bots/bot-basics.md) 
 * [Build and Run your first Microsoft Teams app](../build-your-first-app/build-and-run.md)  
 * [Build a personal tab for Microsoft Teams](../build-your-first-app/build-personal-tab.md)
 * [See what else Teams bots can do with one of our samples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
@@ -126,9 +129,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [Microsoft Bot Framework](https://dev.botframework.com/)
 * [Create a bot without the toolkit](../resources/bot-v3/bots-create.md)
 
-## Next lesson
-
-Let's try building a real-world bot.
+## Next step
 
 > [!div class="nextstepaction"]
-> [Build a bot](../bots/bot-basics.md)
+> [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)

@@ -14,18 +14,25 @@ This tutorial teaches you to create a *search command* (also known as a *search-
 
 Your organization's help desk communicates with users through Teams, but the tickets reside in a separate system. This means support staff must constantly go back and forth between apps. You'll investigate how you might reduce this much context switching by creating a simple search-based messaging extension for Teams.
 
-In this tutorial, you will learn to create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code. You will also understand the app configurations and the scaffolding relevant to the messaging extensions. You will learn to host your app locally, configure the bot for your messaging extension, and sideload and test a messaging extension in Teams.
+**This tutorial teaches you to:**
+
+* Create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code.
+* Understand the app configurations and the scaffolding relevant to the messaging extensions.
+* Learn to host your app locally.
+* Configure the bot for your messaging extension.
+* Sideload and test a messaging extension in Teams.
+
 
 ## Prerequisites
 
-You should have set up your development tenant and have installed the development tools.
+Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md).
 
 ## 1. Create your app project
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
 
-* **App configurations and scaffolding** relevant to messaging extensions
-* **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
+* **App configurations and scaffolding** relevant to messaging extensions.
+* **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service.
 
 > [!TIP]
 > If you haven't created a Teams app project before, you might find it helpful build your first teams app before going ahead.
@@ -44,13 +51,8 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 
 Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit.
 
-### App configurations
-
-To view or update your messaging extension's configurations, select **App Studio** in the toolkit and go to **Messaging extensions**.
-
-### App scaffolding
-
-The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your messaging extension (or technically, the messaging extenstion's bot) responds to search queries in Teams.
+* App configurations: To view or update your messaging extension's configurations, select **App Studio** in the toolkit and go to **Messaging extensions**.
+* App scaffolding: The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, for handling how your messaging extension, or technically, the messaging extenstion's bot, responds to search queries in Teams.
 
 ## 3. Set up a secure tunnel to your app
 
@@ -58,9 +60,9 @@ For testing purposes, let's host your messaging extension on a local web server 
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
-1. Copy the HTTPS URL in the output (for example, `https://468b9ab725e9.ngrok.io`) since Teams requires HTTPS connections.
+1. Copy the HTTPS URL in the output, for example `https://468b9ab725e9.ngrok.io`, since Teams requires HTTPS connections.
 
-With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
+With this URL, Teams, which requires HTTPS connections, will be able tunnel to where you're hosting your app, `localhost` on port 3978.
 
 ## 4. Configure the bot for your messaging extension
 
@@ -70,9 +72,9 @@ You still must specify a bot endpoint URL to receive and process search queries 
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Open Microsoft Teams Toolkit**.
 1. Go to **Bots > Existing bot registrations** and select the bot you created during setup.
-1. In the **Bot endpoint address** field, enter the ngrok URL (for example, `https://468b9ab725e9.ngrok.io`) where you're hosting the bot and append `/api/messages` to it.
+1. In the **Bot endpoint address** field, enter the ngrok URL, for example `https://468b9ab725e9.ngrok.io`, where you're hosting the bot and append `/api/messages` to it.
 
-Your bot will be able to handle queries in your messaging extension.
+    Your bot will be able to handle queries in your messaging extension.
 
 ## 5. Build and run your app
 
@@ -108,7 +110,7 @@ Learn how messaging extensions work in a Teams chat.
 
 The following information may help if you had issues completing this tutorial.
 
-### Bot isn't connected to Teams
+**Bot isn't connected to Teams**
 
 If you installed your app but it isn't working, make sure the messaging extension's bot is [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
@@ -125,13 +127,10 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [Add authentication](../messaging-extensions/how-to/add-authentication.md)
 * [Create an action-based messaging extension](../messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
+* [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md)
 
-## Next lesson
-
-See the following pages to continue and build a fully featured messaging extension.
-
-> [!div class="nextstepaction"]
-> [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md)
+## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md)
+> [Link unfurling](../messaging-extensions/how-to/link-unfurling.md)
