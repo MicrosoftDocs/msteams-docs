@@ -131,15 +131,6 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web-view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### Share to stage
-
-> [!NOTE]
-> This capability is avaialable only in insider dev preview.
-
-This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time.
-
-The required context is meetingStage in the app manifest. A pre-requisite for this is to have the meetingSidePanel context. This enables the **Share** button in the sidePanel.
-
 ### After a meeting
 
 The post-meeting and pre-meeting configurations are the same.
