@@ -684,7 +684,7 @@ Define the properties your app uses to post a user activity feed.
 
 **Optional** - string
 
-Specifies whether the scope offers an experience in the context of an individual user alone (personal), a team, a groupchat, or meetings. Options are:
+Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
 * `personal`
 * `team`
 * `groupchat`
@@ -694,8 +694,13 @@ Specifies whether the scope offers an experience in the context of an individual
 
 **Optional** - object
 
-Specifies the default capability for each collaboration scope your app supports. Options are:
-* `meetings`: `tab`
-* `team`: `bot`
-* `groupchat`: `bot` 
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+* `team`
+* `groupchat`
+* `meetings`
  
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team`|string|||When the install scope selected is Team, this field specifies the default capability available. Options: tab, bot, or connector.|
+|`groupchat`|string|||When the install scope selected is GroupChat, this field specifies the default capability available. Options: tab, bot or connector|
+|`meetings`|string|||When the install scope selected is Meetings, this field specifies the default capability available. Options: tab, bot, or connector.|
