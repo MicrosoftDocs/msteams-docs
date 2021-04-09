@@ -22,7 +22,7 @@ In addition, the Real-time Media Platform enables bots to interact with Teams ca
 
 The Teams app manifest with two additional settings `supportsCalling` and `supportsVideo`, Graph permissions for your bot's Microsoft App ID, and tenant admin consent enable you to register the bot. In registering a calls and meetings bot for Teams, the Webhook URL is mentioned, which is the webhook endpoint for all incoming calls to your bot. An application-hosted media bot requires the Microsoft.Graph.Communications.Calls.Media .NET library to access the audio and video media streams, and the bot must be deployed on a Windows Server machine or Windows Server guest Operating System (OS) in Azure. Bots on Teams supports only a specific set of media formats for audio and video content.
 
-Now you must understand some core concepts, terminology, and conventions.
+Now, you must understand some core concepts, terminology, and conventions.
 
 ## Terminologies
 
@@ -71,11 +71,11 @@ When a bot is participating in a call or online meeting, it must deal with audio
 
 Real-time media refers to scenarios where media must be processed in real-time, as opposed to playback of previously recorded audio or video. Dealing with media streams, particularly real-time media streams, is extremely complex. Microsoft has created the Real-time Media Platform to handle these scenarios and to offload as much of the traditional heavy lifting of real-time media processing as possible. When the bot answers an incoming call or joins a new or existing call, it needs to tell the Real-time Media Platform how media is handled. If you are building an IVR application, you can offload the expensive audio processing to Microsoft. Alternately, if your bot requires direct access to media streams, that scenario is also supported. There are two types of media processing:
 
-* Service-hosted media: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use APIs, such as the following:
+* Service-hosted media: Bots focus on managing application workflow, such as routing calls and offload audio processing to the Microsoft Real-time Media Platform. With service-hosted media, you have several options to implement and host your bot. A service-hosted media bot can be implemented as a stateless service as it does not process media locally. Service-hosted media bots can use the following APIs:
 
     * `PlayPrompt` for playing an audio clip.
     * `Record` for recording audio clips.
-    * `SubscribeToTone` for subscribing to DTMF tones.
+    * `SubscribeToTone` for subscribing to dual tone multiple frequency (DTMF) tones.
 
     For example, knowing when a user has pressed **0** to reach the operator.
 

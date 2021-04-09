@@ -13,7 +13,7 @@ A bot can access additional context data about a team or chat where it is instal
 
 ## Fetch the roster or user profile
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Azure Active Directory (AAD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through AAD credentials, is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and page size greater than 500, are capped at 500. Even if you use the non-paged version, it is unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Azure Active Directory (AAD) information, such as name and objectId. You can use this information to correlate user identities. For example, to check whether a user logged into a tab through AAD credentials, is a member of the team. For get conversation members, minimum or maximum page size depends on the implementation. Page size less than 50, are treated as 50, and greater than 500, are capped at 500. Even if you use the non-paged version, it is unreliable in large teams and must not be used. For more information, see [changes to Teams Bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
 The following sample code uses the paged endpoint for fetching the roster:
 
@@ -358,8 +358,6 @@ Response body
 ```
 
 * * *
-
-After you get the list of channels in a team, you can go through the Teams samples for Bot Framework.
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 

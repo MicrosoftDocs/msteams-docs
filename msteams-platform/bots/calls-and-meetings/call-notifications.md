@@ -12,7 +12,7 @@ In [registering a calls and meetings bot for Microsoft Teams](./registering-call
 
 ## Protocol determination
 
-The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and reply with the following:
+The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provide the following response:
 
 ```http
 HTTP/1.1 204 No Content
@@ -26,7 +26,7 @@ The next section provides details on incoming call notifications redirected for 
 
 ## Redirects for region affinity
 
-You call your webhook from the data-center hosting the call. The call starts in any data center and does not take into account region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application replies with the following:
+You call your webhook from the data-center hosting the call. The call starts in any data center and does not take into account region affinities. The notification is sent to your deployment depending on the GeoDNS resolution. If your application determines, by inspecting the initial notification payload or otherwise, that it needs to run in a different deployment, the application provides the following response:
 
 ```http
 HTTP/1.1 302 Found

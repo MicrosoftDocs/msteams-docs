@@ -12,7 +12,7 @@ To create a bot that works in Microsoft Teams, you can use an existing bot built
 
 ## Bots and the Microsoft Bot Framework
 
-Your Teams bot consists of three elements:
+Your Teams bot consists of the following three elements:
 
 * A publicly accessible web service that you host.
 * Your bot registration with the Bot Framework.
@@ -40,7 +40,7 @@ Webhooks and connectors connect your bot to your web services. Using webhooks an
 
 ## Advantages of bots
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a Team. Each scope provides unique opportunities and challenges for your conversational bot.
+Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
@@ -55,7 +55,7 @@ Channels contain threaded conversations between multiple people even up to two t
 Bots work better in a channel in the following cases:
 
 * Notifications, where you provide an interactive card for users to take additional information.
-* Feedback scenarios such as polls and surveys.
+* Feedback scenarios, such as polls and surveys.
 * Single request or response cycle resolves interactions and the results are useful for multiple members of the conversation.
 * Social or fun bots, where you get an awesome cat image, randomly pick a winner, and so on.
 

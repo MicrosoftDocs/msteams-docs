@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Optimize your bot with rate limiting in Teams
 
-Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages do not appear as spam to your end users.
+Rate limiting is a method to limit messages to a certain maximum frequency. As a general principle, your application must limit the number of messages it posts to an individual chat or channel conversation. This ensures an optimal experience and messages do not appear as spam to your users.
 
 To protect Microsoft Teams and its users, the bot APIs provide a rate limit for incoming requests. Apps that go over this limit receive an `HTTP 429 Too Many Requests` error status. All requests are subject to the same rate limiting policy, including sending messages, channel enumerations, and roster fetches.
 

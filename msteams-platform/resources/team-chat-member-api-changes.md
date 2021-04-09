@@ -17,8 +17,8 @@ Currently, bot developers who want to retrieve information for one or more membe
 
 Currently, if you want to retrieve information for one or more members of a chat or team, you can use the [Microsoft Teams bot APIs](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) `TeamsInfo.GetMembersAsync` for C# or `TeamsInfo.getMembers` for TypeScript or Node.js APIs. These APIs have the following shortcomings:
 
-* For large teams, performance is poor and timeouts are more likely: The maximum team size has grown considerably since Teams was released in early 2017. Since `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it is common for the call to time out and you have to try again.
-* Getting profile details for a single user is cumbersome: To get the profile information for a single user, you have to retrieve the entire member list and then search for the one you want. There is a helper function in the Bot Framework SDK to make it simpler, but it is not efficient.
+* For large teams, performance is poor and timeouts are more likely: The maximum team size has grown considerably since Teams was released in early 2017. As `GetMembersAsync` or `getMembers` returns the entire member list, it takes a long time for the API call to return for large teams, and it is common for the call to time out and you have to try again.
+* Getting profile details for a single user is difficult: To get the profile information for a single user, you have to retrieve the entire member list and then search for the one you want. There is a helper function in the Bot Framework SDK to make it simpler, but it is not efficient.
 
 With the introduction of organization wide teams, there is a requirement to better align these APIs with Office 365 privacy controls. Bots used in large teams are able to retrieve basic profile information similar to the `User.ReadBasic.All` Microsoft Graph permission. Tenant administrators have a great deal of control over which apps and bots can be used in their tenant, but these settings are different from Microsoft Graph.
 
@@ -55,7 +55,7 @@ The following code provides a sample JSON representation of what is returned by 
 
 Following are the upcoming API changes:
 
-* A new API is created [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Bot Framework 4.8 SDK. For development in all other versions use the [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
+* A new API is created [`TeamsInfo.GetPagedMembersAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile) for retrieving profile information for members of a chat or team. This API is now available with the Bot Framework 4.8 SDK. For development in all other versions, use the [`GetConversationPagedMembers`](https://docs.microsoft.com/dotnet/api/microsoft.bot.connector.conversationsextensions.getconversationpagedmembersasync?view=botbuilder-dotnet-stable&preserve-view=true) method.
 
     > [!NOTE]
     > In either v3 or v4, the best action is to upgrade to the latest point release that is 3.30.2 or 4.8 respectively.
@@ -63,12 +63,11 @@ Following are the upcoming API changes:
 * A new API is created [`TeamsInfo.GetMemberAsync`](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) for retrieving the profile information for a single user. It takes the ID of the team or chat and a [UPN](https://docs.microsoft.com/windows/win32/ad/naming-properties#userprincipalname) that is `userPrincipalName`, Azure Active Directory Object ID `objectId`, or the Teams user ID `id` as parameters and returns the profile information for that user.
 
     > [!NOTE]
-    > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Bot Framework message. The new API is available with version 4.8 of the Bot Framework SDK. It is available in the Teams SDK extension Bot Framework 3.x as well. Meanwhile, you can use the [REST](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
+    > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Bot Framework message. The new API is available with version 4.8 of the Bot Framework SDK. It is also available in the Teams SDK extension Bot Framework 3.x. Meanwhile, you can use the [REST](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.
 
 * `TeamsInfo.GetMembersAsync` in C# and `TeamsInfo.getMembers` in TypeScript or Node.js is formally deprecated. Once the new API is available, you must update your bots to use it. This also applies to the [underlying REST API that these APIs use](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#tabpanel_CeZOj-G++Q_json).
-* By late 2021, bots cannot proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use Graph to retrieve them. `userPrincipalName` and `email` properties are not returned from the new `GetConversationPagedMembers` API starting in late 2021. Bots have to use Graph with an access token to retrieve information. It must be made easier for bots to get an access token and streamline and simplify the end-user consent process.
+* By late 2021, bots cannot proactively retrieve the `userPrincipalName` or `email` properties for members of a chat or team. Bots must use Graph to retrieve them. The `userPrincipalName` and `email` properties are not returned from the new `GetConversationPagedMembers` API starting in late 2021. Bots have to use Graph with an access token to retrieve information. It must be made easier for bots to get an access token and streamline and simplify the end-user consent process.
 
 ## Feedback and more information
 
-This page is used to provide up-to-date information on changes. If you have questions, select **This page** in the **Feedback** section.
-
+This page is used to provide the up-to-date information on changes. If you have questions, select **This page** in the **Feedback** section.

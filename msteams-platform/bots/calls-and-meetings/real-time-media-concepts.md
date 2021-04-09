@@ -25,7 +25,7 @@ The next section provides details about the bot sending and receiving media as a
 
 ## Frames and frame rate
 
-A real-time media bot interacts directly with the audio and video modalities of a media session. This means the bot is sending and receiving media as a sequence of frames, where each frame represents a unit of content. One second of audio is transmitted as a sequence of 50 frames, with each frame containing 20 milliseconds (ms) that is 1/50th of a second of speech content. One second of video is transmitted as a sequence of 30 still images, each intended to be viewed for just 33.3 ms that is 1/30th of a second before the next video frame is displayed. The number of frames transmitted or rendered per second is called the frame rate.
+A real-time media bot interacts directly with the audio and video modalities of a media session. This means the bot is sending and receiving media as a sequence of frames, where each frame represents a unit of content. One second of audio is transmitted as a sequence of 50 frames, with each frame containing 20 ms that is 1/50th of a second of speech content. One second of video is transmitted as a sequence of 30 still images, each intended to be viewed for just 33.3 ms that is 1/30th of a second before the next video frame is displayed. The number of frames transmitted or rendered per second is called the frame rate.
 
 The next section provides details about the audio and video format used in real-time media calls and meetings.
 

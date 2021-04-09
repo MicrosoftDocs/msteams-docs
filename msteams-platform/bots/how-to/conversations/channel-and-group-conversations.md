@@ -20,7 +20,7 @@ Bots in a group or channel only receive messages when they are mentioned `@botna
 
 Unlike personal chats, in group chats and channels, your bot must provide a quick introduction. You must follow these and more bot design guidelines. To understand how to better design bots in Teams, see [how to design bot conversations in channels and chats](~/bots/design/bots.md).
 
-Now you can create new conversation threads and easily manage different conversations in channels.
+Now, you can create new conversation threads and easily manage different conversations in channels.
 
 ## Create new conversation threads
 
@@ -259,13 +259,12 @@ Do not send a message in the following cases:
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
-## Learn more
-
-Your bot can get additional information about the group chat or team where it is installed. For additional APIs for your bot, see [get teams context](~/bots/how-to/get-teams-context.md).
-
-There are also additional events that your bot can subscribe and respond to. For more information, see [subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Get teams context](~/bots/how-to/get-teams-context.md).
 
 ## Next step
 

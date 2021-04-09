@@ -9,7 +9,7 @@ Keywords: send a message get user ID channel ID conversation ID
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages such as:
+A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
 
 * Welcome messages
 * Notifications
@@ -58,13 +58,13 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message. See [samples](#samples) or use one of the samples listed in [code samples](#code-samples).
+If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message.
 
 Now that you have sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is a very effective way to communicate with your users. However, from their perspective, this message can appear completely unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is very important to use proactive messaging sparingly, to not spam your users, and to provide enough information to let users understand why they are receiving the messages.
+Sending proactive messages to users is a very effective way to communicate with your users. However, from their perspective, this message can appear completely unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is very important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
 
 ### Welcome messages
 
@@ -78,7 +78,7 @@ Poor welcome messages can lead to users blocking your bot. Write to the point an
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they have received a notification. Good notification messages generally include:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they have received a notification. Good notification messages generally include the following:
 
 * What happened: A clear indication of what happened to cause the notification.
 * What was the result: It must be clear what item was updated to cause the notification.
@@ -95,15 +95,13 @@ To send messages to a large group of users, for example to your organization, pr
 
 Proactively message users that have previously not installed or interacted with your app. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. In this case, you can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
 
-You can only install apps that are in your organizational app catalog or the Teams app store.
+You can only install apps that are in your organizational app catalog or the Teams App Store.
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There is also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
-The next section illustrates a simple code sample that proactively installs your app using Graph.
-
 ## Samples
 
-The following code shows a sample of proactively installing your app using Graph:
+The following code shows a simple code sample that proactively installs your app using Graph:
 
 # [C#](#tab/dotnet)
 
@@ -247,18 +245,16 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ---
 
-The next section illustrates simple code samples that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams.
-
 ## Code samples
 
-The code samples for proactive messaging are as follows:
+The following table provides a simple code sample that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
 
 | Sample name           | Description                                                                      | .NET    | Node.js   | Python  |
 |:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
 |Teams conversation basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
 |Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
-### View additional code sample
+### Additional code sample
 
 > [!div class="nextstepaction"]
 > [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)

@@ -1,6 +1,6 @@
 ## Teams bot samples
 
-For fully working samples demonstrating the functionality, see the following Teams samples for Bot Framework:
+For complete working samples demonstrating the functionality, see the following Teams samples for Bot Framework:
 
 | Sample | Description | .NET Core | Node.js | Python |
 |--------|------------- |---|---|---|
