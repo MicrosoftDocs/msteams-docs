@@ -26,7 +26,7 @@ Sending a proactive message is different from sending a regular message. There i
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-For using proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and groups or channels, see [code samples](#code-samples).
+For using proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and groups or channels, see [code sample](#code-sample).
 
 ## Get the user ID, team ID or channel ID
 
@@ -245,7 +245,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ---
 
-## Code samples
+## Code sample
 
 The following table provides a simple code sample that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
 
