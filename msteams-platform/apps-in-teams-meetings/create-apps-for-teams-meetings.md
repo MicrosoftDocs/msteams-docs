@@ -329,17 +329,17 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 #### Share to stage 
 
 > [!NOTE]
-> * This capability is avaialable only in insider dev preview
-> * To use this feature, the app must support an in-meeting sidepanel
+> * This capability is currently available in developer preview only.
+> * To use this feature, the app must support an in-meeting sidepanel.
 
 
 This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time. 
 
-The required context is meetingStage in the app manifest. A pre-requisite for this is to have the meetingSidePanel context. This will enable the "Share" button in the sidepanel as depecited below.
+The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables the **Share** button in the sidepanel as depecited in the following image:
 
-  ![share_to_stage_during_meeting experience](../assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+  ![share_to_stage_during_meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-The manifest change that is needed to enable this capability is shown below. 
+The manifest change that is needed to enable this capability is as follows: 
 
 ```json
 
