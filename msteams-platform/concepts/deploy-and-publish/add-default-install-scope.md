@@ -24,7 +24,22 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 
 ## Configure app's default install scope
 
-Explain what this configuration is for, why you would use it, and how to configure defaultInstallScope in the manifest (we should provide a JSON example for context).
+Configure the default install scope for your app, based on whether your app needs to installed in personal, team, meetings, or groupchat scope. 
+
+**To configure details in app manifest**
+
+1. In **Teams**, select **Apps**, and open **App Studio**.
+2. Select the **Manifest editor** tab, and configure the default install scope.
+3. Select **Save**
+
+> [!NOTE]
+> You can also manually add the details to your app manifest.
+
+Following is a JSON example:
+
+```json
+(we should provide a JSON example for context).
+```
 
 ## Configure the default capability for shared scopes
 
