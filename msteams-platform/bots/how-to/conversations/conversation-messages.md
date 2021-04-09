@@ -14,7 +14,7 @@ Basic conversations are handled through the Bot Framework connector, a single RE
 
 * Easy access to the Bot Framework connector.
 * Additional functionality to manage conversation flow and state.
-* Simple ways to incorporate cognitive services such as natural language processing (NLP).
+* Simple ways to incorporate cognitive services, such as natural language processing (NLP).
 
 Your bot receives messages from Teams using the `Text` property and it sends single or multiple message responses to the users.
 
@@ -244,11 +244,9 @@ Messages received from or sent to your bot can include different types of messag
 
 ## Message content
 
-Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.
-
 | Format    | From user to bot | From bot to user | Notes                                                                                   |
 |-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔                | ✔                |                                                                                         |
+| Rich text | ✔                | ✔                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
 | Pictures  | ✔                | ✔                | Maximum 1024×1024 and 1 MB in PNG, JPEG, or GIF format. Animated GIF is not supported.  |
 | Cards     | ✖                | ✔                | See the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis    | ✖                | ✔                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
@@ -257,7 +255,7 @@ You can also add notifications to your message using the `Notification.Alert` pr
 
 ## Notifications to your message
 
-Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to true. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner or both a banner and an email.
+Notifications alert users about new tasks, mentions, and comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. Whether or not a notification is raised depends on the individual user's Teams settings and you cannot override these settings. The notification type is either a banner, or both a banner and an email.
 
 > [!NOTE]
 > The **Summary** field displays any text from the user as a notification message in the feed.
@@ -348,13 +346,13 @@ Specify the height and width of each image by using XML. In markdown, the image 
 * Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-A conversational bot can include adaptive cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
 
-## Adaptive cards
+## Adaptive Cards
 
-Adaptive cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
-The following code shows an example of sending a simple adaptive card:
+The following code shows an example of sending a simple Adaptive Card:
 
 ```json
 {
@@ -382,8 +380,6 @@ The following code shows an example of sending a simple adaptive card:
 
 To know more about cards and cards in bots, see [cards documentation](~/task-modules-and-cards/what-are-cards.md).
 
-The next section provides status code responses for errors generated from Bot APIs.
-
 ## Status code responses
 
 Following are the status codes and their error code and message values:
@@ -399,11 +395,7 @@ Following are the status codes and their error code and message values:
 | 413 | **Code**: `MessageSizeTooBig` <br/> **Message**: Message size too large. | The size on the incoming request was too large. |
 | 429 | **Code**: `Throttled` <br/> **Message**: Too many requests. Also returns when to retry after. | Too many requests were sent by the bot. For more information, see [rate limit](~/bots/how-to/rate-limit.md). |
 
-The next section illustrates a simple code sample that incorporates basic conversational flow into a Teams application.
-
 ## Code sample
-
-Following are the code samples for Teams conversation bot:
 
 |Sample name | Description | .NETCore | Node.js | Python |
 |----------------|-----------------|--------------|----------------|-----------|
