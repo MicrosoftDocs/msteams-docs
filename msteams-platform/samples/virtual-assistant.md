@@ -113,13 +113,13 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
     }
 ```
 
-### Handle interruptions gracefully
+### Handle interruptions
 
 Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. we have introduced `TeamsSkillDialog` and `TeamsSwitchSkillDialog`, based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs), to enable users to switch a skill experience from card actions. To handle this request the Virtual Assistant prompts the user with a confirmation message to switch skills.
 
 ![Confirmation prompt when switching to a new skill](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
-### Handling task module requests
+### Handle task module requests
 
 To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill. 
 
@@ -215,7 +215,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
 
 Additionally, you must include all skill domains in the `validDomains` section in Virtual Assistant's manifest file so that task modules invoked through a skill render properly.
 
-### Handling collaborative app scopes
+### Handle collaborative app scopes
 
 Teams apps can exist in multiple scopes including 1:1 chat, group chat, and channels. The core Virtual Assistant template is designed for 1:1 chats. As part of the onboarding experience Virtual Assistant prompts users for name and maintains user state. Since that onboarding experience is not suited for group chat or channel scopes it has been removed.
 
@@ -241,7 +241,7 @@ The following  processing functions have been added to Virtual Assistant core:
     }
 ```
 
-### Handling messaging extensions
+### Handle messaging extensions
 
 The commands for a messaging extension are declared in your app manifest file. The messaging extension user interface is powered by those commands. For a Virtual Assistant to power a messaging extension command as an attached skill, a Virtual Assistant's own manifest must contain those commands. You must add the commands from an individual skill's manifest to the Virtual Assistant's manifest. The command ID provides information about an associated skill by appending the skill's app ID through a separator `:`.
 
@@ -462,7 +462,7 @@ On the other hand, `Book-a-room room` bot needs to use LUIS model to understand 
 
 ### Multi-Language support
 
-For this example, we have only created a LUIS model with English culture. You can create LUIS models corresponding to other languages and add entry to `cognitivemodels.json`.
+As an example, a LUIS model with only English culture is created. You can create LUIS models corresponding to other languages and add entry to `cognitivemodels.json`.
 
 ```json
 {
@@ -551,7 +551,7 @@ For more information refer [this](https://msteams-captain.visualstudio.com/xGrow
 
 You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see[Virtual Assistant and skills architecture](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
-## Sample code 
+## Code sample
 
 * [Updated visual studio template](https://github.com/nebhagat/msteams-virtual-assistant-dotnet)
 * [Book-a-room bot skill code](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill)

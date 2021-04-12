@@ -56,23 +56,26 @@ The following image guides you to create a new app in App Studio:
 
 1. **Add your bot details**  
 Complete all the required fields. For a full descriptions of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).   
-
 The following image guides you to add the app details:  
 
    ![add app details](../../assets/images/get-started/add-app-details.png)
 
 1. **Set up your bot**                            
 Navigate to the **Bots** tab, select the **Setup** button, choose **Existing bot**, and enter your bot name. 
-The following image guides you to set-up a bot:    
+   The following image guides you to set-up a bot:    
 
    ![Bot set-up](../../assets/images/get-started/bot-set-up.png) 
 
-The following image guides you to set-up an existing bot:    
+   The following image guides you to set-up an existing bot:      
 
    ![existing bot set-up](../../assets/images/get-started/existing-bot-set-up.png)    
 
 1. **Add your App ID**  
-Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.
+Navigate to **Connect to a different bot id** and paste in the **App Id** you copied earlier. Under scope, select **Personal** and then select **Save**.  
+The following image guides you to set-up an existing bot:    
+
+   ![add app id](../../assets/images/get-started/add-app-id.png)
+
 1. **Add valid domains for your bot**  
 This step is only required if your bot requires the user to sign-in. Navigate to **Domains and permissions** and  in the **Valid Domains** field, input the following:
 
