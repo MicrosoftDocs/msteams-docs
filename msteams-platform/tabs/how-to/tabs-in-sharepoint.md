@@ -85,11 +85,11 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 * Select the **Appstore** icon at the lower left of side tab.
 * Select **Upload a custom app** at the lower left. The following image displays the corresponding screen:  
 
-    ![upload a custom app](../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
+    ![upload a custom app](~/assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png)
 
 * The file to upload is located in your **Downloads** folder. It is called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
  
-    ![TalentMgmt-Azure](../assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
+    ![TalentMgmt in Azure](~/assets/images/tabs/tabs-in-sharepoint/talentmgmt-azure.png)
 
 * You can see the install or consent screen for the talent management app. Select the team you want to install. 
 * Select the Install button. Now, you can experiment with the app.
