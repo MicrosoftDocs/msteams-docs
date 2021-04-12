@@ -9,7 +9,7 @@ ms.topic: overview
 
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-You can add rich text formatting to your cards using either markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams support `openUrl`, `messageBack`, `imBack`, `invoke`, `signin` and adaptive card action types. Adaptive card, hero card, list card, Office 365 connector card, receipt card, signin card, thumbnail card, and card collections are supported in bots for Teams.
+You can add rich text formatting to your cards using either markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams support `openUrl`, `messageBack`, `imBack`, `invoke`, `signin` and Adaptive Card action types. Adaptive Card, hero card, list card, Office 365 connector card, receipt card, signin card, thumbnail card, and card collections are supported in bots for Teams.
 
 Teams uses cards in three different places:
 
@@ -25,34 +25,34 @@ Cards were first defined as part of Outlook and Office 365, and are now used as 
 
 The Microsoft Bot Framework extended the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework but it supports a different set of these cards. General information on cards in Bot Framework can be found in [add rich card attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called simple cards in Teams.
 
-Bots in Teams can use simple, connector, or adaptive cards. Cards that are supported by bots in Teams are detailed in [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md).
+Bots in Teams can use simple, connector, or Adaptive Cards. Cards that are supported by bots in Teams are detailed in [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## Cards in messaging extensions
 
-[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) can also return a card. Messaging extensions can use simple, connector, or adaptive cards. These cards are found in the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md).
+[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) can also return a card. Messaging extensions can use simple, connector, or Adaptive Cards. These cards are found in the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ## Card reference
 
 All cards used by Teams are listed in the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md). This reference also describes differences between Bot Framework cards and cards in Teams.
 
-## Adaptive cards
+## Adaptive Cards
 
-[Adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the adaptive cards team, see [adaptive cards overview](/adaptive-cards). You can use adaptive cards anywhere you can use existing hero cards, Office 365 cards, and thumbnail cards.
+[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you can use existing hero cards, Office 365 cards, and thumbnail cards.
 
-In addition to adaptive cards, Teams supports two other types of cards:
+In addition to Adaptive Cards, Teams supports two other types of cards:
 
 * Connector cards, used as part of Office 365 connectors.
 * Simple cards from the Bot Framework, such as the thumbnail and hero cards.
 
 These card types are described in the [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md).
 
-### Adaptive cards and incoming webhooks
+### Adaptive Cards and incoming webhooks
 
 > [!NOTE]
-> * All native adaptive card schema elements, except `Action.Submit`, are fully supported.
+> * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [`Action.OpenURL`](https://adaptivecards.io/explorer/Action.OpenUrl.html), [`Action.ShowCard`](https://adaptivecards.io/explorer/Action.ShowCard.html), and [`Action.ToggleVisibility`](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-Adaptive cards with incoming webhooks enables you to use the rich and flexible capabilities of adaptive cards to send content using incoming webhooks in Teams from their web service.
+Adaptive Cards with incoming webhooks enables you to use the rich and flexible capabilities of Adaptive Cards to send content using incoming webhooks in Teams from their web service.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
 

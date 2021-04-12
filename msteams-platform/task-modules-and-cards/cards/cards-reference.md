@@ -4,13 +4,14 @@ description: Describes all the cards and card actions available to bots in Teams
 keywords: bots cards reference
 ms.topic: reference
 ---
+
 # Cards reference
 
-The cards listed in this section are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own. Differences are called out in the references in this document.
+Adaptive, hero, list, Office 365 connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
 
 ## Card examples
 
-You can find additional information on how to use cards in the documentation for the Bot Builder SDK (v3). Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
+You can find additional information on how to use cards in the documentation for the Bot Builder SDK v3. Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub. Following are a few card examples:
 
 * .NET
   * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
@@ -22,14 +23,14 @@ You can find additional information on how to use cards in the documentation for
 
 ## Types of cards
 
-This table shows the types of cards available to you:
+The following table shows the types of cards available to you:
 
 | Card type | Description |
 | --- | --- |
-| [Adaptive card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
+| [Adaptive Card](#adaptive-card) | Highly customizable card that can contain any combination of text, speech, images, buttons and input fields. |
 | [Hero card](#hero-card) | Typically contains a single large image, one or more buttons, and a small amount of text. |
-| [List card](#list-card) | A scrolling list of items. |
-| [Office 365 connector card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images and actions. |
+| [List card](#list-card) | Contains a scrolling list of items. |
+| [Office 365 connector card](#office-365-connector-card) | Flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | Provides a receipt to the user. |
 | [Signin card](#signin-card) | Enables a bot to request that a user sign in. |
 | [Thumbnail card](#thumbnail-card) | Typically contains a single thumbnail image, some short text, and one or more buttons. |
@@ -43,7 +44,9 @@ The card can contain an inline image by including a link to the publicly availab
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area, and then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024, in PNG, JPEG, or GIF format, and animated GIF is not supported.
+Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF is not supported.
+
+The following table provides the properties of inline card images:
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -52,31 +55,31 @@ Images must be at most 1024×1024, in PNG, JPEG, or GIF format, and animated GIF
 
 ### Buttons
 
-Buttons are shown stacked at the bottom of the card. Button text is always on a single line and will be truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card will not be shown.
+Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card are not shown.
 
-See [Card Actions](~/task-modules-and-cards/cards/cards-actions.md) for more information.
+For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
 ### Card formatting
 
-See [Card Formatting](~/task-modules-and-cards/cards/cards-format.md) for more information on text formatting in cards.
+For more information on text formatting in cards, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
 
-## Adaptive card
+## Adaptive Card
 
-An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
-### Support for adaptive cards
+### Support for Adaptive Cards
 
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams platform supports v1.2 or earlier of Adaptive card features.
-> * Media elements are currently not supported in Adaptive card v1.2 on the Teams platform.
+> * Teams platform supports v1.2 or earlier of Adaptive Card features.
+> * Media elements are currently not supported in Adaptive Card v1.2 on the Teams platform.
 
-### Example of an adaptive card
+### Example of an Adaptive Card
 
-![Example of an adaptive card](~/assets/images/cards/adaptivecard.png)
+![Example of an Adaptive Card](~/assets/images/cards/adaptivecard.png)
 
 ```json
 {
@@ -211,12 +214,12 @@ An adaptive card is a customizable card that can contain any combination of text
 }
 ```
 
-#### Additional information on adaptive cards
+#### Additional information on Adaptive Cards
 
 Bot Framework reference:
 
-* [Adaptive cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-* [Adaptive card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
+* [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
+* [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
 ## Hero card
 
@@ -237,7 +240,7 @@ A card that typically contains a single large image, one or more buttons and tex
 | text | Rich text | Text appears under the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
 | images | Array of images | Image displayed at top of card. Aspect ratio 16:9. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
-| tap | Action object | This action will be activated when the user taps on the card itself. |
+| tap | Action object | This action is activated when the user taps on the card itself. |
 
 ### Example of a hero card
 
@@ -382,7 +385,7 @@ One important difference between using connector cards from a connector and usin
 Each connector card can display a maximum of 10 sections, and each section can contain a maximum of 5 images and 5 actions.
 
 > [!NOTE]
-> Any additional sections, images, or actions in a message will not appear.
+> Any additional sections, images, or actions in a message do not appear.
 
 All text fields support Markdown and HTML. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`; if you want to use HTML instead, set `markdown` to `false`.
 
@@ -392,8 +395,8 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 
 | Value | Description |
 | --- | --- |
-| `avatar` | Default; `activityImage` will be cropped as a circle. |
-| `article` | `activityImage` will be displayed as a rectangle and retain its aspect ratio. |
+| `avatar` | Default; `activityImage` is cropped as a circle. |
+| `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
 
 For all other details about connector card properties, see the [Actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Microsoft Teams does not currently support are as follows:
 
@@ -574,7 +577,7 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | text | Rich text | Text appears under the subtitle; see [Card formatting](~/task-modules-and-cards/cards/cards-format.md) for formatting options. |
 | images | Array of images | Image displayed at top of card. Aspect ratio 1:1 (square). |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
-| tap | Action object | This action will be activated when the user taps on the card itself. |
+| tap | Action object | This action is activated when the user taps on the card itself. |
 
 ### Example of a thumbnail card
 
@@ -630,7 +633,7 @@ Bot Framework reference:
 
 Teams supports Card collections.
 
-Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain adaptive, hero, or thumbnail cards.
+Card collections: `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain Adaptive, hero, or thumbnail cards.
 
 ## Carousel collection
 
