@@ -1,9 +1,10 @@
 ---
 title: Using Task Modules in Microsoft Teams tabs
 description: Explains how to invoke task modules from Teams tabs using the Microsoft Teams client SDK.
-ms.topic: How-to guide
+ms.topic: how-to
 keywords: task modules teams tabs client sdk
 ---
+
 # Using task modules in tabs
 
 Adding a task module to your tab can greatly simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Teams-aware popup. A good example of this is editing Planner cards; you can use task modules to create a similar experience.
