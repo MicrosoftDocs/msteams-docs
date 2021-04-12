@@ -6,7 +6,7 @@ ms.author: timura
 ms.date: 03/22/2021
 ms.topic: quickstart
 ---
-# Build and run your first Microsoft Teams app
+# Create your first Microsoft Teams *Hello World* app
 
 This tutorial teaches you to build and run your first Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
 
@@ -116,12 +116,13 @@ This information is also available in the `README` file of the toolkit.
 
 ## 4. Sideload your app in Teams
 
-You have to sideload your app to test it in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
+
+Sideloading an app is the process of installing apps on your computer that hasn't gone through the certification process to appear in the Store and to run on a Windows device. The operating system by default blocks you from sideloading apps. You have to enable sideloading of the apps to test your app in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
 
 * Ensure to have a Teams account and with admin access.
 * Ensure to have a Microsoft 365 development account that allows app sideloading. 
 
-**To Sideload your app in Teams**
+**To enable sideloading of your app in Teams**
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials. 
 1. Select **Show All** > **Teams**. 
@@ -145,7 +146,7 @@ You have to sideload your app to test it in Teams. Before you turn on custom app
 > Check for issues before sideloading your app using the validation feature in App Studio, which is included in the toolkit. Fix the errors to successfully sideload the app.
 
 
-### Install your app
+### To sideload your app
 
 1. Go to Teams Toolkit in Visual Studio Code.
 1. Select **App Studio**.  

@@ -10,7 +10,7 @@
   items:
   - name: Overview
     href: build-your-first-app/build-first-app-overview.md
-  - name: Build and run your first Microsoft Teams app
+  - name: Create your first Microsoft Teams Hello World app
     href: build-your-first-app/build-and-run.md
   - name: Build a personal tab for Microsoft Teams
     href: build-your-first-app/build-personal-tab.md

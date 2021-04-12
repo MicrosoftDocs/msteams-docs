@@ -102,20 +102,25 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
 
    You need a handler to update your app's state with the theme. To create a handler, insert the following theme change handler immediately after the `microsoftTeams.getContext()` call:
 
-   ```JavaScript
-      microsoftTeams.registerOnThemeChangeHandler(theme => {
-        if (theme !== this.state.theme) {
-          this.setState({ theme });  
-        }
-      });
-    ```
+    ```JavaScript
+    microsoftTeams.registerOnThemeChangeHandler(theme => {
+    if (theme !== this.state.context.theme) {
+    this.setState({
+      context: {
+      ...this.state.context,
+      theme
+      }
+      })   
+      }
+    });
+      ```
 1. **Match the theme styles**
    Your theme change handler is in place, however, you still have to respond to changes and align your tab's colors with the current theme.
 
    In the `render()` function, store the state provided by the theme change handler in `isTheme`:
 
   ```JavaScript
-    const isTheme = this.state.theme
+    const isTheme = this.state.context.theme
   ```
   > [!NOTE]
   > This example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
