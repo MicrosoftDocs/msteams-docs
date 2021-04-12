@@ -30,19 +30,19 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Upgrade Microsoft Teams using the Yeoman generator
-    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
+  - name: Overview
+    href: concepts/app-fundamentals-overview.md
   - name: Teams app capabilities
     href: concepts/capabilities-overview.md
   - name: Teams app entry points
     href: concepts/extensibility-points.md
-  - name: Understanding your use cases
+  - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams app capabilities
+  - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
@@ -246,7 +246,7 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Create action commands
+  - name: Action commands
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +254,13 @@
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to action commands
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-  - name: Create search commands
+  - name: Search commands
     items:
     - name: Add a configuration page
       href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
-    - name: Receive and respond to search queries
+    - name: Respond to search commands
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
@@ -350,9 +350,11 @@
     href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Test your app
   items:
+  - name: Overview
+    href: concepts/build-and-test/test-app-overview.md
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
-  - name: Choosing a test setup
+  - name: Choose a test setup
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
