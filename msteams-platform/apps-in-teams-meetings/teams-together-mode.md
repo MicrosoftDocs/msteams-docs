@@ -116,27 +116,9 @@ Assets include PNG images used to create the scene and a scene.json file that ca
 >[!NOTE]
 > Scene package can be used for sharing and allowing other co-creators to continue enhancing the scene. The **Import a scene** option can be used for this purpose.
 
-After you have built a scene using the Scene studio, you can assemble a scene package.
+After you have built a scene using the Scene studio, you can go through the sample JSON.
 
-## Assemble a scene package
-
-A scene package is a collection of images, scene JSON, and all assets. A scene package is used to build the scene. The scene JSON in the scene package indicates the exact position of the seats.
-
-You can ship a scene package that includes the following:
-
-* **Role based scene:** Within a scene package, you can render an experience preview for the users.
-
-    ![Role based scene](../assets/images/apps-in-meetings/role-based-scene.png)
-
-* **In scene configuration:** The JSON package takes a single image with seat assignment. For example, in the following image, the astronaut seat can be applied by default to the organizer through `participantRole` API, but the user can dynamically move the seat around using the class roster:
-
-    ![In scene configuration](../assets/images/apps-in-meetings/in-scene-configuration.png)
-
-* **Moving images:** You can support scenes that are in motion to simulate moving objects. One way of doing that is to support GIF format in Together Mode. Advanced scene rendering is more like a movie being played.
-
-* **Visual no-code designer experience:** Users can build their own filters using Snap's graphical user interface (GUI). It is a challenge to ship a scene generic enough for all users to use it. At present users can create custom scenes that serve the purpose.
-
-### Sample JSON
+## Sample JSON
 
 Scene JSON along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
 
@@ -214,27 +196,7 @@ The seating order can be altered according to the preferred order.
 
 The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required.
 
-Now that you have assembled a scene package, you can create an app package and apply the scene in Teams.
-
-## Create an app package and use the scene in Teams
-
-An app package contains the scene package. App Studio simplifies app packaging.
-
-![App Studio](../assets/images/apps-in-meetings/app-studio.png)
-
-**To create an app package and use the scene in Teams**
-
-1. Go to **Teams**, and select **App Studio**.
-
-2. Create a new app and enter the necessary details in the app details page or select an existing app.
-
-3. In the **Microsoft Teams Developer Center** page, go to **Scenes** under **Configuration** in **Apps**.
-
-4. Select the scene you built and import the app package.
-
-5. Sideload this package in Teams.
-
-Now that you have created an app package and uploaded the scene in Teams, you can activate the Together Mode to engage in scenes.
+Now that you have gone through the sample JSON, you can activate the Together Mode to engage in scenes.
 
 ## Activate the Together Mode
 
