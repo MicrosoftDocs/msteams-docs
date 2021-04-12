@@ -1,6 +1,7 @@
 ---
 title: Optimize your bot with rate limiting in Teams
 description: Rate limiting and best practices in Microsoft Teams
+ms.topic: conceptual
 keywords: teams bots rate limiting
 ms.topic: conceptual
 ---

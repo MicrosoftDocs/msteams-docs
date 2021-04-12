@@ -2,6 +2,7 @@
 title: Troubleshoot your app
 description: Troubleshoot issues or errors while building apps for Microsoft Teams
 keywords: teams apps development troubleshooting
+ms.topic: troubleshooting
 ms.date: 07/09/2018
 ---
 

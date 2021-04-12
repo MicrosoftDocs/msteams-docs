@@ -2,6 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+ms.topic: reference
 ms.date: 03/29/2018
 ---
 

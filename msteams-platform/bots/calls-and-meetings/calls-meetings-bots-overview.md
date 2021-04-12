@@ -1,6 +1,7 @@
 ---
 title: Calls and online meetings bots
 description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings.
+ms.topic: conceptual
 keywords: calling calls audio video IVR voice online meetings
 ms.topic: conceptual
 ---

@@ -1,8 +1,10 @@
 ---
 title: Introducing cards
 description: Describes cards and how they are used in bots, connectors and messaging extensions
+ms.topic: conceptual
 keywords: connectors bots cards messaging
 ---
+
 # Cards
 
 A *card* is a user-interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [Card actions](~/task-modules-and-cards/cards/cards-actions.md).

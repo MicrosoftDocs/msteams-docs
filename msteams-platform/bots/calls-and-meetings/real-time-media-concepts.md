@@ -1,6 +1,7 @@
 ---
 title: Real-time media calls and online meetings with Microsoft Teams
 description: Understand key concepts in building bot that can conduct real-time audio and video calls and online meetings.
+ms.topic: conceptual
 keywords: audio stream video stream audio/video calling meeting real-time media application-hosted media service-hosted media
 ms.topic: conceptual
 ---
