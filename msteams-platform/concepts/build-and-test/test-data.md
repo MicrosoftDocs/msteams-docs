@@ -10,230 +10,244 @@ ms.date: 11/01/2019
 
 With a Microsoft 365 developer subscription, you can use your Microsoft Teams app with test teams, channels, and users.
 
-## Before you start
+## Prerequisites
 
-If you don't already have a test tenant, you will need to join the Office 365 developer program and sign up for a developer subscription. You'll also need to install the necessary PowerShell modules. For whatever tenant you use you'll need to have global administrator permissions to run the scripts.
+1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program), if you do not have a test tenant.
+2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started).
+3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs).
+4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2).
+5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
-1. [Join the Microsoft 365 Developer Program](/office/developer-program/office-365-developer-program)
-2. [Set up a Microsoft 365 Developer Subscription](/office/developer-program/office-365-developer-program-get-started)
-3. [Use sample data packs with your Microsoft 365 developer subscription to install the Users content pack](/office/developer-program/install-sample-packs)
-4. [Install the Teams PowerShell module](https://www.powershellgallery.com/packages/MicrosoftTeams/1.0.2)
-5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true)
+> [!NOTE]
+> For any tenant that you use, you must get the global administrator permissions to run the scripts.
 
-## (Optional) Enable custom app sideloading
+## Enable custom app sideloading
 
-By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
+Enabling custom app sideloading is optional. By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, see [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
 ## Create teams and channels
 
-Save the following snippet as an XML (.xml) and note where you've saved it.  This XML defines the structure of the teams and channels that will be created - along with its members.
+1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
-```xml
-<?xml version="1.0"?>
-<Teams>
-  <Team Name="Store Portal" ID="storeportal" Description="" Type="Private" Creator="admin">
-    <Members>
-      <Member UserName="AlexW" IsOwner="false"/>
-      <Member UserName="PattiF" IsOwner="false"/>
-      <Member UserName="PradeepG" IsOwner="false"/>
-      <Member UserName="JoniS" IsOwner="false"/>
-      <Member UserName="JohannaL" IsOwner="false"/>
-      <Member UserName="NestorW" IsOwner="false"/>
-      <Member UserName="IsaiahL" IsOwner="false"/>
-      <Member UserName="AdeleV" IsOwner="false"/>
-      <Member UserName="LeeG" IsOwner="false"/>
-      <Member UserName="MeganB" IsOwner="true"/>
-      <Member UserName="LynneR" IsOwner="false"/>
-      <Member UserName="GradyA" IsOwner="false"/>
-      <Member UserName="LidiaH" IsOwner="false"/>
-      <Member UserName="DiegoS" IsOwner="false"/>
-      <Member UserName="MiriamG" IsOwner="true"/>
-    </Members>
-    <Channels>
-      <Channel Name="Sales" ID="sales" Description="" Creator="Admin" />
-      <Channel Name="Inventory" ID="inventory" Description="" Creator="Admin" />
-      <Channel Name="Los Angeles Store 239" ID="losangelesstore239" Description="" Creator="Admin" />
-      <Channel Name="Seattle Store 121" ID="seattlestore121" Description="" Creator="Admin" />
-      <Channel Name="Online" ID="online" Description="" Creator="Admin" />
-      <Channel Name="Store Layout" ID="storelayout" Description="" Creator="Admin" />
-      <Channel Name="Promotions" ID="promotions" Description="" Creator="Admin" />
-    </Channels>
-  </Team>
-  <Team Name="Mark 8 Project Team" ID="Mark8ProjectTeam" Description="Welcome to the team that we've assembled to create the Mark 8." Type="Private" Creator="admin">
-    <Members>
-      <Member UserName="meganb" IsOwner="true" />
-      <Member UserName="alexw" IsOwner="false" />
-      <Member UserName="lynner" IsOwner="false" />
-      <Member UserName="isaiahl" IsOwner="false" />
-      <Member UserName="leeg" IsOwner="false" />
-      <Member UserName="pradeepg" IsOwner="false" />
-      <Member UserName="lidiah" IsOwner="false" />
-      <Member UserName="diegos" IsOwner="false" />
-      <Member UserName="johannal" IsOwner="false" />
-      <Member UserName="miriamg" IsOwner="false" />
-      <Member UserName="adelev" IsOwner="false" />
-      <Member UserName="jonis" IsOwner="false" />
-      <Member UserName="nestorw" IsOwner="false" />
-      <Member UserName="gradya" IsOwner="false" />
-      <Member UserName="pattif" IsOwner="false" />
-    </Members>
-    <Channels>
-      <Channel Name="Research and Development" ID="researchanddevelopment" Description="Channel for Research and Development!" Creator="meganb" />
-      <Channel Name="Design" ID="design" Description="Discuss design projects." Creator="meganb" />
-      <Channel Name="Digital Assets Web" ID="digitalassetsweb" Description="Discuss digital assets." Creator="meganb" />
-      <Channel Name="Go to Market Plan" ID="gotomarketplan" Description="Our go-to-market plan!" Creator="meganb" />
-    </Channels>
-  </Team>
-  <Team Name="District 9 Road Safety Audit" ID="district9roadsafetyaudit" Description="" Type="Private" Creator="admin">
-    <Members>
-      <Member UserName="meganb" IsOwner="true" />
-      <Member UserName="alexw" IsOwner="false" />
-      <Member UserName="lynner" IsOwner="false" />
-      <Member UserName="isaiahl" IsOwner="false" />
-      <Member UserName="leeg" IsOwner="false" />
-      <Member UserName="pradeepg" IsOwner="false" />
-      <Member UserName="lidiah" IsOwner="false" />
-      <Member UserName="diegos" IsOwner="false" />
-      <Member UserName="johannal" IsOwner="false" />
-      <Member UserName="miriamg" IsOwner="false" />
-      <Member UserName="adelev" IsOwner="false" />
-      <Member UserName="jonis" IsOwner="false" />
-      <Member UserName="nestorw" IsOwner="false" />
-      <Member UserName="gradya" IsOwner="false" />
-      <Member UserName="pattif" IsOwner="false" />
-    </Members>
-    <Channels>
-      <Channel Name="Audit Planning" ID="auditplanning" Description="" Creator="Admin" />
-      <Channel Name="Delivery" ID="delivery" Description="" Creator="Admin" />
-      <Channel Name="Findings" ID="findings" Description="" Creator="Admin" />
-      <Channel Name="Recommended Actions" ID="recommendedactions" Description="" Creator="Admin" />
-      <Channel Name="Survey" ID="survey" Description="" Creator="Admin" />
-    </Channels>
-  </Team>
-  <Team Name="ACC-1000 Product Team" ID="acc1000productteam" Description="" Type="Private" Creator="admin" >
-    <Members>
-      <Member UserName="meganb" IsOwner="true" />
-      <Member UserName="alexw" IsOwner="false" />
-      <Member UserName="lynner" IsOwner="false" />
-      <Member UserName="isaiahl" IsOwner="false" />
-      <Member UserName="leeg" IsOwner="false" />
-      <Member UserName="pradeepg" IsOwner="false" />
-      <Member UserName="lidiah" IsOwner="false" />
-      <Member UserName="diegos" IsOwner="false" />
-      <Member UserName="johannal" IsOwner="false" />
-      <Member UserName="miriamg" IsOwner="false" />
-      <Member UserName="adelev" IsOwner="false" />
-      <Member UserName="jonis" IsOwner="false" />
-      <Member UserName="nestorw" IsOwner="false" />
-      <Member UserName="gradya" IsOwner="false" />
-      <Member UserName="pattif" IsOwner="false" />
-    </Members>
-    <Channels>
-      <Channel Name="Corporate Communication" ID="corporatecommunication" Description="" Creator="Admin" />
-      <Channel Name="Lean Process Improvement" ID="corporatecommunication" Description="" Creator="Admin" />
-      <Channel Name="Training and Certification" ID="trainingandcertification" Description="" Creator="Admin" />
-      <Channel Name="Production" ID="production" Description="" Creator="Admin" />
-      <Channel Name="Research and Development" ID="researchanddevelopment" Description="" Creator="Admin" />
-      <Channel Name="Supplier Collaboration" ID="suppliercollaboration" Description="" Creator="Admin" />
-    </Channels>
-  </Team>
-</Teams>
-```
+    ```xml
+    <?xml version="1.0"?>
+    <Teams>
+      <Team Name="Store Portal" ID="storeportal" Description="" Type="Private" Creator="admin">
+        <Members>
+          <Member UserName="AlexW" IsOwner="false"/>
+          <Member UserName="PattiF" IsOwner="false"/>
+          <Member UserName="PradeepG" IsOwner="false"/>
+          <Member UserName="JoniS" IsOwner="false"/>
+          <Member UserName="JohannaL" IsOwner="false"/>
+          <Member UserName="NestorW" IsOwner="false"/>
+          <Member UserName="IsaiahL" IsOwner="false"/>
+          <Member UserName="AdeleV" IsOwner="false"/>
+          <Member UserName="LeeG" IsOwner="false"/>
+          <Member UserName="MeganB" IsOwner="true"/>
+          <Member UserName="LynneR" IsOwner="false"/>
+          <Member UserName="GradyA" IsOwner="false"/>
+          <Member UserName="LidiaH" IsOwner="false"/>
+          <Member UserName="DiegoS" IsOwner="false"/>
+          <Member UserName="MiriamG" IsOwner="true"/>
+        </Members>
+        <Channels>
+          <Channel Name="Sales" ID="sales" Description="" Creator="Admin" />
+          <Channel Name="Inventory" ID="inventory" Description="" Creator="Admin" />
+          <Channel Name="Los Angeles Store 239" ID="losangelesstore239" Description="" Creator="Admin" />
+          <Channel Name="Seattle Store 121" ID="seattlestore121" Description="" Creator="Admin" />
+          <Channel Name="Online" ID="online" Description="" Creator="Admin" />
+          <Channel Name="Store Layout" ID="storelayout" Description="" Creator="Admin" />
+          <Channel Name="Promotions" ID="promotions" Description="" Creator="Admin" />
+        </Channels>
+      </Team>
+      <Team Name="Mark 8 Project Team" ID="Mark8ProjectTeam" Description="Welcome to the team that we've assembled to create the Mark 8." Type="Private" Creator="admin">
+        <Members>
+          <Member UserName="meganb" IsOwner="true" />
+          <Member UserName="alexw" IsOwner="false" />
+          <Member UserName="lynner" IsOwner="false" />
+          <Member UserName="isaiahl" IsOwner="false" />
+          <Member UserName="leeg" IsOwner="false" />
+          <Member UserName="pradeepg" IsOwner="false" />
+          <Member UserName="lidiah" IsOwner="false" />
+          <Member UserName="diegos" IsOwner="false" />
+          <Member UserName="johannal" IsOwner="false" />
+          <Member UserName="miriamg" IsOwner="false" />
+          <Member UserName="adelev" IsOwner="false" />
+          <Member UserName="jonis" IsOwner="false" />
+          <Member UserName="nestorw" IsOwner="false" />
+          <Member UserName="gradya" IsOwner="false" />
+          <Member UserName="pattif" IsOwner="false" />
+        </Members>
+        <Channels>
+          <Channel Name="Research and Development" ID="researchanddevelopment" Description="Channel for Research and Development!" Creator="meganb" />
+          <Channel Name="Design" ID="design" Description="Discuss design projects." Creator="meganb" />
+          <Channel Name="Digital Assets Web" ID="digitalassetsweb" Description="Discuss digital assets." Creator="meganb" />
+          <Channel Name="Go to Market Plan" ID="gotomarketplan" Description="Our go-to-market plan!" Creator="meganb" />
+        </Channels>
+      </Team>
+      <Team Name="District 9 Road Safety Audit" ID="district9roadsafetyaudit" Description="" Type="Private" Creator="admin">
+        <Members>
+          <Member UserName="meganb" IsOwner="true" />
+          <Member UserName="alexw" IsOwner="false" />
+          <Member UserName="lynner" IsOwner="false" />
+          <Member UserName="isaiahl" IsOwner="false" />
+          <Member UserName="leeg" IsOwner="false" />
+          <Member UserName="pradeepg" IsOwner="false" />
+          <Member UserName="lidiah" IsOwner="false" />
+          <Member UserName="diegos" IsOwner="false" />
+          <Member UserName="johannal" IsOwner="false" />
+          <Member UserName="miriamg" IsOwner="false" />
+          <Member UserName="adelev" IsOwner="false" />
+          <Member UserName="jonis" IsOwner="false" />
+          <Member UserName="nestorw" IsOwner="false" />
+          <Member UserName="gradya" IsOwner="false" />
+          <Member UserName="pattif" IsOwner="false" />
+        </Members>
+        <Channels>
+          <Channel Name="Audit Planning" ID="auditplanning" Description="" Creator="Admin" />
+          <Channel Name="Delivery" ID="delivery" Description="" Creator="Admin" />
+          <Channel Name="Findings" ID="findings" Description="" Creator="Admin" />
+          <Channel Name="Recommended Actions" ID="recommendedactions" Description="" Creator="Admin" />
+          <Channel Name="Survey" ID="survey" Description="" Creator="Admin" />
+        </Channels>
+      </Team>
+      <Team Name="ACC-1000 Product Team" ID="acc1000productteam" Description="" Type="Private" Creator="admin" >
+        <Members>
+          <Member UserName="meganb" IsOwner="true" />
+          <Member UserName="alexw" IsOwner="false" />
+          <Member UserName="lynner" IsOwner="false" />
+          <Member UserName="isaiahl" IsOwner="false" />
+          <Member UserName="leeg" IsOwner="false" />
+          <Member UserName="pradeepg" IsOwner="false" />
+          <Member UserName="lidiah" IsOwner="false" />
+          <Member UserName="diegos" IsOwner="false" />
+          <Member UserName="johannal" IsOwner="false" />
+          <Member UserName="miriamg" IsOwner="false" />
+          <Member UserName="adelev" IsOwner="false" />
+          <Member UserName="jonis" IsOwner="false" />
+          <Member UserName="nestorw" IsOwner="false" />
+          <Member UserName="gradya" IsOwner="false" />
+          <Member UserName="pattif" IsOwner="false" />
+        </Members>
+        <Channels>
+          <Channel Name="Corporate Communication" ID="corporatecommunication" Description="" Creator="Admin" />
+          <Channel Name="Lean Process Improvement" ID="corporatecommunication" Description="" Creator="Admin" />
+          <Channel Name="Training and Certification" ID="trainingandcertification" Description="" Creator="Admin" />
+          <Channel Name="Production" ID="production" Description="" Creator="Admin" />
+          <Channel Name="Research and Development" ID="researchanddevelopment" Description="" Creator="Admin" />
+          <Channel Name="Supplier Collaboration" ID="suppliercollaboration" Description="" Creator="Admin" />
+        </Channels>
+      </Team>
+    </Teams>
+    ```
 
-Save the following snippet as a PowerShell script (.ps1) and note where you've saved it.  This script executes the steps to create the teams and channels and add members to them.
+2. Save the following snippet as a PowerShell script (.ps1) and note where you have saved it. This script executes the steps to create the team and channel, and add members to them:
 
-```powershell
-Param(
-    [Parameter(Mandatory = $true)]
-    
-    # This specifies the location of your configuration XML.
-    
-    [string] $teamsFilePath 
-)
-    
-[xml]$XmlDocument = Get-Content -Path $teamsFilePath.ToString()
+    ```powershell
+    Param(
+        [Parameter(Mandatory = $true)]
 
-if ($XmlDocument.Teams.Team.Count -gt 0) {
+        # This specifies the location of your configuration XML.
 
-    try {
-        
-        # 1. Login with the global administrator account for your O365 Developer Program tenant.  This script will then use these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
-        
-        $creds = Get-Credential
+        [string] $teamsFilePath 
+    )
 
-        # Connecting to AAD PowerShell
-        Connect-AzureAD -Credential $creds | Out-Null
+    [xml]$XmlDocument = Get-Content -Path $teamsFilePath.ToString()
 
-        # Connect to Microsoft Teams PowerShell
-        Connect-MicrosoftTeams -Credential $creds | Out-Null
+    if ($XmlDocument.Teams.Team.Count -gt 0) {
 
-        Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
+        try {
 
-        # 2. Create the teams as specified in the XML.
-        
-        foreach ($team in $XmlDocument.Teams.Team ) {
-            try {
-                $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
-                Write-Host "Successfully created team: " $group.DisplayName
-            }
-            catch {
-                Write-Host "Unable to create team: $_"
-            }
-                
-            # 3. Add users to the newly created teams.
-            foreach ($user in $team.Members.Member) {
+            # 1. Login with the global administrator account for your O365 Developer Program tenant. This script uses these credentials to connect to the powershell modules for Azure Active Directory and Microsoft Teams
+
+            $creds = Get-Credential
+
+            # Connecting to AAD PowerShell
+            Connect-AzureAD -Credential $creds | Out-Null
+
+            # Connect to Microsoft Teams PowerShell
+            Connect-MicrosoftTeams -Credential $creds | Out-Null
+
+            Write-Host "Connected to Microsoft 365 and configuring your organization with test teams and channels"
+
+            # 2. Create the teams as specified in the XML.
+
+            foreach ($team in $XmlDocument.Teams.Team ) {
                 try {
-                    $newUserPrincipalName = (Get-AzureADUser -SearchString $user.UserName).UserPrincipalName
+                    $group = New-Team -DisplayName $team.Name -Description $teams.description -visibility public 
+                    Write-Host "Successfully created team: " $group.DisplayName
+                }
+                catch {
+                    Write-Host "Unable to create team: $_"
+                }
 
-                    if($user.IsOwner -eq $true){
-                        Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName -Role Owner | Out-Null
-                    }else{
-                        Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName | Out-Null
+                # 3. Add users to the newly created teams.
+                foreach ($user in $team.Members.Member) {
+                    try {
+                        $newUserPrincipalName = (Get-AzureADUser -SearchString $user.UserName).UserPrincipalName
+
+                        if($user.IsOwner -eq $true){
+                            Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName -Role Owner | Out-Null
+                        }else{
+                            Add-TeamUser -GroupId $group.GroupId -User $newUserPrincipalName | Out-Null
+                        }
+
+                        Write-Host "Successfully added user : " $user.UserName
+                    }
+                    catch {
+                        Write-Host "Unable to add team user: $_"
                     }
 
-                    Write-Host "Successfully added user : " $user.UserName
-                }
-                catch {
-                    Write-Host "Unable to add team user: $_"
                 }
 
+                # 4. Add a set of channels to each newly created team
+                foreach ($channel in $team.Channels.Channel) {
+                    try {
+                        # Adding each team channel
+                        New-TeamChannel -GroupId $group.GroupId -DisplayName $channel.Name -Description $channel.Description | Out-Null
+                        Write-Host "Successfully created channel: " $channel.Name
+                    }
+                    catch {
+                        Write-Host "Unable to add new Team Channel: $_"
+                    }   
+                }
+
+                Clear-Variable -Name group
             }
 
-            # 4. Add a set of channels to each newly created team
-            foreach ($channel in $team.Channels.Channel) {
-                try {
-                    # Adding each team channel
-                    New-TeamChannel -GroupId $group.GroupId -DisplayName $channel.Name -Description $channel.Description | Out-Null
-                    Write-Host "Successfully created channel: " $channel.Name
-                }
-                catch {
-                    Write-Host "Unable to add new Team Channel: $_"
-                }   
-            }
+            Clear-Variable -Name creds
 
-            Clear-Variable -Name group
+            # 5. Disconnect from all PowerShell sessions
+
+            Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
+            Disconnect-MicrosoftTeams
+            Disconnect-AzureAD
         }
-
-        Clear-Variable -Name creds
-        
-        # 5. Disconnect from all PowerShell sessions
-        
-        Write-Host "Completed execution and disconnecting from Microsoft 365 PowerShell sessions."
-        Disconnect-MicrosoftTeams
-        Disconnect-AzureAD
+        catch {
+            Write-Host "Unable to complete the operation: $_"
+        }
     }
-    catch {
-        Write-Host "Unable to complete the operation: $_"
+    else {
+        Write-Host "Content file has invalid data."
     }
-}
-else {
-    Write-Host "Content file has invalid data."
-}
-```
+    ```
 
-Open a Windows PowerShell session in Administrator mode.  Run the script that you just saved.  You'll be prompted to provide the credentials - use the Global Administrator credentials you received when you first signed up for your developer subscription.
+3. Open a Windows PowerShell session in Administrator mode, and run the script that you just saved.
+4. When you are prompted to provide the credentials, enter the Global Administrator credentials you received when you first signed up for your developer subscription.
 
-> [!Note]
-> The script will take several minutes to execute - do not close your PowerShell session.  If you've modified the users in your subscription from what is created in the default content pack, some users may not be added to teams.  As the script executes it will output successful or failed actions.
+    > [!Note]
+    > Do not close your PowerShell session as the script takes several minutes to execute. If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams. As the script executes it displays successful or failed actions.
 
-Once the script has finished execution, you can login to the Teams client with one of the user accounts and view the newly created teams.
+5. After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Debug your tab](~/tabs/how-to/developer-tools.md)
+ 
+> [!div class="nextstepaction"]
+> [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
+
+> [!div class="nextstepaction"]
+> [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
+

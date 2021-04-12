@@ -272,7 +272,11 @@ The following schema sample shows all extensibility options.
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -653,5 +657,5 @@ Define the properties your app uses to post a user activity feed.
 ```
 
 ***
->
->
+
+
