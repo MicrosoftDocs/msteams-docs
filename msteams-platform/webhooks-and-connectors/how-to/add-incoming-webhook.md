@@ -29,12 +29,14 @@ ms.author: lajanuar
 > [!Note]
 > Teams bots, messaging extensions, incoming webhooks, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not currently support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 
+> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg&t=204s]
+
 ## Add an incoming webhook to a Teams channel
 
 > [!Important]  
-> If your team's **Settings** => **Member permissions** => **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
+> If your team's **Settings** > **Member permissions** => **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
 
-1. Navigate to the channel where you want to add the webhook and select (&#8226;&#8226;&#8226;) *More Options* from the top navigation bar.
+1. Navigate to the channel where you want to add the webhook and select (&#8226;&#8226;&#8226;) **More Options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu and search for **Incoming Webhook**.
 1. Select the **Configure** button, provide a name, and, optionally, upload an image avatar for your webhook.
 1. The dialog window will present a unique URL that will map to the channel. Make sure that you **copy and save the URL**—you will need to provide it to the outside service.

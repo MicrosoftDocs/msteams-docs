@@ -32,3 +32,6 @@ See [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-w
 Office 365 Connectors help you to create a custom configuration page for your incoming webhook and package them as part of a Teams app. You can then distribute that app more broadly or even to our app store. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them as well. A good example of this is a weather connector, where users can choose a location and time of day to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
 
 See [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
+
+Webhook and connectors
+> [!VIDEO https://www.youtube-nocookie.com/embed/EqodWkS5PYM]
