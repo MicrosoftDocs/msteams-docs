@@ -1,6 +1,7 @@
 ---
 title: Registering a calling and meeting bot for Microsoft Teams
 description: Learn how to register a new audio/video calling bot for Microsoft Teams
+ms.topic: conceptual
 keywords: calling bot audio/video audio video media
 ---
 # Register a calling bot for Microsoft Teams
