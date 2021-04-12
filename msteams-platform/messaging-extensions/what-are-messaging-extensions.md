@@ -60,7 +60,7 @@ The following images display link unfurling feature when a link is pasted in mes
  
 ![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
 
-![link unfurling](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-link-unfurling-reddit/csharp/doc/images/Preview.gif)
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
 
 ## See also
