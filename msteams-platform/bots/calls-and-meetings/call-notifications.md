@@ -4,7 +4,6 @@ description: Detailed technical information on handling notifications from incom
 ms.topic: conceptual
 keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
-ms.topic: conceptual
 ---
 
 # Incoming call notifications
