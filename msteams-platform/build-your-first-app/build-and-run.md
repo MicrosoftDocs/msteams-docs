@@ -12,7 +12,7 @@ This tutorial teaches you to build and run your first Microsoft Teams app. You w
 
 ## Prerequisites
 
-Ensure that you have [set up your Teams development tenant](#set-up-your-Teams-development-tenant) and have [installed your Teams development tools](#install-your-development-tools).
+Ensure that you have [set up your Teams development tenant](#Set-up-your-Teams-development-tenant) and have [installed your Teams development tools](#install-your-development-tools).
 
 ### Set up your Teams development tenant
 

@@ -30,13 +30,13 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 * **Bot** that's automatically registered with the Microsoft Azure Bot Service
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="Screenshot showing how to create an app in the Teams Toolkit.":::
+    :::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="Screenshot showing how to create an app in the Teams Toolkit.":::
 1. When prompted, sign in with your Microsoft 365 development account. 
 1. On the Select project screen, select Conversation bots: 
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="Screenshot showing how to create a new bot in the Teams Toolkit.":::
+    :::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="Screenshot showing how to create a new bot in the Teams Toolkit.":::
 1. In the **Configure project** screen, enter a name for your bot. This is the default name for your app and also the name of the app project directory on your local machine.
 1. Select **Create a new Bot** then click **Create Bot Registration** button:
-    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="Screenshot showing naming new bot in the Teams Toolkit.":::
+    :::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="Screenshot showing naming new bot in the Teams Toolkit.":::
     If successful, your new bot will have a **Registered** status. Now your bot is automatically registered with the Microsoft Azure Bot Service. 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-04.png" alt-text="Screenshot showing registering new bot in the Teams Toolkit.":::
 1. Select **Finish** at the bottom of the screen and save your project on your machine.  
