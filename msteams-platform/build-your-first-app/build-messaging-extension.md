@@ -20,11 +20,11 @@ This tutorial teaches you to create a *search command* (also known as a *search-
 * Configure the bot for your messaging extension.
 * Sideload and test a messaging extension in Teams.
 
-## Before you begin
 
-If you haven't yet, make sure you [understand and install the Teams development prerequisites](build-first-app-overview.md#get-prerequisites).
+## Prerequisites
 
-You need know how to set up and build Teams app. If you haven’t, please complete the ["Hello, world"](../build-your-first-app/build-and-run.md) first, then try [building a bot](../build-your-first-app/build-bot.md) before proceeding this tutorial.  
+Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Create your first Microsoft Teams Hello World app](../build-your-first-app/build-and-run.md).
+
 
 ## 1. Create your app project
 
@@ -55,7 +55,7 @@ For testing purposes, let's host your messaging extension on a local web server 
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
 1. Copy the HTTPS URL in the output (for example, `https://468b9ab725e9.ngrok.io`) since Teams requires HTTPS connections.
 
-    With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
+   With this URL, Teams (which requires HTTPS connections) will be able tunnel to where you're hosting your app (`localhost` on port 3978).
 
 ## 4. Configure the bot for your messaging extension
 
@@ -67,7 +67,7 @@ You still must specify a bot endpoint URL to receive and process search queries 
 1. Go to **Bots > Existing bot registrations** and select the bot you created during setup.
 1. In the **Bot endpoint address** field, enter the ngrok URL (for example, `https://468b9ab725e9.ngrok.io`) where you're hosting the bot and append `/api/messages` to it.
 
-    Your bot will be able to handle queries in your messaging extension.
+   Your bot will be able to handle queries in your messaging extension.
 
 ## 5. Build and run your app
 
