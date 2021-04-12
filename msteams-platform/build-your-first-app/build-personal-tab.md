@@ -122,6 +122,7 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
   ```JavaScript
     const isTheme = this.state.context.theme
   ```
+  
   > [!NOTE]
   > This example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
 
