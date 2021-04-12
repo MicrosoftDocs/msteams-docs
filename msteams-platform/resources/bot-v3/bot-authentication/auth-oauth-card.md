@@ -1,6 +1,7 @@
 ---
 title: Using Azure Bot Service for Authentication in Teams
 description: Describes the Azure Bot Service OAuthCard and how it is used for authentication
+ms.topic: conceptual
 keywords: teams authentication OAuthCard OAuth card Azure Bot Service
 ---
 # Using Azure Bot Service for Authentication in Teams
