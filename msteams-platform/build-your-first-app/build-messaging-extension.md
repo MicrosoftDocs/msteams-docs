@@ -15,16 +15,14 @@ This tutorial teaches you to create a *search command* (also known as a *search-
 **This tutorial teaches you to:**
 
 * Create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code.
-* Understand the app configurations and some of the scaffolding relevant to messaging extensions.
+* Understand the app configurations and the scaffolding relevant to messaging extensions.
 * Host an app locally.
 * Configure the bot for your messaging extension.
 * Sideload and test a messaging extension in Teams.
 
-
 ## Prerequisites
 
 Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Create your first Microsoft Teams Hello World app](../build-your-first-app/build-and-run.md).
-
 
 ## 1. Create your app project
 
@@ -77,9 +75,9 @@ You've set up a URL to host your messaging extension and configured it to handle
 1. Run `npm install`.
 1. Run `npm start`.
 
-    If successful, you see the following message indicating your messaging extension service is listening for activity at your `localhost`:
+   If successful, you see the following message indicating your messaging extension service is listening for activity at your `localhost`:
 
-    `Bot/ME service listening at http://localhost:3978`
+   `Bot/ME service listening at http://localhost:3978`
 
 ## 6. Sideload your messaging extension in Teams
 
@@ -121,7 +119,8 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 
 ## Next steps
 
-See the following pages to continue and build a fully featured messaging extension:
+> [!div class="nextstepaction"]
+> [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md)
 
-1. [Define search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) that are relevant to your service.
-1. Configure your service to [respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md).
+> [!div class="nextstepaction"]
+> [Respond to users' searches](../messaging-extensions/how-to/search-commands/respond-to-search.md)

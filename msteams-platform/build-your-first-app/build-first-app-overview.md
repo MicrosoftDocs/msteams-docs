@@ -12,9 +12,7 @@ The Get Started tutorial teaches you to create basic Teams apps. It contains a s
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/jugBQqE_2sM]
 
-## What you'll learn
-
-Here's an idea of what you'll know after going through the lessons:
+**This tutorial teaches you to:**
 
 * Get up and running quickly with the Teams Toolkit (a Visual Studio Code extension) 
 * Configure your app with App Studio 
@@ -67,16 +65,13 @@ You will only install an app package that contains a configuration file called m
 * [Microsoft Bot Framework](https://dev.botframework.com/)
 * [Create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md)
 
-## Next lesson
-
-Now, let's set up your development environment and start building!
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md)
 
-Or try building a bot or a messaging extention.
-
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/build-bot.md)
+
 > [!div class="nextstepaction"]
-> [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)
+> [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)

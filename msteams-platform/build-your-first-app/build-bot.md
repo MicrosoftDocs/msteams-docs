@@ -13,7 +13,7 @@ This tutorial teaches you to build a basic bot app. A bot acts as an intermediar
 **This tutorial teaches you to:**
 
 * Create an app project and bot using the Microsoft Teams Toolkit for Visual Studio Code.
-* Configure a bot for Teams.
+* Understand the Configurations relavant to bot for Teams.
 * Host and run an app locally using a localhost tunneling solution.
 * Sideload and test a bot in Teams.
 
@@ -65,23 +65,22 @@ server.post('/api/messages', (req, res) => {
 
 To forward the requests to your bot's logic, you must set up a publicly accessible URL, such as `https://example.com/api/messages`, instead of `https://localhost`.  Because your app is running from your localhost currently, you will need to **tunnel** the network.
 
-> 📝 _**What is tunneling?**_— tunneling is a protocol that allows you to transport data across a network. And localhost tunneling gives you a connection between your local machine and a remote connection. To securely expose your localhost to the internet, we recommend you to use the 3rd party tool called, **ngrok**. This will give you a secure URL. 
+Tunneling is a protocol that allows you to transport data across a network. And localhost tunneling gives you a connection between your local machine and a remote connection. To securely expose your localhost to the internet, we recommend you to use the 3rd party tool called, **ngrok**. This will give you a secure URL. 
 
 1. Go to [ngrok.com](https://ngrok.com/download) site to install and set up ngrok on your environment. 
-1. Once you have finished setting it up, host your app on a local web server at port 3978.
+1. After you have finished setting it up, host your app on a local web server at port 3978.
 1. Open terminal and run `ngrok http -host-header=rewrite 3978`.  
 
     Now ngrok provides you a public, secure URL that forwards to your localhost at port 3978, so copy the HTTPS URL, for example, `https://287a4f4223bc.ngrok.io` as shown in the screenshot below, since Teams requires HTTPS connections: 
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-ngrok-06.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
-
 1. Register the URL in your app manifest in the next step. 
 
-## 4. Register bot endpoint
+## 4. Register your bot endpoint
 
 To use a bot in Teams, you must register it with the Azure Bot Service. This is done automatically when you set up your app using the Teams Toolkit.
 
-You must still specify an endpoint address to receive and process user messages (i.e., requests) sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the toolkit.
+You must still specify an endpoint address to receive and process user messages, or requests, sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the toolkit.
 
 1. Open **Microsoft Teams Toolkit**.
 1. Select **Bots** > **Existing bot registrations** and select the bot you created during setup. 

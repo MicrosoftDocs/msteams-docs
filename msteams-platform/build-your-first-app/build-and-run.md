@@ -117,7 +117,9 @@ This information is also available in the `README` file of the toolkit.
 ## 4. Sideload your app in Teams
 
 
-Sideloading an app is the process of installing apps on your computer that hasn't gone through the certification process to appear in the Store and to run on a Windows device. The operating system by default blocks you from sideloading apps. You have to enable sideloading of the apps to test your app in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
+Sideloading an app is the process of installing apps on your computer, that hasn't gone through the certification process, to appear in the app store and to run on a Windows device. 
+
+The operating system by default blocks you from sideloading apps. You have to enable sideloading of the apps to test your app in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
 
 * Ensure to have a Teams account and with admin access.
 * Ensure to have a Microsoft 365 development account that allows app sideloading. 
@@ -166,7 +168,7 @@ Sideloading an app is the process of installing apps on your computer that hasn'
 
 ### Troubleshoot App Studio
 
-#### Installation failed
+**Installation failed**
 
 If the following error message appears while installing App Studio, verify that the app information is correctly entered:
 
@@ -178,7 +180,7 @@ If the following error message appears while installing App Studio, verify that 
 * In Microsoft Teams Toolkit, select **App Studio** > **app Details**, and verify that all the required information is correctly entered.
 * If you have manually edited the `manifest.json` file, verify that the JSON is well-defined in **App Manifest** in App Studio.
 
-#### Tab content not displayed
+**Tab content not displayed**
 
 Verify that your web app is running. If the web app is not running, go to the terminal and run **npm start**.
 

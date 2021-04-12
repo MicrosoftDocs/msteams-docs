@@ -162,7 +162,5 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 > [!div class="nextstepaction"]
 > [Build a bot](../build-your-first-app/build-bot.md)
 
-or
-
 > [!div class="nextstepaction"]
-> [Build a messaging extention](../build-your-first-app/build-messaging-extention.md)
+> [Build a messaging extension](../build-your-first-app/build-messaging-extension.md)

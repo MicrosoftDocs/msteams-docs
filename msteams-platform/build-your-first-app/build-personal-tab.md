@@ -12,7 +12,7 @@ This tutorial teaches you to build a basic personal tab in Microsoft Teams. Tabs
 
 **This tutorial teaches you to:**
 
-* Understand some of the app configurations and scaffolding relevant to personal tabs.
+* Understand the app configurations and scaffolding relevant to personal tabs.
 * Create a tab content with a contact list of your organization.
 * Update a tab's color theme based on user preference.
 
@@ -162,8 +162,6 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
 * [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md).
 
 ## Next step
-
-You know how to build a tab for personal use. Let's look at what it takes to build a tab for team channels and chats.
 
 > [!div class="nextstepaction"]
 > [Build a channel tab](../build-your-first-app/build-channel-tab.md)
