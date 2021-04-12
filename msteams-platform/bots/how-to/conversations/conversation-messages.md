@@ -107,7 +107,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Send a message
 
-To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once. 
+To send a text message, specify the string you want to send as the activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses at once.
 
 The following code shows an example of sending a message when a user is added to a conversation:
 
@@ -346,11 +346,11 @@ Specify the height and width of each image by using XML. In markdown, the image 
 * Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Do not use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive cards offer rich customizable text, speech, images, buttons, and input fields.
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
 
 ## Adaptive Cards
 
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [adaptive cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 The following code shows an example of sending a simple Adaptive Card:
 
