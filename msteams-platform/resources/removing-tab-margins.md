@@ -14,10 +14,13 @@ Removing the margins around all tabs will allow developers to build apps that lo
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
 
+> [!NOTE]
+> This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients do not have margins. 
+
 ## Timelines
 
 * March 5, 2021 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-* May 1, 2021 - Margins will be removed in production.
+* June 15, 2021 - Margins will be removed in production.
 
 ## Guidelines
 

@@ -539,6 +539,10 @@
       {
         "source_path": "msteams-platform/moodleinstructions.md",
         "redirect_url": "/microsoftteams/platform/resources/moodleinstructions"
+      },
+      {
+        "source_path": "msteams-platform/concepts/build-and-test/app-studio-controls.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-ui-templates"
       }
     ]
 }
