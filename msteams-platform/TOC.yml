@@ -388,6 +388,8 @@
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: Submit your app
       href: https://docs.microsoft.com/office/dev/store/add-in-submission-guide
+    - name: Resolve submission issues
+      href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
 - name: Resources
