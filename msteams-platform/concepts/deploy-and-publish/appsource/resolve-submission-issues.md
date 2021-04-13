@@ -65,3 +65,8 @@ No. The validation process doesn't begin until you submit your app for the first
 ### I received an email from Partner Center saying my app was approved to publish. Why isn't my app in the Teams store?
 
 Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app hasn't published after two business days, contact *teamsubm@microsoft.com*.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

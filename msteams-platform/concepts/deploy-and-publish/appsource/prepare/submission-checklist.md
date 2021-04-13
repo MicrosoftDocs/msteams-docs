@@ -11,16 +11,16 @@ You've designed, built, and tested your Microsoft Teams app. Now you're ready to
 
 Before you submit your app to [Partner Center](/office/dev/store/use-partner-center-to-submit-to-appsource), make sure you've done the following.
 
-## Validate your app manifest
+## Validate your app package
 
-While your app may be working in a test environment, you should check your app manifest again to avoid running into issues during the submission process.
+While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams App Validator tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your manifest against the same test cases used during store validation.
+The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
-1. Go to the [Microsoft Teams App Validator tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
-1. Upload your manifest to run the automated tests.
+1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
+1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the list of test cases that are difficult to automate.
-1. If present, [fix issues with your manifest](~/resources/schema/manifest-schema.md) or app in general.
+1. If present, [fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general.
 
 ## Create notes for testing your app
 
@@ -47,7 +47,7 @@ You can provide a recording of the product so we can fully understand its functi
 
 ## Create a Partner Center account
 
-To publish your app to the Teams store and AppSource, you must [set up your Partner Center account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
+To publish your app to the Teams store, you must [set up your Partner Center account](https://docs.microsoft.com/office/dev/store/open-a-developer-account).
 
 ### Partner Center app category mapping
 
