@@ -5,20 +5,17 @@ ms.topic: conceptual
 ---
 
 ## Up to date views
-Up to ate views are now powered with a combination of Universal bots and bot fanouts in Teams.
+Up to date views are now powered with a combination of Universal bots and bot fanouts in Teams.
 
-Example: A user creates a poll in a Teams conversation. 
+Example: A user creates a approval request in Teams conversation. Shiladitya creates an approval request and assigns the same to Sowrabh and Dipesh. 
 
 Part 1: Now role based views can be leveraged by using refresh property of the adaptive cards.
-Using role based views one can show base poll card (with question, options, submit vote button) and show summary card to different users depending on their role.
+Using role based views one can show a card with Approve/Reject buttons to a set of users, and show a card without Approve/Reject buttons to other users depending on their role.
 
-Part 2: To keep the summary view updated an all times, bot fanout mechanism can be leveraged.
-Each time there is vote from an user, bot can trigger a fanout to all users. This bot fanout would trigger an automatic refresh request for all users, to which the bot can respond with the latest updated role based card.
+Part 2: To keep the card state updated an all times, bot fanout mechanism can be leveraged.
+example: Each time there is an approval, bot can trigger a fanout to all users. This bot fanout would trigger an invoke request for all automatic refresh users, to which the bot can respond with the latest updated role based card.
 
-Role 1: Poll base card - Shown to users who have not responded to the poll or users who have voted but are not part of the userIds property in adaptive card json.
-Role 2: Summary card - Shown to users who have voted and are in userIds property in the adaptive card json.
-
-**Sample Poll base card JSON**
+**Sample approval base card JSON**
 ```
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -28,47 +25,187 @@ Role 2: Summary card - Shown to users who have voted and are in userIds property
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedViewCardRefresh"
+      "verb": "roleBasedView"
     },
-    "userIds": ["userId1", "userId2", "userId3", "userId4", "userId5"]
+    "userIds": ["<Sowrabh's user mri>", <Dipesh's user mri>]
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Poll 1234"
+      "text": "Asset Request 1234"
     },
     {
-      "type": "Input.ChoiceSet",
-      "id": "choice",
-      "style": "expanded",
-      "isMultiSelect": false,
-      "label": "What is your favorite color",
-      "choices": [
-        {
-          "title": "Red",
-          "value": "1"
-        },
-        {
-          "title": "Blue",
-          "value": "2"
-        }
-      ]
+      "type": "TextBlock",
+      "text": "Submitted by **Shiladitya**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approval pending from **Sowrabh and Dipesh**"
+    }
+  ]
+}
+```
+
+**Sample approval card JSON with approve, reject buttons**
+```
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "refresh": {
+    "action": {
+      "type": "Action.Execute",
+      "title": "Refresh",
+      "verb": "roleBasedView"
+    },
+    "userIds": ["<Dipesh's user mri>", "<Sowrabh's user mri>"]
+  },
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Approval Request 1234"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Submitted by **Shiladitya**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approval pending from **Sowrabh and Dipesh**"
     }
   ],
   "actions": [
     {
       "type": "Action.Execute",
-      "title": "Submit Vote",
-      "verb": "vote",
+      "title": "Approve",
+      "verb": "approve",
       "data": {
-            "poll info": "<poll-info>"
+            "more info": "<more info>"
+      }
+    },
+    {
+      "type": "Action.Execute",
+      "title": "Reject",
+      "verb": "reject",
+      "data": {
+            "more info": "<more info>"
+      }
+    }
+  ]
+}
+```
+Role 1: Approval base card - Shown to users who are not part of approvers list and have not yet approved or rejected the request (not part of userIds list in refresh property of adaptive card json). 
+
+Role 2: Approval card with Approve/Reject buttons - Shown to the users who are part of the approvers list (part of the usersIds list in refresh property of the adaptive card json).
+
+1. Shiladitya raised an asset request in a Teams conversation and assigns it to Sowrabh and Dipesh.
+2. Bot sends the approval base card is sent to the conversation.
+3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Sowrabh and Dipesh who now see the role based vew card with Approve/Reject buttons (Since their user mri's are added to the userIds list in the refresh property of the adaptive card json). 
+
+![Role-based views](~/assets/images/bots/up-to-date-views-stage1.png)
+
+4. Dipesh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
+5. The bot triggers a fanout with an updated card which says Dipesh has approved the request while Sowrabh's approval is pending.
+
+**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `bot fanout` for #4, #5**
+
+```
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "refresh": {
+    "action": {
+      "type": "Action.Execute",
+      "title": "Refresh",
+      "verb": "roleBasedView"
+    },
+    "userIds": ["<Sowrabh's user mri>"]
+  },
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Asset Request 1234"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Submitted by **Shiladitya**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approval pending from **Sowrabh**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approved by **Dipesh**"
+    }
+  ]
+}
+```
+
+6. Bot fanout triggeres an automatic refresh for Sowrabh and sees the updated role based card which says Dipesh has approved the request but also see the Approve/Reject buttons. (Dipesh's user mri is removed from the userIds list in refresh property of this adaptive card json in #4, #5. Now, automatic refresh would only be triggered for Sowrabh)
+
+**Sample adaptive card JSON sent as response of `adaptiveCard/action` invoke through automatic refresh for #6**
+
+```
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.4",
+  "refresh": {
+    "action": {
+      "type": "Action.Execute",
+      "title": "Refresh",
+      "verb": "roleBasedView"
+    },
+    "userIds": ["<Sowrabh's user mri>"]
+  },
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Approval Request 1234"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Submitted by **Shiladitya**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approval pending from **Sowrabh**"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Approved by **Dipesh**"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Execute",
+      "title": "Approve",
+      "verb": "approve",
+      "data": {
+            "more info": "<more info>"
+      }
+    },
+    {
+      "type": "Action.Execute",
+      "title": "Reject",
+      "verb": "reject",
+      "data": {
+            "more info": "<more info>"
       }
     }
   ]
 }
 ```
 
-**Sample Poll summary card JSON**
+![Up to date role based views](~/assets/images/bots/up-to-date-views-stage2.png)
+
+7. Now, Sowrabh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
+8. The bot triggers a fanout with an updated card which says Dipesh and Sowrabh has approved the request.
+
+**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `bot fanout` for #7, #8**
+
 ```
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -78,48 +215,27 @@ Role 2: Summary card - Shown to users who have voted and are in userIds property
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedViewCardRefresh"
+      "verb": "roleBasedView"
     },
-    "userIds": ["userId1", "userId2", "userId3", "userId4", "userId5"]
+    "userIds": []
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Poll 1234"
+      "text": "Asset Request 1234"
     },
     {
       "type": "TextBlock",
-      "text": "Summary View"
+      "text": "Submitted by **Shiladitya**"
     },
     {
       "type": "TextBlock",
-      "text": "Red: 100%"
-    },
-    {
-      "type": "TextBlock",
-      "text": "Blue: 0%"
+      "text": "Approved by **Dipesh and Sowrabh**"
     }
   ]
 }
 ```
 
-1. Poll base card is sent to a conversation.
-2. Automatic refresh would be triggered for all users which are present in userIds property.
-3. Same base card is returned in response of the automatic refresh to all users since no one has voted.
-4. User 1 votes with option 'Red' on the poll.
-5. User 1 gets his role based view card in response, in this case the summary view (Red 100%, Blue 0%).
-6. Bot initiates a fanout to all users with base card. 
-7. Automatic refresh is triggered for all users which are present in userIds property.
-8. User 1 gets the up to date summary card as role based view. User 2, user 3, user 4, user 5 get base card as role based view.
-9. Now, user 2 votes with option 'Blue' on the poll.
-10. User 2 gets his role based view card in response, in this case the summary view (Red 50%, Blue 50%).
-11. Bot initiates a fanout to all users with base card. (User 1 still sees summary view with Red 100%, Blue 0%)
-12. Automatic refresh is triggered for all users which are present in userIds property.
-13. User 1 and user 2 get the up to date summary card as role based view (Red 50%, Blue 50%). User 3, user 4, user 5 get base card as role based view.
-14. Now, user 6 votes with option 'Blue' on the poll.
-15. User 6 gets his role based view card in response, in this case the poll base card. (since user 6 is not part of userIds list)
-16. Bot initiates a fanout to all users with base card. (User 1 and User 2 still sees summary view with Red 50%, Blue 50%)
-17. Automatic refresh is triggered for all users which are present in userIds property. 
-18. User 1 and user 2 get the up to date summary card as role based view (Red 33%, Blue 67%). User 3, user 4, user 5 get base card as role based view.
+9. Bot fanout does not trigger any automatic refresh. (Sowrabh's user mri is also removed from the userIds list in refresh property of this adaptive card json in #7, #8)
 
-Note: When a user votes, bot developer can keep on adding the user's user Id to the userIds property inside the refresh section of the adaptive card json which is sends in response of Action.Execute and then bot fanout (Step #5 and #6, Step #10 and #11, Step #15 and #16). Hence user whose user id is added will trigger automatic refresh request on bot fanout, to which bot can return an up to date summary view. The users who submit vote on the poll hence get poll summary view which remains up to date on every vote.
+![Up to date views](~/assets/images/bots/up-to-date-views-stage3.png)

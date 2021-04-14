@@ -44,17 +44,27 @@ Today every user in the Teams chat or channel sees the exact same view and butto
 
 ![Role-based views](~/assets/images/bots/Rolebasedviews.png)
 
+[Sample for contextual or role based views](~/Role-Based-Views.md)
+
 ### Sequential workflow support
 
 With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. The following images illustrate a food ordering bot example:
 
-<img src="~/assets/images/bots/sequentialworkflowsupport.gif" alt="Sequential workflow" width="400"/>
+<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
+
+[Sample for sequential workflow](~/Sequential-Workflows.md)
 
 ### Up-to-date views
 
 You can create adaptive cards that update automatically, for example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
+
+![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage1.png)
+![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage2.png)
+![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage3.png)
+
+[Sample for up to date eviews](~/Up-To-Date.md)
 
 Now you can understand how adaptive cards can be transformed with the new universal actions for adaptive cards to provide a unique and enhanced user experience.
 
