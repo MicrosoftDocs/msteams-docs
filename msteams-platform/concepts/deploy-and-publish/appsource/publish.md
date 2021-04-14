@@ -9,8 +9,7 @@ ms.author: surbhigupta
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
-Apps published to the Teams store are also automatically listed on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
-
+Apps published to the Teams store also automatically list on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
 
 ## Understand the publishing process
 
