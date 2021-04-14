@@ -67,13 +67,11 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
 
-2. Select **Tools** from the menu, and select **Scene editor** under **Tools** to open the Scene studio.
+2. From the **Scenes Editor** page, select **Create a new scene**.
 
-3. From the **Scenes Editor** page, select **Create a new scene**.
+3. On the right side, in the **Scene Name** box, enter a name for the scene.
 
-4. On the right side, in the **Scene Name** box, enter a name for the scene.
-
-5. Drag and drop the image into the environment as displayed in the following image:
+4. Drag and drop the image into the environment as displayed in the following image:
 
     >[!NOTE]
     > * You can download the Sample Scene.zip and Sample App.zip files with the images from [sample scene and sample app](/apps-in-teams-meetings).
@@ -81,38 +79,38 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-6. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
+5. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-7. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
+6. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
 
-8. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
+7. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
 
     >[!NOTE]
     > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
     > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
 
-9. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+8. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
 
-10. Select **Meeting Organizer** or **Presenter** role for the participant.
+9. Select **Meeting Organizer** or **Presenter** role for the participant.
 
     >[!NOTE]
     > In a meeting, one participant must be assigned the role of a meeting organizer.
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-11. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
+10. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
     
     >[!NOTE]
     > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Dev Center. The scene can then be viewed in the Together Mode scene gallery.
 
-12. After preview, the scene can be shipped as an app to Micrsoft Teams by following the steps for app submission. 
+11. After preview, the scene can be shipped as an app to Micrsoft Teams by following the steps for app submission. 
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
-13. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+12. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     [!NOTE]
     > Scene package comprosies of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
