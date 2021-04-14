@@ -30,7 +30,7 @@ See also: [4.0 App package and store listing](#40-app-package-and-store-listing)
 
 ### 1.2 Suitable for workplace consumption
 
-App content must be suitable for general workplace consumption and abide by all restrictions listed in the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content). Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
+App content must be suitable for general workplace consumption and abide by all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited. For more information, see the [commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies#10010-inappropriate-content).
 
 Your app must facilitate group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. These types of apps also should not require a substantial time investment or perceptively impact productivity.
 
@@ -48,7 +48,7 @@ App feature names in buttons and other UI text must not conflict with terminolog
 
 The [Microsoft 365 App Compliance Program](https://docs.microsoft.com/microsoft-365-app-certification/overview) is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. As a Teams app developer, you must complete the following tiers of the program:
 
-* [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview): Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue "verified" badge displays on the Azure AD consent dialog and other screens. For more information, see the [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified) and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
+* [Publisher Verification](/azure/active-directory/develop/publisher-verification-overview): Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue "verified" badge displays on the Azure AD consent dialog and other screens. For more information, see the [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
 * [Publisher Attestation](/microsoft-365-app-certification/docs/attestation): A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
 > [!NOTE]
@@ -69,7 +69,7 @@ In most cases, you must not include domains outside of your organization's contr
 
 ### 2.4 Authentication
 
-For implementation details, see [authentication in Teams](~/concepts/authentication/authentication.md).
+For information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
 #### 2.4.1 External service experiences
 
@@ -138,9 +138,11 @@ App packages must be correctly formatted and include all required information an
 
 ### 4.1 App manifest
 
-* The app manifest must conform to the [latest manifest schema](~/resources/schema/manifest-schema.md).
-* If your app includes a bot or messaging extension, the manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD ID in the manifest. For more information, see the [manifest schema](~/resources/schema/manifest-schema.md#webapplicationinfo).
+The Teams app manifest defines your app's configurations.
+
+* Your manifest must conform to the latest manifest schema. For information, see the [manifest reference]((~/resources/schema/manifest-schema.md)).
+* If your app includes a bot or messaging extension, your manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
+* If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### 4.2 App icons
 
@@ -151,7 +153,7 @@ Icons are one of the main elements people see when browsing the store. Your icon
 * The outline version of your icon displays when your app is in use and “hoisted” on the app bar on the left of Teams and when a user pins your app's messaging extension. It must be 32x32 pixels and can be white with a transparent background or transparent with a white background (no other colors are permitted). The icon should not have any extra padding around the symbol.
 * Correctly sized and formatted icons must be specified in your app package. The icons must match what's submitted with the store listing metadata.
 
-For more information, best practices, and examples see the Teams app [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
+For more information, best practices, and examples, see the Teams app [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
 ### 4.3 App descriptions
 
@@ -257,14 +259,14 @@ An app's support URLs should not require authentication. For example. users shou
 
 ### 4.8 Localization
 
-App packages must include a file with language translations that display based on the Teams language setting. The file must conform to the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
+App packages must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see the [Teams localization schema](~/concepts/build-and-test/apps-localization.md)
 
 ## 5.0 Tabs
 
 If your app includes a tab, make sure it adheres to these guidelines.
 
 > [!TIP]
-> For information on creating a high-quality experience, see the [tab design guidelines](~/tabs/design/tabs.md).
+> For information on creating a high-quality experience, see the [Teams tab design guidelines](~/tabs/design/tabs.md).
 
 ### 5.1 Setup
 
@@ -310,7 +312,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 If your app includes a bot, make sure it adheres to these guidelines.
 
 > [!TIP]
-> For information on creating a high-quality experience, see the [bot design guidelines](~/bots/design/bots.md).
+> For information on creating a high-quality experience, see the [Teams bot design guidelines](~/bots/design/bots.md).
 
 ### 6.1 Bot commands
 
@@ -357,7 +359,7 @@ See the following resources for more information:
 If your app includes a messaging extension, make sure it adheres to these guidelines.
 
 > [!TIP]
-> For information on creating a high-quality experience, see the [messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
+> For information on creating a high-quality experience, see the [Teams messaging extension design guidelines](~/messaging-extensions/design/messaging-extension-design.md).
 
 ### 7.1 Action commands
 
@@ -380,25 +382,25 @@ Messaging extensions should preview recognized links in the Teams compose box. D
 A task module must include an icon and the short name of the app it's associated with.
 
 > [!TIP]
-> For information on creating a high-quality experience, see the [task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
+> For information on creating a high-quality experience, see the [Teams task module design guidelines](~/task-modules-and-cards/task-modules/design-teams-task-modules.md).
 
 ## 9.0 Meeting extensions
 
 If your app includes a meeting extension, make sure it adheres to these guidelines.
 
 > [!TIP]
-> For information on creating a high-quality experience, see the [meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+> For information on creating a high-quality experience, see the [Teams meeting extension design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### 9.1 Pre- and post-meeting experience
 
-* Pre- and post-meeting screens must adhere to general [tab design guidelines](~/tabs/design/tabs.md).
+* Pre- and post-meeting screens must adhere to general tab design guidelines. For more information, see the [Teams design guidelines](~/tabs/design/tabs.md)
 * Tabs must not have horizontal scrolling.
-* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). [See an example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
+* Tabs should have an organized layout when displaying multiple items (for instance, more than 10 polls or surveys). For more information, [see an example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, "Results successfully downloaded".
 
 ### 9.2 In-meeting experience
 
-* Apps must [only use a dark theme](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming) during meetings.
+* Apps must only use a dark theme during meetings. For more information, see the [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * A tooltip should display the app name when hovering over the app icon during meetings.
 * Messaging extensions must function the same during meetings as they do outside meetings.
 
@@ -419,7 +421,7 @@ If your app includes a meeting extension, make sure it adheres to these guidelin
 
 ## 10.0 Notifications
 
-If your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), make sure it adheres to these guidelines.
+If your app uses the [activity feed APIs provided by Microsoft Graph](https://docs.microsoft.com/graph/teams-send-activityfeednotifications), make sure it adheres to the following guidelines.
 
 ### 10.1 General
 
