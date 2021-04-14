@@ -52,7 +52,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 
 Much of the app configurations and scaffolding are set up automatically when you create your project with the Teams Toolkit. Let's look at the main components for building a bot:
 
-:::image type="content" source="../../assets/images/build-your-first-app/vscode-teams-toolkit-bots-05.png" alt-text="Screenshot showing a project scaffold in the Teams Toolkit.":::
+:::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-05.png" alt-text="Screenshot showing a project scaffold in the Teams Toolkit.":::
 
 The app scaffolding of the bot is different from the tab. Unlike tabs, bot development doesn't require you to build any front-end web components or Teams client SDK.  Instead, it uses [Microsoft Bot Framework](https://dev.botframework.com/), which is an open-source SDK that allows you to build intelligent, enterprise-grade bots, including web and mobile chat bots, and Teams bots! 
 
