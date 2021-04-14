@@ -2,8 +2,8 @@
 title: Get started - Build a bot
 author: girliemac
 description: Quickly create a Microsoft Teams bot using the Microsoft Teams Toolkit.
-ms.author: lajantimurauar
-ms.date: 03/17/2020
+ms.author: timura
+ms.date: 04/14/2020
 ms.topic: tutorial
 ---
 # Build a bot for Microsoft Teams
@@ -74,9 +74,11 @@ To forward the requests to your bot's logic, you must set up a publicly accessib
 
 Tunneling is a protocol that allows you to transport data across a network. And localhost tunneling gives you a connection between your local machine and a remote connection. To securely expose your localhost to the internet, we recommend you to use the 3rd party tool called, **ngrok**. This will give you a secure URL. 
 
-1. Go to [ngrok.com](https://ngrok.com/download) site to install and set up ngrok on your environment. 
-1. After you have finished setting it up, host your app on a local web server at port 3978.
-1. Open terminal and run `ngrok http -host-header=rewrite 3978`.  
+1. Go to [ngrok.com](https://ngrok.com/download) site and follow the instruction to install and set up ngrok on your environment. 
+    
+    You may want to set the PATH environment variable, which is specific to the shell you are using, so that you can use the `ngrok` command from your working directory in the next step. 
+
+1. After you have finished setting it up, open terminal and run `ngrok http -host-header=rewrite 3978`. 
 
     Now ngrok provides you a public, secure URL that forwards to your localhost at port 3978, so copy the HTTPS URL, for example, `https://287a4f4223bc.ngrok.io` as shown in the screenshot below, since Teams requires HTTPS connections: 
 
