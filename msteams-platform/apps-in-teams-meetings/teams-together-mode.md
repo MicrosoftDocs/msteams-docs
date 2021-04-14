@@ -102,20 +102,20 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-11. Hit Save and click on "Preview" to start testing your scenes in Microsoft Teams. 
+11. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
     
     >[!NOTE]
-    > Clicking "Preview" will automatically create a Microsoft Teams app (this can be viewed in the Apps page in the Microsoft Teams Dev Center). The scene can then be viewed in       the Together Mode scene gallery.
-12. After Preview, the scene can be shipped as an app to Micrsoft Teams by following the steps for app submission. 
+    > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Dev Center. The scene can then be viewed in the Together Mode scene gallery.
+
+12. After preview, the scene can be shipped as an app to Micrsoft Teams by following the steps for app submission. 
 
     >[!NOTE]
-    > This step will require the app package (this is different from the scene package, described in the next step) for the scene that was just designed. The app package,             created, automatically can be found in the Apps section in the Microsoft Teams Developer Center. 
+    > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
-13. Optionally, the scene package can be retrieved by selecting the **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+13. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     [!NOTE]
-    > Scene package comprosies of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the          Sample JSON section of this doc.
-
+    > Scene package comprosies of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
 
 ## Sample JSON
 
@@ -203,28 +203,27 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 
 **To choose scenes and activate the Together Mode**
 
-1. Upon clicking Preview in the scene design studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene
+1. On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene.
 
->[!NOTE]
-> This is the model for a developer to test and try out scenes from the Scene Studio. Once a scene is shipped as an app, end-users will see these scenes in the scene gallery as shown in the following steps and they will be able to acquire the scene from the scene gallery itself
+    >[!NOTE]
+    > This is the model for a developer to test and try out scenes from the Scene studio. Once a scene is shipped as an app, users see these scenes in the scene gallery as shown in the following steps and they are able to acquire the scene from the scene gallery itself.
 
-2. From the top left viewing options, select **Together Mode**
+2. From the top left viewing options, select **Together Mode**.
 
-3. Select **Change scene** to change the default scene. 
+3. Select **Change scene** to change the default scene.
 
 4. From the **Scene Gallery**, select the scene you want to use for your meeting.
 
 5. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
 >[!NOTE]
-> At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it will change it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants will have the same scene. 
+> At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
 
 6. Select **Apply**. Teams installs the app for the user and applies the scene.
 
-
 ## Open a Together Mode Scene Package
 
-As developers share the Scene Package (.zip file retrived from the scene studio) to other creators to further enhace, the **Import a Scene** functionality can be leveraged. This tool helps unwrap a scene package to let the creator continue building the scene
+As developers share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene, the **Import a Scene** functionality can be leveraged. This tool helps unwrap a scene package to let the creator continue building the scene.
 
 ![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
 
