@@ -14,7 +14,7 @@ You can distribute your app directly to the store inside Microsoft Teams and rea
 :::row:::
    :::column span="3":::
 
-When your app is production ready, you can begin the process of getting it listed on the Teams store.
+When your app is production ready, you can begin the process of getting it listed on the Teams store. 
 
 > [!TIP]
 > Following the initial steps closely can increase the possibility that your app will be approved.
