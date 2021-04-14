@@ -12,13 +12,6 @@ You can distribute your app directly to the store inside Microsoft Teams and rea
 ## Understand the publishing process
 
 :::row:::
-   :::column span="1":::
-
-<br>
-
-:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
-
-   :::column-end:::
    :::column span="3":::
 
 When your app is production ready, you can begin the process of getting it listed on the Teams store.
@@ -33,6 +26,13 @@ When your app is production ready, you can begin the process of getting it liste
 1. Once published, learn how to [maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
 
 Apps published to the Teams store are also automatically listed on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
+
+   :::column-end:::
+   :::column span="1":::
+
+<br>
+
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
 
    :::column-end:::
 :::row-end:::
