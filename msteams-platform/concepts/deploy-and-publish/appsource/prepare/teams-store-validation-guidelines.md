@@ -140,7 +140,7 @@ App packages must be correctly formatted and include all required information an
 
 The Teams app manifest defines your app's configurations.
 
-* Your manifest must conform to the latest manifest schema. For information, see the [manifest reference]((~/resources/schema/manifest-schema.md)).
+* Your manifest must conform to the latest manifest schema. For information, see the [manifest reference](~/resources/schema/manifest-schema.md).
 * If your app includes a bot or messaging extension, your manifest must be consistent with Bot Framework metadata, including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
