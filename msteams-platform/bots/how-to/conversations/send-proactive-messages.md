@@ -60,7 +60,7 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you'll do so using the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [examples](#examples) section or use one of the samples listed in the [code sample](#code-sample) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, you'll do so using the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message.
 
