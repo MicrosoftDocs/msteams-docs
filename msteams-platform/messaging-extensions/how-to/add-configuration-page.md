@@ -17,6 +17,7 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 |-----------------|-----------------|-------------|--------------|
 | Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
+## Additional code sample
 
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/microsoft/BotBuilder-Samples)

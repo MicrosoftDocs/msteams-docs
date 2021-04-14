@@ -99,9 +99,9 @@ Almost everything in Teams can be linked to directly with a [deep link](../conce
 
 Consider the types of messages your Teams app might send now and in the long term. If you think your app will ever have a multi-threaded conversation, a [bot](../bots/what-are-bots.md) might offer more flexibility than a [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event and not a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.) 
+Bots also allow you to send *proactive messages* to individual users or channels. These are unprompted messages triggered by an outside event and not a message sent to a bot. (For example, your bot can send a welcome message when it's installed or a new user joins a channel.)
 
-Sending proactive messages requires Teams-specific identifiers—you can capture this information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
+Sending proactive messages requires Teams-specific identifiers—you can capture this information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
 
 Be careful not to spam users with excessive messages. If the Teams capability supports it, consider letting users configure notification settings for your app (for example, "Don't send me unprompted messages.").
 

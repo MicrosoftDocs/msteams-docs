@@ -127,10 +127,12 @@ The `ActionCard` action supports three input types:
 
 If you want a multiselect list initially displayed in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
 
+For more information on Connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
+
 > [!NOTE]
 > Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
-
-For all other details about Connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
+> 
+> For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
 
 ## Setting up a custom incoming webhook
 
@@ -300,7 +302,7 @@ Application rate limits control the traffic that a connector or an incoming webh
 
 *See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
