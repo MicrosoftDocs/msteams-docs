@@ -1315,9 +1315,6 @@ turnContext, CancellationToken cancellationToken) {
 }
 ```
 
-# [TypeScript](#tab/typescript)
-
-
 # [JSON](#tab/json)
 
 ```json
@@ -1372,10 +1369,6 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-
-#[Python](#tab/python)
-
-
 * * *
 
 ## Code sample
