@@ -1055,8 +1055,8 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| messageReaction | reactionsAdded   | [Reactions to a bot message](#reactions-added-to-bot-message)           | All   |
-| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message) | All |
+| messageReaction | reactionsAdded   | [Reactions added to bot message](#reactions-added-to-bot-message).           | All   |
+| messageReaction | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All |
 
 ### Reactions added to bot message
 
@@ -1315,6 +1315,9 @@ turnContext, CancellationToken cancellationToken) {
 }
 ```
 
+# [TypeScript](#tab/typescript)
+
+
 # [JSON](#tab/json)
 
 ```json
@@ -1369,6 +1372,10 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
+
+#[Python](#tab/python)
+
+
 * * *
 
 ## Code sample
