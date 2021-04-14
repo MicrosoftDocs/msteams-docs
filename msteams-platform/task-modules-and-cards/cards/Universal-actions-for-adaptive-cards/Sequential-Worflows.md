@@ -94,9 +94,9 @@ var card = JsonConvert.DeserializeObject(cardJson);
 
 var adaptiveCardResponse = JObject.FromObject(new
  {
-                statusCode = 200,
-                type = "application/vnd.microsoft.card.adaptive",
-                value = card
+    statusCode = 200,
+    type = "application/vnd.microsoft.card.adaptive",
+    value = card
  });
 ```
 

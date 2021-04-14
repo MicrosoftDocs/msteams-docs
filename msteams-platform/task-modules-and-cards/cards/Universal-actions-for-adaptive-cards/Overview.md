@@ -50,6 +50,7 @@ Today every user in the Teams chat or channel sees the exact same view and butto
 
 With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. The following images illustrate a food ordering bot example:
 
+
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
@@ -60,9 +61,9 @@ With sequential workflow support, users can progress through a series of workflo
 
 You can create adaptive cards that update automatically, for example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
-![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage1.png)
-![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage2.png)
-![Up-to-date-role-based-views](~/assets/images/bots/up-to-date-views-stage3.png)
+![Up-to-date-role-based-views-1](~/assets/images/bots/up-to-date-views-stage1.png)
+![Up-to-date-role-based-views-2](~/assets/images/bots/up-to-date-views-stage2.png)
+![Up-to-date-role-based-views-3](~/assets/images/bots/up-to-date-views-stage3.png)
 
 [Sample for up to date eviews](~/Up-To-Date.md)
 
