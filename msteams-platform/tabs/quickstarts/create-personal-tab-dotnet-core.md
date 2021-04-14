@@ -52,7 +52,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 ### Index.cshtml
 
-ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP.NET Core treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
 ### AppManifest folder
 
@@ -66,7 +66,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you'll see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
