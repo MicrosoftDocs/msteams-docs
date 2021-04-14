@@ -14,6 +14,8 @@ You can distribute your app directly to the store inside Microsoft Teams and rea
 :::row:::
    :::column span="1":::
 
+<br>
+
 :::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
 
    :::column-end:::

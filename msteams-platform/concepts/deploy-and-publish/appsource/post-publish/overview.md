@@ -1,5 +1,5 @@
 ---
-title: Support your published app
+title: Maintain and support your published app
 description: What to think about once your store is listed on the Teams store and AppSource.
 ms.topic: conceptual
 author: heath-hamilton
