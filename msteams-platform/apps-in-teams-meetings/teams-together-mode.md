@@ -105,14 +105,14 @@ The seat dimensions become the canvas for rendering the participant video stream
     >[!NOTE]
     > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Dev Center. The scene can then be viewed in the Together Mode scene gallery.
 
-11. After preview, the scene can be shipped as an app to Micrsoft Teams by following the steps for app submission. 
+11. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
 12. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
-    [!NOTE]
+    >[!NOTE]
     > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
 
 ## Sample JSON
