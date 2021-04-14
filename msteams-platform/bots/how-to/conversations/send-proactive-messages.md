@@ -26,7 +26,7 @@ Sending a proactive message is different from sending a regular message. There i
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-The code snippets in the [examples](#examples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [code sample](#code-sample).
+The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [code sample](#code-sample).
 
 For using proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and groups or channels, see [code sample](#code-sample).
 
