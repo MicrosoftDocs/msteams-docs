@@ -148,7 +148,7 @@ The following table provides the user types and what features each user can acce
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an adaptive card are allowed. | Not available |
 | Guest that is part of the tenant AAD | Interaction is allowed. Creating, updating, and deleting are not allowed. | Not available | Not available | Interactions in the meeting chat are allowed | Interactions in the meeting chat from an adaptive card are allowed | Available |
-| Federated | Not available | Not available | Not available | Not available | Not available | Not available. This is planned to be supported in the future. |
+| Federated | Not available | Not available | Not available | Not available | Not available | Not available. |
 
 ## See also
 
