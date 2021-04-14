@@ -113,7 +113,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 12. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     [!NOTE]
-    > Scene package comprosies of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
+    > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
 
 ## Sample JSON
 
