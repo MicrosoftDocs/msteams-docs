@@ -39,11 +39,7 @@ If you make any of the following changes to your app, your existing users must a
 
 When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to add your app. You could include this link, for example, with a download button on your product's marketing page.
 
-You can create the link with the following format that appends your app ID:
-
-```
-https://teams.microsoft.com/l/app/<appId>
-```
+You can create the link with the following format that appends your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
 ## See also
 

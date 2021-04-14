@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
-## Understand the Teams store publishing process
+## Understand the publishing process
 
 :::row:::
    :::column span="1":::
