@@ -21,6 +21,8 @@ You can find additional information on how to use cards in the documentation for
   * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
   * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
 
+Next, you can identify the different types of cards you can use based on your application requirements.
+
 ## Types of cards
 
 The following table shows the types of cards available to you:
@@ -35,6 +37,8 @@ The following table shows the types of cards available to you:
 | [Signin card](#signin-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
+
+Now, you can go through some common properties that are applicable to all cards.
 
 ## Common properties for all cards
 
@@ -66,11 +70,17 @@ For more information, see [card actions](~/task-modules-and-cards/cards/cards-ac
 
 For more information on text formatting in cards, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
 
+After identifying the common properties for all cards, you can now work with Adaptive Cards, which help you increase engagement and efficiency by adding your actionable content directly into the apps you use.
+
 ## Adaptive Card
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
 An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for Adaptive Cards
+
+The following table provides the features that support Adaptive Cards:
 
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
@@ -83,6 +93,8 @@ An Adaptive Card is a customizable card that can contain any combination of text
 ### Example of an Adaptive Card
 
 ![Example of an Adaptive Card](~/assets/images/cards/adaptivecard.png)
+
+The following code shows an example of an Adaptive Card:
 
 ```json
 {
@@ -224,17 +236,23 @@ Bot Framework reference:
 * [Adaptive Cards Node](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
 * [Adaptive Card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
 
+You can now work with a hero card, which is a multipurpose card used to visually highlight a potential user selection.
+
 ## Hero card
 
 A card that typically contains a single large image, one or more buttons, and text.
 
 ### Support for hero cards
 
+The following table provides the features that support hero cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
 ### Properties of a hero card
+
+The following table provides the properties of a hero card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -248,6 +266,8 @@ A card that typically contains a single large image, one or more buttons, and te
 ### Example of a hero card
 
 ![Example of a hero card](~/assets/images/cards/hero.png)
+
+The following code shows an example of a hero card:
 
 ```json
 {
@@ -285,17 +305,23 @@ Bot Framework reference:
 * [Hero card Node.js](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-a-hero-card&preserve-view=true)
 * [Hero card C#](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-hero-card&preserve-view=true)
 
+You can now work with a list card that provides a scrolling list of items.
+
 ## List card
 
 The list card has been added by Teams to provide functions beyond what the list collection can provide. The list card provides a scrolling list of items.
 
 ### Support for list cards
 
+The following table provides the features that support list cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ |✔ |
 
 ### Properties of a list card
+
+The following table provides the properties of a list card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -304,6 +330,8 @@ The list card has been added by Teams to provide functions beyond what the list 
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
 ### Example of a list card
+
+The following code shows an example of a list card:
 
 ```json
 {
@@ -363,11 +391,15 @@ The Office 365 connector card is supported in Teams, not in Bot Framework. This 
 
 ### Support for Office 365 connector cards
 
+The following table provides the features that support Office 365 connector cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✔ | ✖ |
 
 ### Properties of the Office 365 connector card
+
+The following table provides the properties of the Office 365 connector card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -410,6 +442,8 @@ For all other details about connector card properties, see [actionable message c
 * `correlationId`
 
 ### Example of an Office 365 connector card
+
+The following code shows an example of an Office 365 connector card:
 
 ```json
 {
@@ -478,6 +512,8 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 
 ### Support for receipt cards
 
+The following table provides the features that support receipt cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
@@ -485,6 +521,8 @@ Teams supports receipt card. It is a card that enables a bot to provide a receip
 ### Example of a receipt card
 
 ![Example of a receipt card](~/assets/images/cards/receipt.png)
+
+The following code shows an example of a receipt card:
 
 ```json
 {
@@ -548,6 +586,8 @@ The signin action can be used from any card in Teams, not just the signin card. 
 
 ### Support for signin cards
 
+The following table provides the features that support signin cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
@@ -565,6 +605,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 
 ### Support for thumbnail cards
 
+The following table provides the features that support thumbnail cards:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
@@ -572,6 +614,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 ![Example of a thumbnail card](~/assets/images/cards/thumbnail.png)
 
 ### Properties of a thumbnail card
+
+The following table provides the properties of a thumbnail card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
@@ -583,6 +627,8 @@ A card that typically contains a single thumbnail image, one or more buttons, an
 | tap | Action object | Activated when the user taps on the card itself. |
 
 ### Example of a thumbnail card
+
+The following code shows an example of a thumbnail card:
 
 ```json
 {
@@ -644,6 +690,8 @@ The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments
 
 ### Support for carousel collections
 
+The following table provides the features that support carousel collections:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
@@ -658,6 +706,8 @@ Properties of a carousel card are same as those of the hero and thumbnail cards.
 ### Example of a carousel collection
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
+
+The following code shows an example of a carousel collection:
 
 ```json
 {
@@ -834,6 +884,8 @@ Properties of a carousel card are same as those of the hero and thumbnail cards.
 
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons.
 
+The following table provides the features that support list collections:
+
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
@@ -860,3 +912,8 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * Animation cards
 * Audio cards
 * Video cards
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
