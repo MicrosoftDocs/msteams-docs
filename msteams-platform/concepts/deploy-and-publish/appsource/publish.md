@@ -9,6 +9,9 @@ ms.author: surbhigupta
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
+Apps published to the Teams store are also automatically listed on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
+
+
 ## Understand the publishing process
 
 :::row:::
@@ -19,13 +22,11 @@ When your app is production ready, you can begin the process of getting it liste
 > [!TIP]
 > Following the initial steps closely can increase the possibility that your app will be approved.
 
-1. [Review the store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
+1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating store listing details, and completing other important tasks to help expedite the review process.
 1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
 1. If your submission fails, work with Microsoft directly to [resolve any issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 1. Once published, learn how to [maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
-
-Apps published to the Teams store are also automatically listed on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
 
    :::column-end:::
    :::column span="1":::
