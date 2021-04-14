@@ -2,8 +2,10 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+ms.topic: reference
 ms.date: 03/29/2018
 ---
+
 # Format cards in Teams
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.
@@ -19,10 +21,10 @@ You can include an inline image with any Teams card. Images an be formatted as  
 There are two card types that support Markdown in Teams:
 
 > [!div class="checklist"]
-> * **Adaptive Cards**: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in adaptive cards.
+> * **Adaptive cards**: Markdown is supported in Adaptive card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive cards.
 > * **O365 Connector Cards**: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
-# [**Markdown formatting: Adaptive Cards**](#tab/adaptive-md)
+# [**Markdown formatting: Adaptive cards**](#tab/adaptive-md)
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
@@ -45,27 +47,27 @@ The following Markdown tags are not supported:
 > [!IMPORTANT]
 > Adaptive cards do not support HTML formatting.
 
-### Newlines for Adaptive Cards
+### Newlines for Adaptive cards
 
 In lists you can use the `\r` or `\n` escape sequences for newlines. Using `\n\n` in a list will cause the next element in the list to be indented. If you need newlines elsewhere in the textblock, use `\n\n`.
 
-### Mobile and desktop differences for Adaptive Cards
+### Mobile and desktop differences for Adaptive cards
 
 Formatting is slightly different between the desktop and the mobile versions of Teams.
 
-On the desktop, Adaptive Card Markdown formatting appears like this in both web browsers and in the Teams client application:
+On the desktop, Adaptive card Markdown formatting appears like this in both web browsers and in the Teams client application:
 
-![Adaptive Card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
+![Adaptive card Markdown formatting in the desktop client](../../assets/images/cards/Adaptive-markdown-desktop-client.png)
 
-On iOS, Adaptive Card Markdown formatting appears like this:
+On iOS, Adaptive card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
+![Adaptive card Markdown formatting in iOS](../../assets/images/cards/Adaptive-markdown-iOS-75.png)
 
 On Android, Adaptive Card Markdown formatting appears like this:
 
-![Adaptive Card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
+![Adaptive card Markdown formatting in Android](../../assets/images/cards/Adaptive-markdown-Android.png)
 
-### More information on Adaptive Cards
+### More information on Adaptive cards
 
 [Text features in Adaptive cards](/adaptive-cards/create/textfeatures)
 The date and localization features mentioned in this topic are not supported in Teams.
@@ -106,7 +108,7 @@ The date and localization features mentioned in this topic are not supported in 
 
 ### Mention support within Adaptive cards v1.2
 
-Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Card based mentions are supported in web, desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -114,14 +116,14 @@ Bots and messaging extensions can include mentions within the card content in [T
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive cards v1.2 on the Teams platform.
 > * Channel & Team mentions are not supported in bot messages.
 
-### Constructing mentions
+#### Constructing mentions
 
-To include a mention in an Adaptive Card your app needs to include the following elements
+To include a mention in an Adaptive card your app needs to include the following elements
 
-* `<at>username</at>` in the supported adaptive card elements
+* `<at>username</at>` in the supported Adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
 
-### Sample Adaptive card with a mention
+#### Sample Adaptive card with a mention
 
 ``` json
 {
@@ -151,6 +153,130 @@ To include a mention in an Adaptive Card your app needs to include the following
   }
 }
 ```
+
+
+### Information masking in Adaptive cards
+Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 
+
+> [!NOTE]
+> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-configure-your-bot). 
+
+> [!NOTE]
+> The information masking property is currently available in the developer preview only.
+
+To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
+
+#### Sample Adaptive card with masking property
+
+```json
+{
+    "type": "Input.Text",
+    "id": "secretThing",
+    "style": "password",
+    "isMasked": true
+  },
+```
+
+The following image is an example of masking information in Adaptive cards:
+
+![Masking information image](../../assets/images/cards/masking-information-view.png)
+
+### Full width Adaptive card
+You can use the `msteams` property to expand the width of an Adaptive card and make use of additional canvas space. For information on how to use the property, see the following example:
+
+#### Constructing full width cards
+To make a full width Adaptive card the `width` object in `msteams` property in the card content must be set to `Full`.
+In addition, your app must include the following elements:
+
+#### Sample adaptive card with full width
+
+``` json
+{
+    "type": "AdaptiveCard",
+    "body": [{
+        "type": "Container",
+        "items": [{
+            "type": "TextBlock",
+            "text": "Digest card",
+            "size": "Large",
+            "weight": "Bolder"
+        }]
+    }],
+
+    "msteams": {
+        "width": "Full"
+    },
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+A full width Adaptive Card appears as follows:
+![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
+
+If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
+![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
+
+### Typeahead support
+
+Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion. Typeahead support within Adaptive cards can simplify input selection by narrowing or filtering the set of input choices as a user is typing the input. 
+
+#### Enable typeahead in Adaptive cards
+
+To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and ensure `isMultiSelect` is set to `false`. 
+
+#### Sample adaptive card with typeahead support
+
+``` json
+{
+   "type": "Input.ChoiceSet",
+   "label": "Select a user",
+   "isMultiSelect": false,
+   "choices":  [
+      { "title": "User 1", "value": "User1" },
+      { "title": "User 2", "value": "User2" }
+    ],
+   "style": "filtered"
+}
+``` 
+
+### Stage view for images in Adaptive Cards
+
+> [!NOTE]
+> This feature is currently available in developer preview only.
+ 
+In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
+
+``` json
+{
+    "type": "AdaptiveCard",
+     "body": [
+          {
+            "type": "Image",
+            "url": "https://picsum.photos/200/200?image=110",
+            "msTeams": {
+              "allowExpand": true
+            }
+          },
+     ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+
+When users hover over the image, an expand icon appears at top right corner of the image:
+![Adaptive card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
+
+The image appears in stage view when the user selects the expand button:
+![Image expanded to stage view](../../assets/images/cards/adaptivecard-expand-image.png)
+
+In the stage view, users can zoom in and zoom out of the image. You can select which images in your Adaptive card needs to have this capability.
+
+> [!NOTE]
+> Zoom in and zoom out capability applies only to the image elements (Image type) in an Adaptive card.
+
+> [!NOTE]
+> For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default and users will be able to view Adaptive card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [**Markdown formatting: O365 Connector Cards**](#tab/connector-md)
 

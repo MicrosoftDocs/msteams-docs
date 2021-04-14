@@ -150,7 +150,7 @@ Here's a view in [App Studio](https://aka.ms/InstallTeamsAppStudio):
 <br>`1.third`<br>
 >**[Unordered List](https://www.markdownguide.org/basic-syntax/#unordered-lists)**<br>
 ` - short` <br>`- bulleted` <br>`- list`<br>
->**Newline**. `Place <br> at the end of a line.` <br> 
+>**Newline**. Use a `\n` character to designate a newline.
  >**Escape.** Use an inline backslash to escape special characters. `\*asterisk`.
 
 **Example in Markdown format**
