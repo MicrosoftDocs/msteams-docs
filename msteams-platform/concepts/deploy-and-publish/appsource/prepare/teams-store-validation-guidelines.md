@@ -146,7 +146,7 @@ The Teams app manifest defines your app's configurations.
 
 ### 4.2 App icons
 
-Icons are one of the main elements people see when browsing the store. Your icons should communicate your app's brand and purpose while also adhering to the following requirements:
+Icons are one of the main elements people see when browsing the Teams store. Your icons should communicate your app's brand and purpose while also adhering to the following requirements:
 
 * Your app package must include two PNG versions of your app icon: A color icon and an outline icon.
 * The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color or colors, but it must sit on a solid or fully transparent square background.

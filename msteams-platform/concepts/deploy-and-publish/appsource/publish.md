@@ -7,25 +7,28 @@ ms.author: surbhigupta
 ---
 # Publish your app to the Microsoft Teams store
 
-You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. Your app also might be featured in the store, instantly reaching potential customers.
+You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
-## Teams store publishing process
+## Understand the Teams store publishing process
 
 :::row:::
    :::column span="1":::
 
-:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store submission process." border="false":::
+:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
 
    :::column-end:::
    :::column span="3":::
 
-To list your app on the Teams store, the following steps can guide you through the process:
+When your app is production ready, you can begin the process of getting it listed on the Teams store.
 
-1. [Review the store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to increase the chances your app will be approved for listing.
+> [!TIP]
+> Following the initial steps closely can increase the possibility that your app will be approved.
+
+1. [Review the store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating store listing details, and completing other important tasks to help expedite the review process.
 1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
-1. If your submission fails, [resolve the issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
-1. [Maintain your published app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
+1. If your submission fails, work with Microsoft directly to [resolve any issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
+1. Once published, learn how to [maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
 
 Apps published to the Teams store are also automatically listed on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
 

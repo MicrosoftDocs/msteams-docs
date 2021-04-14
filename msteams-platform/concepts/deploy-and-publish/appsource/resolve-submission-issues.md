@@ -5,7 +5,7 @@ ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
 ---
-# Resolve issues with your Microsoft Teams store submission
+# Resolve issues if your Microsoft Teams store submission fails
 
 If your Teams store submission doesn't pass validation, Microsoft provides resources and guidance to help get your app published.
 
