@@ -5,11 +5,11 @@ keywords: teams o365 connector
 ms.topic: conceptual
 ms.date: 04/19/2019
 ---
-# Creating Office 365 Connectors for Microsoft Teams
+# Create Office 365 Connectors for Microsoft Teams
 
 >With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
 
-## Adding a Connector to your Teams App
+## Add a Connector to your Teams App
 
 You can distribute your registered Connector as part of your Teams app package. Whether as a standalone solution, or one of several [capabilities](~/concepts/extensibility-points.md) that your experience enables in Teams, you can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission, or you can provide it to users directly for uploading within Teams.
 
@@ -18,7 +18,7 @@ To distribute your Connector, you need to register by using the [Connectors Deve
 > [!IMPORTANT]
 > After you choose **Save** in the Connectors Developer Dashboard, your Connector is registered. If you want to publish your Connector in AppSource, follow the instructions in [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not wish to publish your app in AppSource, and rather simply distribute it directly to your organization only, you can do so by [publishing to your organization](#publish-connectors-for-your-organization). If you only want to publish to your organization, no further action is necessary on the Connector dashboard.
 
-### Integrating the configuration experience
+### Integrate the configuration experience
 
 Your users will complete the entire Connector configuration experience without having to leave the Teams client. To achieve this experience, Teams will embed your configuration page directly within an iframe. The sequence of operations is as follows:
 
@@ -94,7 +94,7 @@ Here's a sample HTML to create a Connector configuration page without the CSS:
 </script>
 ```
 
-#### `GetSettings()` response properties
+#### `GetSettings` response properties
 
 >[!Note]
 >The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
@@ -113,7 +113,7 @@ If you need to authenticate the user as part of loading your page in step 2 abov
 > [!NOTE]
 > Due to cross-client compatibility reasons, your code will need to call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success/failure callback methods before calling `authenticate()`.
 
-#### Handling edits
+#### Handle edits
 
 Your code should handle users returning to edit an existing connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
 
@@ -123,11 +123,11 @@ Your code should handle users returning to edit an existing connector configurat
 
 Typically, this call is made as part of your save event handler. Then, when the `contentUrl` above is loaded, your code should call `getSettings()` to prepopulate any settings or forms in your configuration UI.
 
-#### Handling removals
+#### Handle removals
 
 You can optionally execute an event handler when the user removes an existing connector configuration. You register this handler by calling `microsoftTeams.settings.registerOnRemoveHandler()`. This handler can be used to perform cleanup operations such as removing entries from a database.
 
-### Including the Connector in your Manifest
+### Include the Connector in your Manifest
 
 You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
 
@@ -179,7 +179,7 @@ The following manifest.json file contains the basic elements needed to test and 
 }
 ```
 
-## Testing your Connector
+## Test your Connector
 
 To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
 

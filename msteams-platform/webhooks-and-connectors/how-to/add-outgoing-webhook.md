@@ -7,9 +7,9 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 ---
 # Add custom bots to Teams with outgoing webhooks
 
-## What are outgoing webhooks in Teams?
+## Outgoing webhooks in Teams
 
-Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks allow users to send messages to your web service without going through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/).
+Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
 Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. It sends notifications to external web services and responds with rich messages, which include cards and images.
 
@@ -22,7 +22,7 @@ Outgoing webhook sends data from Teams to any chosen service capable of acceptin
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any bot framework message content, for example, rich text, images, cards, and emojis. Although outgoing webhooks can use cards, they cannot use any card actions except for `openURL`.|
 | Teams API method support|Outgoing webhook sends an HTTP POST to a web service and process a response back. They cannot access any other APIs like retrieve the roster or list of channels in a team.|
 
-## Creating actionable messages
+## Create actionable messages
 
 The connector cards include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type; a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
 
@@ -56,15 +56,14 @@ The `ActionCard` action supports three input types:
 
 For all other details about connector card actions, see **[Actions](/outlook/actionable-messages/card-reference#actions)** in the actionable message card reference.
 
-## Adding outgoing webhooks to your app
+## Add outgoing webhooks to your app
 
 **Scenario**: Push change status notifications on a Teams channel database server to your app.  
 **Example**: You have a line-of-business app that tracks all CRUD operations made to employee records by Teams channel HR users across an Office 365 tenancy.
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
 
-Your service receives messages in a standard Azure bot service messaging schema. The bot framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages via HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
-
+Your service receives messages in a standard Azure bot service messaging schema. The bot framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [About Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
