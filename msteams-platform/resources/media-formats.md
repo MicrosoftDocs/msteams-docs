@@ -6,7 +6,7 @@ keywords: teams bots media formats
 ---
 # Supported media formats for bots
 
-Bots on Microsoft Teams supports only the following media formats for audio and video content.
+Bots on Microsoft Teams supports only the following media formats for audio and video content:
 
 | Format | More information |
 | --- | --- |
@@ -20,3 +20,8 @@ Bots on Microsoft Teams supports only the following media formats for audio and 
 | MP3 | https://en.wikipedia.org/wiki/MP3 |
 | Opus | http://opus-codec.org/ |
 | MP4 | https://en.wikipedia.org/wiki/MPEG-4 |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Changes to Teams bot APIs for fetching Team or chat members](~/resources/team-chat-member-api-changes.md)

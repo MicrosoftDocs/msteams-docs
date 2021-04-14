@@ -106,7 +106,7 @@ Bots also allow you to send **proactive messages** to individual users or channe
 
 Sending proactive messages requires Teams-specific identifiers. You can capture the information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetching-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
 
-Donot spam users with excessive messages. If the Teams capability supports it, the users can configure notification settings for your app.   
+Do not spam users with excessive messages. If the Teams capability supports it, the users can configure notification settings for your app.   
 Following is an example of a notification message: 
 **Don't send me unprompted messages**.
 

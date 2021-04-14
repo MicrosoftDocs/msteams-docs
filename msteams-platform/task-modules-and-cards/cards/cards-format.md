@@ -2,6 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+ms.topic: reference
 ms.date: 03/29/2018
 ---
 
@@ -107,7 +108,7 @@ The date and localization features mentioned in this topic are not supported in 
 
 ### Mention support within Adaptive cards v1.2
 
-Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an Adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Card based mentions are supported in web, desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 

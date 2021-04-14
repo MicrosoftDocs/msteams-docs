@@ -8,7 +8,7 @@ ms.topic: tutorial
 ---
 # Build a messaging extension for Microsoft Teams
 
-There are two types of Teams app *messaging extensions*: [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
+There are two types of Teams *messaging extensions*: [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
 In this lesson, you'll create a *search command* (also known as a *search-based messaging extension*), which is a shortcut for finding external content and sharing it in Teams. Users can access search commands from the [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md).
 
@@ -141,3 +141,4 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [Add authentication](../messaging-extensions/how-to/add-authentication.md)
 * [Create an action-based messaging extension](../messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
+
