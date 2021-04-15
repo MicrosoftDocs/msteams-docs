@@ -47,7 +47,7 @@ Following is a JSON example:
 ```
 
 > [!NOTE]
-> For full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
+> For information on full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Configure the default capability for shared scopes
 
@@ -65,9 +65,15 @@ Configure the default capability for shared scopes, based on whether your app ne
 Following is a JSON example:
 
 ```json
-(we should provide a JSON example for context).
+"defaultInstallScope": "groupchat",
+"defaultGroupCapability": {
+    "team": "bot",
+    "groupchat": "bot",
+    "meetings": "tab"
+}
 ```
-
+> [!NOTE]
+> For information on full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Next step
 
