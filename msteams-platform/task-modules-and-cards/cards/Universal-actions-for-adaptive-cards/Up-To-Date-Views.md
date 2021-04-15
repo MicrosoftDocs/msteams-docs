@@ -5,7 +5,7 @@ ms.topic: conceptual
 ---
 
 ## Up to date views
-Up to date views are now powered with a combination of Universal bots and bot fanouts in Teams.
+Up to date views are now powered with a combination of Universal bots and message edit in Teams.
 
 Example: A user creates an asset approval request in Teams conversation. Shiladitya creates an approval request and assigns it to Sowrabh and Dipesh. 
 
