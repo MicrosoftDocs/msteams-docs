@@ -276,28 +276,6 @@ The following schema sample shows all extensibility options.
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-    },
-    "groupchat": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Group Chat, this field specifies the default capability available."
-    },
-    "meetings": {
-      "type": "string",
-      "enum": [
-            "tab",
-            "bot",
-            "connector"
-      ],
-      "description": "When the selected install scope is Meetings, this field specifies the default capability available."
-      }
-    },
-    "description": "When a group install scope is selected, this defines the default capability when the user installs the app.",
-    "additionalProperties": false
   }
 }
 ```
@@ -701,8 +679,8 @@ When a group install scope is selected, it will define the default capability wh
  
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team`|string|||When the install scope selected is Team, this field specifies the default capability available. Options: tab, bot, or connector.|
-|`groupchat`|string|||When the install scope selected is GroupChat, this field specifies the default capability available. Options: tab, bot or connector|
-|`meetings`|string|||When the install scope selected is Meetings, this field specifies the default capability available. Options: tab, bot, or connector.|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: tab, bot, or connector.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: tab, bot or connector|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: tab, bot, or connector.|
 
 
