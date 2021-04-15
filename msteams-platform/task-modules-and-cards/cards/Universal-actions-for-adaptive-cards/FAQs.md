@@ -10,7 +10,7 @@ ms.topic: conceptual
 **Answer -** `Action.Execute` works across hubs including Teams and Outlook. Moreover, an adaptive card can be returned as reponse for an Action.Execute triggered `adaptiveCard/action` invoke request.
 
 **Question -** What is refresh? <br>
-**Answer -** Refresh in adaptive cards is powered with `Action.Execute`. Refresh enables scenarios with [role based views](~/Role-Based-Views.md) and [up-to-date views](~/Up-To-Date.md).
+**Answer -** Refresh in adaptive cards is powered with `Action.Execute`. Refresh enables scenarios with [role based views](~/Role-Based-Views.md), [Sequential Workflows](~/sequential-workflows) and [up-to-date views](~/Up-To-Date.md).
 
 **Question -** What are userIds? <br>
 Answer: UserIds is an array of user MRIs which is part of the refersh property in adaptive cards.
