@@ -186,7 +186,7 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams desktop client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation. 
 
-In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through Teams call notification window.
+In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
 
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
@@ -197,11 +197,11 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 |-----------|--------|---------|
 | Make an audio call. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>| https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | Make an audio and video call. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
-|Make an audio and video call with an optional parameter source. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp | 
+|Make an audio and video call with an optional parameter source. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
 | Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>,8:<usermri> | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:<1111111111> |
   
 Following are the query parameters:
 * `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri (4:<phonenumber>).
-* `Withvideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera on. The receiver of the call has a choice to answer through audio or audio and video call through Teams call notification window. 
+* `Withvideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window. 
 * `Source`: This is an optional parameter, which informs about the source of the deeplink.
 
