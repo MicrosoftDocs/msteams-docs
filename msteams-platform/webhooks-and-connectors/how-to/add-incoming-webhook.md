@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create an incoming webhook and post external requests to Microsoft Teams
 
-## Incoming webhooks in Teams
+## Teams incoming webhooks
 
  Incoming webhooks are connector that provide a simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are User Interface (UI) containers that contain content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within three capabilities:
 
@@ -16,7 +16,7 @@ ms.author: lajanuar
 * Messaging extensions
 * Connectors
 
-## Incoming webhook key features
+## Key features incoming webhook
 
 | Feature | Description |
 | ------- | ----------- |
@@ -34,7 +34,7 @@ ms.author: lajanuar
 ## Add an incoming webhook to a Teams channel
 
 > [!Important]  
-> If your team's **Settings** > **Member permissions** => **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
+> If your team's **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
 
 1. Navigate to the channel where you want to add the webhook and select (&#8226;&#8226;&#8226;) **More Options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu and search for **Incoming Webhook**.
@@ -49,8 +49,8 @@ ms.author: lajanuar
 1. On the left, under **Manage**, choose **Configured**.
 1. Select the **number Configured** to see a list of your current connectors.
 1. Select **Manage** next to the connector that you want to delete.
-1. Select the **Remove** button and you will be presented with a **Remove Configuration** dialog box.
-1. Optionally, complete the dialog box fields and checkboxes prior to selecting the **Remove** button. The webhook will be deleted from the team channel.
+1. Select the **Remove** button and you are presented with a **Remove Configuration** dialog box.
+1. Optionally, complete the dialog box fields and checkboxes prior to selecting the **Remove** button. The webhook must be deleted from the team channel.
 
 ## Distribution
 

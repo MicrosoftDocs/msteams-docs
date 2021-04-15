@@ -8,7 +8,7 @@ keywords: teams o365 connector
 
 # Sending messages to connectors and webhooks
 
-To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL. Typically this payload will be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL. Typically this payload must be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the webhook URL can be running on any hosted service. These cards are defined as part of actionable messages, and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and Messaging extensions.
 
@@ -288,7 +288,7 @@ To verify that an `HttpPOST` action is working correctly, use your [custom incom
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an incoming webhook is allowed to generate on a channel. Teams tracks requests via a fixed-rate window and incremental counter measured in seconds.  If too many requests are made, the client connection will be throttled until the window refreshes, i.e., for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an incoming webhook is allowed to generate on a channel. Teams tracks requests via a fixed-rate window and incremental counter measured in seconds. If too many requests are made, the client connection is throttled until the window refreshes, for the duration of the fixed rate.
 
 ### **Transactions per second thresholds**
 
