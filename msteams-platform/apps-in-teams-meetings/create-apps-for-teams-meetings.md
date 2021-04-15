@@ -256,9 +256,6 @@ The `NotificationSignal` API includes the following response codes:
 > [!div class="nextstepaction"]
 >  [Apps in Teams meetings](teams-apps-in-meetings.md)
 
-> [!div class="nextstepaction"]
->  [Together Mode](teams-together-mode.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]

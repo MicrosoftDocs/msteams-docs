@@ -141,9 +141,6 @@ A guest or anonymous user cannot add, remove, or uninstall apps.
 > [!div class="nextstepaction"]
 > [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-> [!div class="nextstepaction"]
-> [Together Mode in Teams](teams-together-mode.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]

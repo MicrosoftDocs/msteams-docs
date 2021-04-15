@@ -147,8 +147,3 @@ The post-meeting and pre-meeting configurations are the same.
 > [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 > [!div class="nextstepaction"]
 > [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Together Mode](teams-together-mode.md)

@@ -43,9 +43,6 @@ The new Together Mode feature enables users to collaborate in a meeting with the
 > [!div class="nextstepaction"]
 > [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 
-> [!div class="nextstepaction"]
-> [Together Mode in Teams](teams-together-mode.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
