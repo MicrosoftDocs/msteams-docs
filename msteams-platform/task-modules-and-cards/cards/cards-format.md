@@ -2,6 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+ms.topic: reference
 ms.date: 03/29/2018
 ms.topic: conceptual
 ---
@@ -108,7 +109,7 @@ The following code shows an example of Adaptive Cards formatting:
 
 ### Mention support within Adaptive Cards v1.2
 
-Card based mentions are supported in web, desktop and mobile clients. You can add @ mentions within an Adaptive Card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Card based mentions are supported in web, desktop, and mobile clients. You can add @ mentions within an Adaptive Card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 

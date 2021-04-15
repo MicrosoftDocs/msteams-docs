@@ -1,6 +1,7 @@
 ---
 title: Add card actions in a bot
 description: Describes card actions in Microsoft Teams and how to use them in your bots
+ms.topic: conceptual
 keywords: teams bots cards actions
 ms.topic: conceptual
 ---

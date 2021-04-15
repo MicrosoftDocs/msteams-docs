@@ -202,21 +202,25 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
-  - name: How bots work
+  - name: Bots and SDKs
+    href: bots/bot-features.md
+  - name: Bot activity handlers
     href: bots/bot-basics.md
   - name: Bot conversations
     items:
-    - name: Conversation basics
+    - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
+    - name: Messages in bot conversations
+      href: bots/how-to/conversations/conversation-messages.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
-    - name: Subscribe to conversation events
+    - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-    - name: Formatting your bot messages
+    - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
       href: bots/how-to/update-and-delete-bot-messages.md     
@@ -224,13 +228,13 @@
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
-  - name: Handling bot rate limiting
+  - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
-  - name: Calling and meeting bots
+  - name: Calls and meetings bots
     items:
     - name: Overview
       href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media concepts
+    - name: Real-time media calls and meetings
       href: bots/calls-and-meetings/real-time-media-concepts.md
     - name: Register a calling bot
       href: bots/calls-and-meetings/registering-calling-bot.md
