@@ -13,7 +13,7 @@ ms.topic: conceptual
 **Answer -** Refresh in adaptive cards is powered with `Action.Execute`. Refresh enables scenarios with [role based views](~/Role-Based-Views.md), [Sequential Workflows](~/sequential-workflows) and [up-to-date views](~/Up-To-Date.md).
 
 **Question -** What are userIds? <br>
-Answer: UserIds is an array of user MRIs which is part of the refersh property in adaptive cards.
+Answer: UserIds is an array of user MRIs which is part of the refresh property in adaptive cards.
 
 **Question -** Where can I find these user Ids or user MRIs? <br>
 **Answer -** [This document explains how bot developers can fetch Teams conversation memebers](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
