@@ -14,7 +14,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML 
 
 There are two types of tabs available in Teams — channel or group and personal. Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
-## Lesser known tab features
+## Tab features
 
 > [!div class="checklist"]
 >
@@ -37,7 +37,7 @@ There are two types of tabs available in Teams — channel or group and personal
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-## How do tabs work?
+## Understand how tabs work
 
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you need to add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Doing so will tell Teams to display your page, give you access to Teams-specific information (for example if the Teams client is running the *dark theme*), and allow you to take action based on the results.
 
