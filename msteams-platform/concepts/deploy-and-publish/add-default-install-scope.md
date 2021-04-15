@@ -24,16 +24,12 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 
 ## Configure app's default install scope
 
-Configure the default install scope for your app, based on whether your app needs to be installed in personal, team, meetings, or groupchat. 
+Configure the default install scope for your app, based on whether your app needs to be installed in personal, team, meetings, or groupchat. You can set only one scope at a time.
 
 **To configure details in app manifest**
 
-1. In **Teams**, select **Apps**, and open **App Studio**.
-2. Select the **Manifest editor** tab, and configure the default install scope.
-3. Select **Save**.
-
-> [!NOTE]
-> You can also manually add the details to your app manifest.
+1. Open your manifest schema, and add the `defaultInstallScope` property to it.
+2. Save the updates.
 
 Following is a JSON example:
 
@@ -51,13 +47,12 @@ Following is a JSON example:
 
 ## Configure the default capability for shared scopes
 
-Configure the default capability for shared scopes, based on whether your app needs to installed in personal, team, meetings, or groupchat scope. .
+Configure the default capability for shared scopes, based on whether your app is installed in personal, team, meetings, or groupchat scope.
 
 **To configure details in app manifest**
 
-1. In **Teams**, select **Apps**, and open **App Studio**.
-2. Select the **Manifest editor** tab, and configure the default capability.
-3. Select **Save**
+1. Open your manifest schema, and add the `defaultInstallScope` property to it.
+2. Save the updates.
 
 > [!NOTE]
 > You can also manually add the details to your app manifest.
@@ -80,7 +75,3 @@ Following is a JSON example:
 > [!div class="nextstepaction"]
 > [Choose how to distribute your app](overview.md)
 
-## See also
-
-> [!div class="nextstepaction"]
-> [Manifest schema](../../resources/schema/manifest-schema.md)
