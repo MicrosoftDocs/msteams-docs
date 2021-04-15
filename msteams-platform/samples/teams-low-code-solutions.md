@@ -52,9 +52,9 @@ Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, 
 
 Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. You can configure your virtual assistant for [integration into the Teams environment](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
 
-## Additional Resources
+## See also
 
-:::image type="content" source="../assets/images/power-platform-and-teams/blogs-and-resources.png" alt-text="blogs and resources illustration":::
+
 
 ### ✔ Teams Shift Connectors
 
