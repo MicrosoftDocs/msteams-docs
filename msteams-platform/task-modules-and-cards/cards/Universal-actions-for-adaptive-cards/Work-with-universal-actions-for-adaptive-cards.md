@@ -43,6 +43,8 @@ To automatically refresh your adaptive card, define its `refresh` property, whic
 
 [Refresh schema and properties](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)
 
+[How to get user MRI's in the conversation to add in userIds list in refresh section of adaptive card?](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+
 > [!IMPORTANT]
 > If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a button is displayed to the user to manually refresh the card. This is because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs.
 

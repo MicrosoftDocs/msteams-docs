@@ -5,7 +5,7 @@ ms.topic: conceptual
 ---
 
 ## Contextual or role based views
-If a message or card is shared in a Teams conversation then all users see the same message or card content. Here we are introducing universal bots which enables bot developers to provide contextual or role based views to users. The same adaptive card can now refresh to a contextual or role based adaptive card.
+Earlier if an adaptive card was sent in a Teams conversation then all users see the same card content. Here we are introducing universal bots which enables bot developers to provide contextual or role based views to users. The same adaptive card can now refresh to a contextual or role based adaptive card.
 
 Example: Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by Universal bots.
 
@@ -42,10 +42,10 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 ```
 
 1. When Megan creates a new incident, the bot sends the above adaptive card (common card) with incident details in the Teams conversation.
-2. Now this card automatically refreshes to role based view for Megan and Alex. (Why? : Alex's and Megan's user IDs are added in userIds property in refresh property in adaptive card payload)
+2. Now this card automatically refreshes to role based view for Megan and Alex. (Why? : Alex's and Megan's user id's are added in userIds property in refresh property of the adaptive card json)
 3. The card remains the same for other users in the conversation.
-4. For Megan, automatic refresh trigers an adaptiveCard/action invoke request to the bot. The bot can return an incident creator card (Edit button) as a response to this invoke request. 
-5. Similarly for Alex, automatic refresh trigers an adaptiveCard/action invoke request to the bot. The bot can return an incident owner card (Resolve button) as a response to this invoke request.
+4. For Megan, automatic refresh trigers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request. 
+5. Similarly for Alex, automatic refresh trigers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
 
 
 **Sample invoke request sent from Alex's and Megan's Teams Client to the bot**
@@ -155,8 +155,8 @@ var card = JsonConvert.DeserializeObject(cardJson);
 
 var adaptiveCardResponse = JObject.FromObject(new
  {
-        statusCode = 200,
-        type = "application/vnd.microsoft.card.adaptive",
-        value = card
+    statusCode = 200,
+    type = "application/vnd.microsoft.card.adaptive",
+    value = card
  });
 ```

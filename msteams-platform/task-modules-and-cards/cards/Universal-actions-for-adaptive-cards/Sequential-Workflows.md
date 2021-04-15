@@ -5,15 +5,15 @@ ms.topic: conceptual
 ---
 ## Sequential workflows
 
-Sequential workflow is supported when the same card is updated on user action and user can progress through a series of sequential cards. This is supported through `Action.Execute` which enables bot developers to return an adaptive card in response of an user action.
+Sequential workflow is when an adaptive card is updated on user action and user can progress through a series of sequential cards. This is supported through `Action.Execute` which enables bot developers to return an adaptive card in response of an user action.
 
-Example: Take a scenario where a restaurant wants to take an order. With `Action.Execute` the order for various items such as food, drinks etc can be taken sequentially.
+Example: Take a scenario where a restaurant wants to take an order. With `Action.Execute` the user's choice for various items such as food, drinks etc. can be recorded sequentially.
 
-<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="200" height="300"/>
+<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
 
-**Card 1 JSON payload**
+**Card 1 JSON**
 
 ```
 {
