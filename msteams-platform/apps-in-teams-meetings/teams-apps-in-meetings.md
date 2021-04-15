@@ -142,6 +142,9 @@ The following user types identify what each user can do and what they can access
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. These users have valid credentials with federated partners and are authorized by Teams. They do not have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 * **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participant is like an external user, but their identity is not projected in the meeting. An anonymous user cannot be an organizer but can be a presenter or attendee.
 
+> [!NOTE]
+> Anonymous users inherit the global default user-level app permission policy. See the Manage Apps section to learn more.
+
 The following table provides the user types and what features each user can access:
 
 | User type | Tabs | Bots | Message extensions | Adaptive cards | Task modules | In-meeting dialog |
