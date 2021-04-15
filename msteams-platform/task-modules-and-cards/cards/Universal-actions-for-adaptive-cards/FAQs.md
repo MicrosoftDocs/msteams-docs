@@ -23,3 +23,6 @@ Answer: UserIds is an array of user MRIs which is part of the refersh property i
 
 **Question -** How many user MRIs can I add to userIds list? Why? <br>
 **Answer -** Five. This is because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh.
+
+**Question -** How does refresh work for users whose user MRI is not present in userIds list in refresh property?
+**Answer -** These users get an option for manually refreshing their cards. On Teams, these users would see an `Refresh Card` option in the triple dot menu in web/desktop while they would see the same option on long press context menu in mobile (android/iOS).
