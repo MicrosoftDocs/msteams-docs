@@ -6,7 +6,7 @@ ms.topic: conceptual
 
 # Send tenant ID and conversation ID to the request headers of the bot
 
-The current outgoing requests to the bot do not contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot to a URL similar to https://va.ai.dynamics.com/api/v1/messages/bots/1f0fe267-c3e3-4011-85fa-xxxxxxxxxx. Requests are received to show the conversation ID and tenant ID in the headers.
+The current outgoing requests to the bot do not contain in the header or URL any information that helps bots route the traffic without unpacking the entire payload. The activities are sent to the bot to a URL similar to https://<your_domain>/api/messages. Requests are received to show the conversation ID and tenant ID in the headers.
 
 ## Request header fields
 
@@ -17,6 +17,6 @@ Two non-standard request header fields are added to all the requests sent to bot
 | x-ms-conversation-id | The conversation ID corresponding to the request activity if applicable and confirmed or verified. |
 | x-ms-tenant-id | The tenant ID corresponding to the conversation in the request activity. |
 
-If the tenant or conversation ID is not present in the activity, the value is empty.
+If the tenant or conversation ID is not present in the activity or was not validated on the service side, the value is empty.
 
 ![Request header fields](~/assets/images/bots/requestheaderfields.png)
