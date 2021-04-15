@@ -256,11 +256,11 @@ The following table provides the properties of a hero card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines. |
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines. |
+| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 16:9. |
-| buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
+| buttons | Array of action objects | Set of actions applicable to the current card. Maximum six. |
 | tap | Action object | Activated when the user taps on the card itself. |
 
 ### Example of a hero card
@@ -385,9 +385,11 @@ The following code shows an example of a list card:
 }
 ```
 
+You can now work with an Office 365 connector card that provides a flexible layout and is a great way to get useful information.
+
 ## Office 365 connector card
 
-The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. For differences between connector cards and the O365 card, see [Notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).
+The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. For differences between connector cards and the O365 card, see [notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).
 
 ### Support for Office 365 connector cards
 
@@ -403,8 +405,8 @@ The following table provides the properties of the Office 365 connector card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines. |
-| summary | Rich text | Summary of the card. Maximum 2 lines. |
+| title | Rich text | Title of the card. Maximum two lines. |
+| summary | Rich text | Summary of the card. Maximum two lines. |
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | themeColor | HEX string | Color that overrides the accentColor provided from the application manifest. |
 
@@ -426,7 +428,7 @@ All text fields support markdown and HTML. You can control which sections use ma
 
 If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
 
-To specify the rendering style for `activityImage`, you can set `activityImageType` as follows:
+To specify the rendering style for `activityImage`, you can set `activityImageType` as shown in the following table:
 
 | Value | Description |
 | --- | --- |
@@ -506,6 +508,8 @@ The following code shows an example of an Office 365 connector card:
 }
 ```
 
+Now, you can work with a receipt card that provides a receipt to the user.
+
 ## Receipt card
 
 Teams supports receipt card. It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
@@ -578,9 +582,11 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
+Now you can work with a signin card that enables a bot to request that a user signs in.
+
 ## Signin card
 
-Signin card enables a bot to request a user to sign in. It is supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions: `signin` and `openUrl`.
+Signin card is supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
 
 The signin action can be used from any card in Teams, not just the signin card. For more information on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -598,6 +604,8 @@ Bot Framework reference:
 
 * [Signin card Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
 * [Signin card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
+
+Now, you can work with a thumbnail card that is used for sending a simple actionable message.
 
 ## Thumbnail card
 
@@ -678,17 +686,17 @@ Bot Framework reference:
 * [Thumbnail card Node.js](/javascript/api/botframework-schema/thumbnailcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Thumbnail card C#](/dotnet/api/microsoft.bot.schema.thumbnailcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
+Now, you can work with card collections that include carousel and list collections.
+
 ## Card collections
 
-Teams supports Card collections.
+Teams supports card collections. Card collections include `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain Adaptive, hero, or thumbnail cards.
 
-Card collections include `builder.AttachmentLayout.carousel` and `builder.AttachmentLayout.list`. These collections contain Adaptive, hero, or thumbnail cards.
-
-## Carousel collection
+### Carousel collection
 
 The [carousel layout](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-a-carousel-of-cards&preserve-view=true) shows a carousel of cards, optionally with associated action buttons.
 
-### Support for carousel collections
+#### Support for carousel collections
 
 The following table provides the features that support carousel collections:
 
@@ -699,11 +707,11 @@ The following table provides the features that support carousel collections:
 > [!NOTE]
 > A carousel can display a maximum of ten cards per message.
 
-### Properties of a carousel card
+#### Properties of a carousel card
 
 Properties of a carousel card are same as those of the hero and thumbnail cards.
 
-### Example of a carousel collection
+#### Example of a carousel collection
 
 ![Example of a carousel of cards](~/assets/images/cards/carousel.png)
 
@@ -874,13 +882,13 @@ The following code shows an example of a carousel collection:
 }
 ```
 
-### Syntax for carousel collections
+#### Syntax for carousel collections
 
 `builder.AttachmentLayoutTypes.Carousel` is the syntax for carousel collections.
 
-## List collection
+### List collection
 
-### Support for list collections
+#### Support for list collections
 
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons.
 
@@ -890,18 +898,18 @@ The following table provides the features that support list collections:
 | --- | --- | --- | --- |
 | ✔ | ✔ | ✖ | ✔ |
 
-### Example of a list collection
+#### Example of a list collection
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
-Properties are the same as for the hero or thumbnail card.
+Properties are the same as the hero or thumbnail card.
 
 A list can display a maximum of ten cards per message.
 
 > [!NOTE]
 > Some combinations of list cards are not yet supported on iOS and Android.
 
-### Syntax for list collections
+#### Syntax for list collections
 
 `builder.AttachmentLayout.list` is the syntax for list collections.
 

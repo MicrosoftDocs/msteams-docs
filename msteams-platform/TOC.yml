@@ -298,6 +298,8 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
+    - name: Invoking and dismissing task modules
+      href: task-modules-and-cards/task-modules/invoking-task-modules.md  
     - name: Using task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
     - name: Using task modules in bots
