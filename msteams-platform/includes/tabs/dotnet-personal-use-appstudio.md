@@ -7,7 +7,7 @@
 
 - Open App studio and select the **Manifest editor** tab.
 
-- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
+- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It must be found here:
 
 ```bash
 /bin/Debug/netcoreapp2.2/Tab.zip
@@ -17,11 +17,11 @@
 
 ### Update your app package with Manifest editor
 
-Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
+Once you've uploaded your app package into App Studio, you need to configure it.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
+There is a list of steps on the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information is provided by your *manifest.json* but there are a few fields that you need to update:
 
 #### Details: App details
 

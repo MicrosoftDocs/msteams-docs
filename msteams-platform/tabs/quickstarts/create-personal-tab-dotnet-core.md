@@ -5,9 +5,9 @@ description: A quickstart guide to creating a custom personal tab with ASP.NET C
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Create a personal tab with ASP.NET Core
+# Create a personal tab with ASP.NETCore
 
-In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.NETCore Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -21,7 +21,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
 
-To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser navigate to the URLs below to verify the application loaded properly:
+To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser, navigate to the URLs below to verify the application loaded properly:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -32,7 +32,7 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -48,11 +48,11 @@ public void Configure(IApplicationBuilder app)
 
 ### wwwroot folder
 
-In ASP.NET Core, the web root folder is where the application looks for static files.
+In ASP.NETCore, the web root folder is where the application looks for static files.
 
 ### Index.cshtml
 
-ASP.NET Core treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP.NETCore treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 ### AppManifest folder
 
@@ -103,7 +103,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 >[!TIP]
->You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
+>You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service, it will return a new URL and you need to update every place that uses the old URL.
 
 ### Run your application
 
