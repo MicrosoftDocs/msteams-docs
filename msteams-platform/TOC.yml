@@ -268,12 +268,8 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Meeting app extensibility
-    href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites and API references
+  - name: Build an app for meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
-  - name: Enable and configure apps for meetings
-    href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Together Mode in Teams
     href: apps-in-teams-meetings/teams-together-mode.md  
   - name: Build a scene in Scene studio
