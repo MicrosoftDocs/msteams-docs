@@ -19,8 +19,7 @@ The default install scope selection helps you to specify the `defaultInstallScop
 The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
 
 > [!NOTE]
->`defaultGroupCapability` provides the default capability that is added to the team, group chat, or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
-> Set the `defaultInstallScope` and `defaultGroupCapability` properties in your [manifest schema](../../resources/schema/manifest-schema.md).
+>`defaultGroupCapability` provides the default capability that is added to the team, groupchat, or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 
 ## Configure app's default install scope
 
@@ -53,9 +52,6 @@ Configure the default capability for shared scopes, based on whether your app is
 
 1. Open your manifest schema, and add the `defaultGroupCapability` property to it.
 2. Save the updates.
-
-> [!NOTE]
-> You can also manually add the details to your app manifest.
 
 Following is a JSON example:
 
