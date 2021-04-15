@@ -189,7 +189,13 @@ For more information on the features available see: [Features in the Public Deve
      "websiteUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  ],
+  "defaultInstallScope": "meetings",
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -493,4 +499,28 @@ You can define any of the following properties:
 * `privacyUrl`: It is the https:// URL to the developer's privacy policy.
 * `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
+## defaultInstallScope
+
+**Optional** - string
+
+Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## defaultGroupCapability
+
+**Optional** - object
+
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: tab, bot, or connector.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: tab, bot or connector|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: tab, bot, or connector.|
 
