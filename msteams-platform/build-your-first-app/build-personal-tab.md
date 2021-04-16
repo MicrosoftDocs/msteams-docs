@@ -132,19 +132,18 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
     1. Apply the following CSS to your tab content's root HTML element (`<div style={newTheme}>`):
 
         ```JavaScript
-        let newTheme
-
-        if (isTheme === "default") {
-          newTheme = {
-            backgroundColor: "#EEF1F5",
-            color: "#16233A"
-          };
-        } else {
-          newTheme = {
-            backgroundColor: "#2B2B30",
-            color: "#FFFFFF"
-          };
-        }
+         let newTheme
+          if (isTheme === "default") {
+            newTheme = {
+              backgroundColor: "#EEF1F5",
+              color: "#16233A"
+            };
+          } else {
+            newTheme = {
+              backgroundColor: "#2B2B30",
+              color: "#FFFFFF"
+            };
+          }
         ```
 
         Check your tab in Teams. The appearance now closely matches the dark theme.

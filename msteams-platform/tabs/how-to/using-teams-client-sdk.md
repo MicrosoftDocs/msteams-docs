@@ -21,12 +21,12 @@ For example, the SDK can make your [tab react to theme changes](../../build-your
 
 Do one of the following depending on your development preferences:
 
-* [Install the SDK with npm or Yarn](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest)
+* [Install the SDK with npm or Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
 * [Clone the SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
 
 ## Common SDK functions
 
-See the following tables to understand commonly used SDK functions. The [SDK reference documentation](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) provides more comprehensive information.
+See the following tables to understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information.
 
 ### Basic functions
 
