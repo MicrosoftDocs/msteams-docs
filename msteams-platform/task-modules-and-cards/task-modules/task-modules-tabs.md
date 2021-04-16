@@ -27,14 +27,14 @@ Let's see how each of them work.
 
 ## Invoking a task module from a tab
 
-To invoke a task module from a tab use `microsoftTeams.tasks.startTask()` passing a [TaskInfo object](~/task-modules-and-cards/what-are-task-modules.md#the-taskinfo-object) and an optional `submitHandler` callback function. As described earlier, there are two cases to consider:
+To invoke a task module from a tab use `microsoftTeams.tasks.startTask()` passing a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) and an optional `submitHandler` callback function. As described earlier, there are two cases to consider:
 
 1. The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page should call `microsoftTeams.initialize()`. If there is a `submitHandler` function on the page and there is an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the error as described [below](#task-module-invocation-errors).
-1. The value of `taskInfo.card` is the [JSON for an Adaptive card](~/task-modules-and-cards/what-are-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). In this case there's obviously not any JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive card; the only way to receive what the user entered is by passing the result to a bot. To use an Adaptive card task module from a tab your app must include a bot to get any information back from the user. This is explained below.
+1. The value of `taskInfo.card` is the [JSON for an Adaptive card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). In this case there's obviously not any JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive card; the only way to receive what the user entered is by passing the result to a bot. To use an Adaptive card task module from a tab your app must include a bot to get any information back from the user. This is explained below.
 
 ## Example: Invoking a task module
 
-The code below is adapted from [the task module sample](~/task-modules-and-cards/what-are-task-modules.md#code-sample). Here's what the task module looks like:
+The code below is adapted from [the task module sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample). Here's what the task module looks like:
 
 ![Task Module - Custom Form](~/assets/images/task-module/task-module-custom-form.png)
 

@@ -17,9 +17,11 @@ Task modules can be invoked from tabs, bots, or deep links and what appears in o
 > [!NOTE]
 > Invoking a task module from JavaScript is not supported on mobile.
 
+Now you can go through the `TaskInfo` object that defines certain attributes for a task module.
+
 ## The TaskInfo object
 
-The `TaskInfo` object contains the metadata for a task module. The object definition is below. You must define either `url` for an embedded iFrame or `card` for an Adaptive Card.
+The `TaskInfo` object contains the metadata for a task module. You must define either `url` for an embedded iFrame or `card` for an Adaptive Card. The following table provides the object definition:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
@@ -34,6 +36,8 @@ The `TaskInfo` object contains the metadata for a task module. The object defini
 > [!NOTE]
 > The task module feature requires that the domains of any URLs you want to load are included in the `validDomains` array in your app's manifest.
 
+Now you can go through task module sizing that enables you to set the height and width of the task module.
+
 ## Task module sizing
 
 Using integers for `TaskInfo.width` and `TaskInfo.height`, sets the height and width in pixels. However, depending on the size of the Team's window and screen resolution they are reduced proportionally while maintaining the aspect ratio that is width or height.
@@ -43,6 +47,8 @@ If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"` or `"large"`
 ![Task module example](~/assets/images/task-module/task-module-example.png)
 
 Task modules invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`).
+
+The next section provides examples of embedding task modules in a YouTube video and a PowerApp.
 
 ## Task module CSS for HTML or JavaScript task modules
 
@@ -116,6 +122,8 @@ The following code provides an example of the CSS:
 }
 ```
 
+The next section provides details on invoking your card using Adaptive Card or Adaptive Card bot card attachment.
+
 ## Adaptive Card or Adaptive Card bot card attachment
 
 Depending on how you are invoking your `card`, you must use either an Adaptive Card, or an Adaptive Card bot card attachment, which is an Adaptive Card wrapped in an attachment object.
@@ -165,6 +173,8 @@ The following code provides an example of an Adaptive Card bot card attachment w
 }
 ```
 
+The next section provides details on task module deep link syntax including the `TaskInfo` object and `APP_ID` and `BOT_APP_ID`.
+
 ## Task module deep link syntax
 
 A task module deep link is a serialization of the [TaskInfo object](#the-taskinfo-object) with the following two other details, `APP_ID` and optionally the `BOT_APP_ID`:
@@ -187,6 +197,8 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 > [!NOTE]
 > `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a bot as it is recommended to use that as an app's ID if there is one.
+
+The next section provides details on using a keyboard with your app's task module.
 
 ## Keyboard and accessibility guidelines
 
@@ -216,16 +228,16 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 ## See also
 
 > [!div class="nextstepaction"]
-> [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+> [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+> [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
 
 > [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
+> [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
 
 ## Next step
 
