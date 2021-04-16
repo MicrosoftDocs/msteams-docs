@@ -317,7 +317,7 @@ To use the `userContext` API to route requests accordingly, see [Teams SDK](../t
 Messaging extension works as expected when a user is in an in-meeting view and the user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
 > [!NOTE]
-> * The side panel is not supported in the older version of SDK. Make sure you use the latest version 1.9.0 of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true). The minimum required version is 1.9.0.
+> The side panel is supported from the version 1.9.0 of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true).
 
 #### In-meeting dialog
 
