@@ -144,7 +144,7 @@ The following user types identify what each user can do and what they can access
 ## See also
 
 > [!div class="nextstepaction"]
-> [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+> [Tab](../tabs/what-are-tabs.md#Understand how tabs work)
 
 > [!div class="nextstepaction"]
 > [Bot](../bots/what-are-bots.md)
