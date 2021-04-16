@@ -1,14 +1,14 @@
 ## Prerequisites
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- To complete this quickstart, you need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
   - Currently, if you don't have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
 
-In addition, this project requires that you have the following installed in your development environment:
+In addition, this project requires the following installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
+- [Node.js/npm](https://nodejs.org/en/). You must use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
 
 - After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
@@ -52,7 +52,7 @@ This is your app package name and will be used in the app manifest and descripti
 
 Your company name will be used in the app manifest.
 
-<br>**Which manifest version would you like to use?**
+**Which manifest version would you like to use?**
 
 Select the default schema.
 
@@ -66,7 +66,7 @@ Select ( &ast; ) A Tab.
 
 **The URL where you will host this solution?**
 
-By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+By default, the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
 **Would you like to include Test framework and initial tests? (y/N)**
 

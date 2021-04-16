@@ -1,4 +1,4 @@
-## Create the app package
+## Create app package
 
 You'll need an app package to test your tab in Teams. It's a zip folder that contains the following required files:
 

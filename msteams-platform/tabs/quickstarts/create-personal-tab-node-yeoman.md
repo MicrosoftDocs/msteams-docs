@@ -14,7 +14,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Do you want to create a configurable or static tab**
+**Do you want to create a configurable or static tab?**
 
 Use the arrow keys to select static tab.
 
@@ -25,7 +25,7 @@ Use the arrow keys to select static tab.
 
 ## Create your personal tab
 
-To add a personal tab to this application you'll create a content page and update existing files:
+To add a personal tab to this application, you must create a content page and update existing files:
 
 - In your code editor, create a new HTML file, **personal.html** and add the following markup:
 
@@ -104,9 +104,9 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 ## Establish a secure tunnel to your tab
 
-Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams don't allow local hosting, therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams don't allow local hosting, therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
-To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that will create a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep the service will no longer be available.
+To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 
 In your command prompt, exit localhost and enter the following:
 
@@ -115,7 +115,7 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends.
+> When your tab is uploaded to Microsoft teams via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ## Upload your application to Teams
 
