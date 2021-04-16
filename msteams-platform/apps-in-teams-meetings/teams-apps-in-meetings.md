@@ -143,7 +143,7 @@ The following user types identify what each user can do and what they can access
 * **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participant is like an external user, but their identity is not projected in the meeting. An anonymous user cannot be an organizer but can be a presenter or attendee.
 
 > [!NOTE]
-> Anonymous users inherit the global default user-level app permission policy. See the Manage Apps section to learn more.
+> Anonymous users inherit the global default user-level app permission policy. For more information, see [Manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
 The following table provides the user types and what features each user can access:
 
