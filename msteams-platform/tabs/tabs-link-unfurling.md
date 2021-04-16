@@ -13,14 +13,14 @@ This documentation guides you on how to adopt the Stage View in your app.
 
 ## Stage View
 
-Stage View is a giant, full screen UI component that you can invoke to surface your web content. The link-unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive card and Chat Services. 
+Stage View is a giant, full screen UI component that you can invoke to surface your web content. The link-unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. 
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive card, and get the UI and tab information through the card. When a user selects the Adaptive card, it is staged in the UI component. The users can pin the content as a tab directly from the Stage View.  
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card, and get the UI and tab information through the card. When a user selects the Adaptive Card, it is staged in the UI component. The users can pin the content as a tab directly from the Stage View.  
 The following image explains how the Stage View works:
 
-![stageview working](../assests/images/tabs/stage-view-working.png)
+![stageview working](~/assests/images/tabs/stage-view-working.png)
 
 ## Advantage of Stage View
 
@@ -28,10 +28,10 @@ The Stage View provides users with a more seamless experience of viewing content
 
 ## Invoke the Stage View
 
-You can invoke the Stage View in the following two ways:
+You can invoke the Stage View in the following two ways:   
 
-* Invoke Stage View from the Adaptive Card.
 * Invoke Stage View through a deep link.
+* Invoke Stage View from the Adaptive Card.
 
 ## Invoke Stage View through a deep link
 
