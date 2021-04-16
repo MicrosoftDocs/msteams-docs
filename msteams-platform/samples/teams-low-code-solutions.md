@@ -41,20 +41,20 @@ You can [create flows to automate repetitive work tasks](https://flow.microsoft.
 Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
 
 ## Teams app templates
+[App templates](../samples/app-templates.md) are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub.   
+The illustration of app template is as follows:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/app-template-illustration.png" alt-text="app solution illustration":::
 
 ### ✔ App template catalog
 
-[App templates](../samples/app-templates.md) are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions for deploying and installing the app for your organization. It provides a ready-to-use application that you can install and start using immediately. The complete source code is available in the GitHub repository. You can explore the code in detail. You can fork the code and change it to meet your specific needs.
+ Each template contains detailed instructions for deploying and installing the app for your organization. It provides a ready-to-use application that you can install and start using immediately. The complete source code is available in the GitHub repository. You can explore the code in detail. You can fork the code and change it to meet your specific needs.
 
 ### ✔ Virtual Assistant for Teams
 
 Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. You can configure your virtual assistant for [integration into the Teams environment](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro). 
 
 ## See also
-
-
 
 ### ✔ Teams Shift Connectors
 

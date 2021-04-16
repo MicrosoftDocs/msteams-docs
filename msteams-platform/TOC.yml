@@ -46,7 +46,7 @@
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
-  - name: Integrate with Teams - Overview
+  - name: Overview
     href: samples/integrate-web-apps-and-device-capabilities-overview.md
   - name: Web apps
     href: samples/integrating-web-apps.md

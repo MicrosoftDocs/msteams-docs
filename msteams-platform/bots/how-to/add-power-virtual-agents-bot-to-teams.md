@@ -79,9 +79,9 @@ The following image guides you to set-up an existing bot:
 1. **Add valid domains for your bot**  
 This step is only required if your bot requires the user to sign-in. Navigate to **Domains and permissions** and  in the **Valid Domains** field, input the following:
 
-```bash
-   token.botframework.com
-```
+    ```bash
+       token.botframework.com
+    ```
 
 7.  **Test and distribute your bot**  
 Choose the **Test and distribute** tab and choose **Install** to add your bot directly to your Teams instance. Alternately, you can download the completed app package to share with Teams users or provide it to your admin to make your bot available in the tenant app catalog.
