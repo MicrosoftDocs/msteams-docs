@@ -37,7 +37,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="Screenshot showing how to create a new bot in the Teams Toolkit.":::
 
-1. In the **Configure project** screen, enter a name for your bot. This is the default name for your app and also the name of the app project directory on your local machine.
+1. On the **Configure project** screen, enter a name for your bot. This is the default name for your app and also the name of the app project directory on your local machine.
 1. Select **Create a new Bot** then click **Create Bot Registration** button:
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="Screenshot showing naming new bot in the Teams Toolkit.":::
