@@ -9,11 +9,14 @@ keywords: teams what's new latest
 >[!TIP]
 > Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
-## Change Log
+The changes to the Microsoft Teams platform and this document set are listed in the following sections:
+* [General Availability (GA) features](#ga-features): Provides a list of released features in Microsoft Teams. 
+* [Developer preview](#developer-preview): Developer preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams.
 
-The change log lists changes to the Microsoft Teams platform and this document set. At times entries may be used to call attention to a new feature that is simply of interest to Teams developers.
+> [!NOTE]
+> Some entries may be used to call attention to a new feature that is simply of interest to Teams developers. 
 
-### Features that are GA
+## GA features
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -87,7 +90,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 
-### Features that are in Developer Preview
+### Developer preview
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -102,7 +105,8 @@ The change log lists changes to the Microsoft Teams platform and this document s
 | 05/29/2018 | Adaptive cards are now supported in Teams in the [Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md). |
 | 05/29/2018 | If you are using the [developer preview](~/resources/dev-preview/developer-preview-intro.md), your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files.md), [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 
+For more information on developer preview program, see [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
-## Submit your questions, bugs, feature requests, and contributions
+## Submit your feedback
 
-We listen to the developer community across [several channels](feedback.md).
+We listen to the developer community for any queries, bugs, feature requests, or contributions. You can submit your feedback through any one of the [available channels](feedback.md).
