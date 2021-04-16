@@ -20,13 +20,13 @@ You can create links to information and features within Teams. Examples where cr
 > ✔ Directly navigates to the deeplink url.
 >
 > **Bot**:  
-> ✔ Deeplink in card body - Opens in browser first.  
-> ✔ Deeplink added to OpenURL action in Adaptive Card - Directly navigates to the deeplink url.  
-> ✔ Hyperlink markdown text in the card - Opens in browser first.  
+> ✔ Deeplink in card body: Opens in browser first.  
+> ✔ Deeplink added to OpenURL action in Adaptive Card: Directly navigates to the deeplink url.  
+> ✔ Hyperlink markdown text in the card: Opens in browser first.  
 >
 > **Chat**:  
-> ✔ Text message hyperlink markdown : Directly navigates to deeplink url.  
-> ✔ Link pasted in general chat conversation - Directly navigates to deeplink url.
+> ✔ Text message hyperlink markdown: Directly navigates to deeplink url.  
+> ✔ Link pasted in general chat conversation: Directly navigates to deeplink url.
 
 ## Deep linking to your tab
 
@@ -160,13 +160,13 @@ Following is the sample format of deeplink to files:
 ### Serialization of this object:
 ```
 {
-tenantId: “0d9b645f-597b-41f0-a2a3-ef103fbd91bb”,
-filetype: = “pptx”,
-objectUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx”,
-baseUrl: “https://microsoft.sharepoint.com/teams/ActionPlatform”,
-serviceName: “teams”,
-threadId: = “19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype”,
-groupId: “ae063b79-5315-4ddb-ba70-27328ba6c31e”
+tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
+filetype: = "pptx",
+objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
+baseUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform",
+serviceName: "teams",
+threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
+groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
 ## Deep links for SharePoint Framework tabs
@@ -180,10 +180,10 @@ The following deep link format can be used in a bot, connector or messaging exte
 
 The query parameters are:
 
-* `appID` - Your manifest ID fe4a8eba-2a31-4737-8e33-e5fae6fee194.
-* `entityID` - The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
-* `entityWebUrl` - An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
-* `entityName` - A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
+* `appID`: Your manifest ID fe4a8eba-2a31-4737-8e33-e5fae6fee194.
+* `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
+* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
@@ -204,7 +204,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 The query parameters are:
 
 * `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName, typically an email address.
-* `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example “2018-03-12T23:55:25+02:00”.
+* `startTime`: The optional start time of the event. This should be in [long ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601), for example *2018-03-12T23:55:25+02:00*.
 * `endTime`: The optional end time of the event, also in ISO 8601 format.
 * `subject`: An optional field for the meeting subject.
 * `content`: An optional field for the meeting details field.
