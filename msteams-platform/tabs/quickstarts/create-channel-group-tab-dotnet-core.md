@@ -5,9 +5,9 @@ description: A quickstart guide to creating a custom channel and group tab with 
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a Custom Channel and Group Tab with ASP.NET Core
+# Create a Custom Channel and Group Tab with ASP.NETCore
 
-In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core Razor page. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom channel or group tab with C# and ASP.NetCore Razor page. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -31,7 +31,7 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -47,11 +47,11 @@ public void Configure(IApplicationBuilder app)
 
 ### wwwroot folder
 
-In ASP.NET Core, the web root folder is where the application looks for static files.
+In ASP.NETCore, the web root folder is where the application looks for static files.
 
 ### Index.cshtml
 
-ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP.NETCore treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
 ### Tab.cs
 
