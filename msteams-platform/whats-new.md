@@ -90,7 +90,7 @@ The changes to the Microsoft Teams platform and this document set are listed in 
 | 02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
 
-### Developer preview
+## Developer preview
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
