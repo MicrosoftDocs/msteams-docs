@@ -149,7 +149,7 @@ The following table provides the user types and what features each user can acce
 
 | User type | Tabs | Bots | Message extensions | Adaptive cards | Task modules | In-meeting dialog |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an adaptive card are allowed. | Not available |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
 | Guest that is part of the tenant AAD | Interaction is allowed. Creating, updating, and deleting are not allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
 | Federated | Not available | Not available | Not available | Not available | Not available | Not available |
 
