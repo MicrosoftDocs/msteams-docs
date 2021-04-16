@@ -2,6 +2,7 @@
 title: Combine bots with tabs
 description: Describes how to use tabs and bots together
 keywords: teams bots tabs development
+ms.topic: conceptual
 ms.date: 03/15/2018
 ---
 # Combine bots with tabs

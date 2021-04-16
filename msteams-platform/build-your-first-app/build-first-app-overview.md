@@ -52,7 +52,14 @@ You can also use any other technologies of your choice. If you prefer using a co
 
 ### Teams doesn't host your app
 
+
 You will only install an app package that contains a configuration file called manifest, and app icons to the Teams client. Rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Teams does not host your app. Your app in the cloud (or localhost during your development) accesses Teams via HTTPS.
+
+1. Install [Node.js](https://nodejs.org/en/).
+1. Install [ngrok](https://ngrok.com/download) if you are building a bot or messaging extension and [create a tunnel using ngrok](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok).
+1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
+1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
+
 
   :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
