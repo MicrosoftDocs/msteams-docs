@@ -14,7 +14,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [cards reference](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Images can be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [cards reference](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and O365 connector cards with Markdown that include certain supported styles.
 
@@ -22,20 +22,19 @@ You can format Adaptive Cards and O365 connector cards with Markdown that includ
 
 There are two card types that support Markdown in Teams:
 
-> [!div class="checklist"]
-> * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
-> * O365 connector cards: Markdown and limited HTML is supported in Office 365 connector cards in the text fields.
+* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
+* O365 connector cards: Markdown and limited HTML is supported in Office 365 connector cards in the text fields.
 
-# [Markdown formatting for Adaptive Cards](#tab/adaptive-md)
+# [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
  The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
 
 | Style | Example | Markdown |
 | --- | --- | --- |
-| bold | **Bold** | ```**Bold**``` |
-| italic | _Italic_ | ```_Italic_``` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| Bold | **Bold** | ```**Bold**``` |
+| Italic | _Italic_ | ```_Italic_``` |
+| Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
 | Hyperlinks |[Bing](https://www.bing.com/)| ```[Title](url)``` |
 
 The following Markdown tags are not supported:
@@ -70,7 +69,7 @@ For more information, see [text features in Adaptive Cards](/adaptive-cards/crea
 
 The date and localization features mentioned in this section are not supported in Teams.
 
-### Adaptive Cards formatting sample
+### Adaptive Cards format sample
 
 The following code shows an example of Adaptive Cards formatting:
 
@@ -185,7 +184,7 @@ The following image is an example of masking information in Adaptive Cards:
 
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
 
-#### Constructing full width cards
+#### Construct full width cards
 
 To make a full width Adaptive Card the `width` object in `msteams` property in the card content must be set to `Full`.
 
@@ -215,9 +214,11 @@ Your app must include the elements from the following code sample:
 ```
 
 The following image shows a full width Adaptive Card:
+
 ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
 
 The following image shows the default view of the Adaptive Card when you have not set the `width` property to **Full**:
+
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### Typeahead support
@@ -281,22 +282,22 @@ In the stage view, users can zoom in and zoom out of the image. You can select w
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown formatting for O365 connector cards](#tab/connector-md)
+# [Markdown format for O365 connector cards](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting. HTML support is described in the last section.
 
 | Style | Example | Markdown |
 | --- | --- | --- |
-| bold | **text** | `**text**` |
-| italic | *text* | `*text*` |
-| header (levels 1&ndash;3) | **Text** | `### Text`|
-| strikethrough | ~~text~~ | `~~text~~` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
-| preformatted text | `text` | ``preformatted text`` |
-| blockquote | >blockquote text | `>blockquote text` |
-| hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
-| image link |![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
+| Bold | **text** | `**text**` |
+| Italic | *text* | `*text*` |
+| Header (levels 1&ndash;3) | **Text** | `### Text`|
+| Strikethrough | ~~text~~ | `~~text~~` |
+| Unordered list | <ul><li>text</li><li>text</li></ul> | ```- Item 1\r- Item 2\r- Item 3``` |
+| Ordered list | <ol><li>text</li><li>text</li></ol> | ```1. Green\r2. Orange\r3. Blue``` |
+| Preformatted text | `text` | ``preformatted text`` |
+| Blockquote | >blockquote text | `>blockquote text` |
+| Hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` |
+| Image link |![Duck on a rock](https://aka.ms/Fo983c) | `![Duck](https://aka.ms/Fo983c)` |
 
 In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
@@ -319,7 +320,7 @@ On Android, Markdown formatting for connector cards appears as shown in the foll
 
 ![Markdown formatting for connector cards in the Android client](../../assets/images/cards/connector-android-markdown-combined.png)
 
-### Formatting example for Markdown connector cards
+### Format example for Markdown connector cards
 
 The following code shows an example of formatting for Markdown connector cards:
 
@@ -370,24 +371,24 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
-## Formatting cards with HTML
+## Format cards with HTML
 
-# [HTML formatting for O365 connector cards](#tab/connector-html)
+# [HTML format for O365 connector cards](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 
 | Style | Example | HTML |
 | --- | --- | --- |
-| bold | **text** | `<strong>text</strong>` |
-| italic | *text* | `<em>text</em>` |
-| header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `<strike>text</strike>` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| preformatted text | `text` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bold | **text** | `<strong>text</strong>` |
+| Italic | *text* | `<em>text</em>` |
+| Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| Strikethrough | ~~text~~ | `<strike>text</strike>` |
+| Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| Preformatted text | `text` | `<pre>text</pre>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
@@ -410,7 +411,7 @@ On Android, HTML formatting appears as shown in the following image:
 
 ![HTML formatting for connector cards in the Android client](../../assets/images/cards/connector-android-html-combined.png)
 
-### Formatting sample for HTML connector cards
+### Format sample for HTML connector cards
 
 The following code shows an example of formatting for HTML connector cards:
 
@@ -462,22 +463,22 @@ The following code shows an example of formatting for HTML connector cards:
 
 ```
 
-# [HTML formatting for hero and thumbnail cards](#tab/simple-html)
+# [HTML format for hero and thumbnail cards](#tab/simple-html)
 
 HTML tags are supported for simple cards, such as the hero and thumbnail cards. Markdown is not supported.
 
 | Style | Example | HTML |
 | --- | --- | --- |
-| bold | **text** | `<strong>text</strong>` |
-| italic | *text* | `<em>text</em>` |
-| header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
-| strikethrough | ~~text~~ | `<strike>text</strike>` |
-| unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
-| ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
-| preformatted text | `text` | `<pre>text</pre>` |
-| blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
-| hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
-| image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| Bold | **text** | `<strong>text</strong>` |
+| Italic | *text* | `<em>text</em>` |
+| Header (levels 1&ndash;3) | **Text** | `<h3>Text</h3>` |
+| Strikethrough | ~~text~~ | `<strike>text</strike>` |
+| Unordered list | <ul><li>text</li><li>text</li></ul> | `<ul><li>text</li><li>text</li></ul>` |
+| Ordered list | <ol><li>text</li><li>text</li></ol> | `<ol><li>text</li><li>text</li></ol>` |
+| Preformatted text | `text` | `<pre>text</pre>` |
+| Blockquote | <blockquote>text</blockquote> | `<blockquote>text</blockquote>` |
+| Hyperlink | [Bing](https://www.bing.com/) | `<a href="https://www.bing.com/">Bing</a>` |
+| Image link |<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>| `<img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
 
 ### Mobile and desktop differences for simple cards
 
@@ -485,7 +486,7 @@ Because of resolution differences between the desktop and mobile platform, forma
 
 On the desktop, HTML formatting appears as shown in the following image:
 
-![HTML formatting in the Desktop client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
+![HTML formatting in the desktop client](../../assets/images/cards/card-formatting-xml-desktop-v2.png)
 
 On iOS, HTML formatting appears as shown in the following image:
 
@@ -499,7 +500,7 @@ On Android, HTML formatting appears as shown in the following image:
 
 Character formatting, such as bold and italic display correctly on Android.
 
-### Format sample for HTML formatting in simple cards
+### Format sample for HTML format in simple cards
 
 The images in the previous section were created using Teams AppStudio, where the text property of a hero card is set to the following string:
 
