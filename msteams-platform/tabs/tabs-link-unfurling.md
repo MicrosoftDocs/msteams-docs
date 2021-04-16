@@ -6,27 +6,39 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Leverage link unfurling service for tabs
+# Tabs link unfurling with Stage View
 
-The collaborative experience of Teams platform  enhances with continuous addition of new features. A new UI component called **Stage View** is built in Teams that renders the content in full screen. **Stage View** provides a engaging experience. Use the **Stage View** to open the links and view the content within Teams itself instead of browser. 
+The collaborative experience of Teams platform enhances with added new features continuously. A new UI component called Stage View is built in Teams allowing you to render the content that can be opened in full screen in Teams and pinned as a tab. 
+This documentation guides you on how to adopt the Stage View in your app.
 
-This document guides you on how to leverage the existing link unfurling service to unfurl the URLs and pin them as tabs. 
+## Stage View
 
-## Add link unfurling to tabs
- 
-Link unfurling in tab provides engaging user experience within Teams context by keeping the content and the conversation in one place and displaying the contents in full-screen, called **Stage View** .
+Stage View is a giant, full screen UI component that you can invoke to surface your web content. The link-unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive card and Chat Services. 
 
-The **Stage View** leverages existing link unfurling service to unfurl URLs to Adaptive Cards that are pinned as tabs. When user selects the Adaptive Card, the content is opened in **Stage View** instead of the browser. The user can pin the URL as a tab from the **Stage View** or from the Adaptive Card directly.
+## Understand how the Stage View works
 
-When a user enters a URL, it is opened in a tab and unfurled into an Adaptive Card. The link opens in a task module or **Stage View** and keeps the user within Teams. The URL is pinned as a tab from the Stage View. 
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive card, and get the UI and tab information through the card. When a user selects the Adaptive card, it is staged in the UI component. The users can pin the content as a tab directly from the Stage View.  
+The following image explains how the Stage View works:
 
-You can use the link unfurling service to upgrade the website tab into a Teams app and configure a new website tab as an app.
+![stageview working](../assests/images/tabs/stage-view-working.png)
 
-## Invoke a Stage View through a deep link
+## Advantage of Stage View
+
+The Stage View provides users with a more seamless experience of viewing content in Teams, instead of navigating to the browser. The users can interact directly with your content without leaving Teams and your app, leading to more engagement to your app and extending the time users spend on your app.
+
+## Invoke the Stage View
+
+You can invoke the Stage View in the following two ways:
+
+* Invoke Stage View from the Adaptive Card.
+* Invoke Stage View through a deep link.
+
+## Invoke Stage View through a deep link
 
 **Stage View** is a large canvas that you can invoke to surface the web content.
 
-To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API.   
+To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API. 
+
 The following image displays a Stage View invoked through a deep link:
 
 ![invoke a Stage View through a deep link](~/assets/images/tab-images/invoke-stage-view-through-deep-link.png)
@@ -51,39 +63,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > The `title` is optional in the deeplink. If you do not include the `title`, your app name replaces it.
 
-## Tab information property
+## Invoke Stage View from the Adaptive Card
 
-| Property name | Type | Number of characters | Description |
-|:-----------|:---------|:------------|:-----------------------|
-| entityId | String | 64 | A unique identifier for the entity that the tab displays. |
-| name | String | 128 | The display neme of the tab in the channel interface. |
-| contentUrl | String | 2048 | The https:// URL that points to the entity UI to be displayed in the Teams canvas. |
-| websiteUrl? | String | 2048 | The https:// URL to point at if a user selects to view in a browser. |
-| removeUrl? | String | 2048 | The https:// URL that points to the UI to be displayed when the user deletes the tab. |
-
-
-## Advantages of tab link unfurling service
-
-The tab link unfurling service is used to turn any URL into a tab using an adaptive card and chat service. 
-
-Following are the advantages of tab link unfurling service:
-
-1. Use the tab link unfurling service to stage a URL in a new component. 
-
-1. Pin a tab directly from the stage. 
-
-1. Use the tab link unfurling service to upgrade the website tab into a Teams app 
-
-1. Use the tab link unfurling service to configure a new website tab as an app. 
-
-## Tab link unfurling scenarios
-
-You can unfurl the link in tabs with the following scenarios:
+Stage View is invoked from an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md). When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage.After a stage is launched, and the tabInfo is passed in, then you can add the ability to pin the stage as a tab.  
 
 ### 1. Open a stage from Adaptive Card and pin a tab
-
-* When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. 
-* After a stage is launched, and the tab information is passed in, then you must add the ability to pin the stage as a tab.  
 
 The following images display a stage opened from Adaptive Card and pinned in a tab:
 
@@ -94,7 +78,7 @@ The following images display a stage opened from Adaptive Card and pinned in a t
 
 ### Example 
 
-Following is an example to open a stage from Adaptive Card and pin a tab:
+Following is the code to open a stage from Adaptive Card and pin a tab:
 
 ```json
 {
@@ -261,7 +245,25 @@ The following image displays how to add a tab of an app instead of the website t
 
 ![add a tab of an app instead of the website tab](~/assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
 
+## Tab information property
+
+| Property name | Type | Number of characters | Description |
+|:-----------|:---------|:------------|:-----------------------|
+| entityId | String | 64 | A unique identifier for the entity that the tab displays. |
+| name | String | 128 | The display neme of the tab in the channel interface. |
+| contentUrl | String | 2048 | The https:// URL that points to the entity UI to be displayed in the Teams canvas. |
+| websiteUrl? | String | 2048 | The https:// URL to point at if a user selects to view in a browser. |
+| removeUrl? | String | 2048 | The https:// URL that points to the UI to be displayed when the user deletes the tab. |
+
+
+##  Stage View vs task Module
+
+Stage View is good to use when you have a rich content to display to end users, like a page, a dashboard, a file, and so on. Stage view provides maximum real estate that helps you render your content in the full-screen canvas. 
+[Task Module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires users attention or collect information required to move to the next step.
+
 ## See also
 
 > [!div class="nextstepaction"]
 > [Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
+
+
