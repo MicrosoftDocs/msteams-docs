@@ -108,10 +108,12 @@ You can also handle rate limit using the per bot per thread limit.
 
 ## Per bot per thread limit
 
->[!NOTE]
-> Message splitting at the service level results in higher than expected requests per second (RPS). If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
+The per bot per thread limit controls the traffic that a bot is allowed to generate in a single conversation. A conversation is 1:1 between bot and user, a group chat, or a channel in a team. So, if the application sends one bot message to each user, it does not throttle.
 
-The per bot per thread limit controls the traffic that a bot is allowed to generate on a single conversation. A conversation here is 1:1 between bot and user, a group chat, or a channel in a team.
+>[!NOTE]
+> * The thread limit of 3600 seconds-1800 applies only if multiple bot messages are sent to a single user. 
+> * The global limit per app per tenant is 30 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit mentioned in the document.
+> * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
 The following table provides the per bot per thread limits:
 
