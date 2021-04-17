@@ -328,7 +328,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### 6.2 Bot welcome messages
 
 * Bots should almost always send a welcome message during first run. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. If your bot does send welcome messages, it must not send these to users individually (this is considered [spamming](#6-3-bot-message-spamming)). The message should also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. If your bot does send welcome messages, it must not send these to users individually (this is considered [spamming](#63-bot-message-spamming)). The message should also mention the person who added the bot.
 * Notification-only bots must send a welcome message that conveys it will not reply to users' messages.
 
 > [!TIP]
@@ -426,14 +426,14 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](https://do
 
 ### 10.1 General
 
-* All the notification triggers specified in your app manifest should get a notification in the app.
-* The notifications must be localized as per the supported languages declared in the app manifest.
-* Notifications must display within five seconds of the user action.
+* All the notification triggers specified in your app configurations should get a notification in the app.
+* Notifications must be localized per the supported languages configured for your app.
+* Notifications must display within five seconds of user action.
 
 ### 10.2 Avatars
 
 * The notification avatar should match your app's color icon.
-* Notifications triggered by an app user should include the user's avatar.
+* Notifications triggered by a user should include the user's avatar.
 
 ### 10.3 Spamming
 
