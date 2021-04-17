@@ -10,13 +10,13 @@ ms.author: surbhigupta
 
 You can provide your Microsoft Teams app to an individual, team, organization, or anyone who wants to use it. How you distribute depends on several factors, including users' needs, business and technical requirements, and your goals for the app.
 
-## Sideload your app in Teams
+## Upload your app in Teams
 
-Use an app or share it with others. Sideloading is the only way to distribute that doesn't require a formal review process.
+Sideload an app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
-For more information, see [sideload your app in Teams](apps-upload.md).
+For more information, see [upload your app in Teams](apps-upload.md).
 
-## Publish your app to your organization
+## Publish your app to your org
 
 Make your app available to people in your org. This kind of distribution requires your Teams admin's approval.
 

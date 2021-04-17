@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 
-Apps published to the Teams store also automatically list on [Microsoft AppSource](https://appsource.microsoft.com), which is the official app store for Microsoft 365 apps and solutions.
+Apps published to the Teams store also automatically list on [Microsoft AppSource](https://appsource.microsoft.com), which is the official marketplace for Microsoft 365 apps and solutions.
 
 ## Understand the publishing process
 
@@ -19,10 +19,10 @@ Apps published to the Teams store also automatically list on [Microsoft AppSourc
 When your app is production ready, you can begin the process of getting it listed on the Teams store.
 
 > [!TIP]
-> Following the initial steps closely can increase the possibility that your app will be approved.
+> Following the initial steps closely can increase the possibility that your app will be approved for publishing.
 
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
-1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating store listing details, and completing other important tasks to help expedite the review process.
+1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating a store listing, and other important tasks to help expedite the review process.
 1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
 1. If your submission fails, work with Microsoft directly to [resolve any issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 1. Once published, learn how to [maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
@@ -40,8 +40,8 @@ When your app is production ready, you can begin the process of getting it liste
 ## See also
 
 * [Publishing to Microsoft 365 App Stores](https://docs.microsoft.com/office/dev/store/)
-* [Upload your Teams app for a team or user](~/concepts/deploy-and-publish/apps-upload.md)
-* [Publish your Teams app to an organization](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
+* [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
+* [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 
 ## Next step
 

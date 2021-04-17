@@ -12,7 +12,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 * You built an app just for yourself (for example, to automate a workflow).
 * You built an app for a small set of users (such as your work group).
-* You want to debug an app locally yourself or with other developers.
+* You want to test and debug an app locally yourself or with other developers.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ You can sideload Microsoft Teams apps without having to publish to your organiza
 
 ## Upload your app
 
-In the install dialog, you can add your app to a team, chat, meeting, or for personal use depending on how you configure your app's scope.
+In the upload dialog, you can add your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
 1. Log in to the Teams client with your [Microsoft 365 development account](~/build-your-first-app/build-first-app-overview.md#set-up-your-development-account).)
 1. Select **Apps**, then choose **Upload a custom app**.
@@ -44,14 +44,14 @@ Teams provides several ways to open apps. For more information, see [access your
 
 ## Update your app
 
-You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations in the manifest.
+You don't have to sideload your app again if you make code changes (these are reflected in Teams in real-time). However, you must reinstall if you change any app configurations.
 
 ## Remove your app
 
 To remove your app, right click the app icon in Teams and select **Uninstall**.
 
 > [!NOTE]
-> You can't remove a bot from a personal context entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
+> You can't remove personal bot activity entirely. If you remove the app and add it again, new communication with the bot appends to the previous conversation with it.
 
 ## Add a default install scope and group capability
 
@@ -74,4 +74,4 @@ The `defaultInstallScope` property supports values, such as personal, team, grou
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Use your Teams app](/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+> [Use your Teams app](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
