@@ -9,22 +9,27 @@ localization_priority: Normal
 
 # Integrate web applications and device capabilities with Teams
 
+<<<<<<< Updated upstream
 You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow Teams design guidelines to make your app native to Teams.
 To integrate web applications you must be aware of the prerequisites, and understand how to create Power apps using Power platform. In addition, you must be aware of what are Power Virtual Agents (PVA), Virtual Assistant, and app templates, Shift connectors, Moodle LMS, and know how to create a Share-to-Teams button for your website, add a Microsoft Teams tab in SharePoint, and create deep links. 
 You will also learn about how to integrate device capabilities with Microsoft Teams capabilities.
+=======
+You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow [Teams design guidelines](../../concepts/design/understand-use-cases.md) to make your app native to Teams.
+This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.
+>>>>>>> Stashed changes
 
-## Pre-requisites to integrate your app with Teams  
+## Prerequisites to integrate your app with Teams  
 
 For effective integration, ensure to have a better understanding of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
 Following are the prerequisites to integrate your app with Teams:
-1.	Map your app's use cases to Teams platform capabilities.
-1.	Determine your app's entry points, such as personal use, collaboration, or both.
+* Map your app's use cases to Teams platform capabilities.
+* Determine your app's entry points, such as personal use, collaboration, or both.
 
 ## Low code platforms
 
 Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with low code platforms. These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
-1.	Microsoft Power platform
-1.	Microsoft Teams app templates
+* Microsoft Power platform
+* Microsoft Teams app templates
 
 ## Microsoft Power platform
 

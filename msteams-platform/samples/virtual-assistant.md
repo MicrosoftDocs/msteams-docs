@@ -7,7 +7,7 @@ keywords: teams virtual assistant bots
 
 # Virtual Assistant for Microsoft Teams
 
-Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. The [Virtual Assistant core template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) is the basic building block that brings together the Microsoft technologies required to build a Virtual Assistant, including the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), [Language Understanding (LUIS)](https://www.luis.ai/), [QnA Maker](https://www.qnamaker.ai/), as well as essential capabilities including  skills registration, linked accounts, basic conversational intent to offer end users a range of seamless interactions and experiences. In addition, the template capabilities include rich examples of reusable conversational [skills](https://microsoft.github.io/botframework-solutions/overview/skills).  Individual skills are integrated in a Virtual Assistant solution to enable multiple scenarios. Using the Bot Framework SDK, skills are presented in source code form enabling you to customize and extend as required. For more information on skills of Bot Framework, see [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). 
+Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. The [Virtual Assistant core template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) is the basic building block that brings together the Microsoft technologies required to build a Virtual Assistant, including the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), [Language Understanding (LUIS)](https://www.luis.ai/), [QnA Maker](https://www.qnamaker.ai/). It also brings together the essential capabilities including  skills registration, linked accounts, basic conversational intent to offer a range of seamless interactions and experiences to users. In addition, the template capabilities include rich examples of reusable conversational [skills](https://microsoft.github.io/botframework-solutions/overview/skills).  Individual skills are integrated in a Virtual Assistant solution to enable multiple scenarios. Using the Bot Framework SDK, skills are presented in source code form, enabling you to customize and extend as required. For more information on skills of Bot Framework, see [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). This document guides you on Virtual Assistant implementation considerations for organizations, how to create a Teams focused Virtual Assistant, related example, code sample and limitations of Virtual Assistant.
 The following image displays the overview of virtual assistant:
 
 ![Virtual Assistant overview diagram](../assets/images/bots/virtual-assistant/overview.png)
@@ -16,30 +16,30 @@ Text message activities are routed to associated skills by the Virtual Assistant
 
 ## Implementation considerations
 
-The decision to add a Virtual Assistant includes many determinants and differs for each organization. Following are the factors that support implementing a Virtual Assistant for your organization:
+The decision to add a Virtual Assistant includes many determinants and differs for each organization. The supporting factors of a Virtual Assistant implementation for your organization are as follows:
 
-* A central team manages all employee experiences and has the capability to build a Virtual Assistant experience and manage updates to the core experience including the addition of new skills.
+* A central team manages all employee experiences. It has the capability to build a Virtual Assistant experience and manage updates to the core experience including the addition of new skills.
 * Multiple applications exist across business functions and the number is expected to grow in the future.
 * Existing applications are customizable, owned by the organization, and are converted into skills for a Virtual Assistant.
-* The central employee-experiences team is able to influence customizations to existing apps and provide necessary guidance for integrating existing applications as skills in Virtual Assistant experience. 
+* The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience. 
 The following image displays the business functions of Virtual Assistant: 
 
 ![Central team maintains the assistant, and business function teams contribute skills](../assets/images/bots/virtual-assistant/business-functions.png)
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text-based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
-The following image displays the high-level diagram of a Virtual Assistant solution:
+Microsoft has published a [Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+The following image displays the high level diagram of a Virtual Assistant solution:
 
 ![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
 
 ### Add Adaptive Cards to your Virtual Assistant
 
-To dispatch requests properly, your Virtual Assistant needs to identify the correct LUIS model and corresponding skill associated with it. However, the dispatching mechanism cannot be used for card action activities since the LUIS model associated with a skill may not be trained for card action texts since these are fixed, pre-defined keywords, not commented from a user.
+To dispatch requests properly, your Virtual Assistant must identify the correct LUIS model and corresponding skill associated with it. However, the dispatching mechanism cannot be used for card action activities as the LUIS model associated with a skill, is trained for card action texts. The card action texts are fixed, pre-defined keywords, and not commented from a user.
 
-We have resolved this by embedding skill information in the card action payload. Every skill should embed `skillId` in the  `value` field of card actions. This is the best way to ensure that each card action activity carries the relevant skill information and Virtual Assistant can utilize this information for dispatching.
+This drawback is resolved this by embedding skill information in the card action payload. Every skill should embed `skillId` in the  `value` field of card actions. You must ensure that each card action activity carries the relevant skill information, and Virtual Assistant can utilize this information for dispatching.
 
-By providing `skillId` in the constructor we ensure that skill information is always present in card actions.
+You must provide `skillId` in the constructor to ensure that the skill information is always present in card actions.
 A card action data sample code is shown in the following section:
 ```csharp
     public class CardActionData
@@ -63,7 +63,7 @@ A card action data sample code is shown in the following section:
     };
 ```
 
-Next, we introduce `SkillCardActionData` class in the Virtual Assistant template to extract `skillId` from the card action payload.
+Next, `SkillCardActionData` class in the Virtual Assistant template is introduces to extract `skillId` from the card action payload.
 A code snippet to extract  `skillId` from card action payload is shown in the following section:
 
 ```csharp
@@ -79,7 +79,7 @@ A code snippet to extract  `skillId` from card action payload is shown in the fo
     }
 ```
 
-We implemented it as an  extension method in the [Activity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md) class.
+The implementation is done by an extension method in the [Activity](https://github.com/microsoft/botframework-sdk/blob/master/specs/botframework-activity/botframework-activity.md) class.
 A code snippet to extract  `skillId` from card action data is shown in the following section:
 
 ```csharp
@@ -115,7 +115,7 @@ A code snippet to extract  `skillId` from card action data is shown in the follo
 
 ### Handle interruptions
 
-Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. we have introduced `TeamsSkillDialog` and `TeamsSwitchSkillDialog`, based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs), to enable users to switch a skill experience from card actions. To handle this request the Virtual Assistant prompts the user with a confirmation message to switch skills.
+Virtual Assistant can handle interruptions in cases where a user tries to invoke a skill while another skill is currently active. `TeamsSkillDialog`, and `TeamsSwitchSkillDialog`are introduced based on Bot Framework's [SkillDialog](https://github.com/microsoft/botframework-solutions/blob/5b46d73e220bbb4fba86c48be532e495535ca78a/sdk/csharp/libraries/microsoft.bot.solutions/Skills/SkillDialog.cs) and [SwitchSkillDialog](https://github.com/microsoft/botframework-solutions/blob/6d40fa8ae05f96b0c5e0464e01361a9e1deb696c/sdk/csharp/libraries/microsoft.bot.solutions/Skills/Dialogs/SwitchSkillDialog.cs). They enable users to switch a skill experience from card actions. To handle this request, the Virtual Assistant prompts the user with a confirmation message to switch skills.
 
 ![Confirmation prompt when switching to a new skill](../assets/images/bots/virtual-assistant/switch-skills-prompt.png)
 
@@ -558,8 +558,8 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 ## Limitations of Virtual Assistant 
 
-- **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there is no clear state where conversation is ended. Hence we have not sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.
-* **Card refresh**: Card refresh is not yet supported through Virtual Assistant.
+* **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there is no clear state where conversation is ended. Hence we have not sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
+* **Card refresh**: Card refresh is not yet supported through Virtual Assistant.  
 * **Messaging extensions**:
   * Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
   * Configuration of messaging extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.

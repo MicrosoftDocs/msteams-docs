@@ -8,13 +8,13 @@ keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---
 
-# Microsoft Teams Shifts WFM connectors  
+# Microsoft Teams Shifts Workforce management (WFM) connectors  
 
-## Workforce management connectors (WFM) for firstline workers 
+Teams Shifts Workforce management WFM connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
 
-Teams Shifts WFM connectors are production-ready, open-source, and community-driven integrations that offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
-
-Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository where you can explore in detail or fork, and tailor to meet your specific needs.
+Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.   
+## JDA-to-Teams Shifts connector
+This document gives an overview of key benefits of Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector, and JDA-to-Teams Shifts connector.
 
 ## Key benefits: Teams Shifts WFM connectors
 
@@ -22,7 +22,7 @@ Each connector provides detailed guidance for deployment and integration to your
 
 * **Production-ready code:** All  Shifts connectors conform to the recommended security and infrastructure best practices and all community-submitted changes are reviewed to ensure continued conformance.
 
-* **Customizable and extensible:**  While all Shifts WFM connectors are ready to deploy for immediate use, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
+* **Customizable and extensible:**  While all Shifts WFM connectors are ready to deploy for immediate use, with the entire code base and deployment scripts readily available. You can easily customize or extend them to fit your unique needs.
 
 * **Detailed documentation & support:**  All Shifts WFM connectors are accompanied by end-to-end documentation for solution architecture, deployment, and configuration steps. The connector repositories are monitored, so that you can report any issues, challenges or difficulties you encounter through the repo's GitHub Issues tracker.
 
@@ -54,7 +54,7 @@ For more information on deployment of Kronos-to-Teams Shifts connector, see [Get
 
 With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 and above, with Teams Shifts  such as, desktop or mobile Teams app for the following firstline worker and manager scenarios:
 
-1. Publish shifts and schedule groups in JDA and view in Teams.
+1. Publish shifts and schedule groups in JDA and view them in Teams.
 
 1. Enable rich scheduling scenarios, including requesting shift swaps and time off.
 

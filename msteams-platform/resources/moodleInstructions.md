@@ -9,7 +9,7 @@ author: laujan
 
 # Installing the Moodle integration with Microsoft Teams
 
-[Moodle](https://moodle.org/), a popular open-source Learning Management System (LMS), is now integrated with Microsoft Teams. This integration helps educators and teachers collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
+[Moodle](https://moodle.org/), a popular open-source Learning Management System (LMS), is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
 
 To help IT admins easily set this integration up, we have updated our open-source Microsoft 365 Moodle Plugin with the following capabilities:
 
