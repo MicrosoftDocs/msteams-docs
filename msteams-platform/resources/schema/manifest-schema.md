@@ -467,7 +467,8 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`context` | array of enums| 2|| The set of `contextItem` scopes where a tab is supported.|
 
 > [!NOTE]
-> If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, *see* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
+>  The searchUrl feature is not available for the third-party developers.
+>  If your tabs require context-dependent information to display relevant content or for initiating an authentication flow, *see* [Get context for your Microsoft Teams tab](../../tabs/how-to/access-teams-context.md).
 
 ## bots
 
