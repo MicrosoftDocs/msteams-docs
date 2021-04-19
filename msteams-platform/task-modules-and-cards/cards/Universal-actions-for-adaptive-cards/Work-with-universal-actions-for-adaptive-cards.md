@@ -24,7 +24,6 @@ If you set the card version to less than 1.4 and use either or both, `refresh` p
 
 | Client | Behavior |
 | :-- | :-- |
-| Outlook | Your card stops working. Card is not refreshed and `Action.Execute` does not render or your card is rejected. |
 | Teams | Your card stops working. Card is not refreshed and `Action.Execute` does not render depending on the version of the Teams client. To ensure maximum compatibility in Teams, define `Action.Execute` with an `Action.Submit` in the fallback property. |
 
 For more information on how to support older clients, see [backward compatibility](#backward-compatibility).
@@ -43,16 +42,20 @@ To automatically refresh your adaptive card, define its `refresh` property, whic
 
 [Refresh schema and properties](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism)
 
-[How to get user MRI's in the conversation to add in userIds list in refresh section of adaptive card?](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
 
-> [!IMPORTANT]
-> If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a `Refresh Card` option is displayed to the user in the triple dot menu in web/desktop and in the long press context menu in mobile (android/iOS) to manually refresh the card. This is because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of five user IDs.
+## User Ids in Refresh
+1. UserIds is an array of user MRI's which is part of the refersh property in adaptive cards.
+
+2. [This document explains how bot developers can fetch Teams conversation memeber's user MRIs to add in userIds list in refresh section of adaptive card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+
+3. If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a `Refresh Card` option is displayed to the user in the triple dot menu in web/desktop and in the long press context menu in mobile (android/iOS) to manually refresh the card. 
+
+4. UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of `sixty user MRIs`.
+
+5. Sample Teams user MRI - `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
 > [!NOTE]
 > The `userIds` property is ignored in Outlook, and the refresh property is always automatically activated. There is no scale issue in Outlook because users view the card at different times.
-
-> [!IMPORTANT]
-> When developing Outlook actionable message scenarios, the adaptive card's `originator` property must be specified. `originator` is a Globally Unique Identifier (GUID) generated at the time a bot subscribes to the Outlook channel. It is used by Outlook to validate that the adaptive card was sent by an authorized bot. The adaptive card is not rendered in Outlook if `originator` is absent. `originator` is ignored in Teams.
 
 Next step is to use the `adaptiveCard/action` invoke activity to understand what request must be made after `Action.Execute` is executed.
 
@@ -71,14 +74,13 @@ Next you can apply backward compatibility to older clients across different plat
 **To work with universal actions for adaptive cards and implement `Action.Execute`**
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
-2. Add the `originator` field for cards to surface on Outlook.
-3. Add a `refresh` clause to your adaptive card, if you want to leverage the automatic refresh model or if your scenario requires contextual views.
+2. Add a `refresh` clause to your adaptive card, if you want to leverage the automatic refresh model or if your scenario requires contextual views.
 
     >[!NOTE]
     > Specify the `userIds` property to identify, which users get automatic updates. 
 
-4. Handle `adaptiveCard/action` invoke requests in your bot.
-5. Use the Invoke request's context to generate cards that are specifically created for a user.
+3. Handle `adaptiveCard/action` invoke requests in your bot.
+4. Use the Invoke request's context to generate cards that are specifically created for a user.
  
     > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the [response format](#response-format).
@@ -86,12 +88,6 @@ Next you can apply backward compatibility to older clients across different plat
 ## Backward compatibility
 
 The universal actions for adaptive cards allows you to set properties that enable backward compatibility with older versions of Outlook and Teams.
-
-### Outlook
-
-Actionable messages in Outlook can either use the existing model or the universal actions for adaptive cards. If you are using the existing model, the actions are encoded as explicit HTTP calls and use `Action.Http` to implement the adaptive card scenarios. If you use the universal actions for adaptive cards, `Action.Execute` must be implemented as bots and subscribe to Outlook actionable messages channel.
-
-[Backward compatibility on Outlook](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#outlook)
 
 ### Teams
 

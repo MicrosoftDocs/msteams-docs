@@ -64,8 +64,8 @@ You can create adaptive cards that update automatically, for example, it can be 
 ![Up-to-date-role-based-views-1](~/assets/images/bots/up-to-date-views-stage1.png)
 ![Up-to-date-role-based-views-2](~/assets/images/bots/up-to-date-views-stage2.png)
 ![Up-to-date-role-based-views-3](~/assets/images/bots/up-to-date-views-stage3.png)
-
-[Sample for up to date eviews](~/Up-To-Date.md)
+``
+[Sample for up to date views](~/Up-To-Date.md)
 
 Now you can understand how adaptive cards can be transformed with the new universal actions for adaptive cards to provide a unique and enhanced user experience.
 
