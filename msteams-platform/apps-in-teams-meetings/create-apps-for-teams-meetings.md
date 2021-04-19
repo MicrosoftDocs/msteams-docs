@@ -227,6 +227,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 
 > [!NOTE]
 > Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
+> Apps in meetings need *groupchat* scope. The *team* scope works for tabs in channels only.
 
 ```json
 
@@ -243,11 +244,14 @@ The meetings app capabilities are declared in your app manifest using the `confi
         "privateChatTab",
         "meetingChatTab",
         "meetingDetailsTab",
-        "meetingSidePanel"
+        "meetingSidePanel",
+        "meetingStage"
      ]
     }
   ]
 ```
+> [!NOTE]
+> `meetingStage` is currently available in developer preview only.
 
 ### Context property
 
@@ -260,6 +264,7 @@ The tab `context` and `scopes` properties enable you to determine where your app
 | **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. |
 | **meetingSidePanel** | An in-meeting panel opened via the unified bar (U-bar). |
+| **meetingStage** | An app from the sidepanel can be shared to the meeting stage. |
 
 > [!NOTE]
 > `Context` property is currently not supported on mobile clients.
@@ -283,6 +288,8 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
+    > [!NOTE] 
+    > Currently, in meetings tab, getting meeting details and participant information is not supported.
 
 **To add a messaging extension to a meeting**
 
@@ -309,6 +316,9 @@ To use the `userContext` API to route requests accordingly, see [Teams SDK](../t
 
 Messaging extension works as expected when a user is in an in-meeting view and the user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
+> [!NOTE]
+> Use version 1.9.0 of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to upload side panel, as versions prior to it do not support side panel.
+
 #### In-meeting dialog
 
 The in-meeting dialog box can be used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification must be triggered. As part of the notification request payload, include the URL where the content to be shown is hosted.
@@ -319,16 +329,51 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web-view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
+#### Share to stage 
+
+> [!NOTE]
+> * This capability is currently available in developer preview only.
+> * To use this feature, the app must support an in-meeting sidepanel.
+
+
+This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time. 
+
+The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables the **Share** button in the sidepanel as depecited in the following image:
+
+  ![share_to_stage_during_meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+The manifest change that is needed to enable this capability is as follows: 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
+
+
+
 ### After a meeting
 
 The post-meeting and pre-meeting configurations are equivalent.
 
 ## Code sample
 
-|Sample name | Description | C# |
-|----------------|-----------------|--------------|
-| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) |
-| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |
+|Sample name | Description | .NET | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
+| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 
 ## See also
 

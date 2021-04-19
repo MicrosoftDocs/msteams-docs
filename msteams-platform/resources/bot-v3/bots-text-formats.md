@@ -2,6 +2,7 @@
 title: Supported text formatting in conversations
 description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
+ms.topic: how-to
 ms.date: 03/29/2018
 ---
 # Formatting bot messages
@@ -79,4 +80,4 @@ Support for text formatting varies by type of message and by platform.
 | preformatted text | `text` | `` `text` `` | `<pre>text</pre>` |
 | blockquote | <blockquote>text</blockquote> | `>text` | `<blockquote>text</blockquote>` |
 | hyperlink | [Bing](https://www.bing.com/) | `[Bing](https://www.bing.com/)` | `<a href="https://www.bing.com/">Bing</a>` |
-| image link | <img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |
+| image link | <img src="https://aka.ms/Fo983c" alt="Duck on a rock"></img> | `![Duck on a rock](http://aka.ms/Fo983c)` | `<img src="http://aka.ms/Fo983c" alt="Duck on a rock"></img>` |

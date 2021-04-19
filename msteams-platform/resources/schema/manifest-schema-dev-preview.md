@@ -178,7 +178,18 @@ For more information on the features available see: [Features in the Public Deve
      "contoso.com",
      "mysite.someplace.com",
      "othersite.someplace.com"
-  ]
+  ],
+   "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -460,3 +471,26 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+
+## configurableProperties
+
+**Optional** - array
+
+The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+> [!NOTE]
+> A minimum of one property must be defined. You can define a maximum of nine properties in this block.
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. 
+
+You can define any of the following properties:
+* `name`: Allows admin to change the app's display name.
+* `shortDescription`: Allows admin to change the app's short description.
+* `longDescription`: Allows admin to change the app's detailed description.
+* `smallImageUrl`: It is `outline` property in the `icons` block of the manifest.
+* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
+* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: It is the https:// URL to the developer's website.
+* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
+* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
+
+
