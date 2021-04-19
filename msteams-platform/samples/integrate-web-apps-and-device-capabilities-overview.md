@@ -9,7 +9,8 @@ ms.author: surbhigupta
 # Integrate web applications and device capabilities with Teams
 
 You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow Teams design guidelines to make your app native to Teams.
-This document gives an overview of pre-requisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.
+To integrate web applications you must be aware of the prerequisites, and understand how to create Power apps using Power platform. In addition, you must be aware of what are Power Virtual Agents (PVA), Virtual Assistant, and app templates, Shift connectors, Moodle LMS, and know how to create a Share-to-Teams button for your website, add a Microsoft Teams tab in SharePoint, and create deep links. 
+You will also learn about how to integrate device capabilities with Microsoft Teams capabilities.
 
 ## Pre-requisites to integrate your app with Teams  
 
