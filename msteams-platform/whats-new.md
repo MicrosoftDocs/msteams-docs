@@ -10,11 +10,8 @@ keywords: teams what's new latest
 > Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
 The changes to the Microsoft Teams platform and this document set are listed in the following sections:
-* [General Availability (GA) features](#ga-features): Provides a list of released features in Microsoft Teams. 
-* [Developer preview](#developer-preview): Developer preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams.
-
-> [!NOTE]
-> Some entries may be used to call attention to a new feature that is simply of interest to Teams developers. 
+* [General Availability (GA) features](#ga-features): Provides a list of released features in Microsoft Teams. Some entries may be used to call attention to a new feature that is simply of interest to Teams developers.
+* [Developer preview](#developer-preview): Developer preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams.  
 
 ## GA features
 
@@ -22,7 +19,6 @@ The changes to the Microsoft Teams platform and this document set are listed in 
 | -------- | --------- | ------------------ |
 |03/18/2021|Notice: **Please update to version 4.10 or above of the Bot Framework SDK** as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Reorder personal app tabs|[Reorder the chat tab in personal apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
-|03/04/2021|Information masking in Adaptive cards is in developer preview.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|New: Added location capabilities. <br/> Update: Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|New: Added QR or barcode scanner capability. <br/> Update: QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|New: Added device capabilities overview. <br/> Update: Microphone capability information is added in the native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
@@ -94,14 +90,15 @@ The changes to the Microsoft Teams platform and this document set are listed in 
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|04/08/2021| App customization feature is now available in developer preview.|[Design teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. This feature is now available in develoepr preview. | [Removing tab margins](resources/removing-tab-margins.md) |
-|03/05/2021 | Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|04/08/2021| App customization|[Design teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
+|03/05/2021 | Default install scope and group capability| [Default install scope and group capability](concepts/deploy-and-publish/apps-upload.md#add-a-default-install-scope-and-group-capability) |
+|03/04/2021|Information masking in Adaptive cards| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |9/18/2020|Support for in-meeting Teams apps (Release Preview)|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-| 07/27/2018 | The developer preview now supports multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features.md)|
-| 07/16/2018 | In developer preview, more space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](tabs/design/tabs.md)|
+| 07/27/2018 | Multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features.md)|
+| 07/16/2018 | More space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](tabs/design/tabs.md)|
 | 06/07/2018 | Pre-release information for the Microsoft Teams Tenant App Catalog has been added. | [Publish your Microsoft Teams app](~/publishing/apps-publish.md)|
-| 05/31/2018 | The Teams developer preview (ring 3.6) has been updated to include the ability to add bots and tabs to group chat. | [Features in the developer preview](~/resources/dev-preview/developer-preview-features.md), [Developer preview schema](~/resources/schema/manifest-schema-dev-preview.md)|
+| 05/31/2018 | Ability to add bots and tabs to group chat. | [Features in the developer preview](~/resources/dev-preview/developer-preview-features.md), [Developer preview schema](~/resources/schema/manifest-schema-dev-preview.md)|
 | 05/29/2018 | Adaptive cards are now supported in Teams in the [Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md). |
 | 05/29/2018 | If you are using the [developer preview](~/resources/dev-preview/developer-preview-intro.md), your bot can now send and receive files.| [Send and receive files through your bot](~/concepts/bots/bots-files.md), [Features in the Public Developer Preview for Microsoft Teams](~/resources/dev-preview/developer-preview-features.md)|
 
