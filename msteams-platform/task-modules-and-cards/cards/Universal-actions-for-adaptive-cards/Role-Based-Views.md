@@ -11,8 +11,8 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 
 ![Role-based views](~/assets/images/bots/Rolebasedviews.png)
 
-**Sample Card JSON**
-```{JSON}
+**Sample Adaptive card**
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -49,7 +49,7 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 
 
 **Sample invoke request sent from Alex's and Megan's Teams Client to the bot**
-```{JSON}
+```JSON
 { 
   "type": "invoke",
   "name": "adaptiveCard/action",
@@ -70,8 +70,8 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-**Sample adaptiveCard/action invoke response Card JSON for Megan**
-```{JSON}
+**Sample adaptiveCard/action invoke response Card for Megan**
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -109,8 +109,8 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-**Sample adaptiveCard/action invoke response Card JSON for Alex**
-```{JSON}
+**Sample adaptiveCard/action invoke response Card for Alex**
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -149,7 +149,7 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 ```
 
 **Sample invoke response to return adaptive card**
-```{C#}
+```C#
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 

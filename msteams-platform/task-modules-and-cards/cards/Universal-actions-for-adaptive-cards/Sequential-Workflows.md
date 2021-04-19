@@ -13,9 +13,9 @@ Example: Take a scenario where a restaurant wants to take an order. With `Action
 
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
 
-**Card 1 JSON**
+**Adaptive card 1**
 
-```{JSON}
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -66,7 +66,7 @@ Example:
 
 **Sample invoke request recieved on bot side**
 
-```{JSON}
+```JSON
 { 
   "type": "invoke",
   "name": "adaptiveCard/action",

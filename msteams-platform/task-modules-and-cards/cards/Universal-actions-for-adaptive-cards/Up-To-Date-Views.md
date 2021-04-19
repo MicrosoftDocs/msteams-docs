@@ -15,8 +15,8 @@ Using role based views one can show a card with Approve/Reject buttons to a set 
 Part 2: To keep the card state updated an all times, Teams message edit mechanism can be leveraged.
 For example each time there is an approval, bot can trigger a message edit to all users. This bot message edit would trigger an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role based view card.
 
-**Sample approval base card JSON**
-```{JSON}
+**Sample approval base card**
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -27,7 +27,7 @@ For example each time there is an approval, bot can trigger a message edit to al
       "title": "Refresh",
       "verb": "roleBasedView"
     },
-    "userIds": ["<Sowrabh's user mri>", <Dipesh's user mri>]
+    "userIds": ["<Sowrabh's user MRI>", "<Dipesh's user MRI>"]
   },
   "body": [
     {
@@ -46,8 +46,8 @@ For example each time there is an approval, bot can trigger a message edit to al
 }
 ```
 
-**Sample approval card JSON with approve, reject buttons**
-```{JSON}
+**Sample approval card with approve, reject buttons**
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -58,7 +58,7 @@ For example each time there is an approval, bot can trigger a message edit to al
       "title": "Refresh",
       "verb": "roleBasedView"
     },
-    "userIds": ["<Dipesh's user mri>", "<Sowrabh's user mri>"]
+    "userIds": ["<Dipesh's user MRI>", "<Sowrabh's user MRI>"]
   },
   "body": [
     {
@@ -107,9 +107,9 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 4. Dipesh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
 5. The bot triggers a message edit with an updated card which says Dipesh has approved the request while Sowrabh's approval is pending.
 
-**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #4, #5**
+**Sample adaptive card sent as response of `adaptiveCard/action` and `message edit` for #4, #5**
 
-```{JSON}
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -120,7 +120,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
       "title": "Refresh",
       "verb": "roleBasedView"
     },
-    "userIds": ["<Sowrabh's user mri>"]
+    "userIds": ["<Sowrabh's user MRI>"]
   },
   "body": [
     {
@@ -145,9 +145,9 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 
 6. Bot message edit triggers an automatic refresh for Sowrabh and sees the updated role based card which says Dipesh has approved the request but also see the Approve/Reject buttons. (Dipesh's user mri is removed from the userIds list in refresh property of this adaptive card json in #4, #5. Now, automatic refresh would only be triggered for Sowrabh)
 
-**Sample adaptive card JSON sent as response of `adaptiveCard/action` invoke through automatic refresh for #6**
+**Sample adaptive card sent as response of `adaptiveCard/action` invoke through automatic refresh for #6**
 
-```{JSON}
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -158,7 +158,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
       "title": "Refresh",
       "verb": "roleBasedView"
     },
-    "userIds": ["<Sowrabh's user mri>"]
+    "userIds": ["<Sowrabh's user MRI>"]
   },
   "body": [
     {
@@ -204,9 +204,9 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 7. Now, Sowrabh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
 8. The bot triggers a message edit with an updated card which says Dipesh and Sowrabh have approved the request.
 
-**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #7, #8**
+**Sample adaptive card sent as response of `adaptiveCard/action` and `message edit` for #7, #8**
 
-```{JSON}
+```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
