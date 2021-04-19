@@ -7,9 +7,9 @@ ms.topic: conceptual
 ---
 # Create low-code custom apps for Microsoft Teams
 
-[Microsoft Teams](/microsoftteams/platform) is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low-code custom apps saves time, provide speedy solutions and meet the demand when compared with the apps created from scratch.
+[Microsoft Teams](/microsoftteams/platform) is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the demand than the apps created from scratch. This document gives an overview of Microsoft Power Platform, and Microsoft Teams app templates.
 
-Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to back-end services, and a built-in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low-code attributes:
+Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience, to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to backend services, and a built-in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams compatible apps using low code attributes:
 
 1. [Microsoft Power Platform](#teams-and-microsoft-power-platform)
 1. [Microsoft Teams app templates](#teams-app-templates)
@@ -32,16 +32,16 @@ The new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143374) in Tea
 
 ### ✔ Teams and Power Automate
 
-You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/flows-teams). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use adaptive cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
+You can [create flows to automate repetitive work tasks](https://flow.microsoft.com/connectors/shared_teams/microsoft-teams/) directly within the Teams environment with the [Power Automate app in Teams](/power-automate/flows-teams). You can [trigger a flow from any message in Microsoft Teams](/power-automate/trigger-flow-teams-message) and [use Adaptive Cards within Power Automate](/power-automate/create-adaptive-cards). Additionally, you can build flows to customize and add further value to Microsoft Teams from within the new [Power Apps app](https://go.microsoft.com/fwlink/?linkid=2143539) in Teams.
 
 ### ✔ Teams and Power Virtual Agents
 
-[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no-code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework, that empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
+[Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents) is a no code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams and Power Virtual Agents bots engage with users in the Teams native chat canvas. You can [integrate your Power Virtual Agents chatbot](/power-virtual-agents/publication-add-bot-to-microsoft-teams) to Teams through the [Power Virtual Agents portal](https://powervirtualagents.microsoft.com).
 
 Use the new [Power Virtual Agents app](https://aka.ms/pva-teams-docs) in Teams, to create, manage, and publish conversational chatbots easily from within Teams. You can share your bots with other people in your organization to chat and get answers for their questions.
 
 ## Teams app templates
-[App templates](../samples/app-templates.md) are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub.   
+[App templates](../samples/app-templates.md) are production ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub.     
 The illustration of app template is as follows:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/app-template-illustration.png" alt-text="app solution illustration":::
@@ -82,7 +82,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 > Project **Oakdale** is renamed to project **Dataverse for Teams**.
 
 [Project Oakdale](https://techcommunity.microsoft.com/t5/microsoft-teams-blog/teams-is-shaping-the-future-of-work-with-low-code-features-to/ba-p/1507180
-) is a new low-code data platform coming soon to Microsoft Teams. It allows developers to create Teams Power Platform solutions directly within Teams. For more information on Project Oakdale, see [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
+) is a new low code data platform coming soon to Microsoft Teams. It allows developers to create Teams Power Platform solutions directly within Teams. For more information on Project Oakdale, see [Teams Blog Microsoft Project Oakdale](https://powerapps.microsoft.com/blog/introducing-project-oakdale-a-new-low-code-data-platform-for-microsoft-teams).
 
 ### ✔ Microsoft Blog insights
 

@@ -9,24 +9,24 @@ ms.author: surbhigupta
 # Integrate web applications and device capabilities with Teams
 
 You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow Teams design guidelines to make your app native to Teams.
-This document gives an overview of pre-requisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.
+This document gives an overview of pre-requisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.
 
 ## Pre-requisites to integrate your app with Teams  
 
-For effective integration, ensure to have a better understanding of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
+For effective integration, ensure to have a better understanding of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
 Following are the prerequisites to integrate your app with Teams:
 1.	Map your app's use cases to Teams platform capabilities.
 1.	Determine your app's entry points, such as personal use, collaboration, or both.
 
 ## Low code platforms
 
-Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with this platform. These platforms consist of a visual interface, connectors to back-end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
+Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with low code platforms. These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
 1.	Microsoft Power platform
 1.	Microsoft Teams app templates
 
 ## Microsoft Power platform
 
-Microsoft Power platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, formerly Microsoft Flow and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment.
+Microsoft Power platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment.
 
 ### Power Apps
 
@@ -34,7 +34,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no-code, guided graphical interface solution, built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. It is built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -62,9 +62,8 @@ You can get a rich integration experience between Microsoft Teams and SharePoint
 
 ## Create Deep link
 
-You can create deep links to the entities in Teams. This is used to create links that navigate to content and information within your tab. 
-You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
+You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
 
 ## Integrate device capabilities
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs. 
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
