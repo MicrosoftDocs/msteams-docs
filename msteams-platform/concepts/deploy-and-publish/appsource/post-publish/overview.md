@@ -35,11 +35,19 @@ If you make any of the following changes to your app, however, your existing use
 * Add a connector.
 * Modify configurations related to your Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-## Create a download link for your app
+## Fix issues with your published app
+
+Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
+
+## Promote your app on another site
 
 When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
 Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
+
+## Complete Microsoft 365 Certification
+
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
 
 ## See also
 

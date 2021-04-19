@@ -396,6 +396,8 @@
       href: concepts/deploy-and-publish/appsource/publish.md
     - name: Review store validation guidelines
       href: concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
+    - name: Create a Partner Center developer account
+      href: concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md
     - name: Prepare your store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: Submit your app

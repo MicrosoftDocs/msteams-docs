@@ -22,10 +22,10 @@ When your app is production ready, you can begin the process of getting it liste
 > Following the initial steps closely can increase the possibility that your app will be approved for publishing.
 
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
+1. [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes validating your app one last time, creating a store listing, and other important tasks to help expedite the review process.
 1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
 1. If your submission fails, work with Microsoft directly to [resolve any issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
-1. Once published, learn how to [maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md) to support existing users and drive growth.
 
    :::column-end:::
    :::column span="1":::
