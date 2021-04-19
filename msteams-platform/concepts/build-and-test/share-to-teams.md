@@ -125,3 +125,8 @@ You can select to set default values for the following fields on the Share to Te
     data-assign-instr="Default Assignment Instructions"
 ></span>
 ```
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Add Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)

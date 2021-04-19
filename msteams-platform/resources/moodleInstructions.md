@@ -11,7 +11,7 @@ author: laujan
 
 [Moodle](https://moodle.org/), a popular open-source Learning Management System (LMS), is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
 
-To help IT admins easily set this integration up, we have updated our open-source Microsoft 365 Moodle Plugin with the following capabilities:
+To help IT admins easily set-up this integration, open-source Microsoft 365 Moodle Plugin is updated with the following capabilities:
 
 * Auto-registration of your Moodle server with [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (Azure AD).
 * One-click deployment of your Moodle Assistant bot to Azure.
@@ -241,3 +241,8 @@ When a Moodle course is synced, Microsoft Teams automatically installs the Moodl
 ### You can now start working with your Moodle courses directly from Microsoft Teams.
 
 To share any feature requests or feedback with us, please visit our [User Voice page](https://microsoftteams.uservoice.com/forums/916759-moodle).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create Share-to-Teams butt](~/concepts/build-and-test/share-to-teams.md)

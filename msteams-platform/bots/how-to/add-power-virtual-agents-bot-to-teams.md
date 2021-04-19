@@ -95,3 +95,9 @@ The set-up process for adding your Power Virtual Agents chat bot to Teams is com
 
 > [!div class="nextstepaction"]
 > [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create virtual assistant](~/samples/virtual-assistant.md)
+

@@ -140,3 +140,8 @@ The following image displays the complete experience of Teams app in Sharepoint:
 
 > [!div class="nextstepaction"]
 > [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create deep links](~/concepts/build-and-test/deep-links.md)

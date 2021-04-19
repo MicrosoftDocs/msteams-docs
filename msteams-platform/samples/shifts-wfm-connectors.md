@@ -13,10 +13,10 @@ ms.author: lajanuar
 Teams Shifts Workforce management WFM connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
 
 Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.   
-## JDA-to-Teams Shifts connector
+
 This document gives an overview of key benefits of Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector, and JDA-to-Teams Shifts connector.
 
-## Key benefits: Teams Shifts WFM connectors
+## Key benefits of Teams Shifts WFM connectors
 
 * **Plug and play experience:** All Shifts WFM connectors include ARM Azure deployment scripts that allow you to host all necessary services in Microsoft Azure. No coding is required to deploy the apps.
 
@@ -61,3 +61,8 @@ With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 an
 1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true).
 
 For more information on contribution and suggestion, see [Get it on GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Install Moodle LMS](~/resources/moodleinstructions.md)
