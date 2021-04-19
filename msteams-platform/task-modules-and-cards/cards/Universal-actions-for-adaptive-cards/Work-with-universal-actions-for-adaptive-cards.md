@@ -6,7 +6,7 @@ ms.topic: conceptual
 
 # Work with universal actions for adaptive cards
 
-A universal actions for adaptive cards provides a way to generalize bots and the Bot Framework to implement adaptive card-based scenarios for both Teams and Outlook. This document covers the following:
+Universal actions for adaptive cards provides a way to implement adaptive card-based scenarios for both Teams and Outlook. This document covers the following:
 
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
@@ -15,7 +15,7 @@ A universal actions for adaptive cards provides a way to generalize bots and the
 
 ## Schema for universal actions for adaptive cards
 
-The universal actions for adaptive cards is introduced in the adaptive cards schema version 1.4. To use the adaptive card effectively, the `version` property of your adaptive card must be set to 1.4 or higher.
+Universal Actions for adaptive cards is introduced in the adaptive cards schema version 1.4. To use Adaptive card effectively, the `version` property of your adaptive card must be set to 1.4
 
 > [!NOTE]
 > Setting the `version` property to 1.4 makes your adaptive card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the universal actions for adaptive cards.

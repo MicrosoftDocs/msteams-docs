@@ -5,14 +5,14 @@ ms.topic: conceptual
 ---
 
 ## Up to date views
-Up to date views are now powered with a combination of Universal bots and bot message edits in Teams.
+Up to date views are now powered with a combination of Universal bots and message edits in Teams.
 
 Example: A user creates an asset approval request in Teams conversation. Shiladitya creates an approval request and assigns it to Sowrabh and Dipesh. 
 
 Part 1: Now role based views can be leveraged by using refresh property of the adaptive cards.
 Using role based views one can show a card with Approve/Reject buttons to a set of users, and show a card without Approve/Reject buttons to other users depending on their role.
 
-Part 2: To keep the card state updated an all times, bot fanout mechanism can be leveraged.
+Part 2: To keep the card state updated an all times, Teams message edit mechanism can be leveraged.
 example: Each time there is an approval, bot can trigger a message edit to all users. This bot message edit would trigger an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role based view card.
 
 **Sample approval base card JSON**
@@ -107,7 +107,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 4. Dipesh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
 5. The bot triggers a message edit with an updated card which says Dipesh has approved the request while Sowrabh's approval is pending.
 
-**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `bot fanout` for #4, #5**
+**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #4, #5**
 
 ```
 {
@@ -204,7 +204,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 7. Now, Sowrabh clicks on the Approve button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an adaptive card in response.
 8. The bot triggers a message edit with an updated card which says Dipesh and Sowrabh have approved the request.
 
-**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `bot fanout` for #7, #8**
+**Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #7, #8**
 
 ```
 {
@@ -236,6 +236,6 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 }
 ```
 
-9. Bot message edit does not trigger any automatic refresh. (Sowrabh's user mri is also removed from the userIds list in refresh property of this adaptive card json in #7, #8)
+9. Bot message edit does not trigger any automatic refresh. (Sowrabh's user MRI is also removed from the userIds list in refresh property of this adaptive card json in #7, #8)
 
 ![Up to date views](~/assets/images/bots/up-to-date-views-stage3.png)
