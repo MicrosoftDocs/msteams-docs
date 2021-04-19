@@ -88,7 +88,7 @@ Example:
 ```
 
 **Sample invoke response to return adaptive card**
-```{C#}
+```C#
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
