@@ -13,10 +13,10 @@ Part 1: Now role based views can be leveraged by using refresh property of the a
 Using role based views one can show a card with Approve/Reject buttons to a set of users, and show a card without Approve/Reject buttons to other users depending on their role.
 
 Part 2: To keep the card state updated an all times, Teams message edit mechanism can be leveraged.
-example: Each time there is an approval, bot can trigger a message edit to all users. This bot message edit would trigger an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role based view card.
+For example each time there is an approval, bot can trigger a message edit to all users. This bot message edit would trigger an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role based view card.
 
 **Sample approval base card JSON**
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -47,7 +47,7 @@ example: Each time there is an approval, bot can trigger a message edit to all u
 ```
 
 **Sample approval card JSON with approve, reject buttons**
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -109,7 +109,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 
 **Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #4, #5**
 
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -147,7 +147,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 
 **Sample adaptive card JSON sent as response of `adaptiveCard/action` invoke through automatic refresh for #6**
 
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -206,7 +206,7 @@ Role 2: Approval card with Approve/Reject buttons - Shown to the users who are p
 
 **Sample adaptive card JSON sent as response of `adaptiveCard/action` and `message edit` for #7, #8**
 
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",

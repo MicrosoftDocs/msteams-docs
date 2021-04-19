@@ -15,7 +15,7 @@ Example: Take a scenario where a restaurant wants to take an order. With `Action
 
 **Card 1 JSON**
 
-```
+```{JSON}
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
@@ -66,7 +66,7 @@ Example:
 
 **Sample invoke request recieved on bot side**
 
-```
+```{JSON}
 { 
   "type": "invoke",
   "name": "adaptiveCard/action",
@@ -88,7 +88,7 @@ Example:
 ```
 
 **Sample invoke response to return adaptive card**
-```
+```{C#}
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
 
