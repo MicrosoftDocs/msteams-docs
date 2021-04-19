@@ -6,7 +6,7 @@ ms.topic: conceptual
 
 # Work with universal actions for adaptive cards
 
-Universal actions for adaptive cards provides a way to implement adaptive card-based scenarios for both Teams and Outlook. This document covers the following:
+Universal actions for adaptive cards provides a way to implement adaptive card based scenarios for both Teams and Outlook. This document covers the following:
 
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
@@ -46,11 +46,11 @@ To automatically refresh your adaptive card, define its `refresh` property, whic
 ## User Ids in Refresh
 1. UserIds is an array of user MRI's which is part of the refersh property in adaptive cards.
 
-2. [This document explains how bot developers can fetch Teams conversation memeber's user MRIs to add in userIds list in refresh section of adaptive card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
+2. If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a `Refresh Card` option is displayed to the user in the triple dot menu in web/desktop and in the long press context menu in mobile (android/iOS) to manually refresh the card. 
 
-3. If the `userIds` list property is not included in the refresh section of the card, the card is not automatically refreshed. Instead, a `Refresh Card` option is displayed to the user in the triple dot menu in web/desktop and in the long press context menu in mobile (android/iOS) to manually refresh the card. 
+3. UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of `sixty user MRIs`.
 
-4. UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh, with a maximum of `sixty user MRIs`.
+4. [This document explains how you can fetch Teams conversation memeber's user MRIs to add in userIds list in refresh section of adaptive card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile)
 
 5. Sample Teams user MRI - `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -67,9 +67,9 @@ When `Action.Execute` is executed in the client, a new type of Invoke activity `
 
 [Response format and properties for a typical `adaptiveCard/action` invoke activity with supported response types](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#response-format)
 
-Next you can apply backward compatibility to older clients across different platforms and make your adaptive card compatible.
+Next you can go through a summary on how you can leverage universal bot action model
 
-## Summary on how to leverage universal bot action model in Teams and Outlook
+## Summary on how to leverage universal bot action model in Teams
 
 **To work with universal actions for adaptive cards and implement `Action.Execute`**
 
@@ -84,6 +84,8 @@ Next you can apply backward compatibility to older clients across different plat
  
     > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the [response format](#response-format).
+
+Next you can apply backward compatibility to older clients across different platforms and make your adaptive card compatible.
 
 ## Backward compatibility
 

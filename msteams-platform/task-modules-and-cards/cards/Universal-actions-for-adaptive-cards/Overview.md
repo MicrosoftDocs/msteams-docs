@@ -40,7 +40,9 @@ This means you can now send the same card to both Teams and Outlook and keep the
 
 ### Contextual or role-based views
 
-Today every user in the Teams chat or channel sees the exact same view and button actions on the adaptive card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel. For example, in the case of an incident reporting card sent in a chat or channel, only the user who is assigned the incident should see a resolve button. On the other hand the incident creator should see am edit button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a Ticketing ME where different users in the chat are shown different actions based on the requirement.
+Today every user in the Teams chat or channel sees the exact same view and button actions on the adaptive card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel. 
+
+For example, in the case of an incident reporting card sent in a chat or channel, only the user who is assigned the incident should see a resolve button. On the other hand the incident creator should see am edit button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a Ticketing ME where different users in the chat are shown different actions based on the requirement.
 
 ![Role-based views](~/assets/images/bots/Rolebasedviews.png)
 
@@ -48,8 +50,9 @@ Today every user in the Teams chat or channel sees the exact same view and butto
 
 ### Sequential workflow support
 
-With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. The following images illustrate a food ordering bot example:
+With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an adaptive card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat. 
 
+The following images illustrate a food ordering bot example: <br>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
@@ -59,12 +62,12 @@ With sequential workflow support, users can progress through a series of workflo
 
 ### Up-to-date views
 
-You can create adaptive cards that update automatically, for example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
+You can create adaptive cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
 ![Up-to-date-role-based-views-1](~/assets/images/bots/up-to-date-views-stage1.png)
 ![Up-to-date-role-based-views-2](~/assets/images/bots/up-to-date-views-stage2.png)
 ![Up-to-date-role-based-views-3](~/assets/images/bots/up-to-date-views-stage3.png)
-``
+
 [Sample for up to date views](~/Up-To-Date.md)
 
 Now you can understand how adaptive cards can be transformed with the new universal actions for adaptive cards to provide a unique and enhanced user experience.
