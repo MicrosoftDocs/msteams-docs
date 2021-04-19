@@ -15,15 +15,15 @@ A Teams app package is a .zip file containing the following:
 
 ## Creating a manifest
 
-*Teams App Studio* can help configure your manifest. It also contains a React control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
+**Teams App Studio** can help configure your manifest. It also contains a React control library and configurable samples for cards. See [App Studio Overview](~/concepts/build-and-test/app-studio-overview.md).
 
 Your manifest file must be named "manifest.json" and be at the top level of the upload package. Note that manifests and packages built previously might support an older version of the schema. For Teams apps and especially AppSource (formerly Office Store) submission, you must use the current [manifest schema](~/resources/schema/manifest-schema.md).
 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
-
+> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",`
+ 
 ## App icons
 
 Your app package must include two PNG versions of your app icon—a color icon and an outline icon. For your app to pass the AppSource review, these icons must meet the following size requirements.
