@@ -74,7 +74,7 @@ Identify which new features the user will prefer to have in the current solution
 ## See also
 
 > [!div class="nextstepaction"]
-> [Choose how to distribute your app](~/deploy-and-publish/overview.md)
+> [Choose how to distribute your app](../../deploy-and-publish/overview.md)
 > [!div class="nextstepaction"]
 > [Design effective tabs](../../tabs/design/tabs.md)
 > [!div class="nextstepaction"]
