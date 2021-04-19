@@ -7,6 +7,9 @@ keywords: teams preview developer features
 
 # Features in the Public Developer Preview for Microsoft Teams
 
+> [!NOTE]
+> This page will be deprecated by June 2021. For informationb on developer preview features, see (What's new?)[whats-new.md]
+
 The developer preview includes the following new features:
 
 ## App customization
