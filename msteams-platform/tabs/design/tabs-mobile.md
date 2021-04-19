@@ -11,9 +11,9 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
-Personal apps are available on mobile clients in the app drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
+Personal apps are available on mobile clients in the app drawer. Personal Apps distributed via the [Appsource](~/concepts/deploy-and-publish/appsource/publish.md) need to be approved for mobile form factor before they show up in the App Drawer. Please refer to the [Custom Tabs page](../../what-are-tabs.md#mobile-clients) for more details. There is no approval process for Personal Apps that are either Sideloaded or directly published to the organization's app catalog.
 
-Channel tabs are also available on mobile. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
+Configurable tabs are also available on mobile and are available under the "More" section of the Channels and Chats to which they have been added to. Tabs distributed via the [Appsource](~/concepts/deploy-and-publish/appsource/publish.md) need to be approved for the mobile form factor. The default behavior for unapproved apps is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client. Please refer to the [Custom Tabs page](../../what-are-tabs.md#mobile-clients) for more details. There is no approval process for Tabs that are either Sideloaded or directly published to the organization's app catalog.
 
 ## Accessing personal tabs
 
