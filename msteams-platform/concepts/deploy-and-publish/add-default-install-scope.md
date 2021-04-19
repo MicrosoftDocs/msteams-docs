@@ -2,6 +2,7 @@
 title: Add a default install scope and group capability
 description: Describes how to add default install scope and group capability for apps.
 ms.topic: how-to
+localization_priority: Normal
 ms.author: surbhigupta
 ---
 
