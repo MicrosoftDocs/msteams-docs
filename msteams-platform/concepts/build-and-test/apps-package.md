@@ -45,7 +45,7 @@ An outline icon displays in two scenarios:
 
 The icon must be 32x32 pixels. It can be white with a transparent background or transparent with a white background (no other colors are permitted). The outline icon should not have any extra padding around the symbol.
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams color icon design guidance." border="false":::
+:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams outline icon design guidance." border="false":::
 
 ### Best practices
 
