@@ -194,7 +194,7 @@ Use these recommendations to create a quality app experience.
 
 ### Content
 
-:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-persona-do.png" alt-text="Example showing a bot best practice for establishing a clear persona." border="false":::
 
 #### Do: Establish a clear persona
 
@@ -204,7 +204,7 @@ See more about writing for bots in the <a href="https://www.figma.com/community/
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-do.png" alt-text="Example showing to clearly convey what your bot can do." border="false":::
 
 #### Do: Clearly convey what your bot can do
 
@@ -212,7 +212,7 @@ Welcome messages and tours help people understand what they can do with your bot
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-convey-dont.png" alt-text="Example showing not to obscure your bot's features." border="false":::
 
 #### Don't: Obscure your bot's features
 
@@ -223,7 +223,7 @@ First impressions matter. People will likely be confused or suspicious when pres
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-do.png" alt-text="Example showing your bot should recognize non-questions." border="false":::
 
 #### Do: Recognize non-questions
 
@@ -231,7 +231,7 @@ Your bot should be able to respond to messages like "Hi", "Help", and "Thanks" w
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-content-understand-dont.png" alt-text="Example showing you should avoid clumsy responses to simple bot messages." border="false":::
 
 #### Don't: Miss out on opportunities to delight
 
@@ -244,7 +244,7 @@ Some people expect conversations to flow naturally like they would with a real p
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-do.png" alt-text="Example showing bots should help users understand how to use bots." border="false":::
 
 #### Do: Provide help
 
@@ -252,7 +252,7 @@ If your bot can’t satisfy a request, provide ways for a user to educate themse
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-help-dont.png" alt-text="Example showing your bot shouldn't strand users." border="false":::
 
 #### Don't: Leave users stranded
 
@@ -265,7 +265,7 @@ People will quickly abandon your bot if they can’t troubleshoot issues.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use task modules or tabs with your bot for complex interactions." border="false":::
 
 #### Do: Use task modules or tabs
 
@@ -273,7 +273,7 @@ If your bot provides an answer that requires a few more steps, you can link to a
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-dont.png" alt-text="Example showing how your bot should avoid multi-turn interactions." border="false":::
 
 #### Don't: Make multi-turn interactions tedious
 
@@ -286,7 +286,7 @@ An extensive conversation to complete a single task is slow and overly complex. 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-do.png" alt-text="Example showing how bots should only show private information in a personal context." border="false":::
 
 #### Do: Only show sensitive info in a personal context
 
@@ -294,7 +294,7 @@ If your bot is in a group chat or channel, we recommend directing users to a pri
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Example showing a bot best practice." border="false":::
+:::image type="content" source="../../assets/images/bots/bot-privacy-dont.png" alt-text="Example showing how bots shouldn't reveal sensitive information to a group or people." border="false":::
 
 #### Don't: Some content isn’t meant to be seen by everyone
 
