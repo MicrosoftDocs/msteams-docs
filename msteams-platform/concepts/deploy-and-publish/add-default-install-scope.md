@@ -34,11 +34,6 @@ Following is a JSON example:
 
 ```json
 "defaultInstallScope": "meetings",
-"defaultGroupCapability": {
-    "team": "bot",
-    "groupchat": "bot",
-    "meetings": "tab"
-}
 ```
 
 > [!NOTE]
@@ -56,7 +51,6 @@ Configure the default capability for shared scopes, based on whether your app is
 Following is a JSON example:
 
 ```json
-"defaultInstallScope": "meetings",
 "defaultGroupCapability": {
     "team": "bot",
     "groupchat": "bot",
