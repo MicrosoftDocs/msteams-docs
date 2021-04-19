@@ -61,7 +61,6 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [recommended workaround](#apps-that-require-additional-graph-scopes).
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
-> * Applications that use the `azurewebsites.net` domain are not supported as it is too common and can be a security risk.
 
 **To register your app through the AAD portal**
 
@@ -80,8 +79,8 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 9. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
     * **Admin consent title:** Teams can access the user’s profile.
     * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent title**: Teams can access the user profile and make requests on the user's behalf.
-    * **User consent description:** Teams can call this app’s APIs with the same rights as the user.
+    * **User consent title**: Teams can access your profile and make requests on your behalf.
+    * **User consent description:** Teams can call this app’s APIs with the same rights as you have.
 10. Ensure that **State** is set to **Enabled**.
 11. Select **Add scope** to save the details. The domain part of the **Scope name** displayed below the text field must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 12. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:

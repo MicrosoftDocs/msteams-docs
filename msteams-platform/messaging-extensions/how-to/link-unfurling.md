@@ -9,32 +9,34 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
+This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
+
 > [!NOTE]
-> Currently, Link unfurling is not supported on Mobile clients.
+> Currently, link unfurling is not supported on Mobile clients.
 
-With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` will contain the full URL that was pasted into the compose message area, and you can respond with a card the user can *unfurl*, providing additional information or actions. This works very similarly to a [search command](~/messaging-extensions/how-to/search-commands/define-search-command.md), with the URL serving as the search term.
-
-The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the screenshot below, a user has pasted in a URL for a work item in Azure DevOps which the messaging extension has resolved into a card.
+The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
 ## Add link unfurling to your app manifest
 
- To add link unfurling to your app manifest add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
 
 > [!NOTE]
-> Do not add domains that are outside your control, either directly or through wildcards. For example, yourapp.onmicrosoft.com is valid, but *.onmicrosoft.com is not valid. Also, the top-level domains are prohibited. For example, *.com, *.org.
+> Donot add domains that are not in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` is not valid. Also, the top-level domains are prohibited. For example, `*.com`, `*.org`.
 
-### Using App Studio
+### Add link unfurling using App Studio
 
-1. In App Studio, on the Manifest editor tab, load your app manifest.
-1. On the **Messaging Extension** page, add the domain you want to look for in the **Message handlers** section as in the screenshot below.
+1. Open **App Studio** from the Microsoft Teams client, and select the **Manifest Editor** tab.
+1. Load your app manifest.
+1. On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
 
-![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+    ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+    
+### Add link unfurling manually
 
-### Manually
+To enable your messaging extension to interact with links, first you must add the `messageHandlers` array to your app manifest. The following example explains how to add link unfurling manually: 
 
-To enable your messaging extension to interact with links this way you'll first need to add the `messageHandlers` array to your app manifest as in the example below. This example is not the complete manifest, see [manifest reference](~/resources/schema/manifest-schema.md) for a complete manifest example.
 
 ```json
 ...
@@ -56,18 +58,20 @@ To enable your messaging extension to interact with links this way you'll first 
 ...
 ```
 
+For a complete manifest example, see [manifest reference](~/resources/schema/manifest-schema.md).
+
 ## Handle the `composeExtension/queryLink` invoke
 
-Once you've added the domain to listen on to the app manifest, you'll need to update your web service code to handle the invoke request. Use the URL you receive to search your service and create a card response. If you respond with more than one card, only the first will be used.
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
-We support the following card types:
+The following card types are supported:
 
 * [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
 * [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-See [What are cards](~/task-modules-and-cards/what-are-cards.md) for an overview.
+### Example
 
 # [C#/.NET](#tab/dotnet)
 
@@ -114,7 +118,7 @@ class TeamsLinkUnfurlingBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is an example of the `invoke` sent to your bot.
+Following is an example of the `invoke` sent to your bot:
 
 ```json
 {
@@ -126,7 +130,7 @@ This is an example of the `invoke` sent to your bot.
 }
 ```
 
-An example of the response is shown below.
+Following is an example of the response:
 
 ```json
 {
@@ -164,3 +168,8 @@ An example of the response is shown below.
 ```
 
 * * *
+
+## See also 
+
+> [!div class="nextstepaction"]
+> [What are cards](~/task-modules-and-cards/what-are-cards.md)

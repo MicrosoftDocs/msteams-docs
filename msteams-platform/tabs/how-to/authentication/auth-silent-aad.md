@@ -26,7 +26,9 @@ The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. B
 
 The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
 
-### include and configure ADAL
+[Initiate silent and simple authentication configurable tab using AAD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
+
+### Include and configure ADAL
 
 Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:
 
@@ -61,7 +63,7 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has an unexpired token cached for the user, use the token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js will call your callback function with the requested token, or give an error if authentication fails.
+If ADAL has a token cached for the user that has not expired, use that token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
 If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
 
@@ -110,5 +112,19 @@ if (authContext.isCallback(window.location.hash)) {
             microsoftTeams.authentication.notifyFailure(authContext.getLoginError());
         }
     }
+}
+```
+
+### Handle sign out flow
+
+Use the following code to handle sign out flow in AAD Auth:
+
+> [!NOTE]
+> While logout for Teams tab or bot is done, the current session is also cleared.
+
+```javascript
+function logout() {
+localStorage.clear();
+window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```

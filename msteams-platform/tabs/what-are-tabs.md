@@ -42,7 +42,7 @@ Whether you choose to expose your tab within the channel/group or personal scope
 
 For channel/group tabs, you also need to create an additional configuration page that allows users to configure your content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel/group tab can be added to multiple different teams or group chats. On each subsequent install, your users will be able to configure the tab, allowing you to tailor the experience as needed. When users add or configure a tab, a URL is being associated with the tab that is presented in the Teams UI. Configuring a tab is simply adding additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose which board the tab will load. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
-You can have a maximum of one (1) channel/group tab and up to sixteen (16) personal tabs per app.
+You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
 ## Mobile considerations
 
@@ -54,19 +54,14 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
->[!NOTE]
+> [!NOTE]
 >
->- The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
->- To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
+> The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
+> To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
-> [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+## See also
 
-> [!div class="nextstepaction"]
-> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
+* [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+* [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
