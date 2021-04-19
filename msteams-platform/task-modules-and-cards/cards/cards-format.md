@@ -122,6 +122,7 @@ To include a mention in an Adaptive card your app needs to include the following
 
 * `<at>username</at>` in the supported Adaptive card elements
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
+* The `userId` is unique to your bot ID and a particular user that can be used to @mention a particular user. It can be retrieved using one of the options mentioned in [get the user ID](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id)
 
 #### Sample Adaptive card with a mention
 
