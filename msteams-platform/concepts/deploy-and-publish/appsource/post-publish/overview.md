@@ -11,35 +11,35 @@ With your app listed on the Microsoft Teams store, start thinking about how you'
 
 ## Publish updates to your app
 
-You can submit changes to your app in Partner Center. Updates must undergo a new review and validation process.
+You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes requires a new review process.
 
 Ensure the following when publishing updates:
 
-* Don't select **Add a new app** to do the update. Go to your app's page instead.
 * Don't change your app ID.
-* Increment your app's version number if you make any changes to the published version, including the app name or other metadata.
+* Increment your app's version number.
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
 ### App updates requiring user consent
 
-When a user adds your app, they must give the app permission to access the services and information it requires to function. In most cases, users only have to do this once&#8212;new versions of your app install automatically.
+When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users only have to do this once and new versions of your app install automatically.
 
-If you make any of the following changes to your app, your existing users must accept another permission request:
+If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
 * Add or remove a bot.
 * Change the bot ID.
 * Modify a bot's one-way notification configuration.
 * Modify a bot's support for uploading and downloading files.
 * Add or remove a messaging extension.
-* Add a personal app tab.
+* Add a personal tab.
 * Add a channel and group tab.
 * Add a connector.
-* Modify configurations related to your Azure Active Directory (AD) app ID. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* Modify configurations related to your Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ## Create a download link for your app
 
-When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to add your app. You could include this link, for example, with a download button on your product's marketing page.
+When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
-You can create the link with the following format that appends your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
+Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
 ## See also
 

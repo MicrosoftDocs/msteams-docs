@@ -11,17 +11,17 @@ If your Teams store submission doesn't pass validation, Microsoft provides resou
 
 ## Check the validation report
 
-After submitting your app to Partner Center, you can expect a validation report from *teamsubm@microsoft.com*. The report includes reasons why your app failed.
+After submitting your app to Partner Center, you can expect a validation report from <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>. The report includes reasons why your app failed.
 
 ## Get help directly from Microsoft
 
-Microsoft can assist developers in getting their apps published. If your app fails submission, you'll be contacted by a team for next steps. This may include a meeting with Microsoft to discuss your app's intended functionality, issues with the submission, and recommendations for fixing issues.
+Microsoft can assist developers in getting their apps published. If your app fails submission, you'll be contacted by a Microsoft team for next steps. This may include a meeting with Microsoft to discuss your app's intended functionality, issues with the submission, and recommendations for fixing these issues.
 
-If you didn't provide the following with your submission, send to the Microsoft team you're working with to help them test your app and provide recommendations:
+If you didn't provide the following with your submission, send the following to the Microsoft team you're working with to help them test your app:
 
 * Credentials for at least two accounts (one admin and one non-admin).
-* Integration, configuration, and other steps related to testing the app's functionality.
-* A video of your app being used in Teams.
+* Integration, configuration, and any other steps required to test the app's functionality.
+* A video showing your app used in Teams.
 
 ## Resolve issues and resubmit your app
 
@@ -30,11 +30,11 @@ Microsoft provides you a detailed report with a list of issues that caused your 
 This process for resolving issues and resubmitting an app typically goes like this:
 
 1. You fix all issues in the report.
-1. You send your updated app package with *teamsubm@microsoft.com*.
+1. You send your updated app package to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 1. Microsoft fully tests your updated app.
 1. You do one of the following:
    * If your app is free of issues, resubmit your app on Partner Center.
-   * If issues aren't resolved or new issues are found, fix these and send another version of the app to *teamsubm@microsoft.com*.
+   * If issues aren't resolved or new issues are found, resolve these and send an updated version of the app to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 > [!CAUTION]
 > To avoid multiple submission failures, do not resubmit your app on Partner Center until the Microsoft team you're working with approves your app.
@@ -43,7 +43,7 @@ This process for resolving issues and resubmitting an app typically goes like th
 
 ### How long will it take to publish my app?
 
-If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend the app to that team, you will be notified in 24 hours if your app is ready to publish or still needs updating.
+If your store submission has no issues, your app will publish within 1-2 business days. If your app fails, a team from Microsoft provides you with recommendations to fix the issues. Once you make those fixes and resend an updated app to that team, you will be notified in 24 hours if your app is ready to publish or still needs more work.
 
 ### How do I increase the likelihood my app will pass submission?
 
@@ -54,17 +54,17 @@ Doing the following can lead to a successful submission:
 1. Test your app package with the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 1. [Prepare your Teams store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
-### My app is in beta testing. Can I still submit my app now to save time?
+### My app is in beta testing. Can I submit my app anyway to save time on the publishing process?
 
 No. Microsoft only validates production-ready apps.
 
 ### May I contact the teamsubm@microsoft.com email before submitting my app for the first time on Partner Center?
 
-No. The validation process doesn't begin until you submit your app for the first time on Partner Center.
+No. Microsoft doesn't start validating your app until you submit your app for the first time on Partner Center.
 
 ### I received an email from Partner Center saying my app was approved to publish. Why isn't my app in the Teams store?
 
-Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app hasn't published after two business days, contact *teamsubm@microsoft.com*.
+Once your app is approved, publishing usually takes 1-2 business days depending on the app's capabilities. If your app hasn't published after two business days, contact <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>.
 
 ## Next step
 
