@@ -20,7 +20,7 @@ Stage View is a giant, full screen UI component that you can invoke to surface y
 When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card, and get the UI and tab information through the card. When a user selects the Adaptive Card, it is staged in the UI component. The users can pin the content as a tab directly from the Stage View.  
 The following image explains how the Stage View works:
 
-![stageview working](~/assests/images/tabs/stage-view-working.png)
+![stageview working](~/assets/images/tabs/stage-view-working.png)
 
 ## Advantage of Stage View
 
