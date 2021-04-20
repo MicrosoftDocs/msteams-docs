@@ -25,8 +25,8 @@ For effective integration, ensure to have a better understanding of the followin
 ## Low code platforms
 
 Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with low code platforms. These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
-* [Microsoft Power platform](~/samples/teams-low-code-solutions#teams-and-microsoft-power-platform.md)
-* [Microsoft Teams app templates](~/samples/teams-low-code-solutions#teams-app-templates.md)
+* Microsoft Power platform
+* Microsoft Teams app templates
 
 ## Microsoft Power platform
 
