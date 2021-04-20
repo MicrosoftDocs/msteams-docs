@@ -389,7 +389,7 @@
   - name: Upload your app
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json
+    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
   - name: Publish to the Teams store
     items:
     - name: Overview
@@ -401,7 +401,7 @@
     - name: Prepare your store submission
       href: concepts/deploy-and-publish/appsource/prepare/submission-checklist.md
     - name: Submit your app
-      href: https://docs.microsoft.com/office/dev/store/add-in-submission-guide
+      href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if store submission fails
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your published app

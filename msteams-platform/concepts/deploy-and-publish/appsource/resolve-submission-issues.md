@@ -46,6 +46,8 @@ The process for resolving issues and resubmitting an app typically goes like thi
 
 Get answers to some common questions when resolving app submission issues.
 
+<br>
+
 <details>
 
 <summary><b>How long will it take to publish my app?</b></summary>
