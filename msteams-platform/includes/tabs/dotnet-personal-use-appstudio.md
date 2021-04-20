@@ -23,7 +23,11 @@ Once you've uploaded your app package into App Studio, you need to configure it.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps on the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information is provided by your *manifest.json* but there are a few fields that you need to update:
+There is a list of steps on the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps as shown in the corresponding screen:
+
+![List of steps on left and right hand side screenshot](~/assets/images/tabs/Update-app-package-with-manifest-editor.png)
+
+Much of the information is provided by your *manifest.json* but there are a few fields that you need to update:
 
 #### Details: App details
 
@@ -39,7 +43,7 @@ In the *App details* section:
 
 In the *Tabs* section:
 
-- Under *Add a personal tab* select ***Add***. You will be presented with a pop-up dialogue window.
+- Under *Add a personal tab* select **Add**. You get a pop-up dialogue window.
 
 - Complete the *Name* field.
 
@@ -53,12 +57,12 @@ In the *Tabs* section:
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In the *Domains and permissions* section, the *Domains from your tabs* field must contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
 ##### Finish: Test and distribute
 
 >[!IMPORTANT]
->In the **Description** field on the right you'll see the following warning:
+>In the **Description** field on the right, the following warning is displayed:
 >
 >&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
 >
@@ -68,14 +72,14 @@ In the *Test and distribute* section:
 
 - Select **Install**.
 
-- In the pop-up window make sure that *Add for you* is set to *Yes* and *Add to a team or chat* is set to *No*.
+- In the pop-up window make sure that *Add for you* is set to *Yes*, and *Add to a team or chat* is set to *No*.
 
 - Select **Install**.
 
-- In the next pop-up window select **Open** and your tab will be displayed.
+- In the next pop-up window select **Open** and your tab is displayed.
 
 ## View your personal tab
 
-- In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
+- Select the menu `...` in the navigation bar on the far-left of the Teams App, you'll get a list of personal applications.
 
 - Select your tab from the list to view.
