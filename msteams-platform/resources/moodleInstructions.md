@@ -1,5 +1,5 @@
 ---
-title: Installing the Moodle integration with Microsoft Teams
+title: Install Moodle LMS
 description: How to install and configure the Moodle integration app for Microsoft Teams
 keywords: Teams Moodle app integration plugin
 ms.topic: how-to
@@ -7,9 +7,9 @@ ms.author: lajanuar
 author: laujan
 ---
 
-# Installing the Moodle integration with Microsoft Teams
+# Install Moodle LMS
 
-[Moodle](https://moodle.org/), a popular open-source Learning Management System (LMS), is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
+Moodle is a popular open-source Learning Management System (LMS). It is now integrated with Microsoft Teams. This integration helps educators and teachers to collaborate around Moodle courses, ask questions about grades and assignments, and stay updated with notifications directly within Teams.
 
 To help IT admins easily set-up this integration, open-source Microsoft 365 Moodle Plugin is updated with the following capabilities:
 
@@ -242,7 +242,10 @@ When a Moodle course is synced, Microsoft Teams automatically installs the Moodl
 
 To share any feature requests or feedback with us, please visit our [User Voice page](https://microsoftteams.uservoice.com/forums/916759-moodle).
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Create Share-to-Teams butt](~/concepts/build-and-test/share-to-teams.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+
+> [!div class="nextstepaction"]
+> [Moodle](https://moodle.org/)

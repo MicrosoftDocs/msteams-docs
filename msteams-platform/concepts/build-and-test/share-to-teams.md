@@ -1,12 +1,12 @@
 ---
-title: Create a Share-to-Teams button
+title: Create Share-to-Teams button
 description: How to add the Share to Teams embedded button on your website
 ms.topic: reference
 keywords: Share Teams Share-to-Teams
 ---
-# Create a Share-to-Teams button for your website
+# Create Share-to-Teams button
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to embed a Share-to-Teams button, craft your website preview, and extend Share-to-Teams for Education.
+Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create, and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
 
 > [!NOTE]
 > * Only the desktop versions of Edge and Chrome are supported.
@@ -126,7 +126,7 @@ You can select to set default values for the following fields on the Share to Te
 ></span>
 ```
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Add Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

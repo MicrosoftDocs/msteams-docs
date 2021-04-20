@@ -4,11 +4,12 @@ description: Best practices for integrating existing web apps with Microsoft Tea
 ms.author: v-heha
 ms.date: 08/26/2020
 ms.topic: conceptual
-title: Integrate a web app with Microsoft Teams
+title: Web apps
 ---
-# Integrate web apps with Teams
+# Web apps 
 
-You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.  
+You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
+  
 The different types of apps with you integrate with Teams are as follows:
 * **Standalone apps**: A stand alone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
@@ -114,3 +115,8 @@ Following is an example of a notification message:
 ***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
 When a team is created, a [SharePoint site collection](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app must leverage this feature if it interacts with files. Use the site collection to store raw data in SharePoint Lists and Excel.
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

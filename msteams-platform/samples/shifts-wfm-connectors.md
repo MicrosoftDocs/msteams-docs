@@ -1,5 +1,5 @@
 ---
-title: Teams Shifts Connectors
+title: Production-ready Shifts Connectors
 description: Workforce management Shifts connectors for Teams
 ms.topic: reference
 author: laujan
@@ -8,9 +8,9 @@ keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---
 
-# Microsoft Teams Shifts Workforce management (WFM) connectors  
+# Production-ready Shifts Connectors  
 
-Teams Shifts Workforce management WFM connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
+Teams Shifts Workforce management (WFM) connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
 
 Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.   
 
@@ -62,7 +62,7 @@ With open-source code, you can integrate JDA, such as BlueYonder Version 17.2 an
 
 For more information on contribution and suggestion, see [Get it on GitHub](https://aka.ms/JDAShiftsConnector).</br></br>
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Install Moodle LMS](~/resources/moodleinstructions.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

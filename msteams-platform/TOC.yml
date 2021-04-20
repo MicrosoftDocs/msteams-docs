@@ -47,26 +47,26 @@
 - name: Integrate with Teams
   items:
   - name: Overview
-    href: samples/integrate-web-apps-and-device-capabilities-overview.md
+    href: samples/integrate-web-apps-overview.md
   - name: Web apps
     href: samples/integrating-web-apps.md
   - name: Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
-    - name: Add a Power Virtual Agents chatbot
+    - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Create a Virtual Assistant
+    - name: Create Virtual Assistant
       href: samples/virtual-assistant.md 
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install the Moodle LMS
+  - name: Install Moodle LMS
     href: resources/moodleInstructions.md
-  - name: Create a Share-to-Teams button
+  - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Add a Teams tab to SharePoint
+  - name: Add Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md

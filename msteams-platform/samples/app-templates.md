@@ -689,7 +689,7 @@ Workplace Awards is a Teams app template that provides a positive framework to f
 
 For more information on app template, see [App template](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Shift connectors](/shift-wfm-connectors.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

@@ -1,30 +1,32 @@
 ---
-title: Integrate web applications and device capabilities with Teams
+title: Integrate web apps
 author: Rajeshwari-v
 description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
-localization_priority: Normal
 ---
 
-# Integrate web applications and device capabilities with Teams
+# Integrate web apps
 
 You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow [Teams design guidelines](~/concepts/design/understand-use-cases.md) to make your app native to Teams.
-To integrate web applications you must be aware of the prerequisites, and understand how to create Power apps using Power platform. In addition, you must be aware of what are Power Virtual Agents (PVA), Virtual Assistant, and app templates, Shift connectors, Moodle LMS, and know how to create a Share-to-Teams button for your website, add a Microsoft Teams tab in SharePoint, and create deep links. 
-You can also learn about how to integrate device capabilities with Microsoft Teams capabilities.
+This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Microsoft Teams tab in SharePoint, creating deep links, and integrating device capabilities.
 
-## Prerequisites to integrate your app with Teams  
+## Prerequisites   
 
-For effective integration, ensure to have a better understanding of Teams capabilities, SharePoint requirements for file and data storage, API requirements, authentication, and deep linking of your app with Teams.
-Following are the prerequisites to integrate your app with Teams:
+For effective integration, ensure to have a better understanding of the following prerequisites:
+* Teams capabilities. 
+* SharePoint requirements for file and data storage.
+* API requirements.
+* Authentication.
+* Deep linking of your app with Teams.
 * Map your app's use cases to Teams platform capabilities.
 * Determine your app's entry points, such as personal use, collaboration, or both.
 
 ## Low code platforms
 
 Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. You can create custom apps easily with low code platforms. These platforms consist of a visual interface, connectors to back end services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft provides the following innovative gateways to rapidly build Teams-compatible apps using low code attributes:
-* Microsoft Power platform
-* Microsoft Teams app templates
+* [Microsoft Power platform](~/samples/teams-low-code-solutions#teams-and-microsoft-power-platform.md)
+* [Microsoft Teams app templates](~/samples/teams-low-code-solutions#teams-app-templates.md)
 
 ## Microsoft Power platform
 
@@ -70,7 +72,43 @@ You can create deep links to the entities in Teams. You can create links to info
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Web apps](/integrating-web-apps.md)
+> [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
+
+> [!div class="nextstepaction"]
+> [Determine your app's entry points](~/concepts/extensibility-points.md)
+
+> [!div class="nextstepaction"]
+> [Integrate web apps](~/samples/integrating-web-apps.md)
+
+> [!div class="nextstepaction"]
+> [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
+
+> [!div class="nextstepaction"]
+> [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+
+> [!div class="nextstepaction"]
+> [Create virtual assistant](~/samples/virtual-assistant.md)
+
+> [!div class="nextstepaction"]
+> [App templates for Microsoft Teams](~/samples/app-templates.md)
+
+> [!div class="nextstepaction"]
+> [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
+
+> [!div class="nextstepaction"]
+> [Install Moodle LMS](~/resources/moodleinstructions.md)
+
+> [!div class="nextstepaction"]
+> [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
+
+> [!div class="nextstepaction"]
+> [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+
+> [!div class="nextstepaction"]
+> [Create deep links](~/concepts/build-and-test/deep-links.md)
+
+> [!div class="nextstepaction"]
+> [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)

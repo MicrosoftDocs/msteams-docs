@@ -1,11 +1,11 @@
 ---
-title: Create deep links to content
+title: Create deep links 
 description: Describes deep links and how to use them in your apps
 ms.topic: how-to
 keywords: teams deep link deeplink
 ---
 
-# Create deep links to content and features in Microsoft Teams
+# Create deep links 
 
 You can create links to information and features within Teams. The scenarios where creating deep links are useful are as follows:
 
@@ -219,7 +219,7 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

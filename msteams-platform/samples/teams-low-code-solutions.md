@@ -97,7 +97,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 > [!div class="nextstepaction"]
 > [Manage Microsoft Power Platform apps in the Microsoft Teams admin center](/microsoftteams/manage-power-platform-apps)
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
-> [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
