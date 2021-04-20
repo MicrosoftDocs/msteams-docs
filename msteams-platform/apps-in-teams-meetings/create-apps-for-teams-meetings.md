@@ -4,6 +4,7 @@ author: laujan
 description: create apps for teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams apps meetings user participant role api 
 ---
 # Create apps for Teams meetings

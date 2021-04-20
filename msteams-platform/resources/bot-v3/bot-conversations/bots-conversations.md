@@ -2,6 +2,7 @@
 title: Send and receive messages with a bot
 description: Describes how to send and receive messages with bots in Microsoft Teams
 ms.topic: overview
+localization_priority: Normal
 keywords: teams bots messages
 ms.date: 05/20/2019
 ---

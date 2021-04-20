@@ -1,6 +1,7 @@
 ---
 title: Package your app
 description: Learn how to package your Microsoft Teams app for testing, uploading, and store publishing.
+localization_priority: Normal
 ms.topic: conceptual
 ---
 

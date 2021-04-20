@@ -2,6 +2,7 @@
 title: Authentication flow for bots
 description: Describes authentication flow in bots
 keywords: teams authentication flow bots
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
 ---

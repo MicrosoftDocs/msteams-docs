@@ -4,6 +4,7 @@ author: laujan
 description: 
 keywords: cookie attributes samesite
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
 ---
 

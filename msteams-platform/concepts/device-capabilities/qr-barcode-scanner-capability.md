@@ -2,6 +2,7 @@
 title: Integrate QR or barcode scanner capability
 description: How to use Teams JavaScript client SDK to leverage QR or barcode scanner capability
 keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---

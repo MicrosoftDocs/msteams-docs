@@ -3,6 +3,7 @@ title: Installing the Moodle integration with Microsoft Teams
 description: How to install and configure the Moodle integration app for Microsoft Teams
 keywords: Teams Moodle app integration plugin
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 author: laujan
 ---

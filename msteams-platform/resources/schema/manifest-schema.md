@@ -3,6 +3,7 @@ title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams manifest schema
 ---
 

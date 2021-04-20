@@ -3,6 +3,7 @@ title: Update and delete messages sent from your bot
 author: WashingtonKayaker
 description: How to update and delete messages sent from your Microsoft Teams bot
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
 ---
 
