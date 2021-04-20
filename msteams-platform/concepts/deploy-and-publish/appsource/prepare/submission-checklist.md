@@ -22,22 +22,25 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
-## Compile notes for testing your app
+## Compile testing instructions
 
-Include the following information with your submission. If you upload test notes to SharePoint, you must provide a public link to that site.
+Provide instructions and resources to help the reviewers test your app, including test accounts, credentials, and license keys. You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
 
 ### Feature list
 
-Detail all of the app's capabilities within Teams and steps for testing each one.
+Provide details about your app's capabilities in Teams and steps for testing each one.
 
 ### Accounts
 
-Test accounts are required if your app only allows licensed accounts or safelisting from the backend. In these situations, you must provide the following:
+You must provide test accounts if your app requires a license or backend safelisting. All accounts you provide must include pre-populated data to facilitate testing.
 
-* Credentials for at least two accounts (one admin and one non-admin). For testing purposes, the accounts should have sufficient pre-populated data.
-* If your app has a channel or group chat scope, two test accounts in the same tenant to validate the collaboration scenario.
-* For apps that require a subscription, have a Microsoft 365 tenant or domain dependency, or are for enterprise users, a third account in the same domain that isn't pre-configured to validate the first-run user experience.
-* If your app has premium features, an additional account with necessary access to test that experience.
+Depending on your app's features, you may need to provide all of the following:
+
+* Admin account (required)
+* Non-admin account (required)
+* An account that isn't pre-configured in order to properly test the first-run sign-in experience (required)
+* An account with access to premium or upgraded features (if applicable)
+* Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
 
 ### Tenant configurations
 
