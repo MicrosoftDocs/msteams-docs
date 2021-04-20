@@ -1,10 +1,10 @@
 ---
-title: Invoking and dismissing task modules
+title: Invoke and dismiss task modules
 description: Invoking and dismissing task modules.
 ms.topic: conceptual
 ---
 
-# Invoking and dismissing task modules
+# Invoke and dismiss task modules
 
 Task modules can be invoked from tabs, bots, or deep links and what appears in one can be either HTML or an Adaptive Card. There is a lot of flexibility in terms of how task modules are invoked and how to deal with the result of a user's interaction. The table below summarizes how this works:
 

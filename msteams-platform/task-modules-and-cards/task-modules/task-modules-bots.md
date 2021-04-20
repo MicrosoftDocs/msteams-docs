@@ -1,32 +1,35 @@
 ---
-title: Using Task Modules in Microsoft Teams bots
+title: Use Task Modules in Microsoft Teams bots
 description: How to use task modules with Microsoft Teams bots, including Bot Framework cards, Adaptive cards, and deep links.
 ms.topic: how-to
 keywords: task modules teams bots
 ---
-# Using task modules from Microsoft Teams bots
 
-Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive cards and Bot Framework cards (Hero, Thumbnail, and Office 365 Connector). Task modules are often a better user experience than multiple conversation steps where you as a developer have to keep track of bot state and allow the user to interrupt/cancel the sequence.
+# Use task modules from bots
+
+Task modules can be invoked from Microsoft Teams bots using buttons on Adaptive Cards and Bot Framework cards that is hero, thumbnail, and Office 365 connector. Task modules are often a better user experience than multiple conversation steps where as a developer you have to keep track of bot state and allow the user to interrupt or cancel the sequence.
 
 There are two ways of invoking task modules:
 
-* **A new kind of invoke message `task/fetch`.** Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, with `task/fetch`, the task module (either a URL or an Adaptive card) is fetched dynamically from your bot.
-* **Deep link URLs.** Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#openurl-action-type) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
+* A new kind of invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, with `task/fetch`, the task module either a URL or an Adaptive Card is fetched dynamically from your bot.
+* Deep link URLs: Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#openurl-action-type) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
 
 >[!IMPORTANT]
 >To ensure secure communications, each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
 
-## Invoking a task module via task/fetch
+The next section provides details on invoking a task module using `task/fetch`.
 
-When the `value` object of the `invoke` card action or `Action.Submit` is initialized in the proper way (explained in more detail below), when a user presses the button an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there's a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
+## Invoke a task module using task/fetch
 
-![task/fetch request/response](~/assets/images/task-module/task-module-invoke-request-response.png)
+When the `value` object of the `invoke` card action or `Action.Submit` is initialized and when a user presses the button, an `invoke` message is sent to the bot. In the HTTP response to the `invoke` message, there is a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, which Teams uses to display the task module.
 
-Let's look at each step in a bit more detail:
+![task/fetch request or response](~/assets/images/task-module/task-module-invoke-request-response.png)
 
-1. This example shows a Bot Framework Hero card with a "Buy" `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type). The value of the `type` property is `task/fetch` - the rest of the `value` object can be whatever you like.
+Now, look at each step in a bit more detail:
+
+1. This example shows a Bot Framework hero card with a "Buy" `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type). The value of the `type` property is `task/fetch` and the rest of the `value` object can be anything you choose.
 2. The bot receives the `invoke` HTTP POST message.
-3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. The schema for responses is described [below in the discussion on task/submit](#the-flexibility-of-tasksubmit), but the important thing to remember now is that the body of the HTTP response contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object, e.g.:
+3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see [the discussion on task/submit](#the-flexibility-of-tasksubmit). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object:
 
     ```json
     {
@@ -43,40 +46,51 @@ Let's look at each step in a bit more detail:
     }
     ```
 
-    The `task/fetch` event and its response for bots is similar, conceptually, to the `microsoftTeams.tasks.startTask()` function in the client SDK.
+    The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the client SDK.
 4. Microsoft Teams displays the task module.
 
-## Submitting the result of a task module
+The next section provides details on submitting the result of a task module.
 
-When the user is finished with the task module, submitting the result back to the bot is similar [to the way it works with tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module), but there are a few differences, so it's described here too.
+## Submit the result of a task module
 
-* **HTML/JavaScript (`TaskInfo.url`)**. Once you've validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function (referred to hereafter as `submitTask()` for readability purposes). You can call `submitTask()` without any parameters if you just want Teams to close the task module, but most of the time you'll want to pass an object or a string to your `submitHandler`. Simply pass it as the first parameter, `result`. Teams will invoke `submitHandler`: `err` will be `null` and `result` will be the object/string you passed to `submitTask()`. If you do call `submitTask()` with a `result` parameter, you **must** pass an `appId` or an array of `appId` strings: this allows Teams to validate that the app sending the result is the same one which invoked the task module. Your bot will receive a `task/submit` message including `result` as described [below](#payload-of-taskfetch-and-tasksubmit-messages).
-* **Adaptive card (`TaskInfo.card`)**. The Adaptive card body (as filled in by the user) will be sent to the bot via a `task/submit` message when the user presses any `Action.Submit` button.
+When the user is finished with the task module, submitting the result back to the bot is similar to the way it works with tabs. For more information, see [example for submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module). There are a few differences as follows:
+
+* HTML or JavaScript that is `TaskInfo.url`: Once you have validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you want Teams to close the task module, but you must pass an object or a string to your `submitHandler`. Pass it as the first parameter, `result`. Teams invokes `submitHandler`, `err` is `null`, and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one which invoked the task module. Your bot receives a `task/submit` message including `result`. For more information, see [payload of task/fetch and task/submit messages](#payload-of-taskfetch-and-tasksubmit-messages).
+* Adaptive Card that is `TaskInfo.card`: The Adaptive Card body as filled in by the user is sent to the bot via a `task/submit` message when the user presses any `Action.Submit` button.
+
+The next section provides details on the flexibility of `task/submit`.
 
 ## The flexibility of task/submit
 
-In the previous section, you learned that when the user finishes with a task module invoked from a bot, the bot always receives a `task/submit invoke` message. As a developer, you have several options when *responding* to the `task/submit` message:
+In the previous section, you identified that when the user finishes with a task module invoked from a bot, the bot always receives a `task/submit invoke` message. As a developer, you have several options when responding to the `task/submit` message:
 
-| HTTP Body Response                      | Scenario                                |
+| HTTP body response                      | Scenario                                |
 | --------------------------------------- | --------------------------------------- |
-| None (ignore the `task/submit` message) | The simplest response is no response at all. Your bot is not required to respond when the user is finished with the task module. |
-| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams will display the value of `value` in a popup message box. |
-| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Allows you to "chain" sequences of Adaptive cards together in a wizard/multi-step experience. _Note that chaining Adaptive cards into a sequence is an advanced scenario and not documented here. The Node.js sample app supports it, however, and how it works is documented in [its README.md file](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes)._ |
+| None ignore the `task/submit` message | The simplest response is no response at all. Your bot is not required to respond when the user is finished with the task module. |
+| <pre>{<br/>  "task": {<br/>    "type": "message",<br/>    "value": "Message text"<br/>  }<br/>}</pre> | Teams displays the value of `value` in a pop-up message box. |
+| <pre>{<br/>  "task": {<br/>    "type": "continue",<br/>    "value": &lt;TaskInfo object&gt;<br/>  }<br/>}</pre> | Allows you to chain sequences of Adaptive Cards together in a wizard or multi-step experience. |
+
+> [!NOTE]
+> Chaining Adaptive Cards into a sequence is an advanced scenario and not documented here. The Node.js sample app supports it, however, and how it works is documented in its [README.md file](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs#implementation-notes).
+
+The next section provides details on payload of `task/fetch` and `task/submit` messages.
 
 ## Payload of task/fetch and task/submit messages
 
-This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Bot Framework `Activity` object. The important top-level appear below:
+This section defines the schema of what your bot receives when it receives a `task/fetch` or `task/submit` Bot Framework `Activity` object. The following table provides the properties of payload of `task/fetch` and `task/submit` messages:
 
 | Property | Description                          |
 | -------- | ------------------------------------ |
-| `type`   | Will always be `invoke`              |
-| `name`   | Either `task/fetch` or `task/submit` |
-| `value`  | The developer-defined payload. Normally the structure of the `value` object mirrors what was sent from Teams. In this case, however, it's different because we want to support dynamic fetch (`task/fetch`) from both Bot Framework (`value`) and Adaptive card `Action.Submit` actions (`data`), and we need a way to communicate Teams `context` to the bot in addition to what was included in `value`/`data`.<br/><br/>We do this by combining the two into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
+| `type`   | Is always `invoke`.           |
+| `name`   | Is either `task/fetch` or `task/submit`. |
+| `value`  | Is the developer-defined payload. Normally the structure of the `value` object mirrors what was sent from Teams. In this case, however, it is different as it requires support for dynamic fetch that is `task/fetch` from both Bot Framework that is `value` and Adaptive Card `Action.Submit` actions that is `data`. A way to communicate Teams `context` to the bot is required in addition to what was included in `value` or `data`.<br/><br/>This can be done by combining the two into a parent object:<br/><br/><pre>{<br/>  "context": {<br/>    "theme": "default" &vert; "dark" &vert; "contrast",<br/>  },<br/>  "data": [value field from Bot Framework card] &vert; [data field from Adaptive Card] <br/>}</pre>  |
 
-## Example: Receiving and responding to task/fetch and task/submit invoke messages - Node.js
+The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
+
+## Example of task/fetch and task/submit invoke messages in Node.js
 
 > [!NOTE]
-> The sample code below was modified between Technical Preview and final release of this feature: the schema of the `task/fetch` request changed to follow what was [documented in the previous section](#payload-of-taskfetch-and-tasksubmit-messages). That is, the documentation was correct but the implementation was not. See the `// for Technical Preview [...]` comments below for what changed.
+> The sample code in this section is modified between technical preview and final release of this feature. The schema of the `task/fetch` request changed to follow [payload of task/fetch and task/submit messages](#payload-of-taskfetch-and-tasksubmit-messages). That is, the documentation was correct but the implementation was not. See the `// for Technical Preview [...]` comments for what changed.
 
 ```typescript
 // Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
@@ -156,13 +170,13 @@ private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status
 }
 ```
 
-*See also*, [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) and  [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+The next section provides an example of receiving and responding to task/fetch and task/submit invoke messages in C#.
 
-## Example: Receiving and responding to task/fetch and task/submit invoke messages - C#
+## Example of task/fetch and task/submit invoke messages in C#
 
-In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, it's not as convenient to deal with raw JSON as it is in Node.js, so you need wrapper classes to handle the serialization to and from JSON. There's no direct support for this in the Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) yet, but you can see an example of what these simple wrapper classes would look like in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
+In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, it is not convenient to deal with raw JSON as it is in Node.js, so you require wrapper classes to handle the serialization to and from JSON. There is no direct support for this in the Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams), but you can see an example of what these simple wrapper classes look like in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
 
-Below is example code in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes (`TaskInfo`, `TaskEnvelope`), excerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
+The following code provides an example in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes that is `TaskInfo` and `TaskEnvelope`, excerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
 
 ```csharp
 private HttpResponseMessage HandleInvokeMessages(Activity activity)
@@ -221,12 +235,19 @@ private static Models.TaskInfo GetTaskInfo(string actionInfo)
 }
 ```
 
-Not shown in the above example is the `SetTaskInfo()` function, which sets the `height`, `width`, and `title` properties of the `TaskInfo` object for each case. Here's the [source code for SetTaskInfo()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
+The `SetTaskInfo()` function is not shown in the example code, which sets the `height`, `width`, and `title` properties of the `TaskInfo` object for each case. For more information, see [source code for SetTaskInfo()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
 
-### Bot Framework card actions vs. Adaptive card Action.Submit actions
+The next section compares Bot Framework card actions and Adaptive Card `Action.Submit` actions.
 
-The schema for Bot Framework card actions is slightly different from Adaptive card `Action.Submit` actions. As a result, the way to invoke task modules is slightly different too: the `data` object in `Action.Submit` contains an `msteams` object so it won't interfere with other properties in the card. The following table shows an example of each:
+### Bot Framework card actions vs. Adaptive Card Action.Submit actions
 
-| Bot Framework card action                              | Adaptive card Action.Submit action                     |
+The schema for Bot Framework card actions is different from Adaptive Card `Action.Submit` actions. As a result, the way to invoke task modules is also different. The `data` object in `Action.Submit` contains an `msteams` object so it does not interfere with other properties in the card. The following table shows an example of each:
+
+| Bot Framework card action                              | Adaptive Card Action.Submit action                     |
 | ------------------------------------------------------ | ------------------------------------------------------ |
 | <pre>{<br/>  "type": "invoke",<br/>  "title": "Buy",<br/>  "value": {<br/>    "type": "task/fetch",<br/>    &lt;...&gt;<br/>  }<br/>}</pre> | <pre>{<br/>  "type": "Action.Submit",<br/>  "id": "btnBuy",<br/>  "title": "Buy",<br/>  "data": {<br/>    &lt;...&gt;,<br/>    "msteams": {<br/>      "type": "task/fetch"<br/>    }<br/>  }<br/>}</pre>  |
+
+## See also
+
+> [!div class="nextstepaction"]
+> [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) and  [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

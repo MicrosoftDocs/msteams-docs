@@ -302,11 +302,11 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Invoking and dismissing task modules
+    - name: Invoke and dismiss task modules
       href: task-modules-and-cards/task-modules/invoking-task-modules.md  
-    - name: Using task modules in tabs
+    - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
-    - name: Using task modules in bots
+    - name: Use task modules in bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
