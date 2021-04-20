@@ -2,6 +2,7 @@
 title: Low code solutions for Teams custom apps 
 author: laujan 
 description: Detail the available Microsoft low and no code solutions for Teams
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
 ---

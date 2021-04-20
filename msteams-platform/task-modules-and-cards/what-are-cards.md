@@ -1,6 +1,7 @@
 ---
 title: Introducing cards
 description: Describes cards and how they are used in bots, connectors and messaging extensions
+localization_priority: Normal
 ms.topic: conceptual
 keywords: connectors bots cards messaging
 ---
