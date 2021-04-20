@@ -1,7 +1,15 @@
 - name: Microsoft Teams
-  tocHref: /microsoftteams/
+  tocHref: /office/
   topicHref: /microsoftteams/
   items:
   - name: Developer platform
-    tocHref: /microsoftteams/platform/
-    topicHref: /microsoftteams/platform/index
+    tocHref: /office/dev/store/
+    topicHref: /microsoftteams/platform/
+    items:
+    - name: Distribute your app
+      tocHref: /office/dev/store/checklist/
+      topicHref: /microsoftteams/platform//concepts/deploy-and-publish/
+      items:
+      - name: Publish to the Teams store
+        tocHref: /office/dev/store/checklist/add-in-submission-guide/
+        topicHref: /microsoftteams/platform//concepts/deploy-and-publish/appsource/
