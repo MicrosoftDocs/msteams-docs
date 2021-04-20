@@ -22,7 +22,7 @@ Your manifest file must be named "manifest.json" and be at the top level of the 
 > [!TIP]
 > Specify the schema at the beginning of your manifest to enable IntelliSense or similar support from your code editor:
 >
-> `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",`
+> `"$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",`
  
 ## App icons
 
