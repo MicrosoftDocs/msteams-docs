@@ -22,13 +22,13 @@ The Microsoft Teams app validation tool helps you identify and fix issues before
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
-## Create notes for testing your app
+## Compile notes for testing your app
 
 Include the following information with your submission. If you upload test notes to SharePoint, you must provide a public link to that site.
 
 ### Feature list
 
-Detail all of the capabilities the app offers within Teams and steps for testing each one.
+Detail all of the app's capabilities within Teams and steps for testing each one.
 
 ### Accounts
 
@@ -39,13 +39,13 @@ Test accounts are required if your app only allows licensed accounts or safelist
 * For apps that require a subscription, have a Microsoft 365 tenant or domain dependency, or are for enterprise users, a third account in the same domain that isn't pre-configured to validate the first-run user experience.
 * If your app has premium features, an additional account with necessary access to test that experience.
 
-### Integration steps
+### Tenant configurations
 
-If a Teams tenant requires configuration to use the app, include the configuration steps and admin and non-admin accounts for validation.
+If you must configure a Teams tenant to use your app, include those instructions and admin and non-admin accounts for validation.
 
 ### Video (optional)
 
-Provide a recording of the product so we can fully understand its functionality.
+Provide a recording of your app so that Microsoft can fully understand its functionality.
 
 ## Create your store listing details
 
