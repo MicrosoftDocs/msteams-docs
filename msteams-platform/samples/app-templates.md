@@ -21,7 +21,7 @@ All app templates are provided under the [MIT License](https://github.com/Office
 
 * **Deploy directly to the cloud:** All app templates include deployment scripts that allows you to host all required services in Microsoft Azure or the Power Platform. 
 * **Recommended sample code:** The app templates conform to recommended best practices around security and infrastructure. All community submitted changes to the app templates are reviewed to ensure conformance.
-* **Customizable and extensible:** While all app templates are deployed with minimal configuration, we provide the entire code base and deployment scripts so that you can easily customize or extend them to fit your unique needs.
+* **Customizable and extensible:** While all app templates are deployed with minimal configuration, the entire code base and deployment scripts are provided, so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
 ## Adoption Bot 
@@ -84,17 +84,16 @@ Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-ap
 
 ## Attendance
 
-The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that are pinned in a team. It is designed to record presence in settings, such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.
+The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that are pinned in a team. It is designed to record presence in settings, such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees. For more information on teams attendance, see [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance)
+The following image displays the attendance app demo:  
 
 ![Attendance app demo](../assets/images/attendance-app.png)
 
 ## Book-a-room
 
-Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom)
+Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations. For more information on Book-a-room app, see [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom).  
+The following image displays the Book-a-room demo:
 
 ![Book-a-room demo](../assets/images/book-a-room.png)
 
