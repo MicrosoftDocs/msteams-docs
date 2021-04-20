@@ -35,7 +35,7 @@ A task module includes the following as shown in the previous image:
 1. Your app's [`color` icon](~/resources/schema/manifest-schema.md#icons).
 2. Your app's [`short` name](~/resources/schema/manifest-schema.md#name).
 3. The task module's title specified in the `title` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
-4. The task module's close or cancel button. If the user presses this, your app receives an `err` event. For more information, see [example for submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-submitting-the-result-of-a-task-module).
+4. The task module's close or cancel button. If the user presses this, your app receives an `err` event. For more information, see [example for submitting the result of a task module](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-task-module).
 
     > [!NOTE]
     > It is currently not possible to detect the `err` event when a task module is invoked from a bot.
