@@ -274,7 +274,7 @@ You can test your adaptive card using [Postman](https://www.postman.com) to send
 >[!TIP]
 > You can use adaptive card code [Samples and Templates](https://adaptivecards.io/samples) for the body of your test Post request.
 
-## Testing your connector
+## Test your connector
 
 To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
 
@@ -300,7 +300,7 @@ Application rate limits control the traffic that a connector or an incoming webh
 | 7200 | 150  |
 | 86400  | 1800  |
 
-*See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
+**See also** [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
 
 A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Please follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
