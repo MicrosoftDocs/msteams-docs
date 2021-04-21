@@ -96,10 +96,8 @@ The `overflow to true` decides whether the button shows up as an overflow in the
 
 **Workflow**
 
-1. `Invoke` request to bot  
-    * Type: “composeextension/queryLink".
-1. `Invoke` response from bot  
-    * Contains Adaptive Card with type `tab` or `tabInfoAction` in it.
+1. `Invoke` request to bot. The request type is `composeextension/queryLink`.
+1. `Invoke` response from bot.The response contains Adaptive Card with type `tab` or `tabInfoAction` in it.
 1.	When the user selects **View**, that sends an `invoke` request to bot. 
 1. The bot can respond with a `200` code.
 
