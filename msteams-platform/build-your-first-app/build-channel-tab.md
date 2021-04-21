@@ -31,8 +31,8 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
 1. Sign in with your Microsoft 365 development account when prompted to do so.
 1. On the **Select project** screen, select **JS** (JavaScript) under **Channel and group app**.
 1. Enter a name for your Teams app. 
-  > [!NOTE]
-  > This is the default name for your app and also the name of the app project directory on your local machine.
+    > [!NOTE]
+    > This is the default name for your app and also the name of the app project directory on your local machine.
 1. Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.  
 

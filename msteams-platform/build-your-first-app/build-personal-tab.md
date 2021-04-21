@@ -86,17 +86,17 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
 1. **Get context about the configured Teams client theme**
   The `microsoftTeams.getContext()` call in your `Tab.js` file, provides some context about the configured client theme (such as dark theme). The following code accesses the `context` interface and its properties:
 
-  ```JavaScript
-  componentDidMount(){
-    // Get the user context from Teams and set it in the state
-    microsoftTeams.getContext((context, error) => {
-      this.setState({
-        context: context,
-        theme: context.theme
+    ```JavaScript
+    componentDidMount(){
+      // Get the user context from Teams and set it in the state
+      microsoftTeams.getContext((context, error) => {
+        this.setState({
+          context: context,
+          theme: context.theme
+        });
       });
-    });
-  }
-  ```
+    }
+    ```
 1. **Create a theme change handler**
    With the `context` properties in hand, your app has a solid understanding of what's happening around it in Teams. However, the app still doesn't have an appearance reflecting the theme when a user updates it.
 
@@ -119,12 +119,12 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
 
    In the `render()` function, store the state provided by the theme change handler in `isTheme`:
 
-  ```JavaScript
-    const isTheme = this.state.context.theme
-  ```
-  
-  > [!NOTE]
-  > This example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
+    ```JavaScript
+      const isTheme = this.state.context.theme
+    ```
+    
+    > [!NOTE]
+    > This example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
 
     After storing the state provided by the theme change handler, provide the conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
     1. Go to `render()` and check the current theme in `isTheme`.

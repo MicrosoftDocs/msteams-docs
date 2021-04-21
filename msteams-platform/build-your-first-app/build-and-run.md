@@ -144,13 +144,13 @@ The operating system by default blocks you from sideloading apps. You have to en
 
    Your test tenant now allows custom app sideloading.
 
-> [!Note]
-> Check for issues before sideloading your app using the validation feature in App Studio, which is included in the toolkit. Fix the errors to successfully sideload the app.
+   > [!Note]
+   > Check for issues before sideloading your app using the validation feature in App Studio, which is included in the toolkit. Fix the errors to successfully sideload the app.
 
 
 ### To sideload your app
 
-1. Go to Teams Toolkit in Visual Studio Code.
+1. Open Teams Toolkit in Visual Studio Code.
 1. Select **App Studio**.  
 1. Select **Test and Distribute** > **Install**.
 
