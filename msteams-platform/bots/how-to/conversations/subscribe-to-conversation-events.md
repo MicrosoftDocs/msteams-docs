@@ -1292,7 +1292,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 ### Install update event
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
