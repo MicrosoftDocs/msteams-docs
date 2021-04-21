@@ -5,6 +5,7 @@ description: Get an overview of how developers can extend Microsoft Teams featur
 ms.topic: overview
 ms.author: lajanuar
 ms.date: 09/22/2020
+localization_priority: Normal
 ---
 # Build apps for Microsoft Teams
 
