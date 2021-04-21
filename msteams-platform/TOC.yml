@@ -223,7 +223,9 @@
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
-      href: bots/how-to/update-and-delete-bot-messages.md     
+      href: bots/how-to/update-and-delete-bot-messages.md   
+    - name: Request headers of the bot
+      href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
