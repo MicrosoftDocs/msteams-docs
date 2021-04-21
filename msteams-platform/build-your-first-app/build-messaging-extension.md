@@ -115,7 +115,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [Teams compose or command box](../messaging-extensions/what-are-messaging-extensions.md) 
 * [Include a link unfurling feature](../messaging-extensions/how-to/link-unfurling.md)
 * [Design guidelines](../messaging-extensions/design/messaging-extension-design.md) 
-* [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) 
+* [Production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md) 
 * [Add authentication](../messaging-extensions/how-to/add-authentication.md)
 * [Create an action-based messaging extension](../messaging-extensions/how-to/action-commands/define-action-command.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
