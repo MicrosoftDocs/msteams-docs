@@ -81,7 +81,7 @@ You can build Teams apps with your preferred tools, but these lessons show how y
 Teams displays app content only through HTTPS connections. To debug certain types of apps locally, such as a bot, you'll learn how to use [ngrok to set up a secure tunnel](../concepts/build-and-test/debug.md#locally-hosted) between Teams and your app. (Production Teams apps are hosted in the cloud.)
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension.
+1. Install [ngrok](https://ngrok.com/download) if you are building a bot or messaging extension and [create a tunnel using ngrok](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
 1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
 
