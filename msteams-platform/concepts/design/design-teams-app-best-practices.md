@@ -109,6 +109,10 @@ Recommendations for when running your app in a collaborative space:
 
 ## First run experience in personal scope
 
+Recommendation for when using apps in personal scope:
+
+
+
 ## Notification
 
 
