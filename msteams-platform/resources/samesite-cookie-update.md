@@ -1,7 +1,7 @@
 ---
 title: Microsoft Teams and the SameSite cookie attribute (2020 update)
 author: laujan
-description: 
+description: describes the attributes of SameSite cookie
 keywords: cookie attributes samesite
 ms.topic: reference
 localization_priority: Normal
@@ -43,7 +43,7 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 ## Handling incompatible clients
 
 > [!IMPORTANT]
-> Currently, `SameSite=None`  is not supported by the [**Teams desktop client**](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron) or older versions of Chrome or Safari. *See* [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients).
+> Currently, `SameSite=None`  is not supported by the [**Teams desktop client**](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron&preserve-view=true) or older versions of Chrome or Safari. **See** [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients).
 >However, there are two **workaround solutions**:
 >
 >1. Check the user-agent in order to provide the correct SameSite property. You can implement the user-agent check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [**Node.js**](https://web.dev/samesite-cookie-recipes/).
