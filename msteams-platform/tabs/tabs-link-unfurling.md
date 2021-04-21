@@ -28,42 +28,12 @@ The Stage View provides users with a more seamless experience of viewing content
 
 ## Invoke the Stage View
 
-You can invoke the Stage View in the following two ways:   
+You can invoke the Stage View in the following two ways: 
 
+* Invoke Stage View from an Adaptive Card.
 * Invoke Stage View through a deep link.
-* Invoke Stage View from the Adaptive Card.
 
-## Invoke Stage View through a deep link
-
-**Stage View** is a large canvas that you can invoke to surface the web content.
-
-To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API. 
-
-The following image displays a Stage View invoked through a deep link:
-
-![invoke a Stage View through a deep link](~/assets/images/tab-images/invoke-stage-view-through-deep-link.png)
-
-
-### Syntax 
-
-The deeplink must follow the following syntax:
-https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”, “title”:”[title]”}
-
-### Examples
-The following examples show the sample deep links to invoke the **Stage View**:
-
-#### Example 1
-
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
-
-#### Example 2
-
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
-
-> [!NOTE]
-> The `title` is optional in the deeplink. If you do not include the `title`, your app name replaces it.
-
-## Invoke Stage View from the Adaptive Card
+## Invoke Stage View from an Adaptive Card
 
 Stage View is invoked from an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md). When the user enters a URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage.After a stage is launched, and the tabInfo is passed in, then you can add the ability to pin the stage as a tab.  
 
@@ -134,50 +104,37 @@ The `overflow to true` decides whether the button shows up as an overflow in the
 1.	When the user selects **View**, that sends an `invoke` request to bot. 
 1. The bot can respond with a `200` code.
 
-### 2. Pin a tab directly from the Adaptive Card through a button or overflow
+## Invoke Stage View through a deep link
 
-* When the user enters a URL, it invokes a bot. The bot returns an Adaptive Card with the option to pin it as a tab.
-* The `overflow to true` decides whether the button shows up as an overflow in the card or as a button in the body of the card.
+**Stage View** is a large canvas that you can invoke to surface the web content.
 
-#### Example 
+To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API. 
 
-Following is an example to pin a tab directly from the Adaptive Card through a button or overflow:
+The following image displays a Stage View invoked through a deep link:
 
-```json
-{
-    type: "Action.Submit",
-    title: "Pin as Tab",
-     data: {
-        msteams: {
-            type: "invoke",
-            overflow: "true",
-            value: {
-                  type: "tab/tabInfoAction",
-                  tabInfo: {
-                    contentUrl: contentUrl,
-                    websiteUrl: websiteUrl,
-                    name: "Tasks",
-                    entityId: "entityId",
-                    pinTab: true
-                  }
-            }
-        }
-    }
-}         
-```
+![invoke a Stage View through a deep link](~/assets/images/tab-images/invoke-stage-view-through-deep-link.png)
 
-> [!NOTE] 
-> Set `pinTab` to `true` for this workflow.
+### Syntax 
 
-### 3. Deeplink to a stage
+The deeplink must follow the following syntax:
+https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”, “title”:”[title]”}
 
-* The deeplink format is: https://teams.microsoft.com/l/stage/appId/0?context={ "contentURL": contentURL, "websiteURL": websiteURL, "title": title}
-* The deeplink is resolved from deeplinkservice and open the stage.
-* No option to pin the tab from here.
-* Its difficult to include the entire `tabInfo` object in the deeplink URL.
-* The `entityId` is `zero` in this case.
+### Examples
 
-### 4. Open a stage with no option to pin the tab
+The following examples show the sample deep links to invoke the **Stage View**:
+
+#### Example 1
+
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
+
+#### Example 2
+
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
+
+> [!NOTE]
+> The `title` is optional in the deeplink. If you do not include the `title`, your app name replaces it.
+
+### Open a stage with no option to pin the tab
 
 Use `OpenURL` action with the stage deeplink to open the stage with the URL.
 
@@ -195,56 +152,6 @@ Following is an example of `OpenURL`action which opens the URL in a browser:
 }
 ```
 
-### 5. Upgrade a website tab to an app
-
-You can upgrade a website tab to an app. The following image displays how a website tab is upgraded to an app:
-
-![upgrade a website tab to an app](~/assets/images/tab-images/upgrade-a-website-tab-to-an-app.png)
-
-#### Example 
-
-Following is an example to upgrade a website tab to an app:
-
-```json
-{
-	“title”: “View”,
-	“type”: “Action.Submit”,
-    “data”:{
-     “msteams”:{
-	  “type”: “invoke”
-         “overflow”: “true”,
-              “value”:{
-                    “type”: “tab/tabInfoFetch”,
-                    “anything”: “any contextual information you would like to add”
-               }
-        }
-    }
-},
-{
-    "tabInfo": {
- “contentUrl”: “contentUrl",
- “websiteUrl”: “websiteUrl”,
- “removeUrl”: “removeUrl”,
- "name": "Tasks",
- "entityId": "entityId",
- “pinTab”: “true”
- }
-}
-```
-* When there is a website tab that matches an app, you get **Use the app** option in a banner. 
-
-* If you select **Use the app**, it triggers an `invoke` request to the bot. You can use  `handleExecuteBotQuery` API to get the response from bot.
-
-* When you send an`invoke` request of `tab/tabInfoFetch`, the bot sends the `tabInfo` as part of the response. You can use the tab information to update the website tab to an app.
-
-### 6. Add a tab of an app instead of the website tab
-
-You can add a tab of an app instead of website tab. This work flow is same as [upgrade a website tab to an app](#5-upgrade-a-website-tab-to-an-app).   
-
-The following image displays how to add a tab of an app instead of the website tab: 
-
-![add a tab of an app instead of the website tab](~/assets/images/tab-images/add-tab-of-an-app-instead-of-website-tab.png)
-
 ## Tab information property
 
 | Property name | Type | Number of characters | Description |
@@ -256,10 +163,10 @@ The following image displays how to add a tab of an app instead of the website t
 | removeUrl? | String | 2048 | The https:// URL that points to the UI to be displayed when the user deletes the tab. |
 
 
-##  Stage View vs task Module
+##  Stage View vs. task Module
 
-Stage View is good to use when you have a rich content to display to end users, like a page, a dashboard, a file, and so on. Stage view provides maximum real estate that helps you render your content in the full-screen canvas. 
-[Task Module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires users attention or collect information required to move to the next step.
+* Stage View is good to use when you have a rich content to display to end users, like a page, a dashboard, a file, and so on. Stage view provides maximum real estate that helps you render your content in the full-screen canvas. 
+* [Task Module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires users attention or collect information required to move to the next step.
 
 ## See also
 
