@@ -95,7 +95,7 @@ With your messaging extension running, you can install it in Teams.
 
 Learn how messaging extensions work in a Teams chat.
 
-1. Start a new chat. In the compose box, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and choose the messaging extension app you just sideloaded.
+1. Start a new chat. In the compose box, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and select the messaging extension app you just sideloaded.
 1. Try searching for something (for example, **Tickets**). If your app is working, you'll see sample search results (you can add your own later).
 
    :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
