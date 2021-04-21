@@ -8,9 +8,6 @@ ms.author: surbhigupta
 
 # Add a default install scope and group capability
 
-> [!NOTE]
-> The default install scope and group capability is currently available in developer preview only.
-
 Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
 Some of these apps are intended to work in a team, meetings, or a groupchat, with personal app experience being secondary.
 The default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
@@ -31,11 +28,11 @@ Configure the default install scope for your app, based on whether your app need
 1. Open your manifest schema, and add the `defaultInstallScope` property to it.
 2. Save the updates.
 
-Following is a JSON example:
+    Following is a JSON example:
 
-```json
-"defaultInstallScope": "meetings",
-```
+    ```json
+    "defaultInstallScope": "meetings",
+    ```
 
 > [!NOTE]
 > For information on full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
@@ -49,15 +46,15 @@ Configure the default capability for shared scopes, based on whether your app is
 1. Open your manifest schema, and add the `defaultGroupCapability` property to it.
 2. Save the updates.
 
-Following is a JSON example:
+    Following is a JSON example:
 
-```json
-"defaultGroupCapability": {
-    "team": "bot",
-    "groupchat": "bot",
-    "meetings": "tab"
-}
-```
+    ```json
+    "defaultGroupCapability": {
+        "team": "bot",
+        "groupchat": "bot",
+        "meetings": "tab"
+    }
+    ```
 > [!NOTE]
 > For information on full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
 
