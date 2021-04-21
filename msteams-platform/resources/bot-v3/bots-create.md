@@ -12,7 +12,7 @@ ms.date: 12/07/2018
 
 All bots created using the Microsoft Bot Framework are configured and ready to work in Microsoft Teams.
 
-See the [Bot Framework Documentation](/azure/bot-service/?view=azure-bot-service-3.0) for general information on bots.
+See the [Bot Framework Documentation](/azure/bot-service/?view=azure-bot-service-3.0&preserve-view=true) for general information on bots.
 
 ## Create a bot for Microsoft Teams
 
