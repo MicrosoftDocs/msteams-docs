@@ -14,7 +14,7 @@ A configuration page is a special type of [content page](content-page.md). The u
 * A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-## Configuring a channel or group chat tab
+## Configure a channel or group chat tab
 
 The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Also, the URLs used must be secured HTTPS endpoints and available from the cloud. 
 
@@ -81,7 +81,7 @@ The corresponding code for configuration page is shown in the following section:
 ...
 ```
 
-Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon. 
+Choose either **Select Gray** or **Select Red** button in the configuration page to display the tab content with a gray or red icon. 
 
 The following image displays the tab content with gray icon:
 
@@ -95,7 +95,7 @@ Choosing the relative button triggers either `saveGray()` or `saveRed()`, and in
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
-1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
+1. The **Save** button on the app's configuration page uploaded in Teams is enabled.
 
 The configuration page code informs the Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
@@ -167,7 +167,7 @@ The `microsoftTeams.getContext((context) => {})` function retrieves the [Context
 ...
 ```
 
-## Context and authentication
+## Context and authenticate
 
  Authenticate before allowing a user to configure your app. Otherwise, your content might include sources that have their authentication protocols. For more information, see [Authenticate a user in a Microsoft Teams tab](~/tabs/how-to/authentication/auth-flow-tab.md). Use context information to construct the authentication requests and authorization page URLs.
 Ensure that all domains used in your tab pages are listed in the `manifest.json` and `validDomains` array.

@@ -11,7 +11,7 @@ ms.author: lajanuar
 A content page is a webpage that is rendered within the Teams client. Typically these are part of:
 
 * A personal-scoped custom tab - In this instance the content page is the first page the user encounters.
-* A channel/group custom tab - After the user pins and configures the tab in the appropriate context, the content page is displayed.
+* A channel or group custom tab - After the user pins and configures the tab in the appropriate context, the content page is displayed.
 * A [task module](~/task-modules-and-cards/what-are-task-modules.md) - You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
 
 This article is specific to using content pages as tabs; however the majority of the guidance here would apply regardless of how the content page is presented to the end-user.
@@ -42,7 +42,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 </body>
 ```
 
-## Accessing additional content
+## Access additional content
 
 ### Using the SDK to interact with Teams
 
@@ -58,11 +58,11 @@ A task module is a modal popup-like experience that you can trigger from your ta
 
 ### Valid Domains
 
-Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
+Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, the core functionality of your tab exists within Teams and not outside of Teams.
 
 ## Reorder static personal tabs
 
-Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
 
 If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
 
@@ -88,14 +88,14 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 
 > [!NOTE]
 > 1. The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
-> 2. If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
+> 2. If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow the mandatory protocol, below:
 
 
 1. To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
 2. Remember to call `microsoftTeams.initialize();`.
-3. **Optional**. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Mandatory**. Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams will then hide the loading indicator if applicable. If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.
-5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen will then be shown to the user:
+3. **Optional**. When you're ready to print to your screen and want to delay the loading of the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
+4. **Mandatory**. Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams hides the loading indicator if applicable. If `notifySuccess` is not called within 30 seconds, the application will expire and an error screen is displayed with an option to retry.
+5. If your application doesn't load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to notify the Teams of an error. An error screen is displayed to the user:
 
 ```typescript
 ``
