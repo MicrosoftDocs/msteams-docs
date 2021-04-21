@@ -127,6 +127,17 @@ The following user types identify what each user can do and what they can access
 
 A guest or anonymous user cannot add, remove, or uninstall apps.
 
+> [!NOTE]
+> Anonymous users inherit the global default user-level app permission policy. For more information, see [Manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+
+The following table provides the user types and what features each user can access:
+
+| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
+| Guest that is part of the tenant AAD | Interaction is allowed. Creating, updating, and deleting are not allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
+| Federated | Not available | Not available | Not available | Not available | Not available | Not available |
+
 ## See also
 
 > [!div class="nextstepaction"]
