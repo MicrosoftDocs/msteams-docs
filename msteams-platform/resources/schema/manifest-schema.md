@@ -683,7 +683,7 @@ You can define any of the following properties:
 * `name`: Allows admin to change the app's display name.
 * `shortDescription`: Allows admin to change the app's short description.
 * `longDescription`: Allows admin to change the app's detailed description.
-* `smallImageUrl`: It is `outline` property in the `icons` block of the manifest.
+* `smallImageUrl`: It is the `outline` property in the `icons` block of the manifest.
 * `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
 * `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
 * `websiteUrl`: It is the https:// URL to the developer's website.
