@@ -32,6 +32,17 @@ You must have a basic understanding of the following to use Together Mode:
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams Dev Center and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
+* Ensure that admin has granted permission to 'Upload custom apps' and has granted permission to select all filters as part of App Setup and Meeting policies respectively
+
+## Best Practices 
+
+Prior to building a scene, there are few key points to consider in order to have a seamless scene building experience
+
+* Ensure all images are in PNG format
+* The final package with all the images put together must not exceed 1920x1080 resolution. Note that the resolution is an 'even' number. 
+* The maximum scene size is 10MB.
+* The maximum size of each image (a scene is a collection of multiple images) is 5MB. The individual image resolution must also be an 'even' number
+
 
 ## Build a scene using the Scene studio
 
