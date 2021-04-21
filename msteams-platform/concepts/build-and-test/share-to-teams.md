@@ -20,13 +20,13 @@ The following image displays the Share-to-Teams pop-up experience:
 
 To embed a Share-to-Teams button, you must follow the following process:
 
-* Add the `launcher.js` script on your webpage.
+1. Add the `launcher.js` script on your webpage.
 
     ```html
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-* Add a HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
+1. Add a HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
 
     ```html
     <div
@@ -35,11 +35,11 @@ To embed a Share-to-Teams button, you must follow the following process:
     </div>
     ```
 
-After completing this, the Microsoft Teams icon gets added to your website. The following image shows Share-to-Teams icon:
+    After completing this, the Microsoft Teams icon gets added to your website. The following image shows Share-to-Teams icon:
 
-![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
+    ![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 
-* Alternatively, if you want a different icon size for the Share-to Teams button, use the `data-icon-px-size` attribute.
+1. Alternatively, if you want a different icon size for the Share-to Teams button, use the `data-icon-px-size` attribute.
 
     ```html
     <div
@@ -48,7 +48,7 @@ After completing this, the Microsoft Teams icon gets added to your website. The 
       data-icon-px-size="64">
     </div>
     ```
-* If the shared link requires user authentication, and if you know that the URL preview from your link to be shared does not render well in Teams, for example the link would require user authentication, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
+1. If the shared link requires user authentication, and the URL preview from your link to be shared does not render well in Teams then, you can disable the URL preview by adding the `data-preview` attribute set to `false`.
 
     ```html
     <div
@@ -58,7 +58,7 @@ After completing this, the Microsoft Teams icon gets added to your website. The 
     </div>
     ```
 
-* If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
+1. If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
 
 ## Craft your website preview
 

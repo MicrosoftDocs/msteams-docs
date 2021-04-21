@@ -326,9 +326,9 @@ Some messaging extension activities do not include the command ID. For example, 
 ---
 
 ## Example
-To convert the Book-a-room app template to a Virtual Assistant skill is shown in the following example:
 
-[Book-a-room](app-templates.md#book-a-room) is a [Microsoft Teams bot](../bots/what-are-bots.md) that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal o**r 1:1 conversations. 
+The following example shows how to convert the Book-a-room app template to a Virtual Assistant skill:
+Book-a-room is a Microsoft Teams that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal o**r 1:1 conversations. 
 The following image displays a Virtual Assistant with a **book a room** skill:
 
 ![Virtual Assistant with a "book a room" skill](../assets/images/bots/virtual-assistant/book-a-room-skill.png)
@@ -569,3 +569,9 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 > [!div class="nextstepaction"]
 > [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+
+> [!div class="nextstepaction"]
+> [Book-a-room](app-templates.md#book-a-room)
+
+> [!div class="nextstepaction"]
+> [Microsoft Teams bot](../bots/what-are-bots.md)

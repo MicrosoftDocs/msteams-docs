@@ -18,6 +18,8 @@ This document gives an overview of key benefits of Teams Shifts WFM connectors, 
 
 ## Key benefits of Teams Shifts WFM connectors
 
+Following are the key benefits of Teams Shifts WFM connectors:
+
 * **Plug and play experience:** All Shifts WFM connectors include ARM Azure deployment scripts that allow you to host all necessary services in Microsoft Azure. No coding is required to deploy the apps.
 
 * **Production-ready code:** All  Shifts connectors conform to the recommended security and infrastructure best practices and all community-submitted changes are reviewed to ensure continued conformance.
@@ -28,7 +30,7 @@ This document gives an overview of key benefits of Teams Shifts WFM connectors, 
 
 * **Seamless integration:** The integration between WFM solutions and Teams Shifts allows firstline workers to use the Teams Shifts app to view or manage their schedules and shift times, and use all the other rich collaboration features provided in Teams right from their mobile device or desktop without having to switch context to another app.  
 
-**Open shifts view in Teams**  
+**Open shifts view in Teams** 
 
 The shifts view in Teams is shown in the following image: 
 
