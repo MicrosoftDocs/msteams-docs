@@ -108,6 +108,8 @@
     href: task-modules-and-cards/cards/design-effective-cards.md
   - name: Task modules
     href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: Best practices for designing Teams apps
+    href: concepts/design/design-teams-app-best-practices.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
