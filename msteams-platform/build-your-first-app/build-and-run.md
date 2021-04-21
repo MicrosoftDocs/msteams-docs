@@ -52,7 +52,7 @@ If you already have a tenant with admin access to the Teams client, verify if yo
 ---
 ### Install your development tools
 
-To help you get started quickly, Microsoft provides development tools such as Microsoft Teams Toolkit for Visual Studio Code. However, you can build Teams apps with your preffered tools as well.
+To help you get started quickly, Microsoft provides development tools such as Microsoft Teams Toolkit for Visual Studio Code. However, you can build Teams apps with your preffered tools as well. 
 
 > [!NOTE]
 > Teams displays app content only through HTTPS connections. To debug certain types of apps locally, such as a bot, you'll learn how to use ngrok to set up a secure tunnel between Teams and your app.
@@ -62,8 +62,9 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 **To install Microsoft Teams Toolkit**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension and [create a tunnel using ngrok](../tutorials/get-started-dotnet-app-studio.md/#Tunnel using ngrok).
+1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension and [create a tunnel using ngrok](../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
+   
    > [!NOTE]
    > The toolkit does not support the earlier versions of Visual Studio Code.
 
@@ -78,6 +79,7 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 1. Select **Microsoft Teams Toolkit** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: > **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create your app project with the Visual Studio Code Teams Toolkit.":::
+   
 1. Sign in with your Microsoft 365 development account.
 1. On the **Select project** screen, select **JS** (JavaScript) > **Next**.
 
@@ -163,8 +165,8 @@ The operating system by default blocks you from sideloading apps. You have to en
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
 
-> [Note]
-> App Studio is also available as a stand-alone app for Teams client.
+   > [!Note]
+   > App Studio is also available as a stand-alone app for Teams client.
 
 ### Troubleshoot App Studio
 

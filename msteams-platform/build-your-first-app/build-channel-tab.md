@@ -31,8 +31,10 @@ The Microsoft Teams Toolkit helps you to configure your app and set up the scaff
 1. Sign in with your Microsoft 365 development account when prompted to do so.
 1. On the **Select project** screen, select **JS** (JavaScript) under **Channel and group app**.
 1. Enter a name for your Teams app. 
+
     > [!NOTE]
     > This is the default name for your app and also the name of the app project directory on your local machine.
+
 1. Select **Group or Teams channel tab**.
 1. Select **Finish** at the bottom of the screen to configure your project and save your project on your local machine.  
 
@@ -112,12 +114,12 @@ When you add a channel tab, the app name displays by default, for example, **fir
 1. Go to the `src/components` directory and open the `TabConfig.js` file.
 1. Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the following example:
 
- ```JavaScript
-   microsoftTeams.settings.setSettings({
-   "contentUrl": "https://localhost:3000/tab",
-   "suggestedDisplayName": "Team Contacts"
- });
- ```
+  ```JavaScript
+    microsoftTeams.settings.setSettings({
+    "contentUrl": "https://localhost:3000/tab",
+    "suggestedDisplayName": "Team Contacts"
+  });
+  ```
 
 ## 6. Build and run your app
 
@@ -141,9 +143,12 @@ Your app is ready to test in Teams. To do this, you must have an account that al
    1. Open `https://localhost:3000/tab` and proceed to the page.
 
 1. Select **Add to a team** or **Add to a chat** and locate a channel or chat you can use for testing from the modal in Teams.
-1. Select **Set up a tab**. The configuration page displays in a modal.<br/>
+1. Select **Set up a tab**. The configuration page displays in a modal.
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content.png" alt-text="Screenshot of a channel tab configuration page.":::
-1. Select **Save** to configure the tab. The following content page appears:<br/>
+
+1. Select **Save** to configure the tab. The following content page appears:
+
    :::image type="content" source="../assets/images/tabs/channel-tab-tutorial-content-installed.png" alt-text="Screenshot of a channel tab with static content view.":::
 
 ## See also
@@ -155,7 +160,7 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 * [Tabs on mobile](../tabs/design/tabs-mobile.md).
 * [Single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md)
 * [Microsoft Teams API overview](https://docs.microsoft.com/graph/teams-concept-overview).
-* [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
+* [Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## Next step
 

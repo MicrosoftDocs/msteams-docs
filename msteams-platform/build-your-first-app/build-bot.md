@@ -28,6 +28,8 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 * **App configurations and scaffolding** relevant to bots
 * **Bot** that's automatically registered with the Microsoft Azure Bot Service
 
+**To create your app project:**
+
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-01.png" alt-text="Screenshot showing how to create an app in the Teams Toolkit.":::
@@ -38,7 +40,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-02.png" alt-text="Screenshot showing how to create a new bot in the Teams Toolkit.":::
 
 1. On the **Configure project** screen, enter a name for your bot. This is the default name for your app and also the name of the app project directory on your local machine.
-1. Select **Create a new Bot** then click **Create Bot Registration** button:
+1. Select **Create a new Bot** > **Create Bot Registration** as shown in the following image:
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-03.png" alt-text="Screenshot showing naming new bot in the Teams Toolkit.":::
 
@@ -76,7 +78,7 @@ Tunneling is a protocol that allows you to transport data across a network. And 
 
 1. Go to [ngrok.com](https://ngrok.com/download) site and follow the instruction to install and set up ngrok on your environment. 
     
-    You may want to set the PATH environment variable, which is specific to the shell you are using, so that you can use the `ngrok` command from your working directory in the next step. 
+    You have to set the PATH environment variable, which is specific to the shell you are using. With this, you can use the `ngrok` command from your working directory in the next step. 
 
 1. After you have finished setting it up, open terminal and run `ngrok http -host-header=rewrite 3978`. 
 
@@ -98,7 +100,7 @@ You must still specify an endpoint address to receive and process user messages,
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-07.png" alt-text="Screenshot showing how to tunnel localhost with ngrok.":::
 
-    Your bot will be able to respond to messages in Teams, once you set up the endpoint correctly. 
+    Your bot will be able to respond to messages in Teams, after you set up the endpoint correctly. 
 
 ## 5. Build and run your app
 
@@ -118,17 +120,17 @@ With your bot running, you can install it in Teams.
 > [!TIP]
 > If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
 
-1. In Visual Studio Code, select the F5 key to launch a Teams web client.
+1. In Visual Studio Code, select the **F5** key to launch a Teams web client.
 1. In the app install dialog, select **Add for me**. 
 
    > [!Note]
-   > By default, the app is added to your 1:1 direct chat message, however you can choose to install it to a team or chat by clicking the little arrow on the right of the button. In this tutorial, let’s just click Add.
+   > By default, the app is added to your 1:1 direct chat message, however you can choose to install it to a team or chat by clicking the little arrow beside **Add for me**. In this tutorial, let’s just click Add.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install-08.png" alt-text="Screenshot showing tunnelling localhost with ngrok.":::
 
 ## 7. Test your bot
 
-Now for the fun part: Let's say "Hello" to your bot.
+Let's say "Hello" to your bot.
 
 * In the compose box, send a `Hello` message.
     Your bot replies with something like the following message:
@@ -154,7 +156,7 @@ It's important to understand that this isn't the same as a channel in Teams. In 
 * [See what else Teams bots can do with one of our samples](https://github.com/microsoft/BotBuilder-Samples#teams-samples)
 * [Bot conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Design guidelines](../bots/design/bots.md) 
-* [production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md)
+* [Production-ready UI templates](../concepts/design/design-teams-app-ui-templates.md)
 * [Bot authentication in Teams](../bots/how-to/authentication/auth-flow-bot.md)
 * [Microsoft Bot Framework](https://dev.botframework.com/)
 * [Create a bot without the toolkit](../resources/bot-v3/bots-create.md)

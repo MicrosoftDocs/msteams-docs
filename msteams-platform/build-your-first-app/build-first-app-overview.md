@@ -14,12 +14,20 @@ The Get Started tutorial teaches you to create basic Teams apps. It contains a s
 
 **This tutorial teaches you to:**
 
-* Get up and running quickly with the Teams Toolkit (a Visual Studio Code extension) 
+* Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension 
 * Configure your app with App Studio 
 * Get experience with Teams tools and SDKs 
-* Expand on your app such as authentication and design guidelines 
+* Expand on your app using authentication or design guidelines 
 
 :::image type="content" source="../assets/images/build-your-first-app/skill-tree-overview.png" alt-text="Skill tree showing learning paths for the Teams 'get started' lessons." border="false":::
+
+Tutorials in this section will walk you through the following recommended tool sets and commonly used Technologies:
+
+* Visual Studio Code with Teams extension
+* React.js for tabs
+* Node.js for bots and messaging extensions
+
+You can also use any other technologies of your choice. You can also use a command-line interface (CLI), if you prefer to do so.
 
 ## Teams app fundamentals
 
@@ -29,8 +37,6 @@ The Teams developer platoform lets you build custom apps. Some common scenarios 
 * Look up information quickly in another system and add the results to a conversation in Teams 
 * Trigger workflows and processes based on a conversation in Teams, preserving the context of the conversation 
 
-Before you begin the tutorials, you should know the following about building apps for Teams.
-
 ### App capabilities
 
 A Teams app is made up of one or more platform capabilities and user interaction points.
@@ -39,29 +45,15 @@ Depending on what capabilities you want for your app, you will need an appropria
 
 | **App Capabilities**| **User interactions** | **Recommended Tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
-| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | Teams client SDK | Web technology in general—HTML, CSS, and JavaScript |
+| Tabs | a full-screen embedded web experience  | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | Teams client SDK | Web technology such as HTML, CSS, and JavaScript |
 | Bots | a chat bot that converse with members | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | Bot Franework SDK | Node.js, C#, or Python | 
 | Messaging Extensions | shortcuts for inserting external content into a conversation or taking action on messages | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator)  | Bot Framework SDK | Node.js, C#, or Python |
 
-Tutorials in this Get started section will walk you through with the recommended tool sets and commonly used technologies:
-* Visual Studio Code with Teams extension
-* React.js for tabs
-* Node.js for bots and messaging extensions
-
-You can also use any other technologies of your choice. If you prefer using a command-line interface (CLI), you are free to do so.
-
 ### Teams doesn't host your app
-
 
 You will only install an app package that contains a configuration file called manifest, and app icons to the Teams client. Rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Teams does not host your app. Your app in the cloud (or localhost during your development) accesses Teams via HTTPS.
 
-1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download) if you are building a bot or messaging extension and [create a tunnel using ngrok](https://docs.microsoft.com/microsoftteams/platform/tutorials/get-started-dotnet-app-studio#tunnel-using-ngrok).
-1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). (Earlier versions might not work with the toolkit.)
-1. In Visual Studio Code, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png"::: on the left Activity Bar and install the **Microsoft Teams Toolkit**.
-
-
-  :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
 ## See also
 

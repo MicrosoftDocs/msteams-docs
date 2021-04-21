@@ -127,6 +127,7 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
     > This example is just one way you might apply styles to your tab. Use the code as is, expand on it, or write your own.
 
     After storing the state provided by the theme change handler, provide the conditional logic to render your tab's styles based on the current theme. The following example shows a basic way to do this:
+
     1. Go to `render()` and check the current theme in `isTheme`.
     1. Create a `newTheme` object with CSS properties relevant to the current theme.
     1. Apply the following CSS to your tab content's root HTML element (`<div style={newTheme}>`):
@@ -146,7 +147,7 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
           }
         ```
 
-        Check your tab in Teams. The appearance now closely matches the dark theme.
+       Check your tab in Teams. The appearance now closely matches the dark theme.
 
        :::image type="content" source="../assets/images/build-your-first-app/personal-tab-tutorial-updated-theme.png" alt-text="Screenshot of a personal tab with static content view.":::
 
@@ -156,10 +157,10 @@ The Teams JavaScript client SDK can make your app aware of and react to theme ch
 * [Designing your tab for Microsoft Teams desktop and web](../tabs/design/tabs.md) 
 * [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)
 * [Designing your Microsoft Teams app with UI templates](../concepts/design/design-teams-app-ui-templates.md) 
-* [Tabs on mobile](../tabs/design/tabs-mobile.md).
+* [Tabs on mobile](../tabs/design/tabs-mobile.md)
 * [Single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md)
-* [Microsoft Teams API overview](https://docs.microsoft.com/graph/teams-concept-overview).
-* [Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md).
+* [Microsoft Teams API overview](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## Next step
 

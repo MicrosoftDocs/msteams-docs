@@ -31,6 +31,8 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 * **App configurations and scaffolding** relevant to messaging extensions
 * **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
 
+**To create your app project:**
+
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account.
 1. On the **Select project** screen, at **Messaging Extensions** > **Search**, click **JS (JavaScript)**. 
@@ -47,7 +49,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ## 3. Set up a secure tunnel to your app
 
-For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure localhost tunneling. Read [Build a bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel to-your-app) for details. 
+For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure localhost tunneling. Read [Build a bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel-to-your-app) for details. 
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
@@ -86,7 +88,7 @@ With your messaging extension running, you can install it in Teams.
 > [!TIP]
 > If you haven't sideloaded a Teams app before and run into issues, follow these [instructions](../build-your-first-app/build-and-run.md#4-sideload-your-app-in-teams).
 
-1. In Visual Studio Code, press the **F5** key to launch a Teams web client.
+1. In Visual Studio Code, select the **F5** key to launch a Teams web client.
 1. In the app install dialog, select **Add for me**.
 
 ## 7. Test your messaging extension
@@ -94,7 +96,8 @@ With your messaging extension running, you can install it in Teams.
 Learn how messaging extensions work in a Teams chat.
 
 1. Start a new chat. In the compose box, select **More** :::image type="icon" source="../assets/icons/teams-client-more.png"::: and choose the messaging extension app you just sideloaded.
-1. Try searching for something (for example, **Tickets**). If your app is working, you'll see sample search results (you can add your own later).<br/>
+1. Try searching for something (for example, **Tickets**). If your app is working, you'll see sample search results (you can add your own later).
+
    :::image type="content" source="../assets/images/build-your-first-app/me-teams-test.png" alt-text="A screenshot showing how a search-based messaging extension is used in the Teams compose box.":::
 
 ## Troubleshooting
