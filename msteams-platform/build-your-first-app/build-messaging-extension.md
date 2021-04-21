@@ -31,7 +31,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your m
 * **App configurations and scaffolding** relevant to messaging extensions
 * **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
 
-**To create your app project:**
+**To create your app project**
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 1. When prompted, sign in with your Microsoft 365 development account.

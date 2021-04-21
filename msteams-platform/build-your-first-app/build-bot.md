@@ -28,7 +28,7 @@ The Microsoft Teams Toolkit helps you set up the following components for your a
 * **App configurations and scaffolding** relevant to bots
 * **Bot** that's automatically registered with the Microsoft Azure Bot Service
 
-**To create your app project:**
+**To create your app project**
 
 1. In Visual Studio Code, select **Microsoft Teams** :::image type="icon" source="../assets/icons/vsc-toolkit.png"::: on the left Activity Bar and choose **Create a new Teams app**.
 
@@ -78,7 +78,7 @@ Tunneling is a protocol that allows you to transport data across a network. And 
 
 1. Go to [ngrok.com](https://ngrok.com/download) site and follow the instruction to install and set up ngrok on your environment. 
     
-    You have to set the PATH environment variable, which is specific to the shell you are using. With this, you can use the `ngrok` command from your working directory in the next step. 
+    You have to set the PATH environment variable, which is specific to the shell you are using. With this, you can use the `ngrok` command from your working directory. 
 
 1. After you have finished setting it up, open terminal and run `ngrok http -host-header=rewrite 3978`. 
 
@@ -86,7 +86,7 @@ Tunneling is a protocol that allows you to transport data across a network. And 
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-bots-ngrok-06.png" alt-text="Screenshot showing tunnelling of localhost with ngrok.":::
 
-1. Register the URL in your app manifest in the next step. 
+1. Register the URL in your app manifest. 
 
 ## 4. Register your bot endpoint
 

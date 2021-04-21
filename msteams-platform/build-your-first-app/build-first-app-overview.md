@@ -12,7 +12,7 @@ The Get Started tutorial teaches you to create basic Teams apps. It contains a s
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/jugBQqE_2sM]
 
-**This tutorial teaches you to:**
+**This tutorial teaches you to**
 
 * Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension 
 * Configure your app with App Studio 
