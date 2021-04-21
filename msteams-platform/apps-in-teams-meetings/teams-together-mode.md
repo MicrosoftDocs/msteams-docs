@@ -47,6 +47,7 @@ Prior to building a scene, there are few key points to consider in order to have
     >[!Note]
     > A scene is a collection of multiple images. The above limit is for each individual image
     > The individual image resolution must also be an 'even' number
+* Ensure that the image is marked 'Transparent' if the image is a transparent image. This checkbox is available on the right panel when an image is selected
 
 
 ## Build a scene using the Scene studio
