@@ -27,8 +27,6 @@ The new meeting extensibilities provide you with APIs that transform the meeting
 
 To customize Teams with apps for meetings and to achieve different tasks, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
 
-The new Together Mode feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.
-
 ## See also
 
 > [!div class="nextstepaction"]

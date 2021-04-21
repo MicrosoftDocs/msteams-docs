@@ -21,7 +21,15 @@ With a Microsoft 365 developer subscription, you can use your Microsoft Teams ap
 > [!NOTE]
 > For any tenant that you use, you must get the global administrator permissions to run the scripts.
 
-## Enable custom app sideloading
+### Optional step to allow upload of custom apps
+
+By default, only global admins or teams service admins can upload custom apps into the tenant app catalog. You can also enable all users to upload custom apps for their own use or to teams for testing.
+
+To enable this setting, you'll need to update the global App Setup Policy in your Teams Admin Portal.
+
+<img width="430px" src="~/assets/images/microsoft-teams-admin-center-screenshot.png" alt="Screenshot of App Setup Policy"/>
+
+## Optional step to enable custom app sideloading
 
 Enabling custom app sideloading is optional. By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, see [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
