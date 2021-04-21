@@ -236,7 +236,7 @@
       href: bots/calls-and-meetings/calls-meetings-bots-overview.md
     - name: Real-time media calls and meetings
       href: bots/calls-and-meetings/real-time-media-concepts.md
-    - name: Register a calling bot
+    - name: Register calls and meetings bot
       href: bots/calls-and-meetings/registering-calling-bot.md
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
