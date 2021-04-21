@@ -36,9 +36,9 @@ For more information on using the OAuthPrompt, see:
 
 provides Bot authentication v3 SDK sample.
 
-| **Sample name** | **Description** | **.NET** | **Node.js** |
-|---------------|------------|------------|-------------|
-| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 
 ## Configure the identity provider
 
