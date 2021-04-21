@@ -276,7 +276,18 @@ The following schema sample shows all extensibility options.
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
-  }
+  },
+  "configurableProperties": [
+     "name",
+     "shortDescription",
+     "longDescription",
+     "smallImageUrl", 
+     "largeImageUrl", 
+     "accentColor",
+     "websiteUrl",
+     "privacyUrl",
+     "termsOfUseUrl"        
+  ]              
 }
 ```
 
@@ -658,4 +669,27 @@ Define the properties your app uses to post a user activity feed.
 
 ***
 
+## configurableProperties
+
+**Optional** - array
+
+The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+> [!NOTE]
+> A minimum of one property must be defined. You can define a maximum of nine properties in this block.
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app.
+
+You can define any of the following properties:
+* `name`: Allows admin to change the app's display name.
+* `shortDescription`: Allows admin to change the app's short description.
+* `longDescription`: Allows admin to change the app's detailed description.
+* `smallImageUrl`: It is `outline` property in the `icons` block of the manifest.
+* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
+* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: It is the https:// URL to the developer's website.
+* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
+
+
+
+* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
