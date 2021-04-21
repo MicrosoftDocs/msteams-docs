@@ -489,7 +489,7 @@ You can define any of the following properties:
 * `smallImageUrl`: It is `outline` property in the `icons` block of the manifest.
 * `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
 * `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
-* `developerUrl`: It is the https:// URL to the developer's website.
+* `websiteUrl`: It is the https:// URL to the developer's website.
 * `privacyUrl`: It is the https:// URL to the developer's privacy policy.
 * `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
