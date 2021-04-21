@@ -10,7 +10,7 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 ```
 
 >[!IMPORTANT]
->Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
+>Don't copy or paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
 
 ### Tab.cshtml
 
@@ -62,7 +62,7 @@ Make sure to save the updated **Tab.cshtml**.
 ## Upload your tab to Teams with App Studio
 
 >[!Note]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, you must build the solution again to create the **tab.zip** file to upload.
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
@@ -78,7 +78,7 @@ Make sure to save the updated **Tab.cshtml**.
 
 ### Update your app package with Manifest editor
 
-Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
+Once you've uploaded your app package into App Studio, you need to configure it.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
@@ -100,11 +100,11 @@ In the *Tabs* section:
 
 - In the Team tab pop-up window update the *Configuration URL* to `https://<yourngrokurl>/tab`.
 
-- Finally, make sure the *can update configuration? Team*, and *Group chat* boxes are checked and select **Save**.
+- Finally, make sure that *can update configuration? Team*, and *Group chat* boxes are checked and select **Save**.
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In the *Domains and permissions* section, the *Domains from your tabs* field must contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
 #### Test and distribute: Test and distribute
 
@@ -125,4 +125,4 @@ In the *Test and distribute* section:
 
 - In the final pop-up window select a value for the tab page (either a red or gray icon) and select **Save**.
 
-To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration should be displayed.
+To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration is displayed.
