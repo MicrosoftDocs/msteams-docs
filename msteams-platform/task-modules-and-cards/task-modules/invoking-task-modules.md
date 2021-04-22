@@ -241,7 +241,5 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 > [!div class="nextstepaction"]
 > [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
 
-## See also
-
 > [!div class="nextstepaction"]
 > [Using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

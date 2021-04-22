@@ -32,7 +32,7 @@ Markdown format for Adaptive Cards include the following features:
 * [Newlines for Adaptive Cards](#newlines-for-adaptive-cards)
 * [Mobile and desktop differences for Adaptive Cards](#mobile-and-desktop-differences-for-adaptive-cards)
 * [Adaptive Cards format sample](#adaptive-cards-format-sample)
-* [Mention support within Adaptive Cards v1.2](#mention-support-within-adaptive-cards-v1.2)
+* [Mention support within Adaptive Cards v1.2](#mention-support-within-adaptive-cards-v12)
 * [Full width Adaptive Card](#full-width-adaptive-card)
 * [Typeahead support](#typeahead-support)
 * [Stage view for images in Adaptive Cards](#stage-view-for-images-in-adaptive-cards)
