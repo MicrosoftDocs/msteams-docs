@@ -33,7 +33,7 @@ Configure the default install scope for your app, based on whether your app need
     ```
 
 > [!NOTE]
-> For information on full schema, see [manifest schema](~/resources/schema/manifest-schema.md).
+> For more information, see the [app manifest schema](~/resources/schema/manifest-schema.md).
 
 ## Configure the default capability for shared scopes
 
