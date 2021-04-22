@@ -62,7 +62,7 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 **To install Microsoft Teams Toolkit**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension and [create a tunnel using ngrok](../tutorials/get-started-dotnet-app-studio.md/#Tunnel-using-ngrok).
+1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension and [create a tunnel using ngrok](../../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
    
    > [!NOTE]
