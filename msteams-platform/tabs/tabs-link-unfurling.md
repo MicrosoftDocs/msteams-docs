@@ -8,7 +8,7 @@ ms.author: surbhigupta
 
 # Tabs link unfurling 
 
-The collaborative experience of Teams platform enhances with added new features continuously. A new UI component called Stage View is built in Teams. It allows you to render the content that can be opened in full screen in Teams and pinned as a tab. 
+The collaborative experience of Teams platform enhances with added new features continuously. A new UI component called Stage View is built in Teams. It allows you to render the content that is opened in full screen in Teams and pinned as a tab. 
 This document guides you on how to adopt the Stage View in your app.
 
 ## Stage View
@@ -17,7 +17,7 @@ Stage View is a giant, full screen UI component that you can invoke to surface y
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the Card. When a user selects the Adaptive Card, it is staged in the UI component. The user can pin the content as a tab directly from the Stage View.  
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the Card. The user can pin the content as a tab directly from the Stage View, and from the Adaptive Card also. 
 The following image explains how the Stage View works:
 
 ![stageview working](~/assets/images/tabs/stage-view-working.png)
@@ -37,8 +37,6 @@ You can invoke the Stage View in the following two ways:
 
 Stage View is invoked from an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md). When the user enters an URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. After a stage is launched, and the tabInfo is passed in, you can add the ability to pin the stage as a tab.  
 
-### 1. Open a stage from Adaptive Card and pin a tab
-
 The following images display a stage opened from Adaptive Card and pinned in a tab:
 
 ![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card.png)
@@ -47,7 +45,7 @@ The following images display a stage opened from Adaptive Card and pinned in a t
 
 ### Example 
 
-Following is the code to open a stage from an  Adaptive Card and pin a tab:
+Following is the code to open a stage from an  Adaptive Card:
 
 ```json
 {
@@ -67,32 +65,10 @@ Following is the code to open a stage from an  Adaptive Card and pin a tab:
                 }
             }
         }
-}, 
-{   
-    type: "Action.Submit",
-    title: "Pin as Tab",
-     data: {
-        msteams: {
-            type: "invoke",
-            overflow: "true",
-            value: {        
-                  type: "tab/tabInfoAction",
-                  tabInfo: {
-                    contentUrl: contentUrl,
-                    websiteUrl: websiteUrl,
-                    name: "Tasks",
-                    entityId: "entityId",
-                    pinTab: true
-                           }
-            }
-        }
-    }    
-}
+} 
 ```
 
 The invoke type must be of `composeExtension/queryLink` type. It is like the current `appLinking` workflow. 
-
-The `overflow to true` decides whether the button shows up as an overflow in the Card or as a button in the body of the Card. 
 
 **Workflow**
 
@@ -131,22 +107,6 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > The `title` is optional in the deeplink. If you do not include the `title`, your app name replaces it.
 
-### Open a stage with no option to pin the tab
-
-Use `OpenURL` action with the stage deeplink to open the stage with the URL in a browser.
-
-#### Example 
-
-Following is an example of `OpenURL`action which opens the URL in a browser:
-
-```json
-{
-  type: "Action.OpenUrl",  
- title: "View",
- url: contentUrl
-}
-```
-
 ## Tab information property
 
 | Property name | Type | Number of characters | Description |
@@ -160,7 +120,7 @@ Following is an example of `OpenURL`action which opens the URL in a browser:
 
 ##  Stage View vs. task Module
 
-* Stage View is good to use when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides maximum real estate that helps you render your content in the full-screen canvas. 
+* Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum spacethat helps to render your content in the full-screen canvas. 
 * [Task Module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention or collect information required to move to the next step.
 
 ## See also
