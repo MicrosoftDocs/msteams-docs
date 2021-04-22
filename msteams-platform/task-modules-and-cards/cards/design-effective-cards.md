@@ -4,6 +4,7 @@ description: Learn how to design Adaptive Cards for Teams and get the Microsoft 
 ms.topic: conceptual
 ms.author: lajanuar
 ---
+
 # Designing Adaptive Cards for your Microsoft Teams app
 
 An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or messaging extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
@@ -32,61 +33,61 @@ You also can start designing your Adaptive Cards directly in the browser.
 
 Our largest card. Use for sharing articles or scenarios where an image tells most of the story.
 
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows a Hero Card." border="false":::
 
 ### Thumbnail
 
 Use for sending a simple actionable message.
 
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows a Thumbnail Card." border="false":::
 
 ### List
 
 Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanation.
 
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an List Card." border="false":::
 
 ### Digest
 
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
 
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows a Digest Card." border="false":::
 
 ### Media
 
 Use when you want to combine text and media, like audio or video.
 
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows a Media Card." border="false":::
 
 ### People
 
 Best used when you to efficiently convey who's involved with a task.
 
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows a People Card." border="false":::
 
 ### Request ticket
 
 Use to get quick inputs from a user to automatically create a task or ticket.
 
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows a Request Ticket Card." border="false":::
 
 ### ImageSet
 
 Use to send multiple image thumbnails.
 
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an ImageSet." border="false":::
 
 ### ActionSet
 
 Use when you want to the user to select a button, then gather addition user input from the same card.
 
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an ActionSet." border="false":::
 
 ### ChoiceSet
 
 Use to gather multiple inputs from the user.
 
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows a ChoiceSet." border="false":::
 
 ## Anatomy
 
@@ -108,7 +109,7 @@ Following is a list of best practices when designing an Adaptive Card.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Example showing an Adaptive Cards best practice." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-do.png" alt-text="Example showing an Adaptive Cards best practice-Do." border="false":::
 
 #### Do: Use up to six primary actions
 
@@ -116,68 +117,73 @@ While Adaptive Cards can support six primary actions, most cards don’t need th
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Example showing an Adaptive Cards best practice." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/actions-dont.png" alt-text="Example showing an Adaptive Cards best practice-Don't." border="false":::
 
 #### Don't: Use more than six primary actions
 
-Adaptive Cards should present quick, actionable content. Too many actions can overwhelm a user.
+Adaptive Cards must present quick, actionable content. Too many actions can overwhelm a user.
 
    :::column-end:::
 :::row-end:::
 
 ### Frequency
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Example showing an Adaptive Cards best practice." border="false":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="Example showing an Adaptive Cards best practice-frequency." border="false":::
 
 #### Do: Be concise
 
 It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
 
-### **Avoid dead ends**
+### Avoid dead ends
+
 Ensure that you provide next steps to the users in the form of action buttons to avoid dead ends in a flow.
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end.png" alt-text="Example of avoiding dead end when using Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end-do.png" alt-text="Example of avoiding dead end when using Adaptive Card-Do." border="false":::
 
 #### Do: Provide logical end to a flow
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end.png" alt-text="Example of avoiding dead end when using Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end-dont.png" alt-text="Example of avoiding dead end when using Adaptive Card-Don't." border="false":::
 
 #### Don't: Leave dead ends
 
 ### Add visual cues
+
 If you want to suggest the outcome of various actions to the users, add the right emoticons to the action buttons in an Adaptive Card.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-emoticons.png" alt-text="Example of using emoticons to provide visual cues." border="false":::
 
 #### Do: Add the right emoticons
 
-### **Avoid over usage of Adaptive Card**
-Do not use an Adaptive Card for very simple flows.
+### Avoid over usage of Adaptive Card
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse.png" alt-text="Example of over usage of Adaptive Card." border="false":::
+Do not over use an Adaptive Card for very simple flows.
 
-#### Do: Avoid overusage
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse-do.png" alt-text="Example of over usage of Adaptive Card-Do." border="false":::
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse.png" alt-text="Example of over usage of Adaptive Card." border="false":::
+#### Do: Keep it simple
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse-dont.png" alt-text="Example of over usage of Adaptive Card-Don't." border="false":::
 
 #### Don't: Overuse for simple flows
 
 ## Scenarios when to use an Adaptive Card
 
-Following are some scenarios where an Adaptive Card is the best fit to enhance user-experience:
+Following are some scenarios where an Adaptive Card is the best fit to enhance the user-experience:
 
-### **Simplify multi-turn bot conversations**
+### Simplify multi-turn bot conversations
+
 If events or queries have a linear flow and you are using bots to manage such conversations, use Adaptive Cards to get information from the user in one go.
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-do.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-do.png" alt-text="Example of simplifying multi-turn bot conversations-do." border="false":::
 
 #### Do: Get information in one go  
 
-:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-dont.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-dont.png" alt-text="Example of simplifying multi-turn bot conversations-don't." border="false":::
 
 #### Don't: Make multi-turn interactions tedious
 
 ### Design task modules using Adaptive Cards
+
 Use an Adaptive Card JSON inside task module to save some operational overheads and get a view that merges into the Teams theme and design.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-task-module.png" alt-text="Example of a task module developed using an Adaptive Card." border="false":::
@@ -185,6 +191,7 @@ Use an Adaptive Card JSON inside task module to save some operational overheads 
 #### Do: Adaptive Card JSON inside a task module
 
 ### Notify status change
+
 Inform your users about the change in status of an activity without making them go through detailed information.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-notify-status.png" alt-text="Example of Adaptive Card usage to notify change in status." border="false":::
@@ -192,6 +199,7 @@ Inform your users about the change in status of an activity without making them 
 #### Do: Allow users to view status change with ease
  
 ### Hide non-critical information
+
 If you want to hide unimportant information from the user, but if the user so wishes can access it by just selecting a button.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-hide-conversation.png" alt-text="Example of Adaptive Card usage to hide non-critical information." border="false":::
@@ -199,6 +207,7 @@ If you want to hide unimportant information from the user, but if the user so wi
 #### Do: Provide a link to view non-critical information
 
 ### Leverage rich input capabilities
+
 In addition to textual input, if you want to leverage rich input capabilities by using native input types, such as date picker, time picker, and so on whenever you need specialized input from the user.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-input-capabilities.png" alt-text="Example of leveraging native input capabilities using Adaptive Card." border="false":::
@@ -206,11 +215,12 @@ In addition to textual input, if you want to leverage rich input capabilities by
 #### Do: Use the native input types
 
 ### Specialized scenarios
-If you want to allow users to download a file or deep-linking users to tab, chat, or channel, as these scenarios can be executed without invoking an intrusive task module.
+
+If you want to allow users to download a file or need to deep-link users to a tab, chat, or channel use an Adaptive Card, as these scenarios can be executed without invoking an intrusive task module.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-specialized-scenarios.png" alt-text="Example of specialized scenarios." border="false":::
 
-#### Do: Allow users to download a file
+#### Do: Avoid using an intrusive task module
 
 
 
