@@ -7,12 +7,16 @@ ms.author: lajanuar
 ---
 # Microsoft Teams tabs
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest.
+
+Tabs are added as a part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content.
 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It is recommended that you can set the intended use for your cookies. You need not rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
 
-There are two types of tabs available in Teams — channel or group and personal. Channel or group tabs deliver content to channels and group chats and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
+There are two types of tabs available in Teams, they are channel or group and personal. Channel or group tabs deliver content to channels and group chats. They can create collaborative spaces around dedicated web-based content.
+
+Personal tabs, along with personally-scoped bots are part of personal apps and are scoped to a single user. They are pinned to the left navigation bar for easy access.
 
 ## Tab features
 
@@ -22,7 +26,7 @@ There are two types of tabs available in Teams — channel or group and personal
 > * Awareness of Azure Active Directory (Azure AD) ID of the current user.
 > * Locale awareness for the user to indicate language, i.e., `en-us`. 
 > * Single sign-on (SSO) capability, if supported.
-> * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, e.g., an individual work item.
+> * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example, an individual work item.
 > * The ability to open a task module from links within a tab.
 > * Reuse of SharePoint web parts within the tab.
 
@@ -36,11 +40,13 @@ There are two types of tabs available in Teams — channel or group and personal
 
 ## Understand how tabs work
 
-A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you need to add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Doing so will tell Teams to display your page, give you access to Teams-specific information (for example if the Teams client is running the *dark theme*), and allow you to take action based on the results.
+A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you must add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Teams allows to display your page, give you access to Teams-specific information, and allows you to take action based on the results. For example, the Teams client is running the *dark theme*.
 
-Whether you choose to expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users.
+If you choose to expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is same for the all users.
 
-For channel or group tabs, you need to create an additional configuration page that allows users to configure your content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple different teams or group chats. On each subsequent install, users can configure the tab, and allows you to tailor the experience as needed. When users add or configure a tab, an URL associated with the tab is presented in the Teams UI. Configuring a tab is simply adding additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose the board that the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your app manifest.
+For channel or group tabs, you must create an additional configuration page that allows users to configure your content page URL, by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab is added to multiple different teams or group chats. On each subsequent install, users can configure the tab, and allows you to tailor the experience as needed. 
+
+When users add or configure a tab, an URL associated with the tab is presented in the Teams UI. To configure a tab, simply add additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose the board that the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
 You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
@@ -60,14 +66,19 @@ Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/apps
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 
-> [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+## See also
 
 > [!div class="nextstepaction"]
-> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+> [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 
 > [!div class="nextstepaction"]
-> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
+> [Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
+
+> [!div class="nextstepaction"]
+> [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
