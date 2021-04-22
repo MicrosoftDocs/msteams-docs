@@ -14,7 +14,7 @@ It’s common for an app to support multiple scenarios in Teams, but you may hav
 
 If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team. 
 
-## Configure app's default install scope
+## Configure your app's default install scope
 
 Configure the default install scope for your app, based on whether your app needs to be installed in personal, team, meetings, or groupchat. You can set only one scope at a time.
 
