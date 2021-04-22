@@ -1,7 +1,9 @@
 ---
 title: Invoke and dismiss task modules
-description: Invoking and dismissing task modules.
+description: Invoke and dismiss task modules.
+author: surbhigupta12
 ms.topic: conceptual
+localization_priority: Normal
 ---
 
 # Invoke and dismiss task modules
@@ -239,7 +241,7 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 > [!div class="nextstepaction"]
 > [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

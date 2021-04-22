@@ -9,7 +9,7 @@ ms.topic: overview
 
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments. Cards can include buttons which can trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-You can add rich text formatting to your cards using either markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, `signin` and Adaptive Card. Cards reference include Adaptive Card, hero card, list card, Office 365 connector card, receipt card, signin card, thumbnail card, and card collections and these cards are supported in bots for Teams.
+You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, `signin`, and Adaptive Card. Cards reference include Adaptive Card, hero card, list card, Office 365 connector card, receipt card, signin card, thumbnail card, and card collections and these cards are supported in bots for Teams.
 
 Teams uses cards in three different places:
 
@@ -58,7 +58,13 @@ These card types are described in the [Teams card reference](~/task-modules-and-
 
 Adaptive Cards with incoming webhooks enables you to use the rich and flexible capabilities of Adaptive Cards to send content using incoming webhooks in Teams from their web service.
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
+> [!div class="nextstepaction"]
+> [Card actions](~/task-modules-and-cards/cards/cards-actions.md)
+> [!div class="nextstepaction"]
+> [Card reference](~/task-modules-and-cards/cards/cards-reference.md)
+> [!div class="nextstepaction"]
+> [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)

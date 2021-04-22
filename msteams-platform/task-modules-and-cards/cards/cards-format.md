@@ -9,7 +9,9 @@ ms.date: 03/29/2018
 
 # Format cards in Microsoft Teams
 
-You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type.
+Following are the two ways to add rich text formatting to your cards:
+* [Markdown](#format-cards-with-markdown)
+* [HTML](#format-cards-with-html)
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting, or Markdown, depending on the card type. For current and future development of Adaptive Cards, using Markdown formatting is recommended.
 
@@ -21,10 +23,23 @@ You can format Adaptive Cards and O365 connector cards with Markdown that includ
 
 ## Format cards with Markdown
 
-There are two card types that support Markdown in Teams:
+The following card types support Markdown formatting in Teams:
 
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
 * O365 connector cards: Markdown and limited HTML is supported in Office 365 connector cards in the text fields.
+
+Markdown format for Adaptive Cards include the following features:
+* [Newlines for Adaptive Cards](#newlines-for-adaptive-cards)
+* [Mobile and desktop differences for Adaptive Cards](#mobile-and-desktop-differences-for-adaptive-cards)
+* [Adaptive Cards format sample](#adaptive-cards-format-sample)
+* [Mention support within Adaptive Cards v1.2](#mention-support-within-adaptive-cards-v1.2)
+* [Full width Adaptive Card](#full-width-adaptive-card)
+* [Typeahead support](#typeahead-support)
+* [Stage view for images in Adaptive Cards](#stage-view-for-images-in-adaptive-cards)
+
+Markdown format for O365 connector cards include the following features:
+* [Mobile and desktop differences for connector cards](#mobile-and-desktop-differences-for-connector-cards)
+* [Format example for Markdown connector cards](#format-example-for-markdown-connector-cards)
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
@@ -303,7 +318,7 @@ Connector cards support limited Markdown and HTML formatting. HTML support is de
 
 In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
-### Mobile and desktop differences for connector cards using Markdown
+### Mobile and desktop differences for connector cards
 
 On the desktop, Markdown formatting for connector cards appears as shown in the following image:
 
@@ -374,6 +389,11 @@ The following code shows an example of formatting for Markdown connector cards:
 ---
 
 ## Format cards with HTML
+
+The following card types support HTML formatting in Teams:
+
+* O365 connector cards: Limited Markdown and HTML formatting is supported in Office 365 connector cards.
+* Hero and thumbnail cards: HTML tags are supported for simple cards such as the hero and thumbnail card.
 
 # [HTML format for O365 connector cards](#tab/connector-html)
 
@@ -504,7 +524,7 @@ Character formatting, such as bold and italic display correctly on Android.
 
 ### Format sample for HTML format in simple cards
 
-The images in the previous section were created using Teams AppStudio, where the text property of a hero card is set to the following string:
+The images in the previous section were created using Teams App Studio, where the text property of a hero card is set to the following string:
 
 `<p>bold: <strong>Bold Text</strong></p><p>italic: <em>Italic Text</em></p><p>strikethrough: <strike>Strikethrough text</strike></p><h1>Header 1</h1><h2>Header 2</h2><h3>Header 3</h3><p>bullet list: <ul><li>text</li><li>text</li></ul></p><p>ordered list: <ol><li>text</li><li>text</li></ol></p><pre>preformatted text</pre><blockquote>blockquote text</blockquote></p><p>hyperlink: <a href=\"https://www.bing.com/\">Bing</a></p><p>embedded image: <img src=\"https://aka.ms/Fo983c\" alt=\"Duck on a rock\"></img></p>`
 
@@ -512,7 +532,7 @@ You can test formatting in your own cards by modifying this code.
 
 ---
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Card actions](./cards-actions.md)

@@ -921,7 +921,7 @@ The following cards are implemented by the Bot Framework, but are not supported 
 * Audio cards
 * Video cards
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Task modules](~/task-modules-and-cards/what-are-task-modules.md)

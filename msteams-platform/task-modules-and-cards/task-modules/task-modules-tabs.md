@@ -121,7 +121,7 @@ The following table provides the possible values of `err` that can be received b
 | Invalid `appId`. | Invalid appId. |
 | User pressed X button, closing it. | User cancelled or closed the task module. |
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Using task modules in bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

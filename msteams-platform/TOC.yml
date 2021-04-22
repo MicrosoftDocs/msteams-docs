@@ -290,6 +290,8 @@
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:
+  - name: Overview
+    href: task-modules-and-cards/cards-and-task-modules.md
   - name: Build cards
     items:
     - name: Overview

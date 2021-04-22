@@ -390,7 +390,7 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 }
 ```
 
-## Next step
+## See also
 
 > [!div class="nextstepaction"]
 > [Card reference](./cards-reference.md)

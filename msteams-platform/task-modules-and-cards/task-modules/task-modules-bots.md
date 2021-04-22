@@ -14,8 +14,8 @@ There are two ways of invoking task modules:
 * A new kind of invoke message `task/fetch`: Using the `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type) for Bot Framework cards, or the `Action.Submit` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, with `task/fetch`, the task module either a URL or an Adaptive Card is fetched dynamically from your bot.
 * Deep link URLs: Using the [deep link syntax for task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax), you can use the `openUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#openurl-action-type) for Bot Framework cards or the `Action.OpenUrl` [card action](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions) for Adaptive cards, respectively. With deep link URLs, the task module URL or Adaptive Card body is obviously known in advance, avoiding a server round-trip relative to `task/fetch`.
 
->[!IMPORTANT]
->To ensure secure communications, each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
+> [!IMPORTANT]
+> To ensure secure communications, each `url` and `fallbackUrl` must implement the HTTPS encryption protocol.
 
 The next section provides details on invoking a task module using `task/fetch`.
 
@@ -250,4 +250,6 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 ## See also
 
 > [!div class="nextstepaction"]
-> [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts) and  [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+> [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
+> [!div class="nextstepaction"]
+> [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
