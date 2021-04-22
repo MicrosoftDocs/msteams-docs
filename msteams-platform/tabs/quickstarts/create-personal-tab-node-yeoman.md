@@ -92,7 +92,7 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 - Make sure to save the updated **Tab.ts** file. Your tab code is complete.
 
-## Build and run Your application
+## Build and run your application
 
 Open a command prompt in your project directory to complete the next tasks.
 
@@ -104,7 +104,7 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 ## Establish a secure tunnel to your tab
 
-Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams don't allow local hosting, therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
 To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 
@@ -119,10 +119,10 @@ gulp ngrok-serve
 
 ## Upload your application to Teams
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-- In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
-- In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
-- Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab will upload into Teams.
+1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. In the *YourTeams* panel on the left, select the `...` menu next to the team that you are using to test your tab and choose **Manage team**.
+1. In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
+1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab will upload into Teams.
 
 ## View your personal tabs
 
