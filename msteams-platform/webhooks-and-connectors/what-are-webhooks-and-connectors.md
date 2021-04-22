@@ -12,9 +12,9 @@ Webhooks and connectors are a simple way to connect your web services to channel
 
 ## Outgoing webhooks
 
-With outgoing webhooks users can send text messages from a channel to your web services. After configuring the outgoing webhooks, users are able to @mention your outgoing webhook and send a message to your service. Your service can have five seconds to respond to the message with text or a card.
+With outgoing webhooks you can send text messages from a channel to your web services. After configuring the outgoing webhooks, users can @mention your outgoing webhook and send a message to your service. Your service can have five seconds to respond to the message with text or a card.
 
-Outgoing webhooks are configured on a per-team basis and cannot be included as part of a normal Teams app. They are best suited for completing team-specific workloads that do not require large amounts of information to be collected or exchanged.
+Outgoing webhooks are configured on a per-team basis and cannot be included as part of a normal Teams app. They are best suited for completing team-specific workloads that do not require too many information to be collected or exchanged.
 
 For more information, see [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
@@ -32,7 +32,7 @@ Connectors permit users to subscribe to notifications and messages from your web
 
 Office 365 Connectors help you to create a custom configuration page for your incoming webhook and package them as part of a Teams app. You can then distribute that app to the app store. You send messages primarily using Office 365 Connector cards and add a limited set of card actions to them. A good example of this is a weather connector, where users can choose a location and time of day to receive updates about the weather. Office 365 Connectors are configured on a channel level but are installed at a team level.
 
-See [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
+For more information, see [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
 
 Webhooks and connectors
 > [!VIDEO https://www.youtube-nocookie.com/embed/EqodWkS5PYM]
