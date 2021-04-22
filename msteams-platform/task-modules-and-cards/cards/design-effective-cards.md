@@ -131,9 +131,16 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
 
-* **Simplify multi-turn bot conversations**: If events or queries have a linear flow and you are using bots to manage such conversations, use Adaptive Cards to get information from the user in one go.
+### **Simplify multi-turn bot conversations**
+If events or queries have a linear flow and you are using bots to manage such conversations, use Adaptive Cards to get information from the user in one go.
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-do.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
+
+#### Do: Simplify multi-turn bot conversations  
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-dont.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
+
+#### Don't: Make multi-turn interactions tedious
 
 * **Design task modules using Adaptive Cards**: Use an Adaptive Card JSON inside task module to save some operational overheads and get a view that merges into the Teams theme and design.
 
