@@ -34,7 +34,7 @@ Configure the default install scope for your app, based on whether your app need
 
 ## Configure the default capability for shared scopes
 
-Configure the default capability for shared scopes, based on whether your app is installed in personal, team, meetings, or groupchat scope.
+Configure the default capability when your app is installed for a team, meeting, or chat.
 
 **To configure details in app manifest**
 
