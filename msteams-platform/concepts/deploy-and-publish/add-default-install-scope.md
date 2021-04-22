@@ -18,7 +18,7 @@ If your app's primary capability is a bot, you can also make the bot the default
 
 Configure the default install scope for your app. You can set only one scope at a time.
 
-**To configure details in app manifest**
+**To configure the default install scope in your app manifest**
 
 1. Open your manifest schema, and add the `defaultInstallScope` property to it.
 2. Set a value of `personal`, `team`, `groupchat`, or `meetings` (see an example below).
