@@ -46,9 +46,9 @@ To show a dialog box that contains a deep link to an item within your tab, call 
 
 Provide the following fields:
 
-* `subEntityId`&emsp;: A unique identifier for the item within your tab to which you are deep linking.
-* `subEntityLabel`&emsp;: A label for the item to use for displaying the deep link.
-* `subEntityWebUrl`&emsp;: An optional field with a fallback URL to use if the client does not support rendering the tab.
+* `subEntityId`: A unique identifier for the item within your tab to which you are deep linking.
+* `subEntityLabel`: A label for the item to use for displaying the deep link.
+* `subEntityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering the tab.
 
 ### Generating a deep link to your tab
 
@@ -63,7 +63,6 @@ Use the following format for a deep link that you can use in a bot, connector, o
 `https://teams.microsoft.com/l/entity/<appId>/<entityId>?webUrl=<entityWebUrl>&label=<entityLabel>&context=<context>`
 
 > [!NOTE]
-
 > If the bot sends a message containing a `TextBlock` with a deep link, then a new browser tab is opened when the user selects the link. This happens in Chrome and in the Microsoft Teams desktop app, both running on Linux.
 > If the bot sends the same deep link URL into an `Action.OpenUrl`, then the Teams tab is opened in the current browser tab when the user selects the link. A new browser tab is not opened.
 

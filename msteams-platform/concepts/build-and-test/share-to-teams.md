@@ -18,8 +18,6 @@ The following image displays the Share-to-Teams pop-up experience:
 
 ## Embed a Share to Teams button
 
-To embed a Share-to-Teams button, you must follow the following process:
-
 1. Add the `launcher.js` script on your webpage.
 
     ```html

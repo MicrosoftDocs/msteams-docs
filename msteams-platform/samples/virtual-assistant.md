@@ -21,14 +21,14 @@ The decision to add a Virtual Assistant includes many determinants and differs f
 * A central team manages all employee experiences. It has the capability to build a Virtual Assistant experience and manage updates to the core experience including the addition of new skills.
 * Multiple applications exist across business functions and the number is expected to grow in the future.
 * Existing applications are customizable, owned by the organization, and are converted into skills for a Virtual Assistant.
-* The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience. 
+* The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience.   
 The following image displays the business functions of Virtual Assistant: 
 
 ![Central team maintains the assistant, and business function teams contribute skills](../assets/images/bots/virtual-assistant/business-functions.png)
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Visual Studio template](https://marketplace.visualstudio.com/items?itemName=BotBuilder.VirtualAssistantTemplate) for building Virtual Assistants and skills. With the Visual Studio template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We have enhanced the Visual Studio base template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, task modules, teams or group chats and messaging extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).    
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 ![High-level diagram of a Virtual Assistant solution](../assets/images/bots/virtual-assistant/high-level-diagram.png)
