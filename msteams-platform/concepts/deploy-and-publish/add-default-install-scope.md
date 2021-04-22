@@ -8,9 +8,7 @@ ms.author: surbhigupta
 
 # Add a default install scope and group capability
 
-Although installing an app in the personal scope works for most apps, some of the apps in Teams Store support both personal and team scopes.
-Some of these apps are intended to work in a team, meetings, or a groupchat, with personal app experience being secondary.
-The default install scope selection helps you to specify the `defaultInstallScope` for the apps that you publish. The app installation experience makes the default options available to the user, while the rest is moved under the chevron as highlighted in the image.
+It’s common for an app to support multiple scenarios in Teams, but you may have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the store is **Add to a team**.
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
