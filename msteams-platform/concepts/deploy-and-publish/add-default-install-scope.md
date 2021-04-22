@@ -12,10 +12,7 @@ It’s common for an app to support multiple scenarios in Teams, but you may hav
 
 ![Add an app](../../assets/images/compose-extensions/addanapp.png)
 
-The `defaultInstallScope` property supports values, such as personal, team, groupchat, or meetings.
-
-> [!NOTE]
->`defaultGroupCapability` provides the default capability that is added to the team, groupchat, or meetings. Choose a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
+If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team. 
 
 ## Configure app's default install scope
 
