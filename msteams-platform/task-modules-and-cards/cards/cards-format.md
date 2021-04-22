@@ -395,6 +395,14 @@ The following card types support HTML formatting in Teams:
 * O365 connector cards: Limited Markdown and HTML formatting is supported in Office 365 connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards such as the hero and thumbnail card.
 
+HTML format for O365 connector cards include the following features:
+* [Mobile and desktop differences for connector cards](#mobile-and-desktop-differences-for-connector-cards)
+* [Format sample for HTML connector cards](#format-sample-for-html-connector-cards)
+
+HTML format for hero and thumbnail cards include the following features:
+* [Mobile and desktop differences for simple cards](#mobile-and-desktop-differences-for-simple-cards)
+* [Format example for simple cards](#format-example-for-simple-cards)
+
 # [HTML format for O365 connector cards](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
@@ -414,7 +422,7 @@ Connector cards support limited Markdown and HTML formatting.
 
 In connector cards, newlines are rendered in HTML using the `<p>` tag.
 
-### Mobile and desktop differences for connector cards using HTML
+### Mobile and desktop differences for connector cards
 
 On the desktop, HTML formatting for connector cards appears as shown in the following image:
 
@@ -522,7 +530,7 @@ On Android, HTML formatting appears as shown in the following image:
 
 Character formatting, such as bold and italic display correctly on Android.
 
-### Format sample for HTML format in simple cards
+### Format example for simple cards
 
 The images in the previous section were created using Teams App Studio, where the text property of a hero card is set to the following string:
 
