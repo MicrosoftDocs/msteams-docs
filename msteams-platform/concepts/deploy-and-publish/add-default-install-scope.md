@@ -1,5 +1,5 @@
 ---
-title: Add a default install scope and group capability
+title: Configure default install options for your app
 description: Describes how to add default install scope and group capability for apps.
 ms.topic: how-to
 localization_priority: Normal
@@ -62,4 +62,3 @@ Configure the default capability for shared scopes, based on whether your app is
 
 > [!div class="nextstepaction"]
 > [Choose how to distribute your app](overview.md)
-
