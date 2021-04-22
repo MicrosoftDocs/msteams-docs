@@ -37,11 +37,9 @@ You can invoke the Stage View in the following two ways:
 
 Stage View is invoked from an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md). When the user enters an URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. After a stage is launched, and the tabInfo is passed in, you can add the ability to pin the stage as a tab.  
 
-The following images display a stage opened from Adaptive Card and pinned in a tab:
+The following image displays a stage opened from an Adaptive Card:
 
 ![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card.png)
-
-![pin a tab](~/assets/images/tab-images/pin-a-tab.png)
 
 ### Example 
 
@@ -72,7 +70,7 @@ The invoke type must be of `composeExtension/queryLink` type. It is like the cur
 
 **Workflow**
 
-1. `Invoke` request to bot. The request type is `composeextension/queryLink`.
+1. `Invoke` request to bot. The request type is `composeExtension/queryLink`.
 1. `Invoke` response from bot.The response contains Adaptive Card with type `tab` or `tabInfoAction` in it.
 1.	When the user selects **View**, that sends an `invoke` request to bot. 
 1. The bot can respond with a `200` code.
