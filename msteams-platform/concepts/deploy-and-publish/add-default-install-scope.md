@@ -23,8 +23,6 @@ Configure the default install scope for your app. You can set only one scope at 
 1. Open your app manifest and add the `defaultInstallScope` property.
 2. Set a value of `personal`, `team`, `groupchat`, or `meetings` (see an example below).
 
-    Following is a JSON example:
-
     ```json
     "defaultInstallScope": "meetings",
     ```
