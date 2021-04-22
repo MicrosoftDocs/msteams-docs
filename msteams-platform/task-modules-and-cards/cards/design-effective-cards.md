@@ -102,6 +102,8 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 ## Best practices
 
+Following is a list of best practices when designing an Adaptive Card.
+
 ### Primary and secondary actions
 
 :::row:::
@@ -131,45 +133,84 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
 
+### **Avoid dead ends**
+Ensure that you provide next steps to the users in the form of action buttons to avoid dead ends in a flow.
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end.png" alt-text="Example of avoiding dead end when using Adaptive Card." border="false":::
+
+#### Do: Provide logical end to a flow
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end.png" alt-text="Example of avoiding dead end when using Adaptive Card." border="false":::
+
+#### Don't: Leave dead ends
+
+### Add visual cues
+If you want to suggest the outcome of various actions to the users, add the right emoticons to the action buttons in an Adaptive Card.
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-emoticons.png" alt-text="Example of using emoticons to provide visual cues." border="false":::
+
+#### Do: Add the right emoticons
+
+### **Avoid over usage of Adaptive Card**
+Do not use an Adaptive Card for very simple flows.
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse.png" alt-text="Example of over usage of Adaptive Card." border="false":::
+
+#### Do: Avoid overusage
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse.png" alt-text="Example of over usage of Adaptive Card." border="false":::
+
+#### Don't: Overuse for simple flows
+
+## Scenarios when to use an Adaptive Card
+
+Following are some scenarios where an Adaptive Card is the best fit to enhance user-experience:
+
 ### **Simplify multi-turn bot conversations**
 If events or queries have a linear flow and you are using bots to manage such conversations, use Adaptive Cards to get information from the user in one go.
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-do.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
 
-#### Do: Simplify multi-turn bot conversations  
+#### Do: Get information in one go  
 
 :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-conversation-dont.png" alt-text="Example of simplifying multi-turn bot conversations." border="false":::
 
 #### Don't: Make multi-turn interactions tedious
 
-* **Design task modules using Adaptive Cards**: Use an Adaptive Card JSON inside task module to save some operational overheads and get a view that merges into the Teams theme and design.
+### Design task modules using Adaptive Cards
+Use an Adaptive Card JSON inside task module to save some operational overheads and get a view that merges into the Teams theme and design.
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-task-module.png" alt-text="Example of a task module developed using an Adaptive Card." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-task-module.png" alt-text="Example of a task module developed using an Adaptive Card." border="false":::
 
-* **Notify status change**: If you want to allow your users to view the status change of an activity without going through detailed information.
+#### Do: Adaptive Card JSON inside a task module
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-notify-status.png" alt-text="Example of Adaptive Card usage to notify change in status." border="false":::
+### Notify status change
+Inform your users about the change in status of an activity without making them go through detailed information.
+
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-notify-status.png" alt-text="Example of Adaptive Card usage to notify change in status." border="false":::
+
+#### Do: Allow users to view status change with ease
  
-* **Hide non-important information**: If you want to hide unimportant information from the user, but if the user so wishes can access it by just selecting a button.
+### Hide non-critical information
+If you want to hide unimportant information from the user, but if the user so wishes can access it by just selecting a button.
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-hide-conversation.png" alt-text="Example of Adaptive Card usage to hide non-critical information." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-hide-conversation.png" alt-text="Example of Adaptive Card usage to hide non-critical information." border="false":::
 
-* **Leverage rich input capabilities**: In addition to textual input, if you want to leverage rich input capabilities by using native input types, such as date picker, time picker, and so on whenever you need specialized input from the user.
+#### Do: Provide a link to view non-critical information
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-input-capabilities.png" alt-text="Example of leveraging native input capabilities using Adaptive Card." border="false":::
+### Leverage rich input capabilities
+In addition to textual input, if you want to leverage rich input capabilities by using native input types, such as date picker, time picker, and so on whenever you need specialized input from the user.
 
-* **Add visual cues**: If you want to suggest the outcome of various actions to the users, add the right emoticons to the action buttons in an Adaptive Card.
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-input-capabilities.png" alt-text="Example of leveraging native input capabilities using Adaptive Card." border="false":::
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-emoticons.png" alt-text="Example of using emoticons to provide visual cues." border="false":::
+#### Do: Use the native input types
 
-* **Specialized scenarios**: If you want to allow users to download a file or deep-linking users to tab, chat, or channel, as these scenarios can be executed without invoking an intrusive task module by using an Adaptive Card.
+### Specialized scenarios
+If you want to allow users to download a file or deep-linking users to tab, chat, or channel, as these scenarios can be executed without invoking an intrusive task module.
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-specialized-scenarios.png" alt-text="Example of specialized scenarios." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-specialized-scenarios.png" alt-text="Example of specialized scenarios." border="false":::
 
-* **Avoid over usage of Adaptive Card**: Do not use an Adaptive Card for very simple flows.
+#### Do: Allow users to download a file
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-overuse.png" alt-text="Example of over usage of Adaptive Card." border="false":::
 
-* **Avoid dead ends**: Ensure that you provide next steps to the users in the form of action buttons to avoid dead ends in a flow.
 
-    :::image type="content" source="../../assets/images/design-guidelines/best-practice-adaptive-card-dead-end.png" alt-text="Example of avoiding dead end when using Adaptive Card." border="false":::
