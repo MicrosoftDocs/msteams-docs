@@ -38,7 +38,7 @@ Configure the default capability for shared scopes, based on whether your app is
 
 **To configure details in app manifest**
 
-1. Open your manifest schema, and add the `defaultGroupCapability` property to it.
+1. Open your app manifest and add the `defaultGroupCapability` property to it.
 2. Save the updates.
 
     Following is a JSON example:
