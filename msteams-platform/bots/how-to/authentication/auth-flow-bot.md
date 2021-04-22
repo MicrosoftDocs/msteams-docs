@@ -47,9 +47,10 @@ for an example that demonstrates authentication flow for bots using Node.js and 
 
 Sample code showing the bot authentication process:
 
-| **Sample name** | **Description** | **Node.js** |
-|-----------------|----------------|--------------|
-| Microsoft Teams bot authentication sample | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) |
+| **Sample name** | **Description** | **Node.js** | **.NET** | **javascript** | **Python** |
+|-----------------|----------------|--------------|----------|-----------------|-----------|
+| Teams authentication | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | | |
+| Bot authentication | This sample demonstartes how to use authentication for a bot runnning in Microsoft Teams | | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## More details
 
