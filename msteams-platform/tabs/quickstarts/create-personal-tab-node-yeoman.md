@@ -19,7 +19,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 Use the arrow keys to select static tab.
 
 >[!IMPORTANT]
->The path component *yourDefaultTabNameTab*, referenced in this quickstart, is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
+>The path component *yourDefaultTabNameTab* referenced in this quickstart is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
 >
 >For example: DefaultTabName: *MyTab* => */MyTabTab/*
 
@@ -92,7 +92,7 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 - Make sure to save the updated **Tab.ts** file. Your tab code is complete.
 
-## Build and Run Your Application
+## Build and run Your application
 
 Open a command prompt in your project directory to complete the next tasks.
 
@@ -106,7 +106,7 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams don't allow local hosting, therefore, you need to either publish your tab to a public URL or use a proxy that will expose your local port to an internet-facing URL.
 
-To test your tab extension, you'll use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
+To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints will be available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 
 In your command prompt, exit localhost and enter the following:
 
@@ -126,4 +126,4 @@ gulp ngrok-serve
 
 ## View your personal tabs
 
-In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
+In the navbar located at the far-left of the Teams client, select the `...` menu and select your application from the list.
