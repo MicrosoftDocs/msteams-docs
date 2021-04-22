@@ -24,7 +24,7 @@ Configure the default install scope for your app, based on whether your app need
 **To configure details in app manifest**
 
 1. Open your manifest schema, and add the `defaultInstallScope` property to it.
-2. Save the updates.
+2. Set a value of `personal`, `team`, `groupchat`, or `meetings` (see an example below).
 
     Following is a JSON example:
 
