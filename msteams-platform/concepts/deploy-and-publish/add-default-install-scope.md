@@ -1,6 +1,6 @@
 ---
 title: Configure default install options for your app
-description: Describes how to add default install scope and group capability for apps.
+description: Describes how to specify your app's default install options.
 ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
