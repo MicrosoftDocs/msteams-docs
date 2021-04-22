@@ -378,7 +378,7 @@
       href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
   items:    
-  - name: Configure default app scopes
+  - name: Configure default install options
     href: concepts/deploy-and-publish/add-default-install-scope.md
   - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
