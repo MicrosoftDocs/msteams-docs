@@ -8,34 +8,36 @@ ms.author: surbhigupta
 
 # Tabs link unfurling 
 
-The collaborative experience of Teams platform enhances with added new features continuously. A new UI component called Stage View is built in Teams. It allows you to render the content that is opened in full screen in Teams and pinned as a tab. 
-This document guides you on how to adopt the Stage View in your app.
+The collaborative experience of Teams platform is enhanced continuously with addition of new features. In this process of continuous enhancement, a new UI component, called Stage View is built in Teams. 
 
+Stage View allows you to render the content that is opened in full screen in Teams and pinned as a tab. To allow the users to use this feature, let us understand how to adopt the Stage View in your app.
+ 
 ## Stage View
 
-Stage View is a giant, full screen UI component that you can invoke to surface your web content. The link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. 
+Stage View is a giant, full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. 
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the Card. The user can pin the content as a tab directly from the Stage View, and from the Adaptive Card also. 
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the card, and pins the content as a tab directly from the Stage View, and from the Adaptive Card. 
+
 The following image explains how the Stage View works:
 
 ![stageview working](~/assets/images/tabs/stage-view-working.png)
 
 ## Advantage of Stage View
 
-The Stage View provides users with a more seamless experience of viewing content in Teams, instead of navigating to the browser. The users can interact directly with your content without leaving Teams and your app. This leads to more engagement to your app and extends the time users spend on your app.
+The Stage View provides users with a more seamless experience of viewing content in Teams, instead of browser. This leads to more engagement with your app within Teams.
 
 ## Invoke the Stage View
 
-You can invoke the Stage View in the following two ways: 
+You can invoke the Stage View in the following  ways: 
 
 * Invoke Stage View from an Adaptive Card.
 * Invoke Stage View through a deep link.
 
 ## Invoke Stage View from an Adaptive Card
 
-Stage View is invoked from an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md). When the user enters an URL, the bot is invoked and returns an Adaptive Card with the option to open the URL in a stage. After a stage is launched, and the tabInfo is passed in, you can add the ability to pin the stage as a tab.  
+When the user enters an URL, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched, and the `tabInfo` is passed in, you can add the ability to pin the stage as a tab.  
 
 The following image displays a stage opened from an Adaptive Card:
 
@@ -66,20 +68,20 @@ Following is the code to open a stage from an  Adaptive Card:
 } 
 ```
 
-The invoke type must be of `composeExtension/queryLink` type. It is like the current `appLinking` workflow. 
+The `invoke` request type must be `composeExtension/queryLink`. 
 
-**Workflow**
+> [!NOTE]
+> `invoke` workflow is similar to the current `appLinking` workflow. 
 
-1. `Invoke` request to bot. The request type is `composeExtension/queryLink`.
-1. `Invoke` response from bot.The response contains Adaptive Card with type `tab` or `tabInfoAction` in it.
-1.	When the user selects **View**, that sends an `invoke` request to bot. 
-1. The bot can respond with a `200` code.
+**To invoke Stage View**
+
+1. When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+1. `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+1. The bot responds with a `200` code.
 
 ## Invoke Stage View through deep link
 
-**Stage View** is a large canvas that you can invoke to surface the web content.
-
-To invoke the deep link from your tab, you must wrap the deep link URL in our `microsoftTeams.executeDeeplink(url)` API. 
+To invoke the deep link from your tab, you must wrap the deep link URL in `microsoftTeams.executeDeeplink(url)` API. 
 
 The following image displays a Stage View invoked through a deep link:
 
@@ -87,12 +89,13 @@ The following image displays a Stage View invoked through a deep link:
 
 ### Syntax 
 
-The deeplink must follow the following syntax:
+Following is the syntax of a deeplink:  
+
 https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”, “title”:”[title]”}
 
 ### Examples
 
-The following examples show the sample deep links to invoke the Stage View:
+Following are the deep link examples to invoke the Stage View:
 
 #### Example 1
 
@@ -103,7 +106,7 @@ https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?conte
 https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
 > [!NOTE]
-> The `title` is optional in the deeplink. If you do not include the `title`, your app name replaces it.
+> The `title` is optional in the deeplink. If not included, the app name replaces it . 
 
 ## Tab information property
 
@@ -116,10 +119,10 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `removeUrl?` | String | 2048 | This property is the https:// URL that points to the UI to be displayed when the user deletes the tab. |
 
 
-##  Stage View vs. task Module
+##  Stage View vs. Task module
 
-* Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum spacethat helps to render your content in the full-screen canvas. 
-* [Task Module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention or collect information required to move to the next step.
+* Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum real estate that helps to render your content in the full-screen canvas. 
+* [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention or collect information required to move to the next step.
 
 ## See also
 
