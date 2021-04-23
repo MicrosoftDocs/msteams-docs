@@ -8,7 +8,7 @@ ms.author: anclear
 ---
 # Webhooks and connectors
 
-Webhooks and connectors are a simple way to connect your web services to channels and teams in Microsoft Teams.
+A webhook is a user-defined HTTP callback that notifies you about any action that has taken place in Teams channel. It is a way for an app to get realtime data. Webhooks and connectors are a simple way to connect your web services to channels and teams in Microsoft Teams.
 
 ## Outgoing webhooks
 

@@ -6,7 +6,7 @@ localization_priority: Priority
 keywords: teams o365 connector
 ---
 
-# Sending messages to connectors and webhooks
+# Send messages to connectors and webhooks
 
 To send a message through your Office 365 Connector or incoming webhook, you post a JSON payload to the webhook URL. Typically this payload must be in the form of an [Office 365 Connector Card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
@@ -102,7 +102,7 @@ This message produces the following card in the channel.
 
 ![Screenshot of a Connector card](~/assets/images/connectors/connector_message.png)
 
-## Creating actionable messages
+## Create actionable messages
 
 The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type: a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
 
@@ -134,7 +134,7 @@ For more information on Connector card actions, see **[Actions]**(/outlook/actio
 > 
 > For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
 
-## Setting up a custom incoming webhook
+## Set up a custom incoming webhook
 
 Follow these steps to see how to send a simple card to a Connector.
 

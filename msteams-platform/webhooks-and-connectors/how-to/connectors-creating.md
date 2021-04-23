@@ -8,28 +8,28 @@ ms.date: 04/19/2019
 ---
 # Create Office 365 Connectors for Microsoft Teams
 
-With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. For more information, see [build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/9qcwzVFppMg]
 
 ## Add a Connector to your Teams App
 
-You can distribute your registered Connector as part of your Teams app package. In case of a standalone solution or one of several [capabilities](~/concepts/extensibility-points.md) that your experience enables in Teams, you can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission or you can provide it to users directly for uploading within Teams.
+You can distribute your registered Connector as part of your Teams app package. In case of a standalone solution or one of several [capabilities](~/concepts/extensibility-points.md) that your experience enables in Teams, you can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can also provide it to users directly for uploading within Teams.
 
 To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish). By default, when a Connector is registered, it is assumed that your Connector works in all Office 365 products that support them, including Outlook and Teams. If that is not the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Microsoft Teams App Submissions](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> Your Connector is registered after you choose **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not wish to publish your app in AppSource, distribute it directly to your organization. You can do so by [publishing to your organization](#publish-connectors-for-your-organization). If you only want to publish to your organization, no further action is necessary on the Connector dashboard.
+> Your Connector is registered after you choose **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not wish to publish your app in AppSource, distribute it directly to your organization. You can do so by [publishing to your organization](#publish-connectors-for-your-organization). If you only want to publish to your organization, no further action is necessary on the Connector dashboard.
 
 ### Integrate the configuration experience
 
 Your users can complete the entire Connector configuration experience without having to leave the Teams client. To achieve this experience, Teams can embed your configuration page directly within an iframe. The sequence of operations is as follows:
 
-1. The user selects your connector to begin the configuration process.
-2. Teams can load your configuration experience in line.
-3. The user interacts with your web experience to complete the configuration.
-4. The user selects **Save**, which triggers a callback in your code.
-5. Your code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
+* The user selects your connector to begin the configuration process.
+* Your configuration experience is loaded in line within Teams.
+* The user interacts with your web experience to complete the configuration.
+* The user selects **Save**, which triggers a callback in your code.
+* Your code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
 
 You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must:
 
@@ -132,10 +132,10 @@ You can optionally execute an event handler when the user removes an existing co
 
 ### Include the Connector in your Manifest
 
-You can download the auto-generated Teams app manifest from the portal. Before you can use it to test or publish your app, though, you must do the following:
+You can download the auto-generated Teams app manifest from the portal. Before you use the Connector to test or publish your app, you must do the following:
 
-- [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-- Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+* [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
+* Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 The following manifest.json file contains the basic elements needed to test and submit your app.
 
@@ -210,6 +210,7 @@ After you have uploaded your app package to configure and use the connector in a
 1. To configure or modify the connector select the **Configure** bar.
 
 ## Code sample
+
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
 | Connectors	| Sample Office 365 Connector generating notifications to teams channel.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-todo-notification/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/connector-github-notification/nodejs)|

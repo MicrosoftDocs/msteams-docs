@@ -80,7 +80,7 @@ The outgoing webhook is available to the team's users, only if the URL is valid 
 Following is the scenario and example of adding outgoing webhooks to your app:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.  
-* Example: You have a line-of-business app that tracks all CRUD operations made to employee records by Teams channel HR users across an Office 365 tenancy.
+* Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
 
