@@ -55,6 +55,18 @@ The next section provides details on scalability and performance considerations 
 
 Application-hosted media bots require the following scalability and performance considerations:
 
+## Code sample
+
+Application-hosted media bots samples are as follows:
+
+| **Sample name** | **Description** | **Graph** |
+|------------|-------------|-----------|
+| Local media sample | Samples that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
+| Remote media sample | Samples that illustrates different remote media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
+
+## See also
+
+- [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 - The bots require more compute and network bandwidth capacity than messaging bots and incur significantly higher operational costs. A real-time media bot developer must carefully measure the bot's scalability, and ensure the bot does not accept more simultaneous calls than it can manage. A video-enabled bot can sustain only one or two concurrent media sessions per CPU core if using the raw RGB24 or NV12 video formats.
 - The Real-time Media Platform does not currently take advantage of any Graphics Processing Units (GPU) available on the VM to off-load H.264 video encoding or decoding. Instead, video encode and decode are done in software on the CPU. If a GPU is available, the bot takes advantage of it for its own graphics rendering, for example, if the bot is using a 3D graphics engine.
 - The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with 4 virtual CPUs (vCPU) is the minimum size required. For more information about Azure VM types, see [Azure documentation](/azure/virtual-machines/windows/sizes-general).

@@ -44,6 +44,9 @@ Using an exponential backoff with a random jitter is the recommended way to hand
 
 After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
 
+> [!NOTE]
+> In addition to retyring error code **429**, error codes **412**, **502**, and **504** must also be retried.
+
 ## Detect transient exceptions example
 
 The following code shows an example of using exponential backoff using the transient fault handling application block:
