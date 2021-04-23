@@ -1291,7 +1291,7 @@ The bot receives an `installationUpdate` event when you install a bot to a conve
 ### Install update event
 Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-# [C#/.NET](#tab/dotnet)
+# [C#](#tab/dotnet)
 
 ```csharp
 protected override async Task
@@ -1373,9 +1373,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** |
-|-----------------|-----------------|---------|
-|Microsoft Teams bots conversation events | Sample for bot events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## Next step
 
