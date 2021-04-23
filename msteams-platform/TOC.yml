@@ -286,20 +286,20 @@
       href: task-modules-and-cards/cards/cards-actions.md
     - name: Cards reference
       href: task-modules-and-cards/cards/cards-reference.md
-    - name: Universal actions for adaptive cards
+    - name: Universal actions for Adaptive Cards
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
-      - name: Work with universal actions for adaptive cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
-      - name: Role based views
+      - name: Role-based views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Role-Based-Views.md
       - name: Sequential workflows
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
-      - name: Up to date views
+      - name: Up-to-date views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
       - name: FAQs
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/FAQs.md
+      - name: Work with universal actions for Adaptive Cards
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
   - name: Build task modules
     items:
     - name: Overview

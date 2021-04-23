@@ -1,17 +1,23 @@
 ---
-title: Contextual or Role Base views
+title: Contextual or role-based views
 description: Sample for role based views using Universal Bot
+author: surbhigupta12
 ms.topic: conceptual
+localization_priority: Normal
 ---
 
-## Contextual or role based views
-Earlier if an adaptive card was sent in a Teams conversation then all users see the same card content. Here we are introducing universal bots which enables bot developers to provide contextual or role based views to users. The same adaptive card can now refresh to a contextual or role based adaptive card.
+# Contextual or role-based views
 
-Example: Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by universal bot action model.
+Earlier if an Adaptive Card was sent in a Teams conversation, all users see the same card content. Here we are introducing universal actions for Adaptive Cards, which enables bot developers to provide contextual or role-based views to users. The same Adaptive Card can now refresh to a contextual or role-based Adaptive Card.
+
+For example, Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by universal actions for Adaptive Cards.
 
 ![Role-based views](~/assets/images/bots/Rolebasedviews.png)
 
-**Sample Adaptive card**
+## Sample Adaptive Card
+
+The following code provides an example of an Adaptive Card:
+
 ```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -41,14 +47,18 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-1. When Megan creates a new incident, the bot sends the above adaptive card (common card) with incident details in the Teams conversation.
-2. Now this card automatically refreshes to role based view for Megan and Alex. (Alex's and Megan's user MRIs are added in userIds property in refresh property of the adaptive card json)
+**To send Adaptive Cards, refresh role-based view, and invoke requests to the bot**
+
+1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
+2. Now this card automatically refreshes to role based view for Megan and Alex. Alex's and Megan's user MRIs are added in userIds property of refresh property of the Adaptive Card json.
 3. The card remains the same for other users in the conversation.
-4. For Megan, automatic refresh trigers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request. 
-5. Similarly for Alex, automatic refresh trigers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
+4. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
+5. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
 
+## Sample invoke request sent from Teams client to the bot
 
-**Sample invoke request sent from Alex's and Megan's Teams Client to the bot**
+The following code provides an example of an invoke request sent from Alex's and Megan's Teams client to the bot:
+
 ```JSON
 { 
   "type": "invoke",
@@ -70,7 +80,10 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-**Sample adaptiveCard/action invoke response Card for Megan**
+## Sample adaptiveCard/action invoke response card
+
+The following code provides an example of an adaptiveCard/action invoke response card for Megan:
+
 ```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -109,7 +122,10 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-**Sample adaptiveCard/action invoke response Card for Alex**
+## Sample adaptiveCard/action invoke response card for Alex
+
+The following code provides an example of an adaptiveCard/action invoke response card for Alex:
+
 ```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -148,7 +164,10 @@ Example: Megan wants to create an incident and assign it to Alex. Also she wants
 }
 ```
 
-**Sample invoke response to return adaptive card**
+## Sample invoke response to return an Adaptive Card
+
+The following code provides an example of an invoke response to return an Adaptive Card:
+
 ```C#
 string cardJson = "<adaptive card json>";
 var card = JsonConvert.DeserializeObject(cardJson);
