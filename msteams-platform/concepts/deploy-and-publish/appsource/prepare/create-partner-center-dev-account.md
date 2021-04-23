@@ -11,7 +11,7 @@ To publish your app to the Microsoft Teams store, you must [set up your Partner 
 
 ## FAQ
 
-Get answers to some common questions about using Partner Center.
+Get answers to some common questions about managing your Partner Center account.
 
 <br>
 
