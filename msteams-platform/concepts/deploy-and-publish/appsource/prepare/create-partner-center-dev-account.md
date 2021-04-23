@@ -210,3 +210,8 @@ The following resources can also assist:
 <br>
 
 </details>
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)

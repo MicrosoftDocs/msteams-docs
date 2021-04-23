@@ -102,8 +102,3 @@ Once your app is approved, publishing usually takes 1-2 business days depending 
 <br>
 
 </details>
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Maintain your app](~/concepts/deploy-and-publish/appsource/post-publish/overview.md)

@@ -453,4 +453,4 @@ Apps must not display advertising, including dynamic ads, banner ads, and ads in
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Create a Partner Center account](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
