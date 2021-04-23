@@ -66,7 +66,7 @@ Select ( &ast; ) A Tab.
 
 **The URL where you will host this solution?**
 
-By default, the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+By default, the generator suggests an Azure Web Sites URL. You will only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
 **Would you like to include Test framework and initial tests? (y/N)**
 

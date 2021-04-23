@@ -27,7 +27,7 @@ Use the arrow keys to select static tab.
 
 To add a personal tab to this application, you must create a content page and update existing files:
 
-- In your code editor, create a new HTML file, **personal.html** and add the following markup:
+1. In your code editor, create a new HTML file, **personal.html** and add the following markup:
 
 ```html
 <!DOCTYPE html>
@@ -49,24 +49,24 @@ To add a personal tab to this application, you must create a content page and up
 </html>
 ```
 
-- Save **personal.html** in your application's **web** folder:
+1. Save **personal.html** in your application's **web** folder:
 
 ```bash
 ./src/app/web/<yourDefaultTabNameTab>/personal.html
 ```
 
-- Open **manifest.json** in your code editor:
+1. Open **manifest.json** in your code editor:
 
 ```bash
 ./src/manifest/manifest.json/
 ```
 
-Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
+1. Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
 
 ```json
 {
     "entityId": "personalTab",
-    "name": "Personal Tab ",
+    "name": "Personal Tab",
     "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
     "websiteUrl": "https://{{HOSTNAME}}",
     "scopes": ["personal"]
@@ -74,23 +74,23 @@ Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the
 
 ```
 
-Remember to update the **"contentURL"** path component **yourDefaultTabNameTab** with your actual tab name.
+1. Update the **"contentURL"** path component **yourDefaultTabNameTab** with your actual tab name.
 
-- Save the updated **manifest.json**.
+1. Save the updated **manifest.json**.
 
-- Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
+1. Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
 
  ```bash
 ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
 ```
 
-- Add the following to the list of IFrame decorators:
+1. Add the following to the list of IFrame decorators:
 
 ```typescript
  @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
 ```
 
-- Make sure to save the updated **Tab.ts** file. Your tab code is complete.
+1. Save the updated **Tab.ts** file. Your tab code is complete.
 
 ## Build and run your application
 
