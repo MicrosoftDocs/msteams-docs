@@ -17,6 +17,9 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
 
+> [!NOTE]
+> You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+
 ### ✔ Teams and Power BI
 
 The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborate with others in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute it as an app or [create a template app in Power BI](/connect-data/service-template-apps-create). Additionally, use the new [Power BI app in Teams](https://go.microsoft.com/fwlink/?linkid=2143643) to bring your entire basic Power BI service experience into Teams.
