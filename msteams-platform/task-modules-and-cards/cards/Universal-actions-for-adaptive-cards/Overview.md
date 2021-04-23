@@ -58,7 +58,7 @@ The following images illustrate a food ordering bot example: <br/>
 
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
 
-For more information, see [sample for sequential workflow](~/Sequential-Workflows.md).
+For more information, see [sample for sequential workflow](Sequential-Workflows.md).
 
 ### Up-to-date views
 

@@ -6,7 +6,7 @@ ms.topic: conceptual
 localization_priority: Normal
 ---
 
-## Sequential workflows
+# Sequential workflows
 
 Sequential workflow is when an Adaptive Card is updated on user action and user can progress through a series of cards. This is supported through `Action.Execute` which enables bot developers to return an Adaptive Card in response to a user action.
 

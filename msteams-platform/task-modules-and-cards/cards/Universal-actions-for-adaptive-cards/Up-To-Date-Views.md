@@ -6,7 +6,7 @@ ms.topic: conceptual
 localization_priority: Normal
 ---
 
-## Up-to-date views
+# Up-to-date views
 
 Up-to-date views are now powered with a combination of Universal actions for Adaptive Cards and message edits in Teams.
 
