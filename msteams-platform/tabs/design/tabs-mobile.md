@@ -6,10 +6,10 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 ---
 # Tabs on mobile
 
+You can include tabs in Teams mobile channels, chats, and personal apps.
+
 > [!NOTE]
 > If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below).
-
-Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
 Personal apps are available on mobile clients in the app drawer. Personal Apps distributed through the [Appsource](~/concepts/deploy-and-publish/appsource/publish.md) need to be approved for mobile form factor before they show up in the app drawer. For more information, see [Custom Tabs page](~/tabs/what-are-tabs.md#mobile-clients). There is no approval process for personal apps that are either sideloaded or directly published to the organization's app catalog.
 
@@ -17,13 +17,13 @@ Configurable tabs are also available on mobile and are available under the **Mor
 
 ## Accessing personal tabs
 
-The following illustration shows how you access a personal tab on mobile.
+You can access personal tabs in the app drawer.
 
 :::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration showing the Teams mobile app drawer." border="false":::
 
 ## Accessing channel tabs
 
-The following illustration shows how you access a channel tab on mobile.
+You can access channel and group tabs by selecting the **More** button in the channel or chat in which they've been added.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration showing a Teams mobile tab." border="false":::
 
@@ -119,10 +119,6 @@ Fields are areas where users can input text. Flyouts are more lightweight than d
 
 When you're building an app that includes a tab, you need to consider (and test) how your tab will function on both the Android and iOS Microsoft Teams clients. The sections below outline some of the key scenarios you need to consider.
 
-### Testing on mobile clients
-
-You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
-
 ### Authentication
 
 For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
@@ -133,4 +129,16 @@ Mobile clients regularly need to function with low bandwidth and intermittent co
 
 > [!NOTE]
 > Tabs are enabled on mobile only after the application is added to an allow list, based on the input of the approval team. 
-> To check mobile responsiveness, reach out to teamsubm@microsoft.com. 
+> To check mobile responsiveness, reach out to teamsubm@microsoft.com.
+
+### Testing on mobile clients
+
+You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
+
+## Distribution
+
+If your app includes tabs and you plan to list it on the Teams store, your app must be approved for mobile use. Otherwise, the tabs won't be available on Teams mobile.
+
+Your app doesn’t need mobile-specific approval to sideload or publish it to an org's app catalog. For channel and group tabs, by default the tab launches in a browser using your `websiteUrl` configuration. (You also must include the `websiteUrl` in the `setSettings()` function, which is part of the Teams JavaScript client SDK.) Users can still load an unapproved tab in Teams mobile by selecting the `...` more menu next to the app and **Open**. This triggers the `contentUrl` configuration.
+
+For more information, see [tabs and mobile clients](~/tabs/what-are-tabs.md#mobile-clients).
