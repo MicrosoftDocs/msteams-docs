@@ -96,8 +96,8 @@ To send messages to a large group of users, for example to your organization, pr
 
 When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
 
-* **Why is the user receiving the message**: Make it easy for your users to understand the reason for which they are receiving the message.
-* **What can user do next**: Users can take the required action based on the message content.
+* Why is the user receiving the message: Make it easy for your users to understand the reason for which they are receiving the message.
+* What can user do next: Users can take the required action based on the message content.
 
 ## Proactively install your app using Graph
 
