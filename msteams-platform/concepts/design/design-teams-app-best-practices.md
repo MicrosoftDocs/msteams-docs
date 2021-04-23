@@ -160,6 +160,18 @@ Show a tour card on your welcome card to allow the users to know more about your
 >
 > A maximum of three tour cards can be shown.
 
+### Make things easy for the users
+
+* Display the sign in and sign up buttons if the user is accessing your app for the first time.
+* Wherever possible, use AAD SSO for signing in and signing up customers. It saves a lot of time for the customers and is a great convenience.
+* Always have support for ‘help’ command. In reply to ‘help’ command, you can display a listing card that has list of all the commands and short description of each command.
+* Nudge users to use top features.
+* Handling incomprehensible commands.
+* Trial period for paid apps.
+* Help and About tabs
+
+
+
 
 
 
