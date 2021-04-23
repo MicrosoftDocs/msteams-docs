@@ -9,7 +9,7 @@ ms.topic: overview
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (Azure AD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams; [here's a good overview](https://aaronparecki.com/oauth-2-simplified/) that's easier to follow than the [formal specification](https://oauth.net/2/). Authentication flow for tabs and bots is a little different — tabs are very similar to websites so they can use OAuth 2.0 directly, while bots aren't and must do a few things differently — but the core concepts are identical.
 
-See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+See the GitHub repo [Microsoft Teams Authentication Sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs)
 for an example that demonstrates authentication flow for bots using Node.js and the [OAuth 2.0 authorization code grant type](https://oauth.net/2/grant-types/authorization-code/).
 
 ![Bot authentication sequence diagram](../../../assets/images/authentication/bot_auth_sequence_diagram.png)
@@ -43,11 +43,14 @@ for an example that demonstrates authentication flow for bots using Node.js and 
     > [!NOTE]
     > If you experience issues with authentication on mobile, ensure your JavaScript SDK is updated to version 1.4.1 or later.
 
-## Samples
+## Code sample
 
-For sample code showing the bot authentication process see:
+Sample code showing the bot authentication process:
 
-[Microsoft Teams bot authentication sample (Node.js)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+| **Sample name** | **Description** | **Node.js** | **.NET** | **Python** |
+|-----------------|----------------|--------------|----------|-----------|
+| Teams authentication | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
+| Bot authentication | This sample demonstartes how to use authentication for a bot runnning in Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
 ## More details
 

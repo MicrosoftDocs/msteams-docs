@@ -223,7 +223,9 @@
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
-      href: bots/how-to/update-and-delete-bot-messages.md     
+      href: bots/how-to/update-and-delete-bot-messages.md   
+    - name: Request headers of the bot
+      href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
@@ -382,6 +384,8 @@
       href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
   items:    
+  - name: Configure default install options
+    href: concepts/deploy-and-publish/add-default-install-scope.md
   - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
   - name: Create your app package
