@@ -1,3 +1,5 @@
+metadata:
+  localization_priority: Priority
 
 - name: Overview
   expanded: true 
