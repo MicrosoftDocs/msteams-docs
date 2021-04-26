@@ -3,6 +3,7 @@ title: Get started - Build a messaging extension
 author: heath-hamilton
 description: Quickly create a Microsoft Teams messaging extension using the Microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
 ---

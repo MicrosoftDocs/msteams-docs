@@ -2,6 +2,7 @@
 title: Task modules
 author: clearab
 description: Describe task modules and components of task module.
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
 ---

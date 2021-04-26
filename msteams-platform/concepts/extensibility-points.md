@@ -3,6 +3,7 @@ title: Entry points for Teams apps
 author: heath-hamilton
 description: Describes where people can discover and use your app in Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
