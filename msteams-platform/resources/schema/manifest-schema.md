@@ -399,7 +399,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** — array
 
-Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope (not personal), and we can configure the same configurable tab multiple times, but not in manifest.
+Used when your app experience has a team channel tab experience that requires extra configuration before it is added. Configurable tabs are supported only in the teams scope and you can configure the same tabs multiple times. However, you can configure it in the manifest only once.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
