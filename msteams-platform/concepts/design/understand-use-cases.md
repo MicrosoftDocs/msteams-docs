@@ -3,6 +3,7 @@ title: Understand your use cases
 author: clearab
 description: Understand your use cases
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
 ---
 

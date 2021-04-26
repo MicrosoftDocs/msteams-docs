@@ -3,6 +3,7 @@ title: Test and debug your bot locally
 author: clearab
 description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
 ---
 

@@ -4,6 +4,7 @@ author: girliemac
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: timura
 ms.date: 03/18/2021
+
 ms.topic: quickstart
 ---
 # Overview

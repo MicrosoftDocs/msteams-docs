@@ -4,8 +4,7 @@ author: girliemac
 description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit.
 ms.author: timura
 ms.date: 03/22/2021
-ms.topic: quickstart
----
+
 # Create your first Microsoft Teams "Hello, World" app
 
 This quickstart teaches you to build and run Microsoft Teams app that displays "Hello, World!". 

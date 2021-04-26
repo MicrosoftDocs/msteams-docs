@@ -2,6 +2,7 @@
 title: Create and send the task module
 author: clearab
 description: How to handle the initial invoke action and respond with a task module from an action messaging extension command
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
 ---

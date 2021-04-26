@@ -3,6 +3,7 @@ title: Understand app capabilities
 author: heath-hamilton
 description: Teams app capabilities explained
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---

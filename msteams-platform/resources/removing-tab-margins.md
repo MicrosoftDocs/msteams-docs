@@ -4,6 +4,7 @@ author: laujan
 description: Describes how the removal of tab margins will enhance developer's experience.
 keywords: tab removing margins padding
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
 ---
 

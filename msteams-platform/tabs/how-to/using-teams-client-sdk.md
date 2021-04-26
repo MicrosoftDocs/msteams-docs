@@ -3,6 +3,7 @@ title: Building tabs and other hosted experiences with the JavaScript client SDK
 author: heath-hamilton
 ms.author: surbhigupta
 description: Overview of the Microsoft Teams JavaScript client SDK, which can help you build Teams app experiences hosted in an <iframe>.
+localization_priority: Normal
 keywords: teams tabs group channel configurable static SDK JavaScript personal
 ms.topic: conceptual
 ---
@@ -21,12 +22,14 @@ For example, the SDK can make your [tab react to theme changes](../../build-your
 
 Do one of the following depending on your development preferences:
 
+
 * [Install the SDK with npm or Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
-* [Clone the SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
 
 ## Common SDK functions
 
+
 See the following tables to understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information.
+
 
 ### Basic functions
 

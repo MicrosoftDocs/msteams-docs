@@ -3,6 +3,7 @@ title: App development fundamentals overview
 author: heath-hamilton
 description: Describe the foundational concepts of Teams platform development.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
