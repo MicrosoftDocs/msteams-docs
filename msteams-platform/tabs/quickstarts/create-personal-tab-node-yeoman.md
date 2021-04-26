@@ -102,7 +102,7 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you need to either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
 
-To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
+To test your tab extension, you must use [ngrok](https://ngrok.com/docs) which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
 
 Your server's web endpoints are available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 
@@ -128,7 +128,6 @@ Select the `...` menu from the left panel of Teams, and select your application 
 
 ## See also
 
-[!div class="nextstepaction"]
-[Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
-[!div class="nextstepaction"]
-[Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+- [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+
+- [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)
