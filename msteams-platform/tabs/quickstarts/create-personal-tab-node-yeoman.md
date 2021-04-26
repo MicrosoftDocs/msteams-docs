@@ -96,7 +96,7 @@ Open a command prompt in your project directory to complete the next tasks.
 
 To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
 
->![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
 ## Establish a secure tunnel to your tab
 
