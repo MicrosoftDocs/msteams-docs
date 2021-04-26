@@ -136,12 +136,12 @@ You must register Moodle as an application in your Azure AD. Use PowerShell scri
 
 13. To validate [cron](https://docs.moodle.org/310/en/Cron) jobs and run them manually for the first run, select the **Scheduled tasks management page** link in the **Sync users with Azure AD** section. This takes you to the **Scheduled Tasks** page.
 
-> [!NOTE]
->
-> The Moodle [Cron](https://docs.moodle.org/310/en/Cron) runs according to the task schedule. The default schedule is once a day. However, the cron must run more frequently to keep everything in sync.
-
     1. Scroll down and find the **Sync users with Azure AD** job and select **Run now**.
     1. If you select to create Groups based on existing courses, you can also run the **Create user groups in Microsoft 365** job.
+
+    > [!NOTE]
+    >
+    > The Moodle [Cron](https://docs.moodle.org/310/en/Cron) runs according to the task schedule. The default schedule is once a day. However, the cron must run more frequently to keep everything in sync.
 
 1. Return to the plugin administration page, **Site administration > Plugins > Microsoft 365 Integration**, and select the **Teams Settings** page.
 
