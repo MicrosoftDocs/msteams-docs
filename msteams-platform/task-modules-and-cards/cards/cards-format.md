@@ -28,18 +28,9 @@ The following card types support Markdown formatting in Teams:
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
 * O365 connector cards: Markdown and limited HTML is supported in Office 365 connector cards in the text fields.
 
-Markdown format for Adaptive Cards include the following features:
-* [Newlines for Adaptive Cards](#newlines-for-adaptive-cards)
-* [Mobile and desktop differences for Adaptive Cards](#mobile-and-desktop-differences-for-adaptive-cards)
-* [Adaptive Cards format sample](#adaptive-cards-format-sample)
-* [Mention support within Adaptive Cards v1.2](#mention-support-within-adaptive-cards-v12)
-* [Full width Adaptive Card](#full-width-adaptive-card)
-* [Typeahead support](#typeahead-support)
-* [Stage view for images in Adaptive Cards](#stage-view-for-images-in-adaptive-cards)
+You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can mask information using the information masking property within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
-Markdown format for O365 connector cards include the following features:
-* [Mobile and desktop differences for connector cards](#mobile-and-desktop-differences-for-connector-cards)
-* [Format example for Markdown connector cards](#format-example-for-markdown-connector-cards)
+Formatting is different between the desktop and the mobile versions of Teams for connector cards. In this section, you can go through the format example for Markdown connector cards.
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
@@ -66,8 +57,6 @@ The following Markdown tags are not supported:
 In lists you can use the `\r` or `\n` escape sequences for newlines. Using `\n\n` in a list causes the next element in the list to be indented. If you require newlines elsewhere in the TextBlock, use `\n\n`.
 
 ### Mobile and desktop differences for Adaptive Cards
-
-Formatting is different between the desktop and the mobile versions of Teams.
 
 On the desktop, Adaptive Card Markdown formatting appears as shown in the following image in both web browsers and in the Teams client application:
 
@@ -123,7 +112,7 @@ The following code shows an example of Adaptive Cards formatting:
 
 ### Mention support within Adaptive Cards v1.2
 
-Card based mentions are supported in web, desktop, and mobile clients. You can add @ mentions within an Adaptive Card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+You can add @ mentions within an Adaptive Card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -203,7 +192,7 @@ You can use the `msteams` property to expand the width of an Adaptive Card and m
 
 #### Construct full width cards
 
-To make a full width Adaptive Card the `width` object in `msteams` property in the card content must be set to `Full`.
+To make a full width Adaptive Card, the `width` object in `msteams` property in the card content must be set to `Full`.
 
 #### Sample Adaptive Card with full width
 
@@ -240,7 +229,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Typeahead support
 
-Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
+Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
 
 To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.
 
@@ -395,13 +384,7 @@ The following card types support HTML formatting in Teams:
 * O365 connector cards: Limited Markdown and HTML formatting is supported in Office 365 connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards such as the hero and thumbnail card.
 
-HTML format for O365 connector cards include the following features:
-* [Mobile and desktop differences for connector cards](#mobile-and-desktop-differences-for-connector-cards)
-* [Format sample for HTML connector cards](#format-sample-for-html-connector-cards)
-
-HTML format for hero and thumbnail cards include the following features:
-* [Mobile and desktop differences for simple cards](#mobile-and-desktop-differences-for-simple-cards)
-* [Format example for simple cards](#format-example-for-simple-cards)
+Formatting is different between the desktop and the mobile versions of Teams for O365 connector cards and simple cards, such as hero and thumbnail cards. In this section, you can go through the format example for HTML connector cards and simple cards.
 
 # [HTML format for O365 connector cards](#tab/connector-html)
 
