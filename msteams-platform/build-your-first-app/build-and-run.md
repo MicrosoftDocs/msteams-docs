@@ -18,7 +18,6 @@ Before you begin, you need to [set up your Teams development tenant](#set-up-you
 
 A **tenant** is like a container for an organization. In Teams terms, a tenant is where people from that org chat, share files, and run meetings. As a developer, you need a tenant to sideload and test the apps that you are building. 
 
----
 # [Do not have a tenant](#tab/do-not-have-a-tenant)
 
 You can get a free Teams test account, which includes a tenant that allows app sideloading, by joining the Microsoft 365 developer program. The registration process takes approximately two minutes.
@@ -49,7 +48,9 @@ If you already have a tenant, verify if you can sideload apps in Teams.
 1.  Verify that you can see the **Upload a custom app** option. If you do, this means you can sideload apps. 
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
+
 ---
+
 ### Install your development tools
 
 To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickly get started. You can also build Teams apps with any ofyour preffered tools. 
