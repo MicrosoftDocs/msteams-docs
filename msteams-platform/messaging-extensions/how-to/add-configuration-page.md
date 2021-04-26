@@ -10,13 +10,13 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how to create messaging extensions that include a configuration page and Bot Service authentication using Bot Framework Teams search Auth Configuration samples. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
-
 ## Code sample
 
-| Sample Name | Description | .NET | Node.js|   
-|:---------------------|:--------------|:---------|:--------|
-| Bot Framework Teams search Auth Configuration samples  | Demonstrate how to create messaging extensions that include a configuration page and Bot Service authentication. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)|
+The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and Bot Service authentication. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|-----------------|-----------------|-------------|--------------|
+| Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## Additional code sample
 

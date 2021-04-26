@@ -1374,9 +1374,9 @@ turnContext, CancellationToken cancellationToken) {
 
 ## Code sample
 
-| **Sample name** | **Description** | **.NET** |
-|-----------------|-----------------|---------|
-|Microsoft Teams bots conversation events | Sample for bot events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|----------|-----------------|----------|
+| Conversation bot | Sample code for bots conversation events. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)  | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
 ## Next step
 

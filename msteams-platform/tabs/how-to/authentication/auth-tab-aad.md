@@ -149,8 +149,10 @@ Your app can set its own session cookie so that the user need not sign in again 
 
 For more information on Single Sign-On (SSO) see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
-## Samples
+## Code sample
 
-For sample code showing the tab authentication process using Azure AD see:
+Sample code showing the tab authentication process using Azure AD:
 
-* [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
+| **Sample name** | **description** | **.NET** | **Node.js** |
+|-----------------|-----------------|-------------|
+| Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
