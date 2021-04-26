@@ -10,7 +10,7 @@ title: Web apps
 
 You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
   
-The different types of apps with you integrate with Teams are as follows:
+The different types of apps which you can integrate with Teams are as follows:
 * **Standalone apps**: A stand alone app is a single-page or large, and complex app. The user can use some aspects of it in Teams.
 * **Collaboration apps**: An app already built for the social and collaborative features inherent to Teams.
 * **SharePoint**: A SharePoint page you want to surface in Teams.
@@ -54,7 +54,7 @@ Following are the prerequisites to integrate your app with Teams.
 To integrate an existing [SharePoint page](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab, you must consider the following:
 
 * It must be a *modern* SharePoint online page.
-* Only personal tabs are supported. You can not integrate your page as a channel tab.
+* Only personal tabs are supported. You cannot integrate your page as a channel tab.
 
 Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
