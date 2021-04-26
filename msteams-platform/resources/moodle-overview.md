@@ -19,13 +19,13 @@ Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 
 
 Watch the following video to understand how mConnect and Teams work better together:
 
-> [!VIDEO https://youtu.be/nM56R_woMdE]
+> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
 From inside mConnect, course participants access the full Moodle course experience inside the real-time collaboration and communication provided by Microsoft Teams.
 
 Watch the following video to understand how to get started with mConnect and Teams:
 
-> [!VIDEO https://youtu.be/KOVpQ2s7iA8]
+> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
 
 ## Next step
 
