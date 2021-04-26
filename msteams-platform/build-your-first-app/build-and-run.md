@@ -48,7 +48,7 @@ If you already have a tenant, verify if you can sideload apps in Teams.
 1.  Verify that you can see the **Upload a custom app** option. If you do, this means you can sideload apps. 
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
-```
+---
 ### Install your development tools
 
 To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickly get started. You can also build Teams apps with any ofyour preffered tools. 
@@ -113,7 +113,6 @@ Build and run your app locally to save time.
   A **Compiled successfully!** message appears in the terminal. Your app is now running on your localhost at `https://localhost:3000`. 
 
 ## 4. Sideload your app in Teams
-
 
 Sideloading is the process of installing an app in Teams that hasn't been approved by your admin or Microsoft. Sideloading is common when testing and debugging Teams apps.
 
