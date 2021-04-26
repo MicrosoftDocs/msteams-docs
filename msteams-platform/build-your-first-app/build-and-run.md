@@ -27,7 +27,7 @@ You can get a free Teams test account, which includes a tenant that allows app s
 1. 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. In the Welcome screen, select **Set up E5 subscription**.
-1. Set up your administrator account. 
+1. Set up your Microsoft 365 developer account. 
    After you finish, the following screen appears:
 
    :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
