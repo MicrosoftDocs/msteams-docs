@@ -132,7 +132,7 @@ Optionally, you can execute an event handler when the user removes an existing c
 
 ### Include the Connector in your Manifest
 
-You can download the auto-generated Teams app manifest from the portal. Before you use the Connector to test or publish your app, you must do the following:
+You can download the auto-generated Teams app manifest from the portal. Before you use the connector to test or publish your app, you must do the following:
 
 * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 * Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
