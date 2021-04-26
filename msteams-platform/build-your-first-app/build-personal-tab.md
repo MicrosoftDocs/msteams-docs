@@ -6,11 +6,11 @@ ms.author: timura
 ms.date: 03/16/2020
 ms.topic: tutorial
 ---
-# Build a personal tab for Microsoft Teams
+# Build a basic personal tab for Microsoft Teams
 
 This tutorial teaches you to build a basic personal tab in Microsoft Teams. Tabs are a simple way to surface information in your app by hosting web content in Teams. Tabs are a common feature of personal apps that provide a private workspace for individual users. Personal tabs are the closest thing to a traditional web experience in Teams. 
 
-**This tutorial teaches you to:**
+## What you'll learn
 
 * Understand the app configurations and scaffolding relevant to personal tabs.
 * Create a tab content with a contact list of your organization.
@@ -18,7 +18,7 @@ This tutorial teaches you to build a basic personal tab in Microsoft Teams. Tabs
 
 ## Prerequisites
 
-Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md).
+Make sure that you understand how to set up and build a simple Teams app. For more information, see [create your first Microsoft Teams "Hello, World!" app](../build-your-first-app/build-and-run.md).
 
 ## 1. Understand your app project components
 

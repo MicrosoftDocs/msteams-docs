@@ -6,25 +6,25 @@ ms.author: timura
 ms.date: 03/22/2021
 ms.topic: quickstart
 ---
-# Create your first Microsoft Teams "Hello, World" app
+# Create your first Microsoft Teams app
 
-This tutorial teaches you to build and run your first Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
+This quickstart teaches you to build and run Microsoft Teams app that displays "Hello, World!". 
 
 ## Prerequisites
 
-Ensure that you have [set up your Teams development tenant](#set-up-your-teams-development-tenant) and have [installed your Teams development tools](#install-your-development-tools).
+Before you begin, you need to [set up your Teams development tenant](#set-up-your-teams-development-tenant) and [install your Teams development tools](#install-your-development-tools).
 
 ### Set up your Teams development tenant
 
-A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This is also where you can sideload and test your apps. 
+A **tenant** is like a container for an organization. In Teams terms, a tenant is where people from that org chat, share files, and run meetings. As a developer, you need a tenant to sideload and test the apps that you are building. 
 
 # [Do not have a tenant](#tab/do-not-have-a-tenant)
 
-Join the Microsoft 365 developer program and get a tenant (free Teams test account) that allows app sideloading. The registration process takes approximately two minutes.
+You can get a free Teams test account, which includes a tenant that allows app sideloading, by joining the Microsoft 365 developer program. The registration process takes approximately two minutes.
 
-**To register for a tenant**
+**To get a tenant**
 
-1. Go to [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. In the Welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. 
@@ -32,41 +32,40 @@ Join the Microsoft 365 developer program and get a tenant (free Teams test accou
 
    :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
-1. Sign in to Teams using your administrator account.
+1. Sign in to Teams with your new account.
 1. In the Teams client, select **Apps**.
-1. Verify that **Upload a custom app** appears.
+1. Verify that you can see the **Upload a custom app** option. If you do, this means you can sideload apps.
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
-# [Have a tenant and admin access](#tab/have-a-tenant)
+# [Have a tenant](#tab/have-a-tenant)
 
-If you already have a tenant with admin access to the Teams client, verify if you can sideload your apps.
+If you already have a tenant, verify if you can sideload apps in Teams.
 
 **Verify that you can sideload your apps** 
 
 1. In the Teams Client, select **Apps**. 
-1. Verify that **Upload a custom app** appears. 
+1.  Verify that you can see the **Upload a custom app** option. If you do, this means you can sideload apps. 
 
    :::image type="content" source="../assets/images/build-your-first-app/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
     
----
 ### Install your development tools
 
-To help you get started quickly, Microsoft provides development tools such as Microsoft Teams Toolkit for Visual Studio Code. However, you can build Teams apps with your preffered tools as well. 
+To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickly get started. You can also build Teams apps with any ofyour preffered tools. 
 
 > [!NOTE]
 > Teams displays app content only through HTTPS connections. To debug certain types of apps locally, such as a bot, you'll learn how to use ngrok to set up a secure tunnel between Teams and your app.
 > 
 > Production Teams apps are hosted in the cloud.
 
-**To install Microsoft Teams Toolkit**
+**To install Microsoft Teams tools**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. Install [ngrok](https://ngrok.com/download) if you plan to build a bot or messaging extension and [create a tunnel using ngrok](../../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
+1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../../../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
    
    > [!NOTE]
-   > The toolkit does not support the earlier versions of Visual Studio Code.
+   > The toolkit does not support earlier versions of Visual Studio Code.
 
 1. In the left activity bar, select **Extensions** :::image type="icon" source="../assets/icons/vs-code-extensions.png":::.
 1. In **Microsoft Teams Toolkit**, select **Install**.
@@ -80,27 +79,26 @@ To help you get started quickly, Microsoft provides development tools such as Mi
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-02.png" alt-text="Screenshot showing how to create your app project with the Visual Studio Code Teams Toolkit.":::
    
-1. Sign in with your Microsoft 365 development account.
-1. On the **Select project** screen, select **JS** (JavaScript) > **Next**.
+1. Sign in with your Microsoft 365 development account. Either the one you just created or the account you already had that allows app sideloading.
+1. On the **Select project** screen, go to **Personal app** and select **JS** (JavaScript) > **Next**.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-03.png" alt-text="Screenshot showing how to configure your app project with the Visual Studio Code Teams Toolkit.":::
 
-1. In the **Application Name** box, enter a name for your Teams app.
+1. Enter a name for your Teams app.
 
     :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-04.png" alt-text="Screenshot showing how to add a name to your app project with the Visual Studio Code Teams Toolkit.":::
 
 1. Select **Finish**. 
    Your project is now configured. 
-1. Save your project on your local machine.  
 
 ## 2. Understand your app project components
 
-After the toolkit configures your project, the components to build a basic personal tab for Teams are now available. The project directories and files appear in the **EXPLORER** section of the Visual Studio Code. 
+After the toolkit configures your app project, you have the components to build your "Hello, World!" Teams app. The project's directories and files are located in the Visual Studio Code Explorer. 
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-05.png" alt-text="Screenshot showing the scaffolding in your app project with the Visual Studio Code Teams Toolkit.":::
 
-The toolkit automatically creates an app scaffold for you in the `src` directory based on the capabilities you added during setup. 
-If you create a tab during setup, the `App.js` file in the `src/components` directory handles the initialization and routing of your app. It calls the Microsoft Teams JavaScript client SDK to establish communication between your app and Teams. 
+The toolkit automatically creates app scaffolding in the `src` directory based on the capabilities you added during setup. 
+Since you created a tab during setup, the `App.js` file in the `src/components` directory handles the initialization and routing of your app. The file also calls the Microsoft Teams JavaScript client SDK to establish communication between your app and Teams. 
 
 ## 3. Build and run your app
 
@@ -114,19 +112,14 @@ Build and run your app locally to save time.
   
   A **Compiled successfully!** message appears in the terminal. Your app is now running on your localhost at `https://localhost:3000`. 
 
-This information is also available in the `README` file of the toolkit.
-
 ## 4. Sideload your app in Teams
 
 
-Sideloading an app is the process of installing apps on your computer, that hasn't gone through the certification process, to appear in the app store and to run on a Windows device. 
+Sideloading is the process of installing an app in Teams that hasn't been approved by your admin or Microsoft. Sideloading is common when testing and debugging Teams apps.
 
-The operating system by default blocks you from sideloading apps. You have to enable sideloading of the apps to test your app in Teams. Before you turn on custom app sideloading for your development tenant, you must have one of the following:
+By default, Teams doesn't allow app sideloading. You can change this setting in the Teams admin center.
 
-* Ensure to have a Teams account and with admin access.
-* Ensure to have a Microsoft 365 development account that allows app sideloading. 
-
-**To enable sideloading of your app in Teams**
+**To enable app sideloading in Teams**
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials. 
 1. Select **Show All** > **Teams**. 
@@ -134,7 +127,7 @@ The operating system by default blocks you from sideloading apps. You have to en
    ![image of admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
    > [!Note] 
-   > It can take up to 24 hours for the **Teams** option to appear. Meanwhile, you can [Upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps#validate) for testing and validation.
+   > It can take up to 24 hours for the **Teams** option to appear. 
 
 1. Go to **Teams apps** > **Setup policies** > **Global** (Org-wide default).
 
@@ -152,16 +145,16 @@ The operating system by default blocks you from sideloading apps. You have to en
 
 ### To sideload your app
 
-1. Open Teams Toolkit in Visual Studio Code.
-1. Select **App Studio**.  
+1. In Visual Studio Code, Open Teams Toolkit.
+1. Go to **App Studio**.  
 1. Select **Test and Distribute** > **Install**.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-appstudio.png" alt-text="Screenshot showing how to sideload your app to Teams client with the Visual Studio Code Teams Toolkit.":::
 
 **Alternatively**
 
-1. Select the **F5** key to open browser window to install. This will skip the installation process in the **App Studio**.
-1. After the installation modal is opened on Teams client in browser, click **Add** to install your app to Teams.
+1. Select the **F5** key to open browser window to install. This will skip the installation process in the **App Studio** and lauch Teams in your browser.
+1. In the installation dialog, select **Add** to install your app to Teams.
 
    :::image type="content" source="../assets/images/build-your-first-app/vscode-teams-toolkit-install.png" alt-text="Screenshot showing how to sideload your app to Teams client.":::
 
@@ -172,19 +165,21 @@ The operating system by default blocks you from sideloading apps. You have to en
 
 **Installation failed**
 
-If the following error message appears while installing App Studio, verify that the app information is correctly entered:
+If the following error message appears while installing App Studio: 
 
 * Something went wrong
 * Manifest parsing has failed 
 
+Verify that the app information is correctly entered.
+
 **To verify the app information**
 
-* In Microsoft Teams Toolkit, select **App Studio** > **app Details**, and verify that all the required information is correctly entered.
-* If you have manually edited the `manifest.json` file, verify that the JSON is well-defined in **App Manifest** in App Studio.
+* In the Teams Toolkit, go to **App Studio** > **App details** and verify that all the required information is correctly entered.
+*  If you manually edited the `manifest.json` file, verify that the JSON is well-defined in the **App Manifest** tool in App Studio.
 
 **Tab content not displayed**
 
-Verify that your web app is running. If the web app is not running, go to the terminal and run **npm start**.
+Verify that your app is running. If it isn't, go to the terminal and run `npm start`.
 
 ## See also
 

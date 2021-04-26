@@ -6,13 +6,13 @@ ms.author: timura
 ms.date: 03/25/2021
 ms.topic: tutorial
 ---
-# Build a messaging extension for Microsoft Teams
+# Build your first messaging extension for Microsoft Teams
 
 There are two types of Teams *messaging extensions*: [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) and [action commands](../messaging-extensions/how-to/action-commands/define-action-command.md).
 
 This tutorial teaches you to create a *search command* (also known as a *search-based messaging extension*), which is a shortcut for finding external content and sharing it in Teams. Users can access search commands from the Teams compose or command box.
 
-**This tutorial teaches you to:**
+## What you'll learn
 
 * Create an app project and messaging extension bot using the Microsoft Teams Toolkit for Visual Studio Code.
 * Understand the app configurations and the scaffolding relevant to messaging extensions.
@@ -22,7 +22,7 @@ This tutorial teaches you to create a *search command* (also known as a *search-
 
 ## Prerequisites
 
-Ensure that you understand how to set up and build Teams app before you begin to build a channel or group tab. For more information, see [Create your first Microsoft Teams Hello World app](../build-your-first-app/build-and-run.md).
+Make sure that you understand how to set up and build a simple Teams app. For more information, see [create your first Microsoft Teams "Hello, World!" app](../build-your-first-app/build-and-run.md).
 
 ## 1. Create your app project
 
@@ -49,7 +49,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ## 3. Set up a secure tunnel to your app
 
-For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure localhost tunneling. Read [Build a bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel-to-your-app) for details. 
+For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure tunnel to localhost. See [build your first bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel-to-your-app) for details. 
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
