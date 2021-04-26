@@ -105,7 +105,7 @@ The following example highlights where an app's long description displays in a s
 :::row:::
 
    :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/ShortDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+      :::image type="content" source="~/assets/images/store-detail-page/LongDescription-02.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
    :::column-end:::
    :::column span="1":::
    :::column-end:::
@@ -123,6 +123,16 @@ For more information, see [guidance on creating Teams app icons](~/concepts/buil
 ### Capture screenshots
 
 Screenshots provide a prominent visual preview of your app to complement your app name, icon, and descriptions.
+
+:::row:::
+
+   :::column span="3":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+   :::column-end:::
+   :::column span="1":::
+   :::column-end:::
+
+:::row-end:::
 
 Remember the following about screenshots:
 
