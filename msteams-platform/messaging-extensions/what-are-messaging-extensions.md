@@ -62,11 +62,18 @@ The following images display link unfurling feature when a link is pasted in mes
 
 ![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
+## Code sample
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|------------|-------------|----------------|------------|
+| Messaging extension with action-based commands | This sample illustrates how to build an action-based messaging extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Messaging extension with search-based commands | This sample illustrates how to build a Search-based Messaging Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
 ## See also
 
 > [!div class="nextstepaction"]
 > [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
+
 
 ## Next step
 

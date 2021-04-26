@@ -123,7 +123,8 @@ Virtual Assistant can handle interruptions in cases where a user tries to invoke
 
 To add task module capabilities to a Virtual Assistant, two additional methods are included in the Virtual Assistant activity handler: `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync`. These methods listen to task module-related activities from Virtual Assistant, identify the skill associated with the request, and forward the request to the identified skill. 
 
-Request forwarding is done through the  [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
+Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.bot.builder.integration.aspnet.core.skills.skillhttpclient?view=botbuilder-dotnet-stable&preserve-view=true), `PostActivityAsync` method. It returns the response as `InvokeResponse` which is parsed and converted to `TaskModuleResponse` .
+
 
 ```csharp
     public static TaskModuleResponse GetTaskModuleRespose(this InvokeResponse invokeResponse)
@@ -517,7 +518,8 @@ The allowed callers array can restrict which skill consumers can access the skil
 ```
 "AllowedCallers": [ "*" ],
 ```
-For detailed documentation for adding claims validation to a skill, see [add claims validation to skill](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
+
+For more information on adding claims validation to a skill, see [add claims validation to skill](https://docs.microsoft.com/azure/bot-service/skill-implement-skill?view=azure-bot-service-4.0&tabs=cs#claims-validator&preserve-view=true).
 
 ### Limitation of card refresh 
 
@@ -551,11 +553,6 @@ For more information refer [this](https://msteams-captain.visualstudio.com/xGrow
 
 You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. For creating a new skill, see [tutorials to create a new skill](https://microsoft.github.io/botframework-solutions/overview/skills/). For Virtual Assistant and skills architecture documentation, see[Virtual Assistant and skills architecture](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true).  
 
-## Code sample
-
-* [Updated visual studio template](https://github.com/nebhagat/msteams-virtual-assistant-dotnet)
-* [Book-a-room bot skill code](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill)
-
 ## Limitations of Virtual Assistant 
 
 * **EndOfConversation**: A skill must send an `endOfConversation` activity when it finishes a conversation. Based on the activity, a Virtual Assistant ends context with that particular skill and gets back into Virtual Assistant's root context. For Book-a-room bot, there is no clear state where conversation is ended. Hence we have not sent `endOfConversation` from `Book-a-room` bot and when user wants to go back to root context they can simply do that by `start over` command.  
@@ -564,6 +561,16 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
   * Currently, a Virtual Assistant can support a maximum of ten commands for messaging extensions.
   * Configuration of messaging extensions is not scoped to individual commands but for the entire extension itself. This limits configuration for each individual skill through Virtual Assistant.
   * Messaging extensions command IDs have a maximum length of [64 characters](../resources/schema/manifest-schema.md#composeextensions) and 37 characters are used for embedding skill information. Thus, updated constraints for command ID are limited to 27 characters.
+
+You can also leverage existing skills from [Bot Framework Solutions repository](https://github.com/microsoft/botframework-solutions/tree/master/skills/csharp) or create a new skill altogether from scratch. Tutorials for the later can be found [here](https://microsoft.github.io/botframework-solutions/overview/skills/). Please refer to [documentation](https://docs.microsoft.com/azure/bot-service/skills-conceptual?view=azure-bot-service-4.0&preserve-view=true) for Virtual Assistant and skills architecture.
+
+## Code sample
+
+| **Sample name** | **Description** | **C#** | **.NET** |
+|----------|-----------------|----------|------------------|
+| Updated visual studio template | Customized template to support teams capabilities. | [View](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/tree/nebhagat/microsoft-teams-apps-bookaroom-skill) |
+| Book-a-room bot skill code | Lets you quickly find and book a meeting room on the go. |  | [View](https://github.com/nebhagat/msteams-virtual-assistant-dotnet) |
+
 
 ## See also
 

@@ -26,6 +26,8 @@ Sending a proactive message is different from sending a regular message. There i
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
+The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [code sample](#code-sample).
+
 For using proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and groups or channels, see [code sample](#code-sample).
 
 ## Get the user ID, team ID or channel ID
@@ -57,6 +59,8 @@ Use either the `conversationReference` object or `conversationId` and `tenantId`
 After you get the appropriate address information, you can send your message.
 
 ## Send the message
+
+Now that you have the right address information, you can send your message. If you're using the SDK, you'll do so using the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call to send the message. You must set the `conversationParameters` correctly to successfully send your message.
 
@@ -92,8 +96,8 @@ To send messages to a large group of users, for example to your organization, pr
 
 When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
 
-* **Why is the user receiving the message**: Make it easy for your users to understand the reason for which they are receiving the message.
-* **What can user do next**: Users can take the required action based on the message content.
+* Why is the user receiving the message: Make it easy for your users to understand the reason for which they are receiving the message.
+* What can user do next: Users can take the required action based on the message content.
 
 ## Proactively install your app using Graph
 
@@ -256,10 +260,10 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 The following table provides a simple code sample that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
 
-| Sample name           | Description                                                                      | .NET    | Node.js   | Python  |
-|:----------------------|:---------------------------------------------------------------------------------|:--------|:-------------|:--------|
-|Teams conversation basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot)|
-|Start new thread in a channel     | Demonstrates creating a new thread in a channel. |[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
+| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|--------------|--------|-------------|--------|
+| Teams Conversation Basics  | Demonstrates basics of conversations in Teams, including sending one-to-one proactive messages.| [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/57.teams-conversation-bot) |
+| Start new thread in a channel | Demonstrates creating a new thread in a channel. | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/csharp_dotnetcore/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/javascript_nodejs/58.teams-start-new-thread-in-channel) | [View](https://github.com/microsoft/BotBuilder-Samples/blob/master/samples/python/58.teams-start-thread-in-channel) |
 
 ### Additional code sample
 
@@ -269,4 +273,5 @@ The following table provides a simple code sample that incorporate basic convers
 ## Next step
 
 > [!div class="nextstepaction"]
+> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 > [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)

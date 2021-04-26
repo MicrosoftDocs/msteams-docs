@@ -9,9 +9,9 @@ ms.author: anclear
 # Bots and SDKs
 
 To create a bot that works in Microsoft Teams, you can use one of the following:
-* An existing bot built on the Microsoft Bot Framework SDK
-* Power Virtual Agents chatbot service
-* Webhooks and connectors
+* An existing bot built on the Microsoft Bot Framework SDK.
+* Power Virtual Agents chatbot service.
+* Webhooks and connectors.
 
 ## Bots and the Microsoft Bot Framework
 
