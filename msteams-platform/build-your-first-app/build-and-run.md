@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Create your first Microsoft Teams "Hello, World" app
 
-This tutorial teaches you to build and run your first Microsoft Teams app. You will be creating a personal tab that displays "Hello, World!". 
+This quickstart teaches you to build and run Microsoft Teams app that displays "Hello, World!". 
 
 ## Prerequisites
 
