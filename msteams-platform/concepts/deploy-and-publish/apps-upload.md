@@ -2,6 +2,7 @@
 title: Upload your custom app
 description: Describes how to upload your app in Microsoft Teams
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 keywords: teams apps upload
 ---

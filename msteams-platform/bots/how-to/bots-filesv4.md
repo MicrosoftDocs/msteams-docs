@@ -3,6 +3,7 @@ title: Send and receive files through the bot
 description: Describes how to send and receive files through the bot
 keywords: teams bots files send receive
 ms.date: 05/20/2019
+localization_priority: Normal
 ms.topic: how-to
 ---
 # Send and receive files through the bot

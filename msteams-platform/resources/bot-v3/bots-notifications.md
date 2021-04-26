@@ -4,6 +4,7 @@ description: Describes how to handle events in bots for Microsoft Teams
 keywords: teams bots events
 ms.date: 05/20/2019
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 author: laujan
 ---

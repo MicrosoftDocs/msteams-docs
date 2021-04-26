@@ -2,6 +2,7 @@
 title: Incoming call notifications
 description: Detailed technical information on handling notifications from incoming calls
 ms.topic: conceptual
+localization_priority: Normal
 keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
 ---

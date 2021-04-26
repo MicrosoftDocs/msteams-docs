@@ -1,3 +1,13 @@
+---
+title: Teams bot samples
+description: describes Teams samples for Bot Framework
+localization_priority: Normal
+ms.topic: overview
+ms.author: surbhigupta12
+---
+
+## Teams bot samples
+
 ## Code sample
 
 For complete working samples demonstrating the functionality, see the following Teams samples for Bot Framework:

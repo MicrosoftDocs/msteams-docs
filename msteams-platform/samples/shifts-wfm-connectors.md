@@ -4,6 +4,7 @@ description: Workforce management Shifts connectors for Teams
 ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
+localization_priority: Normal
 keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---

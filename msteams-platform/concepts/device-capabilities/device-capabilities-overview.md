@@ -3,7 +3,8 @@ title: Device capabilities - Overview
 author: Rajeshwari-v
 description:  Overview of native device capabilities.
 ms.author: surbhigupta
-keywords: camera image media microphone mic qr code qrcode bar code barcode scan scanner location map capabilities native device permissions 
+keywords: camera image media microphone mic qr code qrcode bar code barcode scan scanner location map capabilities native device permissions
+localization_priority: Normal
 ms.topic: overview
 ---
 

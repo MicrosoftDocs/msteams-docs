@@ -1,7 +1,8 @@
 ---
 title: Create low-code custom apps for Microsoft Teams 
 author: laujan 
-description: Details the available Microsoft low and no code solutions for Teams
+description: Detail the available Microsoft low and no code solutions for Teams
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: conceptual
 ---
