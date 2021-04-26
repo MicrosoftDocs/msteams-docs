@@ -1,7 +1,3 @@
----
-localization_priority: Priority
----
-
 - name: Overview
   expanded: true 
   items:
@@ -66,8 +62,12 @@ localization_priority: Priority
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install Moodle LMS
-    href: resources/moodleInstructions.md
+  - name: Moodle LMS
+    items:
+    - name: Overview
+      href: resources/moodle-overview.md
+    - name: Install Moodle LMS
+      href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add Teams tab to SharePoint
