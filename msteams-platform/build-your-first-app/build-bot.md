@@ -4,7 +4,6 @@ author: girliemac
 description: Quickly create a Microsoft Teams bot using the Microsoft Teams Toolkit.
 ms.author: timura
 ms.date: 04/14/2020
-
 ms.topic: tutorial
 ---
 # Create your first bot for Teams
