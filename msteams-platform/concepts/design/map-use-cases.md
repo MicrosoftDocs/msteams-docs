@@ -3,6 +3,7 @@ title: Map your use cases to Teams app capabilities
 author: clearab
 description: Choose the correct app scope
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
 ---
 

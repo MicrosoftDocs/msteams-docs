@@ -4,6 +4,7 @@ author: girliemac
 description: Quickly create a Microsoft Teams messaging extension using the Microsoft Teams Toolkit.
 ms.author: timura
 ms.date: 03/25/2021
+
 ms.topic: tutorial
 ---
 # Build your first messaging extension for Microsoft Teams

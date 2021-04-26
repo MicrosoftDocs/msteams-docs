@@ -3,6 +3,7 @@ title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams manifest schema
 ---
 
@@ -657,5 +658,30 @@ Define the properties your app uses to post a user activity feed.
 ```
 
 ***
+
+## defaultInstallScope
+
+**Optional** - string
+
+Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## defaultGroupCapability
+
+**Optional** - object
+
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
 
