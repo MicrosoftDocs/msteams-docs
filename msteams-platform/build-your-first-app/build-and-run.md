@@ -18,6 +18,7 @@ Before you begin, you need to [set up your Teams development tenant](#set-up-you
 
 A **tenant** is like a container for an organization. In Teams terms, a tenant is where people from that org chat, share files, and run meetings. As a developer, you need a tenant to sideload and test the apps that you are building. 
 
+---
 # [Do not have a tenant](#tab/do-not-have-a-tenant)
 
 You can get a free Teams test account, which includes a tenant that allows app sideloading, by joining the Microsoft 365 developer program. The registration process takes approximately two minutes.
@@ -61,7 +62,7 @@ To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickl
 **To install Microsoft Teams tools**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
+1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../get-started-dotnet-app-studio.md/3tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
    
    > [!NOTE]
