@@ -8,13 +8,6 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 
 You can include tabs in Teams mobile channels, chats, and personal apps.
 
-> [!NOTE]
-> If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below).
-
-Personal apps are available on mobile clients in the app drawer. Personal Apps distributed through the [Appsource](~/concepts/deploy-and-publish/appsource/publish.md) need to be approved for mobile form factor before they show up in the app drawer. For more information, see [Custom Tabs page](~/tabs/what-are-tabs.md#mobile-clients). There is no approval process for personal apps that are either sideloaded or directly published to the organization's app catalog.
-
-Configurable tabs are also available on mobile and are available under the **More** section of the Channels and Chats to which they have been added to. Tabs distributed through the [Appsource](~/concepts/deploy-and-publish/appsource/publish.md) need to be approved for the mobile form factor. The default behavior for unapproved apps is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by selecting the `...` overflow menu next to the tab and selecting **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client. For more information, see [Custom Tabs page](~/tabs/what-are-tabs.md#mobile-clients). There is no approval process for tabs that are either sideloaded or directly published to the organization's app catalog.
-
 ## Accessing personal tabs
 
 You can access personal tabs in the app drawer.
@@ -137,8 +130,10 @@ You need to validate that your tab functions properly on mobile devices of vario
 
 ## Distribution
 
-If your app includes tabs and you plan to list it on the Teams store, your app must be approved for mobile use. Otherwise, the tabs won't be available on Teams mobile.
+Apps listed on the Teams store must be approved for mobile use. Tabs do not display in the Teams mobile client if the app isn't approved. Instead, a channel and group tab by default opens in a browser using your `websiteUrl` configuration (which you also must include in your source code's `setSettings()` function, which is part of the Teams JavaScript client SDK).
 
-Your app doesn’t need mobile-specific approval to sideload or publish it to an org's app catalog. For channel and group tabs, by default the tab launches in a browser using your `websiteUrl` configuration. (You also must include the `websiteUrl` in the `setSettings()` function, which is part of the Teams JavaScript client SDK.) Users can still load an unapproved tab in Teams mobile by selecting the `...` more menu next to the app and **Open**. This triggers the `contentUrl` configuration.
+However, users can still load an unapproved tab in the Teams mobile client by selecting the `...` more menu next to the app and **Open**. This triggers your app's `contentUrl` configuration.
+
+If you're sideloading your app or publishing to an org's app catalog, you don't need mobile-specific approval.
 
 For more information, see [tabs and mobile clients](~/tabs/what-are-tabs.md#mobile-clients).
