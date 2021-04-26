@@ -63,7 +63,7 @@ To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickl
 **To install Microsoft Teams tools**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
+1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
    
    > [!NOTE]
