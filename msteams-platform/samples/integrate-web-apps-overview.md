@@ -64,7 +64,7 @@ Third-party websites can use the launcher script to embed Share to Teams buttons
 
 You can get a rich integration experience between Microsoft Teams and SharePoint by adding a Microsoft Teams tab in SharePoint as an SPFx web part. 
 
-## Create Deep link
+## Create deep link
 
 You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
 
