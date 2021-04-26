@@ -3,6 +3,7 @@ title: Messages in bot conversations
 description: Describes ways to have a conversation with a Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
 ---
 

@@ -3,6 +3,7 @@ title: Get started - Build a bot
 author: heath-hamilton
 description: Quickly create a Microsoft Teams bot using the Microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/04/2020
 ms.topic: tutorial
 ---

@@ -2,6 +2,7 @@
 title: Create a Share-to-Teams button
 description: How to add the Share to Teams embedded button on your website
 ms.topic: reference
+localization_priority: Normal
 keywords: Share Teams Share-to-Teams
 ---
 # Create a Share-to-Teams button for your website
@@ -76,7 +77,7 @@ In order for the preview to be displayed you must:
 
 For teachers using the Share to Teams button you'll be given an additional option to `Create an Assignment`. This enables you to quickly create an assignment in the chosen Team based on the shared link.
 
-![Share to Teams popup](~/assets/images/share-to-teams-popup-edu.png)
+![Share to Teams popup edu](~/assets/images/share-to-teams-popup-edu.png)
 
 ## Full launcher.js definition
 

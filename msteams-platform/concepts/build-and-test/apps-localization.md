@@ -2,6 +2,7 @@
 title: Localization for your app
 description: Describes considerations for localizing your Microsoft Teams app.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---

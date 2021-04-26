@@ -4,6 +4,7 @@ description: Workforce management Shifts connectors for Teams
 ms.topic: reference
 author: laujan
 ms.date: 03/09/2020
+localization_priority: Normal
 keywords: Microsoft Teams connectors kronos
 ms.author: lajanuar
 ---
@@ -55,6 +56,6 @@ With open-source code, you can integrate JDA (BlueYonder) Version 17.2 and above
 
 1. Enable rich scheduling scenarios, including requesting shift swaps and time off.
 
-1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta) .
+1. Set  user availability using the [Microsoft Graph API for Shifts](/graph/api/resources/shift?view=graph-rest-beta&preserve-view=true) .
 
 [Get it on GitHub](https://aka.ms/JDAShiftsConnector)</br></br>

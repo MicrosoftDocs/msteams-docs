@@ -3,6 +3,7 @@ title: Create a command menu for your bot
 author: clearab
 description: How to create a command menu for your Microsoft Teams bot
 ms.topic: how-to
+localization_priority: Normal
 ms.author: anclear
 ---
 

@@ -3,6 +3,7 @@ title: Conversation basics
 description: Introduction to conversations
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: conversations basics messages
 ---
 

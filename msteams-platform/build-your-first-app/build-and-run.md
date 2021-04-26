@@ -3,6 +3,7 @@ title: Get started - Build and run your first app
 author: heath-hamilton
 description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: quickstart
 ---

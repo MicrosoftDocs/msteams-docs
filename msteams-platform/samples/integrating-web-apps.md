@@ -3,6 +3,7 @@ author: heath-hamilton
 description: Best practices for integrating existing web apps with Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
+localization_priority: Normal
 ms.topic: conceptual
 title: Integrate a web app with Microsoft Teams
 ---
