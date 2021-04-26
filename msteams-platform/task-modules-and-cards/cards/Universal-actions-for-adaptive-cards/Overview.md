@@ -12,6 +12,8 @@ With the Universal actions for Adaptive Cards, this problem is now addressed wit
 
 This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
+**Note:** Support for Universal Action Model is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards will be available soon.
+
 ## Enhance user experience with universal actions for Adaptive Cards
 
 Universal actions for Adaptive Cards enhances user experience by enabling the following scenarios:
