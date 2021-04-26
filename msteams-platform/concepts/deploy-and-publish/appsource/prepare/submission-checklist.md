@@ -60,8 +60,6 @@ A store listing may be someone's first impression of your app. Increase installa
 
 Your app's name (specifically, its [*short name*](~/resources/schema/manifest-schema.md#name)) plays a crucial role in how users discover it in the store.
 
-The following example highlights where an app's short name displays in a store listing:
-
 :::row:::
 
    :::column span="3":::
@@ -82,8 +80,6 @@ You must have a short and long description of your app.
 
 A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
 
-The following example highlights where an app's short description displays in a store listing:
-
 :::row:::
 
    :::column span="3":::
@@ -99,8 +95,6 @@ Make sure your short description adheres to the [store validation guidelines](~/
 #### Long description
 
 The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience. While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
-
-The following example highlights where an app's long description displays in a store listing:
 
 :::row:::
 
