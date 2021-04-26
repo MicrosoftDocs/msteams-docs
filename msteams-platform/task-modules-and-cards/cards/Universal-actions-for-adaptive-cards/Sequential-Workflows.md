@@ -14,7 +14,10 @@ For example, take a scenario where a restaurant wants to take an order. With `Ac
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
+A user can progress through their workflow without modifying the card for other users. As shown in the below image, different users could be at different stages of the workflow and they see different states of the card.
+
 ![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
+Note: In order to sync the user's progress across devices, please use the refresh property in adaptive card JSON. 
 
 ## Sample Adaptive Card
 
