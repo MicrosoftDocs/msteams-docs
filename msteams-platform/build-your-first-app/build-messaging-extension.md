@@ -50,7 +50,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 ## 3. Set up a secure tunnel to your app
 
-For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure tunnel to localhost. See [build your first bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-set-up-a-secure-tunnel-to-your-app) for details. 
+For testing purposes, let's host your messaging extension on a local web server (port 3978). You are going to use [ngrok](https://ngrok.com/download) to set up a secure tunnel to localhost. See [build your first bot for Microsoft Teams](../build-your-first-app/build-bot.md#3-securely-expose-your-localhost-to-the-internet) for details. 
 
 1. If you haven't already, install [ngrok](https://ngrok.com/download).
 1. In a terminal, run `ngrok http -host-header=rewrite 3978`.
