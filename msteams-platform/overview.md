@@ -37,7 +37,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Bots
 
-**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
