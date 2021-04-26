@@ -2,6 +2,7 @@
 title: Add authentication to your messaging extension
 author: clearab
 description: How to add authentication to a messaging extension
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
 ---

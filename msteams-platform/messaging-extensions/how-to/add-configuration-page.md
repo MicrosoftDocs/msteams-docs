@@ -2,6 +2,7 @@
 title: Add a configuration page to your messaging extension
 author: clearab
 description: How to add a configuration page to a messaging extension
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
 ---

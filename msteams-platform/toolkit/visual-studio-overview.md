@@ -2,6 +2,7 @@
 title: Build apps with the Microsoft Teams Toolkit and Visual Studio
 description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit
 keywords: teams visual studio toolkit
+localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
 ---

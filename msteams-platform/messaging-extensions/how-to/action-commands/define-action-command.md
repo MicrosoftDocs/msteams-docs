@@ -2,6 +2,7 @@
 title: Define messaging extension action commands
 author: clearab
 description: An overview of messaging extension action commands
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
 ---
