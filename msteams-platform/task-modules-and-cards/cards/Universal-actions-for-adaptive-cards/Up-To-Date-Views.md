@@ -6,14 +6,14 @@ ms.topic: conceptual
 localization_priority: Normal
 ---
 
-# Up-to-date views
+# Up-to-date cards
 
-Up-to-date views are now powered with a combination of Universal actions for Adaptive Cards and message edits in Teams.
+You can now provide latest information to your users on adaptive cards with a combination of refresh and message edits in Teams. With this you would be able to update the even the user specific views dynamically to its latest state as and when there is a change on your service. For example in the case of project management/ticketing cards, you can update comments and status of task, in case of approvals reflect the latest state while also providing them differentiated information and actions. 
 
 For example, a user can create an asset approval request in Teams conversation. Shiladitya creates an approval request and assigns it to Sowrabh and Dipesh. The following are the two parts to create the approval request:
 
-* Now role-based views can be leveraged using the refresh property of the Adaptive Cards.
-Using role based views one can show a card with **Approve** or **Reject** buttons to a set of users, and show a card without **Approve** or **Reject** buttons to other users depending on their role.
+* Now user-specific views can be leveraged using the refresh property of the Adaptive Cards.
+Using user specific views one can show a card with **Approve** or **Reject** buttons to a set of users, and show a card without these buttons to other users.
 
 * To keep the card state updated at all times, Teams message edit mechanism can be leveraged.
 For example, each time there is an approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role-based view card.
