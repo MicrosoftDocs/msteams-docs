@@ -174,7 +174,7 @@ A short description is a concise summary of your app that highlights its value p
 **Don't:**
 
 * Repeat your app name.
-* Use the word **app** in the name.
+* Use the word **app** in the short description.
 
 #### 4.3.2 Long description
 
