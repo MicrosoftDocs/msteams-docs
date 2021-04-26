@@ -28,7 +28,7 @@ Ensure all the prerequisites are met before starting the installation.
 
 > [!NOTE]
 > To help IT admins to easily set-up Moodle and Teams integration, open-source Microsoft 365 Moodle Plugin is updated for the following:
-
+>
 > * Auto-registration of your Moodle server with [Azure Active Directory (AAD)](https://azure.microsoft.com/services/active-directory/).
 >
 > * One-click deployment of your Moodle Assistant bot to Azure.
@@ -69,7 +69,7 @@ Moodle integration in Microsoft Teams is powered by the open source [Microsoft 3
 You must register Moodle as an application in your Azure AD. Use PowerShell script to complete this process. The PowerShell script provisions a new Azure AD application for your Microsoft 365 tenant, which is used by the Microsoft 365 Moodle Plugin. The script provisions the app for your Microsoft 365 tenant, set up the required reply URLs and permissions for the provisioned app, and return the `AppID` and `Key`. You can use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugin setup page to configure your Moodle server site with Azure AD.
 
 > [!IMPORTANT]
-
+>
 > * The PowerShell script is not updated with the latest configuration items, therefore you must complete the configuration manually following the steps outlined in the Moodle [3.8.0.4 and 3.9.1](https://docs.moodle.org/39/en/Office365#3.8.0.4_and_3.9.1_release) and [3.8.0.5 and 3.9.2](https://docs.moodle.org/39/en/Office365#3.8.0.5_and_3.9.2_release) release pages.
 >
 > * To view the manual steps that the PowerShell script is automating in detail, see [Register your Moodle instance as an application](https://docs.moodle.org/34/en/Office365#Register_your_Moodle_instance_as_an_Application).
@@ -127,7 +127,7 @@ You must register Moodle as an application in your Azure AD. Use PowerShell scri
     1. Switch to the **Sync Settings tab**
     1. In the **Sync users with Azure AD** section, select the checkboxes that apply to your environment. You must select the following:  
 
-        ✔ Create accounts in Moodle for users in Azure AD . 
+        ✔ Create accounts in Moodle for users in Azure AD. 
         ✔ Update all accounts in Moodle for users in Azure AD.  
 
     1. In the **User Creation Restriction** section, you can setup a filter to limit the Azure AD users that is synced to Moodle.
