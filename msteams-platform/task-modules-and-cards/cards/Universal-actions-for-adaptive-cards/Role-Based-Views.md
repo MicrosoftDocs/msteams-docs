@@ -1,18 +1,18 @@
 ---
-title: Contextual or role-based views
+title: Contextual or user specific views
 description: Sample for role based views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
 ---
 
-# Contextual or role-based views
+# Contextual or user specific views
 
-Earlier if an Adaptive Card was sent in a Teams conversation, all users see the same card content. Here we are introducing universal actions for Adaptive Cards, which enables bot developers to provide contextual or role-based views to users. The same Adaptive Card can now refresh to a contextual or role-based Adaptive Card.
+Earlier if an Adaptive Card was sent in a Teams conversation, all users see the same card content. Here we are introducing universal actions for Adaptive Cards, which enables bot developers to provide contextual or user specific views to users. The same Adaptive Card can now refresh to a contextual or user specific Adaptive Card.
 
 For example, Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by universal actions for Adaptive Cards.
 
-![Role-based views](~/assets/images/bots/Rolebasedviews.png)
+![user specific views](~/assets/images/bots/Rolebasedviews.png)
 
 ## Sample Adaptive Card
 
@@ -32,7 +32,7 @@ The following code provides an example of an Adaptive Card:
       "data": {
               "refresh info": "<refresh info>"
     },
-    "userIds": ["<Megan's userID>", "<Alex's userID>"]
+    "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
   "body": [
     {
@@ -47,7 +47,7 @@ The following code provides an example of an Adaptive Card:
 }
 ```
 
-**To send Adaptive Cards, refresh role-based view, and invoke requests to the bot**
+**To send Adaptive Cards, refresh user specific view, and invoke requests to the bot**
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
 2. Now this card automatically refreshes to role based view for Megan and Alex. Alex's and Megan's user MRIs are added in userIds property of refresh property of the Adaptive Card json.
@@ -96,7 +96,7 @@ The following code provides an example of an adaptiveCard/action invoke response
       "title": "Refresh",
       "verb": "editOrResolveView"
     },
-    "userIds": ["<Megan's userID>", "<Alex's userID>"]
+    "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
   "body": [
     {
@@ -138,7 +138,7 @@ The following code provides an example of an adaptiveCard/action invoke response
       "title": "Refresh",
       "verb": "editOrResolveView"
     },
-    "userIds": ["<Megan's userID>", "<Alex's userID>"]
+    "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
   "body": [
     {

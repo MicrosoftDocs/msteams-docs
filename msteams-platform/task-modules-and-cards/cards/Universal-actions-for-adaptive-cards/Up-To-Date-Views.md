@@ -16,9 +16,9 @@ For example, a user can create an asset approval request in Teams conversation. 
 Using user specific views one can show a card with **Approve** or **Reject** buttons to a set of users, and show a card without these buttons to other users.
 
 * To keep the card state updated at all times, Teams message edit mechanism can be leveraged.
-For example, each time there is an approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role-based view card.
+For example, each time there is an approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated user specific view card.
 
-[Edit bot message with adaptive card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
+[See: How to do a bot messgae edit](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
 
 ## Sample approval base card
 
@@ -115,15 +115,15 @@ The following are the two roles that are shown to users depending on their acces
 
 1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Bot sends the approval base card in the conversation.
-3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor who now see the role-based view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
+3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor who now see the user specific view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
 
-    ![Role-based views](~/assets/images/bots/up-to-date-views-stage1.png)
+    ![user specific views](~/assets/images/bots/up-to-date-views-stage1.png)
 
 4. Nestor selects the **Approve** button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 5. The bot triggers a message edit with an updated card which says Nestor has approved the request while Megan's approval is pending.
-6. Bot message edit triggers an automatic refresh for Megan and sees the updated role-based card which says Nestor has approved the request, but also see the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
+6. Bot message edit triggers an automatic refresh for Megan and sees the updated user specific card which says Nestor has approved the request, but also see the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
-    ![Up-to-date role-based views](~/assets/images/bots/up-to-date-views-stage2.png)
+    ![Up-to-date user specific views](~/assets/images/bots/up-to-date-views-stage2.png)
 
 7. Now, Megan selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 8. The bot triggers a message edit with an updated card, which says Nestor and Megan have approved the request.
