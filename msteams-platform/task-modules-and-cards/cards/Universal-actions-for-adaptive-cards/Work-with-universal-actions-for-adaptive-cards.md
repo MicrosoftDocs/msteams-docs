@@ -8,9 +8,9 @@ ms.topic: conceptual
 
 Universal actions for adaptive cards provides a way to implement adaptive card based scenarios for both Teams and Outlook. This document covers the following:
 
+* [Schema used for universal actions for adaptive cards](#schema-for-universal-actions-for-adaptive-cards)
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
-* [Schema used for universal actions for adaptive cards](#schema-for-universal-actions-for-adaptive-cards)
 * [Backward compatibility](#backward-compatibility)
 
 ## Schema for universal actions for adaptive cards

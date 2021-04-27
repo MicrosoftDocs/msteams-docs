@@ -30,7 +30,7 @@ Before the universal actions for adaptive cards, different hosts provided differ
 
 ![Inconsistent action model](~/assets/images/bots/inconsistent-action-model.png)
 
-With the universal actions for adaptive cards, you can use `Action.Execute` for action handling throughout different platforms.
+With the universal actions for adaptive cards, you can use `Action.Execute` for action handling across different platforms.
 
 ![New universal action model](~/assets/images/bots/Newuniversalactionmodel.png)
 

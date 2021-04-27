@@ -46,7 +46,7 @@ For example each time there is an approval, bot can trigger a message edit to al
 }
 ```
 
-**Sample approval card with approve, reject buttons**
+**Sample approval card with Approve, Reject buttons**
 ```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
