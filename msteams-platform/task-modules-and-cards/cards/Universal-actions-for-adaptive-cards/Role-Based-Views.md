@@ -28,7 +28,7 @@ The following code provides an example of an Adaptive Card:
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedViewCardRefresh",
+      "verb": "editOrResolveView",
       "data": {
               "refresh info": "<refresh info>"
     },
@@ -70,7 +70,7 @@ The following code provides an example of an invoke request sent from Alex's and
     "action": { 
       "type": "Action.Execute", 
       "id": "", 
-      "verb": "roleBasedViewCardRefresh",
+      "verb": "editOrResolveView",
       "data": { 
             "refresh info": "<refresh info>"
       } 
@@ -94,7 +94,7 @@ The following code provides an example of an adaptiveCard/action invoke response
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedViewCardRefresh"
+      "verb": "editOrResolveView"
     },
     "userIds": ["<Megan's userID>", "<Alex's userID>"]
   },
@@ -136,7 +136,7 @@ The following code provides an example of an adaptiveCard/action invoke response
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedViewCardRefresh"
+      "verb": "editOrResolveView"
     },
     "userIds": ["<Megan's userID>", "<Alex's userID>"]
   },

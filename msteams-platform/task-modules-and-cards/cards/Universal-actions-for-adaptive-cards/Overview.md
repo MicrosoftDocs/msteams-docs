@@ -32,11 +32,7 @@ Before the universal actions for Adaptive Cards, different hosts provided differ
 
 ![Inconsistent action model](~/assets/images/bots/inconsistent-action-model.png)
 
-<<<<<<< HEAD
-With the universal actions for adaptive cards, you can use `Action.Execute` for action handling across different platforms.
-=======
-With the universal actions for Adaptive Cards, you can use `Action.Execute` for action handling throughout different platforms.
->>>>>>> 3818443091d0eb2b2be065e6f2a70d257d8b443a
+With the universal actions for adaptive cards, you can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. Moreover, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
 
 ![New universal action model](~/assets/images/bots/Newuniversalactionmodel.png)
 

@@ -10,13 +10,15 @@ localization_priority: Normal
 
 You can now provide latest information to your users on adaptive cards with a combination of refresh and message edits in Teams. With this you would be able to update the even the user specific views dynamically to its latest state as and when there is a change on your service. For example in the case of project management/ticketing cards, you can update comments and status of task, in case of approvals reflect the latest state while also providing them differentiated information and actions. 
 
-For example, a user can create an asset approval request in Teams conversation. Shiladitya creates an approval request and assigns it to Sowrabh and Dipesh. The following are the two parts to create the approval request:
+For example, a user can create an asset approval request in Teams conversation. Alex creates an approval request and assigns it to Megan and Nestor. The following are the two parts to create the approval request:
 
 * Now user-specific views can be leveraged using the refresh property of the Adaptive Cards.
 Using user specific views one can show a card with **Approve** or **Reject** buttons to a set of users, and show a card without these buttons to other users.
 
 * To keep the card state updated at all times, Teams message edit mechanism can be leveraged.
 For example, each time there is an approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated role-based view card.
+
+[Edit bot message with adaptive card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards)
 
 ## Sample approval base card
 
@@ -31,35 +33,31 @@ The following code provides an example of an approval base card:
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedView"
+      "verb": "acceptRejectView"
     },
-    "userIds": ["<Sowrabh's user MRI>", "<Dipesh's user MRI>"]
+    "userIds": ["<Megan's user MRI>", "<Nestor's user MRI>"]
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Asset Request 1234"
+      "text": "Asset Request B12"
     },
     {
       "type": "TextBlock",
-      "text": "Submitted by **Shiladitya**"
+      "text": "Submitted by **Alex**"
     },
     {
       "type": "TextBlock",
-      "text": "Approval pending from **Sowrabh and Dipesh**"
+      "text": "Approval pending from **Megan and Nestor**"
     }
   ]
 }
 ```
 
-<<<<<<< HEAD
-**Sample approval card with Approve, Reject buttons**
-=======
 ## Sample approval card with Approve and Reject buttons
 
 The following code provides an example of an approval card with **Approve** and **Reject** buttons:
 
->>>>>>> 3818443091d0eb2b2be065e6f2a70d257d8b443a
 ```JSON
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -69,22 +67,22 @@ The following code provides an example of an approval card with **Approve** and 
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedView"
+      "verb": "acceptRejectView"
     },
-    "userIds": ["<Dipesh's user MRI>", "<Sowrabh's user MRI>"]
+    "userIds": ["<Nestor's user MRI>", "<Megan's user MRI>"]
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Approval Request 1234"
+      "text": "Approval Request B12"
     },
     {
       "type": "TextBlock",
-      "text": "Submitted by **Shiladitya**"
+      "text": "Submitted by **Alex**"
     },
     {
       "type": "TextBlock",
-      "text": "Approval pending from **Sowrabh and Dipesh**"
+      "text": "Approval pending from **Megan and Nestor**"
     }
   ],
   "actions": [
@@ -115,21 +113,21 @@ The following are the two roles that are shown to users depending on their acces
 
 **To send the asset approval request**
 
-1. Shiladitya raises an asset approval request in a Teams conversation and assigns it to Sowrabh and Dipesh.
+1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Bot sends the approval base card in the conversation.
-3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Sowrabh and Dipesh who now see the role-based view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
+3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor who now see the role-based view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
 
     ![Role-based views](~/assets/images/bots/up-to-date-views-stage1.png)
 
-4. Dipesh selects the **Approve** button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
-5. The bot triggers a message edit with an updated card which says Dipesh has approved the request while Sowrabh's approval is pending.
-6. Bot message edit triggers an automatic refresh for Sowrabh and sees the updated role-based card which says Dipesh has approved the request, but also see the **Approve** or **Reject** buttons. Dipesh's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Sowrabh.
+4. Nestor selects the **Approve** button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
+5. The bot triggers a message edit with an updated card which says Nestor has approved the request while Megan's approval is pending.
+6. Bot message edit triggers an automatic refresh for Megan and sees the updated role-based card which says Nestor has approved the request, but also see the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
     ![Up-to-date role-based views](~/assets/images/bots/up-to-date-views-stage2.png)
 
-7. Now, Sowrabh selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
-8. The bot triggers a message edit with an updated card, which says Dipesh and Sowrabh have approved the request.
-9. Bot message edit does not trigger any automatic refresh. Sowrabh's user MRI is also removed from the userIds list in refresh property of this Adaptive Card json in steps 7 and 8.
+7. Now, Megan selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
+8. The bot triggers a message edit with an updated card, which says Nestor and Megan have approved the request.
+9. Bot message edit does not trigger any automatic refresh. Megan's user MRI is also removed from the userIds list in refresh property of this Adaptive Card json in steps 7 and 8.
 
     ![Up-to-date views](~/assets/images/bots/up-to-date-views-stage3.png)
 
@@ -146,26 +144,26 @@ The following code provides an example of an Adaptive Card sent as response of `
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedView"
+      "verb": "acceptRejectView"
     },
-    "userIds": ["<Sowrabh's user MRI>"]
+    "userIds": ["<Megan's user MRI>"]
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Asset Request 1234"
+      "text": "Asset Request B12"
     },
     {
       "type": "TextBlock",
-      "text": "Submitted by **Shiladitya**"
+      "text": "Submitted by **Alex**"
     },
     {
       "type": "TextBlock",
-      "text": "Approval pending from **Sowrabh**"
+      "text": "Approval pending from **Megan**"
     },
     {
       "type": "TextBlock",
-      "text": "Approved by **Dipesh**"
+      "text": "Approved by **Nestor**"
     }
   ]
 }
@@ -184,26 +182,26 @@ The following code provides an example of an Adaptive Card sent as response of `
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedView"
+      "verb": "acceptRejectView"
     },
-    "userIds": ["<Sowrabh's user MRI>"]
+    "userIds": ["<Megan's user MRI>"]
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Approval Request 1234"
+      "text": "Approval Request B12"
     },
     {
       "type": "TextBlock",
-      "text": "Submitted by **Shiladitya**"
+      "text": "Submitted by **Alex**"
     },
     {
       "type": "TextBlock",
-      "text": "Approval pending from **Sowrabh**"
+      "text": "Approval pending from **Megan**"
     },
     {
       "type": "TextBlock",
-      "text": "Approved by **Dipesh**"
+      "text": "Approved by **Nestor**"
     }
   ],
   "actions": [
@@ -240,22 +238,22 @@ The following code provides an example of an Adaptive Card sent as response of `
     "action": {
       "type": "Action.Execute",
       "title": "Refresh",
-      "verb": "roleBasedView"
+      "verb": "acceptRejectView"
     },
     "userIds": []
   },
   "body": [
     {
       "type": "TextBlock",
-      "text": "Asset Request 1234"
+      "text": "Asset Request B12"
     },
     {
       "type": "TextBlock",
-      "text": "Submitted by **Shiladitya**"
+      "text": "Submitted by **Alex**"
     },
     {
       "type": "TextBlock",
-      "text": "Approved by **Dipesh and Sowrabh**"
+      "text": "Approved by **Nestor and Megan**"
     }
   ]
 }
