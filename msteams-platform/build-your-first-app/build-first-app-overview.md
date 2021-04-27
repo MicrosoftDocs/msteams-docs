@@ -12,7 +12,6 @@ ms.topic: quickstart
 Build a simple app to learn the basics of Teams app development. Once you see "Hello, World!", try any of the other get started articles for more information on common tools, fundamental concepts, and advanced features.
 
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/jugBQqE_2sM]
 
 ## What you'll learn
 
