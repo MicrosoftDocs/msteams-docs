@@ -9,7 +9,7 @@ localization_priority: Normal
 
 Universal actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they have to handle actions differently.
 
-With the Universal actions for Adaptive Cards, this problem is now addressed with bot becoming the common backend for handling actions. Also the problem is addressed with the introduction of the new action type, `Action.Execute`, which works across apps starting from Teams and Outlook.
+Universal actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
 
 This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
