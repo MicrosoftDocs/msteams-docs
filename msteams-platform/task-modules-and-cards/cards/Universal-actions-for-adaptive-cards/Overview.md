@@ -14,7 +14,7 @@ With the Universal actions for Adaptive Cards, this problem is now addressed wit
 This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
 > [!NOTE]
-> Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards are not yet available.
+> Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is not yet available.
 
 ## Enhance user experience with universal actions for Adaptive Cards
 
