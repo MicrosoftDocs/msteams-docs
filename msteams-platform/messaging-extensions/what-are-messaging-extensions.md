@@ -1,74 +1,85 @@
 ---
-title: What are messaging extensions?
+title: Messaging extensions
 author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
 ---
-# What are messaging extensions?
+# Messaging extensions
 
-Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search, or initiate actions, in an external system from the compose message area, the command box, or directly from a message. You can then send the results of that interaction back to the Microsoft Teams client, typically in the form of a richly formatted card.
+Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Microsoft Teams client in the form of a richly formatted card. This document gives an overview of the messaging extension, tasks performed under different scenarios, working of messaging extension, action and search commands, and link unfurling.
 
-The screenshot below shows the locations where messaging extensions can be invoked from.
+The following image displays the locations from where messaging extensions are invoked:
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
-## What kinds of tasks are they good for?
+## Scenarios where messaging extensions are used
 
-**Scenario:** I need some external system to do something and I want the result of the action to be sent back to my conversation.\
-**Example:** Reserve a resource and let the channel know what day/time you reserved it for.
+| Scenario | Example |
+|:-----------------|:-----------------|
+|You want some external system to do an action  and the result of the action to be sent back to your conversation.|Reserve a resource and allow the channel to know the reserved time slot.|
+|You want to find something in an external system, and share the results with the conversation.|Search for a work item in Azure DevOps, and share it with the group as an Adaptive Card.|
+|You want to complete a complex task involving multiple steps or lots of information in an external system, and share the results with a conversation.|Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details.|
 
-**Scenario:** I need to find something in an external system, and I want to share the results with my conversation.\
-**Example:**  Search for a work item in Azure DevOps, and share it with the group as an adaptive card.
+## Understand how messaging extensions work
 
-**Scenario:** I need to complete a complex task involving multiple steps (or lots of information) in an external system, and the results should be shared with a conversation.\
-**Example:** Create a bug in your tracking system based on a Teams message, assign that bug to Bob, then send a card to the conversation thread with the bug's details.
+A messaging extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Microsoft Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. 
 
-## How do messaging extensions work?
+> [!NOTE]
+> Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol.
 
-A messaging extension consists of a web service you host and your app manifest which defines where your web service can be invoked from in the Microsoft Teams client. They take advantage of the Bot Framework's messaging schema and secure communication protocol, so you'll also need to register your web service as a bot in the Bot Framework. Although you can create your web service completely by hand, we recommend you take advantage of the [Bot Framework SDK](https://github.com/microsoft/botframework) to make working with the protocol simpler.
-
-In the app manifest for your Microsoft Teams app you'll define a single messaging extension with up to ten different commands. Each command defines a type (action or search), and the locations in the client it can be invoked from (compose message area, command bar, and/or message). Once invoked, your web service will receive an HTTPS message with a JSON payload including all the relevant information. You'll respond with a JSON payload, letting the Teams client know what interaction to enable next.
+In the app manifest for Microsoft Teams app, a single messaging extension is defined with up to ten different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable. 
 
 ## Types of messaging extension commands
 
-The type of messaging extension command defines the UI elements and interaction flows available to your web service. Some interactions, like authentication and configuration, are available for both types of commands.
+There are two types of messaging extension commands, action command and search command. The messaging extension command type defines the UI elements and interaction flows available to your web service. Some interactions, such as authentication and configuration are available for both types of commands.
 
 ### Action commands
 
-Action commands allow you to present your users with a modal popup to collect or display information. When they submit the form, your web service can respond by inserting a message into the conversation directly, or by inserting a message into the compose message area and allowing the user to submit the message. You can even chain multiple forms together for more complex workflows.
+Action commands are used to present the users with a modal popup to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or by inserting a message into the compose message area. After that the user can submit the message. You can chain multiple forms together for more complex workflows.
 
-They can be triggered from the compose message area, the command box, or from a message. When invoked from a message, the initial JSON payload sent to your bot will include the entire message it was invoked from.
-
+The action commands are triggered from the compose message area, the command box, or from a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message it was invoked from. The following image displays the messaging extension action command task module:
 ![messaging extension action command task module](~/assets/images/task-module.png)
 
 ### Search commands
 
-Search commands allow your users to search an external system for information (either manually through a search box, or by pasting a link to a monitored domain into the compose message area), then insert the results of the search into a message. In the most basic search command flow, the initial invoke message will include the search string the user submitted. You'll respond with a list of cards and card previews. The Teams client will render the card previews in a list for the end user to select from. When the user selects a card, the full-size card will be inserted into the compose message area.
+Search commands allow the users to search an external system for information either manually through a search box, or by pasting a link to a monitored domain into the compose message area, and insert the results of the search into a message. In the most basic search command flow, the initial invoke message includes the search string that the user submitted. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
-They can be triggered from the compose message area or the command box. Unlike action commands, they cannot be triggered from a message.
+The cards are triggered from the compose message area or the command box and not triggered from a message. They can not be triggered from a message.
+The following image displays the messaging extension search command task module:
 
 ![messaging extension search command](~/assets/images/search-extension.png)
 
-### Link unfurling
+> [!NOTE]
+> For more information on cards, see [what are cards](../task-modules-and-cards/what-are-cards.md).
 
-You also have the option to invoke your service when a URL is pasted in the compose message area. This functionality, known as **link unfurling**, allows you to subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can even add buttons to allow your users to immediately take action without leaving the Microsoft Teams client.
+## Link unfurling
 
-## Get Started
+A web service is invoked when a URL is pasted in the compose message area. This functionality is known as link unfurling. You can subscribe to receive an invoke when URLs containing a particular domain are pasted into the compose message area. Your web service can "unfurl" the URL into a detailed card, providing more information than the standard website preview card. You can add buttons to allow the users to immediately take action without leaving the Microsoft Teams client.
+The following images display link unfurling feature when a link is pasted in messaging extension:
+ 
+![unfurl link](../assets/images/messaging-extension/unfurl-link.png)
 
-Ready to get started building? Try one of our quickstarts:
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
-* **C#**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)
-* **JavaScript**
-  * [Messaging extension with action-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action)
-  * [Messaging extension with search-based commands](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)
+## Code sample
 
-## Learn more
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|------------|-------------|----------------|------------|
+| Messaging extension with action-based commands | This sample illustrates how to build an action-based messaging extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
+| Messaging extension with search-based commands | This sample illustrates how to build a Search-based Messaging Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-Build a messaging extension:
+## See also
 
-* [Create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md)
-* [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
-* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+> [!div class="nextstepaction"]
+> [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
+
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+
+> [!div class="nextstepaction"]
+> [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)

@@ -30,41 +30,43 @@
     href: tutorials/get-started-nodejs-app-studio.md
   - name: Create an app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
-  - name: Upgrade Microsoft Teams using the Yeoman generator
-    href: tutorials/upgrade-using-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
   items:
+  - name: Overview
+    href: concepts/app-fundamentals-overview.md
   - name: Teams app capabilities
     href: concepts/capabilities-overview.md
   - name: Teams app entry points
     href: concepts/extensibility-points.md
-  - name: Understanding your use cases
+  - name: Understand your use cases
     href: concepts/design/understand-use-cases.md
-  - name: Mapping use cases to Teams app capabilities
+  - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
 - name: Integrate with Teams
   items:
+  - name: Overview
+    href: samples/integrate-web-apps-overview.md
   - name: Web apps
     href: samples/integrating-web-apps.md
   - name: Power Platform apps
     items:
     - name: Overview
       href: samples/teams-low-code-solutions.md
-    - name: Add a Power Virtual Agents chatbot
+    - name: Add Power Virtual Agents chatbot
       href: bots/how-to/add-power-virtual-agents-bot-to-teams.md
-    - name: Create a Virtual Assistant
+    - name: Create Virtual Assistant
       href: samples/virtual-assistant.md 
   - name: App templates for Microsoft Teams
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install the Moodle LMS
+  - name: Install Moodle LMS
     href: resources/moodleInstructions.md
-  - name: Create a Share-to-Teams button
+  - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Add a Teams tab to SharePoint
+  - name: Add Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
@@ -202,37 +204,43 @@
   items:
   - name: Overview
     href: bots/what-are-bots.md
-  - name: How bots work
+  - name: Bots and SDKs
+    href: bots/bot-features.md
+  - name: Bot activity handlers
     href: bots/bot-basics.md
   - name: Bot conversations
     items:
-    - name: Conversation basics
+    - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
+    - name: Messages in bot conversations
+      href: bots/how-to/conversations/conversation-messages.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
-    - name: Subscribe to conversation events
+    - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-    - name: Formatting your bot messages
+    - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
-      href: bots/how-to/update-and-delete-bot-messages.md     
+      href: bots/how-to/update-and-delete-bot-messages.md   
+    - name: Request headers of the bot
+      href: bots/how-to/conversations/request-headers-of-the-bot.md
   - name: Get context for your bot
     href: bots/how-to/get-teams-context.md
   - name: Send and receive files
     href: bots/how-to/bots-filesv4.md
-  - name: Handling bot rate limiting
+  - name: Optimize your bot with rate limiting in Teams
     href: bots/how-to/rate-limit.md
-  - name: Calling and meeting bots
+  - name: Calls and meetings bots
     items:
     - name: Overview
       href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media concepts
+    - name: Real-time media calls and meetings
       href: bots/calls-and-meetings/real-time-media-concepts.md
-    - name: Register a calling bot
+    - name: Register calls and meetings bot
       href: bots/calls-and-meetings/registering-calling-bot.md
     - name: Incoming call notifications
       href: bots/calls-and-meetings/call-notifications.md
@@ -246,7 +254,7 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-  - name: Create action commands
+  - name: Action commands
     items:
     - name: Define action commands
       href: messaging-extensions/how-to/action-commands/define-action-command.md
@@ -254,13 +262,13 @@
       href: messaging-extensions/how-to/action-commands/create-task-module.md
     - name: Respond to action commands
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
-  - name: Create search commands
+  - name: Search commands
     items:
     - name: Add a configuration page
       href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
-    - name: Receive and respond to search queries
+    - name: Respond to search commands
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
@@ -350,9 +358,11 @@
     href: graph-api/import-messages/import-external-messages-to-teams.md
 - name: Test your app
   items:
+  - name: Overview
+    href: concepts/build-and-test/test-app-overview.md
   - name: Prepare your Microsoft 365 tenant
     href: concepts/build-and-test/prepare-your-o365-tenant.md
-  - name: Choosing a test setup
+  - name: Choose a test setup
     href: concepts/build-and-test/debug.md
   - name: Add test data to your environment
     href: concepts/build-and-test/test-data.md
@@ -376,6 +386,8 @@
       href: graph-api/rsc/test-rsc-json-file.md
 - name: Publish your app
   items:    
+  - name: Configure default install options
+    href: concepts/deploy-and-publish/add-default-install-scope.md
   - name: Choose how to distribute your app
     href: concepts/deploy-and-publish/overview.md
   - name: Create your app package
@@ -426,3 +438,5 @@
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
+  
+  

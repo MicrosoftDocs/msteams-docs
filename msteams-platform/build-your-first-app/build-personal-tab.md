@@ -3,6 +3,7 @@ title: Get started - Build a personal tab
 author: heath-hamilton
 description: Quickly create a Microsoft Teams personal tab using the Microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 11/03/2020
 ms.topic: tutorial
 ---

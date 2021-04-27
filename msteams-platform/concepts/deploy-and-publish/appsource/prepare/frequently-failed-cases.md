@@ -2,6 +2,7 @@
 title: App submission tips and frequently failed cases
 description: describes tips for a successful Teams store submission and common reasons submissions fail
 ms.topic: reference
+localization_priority: Normal
 ms.author: lajanuar
 keywords: app submission tips frequently failed cases validation guidelines
 ---

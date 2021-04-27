@@ -5,6 +5,7 @@ description: describes how to add an outgoing webhook
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams tabs outgoing webhook actionable message verify webhook
 
 ---

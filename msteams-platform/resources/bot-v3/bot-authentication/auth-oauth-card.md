@@ -1,6 +1,8 @@
 ---
 title: Using Azure Bot Service for Authentication in Teams
 description: Describes the Azure Bot Service OAuthCard and how it is used for authentication
+ms.topic: conceptual
+localization_priority: Normal
 keywords: teams authentication OAuthCard OAuth card Azure Bot Service
 ---
 # Using Azure Bot Service for Authentication in Teams
@@ -24,7 +26,7 @@ There are currently some restrictions to where you can use the OAuthCard. These 
 
 ## How does the Azure Bot Service help me do authentication?
 
-Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
+Full documentation using the OAuthCard is available in the topic: [Add authentication to your bot via Azure Bot Service](/azure/bot-service/bot-builder-tutorial-authentication?view=azure-bot-service-3.0&preserve-view=true). Note that this topic is in the Azure Bot Framework documentation set, and is not specific to Teams.
 
 The following sections tell how to use the OAuthCard in Teams.
 
@@ -45,7 +47,7 @@ Because access tokens are sensitive information, you may not wish to have them s
 ## Getting started with OAuthCard in Teams
 
 > [!NOTE]
-> This guide is using the Bot Framework v3 SDK. You can find the v4 implementation [here](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp). You will still need to create a manifest and include token.botframework.com in the `validDomains` section, because otherwise the Sign in button will not open the authentication window. Use the [App Studio](~/concepts/build-and-test/app-studio-overview.md) to generate your manifest.
+> This guide is using the Bot Framework v3 SDK. You can find the v4 implementation [here](/azure/bot-service/bot-builder-authentication?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true). You will still need to create a manifest and include token.botframework.com in the `validDomains` section, because otherwise the Sign in button will not open the authentication window. Use the [App Studio](~/concepts/build-and-test/app-studio-overview.md) to generate your manifest.
 
 You’ll first need to configure your Azure bot service to set up external authentication providers. Read [Configuring identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps.
 

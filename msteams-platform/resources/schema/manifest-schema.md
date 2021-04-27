@@ -3,6 +3,7 @@ title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams manifest schema
 ---
 
@@ -272,7 +273,11 @@ The following schema sample shows all extensibility options.
     ]
   },
   "defaultInstallScope": "meetings",
-  "defaultGroupCapability": {"meetings": "tab" , "team": "bot", "groupchat": "bot"}
+  "defaultGroupCapability": {
+    "meetings": "tab", 
+    "team": "bot", 
+    "groupchat": "bot"
+  }
 }
 ```
 
@@ -304,7 +309,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** — Microsoft app ID
 
-The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework or your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)). Use the same ID if you add a bot.
+The ID is a unique Microsoft-generated identifier for the app. You have an ID if your bot is registered through the Microsoft Bot Framework or your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
 > [!NOTE]
 > If you are submitting an update to your existing app in AppSource, the ID in your manifest must not be modified.
@@ -653,5 +658,30 @@ Define the properties your app uses to post a user activity feed.
 ```
 
 ***
->
->
+
+## defaultInstallScope
+
+**Optional** - string
+
+Specifies the install scope defined for this app by default. The defined scope will be the option displayed on the button when a user tries to add the app. Options are:
+* `personal`
+* `team`
+* `groupchat`
+* `meetings`
+
+## defaultGroupCapability
+
+**Optional** - object
+
+When a group install scope is selected, it will define the default capability when the user installs the app. Options are:
+* `team`
+* `groupchat`
+* `meetings`
+ 
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+|`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+
+

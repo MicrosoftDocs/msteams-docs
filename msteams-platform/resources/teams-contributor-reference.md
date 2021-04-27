@@ -3,6 +3,7 @@ title: Contributing to Microsoft Teams documentation
 description: steps for creating and publishing Teams documentation
 author: laujan
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: contributor-guide
 ---
 

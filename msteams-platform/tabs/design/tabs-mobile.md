@@ -2,6 +2,7 @@
 title: Tabs on mobile
 description: Describes the guidelines for designing tabs that work on mobile.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams design guidelines reference framework personal apps mobile tabs
 ---
 # Tabs on mobile
@@ -11,7 +12,7 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 
 Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
 
-Personal apps are available on mobile clients in the app drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients.
+Personal apps are available on mobile clients in the app drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients. Alternatively, you can enforce a reload on the mobile client by signing out and in. This should make the mobile app available right away.
 
 Channel tabs are also available on mobile. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
 

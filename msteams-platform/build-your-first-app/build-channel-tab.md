@@ -3,6 +3,7 @@ title: Get started - Build a channel and group tab
 author: heath-hamilton
 description: Quickly create a Microsoft Teams channel and group tab using the Microsoft Teams Toolkit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.date: 10/09/2020
 ms.topic: tutorial
 ---
