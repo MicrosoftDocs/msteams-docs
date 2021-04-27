@@ -172,5 +172,4 @@ Following is an example of the response:
 
 ## See also 
 
-> [!div class="nextstepaction"]
-> [What are cards](~/task-modules-and-cards/what-are-cards.md)
+- [What are cards](~/task-modules-and-cards/what-are-cards.md)
