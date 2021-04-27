@@ -11,7 +11,7 @@ keywords: teams what's new latest
 
 Changes to the Microsoft Teams platform and this documentation are listed in the following sections:
 * [General availability (GA) features](#ga-features): Microsoft Teams platform features that are available to all app developers.
-* [Developer preview](#developer-preview): Developer preview is a public program for developers, which provides early access to unreleased features in Microsoft Teams.  
+* [Developer preview](#developer-preview): Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
 ## GA features
 
