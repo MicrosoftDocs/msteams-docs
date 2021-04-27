@@ -67,9 +67,7 @@ For more information, see [sample for sequential workflow](Sequential-Workflows.
 
 You can create Adaptive Cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
-![Up-to-date user-specific views 1](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png)
-![Up-to-date user-specific views 2](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png)
-![Up-to-date user-specific views 3](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png)
+![Up-to-date user-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png)
 
 For more information, see [sample for up-to-date views](Up-To-Date-Views.md).
 
