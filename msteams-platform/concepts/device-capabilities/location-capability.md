@@ -101,8 +101,6 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+- [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+- [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)

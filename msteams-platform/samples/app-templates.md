@@ -692,5 +692,4 @@ For more information on app template, see [App template](https://forms.office.co
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)

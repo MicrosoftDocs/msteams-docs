@@ -74,41 +74,28 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
+- [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
 
-> [!div class="nextstepaction"]
-> [Determine your app's entry points](~/concepts/extensibility-points.md)
+- [Determine your app's entry points](~/concepts/extensibility-points.md)
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrating-web-apps.md)
+- [Integrate web apps](~/samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
+- [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 
-> [!div class="nextstepaction"]
-> [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+- [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Create virtual assistant](~/samples/virtual-assistant.md)
+- [Create virtual assistant](~/samples/virtual-assistant.md)
 
-> [!div class="nextstepaction"]
-> [App templates for Microsoft Teams](~/samples/app-templates.md)
+- [App templates for Microsoft Teams](~/samples/app-templates.md)
 
-> [!div class="nextstepaction"]
-> [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
+- [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
 
-> [!div class="nextstepaction"]
-> [Install Moodle LMS](~/resources/moodleinstructions.md)
+- [Install Moodle LMS](~/resources/moodleinstructions.md)
 
-> [!div class="nextstepaction"]
-> [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
+- [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
 
-> [!div class="nextstepaction"]
-> [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+- [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 
-> [!div class="nextstepaction"]
-> [Create deep links](~/concepts/build-and-test/deep-links.md)
+- [Create deep links](~/concepts/build-and-test/deep-links.md)
 
-> [!div class="nextstepaction"]
-> [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+- [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
