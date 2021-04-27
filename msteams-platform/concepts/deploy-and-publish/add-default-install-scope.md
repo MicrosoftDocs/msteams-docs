@@ -38,7 +38,7 @@ Configure the default install scope for your app. You can set only one scope at 
 Configure the default capability when your app is installed for a team, meeting, or groupchat.
 
 > [!NOTE]
-> To configure the `defaultGroupCapability` ensure that you have defined the selected capability, for example, tab, bot, or connector in your app definition.
+> `defaultGroupCapability` provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
 
 **To configure details in app manifest**
 
