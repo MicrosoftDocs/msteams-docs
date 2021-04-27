@@ -81,7 +81,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new unive
 
 Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. You can add Adaptive Cards to a conversation through a bot or messaging extension. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new universal actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [universal actions for Adaptive Cards](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
 
-Work with universal actions for Adaptive Cards document takes you through the steps to use the capabilities of universal actions for Adaptive Cards for your solution.
+[Work with universal actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of universal actions for Adaptive Cards for your solution.
 
 ## See also
 
