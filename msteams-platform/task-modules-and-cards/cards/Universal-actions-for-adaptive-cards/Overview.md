@@ -6,13 +6,14 @@ ms.topic: overview
 
 # Universal actions for Adaptive Cards
 
-Universal actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they would have to handle actions differently.
+Universal actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they have to handle actions differently.
 
 With the Universal actions for Adaptive Cards, this problem is now addressed with bot becoming the common backend for handling actions. Also the problem is addressed with the introduction of the new action type, `Action.Execute`, which works across apps starting from Teams and Outlook.
 
 This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
-**Note:** Support for Universal Action Model is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards will be available soon.
+> [!NOTE]
+> Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards are not yet available.
 
 ## Enhance user experience with universal actions for Adaptive Cards
 
@@ -34,7 +35,7 @@ Before the universal actions for Adaptive Cards, different hosts provided differ
 
 With the universal actions for adaptive cards, you can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. Moreover, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
 
-![New universal action model](~/assets/images/bots/Newuniversalactionmodel.png)
+![New universal actions for Adaptive Cards](~/assets/images/bots/Newuniversalactionmodel.png)
 
 This means you can now send the same card to both Teams and Outlook and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this build once, deploy anywhere model.
 
@@ -72,13 +73,13 @@ You can create Adaptive Cards that update automatically. For example, it can be 
 
 For more information, see [sample for up-to-date views](Up-To-Date-Views.md).
 
-Now you can understand how Adaptive Cards can be transformed with the new universal actions for Adaptive Cards to provide a unique and enhanced user experience.
+Now, you can understand how Adaptive Cards can be transformed with the new universal actions for Adaptive Cards to provide a unique and enhanced user experience.
 
 ## Adaptive Cards and the new universal actions for Adaptive Cards
 
 Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. You can add Adaptive Cards to a conversation through a bot or messaging extension. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new universal actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [universal actions for Adaptive Cards](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
 
-The Work with universal actions for Adaptive Cards document takes you through the steps to use the capabilities of universal actions for Adaptive Cards for your solution.
+Work with universal actions for Adaptive Cards document takes you through the steps to use the capabilities of universal actions for Adaptive Cards for your solution.
 
 ## See also
 
