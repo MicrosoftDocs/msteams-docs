@@ -250,7 +250,5 @@ The schema for Bot Framework card actions is different from Adaptive Card `Actio
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
-> [!div class="nextstepaction"]
-> [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
+* [Microsoft Teams task module sample code in Node.js](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
+* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

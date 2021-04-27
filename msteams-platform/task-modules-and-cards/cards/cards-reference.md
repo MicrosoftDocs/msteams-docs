@@ -30,7 +30,7 @@ The following table shows the types of cards available to you:
 
 | Card type | Description |
 | --- | --- |
-| [Adaptive Card](#adaptive-card) | This card is a highly customizable card that can contain any combination of text, speech, images, buttons, and input fields. |
+| [Adaptive Card](#adaptive-card) | This card is highly customizable and can contain any combination of text, speech, images, buttons, and input fields. |
 | [Hero card](#hero-card) | This card typically contains a single large image, one or more buttons, and a small amount of text. |
 | [List card](#list-card) | This card contains a scrolling list of items. |
 | [Office 365 connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
@@ -45,7 +45,7 @@ Now, you can go through some common properties that are applicable to all cards.
 
 ### Inline card images
 
-The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public content-delivery network (CDN).
+The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public content delivery network (CDN).
 
 Images are scaled up or down in size while maintaining the aspect ratio to cover the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
@@ -924,5 +924,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
+* [Task modules](~/task-modules-and-cards/what-are-task-modules.md)

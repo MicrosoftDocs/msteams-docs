@@ -229,17 +229,8 @@ Microsoft Teams ensures that keyboard navigation works properly from the task mo
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
-
-> [!div class="nextstepaction"]
-> [Using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Request device permissions](~/concepts/device-capabilities/native-device-permissions.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate QR or barcode scanner capability in Teams](~/concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Integrate location capabilities in Teams](~/concepts/device-capabilities/location-capability.md)
+* [Using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)

@@ -124,5 +124,4 @@ The following table provides the possible values of `err` that can be received b
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Using task modules in bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Using task modules in bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
