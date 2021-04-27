@@ -120,7 +120,7 @@ The following are the two roles that are shown to users depending on their acces
 
 4. Nestor selects the **Approve** button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 5. The bot triggers a message edit with an updated card which says Nestor has approved the request while Megan's approval is pending.
-6. Bot message edit triggers an automatic refresh for Megan and sees the updated user-specific card which says Nestor has approved the request, but also see the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
+6. Bot message edit triggers an automatic refresh for Megan and sees the updated user-specific card, which says Nestor has approved the request, but also sees the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
     ![Up-to-date user-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png)
 
