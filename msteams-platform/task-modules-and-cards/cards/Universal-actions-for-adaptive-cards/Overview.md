@@ -86,7 +86,6 @@ The Work with universal actions for Adaptive Cards document takes you through th
 * [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
-* [FAQs](FAQs.md)
 
 ## Next step
 
