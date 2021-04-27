@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # Sequential workflows
 
-Sequential workflow is when an Adaptive Card is updated on user action and user can progress through a series of cards. This is supported through `Action.Execute` which enables bot developers to return an Adaptive Card in response to a user action.
+Sequential workflow is when an Adaptive Card is updated on user action and user can progress through a series of cards. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
 
 For example, take a scenario where a restaurant wants to take an order. With `Action.Execute` the user's choice for various items, such as food, drinks and so on, can be recorded sequentially. <br/>
 
