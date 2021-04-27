@@ -140,11 +140,8 @@ The following image displays the complete experience of Teams app in Sharepoint:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
 
-> [!div class="nextstepaction"]
-> [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)

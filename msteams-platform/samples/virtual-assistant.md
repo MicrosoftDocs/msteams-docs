@@ -575,11 +575,8 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Book-a-room](app-templates.md#book-a-room)
+- [Book-a-room](app-templates.md#book-a-room)
 
-> [!div class="nextstepaction"]
-> [Microsoft Teams bot](../bots/what-are-bots.md)
+- [Microsoft Teams bot](../bots/what-are-bots.md)
