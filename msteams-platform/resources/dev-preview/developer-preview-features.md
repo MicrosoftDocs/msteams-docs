@@ -8,7 +8,7 @@ keywords: teams preview developer features
 # Features in the Public Developer Preview for Microsoft Teams
 
 > [!NOTE]
-> This page will be deprecated by June 2021. For information on features available in developer preview, see [What's new?](~/whats-new.md)
+> This page will be deprecated in June 2021. For information on features available for developer preview, see [What's new?](~/whats-new.md)
 
 The developer preview includes the following new features:
 
@@ -43,4 +43,3 @@ It is now possible for bots to indicate which images shared in Adaptive Cards in
     }
 ```
 This will cause Teams web/desktop client to render an element on hover over the image to allow the user to expand the image.
-
