@@ -27,9 +27,9 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |11/30/2020|New: Identity platform integration with Teams Toolkit and Visual Studio Code for tabs|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md)|
-|9/30/2020|Sending and receiving files to bots on mobile devices is now supported.|[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
+|09/30/2020|Sending and receiving files to bots on mobile devices is now supported.|[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
 |09/22/2020|New information for getting started with Teams development.|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
-|8/19/2020|Import Teams messages with Microsoft Graph.|[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
+|08/19/2020|Import Teams messages with Microsoft Graph.|[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Adaptive Cards support in incoming webhook moved to GA.|[Send adaptive cards using an incoming webhook](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Get started building Teams apps with the Visual Studio Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-overview.md) |
 |08/06/2020|Support for Tabs SSO authentication.|[Develop an SSO Microsoft Teams Tab](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
@@ -41,14 +41,14 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Manifest Schema updated to version 1.7.| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
-|5/18/2020|Integrate Power Virtual Agents with Teams.|[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
+|05/18/2020|Integrate Power Virtual Agents with Teams.|[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrate WFM systems with Shifts Connector for Teams.|[Microsoft Teams Shifts WFM connectors](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md)
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter. `legacy.replyToId`.  |
 | 10/31/2019 | Conversational bots and messaging extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and messaging extension documentation. |
 | 10/31/2019 | New documentation structure, and major article refactoring. Please report any dead links or 404's by creating a GitHub Issue. | All of them! |
-| 9/13/2019 | Request bot is installed from action-based messaging extension. | [Initiate actions with messaging extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
-| 8/28/2019 | Support for private channels in tabs and Connectors. | [Get context for your tab](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
+| 09/13/2019 | Request bot is installed from action-based messaging extension. | [Initiate actions with messaging extensions](resources/messaging-extension-v3/create-extensions.md#request-to-install-your-conversational-bot)
+| 08/28/2019 | Support for private channels in tabs and Connectors. | [Get context for your tab](tabs/how-to/access-teams-context.md#retrieving-context-in-private-channels) |
 | 06/20/2019 | Share an external website, from an external website, into a Teams channel. | [Share to Teams](~/share-to-teams.md) |
 | 05/25/2019 | Respond with bot message from task module. | [Respond with bot message from task module](resources/messaging-extension-v3/create-extensions.md#respond-with-an-adaptive-card-message-sent-from-a-bot) |
 | 05/25/2019 | Bots in group chats. | [Interact with a bot in group chat or channel](~/concepts/bots/bot-conversations/bots-conv-channel.md) |
@@ -92,7 +92,7 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |04/08/2021| App customization.|[Design teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/04/2021|Information masking in Adaptive cards.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|9/18/2020|Support for in-meeting Teams apps (Release Preview).|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|09/18/2020|Support for in-meeting Teams apps (Release Preview).|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 | 05/20/2020 | Resource-specific consent permissions using Microsoft Graph APIs is in developer preview. |[Resource-specific consent (RSC) — Developer Preview](graph-api/rsc/resource-specific-consent.md) |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK in a web content page is in developer preview. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
