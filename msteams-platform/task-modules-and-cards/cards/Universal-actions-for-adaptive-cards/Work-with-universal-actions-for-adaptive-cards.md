@@ -25,7 +25,7 @@ Universal actions for Adaptive Cards provides a way to implement Adaptive Card b
 4. Use the Invoke request's context to respond back with cards that are specifically created for a user.
 
     > [!NOTE]
-    > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the [response format](#response-format).
+    > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the response format.
 
 ## Schema for universal actions for Adaptive Cards
 
@@ -46,7 +46,7 @@ For more information on how to support older clients, see [backward compatibilit
 
 When authoring Adaptive Cards, replace `Action.Submit` and `Action.Http` with `Action.Execute`. The schema for `Action.Execute` is similar to that of `Action.Submit`.
 
-For more information, see [Action.Execute schema and properties](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+For more information, see [Action.Execute schema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Now, you can use the refresh model to allow Adaptive Cards to update automatically.
 
@@ -54,7 +54,7 @@ Now, you can use the refresh model to allow Adaptive Cards to update automatical
 
 To automatically refresh your Adaptive Card, define its `refresh` property, which embeds an action of type `Action.Execute` and an `userIds` array.
 
-For more information, see [refresh schema and properties](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
+For more information, see [refresh schema and properties](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#refresh-mechanism).
 
 ## User IDs in refresh
 
@@ -66,7 +66,7 @@ The following are the features of UserIds in refresh:
 
 * UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of `60 (sixty) user MRIs`.
 
-* For more information, see [how you can fetch Teams conversation member's user MRIs to add in userIds list in refresh section of Adaptive Card](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* For more information, see [how you can fetch Teams conversation member's user MRIs to add in userIds list in refresh section of Adaptive Card](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
 * Sample Teams user MRI - `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -79,9 +79,9 @@ Next step is to use the `adaptiveCard/action` invoke activity to understand what
 
 When `Action.Execute` is executed in the client, a new type of Invoke activity `adaptiveCard/action` is made to your bot.
 
-For more information, see [request format and properties for a typical `adaptiveCard/action` invoke activity](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#request-format)
+For more information, see [request format and properties for a typical `adaptiveCard/action` invoke activity](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#request-format)
 
-For more information, see [response format and properties for a typical `adaptiveCard/action` invoke activity with supported response types](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#response-format)
+For more information, see [response format and properties for a typical `adaptiveCard/action` invoke activity with supported response types](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#response-format)
 
 Next, you can apply backward compatibility to older clients across different platforms and make your Adaptive Card compatible.
 
@@ -93,7 +93,7 @@ The universal actions for Adaptive Cards allows you to set properties that enabl
 
 To ensure backward compatibility of your Adaptive Cards with older versions of Teams, you must include the `fallback` property and set its value to `Action.Submit`. Also, your bot code must process both `Action.Execute` and `Action.Submit`.
 
-For more information, see [backward compatibility on Teams](https://docs.microsoft.com/en-us/adaptive-cards/authoring-cards/universal-action-model#teams).
+For more information, see [backward compatibility on Teams](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams).
 
 ## See also
 

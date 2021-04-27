@@ -18,7 +18,7 @@ Using user specific views one can show a card with **Approve** or **Reject** but
 * To keep the card state updated at all times, Teams message edit mechanism can be leveraged.
 For example, each time there is an approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated user-specific view card.
 
-For more information, see [how to do a bot message edit](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+For more information, see [how to do a bot message edit](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## Sample approval base card
 
