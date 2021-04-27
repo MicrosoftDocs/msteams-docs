@@ -7,7 +7,7 @@ ms.author: lajanuar
 ---
 # Create a personal tab with ASP.NETCore
 
-In this quickstart, we will walk-through creating a custom personal tab with C# and ASP.NETCore Razor pages. We will also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+This quickstart guides you to create a custom personal tab with C# and ASP.NETCore Razor pages using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest, and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -19,15 +19,15 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Once you have the source code, follow the steps below:
+Once you have the source code, follow the steps:
 
-1. open Visual Studio and select **Open a project or solution**.
+1. Open Visual Studio and select **Open a project or solution**.
 
-1. Navigate to the tab application directory and open **PersonalTab.sln**.
+1. Go to the tab application directory and open **PersonalTab.sln**.
 
 1. To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu.
 
-1. In a browser, navigate to the URLs below to verify the application loaded properly:
+1. In a browser, go to the URLs below to verify the application loaded properly:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -38,7 +38,7 @@ Once you have the source code, follow the steps below:
 
 ### Startup.cs
 
-This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. The empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -116,3 +116,7 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - In a Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## See also
+
+- [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
