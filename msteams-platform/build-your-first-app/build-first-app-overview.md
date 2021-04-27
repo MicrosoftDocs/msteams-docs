@@ -27,7 +27,6 @@ You can build Teams app using any technology of your choice, for example, comman
 * React.js for tabs
 * Node.js for bots and messaging extensions
 
-You can also use any other technologies of your choice. You can also use a command-line interface (CLI), if you prefer to do so.
 
 ## Teams app fundamentals
 
