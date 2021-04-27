@@ -114,7 +114,7 @@ The following are the two roles that are shown to users depending on their acces
 
 1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Bot sends the approval base card in the conversation.
-3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor who now see the user-specific view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
+3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor, who now see the user-specific view card with **Approve** or **Reject** buttons as their user MRIs are added to the `userIds` list in the `refresh` property of the Adaptive Card.
 
     ![User-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png)
 
