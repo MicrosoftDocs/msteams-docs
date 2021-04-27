@@ -30,7 +30,7 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |11/16/2020|Teams app manifest updated to version 1.8|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
 |11/10/2020|Teams bot design guidelines|[Bot design guidelines](bots/design/bots.md)|
 |9/30/2020|Sending and receiving files to bots on mobile devices is now supported.|[Send and receive files through your bot](resources/bot-v3/bots-files.md)|
-|09/22/2020|Get Started with Teams.|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
+|09/22/2020|New information for getting started with Teams development.|[Build your first Teams app overview](build-your-first-app/build-first-app-overview.md)|
 |8/19/2020|Import Teams messages with Microsoft Graph.|[Import third-party platform messages to Teams using Microsoft Graph](graph-api/import-messages/import-external-messages-to-teams.md)
 | 08/12/2020 |Adaptive Cards support in incoming webhook moved to GA.|[Send adaptive cards using an incoming webhook](~/webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook) |
 |08/10/2020|Get started building Teams apps with the Visual Studio Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-overview.md) |
