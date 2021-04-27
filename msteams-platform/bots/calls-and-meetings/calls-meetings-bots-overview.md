@@ -90,20 +90,19 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-> [!div class="nextstepaction"]
-> [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-> [!div class="nextstepaction"]
-> [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-> [!div class="nextstepaction"]
-> [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
-> [!div class="nextstepaction"]
-> [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-> [!div class="nextstepaction"]
-> [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-> [!div class="nextstepaction"]
-> [Technical information on handling incoming call notifications](./call-notifications.md)
+- [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+
+- [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+
+- [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
+
+- [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
+
+- [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
+
+- [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
+
+- [Technical information on handling incoming call notifications](./call-notifications.md)
 
 ## Next step
 

@@ -80,6 +80,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+- [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 

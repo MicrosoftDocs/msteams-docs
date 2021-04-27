@@ -341,8 +341,7 @@ The default query has the same structure as any regular user query, with the `na
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
+- [Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
  
 ## Next step
 
