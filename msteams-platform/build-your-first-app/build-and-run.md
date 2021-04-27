@@ -162,7 +162,7 @@ By default, Teams doesn't allow app sideloading. You can change this setting in 
    > [!Note]
    > App Studio is also available as a stand-alone app for Teams client.
 
-### Troubleshoot App Studio
+### Troubleshoot sideloading issues
 
 **Installation failed**
 
