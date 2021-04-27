@@ -14,9 +14,6 @@ It’s common for an app to support multiple scenarios in Teams, but you may hav
 
 If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
 
-> [!NOTE]
-> `defaultGroupCapability` provides the default capability that will be added to the team, groupchat, or meeting. Select a tab, bot, or connector as the default capability for your app, but you must ensure that you have provided the selected capability in your app definition.
-
 ## Configure your app's default install scope
 
 Configure the default install scope for your app. You can set only one scope at a time.
