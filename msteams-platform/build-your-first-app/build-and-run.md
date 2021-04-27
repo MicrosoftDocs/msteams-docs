@@ -166,7 +166,7 @@ By default, Teams doesn't allow app sideloading. You can change this setting in 
 
 **Installation failed**
 
-If the `Manifest parsing has failed` error message appears while installing App Studio, verify that the app information is correctly entered.
+If the `Manifest parsing has failed` error message appears while installing your app, verify that the app information is correctly entered.
 
 **To verify the app information**
 
