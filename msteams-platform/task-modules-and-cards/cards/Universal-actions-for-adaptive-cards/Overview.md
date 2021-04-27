@@ -19,7 +19,7 @@ This document helps you to understand how you can use the universal actions for 
 Universal actions for Adaptive Cards enhances user experience by enabling the following scenarios:
 
 * [Universal actions](#universal-actions)
-* [Contextual or role based views](#contextual-or-user-specific-views)
+* [Contextual or user specific views](#contextual-or-user-specific-views)
 * [Sequential workflow support](#sequential-workflow-support)
 * [Up-to-date views](#up-to-date-views)
 
@@ -48,7 +48,7 @@ For example, in the case of an incident reporting card sent in a chat or channel
 
 ![user specific views](~/assets/images/bots/Rolebasedviews.png)
 
-For more information, see [sample for contextual or role based views](user specific-Views.md).
+For more information, see [sample for contextual or user specific views](user specific-Views.md).
 
 ### Sequential workflow support
 
