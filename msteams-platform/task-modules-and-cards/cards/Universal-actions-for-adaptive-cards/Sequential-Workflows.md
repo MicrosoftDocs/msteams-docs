@@ -19,7 +19,7 @@ A user can progress through their workflow without modifying the card for other 
 ![Catering bot states](~/assets/images/adaptive-cards/universal-bots-catering-bot.png)
 
 > [!NOTE]
-> In order to sync the user's progress across devices, use the refresh property in Adaptive Card JSON.
+> In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
 
 ## Sample Adaptive Card
 
