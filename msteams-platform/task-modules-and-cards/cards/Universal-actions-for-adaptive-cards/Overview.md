@@ -48,7 +48,7 @@ For example, in the case of an incident reporting card sent in a chat or channel
 
 ![user specific views](~/assets/images/bots/Rolebasedviews.png)
 
-For more information, see [sample for contextual or user specific views](user specific-Views.md).
+For more information, see [sample for contextual or user specific views](User-Specific-Views.md).
 
 ### Sequential workflow support
 

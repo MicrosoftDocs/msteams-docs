@@ -292,10 +292,10 @@
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
       - name: Work with universal actions for Adaptive Cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Work-with-universal-actions-for-adaptive-cards.md
-      - name: Sequential workflows
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
       - name: User specific views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/User-Specific-Views.md.md
+      - name: Sequential workflows
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
       - name: Up-to-date views
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
   - name: Build task modules
