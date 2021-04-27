@@ -19,7 +19,7 @@ This document helps you to understand how you can use the universal actions for 
 Universal actions for Adaptive Cards enhances user experience by enabling the following scenarios:
 
 * [Universal actions](#universal-actions)
-* [Contextual or user specific views](#contextual-or-user-specific-views)
+* [Contextual or user-specific views](#contextual-or-user-specific-views)
 * [Sequential workflow support](#sequential-workflow-support)
 * [Up-to-date views](#up-to-date-views)
 
@@ -40,15 +40,19 @@ This means you can now send the same card to both Teams and Outlook and keep the
 
 ![Same card to Teams and Outlook](~/assets/images/bots/TeamsandOutlook.png)
 
-### Contextual or user specific views
+### Contextual or user-specific views
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.
 
 For example, in the case of an incident reporting card sent in a chat or channel, only the user who is assigned the incident should see a **Resolve** button. On the other hand, the incident creator should see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
-![user specific views](~/assets/images/bots/Rolebasedviews.png)
+![User-specific views](~/assets/images/bots/Rolebasedviews.png)
 
+<<<<<<< HEAD
 For more information, see [sample for contextual or user specific views](User-Specific-Views.md).
+=======
+For more information, see [sample for contextual or user-specific views](User-Specific-Views.md).
+>>>>>>> 0d098aa6418a3c7a22e30c0a08b095654e4eb09b
 
 ### Sequential workflow support
 
@@ -66,9 +70,9 @@ For more information, see [sample for sequential workflow](Sequential-Workflows.
 
 You can create Adaptive Cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
-![Up-to-date-user specific-views-1](~/assets/images/bots/up-to-date-views-stage1.png)
-![Up-to-date-user specific-views-2](~/assets/images/bots/up-to-date-views-stage2.png)
-![Up-to-date-user specific-views-3](~/assets/images/bots/up-to-date-views-stage3.png)
+![Up-to-date user-specific views 1](~/assets/images/bots/up-to-date-views-stage1.png)
+![Up-to-date user-specific views 2](~/assets/images/bots/up-to-date-views-stage2.png)
+![Up-to-date user-specific views 3](~/assets/images/bots/up-to-date-views-stage3.png)
 
 For more information, see [sample for up-to-date views](Up-To-Date-Views.md).
 
