@@ -8,7 +8,13 @@ ms.author: anclear
 ---
 # Webhooks and connectors
 
-A webhook is a user-defined HTTP callback that notifies you about any action that has taken place in Teams channel. It is a way for an app to get realtime data. Webhooks and connectors are a simple way to connect your web services to channels and teams in Microsoft Teams.
+A webhook is a user-defined HTTP callback that notifies you about any action that has taken place in Teams channel. It is a way for an app to get real-time data. Webhooks and connectors are a simple way to connect your web services to channels and teams in Microsoft Teams.
+
+## Incoming webhooks
+
+Incoming webhooks are the simplest type of connectors. If incoming webhooks are enabled for a team in any channel, you expose an HTTPS endpoint that accepts correctly formatted JSON and inserts messages into that channel. Webhooks are a quick and easy way to connect a channel to your service and are best used for scenarios that are unique to a particular team. For example, you could create an incoming webhook in your DevOps channel and configure your build, simultaneously deploy and monitor services to send alerts.
+
+For more information, see [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
 
 ## Outgoing webhooks
 
@@ -17,12 +23,6 @@ With outgoing webhooks you can send text messages from a channel to your web ser
 Outgoing webhooks are configured on a per-team basis and cannot be included as part of a normal Teams app. They are best suited for completing team-specific workloads that do not require too many information to be collected or exchanged.
 
 For more information, see [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
-
-## Incoming webhooks
-
-Incoming webhooks are the simplest type of connectors. If incoming webhooks are enabled for a team in any channel, you expose an HTTPS endpoint that accepts correctly formatted JSON and inserts messages into that channel. Webhooks are a quick and easy way to connect a channel to your service and are best used for scenarios that are unique to a particular team. For example, you could create an incoming webhook in your DevOps channel and configure your build, simultaneously deploy and monitor services to send alerts.
-
-For more information, see [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md).
 
 ## Connectors
 
