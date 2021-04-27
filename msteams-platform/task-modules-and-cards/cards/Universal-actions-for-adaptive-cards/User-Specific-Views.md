@@ -1,6 +1,6 @@
 ---
 title: Contextual or user-specific views
-description: Sample for user specific views using Universal Bot
+description: Sample for user-specific views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
@@ -50,7 +50,7 @@ The following code provides an example of an Adaptive Card:
 **To send Adaptive Cards, refresh user-specific view, and invoke requests to the bot**
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
-2. Now this card automatically refreshes to user specific view for Megan and Alex. Alex's and Megan's user MRIs are added in userIds property of refresh property of the Adaptive Card json.
+2. Now this card automatically refreshes to user-specific view for Megan and Alex. Alex's and Megan's user MRIs are added in userIds property of refresh property of the Adaptive Card json.
 3. The card remains the same for other users in the conversation.
 4. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
 5. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
