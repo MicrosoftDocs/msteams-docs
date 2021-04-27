@@ -41,7 +41,6 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |
 |07/01/2020|Single sign-on for tabs GA for Teams web and desktop clients.|[Single Sign-On (SSO)](tabs/how-to/authentication/auth-aad-sso.md)|
 |06/05/2020| Manifest Schema updated to version 1.7.| [Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
-| 05/20/2020 | Resource-specific consent permissions using Microsoft Graph APIs is in developer preview. |[Resource-specific consent (RSC) — Developer Preview](graph-api/rsc/resource-specific-consent.md) |
 |5/18/2020|Integrate Power Virtual Agents with Teams.|[Integrate a Power Virtual Agents chatbot with Microsoft Teams](bots/how-to/add-power-virtual-agents-bot-to-teams.md)|
 |04/01/2020|Integrate WFM systems with Shifts Connector for Teams.|[Microsoft Teams Shifts WFM connectors](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md)
@@ -95,6 +94,7 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/04/2021|Information masking in Adaptive cards.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |9/18/2020|Support for in-meeting Teams apps (Release Preview).|[Create apps for Teams meetings](apps-in-teams-meetings/create-apps-for-teams-meetings.md) and [Apps in Teams meetings](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+| 05/20/2020 | Resource-specific consent permissions using Microsoft Graph APIs is in developer preview. |[Resource-specific consent (RSC) — Developer Preview](graph-api/rsc/resource-specific-consent.md) |
 | 08/10/2018 | Client support for DevTools has been documented for Developer Preview.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 07/27/2018 | Multiple commands in messaging extensions. | [Messaging extensions have been extended](~/resources/dev-preview/developer-preview-features.md)|
 | 07/16/2018 | More space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](tabs/design/tabs.md)|
