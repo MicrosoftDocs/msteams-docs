@@ -46,7 +46,10 @@ You can now send the same card to both, Teams and Outlook, and keep them in sync
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.
 
-For example, in the case of an incident reporting card sent in a chat or channel, only the user who is assigned the incident should see a **Resolve** button. On the other hand, the incident creator should see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the refresh property. The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
+For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the `refresh` property. 
+
+The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
+
 
 ![User-specific views](~/assets/images/adaptive-cards/universal-bots-incident-management.png)
 
