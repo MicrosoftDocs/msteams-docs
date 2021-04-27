@@ -12,7 +12,7 @@ Earlier if an Adaptive Card was sent in a Teams conversation, all users see the 
 
 For example, Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by universal actions for Adaptive Cards.
 
-![User-specific views](~/assets/images/bots/Rolebasedviews.png)
+![User-specific views](~/assets/images/adaptive-cards/universal-bots-incident-management.png)
 
 ## Sample Adaptive Card
 

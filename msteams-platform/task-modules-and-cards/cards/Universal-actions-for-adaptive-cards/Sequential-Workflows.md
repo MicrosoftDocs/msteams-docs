@@ -16,7 +16,7 @@ For example, take a scenario where a restaurant wants to take an order. With `Ac
 
 A user can progress through their workflow without modifying the card for other users. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:
 
-![Catering bot states](~/assets/images/bots/Cateringbotstates.png)
+![Catering bot states](~/assets/images/adaptive-cards/universal-bots-catering-bot.png)
 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the refresh property in Adaptive Card JSON.

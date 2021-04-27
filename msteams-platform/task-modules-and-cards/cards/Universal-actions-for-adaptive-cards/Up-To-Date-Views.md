@@ -116,19 +116,19 @@ The following are the two roles that are shown to users depending on their acces
 2. Bot sends the approval base card in the conversation.
 3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor who now see the user-specific view card with **Approve** or **Reject** buttons as their user MRIs are added to the userIds list in the refresh property of the Adaptive Card.
 
-    ![User-specific views](~/assets/images/bots/up-to-date-views-stage1.png)
+    ![User-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png)
 
 4. Nestor selects the **Approve** button which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 5. The bot triggers a message edit with an updated card which says Nestor has approved the request while Megan's approval is pending.
 6. Bot message edit triggers an automatic refresh for Megan and sees the updated user-specific card which says Nestor has approved the request, but also see the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the userIds list in refresh property of this Adaptive Card json in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
-    ![Up-to-date user-specific views](~/assets/images/bots/up-to-date-views-stage2.png)
+    ![Up-to-date user-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png)
 
 7. Now, Megan selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 8. The bot triggers a message edit with an updated card, which says Nestor and Megan have approved the request.
 9. Bot message edit does not trigger any automatic refresh. Megan's user MRI is also removed from the userIds list in refresh property of this Adaptive Card json in steps 7 and 8.
 
-    ![Up-to-date views](~/assets/images/bots/up-to-date-views-stage3.png)
+    ![Up-to-date views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png)
 
 ## Sample Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 4 and 5
 
