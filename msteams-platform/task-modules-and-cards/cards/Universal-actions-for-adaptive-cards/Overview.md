@@ -38,7 +38,7 @@ With the universal actions for Adaptive Cards, you can use `Action.Execute` for 
 
 ![New universal actions for Adaptive Cards](~/assets/images/adaptive-cards/universal-action-model.png)
 
-This means you can now send the same card to both Teams and Outlook and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this build once, deploy anywhere model.
+You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* model.
 
 ![Same card to Teams and Outlook](~/assets/images/adaptive-cards/universal-bots-teams-outlook.png)
 
