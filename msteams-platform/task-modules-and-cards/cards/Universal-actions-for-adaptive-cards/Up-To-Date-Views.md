@@ -107,8 +107,8 @@ The following code provides an example of an approval card with **Approve** and 
 
 The following are the two roles that are shown to users depending on their access to approvals:
 
-* Approval base card: Shown to users who are not part of approvers list and have not yet approved or rejected the request not part of userIds list in refresh property of the Adaptive Card json.
-* Approval card with **Approve** or **Reject** buttons: Shown to the users who are part of the approvers list and the userIds list in the refresh property of the Adaptive Card json.
+* Approval base card: Shown to users who are not part of approvers list and have not yet approved or rejected the request, and are not part of `userIds` list in `refresh` property of the Adaptive Card JSON.
+* Approval card with **Approve** or **Reject** buttons: Shown to the users who are part of the approvers list and the `userIds` list in the `refresh` property of the Adaptive Card JSON.
 
 **To send the asset approval request**
 
