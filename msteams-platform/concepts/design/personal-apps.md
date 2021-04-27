@@ -3,6 +3,7 @@ title: Designing your personal app
 description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
@@ -87,7 +88,7 @@ With responsive sizing, tabs on the right may become truncated or out of view.
 
 Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Example of a personal app best practice." border="false":::
 
 ### Tab hierarchy
 
@@ -95,13 +96,13 @@ Like a standard web app, tab navigation should progress in an order that helps m
 
 Your tabs should categorize your app’s primary features and content. With responsive sizing, content on the right may become truncated or out of view.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Example shows personal app best practice." border="false":::
 
 #### Don't: Include different levels of hierarchy
 
 Your content should progress in a logical order that helps users make sense of it. If you have two tabs that are closely related, consider combining them into one tab.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Example displays a personal app best practice." border="false":::
 
 ### First-run experience
 
@@ -109,15 +110,15 @@ Your content should progress in a logical order that helps users make sense of i
 
 There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign-in button.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Illustration shows a personal app best practice." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-fre-do.png" alt-text="Illustration of a personal app best practice." border="false":::
 
 #### Don't: Start with a blank screen
 
 Users might be confused if nothing displays the first time they run your app.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Illustration displays a personal app best practice." border="false":::
 
 ### Personalized content
 
@@ -125,17 +126,17 @@ Users might be confused if nothing displays the first time they run your app.
 
 Whether it's a personal tab or bot, display content related to only a user's activity in your app.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Example provides a personal app best practice." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-do.png" alt-text="The example shows a personal app best practice." border="false":::
 
 #### Don’t: Show unrelated or overly broad content
 
 In personal contexts, don’t display content for teams a user isn't part of. Personal bot content should focus on the individual—not a group.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-dont.png" alt-text="Disclosed is an example of a personal app best practice." border="false":::
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-personalized-content-dont.png" alt-text="Sample shows a personal app best practice." border="false":::
 
 ### Complex app features
 
@@ -143,13 +144,13 @@ In personal contexts, don’t display content for teams a user isn't part of. Pe
 
 Your app should focus on core tasks in Teams, but you can still view the full, standalone app in a browser.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-do.png" alt-text="Sample shows personal app best practice." border="false":::
 
 #### Don’t: Include your entire app
 
 Unless you created your app specifically for Teams, you probably have features that don’t make sense in a collaboration tool.
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Example shows a personal app best practice." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-feature-dont.png" alt-text="Illustration provides personal app best practice." border="false":::
 
 ## Manage a personal tab
 

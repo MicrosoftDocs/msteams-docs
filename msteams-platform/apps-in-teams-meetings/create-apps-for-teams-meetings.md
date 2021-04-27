@@ -4,7 +4,8 @@ author: laujan
 description: Work with apps for Teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
-keywords: teams apps meetings user participant role api
+localization_priority: Normal
+keywords: teams apps meetings user participant role api 
 ---
 
 # Prerequisites and API references for apps in Teams meetings

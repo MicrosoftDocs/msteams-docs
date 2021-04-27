@@ -2,6 +2,7 @@
 title: Tabs on mobile
 description: Describes the guidelines for designing tabs that work on mobile.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams design guidelines reference framework personal apps mobile tabs
 ---
 # Tabs on mobile

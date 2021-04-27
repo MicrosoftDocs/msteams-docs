@@ -2,6 +2,7 @@
 title: Calls and online meetings bots
 description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: calling calls audio video IVR voice online meetings
 ---
 
@@ -80,6 +81,12 @@ Real-time media refers to scenarios where media must be processed in real-time, 
     For example, knowing when a user has pressed **0** to reach the operator.
 
 * **Application-hosted media**: For a bot to get direct access to the media, it needs a specific Graph permission. After your bot has the permission, the [Real-time Media Library](https://www.nuget.org/packages/Microsoft.Graph.Communications.Calls.Media/), and the [Graph calling SDK](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/articles/index.html#graph-calling-sdk-and-stateful-client-builder) helps you build rich, real-time media, and calling bots. An application-hosted bot must be hosted in a Windows environment. For more information, see [application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md).
+
+## Code sample
+
+| **Sample name** | **Description** | **Graph** |
+|---------------|----------|--------|
+| Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 
 ## See also
 
