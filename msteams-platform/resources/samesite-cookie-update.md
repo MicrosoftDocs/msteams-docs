@@ -40,22 +40,10 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 | **Strict** |The browser will only send cookies for first-party context requests (requests originating from the site that set the cookie). If the request originated from a different URL than that of the current location, none of the cookies tagged with the `Strict` attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
 | **None** | Cookies will be sent in both first-party context and cross-origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute which requires an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/>**Both attributes are required together**. If just **`None`** is specified without **`Secure`**  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
-## Handling incompatible clients
-
-> [!IMPORTANT]
-> Currently, `SameSite=None`  is not supported by the [**Teams desktop client**](/aspnet/core/security/samesite?view=aspnetcore-3.1#test-with-electron&preserve-view=true) or older versions of Chrome or Safari. **See** [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients).
->However, there are two **workaround solutions**:
->
->1. Check the user-agent in order to provide the correct SameSite property. You can implement the user-agent check in [**C#**](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/) and [**Node.js**](https://web.dev/samesite-cookie-recipes/).
->2. Set your cookie attributes using both the new and old models. *See* [Handling incompatible clients](https://web.dev/samesite-cookie-recipes/#handling-incompatible-clients)<br><br>
->**If your app is running in the Teams desktop client, and you set the SameSite attribute to `SameSite=None` , your app will not work as expected.**
-
-Using either approach will ensure that your application continues to work properly when the Teams desktop client is upgraded to a `SameSite=None`   compatible version of  Chromium.
-
 ## Teams implications and adjustments
 
->[!WARNING]
->**Applications running in the Teams desktop client are incompatible with the `SameSite=None`  attribute, and  they will not work as expected.** Please see the **workaround solutions**, above.
+> [!WARNING]
+> Applications running in the Teams desktop client are incompatible with the `SameSite=None` attribute and they do not work as expected. Please see the workaround solutions mentioned in this document.
 
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
@@ -70,7 +58,7 @@ Using either approach will ensure that your application continues to work proper
 * Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Message extensions allow you to insert enriched content into chat message from external resources.
 
-Any cookies used by embedded content will be considered third-party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request (e.g., `<img>` and `<script>` tags, external fonts, and personalized content) you'll need to ensure those are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
+Any cookies used by embedded content must be considered third-party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request (e.g., `<img>` and `<script>` tags, external fonts, and personalized content) you'll need to ensure those are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
 
 ### Authentication
 
@@ -89,13 +77,13 @@ Android WebView is a Chrome system component that allows Android apps to display
 
 ## Learn more
 
-[SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
+* [SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
 
-[SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
+* [SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
 
-[Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
+* [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
 
-[Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
+* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **OpenId Connect impact**<br>
 [Upcoming SameSite Cookie Changes in ASP.NET and ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
