@@ -2,7 +2,7 @@
 title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
-localization_priority: Priority
+localization_priority: Normal
 keywords: teams o365 connector
 ---
 
@@ -299,6 +299,10 @@ Application rate limits control the traffic that a connector or an incoming webh
 | 86400  | 1800  |
 
 A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
+
+*See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
+
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 

@@ -2,6 +2,8 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+localization_priority: Normal
+ms.topic: reference
 ms.date: 03/29/2018
 ---
 
@@ -107,7 +109,7 @@ The date and localization features mentioned in this topic are not supported in 
 
 ### Mention support within Adaptive cards v1.2
 
-Card based mentions are supported in Web, Desktop and mobile clients. You can add @ mentions within an Adaptive card body for bots and messaging extension responses.  To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#working-with-mentions ).
+Card based mentions are supported in web, desktop and mobile clients. You can add @ mentions within an adaptive card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -117,10 +119,11 @@ Bots and messaging extensions can include mentions within the card content in [T
 
 #### Constructing mentions
 
-To include a mention in an Adaptive card your app needs to include the following elements
+To include a mention in an Adaptive Card your app needs to include the following elements:
 
-* `<at>username</at>` in the supported Adaptive card elements
-* The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
+* `<at>username</at>` in the supported Adaptive card elements.
+* The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned.
+* The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### Sample Adaptive card with a mention
 
@@ -152,7 +155,6 @@ To include a mention in an Adaptive card your app needs to include the following
   }
 }
 ```
-
 
 ### Information masking in Adaptive cards
 Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 

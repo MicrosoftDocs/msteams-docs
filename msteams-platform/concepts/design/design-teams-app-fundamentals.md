@@ -2,6 +2,7 @@
 title: Design your app - Understanding the fundamentals
 description: Learn about the basics of designing your Microsoft Teams app, including layout, color scheme, and more.
 author: heath-hamilton
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
 ---
@@ -39,7 +40,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image for Teams UI Kit." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -56,7 +57,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image for Microsoft Teams UI Kit." border="false":::
    :::column-end:::
 
 :::row-end:::
@@ -78,7 +79,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual illustration for Microsoft Teams UI Kit." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -96,7 +97,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual figure for Microsoft Teams UI Kit." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -114,7 +115,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual picture for Microsoft Teams UI Kit." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -132,7 +133,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Conceptual form for Microsoft Teams UI Kit." border="false":::
 
    :::column-end:::
 :::row-end:::

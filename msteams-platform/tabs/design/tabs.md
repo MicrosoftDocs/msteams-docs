@@ -2,6 +2,7 @@
 title: Designing your tab for desktop and web
 description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
 author: heath-hamilton
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -142,7 +143,7 @@ Notify users of tab activity one of the following ways:
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration shows what to do with tab navigation design." border="false":::
 
 #### Do: Facilitate conversation
 
@@ -150,7 +151,7 @@ Include content and components people can talk about. If it doesn’t fit within
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Example shows what not to do with tab navigation design." border="false":::
 
 #### Don't: Treat your tab like any other webpage
 
@@ -163,7 +164,7 @@ A tab isn’t a webpage someone might view once. A tab should display your most 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Example showing what to do with tab navigation design." border="false":::
 
 #### Do: Limit tasks and data
 

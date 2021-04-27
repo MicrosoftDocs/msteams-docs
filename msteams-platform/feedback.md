@@ -1,6 +1,7 @@
 ---
 title: Microsoft Teams developer support and feedback
 description: The Microsoft Teams product team responds to the developer community across various feedback and support channels.
+localization_priority: Normal
 ms.topic: reference
 keywords: teams feedback developer questions issues contact support request bugs contributions community discussions
 ---
