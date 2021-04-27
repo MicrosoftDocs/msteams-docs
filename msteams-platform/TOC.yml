@@ -10,15 +10,15 @@
   items:
   - name: Overview
     href: build-your-first-app/build-first-app-overview.md
-  - name: Create a "Hello, World!" app
+  - name: Build a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
-  - name: Build a basic personal tab for Microsoft Teams
+  - name: Build a basic personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Build your first channel and group tab for Microsoft Teams
+  - name: Build your first channel and group tab
     href: build-your-first-app/build-channel-tab.md
-  - name: Create your first bot for Microsoft Teams
+  - name: Build your first bot
     href: build-your-first-app/build-bot.md
-  - name: Build your first messaging extension for Microsoft Teams
+  - name: Build your first messaging extension
     href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:

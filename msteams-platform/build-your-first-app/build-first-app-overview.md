@@ -19,12 +19,12 @@ Build a simple app to learn the basics of Teams app development. After you see "
 
 * Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension 
 * Configure your app with App Studio 
-* Get familiar with Teams tools and SDKs
+* Get familiar with Teams developer tools and SDKs
 * Consider important Teams app concepts, such as authentication and design best practices
 
-Tutorials in this section will walk you through the following recommended tool sets and commonly used Technologies:
+You can build Teams app using any technology of your choice, for example, command-line interface (CLI). But, these articles help you get started with the following recommended tools and technologies:
 
-* Visual Studio Code with Teams extension
+* Teams Toolkit, a Visual Studio Code extension
 * React.js for tabs
 * Node.js for bots and messaging extensions
 
@@ -34,9 +34,9 @@ You can also use any other technologies of your choice. You can also use a comma
 
 You can build custom Teams apps for yourself, people in your org, or people all over the world. Before you begin, you should understand the following fundamental concepts about Teams app development:
 
-### Common app usecases
+### Common app use cases
 
-Some typical scenarios that a custom Microsoft Teams app can help with are:
+Some typical scenarios that a custom Teams app can help with are:
 
 * Embed web-based content, such as a web app or part of a website, in the Teams client
 * Look up information quickly in another system and adding it to a Teams conversation 
@@ -46,7 +46,7 @@ Some typical scenarios that a custom Microsoft Teams app can help with are:
 
 An app is made up of one or more Teams capabilities and user interaction points. Your development toolset will vary depending on the capabilities you want.
 
-| **App Capabilities**| **Interaction points** | **Recommended tools** | **SDKs** | **Technology stacks** |
+| **App capabilities**| **Interaction points** | **Recommended tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
 | Tabs | Spaces where users can interact with embedded web content in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Teams JavaScript client SDK | General web technologies (HTML, CSS, and JavaScript) or React.js |
 | Bots | Chatbots that interact with users in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Franework SDK | Node.js, C#, or Python | 
@@ -54,7 +54,7 @@ An app is made up of one or more Teams capabilities and user interaction points.
 
 ### Teams doesn't host your app
 
-When a user installs your app in Teams, they only install an app package that contains a configuration file, also known as app manifest, and your app’s icons. Your app’s logic and data storage are hosted elsewhere, such as Azure Web Services or localhost during development. Teams accesses these resources via HTTPS.
+When a user installs your app in Teams, they only install an app package that contains a configuration file (also known as an app manifest) and your app’s icons. Your app’s logic and data storage are hosted elsewhere, such as Azure Web Services or localhost during development. Teams accesses these resources via HTTPS.
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 

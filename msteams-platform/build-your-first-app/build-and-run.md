@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Create your first Microsoft Teams app
 
-This quickstart teaches you to build and run Microsoft Teams app that displays "Hello, World!". 
+This quickstart teaches you to build and run Microsoft Teams app that displays "Hello, World!"
 
 ## Prerequisites
 
@@ -16,7 +16,7 @@ Before you begin, you need to [set up your Teams development tenant](#set-up-you
 
 ### Set up your Teams development tenant
 
-A **tenant** is like a container for an organization. In Teams terms, a tenant is where people from that org chat, share files, and run meetings. As a developer, you need a tenant to sideload and test the apps that you are building. 
+A **tenant** is like a container for an organization. In Teams terms, a tenant is where people from that org chat, share files, and run meetings. As a developer, you need a tenant to sideload and test the Teams apps that you are building.  
 
 # [Do not have a tenant](#tab/do-not-have-a-tenant)
 
@@ -24,7 +24,7 @@ You can get a free Teams test account, which includes a tenant that allows app s
 
 **To get a tenant**
 
-1. 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. In the Welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. 
@@ -63,7 +63,7 @@ To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickl
 **To install Microsoft Teams tools**
 
 1. Install [Node.js](https://nodejs.org/en/).
-1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](../tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
+1. If you plan to build a bot or messaging extension, Install [ngrok](https://ngrok.com/download) and [expose your localhost to the Internet using ngrok](~/tutorials/get-started-dotnet-app-studio.md/#tunnel-using-ngrok).
 1. Install the latest version of [Visual Studio Code](https://code.visualstudio.com/download). 
    
    > [!NOTE]
@@ -122,7 +122,7 @@ By default, Teams doesn't allow app sideloading. You can change this setting in 
 
 **To enable app sideloading in Teams**
 
-1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials. 
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.  
 1. Select **Show All** > **Teams**. 
 
    ![image of admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
@@ -144,9 +144,9 @@ By default, Teams doesn't allow app sideloading. You can change this setting in 
    > Check for issues before sideloading your app using the validation feature in App Studio, which is included in the toolkit. Fix the errors to successfully sideload the app.
 
 
-### To sideload your app
+### Sideload your app
 
-1. In Visual Studio Code, Open Teams Toolkit.
+1. In Visual Studio Code, open the Teams Toolkit.
 1. Go to **App Studio**.  
 1. Select **Test and Distribute** > **Install**.
 
@@ -166,12 +166,7 @@ By default, Teams doesn't allow app sideloading. You can change this setting in 
 
 **Installation failed**
 
-If the following error message appears while installing App Studio: 
-
-* Something went wrong
-* Manifest parsing has failed 
-
-Verify that the app information is correctly entered.
+If the `Manifest parsing has failed` error message appears while installing App Studio, verify that the app information is correctly entered.
 
 **To verify the app information**
 
