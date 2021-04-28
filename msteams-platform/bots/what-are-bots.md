@@ -47,5 +47,4 @@ You can use the Teams bot APIs to get information for one or more members of a c
 
 ## Next step
 
-> [!div class="nextstepaction"]
-> [Bots and SDKs](~/bots/bot-features.md)
+[Bots and SDKs](~/bots/bot-features.md)

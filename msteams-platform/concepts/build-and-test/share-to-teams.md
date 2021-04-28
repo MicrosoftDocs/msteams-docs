@@ -127,5 +127,4 @@ You can select to set default values for the following fields on the Share to Te
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate web apps](~/samples/integrate-web-apps-overview.md)
