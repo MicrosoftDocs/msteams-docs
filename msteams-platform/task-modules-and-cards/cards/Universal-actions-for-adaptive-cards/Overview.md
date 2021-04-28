@@ -14,18 +14,18 @@ Universal actions for Adaptive Cards brings the bot as the common backend for ha
 This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
 > [!NOTE]
-> Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is not yet available.
+> Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
 
-## Enhance user experience with universal actions for Adaptive Cards
+## Enhance user experiences with Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards enhances user experience by enabling the following scenarios:
+Universal Actions for Adaptive Cards enhances user experience by enabling the following scenarios:
 
-* [Universal actions](#universal-actions)
+* [Universal Actions](#universal-actions)
 * [Contextual or user-specific views](#contextual-or-user-specific-views)
 * [Sequential workflow support](#sequential-workflow-support)
 * [Up-to-date views](#up-to-date-views)
 
-### Universal actions
+### Universal Actions
 
 Before the universal actions for Adaptive Cards, different hosts provided different action models as follows:
 
@@ -42,7 +42,7 @@ You can now send the same card to both, Teams and Outlook, and keep them in sync
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
 
-### Contextual or user-specific views
+### User Specific Views
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.
 
@@ -52,9 +52,9 @@ The following image shows an example of a ticketing messaging extension (ME) whe
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User-specific views":::
 
-For more information, see [sample for contextual or user-specific views](User-Specific-Views.md).
+For more information, see [sample for User Specific Views](User-Specific-Views.md).
 
-### Sequential workflow support
+### Sequential Workflow support
 
 With sequential workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.
 
@@ -64,21 +64,23 @@ The following images illustrate a food ordering bot example: <br/>
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
+The above image shows the various states for different users in the chat/channel.
+
 For more information, see [sample for sequential workflow](Sequential-Workflows.md).
 
-### Up-to-date views
+### Up to date views
 
-You can create Adaptive Cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
+You can create Adaptive Cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views. The below example shows a multi-step approval flow and how the views for different users would be shown.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Up-to-date user-specific views":::
 
 For more information, see [sample for up-to-date views](Up-To-Date-Views.md).
 
-Now, you can understand how Adaptive Cards can be transformed with the new universal actions for Adaptive Cards to provide a unique and enhanced user experience.
+Now, you can understand how Adaptive Cards can be transformed with the new Universal Actions model for Adaptive Cards to provide a unique and enhanced user experience.
 
-## Adaptive Cards and the new universal actions for Adaptive Cards
+## Adaptive Cards and the new Universal Actions model
 
-Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. You can add Adaptive Cards to a conversation through a bot or messaging extension. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new universal actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [universal actions for Adaptive Cards](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
+Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new universal actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [universal actions for Adaptive Cards](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model). 
 
 [Work with universal actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of universal actions for Adaptive Cards for your solution.
 
