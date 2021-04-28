@@ -47,7 +47,7 @@ Now, you can go through some common properties that are applicable to all cards.
 
 The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public content delivery network (CDN).
 
-Images are scaled up or down in size while maintaining the aspect ratio to cover the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
+Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
 Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF is not supported.
 
@@ -59,7 +59,7 @@ The following table provides the properties of inline card images:
 | alt | String | Accessible description of the image. |
 
 > [!NOTE]
-> If a card includes an image URL that goes through a redirect before the final image, the redirect in image URL is not supported. This occurs for images shared on the public cloud.
+> If a card includes an image URL that is redirected before the final image, the redirect in image URL is not supported. This occurs for images shared on the public cloud.
 
 ### Buttons
 
@@ -390,7 +390,7 @@ You can now work with an Office 365 connector card that provides a flexible layo
 
 ## Office 365 connector card
 
-The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card encapsulates a connector card so that it can be used by bots. For differences between connector cards and the O365 card, see [notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).
+The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the Office 365 connector card, see [notes on the Office 365 connector card](#notes-on-the-office-365-connector-card).
 
 ### Support for Office 365 connector cards
 
@@ -433,10 +433,10 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 
 | Value | Description |
 | --- | --- |
-| `avatar` | Default; `activityImage` is cropped as a circle. |
+| `avatar` | Default, `activityImage` is cropped as a circle. |
 | `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
 
-For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Microsoft Teams does not currently support are as follows:
+For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams does not currently support are as follows:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -583,13 +583,13 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-Now you can work with a signin card that enables a bot to request that a user signs in.
+Now, you can work with a signin card that enables a bot to request that a user signs in.
 
 ## Signin card
 
 Signin card is supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
 
-The signin action can be used from any card in Teams, not just the signin card. For more information on authentication, see [Microsoft Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The signin action can be used from any card in Teams, not just the signin card. For more information on authentication, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for signin cards
 
@@ -710,7 +710,7 @@ The following table provides the features that support carousel collections:
 
 #### Properties of a carousel card
 
-Properties of a carousel card are same as those of the hero and thumbnail cards.
+Properties of a carousel card are same as the hero and thumbnail cards.
 
 #### Example of a carousel collection
 
@@ -889,9 +889,9 @@ The following code shows an example of a carousel collection:
 
 ### List collection
 
-#### Support for list collections
-
 The list layout shows a vertically stacked list of cards, optionally with associated action buttons.
+
+#### Support for list collections
 
 The following table provides the features that support list collections:
 
@@ -903,7 +903,7 @@ The following table provides the features that support list collections:
 
 ![Example of a list of cards](~/assets/images/cards/list.png)
 
-Properties are the same as the hero or thumbnail card.
+Properties of list collections are same as the hero or thumbnail cards.
 
 A list can display a maximum of ten cards per message.
 
