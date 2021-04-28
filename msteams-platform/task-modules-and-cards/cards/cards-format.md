@@ -160,7 +160,7 @@ To include a mention in an Adaptive Card your app needs to include the following
 Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 
 
 > [!NOTE]
-> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-configure-your-bot). 
+> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md). 
 
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.
