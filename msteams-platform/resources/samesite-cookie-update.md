@@ -36,14 +36,14 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 
 |Setting | Enforcement | Value |Attribute Specification |
 | -------- | ----------- | --------|--------|
-| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or iframes, but will be sent when a user navigates to the URL from an external site, e.g., by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
+| **Lax**  | Cookies will be sent automatically only in a *first-party* context and with HTTP GET requests. SameSite cookies will be withheld on cross-site sub-requests, such as calls to load images or iframes, but will be sent when a user navigates to the URL from an external site, for example, by following a link.| **Default** |`Set-Cookie: key=value; SameSite=Lax`|
 | **Strict** |The browser will only send cookies for first-party context requests (requests originating from the site that set the cookie). If the request originated from a different URL than that of the current location, none of the cookies tagged with the `Strict` attribute will be sent.| Optional |`Set-Cookie: key=value; SameSite=Strict`|
 | **None** | Cookies will be sent in both first-party context and cross-origin requests; however, the value must be explicitly set to **`None`** and all browser requests **must follow the HTTPS protocol** and include the **`Secure`** attribute which requires an encrypted connection. Cookies that don't adhere to that requirement will be **rejected**. <br/>**Both attributes are required together**. If just **`None`** is specified without **`Secure`**  or if the HTTPS protocol is not used, the third-party cookie will be rejected.| Optional, but, if set, the HTTPS protocol is required. |`Set-Cookie: key=value; SameSite=None; Secure` |
 
 ## Teams implications and adjustments
 
 > [!WARNING]
-> Applications running in the Teams desktop client are incompatible with the `SameSite=None` attribute and they do not work as expected. Please see the workaround solutions mentioned in this document.
+> Applications running in the Teams desktop client are incompatible with the `SameSite=None` attribute, and they do not work as expected. See the workaround solutions mentioned in [SameSite cookie attribute 2020 release](#samesite-cookie-attribute-2020-release).
 
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
@@ -58,7 +58,7 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 * Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Message extensions allow you to insert enriched content into chat message from external resources.
 
-Any cookies used by embedded content must be considered third-party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request (e.g., `<img>` and `<script>` tags, external fonts, and personalized content) you'll need to ensure those are marked for cross-site usage — `SameSite=None; Secure` — or ensure that a fallback is in place.
+Any cookies used by embedded content must be considered third-party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request `<img>` and `<script>` tags, external fonts, and personalized content, you must ensure those are marked for cross-site usage, such as `SameSite=None; Secure` or ensure that a fallback is in place.
 
 ### Authentication
 
