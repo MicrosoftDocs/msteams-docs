@@ -119,4 +119,4 @@ When a team is created, a [SharePoint site collection](https://docs.microsoft.co
 
 ## See also
 
-- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate web apps](~/samples/integrate-web-apps-overview.md)
