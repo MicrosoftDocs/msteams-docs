@@ -100,20 +100,16 @@ Open **Test and distribute** tab and select **Install** to add your bot directly
 The set-up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
 ## See also
-> [!div class="nextstepaction"]
-> [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
-> [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
 
-> [!div class="nextstepaction"]
->  [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+- [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
 
-> [!div class="nextstepaction"]
-> [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+- [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
 
-> [!div class="nextstepaction"]
-> [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+- [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+
+- [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## Next step
 

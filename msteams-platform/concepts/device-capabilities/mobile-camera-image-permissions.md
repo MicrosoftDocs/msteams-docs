@@ -252,8 +252,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+- [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+- [Integrate location capabilities in Teams](location-capability.md)

@@ -251,12 +251,9 @@ Enabling custom app sideloading is optional. By default, only global admins or T
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Debug your tab](~/tabs/how-to/developer-tools.md)
+- [Debug your tab](~/tabs/how-to/developer-tools.md)
  
-> [!div class="nextstepaction"]
-> [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
+- [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
 
-> [!div class="nextstepaction"]
-> [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
+- [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
 
