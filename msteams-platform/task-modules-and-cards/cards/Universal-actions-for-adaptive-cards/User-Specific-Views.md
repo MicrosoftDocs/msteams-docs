@@ -1,18 +1,18 @@
 ---
-title: Contextual or user-specific views
-description: Sample for user-specific views using Universal Bot
+title: User Specific Views
+description: Sample for User Specific Views using Universal Actions
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
 ---
 
-# Contextual or user-specific views
+# User Specific Views
 
-Earlier if an Adaptive Card was sent in a Teams conversation, all users see the same card content. Here we are introducing universal actions for Adaptive Cards, which enables bot developers to provide contextual or user-specific views to users. The same Adaptive Card can now refresh to a contextual or user-specific Adaptive Card.
+Earlier if an Adaptive Card was sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card.
 
-For example, Megan wants to create an incident and assign it to Alex. Also she wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting bot powered by universal actions for Adaptive Cards.
+For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. She also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User-specific views":::
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
 
 ## Sample Adaptive Card
 
