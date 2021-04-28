@@ -8,7 +8,7 @@ This project requires the following installed in your development environment:
 
 1. Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-1. In [Node.js/npm](https://nodejs.org/en/), You must use the latest LTS version. The Node Package Manager (npm) installs into your system with the installation of Node.js.
+1. In [Node.js or Node Package Manager](https://nodejs.org/en/), You must use the latest Long Term Support (LTS) version. The Node Package Manager (NPM) installs into your system with the installation of Node.js.
 
 1. Install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
