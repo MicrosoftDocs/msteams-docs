@@ -219,6 +219,12 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
+## Code sample
+
+| Sample name | Description | .NET |
+|-------------|-------------|------|
+| Deep Link consuming Subentity ID | Microsoft Teams sample app for demonstrating deeplink from bot chat to tab consuming Subentity ID. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
 ## See also
 
-- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate web apps](~/samples/integrate-web-apps-overview.md)
