@@ -1,20 +1,20 @@
 ---
-title: Sequential workflows
-description: Sample for sequential workflow using Universal Bot
+title: Sequential Workflows
+description: Sample for Sequential Workflows using Universal Actions
 author: surbhigupta12
 ms.topic: conceptual
 localization_priority: Normal
 ---
 
-# Sequential workflows
+# Sequential Workflows
 
-Sequential workflow is when an Adaptive Card is updated on user action and user can progress through a series of cards. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
+Adaptive Cards now support Sequential Workflows i.e. when an Adaptive Card is updated on user action and user can progress through a series of cards which require user input. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
 
-For example, take a scenario where a restaurant wants to take an order. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. <br/>
+For example, take a scenario where the cafeteria wants to take an order for a team/channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
-A user can progress through their workflow without modifying the card for other users. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:
+A user can progress through their workflow without modifying the card for other users. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card. This is also useful for conducting quizzes using sequential Adaptive Cards.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
