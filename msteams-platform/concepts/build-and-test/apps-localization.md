@@ -131,6 +131,6 @@ If your provide localized versions of your application it is very likely that yo
 
 | Sample name | Description | .NET |
 |-------------|-------------|------|
-|App Localization|Microsoft Teams app localization using Bot and Tab|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp)|
+| App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
 
 
