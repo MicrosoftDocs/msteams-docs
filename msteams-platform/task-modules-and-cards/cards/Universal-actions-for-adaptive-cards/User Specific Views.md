@@ -179,6 +179,11 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+Card design guidelines to keep in mind while designing User Specific Views:
+
+* You can create a maximum of **60 User Specific Views** for a particular card being sent to a chat/channel by specifying their `userIds` in the `refresh` section 
+* **Base Card:** The base version of the card that the bot developer sends to the chat. This will be the version of the Adaptive Card for all users who are not specified in the `userIds` section
+* A message update/edit can be used to update the base card and simultaneously refresh the User Specific Card
 
 ## See also
 
