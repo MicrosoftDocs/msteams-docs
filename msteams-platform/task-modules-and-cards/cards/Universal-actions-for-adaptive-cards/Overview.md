@@ -32,15 +32,15 @@ Before the universal actions for Adaptive Cards, different hosts provided differ
 * Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.
 * Outlook used `Action.Http` to communicate with the backend service explicitly specified in the Adaptive Card payload.
 
-![Inconsistent action model](~/assets/images/adaptive-cards/current-teams-outlook-action-model.png)
+:::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Inconsistent action model":::
 
 With the universal actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
 
-![New universal actions for Adaptive Cards](~/assets/images/adaptive-cards/universal-action-model.png)
+:::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="New universal actions for Adaptive Cards":::
 
 You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* model.
 
-![Same card to Teams and Outlook](~/assets/images/adaptive-cards/universal-bots-teams-outlook.png)
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
 
 ### Contextual or user-specific views
 
@@ -50,8 +50,7 @@ For example, if you send an incident reporting card in a chat or channel, only t
 
 The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
-
-![User-specific views](~/assets/images/adaptive-cards/universal-bots-incident-management.png)
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User-specific views":::
 
 For more information, see [sample for contextual or user-specific views](User-Specific-Views.md).
 
@@ -63,7 +62,7 @@ The following images illustrate a food ordering bot example: <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
-![Catering bot states](~/assets/images/adaptive-cards/universal-bots-catering-bot.png)
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
 For more information, see [sample for sequential workflow](Sequential-Workflows.md).
 
@@ -71,7 +70,7 @@ For more information, see [sample for sequential workflow](Sequential-Workflows.
 
 You can create Adaptive Cards that update automatically. For example, it can be an approval request sent by a user. After approval, the card must automatically display details about the request approval time and who approved the request. The refresh model enables you to provide such up-to-date views.
 
-![Up-to-date user-specific views](~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png)
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Up-to-date user-specific views":::
 
 For more information, see [sample for up-to-date views](Up-To-Date-Views.md).
 
