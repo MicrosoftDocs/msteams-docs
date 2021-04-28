@@ -1,10 +1,10 @@
 ---
-title: Work with universal actions for Adaptive Cards
-description: Work with the universal actions for Adaptive Cards.
+title: Work with Universal Actions for Adaptive Cards
+description: Work with the Universal Actions for Adaptive Cards.
 ms.topic: conceptual
 ---
 
-# Work with universal actions for Adaptive Cards
+# Work with Universal Actions for Adaptive Cards
 
 Universal actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both Teams and Outlook. This document covers the following:
 
@@ -13,10 +13,10 @@ Universal actions for Adaptive Cards provides a way to implement Adaptive Card b
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
 * [Backward compatibility](#backward-compatibility)
 
-## Quick start guide to leverage universal actions for Adaptive Cards in Teams
+## Quick start guide to leverage Universal Actions for Adaptive Cards in Teams
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
-2. Add a `refresh` clause to your Adaptive Card, if you want to leverage the automatic refresh model or if your scenario requires contextual views.
+2. Add a `refresh` clause to your Adaptive Card, if you want to leverage the automatic refresh model or if your scenario requires user specific views.
 
     >[!NOTE]
     > Specify the `userIds` property to identify, which users get automatic updates.
@@ -87,7 +87,7 @@ Next, you can apply backward compatibility to older clients across different pla
 
 ## Backward compatibility
 
-The universal actions for Adaptive Cards allows you to set properties that enable backward compatibility with older versions of Outlook and Teams.
+Universal Actions for Adaptive Cards allows you to set properties that enable backward compatibility with older versions of Outlook and Teams.
 
 ### Teams
 
