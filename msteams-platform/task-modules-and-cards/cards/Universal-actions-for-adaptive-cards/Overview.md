@@ -1,17 +1,17 @@
 ---
-title: Overview of universal actions for Adaptive Cards
-description: A quick overview of universal actions for Adaptive Cards.
+title: Overview of Universal Actions for Adaptive Cards
+description: A quick overview of Universal Actions for Adaptive Cards.
 ms.topic: overview
 localization_priority: Normal
 ---
 
-# Universal actions for Adaptive Cards
+# Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they have to handle actions differently.
+Universal Actions for Adaptive Cards evolved from developer feedback that even though layout and rendering for Adaptive Cards was universal, action handling was not. Even if a developer wanted to send the same card to different places, they have to handle actions differently.
 
-Universal actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
+Universal Actions for Adaptive Cards brings the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
 
-This document helps you to understand how you can use the universal actions for Adaptive Cards to enhance user experience of interacting with Adaptive Cards across platforms and applications.
+This document helps you to understand how you can use the Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
 > [!NOTE]
 > Support for universal action for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
@@ -46,7 +46,7 @@ You can now send the same card to both, Teams and Outlook, and keep them in sync
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card. However, in certain scenarios there is a requirement for certain users to act differently and have access to different information within the same chat or channel.
 
-For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by contextual views that is enabled by the `refresh` property. 
+For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by user specific views that is enabled by the `refresh` property. 
 
 The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
