@@ -14,10 +14,10 @@ Your tab needs contextual information to display relevant content:
 
 ## User context
 
-Context about the user, team, or company can be especially useful when:
+Context about the user, team, or company are especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want the user to re-enter their username. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* You initiate an authentication flow against Azure Active Directory or other identity provider, and you do not want the user to re-enter their username.
 
 > [!IMPORTANT]
 > While this user information can help ensure a smooth user experience, you should not use it as proof of identity. For example, an attacker could load your page in a 'bad browser' and generate malicious information or requests.
@@ -129,3 +129,7 @@ When your content page is loaded in a private channel, the data you receive from
 You can register your app to be told if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
 The `theme` argument in the function will be a string with a value of `default`, `dark`, or `contrast`.
+
+## See also
+
+- [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).

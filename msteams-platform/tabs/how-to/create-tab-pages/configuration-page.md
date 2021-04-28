@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
-* A channel or group chat tab - Collect information from the users and set the `contentUrl` of the content page to display.
+* A channel or group chat tab to collect information from the users and set the `contentUrl` of the content page to display.
 * A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
@@ -81,7 +81,7 @@ The corresponding code for configuration page is shown in the following section:
 ...
 ```
 
-Choose either **Select Gray** or **Select Red** button in the configuration page to display the tab content with a gray or red icon. 
+Select either **Select Gray** or **Select Red** button in the configuration page to display the tab content with a gray or red icon. 
 
 The following image displays the tab content with gray icon:
 
@@ -102,17 +102,17 @@ The configuration page code informs the Teams that the configuration requirement
 >[!NOTE]
 >
 >* If you register a save handler using `microsoftTeams.settings.registerOnSaveHandler()`, the callback must invoke `saveEvent.notifySuccess()` or `saveEvent.notifyFailure()` to indicate the outcome of the configuration.
->* If you don't register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
+>* If you do not register a save handler, the `saveEvent.notifySuccess()` call is made automatically when the user selects **Save**.
 
 ### Get context data for your tab settings
 
 Your tab might require contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-For more information on the properties used for tab configuration, see [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
+Collect the values of context data variables in the following two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use the [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` method.
+1. Use [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` method.
 
 #### Insert placeholders in the `configurationUrl`
 
@@ -191,3 +191,7 @@ microsoftTeams.settings.setSettings({
 ## Mobile clients
 
 If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+
+## See also
+
+- [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)
