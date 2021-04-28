@@ -221,4 +221,5 @@ To use this deep link with your bot, you can specify this as the URL target in y
 
 ## See also
 
-- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+> [!div class="nextstepaction"]
+> [Integrate web apps](~/samples/integrate-web-apps-overview.md)

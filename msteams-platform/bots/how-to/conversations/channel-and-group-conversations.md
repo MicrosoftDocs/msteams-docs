@@ -264,7 +264,8 @@ Do not send a message in the following cases:
 
 ## See also
 
-- [Get teams context](~/bots/how-to/get-teams-context.md).
+> [!div class="nextstepaction"]
+> [Get teams context](~/bots/how-to/get-teams-context.md).
 
 ## Next step
 

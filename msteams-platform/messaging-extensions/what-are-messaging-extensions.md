@@ -72,7 +72,8 @@ The following images display link unfurling feature when a link is pasted in mes
 
 ## See also
 
-- [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
+> [!div class="nextstepaction"]
+> [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
 
 
 ## Next step
