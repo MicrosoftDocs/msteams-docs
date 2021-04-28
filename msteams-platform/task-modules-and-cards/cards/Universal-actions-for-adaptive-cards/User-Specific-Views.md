@@ -179,3 +179,8 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
+## See also
+
+* [Work with universal actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
+* [Up-to-date views](Up-To-Date-Views.md)
