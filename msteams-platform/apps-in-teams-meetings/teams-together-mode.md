@@ -30,7 +30,7 @@ There are prerequisites that you must complete before using the Together Mode.
 You must have a basic understanding of the following to use Together Mode:
 
 * Definition of scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Microsoft Teams Dev Center and App Studio.
+* Have a Microsoft Developer account and be familiar with the Microsoft Teams Developer Portal and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to **Upload a custom app** and has granted permission to select all filters as part of App Setup and Meeting policies respectively.
 
@@ -51,10 +51,10 @@ Prior to building a scene, there are few key points as follows to consider in or
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
+Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 >[!NOTE]
-> This document is referring to Scene studio in the Microsoft Teams Dev Center. The interface and functionalities are all the same in App Studio Scene Designer.
+> This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following:
 
@@ -81,7 +81,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 **To build a scene using the Scene studio**
 
-1. Go to [Teams Dev Center](https://dev.teams.microsoft.com/scenes).
+1. Go to [Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 2. From the **Scenes Editor** page, select **Create a new scene**.
 
@@ -119,7 +119,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 10. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
     
     >[!NOTE]
-    > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Dev Center. The scene can then be viewed in the Together Mode scene gallery.
+    > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal. The scene can then be viewed in the Together Mode scene gallery.
 
 11. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
