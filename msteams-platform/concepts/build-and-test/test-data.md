@@ -2,6 +2,7 @@
 title: Add test data to your Microsoft 365 test tenant
 description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps
 ms.topic: how-to
+localization_priority: Normal
 keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
@@ -242,9 +243,6 @@ By default, only global admins or Teams service admins can upload (sideload) app
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Debug your tab](~/tabs/how-to/developer-tools.md)
-> [!div class="nextstepaction"]
-> [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
-> [!div class="nextstepaction"]
-> [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
+* [Debug your tab](~/tabs/how-to/developer-tools.md) 
+* [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

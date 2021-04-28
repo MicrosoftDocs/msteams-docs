@@ -3,6 +3,7 @@ title: Entry points for Teams apps
 author: heath-hamilton
 description: Describes where people can discover and use your app in Teams.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
@@ -41,8 +42,7 @@ The following list shows how Teams capabilities are commonly used in personal co
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Teams app design guidelines](../concepts/design/design-teams-app-overview.md)
+- [Teams app design guidelines](../concepts/design/design-teams-app-overview.md)
 
 ## Next step
 

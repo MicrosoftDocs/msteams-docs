@@ -3,6 +3,7 @@ title: Test and debug your bot locally
 author: clearab
 description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
 ---
 
@@ -89,8 +90,6 @@ To remove your bot completely from Teams, go to your **Bot Dashboard** and edit 
 
 ## See also
 
-> [!div class=nextstep]
-> [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
+- [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
 
-> [!div class=nextstep]
-> [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+- [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

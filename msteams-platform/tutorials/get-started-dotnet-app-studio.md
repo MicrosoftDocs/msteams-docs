@@ -3,6 +3,7 @@ title: Tutorial - Create your first app using C#
 description: Learn how to get started building Microsoft Teams apps with C# or .NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+localization_priority: Normal
 ms.topic: tutorial
 ms.date: 11/09/2018
 ---

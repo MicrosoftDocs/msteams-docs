@@ -2,6 +2,7 @@
 title: Localization for your app
 description: Describes considerations for localizing your Microsoft Teams app.
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---
@@ -127,3 +128,11 @@ Therefore, it is strongly recommended to provide top-level, language-only transl
 ## Handling localized text submissions from your users
 
 If your provide localized versions of your application it is very likely that your users will respond with the same language. Teams does not translate the user submissions back to the default language, so your app will need to handle that. For example, if you provide a localized `commandList`, the responses to your bot will be the localized text of the command, not the default language. Your app will need to respond appropriately.
+
+## Code sample
+
+| Sample name | Description | .NET |
+|-------------|-------------|------|
+| App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |
+
+

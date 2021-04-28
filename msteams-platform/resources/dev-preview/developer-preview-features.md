@@ -2,6 +2,7 @@
 title: Features in the Public Developer Preview
 description: Details the features in the Microsoft Teams Public Developer Preview
 ms.topic: reference
+localization_priority: Normal
 keywords: teams preview developer features
 ---
 

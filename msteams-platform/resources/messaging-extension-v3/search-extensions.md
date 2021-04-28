@@ -3,6 +3,7 @@ title: Search with messaging extensions
 description: Describes how to develop search based messaging extensions
 keywords: teams messaging extensions messaging extensions search
 ms.topic: how-to
+localization_priority: Normal
 ms.date: 07/20/2019
 ---
 # Search with messaging extensions

@@ -1,8 +1,10 @@
 ---
 title: Integrate media capabilities 
+author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to enable media capabilities
 keywords: camera image microphone capabilities native device permissions media
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
@@ -250,8 +252,6 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+- [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+- [Integrate location capabilities in Teams](location-capability.md)

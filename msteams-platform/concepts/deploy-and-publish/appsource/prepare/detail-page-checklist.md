@@ -2,6 +2,7 @@
 title: Create a store listing for your app
 description: Describes how to create a store listing for your Microsoft Teams app.
 ms.topic: how-to
+localization_priority: Normal
 author: heath-hamilton
 ms.author: surbhigupta
 ---

@@ -3,6 +3,7 @@ title: Map your use cases to Teams app capabilities
 author: clearab
 description: Identify how your app's use cases can work within the Teams experience.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
 ---
 # Map your use cases to Teams app capabilities
@@ -97,5 +98,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Build apps for Microsoft Teams](../../overview.md)
+* [Build apps for Microsoft Teams](../../overview.md)

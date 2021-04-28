@@ -2,7 +2,7 @@
 title: Sending messages to Connectors and Webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
-localization_priority: Priority
+localization_priority: Normal
 keywords: teams o365 connector
 ---
 

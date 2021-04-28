@@ -2,6 +2,7 @@
 title: Link unfurling
 author: clearab
 description: How to perform link unfurling with messaging extension in a Microsoft Teams app.
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: anclear
 ---
@@ -171,5 +172,4 @@ Following is an example of the response:
 
 ## See also 
 
-> [!div class="nextstepaction"]
-> [What are cards](~/task-modules-and-cards/what-are-cards.md)
+[Cards](~/task-modules-and-cards/what-are-cards.md)
