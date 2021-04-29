@@ -52,7 +52,7 @@ The following image shows an example of a ticketing messaging extension (ME) whe
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
 
-For more information, see [sample for User Specific Views](User Specific Views.md).
+For more information, see [sample for User Specific Views](User-Specific-Views.md).
 
 ### Sequential Workflow support
 

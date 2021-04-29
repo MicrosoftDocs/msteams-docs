@@ -261,4 +261,4 @@ The following code provides an example of an Adaptive Card sent as response of `
 ## See also
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [User specific views](User Specific Views.md)
+* [User specific views](User-Specific-Views.md)
