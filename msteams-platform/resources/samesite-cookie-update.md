@@ -47,7 +47,7 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 1. Microsoft internal partners can join the following team if they need more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
 
 > [!NOTE]
-> For best practice, it's recommended that you always set SameSite attributes to reflect the intended use for your cookies — don't rely on default browser behavior. *See* [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
+> For best practice, it is recommended that you always set SameSite attributes to reflect the intended use for your cookies. Do not rely on default browser behavior. For more information, see [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
 ### Tabs, task modules, and message extensions
 
