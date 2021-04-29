@@ -189,4 +189,4 @@ Card design guidelines to keep in mind while designing User Specific Views:
 ## See also
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Up to date views](Up To Date Views.md)
+* [Up to date views](Up-To-Date-Views.md)
