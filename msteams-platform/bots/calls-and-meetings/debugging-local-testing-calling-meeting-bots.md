@@ -2,29 +2,30 @@
 title: Debug your calling and meeting bot locally
 description: Learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
+localization_priority: Normal
 keywords: local development ngrok tunnel
 ms.date: 11/18/2018
 ---
 
-# How to develop calling and online meeting bots on your local PC
+# Develop calling and online meeting bots on your local PC
 
 In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
 
-Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels; you'll learn how, below.
+Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels. 
 
-## Configuring ngrok.yml
+## Configure ngrok.yml
 
-Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. Once you've logged in, go to the [dashboard](https://dashboard.ngrok.com) and get your authtoken.
+Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your auth token.
 
-Create an ngrok configuration file `ngrok.yml` (see [here](https://ngrok.com/docs#config) for more information on where this file can be located) and add this line:
+Create an ngrok configuration file `ngrok.yml` and add the following line. For more information on where the file can be located, see [ngrok](https://ngrok.com/docs#config):
 
   `authtoken: <Your-AuthToken>`
 
-## Setting up signaling
+## Set up signaling
 
-In [Calls and online meetings bots](./calls-meetings-bots-overview.md), we discussed call signaling — how bots detect and respond to new calls and events during a call. Call signaling events are sent via HTTP POST to the bot's calling endpoint.
+In [Calls and online meetings bots](./calls-meetings-bots-overview.md), we discussed call signaling on how bots detect and respond to new calls and events during a call. Call signaling events are sent through HTTP POST to the bot's calling endpoint.
 
-As with the bot's messaging API, in order for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple — add the following lines to your ngrok.yml:
+As with the bot's messaging API, for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple. Add the following lines to your ngrok.yml:
 
 ```yaml
 tunnels:
@@ -33,16 +34,16 @@ tunnels:
         proto: http
 ```
 
-## Setting up local media
+## Set up local media
 
 > [!NOTE]
 > This section is only required for application-hosted media bots and can be skipped if you don't host media yourself.
 
 Application-hosted media uses certificates and TCP tunnels. The following steps are required:
 
-- Ngrok's public TCP endpoints have fixed URLs. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You should have a DNS CNAME entry for your service that points to these URLs. In this example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
-- A SSL certificate is required for your URLs. To make it easy, use a SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it should match your bot's public URL. Note the thumbprint and install it in your machine certificates.
-- Now, setup a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
+1. Ngrok's public TCP endpoints have fixed URLs. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You must have a DNS CNAME entry for your service that points to these URLs. For example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
+2. An SSL certificate is required for your URLs. To make it easy, use an SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it must match your bot's public URL. Note the thumbprint and install it in your machine certificates.
+3. Now, set up a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
 
     ```yaml
     media:
@@ -56,7 +57,7 @@ Now that the ngrok configuration is ready, launch it:
 
   `ngrok.exe start -all -config <Path to your ngrok.yml>`
 
-This starts ngrok and defines the public URLs which provide the tunnels to your localhost. The output looks like the following:
+This starts ngrok and defines the public URLs which provide the tunnels to your localhost. Following is an example of the output:
 
 ```cmd
 Forwarding  http://signal.ngrok.io -> localhost:12345
@@ -68,11 +69,11 @@ Here, `12345` is the signaling port, `8445` is the application-hosted port, and 
 
 ### Update code
 
-Once ngrok is up and running, update the code to use the config you just set up.
+After ngrok is up and running, update the code to use the config you just set up.
 
 #### Update signaling
 
-- In the BotBuilder call, change the `NotificationUrl` to the signaling URL provided by ngrok.
+In the BotBuilder call, change the `NotificationUrl` to the signaling URL provided by ngrok.
 
 ```csharp
 statefulClientBuilder.SetNotificationUrl(
@@ -82,13 +83,14 @@ statefulClientBuilder.SetNotificationUrl(
 > [!NOTE]
 > Replace signal with the one provided by ngrok and the `NotificationEndpoint` with the controller path that receives notification.
 
-> **IMPORTANT**: The URL in `SetNotificationUrl` must be HTTPS.
-
-> **IMPORTANT**: Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform will reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
+> [!IMPORTANT]
+> * The URL in `SetNotificationUrl` must be HTTPS.
+> 
+> Your local instance must be listening to HTTP traffic on the signaling port. The requests made by the calls and online meetings platform will reach the bot as localhost HTTP traffic unless end-to-end encryption is set up.
 
 #### Update media
 
-Update your `MediaPlatformSettings` to the following.
+Update your `MediaPlatformSettings` as following:
 
 ```csharp
 var mediaPlatform = new MediaPlatformSettings
@@ -106,11 +108,7 @@ var mediaPlatform = new MediaPlatformSettings
 ```
 
 > [!NOTE]
-> The certificate thumbprint provided above should match the Service FQDN. That is why the DNS entries are required.
-
-## Next steps
-
-Your bot can now run locally and all the flows work from your localhost.
+> The certificate thumbprint provided in the `MediaPlatformSettings` must match the Service FQDN. That is why the DNS entries are required.
 
 ## Caveats
 

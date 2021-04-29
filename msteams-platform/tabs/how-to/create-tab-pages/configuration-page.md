@@ -2,7 +2,8 @@
 title: Create a configuration page
 author: laujan
 description: how to create a configuration page
-keywords: teams tabs group channel configurable 
+keywords: teams tabs group channel configurable
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -16,7 +17,15 @@ A configuration page is a special type of [content page](content-page.md). The u
 
 ## Configuring a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Also, the URLs used must be secured HTTPS endpoints and available from the cloud. The following code is an example of a configuration page:
+The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Also, the URLs used must be secured HTTPS endpoints and available from the cloud. 
+
+### Example
+
+An example of a configuration page is shown in the following image: 
+
+<img src="~/assets/images/tab-images/configuration-page.png" alt="Configuration page" width="400"/>
+
+The corresponding code for configuration page is shown in the following section:
 
 ```html
 <head>
@@ -73,7 +82,17 @@ The application must reference the [Microsoft Teams JavaScript client SDK](/java
 ...
 ```
 
-Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon. Choosing the relative button fires either `saveGray()` or `saveRed()`, and invokes the following:
+Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon. 
+
+The following image displays the tab content with gray icon:
+
+<img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
+
+The following image displays the tab content with red icon:
+
+<img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
+
+Choosing the relative button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
 1. The `settings.setValidityState(true)` is set to true.
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
@@ -156,20 +175,20 @@ Ensure that all domains used in your tab pages are listed in the `manifest.json`
 
 ## Modify or remove a tab
 
-Supported removal options further refine the user experience. Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a group or channel tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. For more information, see [Mobile clients](#mobile-clients). The user can uninstall the Personal tabs but cannot modify them. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Supported removal options further refine the user experience. Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a group or channel tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. The user can uninstall the Personal tabs but cannot modify them. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
-## Mobile clients
-
-If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
-
-Microsoft Teams setSettings() configuration for removal page or mobile clients:
+Microsoft Teams setSettings() configuration for removal page:
 
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
     entityId: "add unique name here",
     suggestedDisplayName: "add name to display on tab here",
-    websiteUrl: "URL REQUIRED FOR MOBILE CLIENTS",
-    removeUrl: "ADD REMOVAL PAGE URL HERE"
+    websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
+    removeUrl: "add removal page URL here"
 });
 ```
+
+## Mobile clients
+
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).

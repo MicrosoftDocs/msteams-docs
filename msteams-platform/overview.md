@@ -3,6 +3,7 @@ title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
 description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---
@@ -36,7 +37,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Bots
 
-**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
@@ -68,6 +69,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::row-end:::
 
 :::row:::
+
    :::column span="":::
 
 ### Microsoft Graph for Teams
@@ -77,8 +79,8 @@ Some apps are simple (send notifications), while others are complex (manage pati
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
    :::column-end:::
-   :::column span="":::
 
+   :::column span="":::
    :::column-end:::
 :::row-end:::
 
@@ -87,10 +89,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Start building
 
-   Quickly familiarize yourself with building for Teams by creating a simple app and adding some commonly used capabilities.
+Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
-   > [!div class="nextstepaction"]
-   > [Build your first app now](build-your-first-app/build-first-app-overview.md)
+> [!div class="nextstepaction"]
+> [Build your first app](build-your-first-app/build-first-app-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -103,10 +105,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## Integrate with Teams
 
-   Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
+Blend the features users love about an existing web app, service, or system with the collaborative features of Teams.
 
-   > [!div class="nextstepaction"]
-   > [Integrate an existing app](samples/integrating-web-apps.md)
+> [!div class="nextstepaction"]
+> [Integrate an existing app](samples/integrating-web-apps.md)
 
    :::column-end:::
    :::column span="":::
@@ -119,10 +121,10 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ## A little code goes a long way
 
-   You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
+You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
 
-   > [!div class="nextstepaction"]
-   > [Create a low-code app](samples/teams-low-code-solutions.md)
+> [!div class="nextstepaction"]
+> [Create a low-code app](samples/teams-low-code-solutions.md)
 
    :::column-end:::
    :::column span="":::
@@ -130,7 +132,23 @@ Some apps are simple (send notifications), while others are complex (manage pati
    :::column-end:::
 :::row-end:::
 
-## Resources
+:::row:::
+   :::column span="2":::
+
+## Get ideas for your app
+
+Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways Teams apps can help your users.
+
+> [!div class="nextstepaction"]
+> [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
+
+   :::column-end:::
+   :::column span="":::
+
+   :::column-end:::
+:::row-end:::
+
+## See also
 
 * [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
 * [Design your Teams app](concepts/design/design-teams-app-overview.md)

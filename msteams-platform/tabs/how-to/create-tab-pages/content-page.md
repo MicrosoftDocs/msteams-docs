@@ -3,6 +3,7 @@ title: Create a content page
 author: laujan
 description: how to create a content page
 keywords: teams tabs group channel configurable static
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -22,7 +23,7 @@ Your tab's overall objective should be to provide access to meaningful and engag
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latestadd &preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
+For your page to display in Teams, you must include the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `microsoftTeams.initialize()` after your page loads. That is how your page and the Teams client communicate:
 
 ```html
 <!DOCTYPE html>
@@ -60,12 +61,34 @@ A task module is a modal popup-like experience that you can trigger from your ta
 
 Ensure that the all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference. However, be mindful that the core functionality of your tab exists within Teams and not outside of Teams.
 
+## Reorder static personal tabs
+
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
+
+If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
+
 ## Show a native loading indicator
 
 Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> 1. The native loading indicator is not yet supported on mobile devices.
+> 1. The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 > 2. If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
 
 

@@ -1,7 +1,9 @@
 ---
-title: Get context for your bot
+title: Get context for your Microsoft Teams bot
 description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
+ms.topic: conceptual
+localization_priority: Normal
 ms.date: 05/20/2019
 ---
 # Get context for your Microsoft Teams bot
@@ -11,23 +13,28 @@ ms.date: 05/20/2019
 Your bot can access additional context about the team or chat, such as user profile. This information can be used to enrich your bot's functionality and provide a more personalized experience.
 
 > [!NOTE]
-> These Microsoft Teams&ndash;specific bot APIs are best accessed through our extensions for the Bot Builder SDK. For C#/.NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package. For Node.js development, the BotBuilder for Microsoft Teams functionality has been incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) as of v4.6.
+>
+> * Microsoft Teams-specific bot APIs are best accessed through our extensions for the Bot Builder SDK.
+> * For C# or .NET, download our [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package.
+> * For Node.js development, the Bot Builder for Teams functionality is incorporated into the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) v4.6.
 
-## Fetching the team roster
+## Fetch the team roster
 
-Your bot can query for the list of team members and their basic profiles, which includes Teams user IDs and Azure Active Directory (Azure AD) information such as name and objectId. You can use this information to correlate user identities; for example, to check whether a user logged into a tab through Azure AD credentials is a member of the team.
+Your bot can query for the list of team members and their basic profiles. The basic profiles include Teams user IDs and Azure Active Directory (AAD) information such as name and object ID. You can use this information to correlate user identities. For example, check if a user logged into a tab through AAD credentials is a team member.
 
 ### REST API example
 
-You can directly issue a GET request on [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the value of `serviceUrl` as the endpoint.
+Directly issue a GET request on [`/conversations/{teamId}/members/`](/bot-framework/rest-api/bot-framework-rest-connector-api-reference#get-conversation-members), using the `serviceUrl` value as the endpoint.
 
 The `teamId` can be found in the `channeldata` object of the activity payload that your bot receives in the following scenarios:
-* When a user messages or interacts with your bot in a team context (see [Receiving Messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages))
-* When a new user or bot is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team))
+
+* When a user messages or interacts with your bot in a team context. For more information, see [receiving messages](~/resources/bot-v3/bot-conversations/bots-conversations.md#receiving-messages).
+* When a new user or bot is added to a team. For more information, see [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#bot-or-user-added-to-a-team).
 
 > [!NOTE]
->* Make sure to use the team id when calling the api
->* The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
+>
+>* Always use the team ID when calling the API.
+>* The `serviceUrl` value tends to be stable but can change. When a new message arrives, your bot must verify its stored `serviceUrl` value.
 
 ```json
 GET /v3/conversations/19:ja0cu120i1jod12j@skype.net/members
@@ -82,7 +89,7 @@ foreach (var member in members.AsTeamsChannelAccounts())
 await context.PostAsync($"People in this conversation: {sb.ToString()}");
 ```
 
-### Node.js/TypeScript example
+### Node.js or TypeScript example
 
 ```typescript
 
@@ -105,15 +112,15 @@ connector.fetchMembers(
 );
 ```
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+Also, see [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
 
-## Fetching user profile or roster in personal or group chat
+## Fetch user profile or roster in personal or group chat
 
-You can also make the same API call for any personal chat to obtain the profile information of the user chatting with your bot.
+You can make the API call for any personal chat to obtain the profile information of the user chatting with your bot.
 
-The API call and SDK methods are identical to fetching the team roster, as is the response object. The only difference is you pass the `conversationId` instead of the `teamId`.
+The API call, SDK methods, and the response object are identical to fetching the team roster. The only difference is you pass the `conversationId` instead of the `teamId`.
 
-## Fetching the list of channels in a team
+## Fetch the list of channels in a team
 
 Your bot can query the list of channels in a team.
 
@@ -124,12 +131,12 @@ Your bot can query the list of channels in a team.
 
 ### REST API example
 
-You can directly issue a GET request on `/teams/{teamId}/conversations/`, using the value of `serviceUrl` as the endpoint.
+Directly issue a GET request on `/teams/{teamId}/conversations/`, using the `serviceUrl` value as the endpoint.
 
-The only source for `teamId` is a message from the team context - either a message from a user or the message that your bot receives when it is added to a team (see [Bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition)).
+The only source for `teamId` is a message from the team context. The message is either a message from a user or the message that your bot receives when it is added to a team. For more information, see [bot or user added to a team](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition).
 
 > [!NOTE]
-> The value of `serviceUrl` tends to be stable but can change. When a new message arrives, your bot should verify its stored value of `serviceUrl`.
+> The `serviceUrl` value tends to be stable but can change. When a new message arrives, your bot must verify its stored `serviceUrl` value.
 
 ```json
 GET /v3/teams/19%3A033451497ea84fcc83d17ed7fb08a1b6%40thread.skype/conversations
@@ -154,7 +161,7 @@ Response body
 
 #### .NET example
 
-The following example uses the `FetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
+The following example uses the `FetchChannelList` call from the [Teams extensions for the Bot Builder SDK for .NET](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams):
 
 ```csharp
 ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelList(activity.GetChannelData<TeamsChannelData>().Team.Id);
@@ -162,7 +169,7 @@ ConversationList channels = client.GetTeamsConnectorClient().Teams.FetchChannelL
 
 #### Node.js example
 
-The following example uses `fetchChannelList` call from the [Microsoft Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams).
+The following example uses `fetchChannelList` call from the [Teams extensions for the Bot Builder SDK for Node.js](https://www.npmjs.com/package/botbuilder-teams):
 
 ```javascript
 var teamId = session.message.sourceEvent.team.id;
@@ -178,4 +185,38 @@ connector.fetchChannelList(
     }
   }
 );
+```
+
+## Get clientInfo in your bot context
+
+You can fetch the clientInfo within your bot's activity. The clientInfo contains the following properties:
+
+* Locale
+* Country
+* Platform
+* Timezone
+
+### JSON example
+
+```json
+[
+    {
+        "type": "clientInfo",
+        "locale": "en-US",
+        "country": "US",
+        "platform": "Windows",
+        "timezone": "Asia/Calcutta"
+    }
+]
+```
+
+### C# example
+
+```csharp
+var connector = new ConnectorClient(new Uri(context.Activity.ServiceUrl));
+
+{
+    var clientinfo = context.Activity.Entities[0];
+    await context.PostAsync($"ClientInfo: clientinfo ");
+}
 ```

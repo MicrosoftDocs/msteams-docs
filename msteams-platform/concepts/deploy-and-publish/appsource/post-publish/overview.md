@@ -1,7 +1,8 @@
 ---
 title: Maintaining and supporting your published app
 description: What to do after you have published your app
-ms.topic: how-to 
+ms.topic: how-to
+localization_priority: Normal
 keywords: teams post publish update certification app update manifest 
 ---
 
@@ -32,16 +33,15 @@ When a user installs your application one of the first things they do is consent
 
  >[!div class="checklist"]
 >
-> * A bot was added or removed.
-> * An existing bot's unique `botId` value changed.
-> * An existing bot's `isNotificationOnly` boolean value changed.
-> * An existing bot's `supportsFiles` boolean value changed.
-> * A messaging extension (`composeExtensions`) was added or removed.
-> * A new connector was added.
-> * A new static/personal tab was added.
-> * A new configurable group/channel tab was added.
-> * The `webApplicationInfo` values changed.
->
+> * A bot is added or removed.
+> * An existing bot's unique `botId` value is changed.
+> * An existing bot's `isNotificationOnly` boolean value is changed.
+> * An existing bot's `supportsFiles` or `supportsCalling` boolean value is changed.
+> * A messaging extension `composeExtensions` is added or removed.
+> * A new connector is added.
+> * A new static or personal tab is added.
+> * A new configurable group or channel tab is added.
+> * The properties inside `webApplicationInfo` are changed. For changes to `webApplicationInfo`, consent is only required in the Teams scope.
 
 ### Images of user consent flow:
 
