@@ -12,7 +12,7 @@ Adaptive Cards now support Sequential Workflows that is when an Adaptive Card is
 
 For example, take a scenario where the cafeteria wants to take an order for a team or channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
 
-<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
+<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
 A user can progress through their workflow without modifying the card for other users. This is also useful for conducting quizzes using sequential Adaptive Cards. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:
 

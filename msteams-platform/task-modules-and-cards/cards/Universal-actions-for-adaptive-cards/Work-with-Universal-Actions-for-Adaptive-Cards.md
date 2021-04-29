@@ -1,23 +1,23 @@
 ---
-title: Work with universal actions for Adaptive Cards
-description: Work with the universal actions for Adaptive Cards.
+title: Work with Universal Actions for Adaptive Cards
+description: Work with the Universal Actions for Adaptive Cards.
 ms.topic: conceptual
 localization_priority: Normal
 ---
 
-# Work with universal actions for Adaptive Cards
+# Work with Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following:
+Universal Actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following:
 
-* [Schema used for universal actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
+* [Schema used for Universal Actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
 * [Backward compatibility](#backward-compatibility)
 
-## Quick start guide to leverage universal actions for Adaptive Cards in Teams
+## Quick start guide to leverage Universal Actions for Adaptive Cards in Teams
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
-2. Add a `refresh` clause to your Adaptive Card, if you want to leverage the automatic refresh model or if your scenario requires user specific views.
+2. Add a `refresh` clause to your Adaptive Card, if you want to leverage the automatic refresh model or if your scenario requires User Specific Views.
 
     >[!NOTE]
     > Specify the `userIds` property to identify, which users get automatic updates.
@@ -28,9 +28,9 @@ Universal actions for Adaptive Cards provides a way to implement Adaptive Card b
     > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the response format.
 
-## Schema for universal actions for Adaptive Cards
+## Schema for Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards is introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
+Universal Actions for Adaptive Cards is introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
 
 > [!NOTE]
 > Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
