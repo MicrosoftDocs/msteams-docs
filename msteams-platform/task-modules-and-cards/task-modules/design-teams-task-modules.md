@@ -114,11 +114,7 @@ The goal is to focus the user on completing a task after all!
 
    :::column-end:::
    :::column span="":::
-<<<<<<< HEAD
 :::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a task module best practice (pop a dialog on top of a task module)." border="false":::
-=======
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example shows a task module best practice." border="false":::
->>>>>>> bb2095251c857ff6da70e121ac739cf36a741b7e
 
 #### Don't: Pop a dialog on top of a task module
 
@@ -131,11 +127,7 @@ This creates an unfocused, confusing user experience.
 
 :::row:::
    :::column span="":::
-<<<<<<< HEAD
 :::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example showing a task module best practice (make sure the content is responsive)." border="false":::
-=======
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example shows task module best practice." border="false":::
->>>>>>> bb2095251c857ff6da70e121ac739cf36a741b7e
 
 #### Do: Make sure the content is responsive
 
@@ -143,11 +135,7 @@ While Adaptive Cards hosted in a task module render well on mobile devices, if y
 
    :::column-end:::
    :::column span="":::
-<<<<<<< HEAD
 :::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice (don't use horizontal scroll bars)." border="false":::
-=======
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example displays a task module best practice." border="false":::
->>>>>>> bb2095251c857ff6da70e121ac739cf36a741b7e
 
 #### Don't: Use horizontal scroll bars
 
