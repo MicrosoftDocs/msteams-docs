@@ -145,7 +145,7 @@ To use this deep link with your bot, specify this as the URL target in your card
 
 The following deep link format can be used in a bot, connector, or messaging extension card:
 
-`https://teams.microsoft.com/I/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
 
 The query parameters are:
 
@@ -219,7 +219,12 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
+## Code sample
+
+| Sample name | Description | .NET |
+|-------------|-------------|------|
+| Deep Link consuming Subentity ID | Microsoft Teams sample app for demonstrating deeplink from bot chat to tab consuming Subentity ID. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate web apps](~/samples/integrate-web-apps-overview.md)

@@ -246,11 +246,8 @@ To share any feature requests or feedback with us, visit our [User Voice page](h
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+- [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 
-> [!div class="nextstepaction"]
-> [Moodle](https://moodle.org/)
+- [Moodle](https://moodle.org/)
 
-> [!div class="nextstepaction"]
-> [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).
+- [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).

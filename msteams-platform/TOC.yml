@@ -8,17 +8,17 @@
 - name: Get started
   expanded: true
   items:
-  - name: Overview and prerequisites
+  - name: Overview
     href: build-your-first-app/build-first-app-overview.md
-  - name: Create a "Hello, World!" app
+  - name: Build a "Hello, World!" app
     href: build-your-first-app/build-and-run.md
-  - name: Create a personal tab
+  - name: Build a basic personal tab
     href: build-your-first-app/build-personal-tab.md
-  - name: Create a channel and group tab
+  - name: Build your first channel and group tab
     href: build-your-first-app/build-channel-tab.md
-  - name: Create a bot
+  - name: Build your first bot
     href: build-your-first-app/build-bot.md
-  - name: Create a messaging extension
+  - name: Build your first messaging extension
     href: build-your-first-app/build-messaging-extension.md
 - name: Tutorials and code samples
   items:

@@ -7,24 +7,17 @@ keywords: teams design guidelines reference framework personal apps mobile tabs
 ---
 # Tabs on mobile
 
-> [!NOTE]
-> If you choose to have your channel/group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property (see below).
-
-Custom tabs can be part of a channel, group chat, or personal app (apps that contain static tabs and/or a one-to-one bot).
-
-Personal apps are available on mobile clients in the app drawer. The app can only be installed from a desktop or web client, and can take up to 24 hours to appear on mobile clients. Alternatively, you can enforce a reload on the mobile client by signing out and in. This should make the mobile app available right away.
-
-Channel tabs are also available on mobile. The default behavior is currently to use your `websiteUrl` to launch your tab in a browser window. However, they can be loaded on a mobile client by clicking the `...` overflow menu next to the tab and choosing **Open**, which will use your `contentUrl` to load the tab inside the Teams mobile client.
+You can include tabs in Teams mobile channels, chats, and personal apps.
 
 ## Accessing personal tabs
 
-The following illustration shows how you access a personal tab on mobile.
+You can access personal tabs in the app drawer.
 
 :::image type="content" source="../../assets/images/tabs/mobile-app-drawer.png" alt-text="Illustration showing the Teams mobile app drawer." border="false":::
 
 ## Accessing channel tabs
 
-The following illustration shows how you access a channel tab on mobile.
+You can access channel and group tabs by selecting the **More** button in the channel or chat in which they've been added.
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab.png" alt-text="Illustration showing a Teams mobile tab." border="false":::
 
@@ -120,10 +113,6 @@ Fields are areas where users can input text. Flyouts are more lightweight than d
 
 When you're building an app that includes a tab, you need to consider (and test) how your tab will function on both the Android and iOS Microsoft Teams clients. The sections below outline some of the key scenarios you need to consider.
 
-### Testing on mobile clients
-
-You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
-
 ### Authentication
 
 For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
@@ -134,4 +123,26 @@ Mobile clients regularly need to function with low bandwidth and intermittent co
 
 > [!NOTE]
 > Tabs are enabled on mobile only after the application is added to an allow list, based on the input of the approval team. 
-> To check mobile responsiveness, reach out to teamsubm@microsoft.com. 
+> To check mobile responsiveness, reach out to teamsubm@microsoft.com.
+
+### Testing on mobile clients
+
+You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high and low performing devices, as well as on a tablet.
+
+### Distribution
+
+Apps listed on the Teams store must be approved for mobile use to function properly in the Teams mobile client. How tabs behave depends on whether your app is approved.
+
+#### Channel and group tab behavior
+
+* **Behavior when approved**: Opens in the Teams mobile client using your app's `contentUrl` configuration.
+* **Behavior when not approved**: Opens in the device’s default browser using your app's `websiteUrl` configuration (which also must be included in your source code's `setSettings()` function). However, users can still load the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.
+
+#### Personal app behavior
+
+* **Behavior when approved**: Each tab in the personal app displays in the Teams mobile client using their respective `contentUrl` configuration.
+* **Behavior when not approved**: The personal app is unavailable in the Teams mobile client.
+
+#### Non-Teams store app behavior
+
+If you're sideloading your app or publishing to an org's app catalog, tab behavior will be the same as Teams store apps approved by Microsoft for mobile.

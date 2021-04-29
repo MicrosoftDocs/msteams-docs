@@ -67,5 +67,4 @@ For more information on contribution and suggestion, see [Get it on GitHub](http
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate web apps](~/samples/integrate-web-apps-overview.md)
