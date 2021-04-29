@@ -8,9 +8,11 @@ localization_priority: Normal
 
 # Sequential Workflows
 
-Adaptive Cards now support Sequential Workflows that is when an Adaptive Card is updated on user action and user can progress through a series of cards that require user input. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
+Adaptive Cards now support Sequential Workflows that is when Adaptive Cards are updated on user action and user can progress through a series of cards that require user input. This is supported through `Action.Execute`, which allows bot developers to return Adaptive Cards in response to a user action.
 
 For example, take a scenario where the cafeteria wants to take an order for a team or channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
+
+The following image shows the Sequential Workflow:
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
@@ -21,9 +23,9 @@ A user can progress through their workflow without modifying the card for other 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
 
-## Sequential Workflow for Adaptive Card
+## Sequential Workflow for Adaptive Cards
 
-The following code provides an example of an Adaptive Card:
+The following code provides an example of Adaptive Cards:
 
 ```JSON
 {
@@ -68,7 +70,7 @@ The following code provides an example of an Adaptive Card:
 }
 ```
 
-`Action.Execute` invoking the bot can return an Adaptive Card as a response, which replaces the existing card in Teams.
+`Action.Execute` invoking the bot can return Adaptive Cards as a response, which replaces the existing card in Teams.
 The following example provides what the bot returns on food or drink selection or order confirmation:
 
 * On food selection from Card 1, bot can return a card for selection of drinks that is Card 2.
@@ -100,9 +102,9 @@ The following code provides an example of an invoke request received on bot side
 }
 ```
 
-## Invoke response to return Adaptive Card
+## Invoke response to return Adaptive Cards
 
-The following code provides an example of an invoke response to return Adaptive Card:
+The following code provides an example of an invoke response to return Adaptive Cards:
 
 ```C#
 string cardJson = "<adaptive card json>";

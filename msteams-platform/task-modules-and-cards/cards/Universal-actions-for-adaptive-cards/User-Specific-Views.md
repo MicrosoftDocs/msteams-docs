@@ -8,15 +8,15 @@ localization_priority: Normal
 
 # User Specific Views
 
-Earlier if an Adaptive Card was sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card.
+Earlier if Adaptive Cards was sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card.
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. She also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
 
-## User Specific Views for Adaptive Card
+## User Specific Views for Adaptive Cards
 
-The following code provides an example of an Adaptive Card:
+The following code provides an example of Adaptive Cards:
 
 ```JSON
 {
@@ -47,13 +47,12 @@ The following code provides an example of an Adaptive Card:
 }
 ```
 
-**To send Adaptive Cards, refresh user specific view, and invoke requests to the bot**
+**To send Adaptive Cards, refresh User Specific Views, and invoke requests to the bot**
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
-2. Now this card automatically refreshes to user specific view for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON.
-3. The card remains the same for other users in the conversation.
-4. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
-5. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
+2. Now this card automatically refreshes to User Specific View for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON. The card remains the same for other users in the conversation.
+3. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
+4. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
 
 ## Invoke request sent from Teams client to the bot
 
@@ -164,9 +163,9 @@ The following code provides an example of an adaptiveCard/action invoke response
 }
 ```
 
-## Invoke response to return an Adaptive Card
+## Invoke response to return Adaptive Cards
 
-The following code provides an example of an invoke response to return an Adaptive Card:
+The following code provides an example of an invoke response to return Adaptive Cards:
 
 ```C#
 string cardJson = "<adaptive card json>";

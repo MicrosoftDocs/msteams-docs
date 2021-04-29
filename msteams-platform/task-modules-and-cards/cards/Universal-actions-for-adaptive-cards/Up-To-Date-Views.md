@@ -132,7 +132,7 @@ Following are the two roles that are shown to users depending on their involveme
 
 ## Adaptive Card sent as response of `adaptiveCard/action` and `message edit`
 
-The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 4 and 5:
+The following code provides an example of Adaptive Cards sent as response of `adaptiveCard/action` and `message edit` for steps 4 and 5:
 
 ```JSON
 {
@@ -168,7 +168,7 @@ The following code provides an example of an Adaptive Card sent as response of `
 }
 ```
 
-The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` invoke through automatic refresh for step 6:
+The following code provides an example of Adaptive Cards sent as response of `adaptiveCard/action` invoke through automatic refresh for step 6:
 
 ```JSON
 {
@@ -222,7 +222,7 @@ The following code provides an example of an Adaptive Card sent as response of `
 }
 ```
 
-The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 7 and 8:
+The following code provides an example of Adaptive Cards sent as response of `adaptiveCard/action` and `message edit` for steps 7 and 8:
 
 ```JSON
 {

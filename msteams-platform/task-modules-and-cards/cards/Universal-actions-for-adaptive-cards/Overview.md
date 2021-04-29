@@ -32,13 +32,19 @@ Before the Universal Actions for Adaptive Cards, different hosts provided differ
 * Teams or bots used `Action.Submit`, an approach which defers the actual communication model to the underlying channel.
 * Outlook used `Action.Http` to communicate with the backend service explicitly specified in the Adaptive Card payload.
 
+The following image shows the current inconsistent action model:
+
 :::image type="content" source="~/assets/images/adaptive-cards/current-teams-outlook-action-model.png" alt-text="Inconsistent action model":::
 
 With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for action handling across different platforms. `Action.Execute` works across hubs including Teams and Outlook. In addition, an Adaptive Card can be returned as response for an `Action.Execute` triggered invoke request.
 
+The following image shows the new Universal Action model:
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="New Universal Actions for Adaptive Cards":::
 
 You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* (Universal Actions for Adaptive Cards model).
+
+The following image depicts the Universal Actions for Adaptive Cards for both Teams and Outlook:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
 
@@ -58,7 +64,7 @@ For more information, see [sample for User Specific Views](User-Specific-Views.m
 
 With Sequential Workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.
 
-The following images illustrate a food ordering bot example: <br/>
+The following image illustrates a food ordering bot example: <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
