@@ -18,7 +18,7 @@ Stage View is a giant, full screen UI component that you can invoke to surface y
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the card, and pins the content as a tab directly from the Stage View, and from the Adaptive Card. 
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the card, and pins the content as a tab directly from the Stage View.
 
 The following image explains how the Stage View works:
 
@@ -39,9 +39,11 @@ You can invoke the Stage View in the following  ways:
 
 When the user enters an URL, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched, and the `tabInfo` is passed in, you can add the ability to pin the stage as a tab.  
 
-The following image displays a stage opened from an Adaptive Card:
+The following images display a stage opened from an Adaptive Card:
 
 ![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card.png)
+
+![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)
 
 ### Example 
 
