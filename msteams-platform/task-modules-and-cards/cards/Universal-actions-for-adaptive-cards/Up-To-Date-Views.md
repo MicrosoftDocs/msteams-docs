@@ -19,7 +19,7 @@ Using user specific views one can show a card with **Approve** or **Reject** but
 
 For more information, see [how to do a bot message edit](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
-## Sample approval base card
+## Approval base card
 
 The following code provides an example of an approval base card:
 
@@ -53,7 +53,7 @@ The following code provides an example of an approval base card:
 }
 ```
 
-## Sample approval card with Approve and Reject buttons
+## Approval card with Approve and Reject buttons
 
 The following code provides an example of an approval card with **Approve** and **Reject** buttons:
 
@@ -130,7 +130,7 @@ Following are the two roles that are shown to users depending on their involveme
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-3.png" alt-text="Up to date views":::
 
-## Sample Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 4 and 5
+## Adaptive Card sent as response of `adaptiveCard/action` and `message edit`
 
 The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 4 and 5:
 
@@ -167,8 +167,6 @@ The following code provides an example of an Adaptive Card sent as response of `
   ]
 }
 ```
-
-## Sample Adaptive Card sent as response of `adaptiveCard/action` invoke for step 6
 
 The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` invoke through automatic refresh for step 6:
 
@@ -223,8 +221,6 @@ The following code provides an example of an Adaptive Card sent as response of `
   ]
 }
 ```
-
-## Sample Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 7 and 8
 
 The following code provides an example of an Adaptive Card sent as response of `adaptiveCard/action` and `message edit` for steps 7 and 8:
 

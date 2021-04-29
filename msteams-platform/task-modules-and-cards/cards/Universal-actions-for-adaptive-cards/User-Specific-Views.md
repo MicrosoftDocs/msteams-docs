@@ -14,7 +14,7 @@ For example, Megan, a safety inspector at Contoso, wants to create an incident a
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
 
-## Sample Adaptive Card
+## User Specific Views for Adaptive Card
 
 The following code provides an example of an Adaptive Card:
 
@@ -55,7 +55,7 @@ The following code provides an example of an Adaptive Card:
 4. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
 5. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
 
-## Sample invoke request sent from Teams client to the bot
+## Invoke request sent from Teams client to the bot
 
 The following code provides an example of an invoke request sent from Alex's and Megan's Teams client to the bot:
 
@@ -80,7 +80,7 @@ The following code provides an example of an invoke request sent from Alex's and
 }
 ```
 
-## Sample adaptiveCard/action invoke response card
+## adaptiveCard/action invoke response card
 
 The following code provides an example of an adaptiveCard/action invoke response card for Megan:
 
@@ -122,7 +122,7 @@ The following code provides an example of an adaptiveCard/action invoke response
 }
 ```
 
-## Sample adaptiveCard/action invoke response card for Alex
+## adaptiveCard/action invoke response card for Alex
 
 The following code provides an example of an adaptiveCard/action invoke response card for Alex:
 
@@ -164,7 +164,7 @@ The following code provides an example of an adaptiveCard/action invoke response
 }
 ```
 
-## Sample invoke response to return an Adaptive Card
+## Invoke response to return an Adaptive Card
 
 The following code provides an example of an invoke response to return an Adaptive Card:
 

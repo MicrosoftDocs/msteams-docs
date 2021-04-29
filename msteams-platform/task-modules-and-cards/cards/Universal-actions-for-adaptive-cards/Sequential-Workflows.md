@@ -14,14 +14,14 @@ For example, take a scenario where the cafeteria wants to take an order for a te
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
-A user can progress through their workflow without modifying the card for other users. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card. This is also useful for conducting quizzes using sequential Adaptive Cards.
+A user can progress through their workflow without modifying the card for other users. This is also useful for conducting quizzes using sequential Adaptive Cards. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
 > [!NOTE]
 > In order to sync the user's progress across devices, use the `refresh` property in Adaptive Card JSON.
 
-## Sample Adaptive Card
+## Sequential Workflow for Adaptive Card
 
 The following code provides an example of an Adaptive Card:
 
@@ -71,11 +71,11 @@ The following code provides an example of an Adaptive Card:
 `Action.Execute` invoking the bot can return an Adaptive Card as a response, which replaces the existing card in Teams.
 The following example provides what the bot returns on food or drink selection or order confirmation:
 
-* On food selection from Card 1, bot can return a card for selection of drinks that is Card 2. 
+* On food selection from Card 1, bot can return a card for selection of drinks that is Card 2.
 * On drink selection from Card 2, bot can return an order confirmation card that is Card 3.
 * On order confirmation from Card 3, bot can return an order confirmed card that is Card 4.
 
-## Sample invoke request received on bot side
+## Invoke request received on bot side
 
 The following code provides an example of an invoke request received on bot side:
 
@@ -100,7 +100,7 @@ The following code provides an example of an invoke request received on bot side
 }
 ```
 
-## Sample invoke response to return Adaptive Card
+## Invoke response to return Adaptive Card
 
 The following code provides an example of an invoke response to return Adaptive Card:
 

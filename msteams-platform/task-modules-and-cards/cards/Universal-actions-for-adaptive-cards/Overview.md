@@ -38,7 +38,7 @@ With the Universal Actions for Adaptive Cards, you can use `Action.Execute` for 
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-action-model.png" alt-text="New Universal Actions for Adaptive Cards":::
 
-You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* model.
+You can now send the same card to both, Teams and Outlook, and keep them in sync with each other using the underlying bot. Any action taken on either platform is reflected to the other with this *build once, deploy anywhere* (Universal Actions for Adaptive Cards model).
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
 
@@ -62,9 +62,9 @@ The following images illustrate a food ordering bot example: <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
+The following image shows the various states for different users in the chat or channel:
 
-The above image shows the various states for different users in the chat/channel.
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
 For more information, see [sample for Sequential Workflow](Sequential-Workflows.md).
 
