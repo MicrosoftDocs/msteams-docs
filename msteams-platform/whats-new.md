@@ -17,7 +17,7 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-| 04/29/2021 | Universal actions for Adaptive Cards. | [Universal actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+| 04/29/2021 | Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/27/2021|Default install scope and group capability feature.| [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/18/2021|Update to version 4.10 or above of the Bot Framework SDK, as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
