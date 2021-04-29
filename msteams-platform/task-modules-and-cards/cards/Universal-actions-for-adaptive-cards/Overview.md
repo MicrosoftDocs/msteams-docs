@@ -74,7 +74,7 @@ You can create Adaptive Cards that update automatically. For example, it can be 
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views.png" alt-text="Up to date User Specific Views":::
 
-For more information, see [sample for up to date views](Up To Date Views.md).
+For more information, see [sample for up to date views](Up-To-Date-Views.md).
 
 Now, you can understand how Adaptive Cards can be transformed with the new Universal Actions model to provide a unique and enhanced user experience.
 
