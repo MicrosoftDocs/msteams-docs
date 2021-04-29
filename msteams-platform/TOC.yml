@@ -297,7 +297,7 @@
       - name: Sequential workflows
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Sequential-Workflows.md
       - name: Up-to-date cards
-        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date Views.md
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
   - name: Build task modules
     items:
     - name: Overview
