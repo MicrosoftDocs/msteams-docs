@@ -42,9 +42,6 @@ Chrome 80, scheduled for release in February 2020, introduces new cookie values 
 
 ## Teams implications and adjustments
 
-> [!WARNING]
-> Applications running in the Teams desktop client are incompatible with the `SameSite=None` attribute, and they do not work as expected. See the workaround solutions mentioned in [SameSite cookie attribute 2020 release](#samesite-cookie-attribute-2020-release).
-
 1. Enable the relevant SameSite setting for your cookies and validate that your apps and extensions continue to work in Teams.
 1. If your apps or extensions fail, make the necessary fixes prior to the Chrome 80 release.
 1. Microsoft internal partners can join the following team if they need more information or help with this issue: <https://teams.microsoft.com/l/team/19%3A08b594cd465e4c0491fb751e823802e2%40thread.skype/conversations?groupId=4d6d04cd-dbf0-43c8-a2ff-f80dd38be034&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47>.
