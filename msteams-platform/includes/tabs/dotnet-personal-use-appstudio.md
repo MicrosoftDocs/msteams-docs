@@ -1,25 +1,25 @@
 ## Upload your tab to Teams with App Studio
 
 >[!NOTE]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, you must build the solution again to create the **Tab.zip** file to upload.
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json**, and you must build the solution again to create the **Tab.zip** file to upload.
 
-- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-- Open App studio and select the **Manifest editor** tab.
+1. Open App studio and select the **Manifest editor** tab.
 
-![Import an existing app screenshot](~/assets/images/tabs/Import-existing-tab.png)
+    ![Import an existing app screenshot](~/assets/images/tabs/Import-existing-tab.png)
 
-- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It must be found here:
+1. Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It must be found here:
 
-```bash
-/bin/Debug/netcoreapp2.2/Tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/Tab.zip
+    ```
 
-- Upload **Tab.zip** to App Studio.
+1. Upload **Tab.zip** to App Studio.
 
 ### Update your app package with Manifest editor
 
-Once you've uploaded your app package into App Studio, you need to configure it.
+Once you have uploaded your app package into App Studio, you need to configure it.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
@@ -72,7 +72,7 @@ In the *Test and distribute* section:
 
 - Select **Install**.
 
-- In the pop-up window make sure that *Add for you* is set to *Yes*, and *Add to a team or chat* is set to *No*.
+- In the pop-up window, select *Add for you* to *Yes*, and *Add to a team or chat* to *No*.
 
 - Select **Install**.
 
@@ -80,6 +80,4 @@ In the *Test and distribute* section:
 
 ## View your personal tab
 
-- Select the menu `...` in the navigation bar on the far-left of the Teams App, you'll get a list of personal applications.
-
-- Select your tab from the list to view.
+- On the left of Teams App, select the menu `...` in the navigation bar and select your tab from the list of applications.

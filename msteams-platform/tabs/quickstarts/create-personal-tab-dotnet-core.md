@@ -29,10 +29,10 @@ Once you have the source code, follow the steps:
 
 1. In a browser, go to the URLs below to verify the application loaded properly:
 
-- `http://localhost:44325/`
-- `http://localhost:44325/personal`
-- `http://localhost:44325/privacy`
-- `http://localhost:44325/tou`
+    - `http://localhost:44325/`
+    - `http://localhost:44325/personal`
+    - `http://localhost:44325/privacy`
+    - `http://localhost:44325/tou`
 
 ## Review the source code
 
@@ -72,7 +72,7 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you'll see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you can the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -98,18 +98,18 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 - Open a command prompt in the root of your project directory and run the following command:
 
-```bash
-ngrok http https://localhost:44325 -host-header="localhost:44325"
-```
+    ```bash
+    ngrok http https://localhost:44325 -host-header="localhost:44325"
+    ```
 
-- Ngrok listens the request from the internet and routes to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
+- Ngrok listens the request from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-- You need to keep the command prompt while ngrok is running. you'll need it later to write down the URL.
+- You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
 
 - Verify that *ngrok* is up and running properly by opening your browser and going to the content page using the ngrok HTTPS URL provided in the command prompt window.
 
 >[!TIP]
->You must be running your application in Visual Studio and ngrok to complete this quickstart. If you're no longer running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when it restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
+>You must run your application in Visual Studio and ngrok to complete this quickstart. If you are no longer running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when it restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
 
 ### Run your application
 
