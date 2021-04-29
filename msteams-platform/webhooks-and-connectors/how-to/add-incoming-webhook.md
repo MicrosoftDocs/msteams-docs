@@ -7,6 +7,7 @@ localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
+
 # Create an incoming webhook and post external requests
 
 ## Teams incoming webhooks
@@ -41,12 +42,15 @@ ms.author: lajanuar
 
 1. Navigate to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu, search for **Incoming Webhook**, and select **Add**.
+
     ![Choose Connector](~/assets/images/connectors.png)
 
 1. Select the **Configure** button, provide a name, and, optionally, upload an image avatar for your webhook. The dialog window presents a unique URL that maps to the channel.
+
     ![Configure button](~/assets/images/configure.png)
 
 1. Copy and save the URL as you need to provide it to the outside service.
+
     ![Unique URL](~/assets/images/url.png)
 
 1. Select the **Done** button. The webhook is available in the team channel.

@@ -1,11 +1,10 @@
 ---
 
-title: Add custom bots to Microsoft Teams with outgoing webhooks
+title: Add an outgoing webhook
 description: describes how to add an outgoing webhook
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: lajanuar
-localization_priority: Normal
 keywords: teams tabs outgoing webhook actionable message verify webhook
 
 ---
