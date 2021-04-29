@@ -27,33 +27,33 @@ There is a list of steps on the left-hand side of the Manifest editor, and on th
 
 ![List of steps on left and right hand side screenshot](~/assets/images/tabs/Update-app-package-with-manifest-editor.png)
 
-Much of the information is provided by your *manifest.json* but there are a few fields that you need to update:
+Much of the information is provided by your *manifest.json* but there are a few fields that you need to update.
 
 #### Details: App details
 
 In the *App details* section:
 
-- Under *Identification* select **Generate** to generate a new App Id for your app.
+1. Under *Identification* select **Generate** to generate a new App Id for your app.
 
-- Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
+1. Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
 
-- Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+1. Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-- Under *Add a personal tab* select **Add**. You get a pop-up dialogue window.
+1. Under *Add a personal tab* select **Add**. You get a pop-up dialogue window.
 
-- Complete the *Name* field.
+1. Complete the *Name* field.
 
-- Complete the *Entity Id* field.
+1. Complete the *Entity Id* field.
 
-- Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
+1. Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
 
-- Leave the *Website URL* field blank.
+1. Leave the *Website URL* field blank.
 
-- Select ***Save***.
+1. Select ***Save***.
 
 #### Finish: Domains and permissions
 
