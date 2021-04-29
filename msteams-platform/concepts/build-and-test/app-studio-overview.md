@@ -2,6 +2,7 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
+localization_priority: Normal
 ms.topic: overview
 ---
 
@@ -96,6 +97,9 @@ Each command requires a title and an ID. The command can optionally contain a de
 * The name of the parameter as it appears in the Teams client and is included in the user request
 * A user-friendly title
 * An optional description
+
+> [!NOTE]
+> To create messaging extension using app studio, see [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
 #### Test and Distribute
 

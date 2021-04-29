@@ -1,8 +1,11 @@
 ---
 title: Integrate QR or barcode scanner capability
+author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to leverage QR or barcode scanner capability
-keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions 
-ms.author: lajanuar
+keywords: camera media qr code qrcode bar code barcode scanner scan capabilities native device permissions
+localization_priority: Normal
+ms.topic: conceptual
+ms.author: surbhigupta
 ---
 
 # Integrate QR or barcode scanner capability 
@@ -102,8 +105,6 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+- [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+- [Integrate location capabilities in Teams](location-capability.md)

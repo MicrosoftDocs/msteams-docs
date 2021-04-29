@@ -2,6 +2,8 @@
 title: Supported text formatting in conversations
 description: Describes text formatting support in bot conversations
 keywords: bots conversations messaging
+ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/29/2018
 ---
 # Formatting bot messages

@@ -57,8 +57,12 @@ This project requires the following installed in your development environment:
     Select the default schema.
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
-
+    
     This field is not required, and must be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+    **Quick scaffolding? (Y/n)**
+
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
 
     **What do you want to add to your project?**
 

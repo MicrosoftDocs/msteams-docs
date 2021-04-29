@@ -2,6 +2,7 @@
 title: Designing your custom app
 author: heath-hamilton
 description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
+localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
 ---
