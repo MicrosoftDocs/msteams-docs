@@ -34,16 +34,23 @@ If you register a new app, you must fill out all the mandatory configuration fie
 
 ### App Overview page
 
-Your app's overview page contains basic information about your app, a validation snapshot of your app's configuration state, and app usage charts about your app. App usage will only be displayed for apps published to the Teams store or an organization's app catalog.
+Your app's overview page contains basic information about your app, a validation snapshot of your app's configuration state, and app usage metrics (currently in preview) for your app. 
 
-- Teams line-of-business app usage chart [Learn more](https://aka.ms/dev-portal-app-usage-lob)
-- Teams store app usage chart [Learn more](https://aka.ms/dev-portal-app-usage-store)
-//TODO: The aka.ms links above currently just point to the dev portal. Sana Nagar needs to provide the docs we point to or include as part of this document.
+#### App Usage (Preview)
+The App Usage metrics show the total number of Active Users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Teams Developer Portal, and are scoped to the App ID(s) shown in the Basic Information section. 
+
+| Metric                  | Definition                                                                                             |
+| :-----------------------| :------------------------------------------------------------------------------------------------------|
+| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30 day window, in UTC. |
+| *Daily* | Shows you the count of unique active users that used your app in a given day, in UTC. |
+
+**History:** Monthly and Daily usage is shown for the past 7 days, 30 days, and 60 days. 
+
+**Latency:** You should see usage reflected for a given day within 24-48 hours. 
 
 ### Owners
 
 Use this section to share your app registration with colleagues in your organization. The *Contributor* role has the same permissions as the *Owner* role, except the ability to delete an app. 
-
 
 ### Environments
 
