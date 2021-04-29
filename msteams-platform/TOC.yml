@@ -302,7 +302,7 @@
       href: task-modules-and-cards/cards/cards-actions.md
     - name: Cards reference
       href: task-modules-and-cards/cards/cards-reference.md
-    - name: Universal actions for Adaptive Cards
+    - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/overview.md
