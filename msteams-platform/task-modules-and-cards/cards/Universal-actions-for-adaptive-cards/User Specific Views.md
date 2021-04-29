@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # User Specific Views
 
-Earlier if an Adaptive Card was sent in a Teams conversation, all users would see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card.
+Earlier if an Adaptive Card was sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card.
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. She also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
@@ -47,10 +47,10 @@ The following code provides an example of an Adaptive Card:
 }
 ```
 
-**To send Adaptive Cards, refresh user-specific view, and invoke requests to the bot**
+**To send Adaptive Cards, refresh user specific view, and invoke requests to the bot**
 
 1. When Megan creates a new incident, the bot sends the Adaptive Card or common card with incident details in the Teams conversation.
-2. Now this card automatically refreshes to user-specific view for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON.
+2. Now this card automatically refreshes to user specific view for Megan and Alex. Alex's and Megan's user MRIs are added in `userIds` property of `refresh` property of the Adaptive Card JSON.
 3. The card remains the same for other users in the conversation.
 4. For Megan, automatic refresh triggers an `adaptiveCard/action` invoke request to the bot. The bot can return an incident creator card with `Edit` button as a response to this invoke request.
 5. Similarly for Alex, automatic refresh triggers another `adaptiveCard/action` invoke request to the bot. The bot can return an incident owner card `Resolve` button as a response to this invoke request.
@@ -179,13 +179,14 @@ var adaptiveCardResponse = JObject.FromObject(new
     value = card
  });
 ```
+
 Card design guidelines to keep in mind while designing User Specific Views:
 
-* You can create a maximum of **60 User Specific Views** for a particular card being sent to a chat/channel by specifying their `userIds` in the `refresh` section 
-* **Base Card:** The base version of the card that the bot developer sends to the chat. This will be the version of the Adaptive Card for all users who are not specified in the `userIds` section
-* A message update/edit can be used to update the base card and simultaneously refresh the User Specific Card
+* You can create a maximum of **60 User Specific Views** for a particular card being sent to a chat or channel by specifying their `userIds` in the `refresh` section.
+* **Base Card:** The base version of the card that the bot developer sends to the chat. This is the version of the Adaptive Card for all users who are not specified in the `userIds` section.
+* A message update or edit can be used to update the base card and simultaneously refresh the User Specific Card.
 
 ## See also
 
-* [Work with universal actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
-* [Up-to-date views](Up-To-Date-Views.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
+* [Up to date views](Up To Date Views.md)

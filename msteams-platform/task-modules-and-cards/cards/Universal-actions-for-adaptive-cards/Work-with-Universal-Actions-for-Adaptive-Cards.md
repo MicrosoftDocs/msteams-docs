@@ -6,9 +6,9 @@ ms.topic: conceptual
 
 # Work with Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both Teams and Outlook. This document covers the following:
+Universal Actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both Teams and Outlook. This document covers the following:
 
-* [Schema used for universal actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
+* [Schema used for Universal Actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
 * [Backward compatibility](#backward-compatibility)
@@ -27,12 +27,12 @@ Universal actions for Adaptive Cards provides a way to implement Adaptive Card b
     > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the response format.
 
-## Schema for universal actions for Adaptive Cards
+## Schema for Universal Actions for Adaptive Cards
 
-Universal actions for Adaptive Cards is introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
+Universal Actions for Adaptive Cards is introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
 
 > [!NOTE]
-> Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the universal actions for Adaptive Cards.
+> Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
 
 If you set the card version to less than 1.4 and use either or both, `refresh` property and `Action.Execute`, the following happens:
 

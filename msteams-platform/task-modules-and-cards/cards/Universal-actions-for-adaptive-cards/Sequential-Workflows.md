@@ -8,9 +8,9 @@ localization_priority: Normal
 
 # Sequential Workflows
 
-Adaptive Cards now support Sequential Workflows i.e. when an Adaptive Card is updated on user action and user can progress through a series of cards which require user input. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
+Adaptive Cards now support Sequential Workflows that is when an Adaptive Card is updated on user action and user can progress through a series of cards that require user input. This is supported through `Action.Execute`, which allows bot developers to return an Adaptive Card in response to a user action.
 
-For example, take a scenario where the cafeteria wants to take an order for a team/channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
+For example, take a scenario where the cafeteria wants to take an order for a team or channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential workflow" width="400"/>
 
@@ -120,4 +120,4 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
 * [How bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true)
-* [Work with universal actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
+* [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
