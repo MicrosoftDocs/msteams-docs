@@ -1,18 +1,15 @@
 - name: Microsoft Teams
-  tocHref: /microsoftteams/
+  tocHref: /office/
   topicHref: /microsoftteams/
   items:
   - name: Developer platform
-    tocHref: /microsoftteams/platform/
-    topicHref: /microsoftteams/platform/index
+    tocHref: /office/dev/store/
+    topicHref: /microsoftteams/platform/
     items:
-    - name: Utilize Teams data with Microsoft Graph
-      tocHref: /microsoftteams/platform/graph-api/
-      topicHref: /microsoftteams/platform/graph-api/
+    - name: Distribute your app
+      tocHref: /office/dev/store/checklist/
+      topicHref: /microsoftteams/platform//concepts/deploy-and-publish/
       items:
-      - name: Overview
-        tocHref: /microsoftteams/platform/graph-api/overview/
-        topicHref: /microsoftgraph/microsoft-graph-docs/concepts/teams-concept-overview
-      - name: Get started
-        tocHref: /microsoftteams/platform/graph-api/get-started/
-        topicHref: /microsoftgraph/microsoft-graph-docs/concepts/toolkit/get-started/build-a-microsoft-teams-tab
+      - name: Publish to the Teams store
+        tocHref: /office/dev/store/checklist/add-in-submission-guide/
+        topicHref: /microsoftteams/platform//concepts/deploy-and-publish/appsource/

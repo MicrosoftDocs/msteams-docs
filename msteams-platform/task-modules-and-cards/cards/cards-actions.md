@@ -244,11 +244,12 @@ Teams also supports [Adaptive Cards actions](#adaptive-cards-actions) that are o
 
 ## Adaptive Cards actions
 
-Adaptive Cards support three action types:
+Adaptive Cards support four action types:
 
 * [Action.OpenUrl](http://adaptivecards.io/explorer/Action.OpenUrl.html)
 * [Action.Submit](http://adaptivecards.io/explorer/Action.Submit.html)
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
+* [Action.Execute](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next sections provide details on how to use existing Bot Framework actions with Adaptive Cards.
 

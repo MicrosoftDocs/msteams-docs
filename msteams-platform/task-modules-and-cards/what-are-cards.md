@@ -22,6 +22,10 @@ Teams uses cards in three different places:
 
 Cards were first defined as part of Outlook and Office 365 and are now used as part of Office 365 connectors. Like many Office 365 applications, Teams supports connectors. Learn more about connectors in [Office 365 connectors for Teams](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md). You can find the specification for cards in connectors in [actionable message card reference](/outlook/actionable-messages/card-reference).
 
+> [!NOTE]
+> * All native adaptive card schema elements, except `Action.Submit`, are fully supported.
+> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html) and [**Action.Execute**](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+
 ## Cards in bots
 
 The Microsoft Bot Framework extends the cards specification by adding a set of predefined cards that bots can use as part of bot messages. Teams supports bots using the Bot Framework, but it supports a different set of these cards. General information on cards in Bot Framework can be found in [add rich card attachments to messages](/bot-framework/nodejs/bot-builder-nodejs-send-rich-cards). These cards are called simple cards in Teams.
