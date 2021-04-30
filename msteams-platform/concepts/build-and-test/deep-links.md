@@ -198,7 +198,7 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 | Make an audio call. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>| https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | Make an audio and video call. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
 |Make an audio and video call with an optional parameter source. | https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
-| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>,8:<usermri> | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:<1111111111> |
+| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>,8:<usermri> | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:1111111111 |
   
 Following are the query parameters:
 * `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri (4:<phonenumber>).
