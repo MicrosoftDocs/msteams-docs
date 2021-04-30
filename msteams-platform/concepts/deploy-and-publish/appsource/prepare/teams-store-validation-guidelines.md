@@ -26,7 +26,6 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
 * Must be unique. For example, you cannot list multiple apps for different regions with the same name and functionality.
-* Partner can have only ONE app in the store with the same name and cannot duplicate apps for specific region with the same name & functionality.
 
 See also: [4.0 App package and store listing](#40-app-package-and-store-listing)
 

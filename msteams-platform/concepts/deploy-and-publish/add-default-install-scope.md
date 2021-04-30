@@ -67,4 +67,4 @@ Configure the default capability when your app is installed for a team, meeting,
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose how to distribute your app](overview.md)
+> [Create your app package](~/concepts/build-and-test/apps-package.md)
