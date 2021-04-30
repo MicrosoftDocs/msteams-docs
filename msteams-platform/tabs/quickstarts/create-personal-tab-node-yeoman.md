@@ -7,10 +7,13 @@ ms.author: lajanuar
 ---
 # Personal tab with Node.js and Yeoman generator
 
-This quickstart guides you to create a custom personal tab using Node.js and the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App), also to establish a secure tunnel using ngrok and to upload the application to Teams. 
+This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
->[!NOTE]
->This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+A Yeoman Generator for Microsoft Teams Apps projects is the most comprehensive and complete development toolkit for Microsoft Teams development. This generator is targeted to developers who prefer to use TypeScript, React and Node.js as their primary technologies.
+
+## What you'll learn
+
+- It also guides you on how to establish a secure tunnel using ngrok and to upload the application to Teams. 
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -128,6 +131,5 @@ Select the `...` menu from the left panel of Teams, and select your application 
 
 ## See also
 
-- [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md)
+- [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
-- [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md)
