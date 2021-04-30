@@ -298,9 +298,9 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-    - name: Format card text
+    - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-    - name: Add and respond to card actions
+    - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
     - name: Cards reference
       href: task-modules-and-cards/cards/cards-reference.md
@@ -312,7 +312,7 @@
       href: task-modules-and-cards/task-modules/invoking-task-modules.md  
     - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
-    - name: Use task modules in bots
+    - name: Use task modules from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:

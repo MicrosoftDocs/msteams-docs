@@ -27,7 +27,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 >* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework or Azure Bot Service. Suggested actions are not supported in Microsoft Teams. If you want buttons to appear on a Teams bot message, use a card.
 >* If you are using a card action as part of a messaging extension, the actions do not work until the card is submitted to the channel. The actions do not work while the card is in the compose message box.
 
-## openUrl action type
+## Action type openUrl
 
 `openUrl` action type specifies a URL to launch in the default browser.
 
@@ -46,7 +46,7 @@ The following code shows an example of `openUrl` action type:
 }
 ```
 
-## messageBack action type
+## Action type messageBack
 
 With `messageBack`, you can create a fully customized action with the following properties:
 
@@ -129,7 +129,7 @@ The following code shows an example of inbound message:
 }
 ```
 
-## imBack action type
+## Action type imBack
 
 The `imBack` action triggers a return message to your bot, as if the user typed it in a normal chat message. Your user and all other users in a channel can see the button response.
 
@@ -148,7 +148,7 @@ The following code shows an example of `imBack` action type:
 }
 ```
 
-## invoke action type
+## Action type invoke
 
 The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
@@ -236,7 +236,7 @@ The following code shows an example of incoming invoke message:
 }
 ```
 
-## signin action type
+## Action type signin
 
 `signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -269,8 +269,6 @@ To include a `messageBack` action with an Adaptive Card include the following de
 | `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
 | `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
-#### Example
-
 The following code shows an example of Adaptive Cards with `messageBack` action:
 
 ```json
@@ -300,8 +298,6 @@ To include an `imBack` action with an Adaptive Card include the following detail
 | `type` | Set to `imBack`. |
 | `value` | String that needs to be echoed back in the chat. |
 
-#### Example
-
 The following code shows an example of Adaptive Cards with `imBack` action:
 
 ```json
@@ -328,8 +324,6 @@ To include a `signin` action with an Adaptive Card include the following details
 | --- | --- |
 | `type` | Set to `signin`. |
 | `value` | Set to the URL where you want to redirect.  |
-
-#### Example
 
 The following code shows an example of Adaptive Cards with `signin` action:
 
@@ -358,8 +352,6 @@ To include an `invoke` action with an Adaptive Card include the following detail
 | `type` | Set to `task/fetch`. |
 | `data` | Set the value.  |
 
-#### Example 1
-
 The following code shows an example of Adaptive Cards with `invoke` action:
 
 ```json
@@ -373,8 +365,6 @@ The following code shows an example of Adaptive Cards with `invoke` action:
   }
 }
 ```
-
-#### Example 2 with additional payload data
 
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
@@ -393,4 +383,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## See also
 
-* [Card reference](./cards-reference.md)
+[Card reference](./cards-reference.md)

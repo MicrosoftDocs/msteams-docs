@@ -924,4 +924,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 
 ## See also
 
-* [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
+[Task modules](~/task-modules-and-cards/what-are-task-modules.md)

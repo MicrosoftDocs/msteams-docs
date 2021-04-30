@@ -8,9 +8,9 @@ keywords: task modules teams tabs client sdk
 
 # Use task modules in tabs
 
-Add a task module to your tab to simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Teams-aware pop-up. A good example of this is editing Planner cards. You can use task modules to create a similar experience.
+Add a task module to your tab to simplify your user's experience for any workflows that require data input. Task modules allow you to gather their input in a Microsoft Teams-aware pop-up. A good example of this is editing Planner cards. You can use task modules to create a similar experience.
 
-To support the task module feature, two new functions are added to the [Microsoft Teams client SDK](/javascript/api/overview/msteams-client). The following code shows an example of these two new functions:
+To support the task module feature, two new functions are added to the [Teams client SDK](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
 
 ```typescript
 microsoftTeams.tasks.startTask(
@@ -30,8 +30,8 @@ Now, you can see how invoking a task module from a tab and submitting the result
 
 To invoke a task module from a tab use `microsoftTeams.tasks.startTask()` passing a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) and an optional `submitHandler` callback function. There are two cases to consider:
 
-1. The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page calls `microsoftTeams.initialize()`. If there is a `submitHandler` function on the page and there is an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the error. For more information, see [task module invocation errors](#task-module-invocation-errors).
-1. The value of `taskInfo.card` is the [JSON for an Adaptive Card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). In this case there is no JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive Card. The only way to receive what the user entered is by passing the result to a bot. To use an Adaptive Card task module from a tab your app must include a bot to get any information back from the user.
+* The value of `TaskInfo.url` is set to a URL. The task module window appears and `TaskModule.url` is loaded as an `<iframe>` inside it. JavaScript on that page calls `microsoftTeams.initialize()`. If there is a `submitHandler` function on the page and there is an error when invoking `microsoftTeams.tasks.startTask()`, then `submitHandler` is invoked with `err` set to the error string indicating the error. For more information, see [task module invocation errors](#task-module-invocation-errors).
+* The value of `taskInfo.card` is the [JSON for an Adaptive Card](~/task-modules-and-cards/task-modules/invoking-task-modules.md#adaptive-card-or-adaptive-card-bot-card-attachment). In this case there is no JavaScript `submitHandler` function to call when the user closes or presses a button on the Adaptive Card. The only way to receive what the user entered is by passing the result to a bot. To use an Adaptive Card task module from a tab your app must include a bot to get any information back from the user.
 
 The next section gives an example of invoking a task module.
 
@@ -124,4 +124,4 @@ The following table provides the possible values of `err` that can be received b
 
 ## See also
 
-* [Using task modules in bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+[Using task modules in bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

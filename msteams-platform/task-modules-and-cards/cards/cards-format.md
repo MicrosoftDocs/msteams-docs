@@ -164,7 +164,7 @@ The following code shows an example of Adaptive Card with a mention:
 Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element.
 
 > [!NOTE]
-> * The feature only supports client side information masking. The masked input text is sent as clear text to the HTTPS endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-configure-your-bot).
+> * The feature only supports client side information masking. The masked input text is sent as clear text to the HTTPS endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-register-your-bot-endpoint).
 > * The information masking property is currently available only in developer preview.
 
 To mask information in Adaptive Cards, add the `isMasked` property to **type** `Input.Text`, and set its value to **true**.
@@ -525,4 +525,4 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-* [Card actions](./cards-actions.md)
+[Card actions](./cards-actions.md)

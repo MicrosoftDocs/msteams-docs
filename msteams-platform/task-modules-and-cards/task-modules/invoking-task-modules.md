@@ -56,7 +56,7 @@ The next section provides examples of embedding task modules in a YouTube video 
 
 HTML or JavaScript-based task modules have access to the entire area of the task module below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, the user must provide the right CSS. The next sections provide some examples for a few use cases.
 
-### Example 1 YouTube video
+**Example 1: YouTube video**
 
 YouTube offers the ability to embed videos on web pages. It is easy to embed videos on web pages in a task module using a simple stub web page.
 
@@ -95,7 +95,7 @@ The following code provides an example of the CSS:
 }
 ```
 
-### Example 2 PowerApp
+**Example 2: PowerApp**
 
 The user can use the same approach to embed a PowerApp as well. As the height or width of any individual PowerApp is customizable, the user can adjust the height and width to achieve the desired presentation.
 
@@ -179,7 +179,7 @@ The next section provides details on task module deep link syntax including the 
 
 ## Task module deep link syntax
 
-A task module deep link is a serialization of the [TaskInfo object](#the-taskinfo-object) with the following two other details, `APP_ID` and optionally the `BOT_APP_ID`:
+A task module deep link is a serialization of the TaskInfo object with the following two other details, `APP_ID` and optionally the `BOT_APP_ID`:
 
 `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
@@ -188,25 +188,25 @@ A task module deep link is a serialization of the [TaskInfo object](#the-taskinf
 For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](#the-taskinfo-object).
 
 > [!TIP]
-> Be sure to URL encode the deep link, especially when using the `card` parameter, for example JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
+> URL encode the deep link when using the `card` parameter, for example, JavaScript's [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
 
 The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
-| Value | Type | Required? | Description |
+| Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | The [id](~/resources/schema/manifest-schema.md#id) of the app invoking the task module. The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. The app ID is already known when a task module is invoked from a tab or a bot, which is why it is not included in `TaskInfo`. |
+| `APP_ID` | string | Yes | The [ID](~/resources/schema/manifest-schema.md#id) of the app invoking the task module. The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is in the URL. The app ID is already known when a task module is invoked from a tab or a bot, which is why it is not included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, that is you cannot send it to any bot. |
 
 > [!NOTE]
-> `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a bot as it is recommended to use that as an app's ID if there is one.
+> `APP_ID` and `BOT_APP_ID` can be the same in many cases, if an app has a recommended bot to use as an app's ID if there is one.
 
 The next section provides details on using a keyboard with your app's task module.
 
 ## Keyboard and accessibility guidelines
 
-With HTML or JavaScript-based task modules it is your responsibility to ensure your app's task module can be used with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. This includes the following two things:
+With HTML or JavaScript-based task modules, you must ensure your app's task module can be used with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. This includes the following two things:
 
-* Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused and if or where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
+* Using the [tabindex attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
 * Handling the <kbd>Esc</kbd> key in the JavaScript for your task module. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
 
     ```javascript
