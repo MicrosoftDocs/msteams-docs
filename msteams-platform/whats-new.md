@@ -16,8 +16,9 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 | 04/29/2021 | New: Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/08/2021| App customization feature is now available in developer preview.|[Design teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|04/08/2021| App customization feature is now available in developer preview.|[Design Teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App Studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Notice: Update to version 4.10 or above of the Bot Framework SDK, as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021|Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
@@ -38,7 +39,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 |08/06/2020|Support for Tabs SSO authentication|[Develop an SSO Microsoft Teams Tab](tabs/how-to/authentication/auth-aad-sso.md#develop-an-sso-microsoft-teams-tab) |
 |07/27/2020 | Graph proactive bots and messages (Public Preview)|[Enable proactive bot installation and proactive messaging in Teams with Microsoft Graph](graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)|
 | 07/22/2020 |Mobile device capability updates.|[Request device permissions for your Microsoft Teams tab](concepts/device-capabilities/native-device-permissions.md) |
-|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams App Validation Tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool)
+|07/20/2020|Teams App Validation Tool for AppSource submissions.|[Teams app package validation tool](concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#validate-your-app-package)
 |07/15/2020|Create a virtual assistant for Teams|[Virtual Assistant for Microsoft Teams](samples/virtual-assistant.md)|
 |07/14/2020|Surfacing a native loading indicator documentation|[Showing a native loading indicator](tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator)
 |07/01/2020|Get started building Teams apps with the Visual Studio Code Toolkit.|[Build apps with the Microsoft Teams Toolkit and Visual Studio Code](toolkit/visual-studio-code-overview.md) |

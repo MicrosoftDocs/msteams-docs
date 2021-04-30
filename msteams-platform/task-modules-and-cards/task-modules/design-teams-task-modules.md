@@ -100,11 +100,13 @@ This example shows poll results launched from an Adaptive Card. The poll can be 
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Usability
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a task module best practice (one task module at a time)." border="false":::
 
 #### Do: Use one task module at a time
 
@@ -112,7 +114,7 @@ The goal is to focus the user on completing a task after all!
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example shows a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/usability-dont.png" alt-text="Example showing a task module best practice (pop a dialog on top of a task module)." border="false":::
 
 #### Don't: Pop a dialog on top of a task module
 
@@ -125,7 +127,7 @@ This creates an unfocused, confusing user experience.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example shows task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-do.png" alt-text="Example showing a task module best practice (make sure the content is responsive)." border="false":::
 
 #### Do: Make sure the content is responsive
 
@@ -133,7 +135,7 @@ While Adaptive Cards hosted in a task module render well on mobile devices, if y
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example displays a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/responsive-dont.png" alt-text="Example showing a task module best practice (don't use horizontal scroll bars)." border="false":::
 
 #### Don't: Use horizontal scroll bars
 
@@ -146,7 +148,7 @@ It's a best practice to keep content focused and not too lengthy. If a scroll is
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Example displays task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-do.png" alt-text="Example showing a task module best practice (keep it short)." border="false":::
 
 #### Do: Keep it short
 
@@ -154,9 +156,9 @@ You can easily create a multi-step wizard, but that doesn't necessarily mean you
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Illustration showing a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/simplicity-dont.png" alt-text="Example showing a task module best practice (don't have long interactions)." border="false":::
 
-#### Don't: Do long interactions
+#### Don't: Have long interactions
 
 Try to keep your interactions short and to the point.
 
@@ -167,7 +169,7 @@ Try to keep your interactions short and to the point.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Illustration shows a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-do.png" alt-text="Example showing a task module best practice (use inline error messages)." border="false":::
 
 #### Do: Use inline error messages
 
@@ -175,7 +177,7 @@ See the forms UI template for guidelines on inline error handling.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Illustration displays a task module best practice." border="false":::
+:::image type="content" source="../../assets/images/task-module/error-messages-dont.png" alt-text="Example showing a task module best practice (put error messages in dialogs)." border="false":::
 
 #### Don't: Put error messages in dialogs
 

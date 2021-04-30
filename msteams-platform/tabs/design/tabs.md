@@ -139,6 +139,8 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Collaboration
 
 :::row:::
@@ -222,10 +224,3 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)
