@@ -122,7 +122,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 :::row:::
 
    :::column span="3":::
-      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Example screenshot highlights where an app's long description displays in a store listing.":::
+      :::image type="content" source="~/assets/images/store-detail-page/Screenshot-01.png" alt-text="Example screenshot highlights where app screenshots display in a store listing.":::
    :::column-end:::
    :::column span="1":::
    :::column-end:::
