@@ -5,12 +5,19 @@ ms.topic: how-to
 localization_priority: Normal
 ms.author: surbhigupta
 ---
-
-# Add a default install scope and group capability
+# Configure default install options for your Microsoft Teams app
 
 It’s common for an app to support multiple scenarios in Teams, but you may have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the store is **Add to a team**.
 
-![Add an app](../../assets/images/compose-extensions/addanapp.png)
+:::row:::
+   :::column span="2":::
+
+![Add an app dropdown example](../../assets/images/compose-extensions/addanapp.png)
+
+   :::column-end:::
+   :::column span="2":::
+   :::column-end:::
+:::row-end:::
 
 If your app's primary capability is a bot, you can also make the bot the default capability when a user installs your app to a team.
 
