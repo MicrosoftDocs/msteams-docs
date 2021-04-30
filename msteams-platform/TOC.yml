@@ -432,6 +432,8 @@
       href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
+    - name: Frequently failed cases for store submissions
+      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Contributing to Teams docs
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
