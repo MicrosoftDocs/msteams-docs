@@ -24,7 +24,7 @@ A Teams app is a web app. Like all web apps, its source code is developed in an 
 There are three paths to registering a Teams app with Developer Portal:
 - Register a brand new app from the portal
 - Import an existing app package from the portal
-- Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](aka.ms/teams-toolkit)
+- Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 If you register a new app, you must fill out all the mandatory configuration fields before you can install the app to your Teams client.
 
