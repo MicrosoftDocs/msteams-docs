@@ -1,12 +1,11 @@
 ---
 title: Map your use cases to Teams app capabilities
 author: clearab
-description: Choose the correct app scope
+description: Identify how your app's use cases can work within the Teams experience.
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: anclear
 ---
-
 # Map your use cases to Teams app capabilities
 
 After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received from the user to your queries, and then decide which capability is best suited to build your app.
@@ -25,12 +24,11 @@ While choosing the app scope, consider the following:
 
 You can choose between personal scope and team or channel scope for your app depending on the following:
 
-* For selecting personal scope, answer questions, such as:
+* For personal scope, ask the following questions:
   * Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information.
   * Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company.
   * Are there any personalized notifications or messages that will need to be sent to a user throughout the Teams app experience? For example, reminders for approvals or registrations.
-
-* For selecting team or channel scope, answer questions, such as: 
+* For a shared scope (team, channel, or chat), ask the following questions:
   * Is the information presented by the app, either in tab or through a bot, relevant and useful for most members in a Team? For example, Scrum app.
   * Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. 
   * Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket.
@@ -100,6 +98,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 ## See also
 
-- [Build apps for Microsoft Teams](../../overview.md)
- 
-
+* [Build apps for Microsoft Teams](../../overview.md)

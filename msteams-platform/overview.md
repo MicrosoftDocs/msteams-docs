@@ -154,4 +154,4 @@ Looking for app development inspiration? Browse our list of real-world scenarios
 * [Design your Teams app](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publish your Teams app](concepts/deploy-and-publish/overview.md)
+* [Distribute your Teams app](concepts/deploy-and-publish/apps-publish-overview.md)

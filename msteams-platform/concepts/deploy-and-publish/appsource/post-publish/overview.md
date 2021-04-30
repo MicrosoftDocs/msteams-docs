@@ -1,54 +1,55 @@
 ---
-title: Maintaining and supporting your published app
-description: What to do after you have published your app
-ms.topic: how-to
+title: Maintain and support your published app
+description: What to think about once your store is listed on the Teams store and AppSource.
+ms.topic: conceptual
 localization_priority: Normal
-keywords: teams post publish update certification app update manifest 
+author: heath-hamilton
+ms.author: surbhigupta
 ---
+# Maintain your published Microsoft Teams app
 
-# Maintain and support your published app 
+With your app listed on the Microsoft Teams store, start thinking about how you'll maintain the app going forward and increase downloads and usage.
 
-After your app is approved and listed in the public app catalog, you can increase your reach by completing the Microsoft 365 App Compliance Program or by adding a download button on your website.
+## Publish updates to your app
 
-## Microsoft 365 Certified
+You can submit changes to your app (such as new features or even metadata) in Partner Center. These changes requires a new review process.
 
-The [Microsoft 365 App Compliance Program](./application-certification.md), is a three tier approach to app security and compliance. Each tier builds upon the next – offering a layered program to meet your customer’s needs. You can learn more about the security and compliance posture of Teams apps by visiting the [compliance page](https://docs.microsoft.com/microsoft-365-app-certification/teams/teams-apps).
+Ensure the following when publishing updates:
 
-## Add a download button to your product site
+* Don't change your app ID.
+* Increment your app's version number.
+* In Partner Center, don't select **Add a new app** to do the update. Go to your app's page instead.
 
-If your app is in the Microsoft Teams global store, you can generate a link for your website that launches Teams and shows a consent and installation dialog for users to add the app.
-The format is:  `https://teams.microsoft.com/l/app/<appId>` where appID is the GUID they declare in the submitted manifest.
-Example: `https://teams.microsoft.com/l/app/49e6f432-d79c-49e8-94f7-89b94f3672fd` is the link to install Trello.
+### App updates requiring user consent
 
-## Updating your existing Teams app
+When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users only have to do this once and new versions of your app install automatically.
 
-* Do not use the *Add a new app* button to resubmit your app. Use the tile for your app on the Overview tab instead.
-* The appId in the updated manifest should be the same as in the current manifest, with an incremented version number.
-* Increment your version number in the manifest if you make any changes to your submission including app name or any metadata in the manifest.
-* Updated submissions are required to undergo a new review and validation process.
+If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 
-## App updates and the user consent flow
+* Add or remove a bot.
+* Change the bot ID.
+* Modify a bot's one-way notification configuration.
+* Modify a bot's support for uploading and downloading files.
+* Add or remove a messaging extension.
+* Add a personal tab.
+* Add a channel and group tab.
+* Add a connector.
+* Modify configurations related to your Azure Active Directory (Azure AD) app registration. For more information, see [`webApplicationInfo`](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-When a user installs your application one of the first things they do is consent to give the app permission to access the services and information that the app needs to do its job. In most cases, after you complete an app update the new version will automatically appear for end users. However, there are some updates to the [Teams app manifest](../../../../resources/schema/manifest-schema.md) that require user acceptance to complete and can re-trigger this consent behavior:
+## Fix issues with your published app
 
- >[!div class="checklist"]
->
-> * A bot is added or removed.
-> * An existing bot's unique `botId` value is changed.
-> * An existing bot's `isNotificationOnly` boolean value is changed.
-> * An existing bot's `supportsFiles` or `supportsCalling` boolean value is changed.
-> * A messaging extension `composeExtensions` is added or removed.
-> * A new connector is added.
-> * A new static or personal tab is added.
-> * A new configurable group or channel tab is added.
-> * The properties inside `webApplicationInfo` are changed. For changes to `webApplicationInfo`, consent is only required in the Teams scope.
+Microsoft runs daily automation tests on apps listed on the Teams store. If issues with your app are identified, we contact you with a detailed report on how to reproduce the issues and recommendations to resolve them. If you can't fix the problems within a stated timeline, your app listing may be removed from the store.
 
-### Images of user consent flow:
+## Promote your app on another site
 
-**Set up a connector** —  This screen will appear only for Teams users.
+When your app is listed in the Teams store, you can create a link that launches Teams and displays a dialog to install your app. You could include this link, for example, with a download button on your product's marketing page.
 
-![Consent flow setup a connector diagram](../../../../assets/images/connector-teams-consentflow.png)
+Create the link using the following URL appended with your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`.
 
-**User consent flow** - This screen is common for both personal and group scope. Here, select the **Consent on behalf of your organization** checkbox and choose **Accept**.
+## Complete Microsoft 365 Certification
 
-![Permissions diagram](../../../../assets/images/user-consent-flow.png)
+[Microsoft 365 Certification](/microsoft-365-app-certification/docs/certification) offers assurances that data and privacy are adequately secured and protected when a third-party Office app or add-in is installed in your Microsoft 365 ecosystem. Certification confirms that your app is compatible with Microsoft technologies, compliant with cloud app security best practices, and supported by Microsoft.
+
+## See also
+
+* [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
