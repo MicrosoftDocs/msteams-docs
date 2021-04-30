@@ -53,7 +53,7 @@ If you already have a tenant, verify if you can sideload apps in Teams.
 
 ### Install your development tools
 
-To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickly get started. You can also build Teams apps with any ofyour preffered tools. 
+To build this app, you'll use the Teams Toolkit for Visual Studio Code to quickly get started. You can also build Teams apps with any of your preffered tools. 
 
 > [!NOTE]
 > Teams displays app content only through HTTPS connections. To debug certain types of apps locally, such as a bot, you'll learn how to use ngrok to set up a secure tunnel between Teams and your app.
