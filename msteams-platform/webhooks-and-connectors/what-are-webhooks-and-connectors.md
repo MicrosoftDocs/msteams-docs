@@ -9,7 +9,9 @@ ms.author: anclear
 
 # Webhooks and connectors
 
-A webhook is a user-defined HTTP callback that notifies you about any action that has taken place in Microsoft Teams channel. It is a way for an app to get real-time data. Connectors are inbound webhooks that gives you an URL with which you can post messages anytime in a specified channel. Connectors are also used in Outlook to notify users through mail. Webhooks and connectors are a simple way to connect your web services to channels and teams in Microsoft Teams.
+Webhooks and connectors are simple ways to connect your web services to channels and teams in Microsoft Teams.
+A webhook is a user-defined HTTP callback that notifies you about any action that has taken place in Microsoft Teams channel. It is a way for an app to get real-time data.
+Connectors are inbound webhooks that give you a URL with which you can post messages anytime in a specified channel.
 
 ## Incoming webhooks
 
@@ -25,11 +27,7 @@ Outgoing webhooks are configured on a per-team basis and cannot be included as p
 
 For more information, see [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
-## Connectors
-
-A connector consists of a configuration page and a backend. In configuration page, you can specify the content that is posted in the channel. Connectors permit users to subscribe to notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages typically in the form of cards.
-
-### Office 365 Connectors
+## Office 365 Connectors
 
 You can create a custom configuration page for your incoming webhook and package them as part of a Teams app with Office 365 connectors. You can then distribute that app to the app store. You send messages primarily using Office 365 Connector cards and add a limited set of card actions to them. A good example of this is a weather connector, where users can choose a location and time of day to receive updates about the weather. Office 365 Connectors are configured on a channel level but are installed at a team level.
 
@@ -37,3 +35,5 @@ For more information, see [create an Office 365 Connector](~/webhooks-and-connec
 
 Webhooks and connectors
 > [!VIDEO https://www.youtube-nocookie.com/embed/EqodWkS5PYM]
+
+## See also
