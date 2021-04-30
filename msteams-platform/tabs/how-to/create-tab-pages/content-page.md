@@ -19,7 +19,7 @@ A content page is a webpage that is rendered within the Teams client. Typically 
 
 This article is specific to using content pages as tabs. The majority of the guidance here would apply regardless of how the content page is presented to the end-user.
 
-## Tab content and style guidelines
+## Tab content and design guidelines
 
 Your tab's overall objective must provide access to meaningful and engaging content that has a practical value and an evident purpose. You must focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive along with pleasing style.
 

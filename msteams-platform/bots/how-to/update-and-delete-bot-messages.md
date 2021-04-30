@@ -61,9 +61,9 @@ To update an existing activity within a conversation, include the `conversationI
 PUT /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request and Responce** | **Description** |
+|Request |Response |
 |----|----|
-| An [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object |
+| An [Activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#activity-object&preserve-view=true) object. | A [ResourceResponse](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#resourceresponse-object&preserve-view=true) object. |
 
 ---
 * * *
@@ -165,9 +165,9 @@ To delete an existing activity within a conversation, include the `conversationI
 DELETE /v3/conversations/{conversationId}/activities/{activityId}
 ```
 
-| **Request and Responce** | **Description** |
+| **Request and response** | **Description** |
 |----|----|
-| N/A | An HTTP status code that indicates the outcome of the operation. Nothing is specified in the body of the response. |
+| N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---
 
@@ -175,7 +175,7 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 The following code sample demonstrates basics of conversations:
 
-| **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |----------------------|-----------------|--------|-------------|--------|
 | Teams Conversation Basics  | Demonstrates basics of conversations in Teams including message update and delete. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
