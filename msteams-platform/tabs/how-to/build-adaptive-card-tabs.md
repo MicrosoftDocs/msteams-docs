@@ -116,7 +116,7 @@ The following code snippets are examples of `tab/fetch` request and response:
             }
     },
     "conversation": {
-        "id": "tab:hash(tabId_appId_userId)"
+        "id": "generated conversation id"
     },
     "imdisplayname": "{user_display_name}"
 }
