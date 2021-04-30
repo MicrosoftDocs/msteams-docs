@@ -3,6 +3,7 @@ title: Designing your meeting extension
 author: heath-hamilton
 description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
@@ -146,11 +147,10 @@ There are two header variants. When possible, use the variant with the avatar to
 
 In-meeting dialogs can vary in size to account for different scenarios. Make sure to maintain padding and component sizes.
 
-* **Width**: The iframe width of the dialog is an absolute value within the range you specify.
-* **Height**: The iframe height of the dialog is an absolute value within the range you specify.
+* **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
+* **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-> [!NOTE]
-> The values that you define for the width and height are used in `externalResourceURL` of in-meeting dialog.
+To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) key.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
@@ -158,9 +158,11 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 
 You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between a the pre- and post-meeting tab experience.)
 
-:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example shows a post-meeting tab." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
 
 ## Best practices
+
+Use these recommendations to create a quality app experience.
 
 ### Interactions
 
@@ -340,10 +342,3 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

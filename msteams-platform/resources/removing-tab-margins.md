@@ -4,6 +4,7 @@ author: laujan
 description: Describes how the removal of tab margins will enhance developer's experience.
 keywords: tab removing margins padding
 ms.topic: reference
+localization_priority: Normal
 ms.author: lomeybur
 ---
 
@@ -13,6 +14,9 @@ This document describes how the removal of margins around all tabs in Microsoft 
 Removing the margins around all tabs will allow developers to build apps that look more native to Teams. This will also align with our [UI kit designs](~/tabs/design/tabs.md). Most apps already look better without the margins surrounding their experiences. However, some tabs are visually affected by this change, and developers must make the necessary changes.
 
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins" border="false":::
+
+> [!NOTE]
+> This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients do not have margins. 
 
 ## Timelines
 

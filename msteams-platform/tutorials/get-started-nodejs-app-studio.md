@@ -3,6 +3,7 @@ title: Tutorial - Create your first app using Node.js
 description: Learn how to get started building Microsoft Teams apps with Node.js.
 keywords: getting started node.js nodejs App Studio
 ms.topic: tutorial
+localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 

@@ -2,12 +2,17 @@
 title: Features in the Public Developer Preview
 description: Details the features in the Microsoft Teams Public Developer Preview
 ms.topic: reference
+localization_priority: Normal
 keywords: teams preview developer features
 ---
 
 # Features in the Public Developer Preview for Microsoft Teams
 
 The developer preview includes the following new features:
+
+## App customization
+
+You can now define a select set of properties, which a Teams admin can customize or rebrand based on their organization's need. For more information, see [app customization feature](~/concepts/design/design-teams-app-overview.md).
 
 ## Tabs single sign-on (SSO)
 
@@ -17,9 +22,10 @@ Our developer preview is available in manifest versions 1.5 and greater. Our cur
 
 ## Calls and online meeting bots
 
-With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
+With the addition of [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Microsoft Teams apps can now interact with users in rich ways using voice and video. These APIs allow you to add new app features such as interactive voice response (IVR), call control, and access to real-time audio and/or video streams for calls and meetings, including desktop and app sharing.
 
 We've added a new section on how to create and develop calls and online meetings bots, starting with the [overview](~/bots/calls-and-meetings/calls-meetings-bots-overview.md).
+
 
 ## Image enlarge support
 
