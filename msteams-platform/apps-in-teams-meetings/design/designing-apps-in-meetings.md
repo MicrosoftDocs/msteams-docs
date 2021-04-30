@@ -3,6 +3,7 @@ title: Designing your meeting extension
 author: heath-hamilton
 description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit.
 ms.author: lajanuar
+localization_priority: Normal
 ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
@@ -160,6 +161,8 @@ You can go back to a meeting after it ends and view app content. In this example
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
 
 ## Best practices
+
+Use these recommendations to create a quality app experience.
 
 ### Interactions
 
@@ -339,10 +342,3 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

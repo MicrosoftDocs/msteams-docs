@@ -2,6 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
+localization_priority: Normal
 ms.topic: reference
 ms.date: 03/29/2018
 ---
@@ -118,10 +119,11 @@ Bots and messaging extensions can include mentions within the card content in [T
 
 #### Constructing mentions
 
-To include a mention in an Adaptive card your app needs to include the following elements
+To include a mention in an Adaptive Card your app needs to include the following elements:
 
-* `<at>username</at>` in the supported Adaptive card elements
-* The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned
+* `<at>username</at>` in the supported Adaptive card elements.
+* The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned.
+* The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### Sample Adaptive card with a mention
 
@@ -154,12 +156,11 @@ To include a mention in an Adaptive card your app needs to include the following
 }
 ```
 
-
 ### Information masking in Adaptive cards
 Use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive card [`Input.Text`](https://adaptivecards.io/explorer/Input.Text.html) input element. 
 
 > [!NOTE]
-> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md#4-configure-your-bot). 
+> The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md). 
 
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.

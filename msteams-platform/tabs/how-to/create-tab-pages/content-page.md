@@ -3,6 +3,7 @@ title: Create a content page
 author: laujan
 description: how to create a content page
 keywords: teams tabs group channel configurable static
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -16,9 +17,11 @@ A content page is a webpage that is rendered within the Teams client. Typically 
 
 This article is specific to using content pages as tabs; however the majority of the guidance here would apply regardless of how the content page is presented to the end-user.
 
-## Tab content and style guidelines
+## Tab content and design guidelines
 
-Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/tabs/design/tabs.md) and [Microsoft Teams app approval process guidance](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive.
+
+For more information, see the [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 ## Integrate your code with Teams
 

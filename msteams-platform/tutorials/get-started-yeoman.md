@@ -2,6 +2,7 @@
 title: Tutorial - Create your first app using the Yeoman generator
 description: Learn how to get started building Microsoft Teams apps with the Yeoman generator.
 keywords: getting started node.js nodejs yeoman
+localization_priority: Normal
 ms.topic: tutorial
 ms.custom: scenarios:getting-started
 ---

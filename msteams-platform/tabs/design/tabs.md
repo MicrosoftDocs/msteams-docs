@@ -2,6 +2,7 @@
 title: Designing your tab for desktop and web
 description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
 author: heath-hamilton
+localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -138,11 +139,13 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Collaboration
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-do.png" alt-text="Illustration shows what to do with tab navigation design." border="false":::
 
 #### Do: Facilitate conversation
 
@@ -150,7 +153,7 @@ Include content and components people can talk about. If it doesn’t fit within
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Illustration showing what not to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-collaboration-dont.png" alt-text="Example shows what not to do with tab navigation design." border="false":::
 
 #### Don't: Treat your tab like any other webpage
 
@@ -163,7 +166,7 @@ A tab isn’t a webpage someone might view once. A tab should display your most 
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Illustration showing what to do with tab navigation design." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-tab-nav-do.png" alt-text="Example showing what to do with tab navigation design." border="false":::
 
 #### Do: Limit tasks and data
 
@@ -221,10 +224,3 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
    :::column-end:::
 :::row-end:::
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

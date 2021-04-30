@@ -2,6 +2,7 @@
 title: Develop messaging extensions
 description: Describes how to get started with messaging extensions in Microsoft Teams
 ms.topic: overview
+localization_priority: Normal
 keywords: teams messaging extensions messaging extensions
 ---
 # Develop messaging extensions for Microsoft Teams
