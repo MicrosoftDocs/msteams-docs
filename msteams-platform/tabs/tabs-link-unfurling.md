@@ -1,12 +1,12 @@
 ---
-title: Tabs-link unfurling
+title: Tabs-link unfurling and Stage View
 author: Rajeshwari-v
-description: How to perform link unfurling with tab in a Microsoft Teams app.
+description: How to unfurl a link and invoke a Stage View in tabs with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Tabs link unfurling 
+# Tabs link unfurling and Stage View
 
 The collaborative experience of Teams platform is enhanced continuously with addition of new features. In this process of continuous enhancement, a new UI component, called Stage View is built in Teams. 
 
@@ -73,7 +73,9 @@ Following is the code to open a stage from an  Adaptive Card:
 The `invoke` request type must be `composeExtension/queryLink`. 
 
 > [!NOTE]
-> `invoke` workflow is similar to the current `appLinking` workflow. 
+> * `invoke` workflow is similar to the current `appLinking` workflow. 
+> * To keep consistency, it is recommended to name the `Action.Submit` as `View`.
+
 
 **To invoke Stage View**
 
@@ -108,7 +110,8 @@ https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?conte
 https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
 > [!NOTE]
-> The `title` is optional in the deeplink. If not included, the app name replaces it . 
+> * The `title` is optional in the deeplink. If not included, the app name replaces it. 
+> * The deeplink can also be passed through  an `OpenURL` action.
 
 ## Tab information property
 
