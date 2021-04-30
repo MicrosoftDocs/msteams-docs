@@ -127,8 +127,10 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. On the resource page, select **Configuration**. 
+1. Select **Add OAuth Connection Settings** near the bottom of the page.   
+The following image displays the corresponding selection in the resource page:  
+![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*.
@@ -154,8 +156,11 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. On the resource page, select **Configuration**. 
+1. Select **Add OAuth Connection Settings** near the bottom of the page.  
+The following image displays the corresponding selection in the resource page:        
+![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv2*.
