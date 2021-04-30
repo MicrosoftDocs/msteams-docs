@@ -4,6 +4,7 @@ author: laujan
 description: create apps for teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams apps meetings user participant role api 
 ---
 # Create apps for Teams meetings
@@ -316,6 +317,9 @@ To use the `userContext` API to route requests accordingly, see [Teams SDK](../t
 
 Messaging extension works as expected when a user is in an in-meeting view and the user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
+> [!NOTE]
+> Use version 1.7.0 or higher of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
+
 #### In-meeting dialog
 
 The in-meeting dialog box can be used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](/graph/api/resources/notifications-api-overview?view=graph-rest-beta&preserve-view=true) API to signal that a bubble notification must be triggered. As part of the notification request payload, include the URL where the content to be shown is hosted.
@@ -329,12 +333,35 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 #### Share to stage 
 
 > [!NOTE]
-> This capability is avaialable only in insider dev preview
+> * This capability is currently available in developer preview only.
+> * To use this feature, the app must support an in-meeting sidepanel.
 
 
 This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time. 
 
-The required context is meetingStage in the app manifest. A pre-requisite for this is to have the meetingSidePanel context. This will enable the "Share" button in the sidepanel as depecited below
+The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables the **Share** button in the sidepanel as depecited in the following image:
+
+  ![share_to_stage_during_meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+
+The manifest change that is needed to enable this capability is as follows: 
+
+```json
+
+"configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/teamstab/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "groupchat"
+      ],
+      "context":[
+        
+        "meetingSidePanel",
+        "meetingStage"
+     ]
+    }
+  ]
+```
 
 
 
@@ -348,6 +375,7 @@ The post-meeting and pre-meeting configurations are equivalent.
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting SidePanel | Microsoft Teams meeting extensibility sample for iteracting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## See also
 

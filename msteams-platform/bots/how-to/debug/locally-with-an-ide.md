@@ -3,6 +3,7 @@ title: Test and debug your bot locally
 author: clearab
 description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
 ---
 
@@ -15,7 +16,7 @@ When testing your bot you need to take into consideration both the contexts you 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
 There are two methods for uploading your app:
-* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md)
+* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Create an app package](~/concepts/build-and-test/apps-package.md) manually, and then [upload your app](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]
@@ -36,7 +37,7 @@ Use the https endpoint provided by ngrok in your app manifest.
 
 ## Test your bot without uploading to Teams
 
-Occasionally it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
+Occasionally, it may be necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding, however it won't allow you to test the full breadth of Microsoft Teams functionality you may have added to your bot. If you need to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
@@ -89,8 +90,6 @@ To remove your bot completely from Teams, go to your **Bot Dashboard** and edit 
 
 ## See also
 
-> [!div class=nextstep]
-> [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
+- [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
 
-> [!div class=nextstep]
-> [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+- [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

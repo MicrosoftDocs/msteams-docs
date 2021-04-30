@@ -2,6 +2,7 @@
 title: Debug your calling and meeting bot locally
 description: Learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
+localization_priority: Normal
 keywords: local development ngrok tunnel
 ms.date: 11/18/2018
 ---
@@ -14,7 +15,7 @@ Messaging bots use HTTP, but calls and online meeting bots use the lower-level T
 
 ## Configure ngrok.yml
 
-Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your authtoken.
+Go to [ngrok](https://ngrok.com) and sign up for a free account or log into your existing account. After you've signed in, go to the [dashboard](https://dashboard.ngrok.com) and get your auth token.
 
 Create an ngrok configuration file `ngrok.yml` and add the following line. For more information on where the file can be located, see [ngrok](https://ngrok.com/docs#config):
 
@@ -24,7 +25,7 @@ Create an ngrok configuration file `ngrok.yml` and add the following line. For m
 
 In [Calls and online meetings bots](./calls-meetings-bots-overview.md), we discussed call signaling on how bots detect and respond to new calls and events during a call. Call signaling events are sent through HTTP POST to the bot's calling endpoint.
 
-As with the bot's messaging API, in order for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple. Add the following lines to your ngrok.yml:
+As with the bot's messaging API, for the Real-time Media Platform to talk to your bot, your bot must be reachable over the internet. Ngrok makes this simple. Add the following lines to your ngrok.yml:
 
 ```yaml
 tunnels:
@@ -41,8 +42,8 @@ tunnels:
 Application-hosted media uses certificates and TCP tunnels. The following steps are required:
 
 1. Ngrok's public TCP endpoints have fixed URLs. They are `0.tcp.ngrok.io`, `1.tcp.ngrok.io`, and so on. You must have a DNS CNAME entry for your service that points to these URLs. For example, let's say `0.bot.contoso.com` refers to `0.tcp.ngrok.io`, `1.bot.contoso.com` refers to `1.tcp.ngrok.io`, and so on.
-2. A SSL certificate is required for your URLs. To make it easy, use a SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it must match your bot's public URL. Note the thumbprint and install it in your machine certificates.
-3. Now, setup a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
+2. An SSL certificate is required for your URLs. To make it easy, use an SSL certificate issued to a wild card domain. In this case, it would be `*.bot.contoso.com`. This SSL certificate is validated by the media SDK, so it must match your bot's public URL. Note the thumbprint and install it in your machine certificates.
+3. Now, set up a TCP tunnel to forward the traffic to localhost. Write the following lines into your ngrok.yml:
 
     ```yaml
     media:

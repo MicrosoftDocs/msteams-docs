@@ -1,6 +1,7 @@
 ---
 title: Cards reference
 description: Describes all the cards and card actions available to bots in Teams
+localization_priority: Normal
 keywords: bots cards reference
 ms.topic: reference
 ---

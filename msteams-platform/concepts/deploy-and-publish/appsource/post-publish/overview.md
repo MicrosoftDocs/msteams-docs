@@ -1,7 +1,8 @@
 ---
 title: Maintaining and supporting your published app
 description: What to do after you have published your app
-ms.topic: how-to 
+ms.topic: how-to
+localization_priority: Normal
 keywords: teams post publish update certification app update manifest 
 ---
 

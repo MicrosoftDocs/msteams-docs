@@ -16,7 +16,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > To test the RSC permissions, your Teams app manifest file must include a **webApplicationInfo** key populated with the following fields:
 >
 > - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
-> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest)
+> - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
 ```json
@@ -49,18 +49,16 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code](test-rsc-json-file.md) into your local environment and update the following values:
 
-* `azureADAppId`: Your app's Azure AD app ID
-* `azureADAppSecret`: Your Azure AD app secret (password)
-* `token_scope`: The scope is required to get a token - set the value to https://graph.microsoft.com/.default
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
+* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
 * `teamGroupId`: You can get the team group id from the Teams client as follows:
 
-  > [!div class="checklist"]
-  >
-  > * In the Teams client, select **Teams** from the far left navigation bar .
-  > * Select the team where the app is installed from the dropdown menu.
-  > * Select the **More options** icon (&#8943;)
-  > * Select **Get link to team** 
-  > * Copy and save the **groupId** value from the string.
+    1. In the Teams client, select **Teams** from the far left navigation bar.
+    2. Select the team where the app is installed from the dropdown menu.
+    3. Select the **More options** icon (&#8943;).
+    4. Select **Get link to team**. 
+    5. Copy and save the **groupId** value from the string.
 
 ### Use Postman
 
@@ -82,6 +80,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+[Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
 
