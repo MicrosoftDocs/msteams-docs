@@ -16,7 +16,9 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|04/08/2021| App customization feature is now available in developer preview.|[Design teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+| 04/29/2021 | New: Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| App customization feature is now available in developer preview.|[Design Teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App Studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/18/2021|Notice: Update to version 4.10 or above of the Bot Framework SDK, as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021|Default install scope and group capability is in developer preview.| [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
