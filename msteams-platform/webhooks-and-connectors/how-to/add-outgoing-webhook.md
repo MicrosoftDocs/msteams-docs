@@ -11,13 +11,17 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 # Add custom bots to Teams with outgoing webhooks
 
+The article provides information on outgoing webhooks and creating actionable messages.
+
 ## Outgoing webhooks in Teams
 
-Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
-Outgoing webhooks sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
+Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
 
 ## Outgoing webhook key features
+
+The following table provides the feature and description of outgoing webhooks:
 
 | Feature | Description |
 | ------- | ----------- |
@@ -65,15 +69,26 @@ For all other details about connector card actions, see [Actions](/outlook/actio
 ## Create an outgoing webhook
 
 1. Select the appropriate team and choose **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
+
+![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
+
 1. Choose the **Apps** tab from the navigation bar.
-1. From the window's lower right corner select **Create an outgoing webhook**.
+
+![Create outgoing webhook](~/assets/images/outgoingwebhook2.png)
+
+1. From the window's lower right corner select **Create an outgoing webhook**. 
+
+![Create outgoing webhook](~/assets/images/outgoingwebhook3.png)
+
 1. In the resulting pop-up window, complete the required fields:
+
+![Create outgoing webhook](~/assets/images/outgoingwebhook.png)
 
 >* **Name** - The webhook title and @mention tab.
 >* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
 >* **Description** - A detailed string that appear in the profile card and the team-level App dashboard.
 >* **Profile Picture** an optional app icon for your webhook.
-1. Select the **Create** button from the lower right corner of the pop-up window and the outgoing webhooks are added to the current team's channels.
+1. Select **Create** from the lower right corner of the pop-up window. The outgoing webhooks are added to the current team's channels.
 
 The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
@@ -87,7 +102,7 @@ Following is the scenario and example of adding outgoing webhooks to your app:
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
 
-Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. See also [about Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. For more information see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
