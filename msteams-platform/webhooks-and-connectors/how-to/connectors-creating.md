@@ -14,16 +14,16 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 
 ## Add a Connector to your Teams App
 
-You can distribute your registered Connector as part of your Teams app package. For a standalone solution or one of several [capabilities](~/concepts/extensibility-points.md) that your experience enables in Teams, you can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can also provide it to users directly for uploading within Teams.
+You can distribute your registered Connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can also provide it to users directly for uploading within Teams.
 
-To distribute your Connector, you need to register by using the [Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish). By default, when a Connector is registered, it is assumed that your Connector works in all Office 365 products that support them, including Outlook and Teams. If that is not the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Microsoft Teams App Submissions](mailto:teamsubm@microsoft.com).
+To distribute your Connector, you must register by using the [Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish). When a Connector is registered, it is assumed that your Connector works in all Office 365 products that support them, including Outlook and Teams. If that is not the case and you need to create a Connector that only works in Microsoft Teams, contact us directly at [Microsoft Teams App Submissions](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> Your Connector is registered after you choose **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to your organization. You can do so by [publishing to your organization](#publish-connectors-for-your-organization). If you only want to publish to your organization, no further action is necessary on the Connector Dashboard.
+> Your Connector is registered after you choose **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to your organization. You can do so by [publishing to your organization](#publish-connectors-for-your-organization). If you only want to publish to your organization, no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
-Your users can complete the entire Connector configuration experience without having to leave the Teams client. To get the experience, Teams can embed your configuration page directly within an iframe. The sequence of operations is as follows:
+Users can complete the entire Connector configuration experience without having to leave the Teams client. To get the experience, Teams can embed your configuration page directly within an iframe. The sequence of operations is as follows:
 
 * The user selects your connector to begin the configuration process.
 * Your configuration experience is loaded in line within Teams.
@@ -33,8 +33,8 @@ Your users can complete the entire Connector configuration experience without ha
 
 You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must:
 
-1. Include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations like getting the current user, channel, or team context and initiating authentication flows. Initialize the SDK by calling `microsoftTeams.initialize()`.
-2. Call `microsoftTeams.settings.setValidityState(true)` when you want to enable the **Save** button. You must do this as a response to valid user input, such as a selection or field update.
+1. Include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiating authentication flows. Initialize the SDK by calling `microsoftTeams.initialize()`.
+2. Call `microsoftTeams.settings.setValidityState(true)` when you want to enable the **Save** button. You must do this as a response to user selection or field update.
 3. Register a `microsoftTeams.settings.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 4. Call `microsoftTeams.settings.setSettings()` to save the connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your connector.
 5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL. You must call this during the save event and when your page is first loaded in case of a re-configuration.
@@ -100,7 +100,7 @@ Following code provides a sample HTML to create a Connector configuration page w
 #### `GetSettings` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call here are different when you invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parameter   | Details |
 |-------------|---------|
@@ -111,7 +111,7 @@ Following code provides a sample HTML to create a Connector configuration page w
 | `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Microsoft Teams respectively. |
 | `userObjectId` | This is the unique ID corresponding to the Office 365 user who initiated setup of the connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration for the user in your service. |
 
-If you need to authenticate the user as part of loading your page in step 2, see [authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md) to integrate sign in when your page is embedded.
+If you need to authenticate the user as part of loading your page, see [authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md) to integrate sign in when your page is embedded.
 
 > [!NOTE]
 > Due to cross-client compatibility reasons, your code must call `microsoftTeams.authentication.registerAuthenticationHandlers()` with the URL and success or failure callback methods before calling `authenticate()`.
@@ -132,7 +132,7 @@ Optionally, you can execute an event handler when the user removes an existing c
 
 ### Include the Connector in your Manifest
 
-You can download the auto-generated Teams app manifest from the portal. Before you use the connector to test or publish your app, you must do the following:
+Download the auto-generated Teams app manifest from the portal. Before you use the connector to test or publish your app, you must do the following:
 
 * [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 * Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
@@ -196,7 +196,7 @@ To verify that an `HttpPOST` action is working correctly, [send messages to your
 
 ## Publish Connectors for your organization
 
-If you do not want to publish your connector app to the public AppSource or Store but want it to be available only to the users in your organization. In such cases, you can upload your custom connector app to your [organization's App Catalog](~/concepts/deploy-and-publish/apps-publish.md). This way, your connector app is available only to that organization and you must not publish your connector to the public store.
+If you do not want to publish your connector app to the public AppSource or Store, but want it to be available only to the users in your organization, you can upload your custom connector app to your [organization's App Catalog](~/concepts/deploy-and-publish/apps-publish.md). This way, your connector app is available only to that organization.
 
 After you have uploaded your app package to configure and use the connector in a team, it can be installed from the organization's app catalog by following these steps:
 
