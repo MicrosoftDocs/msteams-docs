@@ -28,6 +28,6 @@ Start a local web server by entering the following:
 gulp serve
 ```
 
-Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser. The following application's home page is displayed:
+Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser. The application's home page appears:
 
 ![home page screenshot](~/assets/images/tab-images/homePage.png)

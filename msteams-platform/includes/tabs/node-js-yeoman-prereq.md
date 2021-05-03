@@ -7,7 +7,10 @@ This project requires the following tools installed in your development environm
     >[!NOTE]
     >If you do not have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. For more information, see also [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
 
-- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+- Any text editor or IDE.
+
+    > [!NOTE]
+    > We recommend using [Visual Studio Code](https://code.visualstudio.com/download).
 
 - [Node.js or Node Package Manager](https://nodejs.org/en/). You must use the latest Long Term Support (LTS) version. The Node Package Manager (NPM) installs into your system with the installation of Node.js.
 

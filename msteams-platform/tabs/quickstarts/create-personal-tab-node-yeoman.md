@@ -10,22 +10,27 @@ ms.author: lajanuar
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
-A Yeoman Generator for Microsoft Teams Apps projects is the most comprehensive and complete development toolkit for Microsoft Teams development. This generator is targeted to developers who prefer to use TypeScript, React and Node.js as their primary technologies.
-
 ## What you'll learn
 
-- It also guides you on how to establish a secure tunnel using ngrok and to upload the application to Teams. 
+- Generate your project.
+- Create your personal tab.
+- Create an app package.
+- Build and run your application.
+- Establish a secure tunnel using ngrok.
+- Upload the application to Teams.
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
->[!IMPORTANT]
->The path component *yourDefaultTabNameTab* referenced in this quickstart is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
+> [!IMPORTANT]
+> The path component *yourDefaultTabNameTab* referenced in this quickstart is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
 >
->For example: DefaultTabName: *MyTab* => */MyTabTab/*
+> For example: DefaultTabName: *MyTab* => */MyTabTab/*
 
 ## Create your personal tab
 
-To add a personal tab to this application, you must create a content page and update existing files:
+To add a personal tab to your application, you must create a content page and update existing files.
+
+**To create a personal tab**
 
 1. Open code editor, create a new HTML file, **personal.html** and add the following markup:
 
@@ -49,13 +54,13 @@ To add a personal tab to this application, you must create a content page and up
     </html>
     ```
 
-1. Save **personal.html** in your application's **web** folder:
+1. Save the HTML file in your application's **web** folder.
 
     ```bash
     ./src/app/web/<yourDefaultTabNameTab>/personal.html
     ```
 
-1. Open **manifest.json** in your code editor:
+1. Open **manifest.json** in your code editor.
 
     ```bash
     ./src/manifest/manifest.json/
@@ -78,7 +83,7 @@ To add a personal tab to this application, you must create a content page and up
 
 1. Save the updated **manifest.json**.
 
-1. Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
+1. Your content page must be served in an IFrame. Open **Tab.ts** in your code editor.
 
      ```bash
     ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -98,7 +103,7 @@ Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`
+To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
 
 ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -106,18 +111,18 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you need to either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
 
-To test your tab extension, you must use [ngrok](https://ngrok.com/docs) which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
+To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
 
 Your server's web endpoints are available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 
 In your command prompt, exit localhost and enter the following:
 
-```bash
+```bash    
 gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> When your tab is uploaded to Microsoft teams through *ngrok* and successfully saved, you can view it in Teams until your tunnel session ends.
+> When your tab is uploaded to Microsoft Teams through *ngrok* and successfully saved, you can view your tab in Teams until your tunnel session ends.
 
 ## Upload your application to Teams
 
@@ -132,5 +137,5 @@ Select the `...` menu from the left panel of Teams, and select your application 
 
 ## See also
 
-- [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
+[Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
