@@ -8,11 +8,13 @@ keywords: teams o365 connector
 
 # Send messages to connectors and webhooks
 
-To send a message through your Office 365 connector or incoming webhook, you post a JSON payload to the webhook URL. Typically, this payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Office 365 Connector or incoming webhook, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-You can also use this JSON to create cards containing inputs, such as text entry, multi-select, or picking a date and time. The code that generates the card and posts to the webhook URL can be running on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md) used in Teams bots and messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or selecting date and time. The code that generates the card and posts to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
 
 ### Example connector message
+
+Following is an example of connector message:
 
 ```json
 {
@@ -98,19 +100,19 @@ You can also use this JSON to create cards containing inputs, such as text entry
 }
 ```
 
-This message produces the following card in the channel:
+This message provides the following card in the channel:
 
 ![Screenshot of a connector card](~/assets/images/connectors/connector_message.png)
 
 ## Create actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each containing an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
 
-Connector cards support three types of actions:
+The Connector cards support three types of actions, which are as follows:
 
 - `ActionCard`: Presents one or more input types and associated actions.
-- `HttpPOST`: Sends a POST request to a URL.
-- `OpenUri`: Opens a URI in a separate browser or app, optionally targets different URIs based on operating systems.
+- `HttpPOST`: Sends POST request to a URL.
+- `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
 
 The `ActionCard` action supports three input types:
 
@@ -135,7 +137,7 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 ## Set up a custom incoming webhook
 
-**To send a simple card to a connector**
+Follow the steps to send a simple card to a connector:
 
 1. In Microsoft Teams, choose **More options** **&#8943;** next to the channel name and then choose **Connectors**.
 2. Scroll through the list of Connectors to **Incoming Webhook**, and choose **Add**.
