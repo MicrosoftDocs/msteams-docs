@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 A channel is a bridge between teams that need to work together. The shared channels in Teams allow users of different organizations to collaborate effectively. The following image displays the concept of shared channels:
 
-![Shared channels](~/assets/images/tab images/shared-channels.png)
+![Shared channels](~/assets/images/tab-images/shared-channels.png)
 
 ## Need for shared channels
 
@@ -52,7 +52,7 @@ To populate the channelType field with sharedChannel, you must populate the foll
 |`userPrincipalName`| This property describes the current user’s UPN, regardless of tenant.|
 |`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> [New] sharedChannelMember  |
 
-**NEW `getContext` PROPERTIES**
+**NEW `getContext` PROPERTIES**:  
 Create the following new `getContext` properties:  
 
 |Property name|Description|
