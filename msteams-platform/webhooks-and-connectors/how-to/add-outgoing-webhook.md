@@ -74,15 +74,15 @@ For all other details about connector card actions, see [Actions](/outlook/actio
 
 1. Choose the **Apps** tab from the navigation bar.
 
-![Create outgoing webhook](~/assets/images/outgoingwebhook2.png)
+![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
 
 1. From the window's lower right corner select **Create an outgoing webhook**. 
 
-![Create outgoing webhook](~/assets/images/outgoingwebhook3.png)
+![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
 
 1. In the resulting pop-up window, complete the required fields:
 
-![Create outgoing webhook](~/assets/images/outgoingwebhook.png)
+![create outgoing webhook](~/assets/images/outgoingwebhook.png)
 
 >* **Name** - The webhook title and @mention tab.
 >* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.

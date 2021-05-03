@@ -226,7 +226,7 @@ The following table provides the sample name and its description:
 
 ## See also
 
-* [Send messages to Connectors and Webhooks](../webhooks-and-connectors/how-to/connectors-using)
+* [Send messages to Connectors and Webhooks](../webhooks-and-connectors/how-to/connectors-using.md)
 
 * Introduction to Office 365 Connectors video
  
