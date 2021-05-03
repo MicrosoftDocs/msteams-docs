@@ -144,7 +144,7 @@ Scenes in Together Mode is an artifact created by the scene developer using the 
 
 The following image gives an overview to create a scene only app:
 
-:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
 >[!NOTE]
 > * A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
@@ -205,11 +205,11 @@ A scene in the context of the Scene studio is an artifact that contains the foll
 
 The following image shows each seat represented as an avatar for building scenes:
 
-![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
+![Scene studio](~/assets/images/apps-in-meetings/scene-design-studio.png)
 
 The seat dimensions become the canvas for rendering the participant video stream.
 
-![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
+![Build a scene](~/assets/images/apps-in-meetings/build-a-scene.png)
 
 **To build a scene using the Scene studio**
 
@@ -225,11 +225,11 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * You can download the [SampleScene.zip](/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](/apps-in-teams-meetings/SampleApp.zip) files with the images.
     > * Alternately, you can add background images to the scene using **Add images**.
 
-    ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
+    ![Drag into the scene](~/assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
 5. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
-    ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
+    ![Alignment for images](~/assets/images/apps-in-meetings/image-alignment.png)
 
 6. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
 
@@ -246,7 +246,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     >[!NOTE]
     > In a meeting, one participant must be assigned the role of a meeting organizer.
 
-    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
+    ![Assign spot](~/assets/images/apps-in-meetings/assign-spot.png)
 
 10. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
     
