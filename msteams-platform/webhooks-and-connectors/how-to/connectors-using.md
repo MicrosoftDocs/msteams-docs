@@ -241,7 +241,7 @@ The following is an example of manifest.json with connector:
 
 Follow the steps to send Adaptive Cards through incoming webhook:
 
-1. [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
+1. [Setup a custom webhook](#Set up a custom incoming webhook) in Teams.</br></br>
 2. Create Adaptive Card JSON file:
 
 ```json
@@ -293,7 +293,7 @@ You can launch the configuration experience.
 > [!NOTE]
 > The flow occurs entirely within Microsoft Teams through a pop-up window. At present, the behavior differs from the configuration experience in connectors that were created.
 
-To verify the `HttpPOST` action is working correctly, use [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
+To verify the `HttpPOST` action is working correctly, use [custom incoming webhook](#Set up a custom incoming webhook).
 
 ## Rate limiting for connectors
 
@@ -311,7 +311,7 @@ The following table highlights the time-based transaction details:
 | 7200 | 150  |
 | 86400  | 1800  |
 
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
+A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../bots/how-to/rate-limit.md) to avoid hitting the rate limits.
 
 > [!NOTE]
 > A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
