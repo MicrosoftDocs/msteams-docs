@@ -136,10 +136,19 @@ Each command requires a title and an ID. The command can optionally contain a de
 //TODO: Rajesh R.
 
 ##### Scene
-//TODO: Rajesh R.
 
-##### Scene
-//TODO: Rajesh R.
+Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
+
+>[!NOTE]
+> Scene only apps are recommended as the acquisition experience for such apps is more seamless.
+
+The following image gives an overview to create a scene only app:
+
+:::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
+
+>[!NOTE]
+> * A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
+> * Multiple scenes in a single app package appear as a flat list of scenes to users.
 
 #### Permissions
 
@@ -174,7 +183,85 @@ On your project home page, you can upload your app to a team, submit your app to
 
 ### Scene studio
 
-//Todo
+Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+
+>[!NOTE]
+> This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+
+A scene in the context of the Scene studio is an artifact that contains the following:
+
+* Seats reserved for meeting organizer and meeting presenters.
+
+    >[!NOTE]
+    > Presenter does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+
+* Seat and image for each participant. Each seat and image has an adjustable width and height.
+
+    >[!NOTE]
+    > PNG is the only supported format.
+
+* The xyz coordinates of all the seats and images.
+* A collection of images that are camouflaged as one image.
+
+The following image shows each seat represented as an avatar for building scenes:
+
+![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
+
+The seat dimensions become the canvas for rendering the participant video stream.
+
+![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
+
+**To build a scene using the Scene studio**
+
+1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+
+2. From the **Scenes Editor** page, select **Create a new scene**.
+
+3. On the right side, in the **Scene Name** box, enter a name for the scene.
+
+4. Drag and drop the image into the environment as displayed in the following image:
+
+    >[!NOTE]
+    > * You can download the [SampleScene.zip](/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](/apps-in-teams-meetings/SampleApp.zip) files with the images.
+    > * Alternately, you can add background images to the scene using **Add images**.
+
+    ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
+
+5. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
+
+    ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
+
+6. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
+
+7. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
+
+    >[!NOTE]
+    > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
+    > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
+
+8. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+
+9. Select **Meeting Organizer** or **Presenter** role for the participant.
+
+    >[!NOTE]
+    > In a meeting, one participant must be assigned the role of a meeting organizer.
+
+    ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
+
+10. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
+    
+    >[!NOTE]
+    > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal. The scene can then be viewed in the Together Mode scene gallery.
+
+11. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
+
+    >[!NOTE]
+    > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
+
+12. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+    
+    >[!NOTE]
+    > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
 
 ### Adaptive card editor
 
