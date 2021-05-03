@@ -140,16 +140,16 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 Follow the steps to send a simple card to a connector:
 
 1. In Microsoft Teams, choose **More options** **&#8943;** next to the channel name and then choose **Connectors**.
-2. Scroll through the list of Connectors to **Incoming Webhook**, and choose **Add**.
-3. Enter a name for the webhook, upload an image to associate with data from the webhook, and choose **Create**.
+2. Scroll through the list of Connectors to **Incoming Webhook**, and select **Add**.
+3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select **Create**.
 4. Copy the webhook to the clipboard and save it. You need the webhook URL for sending information to Microsoft Teams.
-5. Choose **Done**.
+5. Select **Done**.
 
-### Post a message to the webhook using cURL
+### Perform the following steps to post a message in the webhook using cURL
 
-The following steps use [cURL](https://curl.haxx.se/) and it is assumed that you have this installed and are familiar with its basic usage.
+1. Install cURL using: https://curl.haxx.se/.
 
-1. From the command line, enter the following cURL command:
+2. From the command line, enter the following cURL command:
 
    ```bash
    // on macOS or Linux
@@ -161,12 +161,14 @@ The following steps use [cURL](https://curl.haxx.se/) and it is assumed that you
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. If the POST succeeds, you must see a simple **1** output by `curl`.
-3. Check the Microsoft Teams client. You must see the new card posted to the team.
+> [!NOTE]
+> If the POST succeeds, you must see a simple **1** output by `curl`.
 
-### Post a message to the webhook using PowerShell
+3. Check the Microsoft Teams client for the new card posted.
 
-The following steps use PowerShell and it is assumed that you have this installed and are familiar with its basic usage.
+### Perform the following steps to post a message to the webhook using PowerShell
+
+Prerequisite: Installation of PowerShell and familiarization with its basic usage.
 
 1. From the PowerShell prompt, enter the following command:
 
@@ -174,8 +176,10 @@ The following steps use PowerShell and it is assumed that you have this installe
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
-3. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+> [!NOTE]
+> If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
+
+2. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
 - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
@@ -186,6 +190,8 @@ The manifest.json file contains the basic elements needed to test and submit you
 
 > [!NOTE]
 > Replace `id` and `connectorId` with the GUID of your Connector.
+
+The following is an example of manifest.json with connector:
 
 ```json
 {
@@ -231,11 +237,12 @@ The manifest.json file contains the basic elements needed to test and submit you
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-### Flow to send Adaptive Cards through an incoming webhook
-**To send Adaptive Cards through incoming webhook**
+### Steps to send Adaptive Cards through an incoming webhook
+
+Follow the steps to send Adaptive Cards through incoming webhook:
 
 1. [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
-2. Create your Adaptive Card JSON file:
+2. Create Adaptive Card JSON file:
 
 ```json
 {
@@ -267,30 +274,34 @@ Properties for Adaptive Card JSON file:
 - The `"contentType"` field must be set to Adaptive Card type.
 - The `"content"` object is the card formatted in JSON.
 
-**3.** Test your Adaptive Card with Postman
+3. Test your Adaptive Card with Postman.
 
-You can test your Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your Adaptive Card message in Teams.
+Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to setup incoming webhook. Paste JSON file in the body of the request and view the Adaptive Card message in Teams.
 
 >[!TIP]
-> You can use Adaptive Card code [samples and templates](https://adaptivecards.io/samples) for the body of your test POST request.
+> Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) for testing the body of POST request.
 
 ## Test your connector
 
-To test your connector, upload it to a team as you can with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard, modified as directed in the preceding section and the two icon files.
+To test the connector, upload it to a team with any other app. To create a .zip package, use the manifest file from the Connectors Developer Dashboard, modified as directed in the preceding section and the two icon files.
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
 ![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 
-You can now launch the configuration experience. Be aware that this flow occurs entirely within Microsoft Teams through a pop-up window. Currently, this behavior differs from the configuration experience in connectors that was created.
+You can launch the configuration experience. 
+> [!NOTE]
+> The flow occurs entirely within Microsoft Teams through a pop-up window. At present, the behavior differs from the configuration experience in connectors that were created.
 
-To verify that an `HttpPOST` action is working correctly, use your [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
+To verify the `HttpPOST` action is working correctly, use [custom incoming webhook](#setting-up-a-custom-incoming-webhook).
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams tracks requests using a fixed-rate window and incremental counter measured in seconds. If too many requests are made, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams tracks requests using a fixed-rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection can be throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
+
+The following table highlights the time-based transaction details:
 
 | Time in seconds  | Maximum allowed requests  |
 |---|---|
@@ -302,9 +313,8 @@ Application rate limits control the traffic that a connector or an incoming webh
 
 A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Follow [best practices](../../bots/how-to/rate-limit.md#best-practices) to avoid hitting the rate limits.
 
-*See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
-A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
+> [!NOTE]
+> A [retry logic with exponential back-off](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
 // Please note that response body needs to be extracted and read 
@@ -322,7 +332,7 @@ try
 }
 ```
  
-These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to your users.
+These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to users.
 
 ## See also
 
