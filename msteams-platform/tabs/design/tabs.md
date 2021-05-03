@@ -33,11 +33,11 @@ The following example shows how a tab is added in a channel.
 
 There's a short setup process to add an app as a channel, chat, or meeting tab. The experience is largely up to you. For example, you could have a description of how to use the app and some optional settings. Include a sign-in step here if you need to authenticate users.
 
-### Tab configuration modal
+### Tab configuration dialog
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal." border="false":::
 
-### Anatomy: Tab configuration modal
+### Anatomy: Tab configuration dialog
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration showing the UI anatomy of a tab configuration modal." border="false":::
 
@@ -47,8 +47,8 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 |2|**App name**: Full name of your app.|
 |3|**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).|
 |4|**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.
-|5|**Close button**: Closes the modal.|
-|6|**Notify team members option**: The modal asks if you want to create a post letting others know you added a tab.|
+|5|**Close button**: Closes the dialog.|
+|6|**Notify team members option**: The dialog asks users if they want to create a post letting others know they added a tab.|
 |7|**Back button**: Goes to the previous step based on where the dialog opened.|
 |8|**Save button**: Completes tab setup.|
 
@@ -80,8 +80,8 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 |----------|-----------|
 |1|**Tab name**: Navigation label for your tab.|
 |2|**Tab overflow**: Opens tab actions, such as rename and remove.|
-|3|**Tab chat**: Opens a chat thread on the right, allowing users to have a conversation next to the content.|
-|4|**iframe**: Displays your tab’s content.
+|3|**Tab chat**: Opens a chat to the right, allowing users to have a conversation next to the content.|
+|4|**iframe**: Displays your app content.|
 
 ### Designing a tab with UI templates
 
@@ -125,7 +125,7 @@ You can include options to rename, remove, or modify a tab.
 |Counter|Description|
 |----------|-----------|
 |1|**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.|
-|2|**Rename**: Allows users to give the tab a name that’s more meaningful to the team.|
+|2|**Rename**: Users can give the tab a name that’s meaningful to the channel, chat, or meeting.|
 |3|**Remove**: Removes the tab from the channel, chat, or meeting.|
 
 ## Tab notifications and deep linking
