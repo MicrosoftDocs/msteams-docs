@@ -137,7 +137,7 @@ Each command requires a title and an ID. The command can optionally contain a de
 
 ##### Scene
 
-Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
