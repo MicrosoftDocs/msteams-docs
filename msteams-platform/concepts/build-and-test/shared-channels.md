@@ -11,7 +11,7 @@ ms.topic: conceptual
 
 A channel is a bridge between teams that need to work together. The shared channels in Teams allow users of different organizations to collaborate effectively. The following image displays the concept of shared channels:
 
-![Shared channels](~/assets/images/tab-images/shared-channels.png)
+![Shared channels](../../assets/images/tab-images/shared-channels.png)
 
 ## Need for shared channels
 
