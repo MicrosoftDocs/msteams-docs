@@ -1,18 +1,18 @@
 ---
 title: Create an incoming webhook
 author: laujan
-description: how to add incoming webhook to Teams app
+description: describes how to add incoming webhook to Teams app and post external requests to Teams with incoming webhooks
 keywords: teams tabs outgoing webhook
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Post external requests to Teams with incoming webhooks
+# Create an incoming webhook to the Teams app
 
 This article provides details on adding and removing incoming webhooks in Microsoft Teams.
 
-## Teams incoming webhooks
+## Incoming webhooks
 
  Incoming webhooks are simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user interface (UI) containers that include content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within the following three capabilities:
 
@@ -83,4 +83,5 @@ You have three options for distributing your incoming webhook:
 
 ## See also
 
-* [Sending messages to Connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Send messages to webhooks and connectors](~/webhooks-and-connectors/how-to/connectors-using.md)
