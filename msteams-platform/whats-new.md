@@ -10,11 +10,9 @@ keywords: teams what's new latest
 >[!TIP]
 > Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
-Changes to the Microsoft Teams platform and this documentation are listed in the following sections:
-* [General availability (GA) features](#ga-features): Microsoft Teams platform features that are available to all app developers.
-* [Developer preview](#developer-preview): Developer preview is a public program that provides early access to unreleased Teams platform features.  
-
 ## GA features
+
+Microsoft Teams platform features that are available to all app developers.
 
 <br>
 
@@ -146,6 +144,8 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 </details>
 
 ## Developer preview
+
+Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
