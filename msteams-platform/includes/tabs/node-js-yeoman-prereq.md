@@ -40,54 +40,18 @@ This project requires the following tools installed in your development environm
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-    **What is your solution name?**
-
-    This is your project name. Press enter to accept the suggested name.
-
-    **Where do you want to place the files?**
-
-    You are currently in your project directory. Press enter.
-
-    **Title of your Microsoft Teams app project?**
-
-    This is your app package name, and it is used in the app manifest and description.
-
-    **Your (company) name? (max 32 characters)**
-
-    Your company name is used in the app manifest.
-
-    **Which manifest version would you like to use?**
-
-    Select the default schema.
-
-    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
-    
-    This field is not required, and must be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com).
-
-    **Quick scaffolding? (Y/n)**
-
-    The default is yes; enter **n** to enter your Microsoft Partner Id.
-
-    **What do you want to add to your project?**
-
-    Select ( &ast; ) A Tab.
-
-    **The URL where you will host this solution?**
-
-    By default, the generator suggests an Azure Web Sites URL. You will only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
-
-    **Would you like to include Test framework and initial tests? (y/N)**
-
-    Select **not** to include a test framework for this project. The default is yes; enter **n**.
-
-    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
-
-    Select **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
-
-    **Default Tab Name (max 16 characters)?**
-
-    Name your tab. This tab name is used throughout your project as a file or URL path component.
-
-    **Do you want to create a configurable or static tab?**
-
-    Use the arrow keys to select static tab.
+    | **Values** | **Solution** |
+    |------------|--------------|
+    | **What is your solution name?** | This is your project name. Press enter to accept the suggested name. |
+    | **Where do you want to place the files?** | You are currently in your project directory. Press enter. |
+    | **Title of your Microsoft Teams app project?** | This is your app package name, and it is used in the app manifest and description. |
+    | **Your (company) name? (max 32 characters)** | Your company name is used in the app manifest. |
+    | **Which manifest version would you like to use?** | Select the default schema. |
+    | **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)** | This field is not required, and must be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com). |
+    | **Quick scaffolding? (Y/n)** | The default is yes; enter **n** to enter your Microsoft Partner Id. |
+    | **What do you want to add to your project?** | Select ( &ast; ) A Tab. |
+    | **The URL where you will host this solution?** | By default, the generator suggests an Azure Web Sites URL. You will only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart. |
+    | **Would you like to include Test framework and initial tests? (y/N)** | Select **not** to include a test framework for this project. The default is yes; enter **n**. |
+    | **Would you like to use Azure Applications Insights for telemetry? (y/N)** | Select **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**. |
+    | **Default Tab Name (max 16 characters)?** | Name your tab. This tab name is used throughout your project as a file or URL path component. |
+    | **Do you want to create a configurable or static tab?** | Use the arrow keys to select static tab. |

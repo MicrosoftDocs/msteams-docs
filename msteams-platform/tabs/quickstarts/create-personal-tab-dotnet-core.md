@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a personal tab with C# and ASP.NETCore
 
-This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NETCore Razor pages using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest, and deploy your tab to Teams.
+This quickstart takes you through the steps to create a custom personal tab using C# and ASP.NETCore Razor pages. It also helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 ## What you'll learn
 
@@ -22,26 +22,11 @@ This quickstart takes you through the steps to create a custom personal tab with
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
-
-Once you have the source code, follow the steps:
-
-1. Open Visual Studio and select **Open a project or solution**.
-
-1. Go to the tab application directory and open **PersonalTab.sln**.
-
-1. To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu.
-
-1. In a browser, go to the URLs below to verify the application loaded properly:
-
-    - `http://localhost:44325/`
-    - `http://localhost:44325/personal`
-    - `http://localhost:44325/privacy`
-    - `http://localhost:44325/tou`
 
 ## Review the source code
 
@@ -122,10 +107,12 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ### Run your application
 
-- In a Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+- In a Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
+- In a browser, enter the following URLs to verify the application loaded properly:
+
+    - `http://localhost:44325/`
+    - `http://localhost:44325/personal`
+    - `http://localhost:44325/privacy`
+    - `http://localhost:44325/tou`
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
-
-## See also
-
-[Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
