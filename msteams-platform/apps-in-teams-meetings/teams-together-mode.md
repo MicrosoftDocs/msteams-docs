@@ -40,16 +40,21 @@ Prior to building a scene, there are few key points as follows to consider in or
 
 * Ensure all images are in PNG format.
 * The final package with all the images put together must not exceed 1920x1080 resolution.
-    >[!NOTE]
+
+    > [!NOTE]
     > The resolution is an even number. This is a requirement for scenes to be lit up successfully.
+ 
 * The maximum scene size is 10 MB.
 * The maximum size of each image is 5 MB.
-    >[!NOTE]
+
+    > [!NOTE]
     > * A scene is a collection of multiple images. The limit is for each individual image.
     > * The individual image resolution must also be an even number.
+  
 * Ensure that the image is marked **Transparent** if it is a transparent image. This checkbox is available on the right panel when an image is selected.
-    >[!NOTE]
-    > Overlapping images need to be marked as **Transparent** to indicate that they are overlapping images in the scene
+
+    > [!NOTE]
+    > Overlapping images need to be marked as **Transparent** to indicate that they are overlapping images in the scene.
 
 ## Build a scene using the Scene studio
 
