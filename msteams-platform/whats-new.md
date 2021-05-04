@@ -16,8 +16,6 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 ## GA features
 
-<br>
-
 <details>
 
 <summary><h2>2021</h2></summary>
