@@ -56,14 +56,24 @@ Use this section to share your app registration with colleagues in your organiza
 
 ### Environments
 
-Environment configurations allow you to seamlessly transion an app from your local runtime through to production.
+Environment configurations allow you to seamlessly transition an app from your local runtime through to production.
 
 Start by creating a new runtime environment configuration by pressing the *+ Add an environment* button. Once created, you can begin to add key value pairs for that environment. As you start configuring your app, you can use the variable names instead actual values in the property fields. When you app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ### Plans and Pricing
 
-//TODO: Christian Maier
+Provide your app as software as a service (SaaS) by configuring plans and pricing for it. Set the plans and pricing through the Teams Developer Portal by updating the manifest.
 
+> [!NOTE]
+> It is recommended to configure the SaaS offer before publishing your app for the first time.
+>
+> If you are configuring the SaaS offer after you have published your app, then you must resubmit your app to the App Source after the manifest is updated with the changes.
+
+**To configure SaaS offer for your app**
+
+1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
+1. Select **Plans and Pricing** in the left panel.
+1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**
 
 ### Configuration
 
