@@ -123,26 +123,34 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-10. Select **Save** and select **Preview** to start testing your scenes in Microsoft Teams. 
+10. Select **Save** and select **Preview** to quickly test your scene in Microsoft Teams. Microsoft Teams is opened and an add dialog box is shown. After adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
+ 
+    ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
     
     >[!NOTE]
-    > Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal. The scene can then be viewed in the Together Mode scene gallery.
+    > * Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
+    > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scenes. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
+    > * The scene can then be viewed in the Together Mode scene gallery.
 
-11. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
+11. Optionally, create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
+
+12. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
-12. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+13. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     >[!NOTE]
     > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
 
-## Sample JSON
+A more complex scene that leverages the z-axis is demonstrated in the step-by-step getting started sample.
 
-Scene JSON along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
+## Sample scene.json
 
-Following is the scene JSON sample:
+Scene.json along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
+
+Following is the scene.json sample:
 
 ```json
 {
@@ -214,9 +222,9 @@ Each scene has a unique ID and name. The scene JSON also contains information on
 
 The seating order can be altered according to the preferred order.
 
-The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required.
+The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required. For more information, see the step-by-step getting started sample. The sample leverages the zOrder.
 
-Now that you have gone through the sample JSON, you can activate the Together Mode to engage in scenes.
+Now that you have gone through the sample scene.json, you can activate the Together Mode to engage in scenes.
 
 ## Activate the Together Mode
 
@@ -224,23 +232,25 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 
 **To choose scenes and activate the Together Mode**
 
-1. On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene.
+1. Create a new test meeting.
+
+2. On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene.
 
     >[!NOTE]
     > This is the model for a developer to test and try out scenes from the Scene studio. Once a scene is shipped as an app, users see these scenes in the scene gallery as shown in the following steps and they are able to acquire the scene from the scene gallery itself.
 
-2. From the top left viewing options, select **Together Mode**.
+3. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
-3. Select **Change scene** to change the default scene.
+4. Select **Change scene** to change the default scene.
 
-4. From the **Scene Gallery**, select the scene you want to use for your meeting.
+5. From the **Scene Gallery**, select the scene you want to use for your meeting.
 
-5. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
+6. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
 >[!NOTE]
 > At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
 
-6. Select **Apply**. Teams installs the app for the user and applies the scene.
+7. Select **Apply**. Teams installs the app for the user and applies the scene.
 
 ## Open a Together Mode Scene Package
 
@@ -250,10 +260,4 @@ As developers share the Scene Package that is a .zip file retrieved from the Sce
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Create your app package](../concepts/build-and-test/apps-package.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build a scene in Scene studio](build-scene-in-scene-studio.md)
+[Build a scene in Scene studio](build-scene-in-scene-studio.md)
