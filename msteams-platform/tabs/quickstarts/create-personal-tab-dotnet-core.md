@@ -6,9 +6,17 @@ ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
 ---
-# Create a personal tab with ASP.NETCore
+# Create a personal tab with C# and ASP.NETCore
 
-This quickstart guides you to create a custom personal tab with C# and ASP.NETCore Razor pages using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest, and deploy your tab to Teams.
+This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NETCore Razor pages using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest, and deploy your tab to Teams.
+
+## What you'll learn
+
+- Download the sample source code.
+- Review the source code.
+- Update your application using tags.
+- Establish a secure tunnel using ngrok.
+- Upload the application to Teams through App Studio.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -73,7 +81,7 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you can the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you can see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -107,7 +115,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 - You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
 
-- Verify that *ngrok* is up and running properly by opening your browser and going to the content page using the ngrok HTTPS URL provided in the command prompt window.
+- Verify that *ngrok* is up and running by opening your browser and navigating to the content page using ngrok HTTPS URL provided in the command prompt window.
 
 >[!TIP]
 >You must run your application in Visual Studio and ngrok to complete this quickstart. If you are no longer running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when it restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
@@ -120,4 +128,4 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ## See also
 
-- [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+[Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).

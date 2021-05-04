@@ -109,7 +109,7 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 ## Establish a secure tunnel to your tab
 
-Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you need to either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
+Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you must either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
 
 To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
 

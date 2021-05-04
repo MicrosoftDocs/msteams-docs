@@ -1,7 +1,7 @@
 ## Upload your tab to Teams with App Studio
 
 >[!NOTE]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json**, and you must build the solution again to create the **Tab.zip** file to upload.
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json**, and build the solution again to create the **Tab.zip** file to upload.
 
 1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
@@ -19,11 +19,11 @@
 
 ### Update your app package with Manifest editor
 
-Once you have uploaded your app package into App Studio, you need to configure it.
+Once you upload your app package into App Studio, you need to configure it.
 
 - Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There is a list of steps on the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps as shown in the corresponding screen:
+There is a list of steps on the left-hand side of the Manifest editor, and a list of properties on the right that needs to have values for each steps as shown in the corresponding screen:
 
 ![List of steps on left and right hand side screenshot](~/assets/images/tabs/Update-app-package-with-manifest-editor.png)
 
@@ -80,4 +80,4 @@ In the *Test and distribute* section:
 
 ## View your personal tab
 
-- On the left of Teams App, select the menu `...` in the navigation bar and select your tab from the list of applications.
+- Select the menu `...` from the left panel of Teams, and select your tab from the list of applications.
