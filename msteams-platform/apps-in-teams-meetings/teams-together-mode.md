@@ -48,6 +48,8 @@ Prior to building a scene, there are few key points as follows to consider in or
     > * A scene is a collection of multiple images. The limit is for each individual image.
     > * The individual image resolution must also be an even number.
 * Ensure that the image is marked **Transparent** if it is a transparent image. This checkbox is available on the right panel when an image is selected.
+    >[!NOTE]
+    > Overlapping images need to be marked as **Transparent** to indicate that they are overlapping images in the scene
 
 ## Build a scene using the Scene studio
 
