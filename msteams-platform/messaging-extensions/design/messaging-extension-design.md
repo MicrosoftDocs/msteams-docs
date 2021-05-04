@@ -3,6 +3,7 @@ title: Designing your messaging extension
 description: Learn how to design a Teams messaging extension and get the Microsoft Teams UI Kit.
 keywords: teams design guidelines reference messaging extensions tips best practice
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
 ---
@@ -154,6 +155,8 @@ The following example is a messaging extension opened from the compose box.
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Setup and general usage
 
 :::row:::
@@ -255,10 +258,3 @@ You can make users press a key or select a button to send queries to your app. W
 #### Do: Consider zero-term queries
 
 For example, before a user writes anything in the search box, display what they last viewed on your app. It's possible that they want to insert that content into their conversation.
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

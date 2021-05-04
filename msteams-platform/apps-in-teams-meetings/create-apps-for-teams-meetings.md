@@ -4,6 +4,7 @@ author: laujan
 description: create apps for teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
+localization_priority: Normal
 keywords: teams apps meetings user participant role api 
 ---
 # Create apps for Teams meetings
@@ -317,7 +318,7 @@ To use the `userContext` API to route requests accordingly, see [Teams SDK](../t
 Messaging extension works as expected when a user is in an in-meeting view and the user can post compose message extension cards. AppName in-meeting is a tooltip that states the app name in-meeting U-bar.
 
 > [!NOTE]
-> Use version 1.9.0 of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) to upload side panel, as versions prior to it do not support side panel.
+> Use version 1.7.0 or higher of [Teams SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), as versions prior to it do not support the side panel.
 
 #### In-meeting dialog
 
@@ -374,6 +375,7 @@ The post-meeting and pre-meeting configurations are equivalent.
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting SidePanel | Microsoft Teams meeting extensibility sample for iteracting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## See also
 

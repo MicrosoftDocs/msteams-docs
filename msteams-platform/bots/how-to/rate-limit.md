@@ -2,6 +2,7 @@
 title: Optimize your bot with rate limiting in Teams
 description: Rate limiting and best practices in Microsoft Teams
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams bots rate limiting
 ---
 
@@ -43,6 +44,9 @@ In general, you must take simple precautions to avoid receiving `HTTP 429` respo
 Using an exponential backoff with a random jitter is the recommended way to handle 429s. This ensures that multiple requests do not introduce collisions on retries.
 
 After you handle `HTTP 429` responses, you can go through the example for detecting transient exceptions.
+
+> [!NOTE]
+> In addition to retyring error code **429**, error codes **412**, **502**, and **504** must also be retried.
 
 ## Detect transient exceptions example
 

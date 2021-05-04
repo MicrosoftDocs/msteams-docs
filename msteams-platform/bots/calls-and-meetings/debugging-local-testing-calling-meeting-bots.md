@@ -2,6 +2,7 @@
 title: Debug your calling and meeting bot locally
 description: Learn how you can also use ngrok to develop calls and online meeting bots on your local PC.
 ms.topic: how-to
+localization_priority: Normal
 keywords: local development ngrok tunnel
 ms.date: 11/18/2018
 ---

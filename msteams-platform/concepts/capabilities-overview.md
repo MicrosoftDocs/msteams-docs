@@ -3,6 +3,7 @@ title: Understand app capabilities
 author: heath-hamilton
 description: Teams app capabilities explained
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---
@@ -35,8 +36,8 @@ For example, you can collect user input in a form built as a tab in the app. You
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Build apps for Teams](../overview.md)
+- [Build apps for Teams](../overview.md)
+
 ## Next step
 
 > [!div class="nextstepaction"]

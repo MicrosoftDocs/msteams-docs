@@ -3,6 +3,7 @@ title: Channel and group conversations with a bot
 author: clearab
 description: How to send, receive, and handle messages for a bot in a channel or group chat.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
 ---
 # Channel and group chat conversations with a bot
@@ -263,8 +264,7 @@ Do not send a message in the following cases:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Get teams context](~/bots/how-to/get-teams-context.md).
+[Get Teams context](~/bots/how-to/get-teams-context.md)
 
 ## Next step
 
