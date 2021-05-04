@@ -69,25 +69,25 @@ The `submitHandler` is very simple and it echoes the value of `err` or `result` 
 
 ## Submit the result of a task module
 
-The `submitHandler` function is used with `TaskInfo.url`. The `submitHandler` function resides in the `TaskInfo.url` web page. If there is an error when invoking the task module, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user presses the X at the upper right of task module.
+The `submitHandler` function resides in the `TaskInfo.url` web page and is used with `TaskInfo.url`. If there is an error when invoking the task module, your `submitHandler` function is immediately invoked with an `err` string indicating what [error occurred](#task-module-invocation-errors). The `submitHandler` function is also called with an `err` string when the user selects X at the upper right of the task module to close it.
 
-If there is no invocation error and the user does not press X to dismiss it, the user presses a button when finished. Depending on whether it is a URL or an Adaptive Card in the task module, the next sections provide details on what occurs.
+If there is no invocation error and the user does not select X to dismiss it, the user chooses a button when finished. Depending on whether it is a URL or an Adaptive Card in the task module, the next sections provide details on what occurs.
 
 ### HTML or JavaScript `TaskInfo.url`
 
-Once you have validated what the user has entered, you call the `microsoftTeams.tasks.submitTask()` SDK function referred to hereafter as `submitTask()` for readability purposes. You can call `submitTask()` without any parameters if you just want Teams to close the task module. You can pass an object or a string to your `submitHandler`.
+After validating the user's inputs, call the `microsoftTeams.tasks.submitTask()` SDK function referred to as `submitTask()`. Call `submitTask()` without any parameters if you just want Teams to close the task module. You can pass an object or a string to your `submitHandler`.
 
-Pass your result as the first parameter. Teams invokes `submitHandler` where `err` is `null` and `result` is the object or string you passed to `submitTask()`. If you do call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This allows Teams to validate that the app sending the result is the same one which invoked the task module.
+Pass your result as the first parameter. Teams invokes `submitHandler` where `err` is `null` and `result` is the object or string you passed to `submitTask()`. If you call `submitTask()` with a `result` parameter, you must pass an `appId` or an array of `appId` strings. This permits Teams to validate that the app sending the result is same as the invoked task module.
 
 ### Adaptive Card `TaskInfo.card`
 
-If you invoked the task module with a `submitHandler`, when the user presses an `Action.Submit` button the values in the card are returned as the value of `result`. If the user presses the Esc button or presses the X, `err` is returned instead. Alternatively, if your app contains a bot in addition to a tab you can simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user presses an `Action.Submit` button. The schema for the object you receive is very similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
+When you invoke the task module with a `submitHandler` and the user selects an `Action.Submit` button, the values in the card are returned as the value of `result`. If the user selects the Esc key or X at the top right, `err` is returned instead. If your app contains a bot in addition to a tab, you can simply include the `appId` of the bot as the value of `completionBotId` in the `TaskInfo` object. The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is very similar to [the schema you receive for task/fetch and task/submit messages](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages). The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](~/task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
 The next section gives an example of submitting the result of a task module.
 
 ## Example of submitting the result of a task module
 
-See the [form in the task module](#example-of-invoking-a-task-module) with an HTML form. The following code gives an example of where the form is defined:
+For more information, see the [HTML form in the task module](#example-of-invoking-a-task-module). The following code gives an example of where the form is defined:
 
 ```html
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
@@ -119,8 +119,8 @@ The following table provides the possible values of `err` that can be received b
 | ------- | ------------------------------ |
 | Values for both `TaskInfo.url` and `TaskInfo.card` were specified. | Values for both card and URL were specified. One or the other, but not both, are allowed. |
 | Neither `TaskInfo.url` nor `TaskInfo.card` specified. | You must specify a value for either card or URL. |
-| Invalid `appId`. | Invalid appId. |
-| User pressed X button, closing it. | User cancelled or closed the task module. |
+| Invalid `appId`. | Invalid app ID. |
+| User selected X button, closing it. | User cancelled or closed the task module. |
 
 ## See also
 
