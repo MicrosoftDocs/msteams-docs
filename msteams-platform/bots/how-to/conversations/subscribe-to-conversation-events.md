@@ -3,6 +3,7 @@ title: Conversation events
 author: WashingtonKayaker
 description: How to work with conversation events from your Microsoft Teams bot.
 ms.topic: conceptual
+localization_priority: Normal
 ms.author: anclear
 ---
 

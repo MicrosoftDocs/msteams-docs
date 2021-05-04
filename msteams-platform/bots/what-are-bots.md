@@ -3,6 +3,7 @@ title: Bots in Microsoft Teams
 author: clearab
 description: An overview of bots in Microsoft Teams.
 ms.topic: overview
+localization_priority: Normal
 ms.author: anclear
 ---
 # Bots in Microsoft Teams
@@ -41,8 +42,7 @@ You can use the Teams bot APIs to get information for one or more members of a c
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+[Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
 
 ## Next step
 

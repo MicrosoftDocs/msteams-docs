@@ -3,6 +3,7 @@ title: Messages in bot conversations
 description: Describes ways to have a conversation with a Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
+localization_priority: Normal
 keyword: receive message send message picture message channel data adaptive cards
 ---
 
@@ -403,10 +404,9 @@ Following are the status codes and their error code and message values:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-> [!div class="nextstepaction"]
-> [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+- [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+
+- [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
 
 ## Next step
 

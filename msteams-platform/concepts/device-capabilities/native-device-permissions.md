@@ -2,6 +2,7 @@
 title: Request device permissions for your Microsoft Teams app
 keywords: teams apps capabilities permissions
 description: How to update your app manifest in order to request access to native features that usually require user consent
+localization_priority: Normal
 ms.topic: how-to
 ---
 

@@ -2,6 +2,7 @@
 title: Authentication for bots using Azure Active Directory
 description: Describes Azure AD authentication in Teams and how to use it in your bots
 keywords: teams authentication bots AAD
+localization_priority: Normal
 ms.topic: conceptual
 ms.date: 03/01/2018
 ---

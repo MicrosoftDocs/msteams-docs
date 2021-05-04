@@ -2,6 +2,7 @@
 title: Messaging extensions
 author: clearab
 description: An overview of messaging extensions on the Microsoft Teams platform
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
 ---
@@ -71,8 +72,7 @@ The following images display link unfurling feature when a link is pasted in mes
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
+[Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
 
 
 ## Next step

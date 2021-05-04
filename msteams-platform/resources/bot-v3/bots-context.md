@@ -3,6 +3,7 @@ title: Get context for your Microsoft Teams bot
 description: Describes how to get context for bots in Microsoft Teams
 keywords: teams bots context
 ms.topic: conceptual
+localization_priority: Normal
 ms.date: 05/20/2019
 ---
 # Get context for your Microsoft Teams bot
