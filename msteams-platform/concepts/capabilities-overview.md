@@ -36,8 +36,8 @@ For example, you can collect user input in a form built as a tab in the app. You
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Build apps for Teams](../overview.md)
+- [Build apps for Teams](../overview.md)
+
 ## Next step
 
 > [!div class="nextstepaction"]

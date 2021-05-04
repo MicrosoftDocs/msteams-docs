@@ -42,8 +42,7 @@ The following list shows how Teams capabilities are commonly used in personal co
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Teams app design guidelines](../concepts/design/design-teams-app-overview.md)
+- [Teams app design guidelines](../concepts/design/design-teams-app-overview.md)
 
 ## Next step
 

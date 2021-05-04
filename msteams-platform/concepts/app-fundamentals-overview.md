@@ -30,11 +30,9 @@ You can recognize user issues and identify the answers to some common problems t
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate web apps with Teams](../samples/integrating-web-apps.md)
+- [Integrate web apps with Teams](../samples/integrating-web-apps.md)
 
-> [!div class="nextstepaction"]
-> [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+- [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## Next step
 
