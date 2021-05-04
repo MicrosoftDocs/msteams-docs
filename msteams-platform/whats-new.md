@@ -16,9 +16,11 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 ## GA features
 
+<br>
+
 <details>
 
-<summary><h2>2021</h2></summary>
+<summary><b>2021</b></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -34,13 +36,15 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
+<br>
 
 </details>
 
+<br>
 
 <details>
   
-<summary><h3>2020</h3></summary>
+<summary><b>2020</b></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -66,7 +70,15 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 |04/01/2020|Integrate WFM systems with Shifts Connector for Teams.|[Microsoft Teams Shifts WFM connectors](samples/shifts-wfm-connectors.md)
 | 03/24/2020 | Added support for retrieving a single member of a conversation, and additional support for retrieving paged members. | [Get Teams context for your bot](~/bots/how-to/get-teams-context.md) |
 
+<br>
+
 </details>
+
+<br>
+
+<details>
+  
+<summary><b>2019</b></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -87,6 +99,19 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 | 04/23/2019 | Action-based Messaging Extensions are now available. | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
 | 02/18/2019 | Creating deep links to private chat is out of developer preview and available. | [Deep linking to a chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Tab Context](~/concepts/tabs/tabs-context.md) |
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>2018</b></summary>
+
+| **Date** | **Notes** | **Changed topics** |
+| -------- | --------- | ------------------ |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams, and has been moved out of developer preview. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
 | 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](concepts/build-and-test/deep-links.md#deep-linking-to-a-chat) |
@@ -115,6 +140,10 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 | 03/03/2018 | Added documentation for Teams App Studio. |[Quickly develop apps with Teams App Studio](~/get-started/get-started-app-studio.md), [Using the control library in App Studio](~/get-started/app-studio-component-library.md)|
 | 02/27/2018 | Added sample code to demonstrate AsTeamsChannelAccounts() method. |[Get context for your bot](~/concepts/bots/bots-context.md)|
 | 02/05/2018 | Added topics for getting started using C#. |[Get started on the Microsoft Teams platform with C#/.NET](./get-started/get-started-dotnet-app-studio.md)|
+
+<br>
+
+</details>
 
 ## Developer preview
 
