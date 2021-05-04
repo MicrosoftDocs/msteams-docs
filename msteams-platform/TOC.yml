@@ -400,6 +400,8 @@
   items:
   - name: Overview
     href: concepts/deploy-and-publish/apps-publish-overview.md
+  - name: Configure default install options
+    href: concepts/deploy-and-publish/add-default-install-scope.md
   - name: Create your app package
     href: concepts/build-and-test/apps-package.md
   - name: Upload your app

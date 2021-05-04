@@ -543,6 +543,42 @@
       {
         "source_path": "msteams-platform/concepts/build-and-test/app-studio-controls.md",
         "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-ui-templates"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/buttons.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/color.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/dialogs.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/fields.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-basic-ui-components"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/components/typography.md",
+        "redirect_url": "/microsoftteams/platform/concepts/design/design-teams-app-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/overview.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/detail-page-checklist.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist"  
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/app-manifest-checklist.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/post-publish/application-certification.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview"  
       }
     ]
 }

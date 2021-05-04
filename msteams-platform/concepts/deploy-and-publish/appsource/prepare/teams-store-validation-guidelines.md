@@ -25,6 +25,7 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * If your app is part of an official partnership with Microsoft, the name of your app must come first (for example, **Contoso Connector for Microsoft Teams**).
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
+* Must be unique. For example, you cannot list multiple apps for different regions with the same name and functionality.
 
 See also: [4.0 App package and store listing](#40-app-package-and-store-listing)
 
