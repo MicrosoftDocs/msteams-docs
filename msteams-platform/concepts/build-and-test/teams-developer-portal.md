@@ -58,7 +58,11 @@ Use this section to share your app registration with colleagues in your organiza
 
 Environment configurations allow you to seamlessly transition an app from your local runtime through to production.
 
-Start by creating a new runtime environment configuration by pressing the *+ Add an environment* button. Once created, you can begin to add key value pairs for that environment. As you start configuring your app, you can use the variable names instead actual values in the property fields. When you app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
+Start by creating a new runtime environment configuration by pressing the *+ Add an environment* button. Once created, you can begin to add key value pairs for that environment.
+
+As you start configuring your app, you can use the variable names instead actual values in the property fields. To enter a variable name instead of a hard coded property value, enter '{{variable}}' in any field in a Developer Portal configuration page. Simply entering '{{' will reveal a dropdown with all the variables you've created for the chosen environment plus the global variables.
+
+When you app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ### Plans and Pricing
 
