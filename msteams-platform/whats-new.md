@@ -16,7 +16,11 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 ## GA features
 
-### 2021
+<br>
+
+<details>
+
+<summary><h2>2021</h2></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -34,9 +38,13 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 <br>
 
+</details>
+
+<br>
+
 <details>
   
-<summary><b>2020</b></summary>
+<summary><h2>2020</h2></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -66,7 +74,8 @@ Changes to the Microsoft Teams platform and this documentation are listed in the
 
 </details>
 
-
+| **Date** | **Notes** | **Changed topics** |
+| -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter. `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
 | 10/31/2019 | Conversational bots and messaging extension documentation updated to reflect the 4.6 Bot Framework SDK. Documentation for the v3 SDK is available in the Resources section. | All bot and messaging extension documentation. |
