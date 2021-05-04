@@ -51,35 +51,26 @@ When users add or configure a tab, an URL associated with the tab is presented i
 
 You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
-## Mobile clients
+## Mobile considerations
 
 If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
-Apps that are [distributed through Appsource](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
+Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
-| **Tab Type** | **Behavior of App if it is optimized for mobile clients** | **Behavior of App if it is not optimized for mobile clients** |
-|:-----|:-----|:-----|
-| **Static Tabs** or **Personal Tabs**|App appears in the bottom bar of the mobile clients. The tabs open in an in-app webview within the Teams client. | App does not show up in mobile clients. |
-| **Configurable Tabs** | The tabs open in an in-app webview within the Teams client using the `contentUrl`. | Selecting **Tab** opens the content using the `websiteUrl` in the default web browser on the device. |
-
+| **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
+| --- | --- | --- |
+| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
 >
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+> The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
+> To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
-
-> [!div class="nextstepaction"]
-> [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+* [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+* [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
