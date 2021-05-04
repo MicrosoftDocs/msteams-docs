@@ -58,7 +58,7 @@ Prior to building a scene, there are few key points as follows to consider in or
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 >[!NOTE]
 > This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
@@ -88,7 +88,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 **To build a scene using the Scene studio**
 
-1. Go to [Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 2. From the **Scenes Editor** page, select **Create a new scene**.
 
