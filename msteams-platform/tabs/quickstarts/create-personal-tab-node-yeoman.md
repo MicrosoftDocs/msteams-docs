@@ -12,12 +12,12 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 ## What you'll learn
 
-- Generate your project.
-- Create your personal tab.
-- Create an app package.
-- Build and run your application.
-- Establish a secure tunnel using ngrok.
-- Upload the application to Teams.
+* Generate a project.
+* Create personal tab.
+* Create an app package.
+* Build and run the application.
+* Establish a secure tunnel using ngrok.
+* Upload the application to Teams.
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
@@ -26,7 +26,7 @@ This quickstart takes you through the steps to create a custom personal tab usin
 >
 > For example: DefaultTabName: *MyTab* => */MyTabTab/*
 
-## Create your personal tab
+## Create a personal tab
 
 To add a personal tab to your application, you must create a content page and update existing files.
 
@@ -96,10 +96,6 @@ To add a personal tab to your application, you must create a content page and up
     ```
 
 1. Save the updated **Tab.ts** file. Your tab code is complete.
-
-## Build and run your application
-
-Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 

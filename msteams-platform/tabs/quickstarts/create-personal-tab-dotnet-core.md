@@ -12,11 +12,11 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 ## What you'll learn
 
-- Download the sample source code.
-- Review the source code.
-- Update your application using tags.
-- Establish a secure tunnel using ngrok.
-- Upload the application to Teams through App Studio.
+* Download the sample source code.
+* Review the source code.
+* Update your application.
+* Establish a secure tunnel using ngrok.
+* Upload your application to Teams using App Studio.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 

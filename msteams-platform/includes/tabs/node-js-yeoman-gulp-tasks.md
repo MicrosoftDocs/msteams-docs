@@ -12,7 +12,11 @@ The package is created through a gulp task that validates the manifest.json file
 gulp manifest
 ```
 
-## Build your application
+## Build and run your application
+
+Open a command prompt in your project directory to complete the next tasks.
+
+### Build your application
 
 The build command transpiles your solution into the *./dist* folder. Enter:
 
@@ -20,7 +24,7 @@ The build command transpiles your solution into the *./dist* folder. Enter:
 gulp build
 ```
 
-## Run your application in localhost
+### Run your application in localhost
 
 Start a local web server by entering the following:
 
