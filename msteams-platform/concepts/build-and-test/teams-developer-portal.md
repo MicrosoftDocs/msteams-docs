@@ -46,7 +46,7 @@ The App Usage metrics show the total number of Active Users for your app. These 
 
 **History:** Monthly and Daily usage is shown for the past 7 days, 30 days, and 60 days.
 
-**Latency:** You should see usage reflected for a given day within 24-48 hours.
+**Latency:** You should see usage reflected for a given day within 24-48 hours. **Usage for new apps can take up to 3-5 days to light up.**
 
 
 ### Owners
