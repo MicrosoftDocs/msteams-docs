@@ -28,6 +28,12 @@ The following image explains how the Stage View works:
 
 The Stage View provides users with a more seamless experience of viewing content in Teams, instead of browser. This leads to more engagement with your app within Teams.
 
+##  Stage View vs. Task module
+
+|Stage View|Task module|
+|:-----------|:-----------|
+|Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum real estate that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention or collect information required to move to the next step.|
+  
 ## Invoke the Stage View
 
 You can invoke the Stage View in the following  ways: 
@@ -122,12 +128,6 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 | `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. |
 | `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. |
 | `removeUrl?` | String | 2048 | This property is the https:// URL that points to the UI to be displayed when the user deletes the tab. |
-
-
-##  Stage View vs. Task module
-
-* Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum real estate that helps to render your content in the full-screen canvas. 
-* [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention or collect information required to move to the next step.
 
 ## See also
 
