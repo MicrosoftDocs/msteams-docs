@@ -1,4 +1,4 @@
-## Create app package
+### Create app package
 
 You need an app package to test your tab in Teams. It is a zip folder that contains the following required files:
 
@@ -11,10 +11,6 @@ The package is created through a gulp task that validates the manifest.json file
 ```bash
 gulp manifest
 ```
-
-## Build and run your application
-
-Open a command prompt in your project directory to complete the next tasks.
 
 ### Build your application
 

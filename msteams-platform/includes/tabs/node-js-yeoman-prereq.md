@@ -30,7 +30,7 @@ This project requires the following tools installed in your development environm
 
 1. Open a command prompt.
 
-1. create a new directory for your tab project.
+1. Create a new directory for your tab project.
 
 1. Run the following command in the new directory to start a generator:
 

@@ -22,9 +22,9 @@ This quickstart takes you through the steps to create a custom personal tab usin
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
 > [!IMPORTANT]
-> The path component *yourDefaultTabNameTab* referenced in this quickstart is the value that you entered in the generator for *Default Tab Name* plus the word *Tab*.
+> The path component **yourDefaultTabNameTab** referenced in this quickstart is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
 >
-> For example: DefaultTabName: *MyTab* => */MyTabTab/*
+> For example: DefaultTabName: **MyTab** => **/MyTabTab/**
 
 ## Create a personal tab
 
@@ -96,6 +96,10 @@ To add a personal tab to your application, you must create a content page and up
     ```
 
 1. Save the updated **Tab.ts** file. Your tab code is complete.
+
+## Build and run your application
+
+Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 

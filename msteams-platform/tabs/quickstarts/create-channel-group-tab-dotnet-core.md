@@ -6,9 +6,17 @@ localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a Custom Channel and Group Tab with ASP.NETCore
+# Create a Custom Channel or Group Tab using C# and ASP.NETCore
 
-In this quickstart we'll walk-through creating a custom channel or group tab with C# and ASP.NetCore Razor page. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+This quickstart takes you through the steps to create a custom channel or group tab with C# and ASP.NetCore Razor pages. It also helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+
+## What you'll learn
+
+* Get the source code.
+* Review the source code.
+* Update your application.
+* Establish a secure tunnel using ngrok.
+* Upload your application to Teams using App Studio.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -19,19 +27,19 @@ Open a command prompt and create a new directory for your tab project. We have p
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
-Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
+Open Visual Studio and select **Open a project or solution**. 
 
-To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser, navigate to the URLs below and verify that the application loaded successfully:
+Go to the tab application directory and open **ChannelGroupTab.sln**.
 
-- `http://localhost:44355`
-- `http://localhost:44355/privacy`
-- `http://localhost:44355/tou`
+To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu.
+
+
 
 ## Review the source code
 
 ### Startup.cs
 
-This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. The empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -51,11 +59,11 @@ In ASP.NETCore, the web root folder is where the application looks for static fi
 
 ### Index.cshtml
 
-ASP.NETCore treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+ASP.NETCore treats *Index* files as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 ### Tab.cs
 
-This C# file contains a method that will be called from **Tab.cshtml** during configuration.
+This C# file contains a method that is called from **Tab.cshtml** during configuration.
 
 ### AppManifest folder
 
@@ -65,11 +73,11 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your app.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams. When a user add or update your tab, Microsoft Teams will load the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
+These files must be zipped in an app package to upload your tab to Teams. When a user add or updates the tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -89,21 +97,9 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
   </ItemGroup>
 ```
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
-
-- Open a command prompt in the root of your project directory and run the following command:
-
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
-
-- Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355. It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
-
-- You must keep the command prompt with ngrok running and make note of the URL — you'll need it later.
-
 ## Update your application
 
-In *Tab.cshtml* the application presents the user with two buttons to indicate the tabs with red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+In *Tab.cshtml* the application presents the user with two buttons to indicate the tabs with red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`. It also sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set, and `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
