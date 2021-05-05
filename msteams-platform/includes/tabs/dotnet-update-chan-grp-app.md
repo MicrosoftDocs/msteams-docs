@@ -56,9 +56,9 @@ Save the updated **Tab.cshtml**.
 
 * Open a command prompt in the root of your project directory and run the following command:
 
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
 
 * Ngrok listen to requests from the internet and route them to your application when it is running on port 44355. It must resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
@@ -84,6 +84,8 @@ ngrok http https://localhost:44355 -host-header="localhost:44355"
 >[!Note]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file and build the solution again to create the **tab.zip** file to upload.
 
+**To upload your tab**
+
 1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
 1. Open App studio and select the **Manifest editor** tab.
@@ -105,6 +107,8 @@ Once you upload your app package into App Studio, you must configure it.
 There is a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you need to update:
 
 #### Details: App details
+
+In the *App details* section
 
 - Under *Identification* select ***Generate*** to replace the placeholder id with the required GUID for your tab.
 
@@ -149,4 +153,4 @@ In the *Test and distribute* section:
 
 ## View your channel or group tab
 
-To view your tab, go to the team you installed it on, and select it from the tab bar. The page that you chose during configuration is displayed.
+Go to the team you installed it on, and select it from the tab bar. The page that you chose during configuration is displayed.

@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a Custom Channel or Group Tab using C# and ASP.NETCore
+# Create a custom channel or group tab using C# and ASP.NETCore
 
 This quickstart takes you through the steps to create a custom channel or group tab with C# and ASP.NetCore Razor pages. It also helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -27,13 +27,6 @@ Open a command prompt and create a new directory for your tab project. We have p
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
-Open Visual Studio and select **Open a project or solution**. 
-
-Go to the tab application directory and open **ChannelGroupTab.sln**.
-
-To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu.
-
-
 
 ## Review the source code
 
@@ -99,7 +92,8 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ## Update your application
 
-In *Tab.cshtml* the application presents the user with two buttons to indicate the tabs with red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`. It also sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set, and `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+> [!Note]
+> In *Tab.cshtml* the application presents the user with two buttons to indicate the tabs with red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`. It also sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set, and `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 

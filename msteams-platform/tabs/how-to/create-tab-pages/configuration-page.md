@@ -12,12 +12,12 @@ ms.author: lajanuar
 A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
 * A channel or group chat tab to collect information from the users and set the `contentUrl` of the content page to display.
-* A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md)
-* An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
+* A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md).
+* An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Configure a channel or group chat tab
 
-The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. Also, the URLs used must be secured HTTPS endpoints and available from the cloud. 
+The application must reference the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and call `microsoft.initialize()`. The URLs used must be secured HTTPS endpoints and available from the cloud. 
 
 ### Example
 
@@ -107,7 +107,7 @@ The configuration page code informs the Teams that the configuration requirement
 
 ### Get context data for your tab settings
 
-Your tab might require contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
+Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
 Collect the values of context data variables in the following two ways:
 
@@ -175,7 +175,7 @@ Ensure that all domains used in your tab pages are listed in the `manifest.json`
 
 ## Modify or remove a tab
 
-Supported removal options further refine the user experience. Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a group or channel tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. The user can uninstall the Personal tabs but cannot modify them. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Supported removal options further refine the user experience. Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a group or channel tab. It also indicates what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. The user can uninstall the Personal tabs but cannot modify them. For more information, see [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams setSettings() configuration for removal page:
 
@@ -195,4 +195,4 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 
 ## See also
 
-- [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)
+[Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)

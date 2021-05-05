@@ -21,7 +21,7 @@
 
 Once you upload your app package into App Studio, you need to configure it.
 
-- Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+* Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
 There is a list of steps on the left-hand side of the Manifest editor, and a list of properties on the right that needs to have values for each steps as shown in the corresponding screen:
 
@@ -33,27 +33,27 @@ Much of the information is provided by your *manifest.json* but there are a few 
 
 In the *App details* section:
 
-1. Under *Identification* select **Generate** to generate a new App Id for your app.
+* Under *Identification* select **Generate** to generate a new App Id for your app.
 
-1. Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
+* Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
 
-1. Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+* Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-1. Under *Add a personal tab* select **Add**. You get a pop-up dialogue window.
+* Under *Add a personal tab* select **Add**. You get a pop-up dialogue window.
 
-1. Complete the *Name* field.
+* Complete the *Name* field.
 
-1. Complete the *Entity Id* field.
+* Complete the *Entity Id* field.
 
-1. Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
+* Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
 
-1. Leave the *Website URL* field blank.
+* Leave the *Website URL* field blank.
 
-1. Select ***Save***.
+* Select ***Save***.
 
 #### Finish: Domains and permissions
 
@@ -70,14 +70,14 @@ In the *Domains and permissions* section, the *Domains from your tabs* field mus
 
 In the *Test and distribute* section:
 
-- Select **Install**.
+* Select **Install**.
 
-- In the pop-up window, select *Add for you* to *Yes*, and *Add to a team or chat* to *No*.
+* In the pop-up window, select *Add for you* to *Yes*, and *Add to a team or chat* to *No*.
 
-- Select **Install**.
+* Select **Install**.
 
-- In the next pop-up window select **Open** and your tab is displayed.
+* In the next pop-up window select **Open** and your tab is displayed.
 
 ## View your personal tab
 
-- Select the menu `...` from the left panel of Teams, and select your tab from the list of applications.
+Select the menu `...` from the left panel of Teams, and select your tab from the list of applications.
