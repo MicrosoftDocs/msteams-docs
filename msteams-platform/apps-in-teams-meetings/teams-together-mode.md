@@ -89,20 +89,20 @@ The seat dimensions become the canvas for rendering the participant video stream
 **To build a scene using the Scene studio**
 
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
- 
+
     >[!NOTE]
     > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select **Scene studio** from the **Create custom scenes for meetings** section.
     > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home), select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
 
-2. From the **Scenes Editor** page, select **Create a new scene**.
+1. In the **Scenes Editor** page, select **Create a new scene**.
 
-3. On the right side, in the **Scene Name** box, enter a name for the scene.
+1. In the **Scene Name** box, enter a name for the scene.
 
     >[!NOTE]
     > * You can select **Close** to toggle between closing or reopening the right pane.
     > * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
-4. Drag and drop the image into the environment as displayed in the following image:
+1. Drag and drop the image into the environment as displayed in the following image:
 
     >[!NOTE]
     > * You can download the [SampleScene.zip](/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](/apps-in-teams-meetings/SampleApp.zip) files with the images.
@@ -110,33 +110,35 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-5. Select an image that you have placed in the scene. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
+1. Select an image that you have placed in the scene.
+
+1. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-6. Select **Participants** under **Layers** in the upper-right corner.
+1. In the upper-right corner, select **Participants** under **Layers**.
 
-7. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
+1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
 
     >[!NOTE]
     > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
     > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
 
-8. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+1. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
 
-9. Select **Meeting Organizer** or **Presenter** role for the participant.
+1. Select **Meeting Organizer** or **Presenter** role for the participant.
 
     >[!NOTE]
     > In a meeting, one participant must be assigned the role of a meeting organizer.
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-10. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
+1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
  
     >[!NOTE]
     > To delete a scene you created, select **Delete scene** on the top bar.
 
-11. In the **View in Teams** dialog box, select **Preview in Teams**. Microsoft Teams is opened and an add dialog box is shown. Select **Add** and after adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
+1. In the **View in Teams** dialog box, select **Preview in Teams**. Microsoft Teams is opened and an add dialog box is shown. Select **Add** and after adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
  
     ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
     
@@ -145,14 +147,14 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scenes. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
     > * The scene can then be viewed in the Together Mode scene gallery.
 
-12. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
+1. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
-13. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
+1. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
-14. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+1. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     >[!NOTE]
     > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
@@ -247,23 +249,23 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 
 1. Create a new test meeting.
 
-2. On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene.
+1. On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. The next step is to create a test meeting in order to engage with the scene.
 
     >[!NOTE]
     > This is the model for a developer to test and try out scenes from the Scene studio. Once a scene is shipped as an app, users see these scenes in the scene gallery as shown in the following steps and they are able to acquire the scene from the scene gallery itself.
 
-3. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
+1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
-4. Select **Change scene** to change the default scene.
+1. Select **Change scene** to change the default scene.
 
-5. From the **Scene Gallery**, select the scene you want to use for your meeting.
+1. From the **Scene Gallery**, select the scene you want to use for your meeting.
 
-6. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
+1. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
 >[!NOTE]
 > At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
 
-7. Select **Apply**. Teams installs the app for the user and applies the scene.
+1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
 ## Open a Together Mode Scene Package
 
