@@ -20,17 +20,11 @@ This quickstart takes you through the steps to create a custom channel and group
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Do you want to create a configurable or static tab?**
-
-Use the arrow keys to select configurable tab.
-
-**What scopes do you intend to use for your Tab?**
-
-You can select a Team or a group chat
-
-**Do you want this tab to be available in SharePoint Online? (Y/n)** 
-
-Select **n**.
+| **Question** | **Values** |
+|-------------|-------------|
+| **Do you want to create a configurable or static tab?** | Use the arrow keys to select configurable tab. |
+| **What scopes do you intend to use for your Tab?** | You can select a Team or a group chat. |
+| **Do you want this tab to be available in SharePoint Online? (Y/n)** | Select **n**. |
 
 >[!IMPORTANT]
 >The path component **yourDefaultTabNameTab**, referenced in this quickstart, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.

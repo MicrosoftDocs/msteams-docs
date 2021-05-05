@@ -12,7 +12,7 @@ This project requires the following tools installed in your development environm
     > [!NOTE]
     > We recommend using [Visual Studio Code](https://code.visualstudio.com/download).
 
-- [Node.js or Node Package Manager](https://nodejs.org/en/). You must use the latest Long Term Support (LTS) version. The Node Package Manager (NPM) installs into your system with the installation of Node.js.
+- [Node.js or Node Package Manager](https://nodejs.org/en/). You must use the latest Long Term Support (LTS) version (The current available version is 4.1.0). The Node Package Manager (NPM) installs into your system with the installation of Node.js.
 
 - [Yeoman](https://yeoman.io/) and [gulp-command line interface (cli)](https://www.npmjs.com/package/gulp-cli). Run the following command in your command prompt to install these tools:
 
@@ -38,11 +38,11 @@ This project requires the following tools installed in your development environm
     yo teams
     ```
 
-The Microsoft Teams App generator appears.
-
-1. Provide a series of values that are used in your application's **manifest.json** file as in the following image:
+    The Microsoft Teams App generator appears:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+1. Provide a series of values that are used in your application's **manifest.json** file.
 
     The following table provides the details of the required values.
 
