@@ -66,18 +66,26 @@ When you app package is downloaded or published, you must select the environment
 
 ### Plans and Pricing
 
-Provide your app as software as a service (SaaS) by configuring plans and pricing for it. Set the plans and pricing through the Teams Developer Portal by updating the manifest.
+Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for the users to know of these offers you must enable the SaaS offers by updating your manifest through the Teams Developer Portal.
 
 > [!NOTE]
-> It is recommended to configure the SaaS offer before publishing your app for the first time.
->
-> If you are configuring the SaaS offer after you have published your app, then you must resubmit your app to the App Source after the manifest is updated with the changes.
+> If your app is already available in AppSource and you want to change it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then [republish](../../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md) the app.
 
-**To configure SaaS offer for your app**
+**To update the manifest**
 
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
 1. Select **Plans and Pricing** in the left panel.
-1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**
+1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
+    > [!NOTE]
+    > You can get your publisher ID and Offer ID from the Partner Center.
+1. Select the **Manifest** tab. The updated manifest with the following property is displayed.
+
+    ```json
+      "subscriptionOffer": {
+        "offerId": "publisher ID and offer ID"  
+        }
+    ```
+1. Select **Distribute**, and select **Download the app package**. For more information on how to distribute your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
 
 ### Configuration
 
