@@ -380,7 +380,7 @@
     href: concepts/build-and-test/test-data.md
   - name: Tabs
     items:
-    - name: Debug your tab with DevTools
+    - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
