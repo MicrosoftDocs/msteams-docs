@@ -262,8 +262,8 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 
 1. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
->[!NOTE]
-> At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
+    >[!NOTE]
+    > At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
