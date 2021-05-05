@@ -158,4 +158,4 @@ Along with new features, we also provide [production-ready Teams app templates](
 
 ## Submit your feedback
 
-We listen to the developer community for any queries, bugs, feature requests, or contributions. You can submit your feedback through any one of the [available channels](feedback.md).
+We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
