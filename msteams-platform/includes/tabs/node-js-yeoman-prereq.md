@@ -40,7 +40,7 @@ This project requires the following tools installed in your development environm
 
     The Microsoft Teams App generator appears:
 
-    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/generator-screenshot.PNG)
 
 1. Provide a series of values that are used in your application's **manifest.json** file.
 
@@ -61,8 +61,6 @@ This project requires the following tools installed in your development environm
     | **Would you like to use Azure Applications Insights for telemetry? (y/N)** | Select **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**. |
     | **Default Tab Name (max 16 characters)?** | Name your tab. This tab name is used throughout your project as a file or URL path component. |
     | **What kind of Tab would you like to create?** | Use the arrow keys to select Personal (static) tab. |
-    | **What scopes do you intend to use for your Tab?** | Press space bar to select or press A to select both, and press i to invert |
     | **Do you require Azure AD Single-Sign-On support for the tab? (Y/n)** | The default is yes. |
     | **What is the Application ID to associate with the SSO Tab?** |  |
     | **What is the Application ID URI to associate with the SSO Tab?** | |
-    | **Do you want this tab to be available in SharePoint Online? (y/N)** | The default is no. |
