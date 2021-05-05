@@ -152,7 +152,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
-## Teams app templates
+## Teams app template catalog
 
 Along with features, we also provide sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md). The catalog is alphabetized and the newest additions are tagged with a star ☆.
 
