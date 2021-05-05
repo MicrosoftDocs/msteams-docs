@@ -192,7 +192,7 @@ The query parameters are:
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## Linking to the scheduling dialog
+## Link to the scheduling dialog
 
 > [!NOTE]
 > This feature is currently in developer preview.
