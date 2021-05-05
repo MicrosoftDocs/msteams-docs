@@ -143,7 +143,7 @@ You will need access to two accounts:
 
 1. Open Visual Studio Code
 2. Open the Command Palette with **View*- > **Command Palette**.
-3. Select **Teams Toolkit v2: Focus on Command View**.  This will open the Teams Toolkit as a sidebar.  You can also select the Teams icon in the sidebar:
+3. Select **Teams Toolkit: Focus on Command View**.  This will open the Teams Toolkit as a sidebar.  You can also select the Teams icon in the sidebar:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
