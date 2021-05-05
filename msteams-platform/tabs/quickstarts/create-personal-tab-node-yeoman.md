@@ -14,8 +14,7 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 * Generate a project.
 * Create personal tab.
-* Create an app package.
-* Build and run the application.
+* Build and run your application.
 * Establish a secure tunnel using ngrok.
 * Upload the application to Teams.
 
@@ -99,11 +98,11 @@ To add a personal tab to your application, you must create a content page and up
 
 ## Build and run your application
 
-Open a command prompt in your project directory to complete the next tasks.
+Perform the following steps through command prompt in your project directory.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
+Navigate to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` to view your personal tab.
 
 ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
@@ -111,7 +110,7 @@ To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/
 
 Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you must either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
 
-To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your locally running web server's publicly available HTTPS endpoints.
+To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your local web server's publicly available HTTPS endpoints.
 
 Your server's web endpoints are available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
 

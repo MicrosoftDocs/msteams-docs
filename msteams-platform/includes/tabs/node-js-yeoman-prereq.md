@@ -62,5 +62,3 @@ This project requires the following tools installed in your development environm
     | **Default Tab Name (max 16 characters)?** | Name your tab. This tab name is used throughout your project as a file or URL path component. |
     | **What kind of Tab would you like to create?** | Use the arrow keys to select Personal (static) tab. |
     | **Do you require Azure AD Single-Sign-On support for the tab? (Y/n)** | The default is yes. |
-    | **What is the Application ID to associate with the SSO Tab?** |  |
-    | **What is the Application ID URI to associate with the SSO Tab?** | |

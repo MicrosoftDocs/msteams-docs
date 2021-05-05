@@ -1,33 +1,33 @@
-### Create app package
+1. Create app package
 
-You need an app package to test your tab in Teams. It is a zip folder that contains the following required files:
+    You need an app package to test your tab in Teams. It is a zip folder that contains the following:
 
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
+    - A **full color icon** measuring 192 x 192 pixels.
+    - A **transparent outline icon** measuring 32 x 32 pixels.
+    - A **manifest.json** file that specifies the attributes of your app.
 
-The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the `./package directory`. In the command prompt enter:
+    The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the `./package directory`. In the command prompt enter:
 
-```bash
-gulp manifest
-```
+    ```bash
+    gulp manifest
+    ```
 
-### Build your application
+1. Build your application
 
-The build command transpiles your solution into the *./dist* folder. Enter:
+    The build command transpiles your solution into the *./dist* folder. Enter:
 
-```bash
-gulp build
-```
+    ```bash
+    gulp build
+    ```
 
-### Run your application in localhost
+1. Run your application in localhost
 
-Start a local web server by entering the following:
+    1. Start a local web server by entering the following:
 
-```bash
-gulp serve
-```
+        ```bash
+        gulp serve
+        ```
 
-Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser. The application's home page appears:
+    1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser. The application's home page appears:
 
-![home page screenshot](~/assets/images/tab-images/homePage.png)
+        ![home page screenshot](~/assets/images/tab-images/homePage.png)
