@@ -154,7 +154,7 @@ For more information, see [public developer preview for Teams](~/resources/dev-p
 
 ## Teams app template catalog
 
-Along with features, we also provide sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md). The catalog is alphabetized and the newest additions are tagged with a star ☆.
+Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
 
 ## Submit your feedback
 
