@@ -26,7 +26,7 @@ The following image explains how the Stage View works:
 
 ## Advantage of Stage View
 
-The Stage View provides users with a more seamless experience of viewing content in Teams, instead of browser. This leads to more engagement with your app within Teams.
+Stage View will help provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, they can pin the content to the chat or channel for future quick access. This will lead to a higher user engagement with your app.
 
 ##  Stage View vs. Task module
 
@@ -107,11 +107,11 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[cont
 
 Following are the deep link examples to invoke the Stage View:
 
-#### Example 1
+**Example 1**
 
 https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
-#### Example 2
+**Example 2**
 
 https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
 
@@ -131,7 +131,6 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
+[Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
 
 
