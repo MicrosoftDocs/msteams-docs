@@ -1,7 +1,7 @@
 ---
-title: Get started - Build your first Teams app with React
+title: Get started - Build a conversational bot for Microsoft Teams
 author: adrianhall
-description: Create a conversational bot for Microsoft Teams using the Teams Toolkit
+description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
@@ -87,7 +87,7 @@ A message extension uses the [Bot Framework](https://docs.botframework.com) to a
 The bot code is stored in the `bot` directory.  The `bots/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
 
 > [!Tip]
-> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0) tutorials.
+> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
 ## Run your app locally
 
@@ -133,7 +133,7 @@ When you pressed F5, the Teams Toolkit:
 To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-side-loading).
 
 > [!TIP]
-> Check for issues before sideloading your app, using the [validation feature in App Studio](../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#teams-app-validation-tool), which is included in the toolkit. Fix the errors to successfully sideload the app.
+> Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
 </details>
 
 ## Deploy your app to Azure

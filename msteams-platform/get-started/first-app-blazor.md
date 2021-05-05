@@ -1,7 +1,7 @@
 ---
 title: Get started - Build your first Teams app with Blazor
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit.
+description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
@@ -73,7 +73,7 @@ Once the Teams Toolkit configures your project, you have the components to build
 - The application manifest for publishing to Teams App Portal is stored in `Properties/manifest.json`.
 - A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
 
-Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](https://docs.microsoft.com/aspnet/core/blazor/?view=aspnetcore-5.0).
+Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](https://docs.microsoft.com/aspnet/core/blazor).
 
 - `Pages/Tab.razor` is the front-end application's entry point.
 - `TeamsFx.cs` and `JS/src/index.js` is used for initializing communications with the Teams host.
@@ -96,7 +96,7 @@ To build and run your app locally:
 
 1. If requested, install the self-signed SSL certificate for local debugging.
 
-   :::image type="content" source="../assets/images/build-your-first-app/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Teams will be loaded in a web browser, and you will be prompted to sign in.  Sign in with your M365 account.
 1. When prompted to install the app onto Teams, press **Add**.

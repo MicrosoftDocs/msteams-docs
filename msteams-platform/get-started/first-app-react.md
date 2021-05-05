@@ -1,9 +1,9 @@
 ---
 title: Get started - Build your first Teams app with React
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit.
+description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and React.
 ms.author: adhal
-ms.date: 05/04/2021
+ms.date: 05/05/2021
 ms.topic: quickstart
 ---
 
@@ -164,7 +164,7 @@ To build and run your app locally:
    >[!NOTE]
    > The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
-   :::image type="content" source="../assets/images/build-your-first-app/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Teams will be loaded in a web browser, and you will be prompted to sign in.  Sign in with your M365 account.
 1. When prompted to install the app onto Teams, press **Add**.
