@@ -41,7 +41,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 >[!NOTE]
 > Currently, shareDeepLink does not work on mobile platforms.
 
-### Showing a deep link to an item within your tab
+### Show a deep link to an item within your tab
 
 To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
 
@@ -51,7 +51,7 @@ Provide the following fields:
 * `subEntityLabel`: A label for the item to use for displaying the deep link.
 * `subEntityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering the tab.
 
-### Generating a deep link to your tab
+### Generate a deep link to your tab
 
 > [!NOTE]
 > Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
@@ -95,7 +95,7 @@ Examples:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### Consuming a deep link from a tab
+### Consume a deep link from a tab
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-entity ID if it exists.
 
@@ -192,14 +192,14 @@ The query parameters are:
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## Link to the scheduling dialog
+## Deep link to the scheduling dialog
 
 > [!NOTE]
 > This feature is currently in developer preview.
 
 You can create deep links to the Teams built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
 
-### Generating a deep link to the scheduling dialog
+### Generate a deep link to the scheduling dialog
 
 Use the following format for a deep link that you can use in a bot, Connector, or messaging extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
@@ -228,14 +228,14 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
-### Generating a deep link to a chat
+### Generate a deep link to a chat
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
 | Make an audio call. | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
 | Make an audio and video call. | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
 |Make an audio and video call with an optional parameter source. | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
-| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:1111111111 |
+| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
   
 Following are the query parameters:
 * `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
