@@ -7,8 +7,7 @@ keywords: teams what's new latest
 ---
 # What's new for developers in Microsoft Teams
 
->[!TIP]
-> Check out sample solutions to common team scenarios in the [**Teams app template catalog**](samples/app-templates.md)! The catalog is alphabetized and the newest additions are tagged with a star ☆.
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
 ## GA features
 
@@ -151,8 +150,12 @@ Developer preview is a public program that provides early access to unreleased T
 | -------- | --------- | ------------------ |
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 
-For more information on developer preview program, see [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+## Teams app template catalog
+
+Along with new features, we also provide [production-ready Teams app templates](samples/app-templates.md) that you can deploy right away or modify to your needs. Newly added templates are indicated with a star ☆.
 
 ## Submit your feedback
 
-We listen to the developer community for any queries, bugs, feature requests, or contributions. You can submit your feedback through any one of the [available channels](feedback.md).
+We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
