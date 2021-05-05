@@ -91,8 +91,8 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
  
     >[!NOTE]
-    > * To open Scene studio you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select **Scene studio** from the **Create custom scenes for meetings** section.
-    > * To open Scene studio you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home), select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
+    > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select **Scene studio** from the **Create custom scenes for meetings** section.
+    > * To open Scene studio, you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home), select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
 
 2. From the **Scenes Editor** page, select **Create a new scene**.
 
