@@ -8,11 +8,10 @@ ms.author: lajanuar
 ---
 # Create a personal tab with C# and ASP.NETCore
 
-This quickstart takes you through the steps to create a custom personal tab using C# and ASP.NETCore Razor pages. It also helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+This quickstart takes you through the steps to create a custom personal tab using C# and ASP.NETCore Razor pages, helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 ## What you'll learn
 
-* Download the sample source code.
 * Review the source code.
 * Update your application.
 * Establish a secure tunnel using ngrok.
