@@ -1,7 +1,8 @@
 ---
 title: What are task modules?
 author: clearab
-description: Add modal popup experiences to collect or display information to your users from your Microsoft Teams apps.
+description: Add modal popup experiences to collect or display information to your users from your Microsoft Teams apps
+localization_priority: Normal
 ms.topic: overview
 ms.author: anclear
 ---
@@ -230,13 +231,22 @@ With HTML/JavaScript-based task modules it is your responsibility to ensure your
 
 Microsoft Teams will ensure that keyboard navigation works properly from the task module header into your HTML and vice-versa.
 
-## Task module samples
+## Code sample
+|**Sample name** | **Description** | **.NET** | **Node.js**|
+|----------------|-----------------|--------------|----------------|
+|Task module sample (Bots-V4) | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+|Task module sample (Tabs + Bots-V3) | Samples for creating task modules. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/54.teams-task-module)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/54.teams-task-module)|
 
-* [Node.js/TypeScript sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs)
-* [C#/.NET sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp)
+
 
 > [!div class="nextstepaction"]
-> [Learn  more: Request device permissions](/concepts/device-capabilities/native-device-permissions.md)
+> [Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 
 > [!div class="nextstepaction"]
->[Learn more: Camera and image gallery permissions](/concepts/device-capabilities/mobile-camera-image-permissions.md)
+> [Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+
+> [!div class="nextstepaction"]
+> [Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)

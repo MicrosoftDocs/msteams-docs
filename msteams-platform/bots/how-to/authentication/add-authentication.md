@@ -3,6 +3,7 @@ title: Add authentication to your Teams bot
 author: clearab
 description: How to add OAuth authentication to a bot in Microsoft Teams.
 ms.topic: how-to
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
@@ -126,8 +127,10 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. Open the resource page and select **Configuration** under **Settings**. 
+1. Select **Add OAuth Connection Settings**.    
+The following image displays the corresponding selection in the resource page:  
+![SampleAppDemoBot configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png)
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv1*.
@@ -153,8 +156,11 @@ Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V
 
 1. In the [**Azure portal**][azure-portal], select your resource group from the dashboard.
 1. Select your bot channel registration link.
-1. On the resource page, select **Settings**.
-1. Under **OAuth Connection Settings** near the bottom of the page, select **Add Setting**.
+1. Open the resource page and select **Configuration** under **Settings**. 
+1. Select **Add OAuth Connection Settings**.  
+The following image displays the corresponding selection in the resource page:        
+![SampleAppDemoBot Configuration](~/assets/images/authentication/sample-app-demo-bot-configuration.png) 
+
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example *BotTeamsAuthADv2*.
@@ -202,7 +208,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
-    - Set the `ConnectionName` to the name of the identity provider connection.
 
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
@@ -222,7 +227,6 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot channel registration.
     - Set the `connectionName` to the name of the identity provider connection.
-
     Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../botbuilder-samples/samples/javascript_nodejs/46.teams-auth/.env)]
