@@ -48,11 +48,11 @@ You can use `getSettings()`to designate the tab content to be removed. The `getS
 
 #### Use the `getContext()` function
 
-You can use `getContext()` to retrieve the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
+Use `getContext()` to retrieve the current context in which the frame is running. The `getContext((Context) =>{})` function takes in the [`Context interface`](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) and provides valid `Context` property values that you can use in your removal page logic to determine the content to display in the removal page.
 
 #### Include authentication
 
-You must have an authentication before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `manifest.json` `validDomains` array.
+You must have an authentication before allowing a user to delete the tab content. Context information is used to help construct authentication requests and authorization page URLs. For more information, see [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). All domains used in your tab pages must be listed in the `manifest.json` `validDomains` array.
 
 Below is a sample tab removal code block:
 
@@ -77,11 +77,11 @@ Below is a sample tab removal code block:
 
 ```
 
-When a user selects **Remove** from the tab's drop-down menu, Teams will load the optional `removeUrl` page (designated in your **configuration page**) into an IFrame. Here, the user is presented with a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button located at the bottom of the removal page IFrame.
+When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page (designated in your **configuration page**) into an IFrame. The user is presented with a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button located at the bottom of the removal page IFrame.
 
-Following the execution of the remove handler, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
+Following the execution of the remove handler `removeEvent.notifySuccess()`, or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 
 >[!NOTE]
->To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases.\
->Teams enables the **Remove** button after 5 seconds, even if your tab has not called `setValidityState()`.\
+>To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases. Or,
+>Teams enables the **Remove** button after 5 seconds, even if your tab has not called `setValidityState()`. Or,
 >When the user selects **Remove**, Teams removes the tab after 30 seconds.

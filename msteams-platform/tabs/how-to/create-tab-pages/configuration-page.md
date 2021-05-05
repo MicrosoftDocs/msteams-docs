@@ -111,9 +111,9 @@ Your tab requires contextual information to display relevant content. Contextual
 
 Collect the values of context data variables in the following two ways:
 
-1. Insert URL query string placeholders in your manifest's `configurationURL`.
+* Insert URL query string placeholders in your manifest's `configurationURL`.
 
-1. Use [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` method.
+* Use [Teams SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) `microsoftTeams.getContext((context) =>{})` method.
 
 #### Insert placeholders in the `configurationUrl`
 

@@ -134,4 +134,4 @@ The `theme` argument in the function will be a string with a value of `default`,
 
 ## See also
 
-- [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+[Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
