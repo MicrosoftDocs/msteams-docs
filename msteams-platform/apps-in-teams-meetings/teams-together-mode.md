@@ -10,7 +10,7 @@ Microsoft Teams Together Mode provides an immersive and engaging meeting environ
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Scenes in Together Mode is an artifact created by the scene developer using the [Microsoft Scene studio](build-scene-in-scene-studio.md) that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
 >[!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
@@ -61,7 +61,7 @@ Prior to building a scene, there are few key points as follows to consider in or
 Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 >[!NOTE]
-> This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+> * This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following:
 
@@ -89,10 +89,18 @@ The seat dimensions become the canvas for rendering the participant video stream
 **To build a scene using the Scene studio**
 
 1. Go to [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+ 
+    >[!NOTE]
+    > * To open Scene studio you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home) and select **Scene studio** from the **Create custom scenes for meetings** section.
+    > * To open Scene studio you can navigate to the home page of [Teams Developer Portal](https://dev.teams.microsoft.com/home), select **Tools** from the left hand section, and select **Scene studio** from the **Tools** section.
 
 2. From the **Scenes Editor** page, select **Create a new scene**.
 
 3. On the right side, in the **Scene Name** box, enter a name for the scene.
+
+    >[!NOTE]
+    > * You can select **Close** to toggle between closing or reopening the right pane.
+    > * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
 4. Drag and drop the image into the environment as displayed in the following image:
 
@@ -106,7 +114,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
 
-6. Select a participant image, and select **Participants** under **Layers** in the upper-right corner.
+6. Select **Participants** under **Layers** in the upper-right corner.
 
 7. Select the number of participants for the scene from the **Number of participants** box, and select **Add**.
 
@@ -123,7 +131,12 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
-10. Select **Save** and select **Preview** to quickly test your scene in Microsoft Teams. Microsoft Teams is opened and an add dialog box is shown. After adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
+10. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
+ 
+    >[!NOTE]
+    > To delete a scene you created, select **Delete scene** on the top bar.
+
+11. In the **View in Teams** dialog box, select **Preview in Teams**. Microsoft Teams is opened and an add dialog box is shown. Select **Add** and after adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
  
     ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
     
@@ -132,14 +145,14 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scenes. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
     > * The scene can then be viewed in the Together Mode scene gallery.
 
-11. Optionally, create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
+12. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
-12. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
+13. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
 
-13. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+14. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
     
     >[!NOTE]
     > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
@@ -260,4 +273,4 @@ As developers share the Scene Package that is a .zip file retrieved from the Sce
 
 ## See also
 
-[Build a scene in Scene studio](build-scene-in-scene-studio.md)
+[Apps in Teams meetings](teams-apps-in-meetings.md)
