@@ -1376,6 +1376,8 @@ turnContext, CancellationToken cancellationToken) {
 
 After the post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are aligned, you cannot send or receive messages after an app has been uninstalled. Your bot receives a 403 response code to new messages posted by your bot. The 403 response code has fields that give the reason behind for the 403 response, which is either the app was uninstalled or the bot was blocked.
 
+![Uninstall event](~/assets/images/bots/uninstallbot.png)
+
 ## Event handling
 
 As you begin using these new install and uninstall events, there are some instances where bots throw exceptions on receiving unexpected events from Teams. Some of the reasons why this occurs:
