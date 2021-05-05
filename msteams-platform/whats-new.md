@@ -7,7 +7,7 @@ keywords: teams what's new latest
 ---
 # What's new for developers in Microsoft Teams
 
-Find out the new features in Microsoft Teams that are generally available (GA) or are in developer preview. You can also share your feedback. 
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
 ## GA features
 
