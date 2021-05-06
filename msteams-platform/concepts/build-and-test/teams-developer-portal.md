@@ -71,29 +71,32 @@ When your app package is downloaded or published, you must select the environmen
 
 ### Plans and Pricing
 
-Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for the users to know of these offers you must enable the SaaS offers by updating your manifest through the Teams Developer Portal.
+Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for users to know of these offers you must enable the SaaS offers in the Teams store. You can achieve this by updating your manifest through the Teams Developer Portal > submitting your app in the Partner Center > distributing to the Teams store > the Teams Admin will validate and turn on the purchase experience.
 
 > [!NOTE]
-> If your app is already available in AppSource and you want to change it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then [republish](../../concepts/deploy-and-publish/appsource/prepare/submission-checklist.md) the app.
+> If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then republish the app.
 
 **To update the manifest**
 
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
-1. Select **Plans and Pricing** in the left panel.
+1. Select **Plans and Pricing** in the left pane.
 1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
-<<<<<<< Updated upstream
+
     > [!NOTE]
     > You can get your publisher ID and Offer ID from the Partner Center.
-1. Select the **Manifest** tab. The updated manifest with the following property is displayed.
+1. Select **Preview in Teams** to view the details of the SaaS offer, and then select **Save**.
+1. Under **Distribute** in the left pane, select **Manifest**. Following property is added to the manifest:
 
     ```json
       "subscriptionOffer": {
         "offerId": "publisher ID and offer ID"  
         }
-    ```
-1. Select **Distribute**, and select **Download the app package**. For more information on how to distribute your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
-=======
->>>>>>> Stashed changes
+   ```
+
+1. Select **Distribute** at the top right, and then select **Publish to Teams store**. For more information on how to publish your app, see [Publish purchaseable web apps](../../msteams-platform/concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+
+    > [!NOTE]
+    > For more information on distributing your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
 
 ### Configuration
 
