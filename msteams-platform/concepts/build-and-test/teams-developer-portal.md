@@ -69,15 +69,160 @@ When your app package is downloaded or published, you must select the environmen
 
 ## Plans and Pricing
 
-Provide your app as software as a service (SaaS) by configuring plans and pricing for it. Set the plans and pricing through the Teams Developer Portal by updating the manifest.
+Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for users to know of these offers you must enable the SaaS offers in the Teams store. You can achieve this by updating your manifest through the Teams Developer Portal > submitting your app in the Partner Center > distributing to the Teams store > the Teams Admin will validate and turn on the purchase experience.
 
 > [!NOTE]
-> It is recommended to configure the SaaS offer before publishing your app for the first time.
->
-> If you are configuring the SaaS offer after you have published your app, then you must resubmit your app to the App Source after the manifest is updated with the changes.
+> If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then republish the app.
 
 **To configure SaaS offer for your app**
 
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
-1. Select **Plans and Pricing** in the left panel.
+1. Select **Plans and Pricing** in the left pane.
 1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
+
+    > [!NOTE]
+    > You can get your publisher ID and Offer ID from the Partner Center.
+1. Select **Preview in Teams** to view the details of the SaaS offer, and then select **Save**.
+1. Under **Distribute** in the left pane, select **Manifest**. Following property is added to the manifest:
+
+    ```json
+      "subscriptionOffer": {
+        "offerId": "publisher ID and offer ID"  
+        }
+   ```
+
+1. Select **Distribute** at the top right, and then select **Publish to Teams store**. For more information on how to publish your app, see [Publish purchaseable web apps](../../msteams-platform/concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+
+    > [!NOTE]
+    > For more information on distributing your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
+
+### Configuration
+
+The most significant part of a Microsoft Teams app package is its manifest.json file. This file must conform to the [Teams App schema](~/resources/schema/manifest-schema.md). The manifest.json file contains metadata which allows Teams to correctly present your app to users.
+
+You can perform the following actions in the **Configure** section of the Developer Portal:
+
+* Create an app package easily.
+* Describe the app.
+* Upload you icons.
+* Product a .zip file for easy distribution.
+
+
+> [!NOTE]
+> Developer Portal does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
+
+**Basic information and Branding**
+
+The **Details** and **Branding** sections define the high-level description of the app you are making. This includes the app’s name, description, and visual branding. The information in this section will be used in your app's Teams store listing and app installation dialogue.
+
+**Capabilities**
+
+The capabilities section of Configuration has the app's capabilities details of each of those capabilities listed.
+
+> [!NOTE]
+> The app customization feature is currently available in developer preview only.
+> 
+> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+##### Group and channel app
+
+* **Team Tabs.** A team tab becomes part of a channel and provides quick access to team information and resources. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
+
+  For team tabs, you must provide a *Configuration URL* to present options and gather information so users can customize the content and experience of your tab. This iframed HTML page is displayed when a user first adds the tab to a channel.
+
+  You must also provide any additional domains that the tab expects to load from or link to.
+
+* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the personal app experience (i.e. the experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. As with Teams tabs, provide any additional domains from which the tab expects to load from or link to.
+
+##### Bot
+
+This section allows you to add a [conversational bot](~/bots/what-are-bots.md) to your app. If you already have a bot registered with Bot Framework, you can add that bot by clicking *Set Up* and supplying the bot's name, Bot Framework ID, and defining the scopes in which the bot will work.
+
+If you have not yet registered a bot with the Bot Framework, click *Register* to create a new one. Once you’re done registering your bot, come back to this section of the Manifest Editor to enter its name and Bot Framework ID.
+
+After you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
+
+Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope will be ignored. You can edit the scopes your bot supports at any time.
+
+##### Connector
+
+This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose *Set up* and enter the name and ID of the connector. If you want a new connector click *Register* to be taken to the Connector Developer Dashboard in your browser.
+
+> [!NOTE]
+> App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as *Contoso*.
+
+##### Messaging Extensions
+
+[Messaging extensions](~/messaging-extensions/what-are-messaging-extensions.md) are a powerful way for users to engage with your app within Microsoft Teams. Users can query for information from your service and post that information in the form of cards, right into the channel or chat conversation.
+
+Messaging extensions are powered by Bot Framework bots, so they require a configured bot to operate. If you have the name and Bot Framework ID of the bot you would like to power the messaging extension, enter it. Otherwise, click *Register* to create one and enter the information afterward. Select whether the configuration of a messaging extension can be updated by the user.
+
+Once you have the underlying bot configured, define the commands and parameters which the messaging extension can accept.
+
+Each command requires a title and an ID. The command can optionally contain a description for the user. Each command can support up to five parameters, each of which requires:
+
+* The name of the parameter as it appears in the Teams client and is included in the user request
+* A user-friendly title
+* An optional description
+
+> [!NOTE]
+> To create messaging extension using app studio, see [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
+
+##### Meeting extension
+
+//TODO: Rajesh R.
+
+##### Scene
+
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats. For more information, see [Teams Together Mode](../apps-in-teams-meetings/teams-together-mode.md).
+
+#### Permissions
+
+You can enrich your Teams app with native device capabilities, such as camera, microphone, and location.
+
+#### Languages
+
+Set up or change the languages that your app supports.
+
+#### Single Sign-On
+
+Configure your app to authenticate users with single sign-on (SSO).
+
+#### Domains
+//TODO
+
+
+## Distribute
+
+Once you have finished defining your application, the *Distribute* section allows you export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as *appname.zip* in your default download directory.
+
+### Publish your app to Teams
+
+On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
+
+
+## Tools
+
+### Bot Management
+
+//Todo
+
+### Scene studio
+
+Microsoft has a Scene studio that allows you to build the scenes in Together Mode. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+
+![Scene studio](~/assets/images/apps-in-meetings/scene-design-studio.png)
+
+For more information, see [Build a scene using Scene studio](../apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio).
+
+### Adaptive card editor
+
+//Todo
+
+### Microsoft identity platform management
+
+//Todo
+
+### Teams store app validation
+
+//Todo
