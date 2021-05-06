@@ -102,9 +102,9 @@ Perform the following steps through command prompt in your project directory.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-4. Navigate to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` to view your personal tab.
+    4. Navigate to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` to view your personal tab.
 
-    ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+        ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
 ## Establish a secure tunnel to your tab
 
