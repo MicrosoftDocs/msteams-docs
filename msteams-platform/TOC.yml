@@ -120,6 +120,14 @@
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
+  - name: Teams Developer Portal
+    items:
+    - name: Overview
+      href: concepts/build-and-test/teams-developer-portal.md
+    - name: Configuration
+      href: concepts/build-and-test/TDP-Configuration.md
+    - name: Tools
+      href: concepts/build-and-test/TDP-Tools.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)

@@ -15,28 +15,31 @@ The Developer Portal makes it easy to manage your Microsoft Teams apps, whether 
 
 ## Developer Portal Overview
 
-The Developer Portal enables app creators to register apps with the Teams app service so they can be published to an organization's app catalog, or the Teams store. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and more.
+The Developer Portal enables app creators to register apps with the Teams app service and publish to an organization's app catalog, or the Teams store. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and more.
 
-A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor, then published to a cloud hosting solution like Azure. For the Teams client to install that app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable our userbase to be more successful.
+A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor and published to a cloud hosting solution like Azure. For the Teams client to install the app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable the users to be more successful.
 
 ### Register a new app
 
 There are three paths to registering a Teams app with Developer Portal:
-- Register a brand new app from the portal
-- Import an existing app package from the portal
-- Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+* Register a brand new app from the portal
+* Import an existing app package from the portal
+* Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
-If you register a new app, you must fill out all the mandatory configuration fields before you can install the app to your Teams client.
-
+If you register a new app, you must fill all the mandatory configuration fields before you can install the app to your Teams client.
 
 ## App Configuration
 
+**App Overview page**
 
-### App Overview page
+Your app's overview page contains the following information:
 
-Your app's overview page contains basic information about your app, a validation snapshot of your app's configuration state, and app usage metrics (currently in preview) for your app.
+* Basic information about your app.
+* A validation snapshot of your app's configuration state.
+* App usage metrics, currently in preview, for your app.
 
-#### App Usage (Preview)
+**App Usage (Preview)**
+
 The App Usage metrics show the total number of Active Users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Teams Developer Portal, and are scoped to the App ID(s) shown in the Basic Information section.
 
 | Metric | Definition |
@@ -48,21 +51,23 @@ The App Usage metrics show the total number of Active Users for your app. These 
 
 **Latency:** You should see usage reflected for a given day within 24-48 hours. **Usage for new apps can take up to 3-5 days to light up.**
 
-
-### Owners
+**Owners**
 
 Use this section to share your app registration with colleagues in your organization. The *Contributor* role has the same permissions as the *Owner* role, except the ability to delete an app. 
 
-
-### Environments
+**Environments**
 
 Environment configurations allow you to seamlessly transition an app from your local runtime through to production.
 
-Start by creating a new runtime environment configuration by pressing the *+ Add an environment* button. Once created, you can begin to add key value pairs for that environment.
+Select **+ Add an environment** to create a new runtime environment configuration. After it is created, you can add key value pairs for the environment.
 
-As you start configuring your app, you can use the variable names instead actual values in the property fields. To enter a variable name instead of a hard coded property value, enter '{{variable}}' in any field in a Developer Portal configuration page. Simply entering '{{' will reveal a dropdown with all the variables you've created for the chosen environment plus the global variables.
+Use the variable names instead actual values in the property fields. 
 
-When you app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
+**To enter a variable name instead of a hard coded property value**
+
+* Enter '{{variable}}' in any field in a Developer Portal configuration page. Simply entering '{{' will reveal a dropdown with all the variables you've created for the chosen environment along with the global variables.
+
+When your app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ### Plans and Pricing
 
@@ -76,6 +81,7 @@ Provide your app as software as a service (SaaS) by configuring plans and pricin
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
 1. Select **Plans and Pricing** in the left panel.
 1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
+<<<<<<< Updated upstream
     > [!NOTE]
     > You can get your publisher ID and Offer ID from the Partner Center.
 1. Select the **Manifest** tab. The updated manifest with the following property is displayed.
@@ -86,23 +92,31 @@ Provide your app as software as a service (SaaS) by configuring plans and pricin
         }
     ```
 1. Select **Distribute**, and select **Download the app package**. For more information on how to distribute your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
+=======
+>>>>>>> Stashed changes
 
 ### Configuration
 
-The most significant part of a Microsoft Teams app package is its manifest.json file. This file, which must conform to the [Teams App schema](~/resources/schema/manifest-schema.md), contains metadata which allows Teams to correctly present your app to users.
+The most significant part of a Microsoft Teams app package is its manifest.json file. This file must conform to the [Teams App schema](~/resources/schema/manifest-schema.md). The manifest.json file contains metadata which allows Teams to correctly present your app to users.
 
-The *Configure* section in Developer Portal simplifies creating the app package, allowing you to describe the app, upload your icons, add app capabilities, and produce a .zip file which can easily be distributed for others to use.
+You can perform the following actions in the **Configure** section of the Developer Portal:
+
+* Create an app package easily.
+* Describe the app.
+* Upload you icons.
+* Product a .zip file for easy distribution.
+
 
 > [!NOTE]
 > Developer Portal does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
-#### Basic information and Branding
+**Basic information and Branding**
 
-The *Details* and *Branding* sections define the high-level description of the app you are making. This includes things such as the app’s name, description, and visual branding. The information in these section will be used in your app's Teams store listing and app installation dialogue.
+The **Details** and **Branding** sections define the high-level description of the app you are making. This includes the app’s name, description, and visual branding. The information in this section will be used in your app's Teams store listing and app installation dialogue.
 
-#### Capabilities
+**Capabilities**
 
-The capabilities section of *Configuration* is where the app's capabilities are defined and where details of each of those capabilities are listed.
+The capabilities section of Configuration has the app's capabilities details of each of those capabilities listed.
 
 > [!NOTE]
 > The app customization feature is currently available in developer preview only.
