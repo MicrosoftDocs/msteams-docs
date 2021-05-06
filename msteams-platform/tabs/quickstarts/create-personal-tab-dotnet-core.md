@@ -21,7 +21,7 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 ## Get the source code
 
-Open command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the following sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -65,7 +65,7 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, you can see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>

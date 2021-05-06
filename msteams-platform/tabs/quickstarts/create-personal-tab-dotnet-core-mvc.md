@@ -22,7 +22,7 @@ This quickstart takes you through the steps to create a custom personal tab with
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code, download the zip folder and extract the files or clone the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code, download the zip folder and extract the files or clone the following sample repository into your new directory:
 
 ``` bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -92,7 +92,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Home
 
-ASP.NETCore treats files called *Index* as the default or home page for the site. When your browser URL points to the root of the site, *Index.cshtml* is displayed as the home page for your application.
+ASP.NETCore treats *Index* files as default or home page for the site. When your browser URL points to the root of the site, *Index.cshtml* is displayed as the home page for your application.
 
 #### Shared
 
@@ -114,7 +114,7 @@ ngrok http https://localhost:44345 -host-header="localhost:44345"
 
 * Ngrok will listen to requests from the internet and route them to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-* Keep the command prompt with ngrok running, to make a note of the URL you need it later.
+* You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
 
 * Verify that *ngrok* is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
 

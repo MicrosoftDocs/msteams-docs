@@ -21,7 +21,7 @@ This quickstart takes you through the steps to create a custom channel or group 
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the following sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -51,7 +51,7 @@ In ASP.NETCore, the web root folder is where the application looks for static fi
 
 ### Index.cshtml
 
-ASP.NETCore treats *Index* files as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+ASP.NETCore treats *Index* files as default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 ### Tab.cs
 
