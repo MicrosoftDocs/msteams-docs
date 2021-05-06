@@ -79,7 +79,7 @@ Provide your app as software as a service (SaaS) by configuring plans and pricin
 **To update the manifest**
 
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
-1. Select **Plans and Pricing** in the left pane.
+1. Select **Plans and Pricing** in the left pane. (*Screenshot / mocks required*)
 1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
 
     > [!NOTE]
