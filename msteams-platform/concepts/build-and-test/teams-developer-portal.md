@@ -28,9 +28,7 @@ There are three paths to registering a Teams app with Developer Portal:
 
 If you register a new app, you must fill all the mandatory configuration fields before you can install the app to your Teams client.
 
-## App Configuration
-
-**App Overview page**
+## App Overview page
 
 Your app's overview page contains the following information:
 
@@ -51,11 +49,11 @@ The App Usage metrics show the total number of Active Users for your app. These 
 
 **Latency:** You should see usage reflected for a given day within 24-48 hours. **Usage for new apps can take up to 3-5 days to light up.**
 
-**Owners**
+## Owners
 
 Use this section to share your app registration with colleagues in your organization. The *Contributor* role has the same permissions as the *Owner* role, except the ability to delete an app. 
 
-**Environments**
+## Environments
 
 Environment configurations allow you to seamlessly transition an app from your local runtime through to production.
 
@@ -69,14 +67,14 @@ Use the variable names instead actual values in the property fields.
 
 When your app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
 
-### Plans and Pricing
+## Plans and Pricing
 
 Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for users to know of these offers you must enable the SaaS offers in the Teams store. You can achieve this by updating your manifest through the Teams Developer Portal > submitting your app in the Partner Center > distributing to the Teams store > the Teams Admin will validate and turn on the purchase experience.
 
 > [!NOTE]
 > If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then republish the app.
 
-**To update the manifest**
+**To configure SaaS offer for your app**
 
 1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
 1. Select **Plans and Pricing** in the left pane. (*Screenshot / mocks required*)
