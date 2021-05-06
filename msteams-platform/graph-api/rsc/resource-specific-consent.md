@@ -41,7 +41,7 @@ The steps for enabling RSC in your application are as follows:
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
-1. [Install your app directly in Teams](#install-your-app-directly-in-teams).
+1. [Install your app directly in Teams](#sideload-your-app-in-teams).
 1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
 
 ## Configure group owner consent settings in the Azure AD portal
@@ -121,9 +121,9 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
   }
 ```
 
-## Install your app directly in Teams
+## Sideload your app in Teams
 
-Once you've created your app you can [upload your app package](../../concepts/deploy-and-publish/apps-upload.md#upload-your-package-into-a-team-using-the-apps-tab) directly to a specific team.  To do so, the **Upload custom apps** policy setting must be enabled as part of the custom app setup policies. *See* [Custom app policy settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team.
 
 ## Check your app for added RSC permissions
 
@@ -143,7 +143,14 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
   ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
- 
+
+## Code sample
+| **Sample name** | **Description** | **.NET** |**Node.js** |
+|-----------------|-----------------|----------------|----------------|
+| Resource Specific Consent (RSC) | Use RSC to call Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-rsc/nodeJs)|
+
+
+
 ## Test resource-specific consent
  
 > [!div class="nextstepaction"]
@@ -154,3 +161,4 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 > [!div class="nextstepaction"]
 > [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
 > 
+

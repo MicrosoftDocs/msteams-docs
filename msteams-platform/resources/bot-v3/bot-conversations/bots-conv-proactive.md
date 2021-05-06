@@ -1,6 +1,8 @@
 ---
 title: Proactive messages
 description: Describes bots can start a conversation in Microsoft Teams
+ms.topic: conceptual
+localization_priority: Normal
 keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots
@@ -49,7 +51,7 @@ When using proactive messaging to send notifications you need to make sure your 
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-* By [fetching the team roster](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) from a channel your app is installed in.
+* By [fetching the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) from a channel your app is installed in.
 * By caching them when a user [interacts with your bot in a channel](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
 * When a users is [@mentioned in a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
 * By caching them when you [receive the `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that

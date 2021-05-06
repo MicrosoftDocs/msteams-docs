@@ -2,6 +2,8 @@
 title: Test and debug your bot
 description: Describes how to test bots in Microsoft Teams
 keywords: teams bots testing
+ms.topic: how-to
+localization_priority: Normal
 ms.date: 03/20/2019
 ---
 # Test and debug your Microsoft Teams bot
@@ -34,7 +36,7 @@ Occasionally it may be necessary to test your bot without installing it as an ap
 
 The Bot Framework Emulator is a desktop application that allows bot developers to test and debug their bots, either locally or remotely. Using the emulator, you can chat with your bot and inspect the messages that your bot sends and receives. This can be useful for verifying that your bot is available and responding, however the emulator will not allow you to test any Teams-specific functionality you've added to your bot, nor will responses from your bot be an accurate visual representation of how they will be rendered in Teams. If you need to test either of those things it is best to [upload your bot](#test-by-uploading-to-teams).
 
-Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0).
+Complete instructions on the Bot Framework Emulator can be found [here](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&preserve-view=true).
 
 ### Talk to your bot directly by Id
 
@@ -51,7 +53,7 @@ You can also initiate a conversation with your bot by using its Id. Two methods 
   
    * From within Microsoft Teams, on the **Chat** pane, select the **Add chat** icon. For **To:**, paste your bot's Microsoft App ID.
   
-     ![Getting the AppID for the bot](~/assets/images/bots_uploading.png)
+     ![Uploading the AppID for the bot](~/assets/images/bots_uploading.png)
 
      The app ID should resolve to your bot name.
 

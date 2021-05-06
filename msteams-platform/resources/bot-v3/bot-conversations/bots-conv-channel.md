@@ -2,6 +2,8 @@
 title: Channel and Group chat conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
+localization_priority: Normal
+ms.topic: conceptual
 ms.date: 06/25/2019
 ---
 # Channel and Group chat conversations with a Microsoft Teams bot
@@ -48,7 +50,7 @@ In a channel, replying to a message shows as a reply to the initiating reply cha
 
 When your bot is first added to the group or team, it is generally useful to send a welcome message introducing the bot to all users. The welcome message should provide a description of the bot’s functionality and user benefits. Ideally the message should also include commands for the user to interact with the app. To do this, ensure that your bot responds to the `conversationUpdate` message, with the `teamsAddMembers` eventType in the `channelData` object. Be sure that the `memberAdded` ID is the bot's App ID itself, because the same event is sent when a user is added to a team. See [Team member or bot addition](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) for more details.
 
-You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetching-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
+You might also want to send a personal message to each member of the team when the bot is added. To do this, you could [fetch the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) and send each user a [direct message](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 We recommend that your bot *not* send a welcome message in the following situations:
 

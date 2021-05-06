@@ -2,6 +2,7 @@
 title: Configure OAuth 2.0 identity providers
 description: Describes how to configure identity providers with a focus on Azure AD
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams authentication AAD oauth identity provider
 ---
 # Configure identity providers
@@ -22,6 +23,6 @@ Replace `<hostname>` with your actual host. This might be a dedicated hosting si
 
 ## Other authentication providers
 
-* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](https://developer.linkedin.com/docs/oauth2)
+* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
 
 * **Google** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
