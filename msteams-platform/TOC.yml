@@ -126,6 +126,8 @@
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Configuration
       href: concepts/build-and-test/TDP-Configuration.md
+    - name: Distribute
+      href: concepts/build-and-test/TDP-Distribute.md
     - name: Tools
       href: concepts/build-and-test/TDP-Tools.md
   - name: Teams JavaScript client SDK
