@@ -13,8 +13,7 @@ This quickstart takes you through the steps to create a custom channel and group
 ## What you'll learn
 
 * Generate a project.
-* Create an app package.
-* Build and run the application.
+* Build and run your application.
 * Establish a secure tunnel using ngrok.
 * Upload the application to Teams.
 
