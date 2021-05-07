@@ -1,28 +1,28 @@
 ---
-title: Subscribe to software-as-a-service (SaaS) apps
-description: Describes how to publish your apps as SaaS and the user experience when subscribing through Teams client.
+title: Subscribe to apps with software-as-a-service (SaaS) offers
+description: Describes the process of creating SaaS offers and the purchase experience for users subscribing to apps with SaaS offers.
 ms.author: surbhigupta
 ms.topic: conceptual
 localization_priority: Normal 
 ---
 
-# Subscribe to software-as-a-service (SaaS) apps
+# Subscribe to apps with software-as-a-service (SaaS) offers
 
-You can publish your apps on the Teams store as free to install apps or purchasable apps by enabling a software-as-a-service (SaaS) offer for them. There is a complete process of enabling a SaaS offer for your apps, starting with creating a SaaS offer in the Partner Center > activating the SaaS offer in Teams by updating the manifest through the Teams Developer Portal > publishing the app to Teams store. Users can subscribe the apps with SaaS offers through Teams client.
+In the Teams store, you have apps that are free to install or are available as software-as-a-service (SaaS). If you want your app to be available as SaaS, then you must follow the complete process of creating a SaaS offer in the Partner Center's Microsoft Commercial Marketplace, updating the manifest through the Teams Developer Portal, publishing the app to the Teams store, and enabling the SaaS offer for your app.
 
 > [!NOTE]
-> It is recommended to create a SaaS offer when you are publishing your app to the Teams store for the first time. If you decide to create a SaaS offer after an app is published then you will have to republish the app to the Teams store.
+> It is recommended to configure your SaaS offer before publishing your app to the Teams store. However, if your app is already published and you now want to change it to SaaS, then you must republish your app after configuring the SaaS offer for your app.
 
 ## Create a SaaS offer
 
-You need to create a SaaS offer for your app in your Partner Center. For information on how to create a SaaS offer, [How to create a software as a service (SaaS) offer in the Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer).
-
 > [!NOTE]
-> To create a SaaS offer you must have a [Partner Center account](create-partner-center-dev-account.md).
+> You must have a [Partner Center account](create-partner-center-dev-account.md) to create a SaaS offer.
 
-## Update app manifest through Teams Developer Portal
+To configure plans and pricing details for your app, create a SaaS offer in the [Microsoft Commercial Marketplace](/azure/marketplace/create-new-saas-offer).
 
-In the Teams Developer Portal, provide your **Publisher ID** and **Offer ID** and update the manifest with the `subscriptionOffer` property.
+## Update app manifest through the Teams Developer Portal
+
+In the [Teams Developer Portal](~/build-and-test/teams-developer-portal.md), provide your **Publisher ID** and **Offer ID** and update the manifest with the `subscriptionOffer` property.
 
 **To update your app manifest**
 
@@ -41,48 +41,38 @@ In the Teams Developer Portal, provide your **Publisher ID** and **Offer ID** an
         }
    ```
 
-1. Select **Distribute** at the top right, and then select **Publish to Teams store**. For more information on how to publish your app, see [Publish your app to the Microsoft Teams store](../../concepts/deploy-and-publish/appsource/publish.md).
+1. Select **Distribute** on the top right, and then select **Publish to Teams store**. For more information on how to publish your app, see [Publish to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
     > [!NOTE]
-    > For more information on distributing your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
+    > For more information on distributing your app package, see [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
-After the app is validated and published on the Teams store, users can purchase the app subscription directly from the Teams App Store.
-
-## Submit the web app to AppSource
-
-To submit your web app to the AppSource and subsequently to the Teams App Store, ensure that your web app completes the approval process provided by Microsoft Teams. This approval process verifies whether your web app works as described and contains the relevant metadata and content that is valuable to the users.
-
-For more information on the submission checklist for submitting an app to AppSource, see:
-
-* [Prepare for AppSource submission](submission-checklist.md)
-* [Build a great app details page](detail-page-checklist.md)
-* [App manifest checklist](app-manifest-checklist.md)
-* [Manifest schema](https://docs.microsoft.com/microsoftteams/platform/resources/schema/manifest-schema) to include the information about your purchasable web app on Teams
-
-## Publish purchasable web apps
-
-After your offer has been submitted on AppSource along with the appropriate plans for the offer, the validation team reviews it and after it passes our validation, the web app is available for you to test and publish it to our commercial marketplace.
-
-After the app is available on our commercial marketplace, your web app (SaaS offer) is automatically available for purchase from the Teams App Store along with AppSource and Azure Marketplace.
+After the app is validated and tested, the Teams admin enables the SaaS offer, and then publishes it on the Teams store. The users can now purchase the app subscription.
 
 ## User purchase experience
 
-The purchasable web apps are available for purchase and installation on the Teams App Store.
+Users can subscribe to purchasable apps through the Teams store.
 
-To purchase an app, as a user you can follow these steps:
+**To subscribe an app with SaaS offer**
 
-1. Navigate to an app that supports purchases and select **Subscription plans**.
+1. In the Teams store, select the app that you want to subscribe to, and select **Buy a subscription**.
 
-    ![Subscription plan](~/assets/images/subscriptionplan.png)
+    :::image type="content" source="../assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
 
-2. In the **Choose a subscription plan** window, view the respective plans and pricing supported by the offer and purchase it.
+2. In the **Choose a subscription plan** dialog box, select the subscription plan for the app, and then select **Checkout**.
 
-    ![View plan](~/assets/images/viewplan.png)
+    :::image type="content" source="../assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
 
-3. After successfully purchasing the offer, you are redirected to the URL provided to activate the offer and manage the licenses purchased.
+3. In the **Checkout** dialog box, view the plan and pricing details, and select **Place order**.
 
-    ![Configure now](~/assets/images/configurenow.png)
-    
+    :::image type="content" source="../assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
+
+1. After the purchase is successful, select **Configure now**. In the **USERS AND LICENSES** page, assign the licenses.
+
+    :::image type="content" source="../assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring the user licenses.":::
+
+> [!NOTE]
+> To manage your subscription, go to **Apps** > **&lt;name of the subscribed app&gt;** > **Manage subscription**.
+
 ## See also
 
-[Maintaining and supporting your published app](../post-publish/overview.md).
+[Maintaining and supporting your published app](../post-publish/overview.md)
