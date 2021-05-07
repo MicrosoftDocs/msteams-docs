@@ -12,7 +12,7 @@ There are multiple tools and resources for designing your Microsoft Teams app. T
 
 :::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagram showing an example of the Teams app design process." border="false":::
 
-## 0. Plan your app
+## Plan your app
 
 Designing a high-quality Teams app requires understanding what you want the app to do and how you think people will use it. Before you start prototyping, make sure you identify:
 
@@ -22,7 +22,7 @@ Designing a high-quality Teams app requires understanding what you want the app 
 
 For more information, see [understand your app’s use cases](~/concepts/design/understand-use-cases.md) and [map use cases to Teams](~/concepts/design/map-use-cases.md).
 
-## 1. Get Teams design tools
+## Get Teams design tools
 
 Microsoft provides tools to make it easier to design your Teams app. At minimum, we strongly recommend using the Microsoft Teams UI Kit.
 
@@ -45,11 +45,11 @@ You can upload a sample app to see how apps should look and behave in the Teams 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## 2. Understand Teams app design basics
+## Understand Teams app design basics
 
 Read in depth about or at least familiarize yourself with the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
 
-## 3. Choose app capability designs
+## Choose app capability designs
 
 After the planning phase, you should have an initial impression about which Teams app capabilities fit your app’s use cases. For example, you want a bot for collaborative scenarios (such as channels and group chats).
 
@@ -59,7 +59,7 @@ The UI kit has pre-built designs that show you how people typically add, set up,
 1. Grab what you need from that page to design your app.<br />
    For example, if your app supports authentication with single sign-on, copy and paste the design for handling that exact scenario.
 
-## 4. Customize your design with pre-built templates and components
+## Customize your design
 
 Once you have a basic app design, you can modify and refine it as much as you want (and quickly) by grabbing Teams UI templates and basic components from the UI kit.
 
@@ -78,7 +78,7 @@ Based on Fluent UI, these are the core elements for creating familiar Teams inte
 1. In the UI kit’s left nav, go to **Basic UI components**.
 1. Grab the components you need for your app design (for example, a button or toggle).
 
-## 5. Implement your design
+## Implement your design
 
 The design is done and you’re ready to start building. The following tools can help simplify the front-end development of your app.
 
