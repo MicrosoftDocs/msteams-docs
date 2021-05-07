@@ -37,4 +37,4 @@ With Office 365 and incoming webhooks, you can send messages by posting a JSON p
 * [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [send messages to connectors and webhooks](../webhooks-and-connectors/how-to/connectors-using.md).
+* [send messages to connectors and webhooks](../webhooks-and-connectors/how-to/connectors-using.md)
