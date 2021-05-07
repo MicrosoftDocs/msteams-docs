@@ -6,7 +6,7 @@ ms.topic: conceptual
 localization_priority: Normal 
 ---
 
-# Subscribe to apps with software-as-a-service (SaaS) offers
+# Subscribe to apps with SaaS offers
 
 In the Teams store, you have apps that are free to install or are available as software-as-a-service (SaaS). If you want your app to be available as SaaS, then you must follow the complete process of creating a SaaS offer in the Partner Center's Microsoft Commercial Marketplace, updating the manifest through the Teams Developer Portal, publishing the app to the Teams store, and enabling the SaaS offer for your app.
 
