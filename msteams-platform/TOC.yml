@@ -422,14 +422,12 @@
       href: /office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
     - name: Resolve issues if store submission fails
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
+    - name: Subscribe to apps with SaaS offers 
+      href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-- name: Subscribe to apps
-  items:  
-  - name: Subscribe to apps with software-as-a-service (SaaS) offers 
-    href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
 - name: Resources
 - name: App manifest
   items:
