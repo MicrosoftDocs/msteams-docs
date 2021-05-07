@@ -26,11 +26,11 @@ The following table provides feature and description of webhooks:
 
 | Feature | Description |
 | ------- | ----------- |
+|Actionable messaging support|If you choose to send messages through cards, you must use the actionable message card format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and the [message card playground](https://messagecardplayground.azurewebsites.net).|
+|Independent HTTPS messaging support|Cards are a great way to present information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an incoming webhook.|
+|Markdown support|All text fields in actionable messaging cards support basic Markdown. Do not use HTML markup in your cards. HTML is ignored and treated as plain text.|
 |Scoped configuration|Incoming webhooks are scoped and configured at the channel level. Outgoing webhooks are scoped and configured at the team level.|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents insertion of malicious code as there is no code execution on the client.|
-|Actionable messaging support|If you choose to send messages through cards, you must use the actionable message card format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and the [message card playground](https://messagecardplayground.azurewebsites.net).|
-|Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an incoming webhook.|
-|Markdown support|All text fields in actionable messaging cards support basic Markdown. Do not use HTML markup in your cards. HTML is ignored and treated as plain text.|
 
 > [!NOTE]
 > Teams bots, messaging extensions, incoming webhooks, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not currently support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
