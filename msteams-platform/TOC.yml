@@ -426,7 +426,9 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Application Certification program
       href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
-  - name: Publish purchasable web apps 
+- name: Subscribe to apps
+  items:  
+  - name: Subscribe to apps with software-as-a-service (SaaS) offers 
     href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
 - name: Resources
 - name: App manifest
