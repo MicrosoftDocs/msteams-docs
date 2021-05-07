@@ -4,7 +4,7 @@
 
 To display your tab in Teams, you must include the **Microsoft Teams JavaScript client SDK** and call `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate:
 
-- Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
     ```html
     `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`

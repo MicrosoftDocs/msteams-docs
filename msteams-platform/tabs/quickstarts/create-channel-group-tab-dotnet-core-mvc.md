@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Create a Custom Channel or Group Tab with ASP.NETCore MVC
 
-This quickstart takes you through the steps to create a custom channel or group tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+This quickstart takes you through the steps to create a custom channel or group tab using C# and ASP.NetCore MVC, and help you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 ## What you'll learn
 
@@ -27,7 +27,7 @@ Open command prompt and create a new directory for your tab project. We have pro
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-Once you have the source code, open Visual Studio and select **Open a project or solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
+In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
 
 To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser, navigate to the URLs below and verify that the application loaded properly:
 
