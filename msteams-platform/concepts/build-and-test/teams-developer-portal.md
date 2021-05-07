@@ -69,32 +69,13 @@ When your app package is downloaded or published, you must select the environmen
 
 ## Plans and Pricing
 
-Provide your app as software as a service (SaaS) by configuring plans and pricing for it in the [Partner Center](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). However, for users to know of these offers you must enable the SaaS offers in the Teams store. You can achieve this by updating your manifest through the Teams Developer Portal > submitting your app in the Partner Center > distributing to the Teams store > the Teams Admin will validate and turn on the purchase experience.
+Provide your app as software-as-a-service (SaaS) by configuring plans and pricing for it in the [Partner Center's Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). For users to be able to subscribe to these offers, you need to go through the entire process of creating a SaaS offer to publishing your SaaS app to the Teams store. For more information, see [Subscribe to apps with SaaS offers](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
 
 > [!NOTE]
+> It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
 > If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then republish the app.
 
-**To configure SaaS offer for your app**
-
-1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
-1. Select **Plans and Pricing** in the left pane. (*Screenshot / mocks required*)
-1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
-
-    > [!NOTE]
-    > You can get your publisher ID and Offer ID from the Partner Center.
-1. Select **Preview in Teams** to view the details of the SaaS offer, and then select **Save**.
-1. Under **Distribute** in the left pane, select **Manifest**. Following property is added to the manifest:
-
-    ```json
-      "subscriptionOffer": {
-        "offerId": "publisher ID and offer ID"  
-        }
-   ```
-
-1. Select **Distribute** at the top right, and then select **Publish to Teams store**. For more information on how to publish your app, see [Publish purchaseable web apps](../../msteams-platform/concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md).
-
-    > [!NOTE]
-    > For more information on distributing your app package, see [Distribute your app](../../concepts/deploy-and-publish/apps-publish-overview.md).
+In the **Plans and Pricing** section of the Developer Portal, you only need to provide the **Publisher ID** and **Offer ID**, which is integrated in the manifest. The manifest.json file is packaged along with your app for publishing to the Teams store.
 
 ### Configuration
 
@@ -106,7 +87,6 @@ You can perform the following actions in the **Configure** section of the Develo
 * Describe the app.
 * Upload you icons.
 * Product a .zip file for easy distribution.
-
 
 > [!NOTE]
 > Developer Portal does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
