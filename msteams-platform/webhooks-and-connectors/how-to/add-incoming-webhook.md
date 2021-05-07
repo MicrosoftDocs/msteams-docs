@@ -14,13 +14,13 @@ This article provides details on adding and removing incoming webhooks in Micros
 
 ## Incoming webhooks
 
- Incoming webhooks are simple way for an external app to share messages in Teams. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user interface (UI) containers that include content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within the following three capabilities:
+Incoming webhooks are special type of Connector in Teams that provide a simple way for an external app to share content in team channels. These webhooks are often used as tracking and notification tools. Incoming webhooks provide a unique URL to which you send a JSON payload with the message that you want to POST, typically in a card format. Cards are user interface (UI) containers that include content and actions related to a single topic and are a way to present message data in a consistent way. Teams uses cards within the following three capabilities:
 
 * Bots
 * Messaging extensions
 * Connectors
 
-## Key features of webhooks
+## Key features of incoming webhooks
 
 The following table provides feature and description of webhooks:
 
