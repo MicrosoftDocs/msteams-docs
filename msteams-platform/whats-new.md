@@ -16,6 +16,7 @@ The change log lists changes to the Microsoft Teams platform and this document s
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/07/2021|Uninstall event| [Uninstall event in conversation events](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-event)|
 |04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 | 04/29/2021 | New: Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/08/2021| App customization feature is now available in developer preview.|[Design Teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App Studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [manifest schema](resources/schema/manifest-schema-dev-preview.md) |

@@ -1377,16 +1377,16 @@ turnContext, CancellationToken cancellationToken) {
 > [!NOTE]
 > Uninstall event is currently available only in developer preview.
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The 403 response code has fields that give the reason behind the 403 response, which is either the app was uninstalled or the bot was blocked. After the post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are aligned, you cannot send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The 403 response code has fields that give the reason behind the 403 response, which is either the app was uninstalled or the bot was blocked. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. So you cannot send or receive messages after an app has been uninstalled.
 
-![Uninstall event](~/assets/images/bots/uninstallbot.png)
+<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="400" height="400"/>
 
 ## Event handling for install and uninstall events
 
 When you use these install and uninstall events, there are some instances where bots throw exceptions on receiving unexpected events from Teams. Some of the reasons why this occurs:
 
-* You built your bot without the Microsoft Bot Framework SDK and the bot throws an exception on receiving an unexpected event.
-* You built your bot with the Microsoft Bot Framework SDK and you chose to alter the default event behavior by overriding the base event handle.
+* You built your bot without the Microsoft Bot Framework SDK, and as a result the bot throws an exception on receiving an unexpected event.
+* You built your bot with the Microsoft Bot Framework SDK, and you chose to alter the default event behavior by overriding the base event handle.
 
 It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
 
