@@ -27,9 +27,9 @@ The following image shows the tabs added in a personal chat:
 > [!NOTE]
 > Chrome 80 introduces new cookie values and imposes cookie policies. It is recommended that you set the intended use for your cookies. You need not rely on default browser behavior. For more information, See [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
 
-There are two types of tabs available in Teams, channel or group and personal. The channel or group tabs deliver content in channels and group chats and can create collaborative spaces around dedicated web-based content.
+There are two types of tabs available in Teams: channel or group and personal. The channel or group tabs provide content in channels and group chats and create collaborative spaces around dedicated web-based content.
 
-Personal tabs and personally-scoped bots are part of personal apps and are scoped to a single user. They are pinned to the left navigation bar in Teams for easy access.
+Personal tabs and personal bots are part of personal apps and are imtended for a single user. They are pinned to the left navigation bar in Teams for easy access.
 
 ## Tab features
 
@@ -59,7 +59,7 @@ Teams display your page, give you access to Teams-specific information, and allo
 
 If you expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is same for the all users.
 
-For channel or group tabs, you must create an additional configuration page that allows users to configure your content page URL by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab is added to multiple different teams or group chats. On each subsequent install, users can configure the tab, and allows them to tailor the experience as needed. 
+For channel or group tabs, create an additional configuration page that allows users to configure your content page URL by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab is added to multiple different teams or group chats. With each subsequent installation, your users can configure the tab to customize the user experience as needed.
 
 When users add or configure a tab, an URL associated with the tab is presented in the Teams UI. To configure a tab, add additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose the board that the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
@@ -67,7 +67,7 @@ You can have multiple channels or group tabs, and up to sixteen personal tabs pe
 
 ## Mobile considerations
 
-If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
+If you choose to have your channel or group tab to appear in Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
 
 Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
 
