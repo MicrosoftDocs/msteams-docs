@@ -10,6 +10,8 @@ ms.topic: overview
 
 There are multiple tools and resources for designing your Microsoft Teams app. The following steps describe when and how you might use these during the design process. (Some of the steps might be considered outside the design process but are included for additional context.)
 
+:::image type="content" source="~/assets/images/design-guidelines/teams-app-design-process.png" alt-text="Diagram showing an example of the Teams app design process.":::
+
 ## 0. Plan your app
 
 Designing a high-quality Teams app requires understanding what you want the app to do and how you think people will use it. Before you start prototyping, make sure you identify:
@@ -17,9 +19,10 @@ Designing a high-quality Teams app requires understanding what you want the app 
 * Your users
 * Their problem
 * How to solve their problem
-For more information, see understand your app’s use cases and map use cases to Teams.
 
-## 1. Get design tools
+For more information, see [understand your app’s use cases](~/concepts/design/understand-use-cases.md) and [map use cases to Teams](~/concepts/design/map-use-cases.md).
+
+## 1. Get Teams design tools
 
 Microsoft provides tools to make it easier to design your Teams app. At minimum, we strongly recommend using the Microsoft Teams UI Kit.
 
@@ -42,11 +45,11 @@ You can upload a sample app to see how apps should look and behave in the Teams 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
 
-## 2. Understand Teams app design fundamentals
+## 2. Understand Teams app design basics
 
-Read in depth about or at least familiarize yourself with the [basics of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
+Read in depth about or at least familiarize yourself with the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
 
-## 3. Design your app capabilities
+## 3. Choose app capability designs
 
 After the planning phase, you should have an initial impression about which Teams app capabilities fit your app’s use cases. For example, you want a bot for collaborative scenarios (such as channels and group chats).
 
@@ -95,7 +98,7 @@ Not unlike the design phase, you can use these Fluent UI components in your app 
 > [!div class="nextstepaction"]
 > [Get the library (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
 
-## Validate your design
+## Review design resources
 
 Whether you’re just starting on your app or are close to a production-ready app, we recommend that you periodically review the following resources:
 
