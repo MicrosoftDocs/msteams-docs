@@ -56,19 +56,19 @@ Users can subscribe to purchasable apps through the Teams store.
 
 1. In the Teams store, select the app that you want to subscribe to, and select **Buy a subscription**.
 
-    :::image type="content" source="../assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
+    :::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Buying the subscription for the selected app.":::
 
 2. In the **Choose a subscription plan** dialog box, select the subscription plan for the app, and then select **Checkout**.
 
-    :::image type="content" source="../assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
+    :::image type="content" source="~/assets/images/saas-offer/choosingsubscriptionplan.png" alt-text="Selecting the appropriate subscription plan.":::
 
 3. In the **Checkout** dialog box, view the plan and pricing details, and select **Place order**.
 
-    :::image type="content" source="../assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
+    :::image type="content" source="~/assets/images/saas-offer/placesubscriptionorder.png" alt-text="Placing the subscription order.":::
 
 1. After the purchase is successful, select **Configure now**. In the **USERS AND LICENSES** page, assign the licenses.
 
-    :::image type="content" source="../assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring the user licenses.":::
+    :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring the user licenses.":::
 
 > [!NOTE]
 > To manage your subscription, go to **Apps** > **&lt;name of the subscribed app&gt;** > **Manage subscription**.
