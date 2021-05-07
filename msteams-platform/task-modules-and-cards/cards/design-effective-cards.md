@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or messaging extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
 
-The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or messaging extensions. Users can take actions on cards when present.
+The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or messaging extensions. Users can also take actions on cards when present.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card." border="false":::
 
@@ -71,19 +71,19 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." border="false":::
 
-### ImageSet
+### Image set
 
 Use to send multiple image thumbnails.
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card." border="false":::
 
-### ActionSet
+### Action set
 
 Use when you want to the user to select a button, then gather addition user input from the same card.
 
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." border="false":::
 
-### ChoiceSet
+### Choice set
 
 Use to gather multiple inputs from the user.
 

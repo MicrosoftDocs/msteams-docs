@@ -3,7 +3,7 @@ title: Designing your custom app
 author: heath-hamilton
 description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
 localization_priority: Normal
-ms.author: lajanuar
+ms.author: surbhigupta
 ms.topic: overview
 ---
 # Designing your Microsoft Teams app
@@ -107,10 +107,6 @@ Designing a Teams app is like designing a conventional web app—but also a litt
 
 These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
 
-## Planning your app
-
-To design a high-quality Teams app, you must first understand what you want your app to do and how you think people will use it. If you haven't already, take some time to properly [plan your app](../../concepts/extensibility-points.md).
-
 ## Design fundamentals
 
 Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
@@ -137,7 +133,7 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 ## App customization
 
-Understand how the Teams admin can customize or rebrand the app based on the organization's need. This customization is enabled if you define the `configurableProperties` in the manifest schema. For more information, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+Understand how the Teams admin can customize or rebrand the app based on an org's need. This customization is enabled if you define the `configurableProperties` in the manifest schema. For more information, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
 > This feature is currently available in developer preview only.
@@ -171,7 +167,7 @@ Import these templates and related components directly into your Teams app proje
 
 ### Sample app
 
-Install a sample app to see how UI templates look and behave within Teams contexts.
+You can upload a sample app to see how apps should look and behave in the Teams client.
 
 > [!div class="nextstepaction"]
 > [Get the sample app (GitHub)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-ui-templates/ts)
@@ -182,7 +178,7 @@ To learn more, try one of the following resources.
 
 ### Fluent UI documentation
 
-Get code samples and implementation details for the Fluent UI-based components used to build Teams experiences.
+Get code samples and implementation details for the basic Fluent UI components used to build Teams experiences.
 
 > [!div class="nextstepaction"]
 > [Try Teams UI components (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)

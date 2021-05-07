@@ -39,9 +39,9 @@ In personal contexts, welcome messages set your bot's tone. The message includes
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." border="false":::
 
-### Introductions in group chats and channels
+### Welcome message in channels and group chats
 
-Your bot's introduction should be slightly different in group chats and channels compared to a personal context (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
+Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
 
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context." border="false":::
 

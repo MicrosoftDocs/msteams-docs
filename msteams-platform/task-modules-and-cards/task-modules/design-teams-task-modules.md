@@ -42,7 +42,7 @@ They can also be built with the [Adaptive Card](../../task-modules-and-cards/car
 |1|**App icon**|
 |2|**App name**: Full name of your app.|
 |3|**Header**: Make headers clear and concise. Describe the task you want users to complete.
-|4|**Close button**: Allows users to find app content they want to insert.|
+|4|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
 |5|**iframe**: Responsive space that hosts your app content.|
 |6|**Actions (optional)**: Buttons related to your app content.|
 
@@ -181,7 +181,7 @@ See the forms UI template for guidelines on inline error handling.
 
 #### Don't: Put error messages in dialogs
 
-Don't pop an error message in a dialog on top of a task modules. It creates a confusing user experience.
+Don't pop an error message in a dialog on top of a task module. It creates a confusing user experience.
 
    :::column-end:::
 :::row-end:::
