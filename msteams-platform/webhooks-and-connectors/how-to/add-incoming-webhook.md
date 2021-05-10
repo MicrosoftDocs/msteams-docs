@@ -35,10 +35,7 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 
 ## Add an incoming webhook
 
-> [!IMPORTANT]
-> If your team's **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
-
-Perform the following steps to add an incoming webhook to a Teams channel.
+Perform the following steps to add an incoming webhook to a Teams channel:
 
 1. Navigate to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu, search for **Incoming Webhook**, and select **Add**.
@@ -54,6 +51,9 @@ Perform the following steps to add an incoming webhook to a Teams channel.
     ![Unique URL](~/assets/images/url.png)
 
 1. Select **Done**. The webhook is available in the team channel.
+
+> [!IMPORTANT]
+> In your team, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
 ## Remove an incoming webhook
 
