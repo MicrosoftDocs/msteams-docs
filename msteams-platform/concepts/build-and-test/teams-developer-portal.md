@@ -69,13 +69,11 @@ When your app package is downloaded or published, you must select the environmen
 
 ## Plans and Pricing
 
-Provide your app as software-as-a-service (SaaS) by configuring plans and pricing for it in the [Partner Center's Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). For users to be able to subscribe to these offers, you need to go through the entire process of creating a SaaS offer to publishing your SaaS app to the Teams store. For more information, see [Subscribe to apps with SaaS offers](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+Provide your app as software-as-a-service (SaaS) by configuring plans and pricing for it in the [Partner Center's Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). For users to be able to subscribe to these offers, you need to go through the entire process from creating a SaaS offer to publishing your SaaS app to the Teams store. For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
 
 > [!NOTE]
 > It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
-> If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, update your manifest through the Teams Developer Portal, and then republish the app.
-
-In the **Plans and Pricing** section of the Developer Portal, you only need to provide the **Publisher ID** and **Offer ID**, which is integrated in the manifest. The manifest.json file is packaged along with your app for publishing to the Teams store.
+> If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, link your SaaS offer through the Teams Developer Portal, and then republish the app.
 
 ### Configuration
 
