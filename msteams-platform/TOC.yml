@@ -14,8 +14,6 @@
     href: get-started/first-app-react.md
   - name: Create a personal tab app (SPFx)
     href: get-started/first-app-spfx.md
-  - name: Create a personal tab app (Blazor)
-    href: get-started/first-app-blazor.md
   - name: Create a conversational bot
     href: get-started/first-app-bot.md
   - name: Create a messaging extension

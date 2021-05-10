@@ -194,6 +194,5 @@ Now that your development environment is configured, you can create, build, and 
 
 - [Create your first Teams app using React](first-app-react.md).
 - [Create your first Teams app using SharePoint Framework (SPFx)](first-app-spfx.md).
-- [Create a Blazor Teams app](first-app-blazor.md).
 - [Create a conversational bot app](first-app-bot.md).
 - [Create a messaging extension](first-message-extension.md).

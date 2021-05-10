@@ -3,7 +3,7 @@ title: Get started - Build your first Teams Message Extension
 author: adrianhall
 description: Create a message extension for Microsoft Teams using the Teams Toolkit
 ms.author: adhal
-ms.date: 04/27/2021
+ms.date: 05/10/2021
 ms.topic: quickstart
 ---
 
@@ -223,5 +223,4 @@ Learn about other methods for creating tab apps:
 
 - [Create a Teams app with React](first-app-react.md).
 - [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required).
-- [Create a Blazor Teams app](first-app-blazor.md).
 - [Create a conversation bot](first-app-bot.md)
