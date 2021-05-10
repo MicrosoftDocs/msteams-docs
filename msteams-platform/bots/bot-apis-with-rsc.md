@@ -38,7 +38,7 @@ Here are some of the functionalities that are blocked on granting additional per
 
 Each bot in Teams when added to a context that is 1:1, group-chat, or team, is limited by the same set of permissions in that context as shown in the following image:
 
-![App permissions](~/assets/images/apppermissions.png)
+![App permissions](~/assets/images/bots/apppermissions.png)
 
 The consent screen is shown to the users when they are trying to add a bot into a team. It is not a simple task to allow a bot to do an operation that is not already covered in the list of permissions.
 
@@ -74,7 +74,7 @@ Here is a high-level overview of the solution in the proposed permission model.
 
 The following diagram illustrates the interactions between various systems to guard Bot Framework API functionality with AAD RSC permissions:
 
-![Bot initiated operations](~/assets/images/botinitiatedoperations.png)
+![Bot initiated operations](~/assets/images/bots/botinitiatedoperations.png)
 
 The proposed solution for bot initiated operations is as follows:
 
@@ -95,7 +95,7 @@ The proposed solution for bot initiated operations is as follows:
 
 The following are the bot requirements to use RSC permissions:
 
-* Get a Graph AppId: If you don't already have a Graph app, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/graph/auth-register-app-v2). To create, edit, or manage your [Graph app registrations](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade). If your app supports single sign-on (SSO), use the same App ID for Graph or RSC as you use for SSO.
+* Get a Graph AppId: If you don't already have a Graph app, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/graph/auth-register-app-v2). To create, edit, or manage your [Graph app registrations](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade). If your app supports single sign-on (SSO), use the same App ID for Graph or RSC as you use for SSO.
 
 * Remove unnecessary permissions: Azure App registration portal cannot be used to request RSC permissions. On your app registration page, go to the **API permissions** section, and delete any excess permissions. If the only Graph calls you make are with RSC, delete all the permissions on that page. If your Graph app makes non-RSC calls as well as RSC calls, keep the non-RSC permissions you require.
 
@@ -125,7 +125,7 @@ The following are the bot requirements to use RSC permissions:
     string token = response.Deserialize<TokenResponse>().access_token;  
     ```
 
-   For more information, see [Get access without a user](https://docs.microsoft.com/en-us/graph/auth-v2-service).
+   For more information, see [Get access without a user](https://docs.microsoft.com/graph/auth-v2-service).
 
 * Include the token in calls to SMBA: Bot Framework SDK must provide helper functions to manage the Graph auth aspect.
 
@@ -133,7 +133,7 @@ The following are the bot requirements to use RSC permissions:
 
 The following diagram illustrates the interactions between various systems to guard Bot Framework API functionality with AAD RSC permissions:
 
-![Alternate bot initiated operations](~/assets/images/alternatebotinitiatedoperations.png)
+![Alternate bot initiated operations](~/assets/images/bots/alternatebotinitiatedoperations.png)
 
 The alternate solution for bot initiated operations is as follows:
 
@@ -154,7 +154,7 @@ Here Do something is the placeholder for an API that is part of common Bot Frame
 1. Depending on whether the required API operation is available in Graph and is usable in app-context, SMBA either makes a call to Graph to execute the operation forwarding the AAD Graph token for bot, or implements the API itself.
 
 1. SMBA finally transforms the response into Bot Framework dialect and transmits it back to the bot.
- 
+
 The solution provided in this section puts the additional burden on the bot to generate an AAD token using the App ID specified in `webApplicationInfo` of the app corresponding to that bot. It requires changes in the Bot Framework SDK to send the normal bot token for traditional Bot APIs, and additionally sends the secondary AAD token for RSC APIs, and requires SMBA to tune its communication with subsequent services to send the app token across. This complexity does not seem justifiable given that SMBA is inside the M365 trust-boundary and is still tasked with enforcing permissions and access controls. Therefore, the [first solution](#preferred-proposed-solution-for-bot-initiated-operations) is the preferred solution.
 
 ### Solution for system to bot eventing scenarios
@@ -163,7 +163,7 @@ Existing bot notifications is an elegant approach, but we must acknowledge RSC p
 
 The following diagram illustrates the approach to govern Bot Framework events using RSC permissions:
 
-![Bot Framework with RSC permissions](~/assets/images/botframeworkrsc.png)
+![Bot Framework with RSC permissions](~/assets/images/bots/botframeworkrsc.png)
 
 The solution for system to bot eventing scenarios is as follows:
 
@@ -206,7 +206,7 @@ Since this filter is a part of the app definition, it can be retrieved during th
 
 The following diagram illustrates the approach to retrieve `eventFilter` during the event fan out flow in SMBA:
 
-![eventFilter](~/assets/images/eventfilter.png)
+![eventFilter](~/assets/images/bots/eventfilter.png)
 
 The properties of `eventFilter` are as follows:
 
@@ -214,3 +214,63 @@ The properties of `eventFilter` are as follows:
 | -------- | ----------- |
 | eventType | Bot Framework event type for which the filter is desired. |
 | filter | Filtering expression to be applied. The only supported value is * in the first release. |
+
+## Eventing scenarios
+
+RSC provides a way for team owners to consent to a more granular set of permission for apps in Teams. Application developers can specify specific permissions apps require in the application manifest.
+
+```json
+
+```
+
+Users review and consent to permissions during the app installation process as shown in the following image:
+
+![Permissions](~/assets/images/permissions.png)
+
+In its current state, RSC only applies on Graph calls for team resources using the application permissions context. The goal of this work is to extend and apply the RSC permissions model to bots that are included with apps.
+
+Supporting RSC for bots includes eventing scenarios to bots that is events bots receive triggered from some user action in Teams.
+
+### Bot events RSC integration
+
+Eventing scenarios consist of any notification sent to a bot triggered by a user action in teams.  
+
+To start converging the permission model, integrate RSC for a scenario that can be supported with an existing permission where bot receives all channel messages in team. This includes the capability to remove bot at mention.
+
+RSC Permission is `ChannelMessage.Read.Group`.
+
+![Event flow with RSC](~/assets/images/eventflowrsc.png)
+
+The event flow with RSC is as follows:
+
+* User sends channel message in a team with bot installed.
+
+* Chat service persists the message and sends a message event to PubSub.
+
+* PubSub fans out event to subscribers. SMBA receives the event which includes the conversation roster and properties. Roster is filtered for any bots installed.  
+
+* Using its first party app permissions, SMBA retrieves a list of app entitlements for conversation by calling `/installedApps` Teams API. First party app requires `TeamsAppInstallation.ReadForTeam.All` permissions.
+
+```json
+
+```
+
+* Graph returns list of app entitlements for team.
+
+* SMBA makes second call to Graph to retrieve list of granted RSC permissions and associated apps using `/permissionGrants` Group API. First party app requires `Group.Read.All` for team.
+
+```json
+
+```
+
+* Graph returns list of granted permissions with app IDs.
+
+* For each bot in roster, SMBA validates whether the associated app has been granted necessary RSC permission and checks tenant settings and app policies.
+
+* Sends message activity to bot if all validation passes.
+
+Graph APIs include the following:
+
+* Get installed apps APIs: /teams/{teamId}/installedApps
+
+* Get consented grants APIs: /groups/{teamId}/permissionGrants
