@@ -63,6 +63,7 @@ Much of the app configurations and scaffolding are set up automatically when you
         </ul>
     </div>
     ```
+    
 1. Go to the `src/components` directory and open the `Tab.js` file. Locate the `render()` function and paste your code inside `return()` as shown in the following example:
     ```JavaScript
     render() {
@@ -81,6 +82,7 @@ Much of the app configurations and scaffolding are set up automatically when you
         );
     }
     ```
+    
 1. Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used:
     ```CSS
     a {
@@ -115,12 +117,12 @@ When you add a channel tab, the app name displays by default, for example, **fir
 1. Go to the `src/components` directory and open the `TabConfig.js` file.
 1. Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the following example:
 
-  ```JavaScript
-    microsoftTeams.settings.setSettings({
-    "contentUrl": "https://localhost:3000/tab",
-    "suggestedDisplayName": "Team Contacts"
-  });
-  ```
+    ```JavaScript
+        microsoftTeams.settings.setSettings({
+        "contentUrl": "https://localhost:3000/tab",
+        "suggestedDisplayName": "Team Contacts"
+      });
+      ```
 
 ## 6. Build and run your app
 
