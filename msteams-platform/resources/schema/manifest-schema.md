@@ -277,6 +277,9 @@ The following schema sample shows all extensibility options.
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
+  },
+  "subscriptionOffer": {
+    "offerId": "Recloud12345"
   }
 }
 ```
@@ -684,5 +687,15 @@ When a group install scope is selected, it will define the default capability wh
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the subscription offer associated with an app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2048 characters | ✔ | It is a unique identifier containing the Publisher ID and Offer ID of the app, which is available for the Commercial Marketplace software-as-a-service offer.|
 
 
