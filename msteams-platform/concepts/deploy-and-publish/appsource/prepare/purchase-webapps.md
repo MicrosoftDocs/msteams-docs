@@ -26,13 +26,14 @@ In the [Teams Developer Portal](~/build-and-test/teams-developer-portal.md), pro
 
 **To link your SaaS offer**
 
-1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **All apps**.
-1. Select **Plans and Pricing** in the left pane. (*Screenshot / mocks required*)
-1. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
+1. Go to [Developer Portal](https://aka.ms/dev-portal), and select **Apps**.
+2. On the **Apps** page, select the app for which you want to enable the SaaS offer.
+3. Select **Plans and Pricing** in the left pane. (*Screenshot / mocks required*)
+4. In the **Plans and Pricing** page, enter your **Publisher ID** and **Offer ID**.
 
     > [!NOTE]
     > You can get your publisher ID and Offer ID from the Partner Center.
-1. Select **Preview in Teams** to view the details of the SaaS offer, and then select **Save**.
+1. Select **Preview** to view the details of the SaaS offer, and then select **Save**.
 1. Under **Distribute** in the left pane, select **Manifest**. Following property is added to the manifest:
 
     ```json
