@@ -29,8 +29,8 @@ Make sure that you understand how to set up and build a simple Teams app. For mo
 
 The Microsoft Teams Toolkit helps you set up the following components for your messaging extension:
 
-* **App configurations and scaffolding** relevant to messaging extensions
-* **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service
+* **App configurations and scaffolding** relevant to messaging extensions.
+* **Bot** for your messaging extension that's automatically registered with the Microsoft Azure Bot Service.
 
 **To create your app project**
 
@@ -74,7 +74,7 @@ You still must specify a bot endpoint URL to receive and process search queries 
 
 You've set up a URL to host your messaging extension and configured it to handle searches. It's time to get your app up and running.
 
-1. Open terminal and go to the root directory of your app project
+1. Open terminal and go to the root directory of your app project.
 1. Run `npm install`.
 1. Run `npm start`.
 
