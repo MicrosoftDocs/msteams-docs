@@ -80,7 +80,7 @@ The proposed solution for bot initiated operations is as follows:
 
 * DoSomething is the placeholder for an API that is part of common Bot Framework dialect.
 * Most bots today are written using Bot Framework SDK. So, the initial interaction starts off with bot calling a helper function in Bot SDK, which wraps the call to the backend API.
-* Bot SDK retrieves a token from AAD for botframework.com tenant. For more information, see [authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0).
+* Bot SDK retrieves a token from AAD for botframework.com tenant. For more information, see [authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true).
 * Bot can use the Bot Framework SDK helpers to invoke functionalities.
 * Bot Framework SDK authenticates the bot using the mechanism documented here.
 * Bot Framework SDK makes the actual HTTP call to SMBA corresponding to the SDK helper invoked.
@@ -95,7 +95,7 @@ The proposed solution for bot initiated operations is as follows:
 
 The following are the bot requirements to use RSC permissions:
 
-* Get a Graph AppId: If you don't already have a Graph app, see [Register an application with the Microsoft identity platform](https://docs.microsoft.com/graph/auth-register-app-v2). To create, edit, or manage your [Graph app registrations](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade). If your app supports single sign-on (SSO), use the same App ID for Graph or RSC as you use for SSO.
+* Get a Graph AppId: If you do not already have a Graph app, see [register an application with the Microsoft identity platform](/graph/auth-register-app-v2). To create, edit, or manage your [Graph app registrations](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade). If your app supports single sign-on (SSO), use the same App ID for Graph or RSC as you use for SSO.
 
 * Remove unnecessary permissions: Azure App registration portal cannot be used to request RSC permissions. On your app registration page, go to the **API permissions** section, and delete any excess permissions. If the only Graph calls you make are with RSC, delete all the permissions on that page. If your Graph app makes non-RSC calls as well as RSC calls, keep the non-RSC permissions you require.
 
@@ -125,7 +125,7 @@ The following are the bot requirements to use RSC permissions:
     string token = response.Deserialize<TokenResponse>().access_token;  
     ```
 
-   For more information, see [Get access without a user](https://docs.microsoft.com/graph/auth-v2-service).
+   For more information, see [Get access without a user](/graph/auth-v2-service).
 
 * Include the token in calls to SMBA: Bot Framework SDK must provide helper functions to manage the Graph auth aspect.
 
@@ -141,7 +141,7 @@ Here Do something is the placeholder for an API that is part of common Bot Frame
 
 1. Most bots today are written using Bot Framework SDK. So, the initial interaction starts off with Bot calling a helper function in Bot SDK, which wraps the call to the backend API. There are some high-profile partners who interact with Bot REST APIs directly, including Power Virtual Assistants and Power Automate internally, and ScrumGenius and Oracle externally. Any bot written in Python or Java calls the REST APIs directly.
 
-1. Bot SDK today retrieves a token from AAD for botframework.com tenant. For more information, see [authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0).
+1. Bot SDK today retrieves a token from AAD for botframework.com tenant. For more information, see [authentication with the Bot Connector API](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
 1. Going forward, bot retrieves a token for its Graph App ID specified in the Teams app manifest for RSC and attaches it in requests to Bot API backend.
 
@@ -206,7 +206,7 @@ Since this filter is a part of the app definition, it can be retrieved during th
 
 The following diagram illustrates the approach to retrieve `eventFilter` during the event fan out flow in SMBA:
 
-![eventFilter](~/assets/images/bots/eventfilter.png)
+![Retrieving eventFilter for event fan out flow](~/assets/images/bots/eventfilter.png)
 
 The properties of `eventFilter` are as follows:
 
@@ -225,7 +225,7 @@ RSC provides a way for team owners to consent to a more granular set of permissi
 
 Users review and consent to permissions during the app installation process as shown in the following image:
 
-![Permissions](~/assets/images/permissions.png)
+![Permissions for app installation](~/assets/images/bots/permissions.png)
 
 In its current state, RSC only applies on Graph calls for team resources using the application permissions context. The goal of this work is to extend and apply the RSC permissions model to bots that are included with apps.
 
@@ -237,9 +237,9 @@ Eventing scenarios consist of any notification sent to a bot triggered by a user
 
 To start converging the permission model, integrate RSC for a scenario that can be supported with an existing permission where bot receives all channel messages in team. This includes the capability to remove bot at mention.
 
-RSC Permission is `ChannelMessage.Read.Group`.
+RSC permission is `ChannelMessage.Read.Group`.
 
-![Event flow with RSC](~/assets/images/eventflowrsc.png)
+![Event flow with RSC](~/assets/images/bots/eventflowrsc.png)
 
 The event flow with RSC is as follows:
 
