@@ -41,11 +41,11 @@ The following tools will be installed by the Visual Studio Code extension when t
 
 - [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local)
 
-    Azure Functions Core Tools is used to run any backend components locally during a local debug run.  It is installed within the project directory (using the npm `devDependencies`).
+    Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure.  It is installed within the project directory (using the npm `devDependencies`).
 
 - [.NET SDK](https://docs.microsoft.com/dotnet/core/install/)
 
-    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.  If required, the portable version will be installed within the project directory (in the `.fx` directory).
+    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.  If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed within the project directory (in the `.fx` directory).
 
 - [ngrok](https://ngrok.com/download)
 
