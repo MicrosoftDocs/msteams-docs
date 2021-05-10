@@ -289,7 +289,7 @@ To test the connector, upload it to a team with any other app. To create a .zip 
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
 
 You can launch the configuration experience. 
 > [!NOTE]
