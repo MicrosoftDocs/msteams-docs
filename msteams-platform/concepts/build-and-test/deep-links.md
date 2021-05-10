@@ -173,7 +173,7 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## Deep links for SharePoint Framework tabs
+## Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or messaging extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -192,7 +192,7 @@ The query parameters are:
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## Deep link to the scheduling dialog
+## Deep linking to the scheduling dialog
 
 > [!NOTE]
 > This feature is currently in developer preview.
