@@ -9,7 +9,7 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 ---
 
-# Create an outgoing webhook 
+# Create an outgoing webhook
 
 The article provides information on outgoing webhooks and creating actionable messages.
 

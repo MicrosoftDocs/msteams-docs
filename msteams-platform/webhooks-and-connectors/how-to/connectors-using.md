@@ -281,6 +281,8 @@ Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST r
 >[!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) for testing the body of POST request.
 
+
+
 ## Test your connector
 
 To test the connector, upload it to a team with any other app. To create a .zip package, use the manifest file from the Connectors Developer Dashboard, modified as directed in the preceding section and the two icon files.
