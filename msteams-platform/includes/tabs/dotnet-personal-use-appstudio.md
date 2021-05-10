@@ -31,23 +31,23 @@ There are list of steps on the left-hand side of the Manifest editor and list of
 
 ![List of steps on left and right hand side screenshot](~/assets/images/tabs/Update-app-package-with-manifest-editor.png)
 
-Most of the information is provided by your *manifest.json*, but there are few fields that you must update.
+Most of the information is provided by your **manifest.json**, but there are few fields that you need to update.
 
 #### Details: App details
 
 In the *App details* section:
 
-* In *Identification* click **Generate** to generate a new App Id for your app.
+* Under *Identification* select **Generate** to generate a new App Id for your app.
 
-* In *Developer information*: update the **Website URL** with your *ngrok* HTTPS URL.
+* Under *Developer information*: update the **Website URL** with your *ngrok* HTTPS URL.
 
-* In *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+* Under *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-* In *Add a personal tab*, select **Add**. You get a pop-up dialogue window.
+* Under *Add a personal tab*, select **Add**. You get a pop-up dialogue window.
 
 * Complete the *Name* and *Entity*.
 
@@ -55,7 +55,7 @@ In the *Tabs* section:
 
 * Leave the *Website URL* blank.
 
-* Click ***Save***.
+* Select ***Save***.
 
 #### Finish: Domains and permissions
 
@@ -72,13 +72,13 @@ In *Domains and permissions* section, the *Domains from your tabs* must contain 
 
 In the *Test and distribute* section:
 
-* Click **Install**.
+* Select **Install**.
 
 * In the pop-up window, select *Add for you* to *Yes*, and *Add to a team or chat* to *No*.
 
-* Click **Install**.
+* Select **Install**.
 
-* In the next pop-up window, click **Open** and your tab is displayed.
+* In the next pop-up window, select **Open** and your tab is displayed.
 
 ## View your personal tab
 

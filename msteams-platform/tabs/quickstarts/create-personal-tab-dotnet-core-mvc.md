@@ -1,12 +1,12 @@
 ---
-title: "Create a Personal Tab with ASP. NET Core MVC" 
+title: "Create a Personal Tab with ASP.NET Core MVC" 
 author: laujan
 description: A quickstart guide to creating a custom personal tab with ASP. NET Core MVC.
 localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a custom personal tab with C# and ASP.NETCore MVC
+# Create a personal tab using C# and ASP.NETCore MVC
 
 This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -29,7 +29,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 
-To build and run your application press F5 or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
+To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
 http://localhost:44335
 http://localhost:44335/privacy
@@ -55,7 +55,7 @@ public void Configure(IApplicationBuilder app)
 
 ### wwwroot
 
-In ASP.NETCore, the web root folder is where the application looks for static files.
+In ASP.NETCore, the application looks for the static files in this folder.
 
 ### AppManifest
 
@@ -65,7 +65,7 @@ This folder contains the following required app package files:
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A **manifest.json** file that specifies the attributes of your app.
 
-These files must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
+These files must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe>, and render it in your tab.
 
 ### .csproj
 
@@ -124,7 +124,7 @@ You must keep the command prompt while ngrok is running, you need it later to wr
 Verify that *ngrok* is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
 
 > [! TIP]
-> You must run your application in Visual Studio and ngrok running to complete this quickstart. If you are no longer running your application in Visual Studio, **keep ngrok running**. It continues to listen and resume routing your application's request when it restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
+> You must run your application in Visual Studio and ngrok to complete this quickstart. When you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
 
 ### Run your application
 

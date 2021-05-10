@@ -13,4 +13,4 @@ Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the followin
 
 ### PersonalTab.cshtml
 
-Open **PersonalTab.cshtml**, update the embedded `<script>` tags by calling `microsoftTeams.initialize()` and Save your updated *PersonalTab.cshtml*.
+Open **PersonalTab.cshtml**, update the embedded `<script>` tags by calling `microsoftTeams.initialize()` and Save your updated **PersonalTab.cshtml**.

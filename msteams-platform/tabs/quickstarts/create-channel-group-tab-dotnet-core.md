@@ -27,6 +27,14 @@ Open a command prompt and create a new directory for your tab project. We have p
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
+In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
+
+To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application loaded properly:
+
+* http://localhost:44355
+* http://localhost:44355/privacy
+* http://localhost:44355/tou
+
 ## Review the source code
 
 ### Startup.cs
@@ -95,4 +103,80 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 > In *Tab.cshtml* the application presents the user with two buttons to indicate the tabs with red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`. It also sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set, and `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+
+## Upload your tab to Teams with App Studio
+
+>[!Note]
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can edit the **manifest.json** file manually and build the solution to create a **tab.zip** file to upload.
+
+**To upload your tab**
+
+1. Open Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+
+1. Open App studio and select the **Manifest editor** tab.
+
+1. Select the **Import an existing app** tile in the Manifest editor to update the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It must be found here:
+
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
+
+1. Upload **tab.zip** to App Studio.
+
+### Update your app package with Manifest editor
+
+You must configure your app package using App Studio.
+
+* Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+
+There are list of steps in the left-hand side and list of properties on the right that must have values for each step in the Manifest editor. Much of the information has been provided by your *manifest.json* but there are few fields that you need to update:
+
+#### Details: App details
+
+In the *App details* section
+
+- Under *Identification* select ***Generate*** to replace the placeholder id with the required GUID for your tab.
+
+- Under *Developer information* update the **Website URL** field with your *ngrok* HTTPS URL.
+
+- Under *App URLs* update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* paths at the end of the URLs.
+
+#### Capabilities: Tabs
+
+In the *Tabs* section:
+
+- Under *Team Tab* select **Add**.
+
+- In the Team tab pop-up window, update the *Configuration URL* to `https://<yourngrokurl>/tab`.
+
+- Select the *can update configuration? Team*, and *Group chat* check boxes.
+
+- Select **Save**.
+
+#### Finish: Domains and permissions
+
+In the *Domains and permissions* section, the *Domains from your tabs* field must contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+
+#### Finish: Test and distribute
+
+>[!IMPORTANT]
+>In a **Description** field on the right, the following warning is displayed:
+>
+>&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+>
+>This warning can be ignored while testing your tab.
+
+In the *Test and distribute* section:
+
+- Select **Install**.
+
+- In the pop-up window's *Add to a team or chat* field, enter your team and select **Install**.
+
+- In the next pop-up window choose the team channel where you would like the tab displayed and select **Set up**.
+
+- In the final pop-up window select a value for the tab page (either a red or gray icon) and select **Save**.
+
+## View your channel or group tab
+
+Navigate to the team where you installed the tab, and select the tab from the tab bar. The page selected during the configuration is displayed.
 

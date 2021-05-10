@@ -29,11 +29,11 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
 
-To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser, navigate to the URLs below and verify that the application loaded properly:
+To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify that the application loaded properly:
 
-- `http://localhost:44360`
-- `http://localhost:44360/privacy`
-- `http://localhost:44360/tou`
+* `http://localhost:44360`
+* `http://localhost:44360/privacy`
+* `http://localhost:44360/tou`
 
 ## Review the source code
 
@@ -65,11 +65,11 @@ This folder contains the following required app package files:
 - A **transparent outline icon** measuring 32 x 32 pixels.
 - A **manifest.json** file that specifies the attributes of your app.
 
-These files need to be zipped in an app package for use in uploading your tab to Teams.
+These files must be zipped in an app package for use in uploading your tab to Teams.
 
 ### .csproj
 
-In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
