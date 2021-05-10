@@ -22,8 +22,6 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 
 ## Key features of incoming webhooks
 
-The following table provides feature and description of webhooks:
-
 | Feature | Description |
 | ------- | ----------- |
 |Actionable messaging support|If you choose to send messages through cards, you must use the actionable message card format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and the [message card playground](https://messagecardplayground.azurewebsites.net).|
@@ -59,7 +57,7 @@ Perform the following steps to add an incoming webhook to a Teams channel.
 
 ## Remove an incoming webhook
 
-Perform the following steps to remove an incoming webhook from a Teams channel.
+Follow the steps to remove an incoming webhook from a Teams channel:
 
 1. Navigate to the channel. 
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
