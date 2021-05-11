@@ -21,6 +21,8 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 ![Mobile bot command menu](./conversations/media/mobile-bot-menu-sample.png)
 
+* * *
+
 ## Create a command menu for your bot
 
 Command menus are defined in your app manifest. You can either use **App Studio** to create them or add them manually in the app manifest.
