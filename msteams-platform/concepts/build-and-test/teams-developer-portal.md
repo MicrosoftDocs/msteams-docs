@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: overview
 ---
 
-# Deliver great apps with the Developer Portal for Microsoft Teams
+# Manage your apps with the Developer Portal for Microsoft Teams
 
 The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world.
 
@@ -38,7 +38,7 @@ Your app's overview page contains the following information:
 
 **App Usage (Preview)**
 
-The App Usage metrics show the total number of Active Users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Teams Developer Portal, and are scoped to the App ID(s) shown in the Basic Information section.
+The App Usage metrics show the total number of active users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Teams Developer Portal, and are scoped to the App ID(s) shown in the Basic Information section.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -59,21 +59,21 @@ Environment configurations allow you to seamlessly transition an app from your l
 
 Select **+ Add an environment** to create a new runtime environment configuration. After it is created, you can add key value pairs for the environment.
 
-Use the variable names instead actual values in the property fields. 
+Use the variable names instead of actual values in the property fields.
 
 **To enter a variable name instead of a hard coded property value**
 
-* Enter '{{variable}}' in any field in a Developer Portal configuration page. Simply entering '{{' will reveal a dropdown with all the variables you've created for the chosen environment along with the global variables.
+Enter '{{variable}}' in any field in the Developer Portal configuration page. Simply entering '{{' will reveal a dropdown with all the variables you've created for the chosen environment along with the global variables.
 
 When your app package is downloaded or published, you must select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ## Plans and Pricing
 
-Provide your app as software-as-a-service (SaaS) by configuring plans and pricing for it in the [Partner Center's Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). For users to be able to subscribe to these offers, you need to go through the entire process from creating a SaaS offer to publishing your SaaS app to the Teams store. For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+[Plan to include a software-as-a-service (SaaS) offer](/azure/marketplace/plan-saas-offer) for your app. Configure the plans and pricing for your app in the [Partner Center's Microsoft commercial marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). Link your offer through the manifest, and distribute and publish your app to the Teams store. For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
 
 > [!NOTE]
 > It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
-> If your app is already available in the Teams store and you want to convert it to SaaS, then you must configure the plans and pricing details in the Partner Center, link your SaaS offer through the Teams Developer Portal, and then republish the app.
+> If your app is already available in the Teams store and you want to convert it to SaaS, then you must plan the SaaS offer and configure the plans and pricing details in the Partner Center, link your SaaS offer through the Developer Portal, and then republish the app.
 
 ### Configuration
 
