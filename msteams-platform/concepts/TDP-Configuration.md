@@ -1,12 +1,12 @@
 ---
-title: Configure your apps in Developer Portal for Microsoft Teams
+title: App configuration in Developer Portal
 description: Learn how to configure and manage your apps using the Developer Portal for Microsoft Teams
 keywords: getting started developer portal teams
 localization_priority: Normal
-ms.topic: overview
+ms.topic: conceptual
 ---
 
-# App Configuration in Teams Developer Portal
+# App configuration in Developer Portal
 
 ## Configuration
 
@@ -88,7 +88,7 @@ Each command requires a title and an ID. The command can optionally contain a de
 
 ##### Scene
 
-Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats. For more information, see [Teams Together Mode](../apps-in-teams-meetings/teams-together-mode.md).
+Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats. For more information, see [Teams Together Mode](~/apps-in-teams-meetings/teams-together-mode.md).
 
 #### Permissions
 
@@ -106,37 +106,3 @@ Configure your app to authenticate users with single sign-on (SSO).
 //TODO
 
 
-## Distribute
-
-Once you have finished defining your application, the *Distribute* section allows you export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as *appname.zip* in your default download directory.
-
-### Publish your app to Teams
-
-On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the *Publish* page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
-
-
-## Tools
-
-### Bot Management
-
-//Todo
-
-### Scene studio
-
-Microsoft has a Scene studio that allows you to build the scenes in Together Mode. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
-
-![Scene studio](~/assets/images/apps-in-meetings/scene-design-studio.png)
-
-For more information, see [Build a scene using Scene studio](../apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio).
-
-### Adaptive card editor
-
-//Todo
-
-### Microsoft identity platform management
-
-//Todo
-
-### Teams store app validation
-
-//Todo
