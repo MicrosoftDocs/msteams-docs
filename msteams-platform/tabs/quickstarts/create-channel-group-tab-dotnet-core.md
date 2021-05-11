@@ -104,6 +104,18 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+
+* Open a command prompt in the root of your project directory and run the following command:
+
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
+
+* Ngrok listen to requests from the internet and route them to your application when it is running on port 44355. It must resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
+
+* You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
+
 ## Upload your tab to Teams with App Studio
 
 >[!Note]

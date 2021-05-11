@@ -29,7 +29,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 # [ASP.NETCore](#tab/ASP.NETCore)
 
-In Visual Studio, navigate to **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
+In Visual Studio, navigate to **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
@@ -40,7 +40,7 @@ To build and run your application press **F5** or select **Start Debugging** fro
 
 # [ASP.NETCore MVC](#tab/ASP.NETCoreMVC)
 
-In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
+In Visual Studio, navigate to  **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 

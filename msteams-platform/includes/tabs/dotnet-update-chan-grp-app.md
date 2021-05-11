@@ -52,18 +52,6 @@ Your code looks like the following with **y8rCgT2b** replaced with your ngrok UR
 
 Save the updated **Tab.cshtml**.
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
-
-* Open a command prompt in the root of your project directory and run the following command:
-
-    ```bash
-    ngrok http https://localhost:44355 -host-header="localhost:44355"
-    ```
-
-* Ngrok listen to requests from the internet and route them to your application when it is running on port 44355. It must resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
-
-* You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
-
 * Verify that **ngrok** is up and running by opening your browser and going to your content page through the ngrok HTTPS URL that was provided in your command prompt window.
 
 >[!TIP]

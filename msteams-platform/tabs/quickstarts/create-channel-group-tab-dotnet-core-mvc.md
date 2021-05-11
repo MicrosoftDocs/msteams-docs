@@ -107,22 +107,22 @@ The partial view markup *_Layout.cshtml* contains the application's overall page
 
 The controllers use the ViewBag property to transfer values dynamically to the Views.
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
-
-- Open a command prompt in the root of your project directory and run the following command:
-
-    ```bash
-    ngrok http https://localhost:443560 -host-header="localhost:44360"
-    ```
-
-- Ngrok listen to requests from the internet and route them to your application when it is running on port 44355.  It must resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
-
-- You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
-
 ## Update your application
 
 Within **Tab.cshtml** the application presents the user with two buttons to indicate the tabs with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`. It also sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set, and `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+
+[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+
+* Open a command prompt in the root of your project directory and run the following command:
+
+    ```bash
+    ngrok http https://localhost:443560 -host-header="localhost:44360"
+    ```
+
+* Ngrok listen to requests from the internet and route them to your application when it is running on port 44355.  It must resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
+
+* You need to keep the command prompt while ngrok is running, you need it later to write down the URL.
 
 [!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]
