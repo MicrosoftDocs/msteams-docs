@@ -11,12 +11,15 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-> [!Note]
-> Bot menus do not appear on mobile clients.
-
 To define a set of core commands that your bot can respond to, you can add a command menu with a drop-down list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
+# [Desktop](#tab/desktop)
+
 ![Bot command menu](./conversations/media/bot-menu-sample.png)
+
+# [Mobile](#tab/mobile)
+
+![Mobile bot command menu](./conversations/media/mobile-bot-menu-sample.png)
 
 ## Create a command menu for your bot
 
