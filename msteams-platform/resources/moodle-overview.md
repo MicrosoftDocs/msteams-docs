@@ -17,11 +17,15 @@ In addition, the Microsoft 365 Moodle plugin complements Moodle by providing a c
  
 Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugin, which integrates Moodle into Teams, faculty and students can have the best of both worlds by taking advantage of Moodle's unique features while engaging in real-time communication and collaboration.
 
+## mConnect and Teams
+
 Watch the following video to understand how mConnect and Teams work better together:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
 
 From inside mConnect, course participants access the full Moodle course experience inside the real-time collaboration and communication provided by Microsoft Teams.
+
+## Get started with mConnect and Teams
 
 Watch the following video to understand how to get started with mConnect and Teams:
 
