@@ -1,12 +1,12 @@
 ---
-title: Distribute your apps in Developer Portal for Microsoft Teams
-description: Learn how to configure and manage your apps using the Developer Portal for Microsoft Teams
+title: Distribute your apps
+description: Learn how to distribute your apps using the Developer Portal for Microsoft Teams.
 keywords: getting started developer portal teams
 localization_priority: Normal
-ms.topic: Distribute
+ms.topic: Conceptual
 ---
 
-# Distribute your app
+# Distribute your apps
 
 ## Distribute
 
