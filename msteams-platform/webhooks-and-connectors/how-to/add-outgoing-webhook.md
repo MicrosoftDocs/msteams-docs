@@ -19,7 +19,7 @@ Webhooks help Teams to integrate with external apps. A webhook is essentially a 
 
 Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
 
-## Outgoing webhook key features
+## Key features of outgoing webhooks
 
 The following table provides the feature and description of outgoing webhooks:
 
@@ -32,7 +32,7 @@ The following table provides the feature and description of outgoing webhooks:
 
 ## Create actionable messages
 
-The connector cards include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
+The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
 
 Connector cards support three types of actions:
 

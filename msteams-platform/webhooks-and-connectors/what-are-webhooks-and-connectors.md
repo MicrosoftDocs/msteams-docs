@@ -25,7 +25,7 @@ Outgoing webhooks are configured on a per-team basis and cannot be included as p
 
 ## Office 365 Connectors
 
-Build a new Office 365 Connector or add the existing connector to Microsoft Teams.
+Create a new Office 365 Connector or add the existing connector to Microsoft Teams.
 You can package connectors as part of a Teams app with Office 365 connectors. You can publish connectors for your organization. You can send messages primarily using Office 365 Connector cards and add a limited set of card actions to them. For example, in a weather connector, users can choose a location and time to receive updates about the weather. Office 365 Connectors are configured on a channel level, but are installed at a team level.
 
 ## Send messages to connectors and webhooks
