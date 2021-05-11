@@ -35,7 +35,7 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 
 ## Add an incoming webhook
 
-Perform the following steps to add an incoming webhook to a Teams channel:
+**To add an incoming webhook to a Teams channel**
 
 1. Navigate to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu, search for **Incoming Webhook**, and select **Add**.
@@ -57,7 +57,7 @@ Perform the following steps to add an incoming webhook to a Teams channel:
 
 ## Remove an incoming webhook
 
-Follow the steps to remove an incoming webhook from a Teams channel:
+**To remove an incoming webhook from a Teams channel**
 
 1. Navigate to the channel. 
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
@@ -82,15 +82,15 @@ Follow the steps to remove an incoming webhook from a Teams channel:
 
 1. The webhook is deleted from the team channel.
 
-## Distribution
+## Distribute an incoming webhook
 
-You have three options for distributing your incoming webhook:
+**To distribute your incoming webhook**
 
 * Set up an incoming webhook directly for your team.
-* Add a configuration page and wrap your incoming webhook in a [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* Add a configuration page and wrap your incoming webhook in a [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
 * Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## See also
 
-* [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Send messages to webhooks and connectors](~/webhooks-and-connectors/how-to/connectors-using.md)
