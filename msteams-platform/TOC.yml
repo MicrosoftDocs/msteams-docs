@@ -125,11 +125,11 @@
     - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
     - name: Configuration
-      href: concepts/build-and-test/TDP-Configuration.md
+      href: concepts/build-and-test/tdp-configuration.md
     - name: Distribute
-      href: concepts/build-and-test/TDP-Distribute.md
+      href: concepts/build-and-test/tdp-distribute.md
     - name: Tools
-      href: concepts/build-and-test/TDP-Tools.md
+      href: concepts/build-and-test/tdp-tools.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
