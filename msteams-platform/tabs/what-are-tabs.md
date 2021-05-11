@@ -8,9 +8,7 @@ ms.author: lajanuar
 ---
 # Microsoft Teams tabs
 
-Tabs are simple HTML <iframe\> tags which point to domains declared in the app manifest, embedded in Microsoft Teams.
-
-Tabs are added as part of channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content.
+Tabs are simple HTML <iframe\> tags which point to domains declared in the app manifest, embedded in Microsoft Teams. They are added as part of a channel inside a team, group chat, or as a personal app for an individual user. You can include custom tabs to embed your own web content in Teams or add Teams-specific functionality to your web content.
 
 The following image shows the tabs added in a channel:
 
@@ -20,7 +18,7 @@ The following image shows the tabs added in a group chat:
 
 ![Tabs in group chat screenshot](~/assets/images/tab-images/tabs-in-groupchat.png)
 
-The following image shows the tabs added in a personal chat:
+The following image shows **myQuiz** added in a personal chat:
 
 ![Tabs in personal chat screenshot](~/assets/images/tab-images/tabs-in-personal-chat.png)
 
@@ -29,7 +27,7 @@ The following image shows the tabs added in a personal chat:
 
 There are two types of tabs available in Teams: channel or group and personal. The channel or group tabs provide content in channels and group chats and create collaborative spaces around dedicated web-based content.
 
-Personal tabs and personal bots are part of personal apps and are imtended for a single user. They are pinned to the left navigation bar in Teams for easy access.
+Personal tabs with personally-scoped bots are part of a personal apps and are intended for a single user. You can pin them to the left navigation bar in Teams for easy access.
 
 ## Tab features
 
@@ -40,7 +38,7 @@ Personal tabs and personal bots are part of personal apps and are imtended for a
 > * Locale awareness for the user to indicate language. For example, `en-us`. 
 > * Single sign-on (SSO) capability, if supported.
 > * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service. For example, an individual work item.
-> * The ability to open a task module from links within a tab.
+> * Ability to open a task module from links within a tab.
 > * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
@@ -53,13 +51,11 @@ Personal tabs and personal bots are part of personal apps and are imtended for a
 
 ## Understand how tabs work
 
-A custom tab is declared in the app manifest of your app package. To include each webpage as a tab in your app, you must define a URL and a scope. You must add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page and call `microsoftTeams.initialize()` after your page loads.
+A custom tab is declared in the app manifest of your app package. To include each webpage as a tab in your app, you must define a URL and a scope, add [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page and call `microsoftTeams.initialize()` after your page loads. Teams display your page, give you access to Teams-specific information, and allows you to take action based on the results. For example, the Teams client is running the **dark theme**.
 
-Teams display your page, give you access to Teams-specific information, and allows you to take action based on the results. For example, the Teams client is running the **dark theme**.
+If you choose to expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is same for all the users.
 
-If you expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is same for the all users.
-
-For channel or group tabs, create an additional configuration page that allows users to configure your content page URL by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab is added to multiple different teams or group chats. With each subsequent installation, your users can configure the tab to customize the user experience as needed.
+For channel or group tabs, create an additional configuration page that allows users to configure your content page URL by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab is added to multiple different teams or group chats. On each subsequent installation, your users can configure the tab and allows you to tailor the experience as needed.
 
 When users add or configure a tab, an URL associated with the tab is presented in the Teams UI. To configure a tab, add additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose the board that the tab loads. The configuration page URL is specified by the `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
@@ -80,7 +76,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 >
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
-> * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
+> * The default behavior of apps is only applicable if distributed through the Teams store. All tabs open in the Teams client.
 > * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
 ## See also
