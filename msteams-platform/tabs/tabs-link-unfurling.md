@@ -13,7 +13,7 @@ The collaborative experience of Teams platform is enhanced continuously with add
 Stage View allows you to render the content that is opened in full screen in Teams and pinned as a tab. To allow the users to use this feature, let us understand how to adopt the Stage View in your app.
  
 > [!NOTE]
- > Currently, Teams mobile clients do no support tab link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
+ > Currently, Teams mobile clients do no support tabs link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
 
 ## Stage View
 
