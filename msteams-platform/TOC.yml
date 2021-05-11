@@ -214,6 +214,8 @@
       href: bots/how-to/conversations/conversation-basics.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
+      - name: Receive all messages with RSC
+      - href: bots/how-to/conversations/bot-apis-with-rsc.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations

@@ -24,6 +24,9 @@ A bot behaves differently depending on the conversation it is involved in:
 * Bots in channel and group chat conversations require the user to @ mention the bot to invoke it in a channel.
 * Bots in a one-to-one conversation do not require an @ mention. All messages sent by the user routes to your bot.
 
+[!NOTE]
+> Bots can be allowed to receive all channel messages in a team without being @ mentioned using RSC permissions. This feature is now available in developer preview. For more information, see [receive all channel messages with RSC](bot-apis-with-rsc.md).
+
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
 Each message in a bot conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot and the bot handles the message. In addition, to define core commands that your bot responds to, you can add a command menu with a drop-down list of commands for your bot. Bots in a group or channel only receive messages when they are mentioned @botname. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them. 
