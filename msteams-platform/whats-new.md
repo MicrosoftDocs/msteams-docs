@@ -21,6 +21,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/10/2021| App customization feature.|[Manifest schema](resources/schema/manifest-schema.md) |
 |05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)
 |04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
 |04/29/2021 | New: Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
@@ -148,7 +149,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|04/08/2021| App customization feature is now available in developer preview.|[Design Teams app overview](concepts/design/design-teams-app-overview.md#app-customization), [App Studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
