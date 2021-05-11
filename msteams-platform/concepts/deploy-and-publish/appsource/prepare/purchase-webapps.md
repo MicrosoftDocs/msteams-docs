@@ -8,21 +8,28 @@ localization_priority: Normal
 
 # Include a SaaS offer for your apps
 
-In the Teams store, you have apps that are free to install or are available as software-as-a-service (SaaS). If you want your app to be available as SaaS, then you must follow the complete process of creating a SaaS offer in the Partner Center's Microsoft Commercial Marketplace, linking the SaaS offer in your manifest through the Teams Developer Portal, publishing the app to the Teams store, and enabling the SaaS offer for your app.
+In the Teams store, you have apps that are free to install or are available as software-as-a-service (SaaS). If you want your app to be available as SaaS, then you must follow the complete process of planning a SaaS offer, creating a SaaS offer in the Partner Center's Microsoft commercial marketplace, linking the SaaS offer in your manifest through the Teams Developer Portal, publishing the app to the Teams store, and enabling the SaaS offer for your app.
 
 > [!NOTE]
 > It is recommended to configure your SaaS offer before publishing your app to the Teams store. However, if your app is already published and you now want to change it to SaaS, then you must republish your app after configuring the SaaS offer for your app.
+
+## Plan your SaaS offer
+
+To plan your SaaS offer, see [How to plan a SaaS offer for the commercial marketplace](/azure/marketplace/plan-saas-offer).
+
+> [!NOTE]
+> When you include a SaaS offer for your app, you manage and pay for the infrastructure required to support your customers' use of your offer.
 
 ## Create a SaaS offer
 
 > [!NOTE]
 > You must have a [Partner Center account](create-partner-center-dev-account.md) to create a SaaS offer.
 
-To configure plans and pricing details for your app, create a SaaS offer in the [Microsoft Commercial Marketplace](/azure/marketplace/create-new-saas-offer).
+To configure plans and pricing details for your app, create a SaaS offer in the [Microsoft commercial marketplace](/azure/marketplace/create-new-saas-offer).
 
 ## Link your SaaS offer through Teams Developer Portal
 
-In the [Teams Developer Portal](~/build-and-test/teams-developer-portal.md), provide your **Publisher ID** and **Offer ID**. The manifest is updated automatically. The `subscriptionOffer` property is added to the manifest.
+In the [Developer Portal](~/build-and-test/teams-developer-portal.md), provide your **Publisher ID** and **Offer ID**. The manifest is updated automatically. The `subscriptionOffer` property is added to the manifest.
 
 **To link your SaaS offer**
 
