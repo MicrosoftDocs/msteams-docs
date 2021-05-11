@@ -70,7 +70,7 @@ Above all else, remember that nobody likes spam. Blasting away with personal and
 
 ## Plan for the future
 
-Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
+Identify which new features the users will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
 
 ## See also
 
