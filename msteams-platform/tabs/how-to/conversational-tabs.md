@@ -55,7 +55,7 @@ The `conversationReponse` object contains information related to the conversatio
 
 ## Continue a conversation
 
-Now that a conversation has started, subsequent calls to `openConversation()` will require that you also provide the same inputs as above, but also include the conversationId. This will open the conversation panel for the user with the appropriate conversation in view. Users will be able to see new/incoming messages in real-time.
+After a conversation starts, subsequent calls to `openConversation()` requires that you also provide the same inputs as in [Starting a new channel tab conversation](#Starting a new channel tab conversation), but also include the **conversationId**. The conversation panel opens for the user with the appropriate conversation in view. Users are able to see new or incoming messages in real-time.
 
 ![Conversationl Sub Entities - Continue Conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
 
