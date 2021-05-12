@@ -36,7 +36,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 Most of these values can also be retrieved from the `getContext` API.
 
 ```javascript
-microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: ”Task Title”});
+microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, “entityId”: “tabInstanceId-1”, “channelId”: ”19:baa6e71f65b948d189bf5c892baa8e5a@thread.skype”, “title”: "Task Title”});
 ```
 
 This will open the conversation panel.
