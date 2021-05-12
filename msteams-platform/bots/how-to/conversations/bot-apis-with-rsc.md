@@ -35,7 +35,7 @@ The consent screen is shown to the users when they are trying to add a bot into 
 
 The corresponding bot, on receiving consent is added to the participant roster of the underlying chat service thread. This supports the 1:1, group-chat, or channel and is limited to the list of permissions for that thread.
 
-For more information, see [bot conversations](/bots/how-to/conversations/conversation-basics), [resource-specific consent](/resource-specific-consent), [test resource-specific consent](/graph-api/rsc/test-resource-specific-consent), and [resource-specific permissions](/graph-api/rsc/resource-specific-consent).
+For more information, see [bot conversations](/microsoftteams/platform/bots/how-to/conversations/conversation-basics), [resource-specific consent](/microsoftteams/resource-specific-consent), [test resource-specific consent](/microsoftteams/platform/graph-api/rsc/test-resource-specific-consent), and [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 ### User tenant requirements
 
