@@ -1,5 +1,5 @@
 ---
-title: Send messages to Connectors and Webhooks
+title: Send messages to connectors and webhooks
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
@@ -137,15 +137,23 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 ## Set up a custom incoming webhook
 
-Follow the steps to send a simple card to a connector:
+**To send a simple card to a connector**
 
 1. In Microsoft Teams, choose **More options** **&#8943;** next to the channel name and then choose **Connectors**.
-2. Scroll through the list of Connectors to **Incoming Webhook**, and select **Add**.
+
+![Choose Connector](~/assets/images/connectors.png)
+
+2. Scroll through the list of Connectors to **Incoming Webhook** and select **Add**.
 3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select **Create**.
 4. Copy the webhook to the clipboard and save it. You need the webhook URL for sending information to Microsoft Teams.
+
+![Unique URL](~/assets/images/url.png)
+
 5. Select **Done**.
 
-### Perform the following steps to post a message in the webhook using cURL
+### Post a message in the webhook using cURL
+
+**To post a message in the webhook with cURL**
 
 1. Install cURL using: https://curl.haxx.se/.
 
@@ -166,9 +174,11 @@ Follow the steps to send a simple card to a connector:
 
 3. Check the Microsoft Teams client for the new card posted.
 
-### Perform the following steps to post a message to the webhook using PowerShell
+### Post a message to the webhook using PowerShell
 
 Prerequisite: Installation of PowerShell and familiarization with its basic usage.
+
+**To post a message to the webhook with PowerShell**
 
 1. From the PowerShell prompt, enter the following command:
 
@@ -280,8 +290,6 @@ Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST r
 
 >[!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) for testing the body of POST request.
-
-
 
 ## Test your connector
 
