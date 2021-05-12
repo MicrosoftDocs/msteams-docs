@@ -21,7 +21,7 @@ You can find comprehensive personal app design guidelines, including elements th
 
 ## Add a personal app
 
-You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
+You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example):
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout." border="false":::
 
@@ -76,25 +76,25 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 ## Manage a personal tab
 
-On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.
+On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options:
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
 ## Best practices
 
-Use these recommendations to create a quality app experience.
+Use these recommendations to create a quality app experience:
 
 ### Tab priority
 
 #### Do: Show the most relevant content in the first tab
 
-With responsive sizing, tabs on the right may become truncated or out of view.
+With responsive sizing, tabs on the right may become truncated or out of view:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-do.png" alt-text="Example shows a personal app displaying the most relevant content in the first tab." border="false":::
 
 #### Don’t: Lead with secondary content or metadata
 
-Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features.
+Like a standard web app, tab navigation should progress in an order that helps make sense of your app’s primary features:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-priority-dont.png" alt-text="Example shows a personal app leading with secondary content or metadata." border="false":::
 
@@ -102,13 +102,13 @@ Like a standard web app, tab navigation should progress in an order that helps m
 
 #### Do: Tabs should be of equal hierarchy and represent key app pages
 
-Your tabs should categorize your app’s primary features and content. With responsive sizing, content on the right may become truncated or out of view.
+Your tabs should categorize your app’s primary features and content. With responsive sizing, content on the right may become truncated or out of view:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-do.png" alt-text="Example shows a personal app with tabs of equal hierarchy." border="false":::
 
 #### Don't: Include different levels of hierarchy
 
-Your content should progress in a logical order that helps users make sense of it. If you have two tabs that are closely related, consider combining them into one tab.
+Your content should progress in a logical order that helps users make sense of it. If you have two tabs that are closely related, consider combining them into one tab:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-hierarchy-dont.png" alt-text="Example shows a personal app with different levels of hierarchy." border="false":::
 
@@ -116,7 +116,7 @@ Your content should progress in a logical order that helps users make sense of i
 
 #### Do: Include a first-run experience
 
-There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign-in button.
+There should be at least a welcome screen the first time you use a personal app. For bots, describe what your bot can do and provide quick actions, such as a sign-in button:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-do.png" alt-text="Example shows what to do during a personal app first-run experience." border="false":::
 
@@ -124,7 +124,7 @@ There should be at least a welcome screen the first time you use a personal app.
 
 #### Don't: Start with a blank screen
 
-Users might be confused if nothing displays the first time they run your app.
+Users might be confused if nothing displays the first time they run your app:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-fre-dont.png" alt-text="Example shows what not to do during a personal app first-run experience." border="false":::
 
@@ -132,7 +132,7 @@ Users might be confused if nothing displays the first time they run your app.
 
 #### Do: Aggregate app content relevant to a user
 
-Whether it's a personal tab or bot, display content related to only a user's activity in your app.
+Whether it's a personal tab or bot, display content related to only a user's activity in your app:
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-personalized-content-do.png" alt-text="Example shows what to do with a personal app and personalized content." border="false":::
 

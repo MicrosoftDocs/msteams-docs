@@ -6,9 +6,9 @@ localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a Custom Personal Tab with ASP. NET Core MVC
+# Create a Custom Personal Tab with ASP.NETCore MVC
 
-In this quickstart we'll walk-through creating a custom personal tab with C# and ASP. Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
+In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.NetCore MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
@@ -84,13 +84,13 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 ### Models
 
-*PersonalTab.cs* presents a Message object and methods that will be called from *PersonalTabController* when a user selects a button in the *PersonalTab* View.
+**PersonalTab.cs** presents a Message object and methods that will be called from *PersonalTabController* when a user selects a button in the **PersonalTab** View.
 
 ### Views
 
 #### Home
 
-ASP. NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, *Index.cshtml* will be displayed as the home page for your application.
+ASP. NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
 #### Shared
 
@@ -106,17 +106,17 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 * Open a command prompt in the root of your project directory and run the following command:
 
-``` bash
-ngrok http https://localhost:44345 -host-header="localhost:44345"
-```
+    ``` bash
+    ngrok http https://localhost:44345 -host-header="localhost:44345"
+    ```
 
 * Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
 * Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.
 
-* Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
+* Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
-> [! TIP]
+> [!TIP]
 > You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
 ### Run your application

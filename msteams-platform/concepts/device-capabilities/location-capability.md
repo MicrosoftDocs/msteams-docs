@@ -48,7 +48,7 @@ You must use the following set of APIs to enable your device's location capabili
 | API      | Description   |
 | --- | --- |
 |[getLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) | Gives user’s current device location or opens native location picker and returns the location chosen by the user. |
-|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | Shows location on map |
+|[showLocation](/javascript/api/@microsoft/teams-js/location?view=msteams-client-js-latest#showLocation&preserve-view=true) | Shows location on map. |
 
 > [!NOTE]
 

@@ -12,7 +12,7 @@ ms.date: 06/25/2019
 
 Microsoft Teams allows users to bring bots into their channel or group chat conversations. By adding a bot to a team or chat, all users of the conversation can take advantage of the bot functionality right in the conversation. You can also access Teams-specific functionality within your bot like querying team information and @mentioning users.
 
-Chat in channels and group chats differ from personal chat in that the user needs to @mention the bot. If a bot is used in multiple scopes (personal, groupchat or channel) you will need to detect what scope the bot messages came from, and process them accordingly.
+Chat in channels and group chats differ from personal chat in that the user needs to @mention the bot. If a bot is used in multiple scopes such as personal, groupchat, or channel, you need to detect what scope the bot messages came from, and process them accordingly.
 
 ## Designing a great bot for channels or groups
 
@@ -33,10 +33,10 @@ For more information on bots creating messages in channels see [Proactive messag
 For a bot in a group or channel, in addition to the [regular message schema](https://docs.botframework.com/core-concepts/reference/#activity), your bot also receives the following properties:
 
 * `channelData` See [Teams channel data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). In a group chat, contains information specific to that chat.
-* `conversation.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain
-* `conversation.isGroup` Is `true` for bot messages in channels or group chats
-* `conversation.conversationType` Either `groupChat` or `channel`
-* `entities` Can contain one or more mentions (see [Mentions](#-mentions))
+* `conversation.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain.
+* `conversation.isGroup` Is `true` for bot messages in channels or group chats.
+* `conversation.conversationType` Either `groupChat` or `channel`.
+* `entities` Can contain one or more mentions. For more information, see [Mentions](#-mentions).
 
 ### Replying to messages
 
@@ -54,10 +54,10 @@ You might also want to send a personal message to each member of the team when t
 
 We recommend that your bot *not* send a welcome message in the following situations:
 
-* The team is large (obviously subjective, but for example larger than 100 members). Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
-* Your bot is first mentioned in a group or channel (versus being first added to a team)
-* A group or channel is renamed
-* A team member is added to a group or channel
+* The team is large. Obviously subjective, for example, larger than 100 members. Your bot may be seen as 'spammy' and the person who added it may get complaints unless you clearly communicate your bot's value proposition to everyone who sees the welcome message.
+* Your bot is first mentioned in a group or channel versus being first added to a team.
+* A group or channel is renamed.
+* A team member is added to a group or channel.
 
 ## @ Mentions
 
@@ -108,8 +108,8 @@ You can also use the Teams extension function `getTextWithoutMentions`, which st
 
 Your bot can mention other users in messages posted into channels. To do this, your message must do the following:
 
-* Include `<at>@username</at>` in the message text
-* Include the `mention` object inside the entities collection
+* Include `<at>@username</at>` in the message text.
+* Include the `mention` object inside the entities collection.
 
 #### .NET example
 
@@ -189,6 +189,8 @@ session.send(generalMessage);
 
 ## Accessing groupChat or channel scope
 
-Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. See [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md) to learn more.
+Your bot can do more than send and receive messages in groups and teams. For instance, it can also fetch the list of members, including their profile information, as well as the list of channels. For more information, See [Get context for your Microsoft Teams bot](~/resources/bot-v3/bots-context.md).
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+## See also
+
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)

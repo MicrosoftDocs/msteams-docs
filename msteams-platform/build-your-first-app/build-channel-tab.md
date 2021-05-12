@@ -157,12 +157,12 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 ## See also
 
 * [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md) 
-* [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Designing your tab for Microsoft Teams desktop and web](../tabs/design/tabs.md) 
 * [Designing your Microsoft Teams app with UI templates](../concepts/design/design-teams-app-ui-templates.md) 
 * [Tabs on mobile](../tabs/design/tabs-mobile.md)
 * [Single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md)
-* [Microsoft Teams API overview](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Microsoft Teams API overview](/graph/teams-concept-overview)
 * [Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## Next step

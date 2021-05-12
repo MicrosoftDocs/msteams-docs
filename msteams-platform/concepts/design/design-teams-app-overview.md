@@ -55,7 +55,7 @@ The app focuses on core scenarios that blend with Teams workflows.
 
 ### Native or distinct
 
-The app uses native Teams design components or your own. There’s no blend of color schemes, controls, etc.
+The app uses native Teams design components or your own. There’s no blend of color schemes, controls, and so on.
 
    :::column-end:::
    :::column span="":::
@@ -178,7 +178,7 @@ Install a sample app to see how UI templates look and behave within Teams contex
 
 ## Other resources
 
-To learn more, try one of the following resources.
+To learn more, try one of the following resources:
 
 ### Fluent UI documentation
 

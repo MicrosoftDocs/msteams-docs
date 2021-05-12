@@ -15,10 +15,10 @@ Teams tabs must adhere to the following requirements:
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy` as well.
   * Alternatively, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still respected by most browsers.
-* Typically, as a safeguard against click-jacking, login pages don't render in iFrames. Therefore, your authentication logic needs to use a method other than redirect (e.g., use token-based or cookie-based authentication).
+* Typically, as a safeguard against click-jacking, login pages don't render in iFrames. Therefore, your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
 
 > [!NOTE]
-> Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../resources/samesite-cookie-update.md).
+> Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute (2020 update)](../../resources/samesite-cookie-update.md).
 
 * Browsers adhere to a same-origin policy restriction that prevents a webpage from making requests to a different domain than the one that served a web page. However, you may need to redirect the configuration or content page to a another domain or subdomain. Your cross-domain navigation logic should allow the Teams client to validate the origin against a static validDomains list in the app manifest when loading or communicating with the tab.
 

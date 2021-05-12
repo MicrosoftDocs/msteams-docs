@@ -53,7 +53,7 @@ Grids are useful for showing elements which are highly visual. It helps to inclu
 
 ### Tabs with bots on mobile
 
-The following example is a personal app that has tabs and a bot.
+The following example is a personal app that has tabs and a bot:
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration showing how mobile Teams app that has tabs and a bot." border="false":::
 
@@ -135,7 +135,7 @@ Apps listed on the Teams store must be approved for mobile use to function prope
 
 #### Apps on Teams store approved for mobile
 
-The following table describes tab availability and behavior when the app is listed on the Teams store and approved for mobile use.
+The following table describes tab availability and behavior when the app is listed on the Teams store and approved for mobile use:
 
 |Capability   |Mobile availability?   |Mobile behavior|
 |----------|-----------|------------|
@@ -144,7 +144,7 @@ The following table describes tab availability and behavior when the app is list
 
 #### Apps on Teams store not approved for mobile
 
-The following table describes tab availability and behavior when the app is listed on the Teams store but not approved for mobile use.
+The following table describes tab availability and behavior when the app is listed on the Teams store but not approved for mobile use:
 
 |Capability   |Mobile availability?|Mobile behavior|
 |----------|-----------|------------|

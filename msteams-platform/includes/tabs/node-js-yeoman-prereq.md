@@ -12,15 +12,15 @@ In addition, this project requires that you have the following installed in your
 
 - After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
 - Install the Microsoft Teams Apps generator by typing the following in your command prompt:
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
 ## Generate your project
 
@@ -28,58 +28,58 @@ npm install generator-teams --global
 
 - To start the generator, navigate to your new directory and type the following command:
 
-```bash
-yo teams
-```
+    ```bash
+    yo teams
+    ```
 
 - Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
 
-![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**What is your solution name?**
+    **What is your solution name?**
 
-This is your project name. You can accept the suggested name by pressing enter.
+    This is your project name. You can accept the suggested name by pressing enter.
 
-**Where do you want to place the files?**
+    **Where do you want to place the files?**
 
-You're currently in your project directory. Press enter.
+    You're currently in your project directory. Press enter.
 
-**Title of your Microsoft Teams app project?**
+    **Title of your Microsoft Teams app project?**
 
-This is your app package name and will be used in the app manifest and description.
+    This is your app package name and will be used in the app manifest and description.
 
-**Your (company) name? (max 32 characters)**
+    **Your (company) name? (max 32 characters)**
 
-Your company name will be used in the app manifest.
+    Your company name will be used in the app manifest.
 
-<br>**Which manifest version would you like to use?**
+    <br>**Which manifest version would you like to use?**
 
-Select the default schema.
+    Select the default schema.
 
-**Quick scaffolding? (Y/n)**
+    **Quick scaffolding? (Y/n)**
 
-The default is yes; enter **n** to enter your Microsoft Partner Id.
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
 
-**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
-**What do you want to add to your project?**
+    **What do you want to add to your project?**
 
-Select ( &ast; ) A Tab.
+    Select ( &ast; ) A Tab.
 
-**The URL where you will host this solution?**
+    **The URL where you will host this solution?**
 
-By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
-**Would you like to include Test framework and initial tests? (y/N)**
+    **Would you like to include Test framework and initial tests? (y/N)**
 
-Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
 
-**Would you like to use Azure Applications Insights for telemetry? (y/N)**
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
+    Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
 
-**Default Tab Name (max 16 characters)?**
+    **Default Tab Name (max 16 characters)?**
 
-Name your tab. This tab name will be used throughout your project as a file/URL path component.
+    Name your tab. This tab name will be used throughout your project as a file/URL path component.

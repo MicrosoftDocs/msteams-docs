@@ -13,7 +13,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 ## Prerequisites
 
-1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
+1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
 
 1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentation.
 
@@ -55,23 +55,23 @@ At its core, the Teams app embraces three components:
   1. A server that responds to requests for content that will be displayed in Teams, e.g., HTML tab content or a bot adaptive card .
   1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
 
-  > [!div class="checklist"]
-  >
-  > - The manifest.json
-  > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog
- > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
+      > [!div class="checklist"]
+      >
+      > - The manifest.json
+      > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog
+      > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
 
 When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
 > [!NOTE]
 >If you haven't done so already, you will need to sign in to your Microsoft 365  or account to continue with the development process.
 >
-> If you don't have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity. If you have a Visual Studio *Enterprise* or *Professional* subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. *See* [Set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+> If you don't have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity. If you have a Visual Studio *Enterprise* or *Professional* subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, See [Set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 >
 
 ### Configuration steps
 
-1. To configure your app, on the **Microsoft Teams Toolkit** landing page, select **Edit app package** .
+1. To configure your app, on the **Microsoft Teams Toolkit** landing page, select **Edit app package**.
 1. From the **My Environments** drop-down menu, select **development**.
 1. You will land on the **App details** page where you can edit your app's property fields.
 1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. [Learn more](https://aka.ms/teams-toolkit-manifest)
@@ -82,9 +82,9 @@ Modifying the **app details** page or updating the **manifest**, or **.env** fil
 
 ## Install and run your app locally
 
-1. From the **Solution Configurations** dropdown menu, select **Deploy**.
+1. From the **Solution Configurations** dropdown menu, select **Deploy** as shown in the following image:
 
-![Solution configurations menu](../assets/images/solution-configurations.png)
+    ![Solution configurations menu](../assets/images/solution-configurations.png)
 
 2. Select the **IIS Express + Teams** button.
 
@@ -102,6 +102,8 @@ The **Validate** page allows you to check your app package before submitting you
 
 ✔  You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
 
+## Next step
+
 > [!div class="nextstepaction"]
-> [Next step: Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
 >
