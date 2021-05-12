@@ -6,7 +6,6 @@
     - name: What's new?
       href: whats-new.md
 - name: Get started
-  expanded: true
   items:
   - name: Overview
     href: build-your-first-app/build-first-app-overview.md
@@ -380,7 +379,7 @@
     href: concepts/build-and-test/test-data.md
   - name: Tabs
     items:
-    - name: Debug your tab with DevTools
+    - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
@@ -424,16 +423,10 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: Resources
+- name: App manifest
   items:
     - name: App manifest schema
       href: resources/schema/manifest-schema.md
-    - name: Localization
-      items:
-      - name: Localize your app
-        href: concepts/build-and-test/apps-localization.md
-      - name: Localization JSON schema
-        href: resources/schema/localization-schema.md
     - name: Public developer preview
       items:
         - name: Overview
@@ -442,6 +435,14 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
+- name: Resources
+  items:
+    - name: Localization
+      items:
+      - name: Localize your app
+        href: concepts/build-and-test/apps-localization.md
+      - name: Localization JSON schema
+        href: resources/schema/localization-schema.md
     - name: Tab margin changes
       href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)

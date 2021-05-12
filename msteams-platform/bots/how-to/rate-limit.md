@@ -116,7 +116,7 @@ The per bot per thread limit controls the traffic that a bot is allowed to gener
 
 >[!NOTE]
 > * The thread limit of 3600 seconds and 1800 operations applies only if multiple bot messages are sent to a single user. 
-> * The global limit per app per tenant is 30 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
+> * The global limit per app per tenant is 50 Requests Per Second (RPS). Hence, the total number of bot messages per second must not cross the thread limit.
 > * Message splitting at the service level results in higher than expected RPS. If you are concerned about approaching the limits, you must implement the [backoff strategy](#backoff-example). The values provided in this section are for estimation only.
 
 The following table provides the per bot per thread limits:
