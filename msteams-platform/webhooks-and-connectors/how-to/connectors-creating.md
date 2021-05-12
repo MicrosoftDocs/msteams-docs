@@ -33,7 +33,9 @@ Users can complete the entire Connector configuration experience without having 
 > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
 > * The configuration experience is loaded in line within Teams.
 
-You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows. Perform the following steps:
+You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
+
+**To integrate the configuration ecperience**
 
 1. Initialize the SDK by calling `microsoftTeams.initialize()`.
 2. Call `microsoftTeams.settings.setValidityState(true)` when you want to enable the **Save** button. You must do this as a response to user selection or field update.
@@ -204,7 +206,9 @@ To verify that an `HttpPOST` action is working correctly, [send messages to your
 
 If you do not want to publish your Connector app to the public AppSource or Store, but want it to be available only to the users in your organization, you can upload your custom Connector app to your [organization's App Catalog](~/concepts/deploy-and-publish/apps-publish.md). This way, your Connector app is available only to that organization.
 
-After you have uploaded the app package to configure and use the Connector in a team, it can be installed from the organization's app catalog by following these steps:
+After uploading the app package to configure and use the Connector in a team, install the Connector from the organization's app catalog.
+
+**To set up a Connector**
 
 1. Select **Apps** from the left navigation bar.
 1. In the **Apps** section, select **Connectors**.

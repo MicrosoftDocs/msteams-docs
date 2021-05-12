@@ -68,6 +68,8 @@ For all other details about connector card actions, see [Actions](/outlook/actio
 
 ## Create an outgoing webhook
 
+**To create an outgoing webhook**
+
 1. Select the appropriate team and choose **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
 
 ![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
