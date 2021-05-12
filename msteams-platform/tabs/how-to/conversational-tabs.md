@@ -65,7 +65,7 @@ Finally, it’s important that your tab consumes [deeplinks to your sub-entity](
 
 To support conversational sub-entities from your personal/static tab, you don’t have to change anything about your implementation. Keep in mind that we only support starting or continuing conversations from channel tabs that are already pinned. Supporting static tabs will allow you to provide a single location for your users to interact with all your sub-entities. It is however important that you save the `subEntityId`, `entityId` and `channelId` when your tab is originally created in a channel in order for you to have the right properties when opening the conversation view in a static tab.
 
-## Additional functions
+## Close a conversation
 
 In addition to the above functions, you can also manually close the conversation view
 
