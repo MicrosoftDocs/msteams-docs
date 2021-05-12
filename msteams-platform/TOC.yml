@@ -65,7 +65,7 @@
     href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Conversational tabs
+  - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
   - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
