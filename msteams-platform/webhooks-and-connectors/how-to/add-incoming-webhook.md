@@ -82,12 +82,10 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 
 1. The webhook is deleted from the team channel.
 
-## Distribute an incoming webhook
-
-**To distribute your incoming webhook**
+## Distribution of webhooks and connectors
 
 * Set up an incoming webhook directly for your team.
-* Add a configuration page and wrap your incoming webhook in a [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md).
+* Add a [configuration page](https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/connectors-creating#integrating-the-configuration-experience) and [publish your incoming webhook]( https://docs.microsoft.com/en-us/microsoftteams/platform/webhooks-and-connectors/how-to/connectors-creating#publish-connectors-for-your-organization) in a O365 Connector.
 * Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## See also

@@ -102,7 +102,7 @@ Following is an example of connector message:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectors/connector_message.png)
+![Screenshot of a connector card](~/assets/images/connectors/connectorcard.png)
 
 ## Create actionable messages
 
@@ -348,4 +348,3 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 ## See also
 
 [Office 365 Connectors for Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
