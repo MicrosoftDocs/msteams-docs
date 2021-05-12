@@ -145,6 +145,9 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 2. Scroll through the list of Connectors to **Incoming Webhook** and select **Add**.
 3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select **Create**.
+
+![Create Connector](~/assets/images/createconnector.png)
+
 4. Copy the webhook to the clipboard and save it. You need the webhook URL for sending information to Microsoft Teams.
 
 ![Unique URL](~/assets/images/url.png)
@@ -249,7 +252,7 @@ The following is an example of manifest.json with connector:
 
 ### Steps to send Adaptive Cards through an incoming webhook
 
-Follow the steps to send Adaptive Cards through incoming webhook:
+**To send Adaptive Cards through incoming webhook**
 
 1. [Setup a custom webhook](#Set up a custom incoming webhook) in Teams.</br></br>
 2. Create Adaptive Card JSON file:
