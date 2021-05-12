@@ -59,7 +59,7 @@ Now that a conversation has started, subsequent calls to `openConversation()` wi
 
 ![Conversationl Sub Entities - Continue Conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
 
-## Polishing your conversational tab
+## Enhance a conversation
 
 Finally, it’s important that your tab consumes [deeplinks to your sub-entity](~/concepts/build-and-test/deep-links.md) (e.g. user clicking the tab chiclet deeplink from the channel conversation). The expected behavior would be for you to receive the deeplink, open that sub-entity and then open the conversation panel for that specific sub-entity.
 
