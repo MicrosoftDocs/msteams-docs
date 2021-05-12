@@ -1,5 +1,5 @@
 ---
-title: Moodle learning management system (LMS)
+title: Moodle learning management system
 description: Overview of Moodle LMS integration with Teams
 ms.topic: overview
 localization_priority: Normal
@@ -7,9 +7,9 @@ ms.author: surbhigupta
 author: KirtiPereira
 ---
 
-# Moodle learning management system (LMS)
+# Moodle learning management system
 
-Moodle is the world’s largest open source Learning Management System. This app helps educators create and organize their courses through valuable features that include a robust quizzing tool, graded discussions, and a variety of assignment types for students to engage with content.  
+Moodle is the world’s largest open source learning management system. This app helps educators create and organize their courses through valuable features that include a robust quizzing tool, graded discussions, and a variety of assignment types for students to engage with content.  
  
 Moodle integrates with Microsoft Teams. Teams is the hub for real-time collaboration, teamwork, and productivity. With seamless integration with Office 365, hundreds of apps, chat, and live meeting capabilities of up to 300 participants, Teams gives faculty and students the ability to work together more efficiently no matter where they are. 
  
@@ -18,6 +18,8 @@ In addition, the Microsoft 365 Moodle plugins complements Moodle by providing a 
 Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugins, which integrates Moodle into Teams, faculty and students can have the best of both worlds by taking advantage of Moodle's unique features while engaging in real-time communication and collaboration.
 
 ## mConnect app by Skooler
+
+The mConnect app by Skooler allows you to deliver virtual learnings through Teams with ease.
 
 ### mConnect and Teams
 
@@ -37,5 +39,5 @@ For more information, see [mConnect by Skooler](https://skooler.com/mconnect/how
 
 ## Microsoft 365 Moodle Plugins
 
-For information on how to install Moodle plugins, see [Install Moodle LMS](moodleInstructions.md).
+Moodle plugins for Teams makes it easy to schedule, deliver, and collaborate on course content. For information on how to install Moodle plugins, see [Install Moodle LMS](moodleInstructions.md).
 
