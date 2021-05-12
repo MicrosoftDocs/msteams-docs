@@ -102,7 +102,7 @@ Following is an example of connector message:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectors/connectorcard.png)
+![Screenshot of a connector card](~/assets/images/connectorcard.png)
 
 ## Create actionable messages
 
