@@ -16,7 +16,7 @@ Conversational sub-entities are only supported in channels. However, they can be
 
 In order to support conversational sub-entities, your tab web application must have the ability to store a mapping between sub-entities ↔ conversations in a backend database. We will provide you with the `conversationId`, but it will be your responsibility to store that `conversationId` and return it to Teams in order for users to continue the conversation.
 
-## Starting a new channel tab conversation
+## Start a new conversation
 
 To start a new conversation, you use the `openConversation()` function. Starting and continuing a conversation are all handled by this method, however, the inputs to the function change depending on which action you want to take. From the users perspective, this opens the conversation panel to the right of the screen, either to initiate a conversation or continue a conversation.
 
