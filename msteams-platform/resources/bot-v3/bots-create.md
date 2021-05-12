@@ -25,9 +25,9 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 > [!NOTE]
 > If you do not wish to create your bot in Azure, you **must** use this link to create a new bot: https://dev.botframework.com/bots/new. If you click on the **Create a bot** in the Bot Framework portal instead, you will [create your bot in Microsoft Azure](#bots-and-microsoft-azure) instead.
 
-2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the  [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](https://docs.microsoft.com/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
+2. Build the bot using the [Microsoft.Bot.Connector.Teams](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams) NuGet package, the  [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), or the [Bot Connector API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference).
 
-3. Test the bot using the [Bot Framework Emulator](https://docs.microsoft.com/bot-framework/debug-bots-emulator).
+3. Test the bot using the [Bot Framework Emulator](/bot-framework/debug-bots-emulator).
 
 4. Deploy the bot to a cloud service, such as [Microsoft Azure](https://azure.microsoft.com/). Alternatively, run your app locally and use a tunneling service such [ngrok](https://ngrok.com) to expose an https:// endpoint for your bot, such as `https://45az0eb1.ngrok.io/api/messages`.
 
