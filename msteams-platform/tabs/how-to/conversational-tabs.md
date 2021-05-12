@@ -67,7 +67,7 @@ To support conversational sub-entities from your personal or static tab, you do 
 
 ## Close a conversation
 
-In addition to the above functions, you can also manually close the conversation view
+You can manually close the conversation view by calling the `closeConversation()` function.
 
 ```javascript
 microsoftTeams.conversations.closeConversation();
