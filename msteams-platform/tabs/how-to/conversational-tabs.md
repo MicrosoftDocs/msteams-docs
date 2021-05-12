@@ -12,7 +12,7 @@ Conversational sub-entities provides a way to allow users to have conversations 
 
 Conversational sub-entities are only supported in channels. However, they can be used from a personal or static tab to create or continue conversations in tabs that are *already* pinned to a channel. The static tab is useful if you wish to provide one location for a user to view and access conversations happening across multiple channels.
 
-## Requirements
+## Prerequisites
 
 In order to support conversational sub-entities, your tab web application must have the ability to store a mapping between sub-entities ↔ conversations in a backend database. We will provide you with the `conversationId`, but it will be your responsibility to store that `conversationId` and return it to Teams in order for users to continue the conversation.
 
