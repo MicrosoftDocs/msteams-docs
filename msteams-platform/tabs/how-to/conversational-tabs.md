@@ -18,7 +18,7 @@ In order to support conversational sub-entities, your tab web application must h
 
 ## Starting a new channel tab conversation
 
-To start a new conversation, you will use the `openConversation()` function. Starting and continuing a conversation are all handled by this method, however, the inputs to the function change depending on which action you wish to take. From the users perspective, this opens the conversation panel to the right of the screen (either to initiate a conversation or continue a conversation).
+To start a new conversation, you use the `openConversation()` function. Starting and continuing a conversation are all handled by this method, however, the inputs to the function change depending on which action you want to take. From the users perspective, this opens the conversation panel to the right of the screen, either to initiate a conversation or continue a conversation.
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
