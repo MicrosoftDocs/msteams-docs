@@ -63,7 +63,7 @@ After a conversation starts, subsequent calls to `openConversation()` requires t
 
 Finally, it’s important that your tab consumes [deeplinks to your sub-entity](~/concepts/build-and-test/deep-links.md). For example, user clicking the tab chiclet deeplink from the channel conversation. The expected behavior is for you to receive the deeplink, open that sub-entity, and then open the conversation panel for that specific sub-entity.
 
-To support conversational sub-entities from your personal/static tab, you don’t have to change anything about your implementation. Keep in mind that we only support starting or continuing conversations from channel tabs that are already pinned. Supporting static tabs will allow you to provide a single location for your users to interact with all your sub-entities. It is however important that you save the `subEntityId`, `entityId` and `channelId` when your tab is originally created in a channel in order for you to have the right properties when opening the conversation view in a static tab.
+To support conversational sub-entities from your personal or static tab, you do not have to change anything about your implementation. We only support starting or continuing conversations from channel tabs that are already pinned. Supporting static tabs allow you to provide a single location for your users to interact with all your sub-entities. It is, however, important that you save the `subEntityId`, `entityId`, and `channelId` when your tab is originally created in a channel in order for you to have the right properties when opening the conversation view in a static tab.
 
 ## Close a conversation
 
