@@ -24,7 +24,7 @@ To start a new conversation, you use the `openConversation()` function. Starting
 microsoftTeams.conversations.openConversation(openConversationRequest);
 ```
 
-**openConversation** takes the follow inputs to start a conversation in a channel:
+**openConversation** takes the following inputs to start a conversation in a channel:
 
 * **subEntityId**: this is the id of your specific (sub-) entity (ex: task-123)
 * **entityId**: this is the id of the tab instance when it was created. This is important to refer back to the same tab instance.
