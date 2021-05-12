@@ -29,7 +29,7 @@ Watch the following video to understand how mConnect and Teams work better toget
 
 From inside mConnect, course participants access the full Moodle course experience inside the real-time collaboration and communication provided by Microsoft Teams.
 
-## Get started with mConnect and Teams
+### Get started with mConnect and Teams
 
 Watch the following video to understand how to get started with mConnect and Teams:
 
