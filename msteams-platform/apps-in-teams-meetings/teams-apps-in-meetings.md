@@ -152,7 +152,7 @@ The following table provides the user types and what features each user can acce
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
 | Guest that is part of the tenant AAD | Interaction is allowed. Creating, updating, and deleting are not allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
-| Federated user. For more information, see [non-standard users](/non-standard-users). | Interaction is allowed. Creating, updating, and deleting are not allowed. | Interaction is allowed. Acquiring, updating, and deleting are not allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
+| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Creating, updating, and deleting are not allowed. | Interaction is allowed. Acquiring, updating, and deleting are not allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
 
 ## See also
 
