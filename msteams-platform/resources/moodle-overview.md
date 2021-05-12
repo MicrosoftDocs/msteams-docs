@@ -21,7 +21,7 @@ Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 
 
 The mConnect app by Skooler allows you to deliver virtual learnings through Teams with ease.
 
-### mConnect and Teams
+### Why mConnect and Teams
 
 Watch the following video to understand how mConnect and Teams work better together:
 
