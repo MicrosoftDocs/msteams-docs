@@ -250,9 +250,7 @@ The following is an example of manifest.json with connector:
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-### Steps to send Adaptive Cards through an incoming webhook
-
-**To send Adaptive Cards through incoming webhook**
+**To send Adaptive Cards through an incoming webhook**
 
 1. [Setup a custom webhook](#Set up a custom incoming webhook) in Teams.</br></br>
 2. Create Adaptive Card JSON file:
