@@ -14,7 +14,7 @@ Conversational sub-entities are only supported in channels. However, they can be
 
 ## Requirements
 
-In order to support conversational sub-entities, your tab web application will need the ability to store a mapping between sub-entities ↔ conversations in a backend database. We will provide you with the `conversationId`, but it will be your responsibility to store that `conversationId` and return it to Teams in order for users to continue the conversation.
+In order to support conversational sub-entities, your tab web application must have the ability to store a mapping between sub-entities ↔ conversations in a backend database. We will provide you with the `conversationId`, but it will be your responsibility to store that `conversationId` and return it to Teams in order for users to continue the conversation.
 
 ## Starting a new channel tab conversation
 
