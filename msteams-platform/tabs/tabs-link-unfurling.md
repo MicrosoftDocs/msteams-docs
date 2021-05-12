@@ -1,7 +1,7 @@
 ---
 title: Tabs-link unfurling and Stage View
 author: Rajeshwari-v
-description: How to unfurl a link and invoke a Stage View in tabs with Microsoft Teams app.
+description: How to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app.  
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
@@ -21,7 +21,7 @@ Stage View is a giant, full screen UI component that you can invoke to surface y
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user gets the UI and tab information through the card, and pins the content as a tab directly from the Stage View.
+When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user selects **View** in the card, and pins the content as a tab directly from the Stage View.
 
 The following image explains how Stage View works:
 
@@ -97,7 +97,7 @@ The `invoke` request type must be `composeExtension/queryLink`.
 
 ## Invoke Stage View through deep link
 
-To invoke the deep link from your tab, you must wrap the deep link URL in `microsoftTeams.executeDeeplink(url)` API. 
+To invoke the deep link from your tab, you must wrap the deep link URL in `microsoftTeams.executeDeeplink(url)` API. The deeplink can also be passed through an `OpenURL` action in the card.
 
 The following image displays a Stage View invoked through a deep link:
 
