@@ -51,7 +51,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 };
 ```
 
-The conversationReponse object contains information related to the conversation that was just started. We recommend you save all the properties of this response object for reuse later.
+The `conversationReponse` object contains information related to the conversation that was just started. We recommend you save all the properties of this response object for reuse later.
 
 ## Continue a conversation
 
