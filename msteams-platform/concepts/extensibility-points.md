@@ -28,7 +28,7 @@ The following list shows how Teams app capabilities are commonly used in collabo
 
 * [**Webhooks and connectors**](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) allow an external service to post messages into a conversation and users to send messages to a service.
 
-* [**Microsoft Graph REST API**](https://docs.microsoft.com/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
+* [**Microsoft Graph REST API**](/graph/teams-concept-overview) for getting data about teams, channels, and group chats to help automate and manage Teams processes.
 
 ## Personal app experiences
 
