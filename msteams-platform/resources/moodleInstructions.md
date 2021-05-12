@@ -119,7 +119,7 @@ You must register Moodle as an application in your Azure AD. Use PowerShell scri
 1. Select the **Update** button to verify the installation, then **Save changes**.
 
 1. Synchronize users between your Moodle server and Azure AD. Depending on your environment, you can select different options during this stage. To get started:
-    1. Switch to the **Sync Settings tab**
+    1. Switch to the **Sync Settings tab**.
     1. In the **Sync users with Azure AD** section, select the checkboxes that apply to your environment. You must select the following:  
 
         ✔ Create accounts in Moodle for users in Azure AD . 
@@ -145,13 +145,13 @@ You must register Moodle as an application in your Azure AD. Use PowerShell scri
     1. Enable the external services for Microsoft 365. Select the **External services** link then next:  
 
         ✔ Select **Edit** on the **Moodle Microsoft 365 Webservices** row.  
-        ✔ Mark the checkbox next to **Enabled**, then select **Save Changes**
+        ✔ Mark the checkbox next to **Enabled**, then select **Save Changes**.
 
     1. Edit your authenticated user permissions to allow them to create web service tokens. Select the **Editing role 'Authenticated user'** link. Scroll down and find the **Create a web service token** capability and mark the **Allow** checkbox.
 
 ## 3. Deploy the Moodle Assistant Bot to Azure
 
-The free Moodle assistant bot for Microsoft Teams helps teachers and students answer questions about their courses, assignments, grades and other information in Moodle. The bot also sends Moodle notifications to students and teachers within Teams. The bot is an open-source project maintained by Microsoft, and is available on [GitHub](https://github.com/microsoft/Moodle-Teams-Bot).
+The free Moodle assistant bot for Microsoft Teams helps teachers and students answer questions about their courses, assignments, grades, and other information in Moodle. The bot also sends Moodle notifications to students and teachers within Teams. The bot is an open-source project maintained by Microsoft, and is available on [GitHub](https://github.com/microsoft/Moodle-Teams-Bot).
 
 > [!NOTE]
 > * In this section you must deploy resources to your Azure subscription. All resources ware configured using the **free** tier. Depending on the usage of your bot, you mhave to scale these resources.
@@ -163,7 +163,7 @@ The free Moodle assistant bot for Microsoft Teams helps teachers and students an
 
 To install the bot, you must register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your bot to authenticate against your Microsoft endpoints. 
 
-**To register your bot**:
+**To register your bot**
 
 1. Go to the plugin administration page. Go to **Plugins**. Under **Microsoft 365 Integration**, select the **Teams Settings** tab.
 
@@ -180,7 +180,7 @@ To install the bot, you must register it on the [Microsoft Identity Platform](ht
 As you generated your Application ID and Password, next step is to deploy your bot to Azure:
 
 > [!div class="checklist"]
-> * Select the **Deploy to Azure** button and complete the form with the necessary information, such as the Bot Application ID, Bot Application Password and the Moodle Secret are on the **Team Settings** page. The Azure information is on the **Setup** page). 
+> * Select the **Deploy to Azure** button and complete the form with the necessary information, such as the Bot Application ID, Bot Application Password, and the Moodle Secret are on the **Team Settings** page. The Azure information is on the **Setup** page. 
 > * After completing the form, select the check box to agree to the terms and conditions.
 > * Select the **Purchase** button. All Azure resources are deployed to the free tier.
 
