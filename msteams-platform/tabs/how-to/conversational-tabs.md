@@ -8,7 +8,7 @@ ms.author: lomeybur
 ---
 # Create conversational tabs
 
-Conversational sub-entities provides a way to allow your users to have conversations about (sub-)entities in your tab (such as specific task, patient, sales opportunity, etc) instead of discussing the entire tab (aka: entity). A traditional channel/configurable tab allows the user to have a conversation about a tab, but your users may not find this sufficient. Either because there is too much content to have a centralized discussion or because the content changes over time, making the conversation no longer relevant to the content being shown. Conversational sub-entities provides a much more focused conversation experience for dynamic tabs. 
+Conversational sub-entities provides a way to allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user may want a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or the content changed over time, making the conversation irrelevant to the content being shown. Conversational sub-entities provides a much more focused conversation experience for dynamic tabs.
 
 Conversational sub-entities are only supported in channels. However, they can be used from a personal/static tab to create (or continue) conversations in tabs that are _already_ pinned to a channel. The latter is useful if you wish to provide one location for a user to view and access conversations happening across multiple channels.
 
