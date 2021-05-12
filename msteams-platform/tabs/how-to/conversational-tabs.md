@@ -53,7 +53,7 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 
 The conversationReponse object contains information related to the conversation that was just started. We recommend you save all the properties of this response object for reuse later.
 
-## Continuing a channel tab conversation
+## Continue a conversation
 
 Now that a conversation has started, subsequent calls to `openConversation()` will require that you also provide the same inputs as above, but also include the conversationId. This will open the conversation panel for the user with the appropriate conversation in view. Users will be able to see new/incoming messages in real-time.
 
