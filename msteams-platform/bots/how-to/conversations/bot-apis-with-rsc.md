@@ -29,6 +29,9 @@ The `ChannelMessage.Read.Group` RSC permission is added to the app manifest and 
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu displays.
 1. Select **Manage team** from the drop-down menu. The details appear.
+
+    ![Teams channel page](~/assets/images/bots/teamschanneldetails.png)
+
 1. Select **Apps**. Multiple apps are displayed.
 1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box is displayed.
 1. Select the required app manifest.
@@ -43,7 +46,7 @@ The bot receives the message without being @mentioned.
 
 ## Changes to app manifest
 
-You can configure an app manifest for a Teams app with an Azure Active Directory (AAD) application and resource-specific permissions that are used to check and authorize calls to Graph.
+The developer can configure an app manifest for a Teams app with an Azure Active Directory (AAD) application and resource-specific permissions that are used to check and authorize calls to Graph.
 
 The following code provides an example of changes to app manifest:
 
