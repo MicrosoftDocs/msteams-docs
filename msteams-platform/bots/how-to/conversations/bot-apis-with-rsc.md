@@ -16,13 +16,13 @@ Using resource-specific consent (RSC) permissions, a bot can now receive a messa
 RSC enables team owners to consent to more permissions for apps in Teams. You can specify permissions that apps require in the application manifest. Users review and consent to permissions when you enable bots to receive all channel messages.
 
 > [!NOTE]
-> RSC permissions are now extended to bot APIs. Earlier, RSC was only applicable to Graph calls for team resources, using the application permissions context. For more information, see [resource-specific permissions](~/graph-api/rsc/resource-specific-consent.md).
-
-The RSC support for Graph is provided to all users. Earlier, only Admins were able to grant permission to apps in groups.
+> * RSC permissions are now extended to bot APIs. Earlier, RSC was only applicable to Graph calls for team resources, using the application permissions context. For more information, see [resource-specific permissions](~/graph-api/rsc/resource-specific-consent.md).
+> 
+> * The RSC support for Graph is provided to all users, and not just Admins to grant permission to apps in groups.
 
 ## Enable bots to receive all channel messages
 
-The `ChannelMessage.Read.Group` RSC permission is added to the app manifest and is now extended to bots. Graph applications are able to get all messages in a conversation. Bots can receive all messages in a channel without being @mentioned with specific permissions and user consent.
+The `ChannelMessage.Read.Group` RSC permission is now extended to bots. Graph applications are able to get all messages in a conversation. Bots can receive all messages in a channel without being @mentioned with specific permissions and user consent.
 
 **To add bots to a team and receive all channel messages**
 
@@ -34,21 +34,23 @@ The `ChannelMessage.Read.Group` RSC permission is added to the app manifest and 
 
 1. Select **Apps**. Multiple apps are displayed.
 1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box is displayed.
-1. Select the required app manifest.
+1. Select the app package.
 1. Select **Open**. The app details pop-up is displayed.
 
     ![Permissions for app installation](~/assets/images/bots/permissions.png)
 
 1. Select **Add** to add the bot to your selected team.
-1. On the **General** page, enter a message in the channel for your bot.
+1. Select a channel and enter a message in the channel for your bot.
+
+    ![Message to bot](~/assets/images/bots/messagetobot.png)
 
 The bot receives the message without being @mentioned.
 
-## Changes to app manifest
+## App manifest example
 
-The developer can configure an app manifest for a Teams app with an Azure Active Directory (AAD) application and resource-specific permissions that are used to check and authorize calls to Graph.
+You can configure an app manifest for a Teams app with an Azure Active Directory (AAD) application and resource-specific permissions that are used to check and authorize calls to Graph. In the `webApplicationInfo` property, the `ChannelMessage.Read.Group` RSC permission is extended to support bots.
 
-The following code provides an example of changes to app manifest:
+The following code provides an example of the app manifest:
 
 ```json
 "webApplicationInfo": {
