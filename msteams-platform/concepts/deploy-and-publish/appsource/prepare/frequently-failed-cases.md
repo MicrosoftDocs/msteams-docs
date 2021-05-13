@@ -11,7 +11,7 @@ keywords: app submission tips frequently failed cases validation guidelines
 >[!NOTE]
 >This page will be deprecated by May 2021. For more information on successfully publishing your app, see the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
-This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. See [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
+This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. For more information, see [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
 >[!NOTE]
 >**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
@@ -19,8 +19,6 @@ This article addresses common reasons submitted apps fail validation. While it's
 ## Validation guidelines & most failed test cases
 
 ### &#9989; General considerations
-
-See also [Section 100 — General](/legal/marketplace/certification-policies#100-general)
 
 * Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
@@ -52,8 +50,6 @@ See also [Section 100 — General](/legal/marketplace/certification-policies#100
 * Personal apps enable users to share content from a personal app experience with other team members.
 
 ### &#9989; Provide a clear and simple sign-in, sign-out, and sign-up experience
-
-See also [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
 
 * If your app or add-in depends on external accounts or services, the sign-in, sign-out, and sign-up experience must be apparent and reachable across all capabilities in your app.
 * If there is an explicit sign-in option provided to the user, there must be a corresponding sign-out option (even if the app is using [silent authentication](../../../../tabs/how-to/authentication/auth-silent-aad.md)).
@@ -246,5 +242,10 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 * Refer to the [Troubleshooting guide](/azure/active-directory/develop/troubleshoot-publisher-verification) for additional information.
 * Complete the self attestation through partner center. Fill the Self-Assessment questionnaire under **App Compliance**.
 
-> [!div class="nextstepaction"]
-> [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
+## See also
+
+- [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
+
+- [Section 100 — General](/legal/marketplace/certification-policies#100-general)
+
+- [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)

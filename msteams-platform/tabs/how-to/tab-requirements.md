@@ -29,3 +29,8 @@ Teams tabs must adhere to the following requirements:
 * For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
 
 * If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/create-personal-tab-node-yeoman.md)

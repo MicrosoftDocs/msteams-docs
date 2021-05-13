@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams
+# Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
@@ -15,7 +15,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Do you want to create a configurable or static tab?**
+**Create a configurable or static tab**
 
 Use the arrow keys to select static tab.
 
@@ -128,3 +128,8 @@ gulp ngrok-serve
 ## View your personal tabs
 
 In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a personal tab using ASP.NETCore](~/tabs/create-personal-tab-dotnet-core.md)

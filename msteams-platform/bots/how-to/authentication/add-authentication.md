@@ -31,7 +31,7 @@ In this article you'll learn:
 - Knowledge of Azure and OAuth 2.0 development.
 - The current versions of Visual Studio and Git.
 - Azure account. If needed, you can create an [Azure free account](https://azure.microsoft.com/free/).
-- The following sample.
+- The following sample:
 
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
@@ -190,7 +190,7 @@ The following image displays the corresponding selection in the resource page:
 1. Select **Accept**.
 1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
 
-  ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
+    ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
 The connection name is used by the bot code to retrieve user authentication tokens.
 
@@ -260,7 +260,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 1. Select the **Publish** button.
 1. In the next dialog window, enter the required information. The following is an example:
 
-   ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
+    ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
 1. Select **Create**.
 1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying *Your bot is ready!*. The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
@@ -278,7 +278,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-In order for the bot sample login to work you must configure the Emulator as shown below.
+In order for the bot sample login to work you must configure the Emulator as shown below:
 
 ### Configure the Emulator for authentication
 
@@ -416,7 +416,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 ### TeamsAppManifest/manifest.json
 
-This manifest contains information needed by Microsoft Teams to connect with the bot.  
+This manifest contains information needed by Microsoft Teams to connect with the bot:  
 
 ```json
 {
@@ -564,8 +564,9 @@ Within the following dialog step, check for the presence of a token in the resul
 
 ---
 
-> [!div class="nextstepaction"]
-> [Learn about adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+## See also
+
+[Learn about adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 

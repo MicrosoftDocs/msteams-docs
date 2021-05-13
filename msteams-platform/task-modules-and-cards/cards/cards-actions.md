@@ -13,16 +13,16 @@ Cards used by bots and messaging extensions in Teams support the following activ
 | Type | Action |
 | --- | --- |
 | `openUrl` | Opens a URL in the default browser. |
-| `messageBack` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card) and sends a separate message to the chat stream. |
-| `imBack`| Sends a message to the bot (from the user who clicked the button or tapped the card). This message (from user to bot) is visible to all conversation participants. |
-| `invoke` | Sends a message and payload to the bot (from the user who clicked the button or tapped the card). This message is not visible. |
+| `messageBack` | Sends a message and payload to the bot from the user who clicked the button or tapped the card and sends a separate message to the chat stream. |
+| `imBack`| Sends a message to the bot from the user who clicked the button or tapped the card. This message (from user to bot) is visible to all conversation participants. |
+| `invoke` | Sends a message and payload to the bot from the user who clicked the button or tapped the card. This message is not visible. |
 | `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
 >* Teams does not support `CardAction` types not listed in the preceding table.
 >* Teams does not support the `potentialActions` property.
 >* Card actions are different than [suggested actions](/azure/bot-service/bot-builder-howto-add-suggested-actions?view=azure-bot-service-4.0&tabs=javascript#suggest-action-using-button&preserve-view=true) in Bot Framework/Azure Bot Service. Suggested actions are not supported in Microsoft Teams: if you want buttons to appear on a Teams bot message, use a card.
->* If you're using a card action as part of a messaging extension, the actions will be not work until the card is submitted to the channel (they will not work while the card is in the compose message box).
+>* If you're using a card action as part of a messaging extension, the actions does not work until the card is submitted to the channel. They does not work while the card is in the compose message box.
 
 Teams also supports [Adaptive Cards actions](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions), which are only used by Adaptive Cards. These actions are listed in their own section at the end of this reference.
 
@@ -288,8 +288,8 @@ To include a `signin` action with an Adaptive Card include the following details
 
 | Property | Description |
 | --- | --- |
-| `type` | Set to `signin` |
-| `value` | Set to the URL that you want to redirect to  |
+| `type` | Set to `signin`. |
+| `value` | Set to the URL that you want to redirect to.  |
 
 #### Example
 

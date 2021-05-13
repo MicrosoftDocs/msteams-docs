@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
-# Create a Custom Channel and Group Tab with ASP.NET Core
+# Create a Custom Channel and Group Tab with ASP.NETCore
 
 In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core Razor page. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
@@ -94,9 +94,9 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
 
 - Open a command prompt in the root of your project directory and run the following command:
 
-```bash
-ngrok http https://localhost:44355 -host-header="localhost:44355"
-```
+    ```bash
+    ngrok http https://localhost:44355 -host-header="localhost:44355"
+    ```
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355. It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
@@ -108,3 +108,7 @@ Within *Tab.cshtml* the application presents the user with two option buttons fo
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/create-channel-group-tab-dotnet-core-mvc.md)

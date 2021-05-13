@@ -124,3 +124,8 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 * In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a custom channel and group tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/create-channel-group-tab-node-yeoman.md)

@@ -32,5 +32,4 @@ The following table lists the support channels to submit Teams product related q
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [SDK reference](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+[SDK reference](https://docs.microsoft.com/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
