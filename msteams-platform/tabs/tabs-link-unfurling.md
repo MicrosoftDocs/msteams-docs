@@ -56,12 +56,12 @@ The following images display a stage opened from an Adaptive Card:
 
 ### Example 
 
-Following is the code to open a stage from an  Adaptive Card:
+Following is the code to open a stage from an Adaptive Card:
 
 ```json
 {
     type: "Action.Submit",
-    title: "View",
+    name: "View",
     data: {
           msteams: {
             type: "invoke",
@@ -93,7 +93,7 @@ The `invoke` request type must be `composeExtension/queryLink`.
 1. The bot responds with a `200` code.
 
 > [!NOTE]
-> Currently, Teams mobile clients do not support the Stage View capability. When a user selects  **View** on a mobile client, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> Currently, Teams mobile clients do not support the Stage View capability. When a user selects **View** on a mobile client, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -107,7 +107,7 @@ The following image displays a Stage View invoked through a deep link:
 
 Following is the syntax of a deeplink:  
 
-https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”, “title”:”[title]”}
+https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”,“name”:”[name]”}
 
 ### Examples
 
@@ -115,14 +115,14 @@ Following are the deep link examples to invoke the Stage View:
 
 **Example 1**
 
-https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
+https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“name”:”Contoso”}
 
 **Example 2**
 
-https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”, “title”:”Contoso”}
+https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“websiteURL”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“name”:”Contoso”}
 
 > [!NOTE]
-> * The `title` is optional in the deeplink. If not included, the app name replaces it. 
+> * The `name` is optional in the deeplink. If not included, the app name replaces it. 
 > * The deeplink can also be passed through  an `OpenURL` action.
 > * Currently, Teams mobile clients do not support the Stage View capability. When users selects a deeplink to a Stage View, they are taken to their device's web browser. The web browser opens the URL specified in the `websiteUrl` parameter of the deeplink.
 
