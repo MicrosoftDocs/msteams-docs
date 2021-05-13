@@ -85,7 +85,7 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 ## Distribution of webhooks and connectors
 
 * [Set up an incoming webhook](#add-an-incoming-webhook) directly for your team.
-* Add a [configuration page](connectors-creating.md#integrating-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-your-organization) in a O365 Connector.
+* Add a [configuration page](connectors-creating.md#integrate-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-your-organization) in a O365 Connector.
 * Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## See also
