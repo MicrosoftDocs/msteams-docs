@@ -8,20 +8,19 @@ localization_priority: Normal
 
 # Receive all channel messages with RSC
 
+> [!NOTE]
+> This feature is available in public developer preview.
+
 Using resource-specific consent (RSC) permissions, a bot can now receive a message even when it is not @mentioned by a user. Bots can receive all channel messages in a team when consented to and installed. Earlier, a bot was only able to receive a message when it was @mentioned by a user.
 
-RSC enables team owners to consent to more permissions for apps in Teams. You can specify permissions that apps require in the application manifest. Users review and consent to permissions during the app installation process.
+RSC enables team owners to consent to more permissions for apps in Teams. You can specify permissions that apps require in the application manifest. Users review and consent to permissions when you enable bots to receive all channel messages.
 
 > [!NOTE]
 > RSC permissions are now extended to bot APIs. Earlier, RSC was only applicable to Graph calls for team resources, using the application permissions context. For more information, see [resource-specific permissions](~/graph-api/rsc/resource-specific-consent.md).
 
-### User tenant requirements
-
-The RSC support for Graph is provided to all users. Previously, only Admins were able to grant permission to apps in groups.
+The RSC support for Graph is provided to all users. Earlier, only Admins were able to grant permission to apps in groups.
 
 ## Enable bots to receive all channel messages
-
-With RSC and existing permissions, bot can receive all channel messages in team. This includes the capability to remove bot @mention.
 
 The `ChannelMessage.Read.Group` RSC permission is added to the app manifest and is now extended to bots. Graph applications are able to get all messages in a conversation. Bots can receive all messages in a channel without being @mentioned with specific permissions and user consent.
 
@@ -49,7 +48,27 @@ You can configure an app manifest for a Teams app with an Azure Active Directory
 The following code provides an example of changes to app manifest:
 
 ```json
-
+"webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+},
 ```
 
 ## See also

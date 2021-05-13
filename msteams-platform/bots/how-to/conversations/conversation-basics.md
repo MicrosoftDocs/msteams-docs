@@ -22,10 +22,11 @@ A conversation is a series of messages sent between your Microsoft Teams bot and
 A bot behaves differently depending on the conversation it is involved in:
 
 * Using resource-specific consent (RSC), bots can receive all channel and group chat conversations without being @mentioned.
-* Bots in a one-to-one conversation do not require an @mention. All messages sent by the user routes to your bot.
 
-> [!NOTE]
-> Bots can be allowed to receive all channel messages in a team without being @mentioned using RSC permissions. This feature is now available in developer preview. For more information, see [receive all channel messages with RSC](bot-apis-with-rsc.md).
+    > [!NOTE]
+    > The RSC feature is now available in developer preview. For more information, see [receive all channel messages with RSC](bot-apis-with-rsc.md).
+
+* Bots in a one-to-one conversation do not require an @mention. All messages sent by the user routes to your bot.
 
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
