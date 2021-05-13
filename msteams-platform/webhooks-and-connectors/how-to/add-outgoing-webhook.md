@@ -62,42 +62,6 @@ The default value of `style` depends on the `isMultiSelect` value:
 
 For more information about connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
-## Create an outgoing webhook
-
-Create outgoing webhooks to send text messages from a channel to your web services. 
-
-**To create an outgoing webhook**
-
-1. In Teams, select **Teams** from the left pane. The **Teams** page appears.
-
-    ![Teams channel](~/assets/images/teamschannel.png)
-
-2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select the &#8226;&#8226;&#8226;. In the drop-down menu, select **Manage team**.
-
-    ![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
-
-3. Select the **Apps** tab on the channel page.
-
-    ![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
-
-4. Select **Create an outgoing webhook** at the bottom of the page.
-
-    ![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
-
-5. Type the details in the **Create an outgoing webhook** page.
-
-    ![create outgoing webhook](~/assets/images/outgoingwebhook.png)
-
-    * **Name**: The webhook title and @mention tab.
-    * **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
-    * **Description**: A detailed string that appear in the profile card and the team-level App dashboard.
-    * **Profile Picture**: An app icon for your webhook, which is optional.
-
-6. Select **Create**. The outgoing webhook is added to the current team's channel.
-
-The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
-The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
-
 ## Add outgoing webhooks to your app
 
 Following is the scenario and example of adding outgoing webhooks to your app:
@@ -140,6 +104,42 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
     "text": "This is a reply!"
 }
 ```
+
+## Create an outgoing webhook
+
+Create outgoing webhooks to send text messages from a channel to your web services. 
+
+**To create an outgoing webhook**
+
+1. In Teams, select **Teams** from the left pane. The **Teams** page appears.
+
+    ![Teams channel](~/assets/images/teamschannel.png)
+
+2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select the &#8226;&#8226;&#8226;. In the drop-down menu, select **Manage team**.
+
+    ![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
+
+3. Select the **Apps** tab on the channel page.
+
+    ![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
+
+4. Select **Create an outgoing webhook** at the bottom of the page.
+
+    ![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
+
+5. Type the details in the **Create an outgoing webhook** page.
+
+    ![create outgoing webhook](~/assets/images/outgoingwebhook.png)
+
+    * **Name**: The webhook title and @mention tab.
+    * **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
+    * **Description**: A detailed string that appear in the profile card and the team-level App dashboard.
+    * **Profile Picture**: An app icon for your webhook, which is optional.
+
+6. Select **Create**. The outgoing webhook is added to the current team's channel.
+
+The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
+The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
 ## Code sample
 
