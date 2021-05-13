@@ -347,4 +347,4 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-[Office 365 Connectors for Microsoft Teams](~/how-to/connectors-creating.md)
+[Office 365 Connectors for Microsoft Teams](connectors-creating.md)
