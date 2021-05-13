@@ -342,9 +342,9 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
-## Group Connect
+## Group Connect &#9734;
 
-Group Connect is a Microsoft Teams app that helps organization members discover employee groups and find information relevant to employee groups. The app comes built-in with rich capabilities for organization leaders to communicate with their employees regarding groups, events, and resources. The Group Connect app also matches group members with each other at their desired frequency to encouraging networking and cohesion within a group. Check out the app on GitHub to learn more about how you can leverage the Group Connect app to help employee groups foster within your organization.
+Group Connect is a Microsoft Teams app that helps organization members discover employee groups and find information relevant to employee groups. The app comes built-in with rich capabilities for organization leaders to communicate with their employees regarding groups, events, and resources. The Group Connect app also matches group members with each other at their desired frequency to encourage networking and cohesion within a group. Check out the app on GitHub to learn more about how you can leverage the Group Connect app to help employee groups foster within your organization.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupconnect)
 
