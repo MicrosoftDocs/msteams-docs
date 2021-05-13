@@ -102,7 +102,7 @@ Following is an example of connector message:
 
 This message provides the following card in the channel:
 
-    ![Screenshot of a connector card](~/assets/images/connectorcard.png)
+![Screenshot of a connector card](~/assets/images/connectorcard.png)
 
 ## Create actionable messages
 
@@ -298,7 +298,7 @@ To test the connector, upload it to a team with any other app. To create a .zip 
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-    ![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
+![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
 
 You can launch the configuration experience. 
 > [!NOTE]
