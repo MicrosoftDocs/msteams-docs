@@ -21,6 +21,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/13/2021|Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
 |05/10/2021| App customization feature.| [Designing your Microsoft Teams app](~/concepts/design/design-teams-app-overview.md#app-customization) |
 |05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
