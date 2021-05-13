@@ -102,7 +102,7 @@ Following is an example of connector message:
 
 This message provides the following card in the channel:
 
-![Screenshot of a connector card](~/assets/images/connectorcard.png)
+    ![Screenshot of a connector card](~/assets/images/connectorcard.png)
 
 ## Create actionable messages
 
@@ -141,16 +141,16 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 1. In Microsoft Teams, choose **More options** **&#8943;** next to the channel name and then choose **Connectors**.
 
-![Choose Connector](~/assets/images/connectors.png)
+    ![Choose Connector](~/assets/images/connectors.png)
 
 2. Scroll through the list of Connectors to **Incoming Webhook** and select **Add**.
 3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select **Create**.
 
-![Create Connector](~/assets/images/createconnector.png)
+    ![Create Connector](~/assets/images/createconnector.png)
 
 4. Copy the webhook to the clipboard and save it. You need the webhook URL for sending information to Microsoft Teams.
 
-![Unique URL](~/assets/images/url.png)
+    ![Unique URL](~/assets/images/url.png)
 
 5. Select **Done**.
 
@@ -298,7 +298,7 @@ To test the connector, upload it to a team with any other app. To create a .zip 
 
 After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
+    ![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
 
 You can launch the configuration experience. 
 > [!NOTE]
