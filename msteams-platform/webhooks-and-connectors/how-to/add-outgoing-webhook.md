@@ -70,7 +70,7 @@ To add an outgoing webhook to a Teams channel, create an outgoing webhook.
 
 1. In Teams, select **Teams** from the left pane. The **Teams** page appears.
 
-
+    ![Teams channel](~/assets/images/teamschannel.png)
 
 2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
 
