@@ -455,7 +455,9 @@
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
     - name: Contributing to Teams docs
       href: resources/teams-contributor-reference.md
+- name: Reference
+  items:
+  - name: Teams JavaScript client SDK 
+    href: /javascript/api/@microsoft/teams-js/teams-js?view=msteams-client-js-latest
 - name: Support and feedback
   href: feedback.md
-  
-  
