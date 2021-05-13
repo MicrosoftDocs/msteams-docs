@@ -64,7 +64,7 @@ For more information about connector card actions, see [Actions](/outlook/action
 
 ## Create an outgoing webhook
 
-To add an outgoing webhook to a Teams channel, create an outgoing webhook.
+Create outgoing webhooks to send text messages from a channel to your web services. 
 
 **To create an outgoing webhook**
 
@@ -72,28 +72,28 @@ To add an outgoing webhook to a Teams channel, create an outgoing webhook.
 
     ![Teams channel](~/assets/images/teamschannel.png)
 
-2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
+2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select the &#8226;&#8226;&#8226;. In the drop-down menu, select **Manage team**.
 
     ![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
 
-3. Select the **Apps** tab from the navigation bar.
+3. Select the **Apps** tab on the channel page.
 
     ![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
 
-4. From the window's lower right corner select **Create an outgoing webhook**.
+4. Select **Create an outgoing webhook** at the bottom of the page.
 
     ![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
 
-5. In the resulting pop-up window, complete the required fields.
+5. Type the details in the **Create an outgoing webhook** page.
 
     ![create outgoing webhook](~/assets/images/outgoingwebhook.png)
 
->* **Name** - The webhook title and @mention tab.
->* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
->* **Description** - A detailed string that appear in the profile card and the team-level App dashboard.
->* **Profile Picture** an optional app icon for your webhook.
+    * **Name**: The webhook title and @mention tab.
+    * **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
+    * **Description**: A detailed string that appear in the profile card and the team-level App dashboard.
+    * **Profile Picture**: An app icon for your webhook, which is optional.
 
-6. Select **Create** from the lower right corner of the pop-up window. The outgoing webhooks are added to the current team's channels.
+6. Select **Create**. The outgoing webhook is added to the current team's channel.
 
 The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
