@@ -3,6 +3,7 @@ title: Designing your messaging extension
 description: Learn how to design a Teams messaging extension and get the Microsoft Teams UI Kit.
 keywords: teams design guidelines reference messaging extensions tips best practice
 author: heath-hamilton
+localization_priority: Normal
 ms.author: qinch
 ms.topic: conceptual
 ---
@@ -49,7 +50,7 @@ With search commands, people can use your messaging extension to quickly find ex
 
 #### Compose box layout options
 
-You have some options for displaying messaging extension search results, including [list and grid views](../../messaging-Ask about extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+You have some options for displaying messaging extension search results, including [list and grid views](../../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 
 :::image type="content" source="../../assets/images/messaging-extension/search-result-layout.png" alt-text="Illustrations showing layout options for messaging extension search results." border="false":::
 
@@ -106,7 +107,7 @@ The following scenarios show the primary ways people use messaging extensions.
 
 **2. Complete the action**. Your app can receive and process any content or data sent by the message action. This allows users to remain in their conversation and, the following example, not worry about entering information directly in your app.
 
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example shows a user searching for content to insert from the compose box." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message." border="false":::
 
 ### Preview links
 
@@ -154,11 +155,13 @@ The following example is a messaging extension opened from the compose box.
 
 ## Best practices
 
+Use these recommendations to create a quality app experience.
+
 ### Setup and general usage
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-do.png" alt-text="Example on setup and general usage." border="false":::
 
 #### Do: Integrate with single-sign on
 
@@ -166,7 +169,7 @@ SSO makes the sign-in process easier, faster, and secure. Also, if a user has al
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/setup-dont.png" alt-text="Example on integrating with single-sign on." border="false":::
 
 #### Don't: Take users away from the conversation
 
@@ -183,7 +186,7 @@ Messaging extensions aren't always easy to find. Include screenshots of how to u
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-do.png" alt-text="Example on templating." border="false":::
 
 #### Do: Let Teams handle some of the design work if possible
 
@@ -191,7 +194,7 @@ If it makes sense for your use cases, consider creating a search-based messaging
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/templating-dont.png" alt-text="Example on handling design work." border="false":::
 
 #### Don't: Embed your entire app in a task module
 
@@ -204,7 +207,7 @@ If your messaging extension requires action commands, keep the task module simpl
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-do.png" alt-text="Example on theming." border="false":::
 
 #### Do: Take advantage of Teams color tokens
 
@@ -212,7 +215,7 @@ Each Teams theme has its own color scheme. To handle theme changes automatically
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/theming-dont.png" alt-text="Example on color tokens." border="false":::
 
 #### Don't: Hard code color values
 
@@ -225,7 +228,7 @@ If you don't use Teams color tokens, your designs will be less scalable and take
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-do.png" alt-text="Example on actions." border="false":::
 
 #### Do: Include action commands that make sense in context
 
@@ -233,7 +236,7 @@ Message actions should relate to what a user is looking at. For example, provide
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Example showing a messaging extension best practice." border="false":::
+:::image type="content" source="../../assets/images/messaging-extension/action-commands-dont.png" alt-text="Example on action commands." border="false":::
 
 #### Don't: Include actions commands that aren't contextual
 
@@ -255,10 +258,3 @@ You can make users press a key or select a button to send queries to your app. W
 #### Do: Consider zero-term queries
 
 For example, before a user writes anything in the search box, display what they last viewed on your app. It's possible that they want to insert that content into their conversation.
-
-## Validate your design
-
-If you plan to publish your app to AppSource, you should understand the design issues that commonly cause apps to fail during submission.
-
-> [!div class="nextstepaction"]
-> [Check design validation guidelines](../../concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md#validation-guidelines--most-failed-test-cases)

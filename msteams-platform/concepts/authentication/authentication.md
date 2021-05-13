@@ -2,12 +2,13 @@
 title: Authenticating app users
 description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
+localization_priority: Normal
 keywords: teams authentication OAuth SSO AAD
 ---
 # Authenticate users in Microsoft Teams
 
-> [!NOTE]
-> Web-based authentication on mobile clients requires version 1.4.1 or later of the Microsoft Teams JavaScript SDK.
+> [!Note]
+> Web-based authentication on mobile clients requires version 1.4.1 or later of the Teams JavaScript client SDK.
 
 To access user information protected by Azure Active Directory (AAD) and to access data from services like Facebook and Twitter, the app establishes a trusted connection with those providers. If the app uses Microsoft Graph APIs in the user scope, authenticate the user to retrieve the appropriate authentication tokens.
 
@@ -31,7 +32,14 @@ For more information on using the OAuthPrompt, see:
 
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
-* [.Net or C#](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) or [JavaScript or Node.js](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) provides Bot authentication v3 SDK sample.
+
+## Code sample
+
+provides Bot authentication v3 SDK sample.
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|---------------|------------|------------|-------------|---------------|
+| Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 
 ## Configure the identity provider
 
