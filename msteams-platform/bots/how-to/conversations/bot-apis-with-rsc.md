@@ -27,15 +27,15 @@ The `ChannelMessage.Read.Group` RSC permission is now extended to bots. Graph ap
 **To add bots to a team and receive all channel messages**
 
 1. Select or create a team.
-1. Select **More options** from the left pane. The drop-down menu displays.
+1. Select **More options** from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
 
     ![Teams channel page](~/assets/images/bots/teamschanneldetails.png)
 
-1. Select **Apps**. Multiple apps are displayed.
-1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box is displayed.
+1. Select **Apps**. Multiple apps appear.
+1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
 1. Select the app package.
-1. Select **Open**. The app details pop-up is displayed.
+1. Select **Open**. The app details pop-up appears.
 
     ![Permissions for app installation](~/assets/images/bots/permissions.png)
 
