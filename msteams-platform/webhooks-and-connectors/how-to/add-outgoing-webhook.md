@@ -11,13 +11,9 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 # Create an outgoing webhook
 
-The article provides information on outgoing webhooks and creating actionable messages.
-
-## Outgoing webhooks in Teams
+Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
 
 Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
-
-Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **\@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
 
 ## Key features of outgoing webhooks
 
@@ -32,7 +28,7 @@ The following table provides the feature and description of outgoing webhooks:
 
 ## Create actionable messages
 
-The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example, `HttpPOST`.
+Actionable messages are sent through connector cards. The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list and an associated action, for example, `HttpPOST`.
 
 Connector cards support three types of actions:
 
@@ -60,37 +56,44 @@ The default value of `style` depends on the `isMultiSelect` value:
 | `true` | The default style is `expanded`. |
 
 > [!NOTE]
-> * Enter both `"isMultiSelect": true` and `"style": true`, if you want the multi-select list to be displayed in a compact style.
+> * To display multi-select list in a compact style, enter `"isMultiSelect": true` and `"style": true`.
 > * Selecting `compact` for the `style` property in Teams is the same as selecting `normal` for the `style` property in Microsoft Outlook.
 > * Webhooks support only Office 365 message back cards and Adaptive Cards.
 
-For all other details about connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
+For more information about connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
 ## Create an outgoing webhook
 
+To add an outgoing webhook to a Teams channel, create an outgoing webhook.
+
 **To create an outgoing webhook**
 
-1. Select the appropriate team and choose **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
+1. In Teams, select **Teams** from the left pane. The **Teams** page appears.
 
-![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
 
-1. Choose the **Apps** tab from the navigation bar.
 
-![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
+2. In the **Teams** page, select the team for which you want to create an outgoing webhook, and select **Manage team** from the &#8226;&#8226;&#8226; drop-down menu.
 
-1. From the window's lower right corner select **Create an outgoing webhook**. 
+    ![Create outgoing webhook](~/assets/images/outgoingwebhook1.png)
 
-![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
+3. Select the **Apps** tab from the navigation bar.
 
-1. In the resulting pop-up window, complete the required fields:
+    ![Create an outgoing webhook](~/assets/images/outgoingwebhook2.png)
 
-![create outgoing webhook](~/assets/images/outgoingwebhook.png)
+4. From the window's lower right corner select **Create an outgoing webhook**.
+
+    ![Create outgoing webhooks](~/assets/images/outgoingwebhook3.png)
+
+5. In the resulting pop-up window, complete the required fields.
+
+    ![create outgoing webhook](~/assets/images/outgoingwebhook.png)
 
 >* **Name** - The webhook title and @mention tab.
 >* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
 >* **Description** - A detailed string that appear in the profile card and the team-level App dashboard.
 >* **Profile Picture** an optional app icon for your webhook.
-1. Select **Create** from the lower right corner of the pop-up window. The outgoing webhooks are added to the current team's channels.
+
+6. Select **Create** from the lower right corner of the pop-up window. The outgoing webhooks are added to the current team's channels.
 
 The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.

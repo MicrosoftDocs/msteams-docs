@@ -282,10 +282,10 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-  - name: Create an incoming webhook
-    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create an outgoing webhook
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
+  - name: Create an incoming webhook
+    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create an Office 365 Connector
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Send messages to connectors and webhooks
