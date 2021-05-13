@@ -342,9 +342,9 @@ try
     }
 }
 ```
- 
+
 These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to users.
 
 ## See also
 
-[Office 365 Connectors for Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
+[Office 365 Connectors for Microsoft Teams](~/how-to/connectors-creating.md)

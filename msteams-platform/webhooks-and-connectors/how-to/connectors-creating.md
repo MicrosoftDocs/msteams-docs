@@ -104,7 +104,7 @@ The following code provides a sample HTML to create Connector configuration page
 #### `GetSettings` response properties
 
 >[!NOTE]
->The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](https://docs.microsoft.com/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call are different when you invoke this method from a tab and differ from those documented in [js settings](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 The following table provides the parameters and the details:
 
