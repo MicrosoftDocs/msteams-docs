@@ -57,6 +57,8 @@ Use the Teams Toolkit to create your first project:
 
 1. When asked for the **Webpart Description**, press **Enter** to accept the default.
 
+1. When asked for the **Programming Language**, press **Enter** to accept the default.
+
 1. Select a workspace folder.  A folder will be created within your workspace folder for the project you are creating.
 
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
@@ -79,7 +81,7 @@ The CLI walks through some questions to create the project.  Each question will 
 1. Select **React** framework.
 1. Press **Enter** for the **Webpart Name**.
 1. Press **Enter** for the **Webpart Description**.
-1. Select **JavaScript** as the programming language.
+1. Press **Enter** for the **Programming Language**.
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
@@ -100,12 +102,12 @@ Once the Teams Toolkit configures your project, you have the components to build
 The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
 
 - The application icons are stored as PNG files in `color.png` and `outline.png`.
-- The application manifest for publishing to Teams App Portal is stored in `manifest.remote.json`.
+- The application manifest for publishing to Teams App Portal is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
 Since you selected an SPFx Webpart project, the following files are relevant to your UI:
 
-- The folder `SPFx/src/webparts/<your webpart name>` contains your SPFx webpart.
+- The folder `SPFx/src/webparts/<your webpart name>.ts` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
 
 For more information about SharePoint Webparts for Teams, [refer to the SharePoint documentation](https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview).
@@ -195,37 +197,11 @@ Ensure a SharePoint App Catalog exists in your deployment.  If one does not exis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-1. Once provisioning is complete, select **Deploy to the Cloud**.  This process takes some time.  You can monitor the process by watching the dialogs in the bottom right corner. After a few minutes, you will see a completion notice.
+1. Once provisioning is complete, select **Deploy to the cloud**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-deploy-complete.png" alt-text="Go to SharePoint App Catalog":::
+1. Currently, automated deployment is not available.  A dialog will pop up prompting you to build and deploy manually. Press **Build SharePoint Package**.
 
-  Press **Go to SharePoint App Catalog**.
-
-1. When prompted, sign in to your M365 tenant with credentials that can manage the SharePoint Site Collection.
-
-    > [!Tip]
-    > If you see a dialog showing "Need admin approval" such as the one below, you may be logged in with an account with insufficient permissions. Try the link `Have an admin account? Sign in with that account`. If you need to test your app in development, register for own developer tenant with the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-deploy-spfx-login.png" alt-text="Screenshot showing the SPFx app catalog requiring admin credentials.":::
-
-1. Select **Distribute apps for SharePoint**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint.":::
-
-1. Select the **FILES** tab.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
-
-1. Select the package you deployed in steps 2-4, then click **Deploy** in the ribbon.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-deploy.png" alt-text="Screenshot showing the SPFx app catalog and the deploy button circled in the ribbon.":::
-
-    When prompted, ensure **Make this solution available to all sites in the organization** is checked, then press **Deploy**.
-
-1. On the same page, select the package you deployed in steps 2-4, then click **Sync to Teams** in the ribbon.
-
-    > [!Note]
-    > The Sync to Teams process can take a couple of minutes.  You will see a message on the right-hand side of the browser indicating that the app has successfully synchronized to Teams.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
 
 # [Command Line](#tab/cli)
 
@@ -248,6 +224,12 @@ In your terminal window:
    teamsfx deploy
    ```
 
+1. When prompted, select **Build SharePoint Package**.
+
+---
+
+The SharePoint package is located in `SPFx/sharepoint/solution` within your project.  Upload the package to SharePoint:
+
 1. Log into the M365 Admin Console, then navigate to the SharePoint App Catalog.
 
    - Open `https://admin.microsoft.com/AdminPortal/Home`.
@@ -260,22 +242,24 @@ In your terminal window:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint.":::
 
+1. Select **Upload**.
+
+1. Press **Choose File**.
+
+1. Locate your `{project}.sppkg` file, located in the `SPFx/sharepoint/solution` folder within your project.  Press **Open**.
+
+1. Press **OK**.
+
+1. The SharePoint deployment process will automatically start.  Ensure **Make this solution available to all sites in the organization** is checked, then press **Deploy**.
+
 1. Select the **FILES** tab.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
 
-1. Select the package you deployed in steps 2-4, then click **Deploy** in the ribbon.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-deploy.png" alt-text="Screenshot showing the SPFx app catalog and the deploy button circled in the ribbon.":::
-
-    When prompted, ensure **Make this solution available to all sites in the organization** is checked, then press **Deploy**.
-
-1. On the same page, select the package you deployed in steps 2-4, then click **Sync to Teams** in the ribbon.
+1. select the package you deployed, then press **Sync to Teams** in the ribbon.
 
     > [!Note]
     > The Sync to Teams process can take a couple of minutes.  You will see a message on the right-hand side of the browser indicating that the app has successfully synchronized to Teams.
-
----
 
 Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press the triple-dot on the sidebar, then select **All apps**.  The app will be placed in the **Apps built for your org** category.  You can add the app from there.
 
