@@ -187,7 +187,7 @@ When you pressed F5, the Teams Toolkit:
 
 1. Registered your application with Azure Active Directory.
 1. Registered your application for "side loading" in Microsoft Teams.
-1. Started your application backend running locally using [Azure Function Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local?#start).
+1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Started your application front-end hosted locally.
 1. Started Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab` (the URL is registered inside the application manifest).
 

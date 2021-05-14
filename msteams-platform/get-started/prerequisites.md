@@ -39,11 +39,11 @@ You can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://m
 
 The following tools will be installed by the Visual Studio Code extension when they are needed.  If already installed, the installed version will be used instead:
 
-- [Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local)
+- [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
     Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure.  It is installed within the project directory (using the npm `devDependencies`).
 
-- [.NET SDK](https://docs.microsoft.com/dotnet/core/install/)
+- [.NET SDK](/dotnet/core/install/)
 
     The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.  If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed within the project directory (in the `.fx` directory).
 
@@ -77,7 +77,7 @@ Ensure you add the npm global cache to your PATH.  This is normally done as part
 You can use the TeamsFX CLI using the `teamsfx` command.  Verify that the command is working by running `teamsfx -h`.
 
 > [!CAUTION]
-> Before you can run TeamsFX in PowerShell terminals, you need to enable the "remote signed" execution policy for PowerShell.  For more information, refer to the [PowerShell documentation](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_signing).
+> Before you can run TeamsFX in PowerShell terminals, you need to enable the "remote signed" execution policy for PowerShell.  For more information, refer to the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 ---
 
@@ -90,7 +90,7 @@ Install appropriate browser tools for application development.  For instance, if
 If you wish to access data stored in Azure, or deploy a cloud-based backend for your Teams app within Azure, you can install tools to work with Azure.
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli)
+- [Azure CLI](/cli/azure/install-azure-cli)
 
 If you work with information in Microsoft Graph, you should learn about and bookmark the Microsoft Graph Explorer.  This is a web application that allows you to query Microsoft Graph outside of an application.
 
@@ -112,7 +112,7 @@ During development, you will need to load your app within Teams without distribu
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
 > [!NOTE]
-> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](https://docs.microsoft.com/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
+> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](../platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
 
 ## Get a free Teams developer tenant (optional)
 

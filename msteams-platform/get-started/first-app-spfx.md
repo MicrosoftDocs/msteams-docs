@@ -89,7 +89,7 @@ Once all the questions have been answered, your project will be created.
 
 ---
 
-- [Learn more about developing for SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/sharepoint-framework-overview)
+- [Learn more about developing for SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
 
 ## Take a tour of the source code
 
@@ -110,11 +110,11 @@ Since you selected an SPFx Webpart project, the following files are relevant to 
 - The folder `SPFx/src/webparts/<your webpart name>.ts` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
 
-For more information about SharePoint Webparts for Teams, [refer to the SharePoint documentation](https://docs.microsoft.com/sharepoint/dev/spfx/build-for-teams-overview).
+For more information about SharePoint Webparts for Teams, [refer to the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
 ## Run your app locally
 
-Teams Toolkit allows you to host your app locally and run it through the [SharePoint Framework Workbench](https://docs.microsoft.com/sharepoint/dev/spfx/debug-in-vscode).
+Teams Toolkit allows you to host your app locally and run it through the [SharePoint Framework Workbench](/sharepoint/dev/spfx/debug-in-vscode).
 
 ### (Optional) Adjust your browser launch settings
 
@@ -183,7 +183,7 @@ Your app should now be running.  You can do normal debugging activities as if th
 
 ## Deploy your app to SharePoint
 
-Ensure a SharePoint App Catalog exists in your deployment.  If one does not exist, [create one](https://docs.microsoft.com/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be fully created.
+Ensure a SharePoint App Catalog exists in your deployment.  If one does not exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be fully created.
 
 # [Visual Studio Code](#tab/vscode)
 

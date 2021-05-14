@@ -88,7 +88,7 @@ Once the Teams Toolkit configures your project, you have the components to build
 - The application manifest for publishing to Teams App Portal is stored in `Properties/manifest.json`.
 - A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
 
-Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](https://docs.microsoft.com/aspnet/core/blazor).
+Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` is the front-end application's entry point.
 - `TeamsFx.cs` and `JS/src/index.js` is used for initializing communications with the Teams host.

@@ -12,6 +12,8 @@
     href: get-started/prerequisites.md
   - name: Create a personal tab app (React)
     href: get-started/first-app-react.md
+  - name: Create a personal tab app (Blazor)
+    href: get-started/first-app-blazor.md
   - name: Create a personal tab app (SPFx)
     href: get-started/first-app-spfx.md
   - name: Create a conversational bot

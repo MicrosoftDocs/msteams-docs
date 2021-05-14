@@ -87,7 +87,7 @@ A message extension uses the [Bot Framework](https://docs.botframework.com) to a
 The bot code is stored in the `bot` directory.  The `bots/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
 
 > [!Tip]
-> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](https://docs.microsoft.com/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
 ## Run your app locally
 
@@ -123,7 +123,7 @@ When you pressed F5, the Teams Toolkit:
 
 1. Registered your application with Azure Active Directory.
 1. Registered your application for "side loading" in Microsoft Teams.
-1. Started your application backend running locally using [Azure Function Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local?#start).
+1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Started an ngrok tunnel so Teams can communicate with your app.
 1. Started Microsoft Teams with a command to instruct Teams to sideload the application.
 
