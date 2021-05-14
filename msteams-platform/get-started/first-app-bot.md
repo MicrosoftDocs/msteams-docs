@@ -3,7 +3,7 @@ title: Get started - Build a conversational bot for Microsoft Teams
 author: adrianhall
 description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
-ms.date: 04/27/2021
+ms.date: 05/14/2021
 ms.topic: quickstart
 ---
 
@@ -104,9 +104,12 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-1. Teams will be loaded in a web browser, and you will be prompted to sign in.  Sign in with your M365 account.
+1. Your web browser is started to run the application.  When prompted, select **Use the web app instead**.
 
-1. Press **Add** to add the app to your account.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
+
+1. You may be prompted to sign in.  If so, sign in with your M365 account.
+1. When prompted to install the app onto Teams, press **Add**.
 
 Once the app is loaded, you will be taken directly to a chat session with the bot.  You can type `login` to authenticate with the bot (showing an additional permissions request), and then say `hello`.  
 
@@ -136,62 +139,7 @@ To successfully run your app in Teams, you must have a Microsoft 365 development
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
 </details>
 
-## Deploy your app to Azure
-
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning), then the code that makes up your app is copied into the created cloud resources.
-
-# [Visual Studio Code](#tab/vscode)
-
-1. Open Visual Studio Code.
-2. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
-3. Select **Provision in the Cloud**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
-
-4. If required, select a subscription to use for the Azure resources.
-
-   > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
-
-   The provisioning process will create resources in the Azure cloud.  This will take some time.  You can monitor the progress by watching the dialogs in the bottom right corner.  After a few minutes, you will see the following notice:
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
-
-5. Once provisioning is complete, select **Deploy to the Cloud**.  As with provisioning, this process takes some time.  You can monitor the process by watching the dialogs in the bottom right corner. After a few minutes, you will see a completion notice.
-
-# [Command Line](#tab/cli)
-
-In your terminal window:
-
-1. Run `teamsfx provision`.
-
-   ``` bash
-   teamsfx provision
-   ```
-
-   You may be prompted to log in to your Azure subscription.  If required, you will be prompted to select an Azure subscription to use for the Azure resources.
-
-   > [!NOTE]
-   > There are always some Azure resources used for hosting your app.
-
-2. Run `teamsfx deploy`.
-
-   ``` bash
-   teamsfx deploy
-   ```
-
----
-
-> [!NOTE]
-> **What's the difference between Provision and Deploy?**
->
-> The **Provision** step will create resources in Azure and M365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources.  The **Deploy** step will copy the code for your app to the resources you created during the provision step.  It is common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it is separate from the deployment step.
-
-Once the provisioning and deployment steps are finished:
-
-1. From Visual Studio Code, open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**)
-2. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-3. Press the Play button to launch your app - now running remotely from Azure!
+[!INCLUDE (./azure-provisioning-instructions.md)]
 
 <!-- markdownlint-disable MD033 -->
 
