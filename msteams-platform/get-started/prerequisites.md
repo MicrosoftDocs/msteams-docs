@@ -142,18 +142,17 @@ You will need access to two accounts:
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code
-2. Open the Command Palette with **View*- > **Command Palette**.
-3. Select **Teams Toolkit: Focus on Command View**.  This will open the Teams Toolkit as a sidebar.  You can also select the Teams icon in the sidebar:
+2. Select the Teams icon in the sidebar:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
-4. Select **Sign In M365...**
+4. Select **Sign in to M365**
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
 
 5. The sign-in process will start using your normal web browser.  Complete the sign-in process for your M365 account.  You will be prompted when you can close the browser and return to Visual Studio Code.
 6. Return to the Teams Toolkit within Visual Studio Code.
-7. Select **Sign In Azure...**
+7. Select **Sign in to Azure**
 
     > [!TIP]
     > If you have the Azure Account extension installed and are using the same account, you can skip this step.  You will automatically use the same account as you are using in other extensions.

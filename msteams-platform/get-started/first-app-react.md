@@ -99,12 +99,12 @@ The Toolkit automatically creates scaffolding for you in the project directory b
 
 Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
 
-- `tabs/src/index.js` is the front-end application's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
-- `tabs/src/components/App.js` handles URL routing in your app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
-- `tabs/src/Tab.js` contains the code to implement the UI of your application.
-- `tabs/src/TabConfig.js` contains the code to implement the UI that configures your application.
+- `tabs/src/index.jsx` is the front-end application's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
+- `tabs/src/components/App.jsx` handles URL routing in your app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
+- `tabs/src/components/Tab.jsx` contains the code to implement the UI of your application.
+- `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your application.
 
-Several tabs are required by the Teams runtime, including the privacy notice, terms of use, and configuration tabs.  The code for the privacy notice and terms of use are located in the `about` directory.
+Several tabs are required by the Teams runtime, including the privacy notice, terms of use, and configuration tabs.  The code for the privacy notice and terms of use are located in the same directory.
 
 When you add cloud functionality, additional directories are added to the project.  Most notably, the `api` directory holds the code to any Azure Functions you write.
 
@@ -166,7 +166,11 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Teams will be loaded in a web browser, and you will be prompted to sign in.  Sign in with your M365 account.
+1. Your web browser is started to run the application.  When prompted, select **Use the web app instead**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
+
+1. You may be prompted to sign in.  If so, sign in with your M365 account.
 1. When prompted to install the app onto Teams, press **Add**.
 
 Your app will now be displayed:
@@ -204,12 +208,12 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
-2. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
-3. Select **Provision in the Cloud**.
+1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
+1. Select **Provision in the Cloud**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
 
-4. If required, select a subscription to use for the Azure resources.
+1. If required, select a subscription to use for the Azure resources.
 
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
@@ -218,7 +222,11 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-5. Once provisioning is complete, select **Deploy to the Cloud**.  As with provisioning, this process takes some time.  You can monitor the process by watching the dialogs in the bottom right corner. After a few minutes, you will see a completion notice.
+1. A dialog warns you that costs may be incurred when running resources in Azure.  Press **Provision**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Screenshot of the provisioning dialog.":::
+
+1. Once provisioning is complete, select **Deploy to the Cloud**.  As with provisioning, this process takes some time.  You can monitor the process by watching the dialogs in the bottom right corner. After a few minutes, you will see a completion notice.
 
 # [Command Line](#tab/cli)
 
