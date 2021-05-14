@@ -3,7 +3,7 @@ title: Get started - Prerequisites
 author: adrianhall
 description: Learn how to get started with Microsoft Teams app development and set up your environment
 ms.author: adhal
-ms.date: 05/05/2021
+ms.date: 05/14/2021
 ms.topic: quickstart
 ---
 # Prerequisites
@@ -31,7 +31,7 @@ The Teams Toolkit provides tools to provision and deploy cloud resources for you
 To install the Teams Toolkit Extension:
 
 - Open Visual Studio Code.
-- Bring up the Extensions view (**Ctrl+Shift+X*- / **⌘⇧-X*- or **View > Extensions**).
+- Bring up the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 - In the search box, enter _Teams Toolkit_.
 - Click on the green install button next to the Teams Toolkit.
 
@@ -69,7 +69,7 @@ The extension will be downloaded.  Close Visual Studio 2019 to install the exten
 To install the TeamsFX CLI, use the `npm` package manager:
 
 ``` bash
-npm install -g teamsfx-cli
+npm install -g @microsoft/teamsfx-cli
 ```
 
 Ensure you add the npm global cache to your PATH.  This is normally done as part of the NodeJS installer.  
