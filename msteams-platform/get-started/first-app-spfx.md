@@ -270,5 +270,6 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 Learn about other methods for creating tab apps:
 
 - [Create a Teams app with React](first-app-react.md).
+- [Create a Teams app with Blazor](first-app-blazor.md).
 - [Create a conversational bot app](first-app-bot.md).
 - [Create a messaging extension](first-message-extension.md).

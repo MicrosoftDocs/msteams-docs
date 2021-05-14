@@ -167,5 +167,6 @@ Deployment involves provisioning resources on an active Azure subscription and d
 Learn about other methods for creating tab apps:
 
 - [Create a Teams app with React](first-app-react.md).
+- [Create a Teams app with Blazor](first-app-blazor.md).
 - [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required).
 - [Create a conversation bot](first-app-bot.md)

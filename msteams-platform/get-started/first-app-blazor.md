@@ -26,38 +26,53 @@ Use the Teams Toolkit to create your first project:
 
 # [Visual Studio 2019](#tab/vs)
 
-1. Open Visual Studio 2019
+1. Open Visual Studio 2019.
+
 1. Select **Create a new project**.
+
 1. Select **Microsoft Teams App**, then press **Next**.  To help you find the template, use the project type **Microsoft Teams**.
+
 1. Give the project and solution a good name, then press **Next**.
+
 1. Provide the application name and company name, then press **Create**.  The application name and company name are displayed to your end users.
+
 1. Your Teams app will be created within a few seconds.  Once the project is created, set up single sign-on with M365:
+
    - Select **Project** > **TeamsFx** > **Configure for SSO...**.
    - When prompted, sign in to your M365 administrator account.
 
 # [Command Line](#tab/cli)
 
-> [!WARNING]
-> Work in progress
-
 1. Open a Terminal and select the directory where you wish to create the project.
+
+1. Run `dotnet new -i` to install the template from NuGet:
+
+   ``` bash
+   dotnet new -i Microsoft.TeamsApp.Blazor
+   ```
+
+   You only need to do this the first time or when updating the template.
+
 1. Create a directory:
 
    ``` bash
    mkdir hello world
    ```
 
-1. Run `dotnet new` to create the project:
+1. Run `dotnet new` to create a new project:
 
    ``` bash
-   dotnet new teamsblazorserver
+   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
    ```
 
+1. 
 1. Once scaffolded, configure the project for Teams deployment:
 
    ``` bash
    teamsfx init
    ```
+
+You can now open the solution in Visual Studio for debugging.
 
 ---
 
