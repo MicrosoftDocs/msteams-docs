@@ -12,14 +12,14 @@ Microsoft Teams Together Mode provides an immersive and engaging meeting environ
 
 Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
->[!NOTE]
+> [!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
 
 The following image gives an overview to create a scene only app:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
->[!NOTE]
+> [!NOTE]
 > * A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
 > * Multiple scenes in a single app package appear as a flat list of scenes to users.
 
@@ -34,7 +34,7 @@ You must have a basic understanding of the following to use Together Mode:
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to **Upload a custom app** and has granted permission to select all filters as part of App Setup and Meeting policies respectively.
 
-## Best Practices
+## Best practices
 
 Prior to building a scene, there are few key points as follows to consider in order to have a seamless scene building experience:
 
@@ -43,7 +43,7 @@ Prior to building a scene, there are few key points as follows to consider in or
 
     > [!NOTE]
     > The resolution is an even number. This is a requirement for scenes to be lit up successfully.
- 
+
 * The maximum scene size is 10 MB.
 * The maximum size of each image is 5 MB.
 
@@ -134,14 +134,14 @@ The seat dimensions become the canvas for rendering the participant video stream
     ![Assign spot](../assets/images/apps-in-meetings/assign-spot.png)
 
 1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
- 
+
     >[!NOTE]
     > To delete a scene you created, select **Delete scene** on the top bar.
 
 1. In the **View in Teams** dialog box, select **Preview in Teams**. Microsoft Teams is opened and an add dialog box is shown. Select **Add** and after adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
- 
+
     ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
-    
+
     >[!NOTE]
     > * Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scenes. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
@@ -152,18 +152,18 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
-    > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package, created, automatically can be found in the **Apps** section in the Teams Developer Center. 
+    > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package created automatically can be found in the **Apps** section in the Teams Developer Center.
 
 1. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
-    
+
     >[!NOTE]
-    > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample JSON section of this document.
+    > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample scene.json section of this document.
 
 A more complex scene that leverages the z-axis is demonstrated in the step-by-step getting started sample.
 
 ## Sample scene.json
 
-Scene.json along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which will be segmented so that only the foreground is rendered.
+Scene.json along with the images indicates the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines which sprite should be rendered on top of which. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed which is segmented so that only the foreground is rendered.
 
 Following is the scene.json sample:
 
@@ -232,7 +232,7 @@ Following is the scene.json sample:
 
 Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically for each seat when it is created.
 
->[!NOTE]
+> [!NOTE]
 > Seating order number corresponds to the order of people joining the call.
 
 The seating order can be altered according to the preferred order.
@@ -263,7 +263,7 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 1. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
     >[!NOTE]
-    > At any point in time, only one scene can be used homoegenously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
+    > At any point in time, only one scene can be used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes it for all. This is different from being in Together Mode. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
