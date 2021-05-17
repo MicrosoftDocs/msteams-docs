@@ -201,7 +201,7 @@ To successfully run your app in Teams, you must have a Microsoft 365 development
 
 </details>
 
-[!INCLUDE (~/includes/get-started/azure-provisioning-instructions.md)]
+[!INCLUDE [Provsion and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
 
 <!-- markdownlint-disable MD033 -->
 <details>
