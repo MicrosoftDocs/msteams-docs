@@ -342,6 +342,12 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 :::column-end:::
 :::row-end:::
 
+## Group Connect &#9734;
+
+Group Connect is a Microsoft Teams app that helps organization members discover employee groups and find information relevant to employee groups. The app comes built-in with rich capabilities for organization leaders to communicate with their employees regarding groups, events, and resources. The Group Connect app also matches group members with each other at their desired frequency to encourage networking and cohesion within a group. For more information on how you can leverage the Group Connect app to help employee groups foster within your organization, see the app on GitHub.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupconnect)
+
 ## Grow Your Skills
 
 The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
