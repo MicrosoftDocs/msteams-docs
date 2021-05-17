@@ -228,7 +228,7 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
-### Generate a deep link to a chat
+### Generate a deep link to a call
 
 | Deep link | Format | Example |
 |-----------|--------|---------|
