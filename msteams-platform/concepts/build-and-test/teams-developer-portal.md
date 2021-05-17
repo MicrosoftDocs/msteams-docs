@@ -64,10 +64,9 @@ Use the variable names instead of actual values in the property fields.
 **To enter a variable name instead of a hard coded property value**
 
 1. Enter '{{variable}}' in any field in the Developer Portal configuration page. 
-
   > [!NOTE]
   > Enter '{{'. A dropdown with all the variables you've created for the chosen environment along with the global variables appear.
-
+  >
 1. When your app package is downloaded or published, select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ## Plans and Pricing
