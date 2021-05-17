@@ -56,7 +56,7 @@ Use the Teams Toolkit to create your first project:
 1. Create a directory:
 
    ``` bash
-   mkdir hello world
+   mkdir helloworld
    ```
 
 1. Run `dotnet new` to create a new project:
@@ -65,7 +65,6 @@ Use the Teams Toolkit to create your first project:
    dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
    ```
 
-1. 
 1. Once scaffolded, configure the project for Teams deployment:
 
    ``` bash
