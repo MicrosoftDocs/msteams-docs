@@ -115,4 +115,4 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/create-personal-tab-dotnet-core-mvc.md)
+> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)

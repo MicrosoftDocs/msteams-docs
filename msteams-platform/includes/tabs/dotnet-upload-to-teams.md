@@ -1,4 +1,4 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab to Teams
 
 >[!NOTE]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.

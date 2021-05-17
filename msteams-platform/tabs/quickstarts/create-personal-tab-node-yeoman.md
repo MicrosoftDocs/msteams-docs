@@ -132,4 +132,4 @@ In the navbar located at the far-left of the Teams client, select the `...` menu
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a personal tab using ASP.NETCore](~/tabs/create-personal-tab-dotnet-core.md)
+> [Create a personal tab using ASP.NETCore](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)

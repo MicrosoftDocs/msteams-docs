@@ -111,4 +111,4 @@ Within *Tab.cshtml* the application presents the user with two option buttons fo
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/create-channel-group-tab-dotnet-core-mvc.md)
+> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)
