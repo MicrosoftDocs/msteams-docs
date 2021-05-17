@@ -21,7 +21,7 @@ Stage View is a giant, full screen UI component that you can invoke to surface y
 
 ## Understand how the Stage View works
 
-When a user sends an URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user selects **View** in the card, and pins the content as a tab directly from the Stage View.
+When a user sends a URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user selects **View** in the card, and pins the content as a tab directly from the Stage View.
 
 The following image explains how Stage View works:
 
@@ -111,6 +111,7 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[cont
 
 ### Examples
 
+When a user enters a URL, it is unfurled into an Adaptive card.
 Following are the deep link examples to invoke the Stage View:
 
 **Example 1**
