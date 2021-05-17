@@ -33,4 +33,4 @@ Teams tabs must adhere to the following requirements:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/create-personal-tab-node-yeoman.md)
+> [Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/quickstarts/create-personal-tab-node-yeoman.md)
