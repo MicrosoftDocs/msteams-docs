@@ -12,7 +12,7 @@ ms.author: anclear
 
 To install the Microsoft Teams bot in a team or group chat, add the `teams` or `groupchat` scope to your bot. This allows all members of the conversation to interact with your bot. After the bot is installed, it has access to metadata about the conversation, such as the list of conversation members. Also, when it is installed in a team, the bot has access to details about that team and the full list of channels.
 
-Using resource-specific consent (RSC), bots can receive all channel and group chat conversations without being @mentioned.
+Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned.
 
 ## Design guidelines
 
@@ -27,6 +27,9 @@ When your bot is installed in a team, you must create a new conversation thread 
 Next, you can retrieve mentions using the `entities` object and add mentions to your messages using the `Mention` object.
 
 ## Work with mentions
+
+> [!NOTE]
+> Using RSC permissions, bots can receive all channel messages in a team without being @ mentioned. This feature is now available in developer preview.
 
 Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends.
 

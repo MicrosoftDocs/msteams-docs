@@ -16,9 +16,7 @@ Using resource-specific consent (RSC) permissions, a bot can now receive a messa
 RSC enables team owners to consent to more permissions for apps in Teams. You can specify permissions that apps require in the application manifest. Users review and consent to permissions when you enable bots to receive all channel messages.
 
 > [!NOTE]
-> * RSC permissions are now extended to bot APIs. Earlier, RSC was only applicable to Graph calls for team resources, using the application permissions context. For more information, see [resource-specific permissions](~/graph-api/rsc/resource-specific-consent.md).
-> 
-> * The RSC support for Graph is provided to all users, and not just Admins to grant permission to apps in groups.
+> Only team owners can add and consent to RSC permissions.
 
 ## Enable bots to receive all channel messages
 
@@ -29,20 +27,12 @@ The `ChannelMessage.Read.Group` RSC permission is now extended to bots. Graph ap
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
-
-    ![Teams channel page](~/assets/images/bots/teamschanneldetails.png)
-
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
 1. Select the app package.
 1. Select **Open**. The app details pop-up appears.
-
-    ![Permissions for app installation](~/assets/images/bots/permissions.png)
-
 1. Select **Add** to add the bot to your selected team.
 1. Select a channel and enter a message in the channel for your bot.
-
-    ![Message to bot](~/assets/images/bots/messagetobot.png)
 
 The bot receives the message without being @mentioned.
 
