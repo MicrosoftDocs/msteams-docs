@@ -86,13 +86,13 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
-In the *Apps* section:
+In the *App details* section:
 
-- *Identification*: select ***Generate*** to replace the placeholder id with the required GUID for your tab.
+- *Identification*: select **Generate** to replace the placeholder id with the required GUID for your tab.
 
 - *Developer information*: update the **Website URL** field with your *ngrok* HTTPS URL.
 
-- *App URLs*: update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* paths at the end of the URLs.
+- *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 

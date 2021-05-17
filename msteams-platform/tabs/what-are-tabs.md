@@ -70,4 +70,4 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Tab requirements](~/tabs/tab-requirements.md)
+> [Tab requirements](~/tabs/how-to/tab-requirements.md)
