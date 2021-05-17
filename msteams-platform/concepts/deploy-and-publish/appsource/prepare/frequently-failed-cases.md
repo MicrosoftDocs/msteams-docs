@@ -14,7 +14,7 @@ keywords: app submission tips frequently failed cases validation guidelines
 This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. For more information, see [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 
 >[!NOTE]
->**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](https://docs.microsoft.com/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
+>**[Section 1140](/legal/marketplace/certification-policies#1140-teams)** is specific to Microsoft Teams and **[sub-section 1140.4](/legal/marketplace/certification-policies#11404-functionality)** addresses functionality requirements for Teams apps.
 
 ## Validation guidelines & most failed test cases
 

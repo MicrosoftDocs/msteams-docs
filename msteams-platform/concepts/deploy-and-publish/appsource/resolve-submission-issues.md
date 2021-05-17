@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 # Resolve issues if your Microsoft Teams store submission fails
 
-Apps published to the Microsoft Teams store must meet the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [commercial marketplace policies](https://docs.microsoft.com/legal/marketplace/certification-policies).
+Apps published to the Microsoft Teams store must meet the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [commercial marketplace policies](/legal/marketplace/certification-policies).
 
 If your store submission fails, Microsoft provides a concierge validation service to help get your app compliant and published.
 
@@ -65,7 +65,7 @@ If your store submission has no issues, your app will publish within 1-2 busines
 Doing the following can lead to a successful submission:
 
 1. Develop your app based on the [Teams design guidelines](~/concepts/design/design-teams-app-overview.md).
-1. Make sure your app adheres to the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Microsoft commercial marketplace certification policies](https://docs.microsoft.com/legal/marketplace/certification-policies).
+1. Make sure your app adheres to the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) and [Microsoft commercial marketplace certification policies](/legal/marketplace/certification-policies).
 1. Test your app package with the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 1. [Prepare your Teams store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md).
 
