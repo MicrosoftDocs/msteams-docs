@@ -156,7 +156,7 @@ The following table provides the user types and what features each user can acce
 
 ## See also
 
-- [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+- [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 
 - [Bot](../bots/what-are-bots.md)
 

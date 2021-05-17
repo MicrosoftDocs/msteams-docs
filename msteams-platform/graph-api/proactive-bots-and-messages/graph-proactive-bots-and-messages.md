@@ -21,8 +21,6 @@ Proactive messages are initiated by bots to start conversations with a user. The
 |Ad-hoc proactive message| The bot interjects a message without interrupting the conversation flow.|
 |Dialog-based proactive message | The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.|
 
-See, [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
-
 ## Proactive app installation in Teams
 
 Before your bot can proactively message a user, it must be installed either as a personal app or in a team where the user is a member. At times, you need to proactively message users that have not installed or previously interacted with your app. For example, the need to message vital information to everyone in your organization. For such scenarios, you can use the Microsoft Graph API to proactively install your bot for your users.
@@ -183,10 +181,11 @@ GET https://graph.microsoft.com/beta/users/{user-id}/chats?$filter=installedApps
 
 Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team and has received all the user information.
 
-## Related topic for Teams administrators
->
-> [!div class="nextstepaction"]
-> [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+## See also
+
+- [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+
+- [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
 ## View additional code samples
 >

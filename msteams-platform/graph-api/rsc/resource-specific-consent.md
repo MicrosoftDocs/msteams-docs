@@ -60,7 +60,7 @@ To enable or disable group owner consent using PowerShell, follow the steps outl
 
 ## Register your app with Microsoft identity platform via the Azure AD portal
 
-The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Microsoft Graph APIs. *See* [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
+The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Microsoft Graph APIs. For more information, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
 >Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
@@ -90,9 +90,9 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
 
 > [!div class="checklist"]
 >
-> - **id**  — your Azure AD app id. *See* [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **id**  — your Azure AD app id. For more information, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 > - **resource**  — any string. This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.
-> - **application permissions** — RSC permissions for  your app. *See* [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
+> - **application permissions** — RSC permissions for  your app. For more information, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
 >
 >[!IMPORTANT]
@@ -128,7 +128,7 @@ If your Teams admin allows custom app uploads, you can [sideload your app](~/con
 ## Check your app for added RSC permissions
 
 >[!IMPORTANT]
->The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. *See* [Microsoft Teams API overview](/graph/teams-concept-overview).
+>The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as creating a channel or deleting a tab. You should review the team owner's intent for your use case prior to making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
 Once the app has been installed to a team, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in a team:
 
@@ -151,14 +151,10 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 
 
 
-## Test resource-specific consent
+## See also
  
-> [!div class="nextstepaction"]
-> [**Test resource-specific consent permissions in Teams**](test-resource-specific-consent.md)
+- [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
  
-## Related topic for Teams administrators
+- [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
 
-> [!div class="nextstepaction"]
-> [**Resource-specific consent in Microsoft Teams for admins**](/MicrosoftTeams/resource-specific-consent)
-> 
 
