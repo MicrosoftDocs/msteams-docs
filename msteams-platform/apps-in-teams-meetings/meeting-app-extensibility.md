@@ -9,14 +9,11 @@ ms.topic: conceptual
 
 Teams’ meeting app extensibility is based on the following concepts:
 
-✔ Meeting lifecycle has stages such as before, during, and after meeting time frame.  
-✔ Participant roles in a meeting such as meeting organizer, presenter, or attendee.  
-✔ User types in a meeting such as in-tenant, guest, federated, or anonymous Teams user.
+✔ Meeting lifecycle has stages such as before, during, and after the meeting.  
+✔ There are three distinct roles in a meeting, organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
+✔ There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting, in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
 This article covers information about the meeting lifecycle and how to integrate tabs, bots, and messaging extensions in your meeting. It also enables you to identify participant roles and also use different user types to perform tasks.
-
-> [!NOTE]
-> To work with the meeting app extensibility features, you must have the appropriate permissions.
 
 ## Meeting lifecycle
 
@@ -24,14 +21,13 @@ Meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app expe
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow team members to access services and content in a specific space within a channel or chat. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and choosing the app that they want to install as a tab.
+Tabs allow team members to access services and content in a specific space within a meeting. This lets the team work directly with tabs and have conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and choosing the app that they want to install as a tab.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow](../tabs/how-to/authentication/auth-aad-sso.md) for tabs.
 
 > [!NOTE]
-> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel are currently not available on mobile.
-> * Apps are supported only in private scheduled meetings.
+> Apps are supported only in private scheduled meetings.
 
 #### Pre-meeting app experience
 
@@ -54,7 +50,7 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 #### In-meeting app experience
 
-With the in-meeting app experience, you can engage participants during the meeting by using apps or taking polls. Meeting apps are hosted in the top upper bar of the chat window as an in-meeting tab. When users add a tab to a meeting through the tab gallery, apps that are in-meeting experiences are displayed. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
+With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
 **To use tabs during a meeting**
 
@@ -65,14 +61,12 @@ With the in-meeting app experience, you can engage participants during the meeti
 
     > [!NOTE]
     > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
-    > * If the result of a survey or poll is exported, you are notified that the results successfully downloaded.
-    > * Your app manifest specifies that your tab is [optimized for side panel](enable-and-configure-your-app-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+    > * If the in-meeting dialog box is rendered successfully, you are notified that the results successfully downloaded.
+    > * Your app manifest specifies the places where you want them to appear. The context field is used for this purpose. It can also be part of a share-tray experience, subject to specified design guidelines.
 
-The following images display the app as an in-meeting dialog box and as a separate side panel:
+1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use. An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 
-![In-meeting experience](../assets/images/apps-in-meetings/in-meeting-experience.png)
-
-![In-meeting dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+    ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
 #### Post-meeting app experience
 
@@ -87,7 +81,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-For bot implementation, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
+Bots enabled in groupchat scope start functioning in meetings. For bot implementation, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -105,7 +99,7 @@ Default participant settings are determined by an organization's IT administrato
 * Presenter: Presenters have the same capabilities as organizer. However, a presenter cannot remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
 * Attendee: An attendee is a user who has been invited to attend a meeting but who is not authorized to act as a presenter. Attendees can interact with other meeting members but cannot manage any of the meeting settings or share content.
 
-Only an organizer or presenter can add, remove, or uninstall apps. Only organizer or presenter can create polls in a meeting.
+Only an organizer or presenter can add, remove, or uninstall apps.
 
 For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
