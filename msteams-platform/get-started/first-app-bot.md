@@ -139,7 +139,7 @@ To successfully run your app in Teams, you must have a Microsoft 365 development
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
 </details>
 
-[!INCLUDE (~/includes/get-started/azure-provisioning-instructions.md)]
+[!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
 
 <!-- markdownlint-disable MD033 -->
 
