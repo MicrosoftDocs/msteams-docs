@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 
 
-# Build Tabs with Adaptive Cards
+# Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
 > This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
