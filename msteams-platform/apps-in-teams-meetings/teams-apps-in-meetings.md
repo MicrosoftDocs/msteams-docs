@@ -12,19 +12,19 @@ keywords: teams apps meetings user participant role api
 
 Meetings enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
-Teams end-users can access apps during meetings using the tab gallery, for example:
+The users can access apps during meetings using the tab gallery, for example:
 
-* Pre-stage a Kanban board
-* Launch an in-meeting actionable dialog
-* Create a post-meeting survey
+* Pre-stage a Kanban board.
+* Launch an in-meeting actionable dialog.
+* Create a post-meeting survey.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and Together Mode in Teams.
 
-You can enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes the various stages of a meeting lifecycle where you can integrate tabs, bots, and messaging extensions. With meetings extensibility APIs, you can identify different participant roles, identify user types, get meeting events, generate in-meeting dialogs, and more, which transform the meeting experience.
+You can enhance your meeting experience by using the meeting extensibility feature, which enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. With meetings extensibility APIs, you can identify different participant roles and user types, get meeting events, generate in-meeting dialogs, and so on.
 
-To customize Teams with apps for meetings and to achieve different tasks, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
+To customize Teams with apps for meetings, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
 
 The new Together Mode feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.
 

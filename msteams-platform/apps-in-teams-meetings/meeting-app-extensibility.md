@@ -10,8 +10,8 @@ ms.topic: conceptual
 Teams’ meeting app extensibility is based on the following concepts:
 
 ✔ Meeting lifecycle has stages such as before, during, and after the meeting.  
-✔ There are three distinct roles in a meeting, organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
-✔ There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting, in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
+✔ There are three distinct roles in a meeting; organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
+✔ There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting; in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
 This article covers information about the meeting lifecycle and how to integrate tabs, bots, and messaging extensions in your meeting. It also enables you to identify participant roles and also use different user types to perform tasks.
 
