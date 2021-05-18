@@ -46,7 +46,7 @@ An app is made up of one or more Teams capabilities and user interaction points.
 | **App capabilities**| **Interaction points** | **Recommended tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
 | Tabs | Spaces where users can interact with embedded web content in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Teams JavaScript client SDK | General web technologies (HTML, CSS, and JavaScript) or React.js |
-| Bots | Chatbots that interact with users in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Franework SDK | Node.js, C#, or Python | 
+| Bots | Chatbots that interact with users in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python | 
 | Messaging extensions | Shortcuts for inserting app content or acting on a message without navigating away from the conversation | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python |
 
 ### Teams doesn't host your app
