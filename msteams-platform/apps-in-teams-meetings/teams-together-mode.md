@@ -6,24 +6,22 @@ ms.topic: conceptual
 
 # Together Mode in Teams
 
-Microsoft Teams Together Mode provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined spots designed and fixed by the scene creator.
+Microsoft Teams Together Mode provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined seats designed and fixed by the scene creator.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
+A scene in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
 > [!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
 
-The following image gives an overview to create a scene only app:
+The following process gives an overview to create a scene only app:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
 > [!NOTE]
-> * A scene only app is still an app in Microsoft Teams. The app package creation step is abstracted out since the Scene studio handles the app package creation in the background.
+> * A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background.
 > * Multiple scenes in a single app package appear as a flat list of scenes to users.
-
-There are prerequisites that you must complete before using the Together Mode.
 
 ## Prerequisites
 
@@ -32,59 +30,55 @@ You must have a basic understanding of the following to use Together Mode:
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams Developer Portal and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to **Upload a custom app** and has granted permission to select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the Administrator has granted permission to **Upload a custom app** and to select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices
 
-Prior to building a scene, there are few key points as follows to consider in order to have a seamless scene building experience:
+Prior to building a scene, consider the following to have a seamless scene building experience:
 
-* Ensure all images are in PNG format.
-* The final package with all the images put together must not exceed 1920x1080 resolution.
+* Ensure that all images are in PNG format.
+* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution.
 
     > [!NOTE]
     > The resolution is an even number. This is a requirement for scenes to be lit up successfully.
 
-* The maximum scene size is 10 MB.
-* The maximum size of each image is 5 MB.
+* Ensure that the maximum scene size is 10 MB.
+* Ensure that the maximum size of each image is 5 MB.
 
     > [!NOTE]
     > * A scene is a collection of multiple images. The limit is for each individual image.
     > * The individual image resolution must also be an even number.
   
-* Ensure that the image is marked **Transparent** if it is a transparent image. This checkbox is available on the right panel when an image is selected.
+* Ensure that the **Transparent** checkbox is selected if the image is transparent. This checkbox is available on the right panel when an image is selected.
 
     > [!NOTE]
     > Overlapping images need to be marked as **Transparent** to indicate that they are overlapping images in the scene.
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build the scenes. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+Microsoft has a Scene studio that allows you to build scenes. It is available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
->[!NOTE]
-> * This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+> [!NOTE]
+> This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following:
 
 * Seats reserved for meeting organizer and meeting presenters.
 
-    >[!NOTE]
+    > [!NOTE]
     > Presenter does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-* Seat and image for each participant. Each seat and image has an adjustable width and height.
+* Seat and image for each participant with an adjustable width and height.
 
-    >[!NOTE]
+    > [!NOTE]
     > PNG is the only supported format.
 
-* The xyz coordinates of all the seats and images.
-* A collection of images that are camouflaged as one image.
+* XYZ coordinates of all the seats and images.
+* Collection of images that are camouflaged as one image.
 
-The following image shows each seat represented as an avatar for building scenes:
+The seat dimensions become the canvas for rendering the participant video stream. The following image shows each seat represented as an avatar for building scenes:
 
 ![Scene studio](../assets/images/apps-in-meetings/scene-design-studio.png)
-
-The seat dimensions become the canvas for rendering the participant video stream.
-
-![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
 **To build a scene using the Scene studio**
 
@@ -155,6 +149,8 @@ The seat dimensions become the canvas for rendering the participant video stream
     > This step requires the app package that is different from the scene package, described in the next step, for the scene that was just designed. The app package created automatically can be found in the **Apps** section in the Teams Developer Center.
 
 1. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded.
+
+    ![Build a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
     >[!NOTE]
     > Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample scene.json section of this document.
