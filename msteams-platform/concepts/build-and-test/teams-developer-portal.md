@@ -79,7 +79,7 @@ Use the variable names instead of actual values in the property fields.
 1. Configure the plans and pricing for your app in the [Partner Center's Microsoft commercial marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). 
 1. Link your offer through the manifest.
 1. Distribute and publish your app to the Teams store. 
-    For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+    For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/add-saas-offer.md).
 
 > [!NOTE]
 > It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
