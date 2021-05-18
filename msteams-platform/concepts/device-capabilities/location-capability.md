@@ -1,7 +1,10 @@
 ---
 title: Integrate location capabilities
+author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to leverage location capabilities
 keywords:  location map capabilities native device permissions 
+ms.topic: conceptual
+localization_priority: Normal
 ms.author: lajanuar
 ---
 
@@ -49,8 +52,7 @@ You must use the following set of APIs to enable your device's location capabili
 
 > [!NOTE]
 
-> The `getLocation()` API comes along with following [input configurations](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` and `showMap`. <br/> If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/>  If the value is *false*, then the users cannot change their current location.<br/> If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*. 
-
+> The `getLocation()` API comes along with following [input configurations](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/locationprops?view=msteams-client-js-latest&preserve-view=true), `allowChooseLocation` and `showMap`. <br/> If the value of `allowChooseLocation` is *true*, then the users can choose any location of their choice.<br/>  If the value is *false*, then the users cannot change their current location.<br/> If the value of `showMap` is *false*, the current location is fetched without displaying the map. `showMap` is ignored if `allowChooseLocation` is set to *true*.
 
 **Web app experience for location capabilities**
 ![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
@@ -98,8 +100,5 @@ microsoftTeams.location.showLocation(location, (err: microsoftTeams.SdkError, re
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)

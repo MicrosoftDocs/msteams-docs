@@ -2,6 +2,7 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
+localization_priority: Normal
 ms.topic: overview
 ---
 
@@ -50,8 +51,6 @@ The details section of the Manifest Editor defines the high-level description of
 The capabilities section of the Manifest Editor is where the app's capabilities are defined and where details of each of those capabilities are listed.
 
 > [!NOTE]
-> The app customization feature is currently available in developer preview only.
-> 
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 

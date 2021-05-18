@@ -3,6 +3,7 @@ title: Build apps for the Microsoft Teams platform
 author: heath-hamilton
 description: Get an overview of how developers can extend Microsoft Teams features with custom apps.
 ms.topic: overview
+localization_priority: Normal
 ms.author: lajanuar
 ms.date: 09/22/2020
 ---
@@ -36,7 +37,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Bots
 
-**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, etc.). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
 :::image type="content" source="assets/images/overview-bots.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
@@ -153,4 +154,4 @@ Looking for app development inspiration? Browse our list of real-world scenarios
 * [Design your Teams app](concepts/design/design-teams-app-overview.md)
 * [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Publish your Teams app](concepts/deploy-and-publish/overview.md)
+* [Distribute your Teams app](concepts/deploy-and-publish/apps-publish-overview.md)

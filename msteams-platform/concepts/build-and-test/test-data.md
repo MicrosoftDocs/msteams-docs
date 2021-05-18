@@ -2,13 +2,14 @@
 title: Add test data to your Microsoft 365 test tenant
 description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps
 ms.topic: how-to
+localization_priority: Normal
 keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
 
 # Add test data to your Microsoft 365 test tenant
 
-With a Microsoft 365 developer subscription, you can use your Microsoft Teams app with test teams, channels, and users.
+You can test your Microsoft Teams app with sample data with a Microsoft 365 developer subscription.
 
 ## Prerequisites
 
@@ -19,13 +20,13 @@ With a Microsoft 365 developer subscription, you can use your Microsoft Teams ap
 5. [Install the Azure AD PowerShell module](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0#installing-the-azure-ad-module&preserve-view=true).
 
 > [!NOTE]
-> For any tenant that you use, you must get the global administrator permissions to run the scripts.
+> You must have global admin permissions in the tenant to run the scripts.
 
-## Enable custom app sideloading
+## Allow users to upload apps
 
-Enabling custom app sideloading is optional. By default, only global admins or Teams service admins can upload custom apps into the tenant app catalog. You can also allow users to upload custom apps to Teams. For more information, see [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
+By default, only global admins or Teams service admins can upload (sideload) apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
 
-## Create teams and channels
+## Create teams and channels for testing
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
@@ -242,12 +243,6 @@ Enabling custom app sideloading is optional. By default, only global admins or T
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Debug your tab](~/tabs/how-to/developer-tools.md)
- 
-> [!div class="nextstepaction"]
-> [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-> [!div class="nextstepaction"]
-> [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
-
+* [Debug your tab](~/tabs/how-to/developer-tools.md) 
+* [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)

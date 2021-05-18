@@ -2,6 +2,8 @@
 title: Notification-only bots
 description: Describes what notification-only bots are in Microsoft Teams
 keywords: teams bots notification
+ms.topic: conceptual
+localization_priority: Normal
 ms.date: 01/29/2020
 ---
 # Notification-only bots in Microsoft Teams

@@ -2,10 +2,14 @@
 title: App submission tips and frequently failed cases
 description: describes tips for a successful Teams store submission and common reasons submissions fail
 ms.topic: reference
+localization_priority: Normal
 ms.author: lajanuar
 keywords: app submission tips frequently failed cases validation guidelines
 ---
 # Tips for a successful Microsoft Teams app submission
+
+>[!NOTE]
+>This page will be deprecated by May 2021. For more information on successfully publishing your app, see the [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 This article addresses common reasons submitted apps fail validation. While it's not intended to be an exhaustive list of all potential issues with your app, following this guide will increase the likelihood that your app submission will pass the first time. See [Commercial marketplace certification policies](/legal/marketplace/certification-policies) for an extensive list of validation policies.
 

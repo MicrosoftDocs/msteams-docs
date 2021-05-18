@@ -2,6 +2,7 @@
 title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 ms.topic: how-to
+localization_priority: Normal
 keywords: teams authentication SSO AAD single sign-on api
 ---
 
@@ -61,7 +62,6 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [recommended workaround](#apps-that-require-additional-graph-scopes).
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
-> * Applications that use the `azurewebsites.net` domain are not supported as it is too common and can be a security risk.
 
 **To register your app through the AAD portal**
 

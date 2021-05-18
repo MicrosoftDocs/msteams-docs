@@ -2,6 +2,8 @@
 title: Channel and Group chat conversations with bots
 description: Describes the end-to-end scenario of having a conversation with a bot in a channel in Microsoft Teams
 keywords: teams scenarios channels conversation bot
+localization_priority: Normal
+ms.topic: conceptual
 ms.date: 06/25/2019
 ---
 # Channel and Group chat conversations with a Microsoft Teams bot
