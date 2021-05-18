@@ -112,7 +112,7 @@ During development, you will need to load your app within Teams without distribu
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
 > [!NOTE]
-> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
+> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
 
 ## Get a free Teams developer tenant (optional)
 
