@@ -17,23 +17,21 @@ A Teams app is a web app. Like all web apps, its source code is developed in an 
 
 ## Manage your apps with Developer Portal
 
-The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world.
+The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world. You can manage your apps through the [Developer Portal](https://aka.ms/dev-portal).
 
-- [Go to Developer Portal](https://aka.ms/dev-portal)
-- [Download the Developer Portal app for Teams](https://aka.ms/dev-portal-app)
+//Add screen here
 
-### Register a new app
+To begin with, you must register a new app. There are three ways to register:
 
-There are three paths to register a Teams app with the Developer Portal:
 * Register a brand new app from the portal
 * Import an existing app package from the portal
 * Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
 
 If you register a new app, you must fill all the mandatory configuration fields before you can install the app to your Teams client.
 
-## App Overview page
+## Overview
 
-Your app's overview page contains the following information:
+Your app's overview page consists of the following information:
 
 * Basic information about your app.
 * A validation snapshot of your app's configuration state.
@@ -41,20 +39,18 @@ Your app's overview page contains the following information:
 
 **App Usage Preview**
 
-The App Usage metrics show the total number of active users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Teams Developer Portal, and are scoped to the App IDs shown in the Basic Information section.
+The App Usage metrics show the total number of active users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Developer Portal, and are scoped to the App IDs shown in the **Basic information** section.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
 | *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30 day window, in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day, in UTC. |
-
-**History:** Monthly and Daily usage is shown for the past 7 days, 30 days, and 60 days.
-
-**Latency:** You should see usage reflected for a given day within 24-48 hours. **Usage for new apps can take up to 3-5 days to light up.**
+| *History* | Monthly and Daily usage is shown for the past 7 days, 30 days, and 60 days. |
+| *Latency* | You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to light up.|
 
 ## Owners
 
-Use this section to share your app registration with colleagues in your organization. The **Contributor** role has the same permissions as the **Owner** role, except the ability to delete an app. 
+The **Owners** section is used to share your app registration with colleagues in your organization. The **Contributor** role has the same permissions as the **Owner** role, except the ability to delete an app. 
 
 ## Environments
 
@@ -68,8 +64,8 @@ Use the variable names instead of actual values in the property fields.
 
 1. Enter `{{variable}}` in any field in the Developer Portal configuration page. 
 
-  > [!NOTE]
-  > Enter `{{`. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.
+   > [!NOTE]
+   > Enter `{{`. A dropdown with all the variables you've created for the chosen environment along with the global variables appear.
   
 1. When your app package is downloaded or published, select the environment configuration you wish to use. Global variables will be the same across all environments.
 
@@ -87,3 +83,5 @@ Use the variable names instead of actual values in the property fields.
 > [!NOTE]
 > It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
 > If your app is already available in the Teams store and you want to convert it to SaaS, then you must plan the SaaS offer and configure the plans and pricing details in the Partner Center, link your SaaS offer through the Developer Portal, and then republish the app.
+
+//Add see also section
