@@ -8,7 +8,7 @@ ms.topic: overview
 
 # Developer Portal Overview
 
-The Developer Portal enables app creators to register apps with the Teams app service and publish to an organization's app catalog, or the Teams store. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and more.
+The Developer Portal enables app creators to easily register, configure and manage your Teams apps from the Developer Portal. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and more.
 
 A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor and published to a cloud hosting solution like Azure. For the Teams client to install the app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data, the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable the users to be more successful.
 
@@ -63,10 +63,11 @@ Use the variable names instead of actual values in the property fields.
 
 **To enter a variable name instead of a hard coded property value**
 
-1. Enter '{{variable}}' in any field in the Developer Portal configuration page. 
+1. Enter `{{variable}}` in any field in the Developer Portal configuration page. 
+
   > [!NOTE]
-  > Enter '{{'. A dropdown with all the variables you've created for the chosen environment along with the global variables appear.
-  >
+  > Enter `{{`. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.
+  
 1. When your app package is downloaded or published, select the environment configuration you wish to use. Global variables will be the same across all environments.
 
 ## Plans and Pricing

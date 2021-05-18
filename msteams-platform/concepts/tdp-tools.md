@@ -8,11 +8,11 @@ ms.topic: conceptual
 
 # Tools in Developer Portal
 
-### Bot Management
+## Bot Management
 
 //Todo
 
-### Scene studio
+## Scene studio
 
 Microsoft has a Scene studio that allows you to build the scenes in Together Mode. It is available on the [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
@@ -20,14 +20,14 @@ Microsoft has a Scene studio that allows you to build the scenes in Together Mod
 
 For more information, see [Build a scene using Scene studio](../apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio).
 
-### Adaptive card editor
+## Adaptive card editor
 
 //Todo
 
-### Microsoft identity platform management
+## Microsoft identity platform management
 
 //Todo
 
-### Teams store app validation
+## Teams store app validation
 
 //Todo
