@@ -54,7 +54,7 @@ The following images display a stage opened from an Adaptive Card:
 
 <img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="400"/>
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage from Adaptive Card" width="400"/>
+<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="400"/>
 
 ### Example 
 
