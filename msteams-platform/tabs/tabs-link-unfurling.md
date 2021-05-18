@@ -42,8 +42,8 @@ Stage View helps provide a more seamless experience of viewing content in Teams.
 
 You can invoke the Stage View in the following  ways: 
 
-* [Invoke Stage View from an Adaptive Card](#invoke-Stage-View-from-an-Adaptive-Card)
-* [Invoke Stage View through a deep link](#invoke-Stage-View-through-a-deep-link)
+* [Invoke Stage View from Adaptive Card](#invoke-stage-View-from-adaptive-card)
+* [Invoke Stage View through deep link](#invoke-stage-View-through-deep-link)
 
 ## Invoke Stage View from Adaptive Card
 
