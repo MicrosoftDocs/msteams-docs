@@ -6,13 +6,16 @@ localization_priority: Normal
 ms.topic: overview
 ---
 
-# Developer Portal Overview
+# Teams Developer Portal
 
-The Developer Portal enables app creators to easily register, configure and manage your Teams apps from the Developer Portal. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and more.
+> [!NOTE]
+> Teams Developer Portal is currently available in public developer preview only.
 
-A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor and published to a cloud hosting solution like Azure. For the Teams client to install the app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data, the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable the users to be more successful.
+The Teams Developer Portal (Developer Portal) enables you to easily register, configure, and manage your Teams apps. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and much more.
 
-## Manage your apps with the Developer Portal for Microsoft Teams
+A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor and published to a cloud hosting solution like Azure. For the Teams client to install the app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data, the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable you to be more successful.
+
+## Manage your apps with Developer Portal
 
 The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world.
 
