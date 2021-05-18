@@ -72,6 +72,14 @@ To install the TeamsFX CLI, use the `npm` package manager:
 npm install -g @microsoft/teamsfx-cli
 ```
 
+Depending on your configuration, you may need to use `sudo` to install the CLI:
+
+``` bash
+sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+```
+
+This is more common on Linux and MacOS systems.
+
 Ensure you add the npm global cache to your PATH.  This is normally done as part of the NodeJS installer.  
 
 You can use the TeamsFX CLI using the `teamsfx` command.  Verify that the command is working by running `teamsfx -h`.
