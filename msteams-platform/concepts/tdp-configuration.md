@@ -109,6 +109,14 @@ Set up or change the languages that your app supports.
 Configure your app to authenticate users with single sign-on (SSO).
 
 ## Domains
-//TODO
 
+A list of valid domains for websites the app expects to load within the Teams client. Domain listings can include wildcards, for example, `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to navigate to any other domain besides the one use for tab configuration, that domain must be specified here.
 
+It is not necessary to include the domains of the identity providers you want to support in your app. For example, to authenticate using a Google ID, it is required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
+
+Teams apps that require their own sharepoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
+
+> [!IMPORTANT]
+> Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
+
+The object is an array with all elements of the type `string`.
