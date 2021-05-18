@@ -3,7 +3,7 @@ title: Get started - Prerequisites
 author: adrianhall
 description: Learn how to get started with Microsoft Teams app development and set up your environment
 ms.author: adhal
-ms.date: 05/14/2021
+ms.date: 05/18/2021
 ms.topic: quickstart
 ---
 # Prerequisites
@@ -45,7 +45,7 @@ The following tools will be installed by the Visual Studio Code extension when t
 
 - [.NET SDK](/dotnet/core/install/)
 
-    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.  If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed within the project directory (in the `.fx` directory).
+    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments.  If you have not installed the .NET 3.1 (or later) SDK globally, the portable version will be installed.
 
 - [ngrok](https://ngrok.com/download)
 
@@ -109,10 +109,10 @@ During development, you will need to load your app within Teams without distribu
     1. In the Teams client, select **Apps**.
     1. Look for an option to **Upload a custom app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
 > [!NOTE]
-> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](../platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
+> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
 
 ## Get a free Teams developer tenant (optional)
 
@@ -123,7 +123,7 @@ If you cannot see the sideload option, or you don't have a Teams account, you ca
 1. When you get to the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. Once you finish, you should see a screen like this.
 
-    :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+    :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
 1. Log in to Teams using the administrator account you just set up.
 1. Verify if you now have the **Upload a custom app** option.
@@ -144,11 +144,11 @@ You will need access to two accounts:
 1. Open Visual Studio Code
 2. Select the Teams icon in the sidebar:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
 4. Select **Sign in to M365**
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
 
 5. The sign-in process will start using your normal web browser.  Complete the sign-in process for your M365 account.  You will be prompted when you can close the browser and return to Visual Studio Code.
 6. Return to the Teams Toolkit within Visual Studio Code.

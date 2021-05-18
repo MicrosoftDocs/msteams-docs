@@ -8,7 +8,7 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
 1. Select **Provision in the Cloud**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
 
 1. If required, select a subscription to use for the Azure resources.
 
@@ -17,11 +17,11 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
    The provisioning process will create resources in the Azure cloud.  This will take some time.  You can monitor the progress by watching the dialogs in the bottom right corner.  After a few minutes, you will see the following notice:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
 1. A dialog warns you that costs may be incurred when running resources in Azure.  Press **Provision**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Screenshot of the provisioning dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Screenshot of the provisioning dialog.":::
 
 1. Once provisioning is complete, select **Deploy to the Cloud**.  As with provisioning, this process takes some time.  You can monitor the process by watching the dialogs in the bottom right corner. After a few minutes, you will see a completion notice.
 
