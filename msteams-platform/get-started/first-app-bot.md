@@ -111,7 +111,7 @@ To build and run your app locally:
 1. You may be prompted to sign in.  If so, sign in with your M365 account.
 1. When prompted to install the app onto Teams, press **Add**.
 
-Once the app is loaded, you will be taken directly to a chat session with the bot.  You can type `login` to authenticate with the bot (showing an additional permissions request), and then say `hello`.  
+Once the app is loaded, you will be taken directly to a chat session with the bot.  You can type `intro` to show an introduction card, and `show` to show your details from Microsoft Graph.  (This will require an additional permissions approval).
 
 Debugging works as you normally would expect - try it yourself! Open the `bot/dialogs/rootDialog.js` file and locate the `triggerCommand(...)` method.  Set a breakpoint on the default case.  Then type some text.
 
