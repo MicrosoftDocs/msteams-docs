@@ -90,7 +90,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. In the **Scenes Editor** page, select **Create a new scene**.
 
-1. In the **Scene Name** box, enter a name for the scene.
+1. In the **Scene** box, enter a name for the scene.
 
     >[!NOTE]
     > * You can select **Close** to toggle between closing or reopening the right pane.
@@ -104,11 +104,13 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
 
-1. Select an image that you have placed in the scene.
+1. Select the image that you have placed.
 
 1. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
     ![Alignment for images](../assets/images/apps-in-meetings/image-alignment.png)
+
+1. Select an area outside of the image.
 
 1. In the upper-right corner, select **Participants** under **Layers**.
 
@@ -132,7 +134,10 @@ The seat dimensions become the canvas for rendering the participant video stream
     >[!NOTE]
     > To delete a scene you created, select **Delete scene** on the top bar.
 
-1. In the **View in Teams** dialog box, select **Preview in Teams**. Microsoft Teams is opened and an add dialog box is shown. Select **Add** and after adding, the scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
+1. In the **View in Teams** dialog box, select **Preview in Teams**.
+1. In the dialog box that appears, select **Add**.
+
+    The scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
 
     ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
 
