@@ -3,20 +3,20 @@ title: Get started - Build your first Teams app with SPFx
 author: zhenyasav
 description: Learn how to build a custom tab with the SharePoint Framework
 ms.author: zhenyasa
-ms.date: 05/03/2021
+ms.date: 05/18/2021
 ms.topic: quickstart
 ---
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
 
-In this tutorial, you will create a new Microsoft Teams app in SharePoint Framework (SPFx) that implements a simple tab application.  During the tutorial, you will learn about the structure of a Teams app, how to run the app locally, and how to deploy the app to SharePoint.
+In this tutorial, you will create a new Microsoft Teams app in SharePoint Framework (SPFx) that implements a simple personal app. (A *personal app* includes a set of tabs scoped for individual use.) During the tutorial, you will learn about the structure of a Teams app, how to run the app locally, and how to deploy the app to SharePoint.
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the [Prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the [prerequisites](prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Install Prerequisites](prerequisites.md)
+> [Install prerequisites](prerequisites.md)
 
 ## Get organized
 
@@ -65,7 +65,7 @@ Use the Teams Toolkit to create your first project:
 
 Your Teams app will be created within a few seconds.
 
-# [Command Line](#tab/cli)
+# [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
@@ -95,14 +95,14 @@ Once all the questions have been answered, your project will be created.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-Once the Teams Toolkit configures your project, you have the components to build a basic personal tab for Teams that is hosted within the SharePoint Framework.  The project directories and files display in the Explorer area of Visual Studio Code.
+Once the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams that is hosted within the SharePoint Framework.  The project directories and files display in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal tab in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
 The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
 
-- The application icons are stored as PNG files in `color.png` and `outline.png`.
-- The application manifest for publishing to Teams App Portal is stored in `manifest.source.json`.
+- The app icons are stored as PNG files in `color.png` and `outline.png`.
+- The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
 Since you selected an SPFx Webpart project, the following files are relevant to your UI:
@@ -171,7 +171,7 @@ Ensure a SharePoint App Catalog exists in your deployment.  If one does not exis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
 
-# [Command Line](#tab/cli)
+# [Command line](#tab/cli)
 
 In your terminal window:
 
@@ -235,9 +235,9 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 
 ## Next steps
 
-Learn about other methods for creating tab apps:
+Learn about other methods for creating Teams apps:
 
-- [Create a Teams app with React](first-app-react.md).
-- [Create a Teams app with Blazor](first-app-blazor.md).
-- [Create a conversational bot app](first-app-bot.md).
-- [Create a messaging extension](first-message-extension.md).
+- [Create a Teams app with React](first-app-react.md)
+- [Create a Teams app with Blazor](first-app-blazor.md)
+- [Create a conversational bot app](first-app-bot.md)
+- [Create a messaging extension](first-message-extension.md)

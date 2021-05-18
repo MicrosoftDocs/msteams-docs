@@ -9,16 +9,16 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with Blazor
 
-In this tutorial, you will create a new Microsoft Teams app in .NET/Blazor that implements a simple tab to pull information from the Microsoft Graph.  During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
+In this tutorial, you will create a new Microsoft Teams app in .NET/Blazor that implements a simple personal app to pull information from the Microsoft Graph. (A *personal app* includes a set of tabs scoped for individual use.)  During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
 
 The app that is built displays basic user information for the current user.  When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the [Prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the [prerequisites](prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Install Prerequisites](prerequisites.md)
+> [Install prerequisites](prerequisites.md)
 
 ## Create your project
 
@@ -41,7 +41,7 @@ Use the Teams Toolkit to create your first project:
    - Select **Project** > **TeamsFx** > **Configure for SSO...**.
    - When prompted, sign in to your M365 administrator account.
 
-# [Command Line](#tab/cli)
+# [Command line](#tab/cli)
 
 1. Open a Terminal and select the directory where you wish to create the project.
 
@@ -79,12 +79,12 @@ You can now open the solution in Visual Studio for debugging.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-Once the Teams Toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Solution Explorer area of Visual Studio 2019.
+Once the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams. The project directories and files display in the Solution Explorer area of Visual Studio 2019.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal tab in Visual Studio 2019.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
-- The application icons are stored as PNG files in `color.png` and `outline.png`.
-- The application manifest for publishing to Teams App Portal is stored in `Properties/manifest.json`.
+- The app icons are stored as PNG files in `color.png` and `outline.png`.
+- The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
 - A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
 
 Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
@@ -99,8 +99,8 @@ You can add backend functionality by adding additional ASP.NET Core controllers 
 Teams Toolkit allows you to run your app locally.  This consists of several parts that are necessary to provide the correct infrastructure that Teams expects:
 
 - An application is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from and any backend resources it accesses.
-- A Web API is hosted (via IIS Express) to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  
-- An app manifest is generated and submitted to the Teams App Portal.  Teams uses the app manifest to tell connected clients where to load the app from.
+- A web API is hosted (via IIS Express) to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  
+- An app manifest is generated and exists in the Developer Portal for Teams.  Teams uses the app manifest to tell connected clients where to load the app from.
 
 Once this is done, the app can be loaded within the Teams client.  We use the Teams web client so that we can see the HTML, CSS, and JavaScript code within a standard web development environment.
 
@@ -149,7 +149,7 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
 > **PREVIEW**
 >
-> Support for Blazor apps is new in Teams Toolkit.  Provisioning and deployment are done with a combination of Visual Studio 2019, The Teams Developer Center, and the CLI right now.
+> Support for Blazor apps is new in Teams Toolkit.  Provisioning and deployment are done with a combination of Visual Studio 2019 and the Developer Portal for Teams.
 
 ## Provision and deploy your app to Azure App Service
 
@@ -191,9 +191,9 @@ The project properties **Publish** pane shows the site URL and other details. Ma
 
 ## Create an environment for your app
 
-The Teams Developer Portal manages where the tabs for your app are loaded from with an **Environment**.  To create an environment:
+The Developer Portal for Teams manages where the tabs for your app are loaded from with an **Environment**.  To create an environment:
 
-1. Open the [Teams Developer Portal](https://dev.teams.microsoft.com).  Sign in with your M365 administrative account.
+1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com).  Sign in with your M365 administrative account.
 
 1. From the sidebar, select **Apps**.
 
@@ -215,9 +215,9 @@ The Teams Developer Portal manages where the tabs for your app are loaded from w
 
    Press **Add**.
 
-## Update the application manifest
+## Update the app manifest
 
-The application manifest is loading the tab from a `localhost` URL.  In this section, you will adjust the application manifest to load the tab from the URL listed within the environment you just created.
+The app manifest is loading the tab from a `localhost` URL.  In this section, you will adjust the app manifest to load the tab from the URL listed within the environment you just created.
 
 1. From the sidebar, select **Basic information**.
 
@@ -266,9 +266,9 @@ You can now use the **Preview in Teams** button at the top of the page to launch
 
 ## Next steps
 
-Learn about other methods for creating tab apps:
+Learn about other methods for creating Teams apps:
 
-- [Create a Teams app with React](first-app-react.md).
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required).
-- [Create a conversational bot app](first-app-bot.md).
-- [Create a messaging extension](first-message-extension.md).
+- [Create a Teams app with React](first-app-react.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
+- [Create a conversational bot app](first-app-bot.md)
+- [Create a messaging extension](first-message-extension.md)

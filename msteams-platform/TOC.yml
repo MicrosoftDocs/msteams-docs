@@ -10,11 +10,11 @@
   items:
   - name: Prerequisites
     href: get-started/prerequisites.md
-  - name: Create a personal tab app (React)
+  - name: Create a personal app (React)
     href: get-started/first-app-react.md
-  - name: Create a personal tab app (Blazor)
+  - name: Create a personal app (Blazor)
     href: get-started/first-app-blazor.md
-  - name: Create a personal tab app (SPFx)
+  - name: Create a personal app (SPFx)
     href: get-started/first-app-spfx.md
   - name: Create a conversational bot
     href: get-started/first-app-bot.md

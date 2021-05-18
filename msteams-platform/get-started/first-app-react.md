@@ -9,16 +9,16 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with React
 
-In this tutorial, you will create a new Microsoft Teams app in React that implements a simple tab to pull information from the Microsoft Graph.  During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
+In this tutorial, you will create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. (A *personal app* includes a set of tabs scoped for individual use.) During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
 
 The app that is built displays basic user information for the current user.  When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the [Prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the [prerequisites](prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Install Prerequisites](prerequisites.md)
+> [Install prerequisites](prerequisites.md)
 
 ## Create your project
 
@@ -61,7 +61,7 @@ Use the Teams Toolkit to create your first project:
 
 Your Teams app will be created within a few seconds.
 
-# [Command Line](#tab/cli)
+# [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
@@ -87,22 +87,22 @@ Once all the questions have been answered, your project will be created.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-Once the Teams Toolkit configures your project, you have the components to build a basic personal tab for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
+Once the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal tab in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
 The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
 
-- The application icons are stored as PNG files in `color.png` and `outline.png`.
-- The application manifest for publishing to Teams App Portal is stored in `manifest.source.json`.
+- The app icons are stored as PNG files in `color.png` and `outline.png`.
+- The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
-Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
+Since you selected the tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
 
-- `tabs/src/index.jsx` is the front-end application's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
+- `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
 - `tabs/src/components/App.jsx` handles URL routing in your app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
-- `tabs/src/components/Tab.jsx` contains the code to implement the UI of your application.
-- `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your application.
+- `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
+- `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
 
 Several tabs are required by the Teams runtime, including the privacy notice, terms of use, and configuration tabs.  The code for the privacy notice and terms of use are located in the same directory.
 
@@ -113,9 +113,9 @@ When you add cloud functionality, additional directories are added to the projec
 Teams Toolkit allows you to run your app locally.  This consists of several parts that are necessary to provide the correct infrastructure that Teams expects:
 
 - An application is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from and any backend resources it accesses.
-- A Web API is hosted to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  This is run by Azure Functions Core Tools.  It can be accessed at the URL `https://localhost:5000`.
+- A web API is hosted to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  This is run by Azure Functions Core Tools.  It can be accessed at the URL `https://localhost:5000`.
 - The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. It can be accessed at `https://localhost:3000`.
-- An app manifest is generated and submitted to the Teams App Portal.  Teams uses the app manifest to tell connected clients where to load the app from.
+- An app manifest is generated and exists in the Developer Portal for Teams.  Teams uses the app manifest to tell connected clients where to load the app from.
 
 Once this is done, the app can be loaded within the Teams client.  We use the Teams web client so that we can see the HTML, CSS, and JavaScript code within a standard web development environment.
 
@@ -154,7 +154,7 @@ You can do normal debugging activities as if this were any other web application
 When you pressed F5, the Teams Toolkit:
 
 1. Registered your application with Azure Active Directory.
-1. Registered your application for "side loading" in Microsoft Teams.
+1. *Sideloaded* your app in Teams.
 1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Started your application front-end hosted locally.
 1. Started Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab` (the URL is registered inside the application manifest).
@@ -165,7 +165,7 @@ When you pressed F5, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app side loading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-side-loading).
+To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [prerequisites](prerequisites.md#enable-side-loading).
 
 </details>
 
@@ -189,9 +189,9 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 ## Next steps
 
-Learn about other methods for creating tab apps:
+Learn about other methods for creating Teams apps:
 
-- [Create a Teams app with Blazor](first-app-blazor.md).
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required).
-- [Create a conversational bot app](first-app-bot.md).
-- [Create a messaging extension](first-message-extension.md).
+- [Create a Teams app with Blazor](first-app-blazor.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
+- [Create a conversational bot app](first-app-bot.md)
+- [Create a messaging extension](first-message-extension.md)

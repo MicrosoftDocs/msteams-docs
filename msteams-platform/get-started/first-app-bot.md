@@ -3,7 +3,7 @@ title: Get started - Build a conversational bot for Microsoft Teams
 author: adrianhall
 description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
-ms.date: 05/14/2021
+ms.date: 05/18/2021
 ms.topic: quickstart
 ---
 
@@ -55,7 +55,7 @@ Use the Teams Toolkit to create your first project:
 
 Your Teams app will be created within a few seconds.
 
-# [Command Line](#tab/cli)
+# [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
 
@@ -94,7 +94,7 @@ The bot code is stored in the `bot` directory.  The `bots/teamsBot.js` is the ma
 Teams Toolkit allows you to host your app locally.  To do this:
 
 - An Azure Active Directory Application is registered within the M365 tenant.
-- An app manifest is submitted to the Teams Developer Center.
+- An app manifest is submitted to the Developer Center for Teams.
 - An API is run locally using Azure Functions Core Tools to support your app.
 - [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your bot code.
 
@@ -157,9 +157,9 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 ## Next steps
 
-Learn about other methods for creating tab apps:
+Learn about other methods for creating Teams apps:
 
-- [Create a Teams app with React](first-app-react.md).
-- [Create a Teams app with Blazor](first-app-blazor.md).
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required).
-- [Create a messaging extension](first-message-extension.md).
+- [Create a Teams app with React](first-app-react.md)
+- [Create a Teams app with Blazor](first-app-blazor.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
+- [Create a messaging extension](first-message-extension.md)
