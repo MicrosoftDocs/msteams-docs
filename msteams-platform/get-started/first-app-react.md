@@ -3,7 +3,7 @@ title: Get started - Build your first Teams app with React
 author: adrianhall
 description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and React.
 ms.author: adhal
-ms.date: 05/05/2021
+ms.date: 05/18/2021
 ms.topic: quickstart
 ---
 
@@ -94,7 +94,7 @@ Once the Teams Toolkit configures your project, you have the components to build
 The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
 
 - The application icons are stored as PNG files in `color.png` and `outline.png`.
-- The application manifest for publishing to Teams App Portal is stored in `manifest.remote.json`.
+- The application manifest for publishing to Teams App Portal is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
 Since you created a tab app during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
