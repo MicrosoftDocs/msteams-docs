@@ -37,7 +37,7 @@ To install the Teams Toolkit Extension:
 
 You can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools will be installed by the Visual Studio Code extension when they are needed.  If already installed, the installed version will be used instead:
+The following tools will be installed by the Visual Studio Code extension when they are needed.  If already installed, the installed version will be used instead.  If using Linux, you must install these tools before use:
 
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
