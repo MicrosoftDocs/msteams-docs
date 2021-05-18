@@ -1,7 +1,7 @@
 ---
-title: Build Adaptive Card Tab
+title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Build tabs using Adaptive Card
+description: Build tabs using Adaptive Cards
 ms.topic: conceptual
 ms.author: surbhigupta
 ---
