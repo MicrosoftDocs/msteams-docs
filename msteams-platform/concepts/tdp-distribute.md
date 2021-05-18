@@ -12,6 +12,8 @@ ms.topic: Conceptual
 
 After you have finished defining your application, the **Distribute** section allows you to export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as **appname.zip** in your default download directory.
 
+// Add Screen here
+
 ### Manifest
 
 The manifest describes how your app is configured, including its capabilities, required resources, and other important attributes. See [manifest schema](~/resources/schema/manifest-schema.md) for more information.
