@@ -154,7 +154,6 @@ The manifest change that is needed to enable this capability is as follows:
         "groupchat"
       ],
       "context":[
-        
         "meetingSidePanel",
         "meetingStage"
      ]
