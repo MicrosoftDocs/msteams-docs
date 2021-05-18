@@ -20,7 +20,7 @@ The manifest describes how your app is configured, including its capabilities, r
 
 Control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public. Select **Create a New Request** to create a new flight request.
 
-### Publish to Org
+### Publish to org
 
 Make your app available to people in your org. Once approved by your IT admin, your app will be featured in Teams under Apps > Built for your org.
 
