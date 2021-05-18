@@ -10,7 +10,7 @@ keywords: teams apps meetings user participant role api
 
 # Apps for Teams meetings
 
-Meetings enable collaboration, partnership, informed communication, and share feedback in an inclusive and active forum. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting and post-meeting app experience, depending on the attendee's status.
+Meetings enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
 Teams end-users can access apps during meetings using the tab gallery, for example:
 
@@ -26,19 +26,15 @@ You can enhance your meeting experience by using the meeting extensibility featu
 
 To customize Teams with apps for meetings and to achieve different tasks, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
 
+The new Together Mode feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.
+
 ## See also
 
-> [!div class="nextstepaction"]
-> [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
-
-> [!div class="nextstepaction"]
-> [Bot](../bots/what-are-bots.md)
-
-> [!div class="nextstepaction"]
-> [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
-
-> [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+* [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Bot](../bots/what-are-bots.md)
+* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+* [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+* [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md)
 
 ## Next step
 

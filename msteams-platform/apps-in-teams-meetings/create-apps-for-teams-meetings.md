@@ -26,13 +26,13 @@ Before you work with apps for Teams meetings, you must have an understanding of 
 
 * You must support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.
 
-* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams client SDK and bot activity. In addition, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams client SDK and bot activity. In addition, reliable information for user ID and tenant ID can be retrieved using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
 * For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `Notification Signal API`.
 
-After you have gone through the prerequisites and considerations, you can use the meeting apps API references `GetUserContext`, `GetParticipant` and `NotificationSignal` that enable you to access information using attributes and display relevant content.
+After you have gone through the prerequisites and considerations, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, and `NotificationSignal` that enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API references
 
@@ -64,13 +64,13 @@ The `GetParticipant` API includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| string | Yes | The participant ID is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| string | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a tenant ID from the Tab SSO. |
+|**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams client SDK.|
+|**participantId**| string | Yes | The participant ID is the user ID. It is available in Tab SSO, Bot Invoke, and Teams client SDK. It is recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| string | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams client SDK. It is recommended to get a tenant ID from the Tab SSO. |
 
 #### Example
 
-The `GetParticipant` API includes the following C# or .NET, JavaScript, and JSON examples:
+The `GetParticipant` API includes the following C#, JavaScript, and JSON examples:
 
 # [C#](#tab/dotnet)
 
@@ -181,7 +181,7 @@ The `Bot ID` is declared in the manifest and the bot receives a result object.
 > * The `externalResourceUrl` width and height parameters must be in pixels. To ensure the dimensions are within the allowed limits, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page loaded as an `<iframe>` in the in-meeting dialog box. The domain must be in the app's `validDomains` array in your app manifest.
 
-The `NotificationSignal` API includes the following C# or .NET, JavaScript, and JSON examples:
+The `NotificationSignal` API includes the following C#, JavaScript, and JSON examples:
 
 # [C#](#tab/dotnet)
 
@@ -240,7 +240,7 @@ The `NotificationSignal` API includes the following response codes:
 
 |Response code|Description|
 |---|---|
-| **201** | The activity with signal is successfully sent |
+| **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
@@ -250,13 +250,12 @@ The `NotificationSignal` API includes the following response codes:
 |Sample name | Description | .NET | Node.js |
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | |
-| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting SidePanel | Microsoft Teams meeting extensibility sample for iteracting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
+| Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
+| Meeting sidePanel | Microsoft Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
 
 ## See also
 
-> [!div class="nextstepaction"]
->  [Apps in Teams meetings](teams-apps-in-meetings.md)
+[Apps in Teams meetings](teams-apps-in-meetings.md)
 
 ## Next step
 
