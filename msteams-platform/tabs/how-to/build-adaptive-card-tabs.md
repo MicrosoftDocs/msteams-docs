@@ -7,50 +7,55 @@ ms.author: surbhigupta
 ---
 
 
-# Build Adaptive Card Tab
+# Build Tabs with Adaptive Cards
 
-Use Adaptive Card to build tabs with ease. Build your tab with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Adaptive Card Tab centralizes all Teams app capabilities around a bot backend, thus, eliminating the need for a different backend for your bot and tabs. This will greatly reduce server and maintenance costs of your Teams app.
-This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in Adaptive Card Tab, and the impact on the task module workflow. 
+> [!IMPORTANT]
+> This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
+> Tabs with Adaptive Cards are currently only supported as personal apps.
+
+Use Adaptive Cards to build tabs with ease. Build your tab with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend, thus, eliminating the need for a different backend for your bot and tabs. This will greatly reduce server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow. 
+
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
 ## Prerequisites
 
-Before you start using Adaptive Card to build tabs, you must:
+Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [Task Modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [Task Modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
-* Have a tenant that is enrolled in ring 1.6.
+* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Changes to app manifest
 
 Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card Tab are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card Tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
-> The `contentBotId` property is currently available in the developer preview manifest schema only. 
+> The `contentBotId` property is currently available manifest version 1.9 or greater. 
 
-Provide the `contentBotId` property with the `botId` the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tab that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
+Provide the `contentBotId` property with the `botId` the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
 Following is a sample Adaptive Card Tab manifest:
 
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
-  "id": "4b0b7c70-d2bc-11ea-a813-bfc190db5187",
+  "manifestVersion": "1.9",
+  "id": "00000000-0000-0000-0000-000000000000",
   "version": "0.0.1",
   "packageName": "acprototype",
   "developer": {
-    "name": "proto",
-    "websiteUrl": "https://acprototype.azurewebsites.net",
-    "privacyUrl": "https://acprototype.azurewebsites.net/privacy.html",
-    "termsOfUseUrl": "https://acprototype.azurewebsites.net/tou.html"
+    "name": "Contoso",
+    "websiteUrl": "https://contoso.yourwebsite.com",
+    "privacyUrl": "https://contoso.yourwebsite.com/privacy.html",
+    "termsOfUseUrl": "https://contoso.yourwebsite.com/terms.html"
   },
   "name": {
-    "short": "Workday",
-    "full": "Workday Prototype"
+    "short": "Contoso",
+    "full": "Contoso Home"
   },
   "description": {
-    "short": "TODO: add short description here",
-    "full": "TODO: add full description here"
+    "short": "Add short description here",
+    "full": "Add full description here"
   },
   "icons": {
     "outline": "icon-outline.png",
@@ -60,15 +65,15 @@ Following is a sample Adaptive Card Tab manifest:
   "configurableTabs": [],
   "staticTabs": [
     {
-      "entityId": "workday",
+      "entityId": "homeTab",
       "name": "Home",
-      "contentBotId": "eda13c8b-ec36-4ef5-a600-999c9531a536",
+      "contentBotId": "00000000-0000-0000-0000-000000000000",
       "scopes": ["personal"]
     },
     {
-      "entityId": "samples",
+      "entityId": "moreTab",
       "name": "More",
-      "contentBotId": "eda13c8b-ec36-4ef5-a600-999c9531a536",
+      "contentBotId": "00000000-0000-0000-0000-000000000000",
       "scopes": ["personal"]
     }
   ],
@@ -76,8 +81,7 @@ Following is a sample Adaptive Card Tab manifest:
   "composeExtensions": [],
   "permissions": ["identity", "messageTeamMembers"],
   "validDomains": [
-    "andhillo-relay.servicebus.windows.net",
-    "acprototype.azurewebsites.net",
+    "contoso.yourwebsite.com",
     "token.botframework.com"
   ]
 }
@@ -91,10 +95,6 @@ Communication between your Adaptive Card Tab and your bot is done through `invok
 
 `tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card Tabs. When your bot receives the request, it will either send a tab **continue** response or a tab **auth** response.
 The **continue** response includes an array for **cards**, which is rendered vertically to the tab in the order of the array.
-
-The following image is an example of the **continue** response, where each card is an Adaptive Card:
-
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
 > [!NOTE]
 > The **auth** response is explained in detail in the [authentication](#authentication) section.
@@ -116,7 +116,7 @@ The following code snippets are examples of `tab/fetch` request and response:
             }
     },
     "conversation": {
-        "id": "generated conversation id"
+        "id": "{generated_conversation_id}"
     },
     "imdisplayname": "{user_display_name}"
 }
@@ -149,16 +149,12 @@ The following code snippets are examples of `tab/fetch` request and response:
 
 ### Handle submits from Adaptive Card
 
-After an Adaptive Card is rendered in the tab, it must be able to respond to user interactions. This response is handled by the `tab\submit` invoke request.
+After an Adaptive Card is rendered in the tab, it must be able to respond to user interactions. This response is handled by the `tab/submit` invoke request.
 
 When a user selects a button on the Adaptive Card Tab, the `tab/submit` request is triggered to your bot with the corresponding data through the *Action.Submit* function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You will receive either of the following responses to your request:
 
 * A http status code `200` response with no body. An empty 200 response will result in no action taken by the client.
-* The standard `200` tab **continue** response, as explained in [Fetch Adaptive Card](#fetch-adaptive-card-to-render-to-a-tab) section. A tab **continue** response triggers the client to update the rendered Adaptive Card Tab with the Adaptive Card provided in the cards array of the **continue** response.
-
-The following image is an example of the **continue** response after the *Action.Submit* function is triggered:
-
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-submit-action.png" alt-text="Example of handling submits from Adaptive Card." border="false":::
+* The standard `200` tab **continue** response, as explained in [Fetch Adaptive Card](#fetch-adaptive-card-to-render-to-a-tab) section. A tab **continue** response triggers the client to update the rendered Adaptive Card Tab with the Adaptive Cards provided in the cards array of the **continue** response.
 
 The following code snippets are examples of `tab/submit` request and response:
 
@@ -181,7 +177,7 @@ The following code snippets are examples of `tab/submit` request and response:
             },
         },
     "conversation": {
-           "id": "{static_tab_thread_id?}" 
+           "id": "{generated_conversation_id}" 
         },
     "imdisplayname": "{user_display_name}"
 }
@@ -237,7 +233,7 @@ The following code snippets are examples of `task/fetch` request and response:
     },
     "imdisplayname": "{user_display_name}",
     "conversation": {
-        "id": "{static_tab_thread_id?}"
+        "id": "{generated_conversation_id}"
     } 
 }
 ```
@@ -283,7 +279,7 @@ The following code snippets are examples of `task/submit` request and response:
         },
     },
     "conversation": {
-        "id": "{static_tab_thread_id?}"
+        "id": "{generated_conversation_id}"
     },
     "imdisplayname": "{user_display_name}",
 }
@@ -320,7 +316,7 @@ The following code snippets are examples of `task/submit` request and response:
 
 In the previous sections of this article, you have seen that most of the development paradigms could be extrapolated from the task module requests and responses into tab requests and responses. However, when it comes to handling authentication, the workflow for Adaptive Card Tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md). 
 
-In the [invoke activities](#invoke-activities) section, you were informed that `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, which enables you to get the authentication code. 
+In the [invoke activities](#invoke-activities) section, you were informed that `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign-in page is shown to the user. 
 
 **To get an authentication code through `tab/fetch` invoke**
 
@@ -364,9 +360,49 @@ The following code snippet is an example of `tab/fetch` auth response:
 
 ### Example
 
-The following image shows a reissued request example:
+The following shows a reissued request example:
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-reissued-request.png" alt-text="Example of reissued request." border="false":::
+```json
+{
+    "name": "tab/fetch",
+    "type": "invoke",
+    "timestamp": "2021-01-15T00:10:12.253Z",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "{id}",
+        "name": "John Smith",
+        "aadObjectId": "00000000-0000-0000-0000-000000000000"
+    },
+    "conversation": {
+        "tenantId": "{tenantId}",
+        "id": "tab:{guid}"
+    },
+    "recipients": {
+        "id": "28:00000000-0000-0000-0000-000000000000",
+        "name": "ContosoApp"
+    },
+    "entities": [
+        {
+            "locale": "en-us",
+            "country": "US",
+            "platform": "Windows",
+            "timezone": "America/Los_Angeles",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": { "id": "00000000-0000-0000-0000-000000000000" },
+        "source": { "name": "message" }
+    },
+    "value": {
+        "tabContext": { "tabEntityId": "homeTab" },
+        "state": "0.43195668034524815"
+    },
+    "locale": "en-US",
+    "localTimeZone": "America/Los_Angeles"
+}
+```
 
 ## See also
 
