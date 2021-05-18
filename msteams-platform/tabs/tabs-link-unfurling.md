@@ -27,6 +27,7 @@ When a user sends a URL in the chat or channel, the URL is unfurled to an Adapti
 The following image explains how Stage View works:
 
 ![stageview working](~/assets/images/tabs/stage-view-working.png)
+<img src="~/assets/images/tabs/stage-view-working.png" alt="Stage View working" width="400"/>
 
 ## Advantage of Stage View
 
@@ -51,9 +52,9 @@ When the user enters a URL on the Teams desktop client, the bot is invoked and r
 
 The following images display a stage opened from an Adaptive Card:
 
-![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)  
+<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="400"/>
 
-![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)
+<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage from Adaptive Card" width="400"/>
 
 ### Example 
 
@@ -102,7 +103,7 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 The following image displays a Stage View invoked through a deep link:
 
-![invoke a Stage View through a deep link](~/assets/images/tab-images/invoke-stage-view-through-deep-link.png)
+<img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
 
 ### Syntax 
 
