@@ -139,7 +139,7 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 **To send a simple card to a connector**
 
-1. In Microsoft Teams, choose **More options** **&#8943;** next to the channel name and then choose **Connectors**.
+1. Select **More options** **&#8943;** in Microsoft Teams, next to the channel name and then select **Connectors**.
 
     ![Choose Connector](~/assets/images/connectors.png)
 
