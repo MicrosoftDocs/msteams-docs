@@ -179,7 +179,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-  - name: Tabs-link unfurling and Stage View
+  - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
   - name: Tab requirements
     href: tabs/how-to/tab-requirements.md
