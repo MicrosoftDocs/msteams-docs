@@ -14,7 +14,7 @@ With Microsoft Teams apps, you can add your existing Office 365 Connector or bui
 
 ## Add a Connector to your Teams App
 
-You can distribute your registered Connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can also provide it to users directly for uploading within Teams.
+You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can distribute your registered Connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide it to users directly for uploading within Teams.
 
 To distribute your Connector, you must register through [Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish). When a Connector is registered, it is assumed that it works in all Office 365 products that support applications, including Outlook and Teams. If that is not the case and you need to create a Connector that only works in Microsoft Teams, contact us: [Microsoft Teams App Submissions](mailto:teamsubm@microsoft.com).
 
@@ -29,7 +29,7 @@ Users can complete the entire Connector configuration experience without having 
 2. The user interacts with your web experience to complete the configuration.
 3. The user selects **Save**, which triggers a callback in your code.
 
-> [!NOTE] 
+> [!NOTE]
 > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
 > * The configuration experience is loaded in line within Teams.
 
