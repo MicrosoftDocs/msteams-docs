@@ -20,7 +20,7 @@ You can perform the following actions in the **Configure** section of the Develo
 > [!NOTE]
 > Developer Portal does not produce functional code for your app, or host your app. Your app must already be hosted and running at the URL listed in the manifest for the app upload process to result in a working app.
 
-// Add screen here for Configure
+:::image type="content" source="../../assets/images/tdp/tdp_configure.png" alt-text="Screenshot showing the Configure page of Teams Developer Portal.":::
 
 ## Basic information and Branding
 
