@@ -98,10 +98,10 @@
       href: concepts/design/personal-apps.md
     - name: Tabs
       href: tabs/design/tabs.md
-    - name: Messaging extensions
-      href: messaging-extensions/design/messaging-extension-design.md  
     - name: Bots
       href: bots/design/bots.md
+    - name: Messaging extensions
+      href: messaging-extensions/design/messaging-extension-design.md  
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates

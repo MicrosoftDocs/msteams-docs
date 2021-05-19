@@ -21,13 +21,25 @@ You can find more comprehensive bot design guidelines, including elements that y
 
 ## Add a bot
 
-Bots are available in chats, channels, and personal apps. You can add a bot one of the following ways:
+Bots are available in chats, channels, and personal apps.
 
-* From the Teams store (AppSource).
+# [Desktop](#tab/desktop)
+
+You can add a bot one of the following ways:
+
+* From the Teams store.
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
 :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
+
+# [Mobile](#tab/mobile)
+
+Users can access bots that were added on desktop with an @mention.
+
+:::image type="content" source="../../assets/images/bots/mobile-access-bot-chat-at-mention.png" alt-text="Example shows how to access a mobile bot in a group chat using an @mention." border="false":::
+
+---
 
 ## Introduce a bot
 
@@ -37,13 +49,29 @@ It’s critical that your bot introduces itself and describes what it can do. Th
 
 In personal contexts, welcome messages set your bot's tone. The message includes a greeting, what the bot can do, and some suggestions for how to interact (for example, “Try asking me about …”). If possible, these suggestions should return stored responses without having to sign in.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app on mobile." border="false":::
+
+---
 
 ### Welcome message in channels and group chats
 
 Your bot's introduction should be slightly different in channels and group chats compared to a personal space (like a personal app). In real life, if you entered a room full of people; you’d introduce yourself instead of welcoming everyone who’s already there. Carry that thinking into your bot design.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-group-welcome.png" alt-text="Example shows a bot introduction in a collaborative context on mobile." border="false":::
+
+---
 
 ### Bot authentication with single sign-on
 
