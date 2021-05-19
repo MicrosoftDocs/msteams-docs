@@ -9,7 +9,7 @@ ms.date: 05/20/2019
 # Developer preview manifest schema for Microsoft Teams
 
 > [!NOTE]
-> See [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for more information on the program and how you can join.
+> For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 > If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
@@ -335,7 +335,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
-Render tabs with Adaptive Cards by specifying the `contentBotId` instead of `contentUrl` in the **staticTabs** block.
+Render tabs with Adaptive Cards by specifying `contentBotId` instead of `contentUrl` in the **staticTabs** block.
 
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
 
