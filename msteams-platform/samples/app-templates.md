@@ -348,6 +348,8 @@ Group Connect is a Microsoft Teams app that helps organization members discover 
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupconnect)
 
+![Discover D&I groups](https://github.com/OfficeDev/microsoft-teams-apps-diversityandinclusion/wiki/Images/temp_group_connect_landing.png)
+
 ## Grow Your Skills
 
 The Grow Your Skills app supports professional growth and development by enabling employees to contribute to supplemental projects for your organization while simultaneously learning new skills. Employees can use the app to locate opportunities that meet their interests, enjoy meaningful collaboration with peers, and acquire new levels of expertise and capabilities, all within the Teams environment.
