@@ -197,6 +197,8 @@ For more information on the features available see: [Features in the Public Deve
       "TeamsTab.Delete.Group",
       "Member.Read.Group",
       "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
     ],
   },
    "configurableProperties": [
