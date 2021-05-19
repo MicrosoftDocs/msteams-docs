@@ -93,11 +93,7 @@
   - name: Personal apps
     href: concepts/design/personal-apps.md
   - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
+    href: tabs/design/tabs.md
   - name: Messaging extensions
     href: messaging-extensions/design/messaging-extension-design.md  
   - name: Bots
@@ -202,6 +198,8 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Tabs on mobile  
+    href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
