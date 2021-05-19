@@ -124,7 +124,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/teams-developer-portal.md
-    - name: Configuration
+    - name: Configure
       href: concepts/tdp-configuration.md
     - name: Distribute
       href: concepts/tdp-distribute.md
