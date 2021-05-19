@@ -116,8 +116,6 @@ For more information about SharePoint Webparts for Teams, [refer to the SharePoi
 
 Teams Toolkit allows you to host your app locally and run it through the [SharePoint Framework Workbench](/sharepoint/dev/spfx/debug-in-vscode).
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
