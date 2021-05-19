@@ -13,15 +13,35 @@ localization_priority: Normal
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is being extended to bot scenarios.
 
-Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, developers can now request team owners to consent for a bot to receive user messages across all standard channels in a team without being @mentioned. This capability can be enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, Team owners can grant consent during the app installation process.
+Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, developers can now request team owners to consent for a bot to receive user messages across all standard channels in a team without having to be @mentioned. This capability can be enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, Team owners can grant consent during the app installation process.
 
-For more information about enabling RSC for your app, see [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
+For more information about enabling RSC for your app, see [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## Enable bots to receive all channel messages
 
-The `ChannelMessage.Read.Group` RSC permission is now extended to bots. Graph applications are able to get all messages in a conversation. Bots can receive all messages in a channel without being @mentioned with specific permissions and user consent.
+The `ChannelMessage.Read.Group` RSC permission is now extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
-**To add bots to a team and receive all channel messages**
+## Update App Manifest
+
+For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
+The following is an example of `webApplicationInfo` object:
+* id: your Azure AD app id. This can be the same as your bot id. 
+* resource: any string. This field has no operation in RSC, but must be added and have a value to avoid an error response. 
+* applicationPermissions: RSC permissions for your app with `ChannelMessage.Read.Group` specified. For more information on RSC permissions, see [Resource-specific Permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions). 
+
+The following code provides an example of the app manifest:
+
+```json
+"webApplicationInfo": {
+"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+"resource": "https://AnyString",
+"applicationPermissions": [
+"ChannelMessage.Read.Group"
+    ]
+  }
+```
+
+**Install into a team to test**
 
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
@@ -34,36 +54,6 @@ The `ChannelMessage.Read.Group` RSC permission is now extended to bots. Graph ap
 1. Select a channel and enter a message in the channel for your bot.
 
 The bot receives the message without being @mentioned.
-
-## App manifest
-
-You can configure an app manifest for a Teams app with an Azure Active Directory (AAD) application and resource-specific permissions that are used to check and authorize calls to Graph. In the `webApplicationInfo` property, the `ChannelMessage.Read.Group` RSC permission is extended to support bots.
-
-The following code provides an example of the app manifest:
-
-```json
-"webApplicationInfo": {
-    "id": "AAD App ID",
-    "resource": "Resource URL for acquiring auth token for SSO",
-    "applicationPermissions": [
-      "TeamSettings.Read.Group",
-      "ChannelSettings.Read.Group",
-      "ChannelSettings.Edit.Group",
-      "Channel.Create.Group",
-      "Channel.Delete.Group",
-      "ChannelMessage.Read.Group",
-      "TeamsApp.Read.Group",
-      "TeamsTab.Read.Group",
-      "TeamsTab.Create.Group",
-      "TeamsTab.Edit.Group",
-      "TeamsTab.Delete.Group",
-      "Member.Read.Group",
-      "Owner.Read.Group",
-      "Member.ReadWrite.Group",
-      "Owner.ReadWrite.Group"
-    ],
-},
-```
 
 ## See also
 
