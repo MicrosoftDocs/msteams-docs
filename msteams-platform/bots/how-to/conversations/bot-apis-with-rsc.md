@@ -42,6 +42,7 @@ The following code provides an example of the app manifest:
 ```
 
 **To receive all channel messages in a team with RSC without being @mentioned**
+
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
