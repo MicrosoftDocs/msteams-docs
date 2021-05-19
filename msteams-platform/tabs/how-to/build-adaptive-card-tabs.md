@@ -13,7 +13,7 @@ ms.author: surbhigupta
 > * This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
-Use Adaptive Cards to build tabs with ease. Build your tab with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend, thus, eliminating the need for a different backend for your bot and tabs. This will greatly reduce server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow. 
+Use Adaptive Cards to build tabs with ease. You can build your tabs with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend, thus, eliminating the need for a different backend for your bot and tabs. This greatly reduces server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow. 
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
@@ -30,9 +30,9 @@ Before you start using Adaptive Cards to build tabs, you must:
 Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card Tab are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card Tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
-> The `contentBotId` property is currently available manifest version 1.9 or greater. 
+> The `contentBotId` property is currently available manifest version 1.9 or later. 
 
-Provide the `contentBotId` property with the `botId` the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
+Provide the `contentBotId` property with the `botId` that the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
 Following is a sample Adaptive Card Tab manifest:
 
