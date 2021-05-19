@@ -8,18 +8,18 @@ keywords: teams tabs user context
 
 # Get context for your Microsoft Teams tab
 
-Your tab might require contextual information to display relevant content.
+Your tab must require contextual information to display relevant content:
 
-* Your tab might need basic information about the user, team, or company.
-* Your tab might need locale and theme information.
-* Your tab might need to read the `entityId` or `subEntityId` that identifies what is in this tab.
+* Basic information about the user, team, or company.
+* Locale and theme information.
+* Read the `entityId` or `subEntityId` that identifies what is in this tab.
 
 ## User context
 
-Context about the user, team or company can be especially useful when
+Context about the user, team or company can be especially useful when:
 
-* You need to create or associate resources in your app with the specified user or team.
-* You want to initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. (For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).)
+* You create or associate resources in your app with the specified user or team.
+* You initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you should *not* use it as proof of identity. For example, an attacker could load your page in a "bad browser" and render harmful information or requests.
@@ -28,8 +28,8 @@ Context about the user, team or company can be especially useful when
 
 You can access context information in two ways:
 
-* Insert URL placeholder values
-* Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client)
+* Insert URL placeholder values.
+* Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 ### Getting context by inserting URL placeholder values
 
@@ -43,23 +43,19 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {theme}: The current UI theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 Group in which the tab resides.
 * {tid}: The Azure AD tenant ID of the current user.
-* {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
+* {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
 
 >[!NOTE]
 >The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
 
-For example, suppose in your tab manifest you set the `configURL` attribute to
+For example, suppose in your tab manifest you set the `configURL` attribute to `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`, the signed-in user has the following attributes:
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* Their username is 'user@example.com'.
+* Their company tenant ID is 'e2653c-etc'.
+* They are a member of the Office 365 group with id '00209384-etc'.
+* The user has set their Teams theme to 'dark'.
 
-And the signed-in user has the following attributes:
-
-* Their username is 'user@example.com'
-* Their company tenant ID is 'e2653c-etc'
-* They are a member of the Office 365 group with id '00209384-etc'
-* The user has set their Teams theme to 'dark'
-
-When they configure your tab, Teams calls this URL:
+When they configure your tab, Teams calls the following URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -67,7 +63,7 @@ When they configure your tab, Teams calls this URL:
 
 You can also retrieve the information listed above using the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) by calling `microsoftTeams.getContext(function(context) { /* ... */ })`.
 
-The context variable will look like the following example.
+The context variable looks like the following example:
 
 ```json
 {
@@ -116,12 +112,12 @@ The context variable will look like the following example.
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call will be obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel. If your page makes use of any of the values below, you'll need to check the `channelType` field to determine if your page is loaded in a private channel, and respond appropriately.
 
-* `groupId` - Undefined for private channels
-* `teamId` - Set to the threadId of the private channel
-* `teamName` - Set to the name of the private channel
-* `teamSiteUrl` - Set to the URL of a distinct, unique SharePoint site for the private channel
-* `teamSitePath` - Set to the path of a distinct, unique SharePoint site for the private channel
-* `teamSiteDomain` - Set to the domain of a distinct, unique SharePoint site domain for the private channel
+* `groupId`: Undefined for private channels
+* `teamId`: Set to the threadId of the private channel
+* `teamName`: Set to the name of the private channel
+* `teamSiteUrl`: Set to the URL of a distinct, unique SharePoint site for the private channel
+* `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the private channel
+* `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
 
 > [!Note]
 >  teamSiteUrl works well for standard channels also.

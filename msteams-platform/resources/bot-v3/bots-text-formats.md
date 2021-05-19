@@ -10,15 +10,15 @@ ms.date: 03/29/2018
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-You can set the optional [`TextFormat`](https://docs.microsoft.com/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
+You can set the optional [`TextFormat`](/bot-framework/dotnet/bot-builder-dotnet-create-messages#customizing-a-message) property to control how your message's text content is rendered.
 
 Microsoft Teams supports the following formatting options:
 
 | TextFormat value | Description |
 | --- | --- |
-| plain | The text should be treated as raw text with no formatting applied at all |
-| markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles |
-| xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles |
+| plain | The text should be treated as raw text with no formatting applied at all. |
+| markdown | The text should be treated as Markdown formatting and rendered on the channel as appropriate; see [Formatting text content](#formatting-text-content) for supported styles. |
+| xml | The text is simple XML markup; see [Formatting text content](#formatting-text-content) for supported styles. |
 
 ## Formatting text content
 
@@ -28,7 +28,7 @@ Currently, the following limitations apply:
 
 * Text-only messages do not support table formatting
 
-For information on formatting in cards see the [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
+For information on formatting in cards, see [Teams Card Reference](~/task-modules-and-cards/cards/cards-reference.md).
 
 ### Cross-platform support
 

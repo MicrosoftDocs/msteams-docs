@@ -15,12 +15,12 @@ Build a simple app to learn the basics of Teams app development. Once you see "H
 
 ## What you'll learn
 
-* Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension 
-* Configure your app with App Studio 
-* Get familiar with Teams developer tools and SDKs
-* Consider important Teams app concepts, such as authentication and design best practices
+* Get up and running quickly with the Teams Toolkit, a Visual Studio Code extension. 
+* Configure your app with App Studio.
+* Get familiar with Teams developer tools and SDKs.
+* Consider important Teams app concepts, such as authentication and design best practices.
 
-You can build Teams app using any technology of your choice, for example, command-line interface (CLI). But, these articles help you get started with the following recommended tools and technologies:
+You can build a Teams app using any technology of your choice, for example, command-line interface (CLI). But, these articles help you get started with the following recommended tools and technologies:
 
 * Teams Toolkit, a Visual Studio Code extension
 * React.js for tabs
@@ -35,9 +35,9 @@ You can build custom Teams apps for yourself, people in your org, or people all 
 
 Some typical scenarios that a custom Teams app can help with are:
 
-* Embed web-based content, such as a web app or part of a website, in the Teams client
-* Look up information quickly in another system and adding it to a Teams conversation 
-* Trigger workflows and processes directly from what's said in a conversation 
+* Embed web-based content, such as a web app or part of a website, in the Teams client.
+* Look up information quickly in another system and adding it to a Teams conversation.
+* Trigger workflows and processes directly from what's said in a conversation.
 
 ### App capabilities and tools
 
@@ -45,9 +45,9 @@ An app is made up of one or more Teams capabilities and user interaction points.
 
 | **App capabilities**| **Interaction points** | **Recommended tools** | **SDKs** | **Technology stacks** |
 |--------|--------|--------|--------|--------|
-| Tabs | Spaces where users can interact with embedded web content in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Teams JavaScript client SDK | General web technologies (HTML, CSS, and JavaScript) or React.js |
-| Bots | Chatbots that interact with users in personal and shared contexts | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python | 
-| Messaging extensions | Shortcuts for inserting app content or acting on a message without navigating away from the conversation | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python |
+| Tabs | Spaces where users can interact with embedded web content in personal and shared contexts. | VS Code with Teams Toolkit extension or Yeoman Generator | Teams JavaScript client SDK | General web technologies (HTML, CSS, and JavaScript) or React.js |
+| Bots | Chatbots that interact with users in personal and shared contexts. | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python | 
+| Messaging extensions | Shortcuts for inserting app content or acting on a message without navigating away from the conversation. | VS Code with Teams Toolkit extension or Yeoman Generator | Bot Framework SDK | Node.js, C#, or Python |
 
 ### Teams doesn't host your app
 

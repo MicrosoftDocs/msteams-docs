@@ -149,7 +149,7 @@ All users in a meeting receive the notifications sent through the `NotificationS
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke |
+|**conversationId**| string | Yes | The conversation identifier is available as part of bot invoke. |
 
 #### Example
 
@@ -215,7 +215,7 @@ POST /v3/conversations/{conversationId}/activities
 
 |Response code|Description|
 |---|---|
-| **201** | The activity with signal is successfully sent |
+| **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
@@ -379,7 +379,5 @@ The post-meeting and pre-meeting configurations are equivalent.
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-> [!div class="nextstepaction"]
-> [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)

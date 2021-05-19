@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Create a custom channel and group tab with Node.js and the Yeoman Generator for Microsoft Teams
+# Create a custom channel and group tab using Node.js and the Yeoman Generator for Microsoft Teams
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
@@ -84,3 +84,8 @@ gulp ngrok-serve
 - Return to your team, choose the channel where you would like to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
 - Follow the directions for adding a tab. Note that there's a custom configuration dialog for your channel/group tab.
 - Select **Save** and your tab will be added to the channel's tab bar.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Custom Channel and Group Tab with ASP.NETCore](~/tabs/quickstarts/create-channel-group-tab-dotnet-core.md)

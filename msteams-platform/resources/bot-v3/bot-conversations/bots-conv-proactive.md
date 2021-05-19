@@ -11,9 +11,9 @@ keywords: teams scenarios proactive messaging conversation bot
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for a number of reasons, including:
 
-* Welcome messages for personal bot conversations
-* Poll responses
-* External event notifications
+* Welcome messages for personal bot conversations.
+* Poll responses.
+* External event notifications.
 
 Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new a conversation, there is no pre-existing conversation to post the message to. In order to send a proactive message you need to:
 
@@ -21,7 +21,7 @@ Sending a message to start a new conversation thread is different than sending a
 1. [Obtain the user's unique Id and tenant Id](#obtain-necessary-user-information)
 1. [Send the message](#examples)
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. See [the samples below](#net-example-from-this-sample).
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. For more information, see [the samples below](#net-example-from-this-sample).
 
 ## Best practices for proactive messaging
 
@@ -54,7 +54,7 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 * By [fetching the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) from a channel your app is installed in.
 * By caching them when a user [interacts with your bot in a channel](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
 * When a users is [@mentioned in a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
-* By caching them when you [receive the `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that
+* By caching them when you [receive the `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that.
 
 ### Proactively install your app using Graph
 
@@ -150,13 +150,11 @@ msg.text('Hello, this is a notification');
 bot.send(msg);
 ```
 
-*See also* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
-
 ## Creating a channel conversation
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()` which gives you a fully-populated address with the correct activity id and conversation id. If you are using C#, see the example below.
 
-Alternatively, you can use the REST API and issue a POST request to [`/conversations`](https://docs.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
+Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
 ### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
@@ -203,3 +201,7 @@ namespace Microsoft.Teams.TemplateBotCSharp.Dialogs
     }
 }
 ```
+
+## See also
+
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md)
