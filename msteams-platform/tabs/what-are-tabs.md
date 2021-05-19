@@ -39,7 +39,7 @@ There are two types of tabs available in Teams — channel/group and personal. C
 
 You can use one of the following methods to create tabs:
 * [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
-* [Use Adaptive Card to build tabs](#use-adaptive-cards-to-build-tabs)
+* [Use Adaptive Card to build tabs](#use-adaptive-card-to-build-tabs)
 
 ### Declare custom tab in app manifest
 
