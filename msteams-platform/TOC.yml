@@ -112,6 +112,8 @@
     href: concepts/design/design-teams-app-ui-templates.md
   - name: Basic UI components
     href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: App customization
+    href: concepts/design/admin-customize-app.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
