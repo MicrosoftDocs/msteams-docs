@@ -1,5 +1,5 @@
 ---
-title: Design your app - Understanding the design system
+title: Design your app - Understand the design system
 description: Learn about the basics of designing your Microsoft Teams app, including layout, color scheme, and more.
 author: heath-hamilton
 localization_priority: Normal
