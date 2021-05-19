@@ -74,7 +74,7 @@ Some apps are simple (send notifications), while others are complex (manage pati
 
 ### Microsoft Graph for Teams
 
-**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
+**Utilize Teams data**: The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app.
 
 :::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
@@ -152,6 +152,6 @@ Looking for app development inspiration? Browse our list of real-world scenarios
 
 * [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
 * [Design your Teams app](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Microsoft Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
 * [Distribute your Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
