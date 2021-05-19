@@ -3,7 +3,7 @@ title: Get started - Build your first Teams app with SPFx
 author: zhenyasav
 description: Learn how to build a custom tab with the SharePoint Framework
 ms.author: zhenyasa
-ms.date: 05/18/2021
+ms.date: 05/19/2021
 ms.topic: quickstart
 ---
 
