@@ -11,7 +11,7 @@ keywords: teams tabs user context
 Your tab must require contextual information to display relevant content:
 
 * Basic information about the user, team, or company.
-* locale and theme information.
+* Locale and theme information.
 * Read the `entityId` or `subEntityId` that identifies what is in this tab.
 
 ## User context

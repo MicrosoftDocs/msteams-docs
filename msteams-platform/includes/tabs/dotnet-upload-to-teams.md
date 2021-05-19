@@ -27,17 +27,17 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 In the *App* details section:
 
-- *Identification*: select **Generate** to generate a new App Id for your app.
+- Under *Identification* select **Generate** to generate a new App Id for your app.
 
-- *Developer information*: update the **Website URL** field with your *ngrok* HTTPS URL.
+- Under *Developer information* update the **Website URL** field with your *ngrok* HTTPS URL.
 
-- *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+- Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-- *Team Tab*: select **Add**.
+- Under *Team Tab* select **Add**.
 
 - In the Team tab pop-up window update the *Configuration URL* to `https://<yourngrokurl>/tab`.
 
@@ -45,9 +45,7 @@ In the *Tabs* section:
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section:
-
-- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+- In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
 #### Finish: Test and distribute
 

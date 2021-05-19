@@ -29,7 +29,7 @@ The process for resolving issues and resubmitting an app typically goes like thi
 
 1. You fix all issues in the report.
 1. You send the following to the Microsoft concierge validation team at <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a>:
-   * An updated app package.
+   * An updated app package
    * Test notes for your app, if you didn't include these in your original submission:
       * Credentials for at least two accounts (one admin and one non-admin).
       * Instructions to configure the app and test its functionality.

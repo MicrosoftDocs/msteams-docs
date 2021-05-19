@@ -52,7 +52,7 @@ In addition, this project requires that you have the following installed in your
 
     Your company name will be used in the app manifest.
 
-    <br>**Which manifest version would you like to use?**
+    **Which manifest version would you like to use?**
 
     Select the default schema.
 

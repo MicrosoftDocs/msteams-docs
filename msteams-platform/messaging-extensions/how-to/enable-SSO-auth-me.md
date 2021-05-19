@@ -111,9 +111,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 
 ## See also
 
-[Add authentication to your messaging extensions](add-authentication.md)
-
-[Use SSO for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
-
-[Link unfurling](link-unfurling.md)
+* [Add authentication to your messaging extensions](add-authentication.md)
+* [Use SSO for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Link unfurling](link-unfurling.md)
 

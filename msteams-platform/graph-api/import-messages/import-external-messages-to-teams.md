@@ -19,11 +19,11 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 At a high level, the import process consists of the following:
 
-1. [Create a team with a back-in-time timestamp](#step-one-create-a-team).
-1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel). 
-1. [Import external back-in-time dated messages](#step-three-import-messages).
-1. [Complete the team and channel migration process](#step-four-complete-migration-mode).
-1. [Add team members](#step-five-add-team-members).
+1. [Create a team with a back-in-time timestamp](#step-one-create-a-team)
+1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel) 
+1. [Import external back-in-time dated messages](#step-three-import-messages)
+1. [Complete the team and channel migration process](#step-four-complete-migration-mode)
+1. [Add team members](#step-five-add-team-members)
 
 ## Necessary requirements
 

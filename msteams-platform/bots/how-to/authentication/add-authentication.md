@@ -278,11 +278,11 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-In order for the bot sample login to work you must configure the Emulator as shown below:
+In order for the bot sample login to work you must configure the Emulator.
 
 ### Configure the Emulator for authentication
 
-If a bot requires authentication, you must configure the Emulator as shown below.
+If a bot requires authentication, you must configure the Emulator. To configure:
 
 1. Start the Emulator.
 1. In the Emulator, select the gear icon &#9881; in the bottom left, or the **Emulator Settings** tab in the upper right.
@@ -566,7 +566,7 @@ Within the following dialog step, check for the presence of a token in the resul
 
 ## See also
 
-[Learn about adding authentication via Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
+[Add authentication through Azure Bot Service](https://aka.ms/azure-bot-add-authentication)
 
 <!-- Footnote-style links -->
 

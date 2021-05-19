@@ -232,6 +232,5 @@ The schema for Bot Framework card actions is slightly different from Adaptive ca
 
 ## See also
 
-- [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
-
-- [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+* [Microsoft Teams task module sample code — nodejs](https://github.com/OfficeDev/microsoft-teams-sample-task-module-nodejs/blob/master/src/TeamsBot.ts)
+* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

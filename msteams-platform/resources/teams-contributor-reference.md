@@ -48,7 +48,7 @@ The [contributors guide](/contribute) offers direction for creating, publishing,
 
 Setting a valid file path for hyperlinks in your documentation can be a challenge, especially when using relative paths and creating links to other docsets.  Your build won't succeed on GitHub if the file path is incorrect or invalid.
 
-For more information on  hyperlinks and file paths, see [Use links in documentation](/contribute/how-to-write-links).
+For more information on hyperlinks and file paths, see [Use links in documentation](/contribute/how-to-write-links).
 
 >[!IMPORTANT]
 > To reference an article that is *part of* the Teams platform docset:<br>
@@ -63,13 +63,12 @@ For more information on  hyperlinks and file paths, see [Use links in documentat
 
 ## Code Samples and Snippets
 
-Code samples play an important role in helping developers successfully use APIs and SDKs. Well-presented code samples can communicate how things work more clearly than descriptive text and instructional information alone. Your code samples should be accurate, concise, well-documented, and, most importantly, reader-friendly. Code that is easy-to-read is also easy to understand, test, debug, maintain, modify, and extend. *See* [How to include code in docs](/contribute/code-in-docs).
+Code samples play an important role in helping developers successfully use APIs and SDKs. Well-presented code samples can communicate how things work more clearly than descriptive text and instructional information alone. Your code samples should be accurate, concise, well-documented, and, most importantly, reader-friendly. Code that is easy-to-read is also easy to understand, test, debug, maintain, modify, and extend. For more information, see [How to include code in docs](/contribute/code-in-docs).
 
 ## See also
 
-- [Docs style and voice quick start](/contribute/style-quick-start)
-
-- [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips).
+* [Docs style and voice quick start](/contribute/style-quick-start)
+* [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips).
 
 > [!div class="nextstepaction"]
 > [Get Microsoft Docs updates and the latest announcements](/teamblog)

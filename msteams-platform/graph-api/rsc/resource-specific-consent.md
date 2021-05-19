@@ -153,8 +153,7 @@ Once the app has been installed to a team, you can use [Graph Explorer](https://
 
 ## See also
  
-- [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
- 
-- [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
+* [Test resource-specific consent permissions in Teams](test-resource-specific-consent.md)
+* [Resource-specific consent in Microsoft Teams for admins](/MicrosoftTeams/resource-specific-consent)
 
 

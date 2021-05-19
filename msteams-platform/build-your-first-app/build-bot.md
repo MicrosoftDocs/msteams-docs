@@ -92,7 +92,7 @@ Tunneling is a protocol that allows you to transport data across a network. And 
 
 To use a bot in Teams, you must register it with the Azure Bot Service. This is done automatically when you set up your app using the Teams Toolkit.
 
-You must still specify an endpoint address to receive and process user messages or requests sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the toolkit.
+You must still specify an endpoint address to receive and process user messages, or requests sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this in the toolkit.
 
 1. In Visual Studio Code, open **Microsoft Teams Toolkit**.
 1. Select **Bots** > **Existing bot registrations** and select the bot you created during setup. 

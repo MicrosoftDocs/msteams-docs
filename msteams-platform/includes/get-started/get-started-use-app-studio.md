@@ -76,8 +76,8 @@ Personal tabs are different from the Team tab. **Hello Tab** is already listed i
 
 Update the following boxes with your app URL:
 
-- Change the **Content URL** box to `https://yourteamsapp.ngrok.io/hello`.
-- Change the **Website URL** box to `https://yourteamsapp.ngrok.io/hello`.
+- Change the **Content URL** box to `https://yourteamsapp.ngrok.io/hello`
+- Change the **Website URL** box to `https://yourteamsapp.ngrok.io/hello`
 
 Replace `yourteamsapp.ngrok.io` by the URL that you used when hosting your app.
 

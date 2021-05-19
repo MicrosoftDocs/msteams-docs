@@ -244,8 +244,6 @@ Please warn users before your app downloads any files or executable (`.exe`  )in
 
 ## See also
 
-- [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
-
-- [Section 100 — General](/legal/marketplace/certification-policies#100-general)
-
-- [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)
+* [Learn more about Teams app approval policies](/legal/marketplace/certification-policies#1140-teams)
+* [Section 100 — General](/legal/marketplace/certification-policies#100-general)
+* [Section 1100.5 — Customer control](/legal/marketplace/certification-policies#11005-customer-control)

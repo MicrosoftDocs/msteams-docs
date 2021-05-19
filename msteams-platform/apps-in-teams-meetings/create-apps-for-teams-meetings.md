@@ -379,6 +379,5 @@ The post-meeting and pre-meeting configurations are equivalent.
 
 ## See also
 
-- [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
-
-- [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
+* [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)

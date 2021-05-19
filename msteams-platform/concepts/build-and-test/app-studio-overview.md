@@ -62,7 +62,7 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 
   You must also provide any additional domains that the tab expects to load from or link to.
 
-* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the personal app experience. This is the experience a user has with your app outside the context of a team or channel. In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. With Teams tabs, provide any additional domains from which the tab expects to load from or link to.
+* **Personal Tabs.** This section lets you define a set of tabs that are presented by default in the personal app experience (experience a user has with your app outside the context of a team or channel). In this section, provide the tab name, a unique identifier, the URL that points to the UI to be displayed in Teams, and optionally, the URL to use if a user opts to view the tab in a browser. With Teams tabs, provide any additional domains from which the tab expects to load from or link to.
 
 ##### Bots
 
@@ -72,7 +72,8 @@ If you have not yet registered a bot with the Bot Framework, click **Register** 
 
 After you have supplied your bot's information, you can now optionally define a list of commands that your bot can suggest to users. Add the name of the command, a description of the command which indicates its syntax and arguments, and the scope(s) to which this command should apply.
 
-Note that if you have defined your bot to only support one scope, commands specified for the unsupported scope is ignored. You can edit the scopes your bot supports at any time.
+> [!NOTE]
+> If you have defined your bot to only support one scope, the commands specified for the unsupported scope is ignored. You can edit the scopes your bot supports at any time.
 
 ##### Connectors
 

@@ -238,10 +238,7 @@ Microsoft Teams will ensure that keyboard navigation works properly from the tas
 
 ## See also
 
-[Learn  more: Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
-
-[Learn more: Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
-
-[Learn more: Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
-
-[Learn more: Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
+* [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
+* [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Integrate QR or barcode scanner capability in Teams](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
+* [Integrate location capabilities in Teams](../concepts/device-capabilities/location-capability.md)
