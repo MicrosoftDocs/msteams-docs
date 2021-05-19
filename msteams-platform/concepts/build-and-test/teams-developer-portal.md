@@ -19,7 +19,7 @@ A Teams app is a web app. Like all web apps, its source code is developed in an 
 
 The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world. You can manage your apps through the [Developer Portal](https://aka.ms/dev-portal).
 
-//Add screen here
+:::image type="content" source="../assets/images/tdp/tdp_home.png" alt-text="Screenshot showing the home page of Teams Developer Poral.":::
 
 To begin with, you must register a new app. There are three ways to register:
 
