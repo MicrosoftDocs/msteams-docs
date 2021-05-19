@@ -1,12 +1,12 @@
 ---
-title: Design your app - Understanding the fundamentals
+title: Design your app - Understanding the design system
 description: Learn about the basics of designing your Microsoft Teams app, including layout, color scheme, and more.
 author: heath-hamilton
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview
 ---
-# Microsoft Teams app design fundamentals
+# Microsoft Teams app design system
 
 Quickly learn about the fundamentals of Teams app design. You can find comprehensive guidance and examples in the <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">Microsoft Teams UI Kit (Figma)</a>.
 
