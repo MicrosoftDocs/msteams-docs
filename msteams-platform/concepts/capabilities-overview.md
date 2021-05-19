@@ -23,9 +23,9 @@ Your Teams app have one or all of the following core capabilities:
 * [Bots](../bots/what-are-bots.md)
 * [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 
-Your app can also take advantage of advanced capabilities, such as the [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview).
+Your app can also take advantage of advanced capabilities, such as the [Microsoft Graph API for Teams](/graph/teams-concept-overview).
 
-The following illustration gives you an idea of which capabilities will provide the features you want in your app.
+The following illustration gives you an idea of which capabilities will provide the features you want in your app:
 
 :::image type="content" source="../assets/images/capabilities-overview.png" alt-text="Mind map illustrating what Teams app capabilities are.":::
 
@@ -36,7 +36,7 @@ For example, you can collect user input in a form built as a tab in the app. You
 
 ## See also
 
-- [Build apps for Teams](../overview.md)
+[Build apps for Teams](../overview.md)
 
 ## Next step
 

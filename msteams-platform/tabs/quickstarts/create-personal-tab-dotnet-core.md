@@ -6,7 +6,7 @@ ms.topic: quickstart
 localization_priority: Normal
 ms.author: lajanuar
 ---
-# Create a personal tab with ASP.NET Core
+# Create a personal tab using ASP.NETCore
 
 In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
@@ -33,7 +33,7 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 
 ### Startup.cs
 
-This project was created from an ASP.NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -93,15 +93,15 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 - Open a command prompt in the root of your project directory and run the following command:
 
-```bash
-ngrok http https://localhost:44325 -host-header="localhost:44325"
-```
+    ```bash
+    ngrok http https://localhost:44325 -host-header="localhost:44325"
+    ```
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44325.  It should resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
 - Be sure to keep the command prompt with ngrok running, and to make a note of the URL — you'll need it later.
 
-- Verify that *ngrok* is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
+- Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 >[!TIP]
 >You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
@@ -111,3 +111,8 @@ ngrok http https://localhost:44325 -host-header="localhost:44325"
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)

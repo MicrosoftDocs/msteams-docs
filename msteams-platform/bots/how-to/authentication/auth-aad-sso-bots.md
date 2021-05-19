@@ -26,25 +26,25 @@ Complete the following steps to get authentication and bot application tokens:
     >* The bot token is received from every active user endpoint.
     >* The app must be installed in personal scope for SSO support.
 
-2. If the current user is using your bot application for the first time, a request prompt appears requesting the user to do one of the following:
+1. If the current user is using your bot application for the first time, a request prompt appears requesting the user to do one of the following:
     * Provide consent, if required.
     * Handle step-up authentication, such as two-factor authentication.
 
-3. Teams requests the bot application token from the AAD endpoint for the current user.
+1. Teams requests the bot application token from the AAD endpoint for the current user.
 
-4. AAD sends the bot application token to the Teams application.
+1. AAD sends the bot application token to the Teams application.
 
-5. Teams sends the token to the bot as part of the value object returned by the invoke activity with the name **sign-in/tokenExchange**.
+1. Teams sends the token to the bot as part of the value object returned by the invoke activity with the name **sign-in/tokenExchange**.
   
-6. The parsed token in the bot application provides the required information, such as the user's email address.
+1. The parsed token in the bot application provides the required information, such as the user's email address.
   
 ## Develop an SSO Teams bot
   
 Complete the following steps to develop an SSO Teams bot:
 
 1. [Register your app through the AAD portal](#register-your-app-through-the-aad-portal).
-2. [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).
-3. [Add the code to request and receive a bot token](#add-the-code-to-request-and-receive-a-bot-token).
+1. [Update your Teams application manifest for your bot](#update-your-teams-application-manifest-for-your-bot).
+1. [Add the code to request and receive a bot token](#add-the-code-to-request-and-receive-a-bot-token).
 
 ### Register your app through the AAD portal
 
