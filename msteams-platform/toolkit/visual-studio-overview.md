@@ -53,7 +53,7 @@ At its core, the Teams app embraces three components:
 
   1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
   1. A server that responds to requests for content that will be displayed in Teams, e.g., HTML tab content or a bot adaptive card .
-  1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
+  1. A Teams app package consists of three files:
 
       > [!div class="checklist"]
       >
