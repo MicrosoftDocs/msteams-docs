@@ -11,9 +11,11 @@ localization_priority: Normal
 > [!NOTE]
 > This feature is available in public developer preview.
 
-Using resource-specific consent (RSC) permissions, a bot can now receive a message even when it is not @mentioned by a user. Bots can receive all channel messages in a team when consented to and installed. Earlier, a bot was only able to receive a message when it was @mentioned by a user.
+The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is being extended to bot scenarios.
 
-Only team owners can add and consent to RSC permissions for apps in Teams. You can specify permissions that apps require in the application manifest. Users review and consent to permissions when you enable bots to receive all channel messages.
+Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, developers can now request team owners to consent for a bot to receive user messages across all standard channels in a team without being @mentioned. This capability can be enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, Team owners can grant consent during the app installation process.
+
+For more information about enabling RSC for your app, see [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## Enable bots to receive all channel messages
 
