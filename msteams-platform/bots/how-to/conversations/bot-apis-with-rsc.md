@@ -43,7 +43,7 @@ The following code provides an example of the app manifest:
 
 ## Receive channel messages with RSC 
 
-To receive all channel messages in a team with RSC without being @mentioned, follow the steps:
+To receive all channel messages in a team with RSC without being @mentioned, follow these steps:
 
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
