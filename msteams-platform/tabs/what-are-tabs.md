@@ -37,7 +37,9 @@ There are two types of tabs available in Teams — channel/group and personal. C
 
 ## How do tabs work?
 
-There are two methods to create tabs. You can use either of the following methods to build tabs:
+You can use one of the following methods to create tabs:
+* [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
+* [Use Adaptive Card to build tabs](#use-adaptive-cards-to-build-tabs)
 
 ### Declare custom tab in app manifest
 
@@ -52,7 +54,7 @@ You can have multiple channels or group tabs, and up to sixteen personal tabs pe
 
 ### Use Adaptive Card to build tabs
 
-When developing a tab using the traditional method, a developer needs to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, developers can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card to render.
+When developing a tab using the traditional method, you need to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, you can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card to render.
 
 ## Mobile clients
 
