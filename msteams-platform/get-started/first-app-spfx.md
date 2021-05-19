@@ -107,7 +107,7 @@ The Toolkit automatically creates scaffolding for you in the project directory b
 
 Since you selected an SPFx Webpart project, the following files are relevant to your UI:
 
-- The folder `SPFx/src/webparts/<your webpart name>.ts` contains your SPFx webpart.
+- The folder `SPFx/src/webparts/{webpart}` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
 
 For more information about SharePoint Webparts for Teams, [refer to the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
@@ -145,7 +145,7 @@ To build and run your app locally:
 Your app should now be running.  You can do normal debugging activities as if this were any other SPFx webpart (such as setting breakpoints).
 
 > [!TIP]
-> Try placing breakpoints in the render method of `SPFx/src/webparts/{yourwebpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
+> Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
 
 ## Deploy your app to SharePoint
 

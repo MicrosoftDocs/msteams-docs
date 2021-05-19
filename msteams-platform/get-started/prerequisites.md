@@ -3,7 +3,7 @@ title: Get started - Prerequisites
 author: adrianhall
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/19/2021
 ms.topic: quickstart
 ---
 # Prerequisites: Get started with Microsoft Teams app development
@@ -35,7 +35,7 @@ The Teams Toolkit helps simplify the development process with tools to provision
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools will be installed by the Visual Studio Code extension when they are needed.  If already installed, the installed version will be used instead.  If using Linux, you must install these tools before use:
+The following tools will be installed by the Visual Studio Code extension when they are needed.  If already installed, the installed version will be used instead.  If using Linux (including WSL), you must install these tools before use:
 
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
