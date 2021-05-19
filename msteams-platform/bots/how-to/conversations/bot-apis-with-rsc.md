@@ -56,7 +56,7 @@ The following code provides an example of the app manifest:
 
 ## See also
 
-* [Bot conversations](/bots/how-to/conversations/conversation-basics)
+* [Bot conversations](~/bots/how-to/conversations/conversation-basics)
 * [Resource-specific consent](/resource-specific-consent)
 * [Test resource-specific consent](/graph-api/rsc/test-resource-specific-consent)
-* [Upload custom app in Teams](/concepts/deploy-and-publish/apps-upload)
+* [Upload custom app in Teams](~/concepts/deploy-and-publish/apps-upload)
