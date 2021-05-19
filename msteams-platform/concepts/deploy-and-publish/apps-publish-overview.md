@@ -42,4 +42,4 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create your app package](~/concepts/build-and-test/apps-package.md)
+> [Configure app's default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
