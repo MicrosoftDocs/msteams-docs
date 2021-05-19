@@ -121,7 +121,7 @@ Blend the features users love about an existing web app, service, or system with
 
 ## A little code goes a long way
 
-You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
+You don't need to be an expert programmer to build a great Teams app. Try one of the several low-code solutions.
 
 > [!div class="nextstepaction"]
 > [Create a low-code app](samples/teams-low-code-solutions.md)
