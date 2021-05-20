@@ -101,10 +101,10 @@ The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js
 
 Teams Toolkit allows you to host your app locally.  To do this:
 
-* An Azure Active Directory Application is registered within the M365 tenant.
-* An app manifest is submitted to the Developer Portal for Teams.
-* An API is run locally using Azure Functions Core Tools to support your app.
-* [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your message extension.
+- An Azure Active Directory Application is registered within the M365 tenant.
+- An app manifest is submitted to the Developer Portal for Teams.
+- An API is run locally using Azure Functions Core Tools to support your app.
+- [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your message extension.
 
 To build and run your app locally:
 
