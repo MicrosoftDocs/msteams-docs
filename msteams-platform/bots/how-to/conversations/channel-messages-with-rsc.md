@@ -13,13 +13,13 @@ localization_priority: Normal
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios.
 
-Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, you can now request team owners to consent for a bot to receive user messages across standard channels in a team without being @mentioned. This capability is enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, Team owners can grant consent during the app installation process.
+Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, you can now request team owners to consent for a bot to receive user messages across standard channels in a team without being @mentioned. This capability is enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
 
 For more information about enabling RSC for your app, see [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## Enable bots to receive all channel messages
 
-The `ChannelMessage.Read.Group` RSC permission is now extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
+The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
 ## Update app manifest
 
@@ -27,9 +27,9 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
 The following is an example of the `webApplicationInfo` object:
 
-* **id**: Your Azure AD app ID. This can be the same as your bot ID.
-* **resource**: Any string. This field has no operation in RSC, but must be added and have a value to avoid an error response.
-* **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
+* **id**: Your Azure Active Directory (AAD) app id. This can be the same as your bot id.
+* **resource**: Any string. This field has no operation in RSC, but must be added and have a value to avoid error response.
+* **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group` must be specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
 The following code provides an example of the app manifest:
 
@@ -45,7 +45,7 @@ The following code provides an example of the app manifest:
 
 ## Receive channel messages with RSC
 
-**To receive all channel messages in a team with RSC without being @mentioned**
+To receive all channel messages in a team with RSC without being @mentioned
 
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
