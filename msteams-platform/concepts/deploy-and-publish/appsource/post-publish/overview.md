@@ -52,4 +52,4 @@ Create the link using the following URL appended with your app ID: `https://team
 
 ## See also
 
-* [Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)
+[Monetize your app through Microsoft Commercial Marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace)

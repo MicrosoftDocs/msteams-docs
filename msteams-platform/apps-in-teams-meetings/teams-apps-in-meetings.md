@@ -30,9 +30,10 @@ The new Together Mode feature enables users to collaborate in a meeting with the
 
 ## See also
 
-* [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+* [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 * [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 * [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md)
 
