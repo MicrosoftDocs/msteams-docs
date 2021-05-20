@@ -191,6 +191,8 @@
       href: tabs/how-to/create-tab-pages/removal-page.md
     - name: Get context for your tab
       href: tabs/how-to/access-teams-context.md  
+    - name: Build tabs with Adaptive Card
+      href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -205,8 +207,7 @@
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
     - name: Channel tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-  - name: Build tabs with Adaptive Card
-    href: tabs/how-to/build-adaptive-card-tabs.md
+  - 
 - name: Build bots
   items:
   - name: Overview
