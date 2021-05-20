@@ -79,7 +79,15 @@ When a person messages a bot, sign in may be required use all its features. You 
 
 Don’t forget: In the bot command menu (**What can I do?**), you must also provide a command to sign out.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-sso-example.png" alt-text="Example shows a bot with a sign-in button." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-sso-example.png" alt-text="Example shows a bot with a sign-in button on mobile." border="false":::
+
+---
 
 ### Tours
 
@@ -92,13 +100,29 @@ You can include a tour with welcome messages and if the bot responds to somethin
 
 In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged (for example, **Create a task**).
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat on mobile." border="false":::
+
+---
 
 #### Channels and group chats
 
 In channels and group chats, a tour should open in a modal (also known as a [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-tour-channel.png" alt-text="Example shows a bot tour in a channel." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-tour-channel.png" alt-text="Example shows a bot tour in a channel on mobile." border="false":::
+
+---
 
 ## Chat with a bot
 
@@ -115,6 +139,8 @@ You can use bots in the following contexts:
 
 ### Anatomy
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-anatomy.png" alt-text="Example shows a bot's structural anatomy." border="false":::
 
 |Counter|Description|
@@ -124,8 +150,23 @@ You can use bots in the following contexts:
 |3|**Custom tabs**: Opens other content related to your app.|
 |4|**About tab**: Displays basic information about your app.|
 |5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
-|6|**Adaptive Card**: If your bot’s responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
-|7|**Command menu**: Displays your bot's standard commands (defined by you).
+|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+|7|**Command menu**: Displays your bot's standard commands (defined by you).|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-anatomy.png" alt-text="Example shows a mobile bot's structural anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**App name and icon**|
+|2|**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).|
+|3|**Custom tabs**: Opens other content related to your app.|
+|4|**About tab**: Displays basic information about your app.|
+|5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
+|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+
+---
 
 ### Command menu
 
