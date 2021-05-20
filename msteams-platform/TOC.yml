@@ -405,8 +405,6 @@
     href: concepts/deploy-and-publish/apps-publish-overview.md
   - name: Configure default install options
     href: concepts/deploy-and-publish/add-default-install-scope.md
-  - name: Include a SaaS offer for your apps 
-    href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
   - name: Create your app package
     href: concepts/build-and-test/apps-package.md
   - name: Upload your app
@@ -429,8 +427,8 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md   
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-    - name: Application Certification program
-      href: concepts/deploy-and-publish/appsource/post-publish/application-certification.md
+    - name: Include a SaaS offer for your app
+      href: concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md
 - name: Resources
 - name: App manifest
   items:
