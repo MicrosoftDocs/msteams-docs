@@ -32,7 +32,7 @@ Use the tools present in [Microsoft Teams JavaScript client SDK](/javascript/api
 
 After getting access to device capabilities, use Teams media capability APIs to [integrate media capabilities](mobile-camera-image-permissions.md) with Teams platform to enhance the user experience. These integrated capabilities allow your app to:
 
-* Capture and share images
-* Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md)
-* Record audio through microphone
+* Capture and share images.
+* Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md).
+* Record audio through microphone.
 * Share location using [location picker](location-capability.md).
