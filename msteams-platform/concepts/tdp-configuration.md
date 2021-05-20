@@ -37,7 +37,7 @@ The **Capabilities** section of Configuration has the app's capabilities details
 
 Following are the capabilities:
 
-// Add Screen here
+:::image type="content" source="../../assets/images/tdp/tdp_configure_1.png" alt-text="Screenshot showing the Configure page of Teams Developer Portal.":::
 
 * **Personal app** 
 
