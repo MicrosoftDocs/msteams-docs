@@ -12,13 +12,13 @@ ms.author: lomeybur
 
 ## Cookies in brief
 
- Cookies are text strings, sent from websites, and stored on a computer by the web browser. They're typically used for authentication and personalization, e.g., recalling stateful information, preserving user settings, recording browsing activity, and displaying relevant ads. Cookies are always linked to a particular domain and can be installed by various parties. They are categorized as follows:
+ Cookies are text strings, sent from websites, and stored on a computer by the web browser. They're typically used for authentication and personalization, For example, recalling stateful information, preserving user settings, recording browsing activity, and displaying relevant ads. Cookies are always linked to a particular domain and can be installed by various parties. They are categorized as follows:
 
  |Cookie|Scope|
  | ------ | ------ |
- |**First-party cookie**|A first-party cookie is created by websites that a user visits and is used to save data such as shopping cart items, login credentials (e.g., authentication cookies), and other analytics.|
- |**Second-party cookie**|A second-party cookies is technically the same as a first-party  cookie. The difference is that data is shared with a second party via a data partnership agreement (e.g., [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference)). |
- |**Third-party cookie**|A third-party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking (e.g. "Like" buttons), ad serving, and live chats.|
+ |**First-party cookie**|A first-party cookie is created by websites that a user visits and is used to save data such as shopping cart items, login credentials. For example, authentication cookies, and other analytics.|
+ |**Second-party cookie**|A second-party cookies is technically the same as a first-party  cookie. The difference is that data is shared with a second party via a data partnership agreement. For example, [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
+ |**Third-party cookie**|A third-party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking. For example, "Like" buttons, ad serving, and live chats.|
 
 ### Cookies and HTTP requests
 
@@ -72,7 +72,7 @@ Android WebView is a Chrome system component that allows Android apps to display
 * For cookies that are only needed in a first-party context, you should declare them as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 * For cookies needed in a third-party context, you should ensure that they are declared as `SameSite=None; Secure`.
 
-## Learn more
+## See also
 
 * [SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
 

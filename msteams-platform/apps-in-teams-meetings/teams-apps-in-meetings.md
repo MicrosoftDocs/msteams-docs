@@ -159,12 +159,12 @@ The following table provides the user types and what features each user can acce
 
 ## See also
 
-* [Tab](../tabs/what-are-tabs.md#how-do-tabs-work)
+* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build your app](create-apps-for-teams-meetings.md)
