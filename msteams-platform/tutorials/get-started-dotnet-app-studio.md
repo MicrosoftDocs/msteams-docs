@@ -67,10 +67,10 @@ After the repo is cloned, use Visual Studio to open the solution file **Microsof
 
 When the app starts, a browser window opens with the root of the app launched. You can go to the following URLs to verify that all the app URLs are loading:
 
-- [https://localhost:44327/](https://localhost:44327/)
-- [https://localhost:44327/hello](https://localhost:44327/hello)
-- [https://localhost:44327/first](https://localhost:44327/first)
-- [https://localhost:44327/second](https://localhost:44327/second)
+- `https://localhost:44327/`
+- `https://localhost:44327/hello`
+- `https://localhost:44327/first`
+- `https://localhost:44327/second`
 
 <a name="HostSample"></a>
 
@@ -105,7 +105,7 @@ The app is only available during the current session on your computer. If the ma
 
 Microsoft Azure hosts your .NET application on a free tier using shared infrastructure. This is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
-Visual Studio has built-in support for app deployment to different providers, including Azure.
+Visual Studio has built-in support for app deployment to different providers, including Azure:
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 

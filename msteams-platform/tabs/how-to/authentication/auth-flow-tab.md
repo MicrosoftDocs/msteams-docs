@@ -41,7 +41,7 @@ Although the tab context provides helpful information regarding the user, do not
 
 ## Code sample
 
-Sample code showing the tab authentication process.
+Sample code showing the tab authentication process:
 
 | **Sample name** | **Description** | **C#** | **Node.js** |
 |-----------------|-----------------|-------------|------------|

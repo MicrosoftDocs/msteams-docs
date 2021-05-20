@@ -20,7 +20,7 @@ There are two methods for uploading your app. You can either use [App Studio](~/
 
 ## Debug your bot locally
 
-If you are hosting your bot locally during development you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service (you may need to add ngrok to your path).
+If you are hosting your bot locally during development you'll need to use a tunneling service like [ngrok](https://ngrok.com/) in order to test your bot. Once you've downloaded and installed ngrok, run the below command to start the tunneling service. You may need to add ngrok to your path.
 
 ```bash
 ngrok http <port> -host-header=localhost:<port>
@@ -84,4 +84,4 @@ To remove your bot completely from Teams, go to your Bot Dashboard and edit the 
 
 ## Removing your bot from AppSource
 
-If you want to remove your bot from your Teams app in AppSource (formerly Office Store), you must remove the bot from your app manifest and resubmit your app for validation. See [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md) for more information.
+If you want to remove your bot from your Teams app in AppSource (previously Office Store), you must remove the bot from your app manifest and resubmit your app for validation. For more information, see [Publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md).

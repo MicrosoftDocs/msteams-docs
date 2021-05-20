@@ -25,7 +25,7 @@ You can add a tab from the Teams store (AppSource) or in one of the following co
 * Channel
 * Meeting (before, during, or after the meeting)
 
-The following example shows how a tab is added in a channel.
+The following example shows how a tab is added in a channel:
 
 :::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." border="false":::
 
@@ -45,7 +45,7 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 |----------|-----------|
 |1|**App logo**: Full color app logo of your app.|
 |2|**App name**: Full name of your app.|
-|3|**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).|
+|3|**iframe**: Responsive space for your app’s content. For example, tab settings or authentication.|
 |4|**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.
 |5|**Close button**: Closes the modal.|
 |6|**Notify team members option**: The modal asks if you want to create a post letting others know you added a tab.|
@@ -139,7 +139,7 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
-Use these recommendations to create a quality app experience.
+Use these recommendations to create a quality app experience:
 
 ### Collaboration
 

@@ -53,7 +53,7 @@ Grids are useful for showing elements which are highly visual. It helps to inclu
 
 ### Tabs with bots on mobile
 
-The following example is a personal app that has tabs and a bot.
+The following example is a personal app that has tabs and a bot:
 
 :::image type="content" source="../../assets/images/tabs/mobile-tab-with-bot.png" alt-text="Illustration showing how mobile Teams app that has tabs and a bot." border="false":::
 
@@ -135,7 +135,7 @@ Apps listed on the Teams store must be approved for mobile use to function prope
 
 #### Apps on Teams store approved for mobile
 
-The following table describes tab availability and behavior when the app is listed on the Teams store and approved for mobile use.
+The following table describes tab availability and behavior when the app is listed on the Teams store and approved for mobile use:
 
 |Capability   |Mobile availability?   |Mobile behavior|
 |----------|-----------|------------|
@@ -144,11 +144,11 @@ The following table describes tab availability and behavior when the app is list
 
 #### Apps on Teams store not approved for mobile
 
-The following table describes tab availability and behavior when the app is listed on the Teams store but not approved for mobile use.
+The following table describes tab availability and behavior when the app is listed on the Teams store but not approved for mobile use:
 
-|Capability   |Mobile availability?|Mobile behavior|
+| Capability | Mobile availability? | Mobile behavior |
 |----------|-----------|------------|
-|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration (which also must be included in your source code's `setSettings()` [function](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions)). However, users can still view the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.|
+|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which also must be included in your source code's `setSettings()` [function](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true). However, users can still view the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.|
 |Personal app|No|Not applicable|
 
 #### Apps not on Teams store

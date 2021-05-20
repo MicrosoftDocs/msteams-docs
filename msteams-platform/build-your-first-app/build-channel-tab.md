@@ -63,6 +63,7 @@ Much of the app configurations and scaffolding are set up automatically when you
         </ul>
     </div>
     ```
+    
 1. Go to the `src/components` directory and open the `Tab.js` file. Locate the `render()` function and paste your code inside `return()` as shown in the following example:
     ```JavaScript
     render() {
@@ -81,6 +82,7 @@ Much of the app configurations and scaffolding are set up automatically when you
         );
     }
     ```
+    
 1. Go to the `src/components` directory and update the `App.css` file with the following code to make the email links easier to read in any theme that is used:
     ```CSS
     a {
@@ -115,12 +117,12 @@ When you add a channel tab, the app name displays by default, for example, **fir
 1. Go to the `src/components` directory and open the `TabConfig.js` file.
 1. Add the `suggestedDisplayName` property with the tab name you want to display by default under `microsoftTeams.settings.setSettings` as shown in the following example:
 
-  ```JavaScript
-    microsoftTeams.settings.setSettings({
-    "contentUrl": "https://localhost:3000/tab",
-    "suggestedDisplayName": "Team Contacts"
-  });
-  ```
+    ```JavaScript
+        microsoftTeams.settings.setSettings({
+        "contentUrl": "https://localhost:3000/tab",
+        "suggestedDisplayName": "Team Contacts"
+      });
+      ```
 
 ## 6. Build and run your app
 
@@ -155,12 +157,12 @@ Your app is ready to test in Teams. To do this, you must have an account that al
 ## See also
 
 * [Build and run your first Microsoft Teams app](../build-your-first-app/build-and-run.md) 
-* [Teams JavaScript client SDK](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
+* [Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
 * [Designing your tab for Microsoft Teams desktop and web](../tabs/design/tabs.md) 
 * [Designing your Microsoft Teams app with UI templates](../concepts/design/design-teams-app-ui-templates.md) 
 * [Tabs on mobile](../tabs/design/tabs-mobile.md)
 * [Single sign-on (SSO) support for tabs](../tabs/how-to/authentication/auth-aad-sso.md)
-* [Microsoft Teams API overview](https://docs.microsoft.com/graph/teams-concept-overview)
+* [Microsoft Teams API overview](/graph/teams-concept-overview)
 * [Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams](../tabs/quickstarts/create-personal-tab-node-yeoman.md)
 
 ## Next step

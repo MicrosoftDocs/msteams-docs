@@ -42,5 +42,6 @@ If you would like to learn more about how your Azure app registration will be pr
 > [!TIP]
 > You may not see the app install dialogue in the browser if pop-up windows are disabled for your browser. If this happens, enable pop-up windows and refresh the page.
 
-> [!div class="nextstepaction"]
-> [Learn more: Build apps with the Microsoft Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md)
+## See also
+
+- [Build apps with the Microsoft Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md)

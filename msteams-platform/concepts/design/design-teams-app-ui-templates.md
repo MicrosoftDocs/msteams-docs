@@ -94,9 +94,9 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 
 ### Top use cases
 
-* Project management. Assigning tasks and tracking status
-* Brainstorming. Adding ideas in different categories
-* Sorting exercises. Organizing any kind of information into buckets
+* Project management: Assigning tasks and tracking status.
+* Brainstorming: Adding ideas in different categories.
+* Sorting exercises: Organizing any kind of information into buckets.
 
 ## Data visualization
 
@@ -154,8 +154,8 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Top use cases
 
-* Browse multiple pages within a Teams tab
-* Break down complex apps into multiple pages
+* Browse multiple pages within a Teams tab.
+* Break down complex apps into multiple pages.
 
 ## Breadcrumb
 
@@ -190,5 +190,5 @@ Stage offers a way for users to open an entity—like an image, file, or website
 
 ### Top use cases
 
-* Open an entity in Teams instead of another app or browser
-* Spotlight media or other content
+* Open an entity in Teams instead of another app or browser.
+* Spotlight media or other content.
