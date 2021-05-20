@@ -11,7 +11,7 @@ ms.date: 05/15/2018
 When localizing your Microsoft Teams app, you must consider the following:
 
 1. Your Teams store listing (if applicable).
-1. The end-user facing strings in your app manifest (for example bot commands).
+1. The end-user facing strings in your app manifest. For example bot commands.
 1. Responding to localized text submitted from your users.
 
 ## Localizing your AppSource listing
@@ -20,7 +20,7 @@ If you're publishing to the store, you need to be aware that localizing your App
 
 ### Example of configuring localization
 
-To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app. French is used in this example.
+To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app. French is used in this example:
 
 1. Add English language
     * Fill in the app name.

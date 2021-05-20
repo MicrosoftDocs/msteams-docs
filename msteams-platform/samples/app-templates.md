@@ -143,7 +143,7 @@ Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.co
 
 ## Company Communicator
 
-The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning and development or organization-wide broadcasts.
+The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
 
 The app provides an easy interface for designated users to create, preview, collaborate and send messages.
 
@@ -190,7 +190,7 @@ CrowdSourcer is a [Microsoft Teams bot](../bots/what-are-bots.md) that gives tea
 
 Self-expression is core to a healthy team culture. This app template is a [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md) that enables your users to use custom stickers and GIFs within Microsoft Teams. This template provides an easy web-based configuration experience where anyone with configuration access can upload the GIFs, stickers, and images they want their users to have, allowing your entire team to use any set of stickers you choose.
 
-This app also enables easy sharing of images, GIFs, stickers across teams without needing access to SharePoint sites or individual channels as storage and sharing mechanisms. For example, product teams can easily share product images and GIFs to social media, marketing and sales teams programmatically. One can also extend this app by triggering a notification flow to specific teams or individuals when new images, and GIFs are made available.
+This app also enables easy sharing of images, GIFs, stickers across teams without needing access to SharePoint sites or individual channels as storage and sharing mechanisms. For example, product teams can easily share product images and GIFs to social media, marketing, and sales teams programmatically. One can also extend this app by triggering a notification flow to specific teams or individuals when new images, and GIFs are made available.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-stickers-app)
 
@@ -285,7 +285,7 @@ The Get Support app is used by organizations that are using Microsoft Teams, to 
 * Requesting assistance on different categories from a Power App.
 * Notifications sent to requestors informing them of who hare assigned.
 * Notifications sent to assigned supervisors informing them of who needs assistance. 
-* Analyzing escalations and patterns in SharePoint and PowerBI.S
+* Analyzing escalations and patterns in SharePoint and PowerBI.S.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
@@ -347,6 +347,8 @@ Group Activities is a Microsoft Teams app that makes it easy for team owners to 
 Group Connect is a Microsoft Teams app that helps organization members discover employee groups and find information relevant to employee groups. The app comes built-in with rich capabilities for organization leaders to communicate with their employees regarding groups, events, and resources. The Group Connect app also matches group members with each other at their desired frequency to encourage networking and cohesion within a group. For more information on how you can leverage the Group Connect app to help employee groups foster within your organization, see the app on GitHub.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-groupconnect)
+
+![Discover D&I groups](https://github.com/OfficeDev/microsoft-teams-apps-diversityandinclusion/wiki/Images/temp_group_connect_landing.png)
 
 ## Grow Your Skills
 
@@ -612,7 +614,7 @@ To resolve this problem, the List Search app template is used. Many users use Sh
 
 ## Staff Check-ins
 
-Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview) based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, notes, reminder notifications and automated workflows.
+Staff Check-ins is a [Power Apps](/powerapps/powerapps-overview) based app that enables oversight communication between your business and field personnel. Staff can easily provide time-critical information and status updates on either a scheduled or ad-hoc basis directly from Teams. The app supports real-time location, photos, notes, reminder notifications, and automated workflows.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-staffcheckins)
 

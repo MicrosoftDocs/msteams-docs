@@ -53,8 +53,6 @@ Sample code showing the bot authentication process:
 | Teams authentication | This sample demonstrates authentication in Microsoft Teams apps. | [View](https://github.com/OfficeDev/microsoft-teams-sample-auth-node) | | |
 | Bot authentication | This sample demonstartes how to use authentication for a bot runnning in Microsoft Teams | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth)
 
-## More details
-
-For detailed implementation walkthroughs for bot authentication targeting Azure AD see:
+## See also
 
 [Add authentication to your Teams bot](add-authentication.md)

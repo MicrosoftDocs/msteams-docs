@@ -27,7 +27,7 @@ Bots are available in chats, channels, and personal apps. You can add a bot one 
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
-:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
 
 ## Introduce a bot
 
@@ -35,7 +35,7 @@ It’s critical that your bot introduces itself and describes what it can do. Th
 
 ### Welcome message in a one-on-one chat
 
-In personal contexts, welcome messages set your bot's tone. The message includes a greeting, what the bot can do, and some suggestions for how to interact (for example, “Try asking me about …”). If possible, these suggestions should return stored responses without having to sign in.
+In personal contexts, welcome messages set your bot's tone. The message includes a greeting, what the bot can do, and some suggestions for how to interact. For example, “Try asking me about …”. If possible, these suggestions should return stored responses without having to sign in.
 
 :::image type="content" source="../../assets/images/bots/bot-personal-welcome.png" alt-text="Example shows a bot introduction in a personal app." border="false":::
 
@@ -55,14 +55,14 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 ### Tours
 
-You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features (for example, include screenshots of your messaging extension).
+You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your messaging extension.
 
 > [!IMPORTANT]
 > Tours should be accessible without having to sign in.
 
 #### One-on-one chats
 
-In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged (for example, **Create a task**).
+In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged. For example, **Create a task**.
 
 :::image type="content" source="../../assets/images/bots/bot-tour-personal.png" alt-text="Example shows a bot tour in a one-on-one chat." border="false":::
 
@@ -128,7 +128,7 @@ Use a thesaurus and get people from as many different backgrounds as possible to
 
 Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
 
-The following examples outline the user intent and data in messages sent to bots.
+The following examples outline the user intent and data in messages sent to bots:
 
 :::row:::
    :::column span="":::
@@ -146,7 +146,7 @@ The following examples outline the user intent and data in messages sent to bots
 
 Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
 
-* [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
+* [Understanding LUIS](/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.
 
 ## Use cases
@@ -161,7 +161,7 @@ Bots can deliver an exact match to a query or a group of related matches to help
 
 While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions. Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).
 
-In the following example, the bot responds to each message with options for what might want to do next.
+In the following example, the bot responds to each message with options for what might want to do next:
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." border="false":::
 
@@ -169,7 +169,7 @@ In the following example, the bot responds to each message with options for what
 
 With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
 
-In the following example, a user gets a toast notification that a bot messaged them in another channel.
+In the following example, a user gets a toast notification that a bot messaged them in another channel:
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." border="false":::
 
@@ -179,7 +179,7 @@ Now in that channel, the user can read their message from the bot.
 
 ### Use tabs with bots
 
-A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
+A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. For more information, See [designing tabs](../../tabs/design/tabs.md).
 
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." border="false":::
 
