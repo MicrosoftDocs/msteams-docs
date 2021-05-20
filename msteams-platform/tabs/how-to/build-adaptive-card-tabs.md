@@ -17,7 +17,7 @@ Use Adaptive Cards to build tabs with ease. You can build your tabs with ready-m
 
 The following image depicts build tabs with adaptive cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
+<img src="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.png" alt="Example of Adaptive Card rendered in tabs." width="400"/>
 
 ## Prerequisites
 
