@@ -207,7 +207,6 @@
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
     - name: Channel tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-  - 
 - name: Build bots
   items:
   - name: Overview
