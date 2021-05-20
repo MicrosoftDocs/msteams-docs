@@ -6,17 +6,18 @@ localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
 ---
-# Enable admins to customize your Microsoft Teams app
+# Enable orgs to customize your Microsoft Teams app
 
 > [!NOTE]
 > This feature is currently available in developer preview only.
 
-For orgs using your app, you can allow Teams admins to customize some parts of the app (such as changing the accent color to match their brand). 
+You can allow orgs (specifically Teams admins) to customize some aspects of your Microsoft Teams app. Some possible examples include:
 
-This customization is enabled if you define the `configurableProperties` in the manifest schema. For more information, see [Customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+* Changing the app's accent color to match the org's brand.
+* Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat will still see the original app name, *Contoso*).
 
-App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from *Contoso* to *Contoso Agent*, then the app will appear with the new name *Contoso Agent* to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as *Contoso*.
+You can enable this with `configurableProperties` in the app manifest. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 ## Best practices
 
-You must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+Provide guidelines for customers who want to customize your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
