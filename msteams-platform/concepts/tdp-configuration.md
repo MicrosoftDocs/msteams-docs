@@ -133,3 +133,8 @@ The object is an array with all elements of the type `string`.
 ### First party settings
 //Todo by Karthig
 
+## See also
+
+* [Overview of Teams Developer Portal](~/concepts/build-and-test/teams-developer-portal.md)
+* [Distribute Teams Developer Portal](~/concepts/tdp-distribute.md)
+* [Tools in Teams Developer Portal](~/concepts/tdp-tools.md)

@@ -84,4 +84,8 @@ Use the variable names instead of actual values in the property fields.
 > It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
 > If your app is already available in the Teams store and you want to convert it to SaaS, then you must plan the SaaS offer and configure the plans and pricing details in the Partner Center, link your SaaS offer through the Developer Portal, and then republish the app.
 
-//Add see also section
+## See also
+
+* [Configure Teams Developer Portal](~/concepts/tdp-configuration.md)
+* [Distribute Teams Developer Portal](~/concepts/tdp-distribute.md)
+* [Tools in Teams Developer Portal](~/concepts/tdp-tools.md)

@@ -33,3 +33,9 @@ For more information, see [Build a scene using Scene studio](../apps-in-teams-me
 ## Teams store app validation
 
 //Todo
+
+## See also
+
+* [Overview of Teams Developer Portal](~/concepts/build-and-test/teams-developer-portal.md)
+* [Configure Teams Developer Portal](~/concepts/tdp-configuration.md)
+* [Distribute Teams Developer Portal](~/concepts/tdp-distribute.md)

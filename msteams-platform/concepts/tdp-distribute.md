@@ -29,3 +29,9 @@ Make your app available to people in your org. Once approved by your IT admin, y
 ### Publish your app to Teams store
 
 On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users. Your IT admin will review these submissions. You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
+
+## See also
+
+* [Overview of Teams Developer Portal](~/concepts/build-and-test/teams-developer-portal.md)
+* [Configure Teams Developer Portal](~/concepts/tdp-configuration.md)
+* [Tools in Teams Developer Portal](~/concepts/tdp-tools.md)
