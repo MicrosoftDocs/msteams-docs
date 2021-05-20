@@ -25,7 +25,7 @@ Bots are available in chats, channels, and personal apps.
 
 # [Desktop](#tab/desktop)
 
-You can add a bot one of the following ways:
+Users can add a bot one of the following ways:
 
 * From the Teams store.
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
