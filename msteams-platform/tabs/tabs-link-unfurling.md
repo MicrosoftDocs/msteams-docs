@@ -26,8 +26,7 @@ When a user sends a URL in the chat or channel, the URL is unfurled to an Adapti
 
 The following image explains how Stage View works:
 
-![stageview working](~/assets/images/tabs/stage-view-working.png)
-<img src="~/assets/images/tabs/stage-view-working.png" alt="Stage View working" width="400"/>
+<img src="~/assets/images/tabs/stage-view-working.png" alt="Stage View working" width="500"/>
 
 ## Advantage of Stage View
 
