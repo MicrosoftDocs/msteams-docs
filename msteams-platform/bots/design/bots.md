@@ -224,21 +224,41 @@ Learn what users say when chatting with your bot. This will be an ongoing, itera
 
 Bots can deliver an exact match to a query or a group of related matches to help with disambiguation. For related matches, group the content using a list card.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-simple-query.png" alt-text="Example shows a simple query interaction with a bot on mobile." border="false":::
+
+---
 
 ### Multi-turn interactions
 
 While your bot can support complete requests and questions, it should also be able to handle multi-turn interactions. Anticipating possible next steps makes it much easier for people to a complete task flow (rather than expecting them to craft a comprehensive request).
 
-In the following example, the bot responds to each message with options for what might want to do next.
+In the following examples, the bot responds to each message with options for what might want to do next.
+
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/bots/bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot." border="false":::
+
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-multi-turn.png" alt-text="Example shows a multi-turn interaction with a bot on mobile." border="false":::
+
+
+---
 
 ### Reach out to users
 
 With proactive messaging, your bot can act like a digest that sends notifications relevant to an individual, group chat, or channel at a specific frequency. A bot may send a message when something has changed in a document or a work item is closed.
 
-In the following example, a user gets a toast notification that a bot messaged them in another channel.
+# [Desktop](#tab/desktop)
+
+In the following example, the user gets a toast notification that a bot messaged them in another channel.
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel." border="false":::
 
@@ -246,11 +266,31 @@ Now in that channel, the user can read their message from the bot.
 
 :::image type="content" source="../../assets/images/bots/bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message." border="false":::
 
+# [Mobile](#tab/mobile)
+
+In the following example, the user gets a notification that a bot messaged them in another channel.
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message-toast.png" alt-text="Example shows a toast of a bot proactively messaging a user from another channel on mobile." border="false":::
+
+Now in that channel, the user can read their message from the bot.
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-proactive-message.png" alt-text="Example shows the user looking at the bot's proactive message on mobile." border="false":::
+
+---
+
 ### Use tabs with bots
 
 A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/bots/bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/bots/mobile-bot-with-tab.png" alt-text="Example shows how a tab can help organize bot content on mobile." border="false":::
+
+---
 
 ## Manage a bot
 
