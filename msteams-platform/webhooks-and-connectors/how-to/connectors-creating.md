@@ -189,7 +189,7 @@ The Exchange Online PowerShell V2 module uses modern authentication and works wi
 **Run the command in Exchange Online PowerShell**
 
 * To disable connectors for the tenant: `Set-OrganizationConfig -ConnectorsEnabled:$true`.
-* To disable actionable messages for connectors for the tenant: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
+* To disable actionable messages for the tenant: `Set-OrganizationConfig -ConnectorsActionableMessagesEnabled:$false`.
 * To enable connectors for Teams, run the following commands:
     * `Set-OrganizationConfig -ConnectorsEnabled:$true `
     * `Set-OrganizationConfig -ConnectorsEnabledForTeams:$true`
