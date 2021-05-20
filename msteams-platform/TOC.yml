@@ -214,8 +214,8 @@
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
       items:
-      - name: Receive all messages with RSC
-        href: bots/how-to/conversations/bot-apis-with-rsc.md
+      - name: Receive all channel messages with RSC
+        href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
@@ -366,8 +366,6 @@
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
   - name: Enable resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Bot APIs with RSC permissions
-    href: bots/how-to/conversations/bot-apis-with-rsc.md
   - name: Proactive installation of apps using Graph API and send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
