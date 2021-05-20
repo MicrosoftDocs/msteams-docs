@@ -182,7 +182,9 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ## Enable connectors in Teams
 
-The Exchange Online PowerShell V2 module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365. Admins can use Exchange Online PowerShell to disable connectors for an entire tenant or a specific group mailbox, affecting all users in that tenant or mailbox. It is impossible to disable for some and not others. The tenant-level setting overrides the group-level setting. For example, if an admin enables connectors for the group and disables them on the tenant, connectors for the group will be disabled. Also, connectors are disabled by default for GCC tenants. To enable a connector in Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell.md?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) using modern authentication with or without MFA.
+The Exchange Online PowerShell V2 module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365. Admins can use Exchange Online PowerShell to disable connectors for an entire tenant or a specific group mailbox, affecting all users in that tenant or mailbox. It is impossible to disable for some and not others. Also, connectors are disabled by default for GCC tenants.
+
+The tenant-level setting overrides the group-level setting. For example, if an admin enables connectors for the group and disables them on the tenant, connectors for the group will be disabled. To enable a connector in Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell.md?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) using modern authentication with or without MFA.
 
 ### Commands to disable or enable connectors
 
