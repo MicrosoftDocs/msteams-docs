@@ -191,7 +191,7 @@
       href: tabs/how-to/create-tab-pages/removal-page.md
     - name: Get context for your tab
       href: tabs/how-to/access-teams-context.md  
-    - name: Build tabs with Adaptive Card
+    - name: Build tabs with Adaptive Cards
       href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Quickstarts
     items:
