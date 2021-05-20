@@ -272,4 +272,4 @@ You can share the Scene Package that is a .zip file retrieved from the Scene stu
 
 ## See also
 
-[Apps in Teams meetings](teams-apps-in-meetings.md)
+[Apps for Teams meetings](teams-apps-in-meetings.md)
