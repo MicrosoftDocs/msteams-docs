@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Tools in Developer Portal
 
-:::image type="content" source="../../assets/images/tdp/tdp_tools.png" alt-text="Screenshot showing the Tools page of Teams Developer Portal.":::
+:::image type="content" source="~/assets/images/tdp/tdp_tools_1.png" alt-text="Screenshot showing the Tools page of Teams Developer Portal.":::
 
 ## Bot Management
 

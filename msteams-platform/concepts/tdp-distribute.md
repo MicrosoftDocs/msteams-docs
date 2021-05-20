@@ -12,7 +12,7 @@ ms.topic: Conceptual
 
 After you have finished defining your application, the **Distribute** section allows you to export your app’s definition as a zip file which then can be shared and uploaded into the Teams client for testing. Clicking export downloads the zip file as **appname.zip** in your default download directory.
 
-:::image type="content" source="../../assets/images/tdp/tdp_distribute.png" alt-text="Screenshot showing the Distribute page of Teams Developer Portal.":::
+:::image type="content" source="~/assets/images/tdp/tdp_distribute_1.png" alt-text="Screenshot showing the Distribute page of Teams Developer Portal.":::
 
 ### Manifest
 
