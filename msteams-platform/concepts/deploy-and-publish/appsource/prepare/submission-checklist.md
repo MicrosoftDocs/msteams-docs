@@ -172,7 +172,7 @@ During submission, you're asked to categorize your app. The following table maps
 
 ### Localize your store listing
 
-Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
+Partner Center supports [localized store listings](/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
 ## Complete Publisher Verification
 
@@ -188,4 +188,4 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [Submit your app](/office/dev/store/add-in-submission-guide)
