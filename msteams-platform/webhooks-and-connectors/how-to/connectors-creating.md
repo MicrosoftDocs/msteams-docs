@@ -8,7 +8,7 @@ ms.date: 04/19/2019
 ---
 # Creating Office 365 Connectors for Microsoft Teams
 
->With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
+With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. See [Build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector) for more information.
 
 ## Adding a Connector to your Teams App
 
