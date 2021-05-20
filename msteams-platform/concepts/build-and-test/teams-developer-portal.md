@@ -1,91 +1,86 @@
 ---
-title: Manage your apps with the Developer Portal for Microsoft Teams
-description: Learn manage your apps using the Developer Portal for Microsoft Teams
+title: Manage your apps with the Developer Portal
+description: Learn how to manage your apps using the Developer Portal for Microsoft Teams.
 keywords: getting started developer portal teams
 localization_priority: Normal
 ms.topic: overview
+ms.author: surbhigupta
 ---
 
-# Teams Developer Portal
+# Manage your apps with the Developer Portal for Microsoft Teams
 
 > [!NOTE]
-> Teams Developer Portal is currently available in public developer preview only.
+> The Developer Portal for Teams is currently in preview mode.
 
-The Teams Developer Portal (Developer Portal) enables you to easily register, configure, and manage your Teams apps. You can invite colleagues in your organization to collaborate on an app, configure runtime environment, and much more.
+The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
-A Teams app is a web app. Like all web apps, its source code is developed in an IDE or editor and published to a cloud hosting solution like Azure. For the Teams client to install the app, it must be configured in such a way that it appears to be a native Teams application. This has traditionally been done by crafting a manifest file that contains all the data, the Teams client needs to render content. The app package that ultimately gets installed to Teams consists of the manifest file and two icon files for the app. Developer Portal builds features and tooling around this core scenario to enable you to be more successful.
+:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
-## Manage your apps with Developer Portal
+## Register an app
 
-The Developer Portal makes it easy to manage your Microsoft Teams apps, whether you develop custom apps for your organization or SaaS applications for teams around the world. You can manage your apps through the [Developer Portal](https://aka.ms/dev-portal).
+The Developer Portal provides a couple ways to register a Teams app:
 
-:::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of Teams Developer Portal.":::
+* Register a brand new app
+* Import an existing app package
 
-To begin with, you must register a new app. There are three ways to register:
+> [!NOTE]
+> If you create an app using the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension), you can manage that app in the Developer Portal.
 
-* Register a brand new app from the portal
-* Import an existing app package from the portal
-* Create a new app from the [Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+## Set up an environment
 
-If you register a new app, you must fill all the mandatory configuration fields before you can install the app to your Teams client.
+You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
 
-## Overview
+**To set up an environment**
 
-Your app's overview page consists of the following information:
+1. In the Developer Portal, select the app you're working on.
+2. Go to the **Environments** page and select **+ Add an environment**.
+3. Select **+ Add a variable** to create configuration variables for your environment.
 
-* Basic information about your app.
-* A validation snapshot of your app's configuration state.
-* App usage metrics, currently in preview, for your app.
+**To use variables**
 
-**App Usage Preview**
+Use the variable names instead of hard-coded values to set your app configurations.
 
-The App Usage metrics show the total number of active users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Developer Portal, and are scoped to the App IDs shown in the **Basic information** section.
+1. Enter `{{` in any field in the Developer Portal. A dropdown with all the variables you've created for the chosen environment along with the global variables appears.  
+1. Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically based on the environment. 
+
+## Identify app owners
+
+Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
+
+## Configure your app's capabilities and other important metadata
+
+A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
+
+To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+
+## Test your app directly in Teams
+
+The Developer Portal provides options for testing and debugging your app:
+
+* On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
+* The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
+
+## Distribute your app
+
+From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
+
+For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
+
+## Analyze your app's usage
+
+On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30 day window, in UTC. |
-| *Daily* | Shows you the count of unique active users that used your app in a given day, in UTC. |
-| *History* | Monthly and Daily usage is shown for the past 7 days, 30 days, and 60 days. |
-| *Latency* | You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to light up.|
+| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
+| *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
+| *History* | Monthly and daily usage is shown for the past seven, 30 days, and 60 days. |
+| *Latency* | You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.|
 
-## Owners
+## Use tools to create app features
 
-The **Owners** section is used to share your app registration with colleagues in your organization. The **Contributor** role has the same permissions as the **Owner** role, except the ability to delete an app. 
+The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
 
-## Environments
-
-Environment configurations allow you to seamlessly transition an app from your local runtime through to production.
-
-Select **+ Add an environment** to create a new runtime environment configuration. After it is created, you can add key value pairs for the environment.
-
-Use the variable names instead of actual values in the property fields.
-
-**To enter a variable name instead of a hard coded property value**
-
-1. Enter `{{variable}}` in any field in the Developer Portal configuration page. 
-
-   > [!NOTE]
-   > Enter `{{`. A dropdown with all the variables you've created for the chosen environment along with the global variables appear.
-  
-1. When your app package is downloaded or published, select the environment configuration you wish to use. Global variables will be the same across all environments.
-
-## Plans and Pricing
-
-[Plan to include a software-as-a-service (SaaS) offer](/azure/marketplace/plan-saas-offer) for your app.
-
-**To include plans and pricing for your app**
-
-1. Configure the plans and pricing for your app in the [Partner Center's Microsoft commercial marketplace](/office/dev/store/monetize-addins-through-microsoft-commercial-marketplace). 
-1. Link your offer through the manifest.
-1. Distribute and publish your app to the Teams store. 
-    For more information, see [Include SaaS offers for your apps](~/deploy-and-publish/appsource/add-saas-offer.md).
-
-> [!NOTE]
-> It is recommended to create a SaaS offer for your app before you publish it to the Teams store.
-> If your app is already available in the Teams store and you want to convert it to SaaS, then you must plan the SaaS offer and configure the plans and pricing details in the Partner Center, link your SaaS offer through the Developer Portal, and then republish the app.
-
-## See also
-
-* [Configure Teams Developer Portal](~/concepts/tdp-configuration.md)
-* [Distribute Teams Developer Portal](~/concepts/tdp-distribute.md)
-* [Tools in Teams Developer Portal](~/concepts/tdp-tools.md)
+* **Scene studio**: Design custom Together mode scenes for Teams meetings.
+* **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
+* **Microsoft identity platform management**: Register your apps with Azure Active Directory (Azure AD) to help users sign in and provide access to APIs.
