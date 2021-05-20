@@ -3,7 +3,7 @@ title: Get started - Build a conversational bot for Microsoft Teams
 author: adrianhall
 description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/20/2021
 ms.topic: quickstart
 ---
 
@@ -104,7 +104,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-1. Your web browser is started to run the application.  When prompted, select **Use the web app instead**.
+1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. When prompted, select **Use the web app instead**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 

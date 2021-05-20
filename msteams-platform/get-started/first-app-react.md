@@ -134,7 +134,7 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Your web browser is started to run the application.  When prompted, select **Use the web app instead**.
+1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. When prompted, select **Use the web app instead**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 

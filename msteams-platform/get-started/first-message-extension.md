@@ -3,7 +3,7 @@ title: Get started - Build your first Teams Message Extension
 author: adrianhall
 description: Create a message extension for Microsoft Teams using the Teams Toolkit
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/20/2021
 ms.topic: quickstart
 ---
 
@@ -112,7 +112,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-1. Teams will be loaded in a web browser, and you will be prompted to sign in.  Sign in with your M365 account.
+1. Teams will be loaded in a web browser, and you will be prompted to sign in. If prompted to open Microsoft Teams, select Cancel to remain within the browser. Sign in with your M365 account.
 
 1. Press **Add** to add the app to your account.
 
