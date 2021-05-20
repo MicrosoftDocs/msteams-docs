@@ -109,7 +109,7 @@ For messaging extension implementation, start with [build a messaging extension]
 
 ## Participant roles and user types in a meeting
 
-![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
+![Participants in a meeting](../assets/images/apps-in-meetings/participantroles.png)
 
 ### Participant roles
 
