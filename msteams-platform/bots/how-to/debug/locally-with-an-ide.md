@@ -90,6 +90,5 @@ To remove your bot completely from Teams, go to your **Bot Dashboard** and edit 
 
 ## See also
 
-- [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
-
-- [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
+* [Debug your bot with inspection middleware](/azure/bot-service/bot-service-debug-inspection-middleware)
+* [Debug your calling and meeting bot locally](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)
