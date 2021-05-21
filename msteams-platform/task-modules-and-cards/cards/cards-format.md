@@ -165,8 +165,6 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.
 
-To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
-
 #### Sample Adaptive card with masking property
 
 ```json
