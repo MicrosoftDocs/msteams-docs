@@ -153,7 +153,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|05/18/2021|Tabs link unfurling and Stage View|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
+|05/21/2021|Tabs link unfurling and Stage View|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
