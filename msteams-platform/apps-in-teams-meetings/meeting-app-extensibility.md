@@ -27,7 +27,8 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> Apps are supported only in private scheduled meetings.
+> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel are currently not available on mobile.
+> * Apps are supported only in private scheduled meetings.
 
 #### Pre-meeting app experience
 
