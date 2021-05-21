@@ -15,11 +15,13 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 
 ## Advantages of integrating people picker control capability
 
+The People Picker API enables you to add a People Picker control to their webapps, which can be surfaced in a task module or as a tab or personal app. This cross-platform control allows users to select entities, such as users in a group,chat,channel, or add users through composite entities, such as DLs, SGs and tags. This capability helps to make the scenarios such as task assignment, tagging or notifying a user, easy. 
+
 To integrate location capabilities, you must  call the people picker API. For effective integration, you must have a good understanding of [code snippets](#code-snippets) for calling the location APIs. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE] 
-> Currently, Microsoft Teams support for location capabilities is only available for mobile clients.
+> Currently, Microsoft Teams support for people picker control capability is only available for mobile clients.
 
 ## People picker API
 
@@ -41,6 +43,20 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 ## Code snippets
 
+```javascript
+microsoftTeams.people.selectPeople((error, people) => {                    if (error) {
+                        if (error.message) {
+                            alert(" ErrorCode: " + error.errorCode + error.message);
+                        }
+                        else {
+                            alert(" ErrorCode: " + error.errorCode);
+                        }
+                    }
+                    if (people) {
+                        output(" People length: " + people.length + " " + JSON.stringify(people));
+                    }
+                });
+```
 ## See also
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
