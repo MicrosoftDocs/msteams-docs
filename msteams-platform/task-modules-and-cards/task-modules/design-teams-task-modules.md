@@ -31,11 +31,13 @@ Task modules can be launched from almost anywhere in your app.
 
 ## Anatomy
 
+Task modules provide a flexible surface for hosted app experiences. They're built using an iframe (desktop) or webview (mobile), so you can design task modules with our UI templates (recommended) or from scratch.
+
+They can also be built with the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) framework, which can be a simpler and faster way to facilitate common scenarios (such as forms).
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module." border="false":::
-
-Task modules are very flexible surfaces. They can be built with iframes, pulling in other UI templates, to host partner-built experiences. This is preferred for the most polished experience.
-
-They can also be built with the [Adaptive Card](../../task-modules-and-cards/cards/design-effective-cards.md) framework, which can be a simpler and faster way to execute common scenarios (such as forms).
 
 |Counter|Description|
 |----------|-----------|
@@ -45,6 +47,20 @@ They can also be built with the [Adaptive Card](../../task-modules-and-cards/car
 |4|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
 |5|**iframe**: Responsive space that hosts your app content.|
 |6|**Actions (optional)**: Buttons related to your app content.|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module on mobile." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**Header**: Make headers clear and concise. Describe the task you want users to complete.
+|2|**App name**: Full name of your app.|
+|3|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
+|4|**webview**: Responsive space that hosts your app content.|
+|5|**Actions (optional)**: Buttons related to your app content.|
+
+---
 
 ## Designing with UI templates
 
