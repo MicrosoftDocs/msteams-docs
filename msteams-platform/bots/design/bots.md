@@ -162,9 +162,8 @@ You can use bots in the following contexts:
 |1|**App name and icon**|
 |2|**Chat tab**: Opens the space to talk with your bot (applicable only to personal apps).|
 |3|**Custom tabs**: Opens other content related to your app.|
-|4|**About tab**: Displays basic information about your app.|
-|5|**Chat bubble**: Bot conversations use the Teams messaging framework.|
-|6|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
+|4|**Chat bubble**: Bot conversations use the Teams messaging framework.|
+|5|**Adaptive Card**: If your bot's responses include Adaptive Cards, the card takes up the full width of the chat bubble.|
 
 ---
 
@@ -280,7 +279,7 @@ Now in that channel, the user can read their message from the bot.
 
 ### Use tabs with bots
 
-A tab can make your bot easier to use. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
+In personal apps, a tab can complement what your bot can do. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
 
 # [Desktop](#tab/desktop)
 
