@@ -215,6 +215,7 @@ POST /v3/conversations/{conversationId}/activities
     "replyToId": "1493070356924"
 }
 ```
+
 ---
 
 #### Response codes
@@ -259,13 +260,17 @@ if (response.Content != null)
 }
 ```
 
+# [JavaScript](#tab/javascript)
+
+Not available
+
 # [JSON](#tab/json)
 
 ```http
 GET /v1/meetings/{meetingId}
 ```
 
-* * *
+---
 
 The JSON response body for Meeting Details API is as follows:
 
