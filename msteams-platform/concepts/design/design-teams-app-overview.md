@@ -12,6 +12,12 @@ ms.topic: overview
 
 Whether you're a designer, product manager, developer, or maker using low-code tools, these guidelines can help you quickly make the right design decisions for your Microsoft Teams app.
 
+## Creating a cohesive experience
+
+Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
+
+These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
+
 ## Teams app design principles
 
 Teams apps help people achieve more together. Use these principles to guide your design.
@@ -101,23 +107,17 @@ Text, icons, and images make it clear what the app is for and how to use it.
    :::column-end:::
 :::row-end:::
 
-## Creating a cohesive experience
-
-Designing a Teams app is like designing a conventional web app—but also a little different. An effective design highlights your app's unique attributes while fitting naturally with Teams features and contexts.
-
-These guidelines and resources can help you strike that balance. You'll know what to do and what to avoid when designing your Teams app (such as multi-level navigation in a tab).
-
-## Design fundamentals
+## Teams design system
 
 Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
-
-## Basic Fluent UI components for Teams
-
-Based on Fluent UI, these are the [core elements for creating familiar Teams interfaces](design-teams-app-basic-ui-components.md).
 
 ## UI templates
 
 Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+
+## Basic UI components
+
+Based on Fluent UI, these are the [core elements](design-teams-app-basic-ui-components.md) you can use to create Teams experiences from scratch.
 
 ## App capabilities
 
