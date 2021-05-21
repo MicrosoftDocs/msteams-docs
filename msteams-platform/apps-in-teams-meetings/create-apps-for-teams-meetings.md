@@ -216,7 +216,7 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-* * *
+---
 
 #### Response codes
 
