@@ -98,7 +98,7 @@ Here's a sample HTML to create a Connector configuration page without the CSS:
 #### `GetSettings()` response properties
 
 >[!Note]
->The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parameter   | Details |
 |-------------|---------|
