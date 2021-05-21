@@ -77,7 +77,7 @@ Refer to the **Build and Run** content in your project homepage for detailed ins
 
 ### Enable development from localhost
 
-If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
+If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from `<https://localhost>`. Navigate to `<https://localhost:3000/tab>`. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
 
 ### Run your app in Teams
 
