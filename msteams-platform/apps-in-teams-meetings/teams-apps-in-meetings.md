@@ -70,7 +70,7 @@ Tabs allow team members to access services and content in a specific space withi
 
 ✔ Permissioned users can add apps while in the meeting.
 
-✔ When loaded in the context of a meeting, apps can leverage the Teams client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
+✔ When loaded in the context of a meeting, apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to appropriately render the experience.
 
 ✔ Exporting a result of a survey or poll notifies the users that the results successfully downloaded.
 
