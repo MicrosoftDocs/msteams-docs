@@ -77,7 +77,7 @@ Tabs allow team members to access services and content in a specific space withi
 ✔ An app is visible in a Teams meeting in the side panel or the in-meeting dialog box. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
    > [!NOTE]
-   > Your app manifest specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#during-a-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
+   > Your app manifest specifies that your tab is [optimized for side panel](create-apps-for-teams-meetings.md#in-meeting), that is where it is displayed. It can also be part of a share-tray experience, subject to specified design guidelines.
 
 The following images display the app as an in-meeting dialog box and as a separate side panel:
 
