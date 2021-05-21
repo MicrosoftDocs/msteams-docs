@@ -18,11 +18,7 @@ Stage View is a new UI component, which allows you to render the content that is
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. 
-
-## Understand how the Stage View works
-
-When a user sends a URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user selects **View** in the card, and pins the content as a tab directly from the Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from the Stage View.
 
 ## Advantage of Stage View
 
@@ -123,7 +119,7 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > * The `name` is optional in deep link. If not included, the app name replaces it. 
 > * The deep link can also be passed through  an `OpenURL` action.
 > * Currently, Teams mobile clients do not support the Stage View capability. When users selects a deep link to a Stage View, they are taken to their device's web browser. The web browser opens the URL specified in the `websiteUrl` parameter of the deep link.
-> * When you launch the Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
+> * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Tab information property
 
