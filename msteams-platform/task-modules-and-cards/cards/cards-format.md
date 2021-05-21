@@ -174,8 +174,7 @@ To mask information in Adaptive cards, add the `isMasked` property to **type** `
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 The following image is an example of masking information in Adaptive cards:
