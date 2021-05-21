@@ -153,7 +153,7 @@ Your bot must be responsive to any command and not dead-end the user. Here are s
   ![Help command sample](../../../../assets/images/faq/helpcommand.png)
 
 * **Use adaptive cards and task modules to make your bot response clear and actionable**
-[Adaptive cards with buttons invoking task modules](/task-modules-and-cards/task-modules/task-modules-bots.md) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
+[Adaptive cards with buttons invoking task modules](../platform/task-modules-and-cards/task-modules/task-modules-bots.md) enhance the bot user experience. These cards and buttons are easier to use in a mobile device as opposed to your user typing the commands. Also bot responses must not be textual with long text. Bots must make use of adaptive cards and task modules instead of conversational chat based user interface and lengthy text responses.
 
 * **Think through all scopes**. Be sure that your bot provides appropriate responses when mentioned (`@*botname*`) in a channel and in personal conversations. If your bot does not provide meaningful context within the personal or teams scope, disable that scope via the manifest. (See the `bots` block in the [Microsoft Teams manifest schema reference](../../../../resources/schema/manifest-schema.md#bots).)
 
