@@ -29,9 +29,9 @@ Before you create apps for Teams meetings, you must have an understanding of the
 
 * For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `Notification Signal API`.
 
-* The Meeting Details API must have a bot registration and bot ID. It requires Bot SDK to get the `TurnContext`.
+* Meeting Details API must have a bot registration and bot ID. It requires Bot SDK to get the `TurnContext`.
 
-* For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end times. Real-time meeting events require a registered bot ID from the Teams platform.
+* For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
 After you have gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and Meeting Details that enable you to access information using attributes and display relevant content.
 
@@ -42,7 +42,7 @@ After you have gone through the prerequisites, you can use the meeting apps API 
 |**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
-|**Meeting Details** | This API enables you to to get static meeting meta-data. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**Meeting Details** | This API enables you to to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
 ### GetUserContext
 
@@ -229,10 +229,10 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Meeting Details API
 
-The Meeting Details API enables your app to get static meeting meta-data. These are data points that do not change dynamically.
+The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
 The API is available through Bot Services.
 
-#### Query parameters
+#### Query parameter
 
 The Meeting Details API includes the following query parameter:
 
@@ -268,7 +268,7 @@ GET /v1/meetings/{meetingId}
 
 * * *
 
-The JSON response body for Meeting Details API is:
+The JSON response body for Meeting Details API is as follows:
 
 ```json
 { 
@@ -296,11 +296,18 @@ The JSON response body for Meeting Details API is:
 
 ## Real-time Teams meeting events
 
-To make apps more meeting aware, you can now receive real-time meeting events. As soon as your app is associated with a meeting, the actual meeting start and meeting end times are shared to your bot.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared to the bot.
 
-Actual start and end times of a meeting are different from the scheduled start and end times. So the meeting details API and real-time start and end time meeting events are being made available.
+Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API and real-time start and end time meeting events are made available.
+
+There are two major categories of events that are supported:
+
+* Meeting start/end event
+* Participant update event
 
 ### Example of meeting start event payload
+
+The following code provides an example of meeting start event payload:
 
 ```json
 {
@@ -353,6 +360,8 @@ Actual start and end times of a meeting are different from the scheduled start a
 ```
 
 ### Example of meeting end event payload
+
+The following code provides an example of meeting end event payload:
 
 ```json
 {
@@ -407,7 +416,7 @@ Actual start and end times of a meeting are different from the scheduled start a
 
 Your bot receives the event through `OnEventActivityAsync` handler.
 
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in `value` property in the event payload. Hence, `MeetingStartEndEventvalue` model object is created whose member variables correspond to the keys under `value` property in the event payload.
+To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under `value` property, in the event payload.
 
 The following code shows how to capture the metadata of a meeting that is MeetingType, Title, Meeting Id, JoinUrl, Meeting start/end time, and so on from a meeting start/end event:
 
@@ -417,21 +426,18 @@ ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
     // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
     var meetingEventName = turnContext.Activity.Name;
-    
     // Value contains meeting information (ex: meeting type, start time, etc).
     var meetingEventInfo = turnContext.Activity.Value as JObject; 
     var meetingEventInfoObject =
 meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-
     // Create a very simple adaptive card with meeting information
 var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
 meetingEventInfoObject);
-    
     await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
 }
 ```
 
-MeetingStartEndEventvalue.cs includes the following code:
+The MeetingStartEndEventvalue.cs includes the following code:
 
 ```csharp
 public class MeetingStartEndEventValue
