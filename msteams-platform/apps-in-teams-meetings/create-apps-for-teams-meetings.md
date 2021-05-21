@@ -215,7 +215,6 @@ POST /v3/conversations/{conversationId}/activities
     "replyToId": "1493070356924"
 }
 ```
-
 ---
 
 #### Response codes
