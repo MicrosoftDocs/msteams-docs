@@ -212,7 +212,7 @@ In addition, your app must include the following elements:
 A full width Adaptive Card appears as follows:
 ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
 
-If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
+If you have not set the `width` property to *Full*, then the default view of the Adaptive Card appears as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### Typeahead support
