@@ -281,7 +281,7 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Meeting app extensibility
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites and API references
+  - name: Prerequisites and API references for apps in Teams meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md

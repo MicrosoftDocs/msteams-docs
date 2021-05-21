@@ -60,7 +60,7 @@ With the in-meeting app experience, you can engage participants during the meeti
     ![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
     > [!NOTE]
-    > * Apps can leverage the Teams client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
+    > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
     > * If the in-meeting dialog box is rendered successfully, you are notified that the results successfully downloaded.
     > * Your app manifest specifies the places where you want them to appear. The context field is used for this purpose. It can also be part of a share-tray experience, subject to specified design guidelines.
 

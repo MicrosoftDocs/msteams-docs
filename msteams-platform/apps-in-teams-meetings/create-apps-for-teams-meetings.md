@@ -26,7 +26,7 @@ Before you work with apps for Teams meetings, you must have an understanding of 
 
 * You must support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.
 
-* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams client SDK and bot activity. In addition, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams Client SDK and bot activity. In addition, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
@@ -42,7 +42,7 @@ The following table provides a list of these APIs:
 
 |API|Description|Request|Source|
 |---|---|----|---|
-|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID.|**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box.|**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 
@@ -64,9 +64,9 @@ The `GetParticipant` API includes the following query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**meetingId**| string | Yes | The meeting identifier is available through Bot Invoke and Teams client SDK.|
-|**participantId**| string | Yes | The participant ID is the user ID. It is available in Tab SSO, Bot Invoke, and Teams client SDK. It is recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| string | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams client SDK. It is recommended to get a tenant ID from the Tab SSO. |
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
+|**participantId**| String | Yes | The participant ID is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a tenant ID from the Tab SSO. |
 
 #### Example
 
@@ -170,7 +170,7 @@ The `NotificationSignal` API includes the following query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**conversationId**| string | Yes | The conversation identifier is available as part of Bot Invoke. |
+|**conversationId**| String | Yes | The conversation identifier is available as part of Bot Invoke. |
 
 #### Example
 
