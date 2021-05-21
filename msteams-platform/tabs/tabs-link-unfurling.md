@@ -24,10 +24,6 @@ Stage View is a full screen UI component that you can invoke to surface your web
 
 When a user sends a URL in the chat or channel, the URL is unfurled to an Adaptive Card. The user selects **View** in the card, and pins the content as a tab directly from the Stage View.
 
-The following image explains how Stage View works:
-
-<img src="~/assets/images/tabs/stage-view-working.png" alt="Stage View working" width="500"/>
-
 ## Advantage of Stage View
 
 Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access. This leads to a higher user engagement with your app.
