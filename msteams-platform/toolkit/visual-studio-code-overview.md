@@ -39,7 +39,7 @@ The Microsoft Teams Toolkit for Visual Studio Code is available for download fro
 
 1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
 1. Select **Import app package** from the command menu.
-1. Choose your existing [Teams app package](/msteams-platform/concepts/build-and-test/apps-package.md) zip file.
+1. Choose your existing Teams [app package](/msteams-platform/concepts/build-and-test/apps-package.md) zip file.
 1. Choose the **Select publishing package** button. The configuration tab of the toolkit should now be populated with your app's details.
 1. In Visual Studio Code, select **File** -> **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.
 
@@ -49,7 +49,7 @@ At its core, the Teams app embraces three components:
 
   1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
   1. A server that responds to requests for content that will be displayed in Teams. For example, HTML tab content or a bot adaptive card.
-  1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
+  1. A Teams app package consists of three files:
 
       > [!div class="checklist"]
       >
