@@ -191,4 +191,4 @@ microsoftTeams.settings.setSettings({
 
 ## Mobile clients
 
-If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
