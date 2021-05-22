@@ -56,7 +56,7 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 |1|**App logo**: Full color app logo of your app.|
 |2|**App name**: Full name of your app.|
 |3|**iframe**: Responsive space for your app’s content (for example, tab settings or authentication).|
-|4|**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.
+|4|**About link**: Opens a dialog showing more information about the app, such as a full description, permissions required by the app, and links to your privacy policy and terms of service.|
 |5|**Close button**: Closes the dialog.|
 |6|**Notify team members option**: The dialog asks users if they want to create a post letting others know they added a tab.|
 |7|**Back button**: Goes to the previous step based on where the dialog opened.|
