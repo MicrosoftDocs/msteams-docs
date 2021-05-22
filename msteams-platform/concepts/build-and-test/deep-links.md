@@ -187,7 +187,7 @@ The query parameters are:
 * `appID`: Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
-* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
 * `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
