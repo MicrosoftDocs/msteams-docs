@@ -44,30 +44,24 @@ Install a sample app to see how UI templates look and behave within Teams contex
 
 You can use a list to display related items in a scannable format and allow users to take actions on an entire list or individual items.
 
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template." border="false":::
-
 ### Top use cases
 
 * Display data
 * Contextual actions on app content
 
-## Dashboard
+# [Desktop](#tab/desktop)
 
-A dashboard displays different types of content in a central location (Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template." border="false":::
+# [Mobile](#tab/mobile)
 
-### Top use cases
+:::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Example shows a list UI template on mobile." border="false":::
 
-* Analyze data
-* Report metrics
-* Organize different information in one place
+---
 
 ## Form
 
 Forms are used to collect, validate, and submit user input in a structured way. Clear labeling and logical groupings of input fields are critical for a good user experience.
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Example shows a form UI template." border="false":::
 
 ### Top use cases
 
@@ -76,44 +70,77 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 * Settings
 * User input collection
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Example shows a form UI template on mobile." border="false":::
+
+---
+
+
 ## Sign in
 
 You can design app sign-in flows for different Teams contexts and identity providers. The following example includes single sign-on (SSO), which we recommend for the simplest authentication experience.
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template." border="false":::
 
 ### Top use case
 
 * Authenticate users
 
-## Task board
+# [Desktop](#tab/desktop)
 
-A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets. It can also be used to sort any type of content into categories. You can edit and move the cards between columns.
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop." border="false":::
 
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template." border="false":::
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Example shows a sign in UI template on mobile." border="false":::
+
+---
+
+## Dashboard
+
+A dashboard displays different types of content in a central location (Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
 
 ### Top use cases
 
-* Project management. Assigning tasks and tracking status
-* Brainstorming. Adding ideas in different categories
-* Sorting exercises. Organizing any kind of information into buckets
+* Analyze data
+* Report metrics
+* Organize different information in one place
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Example shows a dashboard UI template on mobile." border="false":::
+
+---
 
 ## Data visualization
 
 You can use different card sizes (single, double, and full) to stack and organize data visualizations on the same page. The cards scale to fit the column layout and fill in blank spaces.
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template." border="false":::
 
 ### Top use cases
 
 * Display complex information
 * Create a dashboard
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Example shows a data visualization UI template on mobile." border="false":::
+
+---
+
 ## Wizard
 
 A wizard guides a user through several screens to complete a task (such as a setup process).
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template." border="false":::
 
 ### Top use cases
 
@@ -121,11 +148,39 @@ A wizard guides a user through several screens to complete a task (such as a set
 * Onboarding
 * First-run experiences
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Example shows a wizard UI template on mobile." border="false":::
+
+---
+
+## Task board
+
+A task board, sometimes called a kanban board or swim lanes, is a collection of cards often used to track the status of work items or tickets. It can also be used to sort any type of content into categories. You can edit and move the cards between columns.
+
+### Top use cases
+
+* Project management. Assigning tasks and tracking status
+* Brainstorming. Adding ideas in different categories
+* Sorting exercises. Organizing any kind of information into buckets
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Example shows a task board UI template on mobile." border="false":::
+
+---
+
 ## Empty state
 
 The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more. It’s highly flexible⁠—adapt it to use one, a few, or all of the components in the following design.
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template." border="false":::
 
 ### Top use cases
 
@@ -134,11 +189,20 @@ The empty state template can be used for many scenarios, including sign in, firs
 * Success messages
 * Error messages
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Example shows an empty state UI template on mobile." border="false":::
+
+---
+
+
 ## Notification bar
 
 A notification bar is a dedicated area for displaying a brief, important messages that do not require the user to take immediate action. Specific background colors and icons are associated with specific types of messages (see below).
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar templates." border="false":::
 
 ### Top use cases
 
@@ -146,33 +210,57 @@ A notification bar is a dedicated area for displaying a brief, important message
 * Success messages
 * Informational or promotional messages
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Example shows notification bar UI template on mobile." border="false":::
+
+---
+
 ## Left nav
 
 Use the left nav to browse multiple pages within your Teams tab. In the following example, the left nav is between the channel list and tab content.
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template." border="false":::
 
 ### Top use cases
 
 * Browse multiple pages within a Teams tab
 * Break down complex apps into multiple pages
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left nav template on mobile." border="false":::
+
+---
+
 ## Breadcrumb
 
 Breadcrumbs are a navigational aid that convey your app’s hierarchy. They help users understand how the page they’re viewing fits into the overall experience and afford one-click access to higher levels in that hierarchy.
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template." border="false":::
 
 ### Top use cases
 
 * Communicate hierarchy
 * Navigation
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Example shows a breadcrumb template on mobile." border="false":::
+
+---
+
 ## Toolbar
 
 A toolbar is a container for grouping a set of controls.
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template." border="false":::
 
 ### Top use cases
 
@@ -180,15 +268,60 @@ A toolbar is a container for grouping a set of controls.
 * Contextual filter and find
 * Navigation and breadcrumbs
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Example shows a toolbar template on mobile." border="false":::
+
+---
+
 ## Stage
 
 Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser. The primary use case of stage is viewing; the surface should not be used for complex interactions.
 
 (Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
 
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template." border="false":::
-
 ### Top use cases
 
 * Open an entity in Teams instead of another app or browser
 * Spotlight media or other content
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+Your app can launch a stage from an Adaptive Card, shared link, or visual components (such as a chart).
+
+:::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Example shows a stage template on mobile." border="false":::
+
+---
+
+## Filter
+
+A filter allows you to reduce the information you see based on the criteria selected. You can include filters with tables, lists, cards, and other components that organize content.
+
+### Top use cases
+
+Organizing content in:
+
+* Lists
+* Tables
+* Dashboards
+* Data visualization
+
+:::image type="content" source="../../assets/images/ui-templates/filter.png" alt-text="Example shows a filter template." border="false":::
+
+## Settings
+
+Settings screens are where users can configure their preferences with your app. (Note: Settings is a container for [basic UI components](~/concepts/design/design-teams-app-basic-ui-components.md).)
+
+### Top use case
+
+* Manage app features
+
+:::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." border="false":::
