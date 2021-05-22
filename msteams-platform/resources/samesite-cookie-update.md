@@ -75,11 +75,8 @@ Android WebView is a Chrome system component that allows Android apps to display
 ## See also
 
 * [SameSite examples](https://github.com/GoogleChromeLabs/samesite-examples)
-
 * [SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
-
 * [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
-
 * [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 
 **OpenId Connect impact**<br>
