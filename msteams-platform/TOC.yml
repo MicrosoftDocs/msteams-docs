@@ -117,7 +117,7 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
   - name: Enable app customization
-    href: concepts/design/admin-customize-app.md
+    href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
