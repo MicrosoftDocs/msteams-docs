@@ -74,45 +74,101 @@ Consider using templates for common layouts inside your task modules. Each one i
 
 ### List
 
-Lists work nicely in a task module because they’re easy to scan.
+Lists work nicely in a task module because they're easy to scan.
+
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Example list in a task module on mobile." border="false":::
+
+---
 
 ### Form
 
 Task modules are a great place to surface forms with sequential user inputs and inline validation. You can leverage Adaptive Cards as a way to embed form elements.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="Example form in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Example form in a task module on mobile." border="false":::
+
+---
 
 ### Sign in
 
 Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign in experience in a task module on mobile." border="false":::
+
+---
 
 ### Media
 
 Embed media content in a task module for a focused viewing experience.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Example media content in a task module on mobile." border="false":::
+
+---
 
 ### Empty state
 
 Use for welcome, error, and success messages.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Example empty state in a task module on mobile." border="false":::
+
+---
 
 ### Image gallery
 
-Embed a gallery carousel in an iframe.
+Embed a gallery carousel in an iframe (desktop) or webview (mobile).
+
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Example image gallery in a task module on mobile." border="false":::
+
+---
 
 ### Poll
 
 This example shows poll results launched from an Adaptive Card. The poll can be placed inside a task module, too.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Example poll in a task module on mobile." border="false":::
+
+---
 
 ## Best practices
 
