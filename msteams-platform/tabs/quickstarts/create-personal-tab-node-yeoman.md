@@ -128,8 +128,3 @@ gulp ngrok-serve
 ## View your personal tabs
 
 In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a personal tab using ASP.NETCore](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)
