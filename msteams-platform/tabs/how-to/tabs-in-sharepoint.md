@@ -37,7 +37,7 @@ With the November release of Teams and SharePoint Framework v.1.7, developers ha
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
