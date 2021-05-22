@@ -111,3 +111,8 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
