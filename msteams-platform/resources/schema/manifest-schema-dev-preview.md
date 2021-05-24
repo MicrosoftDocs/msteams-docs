@@ -180,6 +180,27 @@ For more information on the features available see: [Features in the Public Deve
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -478,6 +499,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 
 ## configurableProperties
 
