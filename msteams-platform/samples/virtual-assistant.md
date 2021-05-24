@@ -532,7 +532,7 @@ Updating activity, such as card refresh is not supported yet through Virtual Ass
 To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
 `Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
 
-For more information refer [this](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) section from this documentation.
+For more information refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
 
 ### Handle activities from group chat or channel scope
 
