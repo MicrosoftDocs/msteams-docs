@@ -5,7 +5,7 @@ description: Get an overview of how developers can extend Microsoft Teams featur
 ms.topic: overview
 localization_priority: Normal
 ms.author: lajanuar
-ms.date: 09/22/2020
+ms.date: 05/24/2021
 ---
 # Build apps for Microsoft Teams
 
@@ -14,7 +14,7 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 > [!div class="nextstepaction"]
-> [Start here](build-your-first-app/build-first-app-overview.md)
+> [Start here](get-started/prerequisites.md)
 
 ## What are Teams apps?
 
