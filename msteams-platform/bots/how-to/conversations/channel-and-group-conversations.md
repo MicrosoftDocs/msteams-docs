@@ -15,6 +15,8 @@ To install the Microsoft Teams bot in a team or group chat, add the `teams` or `
 Bots in a group or channel only receive messages when they are mentioned @botname. They do not receive any other messages sent to the conversation. The bot must be @mentioned directly. Your bot does not receive a message when the team or channel is mentioned, or when someone replies to a message from your bot without @mentioning it.
 
 > [!NOTE]
+> This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
+>
 > Using resource-specific consent (RSC), bots can receive all channel messages in teams that it is installed in without being @mentioned. For more information, see [receive all channel messages with RSC](channel-messages-with-rsc.md).
 
 ## Design guidelines

@@ -9,7 +9,7 @@ localization_priority: Normal
 # Receive all channel messages with RSC
 
 > [!NOTE]
-> This feature is currently available in public developer preview only.
+> This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios.
 
@@ -45,13 +45,9 @@ The following code provides an example of the app manifest:
   }
 ```
 
-The following image illustrates how to create the zip file for the app manifest:
+## Sideload in team to test
 
-![Create zip file](~/bots/how-to/conversations/Media/createzipfile.png)
-
-## Receive channel messages with RSC
-
-To receive all channel messages in a team with RSC without being @mentioned
+To sideload in team to test if all channel messages in a team with RSC are received without being @mentioned:
 
 1. Select or create a team.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
