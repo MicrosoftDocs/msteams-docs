@@ -27,7 +27,7 @@ You can view the demonstration on [enabling bots to receive all channel messages
 
 <a href="~/assets/videos/botrsc-allchannelmessages-demo.mp4" title="Link Title"></a>
 
-[![Alternate Text]({image-url})]({~/assets/videos/botrsc-allchannelmessages-demo.mp4} "Link Title")
+[![Alternate Text]({image-url})](~/assets/videos/botrsc-allchannelmessages-demo.mp4 "Link Title")
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
