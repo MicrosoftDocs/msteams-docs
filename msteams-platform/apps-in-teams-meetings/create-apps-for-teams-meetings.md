@@ -302,64 +302,58 @@ The JSON response body for Meeting Details API is as follows:
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
 
-Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API and real-time start and end time meeting events are made available.
-
-There are two major categories of events that are supported:
-
-* Meeting start and end event
-* Participant update event
+Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
 
 ### Example of meeting start event payload
 
 The following code provides an example of meeting start event payload:
 
 ```json
-{
-    "name": "Microsoft/MeetingStart",
-    "type": "event",
-    "timestamp": "2021-04-29T16:10:41.1252256Z",
-    "id": "1619712641110",
-    "channelId": "msteams",
-    "serviceUrl": "https://canary.botapi.skype.com/amer/",
-    "from": {
-        "id": "29:1EbGIDZ3fAuWANLBIoaD4a67K1wHcbOJUzxz068_4WfmoJ7c8LHM_q1w3ALSVWlTAyQRBsV9y7iBGPTzFNfzYVg",
-        "name": "",
-        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"
-    },
-    "conversation": {
-        "isGroup": true,
-        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",
-        "id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2"
-    },
-    "recipient": {
-        "id": "28:e23cded7-1d12-456c-a93d-15e166a83e10",
-        "name": "Echobot1_WorkMachine2"
-    },
-    "entities": [
-        {
-            "locale": "en-US",
-            "country": "US",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "e15762ef-a8d8-416b-871c-25516354f1fe"
-        },
-        "source": null,
-        "meeting": {
-            "id": "MCMxOTptZWV0aW5nX05UTTNaREpqT1RVdFpHUmhPUzAwTXpZeExUazVOREF0TXpZNE0ySXpaV0ZqWkdFMUB0aHJlYWQudjIjMA=="
-        }
-    },
-    "value": {
-        "MeetingType": "Scheduled",
-        "Title": "Meeting Start/End Event in Canary",
-        "Id":
-"19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2",
-        "JoinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1%40thread.v2/0?context=%7b%22Tid%22%3a%22e15762ef-a8d8-416b-871c-25516354f1fe%22%2c%22Oid%22%3a%22f30ba569-abef-4e97-8762-35f85cbae706%22%7d",
-        "StartTime": "2021-04-29T16:10:41.1252256Z"
-    },
-    "locale": "en-US"
+{ 
+    "name": "Microsoft/MeetingStart", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:10:41.1252256Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "userID", 
+        "name": "", 
+        "aadObjectId": "aadOnjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user Id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event", 
+        "Id":"meeting id", 
+        "JoinUrl": "url" 
+        "StartTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
 }
 ```
 
@@ -368,51 +362,51 @@ The following code provides an example of meeting start event payload:
 The following code provides an example of meeting end event payload:
 
 ```json
-{
-    "name": "Microsoft/MeetingEnd",
-    "type": "event",
-    "timestamp": "2021-04-29T16:17:17.4388966Z",
-    "id": "1619713037428",
-    "channelId": "msteams",
-    "serviceUrl": "https://canary.botapi.skype.com/amer/",
-    "from": {
-        "id": "29:1EbGIDZ3fAuWANLBIoaD4a67K1wHcbOJUzxz068_4WfmoJ7c8LHM_q1w3ALSVWlTAyQRBsV9y7iBGPTzFNfzYVg",
-        "name": "",
-        "aadObjectId": "f30ba569-abef-4e97-8762-35f85cbae706"
-    },
-    "conversation": {
-        "isGroup": true,
-        "tenantId": "e15762ef-a8d8-416b-871c-25516354f1fe",
-        "id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2"
-    },
-    "recipient": {
-        "id": "28:e23cded7-1d12-456c-a93d-15e166a83e10",
-        "name": "Echobot1_WorkMachine2"
-    },
-    "entities": [
-        {
-            "locale": "en-US",
-            "country": "US",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "e15762ef-a8d8-416b-871c-25516354f1fe"
-        },
-        "source": null,
-        "meeting": {
-            "id": "MCMxOTptZWV0aW5nX05UTTNaREpqT1RVdFpHUmhPUzAwTXpZeExUazVOREF0TXpZNE0ySXpaV0ZqWkdFMUB0aHJlYWQudjIjMA=="
-        }
-    },
-    "value": {
-        "MeetingType": "Scheduled",
-        "Title": "Meeting Start/End Event in Canary",
-        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2",
-        "JoinUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1%40thread.v2/0?context=%7b%22Tid%22%3a%22e15762ef-a8d8-416b-871c-25516354f1fe%22%2c%22Oid%22%3a%22f30ba569-abef-4e97-8762-35f85cbae706%22%7d",
-        "EndTime": "2021-04-29T16:17:17.4388966Z"
-    },
-    "locale": "en-US"
+{ 
+    "name": "Microsoft/MeetingEnd", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:17:17.4388966Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "user id", 
+        "name": "", 
+        "aadObjectId": "aadObjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting Id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event in Canary", 
+        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
+        "JoinUrl": "url", 
+        "EndTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
 }
 ```
 
