@@ -9,7 +9,7 @@ localization_priority: Normal
 # Receive all channel messages with RSC
 
 > [!NOTE]
-> This feature is available in public developer preview.
+> This feature is currently available in public developer preview only.
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios.
 
@@ -24,8 +24,6 @@ The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user co
 ## Update app manifest
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
-
-The following image illustrates how to update the app manifest:
 
 ![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
 
@@ -62,14 +60,14 @@ To receive all channel messages in a team with RSC without being @mentioned
    ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
 
 1. Select **Apps**. Multiple apps appear.
+1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
 
     ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
 
-1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
+1. Select the app package.
 
     ![Selecting app package](~/bots/how-to/conversations/Media/selectapppackage.png)
 
-1. Select the app package.
 1. Select **Open**. The app details pop-up appears.
 1. Select **Add** to add the bot to your selected team.
 
