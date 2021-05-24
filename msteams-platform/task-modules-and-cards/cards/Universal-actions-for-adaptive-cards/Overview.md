@@ -46,7 +46,15 @@ You can now send the same card to both, Teams and Outlook, and keep them in sync
 
 The following image depicts the Universal Actions for Adaptive Cards for both Teams and Outlook:
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Mobile same card to Teams and Outlook":::
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
+
+* * *
 
 ### User Specific Views
 
@@ -56,7 +64,15 @@ For example, if you send an incident reporting card in a chat or channel, only t
 
 The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views":::
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+
+* * *
 
 For more information, see [sample for User Specific Views](User-Specific-Views.md).
 
