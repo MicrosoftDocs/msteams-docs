@@ -21,15 +21,9 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 You can view the demonstration on [enabling bots to receive all channel messages](~/assets/videos/botrsc-allchannelmessages-demo.mp4).
 
-<video width="500" height="500" controls>
+<video width="500" height="500" controls autoplay>
   <source src="~/assets/videos/botrsc-allchannelmessages-demo.mp4" type="video/mp4">
 </video>
-
-<a href="~/assets/videos/botrsc-allchannelmessages-demo.mp4" title="Link Title"></a>
-
-[![Alternate Text]({image-url})](~/assets/videos/botrsc-allchannelmessages-demo.mp4 "Link Title")
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
