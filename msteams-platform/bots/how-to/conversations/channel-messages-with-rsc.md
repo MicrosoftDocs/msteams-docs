@@ -45,9 +45,9 @@ The following code provides an example of the app manifest:
   }
 ```
 
-## Sideload in team to test
+## Sideload in a team to test
 
-To sideload in team to test if all channel messages in a team with RSC are received without being @mentioned:
+To sideload in a team to test, whether all channel messages in a team with RSC are received without being @mentioned:
 
 1. Select or create a team.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
