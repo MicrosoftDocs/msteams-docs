@@ -39,7 +39,7 @@ Before you create apps for Teams meetings, you must have an understanding of the
 
 ### GetUserContext
 
-To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#getting-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
+To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
 
 ### GetParticipant API
 
