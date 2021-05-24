@@ -131,7 +131,6 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
   </ItemGroup>
 ```
 
-
 [!INCLUDE  [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
