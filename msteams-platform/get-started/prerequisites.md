@@ -106,7 +106,7 @@ With the Developer Portal for Teams, you can configure, manage, and distribute y
 
 - [Developer Portal for Teams](https://dev.teams.microsoft.com/)
 
-## Enable side-loading
+## Enable sideloading
 
 During development, you will need to load your app within Teams without distributing it.  This is known as "sideloading".
 
@@ -125,7 +125,7 @@ During development, you will need to load your app within Teams without distribu
 If you cannot see the sideload option, or you don't have a Teams account, you can get a free Teams developer account by joining the M365 developer program.  The registration process takes approximately two minutes.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-1. Select **Join Now*- and follow the onscreen instructions.
+1. Select **Join Now** and follow the onscreen instructions.
 1. When you get to the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. Once you finish, you should see a screen like this.
 

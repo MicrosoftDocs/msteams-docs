@@ -1,15 +1,15 @@
 ---
-title: Get started - Build your first Teams Message Extension
+title: Get started - Build your first messaging extension
 author: adrianhall
-description: Create a message extension for Microsoft Teams using the Teams Toolkit
+description: Create a messaging extension for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
 ---
 
-# Build and run your first message extension for Microsoft Teams
+# Build and run your first messaging extension for Microsoft Teams
 
-There are two types of Teams **message extensions**:
+There are two types of Teams **messaging extensions**:
 
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) allow you to search external systems and insert the results of that search into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams.
@@ -51,7 +51,7 @@ Use the Teams Toolkit to create your first project:
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Select create a new bot registration":::
 
    > [!NOTE]
-   > Message extensions rely on bots to provide a dialog between the user and your code.
+   > Messaging extensions rely on bots to provide a dialog between the user and your code.
 
 1. On the **Programming Language** step, select **JavaScript**.
 
@@ -88,11 +88,11 @@ Once all the questions have been answered, your project will be created.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-A message extension uses the [Bot Framework](https://docs.botframework.com) to allow the user to interact with your service via a conversation.  After scaffolding, your project will look like this:
+A messaging extension uses the [Bot Framework](https://docs.botframework.com) to allow the user to interact with your service via a conversation.  After scaffolding, your project will look like this:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js` is the main entry point for the message extension.
+The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -104,7 +104,7 @@ Teams Toolkit allows you to host your app locally.  To do this:
 - An Azure Active Directory Application is registered within the M365 tenant.
 - An app manifest is submitted to the Developer Portal for Teams.
 - An API is run locally using Azure Functions Core Tools to support your app.
-- [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your message extension.
+- [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your messaging extension.
 
 To build and run your app locally:
 
@@ -118,7 +118,7 @@ To build and run your app locally:
 
 Once the app is loaded, you will be taken directly to a search dialog:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based message extension in action":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
 
 Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
 

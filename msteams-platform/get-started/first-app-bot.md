@@ -1,5 +1,5 @@
 ---
-title: Get started - Build a conversational bot for Microsoft Teams
+title: Get started - Build your first conversational bot
 author: adrianhall
 description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
@@ -7,7 +7,7 @@ ms.date: 05/20/2021
 ms.topic: quickstart
 ---
 
-# Build a conversational bot for Microsoft Teams
+# Build your first conversational bot for Microsoft Teams
 
 A bot acts as an intermediary between a Teams user and a web service.  Users can chat with a bot to quickly get information, initiate workflows, or anything else your web service can do.  In this tutorial, you will learn how to build, run, and deploy a Teams bot app.
 
@@ -80,7 +80,7 @@ Once all the questions have been answered, your project will be created.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-A message extension uses the [Bot Framework](https://docs.botframework.com) to allow the user to interact with your service via a conversation.  After scaffolding, your project will look like this:
+A messaging extension uses the [Bot Framework](https://docs.botframework.com) to allow the user to interact with your service via a conversation.  After scaffolding, your project will look like this:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="File layout of a bot project.":::
 
