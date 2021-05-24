@@ -147,7 +147,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
 > [!div class="nextstepaction"]
-> [Build your first app](build-your-first-app/build-first-app-overview.md)
+> [Build your first app](get-started/prerequisites.md)
 
    :::column-end:::
    :::column span="":::
