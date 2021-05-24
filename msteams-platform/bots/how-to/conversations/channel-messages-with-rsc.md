@@ -73,10 +73,10 @@ To receive all channel messages in a team with RSC without being @mentioned
 
 1. Select the app package.
 1. Select **Open**. The app details pop-up appears.
+1. Select **Add** to add the bot to your selected team.
 
     ![Adding the bot](~/bots/how-to/conversations/Media/addingbot.png)
 
-1. Select **Add** to add the bot to your selected team.
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
