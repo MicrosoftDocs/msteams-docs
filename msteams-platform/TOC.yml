@@ -89,30 +89,38 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-  - name: Design fundamentals
+  - name: Understand the design process
+    href: concepts/design/design-teams-app-process.md
+  - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
-  - name: Basic UI components
-    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: App capabilities
+    items:
+    - name: Understand the app structure
+      href: concepts/design/app-structure.md
+    - name: Personal apps
+      href: concepts/design/personal-apps.md
+    - name: Tabs
+      href: tabs/design/tabs.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Messaging extensions
+      href: messaging-extensions/design/messaging-extension-design.md  
+    - name: Meeting extensions
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
-  - name: Personal apps
-    href: concepts/design/personal-apps.md
-  - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
-  - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md  
-  - name: Bots
-    href: bots/design/bots.md
-  - name: Meeting extensions
-    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-  - name: Adaptive Cards
-    href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Task modules
-    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: UI components
+    items:
+    - name: Basic UI components
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Adaptive Cards
+      href: task-modules-and-cards/cards/design-effective-cards.md
+    - name: Task modules
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Activity feed notifications
+      href: concepts/design/activity-feed-notifications.md
+  - name: Enable app customization
+    href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
@@ -181,6 +189,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tabs link unfurling and Stage View
+    href: tabs/tabs-link-unfurling.md
   - name: Tab requirements
     href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
@@ -203,6 +213,8 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Tabs on mobile  
+    href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
 - name: Build bots

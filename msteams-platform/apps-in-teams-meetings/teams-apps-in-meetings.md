@@ -62,7 +62,7 @@ Tabs allow team members to access services and content in a specific space withi
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus ➕ button.
 
-✔ Tab layout must be in an organized state if there are more than ten polls or surveys.
+✔ Tab layout must be in an organized state if there are multiple (more than ten) polls or surveys.
 
 ### In-meeting app experience
 
