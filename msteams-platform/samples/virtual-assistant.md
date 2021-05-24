@@ -409,7 +409,7 @@ Book-a-room bot has two main commands for users:
 - `Book room`
 - `Manage Favorites`
 
-We have built a LUIS model by understanding these two commands. Corresponding secrets must be populated in `cognitivemodels.json`. The corresponding LUIS JSON file is found [here](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
+We have built a LUIS model by understanding these two commands. Corresponding secrets must be populated in `cognitivemodels.json`. The corresponding LUIS JSON file is found [here](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 The corresponding `.lu` file is shown in the following section:
 
 ```
@@ -532,7 +532,7 @@ Updating activity, such as card refresh is not supported yet through Virtual Ass
 To forward card action or task module activities to an associated skill, the skill must embed `skillId` to it.
 `Book-a-room` bot card action, task module fetch and submit action payloads are modified to contain `skillId` as a parameter. 
 
-For more information refer [this](https://msteams-captain.visualstudio.com/xGrowth%20App%20Templates/_wiki/wikis/xGrowth.wiki/88/Virtual-Assistant-for-MS-Teams?anchor=rich-cards) section from this documentation.
+For more information refer [this](/microsoftteams/platform/samples/virtual-assistant#add-adaptive-cards-to-your-virtual-assistant) section from this documentation.
 
 ### Handle activities from group chat or channel scope
 

@@ -33,14 +33,16 @@ With a private workspace, you can view app content that's meaningful to you in a
 
 ### Anatomy: Personal app (private workspace)
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
 |A|**App attribution**: Your app logo and name.|
-|B|**Tabs**: Provides navigation for your personal app. For example, include an **About** or **Help** tab.|
+|B|**Tabs**: Provides navigation for your personal app.|
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
-|D|**More menu**: Includes additional app information and options. (You could alternatively make **Settings** a tab.)|
+|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
 
 :::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
 
@@ -48,6 +50,26 @@ With a private workspace, you can view app content that's meaningful to you in a
 |----------|-----------|
 |A|**Tabs**: Provides navigation for your personal app.|
 |1|**iframe**: Displays your app content.|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**App attribution**: Your app name.|
+|B|**Tabs**: Provides navigation for your personal app.|
+|C|**More menu**: Includes additional app options and information.|
+|D|**Primary navigation**: Provides navigation to your app other main Teams features.|
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Tabs**: Provides navigation for your personal app.|
+|1|**webview**: Displays your app content.|
+
+---
 
 ### Designing with UI templates
 
@@ -66,6 +88,8 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 ### Anatomy: Personal app (bot)
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
 
 |Counter|Description|
@@ -73,6 +97,19 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |A|**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.|
 |B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |C|**Compose box**: Input field for sending messages to the bot.|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Bot entry point**: Entry point for users to access the bot feature in your personal app.|
+|B|**Back button**: Takes users back to the private workspace.|
+|C|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
+|D|**Compose box**: Input field for sending messages to the bot.|
+
+---
 
 ## Manage a personal tab
 
