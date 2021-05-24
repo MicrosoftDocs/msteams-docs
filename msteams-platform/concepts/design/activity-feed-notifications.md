@@ -49,7 +49,7 @@ Each activity generates a system notification. What displays depends on what the
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity feed cards." border="false":::
+:::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems." border="false":::
 
 |Counter|Description|
 |----------|-----------|

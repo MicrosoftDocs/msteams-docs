@@ -31,7 +31,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
 
    :::column-end:::
 
@@ -100,7 +100,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -128,7 +128,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 
    :::column span="":::
 
-**Utilize Teams data**: The [Microsoft Graph API for Teams](https://docs.microsoft.com/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
+**Utilize Teams data**: The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
 
    :::column-end:::
 
