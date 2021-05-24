@@ -39,7 +39,7 @@ The Microsoft Teams Toolkit for Visual Studio Code is available for download fro
 
 1. In Visual Studio Code, select the Teams icon ![Teams icon](../assets/icons/favicon-16x16.png) from the activity bar on the left side of the window.
 1. Select **Import app package** from the command menu.
-1. Choose your existing [Teams app package](../concepts/build-and-test/apps-package.md) zip file.
+1. Choose your existing Teams [app package](/microsoftteams/platform/concepts/build-and-test/apps-package?view=msteams-client-js-latest&preserve-view=true) zip file.
 1. Choose the **Select publishing package** button. The configuration tab of the toolkit should now be populated with your app's details.
 1. In Visual Studio Code, select **File** -> **Add Folder to Workspace** to add your source code directory to the Visual Studio Code workspace.
 
@@ -49,7 +49,7 @@ At its core, the Teams app embraces three components:
 
   1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
   1. A server that responds to requests for content that will be displayed in Teams. For example, HTML tab content or a bot adaptive card.
-  1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
+  1. A Teams app package consists of three files:
 
       > [!div class="checklist"]
       >
@@ -77,7 +77,7 @@ Refer to the **Build and Run** content in your project homepage for detailed ins
 
 ### Enable development from localhost
 
-If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from <https://localhost>. Navigate to <https://localhost:3000/tab>. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
+If you wish to debug your tab based app on localhost using HTTPS, you will need to tell your browser to trust the app being served from `<https://localhost>`. Navigate to `<https://localhost:3000/tab>`. If you see a warning indicating that the site isn't trusted, choose the option to proceed anyway. Your app should now be accessible from the Teams client.
 
 ### Run your app in Teams
 
