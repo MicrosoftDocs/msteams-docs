@@ -60,16 +60,16 @@ To receive all channel messages in a team with RSC without being @mentioned
    ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
 
 1. Select **Apps**. Multiple apps appear.
-1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
+1. Select **Upload a custom app** from the lower right corner.
 
     ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
 
-1. Select the app package.
+1. Select the app package from the **Open** dialog box.
+1. Select **Open**.
 
     ![Selecting app package](~/bots/how-to/conversations/Media/selectapppackage.png)
 
-1. Select **Open**. The app details pop-up appears.
-1. Select **Add** to add the bot to your selected team.
+1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
     ![Adding the bot](~/bots/how-to/conversations/Media/addingbot.png)
 
