@@ -21,7 +21,8 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|05/13/2021|Added tabs link unfurling and stage view|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
+|5/24/2021|Updated Teams app design guidelines with mobile patterns and more.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021|Added tabs link unfurling and stage view.|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
 |03/18/2021|Notice: **Please update to version 4.10 or above of the Bot Framework SDK** as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |05/13/2021|Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
