@@ -19,7 +19,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       Teams relies on a grid layout to ensure consistent and elegant relationships between design components. The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
 
       * [See full layout guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
-      * [Implement layout](https://developer.microsoft.com/fluentui#/styles/web/layout)
+      * [Implement layout (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
@@ -36,7 +36,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       An avatar is a graphical representation of a person, team, bot, or entity in Teams. An avatar group is often used to convey live activity or a represent a roster in a way that preserves vertical space. 
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full avatar guidelines (Figma)</a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full avatar guidelines (Figma)</a>
 
    :::column-end:::
    :::column span="1":::
@@ -113,7 +113,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
       You can use shape and elevation to create additional hierarchy in your app. 
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full shape and elevation guidelines (Figma)</a>
-      * [Implement shape and elevation](https://developer.microsoft.com/fluentui#/styles/web/elevation)
+      * [Implement shape and elevation (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::
@@ -131,7 +131,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a>
 
    :::column-end:::
    :::column span="1":::

@@ -16,10 +16,6 @@ For authentication to work on mobile clients, you must upgrade you Teams JavaScr
 
 Mobile clients regularly need to function with low bandwidth and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
 
-> [!NOTE]
-> Tabs are enabled on mobile only after the application is added to an allow list, based on the input of the approval team. 
-> To check mobile responsiveness, reach out to teamsubm@microsoft.com.
-
 ## Testing on mobile clients
 
 You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high- and low-performance devices, including a tablet.
