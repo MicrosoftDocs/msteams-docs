@@ -58,7 +58,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 If you created a tab in another tutorial, the app scaffolding for the bot is different. Unlike tabs, bot development doesn't require you to build any front-end web components or use the Teams JavaScript client SDK.  Instead, the scaffolding uses the [Microsoft Bot Framework](https://dev.botframework.com/), which is an open-source SDK for building intelligent, enterprise-grade bots that can work on the web, mobile, and of course Teams! 
 
-The `botActivityHandler.js` file, located in the root directory of your project, is the Teams-specific handler that handles bot activities, such as how the bot responds to specific messages. The app scaffolding provides a `botActivityHandler.js` file located in the root directory of your project, is the Teams specific handler that handles bot activities such as how the bot responds to specific messages.
+The `botActivityHandler.js` file, located in the root directory of your project, is the Teams-specific handler that handles bot activities, such as how the bot responds to specific messages.
 
 ## 3. Securely expose your localhost to the internet
 
