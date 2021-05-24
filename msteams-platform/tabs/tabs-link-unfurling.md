@@ -9,7 +9,7 @@ ms.author: surbhigupta
 # Tabs link unfurling and Stage View
 
 > [!NOTE]
-> This feature is available in public developer preview only.
+> This feature is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
 Stage View is a new UI component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
  
