@@ -409,7 +409,7 @@ Book-a-room bot has two main commands for users:
 - `Book room`
 - `Manage Favorites`
 
-We have built a LUIS model by understanding these two commands. Corresponding secrets must be populated in `cognitivemodels.json`. The corresponding LUIS JSON file is found [here](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/book-a-meeting.json).
+We have built a LUIS model by understanding these two commands. Corresponding secrets must be populated in `cognitivemodels.json`. The corresponding LUIS JSON file is found [here](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom/blob/nebhagat/microsoft-teams-apps-bookaroom-skill/Deployment/Resources/LU/en-us/book-a-meeting.json).
 The corresponding `.lu` file is shown in the following section:
 
 ```
