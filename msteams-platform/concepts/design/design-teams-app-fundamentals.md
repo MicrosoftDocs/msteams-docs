@@ -18,11 +18,12 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Teams relies on a grid layout to ensure consistent and elegant relationships between design components. The grid’s 4-pixel base unit allows components to scale consistently across all display sizes in Teams.
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full layout guidelines (Figma)</a>
+      * [See full layout guidelines (Figma)](https://www.figma.com/community/file/916836509871353159)
+      * [Implement layout](https://developer.microsoft.com/fluentui#/styles/web/layout)
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Conceptual image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-layout.png" alt-text="Conceptual image of Teams layout." border="false":::
    :::column-end:::
 
 :::row-end:::
@@ -40,7 +41,47 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image for Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-avatars.png" alt-text="Conceptual image of Teams avatars." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+## Icons
+
+:::row:::
+
+   :::column span="3":::
+
+      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Teams store.
+
+      You also can use Fluent UI icons throughout your app:
+
+      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">Get the latest Fluent icon set (Figma)</a>
+      * [Implement the icons (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/icons)
+
+   :::column-end:::
+   :::column span="1":::
+
+      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual image of Teams icons." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+## Type
+
+:::row:::
+
+   :::column span="3":::
+
+      Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.
+
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full type guidelines (Figma)</a>
+      * [Implement typography (Fluent UI)](https://developer.microsoft.com/fluentui#/styles/web/typography)
+
+   :::column-end:::
+   :::column span="1":::
+
+      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual image of Teams typography." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -53,51 +94,31 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
       Teams web and desktop supports default (light), dark, and high-contrast themes, while Teams mobile supports light and dark themes. Each theme has its own color scheme.
 
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full color guidelines and available color tokens (Figma)</a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full color guidelines and available color tokens (Figma)</a>
+      * [Implement colors (Fluent UI)](https://fluentsite.z22.web.core.windows.net/0.51.7/colors)
 
    :::column-end:::
    :::column span="1":::
-      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-color.png" alt-text="Concept image of Teams colors." border="false":::
    :::column-end:::
 
 :::row-end:::
 
-## Iconography
+## Shape and elevation
 
 :::row:::
 
    :::column span="3":::
 
-      Teams apps use icons provided by Fluent UI.
+      You can use shape and elevation to create additional hierarchy in your app. 
 
-### Resources
-
-      * <a href="https://www.figma.com/community/file/836835755999342788" target="_blank">See the latest Fluent icons (Figma)</a>
-      * <a href="https://aka.ms/fluent-ui-icons" target="_blank">Try out Fluent icons (Fluent UI)</a>
-      * <a href="https://github.com/microsoft/fluentui-system-icons" target="_blank">Get the Fluent icon library (GitHub)</a>
+      * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full shape and elevation guidelines (Figma)</a>
+      * [Implement shape and elevation](https://developer.microsoft.com/fluentui#/styles/web/elevation)
 
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-iconography.png" alt-text="Conceptual illustration for Microsoft Teams UI Kit." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-## Typography
-
-:::row:::
-
-   :::column span="3":::
-
-      Teams uses Segoe UI for its type ramp and different font sizes and weights to help create hierarchy and ensure readability.
-
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full typography guidelines (Figma)</a>
-
-   :::column-end:::
-   :::column span="1":::
-
-      :::image type="content" source="../../assets/images/design-guidelines/teams-typography.png" alt-text="Conceptual figure for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/shape-and-elevation.png" alt-text="Conceptual of shape and elevation." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -115,25 +136,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
    :::column-end:::
    :::column span="1":::
 
-      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual picture for Microsoft Teams UI Kit." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-## Brand expression
-
-:::row:::
-
-   :::column span="3":::
-
-      Your app icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to AppSource.
-
-      <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full brand expression guidelines (Figma)</a>
-
-   :::column-end:::
-   :::column span="1":::
-
-      :::image type="content" source="../../assets/images/design-guidelines/teams-branding.png" alt-text="Conceptual form for Microsoft Teams UI Kit." border="false":::
+      :::image type="content" source="../../assets/images/design-guidelines/teams-copy-and-content.png" alt-text="Conceptual image of copy and content." border="false":::
 
    :::column-end:::
 :::row-end:::
