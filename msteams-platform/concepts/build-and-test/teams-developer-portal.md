@@ -10,7 +10,7 @@ ms.author: surbhigupta
 # Manage your apps with the Developer Portal for Microsoft Teams
 
 > [!NOTE]
-> The Developer Portal for Teams is currently in preview mode.
+> The Developer Portal for Teams is currently in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The Developer Portal for Teams is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
