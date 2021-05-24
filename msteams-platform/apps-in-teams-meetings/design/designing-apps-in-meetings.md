@@ -78,9 +78,9 @@ The in-meeting tab is a canvas for augmenting collaboration during meetings. Att
 
 People might use the in-meeting tab to:
 
-* Provide detailed feedback (for example, evaluate a job candidate)
-* Quickly create a poll, survey, or task item for the meeting participants
-* Display notes relevant to the meeting (for example, information about a sales lead)
+* Provide detailed feedback. For example, evaluate a job candidate.
+* Create a poll, survey, or task item for the meeting participants.
+* Display notes relevant to the meeting. For example, information about a sales lead.
 
 # [Desktop](#tab/desktop)
 

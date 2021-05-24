@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Add Power Virtual Agents chatbot 
 
-Power Virtual Agents is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams. Power Virtual Agents bots engage with users in the Teams native chat canvas. The IT administrators, business analysts, domain specialists, and skilled app developers can design, develop and publish intelligent virtual agents for Teams without having to setup a development environment. They can create a web service, or directly register with the Bot Framework. 
+Power Virtual Agents is a no-code, guided graphical interface solution that empowers every member of your team to create rich, conversational chatbots that easily integrate with the Teams platform. All content authored in Power Virtual Agents renders naturally in Teams. Power Virtual Agents bots engage with users in the Teams native chat canvas. The IT administrators, business analysts, domain specialists, and skilled app developers can design, develop, and publish intelligent virtual agents for Teams without having to setup a development environment. They can create a web service, or directly register with the Bot Framework. 
 
 This document guides you on how to make your chatbot available in Teams through the Power Virtual Agents portal, and add your bot to Teams using App Studio. 
 
@@ -55,36 +55,32 @@ App Studio is a Teams app. Install App Studio from the Teams store that simplifi
       &emsp;&emsp; <img  width="450px" alt="Installing App Studio" src="../../assets/images/get-started/app-studio-install.png"/>
 
 1. **Create the Teams app manifest in App Studio**  
-Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.  
-The following image guides you to create a new app in App Studio:  
+Bots in Teams are defined by an app manifest JSON file that provides the basic information about your bot and its capabilities. In **App Studio**, select **Manifest editor**, and select **Create a new app**.
 
-   ![create a new app](../../assets/images/get-started/create-new-app.png)
+    ![create a new app](../../assets/images/get-started/create-new-app.png)
 
 1. **Add your bot details**  
-Complete all the required fields. For a full description of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).   
-The following image guides you to add the app details:  
+Complete all the required fields. For a full description of each field see [manifest schema definition](../../resources/schema/manifest-schema.md).
 
-   ![add app details](../../assets/images/get-started/add-app-details.png)
+    ![add app details](../../assets/images/get-started/add-app-details.png)
 
 1. **Set up your bot** 
 To set-up the bot, perform the following steps: 
      1. Open the **Bots** tab. 
      1. Select **Setup** > **Existing bot** and enter the name of your bot.
 
-   The following image guides you to set-up a bot:    
-
    ![Bot set-up](../../assets/images/get-started/bot-set-up.png) 
 
-   The following image guides you to set-up an existing bot:      
+   The following image depicts how to set-up an existing bot:      
 
-   ![existing bot set-up](../../assets/images/get-started/existing-bot-set-up.png)    
+   ![existing bot set-up](../../assets/images/get-started/existing-bot-set-up.png)
+       
 1. **Add your App ID**  
 To add your App ID, perform the following steps:  
     1. Select **Connect to a different bot id** and paste the **App Id** you copied earlier. 
-    1. Select **Scope** > **Personal** > **Save**.      
-The following image guides you to set-up an existing bot:    
+    1. Select **Scope** > **Personal** > **Save**.
 
-   ![add app id](../../assets/images/get-started/add-app-id.png)
+    ![add app id](../../assets/images/get-started/add-app-id.png)
 
 1. **Add valid domains for your bot**  
 This step is only required if your bot requires the user to sign in. Select **Domains and permissions** and in the **Valid Domains** field, provide the following input:
@@ -93,23 +89,19 @@ This step is only required if your bot requires the user to sign in. Select **Do
        token.botframework.com
     ```
 
-7.  **Test and distribute your bot**  
+1. **Test and distribute your bot**  
 Open **Test and distribute** tab and select **Install** to add your bot directly to your Teams instance. Alternately, you can download the completed app package to share with Teams users or provide it to your admin to make your bot available in the tenant app catalog.
 
-8. **Start a chat**   
+1. **Start a chat**   
 The set-up process for adding your Power Virtual Agents chat bot to Teams is complete. You can now start a conversation with your bot in a personal chat.
 
 ## See also
 
-- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-
-- [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
-
-- [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-
-- [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-
-- [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+* [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## Next step
 

@@ -203,7 +203,7 @@ Notify users of tab activity one of the following ways:
 
 ## Best practices
 
-Use these recommendations to create a quality app experience.
+Use these recommendations to create a quality app experience:
 
 ### Collaboration
 

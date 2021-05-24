@@ -31,7 +31,7 @@ Users can add a bot one of the following ways:
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 
-:::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
+    :::image type="content" source="../../assets/images/bots/add-bot-chat-at-mention.png" alt-text="Example shows how to add a bot in a group chat using an @mention." border="false":::
 
 # [Mobile](#tab/mobile)
 
@@ -47,7 +47,7 @@ It’s critical that your bot introduces itself and describes what it can do. Th
 
 ### Welcome message in a one-on-one chat
 
-In personal contexts, welcome messages set your bot's tone. The message includes a greeting, what the bot can do, and some suggestions for how to interact (for example, “Try asking me about …”). If possible, these suggestions should return stored responses without having to sign in.
+In personal contexts, welcome messages set your bot's tone. The message includes a greeting, what the bot can do, and some suggestions for how to interact. For example, “Try asking me about …”. If possible, these suggestions should return stored responses without having to sign in.
 
 # [Desktop](#tab/desktop)
 
@@ -91,14 +91,14 @@ Don’t forget: In the bot command menu (**What can I do?**), you must also prov
 
 ### Tours
 
-You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features (for example, include screenshots of your messaging extension).
+You can include a tour with welcome messages and if the bot responds to something like a “help” command. A tour is the most effective way to describe what your bot can do. If applicable, they’re also great for describing your app’s other features. For example, include screenshots of your messaging extension.
 
 > [!IMPORTANT]
 > Tours should be accessible without having to sign in.
 
 #### One-on-one chats
 
-In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged (for example, **Create a task**).
+In a personal app, a carousel can provide an effective overview of your bot and any other features of your app. Including buttons the let users try bot commands is encouraged. For example, **Create a task**.
 
 # [Desktop](#tab/desktop)
 
@@ -196,7 +196,7 @@ Use a thesaurus and get people from as many different backgrounds as possible to
 
 Design your bot to recognize intent, which captures what someone wants from a bot in response to a message or query. Intent classifies a message or query as a single action with one or more data objects that are affected by the action. 
 
-The following examples outline the user intent and data in messages sent to bots.
+The following examples outline the user intent and data in messages sent to bots:
 
 :::row:::
    :::column span="":::
@@ -214,7 +214,7 @@ The following examples outline the user intent and data in messages sent to bots
 
 Learn what users say when chatting with your bot. This will be an ongoing, iterative process as your user base grows in different locations and orgs. You can tune your bot's language recognition and intent mapping with Microsoft Language Understanding (LUIS).
 
-* [Understanding LUIS](https://docs.microsoft.com/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
+* [Understanding LUIS](/azure/cognitive-services/luis/artificial-intelligence): Find out how LUIS uses AI to provide natural language understanding (NLU) to your app data.
 * [Integrating with LUIS](https://www.luis.ai/): Add natural language capabilities to your bot without the complex process of creating machine learning models.
 
 ## Use cases

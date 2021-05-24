@@ -226,8 +226,8 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 
 ### Top use cases
 
-* Browse multiple pages within a Teams tab
-* Break down complex apps into multiple pages
+* Browse multiple pages within a Teams tab.
+* Break down complex apps into multiple pages.
 
 # [Desktop](#tab/desktop)
 

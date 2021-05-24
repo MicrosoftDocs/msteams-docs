@@ -26,7 +26,7 @@ You can add a messaging extension in the following Teams contexts:
 * From the Teams store.
 * In a channel, chat, or meeting (before, during, and after) near the compose box. It's worth noting if you add a messaging extension in one of these places, only you can use it in that context.
 
-The following example shows how you add a messaging extension in a channel.
+The following example shows how you add a messaging extension in a channel:
 
 # [Desktop](#tab/desktop)
 
@@ -86,7 +86,7 @@ Action-based messaging extensions frequently require users to complete a form or
 
 ## Open a messaging extension
 
-The compose box and messages/posts are the primary contexts where people use messaging extensions.
+The compose box and messages or posts are the primary contexts where people use messaging extensions.
 
 ### From the compose box
 
