@@ -7,7 +7,7 @@ ms.topic: conceptual
 # Together Mode in Teams
 
 > [!NOTE]
-> This feature is currently available in [public developer](../../resources/dev-preview/developer-preview-intro.md) preview only.
+> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Microsoft Teams Together Mode provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined seats designed and fixed by the scene creator.
 
