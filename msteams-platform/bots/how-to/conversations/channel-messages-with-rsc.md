@@ -23,6 +23,10 @@ You can view the demonstration on [enabling bots to receive all channel messages
 
 > [!VIDEO ~/assets/videos/BotsRSC_AllChannelMessages_Docs_Demo.mp4]
 
+<video width="320" height="240" controls>
+  <source src="~/assets/videos/BotsRSC_AllChannelMessages_Docs_Demo.mp4" type="video/mp4">
+</video>
+
 The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
 ## Update app manifest
