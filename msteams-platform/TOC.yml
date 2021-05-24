@@ -24,12 +24,6 @@
   items:
   - name: Tutorials
     href: tutorials/code-samples.md   
-  - name: Create an app using C# or .NET
-    href: tutorials/get-started-dotnet-app-studio.md
-  - name: Create an app using Node.js
-    href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman generator
-    href: tutorials/get-started-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
@@ -62,8 +56,12 @@
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install Moodle LMS
-    href: resources/moodleInstructions.md
+  - name: Moodle LMS
+    items:
+    - name: Overview
+      href: resources/moodle-overview.md
+    - name: Install Moodle LMS
+      href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
   - name: Add Teams tab to SharePoint
@@ -86,30 +84,38 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-  - name: Design fundamentals
+  - name: Understand the design process
+    href: concepts/design/design-teams-app-process.md
+  - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
-  - name: Basic UI components
-    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: App capabilities
+    items:
+    - name: Understand the app structure
+      href: concepts/design/app-structure.md
+    - name: Personal apps
+      href: concepts/design/personal-apps.md
+    - name: Tabs
+      href: tabs/design/tabs.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Messaging extensions
+      href: messaging-extensions/design/messaging-extension-design.md  
+    - name: Meeting extensions
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
-  - name: Personal apps
-    href: concepts/design/personal-apps.md
-  - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
-  - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md  
-  - name: Bots
-    href: bots/design/bots.md
-  - name: Meeting extensions
-    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-  - name: Adaptive Cards
-    href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Task modules
-    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: UI components
+    items:
+    - name: Basic UI components
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Adaptive Cards
+      href: task-modules-and-cards/cards/design-effective-cards.md
+    - name: Task modules
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Activity feed notifications
+      href: concepts/design/activity-feed-notifications.md
+  - name: Enable app customization
+    href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
@@ -120,6 +126,8 @@
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
+  - name: Developer Portal for Teams
+    href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
@@ -176,6 +184,8 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
+  - name: Tabs link unfurling and Stage View
+    href: tabs/tabs-link-unfurling.md
   - name: Tab requirements
     href: tabs/how-to/tab-requirements.md
   - name: Quickstarts
@@ -198,6 +208,8 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Tabs on mobile  
+    href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
@@ -214,6 +226,9 @@
       href: bots/how-to/conversations/conversation-basics.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
+      items:
+      - name: Receive all channel messages with RSC
+        href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
@@ -424,7 +439,7 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: Manifest
+- name: App manifest
   items:
     - name: App manifest schema
       href: resources/schema/manifest-schema.md
