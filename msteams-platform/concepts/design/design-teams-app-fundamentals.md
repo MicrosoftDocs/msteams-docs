@@ -129,7 +129,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column span="3":::
 
-      To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](https://docs.microsoft.com/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.
+      To feel part of Teams, your app copy in general should follow these [Microsoft voice principles](/style-guide/brand-voice-above-all-simple-human): warm and relaxed, crisp and clear, and ready to lend hand.
 
       * <a href="https://www.figma.com/community/file/916836509871353159" target="_blank">See full copy and content guidelines—including writing for bots (Figma)</a>
 
