@@ -19,7 +19,9 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 ## Enable bots to receive all channel messages
 
-You can view the demonstration on [enabling bots to receive all channel messages](https://microsoft-my.sharepoint-df.com/personal/vul_microsoft_com/Documents/Microsoft%20Teams%20Chat%20Files/BotsRSC_AllChannelMessages_Docs_Demo.mp4).
+You can view the demonstration on [enabling bots to receive all channel messages](~/assets/videos/BotsRSC_AllChannelMessages_Docs_Demo.mp4).
+
+> [!VIDEO ~/assets/videos/BotsRSC_AllChannelMessages_Docs_Demo.mp4]
 
 The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
