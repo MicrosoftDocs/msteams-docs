@@ -60,4 +60,4 @@ Configure the default capability when your app is installed for a team, meeting,
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose how to distribute your app](overview.md)
+> [Choose how to distribute your app](apps-publish-overview.md)
