@@ -8,9 +8,6 @@ ms.topic: overview
 ---
 # Enable orgs to customize your Microsoft Teams app
 
-> [!NOTE]
-> This feature is currently available in developer preview only.
-
 You can allow orgs (specifically Teams admins) to customize some aspects of your Microsoft Teams app. Some possible examples include:
 
 * Changing the app's accent color to match the org's brand.
