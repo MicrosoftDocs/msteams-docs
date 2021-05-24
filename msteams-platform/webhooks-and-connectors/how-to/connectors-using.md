@@ -1,12 +1,12 @@
 ---
-title: Send messages to connectors and webhooks
+title: Send messages to incoming webhooks and connectors
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal
 keywords: teams o365 connector
 ---
 
-# Send messages to connectors and webhooks
+# Send messages to incoming webhooks and connectors
 
 To send a message through your Office 365 Connector or incoming webhook, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
@@ -300,7 +300,7 @@ After you upload the app, open the connectors list from any channel. Scroll to t
 
 ![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
 
-You can launch the configuration experience. 
+You can launch the configuration experience.
 > [!NOTE]
 > The flow occurs entirely within Microsoft Teams through a pop-up window. At present, the behavior differs from the configuration experience in connectors that were created.
 

@@ -124,7 +124,7 @@ If you need to authenticate the user as part of loading your page, see [authenti
 
 #### Handle edits
 
-Your code must handle users who return to edit an existing Connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
+Your code must handle users who return to edit an existing connector configuration. To do this, call `microsoftTeams.settings.setSettings()` during the initial configuration with the following parameters:
 
 - `entityId` is the custom ID that represents what the user has configured and understood by your service.
 - `configName` is a friendly name that your configuration code can retrieve.
@@ -233,5 +233,5 @@ The following table provides the sample name and its description:
 * [Send messages to Connectors and Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md)
 
 * Introduction to Office 365 Connectors video
- 
+
 > [!VIDEO https://www.youtube-nocookie.com/embed/QILGfafEvTw] 
