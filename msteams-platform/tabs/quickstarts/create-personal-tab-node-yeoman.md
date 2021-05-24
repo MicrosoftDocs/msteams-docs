@@ -6,7 +6,8 @@ localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Personal tab with Node.js and Yeoman generator
+
+# Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
@@ -20,6 +21,9 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
+**Create a configurable or static tab**
+Use the arrow keys to select static tab.
+
 > [!IMPORTANT]
 > The path component **yourDefaultTabNameTab** referenced in this quickstart is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
 >
@@ -27,7 +31,7 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 ## Create a personal tab
 
-To add a personal tab to your application, you must create a content page and update existing files.
+To add a personal tab to your application, you must create a content page and update the existing files.
 
 **To create a personal tab**
 
@@ -78,13 +82,14 @@ To add a personal tab to your application, you must create a content page and up
 
     ```
 
+
 1. Update the `contentUrl` path component `yourDefaultTabNameTab` with your actual tab name.
 
 1. Save the updated **manifest.json**.
 
 1. Your content page must be served in an IFrame. Open **Tab.ts** in your code editor.
 
-     ```bash
+    ```bash
     ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
     ```
 
@@ -143,3 +148,7 @@ Select the `...` menu from the left panel of Teams, and select your application 
 
 [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a personal tab using ASP.NETCore](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)

@@ -35,7 +35,7 @@ Most of the information is provided by your **manifest.json**, but there are few
 
 #### Details: App details
 
-In the *App details* section:
+In the **App details** section:
 
 * Under *Identification* select **Generate** to generate a new App Id for your app.
 
@@ -70,7 +70,7 @@ In *Domains and permissions* section, the *Domains from your tabs* must contain 
 >
 >Ignore this warning while testing your tab.
 
-In the *Test and distribute* section:
+In the **Test and distribute** section:
 
 * Select **Install**.
 

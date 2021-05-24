@@ -90,14 +90,14 @@ If you create a bot with a *personal* scope, it shows up in the first tab positi
 Start with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams. For example; [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
->
-> * The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules.
-> * This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
+> The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules.
+> This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
 If you indicate `"showLoadingIndicator : true` in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow the mandatory protocol as in the following:
 
+**To show the loading indicator**
 
-* To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
+* Add `"showLoadingIndicator": true` to your manifest. 
 * Remember to call `microsoftTeams.initialize();`.
 * **Optional**. When you are ready to print to your screen and want to delay the loading of the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
 * **Mandatory**. Call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams hides the loading indicator if applicable. If `notifySuccess` is not called within 30 seconds, the application expires and an error screen is displayed with an option to retry.
@@ -112,10 +112,8 @@ If you indicate `"showLoadingIndicator : true` in your app manifest, then all ta
         Other = "Other"
     }
     ```
->
 
 ## See also
 
-- [Content and conversations, all at once using tabs](~/tabs/design/tabs.md)
-
-- [Microsoft Teams app approval process guidance](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+* [Content and conversations, all at once using tabs](~/tabs/design/tabs.md)
+* [Microsoft Teams app approval process guidance](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)

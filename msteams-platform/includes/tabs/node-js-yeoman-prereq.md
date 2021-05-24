@@ -32,6 +32,10 @@ This project requires the following tools installed in your development environm
 
 1. Create a new directory for your tab project.
 
+    ```bash
+    yo teams
+    ```
+    
 1. Run the following command in the new directory to start a generator:
 
     ```bash
@@ -60,5 +64,3 @@ This project requires the following tools installed in your development environm
     | **Would you like to include Test framework and initial tests? (y/N)** | Select **not** to include a test framework for this project. The default is yes; enter **n**. |
     | **Would you like to use Azure Applications Insights for telemetry? (y/N)** | Select **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**. |
     | **Default Tab Name (max 16 characters)?** | Name your tab. This tab name is used throughout your project as a file or URL path component. |
-    | **What kind of Tab would you like to create?** | Use the arrow keys to select Personal (static) tab. |
-    | **Do you require Azure AD Single-Sign-On support for the tab? (Y/n)** | The default is yes. |

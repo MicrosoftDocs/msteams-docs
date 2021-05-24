@@ -98,13 +98,13 @@ Here's a sample HTML to create a Connector configuration page without the CSS:
 #### `GetSettings()` response properties
 
 >[!Note]
->The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/%40microsoft/teams-js/settings.settings?view=msteams-client-js-latest&preserve-view=true).
+>The parameters returned by the `getSettings` call here are different than if you were to invoke this method from a tab, and differ from those documented [here](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true).
 
 | Parameter   | Details |
 |-------------|---------|
 | `entityId`       | The entity ID, as set by your code when calling `setSettings()`. |
 | `configName`  | The configuration name, as set by your code when calling `setSettings()`. |
-| `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()` |
+| `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()`. |
 | `webhookUrl` | The webhook URL created for this connector. Persist the webhook URL and use it to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when application returns successfully. |
 | `appType` | The values returned can be `mail`, `groups` or `teams` corresponding to the Office 365 Mail, Office 365 Groups or Microsoft Teams respectively. |
 | `userObjectId` | This is the unique id corresponding to the Office 365 user who initiated setup of the connector. It should be secured. This value can be used to associate the user in Office 365 who set up the configuration to the user in your service. |

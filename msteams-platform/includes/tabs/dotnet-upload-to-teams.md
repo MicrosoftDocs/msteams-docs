@@ -1,4 +1,4 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab to Teams
 
 >[!NOTE]
 > Use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file manually and build the solution to create a **tab.zip** file to upload.
@@ -27,7 +27,7 @@ There are list of steps in the left-hand side and list of properties on the righ
 
 #### Details: App details
 
-In the *App details* section
+In the *App details* section:
 
 - Under *Identification* select **Generate** to generate a new App Id for your app.
 

@@ -6,6 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart 
 ms.author: lajanuar
 ---
+
 # Create a custom channel or group tab using C# and ASP.NETCore
 
 This quickstart takes you through the steps to create a custom channel or group tab with C# and ASP.NetCore Razor pages, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
@@ -192,3 +193,7 @@ In the *Test and distribute* section:
 
 Navigate to the team where you installed the tab, and select the tab from the tab bar. The page selected during the configuration is displayed.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)

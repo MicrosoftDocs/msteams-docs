@@ -16,10 +16,10 @@ Your tab needs contextual information to display relevant content:
 
 ## User context
 
-Context about the user, team, or company are especially useful when:
+Context about the user, team or company are especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow against Azure Active Directory or other identity provider, and you do not want the user to re-enter their username.
+* You initiate an authentication flow against Azure Active Directory or other identity provider, and you don't want to require the user to enter their username again. For more information on authenticating within your Microsoft Teams tab, see [Authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > While this user information can help ensure a smooth user experience, you should not use it as proof of identity. For example, an attacker could load your page in a 'bad browser' and generate malicious information or requests.
@@ -43,14 +43,17 @@ Use placeholders in your configuration or content URLs. Teams replaces the place
 * {theme}: The current UI theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 Group in which the tab resides.
 * {tid}: The Azure AD tenant ID of the current user.
-* {locale}: The current locale of the user formatted as languageId-countryId (for example, en-us).
+* {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
 
 >[!NOTE]
 >The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
 
-For example, suppose in your tab manifest you set the `configURL` attribute to
+For example, suppose in your tab manifest you set the `configURL` attribute to `"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`, the signed-in user has the following attributes:
 
-`"https://www.contoso.com/config?name={loginHint}&tenant={tid}&group={groupId}&theme={theme}"`
+* Their username is 'user@example.com'.
+* Their company tenant ID is 'e2653c-etc'.
+* They are a member of the Office 365 group with id '00209384-etc'.
+* The user has set their Teams theme to 'dark'.
 
 And the signed-in user has the following attributes:
 
@@ -59,7 +62,7 @@ And the signed-in user has the following attributes:
 * They are a member of the Office 365 group with id '00209384-etc'.
 * The user has set their Teams theme to 'dark'.
 
-When they configure your tab, Teams calls this URL:
+When they configure your tab, Teams calls the following URL:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -97,7 +100,7 @@ The following example shows context variables:
     "hostClientType": "The type of host client. Possible values are android, ios, web, desktop, rigel",
     "frameContext": "The context where tab URL is loaded (for example, content, task, setting, remove, sidePanel)",
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
-    "tenantSKU": "The license type for the current user tenant",
+    "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
@@ -116,12 +119,12 @@ The following example shows context variables:
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. The following fields changes when your content page is on a private channel. If your page uses any of the following values, you need to check the `channelType` field to see if your page is loaded in a private channel, and respond accordingly.
 
-* `groupId` - Undefined for private channels.
-* `teamId` - Set to the threadId of the private channel.
-* `teamName` - Set to the name of the private channel.
-* `teamSiteUrl` - Set to the URL of a distinct, unique SharePoint site for the private channel.
-* `teamSitePath` - Set to the path of a distinct, unique SharePoint site for the private channel.
-* `teamSiteDomain` - Set to the domain of a distinct, unique SharePoint site domain for the private channel.
+* `groupId`: Undefined for private channels
+* `teamId`: Set to the threadId of the private channel
+* `teamName`: Set to the name of the private channel
+* `teamSiteUrl`: Set to the URL of a distinct, unique SharePoint site for the private channel
+* `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the private channel
+* `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
 
 > [!Note]
 >  teamSiteUrl works well for standard channels also.

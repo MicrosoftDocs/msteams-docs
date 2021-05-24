@@ -18,7 +18,6 @@ Teams tabs must adhere to the following requirements:
 * To safeguard against click-jacking, sign in pages are not processed in iframes. Your authentication logic must use a method other than redirect. For example, use token-based or cookie-based authentication.
 
 > [!NOTE]
->
 > Chrome 80 introduces new cookie values and imposes cookie policies by default. It is recommended to set the intended use of the cookies instead of relying on the default browser behavior. For more information, see [SameSite cookie attribute (2020 update)](../../resources/samesite-cookie-update.md).
 
 * Browsers adhere to the same origin policy restriction that prevents a webpage from requesting a domain other than the one that served a web page. You must redirect the configuration or content page to a different domain or subdomain. Your cross-domain navigation logic must allow the Teams client to validate the origin against a list of static validDomains in the app manifest when loading or communicating with the tab.
@@ -29,4 +28,9 @@ Teams tabs must adhere to the following requirements:
 
 * For authentication, upgrade your Teams JavaScript SDK to version 1.4.1 to work on mobile clients.
 
-* If you choose to have your channel or group tab to appear in Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+* If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/quickstarts/create-personal-tab-node-yeoman.md)

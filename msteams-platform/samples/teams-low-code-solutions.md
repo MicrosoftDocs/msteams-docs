@@ -8,13 +8,13 @@ ms.topic: conceptual
 ---
 # Create low-code custom apps for Microsoft Teams
 
-Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the demand than the apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot and Virtual Assistant.
+Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the demand than the apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot, and Virtual Assistant.
 
-Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience, to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to backend services, and a built-in app lifecycle management system to build, debug, deploy and maintain applications. Microsoft Power Platform is the innovative gateway to rapidly build Teams compatible apps using low code attributes.
+Low code platforms provide an intuitive approach to software development and require little or no coding to build applications and processes. They allow the developers without experience, to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to backend services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft Power Platform is the innovative gateway to rapidly build Teams compatible apps using low code attributes.
 
 ## Teams and Microsoft Power Platform
 
-Microsoft Power Platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, formerly Microsoft Flow and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment:
+Microsoft Power Platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, formerly Microsoft Flow, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment:
 
 :::image type="content" source="../assets/images/power-platform-and-teams/ms-power-platform.png" alt-text="Power platform services":::
 
@@ -23,7 +23,7 @@ Microsoft Power Platform combines four robust Microsoft technologies, such as Po
 
 ### ✔ Teams and Power BI
 
-The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborate with others in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute it as an app or [create a template app in Power BI](/connect-data/service-template-apps-create). Additionally, use the new [Power BI app in Teams](https://go.microsoft.com/fwlink/?linkid=2143643) to bring your entire basic Power BI service experience into Teams.
+The [Power BI tab for Microsoft Teams](https://powerbi.microsoft.com/blog/announcing-new-power-bi-tab-for-microsoft-teams/) adds support for reports in the Teams workspace and allows users to [share interactive Power BI content](/power-bi/collaborate-share/service-embed-report-microsoft-teams) and [collaborate with others in Teams](/power-bi/collaborate-share/service-collaborate-microsoft-teams) channels and chats. You can create packaged [Power BI app](/power-bi/collaborate-share/service-create-distribute-apps) content from scratch and distribute it as an app or [create a template app in Power BI](/power-bi/connect-data/service-template-apps-create). Additionally, use the new [Power BI app in Teams](https://go.microsoft.com/fwlink/?linkid=2143643) to bring your entire basic Power BI service experience into Teams.
 
 ### ✔ Teams and Power Apps
 

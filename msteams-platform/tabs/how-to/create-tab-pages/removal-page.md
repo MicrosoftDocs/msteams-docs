@@ -85,3 +85,4 @@ Following the execution of the remove handler `removeEvent.notifySuccess()`, or 
 >To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases. Or,
 >Teams enables the **Remove** button after 5 seconds, even if your tab has not called `setValidityState()`. Or,
 >When the user selects **Remove**, Teams removes the tab after 30 seconds.
+

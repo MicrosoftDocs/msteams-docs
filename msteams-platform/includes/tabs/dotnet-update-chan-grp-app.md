@@ -4,10 +4,10 @@ To display your tab in Teams, you must include the **Microsoft Teams JavaScript 
 
 * Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
 >Do not copy or paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
@@ -56,6 +56,74 @@ Save the updated **Tab.cshtml**.
 
 >[!TIP]
 >You must run your application in Visual Studio and ngrok to complete this quickstart. If you are no longer running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when it restarts in Visual Studio. When you restart the ngrok service, it returns the new URL and you need to update all locations that use the old URL.
+
+## Upload your tab to Teams
+
+>[!Note]
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
+
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+
+- Open App studio and select the **Manifest editor** tab.
+
+- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
+
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
+
+- Upload **tab.zip** to App Studio.
+
+### Update your app package with Manifest editor
+
+Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
+
+- Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+
+There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
+
+#### Details: App details
+
+In the *App details* section:
+
+- *Identification*: select **Generate** to replace the placeholder id with the required GUID for your tab.
+
+- *Developer information*: update the **Website URL** field with your *ngrok* HTTPS URL.
+
+- *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+
+#### Capabilities: Tabs
+
+In the *Tabs* section:
+
+- *Team Tab*: select **Add**.
+
+- In the Team tab pop-up window update the *Configuration URL* to `https://<yourngrokurl>/tab`.
+
+- Finally, make sure the *can update configuration? Team*, and *Group chat* boxes are checked and select **Save**.
+
+#### Finish: Domains and permissions
+
+In the *Domains and permissions* section:
+
+- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+
+#### Finish: Test and distribute
+
+>[!IMPORTANT]
+>In the **Description** field on the right you'll see the following warning:
+>
+>&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+>
+>This warning can be ignored while testing your tab.
+
+In the *Test and distribute* section:
+
+- Select **Install**.
+
+- In the pop-up window's *Add to a team or chat* field enter your team and select **Install**.
+
+- In the next pop-up window choose the team channel where you would like the tab displayed and select **Set up**.
 
 ### Run your application
 

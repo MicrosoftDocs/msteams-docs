@@ -62,7 +62,7 @@ Tabs allow team members to access services and content in a specific space withi
 
 ✔ Tab apps are accessible in meetings **Details** and **Chats** pages using a plus ➕ button.
 
-✔ Tab layout must be in an organized state if there are more than ten polls or surveys.
+✔ Tab layout must be in an organized state if there are multiple (more than ten) polls or surveys.
 
 ### In-meeting app experience
 
@@ -156,19 +156,12 @@ The following table provides the user types and what features each user can acce
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Tab](../tabs/what-are-tabs.md#Understand how tabs work)
+* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
+* [Bot](../bots/what-are-bots.md)
+* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
+* [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
 
-> [!div class="nextstepaction"]
-> [Bot](../bots/what-are-bots.md)
-
-> [!div class="nextstepaction"]
-> [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
-
-> [!div class="nextstepaction"]
-> [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Build your app](create-apps-for-teams-meetings.md)

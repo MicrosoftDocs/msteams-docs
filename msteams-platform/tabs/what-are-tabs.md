@@ -85,3 +85,8 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 * [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tab requirements](~/tabs/how-to/tab-requirements.md)

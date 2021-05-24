@@ -11,6 +11,7 @@ ms.author: lajanuar
 
 A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
+
 * A channel or group chat tab to collect information from the users and set the `contentUrl` of the content page to display.
 * A [messaging extension](~/messaging-extensions/what-are-messaging-extensions.md).
 * An [Office 365 Connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
@@ -98,7 +99,7 @@ Choosing the relative button triggers either `saveGray()` or `saveRed()`, and in
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page uploaded in Teams is enabled.
 
-The configuration page code informs the Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+The configuration page code informs the Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -109,7 +110,7 @@ The configuration page code informs the Teams that the configuration requirement
 
 Your tab requires contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-Collect the values of context data variables in the following two ways:
+For more information on the properties used for tab configuration, see [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
 * Insert URL query string placeholders in your manifest's `configurationURL`.
 
@@ -152,7 +153,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) when invoked. Add this function to the configuration page to retrieve context values:
+The `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) when invoked. Add this function to the configuration page to retrieve context values:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
