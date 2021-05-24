@@ -3,7 +3,7 @@ title: Get started - Prerequisites
 author: adrianhall
 description: Learn how to get started with Microsoft Teams app development and set up your environment.
 ms.author: adhal
-ms.date: 05/19/2021
+ms.date: 05/24/2021
 ms.topic: quickstart
 ---
 # Prerequisites: Get started with Microsoft Teams app development
@@ -64,7 +64,7 @@ The extension will be downloaded.  Close Visual Studio 2019 to install the exten
 
 # [Command line](#tab/cli)
 
-To install the TeamsFX CLI, use the `npm` package manager:
+To install the TeamsFx CLI, use the `npm` package manager:
 
 ``` bash
 npm install -g @microsoft/teamsfx-cli
@@ -83,7 +83,7 @@ Ensure you add the npm global cache to your PATH.  This is normally done as part
 You can use the CLI with the `teamsfx` command.  Verify that the command is working by running `teamsfx -h`.
 
 > [!CAUTION]
-> Before you can run TeamsFX in PowerShell terminals, you need to enable the "remote signed" execution policy for PowerShell.  For more information, refer to the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+> Before you can run TeamsFx in PowerShell terminals, you need to enable the "remote signed" execution policy for PowerShell.  For more information, refer to the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 ---
 
@@ -173,7 +173,7 @@ Visual Studio 2019 will prompt you to log in to each service as it is needed.  Y
 
 # [Command line](#tab/cli)
 
-1. Sign in to Microsoft 365 with the TeamsFX CLI:
+1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
     ``` bash
     teamsfx account login m365
@@ -181,7 +181,7 @@ Visual Studio 2019 will prompt you to log in to each service as it is needed.  Y
 
     The sign-in process will start using your normal web browser.  Complete the sign-in process for your M365 account.  You will be prompted when you can close the browser.
 
-2. Sign in to Azure with the TeamsFX CLI:
+2. Sign in to Azure with the TeamsFx CLI:
 
     ``` bash
     teamsfx account login azure
@@ -189,7 +189,7 @@ Visual Studio 2019 will prompt you to log in to each service as it is needed.  Y
 
     The sign-in process will start using your normal web browser.  Complete the sign-in process for your Azure account.  You will be prompted when you can close the browser.
 
-The account logins are shared between Visual Studio Code and the TeamsFX CLI.
+The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
 ---
 
