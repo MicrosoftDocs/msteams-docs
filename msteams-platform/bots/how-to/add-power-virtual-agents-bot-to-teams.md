@@ -97,15 +97,11 @@ The set-up process for adding your Power Virtual Agents chat bot to Teams is com
 
 ## See also
 
-- [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
-
-- [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
-
-- [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
-
-- [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
-
-- [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
+* [Power Virtual Agents](/power-virtual-agents/fundamentals-what-is-power-virtual-agents)  
+* [Create a chatbot for Teams with Microsoft Power Virtual Agents](../bot-features.md#bots-and-the-microsoft-power-virtual-agents).  
+* [Power Virtual Agents portal](https://powervirtualagents.microsoft.com)
+* [Publish your Power Virtual Agents bot](/power-virtual-agents/publication-fundamentals-publish-channels)
+* [Security and compliance in Microsoft Teams](/MicrosoftTeams/security-compliance-overview).
 
 ## Next step
 
