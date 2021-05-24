@@ -19,13 +19,9 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 ## Enable bots to receive all channel messages
 
-<video width="500" height="500" controls autoplay>
-  <source src="~/assets/videos/botrsc-allchannelmessages-demo.mp4">
-</video>
-
-![Caption](~/assets/videos/botrsc-allchannelmessages-demo.mp4)
-
-<img src="~/assets/videos/botrsc-allchannelmessages-demo.mp4" type="video/mp4"/>
+<figure class="video_container">
+  <iframe src="~/assets/videos/botrsc-allchannelmessages-demo.mp4" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
@@ -64,11 +60,11 @@ The following image illustrates how to create the zip file for the app manifest:
 To receive all channel messages in a team with RSC without being @mentioned
 
 1. Select or create a team.
-1. Select **More options** from the left pane. The drop-down menu appears.
-
-    ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
-
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage team** from the drop-down menu. The details appear.
+
+   ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
+
 1. Select **Apps**. Multiple apps appear.
 
     ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
