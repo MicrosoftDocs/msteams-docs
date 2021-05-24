@@ -96,6 +96,12 @@ To ensure backward compatibility of your Adaptive Cards with older versions of T
 
 For more information, see [backward compatibility on Teams](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#teams).
 
+## Code sample
+
+|Sample name | Description | .NETCore |
+|----------------|-----------------|--------------|
+| Teams catering bot | Create a simple bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+
 ## See also
 
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)
