@@ -229,6 +229,9 @@ POST /v3/conversations/{conversationId}/activities
 
 ### Meeting Details API
 
+> [!NOTE]
+> This feature is currently available in public developer preview only.
+
 The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
 The API is available through Bot Services.
 
@@ -299,6 +302,9 @@ The JSON response body for Meeting Details API is as follows:
 ```
 
 ## Real-time Teams meeting events
+
+> [!NOTE]
+> This feature is currently available in public developer preview only.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
 
