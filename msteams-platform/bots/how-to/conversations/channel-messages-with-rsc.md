@@ -29,7 +29,7 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
 The following image illustrates how to update the app manifest:
 
-![Update app manifest](./conversations/media/appmanifest.png)
+![Update app manifest](~/conversations/media/appmanifest.png)
 
 The following is an example of the `webApplicationInfo` object:
 
@@ -51,7 +51,7 @@ The following code provides an example of the app manifest:
 
 The following image illustrates how to create the zip file for the app manifest:
 
-![Create zip file](./conversations/media/createzipfile.png)
+![Create zip file](~/conversations/media/createzipfile.png)
 
 ## Receive channel messages with RSC
 
@@ -60,28 +60,28 @@ To receive all channel messages in a team with RSC without being @mentioned
 1. Select or create a team.
 1. Select **More options** from the left pane. The drop-down menu appears.
 
-    ![Managing apps in team](./conversations/media/managingteam.png)
+    ![Managing apps in team](~/conversations/media/managingteam.png)
 
 1. Select **Manage team** from the drop-down menu. The details appear.
 1. Select **Apps**. Multiple apps appear.
 
-    ![Uploading custom app](./conversations/media/uploadingcustomapp.png)
+    ![Uploading custom app](~/conversations/media/uploadingcustomapp.png)
 
 1. Select **Upload a custom app** from the lower right corner. The **Open** dialog box appears.
 
-    ![Selecting app package](./conversations/media/selectapppackage.png)
+    ![Selecting app package](~/conversations/media/selectapppackage.png)
 
 1. Select the app package.
 1. Select **Open**. The app details pop-up appears.
 
-    ![Adding the bot](./conversations/media/addingbot.png)
+    ![Adding the bot](~/conversations/media/addingbot.png)
 
 1. Select **Add** to add the bot to your selected team.
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-    ![Bot receives message](./conversations/media/botreceivingmessage.png)
+    ![Bot receives message](~/conversations/media/botreceivingmessage.png)
 
 ## See also
 
