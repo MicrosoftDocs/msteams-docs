@@ -165,8 +165,6 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The information masking property is currently available in the developer preview only.
 
-To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
-
 #### Sample Adaptive card with masking property
 
 ```json
@@ -174,8 +172,7 @@ To mask information in Adaptive cards, add the `isMasked` property to **type** `
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 The following image is an example of masking information in Adaptive cards:
@@ -215,7 +212,7 @@ In addition, your app must include the following elements:
 A full width Adaptive Card appears as follows:
 ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
 
-If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
+If you have not set the `width` property to *Full*, then the default view of the Adaptive Card appears as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### Typeahead support

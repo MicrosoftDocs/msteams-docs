@@ -16,18 +16,18 @@ The SDK is helpful for developing apps with any of the following Teams capabilit
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
 
-For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-personal-tab.md) your users make in the Teams client.
+For example, the SDK can make your [tab react to theme changes](../../build-your-first-app/build-personal-tab.md#3-update-your-tab-theme) your users make in the Teams client.
 
 ## Getting started
 
 Do one of the following depending on your development preferences:
 
 * [Install the SDK with npm or Yarn](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true)
+* [Clone the SDK (GitHub)](https://github.com/OfficeDev/microsoft-teams-library-js)
 
 ## Common SDK functions
 
-See the following tables to understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information:
-
+See the following tables to understand commonly used SDK functions. The [SDK reference documentation](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true) provides more comprehensive information.
 
 ### Basic functions
 
@@ -35,9 +35,9 @@ See the following tables to understand commonly used SDK functions. The [SDK ref
 | -----     | -----     | -----    |
 | `microsoftTeams.initialize()` | Initializes the SDK. This function must be called before any other SDK calls.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initialize-any-&preserve-view=true)|
 |`microsoftTeams.getContext(callback: (context: Context)`| Gets the current state in which the page is running. The callback retrieves the **Context** object.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getcontext--context--context-----void-&preserve-view=true)<br/>[context obj](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true)|
-| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initializes the Teams library and sets the tab's [frame context](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website or reload functionality operates on the correct URL.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
-| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Sets the tab's [frame context](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website or reload functionality operates on the correct URL.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-&preserve-view=true)|
-| `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |The handler that is registered when the user toggles a tab's full-screen or windowed view.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-&preserve-view=true)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerFullScreenHandler__isFullScreen__boolean_____void_&preserve-view=true)|
+| `microsoftTeams.initializeWithContext({contentUrl: string, websiteUrl: string})` | Initializes the Teams library and sets the tab's [frame context](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website/reload functionality operates on the correct URL.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#initializewithframecontext-framecontext--------void--string---&preserve-view=true)|
+| `microsoftTeams.setFrameContext({contentUrl: string, websiteUrl: string})` | Sets the tab's [frame context](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true) depending on the contentUrl and websiteUrl. This ensures the go-to-website/reload functionality operates on the correct URL.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#setframecontext-framecontext-&preserve-view=true)|
+| `microsoftTeams.registerFullScreenHandler(handler: (isFullScreen: boolean)` |The handler that is registered when the user toggles a tab's full-screen/windowed view.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerfullscreenhandler--isfullscreen--boolean-----void-&preserve-view=true)<br/>[boolean](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerFullScreenHandler__isFullScreen__boolean_____void_&preserve-view=true)|
 |`microsoftTeams.registerChangeSettingsHandler()` |The handler that is registered when the user selects the enabled **Settings** button to reconfigure a tab.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#registerchangesettingshandler-------void-&preserve-view=true)|
 | `microsoftTeams.getTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters,)` |Gets the tabs owned by the app. The callback retrieves the **TabInformation** object. The **TabInstanceParameters** object is an optional parameter.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#gettabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)|
 |`microsoftTeams.getMruTabInstances(callback: (tabInfo: TabInformation),tabInstanceParameters?: TabInstanceParameters)`|Gets the most recently used tabs for the user. The callback retrieves the **TabInformation** object. The **TabInstanceParameters** object is an optional parameter.|[function](/javascript/api/@microsoft/teams-js/microsoftteams?view=msteams-client-js-latest#getmrutabinstances--tabinfo--tabinformation-----void--tabinstanceparameters-&preserve-view=true)<br/>[tabInfo obj](/javascript/api/@microsoft/teams-js/tabinformation?view=msteams-client-js-latest&preserve-view=true)<br/>[tabInstance obj](/javascript/api/@microsoft/teams-js/tabinstanceparameters?view=msteams-client-js-latest&preserve-view=true)|

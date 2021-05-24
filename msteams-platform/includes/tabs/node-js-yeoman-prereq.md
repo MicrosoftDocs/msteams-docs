@@ -78,7 +78,7 @@ In addition, this project requires that you have the following installed in your
 
     **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-    Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
     **Default Tab Name (max 16 characters)?**
 
