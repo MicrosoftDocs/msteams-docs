@@ -133,7 +133,7 @@ When you pressed F5, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-side-loading).
+To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-sideloading).
 
 > [!TIP]
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
