@@ -31,7 +31,7 @@ The following process gives an overview to create a scene only app:
 You must have a basic understanding of the following to use Together Mode:
 
 * Definition of scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../../concepts/build-and-test/teams-developer-portal.md) and App Studio.
+* Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to **Upload a custom app** and to select all filters as part of App Setup and Meeting policies respectively.
 
