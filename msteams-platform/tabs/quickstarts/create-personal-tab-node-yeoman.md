@@ -103,13 +103,13 @@ To add a personal tab to your application, you must create a content page and up
 
 ## Build and run your application
 
-Perform the following steps through command prompt in your project directory.
+Perform the following steps through command prompt in your project directory:
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
 4. Navigate to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` to view your personal tab.
 
-![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+    ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
 ## Establish a secure tunnel to your tab
 
@@ -133,9 +133,11 @@ gulp ngrok-serve
 1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
 1. In the *YourTeams* panel on the left, select the `...` menu next to the team that you are using to test your tab and select **Manage team**.
+
     ![Manage team screenshot](~/assets/images/tab-images/manage-team.png)
 
 1. In the main panel select **Apps** from the tab bar and select **Upload a custom app** located in the lower left-hand corner of the page.
+
     ![Upload a custom app screenshot](~/assets/images/tab-images/upload-custom-app.png)
 
 1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and select **Open**. Your tab is uploaded into Teams.
