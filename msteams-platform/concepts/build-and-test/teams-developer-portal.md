@@ -75,11 +75,6 @@ On the **Overview** page, you can see the total number of active users for your 
 | *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
 | *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
 
-You can also view the history and latency:
-
-* *History*: Monthly and daily usage is shown for the past seven, 30 days, and 60 days. 
-* *Latency*: You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
-
 ## Use tools to create app features
 
 The Developer Portal also includes tools to help you build some key features of Teams apps. Some of these tools include:
