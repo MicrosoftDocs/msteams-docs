@@ -28,7 +28,7 @@ We have provided a simple project to get you started. In a command prompt create
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
-# [ASP.NET Core](#tab/ASP.NET Core)
+# [ASP.NET Core](#tab/ASP.NETCore)
 
 In Visual Studio, navigate to **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTab.sln**.
 
@@ -39,7 +39,7 @@ To build and run your application press **F5** or select **Start Debugging** fro
 * http://localhost:44325/privacy
 * http://localhost:44325/tou
 
-# [ASP.NET Core MVC](#tab/ASP.NET Core MVC)
+# [ASP.NET Core MVC](#tab/ASP.NETCoreMVC)
 
 In Visual Studio, navigate to  **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 
@@ -73,13 +73,13 @@ public void Configure(IApplicationBuilder app)
 
 In ASP.NETCore, The application looks for the static files in this folder.
 
-# [ASP.NET Core](#tab/ASP.NET Core)
+# [ASP.NET Core](#tab/ASP.NETCore)
 
 ### Index.cshtml
 
 ASP.NETCore treats **index** files as default or home page for the site. When your browser URL points to the root, **index.cshtml** is displayed as the home page for your application.
 
-# [ASP.NET Core MVC](#tab/ASP.NET Core MVC)
+# [ASP.NET Core MVC](#tab/ASP.NETCoreMVC)
 
 ### Models
 
@@ -137,19 +137,20 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 In a command prompt, navigate to the root of your project directory run the following command:
 
-# [ASP.NET Core](#tab/ASP.NET Core)
+# [ASP.NET Core](#tab/ASP.NETCore)
 
-    ```bash
-    ngrok http https://localhost:44325 -host-header="localhost:44325"
-    ```
+```bash
+ngrok http https://localhost:44325 -host-header="localhost:44325"
+```
 
 Ngrok listens the request from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
-# [ASP.NET Core MVC](#tab/ASP.NET Core MVC)
+# [ASP.NET Core MVC](#tab/ASP.NETCoreMVC)
 
 ``` bash
 ngrok http https://localhost:44345 -host-header="localhost:44345"
 ```
+---
 
 Ngrok listens the requests from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
