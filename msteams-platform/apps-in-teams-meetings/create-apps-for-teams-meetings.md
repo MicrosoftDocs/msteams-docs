@@ -9,7 +9,7 @@ keywords: teams apps meetings user participant role api
 ---
 # Create apps for Teams meetings
 
-## Prerequisites and considerations
+## Prerequisites
 
 Before you create apps for Teams meetings, you must have an understanding of the following:
 
@@ -17,25 +17,32 @@ Before you create apps for Teams meetings, you must have an understanding of the
 
 * You must update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](#update-your-app-manifest).
 
-* For your app to function in the meeting lifecycle as a tab, it must support configurable tabs in the groupchat scope. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
+* Your app must support configurable tabs in the groupchat scope, for your app to function in the meeting lifecycle as a tab. For more information, see [groupchat scope](../resources/schema/manifest-schema.md#configurabletabs) and [build a group tab](../build-your-first-app/build-channel-tab.md).
 
 * You must adhere to general Teams tab design guidelines for pre- and post-meeting scenarios. For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines. For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab) and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
 * You must support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.
 
-* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams client SDK and bot activity. In addition, reliable information for user ID and tenant ID can be retrieved using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These are available as part of the Teams Client SDK and bot activity. In addition, you can retrieve reliable information for user ID and tenant ID using [Tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
-* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `Notification Signal API`.
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `NotificationSignal` API.
+
+* Meeting Details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`.
+
+* For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
+
+After you have gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and Meeting Details API that enable you to access information using attributes and display relevant content.
 
 ## Meeting apps API reference
 
 |API|Description|Request|Source|
 |---|---|----|---|
-|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams client SDK|
+|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
 ### GetUserContext
 
@@ -209,7 +216,7 @@ POST /v3/conversations/{conversationId}/activities
 }
 ```
 
-* * *
+---
 
 #### Response codes
 
@@ -219,6 +226,234 @@ POST /v3/conversations/{conversationId}/activities
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat does not exist. |
+
+### Meeting Details API
+
+> [!NOTE]
+> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+
+The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
+The API is available through Bot Services.
+
+#### Query parameter
+
+The Meeting Details API includes the following query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK. |
+
+#### Example
+
+The Meeting Details API includes the following examples:
+
+# [C#](#tab/dotnet)
+
+```csharp
+var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var creds = connectorClient.Credentials as AppCredentials;
+var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
+var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
+request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
+HttpResponseMessage response = await (connectorClient as ServiceClient<ConnectorClient>).HttpClient.SendAsync(request, CancellationToken.None).ConfigureAwait(false);
+string content;
+if (response.Content != null)
+{
+    content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+}
+```
+
+# [JavaScript](#tab/javascript)
+
+Not available
+
+# [JSON](#tab/json)
+
+```http
+GET /v1/meetings/{meetingId}
+```
+
+---
+
+The JSON response body for Meeting Details API is as follows:
+
+```json
+{ 
+   "details": { 
+        "id": "meeting ID", 
+        "msGraphResourceId": "", 
+        "scheduledStartTime": "2020-08-21T02:30:00+00:00", 
+        "scheduledEndTime": "2020-08-21T03:00:00+00:00", 
+        "joinUrl": "https://teams.microsoft.com/l/xx", 
+        "title": "All Hands", 
+        "type": "Scheduled" 
+    }, 
+    "conversation": { 
+            "isGroup": true, 
+            “conversationType”: “groupchat”, 
+            "id": "meeting chat ID" 
+    }, 
+    "organizer": { 
+        "id": "<organizer user ID>", 
+        "aadObjectId": "<AAD ID>", 
+        "tenantId": "<Tenant ID>" 
+    }
+} 
+```
+
+## Real-time Teams meeting events
+
+> [!NOTE]
+> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
+
+Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
+
+### Example of meeting start event payload
+
+The following code provides an example of meeting start event payload:
+
+```json
+{ 
+    "name": "Microsoft/MeetingStart", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:10:41.1252256Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "userID", 
+        "name": "", 
+        "aadObjectId": "aadOnjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user Id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event", 
+        "Id":"meeting id", 
+        "JoinUrl": "url" 
+        "StartTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### Example of meeting end event payload
+
+The following code provides an example of meeting end event payload:
+
+```json
+{ 
+    "name": "Microsoft/MeetingEnd", 
+    "type": "event", 
+    "timestamp": "2021-04-29T16:17:17.4388966Z", 
+    "id": "123", 
+    "channelId": "msteams", 
+    "serviceUrl": "https://microsoft.com", 
+    "from": { 
+        "id": "user id", 
+        "name": "", 
+        "aadObjectId": "aadObjectId" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "tenantId": "tenantId", 
+        "id": "thread id" 
+    }, 
+    "recipient": { 
+        "id": "user id", 
+        "name": "user name" 
+    }, 
+    "entities": [ 
+        { 
+            "locale": "en-US", 
+            "country": "US", 
+            "type": "clientInfo" 
+        } 
+    ], 
+    "channelData": { 
+        "tenant": { 
+            "id": "channel id" 
+        }, 
+        "source": null, 
+        "meeting": { 
+            "id": "meeting Id" 
+        } 
+    }, 
+    "value": { 
+        "MeetingType": "Scheduled", 
+        "Title": "Meeting Start/End Event in Canary", 
+        "Id": "19:meeting_NTM3ZDJjOTUtZGRhOS00MzYxLTk5NDAtMzY4M2IzZWFjZGE1@thread.v2", 
+        "JoinUrl": "url", 
+        "EndTime": "2021-04-29T16:17:17.4388966Z" 
+    }, 
+    "locale": "en-US" 
+}
+```
+
+### Example of getting metadata of a meeting
+
+Your bot receives the event through the `OnEventActivityAsync` handler.
+
+To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start and end event:
+
+```csharp
+protected override async Task OnEventActivityAsync(
+ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
+    var meetingEventName = turnContext.Activity.Name;
+    // Value contains meeting information (ex: meeting type, start time, etc).
+    var meetingEventInfo = turnContext.Activity.Value as JObject; 
+    var meetingEventInfoObject =
+meetingEventInfo.ToObject<MeetingStartEndEventValue>();
+    // Create a very simple adaptive card with meeting information
+var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
+meetingEventInfoObject);
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+}
+```
+
+The MeetingStartEndEventvalue.cs includes the following code:
+
+```csharp
+public class MeetingStartEndEventValue
+{
+    public string Id { get; set; }
+    public string Title { get; set; }
+    public string MeetingType { get; set; }
+    public string JoinUrl { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
+}
+```
 
 ## Enable your app for Teams meetings
 
@@ -265,7 +500,7 @@ The tab `context` and `scopes` properties enable you to determine where your app
 | **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. |
 | **meetingSidePanel** | An in-meeting panel opened via the unified bar (U-bar). |
-| **meetingStage** | An app from the sidepanel can be shared to the meeting stage. |
+| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. |
 
 > [!NOTE]
 > `Context` property is currently not supported on mobile clients.
@@ -277,14 +512,14 @@ The tab `context` and `scopes` properties enable you to determine where your app
 > * Mobile clients support tabs only in pre and post meeting stages.
 > * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
 
-### Before a meeting
+### Pre-meeting
 
 Before a meeting, users can add tabs, bots and messaging extensions to a meeting. Users with organizer and presenter roles can add tabs to a meeting.
 
 **To add a tab to a meeting**
 
 1. In your calendar, select a meeting to which you want to add a tab.
-1. Select the **Details** tab and select plus <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
+1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
     ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
@@ -294,7 +529,7 @@ Before a meeting, users can add tabs, bots and messaging extensions to a meeting
 
 **To add a messaging extension to a meeting**
 
-1. Select the ellipses or overflow menu &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; located in the compose message area in the chat.
 1. Select the app that you want to add and follow the steps as required. The app is installed as a messaging extension.
 
 **To add a bot to a meeting**
@@ -306,11 +541,12 @@ In a meeting chat enter the **@** key and select **Get bots**.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-### During a meeting
+### In-meeting
 
-#### sidePanel
+#### meetingSidePanel
 
-With the sidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add sidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+With the meetingSidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true
+).
 
 To use the `userContext` API to route requests accordingly, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). See [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the auth flow for websites. So tabs can use OAuth 2.0 directly. See, [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
@@ -333,15 +569,15 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 
 > [!NOTE]
 > * This capability is currently available in developer preview only.
-> * To use this feature, the app must support an in-meeting sidepanel.
+> * To use this feature, the app must support an in-meeting meetingSidePanel.
 
 This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time.
 
-The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables the **Share** button in the sidepanel as depecited in the following image:
+The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables **Share** in the meetingSidePanel.
 
   ![share_to_stage_during_meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-The manifest change that is needed to enable this capability is as follows: 
+The manifest change that is needed to enable this capability is as follows:
 
 ```json
 
@@ -361,9 +597,9 @@ The manifest change that is needed to enable this capability is as follows:
   ]
 ```
 
-### After a meeting
+### Post-meeting
 
-The post-meeting and pre-meeting configurations are equivalent.
+The post-meeting and pre-meeting configurations are the same.
 
 ## Code sample
 
@@ -371,7 +607,7 @@ The post-meeting and pre-meeting configurations are equivalent.
 |----------------|-----------------|--------------|--------------|
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
-| Meeting SidePanel | Microsoft Teams meeting extensibility sample for iteracting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) |
+| Meeting meetingSidePanel | Microsoft Teams meeting extensibility sample for iteracting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | |
 
 ## See also
 

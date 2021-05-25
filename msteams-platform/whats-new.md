@@ -153,6 +153,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/25/2021| Meeting Details API and real-time Teams meeting events | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Together Mode feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
