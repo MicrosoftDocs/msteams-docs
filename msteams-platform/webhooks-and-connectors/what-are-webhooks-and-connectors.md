@@ -15,7 +15,7 @@ Connectors are incoming webhooks that provide a URL to post messages anytime in 
 
 ## Outgoing webhooks
 
-With outgoing webhooks you can send text messages from a channel to the web services. After configuring the outgoing webhooks, users can @mention outgoing webhook and send a message to web services. The service responds within five seconds to the message with text or a card.
+Webhooks help Teams to integrate with external apps. With outgoing webhooks you can send text messages from a channel to the web services. After configuring the outgoing webhooks, users can @mention outgoing webhook and send a message to web services. The service responds within five seconds to the message with text or a card.
 
 > [!NOTE]
 > Outgoing webhooks are configured on a per-team basis and cannot be included as part of a normal Teams app.

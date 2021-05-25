@@ -11,15 +11,13 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 # Create an outgoing webhook
 
-Outgoing webhook sends data from Teams to any chosen web service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and searches for messages in channels using **@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
-
-Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
+The outgoing webhooks acts as a bot and searches for messages in channels using **@mention**. They send notifications to external web services and responds with rich messages, which include cards and images, without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
 ## Key features of outgoing webhooks
 
-The following table provides the feature and description of outgoing webhooks:
+The following table provides the features and description of outgoing webhooks:
 
-| Feature | Description |
+| Features | Description |
 | ------- | ----------- |
 | Scoped configuration| Webhooks are scoped at the team level. You must go through the setup process for each team where you want to add your outgoing webhook. |
 | Reactive messaging| Users must use @mention for the webhook to receive messages. Currently, users can only message an outgoing webhook in public channels and not within the personal or private scope. |
