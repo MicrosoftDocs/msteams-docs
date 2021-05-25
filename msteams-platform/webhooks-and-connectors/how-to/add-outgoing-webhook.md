@@ -11,7 +11,7 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 # Create an outgoing webhook
 
-Outgoing webhook sends data from Teams to any chosen service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and looks for messages in channels using **@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
+Outgoing webhook sends data from Teams to any chosen web service capable of accepting a JSON payload. After adding the outgoing webhooks to a team, it acts as a bot and searches for messages in channels using **@mention**. Outgoing webhooks send notifications to external web services and responds with rich messages, which include cards and images.
 
 Webhooks help Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks permit users to send messages to your web service without going through the full process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
@@ -62,7 +62,7 @@ The default value of `style` depends on the `isMultiSelect` value:
 
 For more information about connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
-## Add outgoing webhooks to your app
+### Scenario to create outgoing webhooks to your app
 
 Following is the scenario and example of adding outgoing webhooks to your app:
 

@@ -33,7 +33,7 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 > [!NOTE]
 > Teams bots, messaging extensions, incoming webhooks, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not currently support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 
-## Add an incoming webhook
+## Create an incoming webhook
 
 **To add an incoming webhook to a Teams channel**
 
@@ -55,9 +55,9 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 > [!IMPORTANT]
 > In your team, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
-## Remove an incoming webhook
+## Delete an incoming webhook
 
-**To remove an incoming webhook from a Teams channel**
+**To delete an incoming webhook from a Teams channel**
 
 1. Navigate to the channel. 
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
