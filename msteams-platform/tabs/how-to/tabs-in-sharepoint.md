@@ -37,7 +37,7 @@ With the November release of Teams and SharePoint Framework v.1.7, developers ha
     </a>
 </li>
 <li>
-    <a href="https://docs.microsoft.com/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
+    <a href="/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -140,11 +140,6 @@ The following image displays the complete experience of Teams app in Sharepoint:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-
-> [!div class="nextstepaction"]
-> [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-
-> [!div class="nextstepaction"]
-> [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Building Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+* [Using single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)

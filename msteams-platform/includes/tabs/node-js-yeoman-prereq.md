@@ -2,7 +2,7 @@
 
 - To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/OfficeDev/office-dev-program-docs/docs/office-365-developer-program.md).
+  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -12,15 +12,15 @@ In addition, this project requires that you have the following installed in your
 
 - After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
-```bash
-npm install yo gulp-cli --global
-```
+    ```bash
+    npm install yo gulp-cli --global
+    ```
 
 - Install the Microsoft Teams Apps generator by typing the following in your command prompt:
 
-```bash
-npm install generator-teams --global
-```
+    ```bash
+    npm install generator-teams --global
+    ```
 
 ## Generate your project
 
@@ -28,54 +28,58 @@ npm install generator-teams --global
 
 - To start the generator, navigate to your new directory and type the following command:
 
-```bash
-yo teams
-```
+    ```bash
+    yo teams
+    ```
 
 - Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
 
-![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
-**What is your solution name?**
+    **What is your solution name?**
 
-This is your project name. You can accept the suggested name by pressing enter.
+    This is your project name. You can accept the suggested name by pressing enter.
 
-**Where do you want to place the files?**
+    **Where do you want to place the files?**
 
-You're currently in your project directory. Press enter.
+    You're currently in your project directory. Press enter.
 
-**Title of your Microsoft Teams app project?**
+    **Title of your Microsoft Teams app project?**
 
-This is your app package name and will be used in the app manifest and description.
+    This is your app package name and will be used in the app manifest and description.
 
-**Your (company) name? (max 32 characters)**
+    **Your (company) name? (max 32 characters)**
 
-Your company name will be used in the app manifest.
+    Your company name will be used in the app manifest.
 
-<br>**Which manifest version would you like to use?**
+    **Which manifest version would you like to use?**
 
-Select the default schema.
+    Select the default schema.
 
-**Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+    **Quick scaffolding? (Y/n)**
 
-This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
 
-**What do you want to add to your project?**
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-Select ( &ast; ) A Tab.
+    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
-**The URL where you will host this solution?**
+    **What do you want to add to your project?**
 
-By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    Select ( &ast; ) A Tab.
 
-**Would you like to include Test framework and initial tests? (y/N)**
+    **The URL where you will host this solution?**
 
-Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
-**Would you like to use Azure Applications Insights for telemetry? (y/N)**
+    **Would you like to include Test framework and initial tests? (y/N)**
 
-Choose **not** to include [Azure Application Insights](/azure-docs/articles/azure-monitor/app/app-insights-overview.md). The default is no; enter **n**.
+    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
 
-**Default Tab Name (max 16 characters)?**
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-Name your tab. This tab name will be used throughout your project as a file/URL path component.
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    **Default Tab Name (max 16 characters)?**
+
+    Name your tab. This tab name will be used throughout your project as a file/URL path component.

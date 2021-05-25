@@ -20,7 +20,7 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 At a high level, the import process consists of the following:
 
 1. [Create a team with a back-in-time timestamp](#step-one-create-a-team)
-1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel)  
+1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel) 
 1. [Import external back-in-time dated messages](#step-three-import-messages)
 1. [Complete the team and channel migration process](#step-four-complete-migration-mode)
 1. [Add team members](#step-five-add-team-members)
@@ -36,8 +36,8 @@ At a high level, the import process consists of the following:
 
 ### Set up your Office 365 tenant
 
-✔ Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, *see*, [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
-✔ Make sure that team members are in Azure Active Directory (AAD).  For more information *see* [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.
+✔ Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+✔ Make sure that team members are in Azure Active Directory (AAD).  For more information, see [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.
 
 ## Step One: Create a team
 
@@ -45,7 +45,8 @@ Since existing data is being migrated, maintaining the original message timestam
 
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource  `createdDateTime`  property. Place the new team in `migration mode`, a special state that bars users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
-> **NOTE**:  The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
+> [!Note]
+> The `createdDateTime` field will only be populated for instances of a team or channel that have been migrated.
 
 <!-- markdownlint-disable MD001 -->
 
@@ -53,7 +54,7 @@ Since existing data is being migrated, maintaining the original message timestam
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a team in migration state)
 
@@ -97,7 +98,7 @@ Creating a channel for the imported messages is similar to the create team scena
 
 |ScopeName|DisplayName|Description|Type|Admin Consent?|Entities/APIs covered|
 |-|-|-|-|-|-|
-|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams|**Application-only**|**Yes**|`POST /teams`|
+|`Teamwork.Migrate.All`|Manage migration to Microsoft Teams|Creating, managing resources for migration to Microsoft Teams.|**Application-only**|**Yes**|`POST /teams`|
 
 #### Request (create a channel in migration state)
 
@@ -221,7 +222,8 @@ HTTP/1.1 200 OK
 
 #### Request (POST a message with inline image)
 
-> **Note**: There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
+> [!Note]
+> There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -368,5 +370,5 @@ HTTP/1.1 204 No Content
 
 
 ## See also
-> [!div class="nextstepaction"]
-> [Learn more about Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+
+[Learn more about Microsoft Graph and Teams integration](/graph/teams-concept-overview)

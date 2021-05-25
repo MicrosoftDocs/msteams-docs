@@ -4,10 +4,10 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 - Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
 
-```html
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
-```
+    ```html
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>
+    ```
 
 >[!IMPORTANT]
 >Don't copy/paste the `<script src="...">` URLs from this page, as they may not represent the latest version. To get the latest version of the SDK, always go to: [Microsoft Teams JavaScript API](https://www.npmjs.com/package/@microsoft/teams-js).
@@ -59,7 +59,7 @@ Make sure to save the updated **Tab.cshtml**.
 >[!TIP]
 >You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update your application with the new URL.
 
-## Upload your tab to Teams with App Studio
+## Upload your tab to Teams
 
 >[!Note]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file if you prefer. If you do, be sure to build the solution again to create the **tab.zip** file to upload.
@@ -70,9 +70,9 @@ Make sure to save the updated **Tab.cshtml**.
 
 - Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
 
-```bash
-/bin/Debug/netcoreapp2.2/tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/tab.zip
+    ```
 
 - Upload **tab.zip** to App Studio.
 
@@ -86,17 +86,19 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
-- Under *Identification* select ***Generate*** to replace the placeholder id with the required GUID for your tab.
+In the *App details* section:
 
-- Under *Developer information* update the **Website URL** field with your *ngrok* HTTPS URL.
+- *Identification*: select **Generate** to replace the placeholder id with the required GUID for your tab.
 
-- Under *App URLs* update the **Privacy statement** and **Terms of use** URL fields with your *ngrok* HTTPS URL. Remember to include the */privacy* and */tou* paths at the end of the URLs.
+- *Developer information*: update the **Website URL** field with your *ngrok* HTTPS URL.
+
+- *App URLs*: update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-- Under *Team Tab* select **Add**.
+- *Team Tab*: select **Add**.
 
 - In the Team tab pop-up window update the *Configuration URL* to `https://<yourngrokurl>/tab`.
 
@@ -104,9 +106,11 @@ In the *Tabs* section:
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In the *Domains and permissions* section:
 
-#### Test and distribute: Test and distribute
+- The *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+
+#### Finish: Test and distribute
 
 >[!IMPORTANT]
 >In the **Description** field on the right you'll see the following warning:

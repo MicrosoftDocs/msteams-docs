@@ -11,15 +11,17 @@ ms.author: lajanuar
 
 A content page is a webpage that is rendered within the Teams client. Typically these are part of:
 
-* A personal-scoped custom tab - In this instance the content page is the first page the user encounters.
-* A channel/group custom tab - After the user pins and configures the tab in the appropriate context, the content page is displayed.
-* A [task module](~/task-modules-and-cards/what-are-task-modules.md) - You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
+* A personal-scoped custom tab: In this instance the content page is the first page the user encounters.
+* A channel/group custom tab: After the user pins and configures the tab in the appropriate context, the content page is displayed.
+* A [task module](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a task module. The page will be rendered inside the modal popup.
 
 This article is specific to using content pages as tabs; however the majority of the guidance here would apply regardless of how the content page is presented to the end-user.
 
-## Tab content and style guidelines
+## Tab content and design guidelines
 
-Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive. See [Content and conversations, all at once using tabs](~/tabs/design/tabs.md) and [Microsoft Teams app approval process guidance](~/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md)
+Your tab's overall objective should be to provide access to meaningful and engaging content that has a practical value and an evident purpose. That does not mean that you should forego a pleasing style, but you should focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive.
+
+For more information, see the [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
 
 ## Integrate your code with Teams
 
@@ -51,7 +53,7 @@ The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provi
 
 ### Deep links
 
-You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. See [Create deep links to content and features in Microsoft Teams](~/concepts/build-and-test/deep-links.md).
+You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. For more information, see [Create deep links to content and features in Microsoft Teams](~/concepts/build-and-test/deep-links.md).
 
 ### Task Modules
 
@@ -85,26 +87,27 @@ If you create a bot with a *personal* scope, it will show up in the first tab po
 
 ## Show a native loading indicator
 
-Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams, e.g., [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md) and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) wherever your web content is loaded in Teams. For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [task modules in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
-> 1. The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
-> 2. If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
+> * The behavior on mobile clients is not configurable through this manifest property. Mobile clients show a native loading indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
+> * If you indicate  `"showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow the mandatory protocol, below:
 
+**To show the loading indicator**
 
-1. To show the loading indicator, add `"showLoadingIndicator": true` to your manifest. 
-2. Remember to call `microsoftTeams.initialize();`.
-3. **Optional**. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
-4. **Mandatory**. Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams will then hide the loading indicator if applicable. If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.
-5. If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen will then be shown to the user:
+* Add `"showLoadingIndicator": true` to your manifest. 
+* Remember to call `microsoftTeams.initialize();`.
+* **Optional**: If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can manually hide the loading indicator by calling `microsoftTeams.appInitialization.notifyAppLoaded();`
+* **Mandatory**: Finally, call `microsoftTeams.appInitialization.notifySuccess()` to notify Teams that your app has successfully loaded. Teams will then hide the loading indicator if applicable. If  `notifySuccess`  is not called within 30 seconds, it will be assumed that your app timed out and an error screen with a retry option will appear.
+* If your application fails to load, you can call `microsoftTeams.appInitialization.notifyFailure(reason);` to let Teams know there was an error. An error screen will then be shown to the user:
 
-```typescript
-``
-/* List of failure reasons */
-export const enum FailedReason {
-    AuthFailed = "AuthFailed",
-    Timeout = "Timeout",
-    Other = "Other"
-}
-```
->
+    ```typescript
+    ``
+    /* List of failure reasons */
+    export const enum FailedReason {
+        AuthFailed = "AuthFailed",
+        Timeout = "Timeout",
+        Other = "Other"
+    }
+    ```
+    >

@@ -14,7 +14,7 @@ In this quickstart we'll walk-through creating a custom channel/group tab with C
 
 ## Get the source code
 
-Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. We have provided a simple [Channel Group Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -104,9 +104,9 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 - Open a command prompt in the root of your project directory and run the following command:
 
-```bash
-ngrok http https://localhost:443560 -host-header="localhost:44360"
-```
+    ```bash
+    ngrok http https://localhost:443560 -host-header="localhost:44360"
+    ```
 
 - Ngrok will listen to requests from the internet and will route them to your application when it is running on port 44355.  It should resemble `https://y8rCgT2b.ngrok.io/` where *y8rCgT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
@@ -117,5 +117,3 @@ ngrok http https://localhost:443560 -host-header="localhost:44360"
 Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button fires `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have satisfied the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
-
-[!INCLUDE [dotnet-upload-to-teams](~/includes/tabs/dotnet-upload-to-teams.md)]
