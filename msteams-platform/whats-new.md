@@ -22,7 +22,6 @@ Microsoft Teams platform features that are available to all app developers.
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
 |5/24/2021|Updated Teams app design guidelines with mobile patterns and more.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)
-|05/13/2021|Added tabs link unfurling and stage view.|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md)
 |03/18/2021|Notice: **Please update to version 4.10 or above of the Bot Framework SDK** as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
 |05/13/2021|Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
@@ -155,9 +154,10 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/25/2021| Together Mode feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021|Tabs link unfurling and Stage View|[Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md) |
+|05/21/2021|Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |03/05/2021| Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
