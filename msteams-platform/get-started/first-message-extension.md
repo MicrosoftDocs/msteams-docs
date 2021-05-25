@@ -130,7 +130,7 @@ When you pressed F5, the Teams Toolkit:
 
 1. Registered your application with Azure Active Directory.
 1. Registered your application for "side loading" in Microsoft Teams.
-1. Started your application backend running locally using [Azure Function Core Tools](https://docs.microsoft.co/azure/azure-functions/functions-run-local?#start).
+1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Started an ngrok tunnel so Teams can communicate with your app.
 1. Started Microsoft Teams with a command to instruct Teams to sideload the application.
 
