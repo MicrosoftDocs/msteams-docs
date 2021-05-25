@@ -99,6 +99,8 @@ The partial view markup *_Layout.cshtml* contains the application's overall page
 
 The controllers use the ViewBag property to transfer values dynamically to the Views.
 
+---
+
 ### AppManifest
 
 This folder contains the following app package files:
