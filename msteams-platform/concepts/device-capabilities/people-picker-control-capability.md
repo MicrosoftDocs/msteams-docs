@@ -15,19 +15,19 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 
 ## Advantages of integrating people picker control capability
 
-* `People Picker` API enables you to add the people picker control to your web apps, which can be surfaced in a task module, as a tab or personal app. 
+* `People Picker` API enables you to add the people picker control to your web apps, which  surfaces in a task module, as a tab or personal app. 
 * This cross platform control allows users to select entities, such as users in a group, chat, channel, or add users through composite entities, such as DLs, SGs and tags. 
-* The people picker control capability helps  task assignment, tagging, notifying a user, and so on easier. 
+* The people picker control capability helps with task assignment, tagging, notifying a user, and so on. 
 
-You must call the people picker API to integrate people picker control capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
-It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
+You must call the `People Picker` API to integrate people picker control capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
+It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
 > [!NOTE] 
 > Currently, Microsoft Teams support for people picker control capability is available for mobile clients only.
 
 ## People Picker API 
 
-`People Picker` API enables you to add Teams’ native `People Picker input control` to your webapps. This API returns information of picked users to the calling webapp. 
+`People Picker` API enables you to add Teams’ native `People Picker input control` to your web apps. This API returns the information of picked users to the calling web app. 
 You must use the following API to enable people picker capability:
 
 | API      | Description   |
@@ -49,7 +49,7 @@ The following image depicts web app experience for people picker control capabil
 
 ## Error handling
 
-You must ensure to handle the errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
+You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated: 
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
@@ -78,6 +78,7 @@ microsoftTeams.people.selectPeople((error, people) => {                    if (e
                     }
                 });
 ```
+
 ## See also
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
