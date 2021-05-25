@@ -31,7 +31,7 @@ The following process gives an overview to create a scene only app:
 You must have a basic understanding of the following to use Together Mode:
 
 * Definition of scene and seats in a scene.
-* Have a Microsoft Developer account and be familiar with the Microsoft Teams Developer Portal and App Studio.
+* Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
 * Ensure that the Administrator has granted permission to **Upload a custom app** and to select all filters as part of App Setup and Meeting policies respectively.
 
@@ -102,7 +102,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. Drag and drop the image into the environment as displayed in the following image:
 
     >[!NOTE]
-    > * You can download the [SampleScene.zip](/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](/apps-in-teams-meetings/SampleApp.zip) files with the images.
+    > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
     > * Alternately, you can add background images to the scene using **Add images**.
 
     ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
@@ -252,7 +252,7 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 1. Create a new test meeting.
 
     >[!NOTE]
-    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. This is the model for a developer to test and try out scenes from the Scene studio. Once a scene is shipped as an app, users see these scenes in the scene gallery.
+    > On selecting **Preview** in the Scene studio, the scene is installed as an app in Microsoft Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is shipped as an app, users see these scenes in the scene gallery.
 
 1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
