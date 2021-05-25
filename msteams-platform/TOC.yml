@@ -113,6 +113,8 @@
     items:
     - name: Basic UI components
       href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Advanced UI components
+      href: concepts/design/design-teams-app-advanced-ui-components.md
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
     - name: Task modules
