@@ -114,7 +114,7 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 Open a command prompt in the root of your project directory and run the following command:
 
-    ``` bash
+   ``` bash
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
