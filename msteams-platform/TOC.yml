@@ -305,6 +305,8 @@
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  - name: Together Mode in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
   items:
   - name: Overview
