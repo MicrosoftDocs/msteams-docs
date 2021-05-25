@@ -164,7 +164,7 @@ When you pressed F5, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [prerequisites](prerequisites.md#enable-side-loading).
+To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [prerequisites](prerequisites.md#enable-sideloading).
 
 </details>
 
