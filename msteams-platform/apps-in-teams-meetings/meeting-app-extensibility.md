@@ -119,12 +119,16 @@ The following list details the different user types along with their accessibili
 * **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They are usually full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD and have same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest user can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They do not have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
+
+    > [!NOTE]
+    > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
+
 * **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participants are like external users, but their identity is not projected in the meeting. Anonymous users are not able to access apps in a meeting window. An anonymous user cannot be an organizer but can be a presenter or attendee.
 
-A guest or anonymous user cannot add, remove, or uninstall apps.
+    > [!NOTE]
+    > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-> [!NOTE]
-> Anonymous users inherit the global default user-level app permission policy. For more information, see [Manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
+A guest or anonymous user cannot add, remove, or uninstall apps.
 
 The following table provides the user types and what features each user can access:
 
@@ -136,7 +140,7 @@ The following table provides the user types and what features each user can acce
 
 ## See also
 
-* [Configurable tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
+* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
