@@ -1,7 +1,7 @@
 ---
 title: Get started - Prerequisites
 author: adrianhall
-description: Learn how to get started with Microsoft Teams app development and set up your environment.
+description: Learn how to get started with the Microsoft Teams app development and set up your environment.
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
