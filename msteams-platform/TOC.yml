@@ -6,19 +6,20 @@
     - name: What's new?
       href: whats-new.md
 - name: Get started
+  expanded: true
   items:
-  - name: Overview
-    href: build-your-first-app/build-first-app-overview.md
-  - name: Build a "Hello, World!" app
-    href: build-your-first-app/build-and-run.md
-  - name: Build a basic personal tab
-    href: build-your-first-app/build-personal-tab.md
-  - name: Build your first channel and group tab
-    href: build-your-first-app/build-channel-tab.md
-  - name: Build your first bot
-    href: build-your-first-app/build-bot.md
-  - name: Build your first messaging extension
-    href: build-your-first-app/build-messaging-extension.md
+  - name: Prerequisites
+    href: get-started/prerequisites.md
+  - name: Create a personal app (React)
+    href: get-started/first-app-react.md
+  - name: Create a personal app (Blazor)
+    href: get-started/first-app-blazor.md
+  - name: Create a personal app (SPFx)
+    href: get-started/first-app-spfx.md
+  - name: Create a conversational bot
+    href: get-started/first-app-bot.md
+  - name: Create a messaging extension
+    href: get-started/first-message-extension.md
 - name: Tutorials and code samples
   items:
   - name: Tutorials
@@ -89,30 +90,40 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-  - name: Design fundamentals
+  - name: Understand the design process
+    href: concepts/design/design-teams-app-process.md
+  - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
-  - name: Basic UI components
-    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: App capabilities
+    items:
+    - name: Understand the app structure
+      href: concepts/design/app-structure.md
+    - name: Personal apps
+      href: concepts/design/personal-apps.md
+    - name: Tabs
+      href: tabs/design/tabs.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Messaging extensions
+      href: messaging-extensions/design/messaging-extension-design.md  
+    - name: Meeting extensions
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
-  - name: Personal apps
-    href: concepts/design/personal-apps.md
-  - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
-  - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md  
-  - name: Bots
-    href: bots/design/bots.md
-  - name: Meeting extensions
-    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-  - name: Adaptive Cards
-    href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Task modules
-    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: UI components
+    items:
+    - name: Basic UI components
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Advanced UI components
+      href: concepts/design/design-teams-app-advanced-ui-components.md
+    - name: Adaptive Cards
+      href: task-modules-and-cards/cards/design-effective-cards.md
+    - name: Task modules
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Activity feed notifications
+      href: concepts/design/activity-feed-notifications.md
+  - name: Enable app customization
+    href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
@@ -123,6 +134,8 @@
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
+  - name: Developer Portal for Teams
+    href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
@@ -203,6 +216,8 @@
     href: tabs/how-to/create-tab-pages/configuration-page.md
   - name: Create a removal page
     href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Tabs on mobile  
+    href: tabs/design/tabs-mobile.md
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
 - name: Build bots
@@ -219,6 +234,9 @@
       href: bots/how-to/conversations/conversation-basics.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
+      items:
+      - name: Receive all channel messages with RSC
+        href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
