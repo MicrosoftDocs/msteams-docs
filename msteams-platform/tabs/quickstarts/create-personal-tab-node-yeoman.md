@@ -11,6 +11,9 @@ ms.author: lajanuar
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
+>[!NOTE]
+>This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+
 ## What you'll learn
 
 * Generate a project.
@@ -137,7 +140,7 @@ gulp ngrok-serve
     ![Manage team screenshot](~/assets/images/tab-images/manage-team.png)
 
 1. In the main panel select **Apps** from the tab bar and select **Upload a custom app** located in the lower left-hand corner of the page.
-
+ 
     ![Upload a custom app screenshot](~/assets/images/tab-images/upload-custom-app.png)
 
 1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and select **Open**. Your tab is uploaded into Teams.
@@ -145,10 +148,6 @@ gulp ngrok-serve
 ## View your personal tabs
 
 Select the `...` menu from the left panel of Teams, and select your application from the list.
-
-## See also
-
-[Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App)
 
 ## Next step
 

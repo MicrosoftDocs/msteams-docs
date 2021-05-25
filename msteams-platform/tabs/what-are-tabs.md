@@ -22,9 +22,6 @@ The following image shows **myQuiz** added in a personal chat:
 
 ![Tabs in personal chat screenshot](~/assets/images/tab-images/tabs-in-personal-chat.png)
 
-> [!NOTE]
-> Chrome 80 introduces new cookie values and imposes cookie policies. It is recommended that you set the intended use for your cookies. You need not rely on default browser behavior. For more information, See [SameSite cookie attribute (2020 update)](../resources/samesite-cookie-update.md).
-
 There are two types of tabs available in Teams: channel or group and personal. The channel or group tabs provide content in channels and group chats and create collaborative spaces around dedicated web-based content.
 
 Personal tabs with personally-scoped bots are part of a personal apps and are intended for a single user. You can pin them to the left navigation bar in Teams for easy access.
