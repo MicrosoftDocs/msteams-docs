@@ -46,7 +46,7 @@ The app manifest must include the following code snippet:
 ```
 
 > [!NOTE]
-> `meetingStage` is currently available in developer preview only.
+> `meetingStage` is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 ### Context property
 
@@ -71,7 +71,7 @@ After you enable your app for Teams meetings, you must configure your app before
 > [!NOTE]
 > * For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
 > * Mobile clients support tabs only in pre and post meeting stages.
-> * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) when creating your tabs for mobile.
+> * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) while creating your tabs for mobile.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios. You can configure your apps to enhance the meeting experience based on participant role or user type. Now you can identify what actions can be taken in the following meeting scenarios:
 * [Pre-meeting](#pre-meeting)
@@ -136,7 +136,7 @@ In-meeting dialog must not use task module. Task module is not invoked in a meet
 #### Share to stage
 
 > [!NOTE]
-> * This capability is currently available in developer preview only.
+> * This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 > * To use this feature, the app must support an in-meeting meetingSidePanel.
 
 This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time.
