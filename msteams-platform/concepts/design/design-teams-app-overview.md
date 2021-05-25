@@ -111,14 +111,6 @@ Text, icons, and images make it clear what the app is for and how to use it.
 
 Learn the [fundamentals of Teams app design](design-teams-app-fundamentals.md), including layout, color schemes, and more.
 
-## UI templates
-
-Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
-
-## Basic UI components
-
-Based on Fluent UI, these are the [core elements](design-teams-app-basic-ui-components.md) you can use to create Teams experiences from scratch.
-
 ## App capabilities
 
 Understand how people add, use, and manage Teams apps to make the most of each capability in your design.
@@ -128,8 +120,14 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 * [Messaging extensions](../../messaging-extensions/design/messaging-extension-design.md)
 * [Bots](../../bots/design/bots.md)
 * [Meeting extensions](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Task modules](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
+
+## UI templates
+
+Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+
+## Basic UI components
+
+Based on Fluent UI, these are the [core elements](design-teams-app-basic-ui-components.md) you can use to create Teams experiences from scratch.
 
 ## Tools and samples
 
