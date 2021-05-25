@@ -167,9 +167,9 @@ All users in a meeting receive the notifications sent through the `NotificationS
 > * When an in-meeting dialog box is invoked, the content is presented as a chat message.
 > * Currently, sending targeted notifications is not supported.
 
-`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameters, examples, and response codes.
+`NotificationSignal` API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. This API allows you to signal based on user action that shows an in-meeting dialog box. The API includes query parameter, examples, and response codes.
 
-#### Query parameters
+#### Query parameter
 
 The `NotificationSignal` API includes the following query parameter:
 
@@ -177,7 +177,7 @@ The `NotificationSignal` API includes the following query parameter:
 |---|---|----|---|
 |**conversationId**| String | Yes | The conversation identifier is available as part of Bot Invoke. |
 
-#### Example
+#### Examples
 
 The `Bot ID` is declared in the manifest and the bot receives a result object.
 
