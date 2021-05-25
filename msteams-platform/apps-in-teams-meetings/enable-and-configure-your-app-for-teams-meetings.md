@@ -114,7 +114,7 @@ During a meeting, you can use the meetingSidePanel or the in-meeting dialog box 
 
 #### meetingSidePanel
 
-With the meetingSidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/framecontext?view=msteams-client-js-latest&preserve-view=true).
+With the meetingSidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
 To use the `userContext` API to route requests accordingly, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is very similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
