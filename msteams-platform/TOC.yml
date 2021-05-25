@@ -6,19 +6,20 @@
     - name: What's new?
       href: whats-new.md
 - name: Get started
+  expanded: true
   items:
-  - name: Overview
-    href: build-your-first-app/build-first-app-overview.md
-  - name: Build a "Hello, World!" app
-    href: build-your-first-app/build-and-run.md
-  - name: Build a basic personal tab
-    href: build-your-first-app/build-personal-tab.md
-  - name: Build your first channel and group tab
-    href: build-your-first-app/build-channel-tab.md
-  - name: Build your first bot
-    href: build-your-first-app/build-bot.md
-  - name: Build your first messaging extension
-    href: build-your-first-app/build-messaging-extension.md
+  - name: Prerequisites
+    href: get-started/prerequisites.md
+  - name: Create a personal app (React)
+    href: get-started/first-app-react.md
+  - name: Create a personal app (Blazor)
+    href: get-started/first-app-blazor.md
+  - name: Create a personal app (SPFx)
+    href: get-started/first-app-spfx.md
+  - name: Create a conversational bot
+    href: get-started/first-app-bot.md
+  - name: Create a messaging extension
+    href: get-started/first-message-extension.md
 - name: Tutorials and code samples
   items:
   - name: Tutorials
@@ -300,6 +301,8 @@
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
   - name: Build an app for meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+  - name: Together Mode in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
   items:
   - name: Overview
