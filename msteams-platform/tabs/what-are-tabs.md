@@ -52,7 +52,7 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 
 | **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
 | --- | --- | --- |
-| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | Apps do not appear in the bottom bar of the mobile clients. |
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
