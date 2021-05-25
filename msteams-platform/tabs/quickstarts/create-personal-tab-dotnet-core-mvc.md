@@ -114,9 +114,9 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 Open a command prompt in the root of your project directory and run the following command:
 
-   ``` bash
-    ngrok http https://localhost:44345 -host-header="localhost:44345"
-    ```
+   ```bash
+   ngrok http https://localhost:44345 -host-header="localhost:44345"
+   ```
 
 Ngrok listens the requests from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
 
