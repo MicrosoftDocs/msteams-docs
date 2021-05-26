@@ -12,7 +12,11 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 ## Microsoft Build 2021
 
-### Features in developer preview
+<br>
+
+<details>
+
+<summary><b>Features in developer preview</b></summary>
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -27,7 +31,15 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 > [!NOTE]
 > For more information on features available in developer preview, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
-### Features in GA
+<br>
+
+</details>
+
+<br>
+
+<details>
+  
+<summary><b>Features in GA</b></summary>
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -35,6 +47,10 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 |04/08/2021| App customization.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/29/2021 | Format cards in Teams. | [Format cards in Teams](task-modules-and-cards/cards/cards-format.md) |
 |02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+
+<br>
+
+</details>
 
 ## GA features
 
