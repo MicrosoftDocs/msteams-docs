@@ -16,7 +16,7 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 <details>
 
-<summary><b>Features in developer preview</b></summary>
+# [Features in developer preview](#tab/devpreview)
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
@@ -31,14 +31,7 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 > [!NOTE]
 > For more information on features available in developer preview, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
-<br>
-
-</details>
-
-<br>
-
-<details open>
-<summary><b>Features in GA</b></summary>
+# [Features in GA](#tab/GA)
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
