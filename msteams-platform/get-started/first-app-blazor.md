@@ -48,10 +48,10 @@ Use the Teams Toolkit to create your first project:
 1. Run `dotnet new -i` to install the template from NuGet:
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   You only need to do this the first time or when updating the template.
+   You only need to do this the first time or when updating the template. Check [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) for the latest version of this package.
 
 1. Create a directory:
 

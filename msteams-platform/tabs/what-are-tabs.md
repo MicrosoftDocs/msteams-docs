@@ -49,6 +49,11 @@ Personal tabs with personally-scoped bots are part of a personal apps and are in
 ## Understand how tabs work
 
 A custom tab is declared in the app manifest of your app package. To include each webpage as a tab in your app, you must define a URL and a scope, add [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page and call `microsoftTeams.initialize()` after your page loads. Teams display your page, give you access to Teams-specific information, and allows you to take action based on the results. For example, the Teams client is running the **dark theme**.
+You can use one of the following methods to create tabs:
+* [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
+* [Use Adaptive Card to build tabs](#use-adaptive-card-to-build-tabs)
+
+### Declare custom tab in app manifest
 
 If you choose to expose your tab within the channel or group or personal scope, you must present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content is same for all the users.
 
@@ -58,7 +63,12 @@ When users add or configure a tab, an URL associated with the tab is presented i
 
 You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
-## Mobile considerations
+
+### Use Adaptive Card to build tabs
+
+When developing a tab using the traditional method, you need to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, you can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card to render.
+
+## Mobile clients
 
 If you choose to have your channel or group tab to appear in Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
 
@@ -70,7 +80,6 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
->
 > * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
 > * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
 > * The default behavior of apps is only applicable if distributed through the Teams store. All tabs open in the Teams client.
