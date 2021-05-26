@@ -25,8 +25,8 @@ Ensure that you understand how to set up and build a simple Teams app. For more 
 
 The Microsoft Teams Toolkit helps you set up the following components for your app: 
 
-* **App configurations and scaffolding** relevant to bots
-* **Bot** that's automatically registered with the Microsoft Azure Bot Service
+* **App configurations and scaffolding** relevant to bots.
+* **Bot** that's automatically registered with the Microsoft Azure Bot Service.
 
 **To create your app project**
 
@@ -58,7 +58,7 @@ Much of the app configurations and scaffolding are set up automatically when you
 
 If you created a tab in another tutorial, the app scaffolding for the bot is different. Unlike tabs, bot development doesn't require you to build any front-end web components or use the Teams JavaScript client SDK.  Instead, the scaffolding uses the [Microsoft Bot Framework](https://dev.botframework.com/), which is an open-source SDK for building intelligent, enterprise-grade bots that can work on the web, mobile, and of course Teams! 
 
-The `botActivityHandler.js` file, located in the root directory of your project, is the Teams-specific handler that handles bot activities, such as how the bot responds to specific messages. The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, is the Teams specific handler that handles bot activities such as how the bot responds to specific messages.
+The app scaffolding provides a `botActivityHandler.js` file, located in the root directory of your project, is the Teams-specific handler that handles bot activities such as, how the bot responds to specific messages.
 
 ## 3. Securely expose your localhost to the internet
 
@@ -92,7 +92,7 @@ Tunneling is a protocol that allows you to transport data across a network. And 
 
 To use a bot in Teams, you must register it with the Azure Bot Service. This is done automatically when you set up your app using the Teams Toolkit.
 
-You must still specify an endpoint address to receive and process user messages, or requests, sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this quickly in the toolkit.
+You must still specify an endpoint address to receive and process user messages, or requests sent to the bot. Typically, the URL looks like `https://HOST_URL/api/messages`. You can configure this in the toolkit.
 
 1. In Visual Studio Code, open **Microsoft Teams Toolkit**.
 1. Select **Bots** > **Existing bot registrations** and select the bot you created during setup. 
@@ -137,7 +137,7 @@ Let's say "Hello" to your bot.
 
     :::image type="content" source="../assets/images/build-your-first-app/teams-client-bot.png" alt-text="A screenshot showing a user say 'Hello' to a Teams bot and getting a response.":::
 
-    You have now created a basic Teams bot that can communicate with users one-on-one or in group settings (channels and chats) 🎉
+    You have now created a basic Teams bot that can communicate with users one-on-one or in group settings (channels and chats) 🎉.
 
 ## Troubleshoot your bot
 
@@ -146,9 +146,9 @@ The following information may help if you had issues completing this tutorial.
 ### Bot isn't connected to Teams
 
 
-If you installed your app but the bot isn't working, make sure the bot is [connected to the Azure Bot Service's Teams *channel*](https://docs.microsoft.com/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
+If you installed your app but the bot isn't working, make sure the bot is [connected to the Azure Bot Service's Teams *channel*](/azure/bot-service/channel-connect-teams?view=azure-bot-service-4.0&preserve-view=true).
 
-It's important to understand that this isn't the same as a channel in Teams. In this case, a channel is how the Azure Bot Service connects your bot to Teams or another [supported Microsoft or third-party communications app](https://docs.microsoft.com/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
+It's important to understand that this isn't the same as a channel in Teams. In this case, a channel is how the Azure Bot Service connects your bot to Teams or another [supported Microsoft or third-party communications app](/azure/bot-service/bot-service-channels-reference?view=azure-bot-service-4.0&preserve-view=true).
 
 ## See also
 

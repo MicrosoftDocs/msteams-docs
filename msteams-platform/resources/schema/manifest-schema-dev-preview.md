@@ -180,6 +180,27 @@ For more information on the features available see: [Features in the Public Deve
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -362,12 +383,12 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. See [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md) for more information.
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`items.scopes`|array of enum|3|✔|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupchat`.|
-|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128)|
+|`items.commands`|array of objects|10|✔|An array of commands the bot supports:<br>`title`: the bot command name (string, 32).<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 ## connectors
 
@@ -408,29 +429,29 @@ Each command item is an object with the following structure:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|64 characters|✔|The ID for the command|
+|`id`|String|64 characters|✔|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`title`|String|32 characters|✔|The user-friendly command name|
-|`description`|String|128 characters||The description that appears to users to indicate the purpose of this command|
+|`title`|String|32 characters|✔|The user-friendly command name.|
+|`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
 |`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
-|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically|
-|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command|
-|`taskInfo.title`|String|64||Initial dialog title|
-|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'|
-|`taskInfo.url`|String|||Initial webview URL|
-|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`|
+|`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically.|
+|`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
+|`taskInfo.title`|String|64||Initial dialog title.|
+|`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
+|`taskInfo.url`|String|||Initial webview URL.|
+|`messageHandlers`|Array of Objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|||Array of domains that the link message handler can register for.|
 |`parameters`|Array of object|5|✔|The list of parameters the command takes. Minimum: 1; maximum: 5|
 |`parameter.name`|String|64 characters|✔|The name of the parameter as it appears in the client. This is included in the user request.|
 |`parameter.title`|String|32 characters|✔|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`|
-|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`|
-|`parameter.choices.title`|String|128||Title of the choice|
-|`parameter.choices.value`|String|512||Value of the choice|
+|`parameter.inputType`|String|128 characters||Defines the type of control displayed on a task module for `fetchTask: true`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.choices`|Array of Objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
+|`parameter.choices.title`|String|128||Title of the choice.|
+|`parameter.choices.value`|String|512||Value of the choice.|
 
 ## permissions
 
@@ -438,8 +459,8 @@ Each command item is an object with the following structure:
 
 An array of `string` which specifies which permissions the app requests, which lets end users know how the extension will perform. The following options are non-exclusive:
 
-* `identity` &emsp; Requires user identity information
-* `messageTeamMembers` &emsp; Requires permission to send direct messages to team members
+* `identity` &emsp; Requires user identity information.
+* `messageTeamMembers` &emsp; Requires permission to send direct messages to team members.
 
 Changing these permissions when updating your app will cause your users to repeat the consent process the first time they run the updated app.
 
@@ -478,6 +499,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 
 ## configurableProperties
 

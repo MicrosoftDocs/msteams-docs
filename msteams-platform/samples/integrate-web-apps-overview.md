@@ -74,28 +74,16 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 
 ## See also
 
-- [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
-
-- [Determine your app's entry points](~/concepts/extensibility-points.md)
-
-- [Integrate web apps](~/samples/integrating-web-apps.md)
-
-- [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
-
-- [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
-
-- [Create virtual assistant](~/samples/virtual-assistant.md)
-
-- [App templates for Microsoft Teams](~/samples/app-templates.md)
-
-- [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
-
-- [Install Moodle LMS](~/resources/moodleinstructions.md)
-
-- [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
-
-- [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
-
-- [Create deep links](~/concepts/build-and-test/deep-links.md)
-
-- [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
+* [Determine your app's entry points](~/concepts/extensibility-points.md)
+* [Integrate web apps](~/samples/integrating-web-apps.md)
+* [Create low-code custom apps for Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Add a Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
+* [Create virtual assistant](~/samples/virtual-assistant.md)
+* [App templates for Microsoft Teams](~/samples/app-templates.md)
+* [Production-ready Shift Connectors](~/samples/shifts-wfm-connectors.md)
+* [Install Moodle LMS](~/resources/moodleinstructions.md)
+* [Create a Share-to-Teams button](~/concepts/build-and-test/share-to-teams.md)
+* [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
+* [Create deep links](~/concepts/build-and-test/deep-links.md)
+* [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
