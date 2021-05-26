@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ---
 # Create a Partner Center developer account
 
-To publish your app to the Microsoft Teams store, you must [set up your Partner Center developer account](https://docs.microsoft.com/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
+To publish your app to the Microsoft Teams store, you must [set up your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
 
 ## FAQ
 
@@ -188,11 +188,11 @@ Support tickets get resolved in a week. Check for updates sent to the email you 
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
 
-* **Subject Line**: Partner Center Account Issue for *<your app name>*
+* **Subject Line**: Partner Center Account Issue for *<your app name>*.
 * **Email body**:
-    * Support ticket number
-    * Your seller ID
-    * A screenshot of the issue (if possible)
+    * Support ticket number.
+    * Your seller ID.
+    * A screenshot of the issue (if possible).
 
 <br>
 
@@ -204,8 +204,8 @@ Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com<
 
 The following resources can also assist:
 
-* [Microsoft 365 app submission FAQ](/office/dev/store/appsource-submission-faq)
-* [Commercial marketplace documentation](/azure/marketplace/)
+* [Microsoft 365 app submission FAQ](/office/dev/store/appsource-submission-faq).
+* [Commercial marketplace documentation](/azure/marketplace/).
 
 <br>
 

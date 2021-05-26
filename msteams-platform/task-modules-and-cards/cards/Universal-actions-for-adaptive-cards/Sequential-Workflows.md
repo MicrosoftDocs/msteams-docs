@@ -118,6 +118,12 @@ var adaptiveCardResponse = JObject.FromObject(new
  });
 ```
 
+## Code sample
+
+|Sample name | Description | .NETCore |
+|----------------|-----------------|--------------|
+| Teams catering bot | Create a simple bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+
 ## See also
 
 * [Adaptive Card actions in Teams](~/task-modules-and-cards/cards/cards-actions.md#adaptive-cards-actions)

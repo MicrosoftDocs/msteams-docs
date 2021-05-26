@@ -21,7 +21,7 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 
 | Feature | Description |
 | ------- | ----------- |
-|Scoped Configuration|Incoming webhooks are scoped and configured at the channel level (e.g., outgoing webhooks are scoped and configured at the team level).|
+|Scoped Configuration|Incoming webhooks are scoped and configured at the channel level. For example, outgoing webhooks are scoped and configured at the team level.|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the injection of malicious code as there is no code execution on the client.|
 |Actionable messaging support|If you choose to send messages via cards, you must use the **actionable message card** format. Actionable message cards are supported in all Office 365 groups including Teams. Here are links to the [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and the [Message card playground](https://messagecardplayground.azurewebsites.net).|
 |Independent HTTPS messaging support| Cards are a great way to present information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests can send messages to Teams via an incoming webhook.|
@@ -35,6 +35,8 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 > [!Important]  
 > If your team's **Settings** => **Member permissions** => **Allow members to create, update, and remove connectors** is selected, any team member can add, modify, or delete a connector.
 
+**To add an incoming webhook**
+
 1. Navigate to the channel where you want to add the webhook and select (&#8226;&#8226;&#8226;) *More Options* from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu and search for **Incoming Webhook**.
 1. Select the **Configure** button, provide a name, and, optionally, upload an image avatar for your webhook.
@@ -42,6 +44,8 @@ Incoming webhooks are special type of Connector in Teams that provide a simple w
 1. Select the **Done** button. The webhook will be available in the team channel.
 
 ## Remove an incoming webhook from a Teams channel
+
+**To remove an incoming webhook**
 
 1. Navigate to the channel where the webhook was added and select (&#8226;&#8226;&#8226;) *More Options* from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu.
@@ -59,6 +63,6 @@ You have three options for distributing your incoming webhook:
 * Add a configuration page and wrap your incoming webhook in a [O365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
-## Learn more
+## See also
 
-* [Sending messages to Connectors and Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
+[Sending messages to Connectors and Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)

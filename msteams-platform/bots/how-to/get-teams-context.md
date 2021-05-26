@@ -160,7 +160,7 @@ export class MyBot extends TeamsActivityHandler {
 async def _show_members(
     self, turn_context: TurnContext
 ):
-    member = TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
+    member = await TeamsInfo.get_member(turn_context, turn_context.activity.from_property.id)
 ```
 
 # [JSON](#tab/json)

@@ -59,7 +59,7 @@ This section walks you through the steps for generating your project.
 **To generate your project**
 
 1. Open up a command prompt and create a new directory where you want to create your project, and in that directory run the command `yo teams`. The generator starts.
-1. Respond to the set of questions prompted by the generator.
+1. Respond to the set of questions prompted by the generator:
 
    ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
@@ -68,7 +68,7 @@ This section walks you through the steps for generating your project.
    1. In the next question, type the title of your project. This title will be used in the manifest and description of your app. 
    1. Next, you will be asked for a company name, which also will be used in the manifest.
    1. The fifth question asks you about what version of the manifest you want to use. For this tutorial select `v1.5`, which is the current general available schema.
-   1. Next, the generator will ask you for what items you want to add to your project. You can select a single one or any combination of items. For this tutorials, just select *a Tab*.
+   1. Next, the generator will ask you for what items you want to add to your project. You can select a single one or any combination of items. For this tutorials, just select *a Tab*:
 
     ![item selection](~/assets/yeoman-images/teams-first-app-2.png)
 
@@ -118,7 +118,7 @@ To build your solution you use the `gulp build` command. This will transpile you
 
 To run your app you use the `gulp serve` command. This will build and start a local web server for you to test your app. The command will also rebuild the application whenever you save a file in your project. 
 
-You should now be able to browse to `http://localhost:3007/myFirstAppTab/` to ensure that your tab is rendering. However, not in Microsoft Teams yet.
+You should now be able to browse to `http://localhost:3007/myFirstAppTab/` to ensure that your tab is rendering. However, not in Microsoft Teams yet:
 
 ![view your site in a browser](~/assets/yeoman-images/teams-first-app-3.png)
 
@@ -128,11 +128,11 @@ Microsoft Teams does not allow you to have your app hosted on localhost, so you 
 
 Good news is that the scaffolded project has this built-in. When you run `gulp ngrok-serve` the ngrok service will be started in the background, with a unique and public DNS entry and it will also package the manifest with that unique URL and then do the exact same thing as `gulp serve`.
 
-After running `gulp ngrok-serve`, create a new Microsoft Teams team and when it is created click on the Team name, to go to the teams settings and then select *Apps*. In the lower right corner you should see a link *Upload a custom app*, select it and then browse to your project folder and the subfolder called `package`. Select the zip file in that folder and choose open. Your App is now sideloaded into Microsoft Teams.
+After running `gulp ngrok-serve`, create a new Microsoft Teams team and when it is created click on the Team name, to go to the teams settings and then select *Apps*. In the lower right corner you should see a link *Upload a custom app*, select it and then browse to your project folder and the subfolder called `package`. Select the zip file in that folder and choose open. Your App is now sideloaded into Microsoft Teams:
 
 ![sideloaded app](~/assets/yeoman-images/teams-first-app-4.png)
 
-Go back to the *General* channel and select *+* to add a new Tab. You should see your tab in the list of tabs.
+Go back to the *General* channel and select *+* to add a new Tab. You should see your tab in the list of tabs:
 
 ![configure tab](~/assets/yeoman-images/teams-first-app-5.png)
 
@@ -156,11 +156,11 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    ```PowerShell
     yo
    ```
-3. Use the  arrow keys to choose **Update your Generators**.
+3. Use the  arrow keys to choose **Update your Generators**:
 
    ![image of YoSelectUpdatGen](~/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
-4. Select the generator you want from the list of generators.
+4. Select the generator you want from the list of generators:
    > [!NOTE]
    > Use the space bar to select or clear a selected Teams version from the available options.
 

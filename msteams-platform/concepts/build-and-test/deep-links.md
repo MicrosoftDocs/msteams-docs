@@ -43,7 +43,7 @@ Alternatively, you can also generate deep links programmatically, using the form
 
 ### Show a deep link to an item within your tab
 
-To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`.
 
 Provide the following fields:
 
@@ -73,9 +73,9 @@ The query parameters are:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from your manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
 | `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
@@ -151,8 +151,8 @@ The query parameters are:
 
 * `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Supported file type, such as docx, pptx, xlsx, and pdf
-* `objectUrl`: Object URL of the file, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: Base URL of the file, https://microsoft.sharepoint.com/teams
+* `objectUrl`: Object URL of the file, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Base URL of the file, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Name of the service, app ID
 * `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -187,7 +187,7 @@ The query parameters are:
 * `appID`: Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
-* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
 * `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList

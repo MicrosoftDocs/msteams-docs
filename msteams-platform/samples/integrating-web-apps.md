@@ -17,7 +17,7 @@ The different types of apps which you can integrate with Teams are as follows:
 * **SharePoint**: A SharePoint page you want to surface in Teams.
 
 You can map and follow the appropriate guideline applicable to your integration scenario.
-This document gives an overview of Teams capabilities, share-point requirements for file and data storage, API requirements, authentication and deep-linking of your app with Teams.
+This document gives an overview of Teams capabilities, share-point requirements for file and data storage, API requirements, authentication, and deep-linking of your app with Teams.
  
 ## Get to know Teams platform capabilities
 
@@ -52,12 +52,12 @@ Following are the prerequisites to integrate your app with Teams.
 
 ***Integration scenarios**: SharePoint*
 
-To integrate an existing [SharePoint page](https://docs.microsoft.com/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab, you must consider the following:
+To integrate an existing [SharePoint page](/MicrosoftTeams/teams-standalone-static-tabs-using-spo-sites) as a Teams tab, you must consider the following:
 
 * It must be a *modern* SharePoint online page.
 * Only personal tabs are supported. You cannot integrate your page as a channel tab.
 
-Alternatively, you can build a Teams tab [using the SharePoint Framework](https://docs.microsoft.com/sharepoint/dev/spfx/integrate-with-teams-introduction).
+Alternatively, you can build a Teams tab [using the SharePoint Framework](/sharepoint/dev/spfx/integrate-with-teams-introduction).
 
 ## Aim towards multi-tenancy
 
@@ -69,7 +69,7 @@ If your app is used by multiple organizations, consider multi-tenant hosting tha
 
 ***Integration scenarios**: Standalone apps, collaboration apps*
 
-You must make your app's existing APIs and data structures support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](https://docs.microsoft.com/graph/teams-concept-overview).
+You must make your app's existing APIs and data structures support the app when integrating with Teams. To extend the support, you must augment the APIs and data structures with contextual information about Teams for [identity mapping](../concepts/authentication/configure-identity-provider.md), [deep-link support](../concepts/build-and-test/deep-links.md), and [incorporating Microsoft Graph](/graph/teams-concept-overview).
 
 Learn more about getting context for your Teams [tab](../tabs/how-to/access-teams-context.md) or [bot](../bots/how-to/get-teams-context.md).
 
@@ -105,7 +105,7 @@ Use a [bot](../bots/what-are-bots.md) in your Teams app for multi-threaded conve
 
 Bots also allow you to send **proactive messages** to individual users or channels. The proactive messages are unprompted messages triggered by an outside event and not a message sent to a bot. For example, your bot sends a welcome message when it is installed or a new user joins a channel. 
 
-Sending proactive messages requires Teams-specific identifiers. You can capture the information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](https://docs.microsoft.com/graph/teams-proactive-messaging).
+Sending proactive messages requires Teams-specific identifiers. You can capture the information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
 Do not spam users with excessive messages. If the Teams capability supports it, the users can configure notification settings for your app.   
 Following is an example of a notification message: 
@@ -115,7 +115,7 @@ Following is an example of a notification message:
 
 ***Integration scenarios:** Standalone apps, collaboration apps, SharePoint pages*
 
-When a team is created, a [SharePoint site collection](https://docs.microsoft.com/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app must leverage this feature if it interacts with files. Use the site collection to store raw data in SharePoint Lists and Excel.
+When a team is created, a [SharePoint site collection](/microsoftteams/sharepoint-onedrive-interact) is also provisioned to support file and data storage for that team. Your app must leverage this feature if it interacts with files. Use the site collection to store raw data in SharePoint Lists and Excel.
 
 ## See also
 

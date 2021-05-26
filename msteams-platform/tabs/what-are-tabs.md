@@ -6,13 +6,13 @@ localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
 ---
-# What are Microsoft Teams tabs?
+# Microsoft Teams tabs
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. *See* [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
 There are two types of tabs available in Teams — channel/group and personal. Channel/group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
-## Lesser known tab features
+## Tab features
 
 > [!div class="checklist"]
 >
@@ -35,7 +35,7 @@ There are two types of tabs available in Teams — channel/group and personal. C
 **Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
 **Example:** You create a channel/group tab with deep linking to individual items.
 
-## How do tabs work?
+## Understand how tabs work
 
 You can use one of the following methods to create tabs:
 * [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
@@ -79,3 +79,8 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 * [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tab requirements](~/tabs/how-to/tab-requirements.md)

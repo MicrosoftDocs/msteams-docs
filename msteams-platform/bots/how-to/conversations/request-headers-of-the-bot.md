@@ -11,7 +11,7 @@ The current outgoing requests to the bot do not contain in the header or URL any
 
 ## Request header fields
 
-Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values.
+Two non-standard request header fields are added to all the requests sent to bots, for both asynchronous flow and synchronous flow. The following table provides the request header fields and their values:
 
 | Field key | Value |
 |----------------|-----------------|
