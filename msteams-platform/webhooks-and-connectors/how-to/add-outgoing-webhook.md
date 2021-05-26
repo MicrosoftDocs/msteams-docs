@@ -148,4 +148,4 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 ## See also
 * [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Send messages to connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using)
+* [Send messages to connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
