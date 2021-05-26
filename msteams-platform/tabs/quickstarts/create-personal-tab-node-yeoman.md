@@ -110,48 +110,6 @@ To add a personal tab to your application, you must create a content page and up
 
 ### Build and run your application
 
-Perform the following steps through command prompt in your project directory:
-
-[!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
-
-4. Navigate to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html` to view your personal tab.
-
-    ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
-
-### Establish a secure tunnel to your tab
-
-Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you must either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
-
-To test your tab extension, you must use [ngrok](https://ngrok.com/docs), which is built into this application. Ngrok is a reverse proxy software tool that creates a tunnel to your local web server's publicly available HTTPS endpoints.
-
-Your server's web endpoints are available during the current session on your local machine. When the machine is shut down or goes to sleep, the service is no longer available.
-
-In your command prompt, exit localhost and enter the following:
-
-```bash    
-gulp ngrok-serve
-```
-
-> [!IMPORTANT]
-> When your tab is uploaded to Microsoft Teams through *ngrok* and successfully saved, you can view your tab in Teams until your tunnel session ends.
-
-### Upload your application to Teams
-
-1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-
-1. In the *YourTeams* panel on the left, select the `...` menu next to the team that you are using to test your tab and select **Manage team**.
-
-    ![Manage team screenshot](~/assets/images/tab-images/manage-team.png)
-
-1. In the main panel select **Apps** from the tab bar and select **Upload a custom app** located in the lower left-hand corner of the page.
- 
-    ![Upload a custom app screenshot](~/assets/images/tab-images/upload-custom-app.png)
-
-1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and select **Open**. Your tab is uploaded into Teams.
-
-### View your personal tabs
-
-Select the `...` menu from the left panel of Teams, and select your application from the list.
 
 # [ASP.NET Core](#tab/aspnetcore)
 
@@ -215,64 +173,6 @@ In ASP.NETCore, The application looks for the static files in this folder.
 
 ASP.NETCore treats **index** files as default or home page for the site. When your browser URL points to the root, **index.cshtml** is displayed as the home page for your application.
 
-#### AppManifest
-
-This folder contains the following app package files:
-
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
-
-These must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.
-
-#### .csproj
-
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the following code that creates and updates your zip folder when the application builds:
-
-```xml
-<PropertyGroup>
-    <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="AppManifest\icon-outline.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\icon-color.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AppManifest\manifest.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-  </ItemGroup>
-```
-
-[!INCLUDE  [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
-
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
-
-**To establish a secure tunnel**
-
-In a command prompt, navigate to the root of your project directory run the following command:
-
-```bash
-ngrok http https://localhost:44325 -host-header="localhost:44325"
-```
-
-Ngrok listens the request from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
-
-You must keep the command prompt while ngrok is running, you need it later to write down the URL.
-
-Verify that **ngrok** is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
-
->[!TIP]
->You must run your application in Visual Studio and ngrok to complete this quickstart. When you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request to Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
-
-#### Run your application
-
-- In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
-
-[!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
@@ -358,48 +258,5 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
     </EmbeddedResource>
   </ItemGroup>
 ```
-
-#### Models
-
-**PersonalTab.cs** presents a Message object and methods that will be called from *PersonalTabController* when a user selects a button in the **PersonalTab** View.
-
-#### Views
-
-##### Home
-
-ASP. NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
-
-##### Shared
-
-The partial view markup *_Layout.cshtml* contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
-
-#### Controllers
-
-The controllers use the ViewBag property to transfer values dynamically to the Views.
-
-[!INCLUDE [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
-
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
-
-Open a command prompt in the root of your project directory and run the following command:
-
-   ```bash
-   ngrok http https://localhost:44345 -host-header="localhost:44345"
-   ```
-
-Ngrok listens the requests from the internet and routes to your application when it is running on port 44325.  It must resemble `https://y8rPrT2b.ngrok.io/` where *y8rPrT2b* is replaced by your ngrok alpha-numeric HTTPS URL.
-
-You must keep the command prompt while ngrok is running, you need it later to write down the URL.
-
-Verify that **ngrok** is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
-
-> [!TIP]
-> You must run your application in Visual Studio and ngrok to complete this quickstart. When you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request when restarts in Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
-
-#### Run your application
-
-* In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
-
-[!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
 ---
