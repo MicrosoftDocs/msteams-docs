@@ -70,24 +70,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: Teams app capabilities
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: Map use cases to Microsoft Teams capabilities
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: Build a Teams app using Node.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: Build a Teams app using C#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
+        - url:  https://dev.teams.microsoft.com/home
+          itemType: reference
+          text: Developer Portal
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
         - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
           itemType: reference
           text: Build scenarios for Microsoft Teams apps
+        - url:  https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+          itemType: reference
+          text: Best practices to build apps on Teams platform
       
     # Card
     - title: Learn
