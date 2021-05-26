@@ -17,6 +17,27 @@ Microsoft Teams platform features that are available to all app developers.
 
 <details>
 
+<summary><b>2021 Build announcements</b></summary>
+
+| **Date** | **Notes** | **Changed topics** |
+| -------- | --------- | ------------------ |
+|05/24/2021|Updated Teams app design guidelines with mobile patterns and more.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)
+|05/13/2021|Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
+|05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
+|05/10/2021| New app customization feature.| [Enable orgs to customize your app](concepts/design/enable-app-customization.md) |
+|05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+|04/29/2021 | New: Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/08/2021| App customization feature is now available in developer preview.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
 <summary><b>2021</b></summary>
 
 | **Date** | **Notes** | **Changed topics** |
