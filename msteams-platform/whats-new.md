@@ -12,10 +12,6 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 ## Microsoft Build 2021
 
-<br>
-
-<details>
-
 # [Features in developer preview](#tab/devpreview)
 
 | **Date** | **Features** | **Changed topics** |
