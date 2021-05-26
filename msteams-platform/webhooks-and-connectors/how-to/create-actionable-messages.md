@@ -70,7 +70,7 @@ To ensure that your service is receiving calls only from actual Teams clients, T
 Your code must always validate the HMAC signature included in the request as follows:
 
 * Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platforms (see [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams webhook sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#). Microsoft Teams uses standard SHA256 HMAC cryptography. You need to convert the body to a byte array in UTF8.
-* Compute the hash from the byte array of the security token provided by Teams when you registered the outgoing webhook in the Teams client. See [create an outgoing webhook](#create-an-outgoing-webhook).
+* Compute the hash from the byte array of the security token provided by Teams when you registered the outgoing webhook in the Teams client. See [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
