@@ -74,7 +74,7 @@ Identify which new features the user will prefer to have in the current solution
 
 ## See also
 
-* [Choose how to distribute your app](../deploy-and-publish/overview.md)
+* [Choose how to distribute your app](../deploy-and-publish/apps-publish-overview.md)
 * [Design tabs](../../tabs/design/tabs.md)
 * [Design bots](../../bots/design/bots.md)
 

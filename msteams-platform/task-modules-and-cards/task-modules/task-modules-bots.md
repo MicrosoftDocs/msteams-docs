@@ -29,8 +29,8 @@ When the `value` object of the `invoke` card action or `Action.Submit` is initia
 The following steps provides the invoke task module using task/fetch:
 
 1. This image shows a Bot Framework hero card with a **Buy** `invoke` [card action](~/task-modules-and-cards/cards/cards-actions.md#invoke-action-type). The value of the `type` property is `task/fetch` and the rest of the `value` object can be of your choice.
-2. The bot receives the `invoke` HTTP POST message.
-3. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see [the discussion on task/submit](#the-flexibility-of-tasksubmit). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object:
+1. The bot receives the `invoke` HTTP POST message.
+1. The bot creates a response object and returns it in the body of the POST response with an HTTP 200 response code. For more information on schema for responses, see [the discussion on task/submit](#the-flexibility-of-tasksubmit). The following code provides an example of body of the HTTP response that contains a [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) embedded in a wrapper object:
 
     ```json
     {
@@ -49,7 +49,7 @@ The following steps provides the invoke task module using task/fetch:
 
     The `task/fetch` event and its response for bots is similar to the `microsoftTeams.tasks.startTask()` function in the client SDK.
 
-4. Microsoft Teams displays the task module.
+1. Microsoft Teams displays the task module.
 
 The next section provides details on submitting the result of a task module.
 

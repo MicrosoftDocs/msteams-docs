@@ -108,10 +108,10 @@ When the hello-world app starts, it displays `App started listening on port 3333
 
 At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
 
-- [http://localhost:3333](http://localhost:3333)
-- [http://localhost:3333/hello](http://localhost:3333/hello)
-- [http://localhost:3333/first](http://localhost:3333/first)
-- [http://localhost:3333/second](http://localhost:3333/second)
+- `http://localhost:3333`
+- `http://localhost:3333/hello`
+- `http://localhost:3333/first`
+- `http://localhost:3333/second`
 
 <a name="HostSample"></a>
 
@@ -121,7 +121,7 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 For local testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
-Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here.
+Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here:
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
@@ -153,7 +153,7 @@ For either method you will need the following:
 
 ## Update your hosted app
 
-The sample app requires the following environment variables to be set to the values you made a note of earlier.
+The sample app requires the following environment variables to be set to the values you made a note of earlier:
 
 ```
 MICROSOFT_APP_ID=<YOUR BOT'S APP ID>
@@ -196,13 +196,13 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose.
+Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose:
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
 ### Test your bot in Teams
 
-You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`, followed by your message. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply.
+You can now interact with the bot in Teams. Choose a channel in the team where you registered your app, and type `@your-bot-name`, followed by your message. This is called an **\@mention**. Whatever message you send to the bot will be sent back to you as a reply:
 
 <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png"/>
 
@@ -210,12 +210,12 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 ### Test your messaging extension
 
-To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation.
+To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation:
 
 <img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
 <img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
 
-Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom.
+Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom:
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />

@@ -17,7 +17,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Images can be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [cards reference](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [cards reference](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and Office 365 connector cards with Markdown that include certain supported styles.
 
@@ -178,8 +178,7 @@ The following code shows an example of Adaptive Card with masking property:
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 The following image is an example of masking information in Adaptive Cards:

@@ -172,11 +172,11 @@ During submission, you're asked to categorize your app. The following table maps
 
 ### Localize your store listing
 
-Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
+Partner Center supports [localized store listings](/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
 ## Complete Publisher Verification
 
-[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store.For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
+[Publisher Verification](/azure/active-directory/develop/publisher-verification-overview) is required for Teams apps listed in the store. For more information, see [frequently asked questions](/azure/active-directory/develop/publisher-verification-overview#frequently-asked-questions), [how to mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified), and [troubleshoot publisher verification](/azure/active-directory/develop/troubleshoot-publisher-verification).
 
 ## Complete Publisher Attestation
 
@@ -188,4 +188,4 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [Submit your app](/office/dev/store/add-in-submission-guide)
