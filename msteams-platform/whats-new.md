@@ -17,7 +17,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <details>
 
-<summary><b>2021 Build announcements</b></summary>
+<summary><b>Build announcements 2021</b></summary>
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
