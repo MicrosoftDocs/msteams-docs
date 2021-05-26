@@ -37,7 +37,8 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 <br>
 
-<details open><summary><b>Features in GA</b></summary>
+<details open>
+<summary><b>Features in GA</b></summary>
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
