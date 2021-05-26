@@ -5,28 +5,52 @@ ms.topic: reference
 localization_priority: Normal
 keywords: teams what's new latest
 ---
+
 # What's new for developers in Microsoft Teams
 
 Discover Microsoft Teams platform features that are introduced in Microsoft Build 2021, generally available (GA), and in developer preview.
 
 ## Microsoft Build 2021
 
+<br>
+
+<details>
+
+<summary><b>Features in developer preview</b></summary>
+
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|05/26/2021| Developer preview: <br/> Build tabs with Adaptive Cards. |[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| Developer preview: <br/> Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
-|05/25/2021| Developer preview: <br/> Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
-|05/25/2021| Developer preview: <br/> New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| Developer preview: <br/> Together Mode feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021|Developer preview: <br/> Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021|Developer preview: <br/> Tabs link unfurling and stage view. |[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
+|05/26/2021| Build tabs with Adaptive Cards. |[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
+|05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
+|05/25/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
+|05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+|05/25/2021| Together Mode feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Together Mode](~/apps-in-teams-meetings/teams-together-mode.md) |
+|05/24/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
+|05/21/2021| Tabs link unfurling and stage view. |[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
+
+> [!NOTE]
+> For more information on features available in developer preview, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+  
+<summary><b>Features in GA</b></summary>
+
+| **Date** | **Features** | **Changed topics** |
+| -------- | --------- | ------------------ |
 |04/29/2021 | Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/08/2021| App customization.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
 |03/29/2021 | Format cards in Teams. | [Format cards in Teams](task-modules-and-cards/cards/cards-format.md) |
 |02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 
-> [!NOTE]
-> For more information on features available in developer preview, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
+<br>
+
+</details>
 
 ## GA features
 
