@@ -8,7 +8,7 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 ---
 # Add custom bots to Teams with outgoing webhooks
 
-## What are outgoing webhooks in Teams?
+## Outgoing webhooks in Teams
 
 Webhooks are an eminent way for Teams to integrate with external apps. A webhook is essentially a POST request sent to a callback URL. Outgoing webhooks allow users to send messages to your web service without going through the full process of creating bots via the [Microsoft Bot Framework](https://dev.botframework.com/).
 
@@ -106,10 +106,10 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 1. From the window's lower right corner select **Create an outgoing webhook**.
 1. In the resulting popup window complete the required fields:
 
->* **Name** - The webhook title and @mention tap.
->* **Callback URL** - The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
->* **Description** - A detailed string that appear in the profile card and the team-level App dashboard.
->* **Profile Picture** an optional app icon for your webhook.
+>* **Name**: The webhook title and @mention tap
+>* **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams
+>* **Description**: A detailed string that appear in the profile card and the team-level App dashboard
+>* **Profile Picture**: An optional app icon for your webhook
 >* Select the **Create** button from the lower right corner of the pop-up window and the outgoing webhook are added to the current team's channels.
 >* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 >* The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
