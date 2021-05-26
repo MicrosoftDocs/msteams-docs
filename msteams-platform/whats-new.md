@@ -24,7 +24,7 @@ Microsoft Teams platform features that are introduced in Build.
 |05/21/2021|Developer preview: Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |04/29/2021 | Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/08/2021| App customization.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | Format cards in Teams | [Format cards in Teams](task-modules-and-cards/cards/cards-format?branch=pr-en-us-3356&tabs=adaptive-md%2Cconnector-html#sample-adaptive-card-with-masking-property) |
+|03/29/2021 | Format cards in Teams | [Format cards in Teams](task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cconnector-html) |
 |02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 
 ## GA features
