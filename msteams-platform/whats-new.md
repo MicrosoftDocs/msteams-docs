@@ -153,6 +153,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|05/26/2021|Build tabs with Adaptive Cards|[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| Meeting Details API and real-time Teams meeting events | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
