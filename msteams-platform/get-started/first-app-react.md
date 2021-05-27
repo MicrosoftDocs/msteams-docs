@@ -119,8 +119,6 @@ Teams Toolkit allows you to run your app locally.  This consists of several part
 
 Once this is done, the app can be loaded within the Teams client.  We use the Teams web client so that we can see the HTML, CSS, and JavaScript code within a standard web development environment.
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
