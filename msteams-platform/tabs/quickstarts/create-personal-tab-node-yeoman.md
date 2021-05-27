@@ -292,10 +292,6 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
