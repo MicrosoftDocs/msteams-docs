@@ -9,7 +9,7 @@ ms.author: lajanuar
 
 # Create a personal tab using C# and ASP.NETCore MVC
 
-This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
+This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC. It also helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
 ## What you'll learn
 
