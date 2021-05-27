@@ -354,7 +354,7 @@ This folder contains the following required app package files:
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A **manifest.json** file that specifies the attributes of your app.
 
-# [ASP.NET Core MVCT](#tab/aspnetcoremvct)
+These files must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe>, and render it in your tab.
 
 ### .csproj
 
