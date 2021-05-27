@@ -392,8 +392,4 @@ ASP. NET Core treats files called **Index** as the default or home page for the 
 
 The partial view markup *_Layout.cshtml* contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
 
-### Controllers
-
-The controllers use the ViewBag property to transfer values dynamically to the Views.
-
 ---
