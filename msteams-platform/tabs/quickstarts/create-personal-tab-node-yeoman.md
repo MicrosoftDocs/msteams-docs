@@ -299,4 +299,59 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
+## What you'll learn
+
+* Review the source code.
+* Update your application.
+* Establish a secure tunnel using ngrok.
+* Upload your application to Teams using App Studio.
+
+[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
+
+## Get the source code
+
+Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code, download the zip folder and extract the files or clone the following sample repository into your new directory:
+
+```bash
+git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
+```
+
+In Visual Studio, navigate to the  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
+
+To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
+
+http://localhost:44335
+http://localhost:44335/privacy
+http://localhost:44335/tou
+
+## Review the source code
+
+### Startup.cs
+
+This project was created from an ASP.NETCore 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. The empty template does not enable serving static content by default, so the following static files middleware is added to the `Configure()` method:
+
+``` csharp
+public void ConfigureServices(IServiceCollection services)
+  {
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+  }
+public void Configure(IApplicationBuilder app)
+  {
+    app.UseStaticFiles();
+    app.UseMvc();
+  }
+```
+
+### wwwroot
+
+In ASP.NETCore, the application looks for the static files in this folder.
+
+### AppManifest
+
+This folder contains the following required app package files:
+
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
+
 ---
