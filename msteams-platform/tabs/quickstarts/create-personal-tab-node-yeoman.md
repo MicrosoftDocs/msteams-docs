@@ -360,7 +360,7 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
 
-    ```xml
+  ```xml
     <PropertyGroup>
         <PostBuildEvent>powershell.exe Compress-Archive -Path \"$(ProjectDir)AppManifest\*\" -DestinationPath \"$(TargetDir)tab.zip\" -Force</PostBuildEvent>
       </PropertyGroup>
@@ -376,7 +376,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </EmbeddedResource>
       </ItemGroup>
-    ```
+  ```
 
 ### Models
 
