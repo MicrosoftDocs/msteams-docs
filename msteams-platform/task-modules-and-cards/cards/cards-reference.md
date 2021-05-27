@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Cards reference
 
-The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
+The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework (BF), but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
 
 ## Card examples
 

@@ -15,7 +15,7 @@ ms.author: surbhigupta
 
 Use Adaptive Cards to build tabs with ease. You can build your tabs with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend, thus, eliminating the need for a different backend for your bot and tabs. This greatly reduces server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow. 
 
-The following image depicts build tabs with adaptive cards in desktop and mobile:
+The following image depicts build tabs with Adaptive Cards in desktop and mobile:
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
 ## Prerequisites
