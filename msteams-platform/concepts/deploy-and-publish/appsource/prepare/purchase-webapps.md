@@ -58,9 +58,9 @@ Once you create the SaaS offer in Partner Center, you can link it to your Teams 
 
 Once published, users can purchase subscriptions plans associated with your app in the Teams store listing.
 
-## Example: User purchase experience
+## End user purchase experience
 
-The following example shows how users can purchase subscription plans for a fictional Teams app called Recloud.
+The following example shows how end users can purchase subscription plans for a fictional Teams app called Recloud.
 
 **To purchase an app subscription plan**
 
@@ -79,6 +79,10 @@ The following example shows how users can purchase subscription plans for a fict
 1. Once the purchase is complete, Recloud can manage this and other app subscriptions internally through its own website.
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring the user licenses.":::
+
+## Admin purchase experience
+
+Admins can purchase app subscription plans in the [Teams admin center](/MicrosoftTeams/purchase-third-party-apps).
 
 ## See also
 
