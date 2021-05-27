@@ -37,8 +37,8 @@ The following tools will be installed by the Visual Studio Code extension when t
 
 - [Set up a new project](#set-up-a-new-teams-project)
 - [Configure your app](#configure-your-app)
-- [Package your app](#package-your-app)
-- [Run your app locally or in Teams](#run-your-app)
+- [Run your app locally](#install-and-run-your-app-locally)
+- [Publish your app](#publish-your-app-to-teams)
 
 ## Set up a new Teams project
 
