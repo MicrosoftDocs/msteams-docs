@@ -52,13 +52,15 @@ Following is the scenario and example of adding outgoing webhooks to your app:
 * Scenario: Push change status notifications on a Teams channel database server to your app.
 * Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.
 
-### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
+# [URL JSON payload](#tab/urljsonpayload)
+**Create a URL on your app's server to accept and process a POST request with a JSON payload**
 
 Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. For more information see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
-### 2. Create a method to verify the outgoing webhook HMAC token
+# [Verify HMAC token](#tab/verifyhmactoken)
+**Create a method to verify the outgoing webhook HMAC token**
 
 #### HMAC signature for testing with code example
 
@@ -75,7 +77,8 @@ Your code must always validate the HMAC signature included in the request as fol
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
-### 3. Create a method to send a success or failure response
+# [Method to respond](#tab/methodtorespond)
+**Create a method to send a success or failure response**
 
 Responses from your outgoing webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
 
@@ -88,6 +91,7 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 }
 ```
 
+---
 ## See also
 
 * [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
