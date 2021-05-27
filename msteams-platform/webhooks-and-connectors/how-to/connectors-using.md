@@ -1,5 +1,6 @@
 ---
 title: Send messages to incoming webhooks and connectors
+author: laujan
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
 localization_priority: Normal

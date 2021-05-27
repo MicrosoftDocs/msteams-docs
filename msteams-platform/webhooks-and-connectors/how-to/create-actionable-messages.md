@@ -49,7 +49,7 @@ For more information about connector card actions, see [Actions](/outlook/action
 
 Following is the scenario and example of adding outgoing webhooks to your app:
 
-* Scenario: Push change status notifications on a Teams channel database server to your app.  
+* Scenario: Push change status notifications on a Teams channel database server to your app.
 * Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.
 
 ### 1. Create a URL on your app's server to accept and process a POST request with a JSON payload
@@ -94,3 +94,6 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 * [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Send messages to connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Get started with actionable messages in Office 365](/outlook/actionable-messages/get-started.md)
+* Actionable message in Outlook video
+> [!VIDEO https://www.youtube-nocookie.com/embed/gBEFSlHLAcg&t] 
+
