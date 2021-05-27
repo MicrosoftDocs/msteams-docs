@@ -360,4 +360,10 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
 
-----
+# [ASP.NET Core MVCT](#tab/aspnetcoremvct)
+
+### .csproj
+
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
+
+---
