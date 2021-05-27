@@ -9,7 +9,7 @@ ms.date: 05/20/2019
 # Developer preview manifest schema for Microsoft Teams
 
 > [!NOTE]
-> See [Developer Preview](~/resources/dev-preview/developer-preview-intro.md) for information on the program and how you can join.
+> For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 > If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
@@ -67,6 +67,7 @@ For more information on the features available see: [Features in the Public Deve
       "entityId": "idForPage",
       "name": "Display name of tab",
       "contentUrl": "https://contoso.com/content?host=msteams",
+      "contentBotId": "Specifies to the app that tab is an Adaptive Card Tab. You can either provide the contentBotId or contentUrl.",
       "websiteUrl": "https://contoso.com/content",
       "scopes": [ "personal" ]
     }
@@ -180,6 +181,27 @@ For more information on the features available see: [Features in the Public Deve
      "mysite.someplace.com",
      "othersite.someplace.com"
   ],
+  "webApplicationInfo": {
+    "id": "AAD App ID",
+    "resource": "Resource URL for acquiring auth token for SSO",
+    "applicationPermissions": [
+      "TeamSettings.Read.Group",
+      "ChannelSettings.Read.Group",
+      "ChannelSettings.Edit.Group",
+      "Channel.Create.Group",
+      "Channel.Delete.Group",
+      "ChannelMessage.Read.Group",
+      "TeamsApp.Read.Group",
+      "TeamsTab.Read.Group",
+      "TeamsTab.Create.Group",
+      "TeamsTab.Edit.Group",
+      "TeamsTab.Delete.Group",
+      "Member.Read.Group",
+      "Owner.Read.Group",
+      "Member.ReadWrite.Group",
+      "Owner.ReadWrite.Group"
+    ],
+  },
    "configurableProperties": [
      "name",
      "shortDescription",
@@ -334,13 +356,17 @@ The object is an array with all elements of the type `object`. This block is req
 
 Defines a set of tabs that can be "pinned" by default, without the user adding them manually. Static tabs declared in `personal` scope are always pinned to the app's personal experience. Static tabs declared in the `team` scope are currently not supported.
 
+Render tabs with Adaptive Cards by specifying `contentBotId` instead of `contentUrl` in the **staticTabs** block.
+
 The object is an array (maximum of 16 elements) with all elements of the type `object`. This block is required only for solutions that provide a static tab solution.
+
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔|The display name of the tab in the channel interface.|
 |`contentUrl`|String|2048 characters|✔|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentBotId`|   | | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
 |`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|1|✔|Currently, static tabs support only the `personal` scope, which means it can be provisioned only as part of the personal experience.|
 
@@ -478,6 +504,7 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 |---|---|---|---|---|
 |`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 
 ## configurableProperties
 
