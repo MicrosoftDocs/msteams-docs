@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 # Integrate people picker control capability 
 
-This document guides you on how to integrate people picker control capability of Teams platform with your Teams app.  
+This document guides you on how to integrate people picker control capability of Teams platform with your web app.  
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the people picker control capability within your web app. 
 
 ## Advantages of integrating people picker control capability
@@ -65,7 +65,7 @@ You must ensure to handle the errors appropriately in your web app. The followin
 **Calling `selectPeople` API** for selecting people from a list:
 
 ```javascript
-microsoftTeams.people.selectPeople((error, people) => {                    if (error) {
+microsoftTeams.people.selectPeople((error, people) => {if (error) {
                         if (error.message) {
                             alert(" ErrorCode: " + error.errorCode + error.message);
                         }
@@ -76,7 +76,7 @@ microsoftTeams.people.selectPeople((error, people) => {                    if (e
                     if (people) {
                         output(" People length: " + people.length + " " + JSON.stringify(people));
                     }
-                });
+            }     );
 ```
 
 ## See also
