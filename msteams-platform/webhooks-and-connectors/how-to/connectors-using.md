@@ -203,7 +203,6 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 ---
 
 The manifest.json file contains the basic elements needed to test and submit your app.
-
 #### Example manifest.json with connector
 
 > [!NOTE]
