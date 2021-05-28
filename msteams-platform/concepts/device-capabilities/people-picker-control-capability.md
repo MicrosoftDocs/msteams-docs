@@ -47,20 +47,7 @@ The following image depicts web app experience for people picker control capabil
 
 ![web app experience for people picker control capability](../../assets/images/tabs/people-picker-control-capability.png)
 
-## Error handling
-
-You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated: 
-
-|Error code |  Error name     | Condition|
-| --------- | --------------- | -------- |
-| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **500** | INTERNAL_ERROR | Internal error is encountered while launching people picker.|
-| **1000** | NETWORK_ERROR | Network issue.|
-| **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
-| **8000** | USER_ABORT |User cancelled the operation.|
-| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
-
-## Code snippet
+### Code snippet
 
 **Calling `selectPeople` API** for selecting people from a list:
 
@@ -78,6 +65,19 @@ microsoftTeams.people.selectPeople((error, people) => {if (error) {
                     }
             }     );
 ```
+
+## Error handling
+
+You must ensure to handle the errors appropriately in your web app. The following table lists the error codes and the conditions under which the errors are generated: 
+
+|Error code |  Error name     | Condition|
+| --------- | --------------- | -------- |
+| **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
+| **500** | INTERNAL_ERROR | Internal error is encountered while launching people picker.|
+| **1000** | NETWORK_ERROR | Network issue.|
+| **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
+| **8000** | USER_ABORT |User cancelled the operation.|
+| **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
 
 ## See also
 
