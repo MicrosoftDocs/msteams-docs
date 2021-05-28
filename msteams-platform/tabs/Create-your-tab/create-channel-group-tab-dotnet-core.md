@@ -167,4 +167,4 @@ Navigate to the team where you installed the tab, and select the tab from the ta
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md)
+> [Create a Custom Channel and Group Tab with ASP.NETCore MVC](~/tabs/create-your-tab/create-channel-group-tab-dotnet-core-mvc.md)

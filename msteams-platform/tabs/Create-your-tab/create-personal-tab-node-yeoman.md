@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.author: lajanuar
 ---
 
-# Create a personal tab in Microsoft Teams
+# Create a personal tab in Microsoft Teams {.tabset}
 
 Create a Personal tab using the following platforms in Microsoft Teams
 
-## Node.js {.tabset}
+## Node.js
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 

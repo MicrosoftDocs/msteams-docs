@@ -184,4 +184,4 @@ In Visual Studio press **F5** or select **Start Debugging** from your applicatio
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md)
+> [Create a Custom Personal Tab with ASP.NETCore MVC](~/tabs/create-your-tab/create-personal-tab-dotnet-core-mvc.md)

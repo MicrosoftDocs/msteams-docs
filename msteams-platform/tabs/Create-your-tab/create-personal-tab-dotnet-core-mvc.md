@@ -136,4 +136,4 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a custom channel and group tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/quickstarts/create-channel-group-tab-node-yeoman.md)
+> [Create a custom channel and group tab using Node.js and the Yeoman Generator for Microsoft Teams](~/tabs/create-your-tab/create-channel-group-tab-node-yeoman.md)

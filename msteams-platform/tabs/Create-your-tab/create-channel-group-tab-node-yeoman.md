@@ -93,4 +93,4 @@ gulp ngrok-serve
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Custom Channel and Group Tab with ASP.NETCore](~/tabs/quickstarts/create-channel-group-tab-dotnet-core.md)
+> [Create a Custom Channel and Group Tab with ASP.NETCore](~/tabs/create-your-tab/create-channel-group-tab-dotnet-core.md)
