@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.author: lajanuar
 ---
 
-# Create a personal tab in Microsoft Teams {.tabset}
+# Create a personal tab in Microsoft Teams
 
 Create a Personal tab using the following platforms in Microsoft Teams
 
-## Node.js
+# [Node.js](#tab/nodejs)
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
@@ -152,11 +152,9 @@ gulp ngrok-serve
 
 Select the `...` menu from the left panel of Teams, and select your application from the list.
 
-## {-}
+# [ASP.NET Core](#tab/aspnetcore)
 
-## ASP.NET Core
-
-### Create a personal tab using ASP.NET Core
+## Create a personal tab using ASP.NET Core
 
 This quickstart takes you through the steps to create a custom personal tab using C#, ASP.NET Core and ASP.NET Core MVC. It also helps you finalize your app manifest and upload your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -293,11 +291,9 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
-## {-}
+# [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-## ASP.NET Core MVC
-
-### Create a personal tab using C# and ASP.NETCore MVC
+## Create a personal tab using C# and ASP.NETCore MVC
 
 This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -355,11 +351,5 @@ This folder contains the following required app package files:
 * A **full color icon** measuring 192 x 192 pixels.
 * A **transparent outline icon** measuring 32 x 32 pixels.
 * A **manifest.json** file that specifies the attributes of your app.
-
-These files must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe>, and render it in your tab.
-
-### .csproj
-
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
 
 ---
