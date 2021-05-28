@@ -11,7 +11,7 @@ keywords: teams tabs actionable message verify webhook
 
 # Create actionable messages
 
-Actionable messages are sent through connector cards. The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list and an associated action, for example, `HttpPOST`.
+Actionable messages help users to respond to a notification from other web services without leaving the current page. They are sent through connector cards. The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list and an associated action, for example, `HttpPOST`.
 
 Connector cards support three types of actions:
 
@@ -29,7 +29,7 @@ The `ActionCard` action supports three input types:
 | `DateInput` | A date selector with an optional time selector. |
 | `MultichoiceInput` | A specified list of choices, offering either a single selection or multiple selections.|
 
-`MultichoiceInput` supports a `style` property that controls the display of a fully expanded list. 
+`MultichoiceInput` supports a `style` property that controls the display of a fully expanded list.
 
 The default value of `style` depends on the `isMultiSelect` value:
 
@@ -45,7 +45,7 @@ The default value of `style` depends on the `isMultiSelect` value:
 
 For more information about connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
-## Scenario to create outgoing webhooks to your app
+## Scenario to add outgoing webhooks to your app
 
 Following is the scenario and example of adding outgoing webhooks to your app:
 
@@ -94,8 +94,8 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 ---
 ## See also
 
-* [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Send messages to connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Get started with actionable messages in Office 365](/outlook/actionable-messages/get-started.md)
 * Actionable message in Outlook video
