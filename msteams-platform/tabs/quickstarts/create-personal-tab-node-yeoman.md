@@ -89,7 +89,6 @@ To add a personal tab to your application, you must create a content page and up
 
     ```
 
-
 1. Update the `contentUrl` path component `yourDefaultTabNameTab` with your actual tab name.
 
 1. Save the updated **manifest.json**.
@@ -128,7 +127,7 @@ Your server's web endpoints are available during the current session on your loc
 
 In your command prompt, exit localhost and enter the following:
 
-```bash    
+```bash
 gulp ngrok-serve
 ```
 
@@ -144,7 +143,7 @@ gulp ngrok-serve
     ![Manage team screenshot](~/assets/images/tab-images/manage-team.png)
 
 1. In the main panel select **Apps** from the tab bar and select **Upload a custom app** located in the lower left-hand corner of the page.
- 
+
     ![Upload a custom app screenshot](~/assets/images/tab-images/upload-custom-app.png)
 
 1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and select **Open**. Your tab is uploaded into Teams.
@@ -237,9 +236,9 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 This folder contains the following app package files:
 
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
 
 These must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.
 
@@ -288,10 +287,9 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 ### Run your application
 
-- In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
+* In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
-
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
@@ -320,9 +318,9 @@ In Visual Studio, navigate to the  **File** **Open** and select **project/soluti
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
-http://localhost:44335
-http://localhost:44335/privacy
-http://localhost:44335/tou
+* `http://localhost:44335`
+* `http://localhost:44335/privacy`
+* `http://localhost:44335/tou`
 
 ## Review the source code
 

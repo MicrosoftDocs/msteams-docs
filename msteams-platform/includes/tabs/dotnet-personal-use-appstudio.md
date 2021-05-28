@@ -25,7 +25,7 @@
 
 Once you upload your app package into App Studio, you must configure it.
 
-Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+In the right panel of the Manifest editor welcome page, select the tile for your newly imported tab.
 
 There are list of steps on the left-hand side of the Manifest editor and list of properties on the right, that needs to have values for each steps as in the corresponding screen:
 

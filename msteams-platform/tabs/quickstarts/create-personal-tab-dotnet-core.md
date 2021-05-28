@@ -22,17 +22,18 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 ## Get the source code
 
-We have provided the following simple projects to get you started:
+We have provided a following simple projects to get you started:
 
 [Personal Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/PersonalTab)
 
 [Personal Tab MVC](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/PersonalTabMVC)
 
-In a command prompt create a new directory for your tab project. To retrieve the source code you can download the zip folder and extract the files or clone the following sample repository into your new directory:
+1. Open command prompt and create a new directory for your tab project.
+    To retrieve the source code you can download the zip folder and extract the files or clone the following sample repository into your new directory:
 
-```bash
-git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
-```
+    ```bash
+    git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
+    ```
 
 # [ASP.NET Core](#tab/aspnetcore)
 
@@ -59,6 +60,8 @@ To build and run your application press **F5** or select **Start Debugging** fro
 
 ## Review the source code
 
+In the Visual Studio Solution Explorer window, open the following files to quickly review the source code.
+
 ### Startup.cs
 
 This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method:
@@ -77,7 +80,7 @@ public void Configure(IApplicationBuilder app)
 
 ### wwwroot
 
-In ASP.NETCore, The application looks for the static files in this folder.
+In ASP.NET Core, The application looks for the static files in this folder.
 
 # [ASP.NET Core](#tab/aspnetcore)
 
@@ -170,11 +173,11 @@ You must keep the command prompt while ngrok is running, you need it later to wr
 Verify that **ngrok** is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
 
 >[!TIP]
->You must run your application in Visual Studio and ngrok to complete this quickstart. When you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request to Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
+>You must run your application in Visual Studio and ngrok to complete this quickstart. If you stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request to Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
 
 ### Run your application
 
-- In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
+In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
