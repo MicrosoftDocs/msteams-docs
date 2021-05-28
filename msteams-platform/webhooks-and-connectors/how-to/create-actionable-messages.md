@@ -67,7 +67,7 @@ Using example of inbound message and ID: "contoso" of SigningKeyDictionary of {"
 
 Use the value "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" in the authorization of request header.
 
-To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` header. Always include the code in your authentication protocol.
+To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` authorization header. Always include the code in your authentication protocol.
 
 Your code must always validate the HMAC signature included in the request as follows:
 
