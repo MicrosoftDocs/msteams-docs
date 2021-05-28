@@ -157,6 +157,8 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 ### Post a message in the webhook using cURL
 
+# [cURL](#tab/cURL)
+
 **To post a message in the webhook with cURL**
 
 1. Install cURL using: https://curl.haxx.se/.
@@ -178,9 +180,9 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 3. Check the Microsoft Teams client for the new card posted.
 
-### Post a message to the webhook using PowerShell
+# [PowerShell](#tab/PowerShell)
 
-Prerequisite: Installation of PowerShell and familiarization with its basic usage.
+ Prerequisite: Installation of PowerShell and familiarization with its basic usage.
 
 **To post a message to the webhook with PowerShell**
 
@@ -197,6 +199,8 @@ Prerequisite: Installation of PowerShell and familiarization with its basic usag
 
 - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+
+---
 
 The manifest.json file contains the basic elements needed to test and submit your app.
 

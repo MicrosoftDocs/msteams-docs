@@ -9,7 +9,7 @@ keywords: teams tabs actionable message verify webhook
 
 ---
 
-# Create actionable messages
+# Create actionable messages using outgoing webhooks
 
 Actionable messages help users to respond to a notification from other web services without leaving the current page. They are sent through connector cards. The connector cards has three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions. Each `ActionCard` contains an input type, a text field, a date picker, or a multi-choice list and an associated action, for example, `HttpPOST`.
 
@@ -61,7 +61,6 @@ Outgoing webhooks are scoped to the `team` level and are visible to all the team
 
 # [Verify HMAC token](#tab/verifyhmactoken)
 **Create a method to verify the outgoing webhook HMAC token**
-
 #### HMAC signature for testing with code example
 
 Using example of inbound message and ID: "contoso" of SigningKeyDictionary of {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
