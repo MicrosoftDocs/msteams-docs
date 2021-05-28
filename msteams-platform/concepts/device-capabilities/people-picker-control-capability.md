@@ -1,54 +1,54 @@
 ---
-title: Integrate people picker control capability
+title: Integrate People Picker control capability
 author: Rajeshwari-v
-description: How to use Teams JavaScript client SDK to integrate people picker control capability
+description: How to use Teams JavaScript client SDK to integrate People Picker control capability
 keywords:  people picker control
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Integrate people picker control capability 
+# Integrate People Picker control capability 
 
 
-People picker is a control to find and pick people. This is a native capability available in Teams platform. You can integrate Teams’ native People picker input control with your web apps to to add it in your web app. You can define search context, single or multi selection, and other configuration to search people within a chat, groups, channels, teams, and across the organization with AAD user list.
+People Picker is a control to find and pick people. This is a native capability available in Teams platform. You can integrate Teams’ native People Picker input control with your web apps to to add it in your web app. You can define search context, single or multi selection, and other configuration to search people within a chat, groups, channels, teams, and across the organization with AAD user list.
 
-This document guides you on how to integrate people picker control capability of Teams platform with your web app.  
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the people picker control capability within your web app. 
+This document guides you on how to integrate People Picker control capability of Teams platform with your web app.  
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the People Picker control capability within your web app. 
 
-## Advantages of integrating people picker control capability
+## Advantages of integrating People Picker control capability
 
-* `People Picker` API enables you to add the people picker control to your web apps, which  surfaces in a task module, as a tab or personal app. 
+* `People Picker` API enables you to add the People Picker control to your web apps, which  surfaces in a task module, as a tab or personal app. 
 * This cross platform control allows users to select entities, such as users in a group, chat, channel.
-* The people picker control capability helps with task assignment, tagging, notifying a user, and so on. 
+* The People Picker control capability helps with task assignment, tagging, notifying a user, and so on. 
 
-You must call the `People Picker` API to integrate people picker control capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
+You must call the `People Picker` API to integrate People Picker control capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
 > [!NOTE] 
-> Currently, Microsoft Teams support for people picker control capability is available for mobile clients only.
+> Currently, Microsoft Teams support for People Picker control capability is available for mobile clients only.
 
 ## People Picker API 
 
 `People Picker` API enables you to add Teams’ native `People Picker input control` to your web apps. This API returns the information of picked users to the calling web app. 
-You must use the following API to enable people picker capability:
+You must use the following API to enable People Picker capability:
 
 | API      | Description   |
 | --- | --- |
-|`selectPeople`|Launches a people picker and allows the user to select one or more people from the list.<br/><br/>If the app is added to personal app scope, the people picker is launched across the organization. If the app is added to a chat or channel, people picker launch is limited to the members of that chat or channel.|
+|`selectPeople`|Launches a People Picker and allows the user to select one or more people from the list.<br/><br/>If the app is added to personal app scope, the People Picker is launched across the organization. If the app is added to a chat or channel, People Picker launch is limited to the members of that chat or channel.|
 
 The `People Picker` API comes along with following input configurations:
 
 |Configuration parameter|Type|Option|Description| Default value|
 |-----|------|----------|--------------|------|
-|`title`| String|Optional| Set title for the people picker.| Add people|
-|`setSelected`|String| Optional| AAD IDs of the users are pre-populated in the search box of people picker control. With single select, only the first user in the list is pre-populated.| Null |
-|`openOrgWideSearchInChatOrChannel`|Boolean | Optional|Launches the people picker across the organization scope even if the app is added to a chat or channel. | False |
-|`singleSelect`|Boolean| Optional| Launches the people picker in which only one person is selected. | False|
+|`title`| String|Optional| Set title for the People Picker.| Add people|
+|`setSelected`|String| Optional| AAD IDs of the users are pre-populated in the search box of People Picker control. With single select, only the first user in the list is pre-populated.| Null |
+|`openOrgWideSearchInChatOrChannel`|Boolean | Optional|Launches the People Picker across the organization scope even if the app is added to a chat or channel. | False |
+|`singleSelect`|Boolean| Optional| Launches the People Picker in which only one person is selected. | False|
 
-The following image depicts web app experience for people picker control capability:
+The following image depicts web app experience for People Picker control capability:
 
-![web app experience for people picker control capability](../../assets/images/tabs/people-picker-control-capability.png)
+![web app experience for People Picker control capability](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### Code snippet
 
@@ -76,7 +76,7 @@ You must ensure to handle the errors appropriately in your web app. The followin
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
-| **500** | INTERNAL_ERROR | Internal error is encountered while launching people picker.|
+| **500** | INTERNAL_ERROR | Internal error is encountered while launching People Picker.|
 | **1000** | NETWORK_ERROR | Network issue.|
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
