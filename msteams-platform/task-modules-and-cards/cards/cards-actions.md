@@ -8,7 +8,7 @@ keywords: teams bots cards actions
 
 # Card actions
 
-Cards used by bots and messaging extensions in Teams support the following activity ([`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards)) types:
+Cards used by bots and messaging extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
 > The `CardAction` actions differ from `potentialActions` for Office 365 connector cards when used from connectors.
@@ -166,7 +166,7 @@ The following code shows an example of `invoke` action type:
 }
 ```
 
-When a user clicks the button, your bot receives the `value` object with some additional information.
+When a user selects the button, your bot receives the `value` object with some additional information.
 
 > [!NOTE]
 > The activity type is `invoke` instead of `message` that is `activity.Type == "invoke"`.
@@ -261,7 +261,7 @@ You can also modify the Adaptive Card `Action.Submit` payload to support existin
 To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object:
 
 > [!NOTE]
-> You can include additional hidden properties in the `data` object if required.
+> You can include additional hidden properties in the `data` object, if required.
 
 | Property | Description |
 | --- | --- |
@@ -292,7 +292,7 @@ The following code shows an example of Adaptive Cards with `messageBack` action:
 To include an `imBack` action with an Adaptive Card include the following details in the `msteams` object:
 
 > [!NOTE]
-> You can include additional hidden properties in the `data` object if needed.
+> You can include additional hidden properties in the `data` object, if required.
 
 | Property | Description |
 | --- | --- |
@@ -319,7 +319,7 @@ The following code shows an example of Adaptive Cards with `imBack` action:
 To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:
 
 > [!NOTE]
-> You can include additional hidden properties in the `data` object if needed.
+> You can include additional hidden properties in the `data` object, if required.
 
 | Property | Description |
 | --- | --- |
@@ -346,7 +346,7 @@ The following code shows an example of Adaptive Cards with `signin` action:
 To include an `invoke` action with an Adaptive Card include the following details in the `msteams` object:
 
 > [!NOTE]
-> You can include additional hidden properties in the `data` object if required.
+> You can include additional hidden properties in the `data` object, if required.
 
 | Property | Description |
 | --- | --- |
@@ -384,4 +384,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## See also
 
-[Card reference](./cards-reference.md)
+[Cards reference](./cards-reference.md)

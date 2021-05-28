@@ -30,11 +30,11 @@ The following card types support Markdown formatting in Teams:
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can mask information using the information masking property within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
-Formatting is different between the desktop and the mobile versions of Teams for connector cards. In this section, you can go through the format example for Markdown connector cards.
+Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
 
 # [Markdown format for Adaptive Cards](#tab/adaptive-md)
 
- The supported styles for `Textblock`, `Fact.Title` and `Fact.Value` are:
+ The following table provides the supported styles for `Textblock`, `Fact.Title`, and `Fact.Value`:
 
 | Style | Example | Markdown |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ The following code shows an example of Adaptive Cards formatting:
 
 ### Mention support within Adaptive Cards v1.2
 
-You can add @ mentions within an Adaptive Card body for bots and messaging extension responses. To add @ mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
+You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
@@ -195,7 +195,7 @@ To make a full width Adaptive Card, the `width` object in `msteams` property in 
 
 #### Sample Adaptive Card with full width
 
-Your app must include the elements from the following code sample:
+To make a full width Adaptive Card, your app must include the elements from the following code sample:
 
 ``` json
 {
@@ -285,7 +285,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 > [!NOTE]
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, stage view functionality for images in Adaptive Cards are available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [Markdown format for O365 connector cards](#tab/connector-md)
 
@@ -383,7 +383,7 @@ The following card types support HTML formatting in Teams:
 * O365 connector cards: Limited Markdown and HTML formatting is supported in Office 365 connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for O365 connector cards and simple cards. In this section, you can go through the format example for HTML connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for O365 connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
 # [HTML format for O365 connector cards](#tab/connector-html)
 
@@ -494,7 +494,7 @@ HTML tags are supported for simple cards, such as the hero and thumbnail cards. 
 
 ### Mobile and desktop differences for simple cards
 
-Because of resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
+As there are resolution differences between the desktop and mobile platform, formatting is different between the desktop and the mobile version of Teams.
 
 On the desktop, HTML formatting appears as shown in the following image:
 

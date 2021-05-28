@@ -589,7 +589,7 @@ Now, you can work with a signin card that enables a bot to request that a user s
 
 Signin card is supported in Teams in a slightly different form than is found in the Bot Framework. The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
 
-The signin action can be used from any card in Teams, not just the signin card. For more information on authentication, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The signin action can be used from any card in Teams, not just the signin card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 ### Support for signin cards
 
