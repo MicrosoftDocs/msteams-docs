@@ -86,7 +86,7 @@
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integrate location capabilities
       href: concepts/device-capabilities/location-capability.md
-    - name: Integrate people picker control capability 
+    - name: Integrate People Picker control capability 
       href: concepts/device-capabilities/people-picker-control-capability.md 
 - name: Design your app
   items:
