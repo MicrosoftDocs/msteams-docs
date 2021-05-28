@@ -155,7 +155,7 @@ For more information on connector card actions, see **[Actions]**(/outlook/actio
 
 5. Select **Done**.
 
-### Post a message in the webhook using cURL
+### Post a message using cURL and PowerShell
 
 # [cURL](#tab/cURL)
 
