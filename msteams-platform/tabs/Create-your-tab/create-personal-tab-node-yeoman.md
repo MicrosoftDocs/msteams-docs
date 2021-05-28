@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.author: lajanuar
 ---
 
-# Create a personal tab in Microsoft Teams
+# Create a personal tab in Microsoft Teams {.tabset}
 
 Create a Personal tab using the following platforms in Microsoft Teams
 
-# [Node.js](#tab/nodejs)
+## Node.js
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
@@ -152,7 +152,7 @@ gulp ngrok-serve
 
 Select the `...` menu from the left panel of Teams, and select your application from the list.
 
-# [ASP.NET Core](#tab/aspnetcore)
+## ASP.NET Core
 
 ## Create a personal tab using ASP.NET Core
 
@@ -291,7 +291,7 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
-# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+## ASP.NET Core MVC
 
 ## Create a personal tab using C# and ASP.NETCore MVC
 
