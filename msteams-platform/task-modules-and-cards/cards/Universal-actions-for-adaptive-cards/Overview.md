@@ -46,7 +46,15 @@ You can now send the same card to both, Teams and Outlook, and keep them in sync
 
 The following image depicts the Universal Actions for Adaptive Cards for both Teams and Outlook:
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-teams-outlook.jpg" alt-text="Mobile same card to Teams and Outlook":::
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-teams-outlook.png" alt-text="Same card to Teams and Outlook":::
+
+* * *
 
 ### User Specific Views
 
@@ -56,7 +64,15 @@ For example, if you send an incident reporting card in a chat or channel, only t
 
 The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views":::
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+
+* * *
 
 For more information, see [sample for User Specific Views](User-Specific-Views.md).
 
@@ -86,7 +102,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new Unive
 
 ## Adaptive Cards and the new Universal Actions model
 
-Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model).
+Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
 [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of Universal Actions for Adaptive Cards for your solution.
 

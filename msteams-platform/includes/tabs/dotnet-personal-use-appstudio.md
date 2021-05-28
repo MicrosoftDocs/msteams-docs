@@ -9,9 +9,9 @@
 
 - Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
 
-```bash
-/bin/Debug/netcoreapp2.2/Tab.zip
-```
+    ```bash
+    /bin/Debug/netcoreapp2.2/Tab.zip
+    ```
 
 - Upload **Tab.zip** to App Studio.
 
@@ -25,33 +25,33 @@ There's a list of steps in the left-hand side of the Manifest editor, and on the
 
 #### Details: App details
 
-In the *App details* section:
+In the **App details** section:
 
-- Under *Identification* select **Generate** to generate a new App Id for your app.
+- Under **Identification** select **Generate** to generate a new App Id for your app.
 
-- Under *Developer information* update the **Website URL** with your *ngrok* HTTPS URL.
+- Under **Developer information** update the **Website URL** with your **ngrok** HTTPS URL.
 
-- Under *App URLs* update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+- Under **App URLs** update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 #### Capabilities: Tabs
 
 In the *Tabs* section:
 
-- Under *Add a personal tab* select ***Add***. You will be presented with a pop-up dialogue window.
+- Under **Add a personal tab** select **Add**. You will be presented with a pop-up dialogue window.
 
-- Complete the *Name* field.
+- Complete the **Name** field.
 
-- Complete the *Entity Id* field.
+- Complete the **Entity Id** field.
 
-- Update the *Content URL* field with to `https://<yourngrokurl>/personalTab`.
+- Update the **Content URL** field with to `https://<yourngrokurl>/personalTab`.
 
-- Leave the *Website URL* field blank.
+- Leave the **Website URL** field blank.
 
-- Select ***Save***.
+- Select **Save**.
 
 #### Finish: Domains and permissions
 
-In the *Domains and permissions* section, the *Domains from your tabs* field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In the **Domains and permissions** section, the **Domains from your tabs** field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
 ##### Finish: Test and distribute
 
@@ -62,11 +62,11 @@ In the *Domains and permissions* section, the *Domains from your tabs* field sho
 >
 >This warning can be ignored while testing your tab.
 
-In the *Test and distribute* section:
+In the **Test and distribute** section:
 
 - Select **Install**.
 
-- In the pop-up window make sure that *Add for you* is set to *Yes* and *Add to a team or chat* is set to *No*.
+- In the pop-up window make sure that **Add for you** is set to **Yes** and **Add to a team or chat** is set to **No**.
 
 - Select **Install**.
 

@@ -138,7 +138,7 @@ async def on_teams_channel_created(
 	)
 ```
 
-* * *
+---
 
 ### Channel renamed
 
@@ -220,7 +220,7 @@ async def on_teams_channel_renamed(
 	)
 ```
 
-* * *
+---
 
 ### Channel deleted
 
@@ -304,7 +304,7 @@ async def on_teams_channel_deleted(
 	)
 ```
 
-* * *
+---
 
 ### Channel restored
 
@@ -393,7 +393,7 @@ async def on_teams_channel_restored(
 	)
 ```
 
-* * *
+---
 
 ### Team members added
 
@@ -537,7 +537,7 @@ async def on_teams_members_added(
 	return
 ```
 
-* * *
+---
 
 ### Team members removed
 
@@ -649,7 +649,7 @@ async def on_teams_members_removed(
 	return
 ```
 
-* * *
+---
 
 ### Team renamed
 
@@ -729,7 +729,7 @@ async def on_teams_team_renamed(
 	)
 ```
 
-* * *
+---
 
 ### Team deleted
 
@@ -805,7 +805,7 @@ async def on_teams_team_deleted(
 	)
 ```
 
-* * *
+---
 
 ### Team restored
 
@@ -885,7 +885,7 @@ async def on_teams_team_restored(
 	)
 ```
 
-* * *
+---
 
 ### Team archived
 
@@ -965,7 +965,7 @@ async def on_teams_team_archived(
 	)
 ```
 
-* * *
+---
 
 
 ### Team unarchived
@@ -1046,7 +1046,7 @@ async def on_teams_team_unarchived(
 	)
 ```
 
-* * *
+---
 
 Now that you have worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
 
@@ -1168,7 +1168,7 @@ async def on_reactions_added(
 	return
 ```
 
-* * *
+---
 
 ### Reactions removed from bot message
 
@@ -1277,7 +1277,7 @@ async def on_reactions_removed(
 	return
 ```
 
-* * *
+---
 
 ## Installation update event
 
@@ -1315,6 +1315,10 @@ turnContext, CancellationToken cancellationToken) {
 // TO:DO Installation workflow return;
 }
 ```
+
+# [TypeScript](#tab/typescript)
+
+Not available
 
 # [JSON](#tab/json)
 
@@ -1370,7 +1374,12 @@ turnContext, CancellationToken cancellationToken) {
   "locale": "en" 
 }
 ```
-* * *
+
+# [Python](#tab/python)
+
+Not available
+
+---
 
 ## Uninstall event
 

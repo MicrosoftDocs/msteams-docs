@@ -6,13 +6,13 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
 
 - Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
-```html
-`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-`<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
-```
+    ```html
+    `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
+    `<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
+    ```
 
 ### PersonalTab.cshtml
 
 Open **PersonalTab.cshtml** and update the embedded `<script>` tags by calling `microsoftTeams.initialize()`.
 
-Make sure to save your updated *PersonalTab.cshtml*.
+Make sure to save your updated **PersonalTab.cshtml**.

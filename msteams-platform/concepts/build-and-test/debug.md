@@ -67,8 +67,8 @@ You can use any externally addressable service to host your development and prod
 
 To load and run your experience within Microsoft Teams, you need to create a package and upload it into Teams. For more information, see:
 
-* [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md)
-* [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md)
+* [Create the package for your Microsoft Teams app](~/concepts/build-and-test/apps-package.md).
+* [Upload your app in Microsoft Teams](~/concepts/deploy-and-publish/apps-upload.md).
 
 ## Next step
 

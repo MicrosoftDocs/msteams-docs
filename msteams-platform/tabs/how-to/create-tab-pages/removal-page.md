@@ -82,6 +82,6 @@ When a user selects **Remove** from the tab's drop-down menu, Teams will load th
 Following the execution of the remove handler, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 
 >[!NOTE]
->To ensure that an authorized user's control over a tab is not inhibited, Teams will remove the tab in both success and failure cases.\
->Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState()`.\
->When the user selects **Remove** Teams removes the tab after 30 seconds regardless of whether your actions have completed.
+> * To ensure that an authorized user's control over a tab is not inhibited, Teams will remove the tab in both success and failure cases.\
+> * Teams enables the **Remove** button after 5 seconds, even if your tab hasn't called `setValidityState()`.\
+> * When the user selects **Remove** Teams removes the tab after 30 seconds regardless of whether your actions have completed.
