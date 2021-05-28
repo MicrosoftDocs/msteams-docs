@@ -10,7 +10,8 @@ ms.author: surbhigupta
 
 # Integrate people picker control capability 
 
-You can add Teams’ native People picker input control to your web apps by integrating people picker control capability of Teams platform with your web app. You can define search context, single or multi selection, and other configuration to search people within a chat, groups, channels, teams, and across the organization with AAD user list.
+
+People picker is a control to find and pick people. This is a native capability available in Teams platform. You can integrate Teams’ native People picker input control with your web apps to to add it in your web app. You can define search context, single or multi selection, and other configuration to search people within a chat, groups, channels, teams, and across the organization with AAD user list.
 
 This document guides you on how to integrate people picker control capability of Teams platform with your web app.  
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the people picker control capability within your web app. 
