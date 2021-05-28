@@ -183,10 +183,10 @@ In Visual Studio, navigate to the **File**, **Open** and select **project/soluti
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
-* http://localhost:44325/
-* http://localhost:44325/personal
-* http://localhost:44325/privacy
-* http://localhost:44325/tou
+* `http://localhost:44325/`
+* `http://localhost:44325/personal`
+* `http://localhost:44325/privacy`
+* `http://localhost:44325/tou`
 
 ### Review the source code
 

@@ -208,7 +208,7 @@
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: Tabs link unfurling and Stage View
       href: tabs/tabs-link-unfurling.md
-  - name: Quickstarts
+  - name: Create your tab
     items:
     - name: Personal tab with Node.js
       href: tabs/quickstarts/create-personal-tab-node-yeoman.md
