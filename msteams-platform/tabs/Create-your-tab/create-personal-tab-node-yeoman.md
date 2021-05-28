@@ -7,11 +7,11 @@ ms.topic: quickstart
 ms.author: lajanuar
 ---
 
-# Create a personal tab in Microsoft Teams {.tabset}
+# Create a personal tab in Microsoft Teams
 
 Create a Personal tab using the following platforms in Microsoft Teams
 
-## Node.js
+## Node.js {.tabset}
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
@@ -357,3 +357,5 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 ### .csproj
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
+
+---
