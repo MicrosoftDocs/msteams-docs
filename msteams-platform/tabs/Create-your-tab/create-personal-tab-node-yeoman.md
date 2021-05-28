@@ -152,6 +152,8 @@ gulp ngrok-serve
 
 Select the `...` menu from the left panel of Teams, and select your application from the list.
 
+## {-}
+
 ## ASP.NET Core
 
 ### Create a personal tab using ASP.NET Core
@@ -290,6 +292,8 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 * In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+## {-}
 
 ## ASP.NET Core MVC
 
