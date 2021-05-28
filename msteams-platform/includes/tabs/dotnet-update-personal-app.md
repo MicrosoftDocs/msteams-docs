@@ -8,10 +8,10 @@ To display your tab in Teams, you must include the **Microsoft Teams JavaScript 
 
 Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
 
-    ```html
-        `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
-        `<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
-    ```
+```html
+`<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
+`<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
+```
 
 ### PersonalTab.cshtml
 

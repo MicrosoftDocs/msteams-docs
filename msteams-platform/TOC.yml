@@ -211,17 +211,17 @@
   - name: Create your tab
     items:
     - name: Personal tab with Node.js
-      href: tabs/quickstarts/create-personal-tab-node-yeoman.md
+      href: tabs/Create-your-tab/create-personal-tab-node-yeoman.md
     - name: Personal tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-personal-tab-dotnet-core.md
+      href: tabs/Create-your-tab/create-personal-tab-dotnet-core.md
     - name: Personal tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
+      href: tabs/Create-your-tab/create-personal-tab-dotnet-core-mvc.md
     - name: Channel tab with Node.js
-      href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
+      href: tabs/Create-your-tab/create-channel-group-tab-node-yeoman.md
     - name: Channel tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
+      href: tabs/Create-your-tab/create-channel-group-tab-dotnet-core.md
     - name: Channel tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+      href: tabs/Create-your-tab/create-channel-group-tab-dotnet-core-mvc.md
 - name: Build bots
   items:
   - name: Overview
