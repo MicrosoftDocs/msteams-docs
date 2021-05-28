@@ -154,7 +154,7 @@ Select the `...` menu from the left panel of Teams, and select your application 
 
 ## ASP.NET Core
 
-## Create a personal tab using ASP.NET Core
+### Create a personal tab using ASP.NET Core
 
 This quickstart takes you through the steps to create a custom personal tab using C#, ASP.NET Core and ASP.NET Core MVC. It also helps you finalize your app manifest and upload your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
@@ -293,11 +293,11 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 
 ## ASP.NET Core MVC
 
-## Create a personal tab using C# and ASP.NETCore MVC
+### Create a personal tab using C# and ASP.NETCore MVC
 
 This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-## What you'll learn
+### What you'll learn
 
 * Review the source code.
 * Update your application.
@@ -306,7 +306,7 @@ This quickstart takes you through the steps to create a custom personal tab with
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-## Get the source code
+### Get the source code
 
 Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code, download the zip folder and extract the files or clone the following sample repository into your new directory:
 
@@ -322,7 +322,7 @@ To build and run your application press **F5** or select **Start Debugging** fro
 * `http://localhost:44335/privacy`
 * `http://localhost:44335/tou`
 
-## Review the source code
+### Review the source code
 
 ### Startup.cs
 
@@ -357,5 +357,3 @@ These files must be zipped in an app package to upload your tab to Teams. Micros
 ### .csproj
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file, see the code that creates and updates your zip folder when the application builds:
-
----
