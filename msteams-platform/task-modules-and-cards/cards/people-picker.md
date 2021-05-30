@@ -26,32 +26,34 @@ Here's another scenario where an employee is looking for support regarding an is
 The initial card that is sent out would look like below:  
 ![People Picker Base Card](../../assets/images/cards/peoplepicker-base-card.png)  
 The issue is initially unassigned. Experts in the group can view the card, understand the employee's issue and search for the right person to assign this to.  
-![People Picker Search](../../assets/images/cards/peoplepicker-card-search.png)  
+![People Picker Search Experience](../../assets/images/cards/peoplepicker-card-search.png)  
 On finding the right person to resolve this issue, clicking on the person's name in the search results would populate the picker control as follows:  
 ![People Picker Name Selected](../../assets/images/cards/peoplepicker-name-selected.png)  
 Once selected, clicking on the Assign button would send this information back to the bot for further processing and notifying the selected person of the issue.  
 
-# Overview
+## Overview
 
 Given a set of `choices`, an [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control can be used in multiple forms like a dropdown, expanded single selection(radio buttons) or as a multi select control(check boxes) based on the `style` and `isMultiSelect` props.  
 
 People Picker is implemented as an extension of the Input.ChoiceSet control.  
 
-## Updates to the Input.ChoiceSet schema
+### Updates to the Input.ChoiceSet schema
 
 The following are the new additions to the Input.ChoiceSet schema to enable a People Picker experience on the card.  
 
-### Input.Choiceset
+#### Input.Choiceset
+
 |Property |Type |Required |Description |
 |--|--|--|--|
 |**choices.data** |**Data.Query** |No |Enables dynamic auto-complete as the user types, by fetching results from the dataset specified |
 
-### Data.Query
+#### Data.Query
+
 |Property |Type |Required |Description |
 |--|--|--|--|
 |**dataset** |string |Yes |The type of data that should be fetched dynamically|   
 
-### dataset
+#### dataset
 The following are the pre-defined values that can be provided as a **dataset** for people picker:   
 
 |dataset|Search Scope
@@ -64,7 +66,7 @@ The following are the pre-defined values that can be provided as a **dataset** f
 > [!NOTE]
 > Searching for all of the organization's members is currently only supported in 1:1 Chats with Bots, Adaptive Card Task Modules and Tabs. It is not supported in other 1:1 Chats, group chats or channels.  
 
-## Usage
+### Usage
 Here's a sample json for creating a People Picker with Org search enabled:
 
 ```json 
@@ -101,27 +103,28 @@ Here's a sample json for creating a People Picker with Org search enabled:
     "version": "1.2"
 }
 ```  
-![People Picker Search](../../assets/images/cards/peoplepicker-org-search.png)  
+![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)  
 To enable searching within a conversation's member list, simply use the appropriate dataset defined in the table above. `isMultiSelect` property can be used to enable selecting multiple people in the control. By default, it is set to false and so allows selecting only one person.
 
 
-### Data Submission
+#### Data Submission
 Like every other Input control in Adaptive Cards, when a Submit Action is performed on the card, all the inputs provided in the card is sent back to the bot via an invoke. The invoke payload consists of a dictionary of input IDs to their corresponding values.  
 
 In the case of People Picker, when a person is selected in the control, on submission, the `AAD ID` of the person is the value that is sent back. The `AAD ID` is a string(GUID) and uniquely identifies a user in a directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
+
 |value of `isMultiSelect`|Format|
 |--|--|
 |false _(single select)_|The `AAD ID` of the selected user as a string|
-|true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concantenated with a 'comma'|
+|true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concantenated with a 'comma'|  
 
-### Pre-Selection of People
+#### Pre-Selection of People
 People Picker supports pre-selection of people in the control when creating and sending an Adaptive Card.  
 Input.ChoiceSet supports the `value` property which can be used to pre-select a person. The format of this `value` property is the same as the submitted value format discussed above.  
 To pre-select a person in the control, specify the `AAD ID` of the person as the `value`. To pre-select multiple people (`isMultiSelect` should be _true_), specify a comma separated string of `AAD ID`s.
 
-### Static Choices
+#### Static Choices
 Input.ChoicSet supports specifying `choices` statically in the json. Generally, these are used to create the choices from which the user can pick.
 <br><br>
 Static `choices` can be used in conjunction with dynamic datasets. 
