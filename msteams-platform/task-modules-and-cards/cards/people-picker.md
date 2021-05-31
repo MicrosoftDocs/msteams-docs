@@ -4,32 +4,36 @@ description: Describes how to use the People Picker control in Adaptive Cards
 localization_priority: Normal
 keywords: Adaptive Cards People Picker
 ms.topic: reference
+ms.author: surbhigupta
 ---
+
 # People Picker in Adaptive Cards
 
-This document describes how a People Picker can be added to your Adaptive Cards as an input control through which users can search for people in their Organization or within the context of the conversation that the card is sent in. 
+You can add a People Picker as an input control to your Adaptive Card through which users can search for people and pick them. You can search within the context of the conversation, such as a chat, channel or an organization that the card is sent in. 
 
-To know more about Adaptive Cards, visit the [Cards Reference](cards-reference.md) section.
+For more information about Adaptive Cards, see [Cards Reference](cards-reference.md).
 
-## Scenarios where People Picker in Adaptive Cards come handy
+## Advantages of People Picker in Adaptive Cards
 
-* **Approvals - Approver Reassignment Scenario**:  
-Mary works in Sales at Contoso. She wanted to give a discount to Eric as he is a long time customer and she thinks the discount would help grow the relationship. She requested approval for a discount to Eric on their department’s Teams Channel and added her manager Wendy as the approver.  
-Wendy saw the request on the channel but realized this would need approval from someone senior and reassigned the approval request to Daniela. Daniela approves the request. 
+Following examples show how the People Picker in Adaptive Cards is used in different scenarios:
 
-* **Incident Management**:   
-June works as a safety inspector at Kenya Port Authority who use an incident management app on Teams to track incidents. She recently noticed a fire hydrant not working properly and raised an issue for the same. Not knowing who the responsible point of contact for hydrants was, she tagged Ron, the head of the administration department.  
-Ron saw the card and picked Vin and Reggie from the card itself and allocated the incident to them. 
+* People Picker in Adaptive Cards is used in sales department to request, assign and re-assign the approval to suitable people based on the requirement.
+* It is used in incident management app on Teams to track incidents and notify them to the correct person for fast action. 
+* It is used in technical support to resolve issues, such as VPN connectivity. In this case, the person can raise an issue ticket with a Help bot and send it to a group with experts who can help with this issue.
 
-* **Tech Support**:  
-Here's another scenario where an employee is looking for support regarding an issue with VPN connectivity. The employee can use a Help bot to create a ticket for the issue which is then sent to a group with experts who can help with this issue.  
-The initial card that is sent out would look like below:  
+The following image shows the initial card that is sent out: 
+ 
 ![People Picker Base Card](../../assets/images/cards/peoplepicker-base-card.png)  
-The issue is initially unassigned. Experts in the group can view the card, understand the employee's issue and search for the right person to assign this to.  
+
+The issue is initially unassigned. Experts in the group can view the card, understand the employee's issue and search for the correct person to assign the issue. The following image shows the issue assignment to the correct person:
+
 ![People Picker Search Experience](../../assets/images/cards/peoplepicker-card-search.png)  
-On finding the right person to resolve this issue, clicking on the person's name in the search results would populate the picker control as follows:  
-![People Picker Name Selected](../../assets/images/cards/peoplepicker-name-selected.png)  
-Once selected, clicking on the Assign button would send this information back to the bot for further processing and notifying the selected person of the issue.  
+
+After finding the correct person to resolve the issue, select the person's name in the search results. It populates the picker control as follows:
+
+![People Picker Name Selected](../../assets/images/cards/peoplepicker-name-selected.png) 
+
+After selection, select **Assign**. This sends the information back to the bot for further processing and notifying the selected person of the issue.  
 
 ## Overview
 
@@ -64,10 +68,10 @@ The following are the pre-defined values that can be provided as a **dataset** f
 <br> 
 
 > [!NOTE]
-> Searching for all of the organization's members is currently only supported in 1:1 Chats with Bots, Adaptive Card Task Modules and Tabs. It is not supported in other 1:1 Chats, group chats or channels.  
+> Currently, search for all the members across the organization is supported in 1:1 chats with bots, task modules with Adaptive Card and tabs only. It is not supported in other 1:1 chats, group chats or channels.  
 
-### Usage
-Here's a sample json for creating a People Picker with Org search enabled:
+### Example
+Following is an example code for creating a People Picker with Organization search enabled:
 
 ```json 
 {
@@ -103,9 +107,10 @@ Here's a sample json for creating a People Picker with Org search enabled:
     "version": "1.2"
 }
 ```  
-![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)  
-To enable searching within a conversation's member list, simply use the appropriate dataset defined in the table above. `isMultiSelect` property can be used to enable selecting multiple people in the control. By default, it is set to false and so allows selecting only one person.
 
+To enable search within a conversation's member list, use the appropriate dataset defined in the following table. `isMultiSelect` property is used to enable selecting multiple people in the control. It is set to false by default and allows to select one person only.
+
+![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
 #### Data Submission
 Like every other Input control in Adaptive Cards, when a Submit Action is performed on the card, all the inputs provided in the card is sent back to the bot via an invoke. The invoke payload consists of a dictionary of input IDs to their corresponding values.  
