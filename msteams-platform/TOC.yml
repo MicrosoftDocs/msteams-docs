@@ -70,7 +70,7 @@
       href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Add Teams tab to SharePoint
+  - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
@@ -208,6 +208,8 @@
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: Tabs link unfurling and Stage View
       href: tabs/tabs-link-unfurling.md
+    - name: Create conversational tabs
+      href: tabs/how-to/conversational-tabs.md
   - name: Create your tab
     items:
     - name: Personal tab with Node.js
