@@ -36,3 +36,5 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Scan QR or barcode using [scanner control](qr-barcode-scanner-capability.md).
 * Record audio through microphone.
 * Share location using [location picker](location-capability.md).
+
+Also, you can add [people picker control](people-picker-control.md) to your web app to search and pick people.
