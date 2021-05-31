@@ -162,13 +162,13 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 </details>
 
-## Add a configuration page to your messaging extension on GitHub
+## Add a configuration page to your messaging extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## Code sample
 
-The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and Bot Service authentication. The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
+The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples). The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
@@ -177,7 +177,7 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 ## Additional code sample
 
 > [!div class="nextstepaction"]
-> [View more Bot Framework Samples on GitHub](https://github.com/microsoft/BotBuilder-Samples)
+> [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
 ## Next steps
 
