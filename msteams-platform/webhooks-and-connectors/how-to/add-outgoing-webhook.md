@@ -14,7 +14,7 @@ keywords: teams tabs outgoing webhook actionable message verify webhook
 
 The outgoing webhooks acts as a bot and searches for messages in channels using **@mention**. They send notifications to external web services and responds with rich messages, which include cards and images, without going through the entire process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
-## Key features of outgoing webhooks
+## Key features of outgoing webhook
 
 The following table provides the features and description of outgoing webhooks:
 
@@ -64,8 +64,6 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 > The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
 ## Scenario to add outgoing webhooks to your app
-
-Following is the scenario and example of adding outgoing webhooks to your app:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
 * Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.

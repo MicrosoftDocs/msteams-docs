@@ -20,6 +20,8 @@ Incoming webhook allows any external apps to share content in Teams channels. Th
 
 ## Key features of incoming webhook
 
+The following table provides the features and description of incoming webhook:
+
 | Features | Description |
 | ------- | ----------- |
 |Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you choose to send messages through cards, you must use the actionable message card format. For more information, see [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
