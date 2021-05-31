@@ -23,12 +23,6 @@ The following table provides the features and description of outgoing webhooks:
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content, for example, rich text, images, cards, and emojis. Although outgoing webhooks can use cards, they cannot use any card actions except for `openURL`.|
 | Teams API method support|Outgoing webhooks sends an HTTP POST to a web service and gets a response. They cannot access any other APIs like retrieve the roster or list of channels in a team.|
 
-## Code sample
-
-|**Sample name** | **Description** | **.NET** | **Node.js** |
-|----------------|------------------|--------|----------------|
-| Outgoing webhooks	| Samples to create custom bots to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
-
 ## Create an outgoing webhook
 
 Create outgoing webhooks and add custom bots to Teams.
@@ -66,6 +60,60 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 
 >[!NOTE]
 > The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
+
+## Scenario to add outgoing webhooks to your app
+
+Following is the scenario and example of adding outgoing webhooks to your app:
+
+* Scenario: Push change status notifications on a Teams channel database server to your app.
+* Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.
+
+# [URL JSON payload](#tab/urljsonpayload)
+**Create a URL on your app's server to accept and process a POST request with a JSON payload**
+
+Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. For more information see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+
+Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
+
+# [Verify HMAC token](#tab/verifyhmactoken)
+**Create a method to verify the outgoing webhook HMAC token**
+#### HMAC signature for testing with code example
+
+Using example of inbound message and ID: "contoso" of SigningKeyDictionary of {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
+
+Use the value "HMAC 03TCao0i55H1eVKUusZOTZRjtvYTs+mO41mPL+R1e1U=" in the authorization of request header.
+
+To ensure that your service is receiving calls only from actual Teams clients, Teams provides an HMAC code in the HTTP `hmac` authorization header. Always include the code in your authentication protocol.
+
+Your code must always validate the HMAC signature included in the request as follows:
+
+* Generate the HMAC token from the request body of the message. There are standard libraries to do this on most platforms (see [Crypto](https://nodejs.org/api/crypto.html#crypto_crypto) for Node.js or see [Teams webhook sample](https://github.com/OfficeDev/microsoft-teams-sample-outgoing-webhook/blob/23eb61da5a18634d51c5247944843da9abed01b6/WebhookSampleBot/Models/AuthProvider.cs) for C\#). Microsoft Teams uses standard SHA256 HMAC cryptography. You need to convert the body to a byte array in UTF8.
+* Compute the hash from the byte array of the security token provided by Teams when you registered the outgoing webhook in the Teams client. See [create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
+* Convert the hash to a string using UTF-8 encoding.
+* Compare the string value of the generated hash with the value provided in the HTTP request.
+
+# [Method to respond](#tab/methodtorespond)
+**Create a method to send a success or failure response**
+
+Responses from your outgoing webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
+
+### Example response
+
+```json
+{
+    "type": "message",
+    "text": "This is a reply!"
+}
+```
+
+---
+
+## Code sample
+
+|**Sample name** | **Description** | **.NET** | **Node.js** |
+|----------------|------------------|--------|----------------|
+| Outgoing webhooks	| Samples to create custom bots to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
+
 ## See also
 * [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)

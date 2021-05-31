@@ -311,8 +311,6 @@
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create an Office 365 Connector
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Create actionable messages
-    href: webhooks-and-connectors/how-to/create-actionable-messages.md 
   - name: Send messages to incoming webhooks and connectors
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
