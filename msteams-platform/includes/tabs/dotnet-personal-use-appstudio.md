@@ -1,4 +1,4 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab to Teams using App Studio
 
 >[!NOTE]
 > Use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json**, and build the solution again to create the **Tab.zip** file to upload.
@@ -45,9 +45,9 @@ In the **App details** section:
 
 #### Capabilities: Tabs
 
-In the *Tabs* section:
+In the **Tabs** section:
 
-* Under *Add a personal tab*, select **Add**. You get a pop-up dialogue window.
+* Under *Add a personal tab*, select **Add**. You will get a pop-up dialogue window.
 
 * Complete the *Name* and *Entity*.
 
@@ -55,11 +55,11 @@ In the *Tabs* section:
 
 * Leave the *Website URL* blank.
 
-* Select ***Save***.
+* Select **Save**.
 
 #### Finish: Domains and permissions
 
-In *Domains and permissions* section, the *Domains from your tabs* must contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+In *Domains and permissions* section, the *Domains from your tabs* must contain your ngrok URL without the HTTPS prefix. For example, `<yourngrokurl>.ngrok.io/`.
 
 ##### Finish: Test and distribute
 
@@ -72,7 +72,7 @@ In *Domains and permissions* section, the *Domains from your tabs* must contain 
 
 In the **Test and distribute** section:
 
-* Select **Install**.
+* Under *Install*, select **Install**. You will get a pop-up dialogue window.
 
 * In the pop-up window, select *Add for you* to *Yes*, and *Add to a team or chat* to *No*.
 

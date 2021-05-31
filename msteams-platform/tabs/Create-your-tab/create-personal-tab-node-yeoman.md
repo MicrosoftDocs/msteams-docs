@@ -7,18 +7,16 @@ ms.topic: quickstart
 ms.author: lajanuar
 ---
 
-# {.tabset}
+[Node.js](#tab/nodejs)
 
-Create a Personal tab using the following platforms in Microsoft Teams
-
-## Node.js
+# Create a custom personal tab using Node.js and Yeoman Generator for Microsoft Teams
 
 This quickstart takes you through the steps to create a custom personal tab using Node.js and the Teams Yeoman generator.
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-### What you'll learn
+## What you'll learn
 
 * Generate a project.
 * Create personal tab.
@@ -28,15 +26,18 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Create a configurable or static tab**
-Use the arrow keys to select static tab.
+The following table provides the additional details of the required values:
+
+| **Question** | **Value** |
+|-------------|-------------|
+| **Create a configurable or static tab** | Use the arrow keys to select static tab. |
 
 > [!IMPORTANT]
 > The path component **yourDefaultTabNameTab** referenced in this quickstart is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
 >
 > For example: DefaultTabName: **MyTab** => **/MyTabTab/**
 
-### Create a personal tab
+## Create a personal tab
 
 To add a personal tab to your application, you must create a content page and update the existing files.
 
@@ -107,7 +108,7 @@ To add a personal tab to your application, you must create a content page and up
 
 1. Save the updated **Tab.ts** file. Your tab code is complete.
 
-### Build and run your application
+## Build and run your application
 
 Perform the following steps through command prompt in your project directory:
 
@@ -117,7 +118,7 @@ Perform the following steps through command prompt in your project directory:
 
     ![personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
-### Establish a secure tunnel to your tab
+## Establish a secure tunnel to your tab
 
 Microsoft Teams is an entirely cloud-based product and requires your tab content to be available from the cloud using HTTPS endpoints. Teams does not allow local hosting, you must either publish your tab to a public URL or use a proxy that exposes your local port to an internet-facing URL.
 
@@ -134,7 +135,7 @@ gulp ngrok-serve
 > [!IMPORTANT]
 > When your tab is uploaded to Microsoft Teams through *ngrok* and successfully saved, you can view your tab in Teams until your tunnel session ends.
 
-### Upload your application to Teams
+## Upload your application to Teams
 
 1. Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
@@ -148,17 +149,17 @@ gulp ngrok-serve
 
 1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and select **Open**. Your tab is uploaded into Teams.
 
-### View your personal tabs
+## View your personal tabs
 
 Select the `...` menu from the left panel of Teams, and select your application from the list.
 
-## ASP.NET Core
+# [ASP.NET Core](#tab/aspnetcore)
 
-### Create a personal tab using ASP.NET Core
+## Create a personal tab using ASP.NET Core
 
 This quickstart takes you through the steps to create a custom personal tab using C#, ASP.NET Core and ASP.NET Core MVC. It also helps you finalize your app manifest and upload your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-### What you'll learn
+## What you'll learn
 
 * Review the source code.
 * Update your application.
@@ -167,7 +168,7 @@ This quickstart takes you through the steps to create a custom personal tab usin
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-### Get the source code
+## Get the source code
 
 We have provided the following simple project to get you started:
 
@@ -188,9 +189,9 @@ To build and run your application press **F5** or select **Start Debugging** fro
 * `http://localhost:44325/privacy`
 * `http://localhost:44325/tou`
 
-### Review the source code
+## Review the source code
 
-#### Startup.cs
+### Startup.cs
 
 This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
@@ -206,11 +207,11 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-#### wwwroot
+### wwwroot
 
 In ASP.NETCore, The application looks for the static files in this folder.
 
-#### Index.cshtml
+### Index.cshtml
 
 ASP.NETCore treats **index** files as default or home page for the site. When your browser URL points to the root, **index.cshtml** is displayed as the home page for your application.
 
@@ -285,19 +286,19 @@ Verify that **ngrok** is up and running by opening your browser and navigating t
 >[!TIP]
 >You must run your application in Visual Studio and ngrok to complete this quickstart. When you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request to Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
 
-### Run your application
+## Run your application
 
 * In Visual Studio press **F5** or select **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
-## ASP.NET Core MVC
+# [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-### Create a personal tab using C# and ASP.NETCore MVC
+## Create a personal tab using C# and ASP.NETCore MVC
 
 This quickstart takes you through the steps to create a custom personal tab with C# and ASP.NetCore MVC, and helps you finalize your app manifest and deploy your tab in Teams using [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md).
 
-### What you'll learn
+## What you'll learn
 
 * Review the source code.
 * Update your application.
@@ -306,7 +307,7 @@ This quickstart takes you through the steps to create a custom personal tab with
 
 [!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
 
-### Get the source code
+## Get the source code
 
 Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code, download the zip folder and extract the files or clone the following sample repository into your new directory:
 
@@ -322,7 +323,7 @@ To build and run your application press **F5** or select **Start Debugging** fro
 * `http://localhost:44335/privacy`
 * `http://localhost:44335/tou`
 
-### Review the source code
+## Review the source code
 
 ### Startup.cs
 

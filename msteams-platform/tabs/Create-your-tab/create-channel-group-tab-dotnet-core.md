@@ -36,17 +36,17 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 # [ASP.NET Core](#tab/aspnetcore)
 
-In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
+In Visual Studio, navigate to  **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application loaded properly:
 
-* http://localhost:44355
-* http://localhost:44355/privacy
-* http://localhost:44355/tou
+* `http://localhost:44355`
+* `http://localhost:44355/privacy`
+* `http://localhost:44355/tou`
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-In Visual Studio, navigate to  **File** **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
+In Visual Studio, navigate to  **File**, **Open** and select **project/solution**. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
 
 To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify that the application loaded properly:
 
@@ -57,6 +57,8 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 ---
 
 ## Review the source code
+
+In the Visual Studio Solution Explorer window, open the following files and quickly review the source code.
 
 ### Startup.cs
 
@@ -102,7 +104,7 @@ ASP.NETCore treats *Index* files as default or home page for the site. When your
 
 #### Shared
 
-The partial view markup *_Layout.cshtml* contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
+The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
 
 ### Controllers
 
@@ -112,13 +114,13 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 ### AppManifest folder
 
-This folder contains the following required app package files:
+This folder contains the following app package files:
 
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
 
-These files must be zipped in an app package to upload your tab to Teams. When a user add or updates the tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
+These must be zipped in an app package to upload your tab to Teams. When a user add or updates the tab, Microsoft Teams loads the `configurationUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
 
 ### .csproj
 

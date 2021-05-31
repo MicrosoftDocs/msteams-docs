@@ -20,6 +20,8 @@ This quickstart takes you through the steps to create a custom channel and group
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
+The following table provides the additional details of the required values:
+
 | **Question** | **Values** |
 |-------------|-------------|
 | **Do you want to create a configurable or static tab?** | Use the arrow keys to select configurable tab. |

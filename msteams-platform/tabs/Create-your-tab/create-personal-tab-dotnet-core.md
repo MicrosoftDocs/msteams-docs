@@ -41,10 +41,10 @@ In Visual Studio, navigate to the **File**, **Open** and select **project/soluti
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
-* http://localhost:44325/
-* http://localhost:44325/personal
-* http://localhost:44325/privacy
-* http://localhost:44325/tou
+* `http://localhost:44325/`
+* `http://localhost:44325/personal`
+* `http://localhost:44325/privacy`
+* `http://localhost:44325/tou`
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
@@ -52,15 +52,15 @@ In Visual Studio, navigate to the **File**, **Open** and select **project/soluti
 
 To build and run your application press **F5** or select **Start Debugging** from the **Debug** menu. In a browser enter the following URLs and verify the application has loaded properly:
 
-* http://localhost:44335
-* http://localhost:44335/privacy
-* http://localhost:44335/tou
+* `http://localhost:44335`
+* `http://localhost:44335/privacy`
+* `http://localhost:44335/tou`
 
 ---
 
 ## Review the source code
 
-In the Visual Studio Solution Explorer window, open the following files to quickly review the source code.
+In the Visual Studio Solution Explorer window, open the following files and quickly review the source code.
 
 ### Startup.cs
 
@@ -98,11 +98,11 @@ ASP.NETCore treats **index** files as default or home page for the site. When yo
 
 #### Home
 
-ASP.NETCore treats *Index* files as default or home page for the site. When your browser URL points to the root of the site, *Index.cshtml* is displayed as the home page for your application.
+ASP.NETCore treats *Index* files as default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 #### Shared
 
-The partial view markup *_Layout.cshtml* contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
+The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also reference the Teams Library.
 
 ### Controllers
 
@@ -114,9 +114,9 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 
 This folder contains the following app package files:
 
-- A **full color icon** measuring 192 x 192 pixels.
-- A **transparent outline icon** measuring 32 x 32 pixels.
-- A **manifest.json** file that specifies the attributes of your app.
+* A **full color icon** measuring 192 x 192 pixels.
+* A **transparent outline icon** measuring 32 x 32 pixels.
+* A **manifest.json** file that specifies the attributes of your app.
 
 These must be zipped in an app package to upload your tab to Teams. Microsoft Teams loads the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.
 
@@ -148,7 +148,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 **To establish a secure tunnel**
 
-In a command prompt, navigate to the root of your project directory run the following command:
+In a command prompt, navigate to the root of your project directory and run the following command:
 
 # [ASP.NET Core](#tab/aspnetcore)
 
@@ -170,7 +170,7 @@ Ngrok listens the requests from the internet and routes to your application when
 
 You must keep the command prompt while ngrok is running, you need it later to write down the URL.
 
-Verify that **ngrok** is up and running by opening your browser and navigating to your content page through the ngrok HTTPS URL provided in your command prompt window.
+Open your browser, enter the ngrok HTTPS URL provided in your command prompt window and verify that **ngrok** is up and running by navigating to your content page.
 
 >[!TIP]
 >You must run your application in Visual Studio and ngrok to complete this quickstart. If you stop running your application in Visual Studio to work on it, **keep ngrok running**. It continues to listen and resume routing your application's request to Visual Studio. When you restart the ngrok service, it returns the new URL, and you need to update all locations that use the old URL.
