@@ -19,23 +19,33 @@ You can find more comprehensive design guidelines, including elements that you c
 
 ## Add a meeting extension
 
-You can add a meeting extension before and during meetings. You also can add an app for a specific meeting directly from the Teams store (AppSource).
+Users can add a meeting extension before and during meetings. They also can add an app for a specific meeting directly from the Teams store.
 
 ### Add before a meeting
 
-In the meeting details, select **Add a tab +** to open the app flyout and find apps optimized for meetings.
+In the meeting details, users can select **Add a tab +** to open the app flyout and find apps optimized for meetings.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-before-meeting.png" alt-text="Example shows how to add a meeting extension before a meeting." border="false":::
 
 ### Add during a meeting
 
-In a meeting, select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and choose the app you want.
+# [Desktop](#tab/desktop)
+
+In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and choose the app they want.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." border="false":::
 
+# [Mobile](#tab/mobile)
+
+In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: and choose the app they want.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
+
+---
+
 ## Before a meeting
 
-Prior to your meeting, you can add content in the tab. The following example shows a draft survey question that people will answer during the call.
+Prior to a meeting, users can add content in the tab. The following example shows a draft survey question that people will answer during the call.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." border="false":::
 
@@ -58,7 +68,7 @@ Use one of the following Teams UI templates to help design your meeting tab:
 * [Dashboard](../../concepts/design/design-teams-app-ui-templates.md#dashboard): A dashboard is a canvas containing multiple cards that provide an overview of data or content.
 * [Form](../../concepts/design/design-teams-app-ui-templates.md#form): Forms are for collecting, validating, and submitting user input in a structured way.
 * [Empty state](../../concepts/design/design-teams-app-ui-templates.md#empty-state): The empty state template can be used for many scenarios, including sign in, first-run experiences, error messages, and more.
-* [Left nav](../../concepts/design/design-teams-app-ui-templates.md#left-nav): The left nav template can help if your tab requires some navigation. In general, you should keep tab navigation to a minimum.
+* [Left nav](../../concepts/design/design-teams-app-advanced-ui-components.md#left-nav): The left nav component can help if your tab requires some navigation. In general, you should keep navigation to a minimum.
 
 ## Use an in-meeting tab
 
@@ -72,7 +82,15 @@ People might use the in-meeting tab to:
 * Create a poll, survey, or task item for the meeting participants.
 * Display notes relevant to the meeting. For example, information about a sales lead.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab on mobile." border="false":::
+
+---
 
 ### Anatomy: In-meeting tab
 
@@ -118,7 +136,15 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 * Submit approvals
 * Get reminders
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog on mobile." border="false":::
+
+---
 
 ### Anatomy: In-meeting dialog
 

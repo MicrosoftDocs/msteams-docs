@@ -234,7 +234,7 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ### The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
 
-1. [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
+1. [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.
 1. Create your adaptive card JSON file:
 
     ```json

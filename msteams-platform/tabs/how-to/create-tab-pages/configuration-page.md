@@ -98,7 +98,7 @@ Choosing the relative button triggers either `saveGray()` or `saveRed()`, and in
 1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
 1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
 
-The configuration page code informs the Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/_settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
+The configuration page code informs the Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [Settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). In the last step, `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ The configuration page code informs the Teams that the configuration requirement
 
 Your tab might require contextual information to display relevant content. Contextual information further enhances your tab's appeal by providing a more customized user experience.
 
-For more information on the properties used for tab configuration, see [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
+For more information on the properties used for tab configuration, see [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
 1. Insert URL query string placeholders in your manifest's `configurationURL`.
 
@@ -152,7 +152,7 @@ document.write(getId());
 
 ### Use the `getContext()` function to retrieve context
 
-The `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/context?view=msteams-client-js-latest&preserve-view=true) when invoked. Add this function to the configuration page to retrieve context values:
+The `microsoftTeams.getContext((context) => {})` function retrieves the [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) when invoked. Add this function to the configuration page to retrieve context values:
 
 ```html
 <!-- `userPrincipalName` will render in the span with the id "user". -->
@@ -191,4 +191,4 @@ microsoftTeams.settings.setSettings({
 
 ## Mobile clients
 
-If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
+If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).

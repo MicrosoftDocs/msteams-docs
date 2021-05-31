@@ -31,20 +31,36 @@ Task modules can be launched from almost anywhere in your app.
 
 ## Anatomy
 
+Task modules provide a flexible surface for hosted app experiences. They're built using an iframe (desktop) or webview (mobile), so you can design task modules with our UI templates (recommended) or from scratch.
+
+They can also be built with the [Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md) framework, which can be a simpler and faster way to facilitate common scenarios (such as forms).
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module." border="false":::
-
-Task modules are very flexible surfaces. They can be built with iframes, pulling in other UI templates, to host partner-built experiences. This is preferred for the most polished experience.
-
-They can also be built with the [Adaptive Card](../../task-modules-and-cards/cards/design-effective-cards.md) framework, which can be a simpler and faster way to execute common scenarios (such as forms).
 
 |Counter|Description|
 |----------|-----------|
 |1|**App icon**|
 |2|**App name**: Full name of your app.|
 |3|**Header**: Make headers clear and concise. Describe the task you want users to complete.
-|4|**Close button**: Allows users to find app content they want to insert.|
+|4|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
 |5|**iframe**: Responsive space that hosts your app content.|
 |6|**Actions (optional)**: Buttons related to your app content.|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-task-module-anatomy.png" alt-text="Illustration showing the UI anatomy of a task module on mobile." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**Header**: Make headers clear and concise. Describe the task you want users to complete.
+|2|**App name**: Full name of your app.|
+|3|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
+|4|**webview**: Responsive space that hosts your app content.|
+|5|**Actions (optional)**: Buttons related to your app content.|
+
+---
 
 ## Designing with UI templates
 
@@ -58,45 +74,101 @@ Consider using templates for common layouts inside your task modules. Each one i
 
 ### List
 
-Lists work nicely in a task module because they’re easy to scan.
+Lists work nicely in a task module because they're easy to scan.
+
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/list.png" alt-text="Example list in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-list.png" alt-text="Example list in a task module on mobile." border="false":::
+
+---
 
 ### Form
 
 Task modules are a great place to surface forms with sequential user inputs and inline validation. You can leverage Adaptive Cards as a way to embed form elements.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/form.png" alt-text="Example form in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-form.png" alt-text="Example form in a task module on mobile." border="false":::
+
+---
 
 ### Sign in
 
 Create a focused sign in or sign-up flow with a series of task modules, letting users move easily through sequential steps.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/sign-in.png" alt-text="Example sign in experience in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-sign-in.png" alt-text="Example sign in experience in a task module on mobile." border="false":::
+
+---
 
 ### Media
 
 Embed media content in a task module for a focused viewing experience.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/media.png" alt-text="Example media content in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-media.png" alt-text="Example media content in a task module on mobile." border="false":::
+
+---
 
 ### Empty state
 
 Use for welcome, error, and success messages.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/empty-state.png" alt-text="Example empty state in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-empty-state.png" alt-text="Example empty state in a task module on mobile." border="false":::
+
+---
 
 ### Image gallery
 
-Embed a gallery carousel in an iframe.
+Embed a gallery carousel in an iframe (desktop) or webview (mobile).
+
+# [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/task-module/image-gallery.png" alt-text="Example image gallery in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-image-gallery.png" alt-text="Example image gallery in a task module on mobile." border="false":::
+
+---
 
 ### Poll
 
 This example shows poll results launched from an Adaptive Card. The poll can be placed inside a task module, too.
 
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="../../assets/images/task-module/poll.png" alt-text="Example poll in a task module." border="false":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/task-module/mobile-poll.png" alt-text="Example poll in a task module on mobile." border="false":::
+
+---
 
 ## Best practices
 
@@ -181,7 +253,7 @@ See the forms UI template for guidelines on inline error handling.
 
 #### Don't: Put error messages in dialogs
 
-Don't pop an error message in a dialog on top of a task modules. It creates a confusing user experience.
+Don't pop an error message in a dialog on top of a task module. It creates a confusing user experience.
 
    :::column-end:::
 :::row-end:::
