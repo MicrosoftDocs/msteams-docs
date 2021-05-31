@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Task modules
 
-Task modules permit you to create modal pop-up experiences in your Teams application. In the pop-up you can:
+Task modules permit you to create modal pop-up experiences in your Teams application. In the pop-up, you can:
 
 * Run your own custom HTML or JavaScript code.
 * Show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video.

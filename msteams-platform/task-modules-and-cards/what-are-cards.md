@@ -53,7 +53,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 > [!NOTE]
 > * All native adaptive card schema elements, except `Action.Submit`, are fully supported.
-> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](https://docs.microsoft.com/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+> * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Adaptive Cards with incoming webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using incoming webhooks in Teams from their web service.
 
