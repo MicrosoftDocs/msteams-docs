@@ -37,4 +37,4 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Record audio through microphone.
 * Share location using [location picker](location-capability.md).
 
-Also, you can add [people picker control](people-picker-control.md) to your web app to search and pick people.
+Also, you can enhance the web app experience with Teams platform by integrating [people picker control](people-picker-control-capability.md) to search and pick people.

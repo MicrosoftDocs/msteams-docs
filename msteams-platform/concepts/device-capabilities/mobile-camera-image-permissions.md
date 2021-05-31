@@ -253,5 +253,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [Integrate People Picker control capability in Teams](people-picker-capability.md)
+* [Integrate People Picker control capability in Teams](people-picker-control-capability.md)
 
