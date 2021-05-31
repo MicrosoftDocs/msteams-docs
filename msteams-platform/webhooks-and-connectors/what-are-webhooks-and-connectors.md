@@ -9,9 +9,7 @@ ms.author: anclear
 
 # Webhooks and connectors
 
-Webhooks and connectors are simple ways to connect your web services to channels and teams in Microsoft Teams.
-A webhook is a user-defined HTTP callback that notifies users about any action that has taken place in Microsoft Teams channel. It is a way for an app to get real-time data.
-Connectors are incoming webhooks that provide a URL to post messages anytime in a specified channel.
+Webhooks and connectors help to connect the web services to channels and teams in Microsoft Teams. Webhooks are user-defined HTTP callback that notifies users about any action that has taken place in Microsoft Teams channel. It is a way for an app to get real-time data. Connectors allow users to subscribe to receive notifications and messages from your web services. They expose an HTTPS endpoint for your service to post messages in the form of cards.
 
 ## Outgoing webhooks
 
@@ -26,7 +24,7 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 ### Incoming webhooks
 
-Incoming webhooks aid in posting messages from apps to Teams. If incoming webhooks are enabled for a team in any channel, it exposes HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. You can create an incoming webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
+Incoming webhooks help in posting messages from apps to Teams. If incoming webhooks are enabled for a team in any channel, it exposes HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. You can create an incoming webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
 ### Office 365 Connectors
 
@@ -34,9 +32,9 @@ Office 365 Connectors allow you to create a custom configuration page for your i
 
 > [!NOTE]
 > You can distribute the Office 365 Connector Teams app to our AppStore.
-## Send messages to connectors and webhooks
+## Create and send messages
 
-With Office 365 and incoming webhooks, you can send messages by posting a JSON payload to the webhook URL. JSON connector message is provided to create cards with rich inputs. You can create actionable messages and set up a custom incoming webhook.
+Actionable messages allow users to take actions without leaving their email client, increasing user engagement. With Office 365 and incoming webhooks, you can send messages by posting a JSON payload to the webhook URL. JSON connector message is provided to create cards with rich inputs.
 
 ## See also
 

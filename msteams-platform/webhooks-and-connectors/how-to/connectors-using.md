@@ -1,5 +1,5 @@
 ---
-title: Send messages to incoming webhooks and connectors
+title: Create and send messages
 author: laujan
 description: Describes how to use Office 365 Connectors in Microsoft Teams
 ms.topic: how-to
@@ -7,9 +7,42 @@ localization_priority: Normal
 keywords: teams o365 connector
 ---
 
-# Send messages to incoming webhooks and connectors
+# Create and send messages
 
-To send a message through your Office 365 Connector or incoming webhook, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+## Create actionable messages
+
+The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
+
+The Connector cards support three types of actions, which are as follows:
+
+- `ActionCard`: Presents one or more input types and associated actions.
+- `HttpPOST`: Sends POST request to a URL.
+- `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
+
+The `ActionCard` action supports three input types:
+
+- `TextInput`: A single-line or multiline text field with an optional length limit.
+- `DateInput`: A date selector with an optional time selector.
+- `MultichoiceInput`: An enumerated list of choices offering either a single selection or multiple selections.
+
+`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect` as follows:
+
+| `isMultiSelect` | `style` default |
+| --- | --- |
+| `false` or not specified | `compact` |
+| `true` | `expanded` |
+
+If you want a multiselect list to be displayed initially, in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
+
+For more information on connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
+
+> [!NOTE]
+> * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
+> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
+
+## Send message through incoming webhook or Office 365 connector
+
+To send a message through your incoming webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or selecting date and time. The code that generates the card and posts to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
 
@@ -105,36 +138,6 @@ This message provides the following card in the channel:
 
 ![Screenshot of a connector card](~/assets/images/connectorcard.png)
 
-## Create actionable messages
-
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
-
-The Connector cards support three types of actions, which are as follows:
-
-- `ActionCard`: Presents one or more input types and associated actions.
-- `HttpPOST`: Sends POST request to a URL.
-- `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
-
-The `ActionCard` action supports three input types:
-
-- `TextInput`: A single-line or multiline text field with an optional length limit.
-- `DateInput`: A date selector with an optional time selector.
-- `MultichoiceInput`: An enumerated list of choices offering either a single selection or multiple selections.
-
-`MultichoiceInput` supports a `style` property that controls whether the list initially appears fully expanded. The default value of `style` depends on the value of `isMultiSelect` as follows:
-
-| `isMultiSelect` | `style` default |
-| --- | --- |
-| `false` or not specified | `compact` |
-| `true` | `expanded` |
-
-If you want a multiselect list to be displayed initially, in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
-
-For more information on connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
-
-> [!NOTE]
-> * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
-> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
 
 ## Set up a custom incoming webhook
 
