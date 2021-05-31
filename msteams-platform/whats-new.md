@@ -50,7 +50,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|05/26/2021| Conversational tabs | [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md) |
+|05/31/2021| Conversational tabs | [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Updated Teams app design guidelines with mobile patterns and more.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
 |05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
