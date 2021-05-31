@@ -291,8 +291,6 @@
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
   - name: Search commands
     items:
-    - name: Add a configuration page
-      href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Respond to search commands
