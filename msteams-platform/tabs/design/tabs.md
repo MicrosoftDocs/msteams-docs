@@ -68,7 +68,7 @@ You can add a step in which users must first sign in with their Microsoft creden
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen." border="false":::
 
-### Designing a tab setup with UI templates
+### Design a tab setup with UI templates
 
 Use one of the following Teams UI templates to help design your tab setup experience:
 
