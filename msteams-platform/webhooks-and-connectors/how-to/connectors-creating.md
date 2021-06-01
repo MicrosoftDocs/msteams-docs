@@ -11,7 +11,9 @@ ms.date: 04/19/2019
 
 With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. For more information, see [build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/9qcwzVFppMg]
+Introduction to Office 365 Connectors video
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/QILGfafEvTw]
 
 ## Add a Connector to Teams App
 
@@ -258,7 +260,3 @@ The following table provides the sample name and its description:
 ## See also
 
 * [Send messages to Connectors and Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md)
-
-* Introduction to Office 365 Connectors video
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/QILGfafEvTw] 
