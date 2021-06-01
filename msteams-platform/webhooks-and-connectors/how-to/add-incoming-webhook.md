@@ -89,7 +89,7 @@ The webhook is deleted from the team channel.
 ## Distribution of webhook and connector
 
 * [Set up an incoming webhook](#create-an-incoming-webhook) directly for your team.
-* Add a [configuration page](connectors-creating.md#integrate-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-your-organization) in a O365 Connector.
+* Add a [configuration page](connectors-creating.md#integrate-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-the-organization) in a O365 Connector.
 * Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## See also
