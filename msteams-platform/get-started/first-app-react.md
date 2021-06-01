@@ -3,7 +3,7 @@ title: Get started - Build your first Teams app with React
 author: adrianhall
 description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and React.
 ms.author: adhal
-ms.date: 05/18/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
 ---
 
@@ -119,8 +119,6 @@ Teams Toolkit allows you to run your app locally.  This consists of several part
 
 Once this is done, the app can be loaded within the Teams client.  We use the Teams web client so that we can see the HTML, CSS, and JavaScript code within a standard web development environment.
 
-[!INCLUDE [Adjust your browser launch settings](~/includes/get-started/browser-private-launch.md)]
-
 ### Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
@@ -133,7 +131,7 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. When prompted, select **Use the web app instead**.
+1. Your web browser starts to run the app. If prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when this happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
