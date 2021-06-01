@@ -192,38 +192,26 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-  - name: Create a tab 
-    items:
-    - name: Tab requirements
-      href: tabs/how-to/tab-requirements.md
-    - name: Create a content page
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Create a configuration page
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Create a removal page
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Get context for your tab
-      href: tabs/how-to/access-teams-context.md  
-    - name: Build tabs with Adaptive Cards
-      href: tabs/how-to/build-adaptive-card-tabs.md
-    - name: Tabs link unfurling and Stage View
-      href: tabs/tabs-link-unfurling.md
-    - name: Create conversational tabs
-      href: tabs/how-to/conversational-tabs.md
-  - name: Quickstarts
-    items:
-    - name: Personal tab with Node.js
-      href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-    - name: Personal tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-    - name: Personal tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Channel tab with Node.js
-      href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-    - name: Channel tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-    - name: Channel tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+  - name: Prerequisites
+    href: tabs/how-to/tab-requirements.md
+  - name: Create a personal tab
+    href: tabs/how-to/create-personal-tab.md
+  - name: Create a channel tab
+    href: tabs/how-to/create-channel-group-tab.md
+  - name: Create a content page
+    href: tabs/how-to/create-tab-pages/content-page.md
+  - name: Create a configuration page
+    href: tabs/how-to/create-tab-pages/configuration-page.md
+  - name: Create a removal page
+    href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Get context for your tab
+    href: tabs/how-to/access-teams-context.md  
+  - name: Build tabs with Adaptive Cards
+    href: tabs/how-to/build-adaptive-card-tabs.md
+  - name: Tabs link unfurling and Stage View
+    href: tabs/tabs-link-unfurling.md
+  - name: Create conversational tabs
+    href: tabs/how-to/conversational-tabs.md
 - name: Build bots
   items:
   - name: Overview
