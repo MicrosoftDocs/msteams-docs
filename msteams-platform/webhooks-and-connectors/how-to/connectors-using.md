@@ -193,7 +193,7 @@ This message provides the following card in the channel:
 
 **To send Adaptive Cards through an incoming webhook**
 
-1. [Setup a custom webhook](#Set-up-a-custom-incoming-webhook) in Teams.
+1. [Setup a custom webhook](/add-incoming-webhook.md) in Teams.
 2. Create Adaptive Card JSON file:
 
 ```json
