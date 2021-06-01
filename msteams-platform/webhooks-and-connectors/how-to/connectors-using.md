@@ -11,9 +11,9 @@ keywords: teams o365 connector
 
 ## Create actionable messages
 
-The example in the preceding section includes three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` action has an associated action, for example `HttpPOST`.
+The actionable messages include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
 
-The Connector cards support three types of actions, which are as follows:
+The Connector cards support the following actions:
 
 - `ActionCard`: Presents one or more input types and associated actions.
 - `HttpPOST`: Sends POST request to a URL.
@@ -34,7 +34,7 @@ The `ActionCard` action supports three input types:
 
 If you want a multiselect list to be displayed initially, in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
 
-For more information on connector card actions, see **[Actions]**(/outlook/actionable-messages/card-reference#actions) in the actionable message card reference.
+For more information on connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
 > [!NOTE]
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
@@ -46,9 +46,9 @@ To send a message through your incoming webhook or Office 365 Connector, post a 
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or selecting date and time. The code that generates the card and posts to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
 
-### Example connector message
+### Example of connector message
 
-Following is an example of connector message:
+An example of connector message is as follows:
 
 ```json
 {
@@ -138,27 +138,7 @@ This message provides the following card in the channel:
 
 ![Screenshot of a connector card](~/assets/images/connectorcard.png)
 
-
-## Set up a custom incoming webhook
-
-**To send a simple card to a connector**
-
-1. Select **More options** **&#8943;** in Microsoft Teams, next to the channel name and then select **Connectors**.
-
-    ![Choose Connector](~/assets/images/connectors.png)
-
-2. Scroll through the list of Connectors to **Incoming Webhook** and select **Add**.
-3. Enter a name for the webhook, upload an image to associate with data from the webhook, and select **Create**.
-
-    ![Create Connector](~/assets/images/createconnector.png)
-
-4. Copy the webhook to the clipboard and save it. You need the webhook URL for sending information to Microsoft Teams.
-
-    ![Unique URL](~/assets/images/url.png)
-
-5. Select **Done**.
-
-### Post a message using cURL and PowerShell
+## Send messages using cURL and PowerShell
 
 # [cURL](#tab/cURL)
 
@@ -205,52 +185,6 @@ This message provides the following card in the channel:
 
 ---
 
-The manifest.json file contains the basic elements needed to test and submit your app.
-#### Example manifest.json with connector
-
-> [!NOTE]
-> Replace `id` and `connectorId` with the GUID of your Connector.
-
-The following is an example of manifest.json with connector:
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.5",
-  "id": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-  "version": "1.0",
-  "packageName": "com.sampleapp",
-  "developer": {
-    "name": "Publisher",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.microsoft.com",
-    "termsOfUseUrl": "https://www.microsoft.com"
-  },
-  "description": {
-    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
-    "short": "This is a small sample app we made for you!"
-  },
-  "icons": {
-    "outline": "sampleapp-outline.png",
-    "color": "sampleapp-color.png"
-  },
-  "connectors": [
-    {
-      "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "scopes": [
-        "team"
-      ]
-    }
-  ],
-  "name": {
-    "short": "Sample App",
-    "full": "Sample App"
-  },
-  "accentColor": "#FFFFFF",
-  "needsIdentity": "true"
-}
-```
-
 ## Send Adaptive Cards using an incoming webhook
 
 > [!NOTE]
@@ -259,7 +193,7 @@ The following is an example of manifest.json with connector:
 
 **To send Adaptive Cards through an incoming webhook**
 
-1. [Setup a custom webhook](#Set up a custom incoming webhook) in Teams.</br></br>
+1. [Setup a custom webhook](#Set-up-a-custom-incoming-webhook) in Teams.
 2. Create Adaptive Card JSON file:
 
 ```json
@@ -299,27 +233,13 @@ Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST r
 >[!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) for testing the body of POST request.
 
-## Test your connector
-
-To test the connector, upload it to a team with any other app. To create a .zip package, use the manifest file from the Connectors Developer Dashboard, modified as directed in the preceding section and the two icon files.
-
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
-
-![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectorsnew.png)
-
-You can launch the configuration experience.
-> [!NOTE]
-> The flow occurs entirely within Microsoft Teams through a pop-up window. At present, the behavior differs from the configuration experience in connectors that were created.
-
-To verify the `HttpPOST` action is working correctly, use [custom incoming webhook](#Set up a custom incoming webhook).
-
 ## Rate limiting for connectors
 
 Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams tracks requests using a fixed-rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection can be throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
 
-The following table highlights the time-based transaction details:
+The following table provides the time-based transaction details:
 
 | Time in seconds  | Maximum allowed requests  |
 |---|---|
@@ -354,4 +274,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-[Office 365 Connectors for Microsoft Teams](connectors-creating.md)
+* [Office 365 Connectors for Microsoft Teams](connectors-creating.md)
+* [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

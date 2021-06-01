@@ -173,8 +173,8 @@ The following manifest.json file contains the elements needed to test and submit
     "termsOfUseUrl": "https://www.microsoft.com"
   },
   "description": {
-    "full": "This is a sample manifest for an app with a connector with an inline configuration experience.",
-    "short": "This is a sample manifest for an app with a connector."
+    "full": "This is a small sample app we made for you! This app has samples of all capabilities Microsoft Teams supports.",
+    "short": "This is a small sample app we made for you!"
   },
   "icons": {
     "outline": "sampleapp-outline.png",
@@ -183,7 +183,6 @@ The following manifest.json file contains the elements needed to test and submit
   "connectors": [
     {
       "connectorId": "e9343a03-0a5e-4c1f-95a8-263a565505a5",
-      "configurationUrl": "https://teamstodoappconnectorwithinlineconfig.azurewebsites.net/Connector/Setup",
       "scopes": [
         "team"
       ]
@@ -191,9 +190,10 @@ The following manifest.json file contains the elements needed to test and submit
   ],
   "name": {
     "short": "Sample App",
-    "full": "Sample App Long Name"
+    "full": "Sample App"
   },
-  "accentColor": "#FFFFFF"
+  "accentColor": "#FFFFFF",
+  "needsIdentity": "true"
 }
 ```
 
