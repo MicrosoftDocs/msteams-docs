@@ -1,12 +1,12 @@
 ---
-title: Designing your tab for desktop and web
-description: Learn how to design a Teams tab (desktop and web) and get the Microsoft Teams UI Kit.
+title: Design tabs for desktop, web, and mobile
+description: Learn how to design a Teams tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
 ms.author: lajanuar
 ---
-# Designing your tab for Microsoft Teams
+# Design your tab for Microsoft Teams
 
 A tab is a large canvas for your app content. To guide your app design, the following information describes and illustrates how people can add, use, and manage tabs in Teams.
 
@@ -68,7 +68,7 @@ You can add a step in which users must first sign in with their Microsoft creden
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-auth.png" alt-text="Example shows a tab authentication screen." border="false":::
 
-### Designing a tab setup with UI templates
+### Design a tab setup with UI templates
 
 Use one of the following Teams UI templates to help design your tab setup experience:
 
@@ -160,7 +160,7 @@ Users can have a conversation next to the tab content they're viewing. On deskto
 
 ### Permissions and role-based views
 
-The tab experience may be different for users depending on their permissions. For example, one user can access the tab without having to sign in. Another user, however, must sign and will see slightly different content.
+The tab experience may be different for users depending on their permissions. For example, one user can access the tab without having to sign in. Another user, however, must sign in and see slightly different content.
 
 ## Manage a tab
 
