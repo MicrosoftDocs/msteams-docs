@@ -63,7 +63,7 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 >[!NOTE]
 > The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
-## Scenario to add outgoing webhooks to your app
+The following scenario provides the details to add an outgoing webhook:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
 * Example: You have a line-of-business app that tracks all CRUD (create, read, update, delete) operations made to employee records by Teams channel HR users across an Office 365 tenancy.
@@ -71,13 +71,12 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 # [URL JSON payload](#tab/urljsonpayload)
 **Create a URL on your app's server to accept and process a POST request with a JSON payload**
 
-Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers your service to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. For more information see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
+Your service receives messages in a standard Azure bot service messaging schema. The Bot Framework connector is a RESTful service that empowers to process the interchange of JSON formatted messages through HTTPS protocols as documented in the [Azure Bot Service API](/bot-framework/rest-api/bot-framework-rest-connector-api-reference). Alternatively, you can follow the [Microsoft Bot Framework SDK] to process and parse messages. For more information see [overview of Azure Bot Service](/azure/bot-service/bot-service-overview-introduction).
 
 Outgoing webhooks are scoped to the `team` level and are visible to all the team members. Just like a bot, users need to **\@mention** the name of the outgoing webhook to invoke it in the channel.
 
 # [Verify HMAC token](#tab/verifyhmactoken)
 **Create a method to verify the outgoing webhook HMAC token**
-#### HMAC signature for testing with code example
 
 Using example of inbound message and ID: "contoso" of SigningKeyDictionary of {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" }.
 
