@@ -104,7 +104,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select the web app when this happens.
+1. Your web browser starts to run the app. If prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when this happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 

@@ -8,7 +8,9 @@ ms.author: lajanuar
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The Teams Toolkit helps developers create and deploy Teams apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.  You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`).
+The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.  
+
+You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
 
 ## Install the Teams Toolkit for Visual Studio Code
 
@@ -65,7 +67,7 @@ The Teams Toolkit can create React apps that will be hosted in Azure or SPFx web
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
 
-1. On the **Cloud resources** step, you can optionally select cloud resources that your application will use.  You can select CRUD (create, read, update, delete) access to a SQL table or an API:
+1. (Optional) On the **Cloud resources** step, select cloud resources that your application will use.  You can select CRUD (create, read, update, delete) access to a SQL table or an API:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot showing how to add cloud resources for your new app.":::
 
@@ -110,7 +112,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-   The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+   The toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
