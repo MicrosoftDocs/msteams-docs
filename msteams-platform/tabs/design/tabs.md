@@ -1,6 +1,6 @@
 ---
-title: Design tabs for desktop, web and mobile
-description: Learn how to design a Teams tab for desktop, web, mobile, and get the Microsoft Teams UI Kit.
+title: Design tabs for desktop, web, and mobile
+description: Learn how to design a Teams tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 localization_priority: Normal
 ms.topic: conceptual
