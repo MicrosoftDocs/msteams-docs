@@ -9,9 +9,9 @@ ms.author: surbhigupta
 
 # People Picker in Adaptive Cards
 
-You can add a People Picker as an input control to your Adaptive Card through which users can search for people and pick them. You can search within the context of the conversation, such as a chat, channel or an organization that the card is sent in. 
+You can add a People Picker as an input control to your Adaptive Card through which users can search for people and pick them. You can search for people within the context of the conversation, such as a chat, channel or an organization that the card is sent in. 
 
-For more information about Adaptive Cards, see [Cards Reference](cards-reference.md).
+For more information on Adaptive Cards, see [Cards Reference](cards-reference.md).
 
 ## Advantages of People Picker in Adaptive Cards
 
