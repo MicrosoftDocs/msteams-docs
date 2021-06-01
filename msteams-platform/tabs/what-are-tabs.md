@@ -1,38 +1,41 @@
 ---
-title: What are custom tabs in Teams?
+title: Microsoft Teams tabs
 author: laujan
 description: An overview of custom tabs on the Teams platform
 localization_priority: Normal
 ms.topic: overview
 ms.author: lajanuar
 ---
+
 # Microsoft Teams tabs
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
+
+There are few prerequisites that you must go through before working on tabs. You can create a content page as part of a personal tab, channel or group tab, or task module. You can create a configuration page that enables users to configure Microsoft Teams app and use it to configure a channel or group chat tab, a messaging extension, or an Office 365 connector. You can permit users to reconfigure your tab after installation and create a tab removal page for your application. Your tab must get context through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
+
+You can build tabs with Adaptive Cards and centralize all Teams app capabilities by eliminating the need for a different backend for your bots and tabs.
 
 There are two types of tabs available in Teams — channel/group and personal. Channel/group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access.
 
 ## Tab features
 
-> [!div class="checklist"]
->
-> * If a tab is added to an app that also has a bot, the bot is added to the team as well.
-> * Awareness of Azure Active Directory (Azure AD) ID of the current user.
-> * Locale awareness for the user to indicate language, i.e., `en-us`. 
-> * Single sign-on (SSO) capability, if supported.
-> * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, e.g., an individual work item.
-> * The ability to open a task module from links within a tab.
-> * Reuse of SharePoint web parts within the tab.
+* If a tab is added to an app that also has a bot, the bot is added to the team as well.
+* Awareness of Azure Active Directory (Azure AD) ID of the current user.
+* Locale awareness for the user to indicate language that is `en-us`.
+* Single sign-on (SSO) capability, if supported.
+* Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
+* The ability to open a task module from links within a tab.
+* Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
 
-**Scenario:** Bring an existing web-based resource inside Teams. \
+**Scenario:** Bring an existing web-based resource inside Teams.
 **Example:** You create a personal tab in your Teams app that presents an informational corporate website to users.
 
-**Scenario:** Add support pages to a Teams bot or messaging extension. \
-**Example:** You create personal tabs that provide *about* and *help* webpage content to users.
+**Scenario:** Add support pages to a Teams bot or messaging extension.
+**Example:** You create personal tabs that provide **about** and **help** webpage content to users.
 
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel/group tab with deep linking to individual items.
 
 ## Understand how tabs work
@@ -50,7 +53,6 @@ Whether you choose to expose your tab within the channel/group or personal scope
 For channel/group tabs, you also need to create an additional configuration page that allows users to configure your content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel/group tab can be added to multiple different teams or group chats. On each subsequent install, your users will be able to configure the tab, allowing you to tailor the experience as needed. When users add or configure a tab, a URL is being associated with the tab that is presented in the Teams UI. Configuring a tab is simply adding additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose which board the tab will load. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
 You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
-
 
 ### Use Adaptive Card to build tabs
 
