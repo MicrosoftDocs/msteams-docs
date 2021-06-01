@@ -46,9 +46,9 @@ People Picker is implemented as an extension of the `Input.ChoiceSet` control.
 The following properties are the new additions to the `Input.ChoiceSet` schema to enable a People Picker experience on the card.  
 
 #### Input.Choiceset control
-The following table represents the property of `Input.Choiceset` control.
+The following is the property of `Input.Choiceset` control:
 |Property |Type |Required |Description |
-|--|--|--|--|
+|----|----|----|----|
 |**choices.data** |**Data.Query** |No |Enables dynamic auto complete as the user types, by fetching results from the dataset specified. |
 
 #### Data.Query
