@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
-![Tabs](../assets/images/tabs/tabs.png)
+![Channel or group and personal tabs](../assets/images/tabs/tabs.png)
 
 There are few prerequisites that you must go through before working on tabs. You can create a content page as part of a personal tab, channel or group tab, or task module. You can create a configuration page that enables users to configure Microsoft Teams app and use it to configure a channel or group chat tab, a messaging extension, or an Office 365 connector. You can permit users to reconfigure your tab after installation and create a tab removal page for your application. When you build a Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Teams clients. Your tab must get context through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
 

@@ -1,4 +1,4 @@
-## Upload your tab to Teams with App Studio
+## Upload your tab with App Studio
 
 >[!NOTE]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, be sure to build the solution again to create the **Tab.zip** file to upload.
@@ -72,7 +72,7 @@ In the **Test and distribute** section:
 
 - In the next pop-up window select **Open** and your tab will be displayed.
 
-## View your personal tab
+## View your personal tab in Teams
 
 - In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
 
