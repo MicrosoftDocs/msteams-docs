@@ -35,21 +35,21 @@ After finding the correct person to resolve the issue, select the person's name 
 
 After selection, select **Assign**. This sends the information back to the bot for further processing and notifying the selected person of the issue.  
 
-## Overview
+## Implement People Picker
 
-Given a set of `choices`, an [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control can be used in multiple forms like a dropdown, expanded single selection(radio buttons) or as a multi select control(check boxes) based on the `style` and `isMultiSelect` props.  
+Given a set of `choices`, an [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control is used in multiple forms, such as a dropdown, expanded single selection, such as radio buttons or as a multi select control, such as check boxes based on the `style` and `isMultiSelect` properties.  
 
-People Picker is implemented as an extension of the Input.ChoiceSet control.  
+People Picker is implemented as an extension of the `Input.ChoiceSet` control.  
 
-### Updates to the Input.ChoiceSet schema
+### Update schema
 
-The following are the new additions to the Input.ChoiceSet schema to enable a People Picker experience on the card.  
+The following properties are the new additions to the `Input.ChoiceSet` schema to enable a People Picker experience on the card.  
 
-#### Input.Choiceset
-
+#### Input.Choiceset control
+The following table represents the property of `Input.Choiceset` control.
 |Property |Type |Required |Description |
 |--|--|--|--|
-|**choices.data** |**Data.Query** |No |Enables dynamic auto-complete as the user types, by fetching results from the dataset specified |
+|**choices.data** |**Data.Query** |No |Enables dynamic auto complete as the user types, by fetching results from the dataset specified. |
 
 #### Data.Query
 
@@ -58,12 +58,12 @@ The following are the new additions to the Input.ChoiceSet schema to enable a Pe
 |**dataset** |string |Yes |The type of data that should be fetched dynamically|   
 
 #### dataset
-The following are the pre-defined values that can be provided as a **dataset** for people picker:   
+The following are the predefined values that can be provided as a **dataset** for people picker:   
 
 |dataset|Search Scope
 |--|--|
-|**graph.microsoft.com/users** |Search all of the organization's members|
-|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation (chat/channel) in which the particular card is sent in|  
+|**graph.microsoft.com/users** |Search all of the organization's members.|
+|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent in.|  
 
 <br> 
 
@@ -113,9 +113,9 @@ To enable search within a conversation's member list, use the appropriate datase
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
 #### Data Submission
-Like every other Input control in Adaptive Cards, when a Submit Action is performed on the card, all the inputs provided in the card is sent back to the bot via an invoke. The invoke payload consists of a dictionary of input IDs to their corresponding values.  
+When a `Submit Action` is performed on the Adaptive Card, all the inputs provided in the card is sent back to the bot through an `invoke`. This action is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
-In the case of People Picker, when a person is selected in the control, on submission, the `AAD ID` of the person is the value that is sent back. The `AAD ID` is a string(GUID) and uniquely identifies a user in a directory.
+In the case of People Picker, when a person is selected in the control, on submission, the `AAD ID` of the person is the value that is sent back. The `AAD ID` is a string and uniquely identifies a user in a directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
 
@@ -124,22 +124,22 @@ The format of the value submitted to the bot depends on the value of the `isMult
 |false _(single select)_|The `AAD ID` of the selected user as a string|
 |true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concantenated with a 'comma'|  
 
-#### Pre-Selection of People
-People Picker supports pre-selection of people in the control when creating and sending an Adaptive Card.  
-Input.ChoiceSet supports the `value` property which can be used to pre-select a person. The format of this `value` property is the same as the submitted value format discussed above.  
-To pre-select a person in the control, specify the `AAD ID` of the person as the `value`. To pre-select multiple people (`isMultiSelect` should be _true_), specify a comma separated string of `AAD ID`s.
+#### Preselection of People
+People Picker supports preselection of people in the control when creating and sending an Adaptive Card.  
+Input.ChoiceSet supports the `value` property which is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
+To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma separated string of `AAD ID`s.
 
 #### Static Choices
-Input.ChoicSet supports specifying `choices` statically in the json. Generally, these are used to create the choices from which the user can pick.
+Input.ChoicSet supports specifying `choices` statically in the json. Staticare used to create the choices from which the user can pick.
 <br><br>
-Static `choices` can be used in conjunction with dynamic datasets. 
+Static `choices` care used in conjunction with dynamic datasets. 
 <br><br>
-A choice basically consists of a `title` and a `value`. When used along with a People Picker, these choices are translated to people profiles which have the `title` as the name and `value` as the identifier. On searching, these custom profiles are also part of the results when the search query matches the given `title`.   
-This enables developers to support scenarios where custom profiles need to be inserted into the pre-defined datasets.
+A choice basically consists of a `title` and a `value`. When used along with a People Picker, these choices are translated to people profiles which have the `title` as the name and `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.   
+This enables you to support scenarios where custom profiles must be inserted into the predefined datasets.
 
-## Mobile (iOS and Android)
+## Mobile clients
 
-People Picker is also supported on the iOS and Android clients along with the Web and Desktop client.   
-While searching on the web involves an inline typing experience, tapping on a people picker on mobile launches a new experience from which a search can be performed. This search experience is similar to other people selection experience across mobile like adding a person to a chat/channel.
+People Picker is also supported on the iOS and Android mobile clients along with the Web and Desktop client.   
+While searching on the web involves an inline typing experience, tapping on a people picker on mobile launches a new experience from which a search is performed. This search experience is similar to other people selection experience across mobile, such as adding a person to a chat or channel.
 
 ![People Picker on Mobile](../../assets/images/cards/people-picker-mobile-experience.gif)
