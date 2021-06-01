@@ -17,7 +17,7 @@ For more information on Adaptive Cards, see [Cards Reference](cards-reference.md
 
 Following examples show how the People Picker in Adaptive Cards is used in different scenarios:
 
-* People Picker in Adaptive Cards is used in sales department to request, assign and re-assign the approval to suitable people based on the requirement.
+* People Picker in Adaptive Cards is used in approvals app of sales department to request, assign and re-assign the approval to suitable people based on the requirement.
 * It is used in incident management app on Teams to track incidents and notify them to the correct person for fast action. 
 * It is used in technical support to resolve issues, such as VPN connectivity. In this case, the person can raise an issue ticket with a Help bot and send it to a group with experts who can help with this issue.
 
@@ -33,7 +33,7 @@ After finding the correct person to resolve the issue, select the person's name 
 
 ![People Picker Name Selected](../../assets/images/cards/peoplepicker-name-selected.png) 
 
-After selection, select **Assign**. This sends the information back to the bot for further processing and notifying the selected person of the issue.  
+After selecting the name, select **Assign**. This sends the information back to the bot to process further and notify the selected person of the issue.  
 
 ## Implement People Picker
 
@@ -55,7 +55,7 @@ The following properties are the new additions to the `Input.ChoiceSet` schema t
 
 |Property |Type |Required |Description |
 |--|--|--|--|
-|**dataset** |string |Yes |The type of data that should be fetched dynamically|   
+|**dataset** |string |Yes |The type of data that must be fetched dynamically.|   
 
 #### dataset
 The following are the predefined values that can be provided as a **dataset** for people picker:   
@@ -68,7 +68,7 @@ The following are the predefined values that can be provided as a **dataset** fo
 <br> 
 
 > [!NOTE]
-> Currently, search for all the members across the organization is supported in 1:1 chats with bots, task modules with Adaptive Card and tabs only. It is not supported in other 1:1 chats, group chats or channels.  
+> Currently, search for all the members across the organization is supported in 1:1 chats with bots, Adaptive Card task modules and tabs only. It is not supported in other 1:1 chats, group chats or channels.  
 
 ### Example
 Following is an example code for creating a People Picker with Organization search enabled:
@@ -113,16 +113,16 @@ To enable search within a conversation's member list, use the appropriate datase
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
 #### Data Submission
-When a `Submit Action` is performed on the Adaptive Card, all the inputs provided in the card is sent back to the bot through an `invoke`. This action is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
+When a `Submit Action` is performed on the Adaptive Card, all the inputs provided in the card is sent back to the bot through an `invoke`. This `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
-In the case of People Picker, when a person is selected in the control, on submission, the `AAD ID` of the person is the value that is sent back. The `AAD ID` is a string and uniquely identifies a user in a directory.
+In People Picker, when a person is selected in the control, on submission, the `AAD ID` of the person is the value that is sent back. The `AAD ID` is a string and uniquely identifies a user in a directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
 
 |value of `isMultiSelect`|Format|
 |--|--|
-|false _(single select)_|The `AAD ID` of the selected user as a string|
-|true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concantenated with a 'comma'|  
+|false _(single select)_|The `AAD ID` of the selected user as a string.|
+|true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concantenated with a 'comma'.|  
 
 #### Preselection of People
 People Picker supports preselection of people in the control when creating and sending an Adaptive Card.  
@@ -132,14 +132,14 @@ To preselect a person in the control, specify the `AAD ID` of the person as the 
 #### Static Choices
 Input.ChoicSet supports specifying `choices` statically in the json. Staticare used to create the choices from which the user can pick.
 <br><br>
-Static `choices` care used in conjunction with dynamic datasets. 
+Static `choices` are used in conjunction with dynamic datasets. 
 <br><br>
 A choice basically consists of a `title` and a `value`. When used along with a People Picker, these choices are translated to people profiles which have the `title` as the name and `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.   
-This enables you to support scenarios where custom profiles must be inserted into the predefined datasets.
+You can use the static choices to support scenarios where custom profiles must be inserted into the predefined datasets.
 
 ## Mobile clients
 
-People Picker is also supported on the iOS and Android mobile clients along with the Web and Desktop client.   
-While searching on the web involves an inline typing experience, tapping on a people picker on mobile launches a new experience from which a search is performed. This search experience is similar to other people selection experience across mobile, such as adding a person to a chat or channel.
+People Picker is supported on the iOS and Android mobile clients. It is also supported in web and desktop client.   
+While searching on the web involves an inline typing experience, selecting a people picker on mobile launches a new experience from which a search is performed. This search experience is similar to other people selection experience across mobile, such as adding a person to a chat or channel.
 
 ![People Picker on Mobile](../../assets/images/cards/people-picker-mobile-experience.gif)
