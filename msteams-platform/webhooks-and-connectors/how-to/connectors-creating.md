@@ -43,13 +43,15 @@ You can reuse your existing web configuration experience or create a separate ve
 1. Initialize the SDK by calling `microsoftTeams.initialize()`.
 2. Call `microsoftTeams.settings.setValidityState(true)` to enable **Save**.
 
-> [!NOTE] You must call this as a response to user selection or field update.
+> [!NOTE]
+> You must call this as a response to user selection or field update.
 
 3. Register  `microsoftTeams.settings.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 4. Call `microsoftTeams.settings.setSettings()` to save the Connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your Connector.
-5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL. 
+5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL.
 
-> [!NOTE] You must call this when your page is first loaded in case of re-configuration.
+> [!NOTE]
+> You must call this when your page is first loaded in case of re-configuration.
 
 6. Optionally, register `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which is called when the user removes Connector. 
 
