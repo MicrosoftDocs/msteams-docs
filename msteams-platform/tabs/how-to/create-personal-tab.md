@@ -11,6 +11,8 @@ ms.author: lajanuar
 
 You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NETCore, and using ASP.NETCore MVC.
 
+# [Node.js](#tab/nodejs)
+
 ## Create a custom personal tab using Node.js and the Yeoman Generator
 
 >[!NOTE]
@@ -217,6 +219,8 @@ gulp ngrok-serve
 ### View your personal tabs
 
 In the navigation bar located at the far-left of the Teams client, select the ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app from the list.
+
+# [ASP.NETCore](#tab/aspnetcore)
 
 ## Create a personal tab using ASP.NETCore
 

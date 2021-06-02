@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
@@ -409,4 +408,3 @@ The following shows a reissued request example:
 
 > [!div class="nextstepaction"]
 > [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-
