@@ -91,10 +91,6 @@ Following are the capabilities:
   > [!NOTE]
   > To create messaging extension using app studio, see [create messaging extension using app studio](~/resources/create-messaging-extension-using-appstudio.md).
 
-* **Meeting extension**
-
-  //TODO: Rajesh R.
-
 * **Scene**
 
   Scenes in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio that brings people together along with their video stream in a creative setting as conceived by the scene creator. In a conceived scene setting, participants have designated seats with video streams rendered in those seats. For more information, see [Teams Together Mode](~/apps-in-teams-meetings/teams-together-mode.md).
