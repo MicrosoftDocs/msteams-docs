@@ -16,7 +16,7 @@ You can allow orgs (specifically Teams admins) to customize some aspects of your
 You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). (This configures `configurableProperties` in your app manifest.) For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
 > [!NOTE]
-> App customization is not supported for sideloaded and LOB apps, hence you cannot test the feature by sideloading the app.
+> App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app.
 
 ## Best practices
 
