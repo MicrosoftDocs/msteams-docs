@@ -222,7 +222,7 @@ In the navigation bar located at the far-left of the Teams client, select the el
 
 In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-## Prerequisites for Teams apps
+## Prerequisites
 
 - To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
   - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
@@ -450,7 +450,6 @@ In addition, this project requires that you have the following installed in your
 - The current version the Visual Studio IDE with the **.NET CORE cross-platform development** workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
 
 - The [ngrok](https://ngrok.com) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download it here](https://ngrok.com/download).
-
 
 ### Get the source code
 
