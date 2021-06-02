@@ -11,7 +11,7 @@ ms.date: 05/20/2019
 > [!NOTE]
 > * For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 > * If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
-> * App customization is not supported for sideloaded and LOB apps, hence you cannot test the feature by sideloading the app.
+> * App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
