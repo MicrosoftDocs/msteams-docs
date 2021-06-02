@@ -10,8 +10,6 @@ ms.author: lajanuar
 
 # Prerequisites
 
-Teams tabs must adhere to the following prerequisites:
-
 * You must allow your tab pages to be served in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`.
@@ -31,6 +29,8 @@ Teams tabs must adhere to the following prerequisites:
 * For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
 
 * If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property.
+
+* MS Teams tab does not support the ability to load intranet websites that use self-signed certificates.
 
 ## Next step
 
