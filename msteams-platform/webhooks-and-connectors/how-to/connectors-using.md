@@ -158,8 +158,8 @@ This message provides the following card in the channel:
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-> [!NOTE]
-> If the POST succeeds, you must see a simple **1** output by `curl`.
+    > [!NOTE]
+    > If the POST succeeds, you must see a simple **1** output by `curl`.
 
 3. Check the Microsoft Teams client for the new card posted.
 
@@ -175,8 +175,8 @@ This message provides the following card in the channel:
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-> [!NOTE]
-> If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
+    > [!NOTE]
+    > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
 2. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
