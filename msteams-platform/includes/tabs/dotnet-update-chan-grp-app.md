@@ -52,7 +52,7 @@ Your code should now look like the following with **y8rCgT2b** replaced with you
 
 Make sure to save the updated **Tab.cshtml**.
 
-## Build and run your application for Teams
+## Build and run your application
 
 - In Visual Studio press **F5**, or choose **Start Debugging** from the **Debug** menu. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 

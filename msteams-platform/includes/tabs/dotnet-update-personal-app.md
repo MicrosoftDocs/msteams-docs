@@ -1,4 +1,4 @@
-## Update your application for Teams
+## Update your application
 
 ### _Layout.cshtml
 

@@ -138,7 +138,18 @@ In the navigation bar located at the far-left of the Teams client, select the el
 
 In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
+## Prerequisites for Teams apps
+
+- To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+  - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
+
+- You'll use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
+
+In addition, this project requires that you have the following installed in your development environment:
+
+- The current version the Visual Studio IDE with the **.NET CORE cross-platform development** workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
+
+- The [ngrok](https://ngrok.com) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download it here](https://ngrok.com/download).
 
 ### Get the source code
 
@@ -215,9 +226,30 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
   </ItemGroup>
 ```
 
-[!INCLUDE  [dotnet-update-personal-app](~/includes/tabs/dotnet-update-personal-app.md)]
+## Update your application for Teams
 
-[!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
+### _Layout.cshtml
+
+For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate:
+
+- Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tags section:
+
+    ```html
+    `<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>`
+    `<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
+    ```
+
+### PersonalTab.cshtml
+
+Open **PersonalTab.cshtml** and update the embedded `<script>` tags by calling `microsoftTeams.initialize()`.
+
+Make sure to save your updated **PersonalTab.cshtml**.
+
+## Establish a secure tunnel to your tab for Teams
+
+Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. You'll need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
+
+To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web endpoints will be available while ngrok is running on your local machine. If you close ngrok, the URLs will be different the next time you start it.
 
 - Open a command prompt in the root of your project directory and run the following command:
 
@@ -238,7 +270,85 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-[!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+## Upload your tab with App Studio for Teams
+
+>[!NOTE]
+> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, be sure to build the solution again to create the **Tab.zip** file to upload.
+
+- Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+
+- Open App studio and select the **Manifest editor** tab.
+
+- Select the **Import an existing app** tile in the Manifest editor to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It should be found here:
+
+    ```bash
+    /bin/Debug/netcoreapp2.2/Tab.zip
+    ```
+
+- Upload **Tab.zip** to App Studio.
+
+### Update your app package with Manifest editor
+
+Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
+
+- Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
+
+There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
+
+#### Details: App details
+
+In the **App details** section:
+
+- Under **Identification** select **Generate** to generate a new App Id for your app.
+
+- Under **Developer information** update the **Website URL** with your **ngrok** HTTPS URL.
+
+- Under **App URLs** update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
+
+#### Capabilities: Tabs
+
+In the *Tabs* section:
+
+- Under **Add a personal tab** select **Add**. You will be presented with a pop-up dialogue window.
+
+- Complete the **Name** field.
+
+- Complete the **Entity Id** field.
+
+- Update the **Content URL** field with to `https://<yourngrokurl>/personalTab`.
+
+- Leave the **Website URL** field blank.
+
+- Select **Save**.
+
+#### Finish: Domains and permissions
+
+In the **Domains and permissions** section, the **Domains from your tabs** field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
+
+##### Finish: Test and distribute
+
+>[!IMPORTANT]
+>In the **Description** field on the right you'll see the following warning:
+>
+>&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+>
+>This warning can be ignored while testing your tab.
+
+In the **Test and distribute** section:
+
+- Select **Install**.
+
+- In the pop-up window make sure that **Add for you** is set to **Yes** and **Add to a team or chat** is set to **No**.
+
+- Select **Install**.
+
+- In the next pop-up window select **Open** and your tab will be displayed.
+
+## View your personal tab in Teams
+
+- In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
+
+- Select your tab from the list to view.
 
 ## Create a custom personal tab with ASP.NET Core MVC
 

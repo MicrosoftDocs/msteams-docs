@@ -72,7 +72,7 @@ In the **Test and distribute** section:
 
 - In the next pop-up window select **Open** and your tab will be displayed.
 
-## View your personal tab in Teams
+## View your personal tab
 
 - In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
 
