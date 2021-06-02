@@ -226,7 +226,7 @@ In the navigation bar located at the far-left of the Teams client, select the el
 
 In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-## Prerequisites for personal tab
+### Prerequisites for personal tab
 
 - To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
   - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
@@ -239,7 +239,7 @@ In addition, this project requires that you have the following installed in your
 
 - The [ngrok](https://ngrok.com) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download it here](https://ngrok.com/download).
 
-### Get the source code
+#### Get the source code
 
 Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
@@ -256,9 +256,9 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 - `http://localhost:44325/privacy`
 - `http://localhost:44325/tou`
 
-### Review the source code
+#### Review the source code
 
-#### Startup.cs
+##### Startup.cs
 
 This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
@@ -274,7 +274,7 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-#### wwwroot folder
+##### wwwroot folder
 
 In ASP.NET Core, the web root folder is where the application looks for static files.
 
@@ -282,7 +282,7 @@ In ASP.NET Core, the web root folder is where the application looks for static f
 
 ASP.NET Core treats files called *Index* as the default/home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
-#### AppManifest folder
+##### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -292,7 +292,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an <iframe\>, and render it in your tab.
 
-#### .csproj
+##### .csproj
 
 In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
@@ -314,9 +314,9 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
   </ItemGroup>
 ```
 
-## Update your application for Teams
+### Update your application for Teams
 
-### _Layout.cshtml
+#### _Layout.cshtml
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams app communicate:
 
@@ -327,13 +327,13 @@ For your tab to display in Teams, you must include the **Microsoft Teams JavaScr
     `<script src="https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js"></script>`
     ```
 
-### PersonalTab.cshtml
+#### PersonalTab.cshtml
 
 Open **PersonalTab.cshtml** and update the embedded `<script>` tags by calling `microsoftTeams.initialize()`.
 
 Make sure to save your updated **PersonalTab.cshtml**.
 
-## Establish a secure tunnel to your tab for Teams
+### Establish a secure tunnel to your tab for Teams
 
 Microsoft Teams is an entirely cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams doesn't allow local hosting. You'll need to either publish your tab to a public URL, or use a proxy that will expose your local port to an internet-facing URL.
 
@@ -354,11 +354,11 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 >[!TIP]
 >You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
-#### Run your application
+##### Run your application
 
 - In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
-## Upload your tab with App Studio for Teams
+### Upload your tab with App Studio for Teams
 
 >[!NOTE]
 > We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit **manifest.json** if you prefer. If you do, be sure to build the solution again to create the **Tab.zip** file to upload.
@@ -375,7 +375,7 @@ To test your tab you'll use [ngrok](https://ngrok.com/docs). Your server's web e
 
 - Upload **Tab.zip** to App Studio.
 
-### Update your app package with Manifest editor
+#### Update your app package with Manifest editor
 
 Once you've uploaded your app package into App Studio, you'll need to finish configuring it.
 
@@ -383,7 +383,7 @@ Once you've uploaded your app package into App Studio, you'll need to finish con
 
 There's a list of steps in the left-hand side of the Manifest editor, and on the right, a list of properties that need to have values for each of those steps. Much of the information has been provided by your *manifest.json* but there are a few fields that you'll need to update:
 
-#### Details: App details
+##### Details: App details
 
 In the **App details** section:
 
@@ -393,7 +393,7 @@ In the **App details** section:
 
 - Under **App URLs** update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
-#### Capabilities: Tabs
+##### Capabilities: Tabs
 
 In the *Tabs* section:
 
@@ -409,11 +409,11 @@ In the *Tabs* section:
 
 - Select **Save**.
 
-#### Finish: Domains and permissions
+##### Finish: Domains and permissions
 
 In the **Domains and permissions** section, the **Domains from your tabs** field should contain your ngrok URL without the HTTPS prefix - `<yourngrokurl>.ngrok.io/`.
 
-##### Finish: Test and distribute
+###### Finish: Test and distribute
 
 >[!IMPORTANT]
 >In the **Description** field on the right you'll see the following warning:
@@ -432,17 +432,19 @@ In the **Test and distribute** section:
 
 - In the next pop-up window select **Open** and your tab will be displayed.
 
-## View your personal tab in Teams
+### View your personal tab in Teams
 
 - In the navigation bar located at the far-left of the Teams App, select the `...` menu. You'll be presented with a list of personal apps.
 
 - Select your tab from the list to view.
 
+# [ASP.NET Core MVC](#tab/aspnetcoremvc)
+
 ## Create a custom personal tab with ASP.NET Core MVC
 
 In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-## Prerequisites for personal tab with ASP.NET Core MVC
+### Prerequisites for personal tab with ASP.NET Core MVC
 
 - To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
   - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
@@ -455,7 +457,7 @@ In addition, this project requires that you have the following installed in your
 
 - The [ngrok](https://ngrok.com) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download it here](https://ngrok.com/download).
 
-### Get the source code
+#### Get the source code
 
 Open a command prompt and create a new directory for your tab project. We have provided a simple project to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
 
@@ -471,9 +473,9 @@ To build and run your application press **F5** or choose **Start Debugging** fro
 * `http://localhost:44335/privacy`
 * `http://localhost:44335/tou`
 
-### Review the source code
+#### Review the source code
 
-#### Startup.cs
+##### Startup.cs
 
 This project was created from an ASP. NET Core 2.2 Web Application empty template with the *Advanced - Configure for HTTPS* check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template doesn't enable serving static content by default, so the static files middleware is added to the `Configure()` method:
 
@@ -489,11 +491,11 @@ public void Configure(IApplicationBuilder app)
   }
 ```
 
-#### wwwroot folder
+##### wwwroot folder
 
 In ASP. NET Core, the web root folder is where the application looks for static files.
 
-#### AppManifest folder
+##### AppManifest folder
 
 This folder contains the following required app package files:
 
@@ -503,7 +505,7 @@ This folder contains the following required app package files:
 
 These files need to be zipped in an app package for use in uploading your tab to Teams. Microsoft Teams will load the `contentUrl` specified in your manifest, embed it in an IFrame, and render it in your tab.
 
-#### .csproj
+##### .csproj
 
 In the Visual Studio Solution Explorer window right-click on the project and select **Edit Project File**. At the bottom of the file you'll see the code that creates and updates your zip folder when the application builds:
 
@@ -525,21 +527,21 @@ In the Visual Studio Solution Explorer window right-click on the project and sel
   </ItemGroup>
 ```
 
-#### Models
+##### Models
 
 **PersonalTab.cs** presents a Message object and methods that will be called from *PersonalTabController* when a user selects a button in the **PersonalTab** View.
 
-#### Views
+##### Views
 
-##### Home
+###### Home
 
 ASP. NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
-##### Shared
+###### Shared
 
 The partial view markup *_Layout.cshtml* contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
 
-#### Controllers
+##### Controllers
 
 The controllers use the ViewBag property to transfer values dynamically to the Views.
 
@@ -562,7 +564,7 @@ The controllers use the ViewBag property to transfer values dynamically to the V
 > [!TIP]
 > You need to have both your application in Visual Studio and ngrok running to complete this quickstart. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It will continue to listen and will resume routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it will return a new URL and you'll have to update every place that uses that URL.
 
-#### Run your application
+##### Run your application
 
 * In Visual Studio press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
