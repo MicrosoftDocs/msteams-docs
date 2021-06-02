@@ -220,9 +220,9 @@ gulp ngrok-serve
 
 In the navigation bar located at the far-left of the Teams client, select the ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app from the list.
 
-# [ASP.NETCore](#tab/aspnetcore)
+# [ASP.NET Core](#tab/aspnetcore)
 
-## Create a personal tab using ASP.NETCore
+## Create a custom personal tab using ASP.NET Core
 
 In this quickstart, we'll walk-through creating a custom personal tab with C# and ASP.Net Core Razor pages. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
