@@ -359,8 +359,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Add SSO with Teams Toolkit for Visual Studio Code
-      href: toolkit/visual-studio-code-tab-sso.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
