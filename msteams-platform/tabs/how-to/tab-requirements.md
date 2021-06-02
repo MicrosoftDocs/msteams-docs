@@ -10,6 +10,8 @@ ms.author: lajanuar
 
 # Prerequisites
 
+Teams tabs must adhere to the following prerequisites:
+
 * You must allow your tab pages to be served in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`.
