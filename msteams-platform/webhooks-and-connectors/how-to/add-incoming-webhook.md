@@ -76,9 +76,9 @@ The following table provides the features and description of incoming webhook:
 
     ![Remove webhook](~/assets/images/remove.png)
 
-The **Remove Configuration** dialog box appears.
+    The **Remove Configuration** dialog box appears.
 
-![Remove Configuration](~/assets/images/removeconfiguration.png)
+    ![Remove Configuration](~/assets/images/removeconfiguration.png)
 
 8. Prior to selecting the **Remove**, complete the dialog box fields and checkboxes. 
 
