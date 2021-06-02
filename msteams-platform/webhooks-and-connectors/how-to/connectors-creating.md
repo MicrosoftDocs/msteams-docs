@@ -11,10 +11,6 @@ ms.date: 04/19/2019
 
 With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. For more information, see [build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-Introduction to Office 365 Connectors video
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/QILGfafEvTw]
-
 ## Add a Connector to Teams App
 
 You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can distribute your registered Connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package to users directly for uploading within Teams.
@@ -32,9 +28,9 @@ Users can complete the entire Connector configuration experience without having 
 2. The user interacts with web experience to complete the configuration.
 3. The user selects **Save**, which triggers a callback in code.
 
-> [!NOTE]
-> * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
-> * The configuration experience is loaded in line within Teams.
+    > [!NOTE]
+    > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
+    > * The configuration experience is loaded in line within Teams.
 
 You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
 
@@ -43,15 +39,15 @@ You can reuse your existing web configuration experience or create a separate ve
 1. Initialize the SDK by calling `microsoftTeams.initialize()`.
 2. Call `microsoftTeams.settings.setValidityState(true)` to enable **Save**.
 
-> [!NOTE]
-> You must call this as a response to user selection or field update.
+    > [!NOTE]
+    > You must call this as a response to user selection or field update.
 
 3. Register  `microsoftTeams.settings.registerOnSaveHandler()` event handler, which is called when the user selects **Save**.
 4. Call `microsoftTeams.settings.setSettings()` to save the Connector settings. The saved settings are also shown in the configuration dialog if the user tries to update an existing configuration for your Connector.
 5. Call `microsoftTeams.settings.getSettings()` to fetch webhook properties, including the URL.
 
-> [!NOTE]
-> You must call this when your page is first loaded in case of re-configuration.
+    > [!NOTE]
+    > You must call this when your page is first loaded in case of re-configuration.
 
 6. Optionally, register `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which is called when the user removes Connector. 
 
@@ -201,7 +197,7 @@ The following manifest.json file contains the elements needed to test and submit
 }
 ```
 
-## Disable or enable Connectors in Teams
+## Enable or disable Connectors in Teams
 
 The Exchange Online PowerShell V2 module uses modern authentication and works with multi-factor authentication (MFA) for connecting to all Exchange-related PowerShell environments in Microsoft 365. Admins can use Exchange Online PowerShell to disable connectors for an entire tenant or a specific group mailbox, affecting all users in that tenant or mailbox. It is not possible to disable for some and not others. Also, connectors are disabled by default for Government Community Cloud (GCC) tenants.
 
