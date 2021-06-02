@@ -114,6 +114,6 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 | Outgoing webhooks	| Samples to create custom bots to be used in Microsoft Teams.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/outgoing-webhook/nodejs)|
 
 ## See also
-* [create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
+* [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Send messages to connectors and webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)

@@ -95,4 +95,5 @@ The following table provides the features and description of incoming webhook:
 ## See also
 
 * [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Send messages to webhooks and connectors](~/webhooks-and-connectors/how-to/connectors-using.md)

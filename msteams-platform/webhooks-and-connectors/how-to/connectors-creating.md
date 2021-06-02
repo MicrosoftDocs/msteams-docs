@@ -262,3 +262,5 @@ The following table provides the sample name and its description:
 ## See also
 
 * [Send messages to Connectors and Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md)
+* [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
