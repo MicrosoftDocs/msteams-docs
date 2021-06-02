@@ -22,7 +22,7 @@ You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/con
 To distribute your Connector, you must register through [Connectors Developer Dashboard](https://outlook.office.com/connectors/home/login/#/publish). When a Connector is registered, it is assumed that it works in all Office 365 products that support applications, including Outlook and Teams. If that is not the case and you need to create a Connector that only works in Microsoft Teams, contact: [Microsoft Teams App Submissions email](mailto:teamsubm@microsoft.com).
 
 > [!IMPORTANT]
-> Your Connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After [publishing to your organization](#publish-connectors-for-your-organization), no further action is required on the Connector Dashboard.
+> Your Connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your Connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After [publishing Connectors for your organization](/connectors-creating.md), no further action is required on the Connector Dashboard.
 
 ### Integrate the configuration experience
 
