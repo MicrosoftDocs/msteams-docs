@@ -1,4 +1,4 @@
-## Prerequisites
+## Prerequisites for apps
 
 - To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 

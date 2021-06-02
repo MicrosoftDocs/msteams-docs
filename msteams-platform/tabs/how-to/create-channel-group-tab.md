@@ -338,11 +338,11 @@ In the *Test and distribute* section:
 
 To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration should be displayed.
 
-## Create a Custom Channel and Group Tab with ASP.NET Core MVC
+## Create a Custom Channel or Group Tab with ASP.NET Core MVC
 
 In this quickstart we'll walk-through creating a custom channel/group tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-## Prerequisites
+## Prerequisites for custom channel or group tab
 
 - To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
   - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
