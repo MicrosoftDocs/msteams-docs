@@ -56,9 +56,9 @@ The following table provides the features and description of incoming webhook:
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
-## Delete an incoming webhook
+## Remove an incoming webhook
 
-**To delete an incoming webhook from a Teams channel**
+**To remove an incoming webhook from a Teams channel**
 
 1. Navigate to the channel. 
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
