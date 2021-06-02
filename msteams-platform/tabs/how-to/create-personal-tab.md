@@ -18,7 +18,91 @@ You can create a personal tab using Node.js and the Yeoman Generator, using ASP.
 
 In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). We'll also upload the application to Team.
 
-[!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
+## Prerequisites for Teams apps
+
+- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+
+  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+
+In addition, this project requires that you have the following installed in your development environment:
+
+- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
+
+- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
+
+- After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+
+    ```bash
+    npm install yo gulp-cli --global
+    ```
+
+- Install the Microsoft Teams Apps generator by typing the following in your command prompt:
+
+    ```bash
+    npm install generator-teams --global
+    ```
+
+## Generate your project
+
+- Open a command prompt and create a new directory for your tab project.
+
+- To start the generator, navigate to your new directory and type the following command:
+
+    ```bash
+    yo teams
+    ```
+
+- Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
+
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    **What is your solution name?**
+
+    This is your project name. You can accept the suggested name by pressing enter.
+
+    **Where do you want to place the files?**
+
+    You're currently in your project directory. Press enter.
+
+    **Title of your Microsoft Teams app project?**
+
+    This is your app package name and will be used in the app manifest and description.
+
+    **Your (company) name? (max 32 characters)**
+
+    Your company name will be used in the app manifest.
+
+    **Which manifest version would you like to use?**
+
+    Select the default schema.
+
+    **Quick scaffolding? (Y/n)**
+
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
+
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+
+    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+    **What do you want to add to your project?**
+
+    Select ( &ast; ) A Tab.
+
+    **The URL where you will host this solution?**
+
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+
+    **Would you like to include Test framework and initial tests? (y/N)**
+
+    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    **Default Tab Name (max 16 characters)?**
+
+    Name your tab. This tab name will be used throughout your project as a file/URL path component.
 
 **Create a configurable or static tab**
 
@@ -354,7 +438,19 @@ In the **Test and distribute** section:
 
 In this quickstart we'll walk-through creating a custom personal tab with C# and ASP.Net Core MVC. We'll also use [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) to finalize your app manifest and deploy your tab to Teams.
 
-[!INCLUDE [dotnet-core-prereq](~/includes/tabs/dotnet-core-prereq.md)]
+## Prerequisites
+
+- To complete this quickstart you'll need a Microsoft 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+  - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription will remain active as long as you're using it for ongoing development.
+
+- You'll use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the bottom-left corner of the Teams app, and search for App Studio. Once you find the tile, select it and choose install in the pop-up window dialog box.
+
+In addition, this project requires that you have the following installed in your development environment:
+
+- The current version the Visual Studio IDE with the **.NET CORE cross-platform development** workload installed. If you don't already have Visual Studio, you can download and install the latest [Microsoft Visual Studio Community](https://visualstudio.microsoft.com/downloads) version for free.
+
+- The [ngrok](https://ngrok.com) reverse proxy tool. You'll use ngrok to create a tunnel to your locally running web server's publicly-available HTTPS endpoints. You can [download it here](https://ngrok.com/download).
+
 
 ### Get the source code
 
