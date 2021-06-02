@@ -88,7 +88,7 @@ This section allows you to add a connector to your app. If you already have regi
 
 > [!NOTE]
 > * App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from **Contoso** to **Contoso Agent**, then the app will appear with the new name **Contoso Agent** to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as **Contoso**.
-> * App customization is not supported for sideloaded and LOB apps, hence you cannot test the feature by sideloading the app.
+> * App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app.
 
 
 ##### Messaging Extensions
