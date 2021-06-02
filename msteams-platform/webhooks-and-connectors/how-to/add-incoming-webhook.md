@@ -84,7 +84,7 @@ The following table provides the features and description of incoming webhook:
 
     ![Final Remove](~/assets/images/finalremove.png)
 
-The webhook is deleted from the team channel.
+    The webhook is deleted from the team channel.
 
 ## Distribution of webhook and connector
 
