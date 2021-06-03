@@ -1,5 +1,5 @@
 ---
-title: Create conversational tabs
+title: Conversational sub-entities
 author: laujan
 description: Create conversational sub-entity chat for your channel tabs
 keywords: teams tabs channel configurable 
@@ -7,11 +7,11 @@ ms.topic: conceptual
 ms.author: lomeybur
 ---
 
-# Create conversational tabs
+# Conversational sub-entities
 
-Conversational sub-entities provides a way to allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or the content changed over time, making the conversation irrelevant to the content being shown. Conversational sub-entities provides a much more focused conversation experience for dynamic tabs.
+Conversational sub-entities provides a way to allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content being shown. Conversational sub-entities provides a much more focused conversation experience for dynamic tabs.
 
-Conversational sub-entities are only supported in channels. However, they can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you wish to provide one location for a user to view and access conversations happening across multiple channels.
+Conversational sub-entities are only supported in channels. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ In order to support conversational sub-entities, your tab web application must h
 
 ## Start a new conversation
 
-To start a new conversation, you use the `openConversation()` function. Starting and continuing a conversation are all handled by this method, however, the inputs to the function change depending on which action you want to take. From the users perspective, this opens the conversation panel to the right of the screen, either to initiate a conversation or continue a conversation.
+To start a new conversation, use the `openConversation()` function. Starting and continuing a conversation are all handled by this method. The inputs to the function change depending on which action you want to take. From the users perspective, this opens the conversation panel to the right of the screen, either to initiate a conversation or continue a conversation.
 
 ``` javascript
 microsoftTeams.conversations.openConversation(openConversationRequest);
@@ -31,7 +31,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 * **entityId**: This is the ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
 * **channelId**: This is the channel in which the tab instance resides.
    > [!NOTE]
-   > The **channelId** is optional for channel tabs. However, it is recommended if you wish to keep your implementation across channel and static tabs the same.
+   > The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
 * **title**: This is the title that is shown to the user in the chat panel.
 
 Most of these values can also be retrieved from the `getContext` API.
@@ -42,7 +42,7 @@ microsoftTeams.conversations.openConversation({“subEntityId”:”task-1”, �
 
 The following image shows the conversation panel:
 
-![Conversationl Sub Entities - Start Conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
+![Conversational sub-entities - start conversation](~/assets/images/tabs/conversational-subentities/start-conversation.png)
 
 If the user starts a conversation, it is important to listen for the callback of that event in order to retrieve and save the **conversationId**:
 
@@ -52,19 +52,21 @@ microsoftTeams.conversations.onStartConversation = (conversationResponse) => {
 };
 ```
 
-The `conversationReponse` object contains information related to the conversation that was just started. It is recommended that you save all the properties of this response object for reuse later.
+The `conversationResponse` object contains information related to the conversation that was started. It is recommended that you save all the properties of this response object for later use.
 
 ## Continue a conversation
 
-After a conversation starts, subsequent calls to `openConversation()` requires that you also provide the same inputs as in [Starting a new channel tab conversation](#Starting a new channel tab conversation), but also include the **conversationId**. The conversation panel opens for the user with the appropriate conversation in view. Users are able to see new or incoming messages in real-time.
+After a conversation starts, subsequent calls to `openConversation()` requires that you also provide the same inputs as in [start a new conversation](#start-a-new-conversation), but also include the **conversationId**. The conversation panel opens for the user with the appropriate conversation in view. Users are able to see new or incoming messages in real-time.
 
-![Conversationl Sub Entities - Continue Conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
+The following image shows the conversation panel with the appropriate conversation:
+
+![Conversational sub-entities - continue conversation](~/assets/images/tabs/conversational-subentities/continue-conversation.png)
 
 ## Enhance a conversation
 
-Finally, it’s important that your tab consumes [deeplinks to your sub-entity](~/concepts/build-and-test/deep-links.md). For example, user clicking the tab chiclet deeplink from the channel conversation. The expected behavior is for you to receive the deeplink, open that sub-entity, and then open the conversation panel for that specific sub-entity.
+Tt is important that your tab includes [deeplinks to your sub-entity](~/concepts/build-and-test/deep-links.md). For example, user selecting the tab chiclet deeplink from the channel conversation. The expected behavior is to receive the deeplink, open that sub-entity, and then open the conversation panel for that sub-entity.
 
-To support conversational sub-entities from your personal or static tab, you do not have to change anything about your implementation. Starting or continuing conversations from channel tabs that are already pinned, are only supported. Supporting static tabs allow you to provide a single location for your users to interact with all your sub-entities. It is, however, important that you save the `subEntityId`, `entityId`, and `channelId` when your tab is originally created in a channel in order for you to have the right properties when opening the conversation view in a static tab.
+To support conversational sub-entities from your personal or static tab, you do not have to change anything in your implementation. Starting or continuing conversations from channel tabs that are already pinned, are only supported. Supporting static tabs allows you to provide a single location for your users to interact with all your sub-entities. It is important that you save the `subEntityId`, `entityId`, and `channelId` when your tab is originally created in a channel to have the right properties when opening the conversation view in a static tab.
 
 ## Close a conversation
 
