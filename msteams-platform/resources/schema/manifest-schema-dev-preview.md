@@ -513,8 +513,6 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
-Testing instructions: App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app. To test this feature, submit the new app manifest and use a test tenant to verify your changes.
-
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. 
