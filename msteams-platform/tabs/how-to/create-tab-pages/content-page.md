@@ -20,9 +20,9 @@ This article is specific to using content pages as tabs; however the majority of
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to meaningful and engaging content that has practical value and an evident purpose. You must focus on minimizing clutter by making your tab design clean, navigation intuitive, and content immersive.
+Your tab's overall objective is to provide access to meaningful and engaging content that has practical value and an evident purpose. You must focus on making your tab design clean, navigation intuitive, and content immersive.
 
-For more information, see the [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
@@ -58,11 +58,11 @@ The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provi
 
 ### Deep links
 
-You can create deep links to entities in Teams. Typically, these are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
+You can create deep links to entities in Teams. These are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
 ### Task Modules
 
-A task module is a modal pop-up-like experience that you can trigger from your tab. Typically in a content page you do not want to navigate your user through multiple pages. Instead, you can use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+A task module is a modal pop-up experience that you can trigger from your tab. Typically in a content page you do not want to navigate your user through multiple pages. Instead, you can use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 ### Valid Domains
 
@@ -70,7 +70,7 @@ Ensure that all URL domains used in your tabs are included in the `validDomains`
 
 ## Reorder static personal tabs
 
-Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab entityId keywords are declared, **conversations** and **about**.
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
 If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
 
