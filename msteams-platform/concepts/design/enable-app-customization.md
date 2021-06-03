@@ -13,9 +13,12 @@ You can allow orgs (specifically Teams admins) to customize some aspects of your
 * Changing the app's accent color to match the org's brand.
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
-Testing Instructions: App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app. To test this feature, submit the new app manifest and use a test tenant to verify your changes.
-
 You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). (This configures `configurableProperties` in your app manifest.) For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+## Test your app
+
+To test app customization, submit the latest version of app manifest, and use a test tenant to verify your changes. App customization does not support sideloading. You cannot test the feature by sideloading the app. 
+
 
 ## Best practices
 
