@@ -9,8 +9,10 @@ ms.date: 05/20/2019
 # Developer preview manifest schema for Microsoft Teams
 
 > [!NOTE]
-> * For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-> * If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
+For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+
+> [!NOTE]
+> * If you aren't using developer preview features, use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 > * App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
@@ -552,4 +554,3 @@ When a group install scope is selected, it will define the default capability wh
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-
