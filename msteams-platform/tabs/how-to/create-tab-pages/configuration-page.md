@@ -94,9 +94,9 @@ The following image displays the tab content with a red icon:
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
-1. The `settings.setValidityState(true)` is set to true.
-1. The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
-1. The **Save** button on the app's configuration page, uploaded in Teams, is enabled.
+* Set `settings.setValidityState(true)` to true. 
+* The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
+* **Save** on the app's configuration page, is enabled.
 
 The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
@@ -176,7 +176,7 @@ Authenticate before allowing a user to configure your app. Otherwise, your conte
 
 ## Modify or remove a tab
 
-Supported removal options provide a better user experience. Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a channel or group tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
+Set your manifest's `canUpdateConfiguration` property to `true`, that enables the users to modify, reconfigure, or rename a channel or group tab. Also, indicate what happens to the content when a tab is removed, by including a removal options page in the app and setting a value for the `removeUrl` property in the  `setSettings()` configuration. The user can uninstall personal tabs but cannot modify them. For more information, see [create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md).
 
 Microsoft Teams `setSettings()` configuration for removal page:
 
