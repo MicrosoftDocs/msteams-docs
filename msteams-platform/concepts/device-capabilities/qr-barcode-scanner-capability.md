@@ -106,5 +106,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [Integrate People Picker control capability in Teams](people-picker-control-capability.md)
+* [Integrate People Picker capability in Teams](people-picker-capability.md)
 
