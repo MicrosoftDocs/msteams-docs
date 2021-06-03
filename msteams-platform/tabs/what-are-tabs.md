@@ -19,6 +19,7 @@ You can build tabs with Adaptive Cards and centralize all Teams app capabilities
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 
+
 > [!VIDEO https://www.youtube-nocookie.com/embed/T2a8yJC3VcQ]
 
 There are two types of tabs available in Teams, personal and channel or group. Personal tabs, along with personally-scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access. Channel or group tabs deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
@@ -37,16 +38,16 @@ Following are some of the features of tabs:
 
 ## Tabs user scenarios
 
-**Scenario:** Bring an existing web-based resource inside Teams.
+**Scenario:** Bring an existing web-based resource inside Teams. \
 **Example:** You create a personal tab in your Teams app that presents an informational corporate website to users.
 
-**Scenario:** Add support pages to a Teams bot or messaging extension.
+**Scenario:** Add support pages to a Teams bot or messaging extension. \
 **Example:** You create personal tabs that provide **about** and **help** webpage content to users.
 
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
 **Example:** You create a channel or group tab with deep linking to individual items.
 
-## Understand how tabs work
+## Create tabs
 
 You can use one of the following methods to create tabs:
 
