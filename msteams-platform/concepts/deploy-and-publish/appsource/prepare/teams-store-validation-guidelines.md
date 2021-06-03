@@ -327,7 +327,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### Bot welcome messages
 
 * Bots should almost always send a welcome message during first run. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
-* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. If your bot does send welcome messages, it must not send these to users individually (this is considered [spamming](#63-bot-message-spamming)). The message should also mention the person who added the bot.
+* Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. If your bot does send welcome messages, it must not send these to users individually (this is considered [spamming](#bot-message-spamming)). The message should also mention the person who added the bot.
 * Notification-only bots must send a welcome message that conveys it will not reply to users' messages.
 
 > [!TIP]
@@ -448,10 +448,6 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 ## Advertising
 
 Apps must not display advertising, including dynamic ads, banner ads, and ads in messages.
-
-## See also
-
-[4.0 App package and store listing](#40-app-package-and-store-listing)
 
 ## Next step
 
