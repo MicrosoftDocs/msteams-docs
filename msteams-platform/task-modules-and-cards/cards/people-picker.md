@@ -42,7 +42,7 @@ After selecting the name, select **Assign**. This sends the information back to 
 People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The control includes the following:
 * Dropdown, such as an expanded selection.
 * Radio button, such as single selection.
-* check boxes, such as multiple selection.  
+* Check boxes, such as multiple selection.  
 > [!NOTE]
 > The `Input.ChoiceSet` control is based on the `style` and `isMultiSelect` properties.  
 
