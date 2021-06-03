@@ -12,7 +12,6 @@ For information on how to enable developer preview, see [public developer previe
 
 > [!NOTE]
 > * If you aren't using developer preview features, use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
-> * App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -513,6 +512,8 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 **Optional** - array
 
 The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+
+Testing instructions: App customization is not supported for sideloaded and LOB apps. You cannot test the feature by sideloading the app. To test this feature, submit the new app manifest and use a test tenant to verify your changes.
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
