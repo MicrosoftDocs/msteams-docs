@@ -10,7 +10,7 @@ ms.author: surbhigupta
 
 # Integrate location capabilities 
 
-You can leverage location functionality with Microsoft Teams JavaScript client SDK by integrating the location capabilities of native device with your Teams app.  
+You can integrate the location capabilities of native device with your Teams app.  
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the location APIs, such as [getLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true) and [showLocation](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#showLocation_Location___error__SdkError__status__boolean_____void_&preserve-view=true) to integrate the capabilities within your app. 
 
@@ -102,4 +102,4 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-* [Integrate People Picker control capability in Teams](people-picker-control-capability.md)
+* [Integrate People Picker capability in Teams](people-picker-capability.md)

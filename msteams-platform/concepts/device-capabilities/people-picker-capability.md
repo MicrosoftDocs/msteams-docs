@@ -1,30 +1,30 @@
 ---
-title: Integrate People Picker control capability
+title: Integrate People Picker capability
 author: Rajeshwari-v
-description: How to use Teams JavaScript client SDK to integrate People Picker control capability
+description: How to use Teams JavaScript client SDK to integrate People Picker capability
 keywords:  people picker control
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Integrate People Picker control capability 
+# Integrate People Picker capability 
 
-People Picker is a control to search and pick people. This is a native capability available in Teams platform. You can integrate Teams’ native People Picker input control with your web apps. You can define search context, single or multi selection, and other configuration to search people within a chat, groups, channels, teams, and across the organization with AAD user list.
+People Picker is a control to search and select people. This is a native capability available in Teams platform. You can integrate Teams’ native People Picker input control with your web apps. You can select between single or multi-selection, and configurations such as limiting search within a chat/channels, or across the entire organization.
 
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the People Picker control capability within your web app. 
+You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `People Picker` API to integrate the People Picker capability within your web app. 
 
-## Advantages of integrating People Picker control capability
+## Advantages of integrating People Picker capability
 
-* `People Picker` API enables you to add the People Picker control to your web apps, which  surfaces in a task module, as a tab or personal app. 
+* The People Picker control works in all of Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
 * This cross platform control allows users to select entities, such as users in a group, chat, channel.
-* The People Picker control capability helps with task assignment, tagging, notifying a user, and so on. 
+* The People Picker capability helps with task assignment, tagging, notifying a user, and so on. 
 
-You must call the `People Picker` API to integrate People Picker control capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
+You must call the `People Picker` API to integrate People Picker capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
 > [!NOTE] 
-> Currently, Microsoft Teams support for People Picker control capability is available for mobile clients only.
+> Currently, Microsoft Teams support for People Picker capability is available for mobile clients only.
 
 ## People Picker API 
 
@@ -44,9 +44,9 @@ The `People Picker` API comes along with following input configurations:
 |`openOrgWideSearchInChatOrChannel`|Boolean | Optional|Launches the People Picker across the organization scope even if the app is added to a chat or channel. | False |
 |`singleSelect`|Boolean| Optional| Launches the People Picker in which only one person is selected. | False|
 
-The following image depicts web app experience of People Picker control capability:
+The following image depicts web app experience of People Picker capability:
 
-![web app experience for People Picker control capability](../../assets/images/tabs/people-picker-control-capability.png)
+![web app experience for People Picker capability](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### Code snippet
 

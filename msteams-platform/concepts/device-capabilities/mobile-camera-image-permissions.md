@@ -10,7 +10,7 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-Yoou can integrate native device capabilities, such as the **camera** and **microphone** with the Teams platform. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable  media capability APIs to integrate the native device capabilities, such as the **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience. 
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience. 
 
 ## Advantage of integrating media capabilities
 
@@ -74,19 +74,14 @@ The following image depicts web app experience of `selectMedia` API for micropho
 
 You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
 
-
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
 | **100** | NOT_SUPPORTED_ON_PLATFORM | API is not supported on the current platform.|
 | **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **2000** |NETWORK_ERROR | Network issue.|
 | **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
 | **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
-| **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
-| **6000** |INSUFFICIENT_RESOURCES | Operation could not be completed due to insufficient resources.|
-|**7000** | THROTTLE | Platform throttled the request as the API was invoked frequently.|
 |  **8000** | USER_ABORT |User aborts the operation.|
 | **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
 | **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
@@ -253,5 +248,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
-* [Integrate People Picker control capability in Teams](people-picker-control-capability.md)
+* [Integrate People Picker capability in Teams](people-picker-capability.md)
 
