@@ -104,7 +104,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new Unive
 
 Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enables a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
-[Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md) document takes you through the steps to use the capabilities of Universal Actions for Adaptive Cards for your solution.
+Get started by updating your scenarios using our [quick start guide](Work-with-universal-actions-for-adaptive-cards.md) section and jump in to leverage Universal Actions to update your scenarios.
 
 ## See also
 
