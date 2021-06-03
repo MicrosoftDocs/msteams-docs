@@ -8,7 +8,6 @@ ms.date: 05/20/2019
 ---
 # Developer preview manifest schema for Microsoft Teams
 
-> [!NOTE]
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
