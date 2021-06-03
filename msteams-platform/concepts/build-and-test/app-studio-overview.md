@@ -86,7 +86,6 @@ After you have supplied your bot's information, you can now optionally define a 
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose **Set up** and enter the name and ID of the connector. If you want a new connector click **Register** to be taken to the Connector Developer Dashboard in your browser.
 
-> [!NOTE]
 
 
 ##### Messaging Extensions
