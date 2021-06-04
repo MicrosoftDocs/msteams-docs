@@ -1,14 +1,29 @@
 ---
-title: Cards reference
+title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
 localization_priority: Normal
 keywords: bots cards reference
 ms.topic: reference
 ---
 
-# Cards reference
+# Types of cards
 
 Adaptive, hero, list, Office 365 connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
+
+Before you identify the different card types, understand how to create a a Hero card, thumbnail card, or Adaptive Card.
+
+## Create a hero card, thumbnail card, or Adaptive Card
+
+**To create a hero card, thumbnail card, or Adaptive Card from App Studio**
+
+1. Open **App Studio** from Teams.
+1. Select **Card editor**.
+1. Select **Create a new card**.
+1. Select **Create** for one of the cards from **Hero Card**, **Thumbnail Card**, or **Adaptive Card**. The metadata details, buttons, and json, csharp, and node code examples are shown for that card.
+
+    ![Hero card details](~/assets/images/Cards/Herocarddetails.png)
+
+1. Select **Send me this card**. The card is sent to you as a chat message.
 
 ## Card examples
 
@@ -24,7 +39,7 @@ You can find additional information on how to use cards in the documentation for
 
 Next, you can identify the different types of cards you can use based on your application requirements.
 
-## Types of cards
+## Card types
 
 The following table shows the types of cards available to you:
 

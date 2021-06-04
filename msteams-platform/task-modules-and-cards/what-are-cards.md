@@ -59,5 +59,6 @@ Adaptive Cards with incoming webhooks enables you to use the rich and flexible c
 
 ## See also
 
+* [Cards reference](~/task-modules-and-cards/cards/cards-reference.md)
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)

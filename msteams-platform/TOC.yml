@@ -331,12 +331,12 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
+    - name: Types of cards
+      href: task-modules-and-cards/cards/cards-reference.md
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-    - name: Cards reference
-      href: task-modules-and-cards/cards/cards-reference.md
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
