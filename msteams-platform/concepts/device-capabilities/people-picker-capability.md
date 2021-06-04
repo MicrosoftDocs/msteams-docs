@@ -17,10 +17,11 @@ You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/mst
 ## Advantages of integrating People Picker capability
 
 * The People Picker control works in all of Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
-* This cross platform control allows users to select entities, such as users in a group, chat, channel.
-* The People Picker capability helps with task assignment, tagging, notifying a user, and so on. 
+* This control allows you to search for and select users within a chat, channel, or the entire organization.
+*  The People Picker capability helps with scenarios involving task assignment, tagging, notifying a user. 
+* You can use the readily available control in your web app. It saves the effort and time significantly to build such a control on your own.
 
-You must call the `People Picker` API to integrate People Picker capability. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
+You must call the `People Picker` API to integrate People Picker control in your Teams app. For effective integration, you must have an understanding of [code snippet](#code-snippet) for calling the `People Picker` API. 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your web app.
 
 > [!NOTE] 
@@ -28,25 +29,25 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 ## People Picker API 
 
-`People Picker` API enables you to add Teams’ native `People Picker input control` to your web apps. This API returns the information of picked users to the calling web app. 
+`People Picker` API enables you to add Teams’ native `People Picker input control` to your web apps. This API returns the information of secected users to the calling web app. 
 You must use the following API to enable People Picker capability:
 
 | API      | Description   |
 | --- | --- |
-|`selectPeople`|Launches a People Picker and allows the user to select one or more people from the list.<br/><br/>If the app is added to personal app scope, the People Picker is launched across the organization. If the app is added to a chat or channel, People Picker launch is limited to the members of that chat or channel.|
+|`selectPeople`|Launches a People Picker and allows the user to search and select one or more people from the list.<br/><br/>In case of a personal app the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
 The `People Picker` API comes along with following input configurations:
 
 |Configuration parameter|Type|Option|Description| Default value|
 |-----|------|----------|--------------|------|
-|`title`| String|Optional| Set title for the People Picker.| Add people|
-|`setSelected`|String| Optional| AAD IDs of the users are pre-populated in the search box of People Picker control. With single select, only the first user in the list is pre-populated.| Null |
-|`openOrgWideSearchInChatOrChannel`|Boolean | Optional|Launches the People Picker across the organization scope even if the app is added to a chat or channel. | False |
-|`singleSelect`|Boolean| Optional| Launches the People Picker in which only one person is selected. | False|
+|`title`| String|Optional| Set title for the People Picker control.| Select people|
+|`setSelected`|String| Optional| Preselect people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. | Null |
+|`openOrgWideSearchInChatOrChannel`|Boolean | Optional| When set to true this launches the People Picker in organization-wide scope even if the app is added to a chat or channel. | False |
+|`singleSelect`|Boolean| Optional| When set to true this launches the People Picker restricting the selection to one user only. | False|
 
-The following image depicts web app experience of People Picker capability:
+The following image depicts the experience of People Picker capability in a sample web app:
 
-![web app experience for People Picker capability](../../assets/images/tabs/people-picker-control-capability.png)
+![Web app experience for People Picker capability](../../assets/images/tabs/people-picker-control-capability.png)
 
 ### Code snippet
 
