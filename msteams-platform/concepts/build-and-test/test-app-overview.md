@@ -10,9 +10,9 @@ keywords: Configure Microsoft 365 tenant Teams uploading test app
 
 After integrating your app with Microsoft Teams, you must test your app before publishing it. The ultimate goal is to get as many users for your app, therefore, ensure to test the app on multiple devices that users could use. For testing your app:
 
-* Prepare your Microsoft 365 tenant
-* Choose a workspace to test and debug your app
-* Add test data to your Microsoft 365 tenant
+* Prepare your Microsoft 365 tenant.
+* Choose a workspace to test and debug your app.
+* Add test data to your Microsoft 365 tenant.
 
 ## Prepare your Microsoft 365 tenant
 
@@ -32,11 +32,9 @@ Add the test data to Microsoft 365 test tenant. For more information, see [add t
 
 ## See also
 
-- [Debug your tab](~/tabs/how-to/developer-tools.md)
- 
-- [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
-
-- [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
+* [Debug your tab](~/tabs/how-to/developer-tools.md)
+* [Debug your bots](~/bots/how-to/debug/locally-with-an-ide.md)
+* [Test RSC permissions](~/graph-api/rsc/test-resource-specific-consent.md)
 
 ## Next step
 

@@ -579,6 +579,30 @@
       {
         "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/post-publish/application-certification.md",
         "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/post-publish/overview"  
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-first-app-overview.md",
+        "redirect_url": "/microsoftteams/platform/get-started/prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-and-run.md",
+        "redirect_url": "/microsoftteams/platform/get-started/prerequisites"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-personal-tab.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-react"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-channel-tab.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-react"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-bot.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-app-bot"
+      },
+      {
+        "source_path": "msteams-platform/build-your-first-app/build-messaging-extension.md",
+        "redirect_url": "/microsoftteams/platform/get-started/first-message-extension"
       }
     ]
 }

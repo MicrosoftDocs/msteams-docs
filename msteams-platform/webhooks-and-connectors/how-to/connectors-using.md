@@ -98,7 +98,7 @@ You can also use this JSON to create cards containing rich inputs, such as text 
 }
 ```
 
-This message produces the following card in the channel.
+This message produces the following card in the channel:
 
 ![Screenshot of a Connector card](~/assets/images/connectors/connector_message.png)
 
@@ -136,13 +136,13 @@ For more information on Connector card actions, see **[Actions]**(/outlook/actio
 
 ## Setting up a custom incoming webhook
 
-Follow these steps to see how to send a simple card to a Connector.
+Follow these steps to see how to send a simple card to a Connector:
 
 1. In Microsoft Teams, choose **More options** (**&#8943;**) next to the channel name and then choose **Connectors**.
-2. Scroll through the list of Connectors to **Incoming Webhook**, and choose **Add**.
-3. Enter a name for the webhook, upload an image to associate with data from the webhook, and choose **Create**.
-4. Copy the webhook to the clipboard and save it. You'll need the webhook URL for sending information to Microsoft Teams.
-5. Choose **Done**.
+1. Scroll through the list of Connectors to **Incoming Webhook**, and choose **Add**.
+1. Enter a name for the webhook, upload an image to associate with data from the webhook, and choose **Create**.
+1. Copy the webhook to the clipboard and save it. You'll need the webhook URL for sending information to Microsoft Teams.
+1. Choose **Done**.
 
 ### Post a message to the webhook using cURL
 
@@ -160,8 +160,8 @@ The following steps use [cURL](https://curl.haxx.se/). We assume that you have t
    curl.exe -H "Content-Type:application/json" -d "{'text':'Hello World'}" <YOUR WEBHOOK URL>
    ```
 
-2. If the POST succeeds, you should see a simple **1** output by `curl`.
-3. Check the Microsoft Team client. You should see the new card posted to the team.
+1. If the POST succeeds, you should see a simple **1** output by `curl`.
+1. Check the Microsoft Team client. You should see the new card posted to the team.
 
 ### Post a message to the webhook using PowerShell
 
@@ -173,13 +173,13 @@ The following steps use PowerShell. We assume that you have this installed and a
    Invoke-RestMethod -Method post -ContentType 'Application/Json' -Body '{"text":"Hello World!"}' -Uri <YOUR WEBHOOK URL>
    ```
 
-2. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
-3. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
+1. If the POST succeeds, you should see a simple **1** output by `Invoke-RestMethod`.
+1. Check the Microsoft Teams channel associated with the webhook URL. You should see the new card posted to the channel.
 
 - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
-The following manifest.json file contains the basic elements needed to test and submit your app.
+The following manifest.json file contains the basic elements needed to test and submit your app:
 
 > [!NOTE]
 > Replace `id` and `connectorId` in the following example with the GUID of your Connector.
@@ -234,40 +234,40 @@ The following manifest.json file contains the basic elements needed to test and 
 
 ### The flow for sending [adaptive cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card) via an incoming webhook is as follows:
 
-**1.** [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.</br></br>
-**2.** Create your adaptive card JSON file:
+1. [Setup a custom webhook](#setting-up-a-custom-incoming-webhook) in Teams.
+1. Create your adaptive card JSON file:
 
-```json
-{
-   "type":"message",
-   "attachments":[
-      {
-         "contentType":"application/vnd.microsoft.card.adaptive",
-         "contentUrl":null,
-         "content":{
-            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
-            "type":"AdaptiveCard",
-            "version":"1.2",
-            "body":[
-                {
-                "type": "TextBlock",
-                "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
-                }
-            ]
-         }
-      }
-   ]
-}
-```
+    ```json
+    {
+       "type":"message",
+       "attachments":[
+          {
+             "contentType":"application/vnd.microsoft.card.adaptive",
+             "contentUrl":null,
+             "content":{
+                "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+                "type":"AdaptiveCard",
+                "version":"1.2",
+                "body":[
+                    {
+                    "type": "TextBlock",
+                    "text": "For Samples and Templates, see [https://adaptivecards.io/samples](https://adaptivecards.io/samples)"
+                    }
+                ]
+             }
+          }
+       ]
+    }
+    ```
 
-> [!div class="checklist"]
->
-> - The `"type"` field must be `"message"`.
-> - The `"attachments"` array contains a set of card objects.
-> - The `"contentType"` field must be set to adaptive card type.
-> - The `"content"` object is the card formatted in JSON.
+    > [!div class="checklist"]
+    >
+    > - The `"type"` field must be `"message"`.
+    > - The `"attachments"` array contains a set of card objects.
+    > - The `"contentType"` field must be set to adaptive card type.
+    > - The `"content"` object is the card formatted in JSON.
 
-**3.** Test your adaptive card with Postman
+1. Test your adaptive card with Postman.
 
 You can test your adaptive card using [Postman](https://www.postman.com) to send a POST request to the URL that you created when you setup your incoming webhook. Paste your JSON file in the body of the request and view your adaptive card message in Teams.
 
@@ -276,9 +276,9 @@ You can test your adaptive card using [Postman](https://www.postman.com) to send
 
 ## Testing your connector
 
-To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard (modified as directed in the preceding section) and the two icon files.
+To test your Connector, upload it to a team as you would with any other app. You can create a .zip package using the manifest file from the Connectors Developer Dashboard which was modified as directed in the preceding section and the two icon files.
 
-After you upload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
+After you upload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
 
 ![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 
@@ -300,8 +300,6 @@ Application rate limits control the traffic that a connector or an incoming webh
 | 7200 | 150  |
 | 86400  | 1800  |
 
-*See also* [Office 365 Connectors — Microsoft Teams](https://docs.microsoft.com/connectors/teams/)
-
 A [retry logic with exponential back-off](/azure/architecture/patterns/retry) like below would mitigate rate limiting for cases where requests are exceeding the limits within a second. Refer [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses) to avoid hitting the rate limits.
 
 ```csharp
@@ -321,3 +319,7 @@ try
 ```
  
 These limits are in place to reduce spamming a channel by a connector and ensures an optimal experience to your end users.
+
+## See also
+
+[Office 365 Connectors — Microsoft Teams](/connectors/teams/)

@@ -12,7 +12,15 @@ Earlier if Adaptive Cards was sent in a Teams conversation, all users see the ex
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. She also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/adaptive-cards/mobile-universal-bots-incident-management.jpg" alt-text="Mobile User Specific Views":::
+
+# [Desktop](#tab/desktop)
+
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+
+* * *
 
 ## User Specific Views for Adaptive Cards
 
@@ -174,7 +182,7 @@ var card = JsonConvert.DeserializeObject(cardJson);
 var adaptiveCardResponse = JObject.FromObject(new
  {
     statusCode = 200,
-    type = "application/vnd.microsoft.card.adaptive",
+    type = "application/vnd.microsoft.adaptive.card",
     value = card
  });
 ```
