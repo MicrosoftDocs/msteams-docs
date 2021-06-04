@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams"
+title: Create a personal tab
 author: laujan
 description: A quickstart guide to creating a personal tab with the Yeoman Generator for Microsoft Teams.
 localization_priority: Normal
@@ -9,30 +9,30 @@ ms.author: lajanuar
 
 # Create a personal tab
 
-You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NETCore, and using ASP.NETCore MVC.
+You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NET Core, or using ASP.NET Core MVC.
 
 # [Node.js](#tab/nodejs)
 
 ## Create a custom personal tab using Node.js and the Yeoman Generator
 
->[!NOTE]
->This quickstart follows the steps outlined in the [build Your first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+> [!NOTE]
+> This article follows the steps outlined in the [build Your first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
-In this quickstart we'll walk-through creating a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). We'll also upload the application to Team.
+You can create a custom personal tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App). The application is also uploaded to Teams.
 
-## Prerequisites for Teams apps
+### Prerequisites for Teams apps
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you do not have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
+- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) is installed in your system with the installation of Node.js.
 
-- After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
     ```bash
     npm install yo gulp-cli --global
@@ -44,7 +44,7 @@ In addition, this project requires that you have the following installed in your
     npm install generator-teams --global
     ```
 
-## Generate your project
+### Generate your project
 
 - Open a command prompt and create a new directory for your tab project.
 
@@ -54,7 +54,7 @@ In addition, this project requires that you have the following installed in your
     yo teams
     ```
 
-- Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
+- Next, provide a series of values that are used in your application's **manifest.json** file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -184,7 +184,7 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 - Make sure to save the updated **Tab.ts** file. Your tab code is complete.
 
-### Build and run Your application
+### Build and run your application
 
 Open a command prompt in your project directory to complete the next tasks.
 
