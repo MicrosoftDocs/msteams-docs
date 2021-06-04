@@ -36,7 +36,7 @@ If your app fails to sideload, do the following until the issue resolves:
 
 1. Go back through the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html) again.
-1. Make sure your app manifest matches the latest [schema](../../resources/schema/manifest-schema.md).
+1. Ensure your app manifest matches the latest [schema](../../resources/schema/manifest-schema.md).
 
 ## Access your app
 
