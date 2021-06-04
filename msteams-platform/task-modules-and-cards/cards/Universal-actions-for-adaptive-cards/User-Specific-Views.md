@@ -8,7 +8,7 @@ localization_priority: Normal
 
 # User Specific Views
 
-Earlier if Adaptive Cards was sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card and up to 60 different users can see a different version of the card with additional information/actions. This helps light up powerful scenarios like approvals, poll creator controls, ticketing, incident management, project management cards etc.
+Earlier if Adaptive Cards was sent in a Teams conversation, all users see the exact same card content. With the introduction of the Universal Actions model and `refresh` for Adaptive Cards, bot developers can now provide User Specific Views of Adaptive Cards to users. The same Adaptive Card can now refresh to a User Specific Adaptive Card and up to 60 different users can see a different version of the card with additional information or actions. This provides powerful scenarios like approvals, poll creator controls, ticketing, incident management, and project management cards.
 
 For example, Megan, a safety inspector at Contoso, wants to create an incident and assign it to Alex. She also wants everyone in the team to be aware about the incident. Megan uses Contoso incident reporting message extension powered by Universal Actions for Adaptive Cards.
 
