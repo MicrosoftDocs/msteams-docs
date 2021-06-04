@@ -191,9 +191,9 @@ Card design guidelines to keep in mind while designing User Specific Views:
 
 * You can create a maximum of **60 User Specific Views** for a particular card being sent to a chat or channel by specifying their `userIds` in the `refresh` section. 
 * **Base Card:** The base version of the card that the bot developer sends to the chat. This is the version of the Adaptive Card for all users who are not specified in the `userIds` section.
-* A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat/channel also refreshes the card for users with refresh enabled.
-* For scenarios with larger groups where users switch to a view on action which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list and remove the 1st responder from the list when the 61st user responds and so on. For the users  who get removed from the userIds list, you can provide a manual refresh button or they can use the refresh button in the message options menu to get the latest result.
-* Give a prompt to end users getting a User Specific View that only they see a particular view of the card or some actions to instill confidence. 
+* A message update can be used to update the base card and simultaneously refresh the User Specific Card. Opening the chat or channel also refreshes the card for users with refresh enabled.
+* For scenarios with larger groups where users switch to a view on action, which needs dynamic updates for responders, you can keep adding up to 60 users to the `userIds` list. You can remove the first responder from the list when the 61st user responds. For the users  who get removed from the `userIds` list, you can provide a manual refresh button or they can use the refresh button in the message options menu to get the latest result.
+* Give a prompt to users to get a User Specific View where only they see a particular view of the card or some actions to provide confidence. 
 
 ## See also
 
