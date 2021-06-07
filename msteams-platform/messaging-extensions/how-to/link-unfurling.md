@@ -13,8 +13,8 @@ ms.author: anclear
 This document guides you on how to add link unfurling to your app manifest using App studio and manually. With link unfurling your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term.
 
 > [!NOTE]
-> Currently, link unfurling is not supported on Mobile clients.
-> The link unfurling result is cached for 30 minutes.
+> * Currently, link unfurling is not supported on Mobile clients.
+> * The link unfurling result is cached for 30 minutes.
 
 The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
 
