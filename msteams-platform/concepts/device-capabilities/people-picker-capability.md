@@ -34,14 +34,14 @@ You must use the following API to enable People Picker capability:
 
 | API      | Description   |
 | --- | --- |
-|`selectPeople`|Launches a People Picker and allows the user to search and select one or more people from the list.<br/><br/>In case of a personal app the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
+|`selectPeople`|Launches a People Picker and allows the user to search and select one or more people from the list.<br/>This API returns the ID, name and email address of selected users to the calling web app.<br/>In case of a personal app the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
 The `selectPeople` API comes along with following input configurations:
 
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`| String| It is an optional parameter. It sets title for the People Picker control. | Select people|
-|`setSelected`|String| It is an optional parameter. The user must pass AAD IDs of the people to be preselected. It preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. | Null |
+|`setSelected`|String| It is an optional parameter. You must pass AAD IDs of the people to be preselected. This parameter preselects people while launching the People Picker control. In case of single selection, only the first valid user is prepopulated ignoring the rest. | Null |
 |`openOrgWideSearchInChatOrChannel`|Boolean | It is an optional parameter. When it is set to true, it launches the People Picker in organization-wide scope even if the app is added to a chat or channel. | False |
 |`singleSelect`|Boolean|It is an optional parameter. When it is set to true, it launches the People Picker restricting the selection to one user only. | False|
 
@@ -54,18 +54,23 @@ The following image depicts the experience of People Picker capability in a samp
 **Calling `selectPeople` API** for selecting people from a list:
 
 ```javascript
- microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => {if (error) {
-                        if (error.message) {
-                            alert(" ErrorCode: " + error.errorCode + error.message);
-                        }
-                        else {
-                            alert(" ErrorCode: " + error.errorCode);
-                        }
+ microsoftTeams.people.selectPeople((error: microsoftTeams.SdkError, people: microsoftTeams.people.PeoplePickerResult[]) => 
+ {
+    if (error) 
+    {
+        if (error.message) 
+           {
+             alert(" ErrorCode: " + error.errorCode + error.message);
+           }
+            else 
+            {
+              alert(" ErrorCode: " + error.errorCode);
+            }
+      }
+      if (people) {
+                    output(" People length: " + people.length + " " + JSON.stringify(people));
                     }
-                    if (people) {
-                        output(" People length: " + people.length + " " + JSON.stringify(people));
-                    }
-            }     );
+  });
 ```
 
 ## Error handling
