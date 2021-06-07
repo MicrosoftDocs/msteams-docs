@@ -53,14 +53,14 @@ The following table provides the features and description of incoming webhook:
 
 1. Select **Done**. The webhook is available in the team channel.
 
-> [!NOTE]
-> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+    > [!NOTE]
+    > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
 ## Remove an incoming webhook
 
 **To remove an incoming webhook from a Teams channel**
 
-1. Navigate to the channel. 
+1. Navigate to the channel.
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Choose **Connectors** from the drop-down menu.
 1. On the left, under **Manage**, choose **Configured**.
@@ -68,7 +68,7 @@ The following table provides the features and description of incoming webhook:
 
     ![Configured webhook](~/assets/images/configured.png)
 
-1. Select **Manage** next to the connector that you want to delete.
+1. Select **Manage** next to the connector that you want to remove.
 
     ![Manage webhook](~/assets/images/manage.png)
 
@@ -84,9 +84,9 @@ The following table provides the features and description of incoming webhook:
 
     ![Final Remove](~/assets/images/finalremove.png)
 
-    The webhook is deleted from the team channel.
+    The webhook is removed from the Teams channel.
 
-## Distribution of webhook and connector
+## Distribute webhook and connector
 
 * [Set up an incoming webhook](#create-an-incoming-webhook) directly for your team.
 * Add a [configuration page](connectors-creating.md#integrate-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-the-organization) in a O365 Connector.

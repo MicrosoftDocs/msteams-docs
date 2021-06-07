@@ -203,7 +203,7 @@ The Exchange Online PowerShell V2 module uses modern authentication and works wi
 
 The tenant-level setting overrides the group-level setting. For example, if an admin enables connectors for the group and disables them on the tenant, connectors for the group will be disabled. To enable a connector in Teams, [connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa&preserve-view=true) using modern authentication with or without MFA.
 
-### Commands to disable or enable Connectors
+### Commands to enable or disable Connectors
 
 Run the following commands in Exchange Online PowerShell:
 

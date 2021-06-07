@@ -180,8 +180,8 @@ This message provides the following card in the channel:
 
 2. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
-- [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-- Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+    - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
+    - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
 
 ---
 
