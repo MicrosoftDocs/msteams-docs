@@ -1,5 +1,5 @@
 ---
-title: Conversational sub-entities
+title: Create conversational tabs
 author: laujan
 description: Create conversational sub-entity chat for your channel tabs
 keywords: teams tabs channel configurable 
@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: lomeybur
 ---
 
-# Conversational sub-entities
+# Create conversational tabs
 
 Conversational sub-entities provides a way to allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content being shown. Conversational sub-entities provides a much more focused conversation experience for dynamic tabs.
 

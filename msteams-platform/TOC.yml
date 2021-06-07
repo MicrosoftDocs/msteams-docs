@@ -212,7 +212,7 @@
     href: tabs/how-to/build-adaptive-card-tabs.md
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
-  - name: Conversational sub-entities
+  - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
 - name: Build bots
   items:
