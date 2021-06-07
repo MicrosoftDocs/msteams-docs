@@ -8,7 +8,9 @@ ms.topic: overview
 ---
 # Enable orgs to customize your Microsoft Teams app
 
-You can allow orgs (specifically Teams admins) to customize some aspects of your Microsoft Teams app. Some possible examples include:
+You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store. Sideloaded apps and apps published for an org can't be customized.
+
+Some possible examples of this feature include:
 
 * Changing the app's accent color to match an org's brand.
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
