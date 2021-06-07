@@ -21,7 +21,12 @@ You can enable this feature in the [Developer Portal for Teams](https://dev.team
 
 To test app customization, submit the latest version of app manifest, and use a test tenant to verify your changes. App customization does not support sideloading. You cannot test the feature by sideloading the app. 
 
+## User considerations
 
-## Best practices
+As the app publisher, provide the following information to customers in Teams admins:
+* Include a note recommending to test customization changes in a Teams test tenant before making changes in their production environment. 
+* Provide best practices for how to customize your app.
 
-Provide guidelines for customers who want to customize your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+## See also
+
+* [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
