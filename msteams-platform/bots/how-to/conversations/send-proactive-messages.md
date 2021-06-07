@@ -115,9 +115,6 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 The following code shows a simple code sample that proactively installs your app using Graph:
 
-> [!NOTE]
-> `createConversation` is only for 1:1 chats and currently bots cannot create a group chat through bot APIs or through Graph.
-
 # [C#](#tab/dotnet)
 
 ```csharp
@@ -259,6 +256,9 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 ```
 
 ---
+
+> [!NOTE]
+> Currently bots cannot create a group chat through bot APIs or Graph. `createConversation` is available only for 1:1 chats.
 
 ## Code sample
 
