@@ -15,7 +15,7 @@ Some possible examples of this feature include:
 * Changing the app's accent color to match an org's brand.
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
-You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). (This configures `configurableProperties` in your app manifest.) For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This configures `configurableProperties` that are not available in previous versions prior to 1.10 of the Teams app manifest.
 
 ## Test your app
 
