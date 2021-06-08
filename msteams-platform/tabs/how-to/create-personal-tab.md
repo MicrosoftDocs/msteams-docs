@@ -261,7 +261,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 1. After you get the source code, open Visual Studio and select **Open a project or solution**.
 1. Navigate to the tab application directory and open **PersonalTab.sln**.
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-1. In a browser navigate to the URLs below to verify the application loaded properly:
+1. In a browser navigate to the following URLs to verify the application loaded properly:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -306,7 +306,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file you see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -464,7 +464,7 @@ You can create a custom personal tab using C# and ASP.Net Core MVC. [App Studio 
 
   - If you do not have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
 
-- Use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the lower left corner of the Teams app, and search for **App Studio**. After you find the tile, select it and choose install in the pop-up dialog box.
+- Use App Studio to import your application to Teams. To install App Studio select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the lower left corner of the Teams app, and search for **App Studio**. After you find the tile, select it and choose **Add** in the pop-up dialog box to install it.
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -474,7 +474,7 @@ In addition, this project requires that you have the following installed in your
 
 ### Get the source code
 
-Open a command prompt and create a new directory for your tab project. A simple project is provided to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory:
+Open a command prompt and create a new directory for your tab project. A simple project is provided to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory using the following command:
 
 ``` bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
@@ -485,7 +485,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 1. After you have the source code, open Visual Studio and select **Open a project or solution**. 
 1. Navigate to the tab application directory and open **PersonalTabMVC.sln**.
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-1. In a browser navigate to the URLs below to verify that the application loaded properly:
+1. In a browser navigate to the following URLs to verify that the application loaded properly:
 
 * `http://localhost:44335`
 * `http://localhost:44335/privacy`
@@ -525,7 +525,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the bottom of the file you see the code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you see the following code that creates and updates your zip folder when the application builds:
 
 ``` xml
 <PropertyGroup>
