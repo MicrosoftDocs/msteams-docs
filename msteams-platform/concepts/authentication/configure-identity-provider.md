@@ -9,15 +9,18 @@ keywords: teams authentication AAD oauth identity provider
 
 ## Configuring an application to use Azure Active Directory as an identity provider
 
-Identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications; applications must be registered ahead of time. To do this with Azure AD, follow these steps:
+>[!NOTE]
+>The applications must be registerd, as the identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications.
+
+**To configure application with Azure AD:**
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select **New Registration**.
-3. Provide the user-facing display name for this application 
+3. Provide the user-facing display name for this application.
 
  > [!NOTE]
- > The name of the application in the UI can be changed later.
+ > The name of the application can be changed later.
 
 4. Find the **Redirect URI** section for the app.
 5. In the dropdown menu, select **Web**. 
