@@ -16,14 +16,14 @@ Teams establishes a trusted connection with providers, to access data from servi
 
 In Teams, there are two authentication flows for the app:
 * Web-based authentication flow: Use in a [content page](~/tabs/how-to/create-tab-pages/content-page.md) embedded in a tab, a configuration page, or a task module. 
-* OAuthPrompt flow: Use the OAuthPrompt flow if the app contains a conversational bot, and optionally use the Azure Bot Framework's token service to authenticate a user as part of a conversation.
+* OAuthPrompt flow: Use if the app contains a conversational bot, and optionally use the Azure Bot Framework's token service to authenticate user as part of a conversation.
 
 > [!NOTE]
 > Microsoft Graph APIs help authenticate the user to retrieve the appropriate authentication tokens.
 
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
+Configure the identity provider communicates with Teams app regardless of the app's authentication flow. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
@@ -51,7 +51,7 @@ For more information on using the OAuthPrompt, see:
 
 ## Code sample
 
-The following code sample provides Bot authentication v3 SDK.
+The following table lists bot authentication v3 SDK code samples:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -66,5 +66,4 @@ The following code sample provides Bot authentication v3 SDK.
 
 > [!div class="nextstepaction"]
 > [Configure identity providers](~/concepts/authentication/configure-identity-provider.md).
-
 
