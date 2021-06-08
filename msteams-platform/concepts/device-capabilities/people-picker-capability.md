@@ -31,7 +31,8 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 `selectPeople` API enables you to add Teams native `People Picker input control` to your web apps.  
 The API description is as follows:
-| API      | Description   |
+
+| API      | Description  |
 | --- | --- |
 |`selectPeople`|Launches a People Picker and allows the user to search and select one or more people from the list.<br/><br/>This API returns the ID, name and email address of selected users to the calling web app.<br/><br/>In case of a personal app, the control searches across the organization. If the app is added to a chat or channel, then the search context is configured depending on the scenario. The search is restricted within the members of that chat, channel, or made available across the organization.|
 
