@@ -13,9 +13,15 @@ Identity providers supporting OAuth 2.0 will not authenticate requests from unkn
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
-2. Select your app to view its properties, or click the "New Registration" button. Find the **Redirect URI** section for the app.
+2. Select **New Registration**.
+3. Provide the user-facing display name for this application 
 
-3. In the dropdown menu, make sure **Web** is selected. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to this:
+ > [!NOTE]
+ > The name of the application in the UI can be changed later.
+
+4. Find the **Redirect URI** section for the app.
+5. In the dropdown menu, select **Web**. 
+6. Update the URL to authentication endpoint. For example, the redirect URL for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -23,6 +29,17 @@ Replace `<hostname>` with your actual host. This might be a dedicated hosting si
 
 ## Other authentication providers
 
-* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
+* **LinkedIn** For more information, see [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
 
 * **Google** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
+
+## See also
+
+[AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md)
+[Silent authentication in tabs](~/tabs/how-to/authentication/auth-silent-AAD.md)
+[Add authentication to the Teams bot](~/bots/how-to/authentication/add-authentication.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
