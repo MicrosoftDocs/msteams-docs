@@ -51,7 +51,7 @@ Create outgoing webhooks and add custom bots to Teams.
 
     * **Name**: The webhook title and @mention tab.
     * **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams.
-    * **Description**: A detailed string that appear in the profile card and the team-level App dashboard.
+    * **Description**: A detailed string that appears in the profile card and the team-level App dashboard.
     * **Profile Picture**: An app icon for your webhook, which is optional.
 
 6. Select **Create**. The outgoing webhook is added to the current team's channel.

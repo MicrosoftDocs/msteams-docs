@@ -12,7 +12,7 @@ ms.author: lajanuar
 
 ## Incoming webhook
 
-Incoming webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface (UI) containers that include content and actions related to a single topic. Teams uses cards within the following three capabilities:
+Incoming webhook allow any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface (UI) containers that include content and actions related to a single topic. Teams use cards within the following three capabilities:
 
 * Bots
 * Messaging extensions
@@ -25,10 +25,10 @@ The following table provides the features and description of incoming webhook:
 | Features | Description |
 | ------- | ----------- |
 |Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you choose to send messages through cards, you must use the actionable message card format. For more information, see [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
-|Independent HTTPS messaging support|Cards provide information in a clear and consistent way. Any tool or framework that can send HTTPS POST requests, can send messages to Teams through an incoming webhook.|
+|Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests, can send messages to Teams through an incoming webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. Do not use HTML markup in your cards. HTML is ignored and treated as plain text.|
-|Scoped configuration|Incoming webhook are scoped and configured at the channel level.|
-|Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents insertion of malicious code.|
+|Scoped configuration|Incoming webhook is scoped and configured at the channel level.|
+|Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the insertion of malicious code.|
 
 > [!NOTE]
 > Teams bots, messaging extensions, incoming webhook, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.

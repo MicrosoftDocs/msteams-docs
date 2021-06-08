@@ -25,12 +25,12 @@ To distribute your Connector, you must register through [Connectors Developer Da
 Users can complete the entire Connector configuration experience without having to leave the Teams client. To get the experience, Teams can embed your configuration page directly within an iframe. The sequence of operations is as follows:
 
 1. The user selects the Connector to begin the configuration process.
-2. The user interacts with web experience to complete the configuration.
+2. The user interacts with the web experience to complete the configuration.
 3. The user selects **Save**, which triggers a callback in code.
 
     > [!NOTE]
     > * The code can process the save event by retrieving the webhook settings. Your code stores the webhook to post events later.
-    > * The configuration experience is loaded in line within Teams.
+    > * The configuration experience is loaded inline within Teams.
 
 You can reuse your existing web configuration experience or create a separate version to be hosted specifically in Teams. Your code must include the Microsoft Teams JavaScript SDK. This gives your code access to APIs to perform common operations, such as getting the current user, channel, or team context and initiate authentication flows.
 
@@ -53,7 +53,7 @@ You can reuse your existing web configuration experience or create a separate ve
 
 This event gives your service an opportunity to perform any cleanup actions.
 
-The following code provides a sample HTML to create Connector configuration page without the customer service and support:
+The following code provides a sample HTML to create a Connector configuration page without the customer service and support:
 
 ```html
 <h2>Send notifications when tasks are:</h2>
@@ -127,9 +127,9 @@ The following table provides the parameters and the details of `GetSetting` resp
 | `entityId`       | The entity ID, as set by your code when calling `setSettings()`. |
 | `configName`  | The configuration name, as set by your code when calling `setSettings()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()`. |
-| `webhookUrl` | The webhook URL created for the Connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when application returns data successfully. |
+| `webhookUrl` | The webhook URL created for the Connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when the application returns data successfully. |
 | `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Microsoft Teams respectively. |
-| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated setup of the Connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
+| `userObjectId` | The unique ID corresponding to the Office 365 user who initiated the setup of the Connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
 #### Handle edits
 
@@ -222,7 +222,7 @@ To test your Connector, upload it to a team with any other app. You can create a
 
 After you upload the app, open the Connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
 
-![Screenshot of uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
+![Screenshot of an uploaded section in Connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 
 > [!NOTE]
 > The flow occurs entirely within Microsoft Teams as a hosted experience.
