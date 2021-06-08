@@ -38,9 +38,9 @@ Replace `<hostname>` with your actual host. This might be a dedicated hosting si
 
 ## See also
 
-[AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md)
-[Silent authentication in tabs](~/tabs/how-to/authentication/auth-silent-AAD.md)
-[Add authentication to the Teams bot](~/bots/how-to/authentication/add-authentication.md)
+* [AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md)
+* [Silent authentication in tabs](~/tabs/how-to/authentication/auth-silent-AAD.md)
+* [Add authentication to the Teams bot](~/bots/how-to/authentication/add-authentication.md)
 
 ## Next step
 

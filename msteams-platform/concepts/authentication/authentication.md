@@ -59,8 +59,8 @@ The following code sample provides Bot authentication v3 SDK.
 
 ## See also
 
-[Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
-[Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md)
+* [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md)
 
 ## Next step
 
