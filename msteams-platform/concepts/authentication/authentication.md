@@ -61,7 +61,6 @@ The following code sample provides Bot authentication v3 SDK.
 
 [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md)
-[Add authentication to messaging extension](~/messaging-extensions/how-to/add-authentication.md)
 
 ## Next step
 
