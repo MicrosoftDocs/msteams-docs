@@ -11,7 +11,7 @@ ms.date: 04/19/2019
 
 With Microsoft Teams apps, you can add your existing Office 365 Connector or build a new one to include in Microsoft Teams. For more information, see [build your own Connector](/outlook/actionable-messages/connectors-dev-dashboard#build-your-own-connector).
 
-## Add a Connector to Teams App
+## Add a Connector to Teams app
 
 You can [package](~/concepts/build-and-test/apps-package.md) and [publish](~/concepts/deploy-and-publish/apps-publish.md) your Connector as part of your AppSource submission. You can distribute your registered Connector as part of your Teams app package. For information on entry points for Teams app, see [capabilities](~/concepts/extensibility-points.md). You can also provide the package to users directly for uploading within Teams.
 
@@ -49,7 +49,7 @@ You can reuse your existing web configuration experience or create a separate ve
     > [!NOTE]
     > You must call this when your page is first loaded in case of re-configuration.
 
-6. Optionally, register `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which is called when the user removes Connector. 
+6. Optionally, register `microsoftTeams.settings.registerOnRemoveHandler()` event handler, which is called when the user removes Connector.
 
 This event gives your service an opportunity to perform any cleanup actions.
 
@@ -127,7 +127,7 @@ The following table provides the parameters and the details of `GetSetting` resp
 | `entityId`       | The entity ID, as set by your code when calling `setSettings()`. |
 | `configName`  | The configuration name, as set by your code when calling `setSettings()`. |
 | `contentUrl` | The URL of the configuration page, as set by your code when calling `setSettings()`. |
-| `webhookUrl` | The webhook URL created for this Connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when application returns data successfully. |
+| `webhookUrl` | The webhook URL created for the Connector. Use the webhook URL to POST structured JSON to send cards to the channel. The `webhookUrl` is returned only when application returns data successfully. |
 | `appType` | The values returned can be `mail`, `groups`, or `teams` corresponding to the Office 365 Mail, Office 365 Groups, or Microsoft Teams respectively. |
 | `userObjectId` | The unique ID corresponding to the Office 365 user who initiated setup of the Connector. It must be secured. This value can be used to associate the user in Office 365, who has set up the configuration in your service. |
 
@@ -157,7 +157,7 @@ The following manifest.json file contains the elements needed to test and submit
 > [!NOTE]
 > Replace `id` and `connectorId` in the following example with the GUID of the Connector.
 
-#### Example manifest.json with Connector
+#### Example of manifest.json with Connector
 
 ```json
 {
@@ -257,6 +257,6 @@ The following table provides the sample name and its description:
 
 ## See also
 
-* [Send messages to Connectors and Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md)
+* [Send messages to Connectors and Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)

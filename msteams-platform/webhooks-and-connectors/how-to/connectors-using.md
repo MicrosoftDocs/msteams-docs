@@ -274,6 +274,6 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 
 ## See also
 
-* [Office 365 Connectors for Microsoft Teams](connectors-creating.md)
+* [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
