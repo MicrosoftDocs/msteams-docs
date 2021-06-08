@@ -117,7 +117,7 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 ## Use cards and Markdown with outgoing webhook
 
 You can use any card and markdown in response to an outgoing webhook. A card must be added as an attachment to respond to an outgoing webhook.
-For more information on formatting cards in Teams, see [format cards with markdown](../task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
+For more information on formatting cards in Teams, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
 
 ## Code sample
 |**Sample name** | **Description** | **.NET** | **Node.js** |
