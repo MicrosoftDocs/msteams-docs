@@ -47,9 +47,12 @@ Sample code showing the tab authentication process:
 |-----------------|-----------------|-------------|------------|
 | Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## More details
+## See also
 
-For a detailed implementation for tab authentication using AAD, see:
-
-* [Authenticate a user in a Teams tab](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md)
+* [SSO authentication](~/tabs/how-to/authentication/auth-aad-sso.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Azure AD Authentication](~/tabs/how-to/authentication/auth-tab-AAD.md)
