@@ -40,7 +40,7 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 
 ![Teams toolkit installed](../assets/images/teamstoolkiticon.png)
 
-1. Select **Create a new project**.
+1. Select **Create New Project**.
 
     ![Create new project](../assets/images/createnewproject.png)
 
