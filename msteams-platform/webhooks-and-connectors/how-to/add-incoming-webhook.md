@@ -86,12 +86,6 @@ The following table provides the features and description of incoming webhook:
 
     The webhook is removed from the Teams channel.
 
-## Distribute webhook and connector
-
-* [Set up an incoming webhook](#create-an-incoming-webhook) directly for your team.
-* Add a [configuration page](connectors-creating.md#integrate-the-configuration-experience) and [publish your incoming webhook](connectors-creating.md#publish-connectors-for-the-organization) in a O365 Connector.
-* Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
-
 ## See also
 
 * [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

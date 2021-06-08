@@ -44,7 +44,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 
 To send a message through your incoming webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-You can also use this JSON to create cards containing rich inputs, such as text entry, multi-select, or selecting date and time. The code that generates the card and posts to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
+You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
 
 ### Example of connector message
 
@@ -235,7 +235,7 @@ Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST r
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams tracks requests using a fixed-rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection can be throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams tracks requests using a fixed-rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection can be throttled until the window refreshes for the duration of the fixed-rate.
 
 ### Transactions per second thresholds
 
