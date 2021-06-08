@@ -17,7 +17,7 @@ The following image shows Contoso channel tabs:
 
 There are few prerequisites that you must go through before working on tabs.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg] <br />
+> [!VIDEO https://www.youtube-nocookie.com/embed/Jw6i7Mkt0dg]
 
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/T2a8yJC3VcQ]

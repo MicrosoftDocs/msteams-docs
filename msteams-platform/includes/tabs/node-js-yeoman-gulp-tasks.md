@@ -14,7 +14,7 @@ gulp manifest
 
 #### Build your application
 
-The build command transpiles your solution into the **./dist** folder. Next, enter the following command in the command prompt:
+The build command transpiles your solution into the **./dist** folder. Enter the following command in the command prompt:
 
 ```bash
 gulp build

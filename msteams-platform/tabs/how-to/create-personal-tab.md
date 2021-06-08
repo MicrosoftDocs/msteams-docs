@@ -98,9 +98,17 @@ In addition, this project requires that you have the following installed in your
 
     By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
+    **Would you like show a loading indicator when your app/tab loads?**
+
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+    **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
     **Would you like to include Test framework and initial tests? (y/N)**
 
-    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+    Choose **not** to include a test framework for this project. The default is yes, enter **n**.
 
     **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
@@ -110,9 +118,13 @@ In addition, this project requires that you have the following installed in your
 
     Name your tab. This tab name will be used throughout your project as a file/URL path component.
 
-**Create a configurable or static tab**
+    **What kind of Tab would you like to create?**
 
-Use the arrow keys to select static tab.
+    Use the arrow keys to select **Personal (static)**.
+
+    **Do you require Azure AD Single-Sign-On support for the tab?**
+
+    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 
 > [!IMPORTANT]
 > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
@@ -218,9 +230,9 @@ gulp ngrok-serve
 **To upload your application to Teams**
 
 1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-1. In the **YourTeams** panel on the left, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
+1. From your teams on the left panel, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
 1. In the main panel, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
-1. Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab is uploaded to Teams.
+1. Open your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**. Your tab is uploaded to Teams.
 
 ### View your personal tabs
 
