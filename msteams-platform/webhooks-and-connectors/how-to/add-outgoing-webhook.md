@@ -114,6 +114,11 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 >* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 >* The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
 
+## Use cards and Markdown with outgoing webhook
+
+You can use any card and markdown in response to an outgoing webhook. A card must be added as an attachment to respond to an outgoing webhook.
+For more information on formatting cards in Teams, see [format cards with markdown](../task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
+
 ## Code sample
 |**Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|------------------|--------|----------------|
