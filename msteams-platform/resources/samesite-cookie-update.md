@@ -50,11 +50,11 @@ SameSite cookie attributes are as follows:
 > [!NOTE]
 > For best practice, it is recommended that you always set SameSite attributes to reflect the intended use for your cookies. Do not rely on default browser behavior. For more information, see [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html).
 
-### Tabs, task modules, and message extensions
+### Tabs, task modules, and messaging extensions
 
 * Teams tabs use `<iframes>` to embed content that is viewed in a top level or first party context.
 * Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
-* Message extensions allow you to insert enriched content into chat message from external resources.
+* Messaging extensions allow you to insert enriched content into chat message from external resources.
 
 Any cookies used by embedded content are considered as third party when the site is displayed in an `<iframe>`. In addition, if any remote resources on a page rely on cookies being sent with a request `<img>` and `<script>` tags, external fonts, and personalized content, you must ensure those are marked for cross site usage, such as `SameSite=None; Secure` or ensure that a fallback is in place.
 
@@ -66,7 +66,7 @@ Any cookies used by embedded content are considered as third party when the site
 
 Pursuant to the updated SameSite restrictions, a browser does not add a cookie to an already authenticated web site if the link derives from an external site. You must ensure your authentication cookies are marked for cross site usage `SameSite=None; Secure` or ensure that a fallback is in place.
 
-### Android System WebView
+## Android System WebView
 
 Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions become default, tarting with Chrome 80, they are not immediately enforced on WebViews. They are applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookeManager API](https://developer.android.com/reference/android/webkit/CookieManager):
 
@@ -79,6 +79,4 @@ Android WebView is a Chrome system component that allows Android apps to display
 * [SameSite cookie recipes](https://web.dev/samesite-cookie-recipes/)
 * [Known Incompatible Clients]( https://www.chromium.org/updates/same-site/incompatible-clients)
 * [Developers: Get Ready for New SameSite=None; Secure Cookie Settings](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
-
-**OpenId Connect impact**<br>
-[Upcoming SameSite Cookie Changes in ASP.NET and ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Upcoming SameSite Cookie Changes in ASP.NET and ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
