@@ -9,6 +9,8 @@ keywords: teams o365 connector
 
 # Create and send messages
 
+You can create actionable messages and send it through incoming webhook or Office 365 connector.
+
 ## Create actionable messages
 
 The actionable messages include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
