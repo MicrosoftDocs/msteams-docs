@@ -60,7 +60,6 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 > [!NOTE]
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
-
 ##### Tabs
 
 * **Team Tabs.** A team tab becomes part of a channel and provides quick access to team information and resources. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
@@ -85,8 +84,6 @@ After you have supplied your bot's information, you can now optionally define a 
 ##### Connectors
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose **Set up** and enter the name and ID of the connector. If you want a new connector click **Register** to be taken to the Connector Developer Dashboard in your browser.
-
-
 
 ##### Messaging Extensions
 
