@@ -1,19 +1,19 @@
 ---
-title: Together Mode in Teams
-description: Work with Together Mode 
+title: Customize Together Mode Scene
+description: Work with customize Together Mode scene 
 ms.topic: conceptual
 ---
 
-# Together Mode in Teams
+# Customize Together Mode Scene in Teams
 
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-Microsoft Teams Together Mode provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined seats designed and fixed by the scene creator.
+Customize Together Mode scene in Microsoft Teams provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined seats designed and fixed by the scene creator.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-A scene in Together Mode is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
+A scene in customize Together Mode scene is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have designated seats with video streams rendered in those seats.
 
 > [!NOTE]
 > Scene only apps are recommended as the acquisition experience for such apps is more seamless.
@@ -28,7 +28,7 @@ The following process gives an overview to create a scene only app:
 
 ## Prerequisites
 
-You must have a basic understanding of the following to use Together Mode:
+You must have a basic understanding of the following to use customize Together Mode scene:
 
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
@@ -140,14 +140,14 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. In the **View in Teams** dialog box, select **Preview in Teams**.
 1. In the dialog box that appears, select **Add**.
 
-    The scene can be tested or accessed by creating a test meeting and launching Together Mode. For more information, see [activate the Together Mode](#activate-the-together-mode).
+    The scene can be tested or accessed by creating a test meeting and launching customize Together Mode scene. For more information, see [activate the customize Together Mode scene](#activate-the-customize-together-mode-scene).
 
-    ![Launch Together Mode](../assets/images/apps-in-meetings/launchtogethermode.png)
+    ![Launch customize Together Mode scene](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
     > * Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
     > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
-    > * The scene can then be viewed in the Together Mode scene gallery.
+    > * The scene can then be viewed in the customize Together Mode scene gallery.
 
 1. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
@@ -167,7 +167,7 @@ A more complex scene that leverages the Z-axis is demonstrated in the step-by-st
 
 ## Sample scene.json
 
-Scene.json along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Together mode supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed, which is segmented so that only the foreground is rendered.
+Scene.json along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Customize Together Mode scene supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed, which is segmented so that only the foreground is rendered.
 
 Following is the scene.json sample:
 
@@ -241,13 +241,13 @@ Each scene has a unique ID and name. The scene JSON also contains information on
 
 The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required. For more information, see the step-by-step getting started sample. The sample leverages the zOrder.
 
-Now that you have gone through the sample scene.json, you can activate the Together Mode to engage in scenes.
+Now that you have gone through the sample scene.json, you can activate the customize Together Mode scene to engage in scenes.
 
-## Activate the Together Mode
+## Activate the customize Together Mode scene
 
-Get end-to-end information of how an end user engages with scenes in Together Mode.
+Get end-to-end information of how an end user engages with scenes in customize Together Mode scene.
 
-**To choose scenes and activate the Together Mode**
+**To choose scenes and activate the customize Together Mode scene**
 
 1. Create a new test meeting.
 
@@ -263,11 +263,11 @@ Get end-to-end information of how an end user engages with scenes in Together Mo
 1. Optionally, the meeting organizer and presenter can choose **Switch all participants to together mode** in the meeting.
 
     >[!NOTE]
-    > At any point in time, only one scene can be used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of Together Mode is up to individual participants, but while in Together Mode, all participants have the same scene.
+    > At any point in time, only one scene can be used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of customize Together Mode scene is up to individual participants, but while in customize Together Mode scene, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
-## Open a Together Mode Scene Package
+## Open a customize Together Mode scene Scene Package
 
 You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality can be leveraged. This tool helps unwrap a scene package to let the creator continue building the scene.
 
