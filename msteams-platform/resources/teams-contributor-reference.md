@@ -9,7 +9,7 @@ ms.topic: contributor-guide
 
 # Contributing to Microsoft Teams documentation
 
-Teams documentation is part of the [Microsoft Docs](/) technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after **docs.microsoft.com**. For example, `/docs.microsoft.com/microsoftteams/...`   is the beginning of the Teams docset file path. Teams articles are written in MarkDown syntax and hosted on GitHub.
+Teams documentation is part of the **Microsoft Docs** technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after **docs.microsoft.com**. For example, `/docs.microsoft.com/microsoftteams/...` is the beginning of the Teams docset file path. Teams articles are written in MarkDown syntax and hosted on GitHub.
 
 ## Set up your workspace
 
@@ -24,13 +24,13 @@ Teams documentation is part of the [Microsoft Docs](/) technical documentation l
 >
 > * Install within VS Code:
 
-   1. Select the **Extensions icon** on the side activity bar or use the **View => Extensions** command (Ctrl+Shift+X) and search for the **Microsoft Docs Authoring Pack**.
+   1. Select the **Extensions icon** on the side activity bar or use the **View => Extensions** command or Ctrl+Shift+X and, search for the **Microsoft Docs Authoring Pack**.
    1. Select the **Install** button.
    1. After installation, the **Install** button changes to the **Manage** gear button.
 
 ## Review the Microsoft Docs Contributors Guide
 
-The [contributors guide](/contribute) offers direction to create, publish, and update technical content on the Microsoft Docs platform. 
+The contributors guide offers direction to create, publish, and update technical content on the **Microsoft Docs** platform. 
 
 ## Microsoft Writing, Style, and Content Guides
 
@@ -67,6 +67,8 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 
 ## See also
 
+* [Microsoft Docs](/)
+* [contributors guide](/contribute)
 * [Docs style and voice quick start](/contribute/style-quick-start)
 * [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)

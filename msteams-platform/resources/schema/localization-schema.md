@@ -9,9 +9,14 @@ ms.date: 05/20/2019
 
 # Localization file JSON schema reference
 
-The Microsoft Teams localization file describes language translations that are served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json). For additional information on localization, see [app localization](~/concepts/build-and-test/apps-localization.md).
+The Microsoft Teams localization file describes language translations that are served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json). 
 
-## Example localization JSON schema 
+> [!TIP]
+> Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+
+## Example 
+
+Example of localization JSON schema is as follows:
 
 ```json
 {
@@ -48,6 +53,6 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.|
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.|
 
-> [!TIP]
-> Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",`
+## See also
 
+> [App localization](~/concepts/build-and-test/apps-localization.md)

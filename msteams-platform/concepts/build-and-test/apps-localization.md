@@ -16,7 +16,7 @@ You must consider the following factors to localize your Microsoft Teams app:
 
 ## Localize your AppSource listing
 
-If you are publishing to the store, you must be aware that localizing your AppSource listing is not yet supported. To support localized listings in the app store you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app. Currently, the default language is English.
+If you are publishing the app to the store, you must be aware that localizing your AppSource listing is not yet supported. To support localized listings in the app store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1) listing for your app. Currently, the default language is English.
 
 ### Configure localization
 
@@ -26,9 +26,9 @@ To configure an additional language for your app, in [Partner Center](/office/de
     * Fill in the app name.
     * Fill in a short description of the app in English.
     * Fill in the long description of the app in English.
-    * In the long description, add **This app is also available in French**.
+    * In the long description, add the line **This app is also available in French**.
     * Upload the images of your app UI in English.
-2. Add French language
+1. Add French language
     * Fill in the app name.
     * Fill in a short description of the app in French.
     * Fill in the long description of the app in French.
@@ -47,7 +47,7 @@ Following is an example for manifest.json change to localize your app:
 ```json
 {
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
-  "manifestVersion": "1.7",
+  "manifestVersion": "1.5",
   ...
 }
 ```
@@ -68,25 +68,28 @@ Following is an example for manifest.json change to add the `localizationInfo` p
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the 'localizationInfo' property of your manifest. Each file correlates to a language tag which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but it is recommended to omit the `<region>` portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but it is recommended to omit the `<region>` portion to target all regions that support the desired language.
 
-The Teams client applys the strings in this order: default language strings -> user's language only strings -> user's language + user's region strings.
+The Teams client applys the strings in the following order:
+default language strings -> user's language only strings -> user's language + user's region strings.
 
 For example, if you provide a default language of `fr` (French, all regions), and additional language files for `en` (English, all regions) and `en-gb` (English, Great Britain), the user's language is set to `en-gb`. The following changes take place based on the language selection:
 
-1. The Teams client takes the `fr` strings overwrite them with the 'en' strings.
-1. Overwrite those with the `en-gb` strings.
+1. The Teams client takes the `fr` strings overwrite them with the `en` strings.
+1. Overwrite the `en` strings with the `en-gb` strings.
 
 If the user's language is set to `en-ca`, the following changes take place based on the language selection: 
 
 1. The Teams client takes the `fr` strings overwrite them with the `en` strings.
 1. Since no `en-ca` localization is supplied, the `en` localizations are used.
 
-If the user's language is set to 'es-es', the Teams client takes the `fr` strings and does not override them with any of the language files.
+If the user's language is set to `es-es`, the Teams client takes the `fr` strings and does not override them with any of the language files.
 
-Therefore, you must provide top level, language-only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them. The corresponding manifest.json change is shown in the following example:
+Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them. 
 
 ### Example manifest.json change
+
+The corresponding manifest.json change is shown in the following example:
 
 ```json
 {
@@ -133,7 +136,7 @@ Therefore, you must provide top level, language-only translations in your manife
 
 ## Handle localized text submissions from your users
 
-If your provide localized versions of your application the users respond with the same language. As Teams does not translate the user submissions back to the default language, your app must handle that. For example, if you provide a localized `commandList`, the responses to your bot are the localized text of the command, not the default language. Your app must respond appropriately.
+If your provide localized versions of your application, the users respond with the same language. As Teams does not translate the user submissions back to the default language, your app must handle the localized language responses. For example, if you provide a localized `commandList`, the responses to your bot are the localized text of the command, not the default language. Your app must respond appropriately.
 
 ## Code sample
 
