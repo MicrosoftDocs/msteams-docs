@@ -76,6 +76,14 @@ In addition, this project requires that you have the following installed in your
 
     By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
+    **Would you like show a loading indicator when your app/tab loads?**
+
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+   **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
     **Would you like to include Test framework and initial tests? (y/N)**
 
     Choose **not** to include a test framework for this project. The default is yes; enter **n**.
@@ -86,4 +94,13 @@ In addition, this project requires that you have the following installed in your
 
     **Default Tab Name (max 16 characters)?**
 
-    Name your tab. This tab name will be used throughout your project as a file/URL path component.
+    Name your tab. This tab name will be used throughout your project as a file or URL path component.
+
+    **What kind of Tab would you like to create?**
+
+    Use the arrow keys to select **Personal (static)**.
+
+    **Do you require Azure AD Single-Sign-On support for the tab?**
+
+    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+

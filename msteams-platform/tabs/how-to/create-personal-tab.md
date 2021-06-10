@@ -116,7 +116,7 @@ In addition, this project requires that you have the following installed in your
 
     **Default Tab Name (max 16 characters)?**
 
-    Name your tab. This tab name will be used throughout your project as a file/URL path component.
+    Name your tab. This tab name will be used throughout your project as a file or URL path component.
 
     **What kind of Tab would you like to create?**
 
