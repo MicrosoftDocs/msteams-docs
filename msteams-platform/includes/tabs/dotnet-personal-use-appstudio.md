@@ -31,7 +31,7 @@ In the **App details** section:
 
 1. Under **Identification**, select **Generate** to generate a new App Id for your app.
 
-1. Under **Developer information**, update the **Website URL** with your **ngrok** HTTPS URL.
+1. Under **Developer information**, update the **Website** with your **ngrok** HTTPS URL.
 
 1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
@@ -43,7 +43,7 @@ In the **Tabs** section:
 
 1. Enter a name for the personal tab in **Name**.
 
-1. Enter the entity ID in **Entity Id**.
+1. Enter the entity ID in **Entity ID**.
 
 1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
@@ -58,7 +58,7 @@ In the **Domains and permissions** section, the **Domains from your tabs** field
 ##### Finish: Test and distribute
 
 >[!IMPORTANT]
->In the **Description** field on the right you see the following warning:
+> On the right, in **Description**, you see the following warning:
 >
 >&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
 >
