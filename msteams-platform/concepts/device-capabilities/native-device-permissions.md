@@ -61,7 +61,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 
 ## Specify permissions
 
-Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the five properties that you use in your application:
+Update your app's `manifest.json` by adding `devicePermissions` and specifying which of the following five properties that you use in your application:
 
 ``` json
 "devicePermissions": [
