@@ -221,12 +221,12 @@ This message provides the following card in the channel:
     }
     ```
 
-Properties for Adaptive Card JSON file:
+    Properties for Adaptive Card JSON file:
 
-   * The `"type"` field must be `"message"`.
-   * The `"attachments"` array contains a set of card objects.
-   * The `"contentType"` field must be set to Adaptive Card type.
-   * The `"content"` object is the card formatted in JSON.
+    * The `"type"` field must be `"message"`.
+    * The `"attachments"` array contains a set of card objects.
+    * The `"contentType"` field must be set to Adaptive Card type.
+    * The `"content"` object is the card formatted in JSON.
 
 3. Test your Adaptive Card with Postman.
 
