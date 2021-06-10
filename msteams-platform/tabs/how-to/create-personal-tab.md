@@ -273,7 +273,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 1. After you get the source code, open Visual Studio and select **Open a project or solution**.
 1. Navigate to the tab application directory and open **PersonalTab.sln**.
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
-1. In a browser navigate to the following URLs to verify the application loaded properly:
+1. In a browser, navigate to the following URLs to verify the application loaded properly:
 
 - `http://localhost:44325/`
 - `http://localhost:44325/personal`
@@ -417,7 +417,7 @@ In the **App details** section:
 
 1. Under **Identification**, select **Generate** to generate a new App Id for your app.
 
-1. Under **Developer information**, update the **Website URL** with your **ngrok** HTTPS URL.
+1. Under **Developer information**, update **Website** with your **ngrok** HTTPS URL.
 
 1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
@@ -429,7 +429,7 @@ In the **Tabs** section:
 
 1. Enter a name for the personal tab in **Name**.
 
-1. Enter the entity ID in **Entity Id**.
+1. Enter the entity ID in **Entity ID**.
 
 1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
