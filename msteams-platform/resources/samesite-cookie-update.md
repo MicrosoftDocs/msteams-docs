@@ -20,7 +20,7 @@ The cookie types and their corresponding scopes are as follows:
 | ------ | ------ |
 |First party cookie|A first party cookie is created by websites that a user visits. It is used to save data, such as shopping cart items, sign in credentials. For example, authentication cookies, and other analytics.|
 |Second party cookie|A second party cookie is technically the same as a first party cookie. The difference is that data is shared with a second party through a data partnership agreement. For example, [Microsoft Teams analytics and reporting](/microsoftteams/teams-analytics-and-reports/teams-reporting-reference). |
-|Third-party cookie|A third party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking. For example, **Like** buttons, ad serving, and live chats.|
+|Third party cookie|A third party cookie is installed by a domain other than the one the user explicitly visited and is mainly used for tracking. For example, **Like** buttons, ad serving, and live chats.|
 
 ## Cookies and HTTP requests
 
@@ -71,7 +71,7 @@ According to the updated SameSite restrictions, a browser does not add a cookie 
 
 ## Android System WebView
 
-Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions become default, tarting with Chrome 80, they are not immediately enforced on WebViews. They are applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookeManager API](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions become default, tarting with Chrome 80, they are not immediately enforced on WebViews. They are applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager):
 
 * For cookies that are only needed in a first party context, you must declare them as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 * For cookies needed in a third party context, you must ensure that they are declared as `SameSite=None; Secure`.
