@@ -1,12 +1,12 @@
 ---
-title: Enable admins to customize your app
+title: Enable your app to be customized
 author: heath-hamilton
 description: Understand how Teams admins can customize your app for their org.
 localization_priority: Normal
 ms.author: surbhigupta
 ms.topic: overview
 ---
-# Enable orgs to customize your Microsoft Teams app
+# Enable your Microsoft Teams app to be customized
 
 You can allow orgs (specifically Teams admins) to customize some aspects of your Microsoft Teams app. Some possible examples include:
 

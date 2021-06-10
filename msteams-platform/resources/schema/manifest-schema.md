@@ -286,7 +286,7 @@ The following schema sample shows all extensibility options:
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ]              
@@ -701,21 +701,19 @@ When a group install scope is selected, it will define the default capability wh
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
-> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app.
 
 You can define any of the following properties:
-* `name`: Allows admin to change the app's display name.
-* `shortDescription`: Allows admin to change the app's short description.
-* `longDescription`: Allows admin to change the app's detailed description.
-* `smallImageUrl`: It is the `outline` property in the `icons` block of the manifest.
-* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
-* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
-* `websiteUrl`: It is the https:// URL to the developer's website.
-* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
-* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
-
+* `name`: The app's display name.
+* `shortDescription`: The app's short description.
+* `longDescription`: The app's detailed description.
+* `smallImageUrl`: The app's outline icon.
+* `largeImageUrl`: The app's color icon.
+* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: The HTTPS URL of the developer's website.
+* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
+* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
