@@ -96,11 +96,3 @@ In addition, this project requires that you have the following installed in your
 
     Name your tab. This tab name will be used throughout your project as a file or URL path component.
 
-    **What kind of Tab would you like to create?**
-
-    Use the arrow keys to select **Personal (static)**.
-
-    **Do you require Azure AD Single-Sign-On support for the tab?**
-
-    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
-

@@ -232,7 +232,8 @@ gulp ngrok-serve
 1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 1. From your teams on the left panel, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
 1. In the main panel, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
-1. Open your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**. Your tab is uploaded to Teams.
+1. Open your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
+1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
 ### View your personal tabs
 

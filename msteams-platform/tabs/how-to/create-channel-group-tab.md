@@ -22,17 +22,21 @@ You can create a custom channel or group tab using the [Teams Yeoman generator](
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Do you want to create a configurable or static tab?**
+   **What kind of Tab would you like to create?**
 
-Use the arrow keys to select configurable tab.
+   Use the arrow keys to select **Configurable** tab.
 
-**What scopes do you intend to use for your Tab?**
+   **What scopes do you intend to use for your Tab?**
 
-You can select a Team and/or a group chat
+   You can select a Team or a group chat.
 
-**Do you want this tab to be available in SharePoint Online? (Y/n)** 
+   **Do you require Azure AD Single-Sign-On support for the tab?**
 
-Select **n**.
+   Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+
+   **Do you want this tab to be available in SharePoint Online? (Y/n)** 
+
+   Select **n**.
 
 > [!IMPORTANT]
 > The path component **yourDefaultTabNameTab**, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
@@ -63,7 +67,7 @@ Open a command prompt in your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
-To view your tab configuration page go to `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
+To view your tab configuration page, go to `https://localhost:3007/<yourDefaultAppNameTab>/config.html`. The following is shown:
 
 ![Configuration page screenshot](~/assets/images/tab-images/configurationPage.png)
 
@@ -80,18 +84,19 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft teams and successfully saved, you can view it in the tabs gallery, add it to the tabs bar, and interact with it until your ngrok tunnel session ends. If you restart your ngrok session, you'll need to update your app with the new URL.
+> After your tab has been uploaded to Microsoft Teams and successfully saved, you can view it in the tabs gallery, add it to the tabs bar, and interact with it until your ngrok tunnel session ends. If you restart your ngrok session, you'll need to update your app with the new URL.
 
 ### Upload your application to Teams
 
 **To upload your application to Teams**
 
 1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-1. In the **YourTeams** panel on the left, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
-1. In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
-1. Open your project directory, browse to the **./package** folder, select the app package zip folder and choose **Open**. Your tab uploads into Teams.
+1. From your teams on the left panel, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
+1. In the main panel, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
+1. Open your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
+1. Select **Add** in the pop-up dialog box. Your tab uploads into Teams.
 1. Return to your team, choose the channel where you want to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
-1. Follow the directions for adding a tab. There is a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
 # [ASP.NET Core](#tab/aspnetcore)
