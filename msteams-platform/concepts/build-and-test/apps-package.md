@@ -69,7 +69,7 @@ The color icon submitted in your app package must be square. Don’t round the c
 
 #### Don't: Copy other brands
 
-Your icons must not mimic any copyrighted products that you don't own (for example, a design similar to a Microsoft product or brand).
+Your icons must not mimic any copyrighted products that you don't own. For example, a design similar to a Microsoft product or brand.
 
 ### Examples
 

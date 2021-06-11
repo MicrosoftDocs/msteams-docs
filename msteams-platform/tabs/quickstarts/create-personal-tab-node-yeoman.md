@@ -6,7 +6,7 @@ localization_priority: Normal
 ms.topic: quickstart
 ms.author: lajanuar
 ---
-# Quickstart: Create a custom personal tab with Node.js and the Yeoman Generator for Microsoft Teams
+# Create a custom personal tab using Node.js and the Yeoman Generator for Microsoft Teams
 
 >[!NOTE]
 >This quickstart follows the steps outlined in the [Build Your First Microsoft Teams App](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
@@ -15,7 +15,7 @@ In this quickstart we'll walk-through creating a custom personal tab using the [
 
 [!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
 
-**Do you want to create a configurable or static tab?**
+**Create a configurable or static tab**
 
 Use the arrow keys to select static tab.
 
@@ -30,37 +30,37 @@ To add a personal tab to this application you'll create a content page and updat
 
 - In your code editor, create a new HTML file, **personal.html** and add the following markup:
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            <!-- Todo: add your a title here -->
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- inject:css -->
-        <!-- endinject -->
-    </head>
-        <body>
-            <h1>Personal Tab</h1>
-            <p><img src="/assets/icon.png"></p>
-            <p>This is your personal tab!</p>
-        </body>
-</html>
-```
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                <!-- Todo: add your a title here -->
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- inject:css -->
+            <!-- endinject -->
+        </head>
+            <body>
+                <h1>Personal Tab</h1>
+                <p><img src="/assets/icon.png"></p>
+                <p>This is your personal tab!</p>
+            </body>
+    </html>
+    ```
 
 - Save **personal.html** in your application's **web** folder:
 
-```bash
-./src/app/web/<yourDefaultTabNameTab>/personal.html
-```
+    ```bash
+    ./src/app/web/<yourDefaultTabNameTab>/personal.html
+    ```
 
 - Open **manifest.json** in your code editor:
 
-```bash
-./src/manifest/manifest.json/
-```
+    ```bash
+    ./src/manifest/manifest.json/
+    ```
 
 Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
 
@@ -81,15 +81,15 @@ Remember to update the **"contentURL"** path component **yourDefaultTabNameTab**
 
 - Your content page must be served in an IFrame. Open **Tab.ts** in your code editor:
 
- ```bash
-./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
-```
+    ```bash
+    ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+    ```
 
 - Add the following to the list of IFrame decorators:
 
-```typescript
- @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
-```
+    ```typescript
+     @PreventIframe("/<yourDefaultAppName>TabNameTab>/personal.html")
+    ```
 
 - Make sure to save the updated **Tab.ts** file. Your tab code is complete.
 
@@ -116,15 +116,20 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft teams, via *ngrok*, and successfully saved, you can view it in Teams until your tunnel session ends.
+> After your tab has been uploaded to Microsoft teams, via **ngrok**, and successfully saved, you can view it in Teams until your tunnel session ends.
 
 ## Upload your application to Teams
 
 - Open the Microsoft Teams client. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-- In the *YourTeams* panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
+- In the **YourTeams** panel on the left, select the `...` menu next to the team that you're using to test your tab and choose **Manage team**.
 - In the main panel select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right-hand corner of the page.
 - Open your project directory, browse to the **./package** folder, select the zip folder, right-click, and choose **Open**. Your tab will upload into Teams.
 
 ## View your personal tabs
 
 In the navbar located at the far-left of the Teams client, select the `...` menu and choose your app from the list.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a personal tab using ASP.NETCore](~/tabs/quickstarts/create-personal-tab-dotnet-core.md)
