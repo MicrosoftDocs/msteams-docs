@@ -90,6 +90,9 @@ Your code must always validate the HMAC signature included in the request:
 
 Responses from your outgoing webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
 
+> [!NOTE]
+> You must send an Adaptive Card as an attachment with outgoing webhook.
+
 ### Example response
 
 ```json
@@ -97,6 +100,29 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
     "type": "message",
     "text": "This is a reply!"
 }
+```
+### Adaptive Card example response
+
+```csharp
+private static Attachment GetAdaptiveCardAttachment()
+ {
+      var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.2")) 
+ { 
+     Body = new List() 
+ { 
+     new AdaptiveImage()
+ {
+     Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")}, 
+ new AdaptiveTextBlock()
+ {
+     Text="Sample image for Adaptive Card.."}
+  } 
+  }; 
+  return new Attachment() 
+  { 
+      ContentType = AdaptiveCard.ContentType, Content = Card 
+  };
+   }
 ```
 
 ## Create an outgoing webhook
@@ -113,14 +139,6 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 >* Select the **Create** button from the lower right corner of the pop-up window and the outgoing webhook are added to the current team's channels.
 >* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
 >* The outgoing webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
-
-## Use Adaptive card with outgoing webhook
-
-You must send an Adaptive Card as an attachment with outgoing webhook. Example of an Adaptive Card attachment is as follows:
-
-```csharp
-private static Attachment GetAdaptiveCardAttachment() { var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.2")) { Body = new List() { new AdaptiveImage(){Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")}, new AdaptiveTextBlock(){Text="Sample image for Adaptive Card.."} } }; return new Attachment() { ContentType = AdaptiveCard.ContentType, Content = Card }; }
-```
 
 ## Code sample
 |**Sample name** | **Description** | **.NET** | **Node.js** |
