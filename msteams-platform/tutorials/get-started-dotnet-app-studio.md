@@ -10,7 +10,7 @@ ms.date: 11/09/2018
 
 # Create your first Teams app using C#
 
-This tutorial helps you to create a Microsoft Teams app using C#. To do this, you must:
+In this tutorial, you will learn how to create your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the steps to:
 
 * Prepare your environment
 * Get prerequisites
