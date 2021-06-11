@@ -1,6 +1,7 @@
 ---
 title: Include a SaaS offer with your app
 description: Describes how to include license or subscription options for using your app.
+author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: how-to
 localization_priority: Normal 
@@ -11,15 +12,14 @@ localization_priority: Normal
 > [!NOTE]
 > This feature is currently available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-You can provide app subscription plans or licenses that users can purchase on your Teams store listing. This process includes creating a software-as-a-service (SaaS) offer in Partner Center and linking that offer to your app in the Developer Portal for Teams.
+In your Teams store listing, you can include app subscription plans or licenses for users to purchase. This process includes creating a software-as-a-service (SaaS) offer in Partner Center and linking that offer to your app in the [Developer Portal for Teams](https://aka.ms/dev-portal).
 
 > [!TIP]
-> We recommended you create and link your SaaS offer before publishing your app to the Teams store. If your app is already listed in the store, you must republish your app to include the SaaS offer.
+> We recommend that you create and link your SaaS offer before publishing your app to the Teams store. If your app is already listed in the store, you must republish your app to include the SaaS offer.
 
 ## Prerequisites
 
-* To create a SaaS offer, you must have a [Partner Center account](create-partner-center-dev-account.md).
-* In your app manifest, configure the `manifestVersion` property to `devPreview` or at least `v1.10`. If you don't, you app will fail validation when you try to publish.
+To create a SaaS offer, you must have a [Partner Center account](create-partner-center-dev-account.md).
 
 ## Plan your SaaS offer
 
@@ -27,23 +27,22 @@ Think about the following before you create your SaaS offer:
 
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
 * Consider using [Azure Active Directory (Azure AD)](/azure/marketplace/azure-ad-saas) to simplify and secure the purchasing process for users. If your offer type is *Sell through Microsoft* (transactable), Azure AD with single sign-on (SSO) identity management and authentication is required.
+* Integrate with the [SaaS Fullfillment APIs](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis). This is required if your offer type is *Sell through Microsoft* (transactable).
 * Determine if you want [metered billing](/azure/marketplace/partner-center-portal/saas-metered-billing) for your offer. 
 
-For complete information, see [how to plan a SaaS offer for the commercial marketplace](/azure/marketplace/plan-saas-offer).
+For comprehensive guidance, see [how to plan a SaaS offer for the commercial marketplace](/azure/marketplace/plan-saas-offer).
 
 ## Create your SaaS offer
 
-In Partner Center, you can [configure plans and pricing details for your SaaS offer](/azure/marketplace/create-new-saas-offer).
+In Partner Center, you can [configure plans, pricing details, and more for your SaaS offer](/azure/marketplace/create-new-saas-offer).
 
 ## Link your SaaS offer to your app
 
-Once you create the SaaS offer in Partner Center, you can link it to your Teams app through the Developer Portal for Teams.
-
-**To link your SaaS offer to your app**
+Once you create the SaaS offer in Partner Center, you can link it to your Teams app through the Developer Portal.
 
 1. Go to the [Developer Portal](https://aka.ms/dev-portal) and select **Apps**.
 1. On the **Apps** page, select the app for which you want to link your SaaS offer.
-1. Go to the **Plans and pricing** page and enter your **Publisher ID** and **Offer ID** (you can find these in Partner Center).
+1. Go to the **Plans and pricing** page and specify your publisher ID and offer ID (you can find these IDs in Partner Center).
 1. Select **Preview** to view the details of the SaaS offer, then select **Save**.
 
    The `subscriptionOffer` property is added to your app manifest.
@@ -54,11 +53,13 @@ Once you create the SaaS offer in Partner Center, you can link it to your Teams 
         }
    ```
 
-1. Select the **Distribute** button and choose **Publish to Teams store** to begin the process of publishing your app with the SaaS offer. (For more information, see [publish to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md).)
+## Publish your SaaS offer
 
-Once published, users can purchase subscriptions plans associated with your app in the Teams store listing.
+In the Developer Portal, select the **Distribute** button and choose **Publish to Teams store** to begin the process of publishing your app with the SaaS offer. (For more information, see [publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).)
 
-## End user purchase experience
+Once published, users can purchase subscriptions plans associated with your app in your store listing.
+
+## End-user purchasing experience
 
 The following example shows how end users can purchase subscription plans for a fictional Teams app called Recloud.
 
@@ -80,7 +81,7 @@ The following example shows how end users can purchase subscription plans for a 
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring the user licenses.":::
 
-## Admin purchase experience
+## Admin purchasing experience
 
 Admins can purchase app subscription plans in the [Teams admin center](/MicrosoftTeams/purchase-third-party-apps).
 
