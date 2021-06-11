@@ -63,7 +63,12 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## Build and run the sample
 
-After the repo is cloned, use Visual Studio to open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample. Then, select **Build Solution** from the **Build** menu. To run the sample, press **F5** or select **Start Debugging** from the **Debug** menu.
+You can build and run the smaple after it is cloned. 
+
+**TO build and run the cloned sample:**
+1. Open the open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
+1. Select **Build Solution** from the **Build** menu.
+1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
 When the app starts, a browser window opens with the root of the app launched. You can go to the following URLs to verify that all the app URLs are loading:
 
@@ -79,7 +84,7 @@ When the app starts, a browser window opens with the root of the app launched. Y
 
 ## Host the sample app
 
-Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be available on the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, note its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
+Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be available on the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
 ### Tunnel using ngrok
 
@@ -91,15 +96,16 @@ After you install `ngrok`, open a new terminal window and run the following comm
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-`Ngrok` listens to requests from the internet and routes them to your app running on port 44327. To verify, open your browser and go to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Instead of this URL, use the forwarding address displayed by `ngrok` in your console session.
+`Ngrok` responds to requests from the internet and routes them to your app running on port 44327. 
+**To verify the response:**
+1. Open your browser and go to `https://d0ac14a5.ngrok.io/hello`. This will load your app's hello page.
+1. Instead of the URL mentioned in Step 1, use the forwarding address displayed by `ngrok` in your console session.
+    > [!NOTE]
+    > If you have used a different port in the [build and run](#build-and-run-the-sample) step, ensure you use the same port number to setup the `ngrok` tunnel.
+    > [!TIP]
+    > It is a good idea to run `ngrok` in a different terminal window. This is done to keep `ngrok` from running without interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
 
-> [!NOTE]
-> If you have used a different port in the [build and run](#build-and-run-the-sample) step, ensure you use the same port number to setup the `ngrok` tunnel.
-
-> [!TIP]
-> It is a good idea to run `ngrok` in a different terminal window. This is done to keep `ngrok` from running without interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
-
-The app is only available during the current session on your computer. If the machine is shut down or goes to sleep, the service is no longer available. Remember this when you share the app for testing to other users. If you have to restart the service, the app returns a new address and you must update every location that uses that address. The paid version of `ngrok` does not have this limitation.
+    The app is only available during the current session on your computer. If the machine is shut down or goes to sleep, the service is no longer available. Remember this when you share the app for testing to other users. If you have to restart the service, the app returns a new address and you must update every location that uses that address. The paid version of `ngrok` does not have this limitation.
 
 ### Host in Azure
 
@@ -115,27 +121,41 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 The sample app requires the environment variables to be set to the values that you saved in the text file.
 
-Open the `appsettings.json` file. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. Update the **MicrosoftAppPassword** with the bot password you saved.
+**To update the credentials for your hosted app**
 
-<img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
+1. Open the `appsettings.json` file. 
+1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. 
+1. Update the **MicrosoftAppPassword** with the bot password that you saved.
 
-After these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure, redeploy the app.
+    <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
+
+    After these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure, redeploy the app.
 
 ## Configure the app tab
 
-Once you install the app into a team, you must configure it to show content. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab. Choose **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to choose the tab to display in this channel. After you select the tab and select **Save** the `Hello World` tab is loaded with the tab.
+After you have installed the app into teams, you must configure it to display the content. 
 
-<img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
+**To configure the app tab**
+
+1. Go to a channel in the team where you installed the sample app and select the **'+'** button to add a new tab.
+1. Select **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to select the tab to display in this channel. 
+1. Select **Save**. The `Hello World` tab is loaded with the tab.
+
+    <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
 
 ### Test your bot in Teams
 
-Now you can test the bot in Teams. Select a channel in the team where you registered your app and type `@your-bot-name`. This is called an **\@mention**. The bot replies to any message that you send.
+You can now test the bot in Teams. 
 
-<img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
+**To test your bot**
+
+* Select a channel in the team where you registered your app and type `@your-bot-name`. This is called an **\@mention**. The bot replies to any message that you send.
+
+    <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### Test your messaging extension
 
-To test your messaging extension, you can select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed. When you select it, a set of random texts is displayed. You can select one of the random text and that is inserted into your conversation.
+To test your messaging extension, select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed. When you select it, a set of random texts is displayed. You can select one of the random text and that is inserted into your conversation.
 
 <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
 
@@ -144,3 +164,8 @@ To test your messaging extension, you can select **...** below the input box in 
 Select one of the random text. A card formatted and ready to send with your own message is shown.
 
 <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
