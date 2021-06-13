@@ -176,8 +176,8 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 ## Deep linking to an app
 
-After the app is listed in the Teams store, create a link that launches Teams and displays a dialog to install your app. To create the link, use the following URL appended with your app ID: https://teams.microsoft.com/l/app/<your-app-id>.
-
+Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the following URL to your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`. Teams then displays a dialog box to install your app. 
+  
 ## Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or messaging extension card:
