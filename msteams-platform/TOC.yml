@@ -212,6 +212,8 @@
       href: tabs/tabs-link-unfurling.md
     - name: Create conversational tabs
       href: tabs/how-to/conversational-tabs.md
+    - name: Tab margin changes
+      href: resources/removing-tab-margins.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -475,8 +477,6 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Localization JSON schema
         href: resources/schema/localization-schema.md
-    - name: Tab margin changes
-      href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions
