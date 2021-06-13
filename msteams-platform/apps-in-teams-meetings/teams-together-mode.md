@@ -4,7 +4,7 @@ description: Work with custom Together Mode scenes
 ms.topic: conceptual
 ---
 
-# Custom Together Mode Scenes in Teams
+# Custom Together Mode scenes in Teams
 
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
