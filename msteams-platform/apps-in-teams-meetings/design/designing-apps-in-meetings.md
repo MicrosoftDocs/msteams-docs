@@ -192,11 +192,44 @@ Apps shared to the meeting stage occupy the same space as a shared screen or win
 
 ### Use cases
 
-* Whiteboard
-* Edit and review
-* Quiz
+:::row:::
+   :::column span="1":::
 
-[INSERT MAIN EXAMPLE IMAGE]
+**Edit and review**: Dive into dashboards and planning with everyone on the call.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="<alt text>" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**Whiteboard**: Draw and ideate together on a shared canvas.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="<alt text>" border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**Quiz**: Test knowledge and gain insights with interactive materials.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="<alt text>" border="false":::
+
+   :::column-end:::
+:::row-end:::
 
 ### Anatomy: Shared meeting stage
 
@@ -219,15 +252,15 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 
 #### Meeting stage (without side panel)
 
-:::image type="complex" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
-   <long description here>
-:::image-end:::
+When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
 
 #### Meeting stage (with side panel)
 
-:::image type="complex" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
-   <long description here>
-:::image-end:::
+When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixels.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
 
 ## After a meeting
 
