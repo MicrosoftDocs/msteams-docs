@@ -219,11 +219,15 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 
 #### Meeting stage (without side panel)
 
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="<alt text>":::
+:::image type="complex" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
+   <long description here>
+:::image-end:::
 
 #### Meeting stage (with side panel)
 
-xxxx
+:::image type="complex" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
+   <long description here>
+:::image-end:::
 
 ## After a meeting
 
