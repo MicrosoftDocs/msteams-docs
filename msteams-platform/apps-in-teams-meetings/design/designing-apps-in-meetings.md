@@ -217,33 +217,13 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 * **Side panel**: A user can have the side panel open at any time during a meeting to chat, view the roster, or use an app (i.e., in-meeting tab). The stage dynamically rearranges when the panel is open.
 * **Video and audio grid**: The video and audio grid is always visible to show meeting participants. When a user spotlights or pins someone in the meeting, this increases the height or width of the participant grid depending on the orientation.
 
-#### Meeting stage (no side panel)
+#### Meeting stage (without side panel)
 
-:::row:::
-   :::column span="1":::
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="<alt text>":::
 
-Meeting window (default size)
+#### Meeting stage (with side panel)
 
-   :::column-end:::
-   :::column span="3":::
-
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel-default.png" alt-text="<alt text>":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="1":::
-
-Meeting window (minimum size)
-
-   :::column-end:::
-   :::column span="3":::
-
-:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel-min.png" alt-text="<alt text>":::
-
-   :::column-end:::
-:::row-end:::
+xxxx
 
 ## After a meeting
 

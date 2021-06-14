@@ -166,7 +166,7 @@ See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/d
 
 ### After a meeting
 
-The post-meeting and [pre-meeting](#pre-meeting) configurations are the same.
+The post- and [pre-meeting](#pre-meeting) configurations are the same.
 
 ## Code sample
 
