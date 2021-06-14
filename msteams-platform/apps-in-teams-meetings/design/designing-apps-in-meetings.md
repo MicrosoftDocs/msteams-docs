@@ -200,7 +200,7 @@ Apps shared to the meeting stage occupy the same space as a shared screen or win
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="<alt text>" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -213,7 +213,7 @@ Apps shared to the meeting stage occupy the same space as a shared screen or win
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="<alt text>" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -226,14 +226,14 @@ Apps shared to the meeting stage occupy the same space as a shared screen or win
    :::column-end:::
    :::column span="3":::
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="<alt text>" border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage." border="false":::
 
    :::column-end:::
 :::row-end:::
 
 ### Anatomy: Shared meeting stage
 
-[INSERT IMAGE]
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -299,7 +299,7 @@ A single in-meeting dialog with multiple interactions can distract from the call
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing how you should use a single-column dialog layout." border="false":::
 
-#### Do: Use a single-column dialog layout
+#### Do: Use a one-column dialog
 
 Since the dialogs are at the center of the meeting stage, task completion should be fast and simple to avoid user frustration.
 
@@ -318,7 +318,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a single-column tab layout." border="false":::
 
-#### Do: Use a single-column tab layout
+#### Do: Use a one-column tab
 
 Given the in-meeting tab's narrow nature, we strongly recommend displaying the contents in a single column.
 
