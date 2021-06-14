@@ -15,7 +15,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
 
-2. Make sure that the **<span>ASP.NET</span> and web development module** has been added to your Visual Studio instance. For more information, see [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentation.
+2. Make sure that the **<span>ASP.NET</span> and web development module** has been added to your Visual Studio instance. For more information, see [Modify Visual Studio by adding or removing workloads and components](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true).
 
 ![Visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
 
@@ -23,7 +23,7 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit) or directly from the **Extensions** menu within Visual Studio.
 
-## Using the toolkit
+## Use the toolkit
 
 - [Set up a new project](#set-up-a-new-teams-project)
 - [Configure your app](#configure-your-app)
@@ -69,8 +69,7 @@ You will be prompted to sign-in to your Microsoft Account that has a M365 tenant
 
 ## Install and run your app locally
 
-1. Press F5 to Start Debugging.
-2. Teams will launch and the app installation dialogue should appear in the Teams client.
+Press F5 to start debugging. The app installation dialog box appears in the Teams client.
 
 ## Validate your app
 
