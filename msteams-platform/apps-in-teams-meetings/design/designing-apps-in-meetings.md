@@ -113,7 +113,11 @@ Optimize your in-meeting tab to fit edge-to-edge within the 280 pixel-wide ifram
 
 ### Scrolling
 
-Iframe contents should scroll vertically. You can only see the content you've scrolled to (nothing above or below). The scrollbar is part of the iframe content.
+Remember the following if you allow scrolling:
+
+* Content in the iframe contents should only scroll vertically.
+* Users should only see the content they've scrolled to (nothing above or below). 
+* The scrollbar is part of the iframe content.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls." border="false":::
 
@@ -179,6 +183,44 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) key.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
+
+## Use the shared meeting stage
+
+Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can make editing a document, brainstorming with a whiteboard, or reviewing a dashboard the focus of their call.
+
+Apps shared to the meeting stage occupy the same space as a shared screen or window and reorient the stage for all meeting participants.
+
+### Use cases
+
+* Whiteboard
+* Edit and review
+* Quiz
+
+[INSERT MAIN EXAMPLE IMAGE]
+
+### Anatomy: Shared meeting stage
+
+[INSERT IMAGE]
+
+|Counter|Description|
+|----------|-----------|
+|1|**App icon**: The highlighted icon indicates the app is open in the meeting.|
+|2|**Share to meeting stage button**: The entry point to start sharing the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
+|3|**iframe**: Displays your app content.|
+|4|**Stop sharing button**: Stops sharing app content to the meeting stage. Displays only for the participant who started the share.|
+|5|**Presenter attribution**: Displays the name of the participant who initiated sharing the app.|
+
+### Responsive behavior
+
+Apps shared to the meeting stage vary in size based on the state of the meeting and how the user resizes the window. Maintain padding and the responsive layout of navigation and controls just as you would in a browser.
+
+* **Side panel**: A user can have the side panel open at any time during a meeting to chat, view the roster, or use an app (i.e., in-meeting tab). The stage dynamically rearranges when the panel is open.
+* **Video and audio grid**: The video and audio grid is always visible to show meeting participants. When a user spotlights or pins someone in the meeting, this increases the height or width of the participant grid depending on the orientation.
+
+|                  |Meeting window (default size)|Meeting window (minimum size)|
+|------------------|---------|--------|
+|**Meeting stage (no side panel)**|:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel-default.png" alt-text="<alt text>":::|:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel-min.png" alt-text="<alt text>":::|
+|**Meeting stage (with side panel)**|:::image type="content" source="<folderPath>" alt-text="<alt text>":::|:::image type="content" source="<folderPath>" alt-text="<alt text>":::|
 
 ## After a meeting
 
