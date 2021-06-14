@@ -74,9 +74,10 @@ After you enable your app for Teams meetings, you must configure your app before
 > * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) while creating your tabs for mobile.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios. You can configure your apps to enhance the meeting experience based on participant role or user type. Now you can identify what actions can be taken in the following meeting scenarios:
-* [Pre-meeting](#pre-meeting)
-* [In-meeting](#in-meeting)
-* [Post-meeting](#post-meeting)
+
+* [Before a meeting](#before-a-meeting)
+* [During a meeting](#during-a-meeting)
+* [After a meeting](#after-a-meeting)
 
 ### Before a meeting
 
@@ -166,7 +167,7 @@ See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/d
 
 ### After a meeting
 
-The post- and [pre-meeting](#pre-meeting) configurations are the same.
+The configurations after and [before meetings](#before-a-meeting) are the same.
 
 ## Code sample
 
