@@ -231,11 +231,15 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
+
+## Next step
+
+Learn about other methods for creating Teams apps:
+
+> [!div class="nextstepaction"]
+> [Create a conversational bot app](first-app-bot.md)
