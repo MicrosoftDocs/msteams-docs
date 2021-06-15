@@ -202,7 +202,7 @@ Now that your development environment is configured, you can create, build, and 
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Create your first Teams app using React](first-app-react.md)
