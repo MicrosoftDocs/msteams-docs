@@ -257,6 +257,9 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ---
 
+> [!NOTE]
+> Currently bots cannot create a group chat through bot APIs or Graph. `createConversation` is available only for 1:1 chats.
+
 ## Code sample
 
 The following table provides a simple code sample that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
