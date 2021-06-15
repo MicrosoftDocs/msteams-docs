@@ -26,7 +26,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information.
 
 > [!NOTE]
-> Currently, Teams does not support device permission for multi window apps, tabs, and the meeting sidepanel. 
+> Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel. 
 
 ## Access device permissions
 
