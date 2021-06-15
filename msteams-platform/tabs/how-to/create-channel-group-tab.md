@@ -20,23 +20,119 @@ You can create a channel or group tab using Node.js and the Yeoman Generator, us
 
 You can create a custom channel or group tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/).
 
-[!INCLUDE [node-js-yeoman-prereq](~/includes/tabs/node-js-yeoman-prereq.md)]
+## Prerequisites for apps
 
-   **What kind of Tab would you like to create?**
+You must have an understanding of the following prerequisites:
 
-   Use the arrow keys to select **Configurable** tab.
+- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-   **What scopes do you intend to use for your Tab?**
+    If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
-   You can select a Team or a group chat.
+In addition, this project requires that you have the following installed in your development environment:
 
-   **Do you require Azure AD Single-Sign-On support for the tab?**
+- Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-   Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+- [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-   **Do you want this tab to be available in SharePoint Online? (Y/n)** 
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
-   Select **n**.
+    ```bash
+    npm install yo gulp-cli --global
+    ```
+
+- Install the Microsoft Teams Apps generator by typing the following in your command prompt:
+
+    ```bash
+    npm install generator-teams --global
+    ```
+
+## Generate your project
+
+**To generate your project**
+
+1. Open a command prompt and create a new directory for your tab project.
+
+1. To start the generator, navigate to your new directory and type the following command:
+
+    ```bash
+    yo teams
+    ```
+
+1. Next, provide a series of values that are used in your application's **manifest.json** file:
+
+    ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
+
+    **What is your solution name?**
+
+    This is your project name. You can accept the suggested name by pressing enter.
+
+    **Where do you want to place the files?**
+
+    You're currently in your project directory. Press enter.
+
+    **Title of your Microsoft Teams app project?**
+
+    This is your app package name and will be used in the app manifest and description.
+
+    **Your (company) name? (max 32 characters)**
+
+    Your company name will be used in the app manifest.
+
+    **Which manifest version would you like to use?**
+
+    Select the default schema.
+
+    **Quick scaffolding? (Y/n)**
+
+    The default is yes; enter **n** to enter your Microsoft Partner Id.
+
+    **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
+
+    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+    **What do you want to add to your project?**
+
+    Select ( &ast; ) A Tab.
+
+    **The URL where you will host this solution?**
+
+    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+
+    **Would you like show a loading indicator when your app/tab loads?**
+
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+   **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
+    **Would you like to include Test framework and initial tests? (y/N)**
+
+    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+
+    **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    **Default Tab Name (max 16 characters)?**
+
+    Name your tab. This tab name will be used throughout your project as a file or URL path component.
+
+    **What kind of Tab would you like to create?**
+
+    Use the arrow keys to select **Configurable** tab.
+
+    **What scopes do you intend to use for your Tab?**
+
+    You can select a Team or a group chat.
+
+    **Do you require Azure AD Single-Sign-On support for the tab?**
+
+    Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+
+    **Do you want this tab to be available in SharePoint Online? (Y/n)**
+
+    Enter **n**.
 
 > [!IMPORTANT]
 > The path component **yourDefaultTabNameTab**, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
@@ -321,7 +417,7 @@ In the **App details** section:
 
 1. Under **Identification**, select **Generate** to replace the placeholder ID with the required GUID for your tab.
 
-1. Under **Developer information**, update the **Website URL** field with your **ngrok** HTTPS URL.
+1. Under **Developer information**, update **Website** with your **ngrok** HTTPS URL.
 
 1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
@@ -329,11 +425,11 @@ In the **App details** section:
 
 In the **Tabs** section:
 
-1. Under **Team Tab**, select **Add**.
+1. Under **Team tab**, select **Add**.
 
-1. In the **Team Tab** pop-up window, update the **Configuration URL** to `https://<yourngrokurl>/tab`.
+1. In the **Team tab** pop-up window, update the **Configuration URL** to `https://<yourngrokurl>/tab`.
 
-1. Ensure the **can update configuration? Team**, and **Group chat** boxes are checked and select **Save**.
+1. Ensure the **Can update configuration?**, **Team**, and **Group chat** checkboxes are selected and select **Save**.
 
 ##### Finish: Domains and permissions
 
@@ -350,11 +446,11 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up window, in the **Add to a team or chat** field, enter your team and select **Install**.
+1. In the pop-up dialog box, select **Add to a team** or from the drop-down, select **Add to a chat**.
 
-1. In the next pop-up window, choose the team channel where you want the tab to be displayed and select **Set up**.
+1. Choose the team or chat where you want the tab to be displayed and select **Set up a tab**.
 
-1. In the final pop-up window, select a value for the tab page either a red or gray icon and select **Save**.
+1. In the next pop-up dialog box, choose either **Select Gray** or **Select Red**, and select **Save**.
 
 1. To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration is displayed.
 
