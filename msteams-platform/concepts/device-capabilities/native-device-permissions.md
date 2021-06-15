@@ -25,6 +25,9 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Record audio memos and save them for later use.
 * Use the location information of the user to display relevant information.
 
+> [!NOTE]
+> Currently, Teams does not support device permission for multi window apps, tabs, and the meeting sidepanel. 
+
 ## Access device permissions
 
 The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) provides the tools necessary for your Teams mobile app to access the user’s [device permissions](#manage-permissions) and build a richer experience.
