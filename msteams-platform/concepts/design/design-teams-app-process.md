@@ -98,11 +98,9 @@ Currently, not all templates listed in the UI kit are available in the library.
 
 Not unlike the design phase, you can use these Fluent UI components in your app project if a UI template is missing something you need, or you just want to build the app from scratch. 
 
-(Note: If you notice something missing or have an idea for a template, consider contributing to the Teams UI Library repo.)
-
-> [!div class="nextstepaction"]
-> [Get the library (Fluent UI)](https://fluentsite.z22.web.core.windows.net/)
-
+> [!NOTE]
+> You can add more templates or any missed information to the [Teams UI Library](https://fluentsite.z22.web.core.windows.net/).
+ 
 ## Review design resources
 
 Whether you’re just starting on your app or close to a production-ready app, we recommend that you periodically review the following resources:
