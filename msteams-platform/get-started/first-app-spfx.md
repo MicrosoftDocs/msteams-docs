@@ -239,7 +239,5 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 
 ## Next step
 
-Learn about other methods for creating Teams apps:
-
 > [!div class="nextstepaction"]
 > [Create a conversational bot app](first-app-bot.md)

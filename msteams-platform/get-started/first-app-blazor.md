@@ -270,7 +270,7 @@ You can now use the **Preview in Teams** button at the top of the page to launch
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
-> [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
+> [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
