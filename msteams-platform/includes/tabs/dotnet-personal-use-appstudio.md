@@ -12,10 +12,10 @@
 1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
 
     ```bash
-    /bin/Debug/netcoreapp2.2/Tab.zip
+    /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload **Tab.zip** to **App Studio**.
+1. Upload **tab.zip** to **App Studio**.
 
 ### Update your app package with Manifest editor
 
@@ -43,7 +43,7 @@ In the **Tabs** section:
 
 1. Enter a name for the personal tab in **Name**.
 
-1. Enter the entity ID in **Entity ID**.
+1. Enter the **Entity ID**.
 
 1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
@@ -66,14 +66,12 @@ In the **Domains and permissions** section, the **Domains from your tabs** field
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up window, make sure that **Add for you** is set to **Yes** and **Add to a team or chat** is set to **No**.
+1. In the pop-up window, select **Add** and your tab is displayed with two options.
 
-1. Select **Install**.
-
-1. In the next pop-up window, select **Open** and your tab is displayed.
+1. From the options in the tab, choose either **Select Gray** or **Select Red**. The tab is displayed according to the color you selected.
 
 ## View your personal tab
 
-1. In the navigation bar located at the far left of the Teams App, select the ellipses &#x25CF;&#x25CF;&#x25CF;. A list of personal apps is shown.
+1. In the navigation bar located at the far left of the Teams app, select the ellipses &#x25CF;&#x25CF;&#x25CF;. A list of personal apps is shown.
 
 1. Select your tab from the list to view it.

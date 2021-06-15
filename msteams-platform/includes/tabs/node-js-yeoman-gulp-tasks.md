@@ -24,9 +24,9 @@ gulp build
 
 1. Start a local web server by entering the following in the command prompt:
 
-```bash
-gulp serve
-```
+    ```bash
+    gulp serve
+    ```
 
 1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser and view your application's home page as shown in the following image:
 

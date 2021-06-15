@@ -92,11 +92,11 @@ In addition, this project requires that you have the following installed in your
 
     **What do you want to add to your project?**
 
-    Select ( &ast; ) A Tab.
+    Select **( &ast; ) A Tab**.
 
     **The URL where you will host this solution?**
 
-    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    By default the generator suggests an Azure Web Sites URL. You are only testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
     **Would you like show a loading indicator when your app/tab loads?**
 
@@ -116,7 +116,7 @@ In addition, this project requires that you have the following installed in your
 
     **Default Tab Name (max 16 characters)?**
 
-    Name your tab. This tab name will be used throughout your project as a file or URL path component.
+    Name your tab. This tab name is used throughout your project as a file or URL path component.
 
     **What kind of Tab would you like to create?**
 
@@ -171,22 +171,21 @@ In addition, this project requires that you have the following installed in your
 
 1. Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
 
-```json
-{
-    "entityId": "personalTab",
-    "name": "Personal Tab ",
-    "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-    "websiteUrl": "https://{{HOSTNAME}}",
-    "scopes": ["personal"]
-}
+    ```json
+    {
+        "entityId": "personalTab",
+        "name": "Personal Tab ",
+        "contentUrl": "https://{{HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{HOSTNAME}}",
+        "scopes": ["personal"]
+    }
+    ```
 
-```
-
-1. Update the **"contentURL"** path component **yourDefaultTabNameTab** with your actual tab name.
+1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
 
 1. Save the updated **manifest.json**.
 
-1. To provide your content page in an IFrame, open **Tab.ts** in your code editor and use the following command:
+1. To provide your content page in an IFrame, open **Tab.ts** in your code editor from the following path:
 
     ```bash
     ./src/app/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
@@ -230,12 +229,12 @@ gulp ngrok-serve
 **To upload your application to Teams**
 
 1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-1. From your teams on the left panel, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
-1. In the main panel, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
+1. From the lower left corner, select **Apps**.
+1. From the lower left corner, choose **Upload a custom app**.
 1. Open your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
-### View your personal tabs
+### View your personal tab
 
 In the navigation bar located at the far left in Teams, select the ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app from the list.
 
@@ -243,7 +242,7 @@ In the navigation bar located at the far left in Teams, select the ellipses &#x2
 
 ## Create a custom personal tab using ASP.NET Core
 
-You can create a custom personal tab using C# and ASP.Net Core Razor pages. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
+You can create a custom personal tab using C# and ASP.NET Core Razor pages. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
 ### Prerequisites for personal tab
 
@@ -399,10 +398,10 @@ In Visual Studio, press **F5** or choose **Start Debugging** from your applicati
 1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
 
     ```bash
-    /bin/Debug/netcoreapp2.2/Tab.zip
+    /bin/Debug/netcoreapp2.2/tab.zip
     ```
 
-1. Upload **Tab.zip** to **App Studio**.
+1. Upload **tab.zip** to **App Studio**.
 
 #### Update your app package with Manifest editor
 
@@ -430,7 +429,7 @@ In the **Tabs** section:
 
 1. Enter a name for the personal tab in **Name**.
 
-1. Enter the entity ID in **Entity ID**.
+1. Enter the **Entity ID**.
 
 1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
@@ -453,11 +452,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up window, make sure that **Add for you** is set to **Yes** and **Add to a team or chat** is set to **No**.
-
-1. Select **Install**.
-
-1. In the next pop-up window, select **Open** and your tab is displayed.
+1. In the pop-up window, select **Add** and your tab is displayed.
 
 ### View your personal tab in Teams
 
@@ -469,7 +464,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 ## Create a custom personal tab with ASP.NET Core MVC
 
-You can create a custom personal tab using C# and ASP.Net Core MVC. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
+You can create a custom personal tab using C# and ASP.NET Core MVC. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
 ### Prerequisites for personal tab with ASP.NET Core MVC
 
@@ -508,7 +503,7 @@ git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 
 #### Startup.cs
 
-This project was created from an ASP. NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
+This project was created from an ASP.NET Core 2.2 Web Application empty template with the **Advanced - Configure for HTTPS** check box selected at setup. The MVC services are registered by the dependency injection framework's `ConfigureServices()` method. Additionally, the empty template does not enable serving static content by default, so the static files middleware is added to the `Configure()` method using the following code:
 
 ``` csharp
 public void ConfigureServices(IServiceCollection services)
@@ -524,7 +519,7 @@ public void Configure(IApplicationBuilder app)
 
 #### wwwroot folder
 
-In ASP. NET Core, the web root folder is where the application looks for static files.
+In ASP.NET Core, the web root folder is where the application looks for static files.
 
 #### AppManifest folder
 
@@ -566,7 +561,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 ##### Home
 
-ASP. NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
 ##### Shared
 
