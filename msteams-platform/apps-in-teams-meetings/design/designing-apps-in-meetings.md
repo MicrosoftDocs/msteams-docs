@@ -173,7 +173,7 @@ There are two header variants. When possible, use the variant with the avatar to
 |4|**Close button**: Dismisses the dialog.|
 |5|**Action string**: Typically describes who initiated the dialog.|
 
-### Responsive behavior
+### Responsive behavior: In-meeting dialogs
 
 In-meeting dialogs can vary in size to account for different scenarios. Make sure to maintain padding and component sizes.
 
@@ -186,11 +186,13 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can make editing a document, brainstorming with a whiteboard, or reviewing a dashboard the focus of their call.
+Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their call on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
 
-Apps shared to the meeting stage occupy the same space as a shared screen or window and reorient the stage for all meeting participants.
+Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 ### Use cases
+
+The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
 
 :::row:::
    :::column span="1":::
@@ -238,12 +240,12 @@ Apps shared to the meeting stage occupy the same space as a shared screen or win
 |Counter|Description|
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app is open in the meeting.|
-|2|**Share to meeting stage button**: The entry point to start sharing the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
+|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
 |3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing app content to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who initiated sharing the app.|
+|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
 
-### Responsive behavior
+### Responsive behavior: Shared meeting stage
 
 Apps shared to the meeting stage vary in size based on the state of the meeting and how the user resizes the window. Maintain padding and the responsive layout of navigation and controls just as you would in a browser.
 
@@ -450,3 +452,8 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
    :::column-end:::
 :::row-end:::
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Configure your app for meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
