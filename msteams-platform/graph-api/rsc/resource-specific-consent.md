@@ -210,7 +210,7 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
-  ![Graph explorer response to GET call.](../../assets/images/team-graph-permissions.png)
+  ![Graph explorer response to GET call for team RSC permissions.](../../assets/images/team-graph-permissions.png)
 
 For information about how to get details about apps installed in a specific team, see [Get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
 
@@ -225,7 +225,7 @@ For information about how to get details about apps installed in a specific team
 ![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
-  ![Graph explorer response to GET call.](../../assets/images/chat-graph-permissions.png)
+  ![Graph explorer response to GET call for chat RSC permissions.](../../assets/images/chat-graph-permissions.png)
 
 For information about how to get details about apps installed in a specific chat, see [Get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
