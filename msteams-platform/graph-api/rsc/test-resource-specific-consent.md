@@ -89,11 +89,12 @@ To check whether the RSC permissions are being honored by the API request payloa
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
 * `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
-* `chatId`: You can get the chat thread id from the Teams web client as follows:
+* `chatId`: You can get the chat thread id from the Teams *web* client as follows:
 
     1. In the Teams web client, select **Chat** from the far left navigation bar.
     2. Select the chat where the app is installed from the dropdown menu.
     3. Copy the web URL and save the chat thread id from the string.
+![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 
 ### Use Postman
 
@@ -113,7 +114,7 @@ Execute the entire permissions collection for each API call. The permissions tha
 2. Follow the steps for either chat or team: 
     1. [Test added RSC permissions to a team using Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
     2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
-3. Check all the response status codes to confirm that the specific API calls, **succeeded, have failed with an HTTP 403 status code**.
+3. Check all the response status codes to confirm that the specific API calls **have failed with an HTTP 403 status code**.
 
 ## See also
 

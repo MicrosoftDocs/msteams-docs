@@ -9,7 +9,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource-specific consent (RSC)
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat members* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular, Teams-specific, RSC permissions define what an application can do within a specific resource:
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat owners* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular, Teams-specific, RSC permissions define what an application can do within a specific resource:
 
 ## Resource-specific permissions
 
@@ -38,26 +38,30 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 | TeamsTab.Delete.Chat           | Delete this chat's tabs.                                      |
 | TeamsTab.ReadWrite.Chat        | Manage this chat's tabs.                                      |
 | TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat.                   |
-| OnlineMeeting.ReadBasic.Chat   | Get basic properties of a meeting associated with this chat. |
+| OnlineMeeting.ReadBasic.Chat   | Get basic properties—such as name, schedule, organizer, and join link—of a meeting associated with this chat. |
 
 >[!NOTE]
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
+
+### See also
+- [Teams resource-specific consent permissions](https://docs.microsoft.com/en-us/graph/permissions-reference#teams-resource-specific-consent-permissions)
+- [Chat resource-specific consent permissions](https://docs.microsoft.com/en-us/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
 ## Enable resource-specific consent in your application
 
 The steps for enabling RSC in your application are as follows:
 
 1. [Configure consent settings in the Azure Active Directory portal](#configure-consent-settings-in-the-azure-ad-portal).
-    a. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
-    a. [Configure user consent settings for RSC in a chat](#configure-user-consent-settings-for-rsc-in-a-chat).
+    1. [Configure group owner consent settings for RSC in a team](#configure-group-owner-consent-settings-for-rsc-in-a-team).
+    1. [Configure user consent settings for RSC in a chat](#configure-user-consent-settings-for-rsc-in-a-chat).
 1. [Register your app with Microsoft identity platform via the Azure AD portal](#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 1. [Review your application permissions in the Azure AD portal](#review-your-application-permissions-in-the-azure-ad-portal).
 1. [Obtain an access token from the Microsoft Identity platform](#obtain-an-access-token-from-the-microsoft-identity-platform).
 1. [Update your Teams app manifest](#update-your-teams-app-manifest).
 1. [Install your app directly in Teams](#sideload-your-app-in-teams).
 1. [Check your app for added RSC permissions](#check-your-app-for-added-rsc-permissions).
-    a. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
-    a. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
+    1. [Check your app for added RSC permissions in a team](#check-your-app-for-added-rsc-permissions-in-a-team).
+    1. [Check your app for added RSC permissions in a chat](#check-your-app-for-added-rsc-permissions-in-a-chat).
 
 ## Configure consent settings in the Azure AD portal
 
@@ -95,7 +99,7 @@ To enable or disable user consent using PowerShell, follow the steps outlined in
 The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Microsoft Graph APIs. For more information, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
->Do not register multiple Teams apps to the same Azure AD app id. The app id must be unique for each app. Attempts to install multiple apps to the same app id will fail.
+>Do not register multiple Teams apps to the same Azure AD app ID. The app ID must be unique for each app. Attempts to install multiple apps to the same app ID will fail.
 
 ## Review your application permissions in the Azure AD portal
 
@@ -122,7 +126,7 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
 
 > [!div class="checklist"]
 >
-> - **id**  — your Azure AD app id. For more information, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **id**  — your Azure AD app ID. For more information, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
 > - **resource**  — any string. This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.
 > - **application permissions** — RSC permissions for  your app. For more information, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
@@ -175,14 +179,17 @@ The RSC permissions are declared in your app manifest (JSON) file.  Add a [webAp
   }
 ```
 
+>[!NOTE]
+>If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+
 ## Sideload your app in Teams
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team.
+If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team or chat.
 
 ## Check your app for added RSC permissions
 
 >[!IMPORTANT]
->The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as deleting a tab. You should review the resource owner's intent for your use case prior to making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
+>The RSC permissions are not attributed to a user. Calls are made with app permissions, not user delegated permissions. Thus, the app may be allowed to perform actions that the user cannot, such as deleting a tab. You should review the team owner's or chat owner's intent for your use case prior to making RSC API calls. For more information, see [Microsoft Teams API overview](/graph/teams-concept-overview).
 
 Once the app has been installed to a resource, you can use [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)  to view the permissions that have been granted to the app in the resource:
 
@@ -197,19 +204,26 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 > - Select **Get link to team**.
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
-> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
+> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
   ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
+
+#### See also
+[Get the names and other details of apps installed in the specified team](https://docs.microsoft.com/en-us/graph/api/team-list-installedapps?view=graph-rest-1.0&tabs=http)
 
 ### Check your app for added RSC permissions in a chat
 
 > [!div class="checklist"]
 >
->- Get the chat thread id from the Teams web client.
+>- Get the chat thread ID from the Teams *web* client.
 > - In the Teams web client, select **Chat** from the far left nav bar.
 > - Select the chat where the app is installed from the drop-down menu.
-> - Copy the web URL and save the chat thread id from the string.
+> - Copy the web URL and save the chat thread ID from the string.
+![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 > - Log into **Graph Explorer**.
-> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The clientAppId field in the response will map to the appId specified in the Teams app manifest.
+> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
+
+#### See also
+[Get the names and other details of apps installed in the specified chat](https://docs.microsoft.com/en-us/graph/api/chat-list-installedapps?view=graph-rest-1.0&tabs=http#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat)
 
 ## Code sample
 | **Sample name** | **Description** | **.NET** |**Node.js** |
