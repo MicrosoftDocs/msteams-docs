@@ -209,7 +209,7 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 > - Select **Get link to team**.
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
-> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
+> - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
   ![Graph explorer response to GET call for team RSC permissions.](../../assets/images/team-graph-permissions.png)
 
 For information about how to get details about apps installed in a specific team, see [Get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
