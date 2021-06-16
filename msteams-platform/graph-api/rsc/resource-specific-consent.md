@@ -13,6 +13,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 
 ## Resource-specific permissions
 
+### Resource-specific permissions for a team
 |Application permission| Action |
 | ----- | ----- |
 |TeamSettings.Read.Group | Get this team's settings.|
@@ -28,6 +29,12 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 |TeamsTab.ReadWrite.Group|Update this team's tabs.​|
 |TeamsTab.Delete.Group|Delete this team's tabs.​|
 |TeamMember.Read.Group|Get this team's members.​|
+
+For more details, see [Teams resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+
+### Resource-specific permissions for a chat
+|Application permission| Action |
+| ----- | ----- |
 | ChatSettings.Read.Chat         | Get this chat's settings.                                    |
 | ChatSettings.ReadWrite.Chat    | Update this chat's settings.                          |
 | ChatMessage.Read.Chat          | Get this chat's messages.                                    |
@@ -40,12 +47,10 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 | TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat.                   |
 | OnlineMeeting.ReadBasic.Chat   | Get basic properties—such as name, schedule, organizer, and join link—of a meeting associated with this chat. |
 
+For more details, see [Chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
+
 >[!NOTE]
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
-
-### See also
-- [Teams resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions)
-- [Chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
 ## Enable resource-specific consent in your application
 
@@ -205,10 +210,9 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 > - Copy and save the **groupId** value from the string.
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/groups/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
-  ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
+  ![Graph explorer response to GET call.](../../assets/images/team-graph-permissions.png)
 
-#### See also
-[Get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps)
+For information about how to get details about apps installed in a specific team, see [Get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps#example-2-get-the-names-and-other-details-of-installed-apps).
 
 ### Check your app for added RSC permissions in a chat
 
@@ -221,9 +225,9 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 ![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 > - Log into **Graph Explorer**.
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
+  ![Graph explorer response to GET call.](../../assets/images/chat-graph-permissions.png)
 
-#### See also
-[Get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat)
+For information about how to get details about apps installed in a specific chat, see [Get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat).
 
 ## Code sample
 | **Sample name** | **Description** | **.NET** |**Node.js** |
