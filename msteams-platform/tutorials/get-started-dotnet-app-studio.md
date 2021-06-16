@@ -67,10 +67,10 @@ After the repo is cloned, use Visual Studio to open the solution file **Microsof
 
 When the app starts, a browser window opens with the root of the app launched. You can go to the following URLs to verify that all the app URLs are loading:
 
-- `https://localhost:44327/`
-- `https://localhost:44327/hello`
-- `https://localhost:44327/first`
-- `https://localhost:44327/second`
+- `http://localhost:3978/`
+- `http://localhost:3978/hello`
+- `http://localhost:3978/first`
+- `http://localhost:3978/second`
 
 <a name="HostSample"></a>
 
