@@ -44,8 +44,8 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 >Resource-specific permissions are only available to Teams apps installed on the Teams client and are currently not part of the Azure Active Directory portal.
 
 ### See also
-- [Teams resource-specific consent permissions](https://docs.microsoft.com/graph/permissions-reference#teams-resource-specific-consent-permissions)
-- [Chat resource-specific consent permissions](https://docs.microsoft.com/graph/permissions-reference#chat-resource-specific-consent-permissions)
+- [Teams resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions)
+- [Chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions)
 
 ## Enable resource-specific consent in your application
 
@@ -208,7 +208,7 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
   ![Graph explorer response to GET call.](../../assets/images/graph-permissions.png)
 
 #### See also
-[Get the names and other details of apps installed in the specified team](https://docs.microsoft.com/graph/api/team-list-installedapps)
+[Get the names and other details of apps installed in the specified team](/graph/api/team-list-installedapps)
 
 ### Check your app for added RSC permissions in a chat
 
@@ -223,7 +223,7 @@ Once the app has been installed to a resource, you can use [Graph Explorer](http
 > - Make a **GET** call to the following endpoint: `https://graph.microsoft.com/beta/chats/{chatId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
 
 #### See also
-[Get the names and other details of apps installed in the specified chat](https://docs.microsoft.com/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat)
+[Get the names and other details of apps installed in the specified chat](/graph/api/chat-list-installedapps#example-2-get-the-names-and-other-details-of-apps-installed-in-the-specified-chat)
 
 ## Code sample
 | **Sample name** | **Description** | **.NET** |**Node.js** |
