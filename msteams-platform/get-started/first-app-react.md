@@ -69,7 +69,7 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project. Each question tells you how to answer it, for example, to use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
+The CLI walks through some questions to create the project. Each question tells you how to answer it, for example, use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
 
 1. Select **Create a new Teams app**.
 1. Choose the **Tab** capability.
