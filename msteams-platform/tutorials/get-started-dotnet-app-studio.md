@@ -66,6 +66,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 You can build and run the smaple after it is cloned. 
 
 **To build and run the cloned sample**
+
 1. Open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
 1. Select **Build Solution** from the **Build** menu.
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
@@ -76,8 +77,6 @@ When the app starts, a browser window opens with the root of the app launched. Y
 - `https://localhost:44327/hello`
 - `https://localhost:44327/first`
 - `https://localhost:44327/second`
-
-<a name="HostSample"></a>
 
 > [!Note]
 > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).

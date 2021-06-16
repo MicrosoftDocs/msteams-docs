@@ -245,3 +245,8 @@ To test your messaging extension, you can click on the three dots below the inpu
 Select one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom:
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+ ## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
