@@ -10,7 +10,7 @@ ms.date: 11/09/2018
 
 # Create your first Teams app using C#
 
-In this tutorial, you will learn how to create your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the steps to:
+In this tutorial, you will learn how to create your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
 
 * Prepare your environment
 * Get prerequisites
@@ -125,7 +125,14 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 # [Developer Portal](#tab/DP)
 
-Content here
+**To install Developer Portal (preview) in Teams**
+
+1. Select the **Apps** icon at the bottom of the left-hand bar, and search for **Developer Portal**.
+1. Select **Developer Portal** and select **Open**.
+1. Select the Apps tab and select select **Import an existing app**.
+1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
+
+You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
 ---
 

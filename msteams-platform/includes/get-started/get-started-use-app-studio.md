@@ -16,7 +16,7 @@ Complete the following steps to update the app package:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
-    The sample comes with its own manifest and is designed to build an app package when the project is built. On .NET this is done in Visual Studio and on Node.js this is done by typing `gulp` at the command line in the root directory of the project.
+    The sample comes with its own manifest and is designed to build an app package when the project is built. On .NET, the manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```. On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.
 
     ```bash
     $ gulp
