@@ -56,7 +56,7 @@ Read in depth about or at least familiarize yourself with the [fundamentals of T
 
 After the planning phase, you can determine which Teams capabilities fit your app’s use cases. For example, if you want to proactively notify people, a bot might be the right capability.
 
-The UI kit has pre-built designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
+The UI kit has pre built designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
 
 1. In the UI kit’s left nav, go to **App capabilities** and select the capability you want for your app.
 1. Copy what you need from that page to design your app.<br />
@@ -64,7 +64,7 @@ The UI kit has pre-built designs that show you how people typically add, set up,
 
 ## Design your UX flow
 
-Once you have a basic app design, you can modify and refine it as much as you want (and quickly) by copying Teams UI templates and basic components from the UI kit.
+Once you have a basic app design, you can modify and refine it as much as you want by copying Teams UI templates and basic components from the UI kit.
 
 ### Design with UI templates
 
@@ -107,5 +107,6 @@ Not unlike the design phase, you can use these Fluent UI components in your app 
 
 Whether you’re just starting on your app or close to a production-ready app, we recommend that you periodically review the following resources:
 
-* **Microsoft Teams store validation guidelines**: Provides standards that all Teams apps should strive for (not just apps listed in the store). For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
-* **Design best practices**: The design guideline documents and the UI kit provide the best practices to design high quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
+* **Microsoft Teams store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
+
