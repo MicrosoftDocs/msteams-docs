@@ -1,6 +1,6 @@
 ---
-title: Resource-specific consent
-description: Describes resource-specific consent and how to make advantage of it.
+title: Resource-specific consent in Teams
+description: Describes resource-specific consent in Teams and how to make advantage of it.
 localization_priority:  Normal
 author: laujan
 ms.author: lajanuar
@@ -9,7 +9,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 ---
 # Resource-specific consent (RSC)
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat members* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular RSC permissions define what an application can do within a specific resource:
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat members* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular, Teams-specific, RSC permissions define what an application can do within a specific resource:
 
 ## Resource-specific permissions
 
