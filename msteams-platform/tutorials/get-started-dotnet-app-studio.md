@@ -119,10 +119,15 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **Update the app package**
 
-# [App Studio](#tab/App Studio)
+# [App Studio](#tab/AS)
+
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
-# [Developer Portal](#tab/Developer Portal)
+# [Developer Portal](#tab/DP)
+
+Content here
+
+---
 
 ## Update the credentials for your hosted app
 
