@@ -23,7 +23,7 @@ The Connector cards support the following actions:
 
 The `ActionCard` action supports three input types:
 
-- `TextInput`: A single-line or multiline text field with an optional length limit.
+- `TextInput`: A single line or multiline text field with an optional length limit.
 - `DateInput`: A date selector with an optional time selector.
 - `MultichoiceInput`: An enumerated list of choices offering either a single selection or multiple selections.
 
@@ -34,7 +34,7 @@ The `ActionCard` action supports three input types:
 | `false` or not specified | `compact` |
 | `true` | `expanded` |
 
-If you want a multiselect list to be displayed initially, in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
+To display the multiselect list in the compact style, you must specify both `"isMultiSelect": true` and `"style": true`.
 
 For more information on connector card actions, see [Actions](/outlook/actionable-messages/card-reference#actions).
 
@@ -148,7 +148,7 @@ This message provides the following card in the channel:
 
 1. Install cURL using: https://curl.haxx.se/.
 
-2. From the command line, enter the following cURL command:
+1. From the command line, enter the following cURL command:
 
    ```bash
    // on macOS or Linux
@@ -163,7 +163,7 @@ This message provides the following card in the channel:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `curl`.
 
-3. Check the Microsoft Teams client for the new card posted.
+1. Check the Microsoft Teams client for the new card posted.
 
 # [PowerShell](#tab/PowerShell)
 
@@ -180,7 +180,7 @@ This message provides the following card in the channel:
     > [!NOTE]
     > If the POST succeeds, you must see a simple **1** output by `Invoke-RestMethod`.
 
-2. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
+1. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
     - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
@@ -196,7 +196,7 @@ This message provides the following card in the channel:
 **To send Adaptive Cards through an incoming webhook**
 
 1. [Setup a custom webhook](/add-incoming-webhook.md) in Teams.
-2. Create Adaptive Card JSON file using the following code:
+1. Create Adaptive Card JSON file using the following code:
 
     ```json
     {
@@ -221,27 +221,28 @@ This message provides the following card in the channel:
     }
     ```
 
-    Properties for Adaptive Card JSON file:
+    The properties for Adaptive Card JSON file are as follows:
 
     * The `"type"` field must be `"message"`.
     * The `"attachments"` array contains a set of card objects.
     * The `"contentType"` field must be set to Adaptive Card type.
     * The `"content"` object is the card formatted in JSON.
 
-3. Test your Adaptive Card with Postman.
+1. Test your Adaptive Card with Postman:
 
-Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up incoming webhook. Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
+    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up incoming webhook.
+    * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
 
->[!TIP]
-> Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) for testing the body of POST request.
+> [!TIP]
+> Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection can be throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
 
-The following table provides the time-based transaction details:
+The following table provides the time based transaction details:
 
 | Time in seconds  | Maximum allowed requests  |
 |---|---|

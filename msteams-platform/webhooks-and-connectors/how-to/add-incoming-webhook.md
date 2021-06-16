@@ -8,11 +8,9 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Create an incoming webhook to the Teams app
+# Create an incoming webhook
 
-## Incoming webhook
-
-Incoming webhook allow any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface (UI) containers that include content and actions related to a single topic. Teams use cards within the following three capabilities:
+Incoming webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. Teams use cards within the following capabilities:
 
 * Bots
 * Messaging extensions
@@ -24,46 +22,46 @@ The following table provides the features and description of incoming webhook:
 
 | Features | Description |
 | ------- | ----------- |
-|Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you choose to send messages through cards, you must use the actionable message card format. For more information, see [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
+|Actionable messaging support|Actionable message cards are supported in all Office 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
 |Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests, can send messages to Teams through an incoming webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. Do not use HTML markup in your cards. HTML is ignored and treated as plain text.|
 |Scoped configuration|Incoming webhook is scoped and configured at the channel level.|
 |Secure resource definitions|Messages are formatted as JSON payloads. This declarative messaging structure prevents the insertion of malicious code.|
 
 > [!NOTE]
-> Teams bots, messaging extensions, incoming webhook, and the Bot Framework support Adaptive Cards, an open cross-card platform framework. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
+> Teams bots, messaging extensions, incoming webhook, and the Bot Framework support Adaptive Cards, an open cross card platform framework. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 
 ## Create an incoming webhook
 
 **To add an incoming webhook to a Teams channel**
 
-1. Navigate to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Choose **Connectors** from the drop-down menu.
+1. Go to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
+1. Select **Connectors** from the drop down menu.
 
-    ![Choose Connector](~/assets/images/connectors.png)
+    ![Select Connector](~/assets/images/connectors.png)
 
 1. Search for **Incoming Webhook** and select **Add**.
-1. Select **Configure**, provide a name, and optionally, upload an image for your webhook.
+1. Select **Configure**, provide a name, and upload an image for your webhook if required.
 
     ![Configure button](~/assets/images/configure.png)
 
-1. The dialog window presents a unique URL that maps to the channel. Copy and save the webhook URL, to send information to Microsoft Teams.
+1. The dialog window presents a unique URL that maps to the channel. Copy and save the webhook URL, to send information to Microsoft Teams and select **Done**.
 
     ![Unique URL](~/assets/images/url.png)
 
-1. Select **Done**. The webhook is available in the team channel.
+The webhook is available in the Teams channel.
 
-    > [!NOTE]
-    > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
+> [!NOTE]
+> In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
 ## Remove an incoming webhook
 
 **To remove an incoming webhook from a Teams channel**
 
-1. Navigate to the channel.
+1. Go to the channel.
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Choose **Connectors** from the drop-down menu.
-1. On the left, under **Manage**, choose **Configured**.
+1. Select **Connectors** from the drop down menu.
+1. On the left, under **Manage**, select **Configured**.
 1. Select the **number Configured** to see a list of your current connectors.
 
     ![Configured webhook](~/assets/images/configured.png)
@@ -80,7 +78,7 @@ The following table provides the features and description of incoming webhook:
 
     ![Remove Configuration](~/assets/images/removeconfiguration.png)
 
-8. Prior to selecting the **Remove**, complete the dialog box fields and checkboxes. 
+8. Complete the dialog box fields and checkboxes and select **Remove**.
 
     ![Final Remove](~/assets/images/finalremove.png)
 
