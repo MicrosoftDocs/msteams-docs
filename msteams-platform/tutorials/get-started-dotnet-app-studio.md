@@ -65,8 +65,8 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 You can build and run the smaple after it is cloned. 
 
-**TO build and run the cloned sample:**
-1. Open the open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
+**To build and run the cloned sample**
+1. Open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
 1. Select **Build Solution** from the **Build** menu.
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
@@ -82,7 +82,7 @@ When the app starts, a browser window opens with the root of the app launched. Y
 > [!Note]
 > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).
 
-## Host the sample app
+## Deploy your sample app
 
 Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be available on the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 
@@ -97,8 +97,10 @@ ngrok http 44327 -host-header=localhost:44327
 ```
 
 `Ngrok` responds to requests from the internet and routes them to your app running on port 44327. 
-**To verify the response:**
-1. Open your browser and go to `https://d0ac14a5.ngrok.io/hello`. This will load your app's hello page.
+
+**To verify the response**
+
+1. Open your browser and go to `https://d0ac14a5.ngrok.io/hello`. This will load your app's Hello page.
 1. Instead of the URL mentioned in Step 1, use the forwarding address displayed by `ngrok` in your console session.
     > [!NOTE]
     > If you have used a different port in the [build and run](#build-and-run-the-sample) step, ensure you use the same port number to setup the `ngrok` tunnel.
@@ -115,7 +117,12 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
+**Update the app package**
+
+# [App Studio](#tab/App Studio)
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+
+# [Developer Portal](#tab/Developer Portal)
 
 ## Update the credentials for your hosted app
 
