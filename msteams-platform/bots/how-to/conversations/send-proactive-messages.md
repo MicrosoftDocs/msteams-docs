@@ -272,8 +272,11 @@ The following table provides a simple code sample that incorporate basic convers
 > [!div class="nextstepaction"]
 > [Teams proactive messaging code samples](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
 
+## See also
+
+[**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
 ## Next step
 
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 > [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
