@@ -56,7 +56,7 @@ The tab features are as follows:
 You can use one of the following methods to create tabs:
 
 * [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
-* [Use Adaptive Card to build tabs](#use-adaptive-card-to-build-tabs)
+* [Use Adaptive Card to build tabs](~/tabs/how-to/build-adaptive-card-tabs.md)
 
 ### Declare custom tab in app manifest
 
@@ -68,33 +68,22 @@ For channel or group tabs, you can also create an additional configuration page.
 
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
 
-### Use Adaptive Card to build tabs
-
-When developing a tab using the traditional method, you must consider these issues, such as HTML and Cascading Style Sheets (CSS) considerations, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, you can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
-
-## Mobile clients
-
-If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs.
-
-Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
-
-| **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
-| --- | --- | --- |
-| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
-| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
-
-> [!NOTE]
-> * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
-> * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
-> * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
-> * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
-
 ## See also
 
 * [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
 
 ## Next step
 

@@ -9,6 +9,21 @@ localization_priority: Normal
 
 When you are building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider.
 
+If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the guidance for tabs on mobile in this article when creating your tabs.
+
+Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
+
+| **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
+| --- | --- | --- |
+| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
+
+> [!NOTE]
+> * [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
+> * For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+> * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
+> * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
+
 ## Authentication
 
 For authentication to work on mobile clients, you must upgrade you Teams JavaScript SDK to at least version 1.4.1.
@@ -50,3 +65,19 @@ If you are sideloading your app or publishing to an organization's app catalog, 
 ## See also
 
 * [Tab design guidelines](~/tabs/design/tabs.md)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get context for your tab](~/tabs/how-to/access-teams-context.md)

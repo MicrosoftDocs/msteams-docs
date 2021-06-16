@@ -12,6 +12,8 @@ ms.author: surbhigupta
 > * This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
+When developing a tab using the traditional method, you must consider these issues, such as HTML and Cascading Style Sheets (CSS) considerations, slow load times, iFrame constraints, and server maintenance and costs. Adaptive Card tabs is a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+
 Use Adaptive Cards to build tabs with ease. You can build your tabs with ready-made user interface (UI) Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend. This eliminates the need for a different backend for your bot and tabs. It greatly reduces server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow.
 
 The following image depicts build tabs with Adaptive Cards in desktop and mobile:
@@ -407,5 +409,20 @@ The following code shows a reissued request example:
 
 ## See also
 
+* [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
+
+## Next step
+
 > [!div class="nextstepaction"]
-> [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)

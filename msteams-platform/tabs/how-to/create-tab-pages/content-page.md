@@ -121,4 +121,20 @@ To show the loading indicator:
 
 ## See also
 
-* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)

@@ -582,3 +582,22 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button, triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+
+## See also
+
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
