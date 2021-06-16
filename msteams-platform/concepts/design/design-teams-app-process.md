@@ -64,7 +64,7 @@ The UI kit has pre built designs that show you how people typically add, set up,
 
 ## Design your UX flow
 
-Once you have a basic app design, you can modify and refine it as much as you want (and quickly) by copying Teams UI templates and basic components from the UI kit.
+Once you have a basic app design, you can modify and refine it as much as you want by copying Teams UI templates and basic components from the UI kit.
 
 ### Design with UI templates
 
