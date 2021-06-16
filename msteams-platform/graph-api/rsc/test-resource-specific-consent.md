@@ -67,6 +67,9 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > [!IMPORTANT]
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
+>[!NOTE]
+>If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
+
 ### Test added RSC permissions to a team using the Postman app
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
