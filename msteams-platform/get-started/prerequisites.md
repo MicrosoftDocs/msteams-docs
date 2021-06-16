@@ -193,12 +193,16 @@ The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
 ---
 
-## Next steps
-
 Now that your development environment is configured, you can create, build, and deploy your first Teams app.
 
-- [Create your first Teams app using React](first-app-react.md)
+## See also
+
 - [Create your first Teams app with Blazor](first-app-blazor.md)
 - [Create your first Teams app using SharePoint Framework (SPFx)](first-app-spfx.md)
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create your first Teams app using React](first-app-react.md)
