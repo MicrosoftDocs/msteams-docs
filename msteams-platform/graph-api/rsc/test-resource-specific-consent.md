@@ -69,7 +69,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 
 ### Test added RSC permissions to a team using the Postman app
 
-To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code](test-rsc-json-file.md) into your local environment and update the following values:
+To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
@@ -84,7 +84,7 @@ To check whether the RSC permissions are being honored by the API request payloa
 
 ## Test added RSC permissions to a chat using the Postman app
 
-To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code](test-chat-rsc-json-file.md) into your local environment and update the following values:
+To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for chats](test-chat-rsc-json-file.md) into your local environment and update the following values:
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
