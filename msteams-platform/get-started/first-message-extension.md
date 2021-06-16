@@ -179,9 +179,7 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
