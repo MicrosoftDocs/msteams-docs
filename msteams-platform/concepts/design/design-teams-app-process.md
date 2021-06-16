@@ -56,7 +56,7 @@ Read in depth about or at least familiarize yourself with the [fundamentals of T
 
 After the planning phase, you can determine which Teams capabilities fit your app’s use cases. For example, if you want to proactively notify people, a bot might be the right capability.
 
-The UI kit has pre-built designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
+The UI kit has pre built designs that show you how people typically add, set up, use, and manage each capability. For quick reference, this information is also in these docs, but with the UI kit you can copy and paste any of these designs into your app’s design.
 
 1. In the UI kit’s left nav, go to **App capabilities** and select the capability you want for your app.
 1. Copy what you need from that page to design your app.<br />
