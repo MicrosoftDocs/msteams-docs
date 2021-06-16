@@ -251,10 +251,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage view for images in Adaptive Cards
 
-> [!NOTE]
-> This feature is currently available only in developer preview.
-
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following code example:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
 ``` json
 {
