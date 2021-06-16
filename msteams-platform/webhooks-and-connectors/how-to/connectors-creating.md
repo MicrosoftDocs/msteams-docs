@@ -246,6 +246,12 @@ After uploading the app package to configure and use the Connector in a team, in
 
 The Connector is available in the section &#9679;&#9679;&#9679; > **More options** > **Connectors** > **All** > **Connectors for your team** for that team. You can navigate by scrolling to this section or search for the Connector app. To configure or modify the connector, select **Configure**.
 
+## Distribute webhook and connector
+
+1. [Set up an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directly for your team.
+2. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) and [publish your incoming webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) in a O365 Connector.
+3. Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
+
 ## Code sample
 
 The following table provides the sample name and its description:
