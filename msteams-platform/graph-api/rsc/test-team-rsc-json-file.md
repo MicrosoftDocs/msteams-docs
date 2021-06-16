@@ -8,7 +8,7 @@ ms.topic: how-to
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 ---
 
-# Test RSC Postman collection JSON
+# Test team RSC Postman collection JSON
 
 ```json
 {
