@@ -104,7 +104,7 @@ To enable or disable user consent using PowerShell, follow the steps outlined in
 The Azure Active Directory portal provides a central platform for you to register and configure your apps. Your app must be registered in the Azure AD portal to integrate with the Microsoft identity platform and call Microsoft Graph APIs. For more information, see [Register an application with the Microsoft identity platform](/graph/auth-register-app-v2).
 
 >[!WARNING]
->Do not register multiple Teams apps to the same Azure AD app ID. The app ID must be unique for each app. Attempts to install multiple apps to the same app ID will fail.
+>An Azure AD app ID should not be shared across multiple Teams apps. There should be a 1:1 mapping between a Teams App and an Azure AD app. Attempts to install multiple Teams apps which are associated with the same Azure AD app ID will cause installation/runtime failures.
 
 ## Review your application permissions in the Azure AD portal
 
