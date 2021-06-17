@@ -163,6 +163,6 @@ After entering the details of your app, complete the following steps to register
 1. Select the **Search** box in the **Add to a team** section and select a team to add the sample app. You can set up a special team for testing.
 1. Select the **Install** button at the bottom of the dialog box.
 
-Your app is now available in Teams. However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.
+    Your app is now available in Teams. However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.
 
-<img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
+    <img  width="450px" alt="The finished app" src="~/assets/images/get-started/Finishedhelloworld.png"/>
