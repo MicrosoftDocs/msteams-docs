@@ -1392,10 +1392,10 @@ When you uninstall an app, the bot is also uninstalled. When a user sends a mess
 
 ## Event handling for install and uninstall events
 
-When you use these install and uninstall events, there are some instances where bots throw exceptions on receiving unexpected events from Teams. Some of the reasons why this occurs:
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams. This occurs in the following cases:
 
-* You built your bot without the Microsoft Bot Framework SDK, and as a result the bot throws an exception on receiving an unexpected event.
-* You built your bot with the Microsoft Bot Framework SDK, and you chose to alter the default event behavior by overriding the base event handle.
+* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the Microsoft Bot Framework SDK, and you chose to alter the default event behavior by overriding the base event handle.
 
 It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
 
