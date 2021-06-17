@@ -48,11 +48,11 @@ Complete the following steps to update the app package:
 
     <img  width="450px" alt="Newly imported app view" src="~/assets/images/get-started/HelloWorldappdetails.png"/>
 
-The following image shows the imported app package in App Studio:
+    The following image shows the imported app package in App Studio:
 
-<img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
+    <img  width="450px" alt="Importing the app package" src="~/assets/images/get-started/Importinganapp2.png"/>
 
-On the left-hand side of the Manifest editor there is a list of steps. On the right-hand side there is a list of properties that need to be filled in for each step. As you started with a sample app, much of the information is already completed. The next steps enable you to update the properties of the Hello World app.
+    On the left-hand side of the Manifest editor there is a list of steps. On the right-hand side there is a list of properties that need to be filled in for each step. As you started with a sample app, much of the information is already completed. The next steps enable you to update the properties of the Hello World app.
 
 #### App details
 
