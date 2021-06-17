@@ -13,7 +13,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 ```json
 {
 	"info": {
-		"_postman_id": "8f4593e1-a3e6-434e-b0a5-fe5d78796f40",
+		"_postman_id": "36d695ea-3ce2-4b2d-a1ac-b1721d2d46f1",
 		"name": "Test-ChatRSC",
 		"description": "Collection to test RSC.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -128,12 +128,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}"
 							]
@@ -171,12 +173,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}/members",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}",
 								"members"
@@ -215,12 +219,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}/messages",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}",
 								"messages"
@@ -262,12 +268,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}/tabs",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}",
 								"tabs"
@@ -277,7 +285,7 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 					"response": []
 				},
 				{
-					"name": "Get PermisisonGrants",
+					"name": "Get PermissionGrants",
 					"event": [
 						{
 							"listen": "test",
@@ -306,12 +314,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}/permissionGrants",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}",
 								"permissionGrants"
@@ -352,12 +362,14 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 						],
 						"url": {
 							"raw": "https://graph.microsoft.com/beta/chats/{{chatId}}/installedApps?$expand=teamsApp",
+							"protocol": "https",
 							"host": [
 								"graph",
 								"microsoft",
 								"com"
 							],
 							"path": [
+								"beta",
 								"chats",
 								"{{chatId}}",
 								"installedApps"
