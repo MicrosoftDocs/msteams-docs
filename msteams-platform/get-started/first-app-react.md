@@ -39,7 +39,7 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. On the **Select capabilities** step, the **Tab** capability will already be selected.  Press **OK**.
+1. On the **Select capabilities** step, the **Tab** capability is already selected. Press **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
@@ -55,11 +55,11 @@ Use the Teams Toolkit to create your first project:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
 
-1. Select a workspace folder.  A folder will be created within your workspace folder for the project you are creating.
+1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
 
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
-Your Teams app will be created within a few seconds.
+Your Teams app is created within a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -79,7 +79,7 @@ The CLI walks through some questions to create the project. Each question will t
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
-Once all the questions have been answered, your project will be created.
+Once all the questions have been answered, your project is created.
 
 ---
 
@@ -127,7 +127,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-   The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+   The Toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
@@ -138,7 +138,7 @@ To build and run your app locally:
 1. You may be prompted to sign in.  If so, sign in with your M365 account.
 1. When prompted to install the app onto Teams, press **Add**.
 
-Your app will now be displayed:
+Your app is now displayed:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 

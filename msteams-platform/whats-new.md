@@ -16,6 +16,7 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resouce-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/26/2021| Build tabs with Adaptive Cards. |[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
