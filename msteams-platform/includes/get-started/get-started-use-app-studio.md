@@ -64,7 +64,7 @@ Your app can only have one Team tab:
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when [hosting your app](#host-the-sample-app).
+In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.
 
 ##### Personal tabs
 
