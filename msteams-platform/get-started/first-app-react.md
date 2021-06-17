@@ -9,7 +9,7 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with React
 
-In this tutorial, you will create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. For example, a personal app includes a set of tabs scoped for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
+In this tutorial, you will create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. For example, a *personal app* includes a set of tabs scoped for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
 
 The app that is built displays basic user information for the current user. When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 
@@ -69,7 +69,7 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project. Each question will tell you how to answer it, for example, to use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
+The CLI walks through some questions to create the project. Each question will tell you how to answer it, for example, use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
 
 1. Select **Create a new Teams app**.
 1. Choose the **Tab** capability.
@@ -142,7 +142,7 @@ Your app will now be displayed:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
-You can do normal debugging activities as if this were any other web application such as setting breakpoints. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+You can do normal debugging activities as if this were any other web application, such as setting breakpoints. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -187,7 +187,7 @@ Deployment involves provisioning resources on an active Azure subscription and d
 ## See also
 
 - [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
 

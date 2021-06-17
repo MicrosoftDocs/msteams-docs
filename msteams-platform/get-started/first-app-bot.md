@@ -159,7 +159,7 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
 
 ## Next step
 

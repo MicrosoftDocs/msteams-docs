@@ -183,5 +183,5 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
 - [Create a conversation bot](first-app-bot.md)
