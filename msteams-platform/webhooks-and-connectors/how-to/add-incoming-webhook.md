@@ -78,7 +78,7 @@ The webhook is available in the Teams channel.
 
     ![Remove Configuration](~/assets/images/removeconfiguration.png)
 
-8. Complete the dialog box fields and checkboxes and select **Remove**.
+1. Complete the dialog box fields and checkboxes and select **Remove**.
 
     ![Final Remove](~/assets/images/finalremove.png)
 
