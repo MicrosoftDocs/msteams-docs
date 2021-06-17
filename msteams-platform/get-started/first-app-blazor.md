@@ -267,6 +267,7 @@ You can now use the **Preview in Teams** button at the top of the page to launch
 ## See also
 
 - [Create a Teams app with React](first-app-react.md)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
 
