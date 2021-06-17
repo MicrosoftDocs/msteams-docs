@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Create your first Teams app using C#
+# Build your first Teams app using C#
 
 In this tutorial, you will learn how to create your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
 

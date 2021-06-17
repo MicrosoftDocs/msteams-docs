@@ -5,7 +5,7 @@ localization_priority: Normal
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
-# Tutorials for the Microsoft Teams developer platform
+# Overview
 
 In this section, you will find tutorials on how to create an app using C# or .NET, Node.js, and Yeoman Generator. You will also find multiple Code Samples for Tabs, Bots, Messaging Extensions, Webhooks and Connectors, and Graph APIs. In addition, you can also refer to the Microsoft Learn sections where you can extend the Teams developer platform capabilities by creating custom apps.  
 
@@ -24,3 +24,4 @@ In this section, you will find tutorials on how to create an app using C# or .NE
 * [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
 * [Create an app using Node.js](get-started-nodejs-app-studio.md)
 * [Create an app using Yeoman generator](get-started-yeoman.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 
-# Create your first Microsoft Teams app using Node.js
+# Build your first Microsoft Teams app using Node.js
 
 In this tutorial, you will learn how to create your very first Microsoft Teams app using Node.js. It also walks you through the steps to: 
 

@@ -7,7 +7,7 @@ ms.topic: tutorial
 ms.custom: scenarios:getting-started
 ---
 
-# Create your first Microsoft Teams app using the Yeoman generator
+# Build your first Microsoft Teams app using the Yeoman generator
 
 > [!Note]
 > This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
