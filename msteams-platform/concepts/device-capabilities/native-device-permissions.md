@@ -168,13 +168,13 @@ For example:
       /* ... *
     /});
     ```
-# [Desktop](#tab/desktop)
-
-   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
-
 # [Mobile](#tab/mobile)
 
    ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
+
+# [Desktop](#tab/desktop)
+
+   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
 
 * * * 
 
