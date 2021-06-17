@@ -88,16 +88,6 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 ### Anatomy: Personal app (bot)
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.|
-|B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
-|C|**Compose box**: Input field for sending messages to the bot.|
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
@@ -108,6 +98,16 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |B|**Back button**: Takes users back to the private workspace.|
 |C|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |D|**Compose box**: Input field for sending messages to the bot.|
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.|
+|B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
+|C|**Compose box**: Input field for sending messages to the bot.|
 
 ---
 
