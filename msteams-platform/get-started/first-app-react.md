@@ -9,13 +9,13 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with React
 
-In this tutorial, you can create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. (A *personal app* includes a set of tabs scoped for individual use.) During the tutorial, you can learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
+In this tutorial, you will create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. For example, a *personal app* includes a set of tabs scoped for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
 
-The app that is built displays basic user information for the current user. When permission is granted, the app connects to Microsoft Graph as the current user to get the complete profile.
+The app that is built displays basic user information for the current user. When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the [prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the [prerequisites](prerequisites.md).
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -69,7 +69,7 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project. Each question tells you how to answer it, for example, use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
+The CLI walks through some questions to create the project. Each question will tell you how to answer it, for example, use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
 
 1. Select **Create a new Teams app**.
 1. Choose the **Tab** capability.
@@ -142,7 +142,7 @@ Your app is now displayed:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
-You can do normal debugging activities as if this were any other web application (such as setting breakpoints). The app supports hot reloading. If you change any file within the project, the page is reloaded.
+You can do normal debugging activities as if this were any other web application, such as setting breakpoints. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -154,7 +154,7 @@ When you pressed F5, the Teams Toolkit:
 1. *Sideloaded* your app in Teams.
 1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Started your application front-end hosted locally.
-1. Started Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab` (the URL is registered inside the application manifest).
+1. Started Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab`. This is the URL registered in the application manifest.
 
 </details>
 
@@ -174,18 +174,19 @@ To successfully run your app in Teams, you must have a Teams account that allows
 
 Before deployment, the application has been running locally:
 
-1. The backend runs using _Azure Functions Core Tools_.
+1. The backend runs using **Azure Functions Core Tools**.
 1. The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
 
-Deployment involves provisioning resources on an active Azure subscription and deploying (uploading) the backend and frontend code for the application to Azure.
+Deployment involves provisioning resources on an active Azure subscription and deploying or uploading the backend and frontend code for the application to Azure.
 
-1. The backend (if configured) uses a variety of Azure services, including Azure App Service and Azure Storage.
-1. The frontend application is deployed to an Azure Storage account configured for static web hosting.
+1. The backend if configured uses a variety of Azure services, including Azure App Service and Azure Storage.
+1. The frontend application will be deployed to an Azure Storage account configured for static web hosting.
 
 </details>
 
 ## See also
 
+- [Create a Teams app with Blazor](first-app-blazor.md)
 - [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
