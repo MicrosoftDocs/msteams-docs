@@ -162,9 +162,6 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md). 
 
-> [!NOTE]
-> The information masking property is currently available in the developer preview only.
-
 #### Sample Adaptive card with masking property
 
 ```json
@@ -240,9 +237,6 @@ To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and e
 
 ### Stage view for images in Adaptive Cards
 
-> [!NOTE]
-> This feature is currently available in developer preview only.
- 
 In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
 ``` json

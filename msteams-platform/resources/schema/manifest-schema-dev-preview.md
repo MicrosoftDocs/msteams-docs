@@ -8,9 +8,10 @@ ms.date: 05/20/2019
 ---
 # Developer preview manifest schema for Microsoft Teams
 
+For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
+
 > [!NOTE]
-> For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-> If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
+> * If you aren't using developer preview features, use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
@@ -209,7 +210,7 @@ For more information on the features available see: [Features in the Public Deve
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ],
@@ -510,22 +511,22 @@ Specify your AAD App ID and Graph information to help users seamlessly sign into
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
-> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. 
 
 You can define any of the following properties:
-* `name`: Allows admin to change the app's display name.
-* `shortDescription`: Allows admin to change the app's short description.
-* `longDescription`: Allows admin to change the app's detailed description.
-* `smallImageUrl`: It is the `outline` property in the `icons` block of the manifest.
-* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
-* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
-* `websiteUrl`: It is the https:// URL to the developer's website.
-* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
-* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
+
+* `name`: The app's display name.
+* `shortDescription`: The app's short description.
+* `longDescription`: The app's detailed description.
+* `smallImageUrl`: The app's outline icon.
+* `largeImageUrl`: The app's color icon.
+* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: The HTTPS URL of the developer's website.
+* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
+* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
 ## defaultInstallScope
 
@@ -551,4 +552,3 @@ When a group install scope is selected, it will define the default capability wh
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
-

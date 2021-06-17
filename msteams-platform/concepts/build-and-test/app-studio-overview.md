@@ -6,7 +6,10 @@ localization_priority: Normal
 ms.topic: overview
 ---
 
-# Quickly develop apps with App Studio for Microsoft Teams
+# Manage your apps with App Studio for Microsoft Teams
+
+> [!TIP]
+> **Try the Developer Portal**: App Studio has evolved. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
 
 App Studio makes it easy to start creating or integrating your own Microsoft Teams apps, whether you develop custom apps for your enterprise or SaaS applications for teams around the world by streamlining the creation of the manifest and package for your app and providing useful tools like the Card Editor and a React control library.
 
@@ -60,7 +63,6 @@ The capabilities section of the Manifest Editor is where the app's capabilities 
 > [!NOTE]
 > As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
 
-
 ##### Tabs
 
 * **Team Tabs.** A team tab becomes part of a channel and provides quick access to team information and resources. For example, the Planner tab for a channel contains a single plan; the Power BI tab maps to a specific report. Users can drill down to the relevant context, but they should not be able to navigate outside the tab. The Power BI tab, for instance, doesn't enable navigation to other Power BI reports, but it does enable the *Go to website* button that launches the report in the main Power BI website.
@@ -85,10 +87,6 @@ After you have supplied your bot's information, you can now optionally define a 
 ##### Connectors
 
 This section allows you to add a connector to your app. If you already have registered an Office 365 connector, choose **Set up** and enter the name and ID of the connector. If you want a new connector click **Register** to be taken to the Connector Developer Dashboard in your browser.
-
-> [!NOTE]
-> App customization enables admins to change the look-and-feel of the apps loaded through bots, messaging extensions, tabs, and connectors. For example, if the Teams admin customizes the name of an app from **Contoso** to **Contoso Agent**, then the app will appear with the new name **Contoso Agent** to users. However, while adding a connector to a chat, in the list the connectors will still show the name of the app as **Contoso**.
-
 
 ##### Messaging Extensions
 
