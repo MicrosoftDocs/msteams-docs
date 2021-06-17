@@ -29,17 +29,17 @@ In the meeting details, users can select **Add a tab +** to open the app flyout 
 
 ### Add during a meeting
 
-# [Desktop](#tab/desktop)
-
-In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and choose the app they want.
-
-:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." border="false":::
-
 # [Mobile](#tab/mobile)
 
 In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: and choose the app they want.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and choose the app they want.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." border="false":::
 
 ---
 
@@ -82,13 +82,13 @@ People might use the in-meeting tab to:
 * Create a poll, survey, or task item for the meeting participants.
 * Display notes relevant to the meeting. For example, information about a sales lead.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
 
 ---
 
@@ -136,13 +136,13 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 * Submit approvals
 * Get reminders
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
 
 ---
 

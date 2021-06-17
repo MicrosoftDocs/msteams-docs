@@ -41,15 +41,6 @@ While access to these features is standard in modern web browsers, you must info
 
 A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
  
-# [Desktop](#tab/desktop)
-
-1. Open your Teams app.
-1. Select your profile icon in the upper right corner of the window.
-1. Select **Settings** > **Permissions** from the drop-down menu.
-1. Select your desired settings.
-
-   ![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
-
 # [Mobile](#tab/mobile)
 
 1. Open Teams.
@@ -58,6 +49,15 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your desired settings.
 
     ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
+ 
+# [Desktop](#tab/desktop)
+
+1. Open your Teams app.
+1. Select your profile icon in the upper right corner of the window.
+1. Select **Settings** > **Permissions** from the drop-down menu.
+1. Select your desired settings.
+
+   ![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
 
 ---
 

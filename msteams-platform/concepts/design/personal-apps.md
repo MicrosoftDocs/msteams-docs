@@ -33,24 +33,6 @@ With a private workspace, you can view app content that's meaningful to you in a
 
 ### Anatomy: Personal app (private workspace)
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**App attribution**: Your app logo and name.|
-|B|**Tabs**: Provides navigation for your personal app.|
-|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
-|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Tabs**: Provides navigation for your personal app.|
-|1|**iframe**: Displays your app content.|
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
@@ -68,6 +50,24 @@ With a private workspace, you can view app content that's meaningful to you in a
 |----------|-----------|
 |A|**Tabs**: Provides navigation for your personal app.|
 |1|**webview**: Displays your app content.|
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**App attribution**: Your app logo and name.|
+|B|**Tabs**: Provides navigation for your personal app.|
+|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
+|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Tabs**: Provides navigation for your personal app.|
+|1|**iframe**: Displays your app content.|
 
 ---
 

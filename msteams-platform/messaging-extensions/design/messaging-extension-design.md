@@ -28,13 +28,13 @@ You can add a messaging extension in the following Teams contexts:
 
 The following example shows how you add a messaging extension in a channel:
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Example shows how to add a messaging extension near the compose box in a channel." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-add-in-channel.png" alt-text="Example shows how to add a messaging extension near the compose box in a channel on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/add-in-channel.png" alt-text="Example shows how to add a messaging extension near the compose box in a channel." border="false":::
 
 ---
 
@@ -44,13 +44,13 @@ Authentication isn't mandatory, but if your app is something like a ticket track
 
 For consistency across Teams apps, you can't customize the sign-in screen. If you use single sign-on (SSO) authentication, users are signed in automatically.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows messaging extension setup screen with a sign-in button." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-set-up.png" alt-text="Example shows messaging extension setup screen with a sign-in button on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/set-up.png" alt-text="Example shows messaging extension setup screen with a sign-in button." border="false":::
 
 ---
 
@@ -62,13 +62,13 @@ Messaging extensions can have search commands, action commands, or both. Your co
 
 With search commands, people can use your messaging extension to quickly find external content and insert into a message. Search commands are commonly made available in the compose box. For example, you can start or add to a discussion by sharing a piece of content—without ever leaving Teams.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Example shows a search-based messaging extension launched from the compose box." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-search-command-type.png" alt-text="Example shows a search-based messaging extension launched from the compose box on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/search-command-type.png" alt-text="Example shows a search-based messaging extension launched from the compose box." border="false":::
 
 ---
 
@@ -92,13 +92,13 @@ The compose box and messages or posts are the primary contexts where people use 
 
 Once added, users can open your messaging extension by selecting your app icon below the compose box. In these examples, the extension has search and action commands.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Example shows how to open a messaging extension from the compose box." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-compose-box.png" alt-text="Example shows how to open a messaging extension from the compose box on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-compose-box.png" alt-text="Example shows how to open a messaging extension from the compose box." border="false":::
 
 ---
 
@@ -111,25 +111,25 @@ Once added, users can select the **More** :::image type="icon" source="../../ass
 
 #### Chat message
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Example shows how to open a messaging extension from a chat message." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Example shows how to open a messaging extension from a chat post on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Example shows how to open a messaging extension from a chat message." border="false":::
 
 ---
 
 #### Channel post
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
 
 ---
 
@@ -141,25 +141,25 @@ The following scenarios show the primary ways people use messaging extensions.
 
 **1. Select a messaging extension**. Users can search for the content they want to share from the compose box.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-search.png" alt-text="Example shows a user searching for content to insert from the compose box." border="false":::
 
 ---
 
 **2. Insert content**. Once posted, others can reply or select the content to see more information in your app.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-content-posted.png" alt-text="Example shows a user posting content into a channel conversation." border="false":::
 
 ---
 
@@ -167,25 +167,25 @@ The following scenarios show the primary ways people use messaging extensions.
 
 **1. Select a messaging extension**. Your app can include one or more action commands.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command." border="false":::
 
 ---
 
 **2. Complete the action**. Your app can receive and process any content or data sent by the message action. This allows users to remain in their conversation and, the following example, not worry about entering information directly in your app.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="Example on how to take action on a message on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message." border="false":::
 
 ---
 
@@ -195,25 +195,25 @@ Messaging extensions also allow you to insert rich links from a recognized URL i
 
 **1. Paste a recognized link** in the compose box.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/paste-preview-link.png" alt-text="Example shows a user pasting a link in the compost box." border="false":::
 
 ---
 
 **2. Insert content**. If your app recognizes the URL in the compose box, it renders the link as a card that provides a content-rich preview of the web content. (See [Adaptive Cards design guidelines](../../task-modules-and-cards/cards/design-effective-cards.md) for more information.)
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Example shows how the URL, since it's recognized by your app, includes some rich content in the compose box." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/messaging-extension/mobile-insert-preview-link.png" alt-text="Example shows how the URL, since it's recognized by your app, includes some rich content in the compose box on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/messaging-extension/insert-preview-link.png" alt-text="Example shows how the URL, since it's recognized by your app, includes some rich content in the compose box." border="false":::
 
 ---
 
@@ -226,6 +226,19 @@ By right clicking your icon, users can pin, remove, or configure your messaging 
 ### Messaging extension in the compose box
 
 The following example is a messaging extension opened from the compose box.
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration showing the UI anatomy of a messaging extension in the compose box on mobile." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**App name**: Full name of your app.|
+|2|**Action commands menu icon (optional)**: Opens a list of action commands for your messaging extension (if you specify any).
+|3|**Search box**: Allows users to find app content they want to insert.|
+|4|**Tab menu (optional)**: Provides multiple content categories.|
+|5|**Action commands menu (optional)**: Displays list of action commands (if you specify any).|
+|6|**App content**: Primarily to display search results.|
 
 # [Desktop](#tab/desktop)
 
@@ -241,19 +254,6 @@ The following example is a messaging extension opened from the compose box.
 |6|**Action commands menu (optional)**: Displays list of action commands (if you specify any).|
 |7|**App content**: Primarily to display search results. The example here is using the list layout (grid layout is another option).|
 |8|**App logo**: Outline icon of your app logo.|
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-anatomy-compose.png" alt-text="Illustration showing the UI anatomy of a messaging extension in the compose box on mobile." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|1|**App name**: Full name of your app.|
-|2|**Action commands menu icon (optional)**: Opens a list of action commands for your messaging extension (if you specify any).
-|3|**Search box**: Allows users to find app content they want to insert.|
-|4|**Tab menu (optional)**: Provides multiple content categories.|
-|5|**Action commands menu (optional)**: Displays list of action commands (if you specify any).|
-|6|**App content**: Primarily to display search results.|
 
 ---
 
