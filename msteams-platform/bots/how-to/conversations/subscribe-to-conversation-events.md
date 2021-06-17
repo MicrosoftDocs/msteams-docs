@@ -1381,10 +1381,10 @@ Not available
 
 ---
 
-## Uninstall event
+## Uninstall behavior for personal app with bot
 
 > [!NOTE]
-> Uninstall event is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+> Uninstall behavior for personal app with bot is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
 
 When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. So you cannot send or receive messages after an app has been uninstalled.
 
