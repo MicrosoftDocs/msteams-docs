@@ -189,7 +189,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|06/17/2021|Uninstall event| [Uninstall event in conversation events](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-event)|
+|06/17/2021|Uninstall behavior updates in personal apps with bots | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-event)|
 |05/26/2021|Build tabs with Adaptive Cards|[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| Meeting Details API and real-time Teams meeting events | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md) |
