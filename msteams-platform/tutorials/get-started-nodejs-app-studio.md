@@ -9,7 +9,7 @@ ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 
 # Build your first Microsoft Teams app using Node.js
 
-In this tutorial, you will learn how to create your very first Microsoft Teams app using Node.js. It also walks you through the steps to: 
+In this tutorial, you will learn how to build your very first Microsoft Teams app using Node.js. It also walks you through the steps to: 
 
 * Prepare your environment
 * Get prerequisites
@@ -19,18 +19,17 @@ In this tutorial, you will learn how to create your very first Microsoft Teams a
 * Update the credentials for your hosted app
 * Configure the app tab
 
-
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
-<a name="DownloadAndHost"></a>
+<a name="GetPrerequisites"></a>
 
-## Download and host your app
+### Download and host your app
 
 Follow these steps to download and host a simple "hello world" app in Teams.
 
 <a name="GetPrerequisites"></a>
 
-### Get prerequisites
+## Get prerequisites
 
 To complete this tutorial, you need the following tools. If you don't already have them you can install them from these links.
 
@@ -76,7 +75,7 @@ You can continue to use this terminal window to run the commands that follow in 
 
 <a name="DownloadSample"></a>
 
-### Download the sample
+## Download the sample
 
 We have provided a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
@@ -89,9 +88,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 <a name="BuildRun"></a>
 
-### Build and run the sample
+## Build and run the sample
 
-Once the repository is cloned, run the change directory command in terminal to change the directory to the sample:
+After the repository is cloned, run the change directory command in terminal to change the directory to the sample:
 
 ```bash
 cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
@@ -103,7 +102,7 @@ In order to build the sample, you need to install all its dependencies. Run the 
 npm install
 ```
 
-You should see a bunch of dependencies getting installed. Once they are finished, you can run the app:
+You should see a bunch of dependencies getting installed. After installation you can run the app with the following command:
 
 ```bash
 npm start
@@ -124,13 +123,13 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 <a name="HostSample"></a>
 
-### Host the sample app
+## Deploy your sample app
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app.
 
 For local testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
-Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here:
+After you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here:
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
@@ -176,7 +175,7 @@ For either method you will need the following:
 
     <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
 
-1. Select the Apps tab and select select **Import an existing app**.
+1. Select the Apps tab and select **Import an existing app**.
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
@@ -188,7 +187,7 @@ For either method you will need the following:
 
 ---
 
-## Update your hosted app
+## Update the credentials for your hosted app
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier:
 
@@ -233,7 +232,7 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose:
+After you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. After you select the tab and click **Save** you can see the `Hello World` tab loaded with the tab you chose:
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 

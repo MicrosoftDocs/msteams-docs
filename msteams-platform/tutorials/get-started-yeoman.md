@@ -12,11 +12,15 @@ ms.custom: scenarios:getting-started
 > [!Note]
 > This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
 
-In this tutorial, you will learn how to create your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the process of upgrading your Teams using the Yeoman generator. Before you begin, you must have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+In this tutorial, you will learn how to build your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the process of upgrading your Teams using the Yeoman generator. Before you begin, you must have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ![yeoman generator git](~/assets/yeoman-demo.gif)
 
-## Setup and prepare your machine
+[!include [prepare your environment](~/includes/prepare-environment.md)]
+
+<a name="GetPrerequisites"></a>
+
+## Get Prerequisites
 
 You need to install the following on your machine before starting to use the Yeoman generator:
 
@@ -91,7 +95,7 @@ This section walks you through the steps to generate your project.
 
    The next set of questions will be based on the previously selected items. For a tab you only need to provide a name and optionally choose if you want to be able to use this app as a SharePoint Online web part. After you provide the name the generator will generate the project and install all dependencies. This will take a minute or two.
 
-## Add some code to your tab
+## Add code to your tab
 
 After the generator is done you can open up the solution in your favorite code editor. Take a minute or two and familiarize yourself with how the code is organized. For more information, see [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
@@ -112,7 +116,7 @@ Your tab is in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. Thi
 
 You can now build your project. This is done in two steps.
 
-1. Create the Teams App manifest file that you upload/sideload into Microsoft Teams. This is done by the Gulp task `gulp manifest`. This will validate the manifest and create a zip file in the `./package` directory.
+1. Create the Teams App manifest file for the app that you uploaded into Microsoft Teams. This is done by the Gulp task `gulp manifest`. This will validate the manifest and create a zip file in the `./package` directory.
 1. Run the `gulp build` command to build the solution. This will transpile your solution into the `./dist` folder. 
 
 ## Run your app
@@ -125,7 +129,7 @@ You should now be go to `http://localhost:3007/myFirstAppTab/` and ensure that y
 
 ![view your site in a browser](~/assets/yeoman-images/teams-first-app-3.png)
 
-## Run your app in Microsoft Teams
+### Run your app in Microsoft Teams
 
 Microsoft Teams does not allow you to have your app hosted on localhost, so you need to either publish it to a public URL or use a proxy such as ngrok. Good news is that the scaffolded project has this built-in. 
 
@@ -142,11 +146,11 @@ Microsoft Teams does not allow you to have your app hosted on localhost, so you 
    ![sideloaded app](~/assets/yeoman-images/teams-first-app-4.png)
 1. Go back to the **General** channel and select **+** to add a new Tab. You should see your tab in the list of tabs:
    ![configure tab](~/assets/yeoman-images/teams-first-app-5.png)
-1. Select your tab and follow the instructions to add it. Notice that you have a custom configuration dialog, for which you can edit the source. Select *Save* to add your tab to the channel. Once done your tab should be loaded inside Microsoft Teams!
+1. Select your tab and follow the instructions to add it. Notice that you have a custom configuration dialog, for which you can edit the source. Select *Save* to add your tab to the channel. Your tab is now loaded inside Microsoft Teams!
 
    ![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
-## Upgrade Microsoft Teams
+### Upgrade Microsoft Teams
 
 You can also upgrade your current Microsoft Teams version to the latest version using the Microsoft Teams Yeoman generator.
 

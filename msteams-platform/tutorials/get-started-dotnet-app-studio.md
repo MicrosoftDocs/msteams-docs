@@ -10,7 +10,7 @@ ms.date: 11/09/2018
 
 # Build your first Teams app using C#
 
-In this tutorial, you will learn how to create your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
+In this tutorial, you will learn how to build your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
 
 * Prepare your environment
 * Get prerequisites
@@ -135,7 +135,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
 
-1. Select the Apps tab and select select **Import an existing app**.
+1. Select the Apps tab and select **Import an existing app**.
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
