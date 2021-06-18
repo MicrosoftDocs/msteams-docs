@@ -104,7 +104,8 @@ The following table provides the features that support Adaptive Cards:
 
 > [!NOTE]
 > * Teams platform supports v1.2 or earlier of Adaptive Card features.
-> * Media elements are currently not supported in Adaptive Card v1.2 on the Teams platform.
+> * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
+> * Media elements are currently not supported in Adaptive Card on the Teams platform.
 
 ### Example of an Adaptive Card
 

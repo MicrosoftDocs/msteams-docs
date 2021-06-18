@@ -16,6 +16,7 @@ Discover Microsoft Teams platform features that are introduced in Microsoft Buil
 
 | **Date** | **Features** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resouce-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/26/2021| Build tabs with Adaptive Cards. |[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
@@ -69,7 +70,7 @@ Microsoft Teams platform features that are available to all app developers.
 |03/05/2021|Notice: Tabs will no longer have margins surrounding their experiences. Tab developers should review and update their apps. | [Removing tab margins](resources/removing-tab-margins.md) |
 |03/05/2021|Default install scope and group capability.| [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
 |03/05/2021|Reorder personal app tabs.|[Reorder the chat tab in personal apps](tabs/how-to/create-tab-pages/content-page.md#reorder-static-personal-tabs)|
-|03/04/2021|Information masking in Adaptive cards.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
+|03/04/2021|Information masking in Adaptive Cards.| [Information masking in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
 |02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
 |02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
 |02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
@@ -189,6 +190,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resouce-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|  
 |05/26/2021|Build tabs with Adaptive Cards|[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
