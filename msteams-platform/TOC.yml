@@ -440,7 +440,7 @@
   - name: Upload your app
     href: concepts/deploy-and-publish/apps-upload.md
   - name: Publish to your org
-    href: /MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json
+    href: concepts/deploy-and-publish/publish-to-org.md
   - name: Publish to the Teams store
     items:
     - name: Overview
