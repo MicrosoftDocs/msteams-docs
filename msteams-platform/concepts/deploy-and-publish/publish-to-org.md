@@ -18,7 +18,8 @@ If you built a Microsoft Teams app specifically for your organization, there are
 
 ## Submit in the Teams client
 
-1. In the Teams client, go to **Apps > Submit submit to app catalog**.
+1. In the Teams client, go to **Apps > Manage your apps**.
+1. Choose **Submit an app to your org**.
 1. Select **Submit an app** and choose your app package .zip file.
 
 ## Submit using the Developer Portal
