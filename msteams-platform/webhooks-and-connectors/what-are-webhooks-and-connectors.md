@@ -13,18 +13,18 @@ Webhooks and connectors help to connect the web services to channels and teams i
 
 ## Outgoing webhooks
 
-Webhooks help Teams to integrate with external apps. With outgoing webhooks, you can send text messages from a channel to the web services. After configuring the outgoing webhooks, users can @mention outgoing webhook and send a message to web services. The service responds within five seconds to the message with a text or a card.
+Webhooks help Teams to integrate with external apps. With outgoing webhooks, you can send text messages from a channel to the web services. After configuring the outgoing webhooks, users can @mention outgoing webhook and send a message to web services. The service responds within ten seconds to the message with a text or a card.
 
 > [!NOTE]
 > Outgoing webhooks are configured on a per team basis and cannot be included as part of a normal Teams app.
 
 ## Connectors
 
-Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to the users, typically in the form of cards.
+Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards.
 
 ### Incoming webhooks
 
-Incoming webhooks help in posting messages from apps to Teams. If incoming webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. You can create an incoming webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
+Incoming webhooks help in posting messages from apps to Teams. If incoming webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, which accepts correctly formatted JSON and inserts the messages into that channel. For example, you can create an incoming webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
 
 ### Office 365 Connectors
 
@@ -34,7 +34,7 @@ Office 365 Connectors allow you to create a custom configuration page for your i
 > You can distribute the Office 365 Connector Teams app to our AppStore.
 ## Create and send messages
 
-Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Office 365 and incoming webhooks, you can send messages by posting a JSON payload to the webhook URL. JSON connector message is provided to create cards with rich inputs.
+Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Office 365 and incoming webhooks, you can send messages by posting a JSON payload to the webhook URL.
 
 ## See also
 
