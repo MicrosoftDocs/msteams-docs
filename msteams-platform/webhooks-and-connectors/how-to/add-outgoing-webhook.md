@@ -101,7 +101,7 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 
 > [!NOTE]
 > * You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
-> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format?tabs=adaptive-md,connector-html#formatting-cards-with-markdown).
+> * Cards support formatting. For more information, see [format cards with markdown](../task-modules-and-cards/cards/cards-format?tabs=adaptive-md,connector-html#formatting-cards-with-markdown).
 
 Following codes are examples of an Adaptive Card response:
 
