@@ -215,6 +215,13 @@ To verify that an `HttpPOST` action is working correctly, [send messages to your
 
 Sometimes, you may not want to publish your connector app to the public AppSource/Store but would like it to be available only to the users in your organization. In such cases, you can upload your custom connector app to your [organization's App Catalog](~/concepts/deploy-and-publish/apps-publish.md). This way, your connector app will be available only to that organization, and you will not need to publish your connector to the public store.
 
+> [!IMPORTANT]
+> Custom connectors are currently not available in the following types of Teams orgs:
+>
+> * Government Community Cloud (GCC)
+> * GCC High
+> * DoD (Department of Defense)
+
 Once you've uploaded your app package, to configure and use the connector in a Team it can be installed from the organization's app catalog by following these steps:
 
 1. Select the apps icon from the far left vertical navigation bar.
