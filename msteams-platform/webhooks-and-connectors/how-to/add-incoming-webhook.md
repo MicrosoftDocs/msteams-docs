@@ -30,7 +30,7 @@ The following table provides the features and description of incoming webhook:
 
 > [!NOTE]
 > * Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards, an open cross card platform framework. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
-> * For more information on cards and webhooks, see [Adaptive cards and Incoming webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks)
+> * For more information on cards and webhooks, see [Adaptive cards and Incoming webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
 ## Create an incoming webhook
 
