@@ -71,7 +71,7 @@ Your app's name (specifically, its [*short name*](~/resources/schema/manifest-sc
 
 :::row-end:::
 
-Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#11-app-name).
+Make sure your short name adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#app-name).
 
 ### Write descriptions
 
@@ -91,7 +91,7 @@ A concise summary of your app that should be original, engaging, and directed at
 
 :::row-end:::
 
-Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#431-short-description).
+Make sure your short description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#short-description).
 
 #### Long description
 
@@ -107,7 +107,7 @@ The long description can provide a narrative that highlights your app's main fea
 
 :::row-end:::
 
-Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#432-long-description).
+Make sure your long description adheres to the [store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
 
 ### Adhere to icon design guidelines
 
@@ -138,7 +138,7 @@ Remember the following about screenshots:
 
 For best practices, see the following resources:
 
-* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#44-screenshots)
+* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video
@@ -172,7 +172,7 @@ During submission, you're asked to categorize your app. The following table maps
 
 ### Localize your store listing
 
-Partner Center supports [localized store listings](https://docs.microsoft.com/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
+Partner Center supports [localized store listings](/office/dev/store/prepare-localized-solutions). For more information, see [how to localize your Teams app listing](../../../../concepts/build-and-test/apps-localization.md).
 
 ## Complete Publisher Verification
 
@@ -188,4 +188,4 @@ Partner Center supports [localized store listings](https://docs.microsoft.com/of
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide)
+> [Submit your app](/office/dev/store/add-in-submission-guide)

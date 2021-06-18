@@ -8,19 +8,19 @@ ms.topic: reference
 
 # Cards reference
 
-The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
+The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework (BF), but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
 
 ## Card examples
 
 You can find additional information on how to use cards in the documentation for the Bot Builder SDK v3. Code samples are also available in the Microsoft/BotBuilder-Samples repository on GitHub.
 
 * .NET
-  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true)
-  * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=csharp#send-an-adaptive-card&preserve-view=true).
+  * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/06.using-cards).
 
 * Node.js
-  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true)
-  * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards)
+  * [Add cards as attachments to messages](/azure/bot-service/bot-builder-howto-add-media-attachments?view=azure-bot-service-4.0&tabs=javascript#send-an-adaptive-card&preserve-view=true).
+  * [Cards sample code Bot Builder v4](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/06.using-cards).
 
 ## Types of cards
 
@@ -67,7 +67,7 @@ For more information on text formatting in cards, see [card formatting](~/task-m
 
 ## Adaptive card
 
-An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. See [adaptive cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An adaptive card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [adaptive cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
 
 ### Support for adaptive cards
 
@@ -77,7 +77,8 @@ An adaptive card is a customizable card that can contain any combination of text
 
 > [!NOTE]
 > * Teams platform supports v1.2 or earlier of adaptive card features.
-> * Media elements are currently not supported in adaptive card v1.2 on the Teams platform.
+> * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
+> * Media elements are currently not supported in Adaptive Cards on the Teams platform.
 
 ### Example of an adaptive card
 

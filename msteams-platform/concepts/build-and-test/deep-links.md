@@ -10,7 +10,7 @@ keywords: teams deep link deeplink
 
 You can create links to information and features within Teams. The scenarios where creating deep links are useful are as follows:
 
-* Navigating the user to content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
+* Navigating the user to the content within one of your app's tabs. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user taps on the notification, the deep link navigates to the tab so that the user can view more details about the activity.
 * Your app automates or simplifies certain user tasks, such as creating a chat or scheduling a meeting, by pre populating the deep links with required parameters. This avoids the need for users to manually enter information.
 
 > [!NOTE]
@@ -41,9 +41,9 @@ Alternatively, you can also generate deep links programmatically, using the form
 >[!NOTE]
 > Currently, shareDeepLink does not work on mobile platforms.
 
-### Showing a deep link to an item within your tab
+### Show a deep link to an item within your tab
 
-To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`
+To show a dialog box that contains a deep link to an item within your tab, call `microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })`.
 
 Provide the following fields:
 
@@ -51,7 +51,7 @@ Provide the following fields:
 * `subEntityLabel`: A label for the item to use for displaying the deep link.
 * `subEntityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering the tab.
 
-### Generating a deep link to your tab
+### Generate a deep link to your tab
 
 > [!NOTE]
 > Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. See the [manifest](~/resources/schema/manifest-schema.md) reference for more information on tab scopes.
@@ -73,9 +73,9 @@ The query parameters are:
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from your manifest. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
 | `entityId`&emsp; | The ID for the item in the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).|Tasklist123|
-| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456 |
+| `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client does not support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab, to use when displaying the deep link. | Task List 123 or "Task 456 |
-| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
+| `context`&emsp; </br></br>* `subEntityId`&emsp;</br></br> * `channelId`&emsp;| A JSON object containing the following fields:</br></br> * An ID for the item within the tab. </br></br> *  The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). | 
 | `subEntityId`&emsp; | An ID for the item within the tab. |Task456 |
 | `channelId`&emsp; | The Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is only available in configurable tabs with a scope of **team**. It is not available in static tabs, which have a scope of **personal**.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 
@@ -95,7 +95,7 @@ Examples:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-### Consuming a deep link from a tab
+### Consume a deep link from a tab
 
 When navigating to a deep link, Microsoft Teams simply navigates to the tab and provides a mechanism through the Microsoft Teams JavaScript library to retrieve the sub-entity ID if it exists.
 
@@ -151,8 +151,8 @@ The query parameters are:
 
 * `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Supported file type, such as docx, pptx, xlsx, and pdf
-* `objectUrl`: Object URL of the file, https://microsoft.sharepoint.com/teams/(filepath)
-* `baseUrl`: Base URL of the file, https://microsoft.sharepoint.com/teams
+* `objectUrl`: Object URL of the file, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Base URL of the file, `https://microsoft.sharepoint.com/teams`
 * `serviceName`: Name of the service, app ID
 * `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
 * `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
@@ -173,7 +173,12 @@ threadId: = "19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype",
 groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 }
 ```
-## Deep links for SharePoint Framework tabs
+
+## Deep linking to an app
+
+Create deeplinks for the app after the app is listed in the Teams store. To create a link to launch Teams, append the following URL to your app ID: `https://teams.microsoft.com/l/app/<your-app-id>`. A dialog box appears to install the app. 
+  
+## Deep linking for SharePoint Framework tabs
 
 The following deep link format can be used in a bot, connector or messaging extension card:
 `https://teams.microsoft.com/l/entity/<AppId>/<EntityId>?webUrl=<entityWebUrl>/<EntityName>`
@@ -187,19 +192,19 @@ The query parameters are:
 * `appID`: Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
-* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - https://tasklist.example.com/123 or https://tasklist.example.com/list123/task456.
+* `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
 * `entityName`: A label for the item in your tab, to use when displaying the deep link, Task List 123 or Task 456.
 
 Example: https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList
 
-## Linking to the scheduling dialog
+## Deep linking to the scheduling dialog
 
 > [!NOTE]
 > This feature is currently in developer preview.
 
 You can create deep links to the Teams built-in scheduling dialog. This is especially useful if your app helps the user complete calendar or scheduling related tasks.
 
-### Generating a deep link to the scheduling dialog
+### Generate a deep link to the scheduling dialog
 
 Use the following format for a deep link that you can use in a bot, Connector, or messaging extension card:
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
@@ -219,12 +224,36 @@ The query parameters are:
 
 To use this deep link with your bot, you can specify this as the URL target in your card's button or tap action through the `openUrl` action type.
 
+## Deep linking to an audio or audio-video call
+
+You can create deep links to invoke audio only or audio-video calls to a single user or a group of users, by specifying the call type, as *audio* or *av*, and the participants. After the deep link is invoked and before placing the call, Teams desktop client prompts a confirmation to make the call. In case of group call, you can call a set of VoIP users and a set of PSTN users in the same deeplink invocation. 
+
+In case of a video call, the client will ask for confirmation and turn on the caller's video for the call. The receiver of the call has a choice to respond through audio only or audio and video, through the Teams call notification window.
+
+> [!NOTE]
+> This deeplink cannot be used for invoking a meeting.
+
+### Generate a deep link to a call
+
+| Deep link | Format | Example |
+|-----------|--------|---------|
+| Make an audio call | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com |
+| Make an audio and video call | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withvideo=true | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true |
+|Make an audio and video call with an optional parameter source | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,&lt;user2&gt;&withvideo=true&source=demoApp | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withvideo=true&source=demoApp |  
+| Make an audio and video call to a combination of VoIP and PSTN users | https://teams.microsoft.com/l/call/0/0?users=&lt;user1&gt;,4:&lt;phonenumber&gt; | https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210 |
+  
+Following are the query parameters:
+* `users`: The comma-separated list of user IDs representing the participants of the call. Currently, the User ID field supports the Azure AD UserPrincipalName, typically an email address, or in case of a PSTN call, it supports a pstn mri 4:&lt;phonenumber&gt;.
+* `Withvideo`: This is an optional parameter, which you can use to make a video call. Setting this parameter will only turn on the caller's camera. The receiver of the call has a choice to answer through audio or audio and video call through the Teams call notification window. 
+* `Source`: This is an optional parameter, which informs about the source of the deeplink.
+
 ## Code sample
 
-| Sample name | Description | .NET |
-|-------------|-------------|------|
-| Deep Link consuming Subentity ID | Microsoft Teams sample app for demonstrating deeplink from bot chat to tab consuming Subentity ID. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) |
+| Sample name | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Deep Link consuming Subentity ID  |Microsoft Teams sample app for demonstrating deeplink from bot chat to tab consuming Subentity ID.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
 
 ## See also
 
 [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+

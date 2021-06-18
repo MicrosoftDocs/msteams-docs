@@ -1,5 +1,5 @@
 ---
-title: Build apps with the Microsoft Teams Toolkit and Visual Studio
+title: Build apps with the Teams Toolkit and Visual Studio
 description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit
 keywords: teams visual studio toolkit
 localization_priority: Normal
@@ -13,82 +13,87 @@ The Microsoft Teams Toolkit enables you to create custom Teams apps directly wit
 
 ## Prerequisites
 
-1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview)
+1. [Enable developer preview](../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
 
-1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [Modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentation.
+1. Make sure that the **<span>ASP.NE</span>T and web development module** has been added to your Visual Studio instance. You can check by following the steps in the [modify Visual Studio by adding or removing workloads and component](/visualstudio/install/modify-visual-studio?view=vs-2019&preserve-view=true) documentation.
 
-![visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
+![Visual studio asp.net module](../assets/images/visual-studio-web-dev-module.png)
 
-3. If you would like test your app by deploying it from Visual Studio, you'll need to have IIS (Internet Information Services) installed in your development environment. Visual Studio does not include IIS and it isn't included in the default Windows 10, Windows 8, or Windows 7 configuration; however, you can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264).
+3. If you want to test your app by deploying it from Visual Studio, you must have Internet Information Services (IIS)) installed in your development environment. Visual Studio does not include IIS and it is not included in the default Windows 10, Windows 8, or Windows 7 configuration; however, you can download the latest version from the [Microsoft download center](https://www.microsoft.com/download/details.aspx?id=48264).
 
 ![IIS download page view](../assets/images/iis.png)
 
 ## Install the Teams Toolkit
 
-The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the **Extensions** menu within Visual Studio.
+The Microsoft Teams Toolkit for Visual Studio is available for download from the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.vsteamstemplate) or directly from the **Extensions** menu within Visual Studio. From the Visual Studio Marketplace also download [Teams Toolkit for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit).
 
 ## Using the toolkit
 
 - [Set up a new project](#set-up-a-new-teams-project)
 - [Configure your app](#configure-your-app)
 - [Package your app](#package-your-app)
-- [Run your app in Teams](#install-and-run-your-app-locally)
+- [Install and run your app in Teams](#install-and-run-your-app-locally)
 - [Validate your app](#validate-your-app)
 - [Publish your app](#publish-your-app-to-teams)
 
 ## Set up a new Teams project
 
-1. Select **Create a new project**.
-1. Choose **Microsoft Teams App** and select **Next**.
-1. You will arrive at the **Configure your new project** screen where you can choose the **Project name**, **Location**, and **Solution name**.
-1. Check the box labeled **Place solution and project in the same directory**.
-1. A pop-up window labeled **Add Capabilities** will allow you to choose one or more capabilities for your project setup.
+![Teams toolkit installed](../assets/images/teamstoolkiticon.png)
+
+1. Select **Create New Project**.
+
+    ![Create new project](../assets/images/createnewproject.png)
+
+1. Choose the quickstart tool for **Microsoft Teams App** and select **Next**.
+1. In the **Configure your new project** page, enter the **Project name**, **Location**, and **Solution name**.
+1. Select the **Place solution and project in the same directory** checkbox.
+1. In the **Add Capabilities** pop-up window, choose one or more capabilities for your project setup.
 1. Select the **Next** button to complete the configuration process.
-1. A pop-up window labeled **Add Capabilities** will allow you to choose the properties for each selected capability.
-1. Select **Finish** and you will  land on the **Microsoft Teams Toolkit** landing page.
+1. In the **Add Capabilities** pop-up window, choose the properties for each selected capability.
+1. Select **Finish**. The **Microsoft Teams Toolkit** landing page is shown.
+
+    ![Teams toolkit landing page](../assets/images/Teamstoolkitpage.png)
 
 ## Configure your app
 
 At its core, the Teams app embraces three components:
 
-  1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
-  1. A server that responds to requests for content that will be displayed in Teams, e.g., HTML tab content or a bot adaptive card .
-  1. A Teams [app package](/concepts/build-and-test/apps-package.md) consisting of three files:
+  1. The Microsoft Teams client including web, desktop, or mobile, where users interact with your app.
+  1. A server that responds to requests for content that is displayed in Teams, for example, HTML tab content or a bot adaptive card.
+  1. A Teams app package consists of three files:
 
-  > [!div class="checklist"]
-  >
-  > - The manifest.json
-  > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog
- > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
+      - The manifest.json
+      - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.
+      - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
 
 When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
 > [!NOTE]
->If you haven't done so already, you will need to sign in to your Microsoft 365  or account to continue with the development process.
+>If you have not done so already, you must sign in to your Microsoft 365 account to continue with the development process.
 >
-> If you don't have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's *free* for 90 days and will continually renew as long as you're using it for development activity. If you have a Visual Studio *Enterprise* or *Professional* subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. *See* [Set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
->
+> If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 ### Configuration steps
 
-1. To configure your app, on the **Microsoft Teams Toolkit** landing page, select **Edit app package** .
+1. To configure your app, on the **Microsoft Teams Toolkit** landing page, select **Edit app package**.
 1. From the **My Environments** drop-down menu, select **development**.
-1. You will land on the **App details** page where you can edit your app's property fields.
-1. Editing the fields in the App details page updates the contents of the manifest.json file that will ultimately ship as part of the app package. [Learn more](https://aka.ms/teams-toolkit-manifest)
+1. In the **App details** page, edit your app's property fields.
+    
+    Editing the fields in the App details page updates the contents of the manifest.json file that will ship as part of the app package. For more information, see [Teams Toolkit manifest](https://aka.ms/teams-toolkit-manifest).
 
 ## Package your app
 
-Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. The Development.zip file includes three required files — the **manifest.json** and [two icons](../concepts/build-and-test/apps-package.md#app-icons).
+Modifying the **app details** page or updating the **manifest**, or **.env** files in your app's  **.publish** folder will automatically generate your **Development.zip** file. The Development.zip file includes three required files, the **manifest.json** and [two icons](../concepts/build-and-test/apps-package.md#app-icons).
 
 ## Install and run your app locally
 
-1. From the **Solution Configurations** dropdown menu, select **Deploy**.
+1. From the **Solution Configurations** dropdown menu, select **Deploy** as shown in the following image:
 
-![Solution configurations menu](../assets/images/solution-configurations.png)
+    ![Solution configurations menu](../assets/images/solution-configurations.png)
 
-2. Select the **IIS Express + Teams** button.
+1. Select the **IIS Express + Teams** button.
 
-1. Teams will launch and the app installation dialogue should appear in the Teams client.
+    The app installation dialog box appears in the Teams client.
 
 ## Validate your app
 
@@ -96,12 +101,14 @@ The **Validate** page allows you to check your app package before submitting you
 
 ## Publish your app to Teams
 
-✔ On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
+* On your project home page, you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
 
-✔ Your IT admin will review these submissions.
+* Your IT admin will review these submissions.
 
-✔  You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you'll come to submit updates to your app or cancel any currently active submissions.
+* You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
+
+## Next step
 
 > [!div class="nextstepaction"]
-> [Next step: Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+> [Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
 >

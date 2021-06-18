@@ -8,18 +8,18 @@
 - name: Get started
   expanded: true
   items:
-  - name: Overview
-    href: build-your-first-app/build-first-app-overview.md
-  - name: Build a "Hello, World!" app
-    href: build-your-first-app/build-and-run.md
-  - name: Build a basic personal tab
-    href: build-your-first-app/build-personal-tab.md
-  - name: Build your first channel and group tab
-    href: build-your-first-app/build-channel-tab.md
-  - name: Build your first bot
-    href: build-your-first-app/build-bot.md
-  - name: Build your first messaging extension
-    href: build-your-first-app/build-messaging-extension.md
+  - name: Prerequisites
+    href: get-started/prerequisites.md
+  - name: Create a personal app (React)
+    href: get-started/first-app-react.md
+  - name: Create a personal app (Blazor)
+    href: get-started/first-app-blazor.md
+  - name: Create a personal app (SPFx)
+    href: get-started/first-app-spfx.md
+  - name: Create a conversational bot
+    href: get-started/first-app-bot.md
+  - name: Create a messaging extension
+    href: get-started/first-message-extension.md
 - name: Tutorials and code samples
   items:
   - name: Tutorials
@@ -62,11 +62,15 @@
     href: samples/app-templates.md
   - name: Production-ready Shifts Connectors
     href: samples/shifts-wfm-connectors.md
-  - name: Install Moodle LMS
-    href: resources/moodleInstructions.md
+  - name: Moodle LMS
+    items:
+    - name: Overview
+      href: resources/moodle-overview.md
+    - name: Install Moodle LMS
+      href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Add Teams tab to SharePoint
+  - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
@@ -86,30 +90,40 @@
   items:
   - name: Overview
     href: concepts/design/design-teams-app-overview.md
-  - name: Design fundamentals
+  - name: Understand the design process
+    href: concepts/design/design-teams-app-process.md
+  - name: Design system
     href: concepts/design/design-teams-app-fundamentals.md
-  - name: Basic UI components
-    href: concepts/design/design-teams-app-basic-ui-components.md
+  - name: App capabilities
+    items:
+    - name: Understand the app structure
+      href: concepts/design/app-structure.md
+    - name: Personal apps
+      href: concepts/design/personal-apps.md
+    - name: Tabs
+      href: tabs/design/tabs.md
+    - name: Bots
+      href: bots/design/bots.md
+    - name: Messaging extensions
+      href: messaging-extensions/design/messaging-extension-design.md  
+    - name: Meeting extensions
+      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
-  - name: Personal apps
-    href: concepts/design/personal-apps.md
-  - name: Tabs
-    items: 
-    - name: Desktop and web
-      href: tabs/design/tabs.md
-    - name: Mobile
-      href: tabs/design/tabs-mobile.md
-  - name: Messaging extensions
-    href: messaging-extensions/design/messaging-extension-design.md  
-  - name: Bots
-    href: bots/design/bots.md
-  - name: Meeting extensions
-    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-  - name: Adaptive Cards
-    href: task-modules-and-cards/cards/design-effective-cards.md
-  - name: Task modules
-    href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+  - name: UI components
+    items:
+    - name: Basic UI components
+      href: concepts/design/design-teams-app-basic-ui-components.md
+    - name: Advanced UI components
+      href: concepts/design/design-teams-app-advanced-ui-components.md
+    - name: Adaptive Cards
+      href: task-modules-and-cards/cards/design-effective-cards.md
+    - name: Task modules
+      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
+    - name: Activity feed notifications
+      href: concepts/design/activity-feed-notifications.md
+  - name: Enable app customization
+    href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
   - name: Teams Toolkit for Visual Studio Code
@@ -120,6 +134,8 @@
     href: https://github.com/pnp/generator-teams
   - name: App Studio
     href: concepts/build-and-test/app-studio-overview.md
+  - name: Developer Portal for Teams
+    href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
@@ -176,8 +192,28 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-  - name: Tab requirements
-    href: tabs/how-to/tab-requirements.md
+  - name: Create a tab 
+    items:
+    - name: Tab requirements
+      href: tabs/how-to/tab-requirements.md
+    - name: Create a content page
+      href: tabs/how-to/create-tab-pages/content-page.md
+    - name: Create a configuration page
+      href: tabs/how-to/create-tab-pages/configuration-page.md
+    - name: Create a removal page
+      href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Tabs on mobile
+      href: tabs/design/tabs-mobile.md
+    - name: Get context for your tab
+      href: tabs/how-to/access-teams-context.md  
+    - name: Build tabs with Adaptive Cards
+      href: tabs/how-to/build-adaptive-card-tabs.md
+    - name: Tabs link unfurling and Stage View
+      href: tabs/tabs-link-unfurling.md
+    - name: Create conversational tabs
+      href: tabs/how-to/conversational-tabs.md
+    - name: Tab margin changes
+      href: resources/removing-tab-margins.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -192,14 +228,6 @@
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
     - name: Channel tab with C#/ASP.NET Core MVC
       href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
-  - name: Create a content page
-    href: tabs/how-to/create-tab-pages/content-page.md
-  - name: Create a configuration page
-    href: tabs/how-to/create-tab-pages/configuration-page.md
-  - name: Create a removal page
-    href: tabs/how-to/create-tab-pages/removal-page.md
-  - name: Get context for your tab
-    href: tabs/how-to/access-teams-context.md
 - name: Build bots
   items:
   - name: Overview
@@ -214,6 +242,9 @@
       href: bots/how-to/conversations/conversation-basics.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
+      items:
+      - name: Receive all channel messages with RSC
+        href: bots/how-to/conversations/channel-messages-with-rsc.md
     - name: Create a commands menu for your bot
       href: bots/how-to/create-a-bot-commands-menu.md
     - name: Channel and group conversations
@@ -264,8 +295,6 @@
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
   - name: Search commands
     items:
-    - name: Add a configuration page
-      href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Respond to search commands
@@ -276,8 +305,14 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Build an app for meetings
+  - name: Meeting app extensibility
+    href: apps-in-teams-meetings/meeting-app-extensibility.md
+  - name: Prerequisites and API references for apps in Teams meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+  - name: Enable and configure apps for meetings
+    href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  - name: Custom Together Mode scenes in Teams
+    href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -338,8 +373,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Add SSO with Teams Toolkit for Visual Studio Code
-      href: toolkit/visual-studio-code-tab-sso.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -380,7 +413,7 @@
     href: concepts/build-and-test/test-data.md
   - name: Tabs
     items:
-    - name: Debug your tab with DevTools
+    - name: DevTools for Microsoft Teams tabs
       href: tabs/how-to/developer-tools.md
   - name: Bots
     items:
@@ -394,8 +427,10 @@
     items:
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: Resource-specific consent JSON test file
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: Resource-specific consent for team JSON test file
+      href: graph-api/rsc/test-team-rsc-json-file.md
+    - name: Resource-specific consent for chat JSON test file
+      href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Distribute your app
   items:
   - name: Overview
@@ -424,16 +459,10 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
-- name: Resources
+- name: App manifest
   items:
     - name: App manifest schema
       href: resources/schema/manifest-schema.md
-    - name: Localization
-      items:
-      - name: Localize your app
-        href: concepts/build-and-test/apps-localization.md
-      - name: Localization JSON schema
-        href: resources/schema/localization-schema.md
     - name: Public developer preview
       items:
         - name: Overview
@@ -442,8 +471,14 @@
           href: resources/schema/manifest-schema-dev-preview.md
         - name: Features
           href: resources/dev-preview/developer-preview-features.md
-    - name: Tab margin changes
-      href: resources/removing-tab-margins.md
+- name: Resources
+  items:
+    - name: Localization
+      items:
+      - name: Localize your app
+        href: concepts/build-and-test/apps-localization.md
+      - name: Localization JSON schema
+        href: resources/schema/localization-schema.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions

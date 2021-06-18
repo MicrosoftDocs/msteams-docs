@@ -15,7 +15,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between different card types, and rendering of the card can differ slightly between the desktop and the mobile Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not officially supported. *See* [Cards reference](./cards-reference.md#inline-card-images)
+You can include an inline image with any Teams card. Images an be formatted as  `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not officially supported. For more information, see [Cards reference](./cards-reference.md#inline-card-images).
 
 ## Formatting cards with Markdown
 
@@ -123,7 +123,7 @@ To include a mention in an Adaptive Card your app needs to include the following
 
 * `<at>username</at>` in the supported Adaptive card elements.
 * The `mention` object inside of an `msteams` property in the card content, which includes the Teams user id of the user being mentioned.
-* The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](https://docs.microsoft.com/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
+* The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### Sample Adaptive card with a mention
 
@@ -162,11 +162,6 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md). 
 
-> [!NOTE]
-> The information masking property is currently available in the developer preview only.
-
-To mask information in Adaptive cards, add the `isMasked` property to **type** `Input.Text`, and set its value to *true*.
-
 #### Sample Adaptive card with masking property
 
 ```json
@@ -174,8 +169,7 @@ To mask information in Adaptive cards, add the `isMasked` property to **type** `
     "type": "Input.Text",
     "id": "secretThing",
     "style": "password",
-    "isMasked": true
-  },
+},
 ```
 
 The following image is an example of masking information in Adaptive cards:
@@ -215,7 +209,7 @@ In addition, your app must include the following elements:
 A full width Adaptive Card appears as follows:
 ![Full width Adaptive Card view](../../assets/images/cards/full-width-adaptive-card.png)
 
-If you have not set the `width` property to *Full*, then the default view of the Adaptive Card is as follows:
+If you have not set the `width` property to *Full*, then the default view of the Adaptive Card appears as follows:
 ![Small width Adaptive Card view](../../assets/images/cards/small-width-adaptive-card.png)
 
 ### Typeahead support
@@ -243,9 +237,6 @@ To enable typeahead within the `Input.Choiceset` set `style` to `filtered` and e
 
 ### Stage view for images in Adaptive Cards
 
-> [!NOTE]
-> This feature is currently available in developer preview only.
- 
 In an Adaptive card, you can use the `msteams` property to add the ability to display images in stage view selectively. When users hover over the images, they would see an expand icon, for which the `allowExpand` attribute is set to `true`. For information on how to use the property, see the following example:
 
 ``` json
