@@ -31,7 +31,7 @@ Bot users are accessible to all users on the workspace where your app is install
     * Federated tenants present the issue of users from multiple organizations accessing the same app. Shared channels encounter this issue. For app roster, and app management  the `parentTeam/tenant` pattern is followed.
 
 
-## JS SDK & Bot SDK
+## JS SDK and Bot SDK
 
 When the content UX is loaded in a shared channel, the data received from the `getContext` call must account for shared channel changes. If the tab makes use of any of the following values, the `channelType` field must be populated to determine if the tab is loaded in a shared channel, and respond appropriately.
 To populate the `channelType` field with `sharedChannel`, you must populate the following  `getContext` properties:
@@ -59,6 +59,6 @@ To populate the `channelType` field with `sharedChannel`, you must populate the 
 **APIs**
 
 1.	Get direct members with the `GET channel members` API
-2.	Iterate through each shared Team with the `GET sharedWithTeam` API
-3.	Use the GET channel member API on each sharedWithTeam to retrieve full membership.
+1.	Iterate through each shared Team with the `GET sharedWithTeam` API
+1.	Use the `GET channel members` API on each `sharedWithTeam` to retrieve full membership.
 
