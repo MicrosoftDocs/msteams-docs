@@ -90,9 +90,6 @@ Your code must always validate the HMAC signature included in the request:
 
 Responses from your outgoing webhooks appear in the same reply chain as the original message. When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service and your code gets five seconds to respond to the message before the connection times out and terminates.
 
-> [!NOTE]
-> You must send an Adaptive Card as an attachment with outgoing webhook.
-
 ### Example response
 
 ```json
@@ -101,7 +98,14 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
     "text": "This is a reply!"
 }
 ```
-### Adaptive Card example response
+
+> [!NOTE]
+> * You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
+> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format?tabs=adaptive-md,connector-html#formatting-cards-with-markdown).
+
+Following codes are examples of an Adaptive Card response:
+
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 private static Attachment GetAdaptiveCardAttachment()
@@ -124,6 +128,46 @@ private static Attachment GetAdaptiveCardAttachment()
   };
    }
 ```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```json
+
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+   "type":"message",
+   "attachments":[
+      {
+         "contentType":"application/vnd.microsoft.card.adaptive",
+         "contentUrl":null,
+         "content":{
+            "$schema":"http://adaptivecards.io/schemas/adaptive-card.json",
+            "type":"AdaptiveCard",
+            "version":"1.2",
+            "body": [
+               {
+                    "type": "Image",
+                    "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6%22"
+               },
+               {
+                    "type": "TextBlock",
+                    "text": "Sample image for Adaptive Card..",
+                    "wrap": true
+               }
+            ]
+         }
+      }
+   ]
+}
+
+```
+
+* * *
 
 ## Create an outgoing webhook
 
