@@ -8,17 +8,17 @@ ms.author: surbhigupta
 
 # Upload your app in Microsoft Teams
 
-You can sideload Microsoft Teams apps without having to publish to your organization or the Teams store. This makes sense in the following scenarios:
+Uploading (aka sideloading) a custom Microsoft Teams app allows you to use an app without publishing it to your entire org or the Teams store. Sideloading makes sense in the following scenarios:
 
 * You want to test and debug an app locally yourself or with other developers.
-* You built an app just for yourself. For example, to automate a workflow.
-* You built an app for a small set of users, such as, your work group.
+* You built an app just for yourself (for example, to automate a workflow).
+* You built an app for a small set of users (such as your work group).
 
 ## Prerequisites
 
-* Create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
-* [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
-* Make sure that your app is running and accessible via HTTPs.
+* Ensure your org has enabled [custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
+* [Validate your app manifest](https://dev.teams.microsoft.com/appvalidation.html) for errors and create your [app package](~/concepts/build-and-test/apps-package.md).
+* Make sure that your app's frontend and backend resources are running and accessible via HTTPS.
 
 ## Upload your app
 
