@@ -19,36 +19,36 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 ### Resource-specific permissions for a team
 |Application permission| Action |
 | ----- | ----- |
-|_TeamSettings.Read.Group_ | Get this team's settings.|
-|_TeamSettings.ReadWrite.Group_|Update this team's settings.|
-|_ChannelSettings.Read.Group_|Get this team's channel names, channel descriptions, and channel settings​.|
-|_ChannelSettings.ReadWrite.Group_|Update this team's channel names, channel descriptions, and channel settings.​|
-|_Channel.Create.Group_|Create channels in this team. |
-|_Channel.Delete.Group_|Delete channels in this team. |
-|_ChannelMessage.Read.Group_ |Get this team's channel messages. |
-|_TeamsAppInstallation.Read.Group_|Get a list of this team's installed apps.|
-|_TeamsTab.Read.Group_|Get a list of this team's tabs.|
-|_TeamsTab.Create.Group_|Create tabs in this team. |
-|_TeamsTab.ReadWrite.Group_|Update this team's tabs. |
-|_TeamsTab.Delete.Group_|Delete this team's tabs. |
-|_TeamMember.Read.Group_|Get this team's members. |
+|TeamSettings.Read.Group_ | Get this team's settings.|
+|TeamSettings.ReadWrite.Group|Update this team's settings.|
+|ChannelSettings.Read.Group|Get this team's channel names, channel descriptions, and channel settings​.|
+|ChannelSettings.ReadWrite.Group|Update this team's channel names, channel descriptions, and channel settings.​|
+|Channel.Create.Group|Create channels in this team. |
+|Channel.Delete.Group|Delete channels in this team. |
+|ChannelMessage.Read.Group |Get this team's channel messages. |
+|TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.|
+|TeamsTab.Read.Group|Get a list of this team's tabs.|
+|TeamsTab.Create.Group|Create tabs in this team. |
+|TeamsTab.ReadWrite.Group|Update this team's tabs. |
+|TeamsTab.Delete.Group|Delete this team's tabs. |
+|TeamMember.Read.Group|Get this team's members. |
 
 For more details, see [Team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### Resource-specific permissions for a chat
 |Application permission| Action |
 | ----- | ----- |
-| _ChatSettings.Read.Chat_         | Get this chat's settings.                                    |
-| _ChatSettings.ReadWrite.Chat_    | Update this chat's settings.                          |
-| _ChatMessage.Read.Chat_          | Get this chat's messages.                                    |
-| _ChatMember.Read.Chat_           | Get this chat's members.                                     |
-| _Chat.Manage.Chat_               | Manage this chat.                                             |
-| _TeamsTab.Read.Chat_             | Get this chat's tabs.                                        |
-| _TeamsTab.Create.Chat_           | Create tabs in this chat.                                     |
-| _TeamsTab.Delete.Chat_           | Delete this chat's tabs.                                      |
-| _TeamsTab.ReadWrite.Chat_        | Manage this chat's tabs.                                      |
-| _TeamsAppInstallation.Read.Chat_ | Get which apps are installed in this chat.                   |
-| _OnlineMeeting.ReadBasic.Chat_   | Get basic properties—such as name, schedule, organizer, and join link—of a meeting associated with this chat. |
+| ChatSettings.Read.Chat         | Get this chat's settings.                                    |
+| ChatSettings.ReadWrite.Chat    | Update this chat's settings.                          |
+| ChatMessage.Read.Chat          | Get this chat's messages.                                    |
+| ChatMember.Read.Chat           | Get this chat's members.                                     |
+| Chat.Manage.Chat               | Manage this chat.                                             |
+| TeamsTab.Read.Chat             | Get this chat's tabs.                                        |
+| TeamsTab.Create.Chat           | Create tabs in this chat.                                     |
+| TeamsTab.Delete.Chat           | Delete this chat's tabs.                                      |
+| TeamsTab.ReadWrite.Chat        | Manage this chat's tabs.                                      |
+| TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat.                   |
+| OnlineMeeting.ReadBasic.Chat   | Get basic properties—such as name, schedule, organizer, and join link—of a meeting associated with this chat. |
 
 For more details, see [Chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
