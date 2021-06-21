@@ -35,9 +35,9 @@ items:
 
     <br>
 
-<details>
+    <details>
 
-<summary><b>Unable to find package</b></summary>
+    <summary><b>Unable to find package</b></summary>
 
         If you get Unable to find package error, perform the following steps:
 
@@ -47,6 +47,10 @@ items:
         1.	Type *nuget.org* in the **Name** and *https://api.nuget.org/v3/index.json* in the **Source**.
         1.	Select **Update** and **Ok**.
         1.	Rebuild your project.
+     <br>
+
+     </details>
+
     1. Start the Ngrok by running following command in terminal window where Ngrok is downloaded `ngrok.exe http 3978 --host-header=localhost`
        <image>
     1. Copy the `Ngrok` URL, we will refer this as `Ngrok base URL` in next steps.
