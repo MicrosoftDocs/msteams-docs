@@ -84,7 +84,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
+The bot code is stored in the `bot` directory.  The `bot/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
