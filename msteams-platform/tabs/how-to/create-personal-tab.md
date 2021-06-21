@@ -11,6 +11,28 @@ ms.author: lajanuar
 
 You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NET Core, or using ASP.NET Core MVC.
 
+## Reorder static personal tabs
+
+Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
+
+If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
+
+```json
+{
+   "staticTabs":[
+      {
+         
+      },
+      {
+         "entityId":"conversations",
+         "scopes":[
+            "personal"
+         ]
+      }
+   ]
+}
+```
+
 # [Node.js](#tab/nodejs)
 
 ## Create a custom personal tab using Node.js and the Yeoman Generator
