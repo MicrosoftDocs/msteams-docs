@@ -138,7 +138,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your AAD app ID. For more information, see [register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).|
+|`id` |String |Your AAD app ID. For more information, see [register your app in the AAD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).|
 |`resource`|String| This field has no operation in RSC, but must be added and have a value to avoid an error response; any string will do.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [resource-specific permissions](resource-specific-consent.md#resource-specific-permissions).|
 
