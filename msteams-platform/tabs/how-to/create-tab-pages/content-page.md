@@ -1,6 +1,6 @@
 ---
 title: Create a content page
-author: akjo
+author: surbhigupta
 description: how to create a content page
 keywords: teams tabs group channel configurable static
 localization_priority: Normal

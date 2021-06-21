@@ -1,6 +1,6 @@
 ---
 title: Post external requests to Microsoft Teams with incoming webhooks
-author: akjo
+author: surbhigupta
 description: how to add incoming webhook to Teams app
 keywords: teams tabs outgoing webhook
 localization_priority: Normal

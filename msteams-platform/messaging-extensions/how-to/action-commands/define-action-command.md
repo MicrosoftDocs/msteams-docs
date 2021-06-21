@@ -1,6 +1,6 @@
 ---
 title: Define messaging extension action commands
-author: akjo
+author: surbhigupta
 description: An overview of messaging extension action commands
 localization_priority: Normal
 ms.topic: conceptual

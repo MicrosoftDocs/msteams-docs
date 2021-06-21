@@ -1,6 +1,6 @@
 ---
 title: Bots and SDKs
-author: akjo
+author: surbhigupta
 description: Bots and SDKs in Microsoft Teams.
 ms.topic: overview
 localization_priority: Normal

@@ -1,6 +1,6 @@
 ---
 title: Create conversational tabs
-author: akjo
+author: surbhigupta
 description: Create conversational sub-entity chat for your channel tabs
 keywords: teams tabs channel configurable 
 ms.topic: conceptual

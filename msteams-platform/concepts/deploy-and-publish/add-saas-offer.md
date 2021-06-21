@@ -2,7 +2,7 @@
 title: Create a SaaS offer for your Teams app
 description: Describes the necessary steps to make a SaaS offering part of a third-party Teams App experience
 keywords: teams app SaaS offer partner center marketplace software service
-author: akjo
+author: surbhigupta
 localization_priority: Normal
 ms.author: lajanuar
 ms.topic: overview

@@ -1,6 +1,6 @@
 ---
 title: Prerequisites and API references for apps in Teams meetings
-author: akjo
+author: surbhigupta
 description: Work with apps for Teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar

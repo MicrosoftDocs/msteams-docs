@@ -1,6 +1,6 @@
 ---
 title: Create a configuration page
-author: akjo
+author: surbhigupta
 description: how to create a configuration page
 keywords: teams tabs group channel configurable
 localization_priority: Normal

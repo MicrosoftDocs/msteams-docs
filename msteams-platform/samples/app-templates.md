@@ -5,7 +5,7 @@ ms.topic: reference
 keywords: Microsoft Teams templates samples demo
 localization_priority: Normal
 ms.author: lajanuar
-author: akjo
+author: surbhigupta
 ---
 
 # App templates for Microsoft Teams
