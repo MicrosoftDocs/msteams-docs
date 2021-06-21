@@ -682,7 +682,8 @@ The Visitor Management app enables your organization and employees to easily and
 ## Water Cooler &#9734;
 
 Water Cooler is a custom Teams app that enables corporate teams to create, invite, and join casual conversations among teammates, such as those that take place by the Water Cooler or break room. Use this template for multiple scenarios, such as new non project related announcements, topics of interest, current events, or conversations about hobbies. 
-The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks.
+The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks.    
+
 [Get it on GitHub](https://github.com/microsoft/csapps-msteams-watercooler)
 
 ### Key features
