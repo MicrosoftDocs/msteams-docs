@@ -30,7 +30,7 @@ items:
     1.	Download code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/Send Proactive Messages.zip) for sample and extract the files.
     1.	Double-click `ProactiveBot.csproj` file from the extracted files. It opens the solution in Visual Studio.
     1.	Right-click the project and build the solution.
-        <image>
+        ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
         1. If you get Unable to find package error, perform the following steps:
         1.  Go to Tools > NuGet Package Manager > Package Manager Settings.
         1.	In the Options Window that appears, select NuGet Package Manager > Package Sources.
