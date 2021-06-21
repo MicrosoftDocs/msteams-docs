@@ -239,7 +239,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon**: The highlighted icon indicates the app is open in the meeting.|
+|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
 |2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
 |3|**iframe**: Displays your app content.|
 |4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
@@ -443,7 +443,7 @@ Teams meetings are optimized for dark theme to help reduce visual and cognitive 
 
 :::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Another example showing a meeting extension with colors that don't match the meeting theme." border="false":::
 
-#### Don't: Use colors unfamiliar to meetings
+#### Don't: Use unfamiliar colors
 
 Colors that clash with the meeting environment may be distracting and appear less native to Teams. Learn about the Teams [color ramp](https://developer.microsoft.com/fluentui#/styles/web/colors/products), including call theme neutrals.
 
