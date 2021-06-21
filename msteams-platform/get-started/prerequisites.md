@@ -8,11 +8,11 @@ ms.topic: quickstart
 ---
 # Prerequisites: Get started with Microsoft Teams app development
 
-Before your create your first Teams app, you must install a few tools and set up your development environment.
+Before you create your first Teams app, you must install a few tools and set up your development environment.
 
 ## Install required tools
 
-Some of the tools you need depend on how you you prefer to build your Teams app:
+Some of the tools you need depend on how you prefer to build your Teams app:
 
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
 - A browser with developer tools - such as [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
@@ -142,7 +142,7 @@ If you wish to host your app or access resources within Azure, you must have an 
 
 You must have access to two accounts:
 
-- Your Microsoft 365 account credentials. This is the account that you use to sign in to Teams. If you're using an Microsoft 365 developer program tenant, this is the admin account you set up when you registered for the program.
+- Your Microsoft 365 account credentials. This is the account that you use to sign in to Teams. If you're using a Microsoft 365 developer program tenant, this is the admin account you set up when you registered for the program.
 - - Your Azure credentials. This is the account that you use to access the Azure Portal and for provisioning new cloud resources to support your app.
 
 # [Visual Studio Code](#tab/vscode)
