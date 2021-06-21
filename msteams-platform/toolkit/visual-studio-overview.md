@@ -37,7 +37,7 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 2. Select **Create a new project**.
 3. Search for **Microsoft Teams App** and select **Next**.
 4. In the **Configure your new project**, enter the **Project name**, **Location**, and **Solution name**.
-5. Select the **Next** button.
+5. Select **Next** to enter a name for the app.
 6. In the Additional Information screen, enter an **Application Name** and **Developer or Company name** for your Teams app.
 
 ## Configure your app
