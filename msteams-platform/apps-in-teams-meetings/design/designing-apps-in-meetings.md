@@ -430,7 +430,7 @@ In-meeting dialogs are intended for brief interactions.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
 
-:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Another example showing meeting extension with the dark theme." border="false":::
 
 #### Do: Focus on dark theme
 
