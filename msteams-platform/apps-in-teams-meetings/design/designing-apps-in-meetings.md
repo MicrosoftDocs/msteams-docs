@@ -295,6 +295,25 @@ A single in-meeting dialog with multiple interactions can distract from the call
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Example showing how to create a focused environment." border="false":::
+
+#### Do: Create a focused environment
+
+We recommend keeping your app’s experience scoped to just the meeting stage. You can use an in-meeting tab in the side panel as a secondary, private view for certain scenarios.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Example showing how not to include competing surfaces during meetings." border="false":::
+
+#### Don't: Include competing surfaces
+
+Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.) 
+
+   :::column-end:::
+:::row-end:::
+
 ### Layout
 
 :::row:::
@@ -356,23 +375,29 @@ This deviates from the standard Teams pattern for control placement in a dialog 
    :::column-end:::
 :::row-end:::
 
-### Scroll
+### Scrolling
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing vertical scrolling in an in-meeting tab." border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Example showing vertical scrolling in the shared meeting stage." border="false":::
 
 #### Do: Scroll vertically
 
-Users expect vertical scrolling in Teams (and elsewhere).
+Users expect vertical scrolling in Teams (and elsewhere). This may not apply if you have a creative canvas, such as a whiteboard, which users can pan across the x and y axis.
 
    :::column-end:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing horizontal scrolling in an in-meeting tab." border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Example showing horizontal scrolling in the shared meeting stage." border="false":::
 
 #### Don't: Scroll horizontally
 
-Horizontal scrolling isn’t an expected behavior in Teams. Other canvases in the meeting environment scroll vertically.
+Horizontal scrolling isn’t an expected behavior in Teams (including the meeting environment).
 
    :::column-end:::
 :::row-end:::
@@ -402,19 +427,25 @@ In-meeting dialogs are intended for brief interactions.
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
 
-#### Do: Use Teams color tokens
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
 
-Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content. Learn about using <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a>.
+#### Do: Focus on dark theme
+
+Teams meetings are optimized for dark theme to help reduce visual and cognitive noise so users can focus on the discussion and shared content. Keep in mind certain types of apps (such as whiteboarding and document editing) don't need a dark canvas.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with a default (light) theme." border="false":::
 
-#### Don't: Hard code hex values
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with colors that don't match the meeting theme." border="false":::
 
-If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Another example showing a meeting extension with colors that don't match the meeting theme." border="false":::
+
+#### Don't: Use colors unfamiliar to meetings
+
+Colors that clash with the meeting environment may be distracting and appear less native to Teams. Learn about the Teams [color ramp](https://developer.microsoft.com/fluentui#/styles/web/colors/products), including call theme neutrals.
 
    :::column-end:::
 :::row-end:::
@@ -449,6 +480,27 @@ Providing an option to close in-meeting tab content may cause issues since there
 #### Caution: Avoid modals within the in-meeting tab
 
 Modals (also known as task modules) in the already narrow in-meeting tab might wrap and obscure the content.
+
+   :::column-end:::
+:::row-end:::
+
+### Responsive behavior
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Example showing how to properly resize a meeting extension." border="false":::
+
+#### Do: Resize and scale your app responsively
+
+App content should dynamically resize and condense in smaller windows. Keep your app’s main navigation and any floating controls visible.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Example showing how not to properly resize a meeting extension." border="false":::
+
+#### Don't: Crop or clip primary UI components
+
+Floating navigation and controls off screen and requiring a scroll to find can be confusing for users. Your app content shouldn’t scroll horizontally when it can't fit in the iframe.
 
    :::column-end:::
 :::row-end:::
