@@ -23,11 +23,11 @@ items:
   durationInMinutes: 2
   content: |
     1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
-        >[!NOTE]
+        > [!NOTE]
         > Ensure you install the ASP.NET and web development or .NET Core cross-platform development workload.
     1.	Install [Ngrok](https://ngrok.com/download).
 
-- title: Declare and use variables
+- title: Setup local environment
   durationInMinutes: 3
   content: |
     Your first program printed the `string` "Hello World!" on
