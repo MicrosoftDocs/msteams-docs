@@ -13,7 +13,7 @@ In this section, you will find tutorials on how to create an app using C# or .NE
 
 | **Capability**| **Learn module**|
 |--------|-------------|
-| Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](msteams-learn/modules/embedded-web-experiences/) |
+| Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](learn/modules/embedded-web-experiences/) |
 | Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](https://docs.microsoft.com/learn/modules/msteams-webhooks-connectors/) |
 |Messaging extensions  | [Task-oriented interactions in Microsoft Teams with messaging extensions](https://docs.microsoft.com/learn/modules/msteams-messaging-extensions/)  |
 | Task modules |  [Collect input in Microsoft Teams with Task Modules](https://docs.microsoft.com/learn/modules/msteams-task-modules/) |
