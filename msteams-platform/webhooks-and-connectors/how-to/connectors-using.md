@@ -9,7 +9,7 @@ keywords: teams o365 connector
 
 # Create and send messages
 
-You can create actionable messages and send it through incoming webhook or Office 365 connector.
+You can create actionable messages and send it through Incoming Webhook or Office 365 connector.
 
 ## Create actionable messages
 
@@ -42,9 +42,9 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
 
-## Send a message through incoming webhook or Office 365 connector
+## Send a message through Incoming Webhook or Office 365 connector
 
-To send a message through your incoming webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
 You can also use this JSON to create cards containing rich inputs, such as text entry, multiselect, or selecting date and time. The code that generates the card and posts it to the webhook URL can run on any hosted service. These cards are defined as part of actionable messages and are also supported in [cards](~/task-modules-and-cards/what-are-cards.md), used in Teams bots and messaging extensions.
 
@@ -187,13 +187,13 @@ This message provides the following card in the channel:
 
 ---
 
-## Send Adaptive Cards using an incoming webhook
+## Send Adaptive Cards using an Incoming Webhook
 
 > [!NOTE]
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-**To send Adaptive Cards through an incoming webhook**
+**To send Adaptive Cards through an Incoming Webhook**
 
 1. [Setup a custom webhook](/add-incoming-webhook.md) in Teams.
 1. Create Adaptive Card JSON file using the following code:
@@ -230,7 +230,7 @@ This message provides the following card in the channel:
 
 1. Test your Adaptive Card with Postman:
 
-    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up incoming webhook.
+    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
     * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
 
 > [!TIP]
@@ -238,7 +238,7 @@ This message provides the following card in the channel:
 
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an incoming webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
 
@@ -278,5 +278,5 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 ## See also
 
 * [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [Create an outgoing webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

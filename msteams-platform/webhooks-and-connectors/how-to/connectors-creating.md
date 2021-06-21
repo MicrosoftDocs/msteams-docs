@@ -248,8 +248,8 @@ The Connector is available in the section &#9679;&#9679;&#9679; > **More options
 
 ## Distribute webhook and connector
 
-1. [Set up an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directly for your team.
-1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) and [publish your incoming webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) in a O365 Connector.
+1. [Set up an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md?branch=pr-en-us-3076#create-an-incoming-webhook) directly for your team.
+1. Add a [configuration page](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#integrate-the-configuration-experience) and [publish your Incoming Webhook](~/webhooks-and-connectors/how-to/connectors-creating.md?branch=pr-en-us-3076#publish-connectors-for-the-organization) in a O365 Connector.
 1. Package and publish your Connector as part of your [AppSource](~/concepts/deploy-and-publish/office-store-guidance.md) submission.
 
 ## Code sample
@@ -264,5 +264,5 @@ The following table provides the sample name and its description:
 ## See also
 
 * [Send messages to Connectors and Webhooks](~/webhooks-and-connectors/how-to/connectors-using.md)
-* [Create an incoming webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
+* [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
