@@ -9,7 +9,6 @@ metadata:
   ms.topic: interactive-tutorial
   nextTutorialHref: numbers-in-csharp.yml
   nextTutorialTitle: Numbers in C#
-  interactive: csharp
   ms.custom: mvc
 items:
 - durationInMinutes: 1
@@ -24,71 +23,28 @@ items:
   content: |
     1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
         > [!NOTE]
-        > Ensure you install the ASP.NET and web development or .NET Core cross-platform development workload.
+        > Ensure you install the ASP.NET and web development or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
     1.	Install [Ngrok](https://ngrok.com/download).
 
 - title: Setup local environment
   durationInMinutes: 3
   content: |
-    Your first program printed the `string` "Hello World!" on
-    the screen.
+    1.	Download code from Zip file for sample and extract the files.
+    1.	Double click ProactiveBot.csproj file which will open the solution in Visual Studio.
+    1.	Right click on the project and build the solution.
+        <image>
+        1. If you get Unable to find package error: Follow these steps:
+        1.  Go to Tools > NuGet Package Manager > Package Manager Settings.
+        1.	In the Options Window that appears, select NuGet Package Manager > Package Sources.
+        2.	Click Add.
+        3.	Type nuget.org in the Name and https://api.nuget.org/v3/index.json in the Source.
+        4.	Click Update and Ok.
+        5.	Rebuild your project
+    1. Start the ngrok by running following command in terminal window where ngrok is downloaded ngrok.exe http 3978 --host-header=localhost
+       <image>
+    1. Copy the ngrok URL, we will refer this as ngrok base URL in next steps.
 
-    > [!TIP]
-    > As you explore C# (or any programming language), you'll
-    > make mistakes when you write code. The **compiler** will
-    > find those errors and report them to you. When the output
-    > contains error messages, look closely at the example code,
-    > and the code in the interactive window to see what to fix.
-    > That exercise will help you learn the structure of C# code.
-
-    Your first program is limited to printing one message. You can write more
-    useful programs by using *variables*. A *variable* is a symbol you can
-    use to run the same code with different values. Let's try it! Replace the
-    code you've written in the interactive window with the following code:
-
-    ```csharp
-    string aFriend = "Bill";
-    Console.WriteLine(aFriend);
-    ```
-
-    The first line declares a variable, `aFriend`, and assigns it a value, "Bill". The second line
-    prints out the name.
-
-    You can assign different values to any variable you declare. You can change
-    the name to one of your friends. Add these two lines in the interactive window
-    following the code you've already added.  Make sure you keep the declaration
-    of the `aFriend` variable and its initial assignment.
-
-    ```csharp
-    aFriend = "Maira";
-    Console.WriteLine(aFriend);
-    ```
-
-    Notice that the same line of code prints two different messages, based on
-    the value stored in the `aFriend` variable.
-
-    You may have also noticed that the word "Hello" was missing in the last two messages. Let's fix
-    that now.  Modify the lines that print the message to the following:
-
-    ```csharp
-    Console.WriteLine("Hello " + aFriend);
-    ```
-
-    Select **Run** again to see the results.
-
-    You've been using `+` to build strings from **variables** and **constant** strings. There's a better way.
-    You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.
-
-    This is called [String interpolation](../../language-reference/tokens/interpolated.md).
-
-    If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces. Give it a try:
-
-
-    ```csharp
-    Console.WriteLine($"Hello {aFriend}");
-    ```
-
-    Select **Run** again to see the results. Instead of "Hello {aFriend}", the message should be "Hello Maira".
+    
 
 - title: Work with strings
   durationInMinutes: 5
