@@ -679,6 +679,62 @@ The Visitor Management app enables your organization and employees to easily and
 :::column-end:::
 :::row-end:::
 
+## Water Cooler &#9734;
+
+Water Cooler is a custom Teams app that enables corporate teams to create, invite, and join casual conversations among teammates, such as those that take place by the Water Cooler or break room. Use this template for multiple scenarios, such as new non project related announcements, topics of interest, current events, or conversations about hobbies. 
+The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks.
+[Get it on GitHub](https://github.com/microsoft/csapps-msteams-watercooler)
+
+### Key features
+
+**Water Cooler Home Page**: Browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the Home Page will show a room name, short description, call duration, and room image. 
+
+:::row:::
+  :::column span="2":::
+    ![Water Cooler Home Page](../assets/images/water-cooler-home-page.png)
+:::column-end:::
+:::row-end:::
+
+**Join room**: Active conversations will show a Join button to allow visitors to immediately enter an ongoing conversation.
+
+:::row:::
+  :::column span="2":::
+    ![Join room](../assets/images/join-room.png)
+:::column-end:::
+:::row-end:::
+
+**Room creation**: Easily create rooms by specifying the room name, short description, up to 5 colleagues as an initial group and selecting from the provided set of room images. Room creation will create a Teams call/chat for all attendees to interact.
+
+:::row:::
+  :::column span="2":::
+    ![Room Creation](../assets/images/create-room.png)
+:::column-end:::
+:::row-end:::
+
+**Find room**: Use the find room feature to search keyword which will match the topic or short descriptions of ongoing conversations.
+
+:::row:::
+  :::column span="2":::
+    ![Find Room](../assets/images/find-room.png)
+:::column-end:::
+:::row-end:::
+
+**Attendee invitation**: Just as with any Teams call, additional users can be invited after room creation.
+
+:::row:::
+  :::column span="2":::
+    ![Attendee invitation](../assets/images/attendee-invitation.png)
+:::column-end:::
+:::row-end:::
+
+**App badge**: Like other Teams apps, the Water Cooler icon on the left menu will show a badge with the number of active conversations visible from Teams while using any app. 
+
+:::row:::
+  :::column span="2":::
+    ![App badge](../assets/images/app-badge.png)
+:::column-end:::
+:::row-end:::
+
 ## Workplace Awards
 
 Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition, called R&R program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.
