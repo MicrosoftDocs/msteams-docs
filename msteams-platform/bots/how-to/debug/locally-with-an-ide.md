@@ -1,6 +1,6 @@
 ---
 title: Test and debug your bot locally
-author: clearab
+author: akjo
 description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
 localization_priority: Normal

@@ -1,6 +1,6 @@
 ---
 title: Apps for Teams meetings 
-author: laujan
+author: akjo
 description: overview of apps in Teams meetings based on participant and user role
 ms.topic: overview
 ms.author: lajanuar

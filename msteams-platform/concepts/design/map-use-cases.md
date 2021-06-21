@@ -1,6 +1,6 @@
 ---
 title: Map your use cases to Teams app capabilities
-author: clearab
+author: akjo
 description: Identify how your app's use cases can work within the Teams experience.
 ms.topic: conceptual
 localization_priority: Normal

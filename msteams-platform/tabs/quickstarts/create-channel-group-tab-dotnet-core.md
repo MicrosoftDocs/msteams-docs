@@ -1,6 +1,6 @@
 ---
 title: "Create a Channel and Group Tab with ASP.NET Core" 
-author: laujan
+author: akjo
 description: A quickstart guide to creating a custom channel and group tab with ASP.NET Core.
 localization_priority: Normal
 ms.topic: quickstart 

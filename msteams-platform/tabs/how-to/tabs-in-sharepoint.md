@@ -1,6 +1,6 @@
 ---
 title: Add Teams tab to SharePoint
-author: laujan
+author: akjo
 description: How to deploy your existing Teams tab to SharePoint as a SharePoint Framework web part.
 keywords: teams tabs sharepoint framework development
 localization_priority: Normal

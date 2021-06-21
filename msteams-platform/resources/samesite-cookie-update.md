@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams and the SameSite cookie attribute (2020 update)
-author: laujan
+author: akjo
 description: describes the attributes of SameSite cookie
 keywords: cookie attributes samesite
 ms.topic: reference

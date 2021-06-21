@@ -1,6 +1,6 @@
 ---
 title: Format your bot messages
-author: clearab
+author: akjo
 description: Add rich formatting to your bot messages
 ms.topic: conceptual
 localization_priority: Normal

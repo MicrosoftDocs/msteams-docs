@@ -1,6 +1,6 @@
 ---
 title: Get Teams specific context for your bot
-author: laujan
+author: akjo
 description: How to get Microsoft Team's specific context for your bot, including the conversation roster, details, and channel list.
 ms.topic: conceptual
 localization_priority: Normal

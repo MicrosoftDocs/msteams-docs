@@ -1,6 +1,6 @@
 ---
 title: Respond to the task module submit action
-author: clearab
+author: akjo
 description: Describes how to respond to the task module submit action from a messaging extension action command
 localization_priority: Normal
 ms.topic: conceptual

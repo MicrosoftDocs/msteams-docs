@@ -1,6 +1,6 @@
 ---
 title: Create a messaging extension using App Studio
-author: clearab
+author: akjo
 description: Learn how to create a Microsoft Teams messaging extension using App Studio.
 ms.topic: conceptual
 localization_priority: Normal

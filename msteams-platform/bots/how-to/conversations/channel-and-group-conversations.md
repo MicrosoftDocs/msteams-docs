@@ -1,6 +1,6 @@
 ---
 title: Channel and group conversations with a bot
-author: clearab
+author: akjo
 description: How to send, receive, and handle messages for a bot in a channel or group chat.
 ms.topic: conceptual
 localization_priority: Normal

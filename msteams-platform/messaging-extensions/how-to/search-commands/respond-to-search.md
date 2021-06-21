@@ -1,6 +1,6 @@
 ---
 title: Respond to search command
-author: clearab
+author: akjo
 description: How to respond to the search command from a messaging extension in a Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
