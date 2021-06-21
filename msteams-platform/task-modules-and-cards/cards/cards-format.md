@@ -162,9 +162,6 @@ Use the information masking property to mask specific information, such as passw
 > [!NOTE]
 > The feature only supports client side information masking, the masked input text is sent as clear text to the https endpoint address that was specified during [bot configuration](../../build-your-first-app/build-bot.md). 
 
-> [!NOTE]
-> The information masking property is currently available in the developer preview only.
-
 #### Sample Adaptive card with masking property
 
 ```json

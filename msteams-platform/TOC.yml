@@ -427,8 +427,10 @@
     items:
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: Resource-specific consent JSON test file
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: Resource-specific consent for team JSON test file
+      href: graph-api/rsc/test-team-rsc-json-file.md
+    - name: Resource-specific consent for chat JSON test file
+      href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Distribute your app
   items:
   - name: Overview
