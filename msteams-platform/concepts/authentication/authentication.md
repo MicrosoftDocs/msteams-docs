@@ -44,7 +44,7 @@ Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md) and ch
 
 The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps using conversational bots. Use Azure Bot Framework's token service to assist with token caching.
 
-For more information on using the OAuthPrompt, see:
+For more information on using OAuthPrompt, see:
 
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.

@@ -8,9 +8,6 @@ keywords: calling calls audio video IVR voice online meetings
 
 # Calls and online meetings bots
 
-> [!NOTE]
-> Support for calls and online meeting bots is currently not supported on the Microsoft Teams mobile platform.
-
 Bots can interact with Teams calls and meetings using real-time voice, video, and screen sharing. With [Microsoft Graph APIs for calls and online meetings](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true), Teams apps can now interact with users using voice and video to enhance the experience. These APIs allow you to add the following new features:
 
 * Interactive voice response (IVR).
@@ -48,6 +45,10 @@ Calls are either peer-to-peer between a person and your bot, or multiparty betwe
 Following are the different call types and permissions required for the call:
 
 * A user can initiate a peer-to-peer call with your bot or invite your bot into an existing multiparty call. The multiparty call is not enabled yet in the Teams user interface.
+
+    > [!NOTE]
+    > User initiated calls to a bot are currently not supported on Microsoft Teams mobile platform.
+
 * Graph permissions are not necessary for a user to initiate a peer-to-peer call with your bot. Additional permissions are needed for your bot to participate in a multiparty call, or for your bot to initiate a peer-to-peer call with a user.
 * A call can start as peer-to-peer and eventually become a multiparty call. Your bot can initiate multiparty calls by inviting others, provided your bot has the proper permissions. If your bot does not have permissions to participate in group calls and if a participant adds another participant to the call, your bot is dropped from the call.
 

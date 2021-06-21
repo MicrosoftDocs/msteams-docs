@@ -92,7 +92,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js` is the main entry point for the messaging extension.
+The bot code is stored in the `bot` directory.  The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -179,9 +179,7 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
