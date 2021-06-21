@@ -105,7 +105,7 @@ The Toolkit automatically creates scaffolding for you in the project directory b
 - The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
-Since you selected an SPFx Webpart project, the following files are relevant to your UI:
+Since you selected a SPFx Webpart project, the following files are relevant to your UI:
 
 - The folder `SPFx/src/webparts/{webpart}` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
