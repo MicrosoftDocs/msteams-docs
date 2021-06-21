@@ -65,7 +65,7 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 1. To configure your app, select the **Project > TeamsFx > Configure for SSO...** menu.
 
-You will be prompted to sign-in to your Microsoft Account that has a M365 tenant.
+When prompted, sign in to your Microsoft account that has an M365 tenant.
 
 ## Install and run your app locally
 
