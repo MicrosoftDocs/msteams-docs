@@ -12,7 +12,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
+  A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
     - Welcome messages
     - Notifications
     - Scheduled messages
