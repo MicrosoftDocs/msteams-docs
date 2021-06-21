@@ -29,17 +29,17 @@ The following table provides resource-specific permissions for a team:
 |TeamSettings.ReadWrite.Group|Update this team's settings.|
 |ChannelSettings.Read.Group|Get this team's channel names, channel descriptions, and channel settings​.|
 |ChannelSettings.ReadWrite.Group|Update this team's channel names, channel descriptions, and channel settings.​|
-|Channel.Create.Group|Create channels in this team.​|
-|Channel.Delete.Group|Delete channels in this team.​|
-|ChannelMessage.Read.Group |Get this team's channel messages.​|
+|Channel.Create.Group|Create channels in this team. |
+|Channel.Delete.Group|Delete channels in this team. |
+|ChannelMessage.Read.Group |Get this team's channel messages. |
 |TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
-|TeamsTab.Create.Group|Create tabs in this team.​|
-|TeamsTab.ReadWrite.Group|Update this team's tabs.​|
-|TeamsTab.Delete.Group|Delete this team's tabs.​|
-|TeamMember.Read.Group|Get this team's members.​|
+|TeamsTab.Create.Group|Create tabs in this team. |
+|TeamsTab.ReadWrite.Group|Update this team's tabs. |
+|TeamsTab.Delete.Group|Delete this team's tabs. |
+|TeamMember.Read.Group|Get this team's members. |
 
-For more details, see [teams resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
 ### Resource-specific permissions for a chat
 
