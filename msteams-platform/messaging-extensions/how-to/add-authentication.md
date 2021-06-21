@@ -8,7 +8,8 @@ ms.author: anclear
 ---
 # Add authentication to your messaging extension
 
-[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+[!important]
+[The code samples in the document are based on version 4.6 and later of the Bot Framework SDK. For documenting earlier versions, see: [Messaging Extensions - v3 SDK](~/includes/v4-to-v3-pointer-me.md) section in the Resources folder.]
 
 ## Identify the user
 
@@ -24,14 +25,13 @@ Every request to your services includes the user  ID, the user's display name an
 
 The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which is used to identify the user’s organization. If applicable, the request also contains the team Id and channel ID from which the request is originated.
 
-## Authentication
+## Authenticate the user
 
-If your service requires user authentication, the users must sign in before they use the messaging extension. The authentication steps are similar to that of a bot or tab.
-The sequence is as follows:
+The users must sign in before they use the messaging extension, for services that require authetication. The authentication steps are as follows:
 
-1. User issues a query, or the default query is automatically sent to your service.
-1. Your service checks whether the user is authenticated by inspecting the Teams user ID.
-1. If the user is not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
+1. The user issues a query, or the default query is automatically sent to your service. Your service checks, if the user is authenticated by inspecting the Teams user ID.
+If the user is not authenticated:
+1. Send an `auth` response with an `openUrl` suggested action including the authentication URL.
 1. The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
 1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
