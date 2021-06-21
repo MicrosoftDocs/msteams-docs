@@ -60,38 +60,16 @@ The [Teams client JavaScript SDK](~/tabs/how-to/using-teams-client-sdk.md) provi
 
 You can create deep links to entities in Teams. These are used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
-### Task Modules
+### Task modules
 
 A task module is a modal pop-up experience that you can trigger from your tab. In a content page, you can use task modules to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The task modules themselves can be additional content pages, or created completely using Adaptive Cards. For more information, see [using task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
-### Valid Domains
+### Valid domains
 
 Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
 
 > [!NOTE]
 > The core functionality of your tab exists within Teams and not outside of Teams.
-
-## Reorder static personal tabs
-
-Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
-
-If you create a bot with a **personal** scope, it appears in the first tab position in a personal app by default. If you want to move it to another position, you must add a static tab object to your manifest with the reserved keyword, **conversations**. The **conversation** tab appears on web or desktop depending on where you add the **conversation** tab in the `staticTabs` array.
-
-```json
-{
-   "staticTabs":[
-      {
-         
-      },
-      {
-         "entityId":"conversations",
-         "scopes":[
-            "personal"
-         ]
-      }
-   ]
-}
-```
 
 ## Show a native loading indicator
 
