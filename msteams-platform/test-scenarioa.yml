@@ -7,15 +7,14 @@ metadata:
   level: Beginner
   ms.date: 06/21/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: numbers-in-csharp.yml
   ms.custom: mvc
 items:
 - durationInMinutes: 1
   content: |
-  A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
-    - Welcome messages
-    - Notifications
-    - Scheduled messages
+    A proactive message is any message sent by a bot that is not in response to a request from a user. This can include messages, such as:
+     - Welcome messages
+     - Notifications
+     - Scheduled messages
 
 - title: Prerequisites
   durationInMinutes: 2
