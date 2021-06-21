@@ -18,18 +18,14 @@ items:
     - Welcome messages
     - Notifications
     - Scheduled messages
+
 - title: Prerequisites
   durationInMinutes: 2
   content: |
-    Run the following code in the interactive window. Select the **Enter focus mode** button. Then, type the following code block in the interactive window and select **Run**:
-
-    ```csharp
-    Console.WriteLine("Hello World!");
-    ```
-
-    Congratulations! You've run your first C# program. It's a simple program that prints the message "Hello World!". It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message. `Console` is a type that represents the console window. `WriteLine` is a method of the `Console` type that prints a line of text to that text console.
-
-    Let's move on and explore more. The rest of this lesson explores working with the `string` type, which represents text in C#. Like the `Console` type, the `string` type has methods. The `string` methods work with text.
+    1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
+        >[!NOTE]
+        > Ensure you install the ASP.NET and web development or .NET Core cross-platform development workload.
+    1.	Install [Ngrok](https://ngrok.com/download).
 
 - title: Declare and use variables
   durationInMinutes: 3
