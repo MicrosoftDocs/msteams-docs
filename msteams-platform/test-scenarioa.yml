@@ -147,10 +147,8 @@ items:
       ```
     1. Resolve the errors by adding required `using Adaptive Cards`. Hover over the squiggly red line and select `using AdaptiveCards`.
     
-        The code looks as follows:
-
-        ![Adaptive Card code](~/assets/images/proactive-scenario/adaptive-card-code.png)
-
+        ![Resolve error](~/assets/images/proactive-scenario/resolve-error.png)  
+    
     1. Press **F5** to run the code. 
     1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
         
