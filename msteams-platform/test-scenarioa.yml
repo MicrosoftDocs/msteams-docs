@@ -64,11 +64,11 @@ items:
 
         ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
 
-    1. Create a Bot and update the Bot ID and Secret to the code.
+    1. Create a Bot and update the Bot ID.
 
         ![Bot setup](~/assets/images/proactive-scenario/bot-setup.png)     
 
-        ![Create Bot](~/assets/images/proactive-scenario/create-bot.png)   
+        ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
     1. Append `/api/message` to `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
     
