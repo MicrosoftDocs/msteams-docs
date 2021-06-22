@@ -7,6 +7,8 @@ metadata:
   level: Beginner
   ms.date: 06/21/2021
   ms.topic: interactive-tutorial
+  nextTutorialHref: ./bots/what-are-bots.md
+  nextTutorialTitle: What are bots
   ms.custom: mvc
 items:
 - durationInMinutes: 1
