@@ -55,7 +55,7 @@ items:
        
         ![Ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)
 
-    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in next steps.    
+    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in the next steps.    
 
 - title: Create and Install Teams App
   durationInMinutes: 5
@@ -79,11 +79,9 @@ items:
     
         ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
 
-    1. Copy the App ID to `appsettings.json` file as value for `MicrosoftAppId`.
+    1. Copy the App ID to `appsettings.json` file as value for `MicrosoftAppId`. Your appsetting.json must have the following setting values:    
 
         ![Generate app ID](~/assets/images/proactive-scenario/generate-app-id.png)
-
-    Your appsetting.json must have the following setting values:
 
         ![Appsetting values](~/assets/images/proactive-scenario/app-setting-values.png)
 
@@ -94,6 +92,15 @@ items:
         The corresponding proactive message sample as follows:  
 
         ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
+
+    1. Go to App Studio and install the App.
+
+        ![Install App](~/assets/images/proactive-scenario/install-app.png)   
+
+    1. You will receive a welcome message from bot when installation is successful.
+    1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in chat.    
+
+        ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)
 
 - title: Add Adaptive card to proactive message
   durationInMinutes: 10
