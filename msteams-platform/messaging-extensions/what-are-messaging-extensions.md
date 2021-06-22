@@ -1,6 +1,6 @@
 ---
 title: Messaging extensions
-author: clearab
+author: surbhigupta
 description: An overview of messaging extensions on the Microsoft Teams platform
 localization_priority: Normal
 ms.topic: overview
