@@ -144,16 +144,16 @@ items:
                     await turnContext.SendActivityAsync(MessageFactory.Attachment(attachment));
         }
       ```
-    1. Resolve the errors by adding required `using Adaptive Cards`. Hover over the squiggly red line and select `using AdaptiveCards`.
+      1. Resolve the errors by adding required `using Adaptive Cards`. Hover over the squiggly red line and select `using AdaptiveCards`.
     
-        ![Resolve error](~/assets/images/proactive-scenario/resolve-error.png)  
+          ![Resolve error](~/assets/images/proactive-scenario/resolve-error.png)  
     
-    1. Press **F5** to run the code. 
-    1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
+      1. Press **F5** to run the code. 
+      1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
         
-        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)     
+          ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)     
     
-    1.Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.
+      1.Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.
 
 - title: Complete challenge
   durationInMinutes: 3
