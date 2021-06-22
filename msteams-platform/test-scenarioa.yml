@@ -52,28 +52,66 @@ items:
      </details>
 
     1. Start the Ngrok by running following command in terminal window where Ngrok is downloaded `ngrok.exe http 3978 --host-header=localhost`
-       <image>
-    1. Copy the `Ngrok` URL, for further use as `Ngrok base URL` in next steps.
+       
+        ![Ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)
+
+    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in next steps.
 
 - title: Create and Install Teams App
   durationInMinutes: 5
   content: |
     1. Go to App Studio and import the manifest file present in the Zip File, `AppManifest.zip`.
-     <add image>
+
+        ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
+
     1. Create a Bot and update the Bot ID and Secret to the code.
-    1. Append `/api/message` to  `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
+
+        ![Bot setup](~/assets/images/proactive-scenario/bot-setup.png)     
+
+        ![Create Bot](~/assets/images/proactive-scenario/create-bot.png)   
+
+
+    1. Append `/api/message` to `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
+    
+        ![Bot endpoint address](~/assets/images/proactive-scenario/bot-endpoint-address.png)
+
     1. Wait for few seconds for changes to take effect. Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
     1. Generate the App Password and copy it to `appsettings.json` file in your Visual Studio as value for `MicrosoftAppPassword`.
+    
+        ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
+
     1. Copy the App ID to `appsettings.json` file as value for `MicrosoftAppId`.
-    1. Run the code by pressing `F5` or clicking the play run button.
+
+        ![Generate app ID](~/assets/images/proactive-scenario/generate-app-id.png)
+
+    Your appsetting.json must have the following setting values:
+
+        ![Appsetting values](~/assets/images/proactive-scenario/app-setting-values.png)
+
+    1. Run the code by pressing `F5` or click the play run button.
+
+        ![Run code](~/assets/images/proactive-scenario/run-code.png)
+    
+    You will get the following proactive message sample:
+
+        ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
+
 
 - title: Add Adaptive card to proactive message
   durationInMinutes: 10
   content: |
-    1. Stop the debugging. 
-    <image>
-    1. Add Adaptive Card package. 
-    <imAGE>
+    1. Stop the debugging process.
+
+        ![Stop debug](~/assets/images/proactive-scenario/stop-debug.png)
+
+    1. Add Adaptive Card package.
+
+        ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
+
+
+        ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
+
+
     1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message. 
 
        private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
