@@ -33,11 +33,11 @@ items:
 
         ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
 
-    <br>
+        <br>
 
-    <details>
+        <details>
 
-    <summary><b>Unable to find package</b></summary>
+        <summary><b>Error: Unable to find package</b></summary>
 
         If you get Unable to find package error, perform the following steps:
 
@@ -47,15 +47,15 @@ items:
         1.	Type *nuget.org* in the **Name** and *https://api.nuget.org/v3/index.json* in the **Source**.
         1.	Select **Update** and **Ok**.
         1.	Rebuild your project.
-     <br>
+        <br>
 
-     </details>
+        </details>
 
-    1. Start the Ngrok by running following command in terminal window where Ngrok is downloaded `ngrok.exe http 3978 --host-header=localhost`
+    1. Start the Ngrok. Follow the command in terminal window where Ngrok is downloaded `ngrok.exe http 3978 --host-header=localhost`.
        
         ![Ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)
 
-    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in next steps.
+    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in next steps.    
 
 - title: Create and Install Teams App
   durationInMinutes: 5
@@ -69,7 +69,6 @@ items:
         ![Bot setup](~/assets/images/proactive-scenario/bot-setup.png)     
 
         ![Create Bot](~/assets/images/proactive-scenario/create-bot.png)   
-
 
     1. Append `/api/message` to `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
     
@@ -92,10 +91,9 @@ items:
 
         ![Run code](~/assets/images/proactive-scenario/run-code.png)
     
-    You will get the following proactive message sample:
+        The corresponding proactive message sample as follows:  
 
         ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
-
 
 - title: Add Adaptive card to proactive message
   durationInMinutes: 10
@@ -113,6 +111,7 @@ items:
 
 
     1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message. 
+       Following is the corresponding code:    
 
        private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
         {
@@ -138,9 +137,8 @@ items:
                     await turnContext.SendActivityAsync(MessageFactory.Attachment(attachment));
         }
       
-      Your code would look like this.
     1. Resolve the errors by adding required using for Adaptive Card. Hover over the squiggly red line and select using AdaptiveCards.
-    1. Press F% to run the code. 
+    1. Press F5 to run the code. 
     1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
     1. Go to http://localhost:3978/api/notify to get proactive `Hello` in Adaptive Card.
 
@@ -151,6 +149,6 @@ items:
 
 - content: |
     You've completed the scenario
-    1.	You can send notification on daily basis or request for feedback from user on periodic basic.
+    1. You can send notification on daily basis or request for feedback from user on periodic basic.
     2. Sending multiple notification may get throttled so remember to handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit).
 
