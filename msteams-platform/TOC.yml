@@ -5,8 +5,6 @@
       href: overview.md
     - name: What's new?
       href: whats-new.md
-    - name: scenario
-      href: scenario-index.yml  
 - name: Get started
   expanded: true
   items:
@@ -283,7 +281,7 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
-  - name: Scenarios
+  - name: Scenario of sending proactive message 
     href: test-scenarioa.yml 
 - name: Build messaging extensions
   items:
