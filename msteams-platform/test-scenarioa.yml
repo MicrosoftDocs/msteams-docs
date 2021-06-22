@@ -1,7 +1,7 @@
 ### YamlMime:Tutorial
-title: Sending Proactive Message
+title: Send Proactive Message
 metadata:
-  title: Sending Proactive Message
+  title: Send Proactive Message
   description: In this scenario, you'll learn how to send proactive messages
   audience: Developer
   level: Beginner
@@ -22,7 +22,7 @@ items:
     1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
         > [!NOTE]
         > Ensure you install the ASP.NET and web development or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
-    1.	Install [Ngrok](https://ngrok.com/download).
+    1.	Install [Ngrok](https://ngrok.com/download). ngrok is a cross-platform application that enables you to expose a local development server to the internet with minimal effort.
 
 - title: Setup local environment
   durationInMinutes: 3
@@ -149,6 +149,7 @@ items:
 
 - content: |
     You've completed the scenario
-    1. You can send notification on daily basis or request for feedback from user on periodic basic.
-    2. Sending multiple notification may get throttled so remember to handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit).
-
+    1. You can send notification on daily basis or request for feedback from user on periodic basis.
+    1. Handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit) to avoid multiple notifications.
+    
+   
