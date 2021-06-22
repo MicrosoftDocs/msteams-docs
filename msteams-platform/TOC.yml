@@ -5,6 +5,8 @@
       href: overview.md
     - name: What's new?
       href: whats-new.md
+    - name: scenario
+      href: scenario-index.yml  
 - name: Get started
   expanded: true
   items:
