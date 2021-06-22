@@ -7,28 +7,25 @@ keywords: teams authentication AAD oauth identity provider
 ---
 # Configure identity providers
 
-## Configuring an application to use Azure Active Directory as an identity provider
+## Prerequisite
 
->[!NOTE]
->The applications must be registerd, as the identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications.
+The applications must be registerd. The identity providers supporting OAuth 2.0 will not authenticate requests from unknown applications.
 
-**To configure application with Azure AD:**
+## Configuring an application to use Azure Active Directory (AAD) as an identity provider
+
+**To configure application with AAD:**
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select **New Registration**.
-3. Provide the user-facing display name for this application.
-
- > [!NOTE]
- > The name of the application can be changed later.
-
+3. Provide the user-facing display name for this application. The name can be changed later.
 4. Find the **Redirect URI** section for the app.
 5. In the dropdown menu, select **Web**. 
 6. Update the URL to authentication endpoint. For example, the redirect URL for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`.
 
 ## Other authentication providers
 
