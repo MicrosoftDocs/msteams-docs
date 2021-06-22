@@ -117,7 +117,7 @@ items:
         ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
 
 
-    1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message. 
+    1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message.     
        Following is the corresponding code:    
 
        ```csharp
