@@ -145,7 +145,6 @@ items:
                     await turnContext.SendActivityAsync(MessageFactory.Attachment(attachment));
         }
       ```
-      
     1. Resolve the errors by adding required `using Adaptive Cards`. Hover over the squiggly red line and select `using AdaptiveCards`.
     
         The code looks as follows:
