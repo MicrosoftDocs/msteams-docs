@@ -12,14 +12,15 @@ ms.date: 11/09/2018
 
 In this tutorial, you will learn how to build your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
 
-* Prepare your environment
-* Get prerequisites
+* [Prepare your environment](prepare-your-environment)
+* [Get prerequisites](GetPrerequisites)
 * Download the sample
 * Build and run the sample
 * Host the sample app
 * Update the credentials for your hosted app
 * Configure the app tab
 
+<a name="prepare-your-environment"></a>
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
 <a name="GetPrerequisites"></a>
