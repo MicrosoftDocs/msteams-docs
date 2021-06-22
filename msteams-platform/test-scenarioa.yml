@@ -22,7 +22,7 @@ items:
     1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
         > [!NOTE]
         > Ensure you install the ASP.NET and web development or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
-    1.	Install [Ngrok](https://ngrok.com/download). ngrok is a cross-platform application that enables you to expose a local development server to the internet with minimal effort.
+    1.	Install [Ngrok](https://ngrok.com/download). Ngrok is a cross-platform application that enables you to expose a local development server to the internet with minimal effort.
 
 - title: Setup local environment
   durationInMinutes: 3
