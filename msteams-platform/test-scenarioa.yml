@@ -153,9 +153,11 @@ items:
   durationInMinutes: 3
   content: |
     Did you come up with something like this?
+    
+    ![proactive helo in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png)
 
 - content: |
-    You've completed the scenario
+    You have completed the scenario.
     1. You can send notification on daily basis or request for feedback from user on periodic basis.
     1. Handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit) to avoid multiple notifications.
     
