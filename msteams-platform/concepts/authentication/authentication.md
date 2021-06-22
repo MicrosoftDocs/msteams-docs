@@ -17,13 +17,12 @@ Teams establishes a trusted connection with providers, to access data from servi
 In Teams, there are two authentication flows for the app:
 * Web-based authentication flow: Use in a [content page](~/tabs/how-to/create-tab-pages/content-page.md) embedded in a tab, a configuration page, or a task module. 
 * OAuthPrompt flow: Use if the app contains a conversational bot, and optionally use the Azure Bot Framework's token service to authenticate user as part of a conversation.
-
-> [!NOTE]
-> Microsoft Graph APIs help authenticate the user to retrieve the appropriate authentication tokens.
+ > [!NOTE]
+ > Microsoft Graph APIs help authenticate the user to retrieve the appropriate authentication tokens.
 
 ## Configure the identity provider
 
-Configure the identity provider communicates with Teams app regardless of the app's authentication flow. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
+The identity provider communicates with Teams app regardless of the app's authentication flow. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
@@ -43,9 +42,7 @@ Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md) and ch
 ## OAuthPrompt flow for conversational bots
 
 The Azure Bot Framework’s OAuthPrompt makes authentication easier for apps using conversational bots. Use Azure Bot Framework's token service to assist with token caching.
-
 For more information on using OAuthPrompt, see:
-
 * [Bot authentication flow overview](~/bots/how-to/authentication/auth-flow-bot.md) describes how authentication works within a bot in the app in Teams. This shows a non-web-based authentication flow used for bots on Teams web, desktop app, and mobile apps.
 * [Bot authentication](~/bots/how-to/authentication/add-authentication.md) describes how to add OAuth authentication to the Teams bot.
 
