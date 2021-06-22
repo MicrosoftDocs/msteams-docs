@@ -16,7 +16,7 @@ items:
      - Notifications
      - Scheduled messages
      
-    This scenario helps you to get a "Welcome" message from the bot. You will see the following outputs:
+    This scenario helps you to get a Welcome message from the bot. You will see the following outputs:
 
     * Welcome message in chat        
     ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)
@@ -36,7 +36,7 @@ items:
 - title: Setup local environment
   durationInMinutes: 3
   content: |
-    1.	Download sample code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/SendProactiveMessages.zip) and extract the files.
+    1.	Download sample code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/Send%20Proactive%20Messages.zip) and extract the files.
     1.	Double-click `ProactiveBot.csproj` file from the extracted files.     
         The solution opens in Visual Studio.
     1.	Right-click the project (**ProactiveBot**) and select **Build** to build the solution.
@@ -49,40 +49,42 @@ items:
 
         <summary><b>Troubleshooting</b></summary>
 
-        If you get Unable to find package error, perform the following steps:
+        If you get the **Unable to find package** error, perform the following steps:
 
         1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-        1.	In the **Options** Window that appears, select **NuGet Package Manager** > **Package Sources**.
+        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
         1.	Select **Add**.
-        1.	Type *nuget.org* in the **Name** and *https://api.nuget.org/v3/index.json* in the **Source**.
+        1.	Type *nuget.org* in the **Name** and `https://api.nuget.org/v3/index.json` in the **Source** fields.
         1.	Select **Update** and **Ok**.
         1.	Rebuild your project.
         <br>
 
         </details>
 
-    1. Go to downloads.
-    1. Double-click `ngrok-stable window.amd` folder. The control goes to `ngrok.exe` file. 
-    1. Double-click `ngrok.exe` file. It opens the terminal window as follows:
+    1. Go to the folder where Ngrog is saved and extract the files.
+    1. Open the `ngrok-stable window.amd` folder.
+    1. Double-click the `ngrok.exe` file. The terminal window opens:
 
         ![Ngrok terminal window](~/assets/images/proactive-scenario/ngrok-terminal-window.png)
 
-    1. Start the Ngrok by running `ngrok.exe http 3978 --host-header=localhost` command in terminal window where Ngrok is downloaded.
-       
-        ![Ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)
+    1. Type the `ngrok.exe http 3978 --host-header=localhost` command in terminal window to start Ngrok.
+            
+    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in the next steps. 
 
-    1. Copy the `Ngrok` URL, for further reference as `Ngrok base URL` in the next steps.    
+        ![Ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)   
 
 - title: Create and Install Teams App
   durationInMinutes: 5
   content: |
-    1. Go to App Studio and import the manifest file present in the Zip File, `AppManifest.zip`.
+    1. Go to App Studio and import the `AppManifest.zip` file available in the downloaded Zip file.
 
         ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
 
-    1. Create a Bot and update the Bot ID.
+    1. Select **Bots** and select **Set up**.
 
-        ![Bot setup](~/assets/images/proactive-scenario/bot-setup.png)     
+        ![Bot setup](~/assets/images/proactive-scenario/bot-setup.png)  
+
+    1. Create the Bot ID.
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
@@ -90,7 +92,10 @@ items:
     
         ![Bot endpoint address](~/assets/images/proactive-scenario/bot-endpoint-address.png)
 
-    1. Wait for few seconds for changes to take effect. Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
+    1. Wait for few seconds for changes to take effect.     
+
+        > [!TIP] Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
+    
     1. Generate the App Password and copy it to `appsettings.json` file in your Visual Studio as value for `MicrosoftAppPassword`.
     
         ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
@@ -109,14 +114,14 @@ items:
 
         ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
 
-    1. Go to App Studio and install the App.
+    1. Go to App Studio > Select Uninstall the app > install ithe app again.
 
         ![Install App](~/assets/images/proactive-scenario/install-app.png)   
 
-    1. You receive a welcome message from bot when installation is successful.
     1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in chat.    
+    1. 1. You receive a welcome message from bot when installation is successful.        
 
-        ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)
+        ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)    
 
 - title: Add Adaptive card to proactive message
   durationInMinutes: 10
@@ -125,10 +130,11 @@ items:
 
         ![Stop debug](~/assets/images/proactive-scenario/stop-debug.png)
 
-    1. Add Adaptive Card package.
+    1. Right-click **Dependencies**, select **Manage Nu-get Packages**.
 
         ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
 
+    1. Add Adaptive Card package.
 
         ![Add Adaptive Card package2](~/assets/images/proactive-scenario/add-adaptive-card-package2.png)
 
