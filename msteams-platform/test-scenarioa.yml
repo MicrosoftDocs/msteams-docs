@@ -94,9 +94,8 @@ items:
 
     1. Wait for few seconds for changes to take effect.     
 
-        > [!TIP] 
         > Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
-    
+        
     1. Generate the App Password and copy it to `appsettings.json` file in your Visual Studio as value for `MicrosoftAppPassword`.
     
         ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
@@ -120,7 +119,7 @@ items:
         ![Install App](~/assets/images/proactive-scenario/install-app.png)   
 
     1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in chat.    
-    1. 1. You receive a welcome message from bot when installation is successful.        
+    1. You receive a welcome message from bot when installation is successful.        
 
         ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)    
 
@@ -177,9 +176,11 @@ items:
     1. Press **F5** to run the code. 
     1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
         
-        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)     
+        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)  
+
+    1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.     
     
-    1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.
+    
 
 - title: Complete challenge
   durationInMinutes: 3
