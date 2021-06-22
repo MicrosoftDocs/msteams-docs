@@ -1,6 +1,6 @@
 ---
 title: What are task modules?
-author: clearab
+author: surbhigupta
 description: Add modal popup experiences to collect or display information to your users from your Microsoft Teams apps
 localization_priority: Normal
 ms.topic: overview

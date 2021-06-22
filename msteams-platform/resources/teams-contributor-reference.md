@@ -1,7 +1,7 @@
 ---
 title: Contributing to Microsoft Teams documentation
 description: steps for creating and publishing Teams documentation
-author: laujan
+author: surbhigupta
 ms.author: lajanuar
 localization_priority: Normal
 ms.topic: contributor-guide
@@ -9,7 +9,7 @@ ms.topic: contributor-guide
 
 # Contributing to Microsoft Teams documentation
 
-[Teams documentation](/microsoftteams/platform/overview) is part of the [Microsoft Docs](https://docs.microsoft.com/) technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after *docs<span></span>.microsoft.com*.  For example,  `/docs.microsoft.com/microsoftteams/...`   is the beginning of the Teams docset file path. Teams articles are written in  [MarkDown](#markdown-reference) syntax and hosted on [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
+[Teams documentation](/microsoftteams/platform/overview) is part of the [Microsoft Docs](https://docs.microsoft.com) technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after *docs<span></span>.microsoft.com*.  For example,  `/docs.microsoft.com/microsoftteams/...`   is the beginning of the Teams docset file path. Teams articles are written in  [MarkDown](#markdown-reference) syntax and hosted on [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform).
 
 ## Set up your workspace
 

@@ -2,7 +2,7 @@
 title: Resource-specific consent in Teams
 description: Describes resource-specific consent in Teams and how to make advantage of it.
 localization_priority:  Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams authorization OAuth SSO AAD rsc Graph
