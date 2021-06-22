@@ -133,7 +133,6 @@ var sampleResponseActivity = new Activity
 };
 
 return sampleResponseActivity;
-
 ```
 
 # [JavaScript/Node.js](#tab/javascript)
