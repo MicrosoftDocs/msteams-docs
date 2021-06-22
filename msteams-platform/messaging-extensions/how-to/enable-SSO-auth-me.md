@@ -109,7 +109,7 @@ You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `t
             return true;
         }
     
-    ```    
+   ```    
 
 ## See also
 
