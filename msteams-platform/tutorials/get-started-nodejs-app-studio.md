@@ -251,9 +251,9 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation:
 
-<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
-<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
 Select one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom:
 
