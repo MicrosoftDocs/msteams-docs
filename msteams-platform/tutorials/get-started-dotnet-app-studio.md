@@ -12,13 +12,13 @@ ms.date: 11/09/2018
 
 In this tutorial, you will learn how to build your very first Microsoft Teams app using .NET or C#. It also walks you through the steps to:
 
-* [Prepare your environment](prepare-your-environment)
-* [Get prerequisites](GetPrerequisites)
-* Download the sample
-* Build and run the sample
-* Host the sample app
-* Update the credentials for your hosted app
-* Configure the app tab
+* [Prepare your environment](#prepare-your-environment)
+* [Get prerequisites](#GetPrerequisites)
+* [Download the sample](#DownloadSample)
+* [Build and run the sample](#BuildRun)
+* [Host the sample app](#hostsample)
+* [Update the credentials for your hosted app](#updatecredentials)
+* [Configure the app tab](#configureapptab)
 
 <a name="prepare-your-environment"></a>
 [!include [prepare your environment](~/includes/prepare-environment.md)]
@@ -82,6 +82,7 @@ When the app starts, a browser window opens with the root of the app launched. Y
 > [!Note]
 > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).
 
+<a name="hostsample"></a>
 ## Deploy your sample app
 
 Apps in Microsoft Teams are web applications that provide one or more capabilities. For the Teams platform to load your app, your app must be available on the internet. To do this, you need to host your app. You can either host it in Microsoft Azure for free or create a tunnel to the local process on your computer using `ngrok`. After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
@@ -147,6 +148,7 @@ Visual Studio has built-in support for app deployment to different providers, in
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
+<a name="updatecredentials"></a>
 ## Update the credentials for your hosted app
 
 The sample app requires the environment variables to be set to the values that you saved in the text file.
@@ -161,6 +163,7 @@ The sample app requires the environment variables to be set to the values that y
 
     After these changes are made, rebuild the app. If you are using ngrok, run the app locally, and if you are hosting in Azure, redeploy the app.
 
+<a name="configureapptab"></a>
 ## Configure the app tab
 
 After you have installed the app into teams, you must configure it to display the content. 
