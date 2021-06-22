@@ -8,8 +8,7 @@ ms.author: anclear
 ---
 # Add authentication to your messaging extension
 
-[!important]
-[The code samples in the document are based on version 4.6 and later of the Bot Framework SDK. For documenting earlier versions, see: [Messaging Extensions - v3 SDK](~/includes/v4-to-v3-pointer-me.md) section in the Resources folder.]
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 ## Identify the user
 
