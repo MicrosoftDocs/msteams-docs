@@ -15,21 +15,31 @@ items:
      - Welcome messages
      - Notifications
      - Scheduled messages
+     
+    This scenario helps you to get a "Welcome" message from the bot. You will see the following outputs:
+
+    * Welcome message in chat        
+    ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)
+
+    * Welcome message in Adaptive Card    
+    ![proactive helo in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) 
 
 - title: Prerequisites
   durationInMinutes: 2
   content: |
-    1.	Install [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/). 
-        > [!NOTE]
-        > Ensure you install the ASP.NET and web development or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
-    1.	Install [Ngrok](https://ngrok.com/download). Ngrok is a cross-platform application that enables you to expose a local development server to the internet with minimal effort.
+    Ensure that you install the following:    
+
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
+    * [ASP.NET and web development](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.301-windows-x64-installer), or [.NET Core](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-3.1.410-windows-x64-installer) cross-platform development workload.
+    * [Ngrok](https://ngrok.com/download): A cross-platform application that enables you to expose a local development server to the internet with minimal effort.
 
 - title: Setup local environment
   durationInMinutes: 3
   content: |
     1.	Download sample code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/SendProactiveMessages.zip) and extract the files.
-    1.	Double-click `ProactiveBot.csproj` file from the extracted files. It opens the solution in Visual Studio.
-    1.	Right-click the project and build the solution.
+    1.	Double-click `ProactiveBot.csproj` file from the extracted files.     
+        The solution opens in Visual Studio.
+    1.	Right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
         ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
 
