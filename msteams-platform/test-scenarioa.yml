@@ -118,8 +118,7 @@ items:
 
 
     1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message.     
-       Following is the corresponding code:    
-
+       Following is the corresponding code:        
        ```csharp
        private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
         {
