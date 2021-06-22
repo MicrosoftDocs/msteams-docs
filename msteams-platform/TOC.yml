@@ -281,6 +281,8 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
+  - name: Scenario of sending proactive message 
+    href: test-scenarioa.yml 
 - name: Build messaging extensions
   items:
   - name: Overview
