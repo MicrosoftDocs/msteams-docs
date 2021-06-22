@@ -179,7 +179,7 @@ items:
         
         ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)     
     
-    1.Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.
+    1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in Adaptive Card.
 
 - title: Complete challenge
   durationInMinutes: 3
