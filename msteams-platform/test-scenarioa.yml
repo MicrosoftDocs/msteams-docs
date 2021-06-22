@@ -27,7 +27,7 @@ items:
 - title: Setup local environment
   durationInMinutes: 3
   content: |
-    1.	Download code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/SendProactiveMessages.zip) for sample and extract the files.
+    1.	Download sample code from [Zip file](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/SendProactiveMessages.zip) and extract the files.
     1.	Double-click `ProactiveBot.csproj` file from the extracted files. It opens the solution in Visual Studio.
     1.	Right-click the project and build the solution.
 
@@ -53,25 +53,29 @@ items:
 
     1. Start the Ngrok by running following command in terminal window where Ngrok is downloaded `ngrok.exe http 3978 --host-header=localhost`
        <image>
-    1. Copy the `Ngrok` URL, we will refer this as `Ngrok base URL` in next steps.
+    1. Copy the `Ngrok` URL, for further use as `Ngrok base URL` in next steps.
 
 - title: Create and Install Teams App
   durationInMinutes: 5
   content: |
-    1. Got to App Studio and import the manifest file present in the Zip File (AppManifest.zip) <add image>
-    1. Create a Bot and update the Bot Id and Secret to the code
-    1. Append /api/message to  Ngrok base URL and set it as endpoint address. Your URL would look like this: https://yourngrokdomain.ngrok.io/api/message
-    1. Wait for few seconds for changes to take effect. Revisit Bots section by selecting Tabs section to force update if it’s taking longer.
-    1. Generate the App Password and copy it to appsettings.json file in your Visual Studio as value for MicrosoftAppPassword
-    1. Copy the App Id to appsettings.json file as value for MicrosoftAppId
-    1. Run the code by pressing F5 or clicking on play run button.
+    1. Go to App Studio and import the manifest file present in the Zip File, `AppManifest.zip`.
+     <add image>
+    1. Create a Bot and update the Bot ID and Secret to the code.
+    1. Append `/api/message` to  `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
+    1. Wait for few seconds for changes to take effect. Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
+    1. Generate the App Password and copy it to `appsettings.json` file in your Visual Studio as value for `MicrosoftAppPassword`.
+    1. Copy the App ID to `appsettings.json` file as value for `MicrosoftAppId`.
+    1. Run the code by pressing `F5` or clicking the play run button.
 
 - title: Add Adaptive card to proactive message
   durationInMinutes: 10
   content: |
-    1. Stop the debugging <image>
-    1. Add Adaptive card package. <imAGE>
-    1. Replace the existing BotCallback code present in NotifyController.cs to send Adaptive Card message. 
+    1. Stop the debugging. 
+    <image>
+    1. Add Adaptive Card package. 
+    <imAGE>
+    1. Replace the existing `BotCallback` code present in `NotifyController.cs` to send Adaptive Card message. 
+
        private async Task BotCallback(ITurnContext turnContext, CancellationToken cancellationToken)
         {
                     AdaptiveCard card = new AdaptiveCard(new AdaptiveSchemaVersion(1, 0));
@@ -98,9 +102,9 @@ items:
       
       Your code would look like this.
     1. Resolve the errors by adding required using for Adaptive Card. Hover over the squiggly red line and select using AdaptiveCards.
-    1. Run the code by pressing F5.
-    1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the conversationUpdate event.
-    1. Navigate to http://localhost:3978/api/notify to get proactive hello in Adaptive Card.
+    1. Press F% to run the code. 
+    1. Go to Teams UI and uninstall the App. Reinstall the same app so that we get the `conversationUpdate` event.
+    1. Go to http://localhost:3978/api/notify to get proactive `Hello` in Adaptive Card.
 
 - title: Complete challenge
   durationInMinutes: 3
@@ -109,6 +113,6 @@ items:
 
 - content: |
     You've completed the scenario
-    1.	You can send notification on daily basis / request for feedback from user on periodic basic
-    2. Sending multiple notification may get throttled so remember to handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit)
+    1.	You can send notification on daily basis or request for feedback from user on periodic basic.
+    2. Sending multiple notification may get throttled so remember to handle [throttling limits](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/how-to/rate-limit).
 
