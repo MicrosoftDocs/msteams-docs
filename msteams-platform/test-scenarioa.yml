@@ -94,7 +94,8 @@ items:
 
     1. Wait for few seconds for changes to take effect.     
 
-        > [!TIP] Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
+        > [!TIP] 
+        > Revisit **Bots** section by selecting **Tabs** section to force update if it is taking longer.
     
     1. Generate the App Password and copy it to `appsettings.json` file in your Visual Studio as value for `MicrosoftAppPassword`.
     
