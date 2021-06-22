@@ -11,13 +11,15 @@ ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 
 In this tutorial, you will learn how to build your very first Microsoft Teams app using Node.js. It also walks you through the steps to: 
 
-* Prepare your environment
-* Get prerequisites
-* Download the sample
-* Build and run the sample
-* Host the sample app
-* Update the credentials for your hosted app
-* Configure the app tab
+1. [Prepare your environment](#prepare-environment)
+1. [Get prerequisites](#GetPrerequisites)
+1. [Download the sample](#DownloadSample)
+1. [Build and run the sample](#BuildRun)
+1. [Host the sample app](#HostSample)
+1. [Update the credentials for your hosted app](#updatecredentials)
+1. [Configure the app tab](#ConfigureTheAppTab)
+
+<a name="prepare-environment"></a>
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
@@ -186,6 +188,7 @@ For either method you will need the following:
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 
 ---
+<a name="updatecredentials"></a>
 
 ## Update the credentials for your hosted app
 
