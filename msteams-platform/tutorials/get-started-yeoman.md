@@ -47,7 +47,7 @@ You need to install the following on your machine before starting to use the Yeo
 Install the Teams Yeoman generator with the following command:
 
 ```bash
-npm install generator-teams --global
+npm init yo teams
 ```
 
 Install the preview version of the generator with the following command:
