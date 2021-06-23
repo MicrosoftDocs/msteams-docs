@@ -34,9 +34,14 @@ Cards used by bots and messaging extensions in Teams support the following activ
 > [!NOTE]
 > Your bot does not receive any notice on which button was selected.
 
-The `value` field must contain a full and properly formed URL.
+With `openUrl`, you can create an action with the following properties:
 
-The following code shows an example of `openUrl` action type:
+| Property | Description |
+| --- | --- |
+| `title` | Appears as the button label. |
+| `value` | This field must contain a full and properly formed URL. |
+
+The following code shows an example of `openUrl` action type in Json:
 
 ```json
 {
@@ -44,6 +49,28 @@ The following code shows an example of `openUrl` action type:
     "title": "Tabs in Teams",
     "value": "https://msdn.microsoft.com/microsoft-teams/tabs"
 }
+```
+
+The following code shows an example of `openUrl` action type in C#:
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.OpenUrl,
+    Title = "Tabs in Teams",
+    Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
+};
+```
+
+The following code shows an example of `openUrl` action type in JavaScript:
+
+```javascript
+CardFactory.actions([
+{
+    type: 'openUrl',
+    title: 'Tabs in Teams',
+    value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
+}])
 ```
 
 ## Action type messageBack
@@ -59,7 +86,7 @@ With `messageBack`, you can create a fully customized action with the following 
 
 The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.
 
-The following code shows an example of `messageBack` action type:
+The following code shows an example of `messageBack` action type in Json:
 
 ```json
 {
@@ -76,6 +103,32 @@ The following code shows an example of `messageBack` action type:
 ```
 
 The `value` property can be either a serialized JSON string or a JSON object.
+
+The following code shows an example of `messageBack` action type in C#:
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.MessageBack,
+    Title = "My MessageBack button",
+    DisplayText = "I clicked this button",
+    Text = "User just clicked the MessageBack button",
+    Value = "{\"property\": \"propertyValue\" }"
+};
+```
+
+The following code shows an example of `messageBack` action type in JavaScript:
+
+```javascript
+CardFactory.actions([
+{
+    type: 'messageBack',
+    title: "My MessageBack button",
+    displayText: "I clicked this button",
+    text: "User just clicked the MessageBack button",
+    value: {property: "propertyValue" }
+}])
+```
 
 ### Inbound message example
 
@@ -133,12 +186,17 @@ The following code shows an example of inbound message:
 
 The `imBack` action triggers a return message to your bot, as if the user typed it in a normal chat message. Your user and all other users in a channel can see the button response.
 
-The `value` field must contain the text string used in the chat and therefore sent back to the bot. This is the message text you process in your bot to perform the desired logic.
+With `imBack`, you can create an action with the following properties:
+
+| Property | Description |
+| --- | --- |
+| `title` | Appears as the button label. |
+| `value` | This field must contain the text string used in the chat and therefore sent back to the bot. This is the message text you process in your bot to perform the desired logic. |
 
 > [!NOTE]
 > The `value` field is a simple string. There is no support for formatting or hidden characters.
 
-The following code shows an example of `imBack` action type:
+The following code shows an example of `imBack` action type in Json:
 
 ```json
 {
@@ -148,13 +206,42 @@ The following code shows an example of `imBack` action type:
 }
 ```
 
+The following code shows an example of `imBack` action type in C#:
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.ImBack,
+    Title = "More",
+    Value = "Show me more"
+};
+```
+
+The following code shows an example of `imBack` action type in JavaScript:
+
+```javascript
+CardFactory.actions([
+{
+    type: "imBack",
+    title: "More",
+    value: "Show me more"
+}])
+```
+
 ## Action type invoke
 
 The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
-The `invoke` action contains three properties, `type`, `title`, and `value`. The `value` property can contain a string, a stringified JSON object, or a JSON object.
+The `invoke` action contains three properties, `type`, `title`, and `value`.
 
-The following code shows an example of `invoke` action type:
+With `invoke`, you can create an action with the following properties:
+
+| Property | Description |
+| --- | --- |
+| `title` | Appears as the button label. |
+| `value` | This property can contain a string, a stringified JSON object, or a JSON object. |
+
+The following code shows an example of `invoke` action type in Json:
 
 ```json
 {
@@ -171,9 +258,7 @@ When a user selects the button, your bot receives the `value` object with some a
 > [!NOTE]
 > The activity type is `invoke` instead of `message` that is `activity.Type == "invoke"`.
 
-### Example of invoke button definition in .NET
-
-The following code shows an example of `invoke` button definition in .NET:
+The following code shows an example of `invoke` action type in C#:
 
 ```csharp
 var button = new CardAction()
@@ -182,6 +267,19 @@ var button = new CardAction()
     Type = "invoke",
     Value = "{\"option\": \"opt1\"}"
 };
+```
+
+The following code shows an example of `invoke` action type in Node.js:
+
+```javascript
+CardFactory.actions([
+{
+    type: "invoke",
+    title: "Option 1",
+    value: {
+        option: "opt1"
+    }
+}])
 ```
 
 ### Example of incoming invoke message
@@ -241,6 +339,38 @@ The following code shows an example of incoming invoke message:
 `signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
 Teams also supports [Adaptive Cards actions](#adaptive-cards-actions) that are only used by Adaptive Cards.
+
+The following code shows an example of `signin` action type in Json:
+
+```json
+{
+"type": "signin",
+"title": "Click me for signin",
+"value": "https://signin.com"
+}
+```
+
+The following code shows an example of `signin` action type in C#:
+
+```csharp
+var button = new CardAction()
+{
+    Type = ActionTypes.Signin,
+    Title = "Click me for signin",
+    Value = "https://signin.com"
+};
+```
+
+The following code shows an example of `signin` action type in JavaScript:
+
+```javascript
+CardFactory.actions([
+{
+    type: "signin",
+    title: "Click me for signin",
+    value: "https://signin.com"
+}])
+```
 
 ## Adaptive Cards actions
 
