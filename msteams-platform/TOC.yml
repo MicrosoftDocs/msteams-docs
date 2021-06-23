@@ -253,6 +253,9 @@
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
     - name: Send proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
+      items:
+      - name: Step-by-step guide
+        href: sbs-send-proactive.yml 
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
@@ -281,8 +284,6 @@
       href: resources/media-formats.md
   - name: Bot API changes for team and chat members
     href: resources/team-chat-member-api-changes.md
-  - name: Click through Guide:Send proactive message 
-    href: test-scenarioa.yml 
 - name: Build messaging extensions
   items:
   - name: Overview

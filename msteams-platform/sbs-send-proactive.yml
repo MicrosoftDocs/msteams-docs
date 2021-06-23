@@ -1,14 +1,14 @@
 ### YamlMime:Tutorial
-title: Send Proactive Message
+title: Send Proactive Messages
 metadata:
-  title: Send Proactive Message
+  title: Send Proactive Messages
   description: In this scenario, you'll learn how to send proactive messages
   audience: Developer
   level: Beginner
-  ms.date: 06/21/2021
+  ms.date: 06/23/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ./bots/what-are-bots.md
-  nextTutorialTitle: What are bots
+  nextTutorialHref: ./bots/how-to/conversations/send-proactive-messages.md
+  nextTutorialTitle: Send proactive messages
   ms.custom: mvc
 items:
 - durationInMinutes: 1
@@ -18,7 +18,7 @@ items:
      - Notifications
      - Scheduled messages
      
-    This scenario helps you to get a Welcome message from the bot. You will see the following outputs:
+    This step-by-step guide helps you to send a proactive message from the bot. You will see the following outputs:
 
     * Welcome message in chat        
     ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)
@@ -79,7 +79,7 @@ items:
 - title: Create and Install Teams App
   durationInMinutes: 5
   content: |
-    1. Go to App Studio and import the `AppManifest.zip` file available in the downloaded Zip file.
+    1. Go to **App Studio** and import the `AppManifest.zip` file available in the downloaded Zip file.
 
         ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
 
@@ -117,7 +117,7 @@ items:
 
         ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
 
-    1. Go to Teams and select **Uninstall** your app. 
+    1. Go to Teams and uninstall your app. 
 
         ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)    
     
@@ -127,9 +127,9 @@ items:
 
     1. Enter the http://localhost:3978/api/notify URL.
 
-       ![Proactive message sent](~/assets/images/proactive-scenario/result.png)
+        ![Proactive message sent](~/assets/images/proactive-scenario/result.png)
 
-       Go to Teams. You receive a welcome message from bot when installation is successful.          
+    1. Go to Teams. You receive a welcome message from bot when installation is successful.          
 
         ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)    
 
