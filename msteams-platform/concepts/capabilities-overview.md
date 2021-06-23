@@ -39,13 +39,13 @@ For example, you can collect user input in a form built as a tab in the app. You
 Government Community Cloud is a government focused copy of the commercial environment. Other types of Teams orgs include:
 
 * GCC High: Department of Defense (DoD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC High was created to meet the needs of DoD and Federal contractors. GCC High is a copy of the DoD cloud but exists in its own sovereign environment.
-* DoD: The DoD cloud is built for the Department of Defense and the DoD only.
+* DoD: The DoD cloud is built for the Department of Defense only.
 
 The following table includes Teams features and whether they are available for GCC, GCC High, and DoD:
 
 | Features   | GCC | GCC High | DoD |
 |-------------|---------|
-| Teams owned apps that is internally developed apps | ✔️ App is enabled if it has GCC in supportedTenantRegions in its appDefinition | ✔️ App is enabled if it has GCCH in supportedTenantRegions in its appDefinition | ✔️ App is enabled if it has DOD in supportedTenantRegions in its appDefinition |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC in `supportedTenantRegions` in its `appDefinition` | ✔️ App is enabled if it has GCCH in `supportedTenantRegions` in its `appDefinition` | ✔️ App is enabled if it has DOD in `supportedTenantRegions` in its `appDefinition` |
 | 3p or third-party apps | ✔️ | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Lob apps |  ✔️ | ✔️ | ✔️ |
@@ -55,7 +55,7 @@ The following table includes Teams features and whether they are available for G
 | Custom InputExtensions | ✔️ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-See the following to identify availability of GCC, GCC High, and DoD for those features:
+The following list helps to identify availability of GCC, GCC High, and DoD for the features:
 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
