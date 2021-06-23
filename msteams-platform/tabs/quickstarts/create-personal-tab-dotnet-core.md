@@ -1,6 +1,6 @@
 ---
 title: Create a Personal Tab with ASP.NET Core
-author: laujan
+author: surbhigupta
 description: A quickstart guide to creating a custom personal tab with ASP.NET Core.
 ms.topic: quickstart
 localization_priority: Normal

@@ -11,7 +11,7 @@ metadata:
   ms.service: msteams #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
-  author: laujan #Required; your GitHub user alias, with correct capitalization.
+  author: akjo #Required; your GitHub user alias, with correct capitalization.
   ms.author: lajanuar #Required; microsoft alias of author; optional team alias.
   ms.date: 05/29/2020 #Required; mm/dd/yyyy format.
 
@@ -40,7 +40,7 @@ highlightedContent:
     - title: Tutorials and code samples
       itemType: sample
       url:  /microsoftteams/platform/tutorials/code-samples
-    - title: What's new?
+    - title: Microsoft Build 2021- What's new?
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 
@@ -70,24 +70,21 @@ conceptualContent:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
           text: Teams app capabilities
-        - url: /microsoftteams/platform/concepts/design/map-use-cases
-          itemType: overview
-          text: Map use cases to Microsoft Teams capabilities
-        - url: /microsoftteams/platform/tutorials/get-started-nodejs-app-studio
-          itemType: how-to-guide
-          text: Build a Teams app using Node.js
-        - url: /microsoftteams/platform/tutorials/get-started-dotnet-app-studio
-          itemType: how-to-guide
-          text: Build a Teams app using C#
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
+        - url:  https://dev.teams.microsoft.com/home
+          itemType: reference
+          text: Developer Portal for Teams
         - url:  /microsoftteams/platform/resources/schema/manifest-schema
           itemType: reference
           text: Manifest schema for Teams apps
         - url:  https://adoption.microsoft.com/extensibility-look-book/scenarios/
           itemType: reference
-          text: Build scenarios for Microsoft Teams apps
+          text: Build scenarios for Teams apps
+        - url:  https://developer.microsoft.com/en-us/microsoft-teams/app-development-resources
+          itemType: reference
+          text: Best practices for Teams app scenarios
       
     # Card
     - title: Learn

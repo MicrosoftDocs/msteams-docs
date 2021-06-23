@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Cards reference
 
-The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
+The cards listed in this document are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework (BF), but Teams does not support all Bot Framework cards and instead some Teams cards have been added. Differences are called out in the references in this document.
 
 ## Card examples
 
@@ -77,7 +77,8 @@ An adaptive card is a customizable card that can contain any combination of text
 
 > [!NOTE]
 > * Teams platform supports v1.2 or earlier of adaptive card features.
-> * Media elements are currently not supported in adaptive card v1.2 on the Teams platform.
+> * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
+> * Media elements are currently not supported in Adaptive Cards on the Teams platform.
 
 ### Example of an adaptive card
 

@@ -51,10 +51,10 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 **To register your application in the [AAD portal](https://azure.microsoft.com/features/azure-portal/) overview**
 
-1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
-2. Specify the permissions that your application needs for the AAD endpoint and, optionally, Graph.
-3. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-4. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter **access_as_user** as the **Scope name**.
+1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
+1. Specify the permissions that your application needs for the AAD endpoint and, optionally, Graph.
+1. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
+1. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter **access_as_user** as the **Scope name**.
 
 > [!NOTE]
 > There are some important restrictions that you must know:
@@ -66,35 +66,39 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 **To register your app through the AAD portal**
 
 1. Register a new application in the [AAD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
-2. Select **New Registration**. The **Register an application** page appears.
-3. In the **Register an application** page, enter the following values:
+1. Select **New Registration**. The **Register an application** page appears.
+1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
     2. Choose the **Supported account types**, select single tenant or multitenant account type. ¹
     * Leave **Redirect URI** empty.
     3. Choose **Register**.
-4. On the overview page, copy and save the **Application (client) ID**. You must have it later when updating your Teams application manifest.
-5. Under **Manage**, select **Expose an API**.
-6. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
-7. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
-8. In the **Who can consent?** box, enter **Admins and users**.
-9. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
+1. On the overview page, copy and save the **Application (client) ID**. You must have it later when updating your Teams application manifest.
+1. Under **Manage**, select **Expose an API**.
+
+    > [!NOTE]
+    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+
+1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
+1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
+1. In the **Who can consent?** box, enter **Admins and users**.
+1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
     * **Admin consent title:** Teams can access the user’s profile.
     * **Admin consent description**: Teams can call the app’s web APIs as the current user.
     * **User consent title**: Teams can access your profile and make requests on your behalf.
     * **User consent description:** Teams can call this app’s APIs with the same rights as you have.
-10. Ensure that **State** is set to **Enabled**.
-11. Select **Add scope** to save the details. The domain part of the **Scope name** displayed below the text field must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
-12. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
+1. Ensure that **State** is set to **Enabled**.
+1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed below the text field must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
-13. Navigate to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Graph API:
+1. Navigate to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Graph API:
     * User.Read enabled by default
     * email
     * offline_access
     * OpenId
     * profile
 
-14. Navigate to **Authentication**.
+1. Navigate to **Authentication**.
 
     If an app has not been granted IT admin consent, users have to provide consent the first time they use an app.
 
@@ -113,7 +117,7 @@ Congratulations! You have completed the app registration prerequisites to procee
 >
 > * ¹ If your AAD app is registered in the same tenant where you are making an authentication request in Teams, the user cannot be asked to consent and is granted an access token right away. Users only consent to these permissions if the AAD app is registered in a different tenant.
 > * ² If the custom domain is not added to AAD, you get an error stating that the host name must not be based on an already owned domain. To add custom domain to AAD and register it, follow the [add a custom domain name to AAD](/azure/active-directory/fundamentals/add-custom-domain) procedure, and then repeat step 5. You can also get this error if you are not signed in with Admin credentials in the Office 365 tenancy.
-> * If you are not receiving the user principal name (UPN)) in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in AAD.
+> * If you are not receiving the user principal name (UPN) in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 ### 2. Update your Teams application manifest
 
@@ -151,7 +155,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and additional user consent is required for user-level permissions, a dialog is shown to the user to grant additional consent.
 
-After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims) in AAD.
+After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>

@@ -1,6 +1,6 @@
 ---
 title: Respond to the task module submit action
-author: clearab
+author: surbhigupta
 description: Describes how to respond to the task module submit action from a messaging extension action command
 localization_priority: Normal
 ms.topic: conceptual
@@ -21,7 +21,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
-* [Request the user to provide additional configuration](~/messaging-extensions/how-to/add-configuration-page.md).
+* [Request the user to provide additional configuration]~/get-started/first-message-extension.md).
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 

@@ -48,10 +48,10 @@ Use the Teams Toolkit to create your first project:
 1. Run `dotnet new -i` to install the template from NuGet:
 
    ``` bash
-   dotnet new -i Microsoft.TeamsApp.Blazor
+   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
    ```
 
-   You only need to do this the first time or when updating the template.
+   You only need to do this the first time or when updating the template. Check [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) for the latest version of this package.
 
 1. Create a directory:
 
@@ -264,11 +264,14 @@ The app manifest is loading the tab from a `localhost` URL.  In this section, yo
 
 You can now use the **Preview in Teams** button at the top of the page to launch your app within Teams.
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
+- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)
 - [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a Teams app as a SharePoint Web Part](first-app-spfx.md)

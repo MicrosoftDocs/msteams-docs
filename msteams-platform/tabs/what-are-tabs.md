@@ -1,6 +1,6 @@
 ---
 title: What are custom tabs in Teams?
-author: laujan
+author: surbhigupta
 description: An overview of custom tabs on the Teams platform
 localization_priority: Normal
 ms.topic: overview
@@ -37,6 +37,12 @@ There are two types of tabs available in Teams — channel/group and personal. C
 
 ## Understand how tabs work
 
+You can use one of the following methods to create tabs:
+* [Declare custom tab in app manifest](#declare-custom-tab-in-app-manifest)
+* [Use Adaptive Card to build tabs](#use-adaptive-card-to-build-tabs)
+
+### Declare custom tab in app manifest
+
 A custom tab is declared in the app manifest of your app package. For each webpage you want included as a tab in your app, you define a URL and a scope. Additionally, you need to add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your page, and call `microsoftTeams.initialize()` after your page loads. Doing so will tell Teams to display your page, give you access to Teams-specific information (for example if the Teams client is running the *dark theme*), and allow you to take action based on the results.
 
 Whether you choose to expose your tab within the channel/group or personal scope, you'll need to present an <iframe\> HTML [content page](~/tabs/how-to/create-tab-pages/content-page.md) in your tab. For personal tabs, the content URL is set directly in your Teams app manifest by the `contentUrl` property in the `staticTabs` array. Your tab's content will be the same for all users.
@@ -45,7 +51,12 @@ For channel/group tabs, you also need to create an additional configuration page
 
 You can have multiple channels or group tabs, and up to sixteen personal tabs per app.
 
-## Mobile considerations
+
+### Use Adaptive Card to build tabs
+
+When developing a tab using the traditional method, you need to consider things, such as HTML, CSS considerations to feel native, slow load times, iFrame constraints, server maintenance and costs, and so on. Adaptive Card Tabs is a new way to build tabs in Teams. Instead of embedding web content in an iframe, you can render Adaptive Card to a tab. While the front-end is rendered as Adaptive Card, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card to render.
+
+## Mobile clients
 
 If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md) when creating your tabs. 
 Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
@@ -56,7 +67,9 @@ Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsour
 | **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
 
 > [!NOTE]
->
+> [Apps submitted to the AppSource for publishing on Teams ](../concepts/deploy-and-publish/overview.md#publish-to-appsource) are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
+> For all [apps that are not distributed through the AppSource](../concepts/deploy-and-publish/overview.md), the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+> 
 > The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
 > To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
