@@ -2,7 +2,7 @@
 title: Resource-specific consent in Teams
 description: Describes resource-specific consent in Teams and how to make advantage of it.
 localization_priority:  Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: reference
 keywords: teams authorization OAuth SSO AAD rsc Graph
@@ -12,7 +12,7 @@ keywords: teams authorization OAuth SSO AAD rsc Graph
 > [!NOTE]
 > Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
 
-Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat owners* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular, Teams-specific, RSC permissions define what an application can do within a specific resource:
+Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. The resource-specific consent (RSC) permissions model enables *team owners* and *chat owners* to grant consent for an application to access and/or modify a team's data and a chat's data, respectively. The granular RSC permissions define what an application can do within a specific resource:
 
 ## Resource-specific permissions
 
@@ -23,17 +23,17 @@ Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API int
 |TeamSettings.ReadWrite.Group|Update this team's settings.|
 |ChannelSettings.Read.Group|Get this team's channel names, channel descriptions, and channel settings​.|
 |ChannelSettings.ReadWrite.Group|Update this team's channel names, channel descriptions, and channel settings.​|
-|Channel.Create.Group|Create channels in this team.​|
-|Channel.Delete.Group|Delete channels in this team.​|
-|ChannelMessage.Read.Group |Get this team's channel messages.​|
+|Channel.Create.Group|Create channels in this team. |
+|Channel.Delete.Group|Delete channels in this team. |
+|ChannelMessage.Read.Group |Get this team's channel messages. |
 |TeamsAppInstallation.Read.Group|Get a list of this team's installed apps.|
 |TeamsTab.Read.Group|Get a list of this team's tabs.|
-|TeamsTab.Create.Group|Create tabs in this team.​|
-|TeamsTab.ReadWrite.Group|Update this team's tabs.​|
-|TeamsTab.Delete.Group|Delete this team's tabs.​|
-|TeamMember.Read.Group|Get this team's members.​|
+|TeamsTab.Create.Group|Create tabs in this team. |
+|TeamsTab.ReadWrite.Group|Update this team's tabs. |
+|TeamsTab.Delete.Group|Delete this team's tabs. |
+|TeamMember.Read.Group|Get this team's members. |
 
-For more details, see [Teams resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
+For more details, see [Team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### Resource-specific permissions for a chat
 |Application permission| Action |

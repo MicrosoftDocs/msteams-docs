@@ -99,6 +99,110 @@ Responses from your outgoing webhooks appear in the same reply chain as the orig
 }
 ```
 
+> [!NOTE]
+> * You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
+> * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
+
+Following codes are examples of an Adaptive Card response:
+
+# [C#/.NET](#tab/dotnet)
+
+```csharp
+string content = await this.Request.Content.ReadAsStringAsync();
+Activity incomingActivity = JsonConvert.DeserializeObject<Activity>(content);
+
+var Card = new AdaptiveCard(new AdaptiveSchemaVersion("1.4"))
+{
+    Body = new List<AdaptiveElement>()
+    {
+        new AdaptiveTextBlock(){Text= $"Request sent by: {incomingActivity.From.Name}"},
+        new AdaptiveImage(){Url=new Uri("https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6")},
+        new AdaptiveTextBlock(){Text="Sample image for Adaptive Card.."}
+    }
+};
+
+var attachment = new Attachment()
+{
+    ContentType = AdaptiveCard.ContentType,
+    Content = Card
+};
+
+var sampleResponseActivity = new Activity
+{
+    Attachments = new [] { attachment }
+};
+
+return sampleResponseActivity;
+```
+
+# [JavaScript/Node.js](#tab/javascript)
+
+```javascript
+var receivedMsg = JSON.parse(payload);
+var responseMsg = JSON.stringify({
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "contentUrl": null,
+            "content": {
+                "type": "AdaptiveCard",
+                "version": "1.4",
+                "body": [
+                    {
+                        "type": "TextBlock",
+                        "text": "Request sent by: " + receivedMsg.from.name
+                    },
+                    {
+                        "type": "Image",
+                        "url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+                    },
+                    {
+                        "type": "TextBlock",
+                        "text": "Sample image for Adaptive Card."
+                    }
+                ]
+            },
+            "name": null,
+            "thumbnailUrl": null
+        }
+    ]
+});
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+	"type": "message",
+	"attachments": [
+		{
+			"contentType": "application/vnd.microsoft.card.adaptive",
+			"content": {
+				"type": "AdaptiveCard",
+				"version": "1.4",
+				"body": [
+					{
+						"type": "TextBlock",
+						"text": "Request sent by: Megan"
+					},
+					{
+						"type": "Image",
+						"url": "https://c.s-microsoft.com/en-us/CMSImages/DesktopContent-04_UPDATED.png?version=43c80870-99dd-7fb1-48c0-59aced085ab6"
+					},
+					{
+						"type": "TextBlock",
+						"text": "Sample image for Adaptive Card.."
+					}
+				]
+			}
+		}
+	]
+}
+```
+
+* * *
+
 ## Create an outgoing webhook
 
 1. Select the appropriate team and choose **Manage team** from the (&#8226;&#8226;&#8226;) drop-down menu.

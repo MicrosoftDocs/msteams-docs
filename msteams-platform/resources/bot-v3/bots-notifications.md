@@ -6,7 +6,7 @@ ms.date: 05/20/2019
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
+author: surbhigupta
 ---
 # Handle bot events in Microsoft Teams
 
