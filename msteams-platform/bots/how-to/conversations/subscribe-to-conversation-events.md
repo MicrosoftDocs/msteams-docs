@@ -1381,6 +1381,24 @@ Not available
 
 ---
 
+## Uninstall behavior for personal app with bot
+
+> [!NOTE]
+> Uninstall behavior for personal app with bot is currently available only in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md).
+
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You cannot send or receive messages after an app has been uninstalled.
+
+<img src="~/assets/images/bots/uninstallbot.png" alt="Uninstall event" width="900" height="900"/>
+
+## Event handling for install and uninstall events
+
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams. This occurs in the following cases:
+
+* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+
+It is important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you do not choose to handle.
+
 ## Code sample
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
