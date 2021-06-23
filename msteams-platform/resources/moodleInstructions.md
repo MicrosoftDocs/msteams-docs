@@ -5,7 +5,7 @@ keywords: Teams Moodle app integration plugins
 ms.topic: how-to
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
+author: surbhigupta
 ---
 
 # Install Moodle LMS

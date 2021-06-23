@@ -1,6 +1,6 @@
 ---
 title: Messaging extensions
-author: clearab
+author: surbhigupta
 description: An overview of messaging extensions on the Microsoft Teams platform
 localization_priority: Normal
 ms.topic: overview
@@ -27,7 +27,7 @@ The following image displays the locations from where messaging extensions are i
 A messaging extension consists of a web service that you host and an app manifest, which defines where your web service is invoked from in the Microsoft Teams client. The web service takes advantage of the Bot Framework's messaging schema and secure communication protocol, so you must register your web service as a bot in the Bot Framework. 
 
 > [!NOTE]
-> Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework) to work with the protocol.
+> Though you can create the web service manually, use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
 In the app manifest for Microsoft Teams app, a single messaging extension is defined with up to ten different commands. Each command defines a type, such as action or search and the locations in the client from where it is invoked. The invoke locations are compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload including all the relevant information. Respond with a JSON payload, allowing the Teams client to know the next interaction to enable. 
 

@@ -1,6 +1,6 @@
 ---
 title: Meeting app extensibility
-author: laujan
+author: surbhigupta
 description: Understand the meeting app extensibility 
 ms.topic: conceptual
 ---
