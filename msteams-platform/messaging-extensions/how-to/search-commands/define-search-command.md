@@ -1,6 +1,6 @@
 ---
 title: Define messaging extension search commands
-author: clearab
+author: surbhigupta
 description: Define messaging extension search commands for Microsoft Teams apps.
 ms.topic: conceptual
 ms.author: anclear
