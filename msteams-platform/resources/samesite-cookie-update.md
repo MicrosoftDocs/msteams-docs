@@ -71,7 +71,7 @@ According to the updated SameSite restrictions, a browser does not add a cookie 
 
 ## Android System WebView
 
-Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions become default, tarting with Chrome 80, they are not immediately enforced on WebViews. They are applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager):
+Android WebView is a Chrome system component that allows Android apps to display web content. While the new restrictions become default, starting with Chrome 80, they are not immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager):
 
 * For cookies that are only needed in a first party context, you must declare them as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
 * For cookies needed in a third party context, you must ensure that they are declared as `SameSite=None; Secure`.

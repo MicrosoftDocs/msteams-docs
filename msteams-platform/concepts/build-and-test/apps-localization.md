@@ -68,24 +68,24 @@ Following is an example for manifest.json change to add the `localizationInfo` p
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but it is recommended to omit the `<region>` portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
 
 The Teams client applys the strings in the following order:
 default language strings -> user's language only strings -> user's language + user's region strings.
 
-For example, if you provide a default language of `fr` (French, all regions), and additional language files for `en` (English, all regions) and `en-gb` (English, Great Britain), the user's language is set to `en-gb`. The following changes take place based on the language selection:
+For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'. The following changes take place based on the language selection:
 
-1. The Teams client takes the `fr` strings overwrite them with the `en` strings.
-1. Overwrite the `en` strings with the `en-gb` strings.
+1. The Teams client takes the 'fr' strings and overwrite them with the 'en' strings.
+1. Overwrite the 'en' strings with the 'en-gb' strings.
 
-If the user's language is set to `en-ca`, the following changes take place based on the language selection: 
+If the user's language is set to 'en-ca', the following changes take place based on the language selection: 
 
-1. The Teams client takes the `fr` strings overwrite them with the `en` strings.
-1. Since no `en-ca` localization is supplied, the `en` localizations are used.
+1. The Teams client takes the 'fr' strings and overwrite them with the 'en' strings.
+1. Since no 'en-ca' localization is supplied, the 'en` localizations are used.
 
-If the user's language is set to `es-es`, the Teams client takes the `fr` strings and does not override them with any of the language files.
+If the user's language is set to 'es-es', the Teams client takes the 'fr' strings. The Teams client does not override the strings with any of the language files as no 'es' or 'es-es' translation is provided.
 
-Therefore, you must provide top level, language only translations in your manifest. For example, `en` instead of `en-us`. You must provide region level overrides only for the few strings that need them. 
+Therefore, you must provide top level, language only translations in your manifest. For example, 'en' instead of 'en-us'. You must provide region level overrides only for the few strings that need them. 
 
 ### Example manifest.json change
 
