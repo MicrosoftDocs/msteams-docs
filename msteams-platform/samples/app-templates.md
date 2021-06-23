@@ -692,7 +692,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![Water Cooler Home Page](../assets/images/water-cooler-home-page.png)
+    ![Water Cooler Home Page](../assets/images/appScreens.gif)
 :::column-end:::
 :::row-end:::
 
@@ -700,7 +700,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![Join room](../assets/images/join-room.png)
+    ![Join room](../assets/images/joinRoom.gif)
 :::column-end:::
 :::row-end:::
 
@@ -708,7 +708,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![Room Creation](../assets/images/create-room.png)
+    ![Room Creation](../assets/images/createRoom.gif)
 :::column-end:::
 :::row-end:::
 
@@ -716,7 +716,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![Find Room](../assets/images/find-room.png)
+    ![Find conversation](../assets/images/findConversation.gif)
 :::column-end:::
 :::row-end:::
 
@@ -724,7 +724,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![Attendee invitation](../assets/images/attendee-invitation.png)
+    ![Attendee invitation](../assets/images/attendeeInvitation.gif)
 :::column-end:::
 :::row-end:::
 
@@ -732,7 +732,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 :::row:::
   :::column span="2":::
-    ![App badge](../assets/images/app-badge.png)
+    ![App badge](../assets/images/badge.gif)
 :::column-end:::
 :::row-end:::
 
