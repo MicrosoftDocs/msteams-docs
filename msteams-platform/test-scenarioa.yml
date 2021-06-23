@@ -91,7 +91,7 @@ items:
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
-    1. Append `/api/messages` to `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/message`.
+    1. Append `/api/messages` to `Ngrok base URL` and set it as endpoint address. Your URL would look like this: `https://yourngrokdomain.ngrok.io/api/messages`.
     
         ![Bot endpoint address](~/assets/images/proactive-scenario/bot-endpoint-address.png)
 
@@ -117,12 +117,19 @@ items:
 
         ![Sample proactive message](~/assets/images/proactive-scenario/proactive-message-sample.png)
 
-    1. Go to App Studio > Select Uninstall the app > install the app again.
+    1. Go to Teams and select **Uninstall** your app. 
+
+        ![Uninstall app](~/assets/images/proactive-scenario/uninstall-app.png)    
+    
+    1. Install the same app again.
 
         ![Install App](~/assets/images/proactive-scenario/install-app.png)   
 
-    1. Go to `http://localhost:3978/api/notify` to get `proactive hello` in chat.    
-    1. You receive a welcome message from bot when installation is successful.        
+    1. Enter the http://localhost:3978/api/notify URL.
+
+       ![Proactive message sent](~/assets/images/proactive-scenario/result.png)
+
+       Go to Teams. You receive a welcome message from bot when installation is successful.          
 
         ![Proactive helo in chat](~/assets/images/proactive-scenario/proactive-helo.png)    
 
