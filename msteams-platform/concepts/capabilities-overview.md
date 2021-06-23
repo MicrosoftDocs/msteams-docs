@@ -34,6 +34,34 @@ The following illustration gives you an idea of which capabilities will provide 
 As you familiarize yourself with Teams app development, you understand its core fundamentals. You understand that there is more than one way to build certain features. In such scenarios, consider how you can provide a more native experience to your user.
 For example, you can collect user input in a form built as a tab in the app. You can also do this using a task module without switching views and disrupting user's flow of work. It is important to choose extension points that provide least deviation from a user's regular flow of work.
 
+## Government Community Cloud (GCC)
+
+Government Community Cloud is a government focused copy of the commercial environment. Other types of Teams orgs include:
+
+* GCC High: Department of Defense (DoD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC High was created to meet the needs of DoD and Federal contractors. GCC High is a copy of the DoD cloud but exists in its own sovereign environment.
+* DoD: The DoD cloud is built for the Department of Defense and the DoD only.
+
+The following table includes Teams features and whether they are available for GCC, GCC High, and DoD:
+
+| Features   | GCC | GCC High | DoD |
+|-------------|---------|
+| Teams owned apps that is internally developed apps | ✔️ App is enabled if it has GCC in supportedTenantRegions in its appDefinition | ✔️ App is enabled if it has GCCH in supportedTenantRegions in its appDefinition | ✔️ App is enabled if it has DOD in supportedTenantRegions in its appDefinition |
+| 3p or third-party apps | ✔️ | ❌ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Lob apps |  ✔️ | ✔️ | ✔️ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom tabs |  ✔️ | ✔️ | ✔️ |
+| Custom bots | ✔️ | ❌ | ❌ |
+| Custom InputExtensions | ✔️ | ❌ | ❌ |
+| Custom connectors | ❌ | ❌ | ❌ |
+
+See the following to identify availability of GCC, GCC High, and DoD for those features:
+
+* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
+* For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+* For custom connectors, see [creating Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+
 ## See also
 
 [Build apps for Teams](../overview.md)
