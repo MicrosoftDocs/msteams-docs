@@ -1,6 +1,6 @@
 ---
 title: Enable and configure your apps for Teams meetings
-author: laujan
+author: surbhigupta
 description: Enable and configure your apps for Teams meetings 
 ms.topic: conceptual
 ---
