@@ -143,7 +143,7 @@ Content-Type: application/json
 
 If the user has Microsoft Teams running, app installation occurs immediately. A restart may be required to view the installed app.
 
-### Retrieve the conversation **chatId**
+### Retrieve the conversation `chatId`
 
 When your app is installed for the user, the bot receives a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that contains the necessary information to send the proactive message.
 
