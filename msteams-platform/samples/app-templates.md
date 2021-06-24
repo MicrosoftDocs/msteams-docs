@@ -690,7 +690,7 @@ The app provides an easy interface for anyone to find an existing conversation o
 
 ### Key features
 
-**Water Cooler Home Page**: Browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the **Home Page** show a room name, short description, call duration, and room image. 
+**Water Cooler Home Page**: You can browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the **Home Page** show a room name, short description, call duration, and room image. 
 
 ![Water Cooler Home Page](../assets/images/home-page.png)
 
