@@ -395,7 +395,7 @@
     href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
-  - name: Enable resource-specific consent
+  - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
