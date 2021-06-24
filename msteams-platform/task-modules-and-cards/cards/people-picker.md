@@ -145,11 +145,19 @@ Static `choices` are used in conjunction with dynamic datasets.
 <br><br>
 A choice basically consists of a `title` and a `value`. When used along with a People Picker, these choices are translated to people profiles which have the `title` as the name and `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.   
 
-## Mobile clients
+## Mobile and desktop experience
+
+# [Mobile](#tab/mobile)
 
 People Picker is supported on the iOS and Android mobile clients. Selecting People Picker on mobile launches a new experience from which a search is performed. The search experience is similar to other people selection experience across mobile, such as adding a person to a chat or channel.
 
-![People Picker on Mobile](../../assets/images/cards/people-picker-mobile-experience.gif)
+![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
 
-## Desktop clients
-People Picker is supported in web and desktop client. While searching on the web involves an inline typing experience,
+# [Desktop](#tab/desktop)
+
+People Picker is supported in web and desktop client. While searching on the web involves an inline typing experience.
+
+![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
+
+
+
