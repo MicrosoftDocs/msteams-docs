@@ -78,7 +78,7 @@ The following is a sample tab removal code block:
 
 When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an IFrame. The user is shown a button loaded with the `onClick()` function that calls `microsoftTeams.settings.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page IFrame.
 
-After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notify Teams of the content removal outcome.
+After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 
 >[!NOTE]
 > * To ensure that an authorized user's control over a tab is not inhibited, Teams removes the tab in both success and failure cases.
