@@ -1,5 +1,5 @@
 ---
-title: Contributing to Microsoft Teams documentation
+title: Contribute to Teams documentation
 description: steps for creating and publishing Teams documentation
 author: surbhigupta
 ms.author: lajanuar
@@ -7,9 +7,9 @@ localization_priority: Normal
 ms.topic: contributor-guide
 ---
 
-# Contributing to Microsoft Teams documentation
+# Contribute to Teams documentation
 
-Teams documentation is part of the **Microsoft Docs** technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after **docs.microsoft.com**. For example, `/docs.microsoft.com/microsoftteams/...` is the beginning of the Teams docset file path. Teams articles are written in MarkDown syntax and hosted on GitHub.
+Teams documentation is part of the **Microsoft Docs** technical documentation library. The content is organized into groups called docsets, each representing a group of related documents managed as a single entity. Articles in the same docset have the same URL path extension after **docs.microsoft.com**. For example, `/docs.microsoft.com/microsoftteams/...` is the beginning of the Teams docset file path. Teams articles are written in Markdown syntax and hosted on GitHub.
 
 ## Set up your workspace
 
@@ -24,13 +24,13 @@ Teams documentation is part of the **Microsoft Docs** technical documentation li
 >
 > * Install within VS Code:
 
-   1. Select the **Extensions icon** on the side activity bar or use the **View => Extensions** command or Ctrl+Shift+X and, search for the **Microsoft Docs Authoring Pack**.
-   1. Select the **Install** button.
-   1. After installation, the **Install** button changes to the **Manage** gear button.
+   1. Select the **Extensions icon** on the side activity bar or use the **View => Extensions** command or Ctrl+Shift+X and, search for **Microsoft Docs Authoring Pack**.
+   1. Select **Install**.
+   1. After installation, the **Install** changes to the **Manage** gear button.
 
 ## Review the Microsoft Docs Contributors Guide
 
-The contributors guide offers direction to create, publish, and update technical content on the **Microsoft Docs** platform. 
+The contributors guide provides direction to create, publish, and update technical content on the **Microsoft Docs** platform. 
 
 ## Microsoft Writing, Style, and Content Guides
 
@@ -42,7 +42,7 @@ The contributors guide offers direction to create, publish, and update technical
 
 ## MarkDown reference
 
-Microsoft Docs pages are written in MarkDown syntax and parsed through a [Markdig](https://github.com/lunet-io/markdig) engine. For more information on specific tags and formatting conventions, see [Docs Markdown reference](/contribute/markdown-reference).
+**Microsoft Docs** pages are written in **MarkDown** syntax and parsed through a [Markdig](https://github.com/lunet-io/markdig) engine. For more information on specific tags and formatting conventions, see [Docs Markdown reference](/contribute/markdown-reference).
 
 ## File Paths
 
@@ -54,16 +54,16 @@ For more information on hyperlinks and file paths, see [use links in documentati
 > To reference an article that is **part of** the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path without a leading forward slash.<br>
 > &emsp;&#x2714; Include the Markdown file extension.<br>
->Ex:  **parent directory/directory/path-to-article.md** —> `[Building an app for Microsoft Teams](../concepts/building-an-app.md)` <br><br>
+>Ex:  **parent directory/directory/path-to-article.md** —> [Building an app for Microsoft Teams](../concepts/building-an-app.md) <br><br>
 > To reference a Microsoft Docs library article that **is not part of** the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
 > &emsp;&#x2714; Do not include the file extension. <br> 
-> Ex:  **/docset/address-to-file-location** —> `[Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)`<br><br>
+> Ex:  **/docset/address-to-file-location** —> [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>
 > To reference a page outside of the Microsoft Docs library, such as GitHub, use the full `https` file path.<br>
 
 ## Code Samples and Snippets
 
-Code samples play an important role to use APIs and SDKs effectively. Well presented code samples can communicate how things work more clearly than descriptive text and instructional information alone. Your code samples must be accurate, concise, well documented, and reader friendly. Code that is easy to read is also easy to understand, test, debug, maintain, modify, and extend. For more information, see [How to include code in docs](/contribute/code-in-docs).
+Code samples play an important role to use APIs and SDKs effectively. Well presented code samples can communicate how things work more clearly than descriptive text and instructional information alone. Your code samples must be accurate, concise, well documented, and reader friendly. Code that is easy to read must be easy to understand, test, debug, maintain, modify, and extend. For more information, see [How to include code in docs](/contribute/code-in-docs).
 
 ## See also
 

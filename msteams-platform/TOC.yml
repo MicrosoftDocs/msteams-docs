@@ -483,7 +483,7 @@
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Contributing to Teams docs
+    - name: Contribute to Teams documentation
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
