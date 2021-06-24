@@ -9,7 +9,7 @@ keywords: teams o365 connector
 
 # Create and send messages
 
-You can create actionable messages and send it through Incoming Webhook or Office 365 connector.
+You can create actionable messages and send it through Incoming Webhook or Office 365 Connector.
 
 ## Create actionable messages
 
@@ -42,7 +42,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
 > * For the HttpPOST action, the bearer token is included with the requests. This token includes the Azure AD identity of the Office 365 user who took the action.
 
-## Send a message through Incoming Webhook or Office 365 connector
+## Send a message through Incoming Webhook or Office 365 Connector
 
 To send a message through your Incoming Webhook or Office 365 Connector, post a JSON payload to the webhook URL. This payload must be in the form of an [Office 365 connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 

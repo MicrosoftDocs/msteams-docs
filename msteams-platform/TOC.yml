@@ -313,7 +313,7 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
-- name: Build webhooks and connectors
+- name: Build Webhooks and Connectors
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
@@ -323,7 +323,7 @@
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
   - name: Create an Office 365 Connector
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Send messages to Incoming Webhooks and Connectors
+  - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:

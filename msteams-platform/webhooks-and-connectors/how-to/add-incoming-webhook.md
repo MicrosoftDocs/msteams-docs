@@ -89,4 +89,4 @@ The webhook is available in the Teams channel.
 
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Send messages to webhooks and connectors](~/webhooks-and-connectors/how-to/connectors-using.md)
+* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
