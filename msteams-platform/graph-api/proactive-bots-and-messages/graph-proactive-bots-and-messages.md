@@ -15,9 +15,9 @@ keywords: teams proactive messaging chat installation Graph
 
 ## Proactive messaging in Teams
 
-Proactive messages are initiated by bots to start conversations with a user. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications. Proactive messages in Teams can be delivered as either *ad-hoc* or *dialog-based* conversations as described in the following table:
+Proactive messages are initiated by bots to start conversations with a user. They serve many purposes including sending welcome messages, conducting surveys or polls, and broadcasting organization-wide notifications. Proactive messages in Teams can be delivered as either **ad-hoc** or **dialog-based** conversations:
 
-|Message Type | Description |
+|Message type | Description |
 |----------------|-------------- |
 |Ad-hoc proactive message| The bot interjects a message without interrupting the conversation flow.|
 |Dialog-based proactive message | The bot creates a new dialog thread, takes control of a conversation, delivers the proactive message, closes, and returns control to the previous dialog.|
@@ -28,7 +28,7 @@ Before your bot can proactively message a user, it must be installed either as a
 
 ## Permissions
 
-Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions help you to manage your app's installation lifecycle for all user or personal, or team or channel scopes within the Microsoft Teams platform as shown in the following table:
+Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsappinstallation?view=graph-rest-1.0&preserve-view=true) permissions help you to manage your app's installation lifecycle for all user (personal) or team (channel) scopes within the Microsoft Teams platform:
 
 |Application permission | Description|
 |------------------|---------------------|
@@ -36,10 +36,11 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 |`TeamsAppInstallation.ReadWriteSelfForTeam.All`|Allows a Teams app to read, install, upgrade, and uninstall itself in any *team*, without prior sign in or use.|
 
 To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest with the following values:
-* **id** — your Azure Active Directory (AAD) app ID.
-* **resource** — the resource URL for the app.
 
->[!NOTE]
+* **id**: Your Azure Active Directory (AAD) app ID.
+* **resource**: The resource URL for the app.
+
+> [!NOTE]
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
@@ -54,12 +55,10 @@ To use these permissions, you must add a [webApplicationInfo](../../resources/sc
 
 To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-teams.md) with [proactive messaging](../../concepts/bots/bot-conversations/bots-conv-proactive.md) capabilities that is in your [organization's app store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-your-org) or the [Teams store](../../concepts/deploy-and-publish/apps-publish-overview.md#publish-your-app-to-the-teams-store).
 
->[!TIP]
+> [!TIP]
 > The production-ready [*Company Communicator*](../..//samples/app-templates.md#company-communicator) app template permits broadcast messaging and is a good start to build your proactive bot application.
 
 ### Get the `teamsAppId` for your app
-
-**To get the `teamsAppId` for your app**
 
 1. The `teamsAppId` can be retrieved from your organization's app catalog using the following requests:
 
@@ -188,7 +187,7 @@ Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proa
 * [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
 * [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
-## View additional code samples
+## Additional code samples
 >
 > [!div class="nextstepaction"]
 > [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
