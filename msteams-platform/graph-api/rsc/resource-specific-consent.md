@@ -100,7 +100,7 @@ You can enable or disable [user consent](/azure/active-directory/manage-apps/con
 
     ![Azure RSC chat configuration](../../assets/images/azure-rsc-chat-configuration.png)
 
-To enable or disable user consent using PowerShell, follow the steps outlined in [configure user consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
+In addition, you can enable or disable user consent using PowerShell, follow the steps outlined in [configure user consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-powershell).
 
 ## Register your app with Microsoft identity platform using the AAD portal
 
