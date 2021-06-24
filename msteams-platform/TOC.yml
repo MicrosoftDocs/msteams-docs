@@ -477,7 +477,7 @@
       items:
       - name: Localize your app
         href: concepts/build-and-test/apps-localization.md
-      - name: Localization JSON schema
+      - name: Localization JSON schema reference
         href: resources/schema/localization-schema.md
     - name: SameSite cookie attribute 
       href: resources/samesite-cookie-update.md

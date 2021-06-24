@@ -1,12 +1,12 @@
 ---
-title: Localization for your app
+title: Localize your app
 description: Describes considerations for localizing your Microsoft Teams app.
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams publish store office publishing AppSource localization language
 ms.date: 05/15/2018
 ---
-# Localization for Microsoft Teams apps
+# Localize your app
 
 You must consider the following factors to localize your Microsoft Teams app:
 
@@ -24,13 +24,13 @@ To configure an additional language for your app, in [Partner Center](/office/de
 
 1. Add English language
     * Fill in the app name.
-    * Fill in a short description of the app in English.
+    * Fill in the short description of the app in English.
     * Fill in the long description of the app in English.
     * In the long description, add the line **This app is also available in French**.
     * Upload the images of your app UI in English.
 1. Add French language
     * Fill in the app name.
-    * Fill in a short description of the app in French.
+    * Fill in the short description of the app in French.
     * Fill in the long description of the app in French.
     * Upload the images of your app UI in French.
 
@@ -38,7 +38,7 @@ The images that you upload with the English language are used in AppSource.
 
 ## Localize strings in your app manifest
 
-You must use the Microsoft Teams app schema v1.5 and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to `https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json` and updating the `manifestVersion` property to `1.7`. 
+You must use the Microsoft Teams app schema v1.5 and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to **https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json** and updating the `manifestVersion` property to `1.7`. 
 
 ### Example manifest.json change
 
@@ -89,7 +89,7 @@ Therefore, you must provide top level, language only translations in your manife
 
 ### Example manifest.json change
 
-The corresponding manifest.json change is shown in the following example:
+The manifest.json change is shown in the following example:
 
 ```json
 {
@@ -117,7 +117,7 @@ The corresponding manifest.json change is shown in the following example:
 
 ### Example localization .json file
 
- The corresponding localization.json change is shown in the following example:
+ The localization.json change is shown in the following example:
 
 ```json
 {

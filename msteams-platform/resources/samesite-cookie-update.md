@@ -1,5 +1,5 @@
 ---
-title: Microsoft Teams and the SameSite cookie attribute 
+title: SameSite cookie attribute 
 author: laujan
 description: describes the attributes of SameSite cookie
 keywords: cookie attributes samesite
@@ -30,7 +30,7 @@ Before the introduction of SameSite restrictions, the cookies were stored on the
 
 Google Chrome version 51 introduced the `SetCookie SameSite` specification as an optional attribute. Starting with Build 17672, Windows 10 introduced SameSite cookie support for the [Microsoft Edge browser](https://blogs.windows.com/msedgedev/2018/05/17/samesite-cookies-microsoft-edge-internet-explorer/).
 
-Developers could opt out of adding the SameSite cookie attribute to the `SetCookie` header or they could add it with one of two settings, **Lax** and **Strict**. An unimplemented SameSite attribute was considered the default state.
+You can opt out of adding the SameSite cookie attribute to the `SetCookie` header or add it with one of two settings, **Lax** and **Strict**. An unimplemented SameSite attribute was considered the default state.
 
 ## SameSite cookie attribute: 2020 release
 
