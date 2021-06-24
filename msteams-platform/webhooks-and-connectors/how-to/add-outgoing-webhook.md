@@ -23,7 +23,7 @@ The following table provides the features and description of Outgoing Webhooks:
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content, for example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they cannot use any card actions except for `openURL`.|
 | Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They cannot access any other APIs, such as retrieve the roster or list of channels in a team.|
 
-## Create an Outgoing Webhook
+## Create Outgoing Webhooks
 
 Create Outgoing Webhooks and add custom bots to Teams.
 
