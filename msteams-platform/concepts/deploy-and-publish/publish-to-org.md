@@ -8,7 +8,10 @@ ms.author: surbhigupta
 
 # Publish your Microsoft Teams app to your org
 
-If you built a Microsoft Teams app specifically for the users in your organization, there are several ways to publish the app. The process is essentially the same with each option: You submit the app to your Teams admin, who's responsible for making it available in your org's app catalog.
+There are several ways to publish a Microsoft Teams app you built specifically for your organization. The process is essentially the same with each option:
+
+1. You submit the app to your Teams admin.
+1. The admin reviews your app. Once approved, users can discover your app in your org's app catalog.
 
 ## Prerequisites
 
@@ -43,7 +46,7 @@ If you aren't using a common Teams developer tool, you can still submit your app
 
 ## Next steps
 
-Your Teams admin reviews the submitted app. Your contact information is included in the submission in case they need to contact your. 
+Your Teams admin reviews the submitted app. Your contact information is included in the submission in case they need to contact your.
 
 Once approved, users can discover the app in the Teams store under **Built for your org**.
 
