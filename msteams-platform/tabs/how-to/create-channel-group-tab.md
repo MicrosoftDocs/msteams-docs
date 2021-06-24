@@ -191,10 +191,15 @@ gulp ngrok-serve
 1. From your teams on the left pane, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
 1. In the main pane, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
 1. Go your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
+
+    ![Channel tab added](../../assets/images/tab-images/channeltabadded.png)
+
 1. Select **Add** in the pop-up dialog box. Your tab uploads into Teams.
 1. Return to your team, choose the channel where you want to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
 1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
+
+    ![Channel tab uploaded](../../assets/images/tab-images/channeltabuploaded.png)
 
 # [ASP.NET Core](#tab/aspnetcore)
 
@@ -457,6 +462,8 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. In the next pop-up dialog box, choose either **Select Gray** or **Select Red**, and select **Save**.
 
 1. To view your tab, go to the team or chat where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
+
+    ![Channel tab ASPNET uploaded](../../assets/images/tab-images/channeltabaspnetuploaded.png)
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 

@@ -130,3 +130,6 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. In the next pop-up dialog box, choose either **Select Gray** or **Select Red**, and select **Save**.
 
 1. To view your tab, go to the team where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
+
+    ![Channel tab ASPNETMVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
+

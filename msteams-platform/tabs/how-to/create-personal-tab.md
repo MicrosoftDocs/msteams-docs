@@ -260,6 +260,8 @@ gulp ngrok-serve
 
 1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
+    ![Personal tab uploaded](../../assets/images/tab-images/personaltabuploaded.png)
+
 ### View your personal tab
 
 In the navigation bar located at the far left in Teams, select the ellipses &#x25CF;&#x25CF;&#x25CF; and choose your app from the list.
@@ -448,6 +450,8 @@ In the **App details** section:
 
 1. Under **Developer information**, update **Website** with your **ngrok** HTTPS URL.
 
+    ![App URLs updated](../../assets/images/tab-images/appurls.png)
+
 1. Under **App URLs**, update the **Privacy statement** to `https://<yourngrokurl>/privacy` and **Terms of use** to `https://<yourngrokurl>/tou`>.
 
 ##### Capabilities: Tabs
@@ -463,6 +467,8 @@ In the **Tabs** section:
 1. Update **Content URL** with `https://<yourngrokurl>/personalTab`.
 
     Leave the **Website URL** field blank.
+
+    ![Personal tab details](../../assets/images/tab-images/personaltabdetails.png)
 
 1. Select **Save**.
 
@@ -482,6 +488,8 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. In the **Test and Distribute** section, select **Install**.
 
 1. In the pop-up dialog box, select **Add** and your tab is displayed.
+
+    ![Personal tab ASPNET uploaded](../../assets/images/tab-images/personaltabaspnetuploaded.png)
 
 ### View your personal tab in Teams
 
