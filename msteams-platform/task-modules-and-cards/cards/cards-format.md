@@ -520,4 +520,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-[Card actions](./cards-actions.md)
+[Task modules](~/task-modules-and-cards/cards/cards-format.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Card actions](./cards-actions.md)

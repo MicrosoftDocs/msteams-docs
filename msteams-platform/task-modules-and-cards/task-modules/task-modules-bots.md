@@ -92,7 +92,7 @@ The next section provides an example of receiving and responding to `task/fetch`
 ## Example of task/fetch and task/submit invoke messages in Node.js
 
 > [!NOTE]
-> The schema of the `task/fetch` request is changed according to [payload of task/fetch and task/submit messages](#payload-of-taskfetch-and-tasksubmit-messages). That is, the documentation was correct but the implementation was not. See the `// for Technical Preview [...]` comments for what changed.
+> The schema of the `task/fetch` request is changed according to [payload of task/fetch and task/submit messages](#payload-of-taskfetch-and-tasksubmit-messages). The documentation is correct but the implementation was not. See the `// for Technical Preview [...]` comments for what changed.
 
 ```typescript
 // Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.

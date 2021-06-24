@@ -47,4 +47,9 @@ A task module includes the following as shown in the previous image:
 
 ## See also
 
-[Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+[Cards](~/task-modules-and-cards/what-are-cards.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)

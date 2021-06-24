@@ -441,7 +441,7 @@ Each connector card can display a maximum of ten sections, and each section can 
 > [!NOTE]
 > Any additional sections, images, or actions in a message do not appear.
 
-All text fields support markdown and HTML. You can control which sections use markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`. If you want to use HTML instead, set `markdown` to `false`.
+All text fields support Markdown and HTML. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`. If you want to use HTML instead, set `markdown` to `false`.
 
 If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
 
@@ -941,3 +941,8 @@ The following cards are implemented by the Bot Framework, but are not supported 
 ## See also
 
 [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Task modules](~/task-modules-and-cards/cards/cards-format.md)
