@@ -1,6 +1,6 @@
 ---
 title: Add authentication to your messaging extension
-author: clearab
+author: surbhigupta
 description: How to add authentication to a messaging extension
 localization_priority: Normal
 ms.topic: conceptual

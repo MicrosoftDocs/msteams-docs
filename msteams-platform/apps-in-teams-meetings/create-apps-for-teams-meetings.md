@@ -1,6 +1,6 @@
 ---
 title: Prerequisites and API references for apps in Teams meetings
-author: laujan
+author: surbhigupta
 description: Work with apps for Teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
@@ -339,7 +339,7 @@ The following code provides an example of meeting start event payload:
 
 ```json
 { 
-    "name": "Microsoft/MeetingStart", 
+    "name": "application/vnd.microsoft.meetingStart", 
     "type": "event", 
     "timestamp": "2021-04-29T16:10:41.1252256Z", 
     "id": "123", 
@@ -347,7 +347,6 @@ The following code provides an example of meeting start event payload:
     "serviceUrl": "https://microsoft.com", 
     "from": { 
         "id": "userID", 
-        "name": "", 
         "aadObjectId": "aadOnjectId" 
     }, 
     "conversation": { 
@@ -392,7 +391,7 @@ The following code provides an example of meeting end event payload:
 
 ```json
 { 
-    "name": "Microsoft/MeetingEnd", 
+    "name": "application/vnd.microsoft.meetingEnd", 
     "type": "event", 
     "timestamp": "2021-04-29T16:17:17.4388966Z", 
     "id": "123", 
@@ -400,7 +399,6 @@ The following code provides an example of meeting end event payload:
     "serviceUrl": "https://microsoft.com", 
     "from": { 
         "id": "user id", 
-        "name": "", 
         "aadObjectId": "aadObjectId" 
     }, 
     "conversation": { 
@@ -451,7 +449,7 @@ The following code shows how to capture the metadata of a meeting that is `Meeti
 protected override async Task OnEventActivityAsync(
 ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Event Name is either `Microsoft/MeetingStart` or `Microsoft/MeetingEnd`
+    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
     var meetingEventName = turnContext.Activity.Name;
     // Value contains meeting information (ex: meeting type, start time, etc).
     var meetingEventInfo = turnContext.Activity.Value as JObject; 

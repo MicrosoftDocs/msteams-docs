@@ -92,7 +92,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js` is the main entry point for the messaging extension.
+The bot code is stored in the `bot` directory.  The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -162,9 +162,24 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 </details>
 
-## Next steps
+## Add a configuration page to your messaging extension
 
-Learn about other methods for creating Teams apps:
+[!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+
+## Code sample
+
+The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples). The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
+
+| **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+|-----------------|-----------------|-------------|--------------|--------|
+| Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+
+## Additional code sample
+
+> [!div class="nextstepaction"]
+> [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
+
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)

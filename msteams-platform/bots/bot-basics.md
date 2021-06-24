@@ -1,6 +1,6 @@
 ---
 title: Bot activity handlers
-author: clearab
+author: surbhigupta
 description: Understand the bot activity handlers in Teams.
 ms.topic: conceptual
 localization_priority: Normal

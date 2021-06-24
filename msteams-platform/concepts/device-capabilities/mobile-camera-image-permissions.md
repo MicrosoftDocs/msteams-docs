@@ -24,7 +24,8 @@ For effective integration, you must have a good understanding of [code snippets]
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE] 
-> Currently, Microsoft Teams support for media capabilities is only available for mobile clients.
+> * Currently, Microsoft Teams support for media capabilities is only available for mobile clients.    
+> * Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel. 
 
 ## Update manifest
 

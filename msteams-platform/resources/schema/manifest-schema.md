@@ -10,6 +10,7 @@ keywords: teams manifest schema
 # Reference: Manifest schema for Microsoft Teams
 
 The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., 1.6, and so on are also supported (using "v1.x" in the URL).
+For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following schema sample shows all extensibility options:
 
@@ -254,7 +255,7 @@ The following schema sample shows all extensibility options:
       "Owner.Read.Group",
       "Member.ReadWrite.Group",
       "Owner.ReadWrite.Group"
-    ],
+    ]
   },
   "showLoadingIndicator": false,
   "isFullScreen": false,
@@ -285,7 +286,7 @@ The following schema sample shows all extensibility options:
      "smallImageUrl", 
      "largeImageUrl", 
      "accentColor",
-     "websiteUrl",
+     "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
   ]              
@@ -700,21 +701,19 @@ When a group install scope is selected, it will define the default capability wh
 
 **Optional** - array
 
-The `configurableProperties` block defines the app properties that Teams admin can customize. For more information, see [customize apps in Microsoft Teams](/MicrosoftTeams/customize-apps).
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
-> As a best practice, you must provide customization guidelines for app users and customers to follow when customizing your app.
 
 You can define any of the following properties:
-* `name`: Allows admin to change the app's display name.
-* `shortDescription`: Allows admin to change the app's short description.
-* `longDescription`: Allows admin to change the app's detailed description.
-* `smallImageUrl`: It is the `outline` property in the `icons` block of the manifest.
-* `largeImageUrl`: It is the `color` property in the `icons` block of the manifest.
-* `accentColor`: It is the color to use in conjunction with and as a background for your outline icons.
-* `websiteUrl`: It is the https:// URL to the developer's website.
-* `privacyUrl`: It is the https:// URL to the developer's privacy policy.
-* `termsOfUseUrl`: It is the https:// URL to the developer's terms of use.
 
-
+* `name`: The app's display name.
+* `shortDescription`: The app's short description.
+* `longDescription`: The app's detailed description.
+* `smallImageUrl`: The app's outline icon.
+* `largeImageUrl`: The app's color icon.
+* `accentColor`: The color to use in conjunction with and as a background for your outline icons.
+* `developerUrl`: The HTTPS URL of the developer's website.
+* `privacyUrl`: The HTTPS URL of the developer's privacy policy.
+* `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.

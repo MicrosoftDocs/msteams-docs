@@ -70,7 +70,7 @@
       href: resources/moodleInstructions.md
   - name: Create Share-to-Teams button
     href: concepts/build-and-test/share-to-teams.md
-  - name: Add Teams tab to SharePoint
+  - name: Add a Teams tab to SharePoint
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
@@ -202,12 +202,18 @@
       href: tabs/how-to/create-tab-pages/configuration-page.md
     - name: Create a removal page
       href: tabs/how-to/create-tab-pages/removal-page.md
+    - name: Tabs on mobile
+      href: tabs/design/tabs-mobile.md
     - name: Get context for your tab
       href: tabs/how-to/access-teams-context.md  
     - name: Build tabs with Adaptive Cards
       href: tabs/how-to/build-adaptive-card-tabs.md
     - name: Tabs link unfurling and Stage View
       href: tabs/tabs-link-unfurling.md
+    - name: Create conversational tabs
+      href: tabs/how-to/conversational-tabs.md
+    - name: Tab margin changes
+      href: resources/removing-tab-margins.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -289,8 +295,6 @@
       href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
   - name: Search commands
     items:
-    - name: Add a configuration page
-      href: messaging-extensions/how-to/add-configuration-page.md
     - name: Define search commands
       href: messaging-extensions/how-to/search-commands/define-search-command.md
     - name: Respond to search commands
@@ -307,7 +311,7 @@
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  - name: Together Mode in Teams
+  - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
   items:
@@ -371,8 +375,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Add SSO with Teams Toolkit for Visual Studio Code
-      href: toolkit/visual-studio-code-tab-sso.md 
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -427,8 +429,10 @@
     items:
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: Resource-specific consent JSON test file
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: Resource-specific consent for team JSON test file
+      href: graph-api/rsc/test-team-rsc-json-file.md
+    - name: Resource-specific consent for chat JSON test file
+      href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Distribute your app
   items:
   - name: Overview
@@ -477,8 +481,6 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Localization JSON schema
         href: resources/schema/localization-schema.md
-    - name: Tab margin changes
-      href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions

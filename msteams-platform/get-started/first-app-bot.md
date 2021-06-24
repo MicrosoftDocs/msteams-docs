@@ -3,7 +3,7 @@ title: Get started - Build your first conversational bot
 author: adrianhall
 description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
-ms.date: 05/20/2021
+ms.date: 05/27/2021
 ms.topic: quickstart
 ---
 
@@ -84,7 +84,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
+The bot code is stored in the `bot` directory.  The `bot/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -104,7 +104,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. When prompted, select **Use the web app instead**.
+1. Your web browser starts to run the app. If prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when this happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
@@ -155,11 +155,13 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 </details>
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
 - [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
-- [Create a messaging extension](first-message-extension.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a messaging extension](first-message-extension.md)

@@ -1,6 +1,6 @@
 ---
 title: Respond to search command
-author: clearab
+author: surbhigupta
 description: How to respond to the search command from a messaging extension in a Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
@@ -341,8 +341,8 @@ The default query has the same structure as any regular user query, with the `na
 
 ## See also
 
-[Add configuration to a messaging extension](~/messaging-extensions/how-to/add-configuration-page.md)
- 
+[Add configuration to a messaging extension](~/get-started/first-message-extension.md)
+
 ## Next step
 
 > [!div class="nextstepaction"]
