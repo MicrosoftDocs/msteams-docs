@@ -66,7 +66,7 @@ Knowing who your users are helps you to craft the right experience. Do you expec
 
 Remember, users can discover your app in a variety of ways. They might be the ones installing it or they might be introduced to your app when another user uses it to share content. If you want more users to use your app, you must look for ways to introduce yourself to everyone.
 
-Above all else, remember that nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
+Above all, remember that nobody likes spam. Blasting away with personal and channel messages is a good way to get un-installed quickly!
 
 ## Plan for the future
 

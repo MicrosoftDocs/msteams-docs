@@ -105,7 +105,7 @@ The Toolkit automatically creates scaffolding for you in the project directory b
 - The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
-Since you selected an SPFx Webpart project, the following files are relevant to your UI:
+Since you selected a SPFx Webpart project, the following files are relevant to your UI:
 
 - The folder `SPFx/src/webparts/{webpart}` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
@@ -231,11 +231,13 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
 
-## Next steps
-
-Learn about other methods for creating Teams apps:
+## See also
 
 - [Create a Teams app with React](first-app-react.md)
 - [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a conversational bot app](first-app-bot.md)
 - [Create a messaging extension](first-message-extension.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a conversational bot app](first-app-bot.md)
