@@ -5,9 +5,9 @@
 
 **To upload your tab with App Studio**
 
-1. Open Microsoft Teams. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. Go to Microsoft Teams. If you use the [web based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Open **App Studio** and select the **Manifest editor** tab.
+1. Go to **App Studio** and select the **Manifest editor** tab.
 
 1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
 
@@ -60,13 +60,13 @@ In the **Domains and permissions** section, the **Domains from your tabs** field
 >[!IMPORTANT]
 > On the right, in **Description**, you see the following warning:
 >
->&#9888; "**The 'validDomains' array cannot contain a tunneling site...**"
+> &#9888; **The 'validDomains' array cannot contain a tunneling site...**
 >
 >This warning can be ignored while testing your tab.
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up window, select **Add** and your tab is displayed with two options.
+1. In the pop-up dialog box, select **Add** and your tab is displayed with two options.
 
 1. From the options in the tab, choose either **Select Gray** or **Select Red**. The tab is displayed according to the color you selected.
 

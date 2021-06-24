@@ -16,7 +16,7 @@ You can create a channel or group tab using Node.js and the Yeoman Generator, us
 ## Create a custom channel and group tab using Node.js and the Yeoman Generator
 
 > [!NOTE]
-> This article follows the steps outlined in the [build Your First Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
+> This article follows the steps outlined in the [build Your first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 You can create a custom channel or group tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/).
 
@@ -26,7 +26,8 @@ You must have an understanding of the following prerequisites:
 
 - You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-    If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+    > [!NOTE]
+    > If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
@@ -34,13 +35,13 @@ In addition, this project requires that you have the following installed in your
 
 - [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following in your command prompt:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Install the Microsoft Teams Apps generator by typing the following in your command prompt:
+- Install the Microsoft Teams Apps generator by entering the following in your command prompt:
 
     ```bash
     npm install generator-teams --global
@@ -50,9 +51,9 @@ In addition, this project requires that you have the following installed in your
 
 **To generate your project**
 
-1. Open a command prompt and create a new directory for your tab project.
+1. At a command prompt, create a new directory for your tab project.
 
-1. To start the generator, navigate to your new directory and type the following command:
+1. To start the generator, go to your new directory and type the following command:
 
     ```bash
     yo teams
@@ -64,19 +65,19 @@ In addition, this project requires that you have the following installed in your
 
     **What is your solution name?**
 
-    This is your project name. You can accept the suggested name by pressing enter.
+    This is your project name. You can accept the suggested name by selecting the **Enter** key.
 
     **Where do you want to place the files?**
 
-    You're currently in your project directory. Press enter.
+    You are currently in your project directory. Select **Enter**.
 
     **Title of your Microsoft Teams app project?**
 
-    This is your app package name and will be used in the app manifest and description.
+    This is your app package name and will be used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
 
     **Your (company) name? (max 32 characters)**
 
-    Your company name will be used in the app manifest.
+    Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
     **Which manifest version would you like to use?**
 
@@ -88,15 +89,15 @@ In addition, this project requires that you have the following installed in your
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-    This field isn't required and should only be used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field is not required and should only be used if you are already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
     **What do you want to add to your project?**
 
-    Select ( &ast; ) A Tab.
+    Select **( &ast; ) A Tab**.
 
     **The URL where you will host this solution?**
 
-    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
+    By default the generator suggests an Azure Web Sites URL. You are only testing your app locally, therefore, a valid URL is not necessary.
 
     **Would you like show a loading indicator when your app/tab loads?**
 
@@ -124,7 +125,7 @@ In addition, this project requires that you have the following installed in your
 
     **What scopes do you intend to use for your Tab?**
 
-    You can select a Team or a group chat.
+    You can select a team or a group chat.
 
     **Do you require Azure AD Single-Sign-On support for the tab?**
 
@@ -139,13 +140,13 @@ In addition, this project requires that you have the following installed in your
 >
 > For example: DefaultTabName: **MyTab** => **/MyTabTab/**
 
-In your project directory, navigate to the following:
+1. In Visual Studio Code or any code editor, go to your project directory and open the following file:
 
-```bash
-./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
-```
+    ```bash
+    ./src/app/scripts/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.tsx
+    ```
 
-Locate the `render()` method and add the following `<div>` tag and content to the top of the `<PanelBody>` container code:
+1. Locate the `render()` method and add the following `<div>` tag and content to the top of the `<PanelBody>` container code:
 
 ```html
     <PanelBody>
@@ -155,11 +156,11 @@ Locate the `render()` method and add the following `<div>` tag and content to th
     </PanelBody>
 ```
 
-Make sure to save the updated file.
+1. Make sure to save the updated file.
 
 ### Build and run your application
 
-Open a command prompt in your project directory to complete the next tasks.
+At a command prompt, open your project directory to complete the next tasks.
 
 [!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
 
@@ -180,16 +181,16 @@ gulp ngrok-serve
 ```
 
 > [!IMPORTANT]
-> After your tab has been uploaded to Microsoft Teams and successfully saved, you can view it in the tabs gallery, add it to the tabs bar, and interact with it until your ngrok tunnel session ends. If you restart your ngrok session, you'll need to update your app with the new URL.
+> After your tab has been uploaded to Microsoft Teams and successfully saved, you can view it in the tabs gallery, add it to the tabs bar, and interact with it until your ngrok tunnel session ends. If you restart your ngrok session, you must update your app with the new URL.
 
 ### Upload your application to Teams
 
 **To upload your application to Teams**
 
-1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
-1. From your teams on the left panel, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
-1. In the main panel, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
-1. Open your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
+1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com) you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. From your teams on the left pane, select the ellipses &#x25CF;&#x25CF;&#x25CF; next to the team that you are using to test your tab and choose **Manage team**.
+1. In the main pane, select **Apps** from the tab bar and choose **Upload a custom app** located in the lower right corner of the page.
+1. Go your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 1. Select **Add** in the pop-up dialog box. Your tab uploads into Teams.
 1. Return to your team, choose the channel where you want to display the tab, select ➕ from the tab bar, and choose your tab from the gallery.
 1. Follow the directions for adding a tab. There is a custom configuration dialog box for your channel or group tab.
@@ -207,7 +208,8 @@ You must have an understanding of the following prerequisites:
 
 - You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-    - If you do not currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
+    > [!NOTE]
+    > If you do not currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
 
 - Use App Studio to import your application to Teams. To install App Studio, select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the lower left corner of the Teams app, and search for **App Studio**. After you find the tile, select it and choose **Add** in the pop-up dialog box to install it.
 
@@ -219,18 +221,20 @@ In addition, this project requires that you have the following installed in your
 
 ### Get the source code
 
-Open a command prompt and create a new directory for your tab project. A simple project is provided to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory using the following command:
+At a command prompt, create a new directory for your tab project. A simple project is provided to get you started. Clone the sample repository into your new directory using the following command:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
+Alternately, you can retrieve the source code by downloading the zip folder and extracting the files.
+
 **To build and run the tab project**
 
-1. After you have the source code, open Visual Studio and select **Open a project or solution**.
-1. Navigate to the tab application directory and open **ChannelGroupTab.sln**.
-1. To build and run your application press **F5** or choose **Start Debugging** from the **Debug** menu.
-1. In a browser navigate to the following URLs and verify the application loaded properly:
+1. After you have the source code, go to Visual Studio and select **Open a project or solution**.
+1. Go to the tab application directory and open **ChannelGroupTab.sln**.
+1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
+1. In a browser, go to the following URLs and verify the application loaded properly:
 
 - `http://localhost:44355`
 - `http://localhost:44355/privacy`
@@ -278,7 +282,7 @@ These files need to be zipped in an app package for use in uploading your tab to
 
 #### .csproj
 
-In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file you see the following code that creates and updates your zip folder when the application builds:
+In the Visual Studio Solution Explorer window, right-click on the project and select **Edit Project File**. At the end of the file, you see the following code that creates and updates your zip folder when the application builds:
 
 ```xml
 <PropertyGroup>
@@ -302,9 +306,9 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 Microsoft Teams is a cloud-based product and requires that your tab content be available from the cloud using HTTPS endpoints. Teams does not allow local hosting. You must either publish your tab to a public URL, or use a proxy that exposes your local port to an internet-facing URL.
 
-To test your tab, use [ngrok](https://ngrok.com/docs). Your server's web endpoints are available while ngrok is running on your computer. If you close ngrok, the URLs are different the next time you start it.
+To test your tab, use [ngrok](https://ngrok.com/docs). Your server's web endpoints are available while ngrok is running on your computer. In the free version of ngrok, if you close ngrok, the URLs are different the next time you start it.
 
-- Open a command prompt in the root of your project directory and run the following command:
+- At a command prompt in the root of your project directory, run the following command:
 
     ```bash
     ngrok http https://localhost:44355 -host-header="localhost:44355"
@@ -322,7 +326,7 @@ Within **Tab.cshtml** the application presents the user with two option buttons 
 
 For your tab to display in Teams, you must include the **Microsoft Teams JavaScript client SDK** and include a call to `microsoftTeams.initialize()` after your page loads. This is how your tab and the Teams client communicate:
 
-Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
+Go to the **Shared** folder, open **_Layout.cshtml**, and add the following to the `<head>` tag:
 
 ```html
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
@@ -336,7 +340,7 @@ Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the followin
 
 **To update Tab.cshtml**
 
-1. Open **Tab.cshtml** and update the embedded `<script>`.
+1. Open **Tab.cshtml** in Visual Studio and update the embedded `<script>`.
 
 1. At the top of the script, call `microsoftTeams.initialize()`.
 
@@ -378,22 +382,22 @@ Navigate to the **Shared** folder, open **_Layout.cshtml**, and add the followin
 
 **To build and run your application**
 
-1. In Visual Studio press **F5**, or choose **Start Debugging** from the **Debug** menu.
+1. In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page via the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [!TIP]
-> You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listend and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
+> You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update your application with the new URL.
 
 ### Upload your tab for Teams
 
 > [!NOTE]
-> We use App Studio to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file. If you do, ensure that you build the solution again to create the **tab.zip** file to upload.
+> App Studio can be used to edit your **manifest.json** file and upload the completed package to Teams. You can also manually edit the **manifest.json** file. If you do, ensure that you build the solution again to create the **tab.zip** file to upload.
 
 **To upload your tab with App Studio**
 
-1. Open Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
+1. Go to Microsoft Teams. If you use the [web-based version](https://teams.microsoft.com), you can inspect your front-end code using your browser's [developer tools](~/tabs/how-to/developer-tools.md).
 
-1. Open **App Studio** and select the **Manifest editor** tab.
+1. Go to **App Studio** and select the **Manifest editor** tab.
 
 1. Select **Import an existing app** in the **Manifest editor** to begin updating the app package for your tab. The source code comes with its own partially complete manifest. The name of your app package is **tab.zip**. It is available from the following path:
 
@@ -452,7 +456,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. In the next pop-up dialog box, choose either **Select Gray** or **Select Red**, and select **Save**.
 
-1. To view your tab, navigate to the team you installed it on, and select it from the tab bar. The page that you chose during configuration is displayed.
+1. To view your tab, go to the team or chat where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
@@ -464,7 +468,8 @@ You can create a custom channel or group tab using C# and ASP.Net Core MVC. [App
 
 - You must have a Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you do not currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
+    > [!NOTE]
+    > If you do not currently have a Microsoft 365 account, you can sign up for a free subscription through the [Microsoft Developer Program](https://developer.microsoft.com/en-us/microsoft-365/dev-program). The subscription remains active as long as you are using it for ongoing development.
 
 - Use App Studio to import your application to Teams. To install App Studio, select **Apps** ![Store App](~/assets/images/tab-images/storeApp.png) at the lower left corner of the Teams app, and search for **App Studio**. After you find the tile, select it and choose **Add** in the pop-up dialog box to install it.
 
@@ -476,16 +481,18 @@ In addition, this project requires that you have the following installed in your
 
 ### Get the source code
 
-Open a command prompt and create a new directory for your tab project. A simple [Channel Group Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) project is provided to get you started. To retrieve the source code you can download the zip folder and extract the files or clone the sample repository into your new directory using the following command:
+At a command prompt, create a new directory for your tab project. A simple [Channel Group Tab](https://github.com/OfficeDev/microsoft-teams-sample-tabs/tree/master/ChannelGroupTabMVC) project is provided to get you started. Clone the sample repository into your new directory using the following command:
 
 ```bash
 git clone https://github.com/OfficeDev/microsoft-teams-sample-tabs.git
 ```
 
+Alternately, you can retrieve the source code by downloading the zip folder and extracting the files.
+
 **To build and run the tab project**
 
-1. After you have the source code, open Visual Studio and select **Open a project or solution**.
-1. Navigate to the tab application directory and open **ChannelGroupTabMVC.sln**.
+1. After you have the source code, go to Visual Studio and select **Open a project or solution**.
+1. Go to the tab application directory and open **ChannelGroupTabMVC.sln**.
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. In a browser, navigate to the following URLs and verify that the application loaded properly:
 

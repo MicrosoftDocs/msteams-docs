@@ -12,7 +12,7 @@ ms.author: lajanuar
 
 Teams tabs must adhere to the following prerequisites:
 
-* You must allow your tab pages to be served in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
+* You must allow your tab pages to be shown in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
   * Set header: `Content-Security-Policy: frame-ancestors teams.microsoft.com *.teams.microsoft.com *.skype.com`
   * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`.
   * Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still accepted by most browsers.
@@ -22,7 +22,7 @@ Teams tabs must adhere to the following prerequisites:
     > [!NOTE]
     > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).
 
-* Browsers adhere to a same-origin policy restriction. It prevents webpage from making requests to different domain than the served web page. However, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic must allow the Teams client to validate the origin against a static `validDomains` list in the app manifest when loading or communicating with the tab.
+* Browsers adhere to a same-origin policy restriction. It prevents webpages from making requests to different domains than the served web page. However, you can redirect the configuration or content page to another domain or subdomain. Your cross-domain navigation logic must allow the Teams client to validate the origin against a static `validDomains` list in the app manifest when loading or communicating with the tab.
 
 * You must style your tabs based on the Teams client's theme, design, and intent. Typically, tabs work best when they are built to address a specific need and focus on a small set of tasks or a subset of data that is relevant to the tab's channel location.
 
