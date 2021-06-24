@@ -12,27 +12,51 @@ When building your app, it's important to know what you can and can't customize 
 
 The following wireframes show you:
 
-* The surfaces you can customize in each Teams app capability (outlined in blue).
+* The surfaces you can customize in each Teams app capability (outlined in pink).
 * The scopes each capability supports.
 
-> [!NOTE]
+> [!TIP]
 > **What does scope mean?** A scope is an area in Teams where people can use your app. Apps can have one or many scopes, including personal, channels, chats, and meetings.
 
 ## Personal apps
 
-Personal apps provide a large canvas to host your app content for individual users. The canvas is an iframe so you can completely customize the experience.
+Personal apps provide a large canvas to host your app content for individual users.
 
 ***Supported scopes**: Personal*
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps." border="false":::
+# [Desktop](#tab/desktop)
+
+The canvas is an iframe so you can completely customize the experience.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on desktop." border="false":::
+
+# [Mobile](#tab/mobile)
+
+The canvas is a webview so you can completely customize the experience.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on mobile." border="false":::
+
+---
 
 ## Tabs
 
-Tabs provide a large canvas to host your app content for a group of users. You can include tabs in shared spaces such as channels, chats, and meeting invites. The canvas is an iframe so you can completely customize the experience.
+Tabs provide a large canvas to host your app content for a group of users. You can include tabs in shared spaces such as channels, chats, and meeting invites.
 
 ***Supported scopes**: Channels, Chats, Meetings*
 
+# [Desktop](#tab/desktop)
+
+The canvas is an iframe so you can completely customize the experience.
+
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs." border="false":::
+
+# [Mobile](#tab/mobile)
+
+The canvas is a webview so you can completely customize the experience.
+
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-tabs-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for tabs." border="false":::
+
+---
 
 ## Bots
 
