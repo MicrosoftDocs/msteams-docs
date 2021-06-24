@@ -23,15 +23,15 @@ If you're publishing to the store, you need to be aware that localizing your App
 To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app. French is used in this example:
 
 1. Add English language
-    * Fill in the app name.
-    * Fill in a short description of the app in English.
-    * Fill in the long description of the app in English.
-    * In the long description, please also add the line “This app is available in “French”.
+    * Enter the app name.
+    * Enter a short description of the app in English.
+    * Enter the long description of the app in English.
+    * In the long description, enter: **This app is available in French**.
     * Upload the images of your app UI (in English).
 2. Add French language
-    * Fill in the app name.
-    * Fill in a short description of the app in French.
-    * Fill in the long description of the app in French.
+    * Enter the app name.
+    * Enter a short description of the app in French.
+    * Enter the long description of the app in French.
     * Upload the images of your app UI (in French).
 
 The images you upload with the English language will be the ones used in AppSource.
@@ -50,7 +50,7 @@ You must use the Microsoft Teams app schema v1.5+ to properly localize your app.
 }
 ```
 
-You will then want to add the 'localizationInfo' property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings do not match any of your additional languages.
+You can add the 'localizationInfo' property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings do not match any of your additional languages.
 
 ### Example manifest.json change
 
