@@ -40,7 +40,7 @@ items:
   durationInMinutes: 3
   content: |
     1.	Download the [sample code](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/Send%20Proactive%20Messages.zip) (Zip file) and extract the files.
-    1.	Go to the extracted files and double-click `ProactiveBot.csproj`.     
+    1.	Go to the extracted files and double-click **ProactiveBot.csproj**.     
         The solution opens in Visual Studio.
     1.	Right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
@@ -57,7 +57,7 @@ items:
         1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
         1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
         1.	Select **Add**.
-        1.	Enter **nuget.org** in the **Name** and **https://api.nuget.org/v3/index.json in the **Source** fields.
+        1.	Enter **nuget.org** in the **Name** and **https://api.nuget.org/v3/index.json** in the **Source** fields.
         1.	Select **Update** and **OK**.
         1.	Rebuild your project.
         <br>
@@ -65,8 +65,8 @@ items:
         </details>
 
     1. Go to the folder where ngrok is saved and extract the files.
-    1. Open the `ngrok-stable window.amd` folder.
-    1. Double-click the `ngrok.exe` file. The terminal window opens:
+    1. Open the **ngrok-stable window.amd** folder.
+    1. Double-click the **ngrok.exe** file. The terminal window opens:
 
         ![ngrok terminal window](~/assets/images/proactive-scenario/ngrok-terminal-window.png)
 
@@ -79,7 +79,7 @@ items:
 - title: Create and install Teams app
   durationInMinutes: 5
   content: |
-    1. Go to Teams > **App Studio** and import the `AppManifest.zip` file available in the downloaded sample code (Zip file).
+    1. Go to Teams > **App Studio** and import the **AppManifest.zip** file available in the downloaded sample code (Zip file).
 
         ![App Studio import App](~/assets/images/proactive-scenario/app-studio-import-app.png) 
 
@@ -87,7 +87,7 @@ items:
 
         ![Bot set up](~/assets/images/proactive-scenario/bot-setup.png)  
 
-    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**) and select **Personal** to create the bot.
+    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**) and select **Personal**, and select **Create bot** to create the bot.
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
@@ -103,12 +103,12 @@ items:
     
         ![Generate app password](~/assets/images/proactive-scenario/generate-app-password.png)
 
-    1. Go to Visual Studio and open the `appsettings.json` file.  Paste the password as the value for `MicrosoftAppPassword`.    
-    1. Go to App Studio, and copy the App ID. 
+    1. Go to Visual Studio and open the **appsettings.json** file.  Paste the password as the value for `MicrosoftAppPassword`.    
+    1. Go to **App Studio**, and copy the App ID. 
 
         ![Generate app ID](~/assets/images/proactive-scenario/generate-app-id.png)
 
-    1. Go to Visual Studio and open the `appsettings.json` file.  Paste the App ID as the value for `MicrosoftAppId`. Your `appsettings.json` will have the following setting values:    
+    1. Go to Visual Studio and open the **appsettings.json** file.  Paste the App ID as the value for `MicrosoftAppId`. Your `appsettings.json` will have the following setting values:    
 
         ![Appsetting values](~/assets/images/proactive-scenario/app-setting-values.png)
 
@@ -143,7 +143,7 @@ items:
 
         ![Stop debug](~/assets/images/proactive-scenario/stop-debug.png)
 
-    1. Right-click **Dependencies**, select **Manage Nu-get Packages**.
+    1. Right-click **Dependencies**, select **Manage NuGet Packages**.
 
         ![Add Adaptive Card package1](~/assets/images/proactive-scenario/add-adaptive-card-package1.png)
 
