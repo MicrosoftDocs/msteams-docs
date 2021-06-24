@@ -28,7 +28,7 @@ Personal apps provide a large canvas to host your app content for individual use
 
 The canvas is an iframe so you can completely customize the experience.
 
-:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on desktop." border="false":::
+:::image type="content" source="../../assets/images/design-guidelines/app-structure-personal-apps-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for personal apps on desktop." border="false":::
 
 # [Mobile](#tab/mobile)
 
