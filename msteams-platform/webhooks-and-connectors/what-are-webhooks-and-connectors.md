@@ -32,6 +32,7 @@ Office 365 Connectors allow you to create a custom configuration page for your I
 
 > [!NOTE]
 > You can distribute the Office 365 Connector Teams app to our AppStore.
+
 ## Create and send messages
 
 Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Office 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL.
