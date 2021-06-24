@@ -1,5 +1,5 @@
 ---
-title: Localization JSON schema reference
+title: Localize JSON schema reference
 description: Describes the localization schema supported by the localization file for Microsoft Teams
 ms.topic: reference
 localization_priority: Normal
@@ -7,7 +7,7 @@ keywords: teams manifest schema localization
 ms.date: 05/20/2019
 ---
 
-# Localization JSON schema reference
+# Localize JSON schema reference
 
 The Microsoft Teams localization file describes language translations that are served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json). 
 

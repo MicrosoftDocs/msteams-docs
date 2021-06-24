@@ -63,7 +63,7 @@ Any cookies used by embedded content are considered as third party when the site
 
 ### Authentication
 
-HYou must use the web based authentication flow for the following:
+You must use the web based authentication flow for the following:
 
 * Embedded content pages in tabs.
 * Configuration page, task module, and messaging extension.
