@@ -256,7 +256,7 @@ gulp ngrok-serve
 1. From the lower left corner, choose **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
-    ![Adding your personal tab](../assets/images/tab-images/addingpersonaltab.png)
+    ![Adding your personal tab](../../assets/images/tab-images/addingpersonaltab.png)
 
 1. Select **Add** in the pop-up dialog box. Your tab is uploaded to Teams.
 
