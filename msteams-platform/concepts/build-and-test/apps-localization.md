@@ -23,15 +23,15 @@ If you are publishing the app to the store, you must be aware that localizing yo
 To configure an additional language for your app, in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center), select both English and the additional language of the app. French is used as an additional language in the following example:
 
 1. Add English language
-    * Fill in the app name.
-    * Fill in the short description of the app in English.
-    * Fill in the long description of the app in English.
+    * Enter the app name.
+    * Enter the short description of the app in English.
+    * Enter the long description of the app in English.
     * In the long description, add the line **This app is also available in French**.
     * Upload the images of your app UI in English.
 1. Add French language
-    * Fill in the app name.
-    * Fill in the short description of the app in French.
-    * Fill in the long description of the app in French.
+    * Enter the app name.
+    * Enter the short description of the app in French.
+    * Enter the long description of the app in French.
     * Upload the images of your app UI in French.
 
 The images that you upload with the English language are used in AppSource.
@@ -56,7 +56,7 @@ You must add the `localizationInfo` property with the default language that your
 
 ### Example manifest.json change
 
-Following is an example for manifest.json change to add the `localizationInfo` property with the default language that your application supports:
+The following manifest.json helps to add the `localizationInfo` property with the default language that your application supports:
 
 ```json
 {
@@ -68,9 +68,9 @@ Following is an example for manifest.json change to add the `localizationInfo` p
 }
 ```
 
-You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
+You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag, which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
 
-The Teams client applys the strings in the following order:
+The Teams client applies the strings in the following order:
 default language strings -> user's language only strings -> user's language + user's region strings.
 
 For example, you provide a default language of 'fr' (French, all regions), and additional language files for 'en' (English, all regions) and 'en-gb' (English, Great Britain), the user's language is set to 'en-gb'. The following changes take place based on the language selection:
