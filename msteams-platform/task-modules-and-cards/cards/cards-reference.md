@@ -945,4 +945,4 @@ The following cards are implemented by the Bot Framework, but are not supported 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Task modules](~/task-modules-and-cards/cards/cards-format.md)
+> [Format cards](~/task-modules-and-cards/cards/cards-format.md)

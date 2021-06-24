@@ -519,4 +519,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Universal Actions for Adaptive Cards](../Universal-actions-for-adaptive-cards/Overview.md)
+> [Universal Actions for Adaptive Cards](../cards/Universal-actions-for-adaptive-cards/Overview.md)
