@@ -60,7 +60,9 @@ To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-te
 
 ### Get the `teamsAppId` for your app
 
-1. The `teamsAppId` can be retrieved from your organization's app catalog using the following requests:
+You can retrieve the `teamsAppId` in the following ways:
+
+* From your organization's app catalog:
 
     **Microsoft Graph page reference:** [teamsApp resource type](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true)
 
@@ -70,7 +72,7 @@ To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-te
         GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
-    The request must return a `teamsApp` object. The returned object `id` is the app's catalog generated app ID and is different from the ID that you provided in your Teams app manifest:
+    The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your Teams app manifest:
 
     ```json
     {
@@ -86,7 +88,7 @@ To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-te
     }
     ```
 
-1. If your app has already been uploaded or sideloaded for a user in the personal scope, you can retrieve the `teamsAppId` as follows:
+* If your app has already been uploaded or sideloaded for a user in personal scope:
 
     **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -96,7 +98,7 @@ To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-te
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
     ```
 
-1. If your app has been uploaded or sideloaded for a channel in the team scope, you can retrieve the `teamsAppId` as follows:
+* If your app has already been uploaded or sideloaded for a channel in team scope:
 
     **Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -106,7 +108,7 @@ To get started, you need a [bot for Teams](../../bots/how-to/create-a-bot-for-te
     GET https://graph.microsoft.com/v1.0/teams/{team-id}/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
     ```
 
-    >[!TIP]
+    > [!TIP]
     > To narrow the list of results, you can filter any of the fields of the [**teamsApp**](/graph/api/resources/teamsapp?view=graph-rest-1.0&preserve-view=true) object.
 
 ### Determine whether your bot is currently installed for a message recipient
@@ -121,7 +123,10 @@ You can determine whether your bot is currently installed for a message recipien
 GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/id eq '{teamsAppId}'
 ```
 
-This request returns an empty array if the app is not installed, and an array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) object if the app is installed.
+The request returns:
+
+* An empty array if the app is not installed.
+* An array with a single [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-v1.0&preserve-view=true) object if the app is installed.
 
 ### Install your app
 
@@ -145,8 +150,6 @@ If the user has Microsoft Teams running, app installation occurs immediately. A 
 ### Retrieve the conversation `chatId`
 
 When your app is installed for the user, the bot receives a `conversationUpdate` [event notification](../../resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) that contains the necessary information to send the proactive message.
-
-The `chatId` can also be retrieved as follows:
 
 **Microsoft Graph page reference:** [Get chat](/graph/api/chat-get?view=graph-rest-beta&tabs=http&preserve-view=true)
 
@@ -180,7 +183,7 @@ The `chatId` can also be retrieved as follows:
 
 ### Send proactive messages
 
-Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team and has received all the user information.
+Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true) after the bot has been added for a user or a team, and has received all the user information.
 
 ## See also
 
