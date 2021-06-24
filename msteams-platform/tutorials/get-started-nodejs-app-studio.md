@@ -7,21 +7,31 @@ localization_priority: Normal
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 
-# Create your first Microsoft Teams app using Node.js
+# Build your first Microsoft Teams app using Node.js
 
-This tutorial helps you get started creating a Microsoft Teams app using Node.js.
+In this tutorial, you will learn how to build your very first Microsoft Teams app using Node.js. It also walks you through the steps to: 
+
+1. [Prepare your environment](#prepare-environment)
+1. [Get prerequisites](#GetPrerequisites)
+1. [Download the sample](#DownloadSample)
+1. [Build and run the sample](#BuildRun)
+1. [Host the sample app](#HostSample)
+1. [Update the credentials for your hosted app](#updatecredentials)
+1. [Configure the app tab](#ConfigureTheAppTab)
+
+<a name="prepare-environment"></a>
 
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
-<a name="DownloadAndHost"></a>
+<a name="GetPrerequisites"></a>
 
-## Download and host your app
+### Download and host your app
 
 Follow these steps to download and host a simple "hello world" app in Teams.
 
 <a name="GetPrerequisites"></a>
 
-### Get prerequisites
+## Get prerequisites
 
 To complete this tutorial, you need the following tools. If you don't already have them you can install them from these links.
 
@@ -29,7 +39,7 @@ To complete this tutorial, you need the following tools. If you don't already ha
 - [Node.js and NPM](https://nodejs.org/)
 - Get any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, choose to do so. It will be handy.
+If you see options to add `git`, `node`, `npm`, and `code` to the PATH during installation, select the options. 
 
 Verify that the tools are available by running the following in a terminal window:
 
@@ -67,7 +77,7 @@ You can continue to use this terminal window to run the commands that follow in 
 
 <a name="DownloadSample"></a>
 
-### Download the sample
+## Download the sample
 
 We have provided a simple [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/nodejs) sample to get you started. In a terminal window, run the following command to clone the sample repository to your local machine:
 
@@ -80,9 +90,9 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 <a name="BuildRun"></a>
 
-### Build and run the sample
+## Build and run the sample
 
-Once the repo is cloned, change to the directory that holds the sample:
+After the repository is cloned, run the change directory command in terminal to change the directory to the sample:
 
 ```bash
 cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
@@ -94,7 +104,7 @@ In order to build the sample, you need to install all its dependencies. Run the 
 npm install
 ```
 
-You should see a bunch of dependencies getting installed. Once they are finished, you can run the app:
+You should see a bunch of dependencies getting installed. After installation you can run the app with the following command:
 
 ```bash
 npm start
@@ -115,13 +125,13 @@ At this point, you can open a browser window and navigate to the following URLs 
 
 <a name="HostSample"></a>
 
-### Host the sample app
+## Deploy your sample app
 
 Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. For the Teams platform to load your app, your app must be reachable from the internet. To make your app reachable from the internet, you need to *host* your app.
 
 For local testing you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok* you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
-Once you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here:
+After you install it, you can open a new terminal window and run the following command to create a tunnel. The sample uses port 3333, so be sure to specify it here:
 
 ```bash
 ngrok http 3333 -host-header=localhost:3333
@@ -136,22 +146,51 @@ ngrok http 3333 -host-header=localhost:3333
 
 There is a paid version of *ngrok* that allows persistent names. If you use the free version your app will only be available during the current session on your development machine. If the machine is shut down or goes to sleep the service will no longer be available. Remember this when sharing the app for testing by other users. If you have to restart the service it will return a new address and you will have to update every place that uses that address.
 
-Remember, make a note of the URL of your app because you will need this later when you register the app with Teams using App studio. Notepad works fine for this purpose.
+Make a note of the URL of your app. You will need this later when you register the app with Teams using App studio or Developer Portal.
 
 <a name="DeployToTeams"></a>
 
 ## Deploy your app to Microsoft Teams
 
-At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look for it, or even what your app is called. To do this you now have to create an app package. This is little more than a text file that contains the app manifest and some icons that the Teams client will use to properly display and brand your app. You can manually create this app package, or you can use App Studio, a tool that runs in Teams that will simplify the process of registering the app. App Studio is the recommended way of creating and updating the app package.
+At this point you have an app hosted on the internet, but you have no way yet of telling Teams where to look for it, or even what your app is called. To do this you now have to create an app package. This is little more than a text file that contains the app manifest and some icons that the Teams client will use to properly display and brand your app. You can manually create this app package, or you can use App Studio or Developer Portal, tools that run in Teams, that will simplify the process of registering the app. App Studio and Developer Portal are the recommended ways of creating and updating the app package.
 
 For either method you will need the following:
 
 - The URL where your app can be found on the internet.
 - Icons that Teams will use to brand your app. The sample comes with placeholder icons located in "src\static\images. App Studio also will provide default icons if needed.
 
-[!include[Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+**Update the app package**
 
-## Update your hosted app
+# [App Studio](#tab/AS)
+
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+
+# [Developer Portal](#tab/DP)
+
+**To install Developer Portal (preview) in Teams**
+
+1. Select the **Apps** icon at the bottom of the left-hand bar, and search for **Developer Portal**.
+
+    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+
+1. Select **Developer Portal** and select **Open**.
+
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+
+1. Select the Apps tab and select **Import an existing app**.
+
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+
+1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
+
+    You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+
+    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+
+---
+<a name="updatecredentials"></a>
+
+## Update the credentials for your hosted app
 
 The sample app requires the following environment variables to be set to the values you made a note of earlier:
 
@@ -196,7 +235,7 @@ NODE_CONFIG_DIR points to the directory at the root of the repository (by defaul
 
 ## Configure the app tab
 
-Once you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. Once you select the tab and click on `Save` you can see the `Hello World` tab loaded with the tab you chose:
+After you install the app into a team, you will need to configure it to show content. Go to a channel in the team and click on the **'+'** button to add a new tab. You can then choose `Hello World` from the **Add a tab** list. You will then be presented with a configuration dialog. This dialog will let you choose which tab to display in this channel. After you select the tab and click **Save** you can see the `Hello World` tab loaded with the tab you chose:
 
 <img width="430px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png"/>
 
@@ -212,10 +251,15 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 To test your messaging extension, you can click on the three dots below the input box in your conversation view. A menu will pop up with the **'Hello World'** app in it. When you click it, you will see a number of random texts. You can choose any one of them and it will be inserted it into your conversation:
 
-<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu.png" />
+<img width="430px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
 
-<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result.png" />
+<img width="430px" alt="Messaging extension result" src="~/assets/images/samples-hello-world-messaging-extensions-result1.png" />
 
-Choose one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom:
+Select one of the random texts, and you will see a card formatted and ready to send with your own message at the bottom:
 
 <img width="430px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
+
+ ## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
