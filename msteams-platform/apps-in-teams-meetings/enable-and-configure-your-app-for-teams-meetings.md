@@ -145,7 +145,7 @@ The required context is `meetingStage` in the app manifest. A prerequisite for t
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-The manifest change that is needed to enable this capability is as follows:
+To enable shared meeting stage, configure your app manifest like this:
 
 ```json
 "configurableTabs": [
