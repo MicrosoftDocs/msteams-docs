@@ -2,7 +2,7 @@
 title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
@@ -10,15 +10,19 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 
 # Test resource-specific consent permissions in Teams
 
-Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific teams within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
+> [!NOTE]
+> Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+
+Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
 > To test the RSC permissions, your Teams app manifest file must include a **webApplicationInfo** key populated with the following fields:
 >
-> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
 > - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
+## Example for a team
 ```json
 "webApplicationInfo":{
       "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
@@ -42,12 +46,36 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
    }
 ```
 
+## Example for a chat
+```json
+"webApplicationInfo":{
+      "id":"XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+      "resource":"https://AnyString",
+      "applicationPermissions":[
+          "ChatSettings.Read.Chat",
+          "ChatSettings.ReadWrite.Chat",
+          "ChatMessage.Read.Chat",
+          "ChatMember.Read.Chat",
+          "Chat.Manage.Chat",
+          "TeamsTab.Read.Chat",
+          "TeamsTab.Create.Chat",
+          "TeamsTab.Delete.Chat",
+          "TeamsTab.ReadWrite.Chat",
+          "TeamsAppInstallation.Read.Chat",
+          "OnlineMeeting.ReadBasic.Chat"
+      ]
+   }
+```
+
 > [!IMPORTANT]
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
-## Test added RSC permissions using the Postman app
+>[!NOTE]
+>If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
-To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code](test-rsc-json-file.md) into your local environment and update the following values:
+## Test added RSC permissions to a team using the Postman app
+
+To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
 
 * `azureADAppId`: Your app's Azure AD app ID.
 * `azureADAppSecret`: Your Azure AD app password.
@@ -59,6 +87,21 @@ To check whether the RSC permissions are being honored by the API request payloa
     3. Select the **More options** icon (&#8943;).
     4. Select **Get link to team**. 
     5. Copy and save the **groupId** value from the string.
+
+## Test added RSC permissions to a chat using the Postman app
+
+To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for chats](test-chat-rsc-json-file.md) into your local environment and update the following values:
+
+* `azureADAppId`: Your app's Azure AD app ID.
+* `azureADAppSecret`: Your Azure AD app password.
+* `token_scope`: The scope is required to get a token. set the value to https://graph.microsoft.com/.default.
+* `tenantId`: The name or the AAD Object ID of your tenant.
+* `chatId`: You can get the chat thread id from the Teams *web* client as follows:
+
+    1. In the Teams web client, select **Chat** from the far left navigation bar.
+    2. Select the chat where the app is installed from the dropdown menu.
+    3. Copy the web URL and save the chat thread id from the string.
+![Chat thread id from web URL.](../../assets/images/chat-thread-id.png)
 
 ### Use Postman
 
@@ -74,9 +117,11 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## Test revoked RSC permissions using [Postman](https://www.postman.com/)
 
-1. Uninstall the app from the specific team.
-2. Follow the steps for [Test added RSC permissions using Postman](#test-added-rsc-permissions-using-the-postman-app).
-3. Check all the response status codes to confirm that the specific API calls, **succeeded, have failed with an HTTP 403 status code**.
+1. Uninstall the app from the specific resource.
+2. Follow the steps for either chat or team: 
+    1. [Test added RSC permissions to a team using Postman](#test-added-rsc-permissions-to-a-team-using-the-postman-app).
+    2. [Test added RSC permissions to a chat using Postman](#test-added-rsc-permissions-to-a-chat-using-the-postman-app).
+3. Check all the response status codes to confirm that the specific API calls **have failed with an HTTP 403 status code**.
 
 ## See also
 

@@ -22,13 +22,13 @@
     href: get-started/first-message-extension.md
 - name: Tutorials and code samples
   items:
-  - name: Tutorials
+  - name: Overview
     href: tutorials/code-samples.md   
-  - name: Create an app using C# or .NET
+  - name: Build your first app using C# or .NET
     href: tutorials/get-started-dotnet-app-studio.md
-  - name: Create an app using Node.js
+  - name: Build your first app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman generator
+  - name: Build your first app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
@@ -212,6 +212,8 @@
       href: tabs/tabs-link-unfurling.md
     - name: Create conversational tabs
       href: tabs/how-to/conversational-tabs.md
+    - name: Tab margin changes
+      href: resources/removing-tab-margins.md
   - name: Quickstarts
     items:
     - name: Personal tab with Node.js
@@ -309,7 +311,7 @@
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
-  - name: Together Mode in Teams
+  - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors
   items:
@@ -393,9 +395,9 @@
     href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
-  - name: Enable resource-specific consent
+  - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Proactive installation of apps using Graph API and send messages
+  - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -425,8 +427,10 @@
     items:
     - name: Test resource-specific consent permissions
       href: graph-api/rsc/test-resource-specific-consent.md 
-    - name: Resource-specific consent JSON test file
-      href: graph-api/rsc/test-rsc-json-file.md
+    - name: Resource-specific consent for team JSON test file
+      href: graph-api/rsc/test-team-rsc-json-file.md
+    - name: Resource-specific consent for chat JSON test file
+      href: graph-api/rsc/test-chat-rsc-json-file.md
 - name: Distribute your app
   items:
   - name: Overview
@@ -478,8 +482,6 @@
         href: concepts/build-and-test/apps-localization.md
       - name: Localization JSON schema
         href: resources/schema/localization-schema.md
-    - name: Tab margin changes
-      href: resources/removing-tab-margins.md
     - name: SameSite cookie attribute (2020 update)
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions
