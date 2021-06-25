@@ -8,7 +8,7 @@
 - name: Get started
   expanded: true
   items:
-    name: Overview
+  - name: Overview
     href: get-started/code-samples.md  
   - name: Prerequisites
     href: get-started/prerequisites.md
