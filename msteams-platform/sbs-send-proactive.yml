@@ -18,7 +18,7 @@ items:
      - Notifications
      - Scheduled messages
      
-    This step-by-step guide helps you send a proactive message from a bot. You will see the following outputs:
+    This step-by-step guide helps you to send a proactive message from a bot. You will see the following outputs:
 
     * Proactive hello message in chat        
     ![Proactive hello in chat](~/assets/images/proactive-scenario/proactive-helo.png)
@@ -39,10 +39,9 @@ items:
 - title: Set up local environment
   durationInMinutes: 3
   content: |
-    1.	Download the [sample code](https://github.com/Wajeed-msft/SampleCodeZipFiles/raw/main/Send%20Proactive%20Messages.zip) (Zip file) and extract the files.
-    1.	Go to the extracted files and double-click **ProactiveBot.csproj**.     
-        The solution opens in Visual Studio.
-    1.	Right-click the project (**ProactiveBot**) and select **Build** to build the solution.
+    1.	Download the [sample code](~/assets/downloads/Send Proactive Messages.zip) (Zip file) and extract the files.
+    1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
+    1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
         ![Proactivebot project](~/assets/images/proactive-scenario/proactivebot-project.png)
 
@@ -87,7 +86,7 @@ items:
 
         ![Bot set up](~/assets/images/proactive-scenario/bot-setup.png)  
 
-    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**) and select **Personal**, and select **Create bot** to create the bot.
+    1. In the **Set up a bot** window that appears, enter **Name** (for example, **Proactive Message Demo**), select **Personal**, and select **Create bot** to create the bot.
 
         ![Create Bot ID](~/assets/images/proactive-scenario/create-bot-id.png)   
 
