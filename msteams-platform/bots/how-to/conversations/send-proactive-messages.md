@@ -6,7 +6,7 @@ ms.author: anclear
 localization_priority: Normal
 Keywords: send a message get user ID channel ID conversation ID
 ---
-# Send proactive messages
+# Proactive messages
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
