@@ -320,26 +320,28 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-  - name: Create an incoming webhook
-    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-  - name: Create an outgoing webhook
+  - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-  - name: Create an Office 365 Connector
+  - name: Create Incoming Webhooks
+    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+  - name: Create Office 365 Connectors
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Send messages to connectors and webhooks
+  - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:
+  - name: Overview
+    href: task-modules-and-cards/cards-and-task-modules.md
   - name: Build cards
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-    - name: Format card text
-      href: task-modules-and-cards/cards/cards-format.md
-    - name: Add and respond to card actions
-      href: task-modules-and-cards/cards/cards-actions.md
-    - name: Cards reference
+    - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
+    - name: Format cards in Microsoft Teams
+      href: task-modules-and-cards/cards/cards-format.md
+    - name: Card actions
+      href: task-modules-and-cards/cards/cards-actions.md
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -356,9 +358,11 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Using task modules in tabs
+    - name: Invoke and dismiss task modules
+      href: task-modules-and-cards/task-modules/invoking-task-modules.md  
+    - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
-    - name: Using task modules in bots
+    - name: Use task modules from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
