@@ -116,7 +116,7 @@ To build and run your app locally:
 
 1. Select **Add** to add the app to your account.
 
-Once the app is loaded, you will be taken directly to a search dialog:
+After the app is loaded, you will be taken directly to a search dialog:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
 
