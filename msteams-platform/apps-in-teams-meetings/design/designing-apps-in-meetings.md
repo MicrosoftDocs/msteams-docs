@@ -113,7 +113,11 @@ Optimize your in-meeting tab to fit edge-to-edge within the 280 pixel-wide ifram
 
 ### Scrolling
 
-Iframe contents should scroll vertically. You can only see the content you've scrolled to (nothing above or below). The scrollbar is part of the iframe content.
+Remember the following if you allow scrolling:
+
+* Content in the iframe contents should only scroll vertically.
+* Users should only see the content they've scrolled to (nothing above or below). 
+* The scrollbar is part of the iframe content.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-scrolling.png" alt-text="Example shows how the in-meeting tab scrolls." border="false":::
 
@@ -169,7 +173,7 @@ There are two header variants. When possible, use the variant with the avatar to
 |4|**Close button**: Dismisses the dialog.|
 |5|**Action string**: Typically describes who initiated the dialog.|
 
-### Responsive behavior
+### Responsive behavior: In-meeting dialogs
 
 In-meeting dialogs can vary in size to account for different scenarios. Make sure to maintain padding and component sizes.
 
@@ -179,6 +183,86 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) key.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
+
+## Use the shared meeting stage
+
+Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their call on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+
+Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
+
+### Use cases
+
+The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
+
+:::row:::
+   :::column span="1":::
+
+**Edit and review**: Dive into dashboards and planning with everyone on the call.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**Whiteboard**: Draw and ideate together on a shared canvas.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-whiteboard.png" alt-text="Example shows a whiteboard on the shared meeting stage." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+   :::column span="1":::
+
+**Quiz**: Test knowledge and gain insights with interactive materials.
+
+   :::column-end:::
+   :::column span="3":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-quiz.png" alt-text="Example shows a quiz on the shared meeting stage." border="false":::
+
+   :::column-end:::
+:::row-end:::
+
+### Anatomy: Shared meeting stage
+
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
+|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
+|3|**iframe**: Displays your app content.|
+|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
+|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+
+### Responsive behavior: Shared meeting stage
+
+Apps shared to the meeting stage vary in size based on the state of the meeting and how the user resizes the window. Maintain padding and the responsive layout of navigation and controls just as you would in a browser.
+
+* **Side panel**: A user can have the side panel open at any time during a meeting to chat, view the roster, or use an app (i.e., in-meeting tab). The stage dynamically rearranges when the panel is open.
+* **Video and audio grid**: The video and audio grid is always visible to show meeting participants. When a user spotlights or pins someone in the meeting, this increases the height or width of the participant grid depending on the orientation.
+
+#### Meeting stage (without side panel)
+
+When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
+
+#### Meeting stage (with side panel)
+
+When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixels.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
 
 ## After a meeting
 
@@ -211,13 +295,32 @@ A single in-meeting dialog with multiple interactions can distract from the call
    :::column-end:::
 :::row-end:::
 
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-do.png" alt-text="Example showing how to create a focused environment." border="false":::
+
+#### Do: Create a focused environment
+
+We recommend keeping your app’s experience scoped to just the meeting stage. You can use an in-meeting tab in the side panel as a secondary, private view for certain scenarios.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/interaction-shared-stage-dont.png" alt-text="Example showing how not to include competing surfaces during meetings." border="false":::
+
+#### Don't: Include competing surfaces
+
+Your app should only ask users to focus on a single surface a time, whether it's collaborating on the stage or responding to an in-meeting dialog. (Note: You can’t keep dialogs being triggered by other apps while your app is on the stage.) 
+
+   :::column-end:::
+:::row-end:::
+
 ### Layout
 
 :::row:::
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-layout-do.png" alt-text="Example showing how you should use a single-column dialog layout." border="false":::
 
-#### Do: Use a single-column dialog layout
+#### Do: Use a one-column dialog
 
 Since the dialogs are at the center of the meeting stage, task completion should be fast and simple to avoid user frustration.
 
@@ -236,7 +339,7 @@ Dense or overly structured content can be distracting and overwhelming, especial
    :::column span="":::
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-layout-do.png" alt-text="Example showing a single-column tab layout." border="false":::
 
-#### Do: Use a single-column tab layout
+#### Do: Use a one-column tab
 
 Given the in-meeting tab's narrow nature, we strongly recommend displaying the contents in a single column.
 
@@ -272,23 +375,29 @@ This deviates from the standard Teams pattern for control placement in a dialog 
    :::column-end:::
 :::row-end:::
 
-### Scroll
+### Scrolling
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-do.png" alt-text="Example showing vertical scrolling in an in-meeting tab." border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-do.png" alt-text="Example showing vertical scrolling in the shared meeting stage." border="false":::
 
 #### Do: Scroll vertically
 
-Users expect vertical scrolling in Teams (and elsewhere).
+Users expect vertical scrolling in Teams (and elsewhere). This may not apply if you have a creative canvas, such as a whiteboard, which users can pan across the x and y axis.
 
    :::column-end:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-scroll-dont.png" alt-text="Example showing horizontal scrolling in an in-meeting tab." border="false":::
+
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-scroll-dont.png" alt-text="Example showing horizontal scrolling in the shared meeting stage." border="false":::
 
 #### Don't: Scroll horizontally
 
-Horizontal scrolling isn’t an expected behavior in Teams. Other canvases in the meeting environment scroll vertically.
+Horizontal scrolling isn’t an expected behavior in Teams (including the meeting environment).
 
    :::column-end:::
 :::row-end:::
@@ -318,19 +427,25 @@ In-meeting dialogs are intended for brief interactions.
 
 :::row:::
    :::column span="":::
+
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-do.png" alt-text="Example showing a meeting extension with the dark theme." border="false":::
 
-#### Do: Use Teams color tokens
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-do.png" alt-text="Another example showing meeting extension with the dark theme." border="false":::
 
-Teams meetings are optimized for dark mode to help reduce visual and cognitive noise so users can focus on the discussion and shared content. Learn about using <a href="https://fluentsite.z22.web.core.windows.net/0.51.3/colors#color-scheme" target="_blank">color tokens (Fluent UI)</a>.
+#### Do: Focus on dark theme
+
+Teams meetings are optimized for dark theme to help reduce visual and cognitive noise so users can focus on the discussion and shared content. Keep in mind certain types of apps (such as whiteboarding and document editing) don't need a dark canvas.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with a default (light) theme." border="false":::
 
-#### Don't: Hard code hex values
+:::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-tab-theming-dont.png" alt-text="Example showing a meeting extension with colors that don't match the meeting theme." border="false":::
 
-If you don’t use Teams color tokens, your designs will be less scalable and take more time to manage.
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-theming-dont.png" alt-text="Another example showing a meeting extension with colors that don't match the meeting theme." border="false":::
+
+#### Don't: Use unfamiliar colors
+
+Colors that clash with the meeting environment may be distracting and appear less native to Teams. Learn about the Teams [color ramp](https://developer.microsoft.com/fluentui#/styles/web/colors/products), including call theme neutrals.
 
    :::column-end:::
 :::row-end:::
@@ -368,3 +483,29 @@ Modals (also known as task modules) in the already narrow in-meeting tab might w
 
    :::column-end:::
 :::row-end:::
+
+### Responsive behavior
+
+:::row:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-do.png" alt-text="Example showing how to properly resize a meeting extension." border="false":::
+
+#### Do: Resize and scale your app responsively
+
+App content should dynamically resize and condense in smaller windows. Keep your app’s main navigation and any floating controls visible.
+
+   :::column-end:::
+   :::column span="":::
+:::image type="content" source="../../assets/images/apps-in-meetings/shared-meeting-stage-responsiveness-dont.png" alt-text="Example showing how not to properly resize a meeting extension." border="false":::
+
+#### Don't: Crop or clip primary UI components
+
+Floating navigation and controls off screen and requiring a scroll to find can be confusing for users. Your app content shouldn’t scroll horizontally when it can't fit in the iframe.
+
+   :::column-end:::
+:::row-end:::
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Configure your app for meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)

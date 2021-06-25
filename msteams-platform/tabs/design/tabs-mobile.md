@@ -4,9 +4,25 @@ description: Describes developer considerations for implementing tabs on Microso
 ms.topic: conceptual
 localization_priority: Normal
 ---
+
 # Tabs on mobile
 
-When you're building a Microsoft Teams app that includes a tab, you must consider (and test) how your tab will function on both the Android and iOS Microsoft Teams clients. The sections below outline some of the key scenarios you need to consider.
+When you are building a Microsoft Teams app that includes a tab, you must test how your tab functions on both the Android and iOS Microsoft Teams clients. This article outlines some of the key scenarios you must consider.
+
+If you choose to have your channel or group tab appear on Teams mobile clients, the `setSettings()` configuration must have a value for the `websiteUrl` property. To ensure optimal user experience, you must follow the guidance for tabs on mobile in this article when creating your tabs.
+
+Apps [distributed through the Teams store](~/concepts/deploy-and-publish/appsource/publish.md) have a separate approval process for mobile clients. The default behavior of such apps is as follows:
+
+| **App capability** | **Behavior if app is approved** | **Behavior if app is not approved** |
+| --- | --- | --- |
+| **Personal tabs** | App appears in the bottom bar of the mobile clients. Tabs open in the Teams client. | App does not appear in the bottom bar of the mobile clients. |
+| **Channel and group tabs** | The tab opens in the Teams client using `contentUrl`. | The tab opens in a browser outside the Teams client using `websiteUrl`. |
+
+> [!NOTE]
+> * Apps submitted to the [AppSource](https://appsource.microsoft.com) for publishing on Teams are evaluated automatically for mobile responsiveness. For any queries, reach out to teamsubm@microsoft.com.
+> * For all apps that are not distributed through the AppSource, the tabs open in an in-app webview within the Teams clients by default and there is no separate approval process required.
+> * The default behavior of apps is only applicable if distributed through the Teams store. By default, all tabs open in the Teams client.
+> * To initiate an evaluation of your app for mobile-friendliness, reach out to teamsubm@microsoft.com with your app details.
 
 ## Authentication
 
@@ -14,11 +30,11 @@ For authentication to work on mobile clients, you must upgrade you Teams JavaScr
 
 ## Low bandwidth and intermittent connections
 
-Mobile clients regularly need to function with low bandwidth and intermittent connections. Your app should handle any timeouts appropriately by providing a contextual message to the user. You should also user progress indicators to provide feedback to your users for any long-running processes.
+Mobile clients function with low bandwidth and intermittent connections. Your app must handle any timeouts appropriately by providing a contextual message to the user. You must also use progress indicators to provide feedback to your users for any long-running processes.
 
 ## Testing on mobile clients
 
-You need to validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use the [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. We recommend that you test on both high- and low-performance devices, including a tablet.
+You must validate that your tab functions properly on mobile devices of various sizes and qualities. For Android devices, you can use [DevTools](~/tabs/how-to/developer-tools.md) to debug your tab while it is running. It is recommended that you test on both high and low-performance devices, including a tablet.
 
 ## Distribution
 
@@ -39,13 +55,29 @@ The following table describes tab availability and behavior when the app is list
 
 | Capability | Mobile availability? | Mobile behavior |
 |----------|-----------|------------|
-|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which also must be included in your source code's `setSettings()` [function](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true). However, users can still view the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.|
+|Channel and group tab|Yes|Tab opens in the device's default browser instead of the Teams mobile client using your app's `websiteUrl` configuration, which must also be included in your source code's `setSettings()` [function](/javascript/api/@microsoft/teams-js/settings?view=msteams-client-js-latest#functions&preserve-view=true). However, users can view the tab in the Teams mobile client by selecting **More** next to the app and choosing **Open**, which triggers your app’s `contentUrl` configuration.|
 |Personal app|No|Not applicable|
 
 ### Apps not on Teams store
 
-If you're sideloading your app or publishing to an org's app catalog, tab behavior will be the same as Teams store apps approved by Microsoft for mobile.
+If you are sideloading your app or publishing to an organization's app catalog, tab behavior is the same as Teams store apps approved by Microsoft for mobile.
 
 ## See also
 
 * [Tab design guidelines](~/tabs/design/tabs.md)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+* [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
+* [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+* [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+* [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get context for your tab](~/tabs/how-to/access-teams-context.md)
