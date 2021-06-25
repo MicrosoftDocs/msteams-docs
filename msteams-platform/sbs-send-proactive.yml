@@ -63,7 +63,7 @@ items:
 
         </details>
         
-    1. Start ngrok.
+    1. Unzip to install ngrok.
        * Windows: Double-click **ngrok.zip**.
        * Linux or OS X: Unzip ngrok from the terminal and run the `unzip /path/to/ngrok.zip` command.
     1. Run ngrok from the command line with following arguments:
