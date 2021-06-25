@@ -24,15 +24,15 @@ To configure an additional language for your app, in [Partner Center](/office/de
 
 1. Add English language
     * Enter the app name.
-    * Enter the short description of the app in English.
+    * Enter a short description of the app in English.
     * Enter the long description of the app in English.
-    * In the long description, add the line **This app is also available in French**.
-    * Upload the images of your app UI in English.
-1. Add French language
+    * In the long description, enter: **This app is available in French**.
+    * Upload the images of your app UI (in English).
+2. Add French language
     * Enter the app name.
-    * Enter the short description of the app in French.
+    * Enter a short description of the app in French.
     * Enter the long description of the app in French.
-    * Upload the images of your app UI in French.
+    * Upload the images of your app UI (in French).
 
 The images that you upload with the English language are used in AppSource.
 
