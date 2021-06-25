@@ -15,20 +15,20 @@ Following are the two ways to add rich text formatting to your cards:
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting or Markdown, depending on the card type. For current and future development of Adaptive Cards, Markdown formatting is recommended.
 
-Formatting support differs between different card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
+Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [cards reference](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
-You can format Adaptive Cards and Office 365 connector cards with Markdown that include certain supported styles.
+You can format Adaptive Cards and Office 365 Connector cards with Markdown that include certain supported styles.
 
 ## Format cards with Markdown
 
 The following card types support Markdown formatting in Teams:
 
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
-* O365 connector cards: Markdown and limited HTML is supported in O365 connector cards in the text fields.
+* O365 Connector cards: Markdown and limited HTML is supported in O365 Connector cards in the text fields.
 
-You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can mask information using the information masking property within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
+You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
 
@@ -72,7 +72,8 @@ On Android, Adaptive Card Markdown formatting appears as shown in the following 
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
-The date and localization features mentioned in this section are not supported in Teams.
+> [!NOTE]
+> The date and localization features mentioned in this section are not supported in Teams.
 
 ### Adaptive Cards format sample
 
@@ -227,7 +228,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Typeahead support
 
-Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter through and select through a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
+Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
 
 To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.
 
@@ -283,7 +284,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown format for O365 connector cards](#tab/connector-md)
+# [Markdown format for O365 Connector cards](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -376,12 +377,12 @@ The following code shows an example of formatting for Markdown connector cards:
 
 The following card types support HTML formatting in Teams:
 
-* O365 connector cards: Limited Markdown and HTML formatting is supported in Office 365 connector cards.
+* O365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for O365 connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for O365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for O365 connector cards](#tab/connector-html)
+# [HTML format for O365 Connector cards](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -520,9 +521,5 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-[Task modules](~/task-modules-and-cards/cards/cards-format.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Card actions](./cards-actions.md)
+* [Card actions](./cards-actions.md)
+* [Task modules](~/task-modules-and-cards/cards/cards-format.md)

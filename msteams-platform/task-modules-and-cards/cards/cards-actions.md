@@ -11,7 +11,7 @@ keywords: teams bots cards actions
 Cards used by bots and messaging extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
-> The `CardAction` actions differ from `potentialActions` for Office 365 connector cards when used from connectors.
+> The `CardAction` actions differ from `potentialActions` for Office 365 Connector cards when used from connectors.
 
 | Type | Action |
 | --- | --- |
