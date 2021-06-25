@@ -149,10 +149,10 @@ In addition, this project requires that you have the following installed in your
 
     Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
 
-> [!IMPORTANT]
-> The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
->
-> For example: DefaultTabName: **MyTab** => **/MyTabTab/**
+    > [!IMPORTANT]
+    > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+    >
+    > For example: DefaultTabName: **MyTab** > **/MyTabTab/**
 
 ### Add a personal tab
 

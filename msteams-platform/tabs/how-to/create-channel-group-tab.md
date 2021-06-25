@@ -135,10 +135,10 @@ In addition, this project requires that you have the following installed in your
 
     Enter **n**.
 
-> [!IMPORTANT]
-> The path component **yourDefaultTabNameTab**, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
->
-> For example: DefaultTabName: **MyTab** => **/MyTabTab/**
+    > [!IMPORTANT]
+    > The path component **yourDefaultTabNameTab**, is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+    >
+    > For example: DefaultTabName: **MyTab** > **/MyTabTab/**
 
 1. In Visual Studio Code or any code editor, go to your project directory and open the following file:
 
