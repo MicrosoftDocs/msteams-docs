@@ -233,11 +233,7 @@ Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press
 
 ## See also
 
-- [Create a Teams app with React](first-app-react.md)
-- [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a messaging extension](first-message-extension.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a conversational bot app](first-app-bot.md)
+* [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

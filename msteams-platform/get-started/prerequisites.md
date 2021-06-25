@@ -196,13 +196,13 @@ Now that your development environment is configured, you can create, build, and 
 
 ## See also
 
-- [Create your first Teams app with Blazor](first-app-blazor.md)
-- [Create your first Teams app using SharePoint Framework (SPFx)](first-app-spfx.md)
-- [Create a conversational bot app](first-app-bot.md)
-- [Create a messaging extension](first-message-extension.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create your first Teams app using React](first-app-react.md)
-
+* [Tutorials Overview](code-samples.md) 
+* [Create an app using React](first-app-react.md)
+* [Create an app using Blazor](first-app-blazor.md)
+* [Create an app using SPFx](first-app-spfx.md)
+* [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
+* [Create an app using Node.js](get-started-nodejs-app-studio.md)
+* [Create an app using Yeoman generator](get-started-yeoman.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -201,4 +201,6 @@ Select one of the random text. A card formatted and ready to send with your own 
 ## See also
 
 * [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
 * [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

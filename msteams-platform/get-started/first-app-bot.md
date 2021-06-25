@@ -9,7 +9,7 @@ ms.topic: quickstart
 
 # Build your first conversational bot for Microsoft Teams
 
-A bot acts as an intermediary between a Teams user and a web service.  Users can chat with a bot to quickly get information, initiate workflows, or anything else your web service can do.  In this tutorial, you will learn how to build, run, and deploy a Teams bot app.
+In this tutorial, you will learn how to build, run, and deploy a Teams bot app. A bot acts as an intermediary between a Teams user and a web service.  Users can chat with a bot to quickly get information, initiate workflows, or anything else your web service can do. 
 
 ## Before you begin
 
@@ -157,11 +157,12 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 ## See also
 
-- [Create a Teams app with React](first-app-react.md)
-- [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a messaging extension](first-message-extension.md)
+* [Tutorials Overview](code-samples.md) 
+* [Create an app using React](first-app-react.md)
+* [Create an app using Blazor](first-app-blazor.md)
+* [Create an app using SPFx](first-app-spfx.md)
+* [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
+* [Create an app using Node.js](get-started-nodejs-app-studio.md)
+* [Create an app using Yeoman generator](get-started-yeoman.md)
+* [Create a messaging extension](first-message-extension.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -185,12 +185,7 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 ## See also
 
-- [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
-- [Create a conversational bot app](first-app-bot.md)
-- [Create a messaging extension](first-message-extension.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a Teams app with Blazor](first-app-blazor.md)
+* [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

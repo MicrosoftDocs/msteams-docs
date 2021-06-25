@@ -262,4 +262,6 @@ Select one of the random texts, and you will see a card formatted and ready to s
  ## See also
 
 * [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
 * [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
