@@ -9,7 +9,7 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with Blazor
 
-In this tutorial, you will create a new Microsoft Teams app in .NET/Blazor that implements a simple personal app to pull information from the Microsoft Graph. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
+In this tutorial, you will learn how to create a new Microsoft Teams app in .NET/Blazor that implements a simple personal app to pull information from the Microsoft Graph. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
 
 The app that is built displays basic user information for the current user.  When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 

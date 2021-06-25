@@ -9,12 +9,12 @@ ms.topic: quickstart
 
 # Build and run your first messaging extension for Microsoft Teams
 
+In this tutorial, you will learn how to create a *search command* to search for external data and insert the results into a message. 
+
 There are two types of Teams **messaging extensions**:
 
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) allow you to search external systems and insert the results of that search into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams.
-
-In this tutorial, you will create a *search command* to search for external data and insert the results into a message.  
 
 ## Before you begin
 

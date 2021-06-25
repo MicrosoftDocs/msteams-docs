@@ -9,7 +9,7 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
 
-In this tutorial, you will create a new Microsoft Teams app in SharePoint Framework SPFx that implements a simple personal app. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to SharePoint.
+In this tutorial, you will learn how to create a new Microsoft Teams app in SharePoint Framework SPFx that implements a simple personal app. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to SharePoint.
 
 ## Before you begin
 
