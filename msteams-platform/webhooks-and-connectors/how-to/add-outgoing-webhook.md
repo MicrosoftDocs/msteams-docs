@@ -208,21 +208,6 @@ var responseMsg = JSON.stringify({
 
 * * *
 
-## Create an Outgoing Webhook
-
-1. Select the appropriate team and choose **Manage team** from the (&#8226;&#8226;&#8226;) drop-down menu.
-1. Choose the **Apps** tab from the navigation bar.
-1. From the window's lower right corner select **Create an Outgoing Webhook**.
-1. In the resulting popup window complete the required fields:
-
->* **Name**: The webhook title and @mention tap
->* **Callback URL**: The HTTPS endpoint that accepts JSON payloads and receives POST requests from Teams
->* **Description**: A detailed string that appear in the profile card and the team-level App dashboard
->* **Profile Picture**: An optional app icon for your webhook
->* Select the **Create** button from the lower right corner of the pop-up window and the Outgoing Webhook are added to the current team's channels.
->* The next dialog window displays an [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) security token that is used to authenticate calls between Teams and the designated outside service.
->* The Outgoing Webhook is available to the team's users, only if the URL is valid and the server and client authentication tokens are equal for example, an HMAC handshake.
-
 ## Code sample
 
 |**Sample name** | **Description** | **.NET** | **Node.js** |
