@@ -279,10 +279,7 @@ The following schema sample shows all extensibility options:
     "team": "bot", 
     "groupchat": "bot"
   },
- "subscriptionOffer": {
-    "offerId": "Recloud12345"
-  }
- "configurableProperties": [
+ "configurableProperties": {
      "name",
      "shortDescription",
      "longDescription",
@@ -292,7 +289,7 @@ The following schema sample shows all extensibility options:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  }
 }
 ```
 
@@ -700,16 +697,6 @@ When a group install scope is selected, it will define the default capability wh
 |`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 
-## subscriptionOffer
-
-**Optional** - object
-
-Specifies the subscription offer associated with an app.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`offerId`| string | 2048 characters | ✔ | It is a unique identifier containing the Publisher ID and Offer ID of the app, which is available for the Commercial Marketplace software-as-a-service offer.|
-
 ## configurableProperties
 
 **Optional** - array
@@ -730,3 +717,13 @@ You can define any of the following properties:
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the SaaS offer associated with your app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in Microsoft Partner Center. You must format the string as `publisherId.offerId`.|
