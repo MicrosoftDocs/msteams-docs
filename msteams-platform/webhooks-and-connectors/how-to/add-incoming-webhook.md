@@ -61,7 +61,7 @@ The webhook is available in the Teams channel.
 
 1. Go to the channel.
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Select **Connectors** from the drop down menu.
+1. Select **Connectors** from the dropdown menu.
 1. On the left, under **Manage**, select **Configured**.
 1. Select the **<*1*> Configured** to see a list of your current connectors:
 
