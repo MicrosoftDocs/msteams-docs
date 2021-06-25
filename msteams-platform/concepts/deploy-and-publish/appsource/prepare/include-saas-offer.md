@@ -42,14 +42,14 @@ Once you create the SaaS offer in Partner Center, you can link it to your Teams 
 
 1. Go to the [Developer Portal](https://aka.ms/dev-portal) and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.
-1. Go to the **Plans and pricing** page and specify your publisher ID and offer ID (you can find these IDs in Partner Center).
+1. Go to the **Plans and pricing** page and specify your publisher and offer IDs (you can find these in Partner Center).
 1. Select **Preview** to view the details of the SaaS offer, then select **Save**.
 
    The `subscriptionOffer` property is added to your app manifest.
 
    ```json
       "subscriptionOffer": {
-        "offerId": "publisher ID and offer ID"  
+        "offerId": "publisherId.offerId"  
         }
    ```
 
