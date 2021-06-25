@@ -19,13 +19,13 @@ With Microsoft Graph, you can migrate users' existing message history and data f
 
 At a high level, the import process consists of the following:
 
-1. [Create a team with a back-in-time timestamp](#step-one-create-a-team)
-1. [Create a channel with a back-in-time timestamp](#step-two-create-a-channel)
-1. [Import external back-in-time dated messages](#step-three-import-messages)
-1. [Complete the team and channel migration process](#step-four-complete-migration-mode)
-1. [Add team members](#step-five-add-team-members)
+1. [Create a team with a back-in-time timestamp](#step-1-create-a-team).
+1. [Create a channel with a back-in-time timestamp](#step-2-create-a-channel).
+1. [Import external back-in-time dated messages](#step-3-import-messages).
+1. [Complete the team and channel migration process](#step-4-complete-migration-mode).
+1. [Add team members](#step-five-add-team-members).
 
-## Necessary requirements
+## Prerequisites
 
 ### Analyze and prepare message data
 
@@ -39,9 +39,9 @@ At a high level, the import process consists of the following:
 * Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
 * Make sure that team members are in Azure Active Directory (AAD). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
 
-## Step one: Create a team
+## Step 1: Create a team
 
-Since existing data is being migrated, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
+Since you are migrating existing data, maintaining the original message timestamps and preventing messaging activity during the migration process are key to recreating the user's existing message flow in Teams. This is achieved as follows:
 
 > [Create a new team](/graph/api/team-post?view=graph-rest-beta&tabs=http&preserve-view=true) with a back-in-time timestamp using the team resource `createdDateTime` property. Place the new team in `migration mode`, a special state that restricts users from most activities within the team until the migration process is complete. Include the `teamCreationMode` instance attribute with the `migration` value in the POST request to explicitly identify the new team as being created for migration.  
 
@@ -79,16 +79,18 @@ Location: /teams/{team-id}/operations/{operation-id}
 Content-Location: /teams/{team-id}
 ```
 
-#### Error messages
+#### Error message
 
 ```http
 400 Bad Request
 ```
 
-* `createdDateTime` set for future.
-* `createdDateTime` correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.
+You will receive the error message in the following scenarios:
 
-## Step two: Create a channel
+* If `createdDateTime` is set for future.
+* If `createdDateTime` is correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.
+
+## Step 2: Create a channel
 
 Creating a channel for the imported messages is similar to the create team scenario:
 
@@ -139,11 +141,12 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
+You will receive the error message in the following scenarios:
 
-* `createdDateTime` set for future.
-* `createdDateTime` correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
+* If `createdDateTime` is set for future.
+* If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
 
-## Step three: Import messages
+## Step 3: Import messages
 
 After the team and channel have been created, you can begin sending back-in-time messages using the `createdDateTime`  and `from` keys in the request body.
 
@@ -224,7 +227,8 @@ HTTP/1.1 200 OK
 #### Request (POST a message with inline image)
 
 > [!NOTE]
-> There are no special permission scopes in this scenario since the request is part of chatMessage; scopes for chatMessage apply here as well.
+> * There are no special permission scopes in this scenario since the request is part of `chatMessage`.
+> * The scopes for `chatMessage` apply here.
 
 ```http
 POST https://graph.microsoft.com/v1.0/teams/team-id/channels/channel-id/messages
@@ -283,9 +287,9 @@ HTTP/1.1 200 OK
 }
 ```
 
-## Step four: Complete migration mode
+## Step 4: Complete migration mode
 
-Once the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration` method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. All channels must be completed out of migration mode before the team can be completed.
+After the message migration process has completed, both the team and channel are taken out of migration mode using the  `completeMigration` method. This step opens the team and channel resources for general use by team members. The action is bound to the `team` instance. Before the team completes, all channels must be completed out of migration mode.
 
 #### Request (end channel migration mode)
 
@@ -344,16 +348,18 @@ HTTP/1.1 204 No Content
 
 * After the `completeMigration` request is made, you cannot import further messages into the team.
 
-* Team members can only be added to the new team after the `completeMigration` request has returned a successful response.
+* You can only add team members to the new team after the `completeMigration` request has returned a successful response.
 
 * Throttling: Messages import at five RPS per channel.
 
-* If you need to make a correction to the migration results, you need to delete the team and repeat the steps to create the team and channel and re-migrate the messages.
+* If you need to make a correction to the migration results, you must delete the team and repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
 > Currently, inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
+
+The following table provides the content scope:
 
 |In-scope | Currently out-of-scope|
 |----------|--------------------------|
@@ -372,4 +378,4 @@ HTTP/1.1 204 No Content
 
 ## See also
 
-[Learn more about Microsoft Graph and Teams integration](/graph/teams-concept-overview)
+[Microsoft Graph and Teams integration](/graph/teams-concept-overview)
