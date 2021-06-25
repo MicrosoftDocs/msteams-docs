@@ -37,16 +37,16 @@ The following table provides the features and description of Incoming Webhook:
 **To add an Incoming Webhook to a Teams channel**
 
 1. Go to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Select **Connectors** from the drop down menu.
+1. Select **Connectors** from the drop down menu:
 
     ![Select Connector](~/assets/images/connectors.png)
 
 1. Search for **Incoming Webhook** and select **Add**.
-1. Select **Configure**, provide a name, and upload an image for your webhook if required.
+1. Select **Configure**, provide a name, and upload an image for your webhook if required:
 
     ![Configure button](~/assets/images/configure.png)
 
-1. The dialog window presents a unique URL that maps to the channel. Copy and save the webhook URL, to send information to Microsoft Teams and select **Done**.
+1. The dialog window presents a unique URL that maps to the channel. Copy and save the webhook URL, to send information to Microsoft Teams and select **Done**:
 
     ![Unique URL](~/assets/images/url.png)
 
@@ -63,23 +63,23 @@ The webhook is available in the Teams channel.
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Select **Connectors** from the drop down menu.
 1. On the left, under **Manage**, select **Configured**.
-1. Select the **number Configured** to see a list of your current connectors.
+1. Select the **number Configured** to see a list of your current connectors:
 
     ![Configured webhook](~/assets/images/configured.png)
 
-1. Select **Manage** next to the connector that you want to remove.
+1. Select **Manage** next to the connector that you want to remove:
 
     ![Manage webhook](~/assets/images/manage.png)
 
-1. Select **Remove**.
+1. Select **Remove**:
 
     ![Remove webhook](~/assets/images/remove.png)
 
-    The **Remove Configuration** dialog box appears.
+    The **Remove Configuration** dialog box appears:
 
     ![Remove Configuration](~/assets/images/removeconfiguration.png)
 
-1. Complete the dialog box fields and checkboxes and select **Remove**.
+1. Complete the dialog box fields and checkboxes and select **Remove**:
 
     ![Final Remove](~/assets/images/finalremove.png)
 

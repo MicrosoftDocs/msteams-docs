@@ -220,7 +220,7 @@ For more information on PowerShell module exchange, see [Set-OrganizationConfig]
 
 To test your connector, upload it to a team with any other app. You can create a .zip package using the manifest file from the two icon files and connectors Developer Dashboard, modified as directed in [Include the connector in your Manifest](#include-the-connector-in-your-manifest).
 
-After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section.
+After you upload the app, open the connectors list from any channel. Scroll to the bottom to see your app in the **Uploaded** section:
 
 ![Screenshot of an uploaded section in connector dialog box](~/assets/images/connectors/connector_dialog_uploaded.png)
 

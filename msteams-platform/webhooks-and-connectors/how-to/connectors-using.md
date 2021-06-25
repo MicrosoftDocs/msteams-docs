@@ -15,7 +15,7 @@ You can create actionable messages and send it through Incoming Webhook or Offic
 
 The actionable messages include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
 
-The Connector cards support the following actions:
+The connector cards support the following actions:
 
 - `ActionCard`: Presents one or more input types and associated actions.
 - `HttpPOST`: Sends POST request to a URL.
@@ -183,7 +183,7 @@ This message provides the following card in the channel:
 1. Check the Microsoft Teams channel associated with the webhook URL. You can see the new card posted to the channel. Before you use the connector to test or publish your app, you must do the following:
 
     - [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
-    - Modify the `icons` portion of the manifest to refer to the file names of the icons instead of URLs.
+    - Modify the `icons` portion of the manifest to the file names of the icons instead of URLs.
 
 ---
 
