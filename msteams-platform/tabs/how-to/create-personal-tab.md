@@ -226,11 +226,43 @@ In addition, this project requires that you have the following installed in your
 
 At a command prompt, open your project directory to complete the next tasks.
 
-[!INCLUDE [node-js-yeoman-gulp-tasks](~/includes/tabs/node-js-yeoman-gulp-tasks.md)]
+#### Create the app package
 
-To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
+You must have an app package to test your tab in Teams. It is a zip folder that contains the following required files:
 
->![Personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
+- A **full color icon** measuring 192 x 192 pixels.
+- A **transparent outline icon** measuring 32 x 32 pixels.
+- A **manifest.json** file that specifies the attributes of your app.
+
+The package is created through a gulp task that validates the manifest.json file and generates the zip folder in the **./package directory**. In the command prompt, enter the following command:
+
+```bash
+gulp manifest
+```
+
+#### Build your application
+
+The build command transpiles your solution into the **./dist** folder. Enter the following command in the command prompt:
+
+```bash
+gulp build
+```
+
+#### Run your application in localhost
+
+1. Start a local web server by entering the following in the command prompt:
+
+    ```bash
+    gulp serve
+    ```
+
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser, replace **<yourDefaultAppNameTab>** with your tab name, and view your application's home page as shown in the following image:
+
+    ![home page screenshot](~/assets/images/tab-images/homePage.png)
+
+1. To view your personal tab, go to `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`.
+
+    >![Personal tab screenshot](/microsoftteams/platform/assets/images/tab-images/personalTab.PNG)
 
 ### Establish a secure tunnel to your tab
 
@@ -599,13 +631,11 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Views
 
-##### Home
+These are the different views in ASP.NET Core:
 
-ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 
-##### Shared
-
-The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also references the Teams Library.
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It also references the Teams Library.
 
 #### Controllers
 
@@ -615,17 +645,19 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 [!INCLUDE [dotnet-ngrok-intro](~/includes/tabs/dotnet-ngrok-intro.md)]
 
-* At a command prompt in the root of your project directory, run the following command:
+**To run ngrok and verify the content page**
+
+1. At a command prompt in the root of your project directory, run the following command:
 
     ``` bash
     ngrok http https://localhost:44345 -host-header="localhost:44345"
     ```
 
-* Ngrok listens to requests from the internet and routes them to your application when it is running on port 44325. It resembles `https://y8rPrT2b.ngrok.io/` where **y8rPrT2b** is replaced by your ngrok alpha-numeric HTTPS URL.
+    Ngrok listens to requests from the internet and routes them to your application when it is running on port 44325. It resembles `https://y8rPrT2b.ngrok.io/` where **y8rPrT2b** is replaced by your ngrok alpha-numeric HTTPS URL.
 
-* Ensure you keep the command prompt with ngrok running, and make a note of the URL.
+    Ensure you keep the command prompt with ngrok running, and make a note of the URL.
 
-* Verify that **ngrok** is running and working properly by opening your browser and going to your content page through the ngrok HTTPS URL that was provided in your command prompt window.
+1. Verify that **ngrok** is running and working properly by opening your browser and going to your content page through the ngrok HTTPS URL that was provided in your command prompt window.
 
 > [!TIP]
 > You need to have both your application in Visual Studio and ngrok running to complete the steps provided in this article. If you need to stop running your application in Visual Studio to work on it, **keep ngrok running**. It listens and resumes routing your application's request when it restarts in Visual Studio. If you have to restart the ngrok service it returns a new URL and you have to update every place that uses that URL.
