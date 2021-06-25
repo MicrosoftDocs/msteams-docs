@@ -33,7 +33,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Create a custom personal tab
 
-You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NET Core, or using ASP.NET Core MVC.
+You can create a personal tab using Node.js and the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC.
 
 # [Node.js](#tab/nodejs)
 

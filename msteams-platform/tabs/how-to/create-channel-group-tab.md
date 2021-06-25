@@ -11,7 +11,7 @@ ms.author: lajanuar
 
 ## Create a custom channel or group tab
 
-You can create a channel or group tab using Node.js and the Yeoman Generator, using ASP.NETCore, and using ASP.NETCore MVC.
+You can create a channel or group tab using Node.js and the Yeoman Generator, ASP.NETCore, or ASP.NETCore MVC.
 
 # [Node.js](#tab/nodejs)
 
