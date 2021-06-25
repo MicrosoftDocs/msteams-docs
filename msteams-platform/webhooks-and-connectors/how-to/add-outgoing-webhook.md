@@ -33,7 +33,7 @@ Create Outgoing Webhooks and add custom bots to Teams.
 
     ![Teams channel](~/assets/images/teamschannel.png)
 
-1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the drop down menu, select **Manage team**:
+1. In the **Teams** page, select the required team to create an Outgoing Webhook and select the &#8226;&#8226;&#8226;. In the dropdown menu, select **Manage team**:
 
     ![Create Outgoing Webhook](~/assets/images/outgoingwebhook1.png)
 
