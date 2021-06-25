@@ -38,35 +38,45 @@ The images that you upload with the English language are used in AppSource.
 
 ## Localize strings in your app manifest
 
-You must use the Microsoft Teams app schema v1.5 and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to **https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json** and updating the `manifestVersion` property to `1.7`. 
-
-### Example manifest.json change
-
-Following is an example for manifest.json change to localize your app:
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.Localization.schema.json",
-  "manifestVersion": "1.5",
-  ...
-}
-```
+You must use the Microsoft Teams app schema `v1.5` and later to localize your app. You can do this by setting the `$schema` attribute in your manifest.json file to **https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json** or higher and updating the `manifestVersion` property to `$schema` version (`1.5` in this case). 
 
 You must add the `localizationInfo` property with the default language that your application supports. The default language is used as the final fallback language if the user's client settings do not match with any of your additional languages.
 
 ### Example manifest.json change
 
-The following manifest.json helps to add the `localizationInfo` property with the default language that your application supports:
+The following manifest.json helps to add the `localizationInfo` property with the default language that your application supports along with `additionalLanguages`:
 
 ```json
 {
-  ...
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
   "localizationInfo": {
-    "defaultLanguageTag": "en"
-  }
+		"defaultLanguageTag": "en",
+		"additionalLanguages": [
+			{
+				"languageTag": "es-mx",
+				"file": "es-mx.json"
+			}
+		]
+	}
   ...
 }
 ```
+
+### Example localization .json change
+
+Following is an example for localization manifest.json:
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.Localization.schema.json",
+  "manifestVersion": "1.5",
+  "name.short": "Localización",
+  "name.full": "Aplicación de localización",
+  ...
+}
+```
+
 
 You can provide additional .json files with translations of all the user facing strings in your manifest. These files must adhere to the [Localization file JSON schema](../../resources/schema/localization-schema.md) and they must be added to the `localizationInfo` property of your manifest. Each file correlates to a language tag, which the Teams client uses to select the appropriate strings. The language tag takes the form of `<language>-<region>` but you can omit the `<region>` portion to target all regions that support the desired language.
 
