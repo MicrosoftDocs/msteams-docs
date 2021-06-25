@@ -342,7 +342,7 @@ HTTP/1.1 204 No Content
 <!-- markdownlint-disable MD001 -->
 <!-- markdownlint-disable MD026 -->
 
-* Once the `completeMigration` request is made, you cannot import further messages into the team.
+* After the `completeMigration` request is made, you cannot import further messages into the team.
 
 * Team members can only be added to the new team after the `completeMigration` request has returned a successful response.
 
