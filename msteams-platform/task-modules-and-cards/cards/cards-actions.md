@@ -79,6 +79,10 @@ CardFactory.actions([
 }])
 ```
 
+# [Node.js](#tab/nodejs)
+
+Not available
+
 ## Action type messageBack
 
 With `messageBack`, you can create a fully customized action with the following properties:
@@ -140,6 +144,10 @@ CardFactory.actions([
     value: {property: "propertyValue" }
 }])
 ```
+
+# [Node.js](#tab/nodejs)
+
+Not available
 
 ### Inbound message example
 
@@ -245,6 +253,10 @@ CardFactory.actions([
 }])
 ```
 
+# [Node.js](#tab/nodejs)
+
+Not available
+
 ## Action type invoke
 
 The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
@@ -289,6 +301,9 @@ var button = new CardAction()
     Value = "{\"option\": \"opt1\"}"
 };
 ```
+# [JavaScript](#tab/javascript)
+
+Not available
 
 # [Node.js](#tab/nodejs)
 
@@ -400,6 +415,10 @@ CardFactory.actions([
     value: "https://signin.com"
 }])
 ```
+
+# [Node.js](#tab/nodejs)
+
+Not available
 
 ## Adaptive Cards actions
 
