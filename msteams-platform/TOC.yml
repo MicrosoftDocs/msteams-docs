@@ -9,7 +9,7 @@
   expanded: true
   items:
     name: Overview
-    href: tutorials/code-samples.md  
+    href: get-started/code-samples.md  
   - name: Prerequisites
     href: get-started/prerequisites.md
   - name: Build your first app using React
@@ -19,11 +19,11 @@
   - name: Build your first app using SPFx
     href: get-started/first-app-spfx.md
   - name: Build your first app using C# or .NET
-    href: tutorials/get-started-dotnet-app-studio.md
+    href: get-started/get-started-dotnet-app-studio.md
   - name: Build your first app using Node.js
-    href: tutorials/get-started-nodejs-app-studio.md
+    href: get-started/get-started-nodejs-app-studio.md
   - name: Build your first app using the Yeoman generator
-    href: tutorials/get-started-yeoman.md
+    href: get-started/get-started-yeoman.md
   - name: Build your first conversational bot
     href: get-started/first-app-bot.md
   - name: Build your first messaging extension
