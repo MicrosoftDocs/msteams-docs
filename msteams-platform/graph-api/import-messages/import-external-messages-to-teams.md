@@ -85,7 +85,7 @@ Content-Location: /teams/{team-id}
 400 Bad Request
 ```
 
-You will receive the error message in the following scenarios:
+You can receive the error message in the following scenarios:
 
 * If `createdDateTime` is set for future.
 * If `createdDateTime` is correctly specified, but `teamCreationMode` instance attribute is missing or set to invalid value.
@@ -141,7 +141,7 @@ HTTP/1.1 202 Accepted
 ```http
 400 Bad Request
 ```
-You will receive the error message in the following scenarios:
+You can receive the error message in the following scenarios:
 
 * If `createdDateTime` is set for future.
 * If `createdDateTime` is correctly specified but `channelCreationMode` instance attribute is missing or set to invalid value.
