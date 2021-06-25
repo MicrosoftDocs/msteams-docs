@@ -6,10 +6,10 @@ keywords: teams manifest schema Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
 ---
-# Developer preview manifest schema for Microsoft Teams
+# Reference: Developer preview manifest schema for Microsoft Teams
 
 > [!NOTE]
-> For more information on the program and how you can join,see [Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
+> For more information on the program and how you can join,see [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > If you are not using the developer preview you should not be using this version of the manifest. See [Reference: Manifest schema for Microsoft Teams](~/resources/schema/manifest-schema.md) for the public version of the manifest.
 
 The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
@@ -220,7 +220,7 @@ For more information on the features available see: [Features in the Public Deve
     "groupchat": "bot"
   },
   "subscriptionOffer": {
-    "offerId": "Recloud12345"
+    "offerId": "Recloud.12345"
   }
 }
 ```
@@ -505,7 +505,7 @@ Specify your Azure AD App ID and Graph information to help users seamlessly sign
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔|Azure AD application id of the app. This id must be a GUID.|
+|`id`|String|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 
@@ -559,8 +559,8 @@ When a group install scope is selected, it will define the default capability wh
 
 **Optional** - object
 
-Specifies the Microsoft commercial marketplace software-as-a-service (SaaS) offer linked to your app.
+Specifies the SaaS offer associated with your app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`offerId`| string | 2048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID. You can find these IDs in [Partner Center](https://partner.microsoft.com/dashboard).|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
