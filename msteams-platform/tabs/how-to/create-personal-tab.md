@@ -631,7 +631,7 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Views
 
-These are the different views in ASP.NET Core:
+These are the different views in ASP.NET Core MVC:
 
 * Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** is displayed as the home page for your application.
 

@@ -599,13 +599,11 @@ In the Visual Studio Solution Explorer window, right-click on the project and se
 
 #### Views
 
-##### Home
+These are the different views in ASP.NET Core MVC:
 
-ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
+* Home: ASP.NET Core treats files called **Index** as the default or home page for the site. When your browser URL points to the root of the site, **Index.cshtml** will be displayed as the home page for your application.
 
-##### Shared
-
-The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
+* Shared: The partial view markup **_Layout.cshtml** contains the application's overall page structure and shared visual elements. It will also reference the Teams Library.
 
 #### Controllers
 
