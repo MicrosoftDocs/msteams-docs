@@ -89,157 +89,108 @@ This section defines the schema of what your bot receives when it receives a `ta
 
 The next section provides an example of receiving and responding to `task/fetch` and `task/submit` invoke messages in Node.js.
 
-## Example of task/fetch and task/submit invoke messages in Node.js
+## Example of task/fetch and task/submit invoke messages in Node.js and C#
 
-> [!NOTE]
-> The schema of the `task/fetch` request is changed according to [payload of task/fetch and task/submit messages](#payload-of-taskfetch-and-tasksubmit-messages). The documentation is correct but the implementation was not. See the `// for Technical Preview [...]` comments for what changed.
+# [Node.js](#tab/nodejs)
 
 ```typescript
-// Handle requests and responses for a "Custom Form" and an "Adaptive card" task module.
-// Assumes request is coming from an Adaptive card Action.Submit button that has a "taskModule" property indicating what to invoke
-private async onInvoke(event: builder.IEvent, cb: (err: Error, body: any, status?: number) => void): Promise<void> {
-    let invokeType = (event as any).name;
-    let invokeValue = (event as any).value;
-    if (invokeType === undefined) {
-        invokeType = null;
+handleTeamsTaskModuleFetch(context, taskModuleRequest) {
+    // Called when the user selects an options from the displayed HeroCard or
+    // AdaptiveCard.  The result is the action to perform.
+
+    const cardTaskFetchValue = taskModuleRequest.data.data;
+    var taskInfo = {}; // TaskModuleTaskInfo
+
+    if (cardTaskFetchValue === TaskModuleIds.YouTube) {
+        // Display the YouTube.html page
+        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.YouTube + '.html';
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
+    } else if (cardTaskFetchValue === TaskModuleIds.CustomForm) {
+        // Display the CustomForm.html page, and post the form data back via
+        // handleTeamsTaskModuleSubmit.
+        taskInfo.url = taskInfo.fallbackUrl = this.baseUrl + '/' + TaskModuleIds.CustomForm + '.html';
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
+    } else if (cardTaskFetchValue === TaskModuleIds.AdaptiveCard) {
+        // Display an AdaptiveCard to prompt user for text, and post it back via
+        // handleTeamsTaskModuleSubmit.
+        taskInfo.card = this.createAdaptiveCardAttachment();
+        this.setTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
     }
-    switch (invokeType) {
-        case "task/fetch": {
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "customform") { // for Technical Preview, was invokeValue.taskModule
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Custom Form",
-                            "height": 510,
-                            "width": 430,
-                            "fallbackUrl": "https://contoso.com/teamsapp/customform",
-                            "url": "https://contoso.com/teamsapp/customform",
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            if (invokeValue !== undefined && invokeValue.data.taskModule === "adaptivecard") { // for Technical Preview, was invokeValue.taskModule
-                let adaptiveCard = {
-                    "type": "AdaptiveCard",
-                    "body": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Here is a ninja cat:"
-                        },
-                        {
-                            "type": "Image",
-                            "url": "http://adaptivecards.io/content/cats/1.png",
-                            "size": "Medium"
-                        }
-                    ],
-                    "version": "1.0"
-                };
-                // Return the specified task module response to the bot
-                let fetchTemplate: any = {
-                    "task": {
-                        "type": "continue",
-                        "value": {
-                            "title": "Ninja Cat",
-                            "height": "small",
-                            "width": "small",
-                            "card": {
-                                contentType: "application/vnd.microsoft.card.adaptive",
-                                content: adaptiveCard,
-                            }
-                        }
-                    }
-                };
-                cb(null, fetchTemplate, 200);
-            };
-            break;
+
+    return TaskModuleResponseFactory.toTaskModuleResponse(taskInfo);
+}
+
+async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
+    // Called when data is being returned from the selected option (see `handleTeamsTaskModuleFetch').
+
+    // Echo the users input back.  In a production bot, this is where you'd add behavior in
+    // response to the input.
+    await context.sendActivity(MessageFactory.text('handleTeamsTaskModuleSubmit: ' + JSON.stringify(taskModuleRequest.data)));
+
+    // Return TaskModuleResponse
+    return {
+        // TaskModuleMessageResponse
+        task: {
+            type: 'message',
+            value: 'Thanks!'
         }
-        case "task/submit": {
-            if (invokeValue.data !== undefined) {
-                // It's a valid task module response
-                let submitResponse: any = {
-                    "task": {
-                        "type": "message",
-                        "value": "Task complete!",
-                    }
-                };
-                cb(null, fetchTemplates.submitMessageResponse, 200)
-            }
-        }
-    }
+    };
+}
+
+setTaskInfo(taskInfo, uiSettings) {
+    taskInfo.height = uiSettings.height;
+    taskInfo.width = uiSettings.width;
+    taskInfo.title = uiSettings.title;
 }
 ```
 
-The next section provides an example of receiving and responding to task/fetch and task/submit invoke messages in C#.
-
-## Example of task/fetch and task/submit invoke messages in C#
-
-In C# bots, `invoke` messages are processed by an `HttpResponseMessage()` controller processing an `Activity` message. The `task/fetch` and `task/submit` requests and responses are JSON. In C#, wrapper classes are used to handle the serialization to and from JSON, as raw JSON is in Node.js. There is no direct support for this in the Microsoft Teams [C# SDK](https://www.nuget.org/packages/Microsoft.Bot.Connector.Teams), but you can see an example of what these simple wrapper classes are in the [C# sample app](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Models/TaskModel.cs).
-
-The following code provides an example in C# for handling `task/fetch` and `task/submit` messages using these wrapper classes that is `TaskInfo` and `TaskEnvelope`, excerpted from the [sample](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs):
+# [C#](#tab/csharp)
 
 ```csharp
-private HttpResponseMessage HandleInvokeMessages(Activity activity)
+protected override Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
 {
-    var activityValue = activity.Value.ToString();
-    if (activity.Name == "task/fetch")
-    {
-        var action = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BotFrameworkCardValue<string>>(activityValue);
+    var asJobject = JObject.FromObject(taskModuleRequest.Data);
+    var value = asJobject.ToObject<CardTaskFetchValue<string>>()?.Data;
 
-        Models.TaskInfo taskInfo = GetTaskInfo(action.Data);
-        Models.TaskEnvelope taskEnvelope = new Models.TaskEnvelope
-        {
-            Task = new Models.Task()
-            {
-                Type = Models.TaskType.Continue,
-                TaskInfo = taskInfo
-            }
-        };
-        return Request.CreateResponse(HttpStatusCode.OK, taskEnvelope);
-    }
-    else if (activity.Name == "task/submit")
-    {
-        ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-        Activity reply = activity.CreateReply("Received = " + activity.Value.ToString());
-        connector.Conversations.ReplyToActivity(reply);
-    }
-    return new HttpResponseMessage(HttpStatusCode.Accepted);
-}
-
-// Helper function for building the TaskInfo object based on the incoming request
-private static Models.TaskInfo GetTaskInfo(string actionInfo)
-{
-    Models.TaskInfo taskInfo = new Models.TaskInfo();
-    switch (actionInfo)
+    var taskInfo = new TaskModuleTaskInfo();
+    switch (value)
     {
         case TaskModuleIds.YouTube:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.YouTube;
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.YouTube;
             SetTaskInfo(taskInfo, TaskModuleUIConstants.YouTube);
             break;
-        case TaskModuleIds.PowerApp:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.PowerApp;
-            SetTaskInfo(taskInfo, TaskModuleUIConstants.PowerApp);
-            break;
         case TaskModuleIds.CustomForm:
-            taskInfo.Url = taskInfo.FallbackUrl = ApplicationSettings.BaseUrl + "/" + TaskModuleIds.CustomForm;
+            taskInfo.Url = taskInfo.FallbackUrl = _baseUrl + "/" + TaskModuleIds.CustomForm;
             SetTaskInfo(taskInfo, TaskModuleUIConstants.CustomForm);
             break;
         case TaskModuleIds.AdaptiveCard:
-            taskInfo.Card = AdaptiveCardHelper.GetAdaptiveCard();
+            taskInfo.Card = CreateAdaptiveCardAttachment();
             SetTaskInfo(taskInfo, TaskModuleUIConstants.AdaptiveCard);
             break;
         default:
             break;
     }
-    return taskInfo;
+
+    return Task.FromResult(taskInfo.ToTaskModuleResponse());
+}
+
+protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+{
+    var reply = MessageFactory.Text("OnTeamsTaskModuleSubmitAsync Value: " + JsonConvert.SerializeObject(taskModuleRequest));
+    await turnContext.SendActivityAsync(reply, cancellationToken);
+
+    return TaskModuleResponseFactory.CreateResponse("Thanks!");
+}
+
+private static void SetTaskInfo(TaskModuleTaskInfo taskInfo, UISettings uIConstants)
+{
+    taskInfo.Height = uIConstants.Height;
+    taskInfo.Width = uIConstants.Width;
+    taskInfo.Title = uIConstants.Title.ToString();
 }
 ```
 
-The `SetTaskInfo()` function is not shown in the example code, which sets the `height`, `width`, and `title` properties of the `TaskInfo` object for each case. For more information, see [source code for SetTaskInfo()](https://github.com/OfficeDev/microsoft-teams-sample-task-module-csharp/blob/master/Microsoft.Teams.Samples.TaskModule.Web/Controllers/MessagesController.cs).
-
-The next section compares Bot Framework card actions and Adaptive Card `Action.Submit` actions.
+---
 
 ### Bot Framework card actions vs. Adaptive Card Action.Submit actions
 
