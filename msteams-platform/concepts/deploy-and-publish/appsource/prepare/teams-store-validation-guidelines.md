@@ -103,7 +103,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * Your app's privacy policy and terms of use pages must be free of any commerce-related UI or links.
 
 > [!NOTE]
-> Teams store listings can include app subscription plans or licenses for purchase. For more information, see [include a SaaS offer with your app](~/concepts/deploy-and-publish/appsource/prepare/purchase-webapps.md).
+> Teams store listings can include app subscription plans or licenses for purchase. For more information, see [include a SaaS offer with your app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 ## General functionality and performance
 
