@@ -9,18 +9,20 @@ ms.author: lajanuar
 
 # Create a channel or group tab
 
+## Create a custom channel or group tab
+
 You can create a channel or group tab using Node.js and the Yeoman Generator, using ASP.NETCore, and using ASP.NETCore MVC.
 
 # [Node.js](#tab/nodejs)
 
-## Create a custom channel and group tab using Node.js and the Yeoman Generator
+### Create a custom channel and group tab using Node.js and the Yeoman Generator
 
 > [!NOTE]
 > This article follows the steps outlined in the [build Your first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
 
 You can create a custom channel or group tab using the [Teams Yeoman generator](https://github.com/OfficeDev/generator-teams/).
 
-## Prerequisites for apps
+### Prerequisites for apps
 
 You must have an understanding of the following prerequisites:
 
@@ -47,7 +49,7 @@ In addition, this project requires that you have the following installed in your
     npm install generator-teams --global
     ```
 
-## Generate your project
+### Generate your project
 
 **To generate your project**
 
@@ -235,7 +237,7 @@ gulp ngrok-serve
 
 # [ASP.NET Core](#tab/aspnetcore)
 
-## Create a custom channel or group tab with ASP.NET Core
+### Create a custom channel or group tab with ASP.NET Core
 
 You can create a custom channel or group tab using C# and ASP.Net Core Razor page. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
@@ -499,11 +501,11 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-## Create a custom channel or group tab with ASP.NET Core MVC
+### Create a custom channel or group tab with ASP.NET Core MVC
 
 You can create a custom channel or group tab using C# and ASP.Net Core MVC. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
-## Prerequisites for custom channel or group tab
+### Prerequisites for custom channel or group tab
 
 - You must have a Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
@@ -626,6 +628,8 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 Within **Tab.cshtml** the application presents the user with two option buttons for displaying the tab with either a red or gray icon. Choosing the **Select Gray** or **Select Red** button, triggers `saveGray()` or `saveRed()`, respectively, sets `settings.setValidityState(true)`, and enables the **Save** button on the configuration page. This code lets Teams know that you have completed the configuration requirements and the installation can proceed. On save, the parameters of `settings.setSettings` are set. Finally, `saveEvent.notifySuccess()` is called to indicate that the content URL has been successfully resolved.
 
 [!INCLUDE [dotnet-update-app](~/includes/tabs/dotnet-update-chan-grp-app.md)]
+
+---
 
 ## See also
 

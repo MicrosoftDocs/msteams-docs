@@ -9,8 +9,6 @@ ms.author: lajanuar
 
 # Create a personal tab
 
-You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NET Core, or using ASP.NET Core MVC.
-
 ## Reorder static personal tabs
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the **bot chat** tab, which always defaults to the first position, anywhere in the personal app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
@@ -33,9 +31,13 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 ```
 
+## Create a custom personal tab
+
+You can create a personal tab using Node.js and the Yeoman Generator, using ASP.NET Core, or using ASP.NET Core MVC.
+
 # [Node.js](#tab/nodejs)
 
-## Create a custom personal tab using Node.js and the Yeoman Generator
+### Create a custom personal tab using Node.js and the Yeoman Generator
 
 > [!NOTE]
 > This article follows the steps outlined in the [build your first Microsoft Teams app](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App) Wiki found in the Microsoft OfficeDev GitHub repository.
@@ -300,7 +302,7 @@ In the navigation bar located at the far left in Teams, select the ellipses &#x2
 
 # [ASP.NET Core](#tab/aspnetcore)
 
-## Create a custom personal tab using ASP.NET Core
+### Create a custom personal tab using ASP.NET Core
 
 You can create a custom personal tab using C# and ASP.NET Core Razor pages. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
@@ -531,7 +533,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 # [ASP.NET Core MVC](#tab/aspnetcoremvc)
 
-## Create a custom personal tab with ASP.NET Core MVC
+### Create a custom personal tab with ASP.NET Core MVC
 
 You can create a custom personal tab using C# and ASP.NET Core MVC. [App Studio for Microsoft Teams](~/concepts/build-and-test/app-studio-overview.md) is also used to finalize your app manifest and deploy your tab to Teams.
 
@@ -667,6 +669,8 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
+
+---
 
 ## See also
 
