@@ -1,12 +1,12 @@
 ---
-title: Developer Preview Manifest schema reference
+title: Public developer preview manifest schema reference
 description: Describes the schema supported by the manifest for Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
 localization_priority: Normal
 ms.date: 05/20/2019
 ---
-# Reference: Developer preview manifest schema for Microsoft Teams
+# Reference: Public developer preview manifest schema for Microsoft Teams
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
