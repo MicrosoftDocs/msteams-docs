@@ -251,8 +251,11 @@
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - name: Send proactive messages
+    - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
+      items:
+      - name: Step-by-step guide
+        href: sbs-send-proactive.yml 
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
