@@ -92,7 +92,7 @@ Messaging extensions are shortcuts for inserting app content or acting on a mess
 
 ## Meeting extensions
 
-Meeting extensions are apps to enhance live meetings. You can host your app content in several scenarios, including before, during, and after meetings. The surface is an iframe, allowing you to customize the experience, but keep in mind that these apps are dark themed and narrow during meetings.
+Meeting extensions are apps to enhance live meetings. You can host your app content in several scenarios, including before, during, and after meetings.
 
 ***Supported scopes**: Meetings, Chats*
 
