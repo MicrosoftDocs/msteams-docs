@@ -148,13 +148,13 @@ In addition, this project requires that you have the following installed in your
 
 1. Locate the `render()` method and add the following `<div>` tag and content to the top of the `<PanelBody>` container code:
 
-```html
-    <PanelBody>
-        <div style={styles.section}>
-            Hello World! Yo Teams rocks!
-        </div>
-    </PanelBody>
-```
+    ```html
+        <PanelBody>
+            <div style={styles.section}>
+                Hello World! Yo Teams rocks!
+            </div>
+        </PanelBody>
+    ```
 
 1. Make sure to save the updated file.
 
@@ -241,9 +241,9 @@ Alternately, you can retrieve the source code by downloading the zip folder and 
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. In a browser, go to the following URLs and verify the application loaded properly:
 
-- `http://localhost:44355`
-- `http://localhost:44355/privacy`
-- `http://localhost:44355/tou`
+    - `http://localhost:44355`
+    - `http://localhost:44355/privacy`
+    - `http://localhost:44355/tou`
 
 ### Review the source code
 
@@ -503,9 +503,9 @@ Alternately, you can retrieve the source code by downloading the zip folder and 
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. In a browser, navigate to the following URLs and verify that the application loaded properly:
 
-- `http://localhost:44360`
-- `http://localhost:44360/privacy`
-- `http://localhost:44360/tou`
+    - `http://localhost:44360`
+    - `http://localhost:44360/privacy`
+    - `http://localhost:44360/tou`
 
 ### Review the source code
 

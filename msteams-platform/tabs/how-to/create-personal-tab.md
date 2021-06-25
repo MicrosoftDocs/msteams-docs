@@ -306,10 +306,10 @@ Alternately, you can retrieve the source code by downloading the zip folder and 
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. In a browser, go to the following URLs to verify the application loaded properly:
 
-- `http://localhost:44325/`
-- `http://localhost:44325/personal`
-- `http://localhost:44325/privacy`
-- `http://localhost:44325/tou`
+    - `http://localhost:44325/`
+    - `http://localhost:44325/personal`
+    - `http://localhost:44325/privacy`
+    - `http://localhost:44325/tou`
 
 ### Review the source code
 
@@ -535,9 +535,9 @@ Alternately, you can retrieve the source code by downloading the zip folder and 
 1. To build and run your application, press **F5** or choose **Start Debugging** from the **Debug** menu.
 1. In a browser, go to the following URLs to verify that the application loaded properly:
 
-* `http://localhost:44335`
-* `http://localhost:44335/privacy`
-* `http://localhost:44335/tou`
+    * `http://localhost:44335`
+    * `http://localhost:44335/privacy`
+    * `http://localhost:44335/tou`
 
 ### Review the source code
 
@@ -632,7 +632,7 @@ The controllers use the `ViewBag` property to transfer values dynamically to the
 
 #### Run your application
 
-* In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
+In Visual Studio, press **F5** or choose **Start Debugging** from your application's **Debug** menu.
 
 [!INCLUDE [dotnet-personal-use-appstudio](~/includes/tabs/dotnet-personal-use-appstudio.md)]
 
