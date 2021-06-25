@@ -8,47 +8,59 @@ ms.author: surbhigupta
 
 # Publish your Microsoft Teams app to your org
 
-There are several ways to publish a Microsoft Teams app you built specifically for your organization. The process is essentially the same with each option:
+There are multiple ways to publish the Microsoft Teams app you built specifically for your organization, but the process is essentially the same:
 
 1. You submit the app to your Teams admin.
-1. The admin reviews your app. Once approved, users can discover your app in your org's app catalog.
+1. The admin reviews your app.
+1. If approved, the admin publishes the app.
+1. Users discover your app in the org's app catalog.
 
 ## Prerequisites
 
-* Contact your Teams admin to make sure your org allows custom apps.
+* Contact your admin to make sure your org allows custom Teams apps.
 * [Validate your app manifest](https://dev.teams.microsoft.com/appvalidation.html) for errors and create your [app package](~/concepts/build-and-test/apps-package.md).
 * Make sure that your app's frontend and backend resources are running and accessible via HTTPS.
 
-## Submit in the Teams client
+## Submit your app
+
+The tools you're already using to create your app likely provide a way to submit the app to your Teams admin.
+
+### Submit in the Teams client
 
 1. In the Teams client, go to **Apps > Manage your apps**.
 1. Choose **Submit an app to your org**.
 1. Select **Submit an app** and choose your app package .zip file.
 
-## Submit using the Developer Portal
+### Submit using the Developer Portal
 
 1. In the [Developer Portal](https://dev.teams.microsoft.com), go to **Apps** and select the app you want to publish.
 1. Select **Distribute** and choose **Publish to your org**.
 1. Select **Publish your app** and choose your app package .zip file.
 
-## Submit with other common Teams developer tools
+### Submit with other common Teams developer tools
 
-Most common Teams developer tools include a feature for publishing your app to your org. Some of these tools include:
+Many Teams developer tools include a feature for publishing your app to your org. Some of these tools include:
 
 * Teams Toolkit for Visual Studio Code
 * Teams Toolkit for Visual Studio
 * Power Apps
 * Power Virtual Agents
 
-## Submit with Microsoft Graph API
+### Submit with Microsoft Graph API
 
 If you aren't using a common Teams developer tool, you can still submit your app with a [Microsoft Graph API call](/graph/api/teamsapp-publish).
 
-## Next steps
+## Get your app approved
 
-Your Teams admin reviews the submitted app. Your contact information is included in the submission in case they need to contact your.
+Your app goes to the Teams admin center for review. Your submission includes your contact information in case the admin needs to reach you.
 
-Once approved, users can discover the app in the Teams store under **Built for your org**.
+Once your admin approves and publishes the app, users can find it in the Teams store under **Built for your org**.
+
+## Manage your app
+
+It's your admin's responsibility to manage the app once it's published. For example, the admin can configure app permission policies and monitor usage. Only the admin can remove the app from the org's app catalog.
+
+If you update your app&#8212;add a feature, fix a bug, enhance the design, or something else&#8212;you must submit the latest version to your admin for publishing.
 
 ## See also
 
