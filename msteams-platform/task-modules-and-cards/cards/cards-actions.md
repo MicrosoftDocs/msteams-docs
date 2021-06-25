@@ -297,7 +297,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript/Node.js](#tab/nodejs)
+# [JavaScript/Node.js](#tab/javascript)
 
 The following code shows an example of `invoke` action type in Node.js:
 
@@ -421,7 +421,7 @@ Adaptive Cards support four action types:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next sections provide details on how to use existing Bot Framework actions with Adaptive Cards.
+You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provide details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
 > Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
