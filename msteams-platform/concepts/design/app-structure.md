@@ -98,13 +98,13 @@ Meeting extensions are apps to enhance live meetings. You can host your app cont
 
 # [Desktop](#tab/desktop)
 
-The surface is an iframe, allowing you to customize the experience, but keep in mind that these apps are dark themed and narrow during meetings.
+The surface is an iframe, allowing you to customize the experience, but keep in mind that during meetings these apps use dark theme and are narrow.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-desktop.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on desktop." border="false":::
 
 # [Mobile](#tab/mobile)
 
-The surface is a webview, allowing you to customize the experience, but keep in mind that these apps are dark themed during meetings.
+The surface is a webview, allowing you to customize the experience, but keep in mind that during meetings these apps use dark theme.
 
 :::image type="content" source="../../assets/images/design-guidelines/app-structure-meeting-exetensions-mobile.png" alt-text="Conceptual image showing the front-end areas in Teams that developers can customize for meeting extensions on mobile." border="false":::
 
