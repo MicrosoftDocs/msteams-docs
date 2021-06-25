@@ -12,9 +12,9 @@
     href: get-started/prerequisites.md
   - name: Build your first app using React
     href: get-started/first-app-react.md
-  - name: Create your first app using Blazor
+  - name: Build your first app using Blazor
     href: get-started/first-app-blazor.md
-  - name: Create your first app using SPFx
+  - name: Build your first app using SPFx
     href: get-started/first-app-spfx.md
   - name: Build your first conversational bot
     href: get-started/first-app-bot.md
