@@ -717,13 +717,3 @@ You can define any of the following properties:
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
-
-## subscriptionOffer
-
-**Optional** - object
-
-Specifies the SaaS offer associated with your app.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`offerId`| string | 2048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in Microsoft Partner Center. You must format the string as `publisherId.offerId`.|
