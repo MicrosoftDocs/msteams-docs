@@ -400,7 +400,7 @@ The following code shows an example of a list card:
 
 ## Office 365 connector card
 
-You can work with an Office 365 Connector card that provides a flexible layout and is a great way to get useful information. The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the Office 365 Connector card, see [notes on the Office 365 Connector card](#notes-on-the-office-365-connector-card).
+You can work with an Office 365 Connector card that provides a flexible layout and is a great way to get useful information. The Office 365 connector card is supported in Teams, not in Bot Framework. This card provides a flexible layout with multiple sections, fields, images, and actions. This card contains a connector card so that it can be used by bots. For differences between connector cards and the Office 365 Connector card, see [Additional information on the Office 365 Connector card](#additional-information-on-the-office-365-connector-card).
 
 ### Support for Office 365 Connector cards
 
