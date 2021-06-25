@@ -240,9 +240,9 @@ After uploading the app package to configure and use the connector in a team, in
 1. Select **Apps** from the left navigation bar.
 1. In the **Apps** section, select **Connectors**.
 1. Select the connector that you want to add. A pop up dialog window appears.
-1. From the drop down menu, select **Add to a team**.
+1. From the dropdown menu, select **Add to a team**.
 1. In the search box, type a team or channel name.
-1. Select **Set up a Connector** from the drop down menu in the bottom right corner of the dialog window.
+1. Select **Set up a Connector** from the dropdown menu in the bottom right corner of the dialog window.
 
 The connector is available in the section &#9679;&#9679;&#9679; > **More options** > **Connectors** > **All** > **Connectors for your team** for that team. You can navigate by scrolling to this section or search for the connector app. To configure or modify the connector, select **Configure**.
 
