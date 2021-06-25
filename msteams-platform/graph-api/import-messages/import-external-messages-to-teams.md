@@ -12,7 +12,7 @@ keywords: teams import messages api graph microsoft migrate migration post
 
 With Microsoft Graph, you can migrate users' existing message history and data from an external system into a Teams channel. By enabling the recreation of a third-party platform messaging hierarchy inside Teams, users can continue their communications in a seamless manner and proceed without interruption.
 
-> [!NOTE] 
+> [!NOTE]
 > In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported.
 
 ## Import overview
@@ -36,8 +36,8 @@ At a high level, the import process consists of the following:
 
 ### Set up your Office 365 tenant
 
-✔ Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [Prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
-✔ Make sure that team members are in Azure Active Directory (AAD).  For more information, see [Add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure Active Directory.
+✔ Ensure that an Office 365 tenant exists for the import data. For more information on setting up an Office 365 tenancy for Teams, see [prepare your Office 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).  
+✔ Make sure that team members are in Azure Active Directory (AAD). For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to AAD.
 
 ## Step One: Create a team
 
