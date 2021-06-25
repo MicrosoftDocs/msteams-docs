@@ -8,7 +8,7 @@ ms.topic: quickstart
 ---
 # Prerequisites: Get started with Microsoft Teams app development
 
-Before you create your first Teams app, you must install a few tools and set up your development environment.
+Before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
 
 ## Install required tools
 
@@ -29,9 +29,9 @@ The Teams Toolkit helps simplify the development process with tools to provision
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
-1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. Select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 1. In the search box, enter **Teams Toolkit**.
-1. Select the green install button next to the Teams Toolkit.
+1. Select **Install** next to the Teams Toolkit.
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -113,7 +113,7 @@ During development, you must load your app within Teams without distributing it.
 1. If you have a Teams account, verify if you can sideload apps in Teams:
 
     1. In the Teams client, select **Apps**.
-    1. Look for an option to **Upload a custom app**.
+    1. Select **Upload a custom app**.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
@@ -126,13 +126,12 @@ If you cannot see the sideload option, or you do not have a Teams account, you c
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
-1. When you get to the welcome screen, select **Set up E5 subscription**.
-1. Set up your administrator account. Once you finish, you should see a screen like this.
+1. In the welcome screen, select **Set up E5 subscription**.
+1. Set up your administrator account. After you finish, you should see a screen like this.
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
-1. Sign in to Teams using the administrator account you just set up.
-1. Verify if you now have the **Upload a custom app** option.
+1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option.
 
 ## Get a free Azure account
 
@@ -156,14 +155,14 @@ You must have access to two accounts:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
 
-1. The sign-in process starts using your normal web browser. Complete the sign-in process for your M365 account. You are prompted when you can close the browser and return to Visual Studio Code.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your M365 account. When you are prompted, you can close the browser and return to Visual Studio Code.
 1. Return to the Teams Toolkit within Visual Studio Code.
 1. Select **Sign in to Azure**.
 
     > [!TIP]
     > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
-1. The sign-in process starts using your normal web browser.  Complete the sign-in process for your Azure account. You are prompted when you can close the browser and return to Visual Studio Code.
+1. The sign-in process starts using your normal web browser.  Complete the sign-in process for your Azure account. When are prompted, you can close the browser and return to Visual Studio Code.
 
 When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
@@ -206,3 +205,4 @@ Now that your development environment is configured, you can create, build, and 
 
 > [!div class="nextstepaction"]
 > [Create your first Teams app using React](first-app-react.md)
+
