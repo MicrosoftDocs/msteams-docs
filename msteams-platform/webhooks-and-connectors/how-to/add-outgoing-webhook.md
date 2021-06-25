@@ -8,7 +8,7 @@ ms.author: lajanuar
 keywords: teams tabs outgoing webhook actionable message verify webhook
 ---
 
-# Create an Outgoing Webhook
+# Create Outgoing Webhook
 
 The Outgoing Webhook acts as a bot and search for messages in channels using **@mention**. It sends notifications to external web services and responds with rich messages, which include cards and images. It helps to skip the process of creating bots through the [Microsoft Bot Framework](https://dev.botframework.com/).
 
@@ -105,7 +105,7 @@ Responses from your Outgoing Webhooks appear in the same reply chain as the orig
 ---
 
 > [!NOTE]
-> * You can send Adaptive Card, Hero card, and text messages as attachment with outgoing webhook.
+> * You can send Adaptive Card, Hero card, and text messages as attachment with Outgoing Webhook.
 > * Cards support formatting. For more information, see [format cards with markdown](~/task-modules-and-cards/cards/cards-format.md?tabs=adaptive-md%2Cconnector-html#formatting-cards-with-markdown).
 
 Following codes are examples of an Adaptive Card response:

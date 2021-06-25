@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.author: lajanuar
 ---
 
-# Create an Incoming Webhook
+# Create Incoming Webhook
 
 Incoming Webhook allows any external apps to share content in Teams channels. These webhooks are used as tracking and notifying tools. They provide a unique URL, to which you send a JSON payload with a message in card format. Cards are user interface containers that include content and actions related to a single topic. Teams use cards within the following capabilities:
 
@@ -32,7 +32,7 @@ The following table provides the features and description of Incoming Webhook:
 > * Teams bots, messaging extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards, an open cross card platform framework. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) do not support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 > * For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
-## Create an Incoming Webhook
+## Create Incoming Webhook
 
 **To add an Incoming Webhook to a Teams channel**
 
@@ -55,7 +55,7 @@ The webhook is available in the Teams channel.
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
-## Remove an Incoming Webhook
+## Remove Incoming Webhook
 
 **To remove an Incoming Webhook from a Teams channel**
 

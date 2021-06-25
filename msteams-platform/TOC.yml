@@ -313,7 +313,7 @@
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
-- name: Build Webhooks and Connectors
+- name: Build webhooks and connectors
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
