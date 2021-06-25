@@ -41,7 +41,9 @@ With `openUrl`, you can create an action with the following properties:
 | `title` | Appears as the button label. |
 | `value` | This field must contain a full and properly formed URL. |
 
-The following code shows an example of `openUrl` action type in Json:
+# [JSON](#tab/json)
+
+The following code shows an example of `openUrl` action type in JSON:
 
 ```json
 {
@@ -50,6 +52,8 @@ The following code shows an example of `openUrl` action type in Json:
     "value": "https://msdn.microsoft.com/microsoft-teams/tabs"
 }
 ```
+
+# [C#](#tab/csharp)
 
 The following code shows an example of `openUrl` action type in C#:
 
@@ -61,6 +65,8 @@ var button = new CardAction()
     Value = "https://docs.microsoft.com/en-us/microsoftteams/platform/"
 };
 ```
+
+# [JavaScript](#tab/javascript)
 
 The following code shows an example of `openUrl` action type in JavaScript:
 
@@ -86,7 +92,9 @@ With `messageBack`, you can create a fully customized action with the following 
 
 The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.
 
-The following code shows an example of `messageBack` action type in Json:
+# [JSON](#tab/json)
+
+The following code shows an example of `messageBack` action type in JSON:
 
 ```json
 {
@@ -104,6 +112,8 @@ The following code shows an example of `messageBack` action type in Json:
 
 The `value` property can be either a serialized JSON string or a JSON object.
 
+# [C#](#tab/csharp)
+
 The following code shows an example of `messageBack` action type in C#:
 
 ```csharp
@@ -116,6 +126,7 @@ var button = new CardAction()
     Value = "{\"property\": \"propertyValue\" }"
 };
 ```
+# [JavaScript](#tab/javascript)
 
 The following code shows an example of `messageBack` action type in JavaScript:
 
@@ -196,7 +207,9 @@ With `imBack`, you can create an action with the following properties:
 > [!NOTE]
 > The `value` field is a simple string. There is no support for formatting or hidden characters.
 
-The following code shows an example of `imBack` action type in Json:
+# [JSON](#tab/json)
+
+The following code shows an example of `imBack` action type in JSON:
 
 ```json
 {
@@ -205,6 +218,8 @@ The following code shows an example of `imBack` action type in Json:
     "value": "Show me more"
 }
 ```
+
+# [C#](#tab/csharp)
 
 The following code shows an example of `imBack` action type in C#:
 
@@ -216,6 +231,8 @@ var button = new CardAction()
     Value = "Show me more"
 };
 ```
+
+# [JavaScript](#tab/javascript)
 
 The following code shows an example of `imBack` action type in JavaScript:
 
@@ -241,7 +258,9 @@ With `invoke`, you can create an action with the following properties:
 | `title` | Appears as the button label. |
 | `value` | This property can contain a string, a stringified JSON object, or a JSON object. |
 
-The following code shows an example of `invoke` action type in Json:
+# [JSON](#tab/json)
+
+The following code shows an example of `invoke` action type in JSON:
 
 ```json
 {
@@ -258,6 +277,8 @@ When a user selects the button, your bot receives the `value` object with some a
 > [!NOTE]
 > The activity type is `invoke` instead of `message` that is `activity.Type == "invoke"`.
 
+# [C#](#tab/csharp)
+
 The following code shows an example of `invoke` action type in C#:
 
 ```csharp
@@ -268,6 +289,8 @@ var button = new CardAction()
     Value = "{\"option\": \"opt1\"}"
 };
 ```
+
+# [Node.js](#tab/nodejs)
 
 The following code shows an example of `invoke` action type in Node.js:
 
@@ -340,7 +363,9 @@ The following code shows an example of incoming invoke message:
 
 Teams also supports [Adaptive Cards actions](#adaptive-cards-actions) that are only used by Adaptive Cards.
 
-The following code shows an example of `signin` action type in Json:
+# [JSON](#tab/json)
+
+The following code shows an example of `signin` action type in JSON:
 
 ```json
 {
@@ -349,6 +374,8 @@ The following code shows an example of `signin` action type in Json:
 "value": "https://signin.com"
 }
 ```
+
+# [C#](#tab/csharp)
 
 The following code shows an example of `signin` action type in C#:
 
@@ -360,6 +387,8 @@ var button = new CardAction()
     Value = "https://signin.com"
 };
 ```
+
+# [JavaScript](#tab/javascript)
 
 The following code shows an example of `signin` action type in JavaScript:
 
