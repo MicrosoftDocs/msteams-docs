@@ -66,7 +66,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript)
 
 The following code shows an example of `openUrl` action type in JavaScript:
 
@@ -78,10 +78,6 @@ CardFactory.actions([
     value: 'https://docs.microsoft.com/en-us/microsoftteams/platform/'
 }])
 ```
-
-# [Node.js](#tab/nodejs)
-
-Not available
 
 ---
 
@@ -133,7 +129,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript)
 
 The following code shows an example of `messageBack` action type in JavaScript:
 
@@ -147,10 +143,6 @@ CardFactory.actions([
     value: {property: "propertyValue" }
 }])
 ```
-
-# [Node.js](#tab/nodejs)
-
-Not available
 
 ---
 
@@ -245,7 +237,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript)
 
 The following code shows an example of `imBack` action type in JavaScript:
 
@@ -257,10 +249,6 @@ CardFactory.actions([
     value: "Show me more"
 }])
 ```
-
-# [Node.js](#tab/nodejs)
-
-Not available
 
 ---
 
@@ -309,11 +297,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript](#tab/javascript)
-
-Not available
-
-# [Node.js](#tab/nodejs)
+# [JavaScript/Node.js](#tab/nodejs)
 
 The following code shows an example of `invoke` action type in Node.js:
 
@@ -413,7 +397,7 @@ var button = new CardAction()
 };
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript/Node.js](#tab/javascript)
 
 The following code shows an example of `signin` action type in JavaScript:
 
@@ -425,10 +409,6 @@ CardFactory.actions([
     value: "https://signin.com"
 }])
 ```
-
-# [Node.js](#tab/nodejs)
-
-Not available
 
 ---
 
