@@ -1,16 +1,18 @@
-## Prerequisites
+## Prerequisites for apps
 
-- To complete this quickstart you will need an Office 365 tenant and a team configured with *Allow uploading custom apps* enabled. To learn more, see [Prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+You must have an understanding of the following prerequisites:
 
-  - If you don't currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription will remain active as long as you're using it for ongoing development. See [Welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+- You must have an Office 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Office 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+
+  - If you do not currently have an Office 365 account, you can sign up for a free subscription through the Office 365 Developer Program. The subscription remains active as long as you are using it for ongoing development. See [welcome to the Office 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-- [Node.js/npm](https://nodejs.org/en/). You should use the latest LTS version. The Node Package Manager (npm) will install into your system with the installation of Node.js.
+- [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-- After you've successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
+- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following in your command prompt:
 
     ```bash
     npm install yo gulp-cli --global
@@ -24,15 +26,17 @@ In addition, this project requires that you have the following installed in your
 
 ## Generate your project
 
-- Open a command prompt and create a new directory for your tab project.
+**To generate your project**
 
-- To start the generator, navigate to your new directory and type the following command:
+1. Open a command prompt and create a new directory for your tab project.
+
+1. To start the generator, navigate to your new directory and type the following command:
 
     ```bash
     yo teams
     ```
 
-- Next, you'll provide a series of values that will be used in your application's **manifest.json** file:
+1. Next, provide a series of values that are used in your application's **manifest.json** file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
@@ -72,6 +76,14 @@ In addition, this project requires that you have the following installed in your
 
     By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL is not necessary to complete this quickstart.
 
+    **Would you like show a loading indicator when your app/tab loads?**
+
+    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+   **Would you like personal apps to be rendered without a tab header-bar?**
+
+    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
     **Would you like to include Test framework and initial tests? (y/N)**
 
     Choose **not** to include a test framework for this project. The default is yes; enter **n**.
@@ -82,4 +94,5 @@ In addition, this project requires that you have the following installed in your
 
     **Default Tab Name (max 16 characters)?**
 
-    Name your tab. This tab name will be used throughout your project as a file/URL path component.
+    Name your tab. This tab name will be used throughout your project as a file or URL path component.
+
