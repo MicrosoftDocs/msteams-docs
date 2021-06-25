@@ -67,7 +67,9 @@ items:
        * Windows: Double-click **ngrok.zip**.
        * Linux or OS X: Unzip ngrok from the terminal and run the `unzip /path/to/ngrok.zip` command.
     1. Run ngrok from the command line with following arguments:
-       `ngrok http 3978 --host-header=localhost`        
+    
+        `ngrok http 3978 --host-header=localhost`  
+        
     1. Copy the ngrok URL (as highlighted in the image) for further reference as ngrok base URL in the next steps. 
 
         ![ngrok base URL](~/assets/images/proactive-scenario/ngrok-base-url.png)   
