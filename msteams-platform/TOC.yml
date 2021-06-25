@@ -22,13 +22,13 @@
     href: get-started/first-message-extension.md
 - name: Tutorials and code samples
   items:
-  - name: Tutorials
+  - name: Overview
     href: tutorials/code-samples.md   
-  - name: Create an app using C# or .NET
+  - name: Build your first app using C# or .NET
     href: tutorials/get-started-dotnet-app-studio.md
-  - name: Create an app using Node.js
+  - name: Build your first app using Node.js
     href: tutorials/get-started-nodejs-app-studio.md
-  - name: Create an app using the Yeoman generator
+  - name: Build your first app using the Yeoman generator
     href: tutorials/get-started-yeoman.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
@@ -239,8 +239,11 @@
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - name: Send proactive messages
+    - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
+      items:
+      - name: Step-by-step guide
+        href: sbs-send-proactive.yml 
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
@@ -305,26 +308,28 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-  - name: Create an incoming webhook
-    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-  - name: Create an outgoing webhook
+  - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-  - name: Create an Office 365 Connector
+  - name: Create Incoming Webhooks
+    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+  - name: Create Office 365 Connectors
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Send messages to connectors and webhooks
+  - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:
+  - name: Overview
+    href: task-modules-and-cards/cards-and-task-modules.md
   - name: Build cards
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-    - name: Format card text
-      href: task-modules-and-cards/cards/cards-format.md
-    - name: Add and respond to card actions
-      href: task-modules-and-cards/cards/cards-actions.md
-    - name: Cards reference
+    - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
+    - name: Format cards in Microsoft Teams
+      href: task-modules-and-cards/cards/cards-format.md
+    - name: Card actions
+      href: task-modules-and-cards/cards/cards-actions.md
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -341,9 +346,11 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Using task modules in tabs
+    - name: Invoke and dismiss task modules
+      href: task-modules-and-cards/task-modules/invoking-task-modules.md  
+    - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
-    - name: Using task modules in bots
+    - name: Use task modules from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
@@ -383,9 +390,9 @@
     href: https://docs.microsoft.com/graph/toolkit/overview
   - name: Get started
     href: https://docs.microsoft.com/graph/toolkit/get-started/build-a-microsoft-teams-tab
-  - name: Enable resource-specific consent
+  - name: Resource-specific consent
     href: graph-api/rsc/resource-specific-consent.md
-  - name: Proactive installation of apps using Graph API and send messages
+  - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
@@ -465,13 +472,13 @@
       items:
       - name: Localize your app
         href: concepts/build-and-test/apps-localization.md
-      - name: Localization JSON schema
+      - name: Localize JSON schema reference
         href: resources/schema/localization-schema.md
-    - name: SameSite cookie attribute (2020 update)
+    - name: SameSite cookie attribute 
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Contributing to Teams docs
+    - name: Contribute to Teams documentation
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
