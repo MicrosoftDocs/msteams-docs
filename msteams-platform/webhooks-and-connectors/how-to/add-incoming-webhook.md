@@ -37,7 +37,7 @@ The following table provides the features and description of Incoming Webhook:
 **To add an Incoming Webhook to a Teams channel**
 
 1. Go to the channel where you want to add the webhook and select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
-1. Select **Connectors** from the drop down menu:
+1. Select **Connectors** from the dropdown menu:
 
     ![Select Connector](~/assets/images/connectors.png)
 
@@ -63,7 +63,7 @@ The webhook is available in the Teams channel.
 1. Select &#8226;&#8226;&#8226; **More options** from the top navigation bar.
 1. Select **Connectors** from the drop down menu.
 1. On the left, under **Manage**, select **Configured**.
-1. Select the **number Configured** to see a list of your current connectors:
+1. Select the **<*1*> Configured** to see a list of your current connectors:
 
     ![Configured webhook](~/assets/images/configured.png)
 
