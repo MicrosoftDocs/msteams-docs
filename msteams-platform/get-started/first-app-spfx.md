@@ -9,11 +9,11 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
 
-In this tutorial, you will create a new Microsoft Teams app in SharePoint Framework (SPFx) that implements a simple personal app. (A *personal app* includes a set of tabs scoped for individual use.) During the tutorial, you will learn about the structure of a Teams app, how to run the app locally, and how to deploy the app to SharePoint.
+In this tutorial, you will create a new Microsoft Teams app in SharePoint Framework SPFx that implements a simple personal app. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to SharePoint.
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the [prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the prerequisites.
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -29,7 +29,7 @@ Use the Teams Toolkit to create your first project:
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio code.
-1. Open the Teams Toolkit by selecting the Teams icon in the sidebar:
+1. Select the Teams icon in the sidebar to open the Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
@@ -41,15 +41,15 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. On the **Select capabilities** step, the **Tab** capability will already be selected.  Press **OK**.
+1. In the **Select capabilities** section, select **Tab** and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-1. On the **Frontend hosting type** step, select **SharePoint Framework (SPFx)**.
+1. In the **Frontend hosting type** section, select **SharePoint Framework (SPFx)**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
 
-1. On the **Framework** step, select **React**.
+1. In the **Framework** section, select **React**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
@@ -76,7 +76,7 @@ teamsfx new
 The CLI walks through some questions to create the project.  Each question will tell you how to answer it (for example, to use arrow keys to select an option).  When you have answered the question, confirm your choice by pressing **Enter**.
 
 1. Select **Create a new Teams app**.
-1. Choose the **Tab** capability.
+1. Select **Tab**.
 1. Select **SharePoint Framework (SPFx)** frontend hosting.
 1. Select **React** framework.
 1. Press **Enter** for the **Webpart Name**.
@@ -120,7 +120,7 @@ Teams Toolkit allows you to host your app locally and run it through the [ShareP
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press **F5**.
+1. From Visual Studio Code, press the **F5** key.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Screenshot showing how to start an SPFx app in a local workbench.":::
 
@@ -134,11 +134,11 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Press one of the **Add Webpart** (+) icons to add your webpart.
+1. Select **Add Webpart +** icons to add your webpart.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart showing.":::
 
-1. Choose your webpart from the menu.
+1. Select your webpart from the menu.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
 
@@ -159,13 +159,13 @@ Ensure a SharePoint App Catalog exists in your deployment.  If one does not exis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
 
-1. You can monitor the progress by watching the dialogs in the bottom right corner.  After a few seconds, you will see the following notice:
+   You can monitor the progress by watching the dialogs in the bottom right corner.  After a few seconds, you will see the following notice:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-1. Once provisioning is complete, select **Deploy to the cloud**.
+1. After provisioning is complete, select **Deploy to the cloud**.
 
-1. Currently, automated deployment is not available.  A dialog will pop up prompting you to build and deploy manually. Press **Build SharePoint Package**.
+1. Currently, automated deployment is not available.  A dialog will pop up prompting you to build and deploy manually. Select **Build SharePoint Package**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
 
@@ -198,11 +198,11 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
 1. Log into the M365 Admin Console, then navigate to the SharePoint App Catalog.
 
-   - Open `https://admin.microsoft.com/AdminPortal/Home`.
-   - Under **Admin centers**, select the **SharePoint** admin center.
-   - Select **More features** from the sidebar menu.
-   - Press **Open** under **Apps**.
-   - Select **App Catalog**.
+   1. Open `https://admin.microsoft.com/AdminPortal/Home`.
+   1. Under **Admin centers**, select the **SharePoint** admin center.
+   1. Select **More features** from the sidebar menu.
+   1. Press **Open** under **Apps**.
+   1. Select **App Catalog**.
 
 1. Select **Distribute apps for SharePoint**.
 
@@ -210,19 +210,19 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
 1. Select **Upload**.
 
-1. Press **Choose File**.
+1. Select **Choose File**.
 
-1. Locate your `{project}.sppkg` file, located in the `SPFx/sharepoint/solution` folder within your project.  Press **Open**.
+1. Locate your `{project}.sppkg` file in the `SPFx/sharepoint/solution` folder within your project. Select **Open**.
 
-1. Press **OK**.
+1. Select **OK**.
 
-1. The SharePoint deployment process will automatically start.  Ensure **Make this solution available to all sites in the organization** is checked, then press **Deploy**.
+1. The SharePoint deployment process will automatically start. Verify that **Make this solution available to all sites in the organization** is selected. Then select **Deploy**.
 
 1. Select the **FILES** tab.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog.":::
 
-1. select the package you deployed, then press **Sync to Teams** in the ribbon.
+1. select the package you deployed, then select **Sync to Teams** from the upper right corner.
 
     > [!Note]
     > The Sync to Teams process can take a couple of minutes.  You will see a message on the right-hand side of the browser indicating that the app has successfully synchronized to Teams.
