@@ -39,7 +39,7 @@ items:
 - title: Set up local environment
   durationInMinutes: 3
   content: |
-    1.	Download the [sample code](~/assets/downloads/Send Proactive Messages.zip) (Zip file) and extract the files.
+    1.	Download the [sample code](~/assets/downloads/SendProactiveMessages.zip) (Zip file) and extract the files.
     1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
     1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
 
