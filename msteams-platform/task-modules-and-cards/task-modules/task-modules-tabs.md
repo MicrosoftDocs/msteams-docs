@@ -122,6 +122,12 @@ The following table provides the possible values of `err` that can be received b
 | Invalid `appId`. | Invalid app ID. |
 | User selected X button, closing it. | User cancelled or closed the task module. |
 
+## Code sample
+
+|Sample name | Description | .NET | Node.js|
+|----------------|-----------------|--------------|----------------|
+|Task module sample tabs and bots-V3 | Samples for creating task modules. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-task-module/nodejs)| 
+
 ## See also
 
 [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
