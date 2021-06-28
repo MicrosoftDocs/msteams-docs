@@ -27,7 +27,7 @@ The tools you're already using to create your app likely provide a way to submit
 
 ### Submit in the Teams client
 
-The steps are different depending on your version of Teams. For example, one set of steps apply to [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+The steps are different depending on your version of Teams. For example, one set of steps apply to [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 #### Submit in the Teams client (developer preview version)
 
