@@ -8,16 +8,16 @@ ms.author: surbhigupta
 
 # Publish your Microsoft Teams app to your org
 
-There are multiple ways to publish the Microsoft Teams app you built specifically for your organization, but the process is essentially the same:
+There are multiple ways to publish the Microsoft Teams app you built specifically for your organization. The process is essentially the same:
 
 1. You submit the app to your Teams admin.
-1. The admin reviews your app.
+1. The admin reviews the app.
 1. If approved, the admin publishes the app.
-1. Users discover your app in the org's app catalog.
+1. Users discover the app in the org's app catalog.
 
 ## Prerequisites
 
-* Contact your admin to make sure your org allows custom Teams apps.
+* Contact your admin to make sure your org allows [custom Teams apps](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 * [Validate your app manifest](https://dev.teams.microsoft.com/appvalidation.html) for errors and create your [app package](~/concepts/build-and-test/apps-package.md).
 * Make sure that your app's frontend and backend resources are running and accessible via HTTPS.
 
@@ -27,8 +27,16 @@ The tools you're already using to create your app likely provide a way to submit
 
 ### Submit in the Teams client
 
+The steps are different depending on your version of Teams. For example, one set of steps apply to [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+
+#### Submit in the Teams client (developer preview version)
+
 1. In the Teams client, go to **Apps > Manage your apps**.
-1. Choose **Submit an app to your org**.
+1. Select **Submit an app to your org** and choose your app package .zip file.
+
+#### Submit in the Teams client (GA version)
+
+1. In the Teams client, go to **Apps > Submit to app catalog**.
 1. Select **Submit an app** and choose your app package .zip file.
 
 ### Submit using the Developer Portal
@@ -39,7 +47,7 @@ The tools you're already using to create your app likely provide a way to submit
 
 ### Submit with other common Teams developer tools
 
-Many Teams developer tools include a feature for publishing your app to your org. Some of these tools include:
+Many Teams developer tools include a feature for publishing an app to your org. Some of these tools include:
 
 * Teams Toolkit for Visual Studio Code
 * Teams Toolkit for Visual Studio
