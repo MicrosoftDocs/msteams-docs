@@ -22,7 +22,7 @@ In Teams, there are two authentication flows for the app:
 
 ## Configure the identity provider
 
-The identity provider communicates with Teams app regardless of the app's authentication flow. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider.
+The identity provider communicates with Teams app regardless of the app's authentication flow. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts, however, apply regardless of the identity provider. The concepts however, apply regardless of the identity provider.
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
 ## Web-based authentication flow
@@ -55,7 +55,6 @@ The following table lists bot authentication v3 SDK code samples:
 
 ## See also
 
-<<<<<<< HEAD
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md)
 
@@ -63,7 +62,5 @@ The following table lists bot authentication v3 SDK code samples:
 
 > [!div class="nextstepaction"]
 > [Configure identity providers](~/concepts/authentication/configure-identity-provider.md).
-=======
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider.
->>>>>>> master
+
 
