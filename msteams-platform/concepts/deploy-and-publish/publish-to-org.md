@@ -29,15 +29,15 @@ The tools you're already using to create your app likely provide a way to submit
 
 The steps are different depending on your version of Teams. For example, one set of steps apply to [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-#### Submit in the Teams client (developer preview version)
-
-1. In the Teams client, go to **Apps > Manage your apps**.
-1. Select **Submit an app to your org** and choose your app package .zip file.
-
 #### Submit in the Teams client (GA version)
 
 1. In the Teams client, go to **Apps > Submit to app catalog**.
 1. Select **Submit an app** and choose your app package .zip file.
+
+#### Submit in the Teams client (developer preview version)
+
+1. In the Teams client, go to **Apps > Manage your apps**.
+1. Select **Submit an app to your org** and choose your app package .zip file.
 
 ### Submit using the Developer Portal
 
@@ -57,6 +57,12 @@ Many Teams developer tools include a feature for publishing an app to your org. 
 ### Submit with Microsoft Graph API
 
 If you aren't using a common Teams developer tool, you can still submit your app with a [Microsoft Graph API call](/graph/api/teamsapp-publish).
+
+### Submit your app in GCC environments
+
+In Microsoft 365 Government - GCC environments, you must send your app package directly to your Teams admin (for example, email or chat).
+
+Submitting your app through the Teams client, Developer Portal, or other Teams developer tool that provides this feature in non-GCC environments isn't currently supported.
 
 ## Get your app approved
 
