@@ -16,7 +16,7 @@ Uploading (aka sideloading) a custom Microsoft Teams app allows you to use an ap
 
 ## Prerequisites
 
-* Make sure your org allows [custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
+* Contact your admin to make sure your org allows [custom Teams apps](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 * [Validate your app manifest](https://dev.teams.microsoft.com/appvalidation.html) for errors and create your [app package](~/concepts/build-and-test/apps-package.md).
 * Make sure that your app's frontend and backend resources are running and accessible via HTTPS.
 
