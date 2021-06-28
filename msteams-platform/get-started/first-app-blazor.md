@@ -106,7 +106,7 @@ Once this is done, the app can be loaded within the Teams client.  We use the Te
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press **F5** to run your application in debug mode.
+1. From Visual Studio, press **F5** to run your application in debug mode.
 
 1. If requested, install the self-signed SSL certificate for local debugging.
 
@@ -223,7 +223,7 @@ The app manifest is loading the tab from a `localhost` URL.  In this section, yo
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
-1. There are several places within the manifest that list a `locahost:XXXXX` as part of a URL.  Replace all occurrences with `{{azure_app_url}}` (including the curly braces).
+1. There are several places within the manifest that list a `localhost:XXXXX` as part of a URL.  Replace all occurrences with `{{azure_app_url}}` (including the curly braces).
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
