@@ -9,29 +9,27 @@ ms.author: lajanuar
 
 # Add authentication to your Teams bot
 
-There are times when you must create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
-
-This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials.
+This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Microsoft Teams that can access resources on behalf of the user, such as a mail service.
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
 
-See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understanding, and [OAuth 2.0](https://oauth.net/2/) for the complete specification.
-
 For more information about how the Azure Bot Service handles authentication, see [user authentication within a conversation](https://aka.ms/azure-bot-authentication).
 
-In this article you'll learn:
+The document scope includes:
 
 - **How to create an authentication-enabled bot**. You will use [cs-auth-sample][teams-auth-bot-cs] to handle user sign in credentials and to generate the authentication token.
-- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information see [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
-- **How to integrate the bot within Microsoft Teams**. Once the bot has been integrated, you can sign in and exchange messages with it in a chat.
+- **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
+- **How to integrate the bot within Microsoft Teams**. After the bot has been integrated, you can sign in and exchange messages with it in a chat.
 
 ## Prerequisites
+
+Before you work with adding authentication to your Teams bot, you must have an understanding of the following:
 
 - Knowledge of [bot basics][concept-basics], [managing state][concept-state], the [dialogs library][concept-dialogs], and how to [implement sequential conversation flow][simple-dialog].
 - Knowledge of Azure and OAuth 2.0 development.
 - The current versions of Visual Studio and Git.
 - Azure account. If required, you can create an [Azure free account](https://azure.microsoft.com/free/).
-- The following sample:
+- The following samples enable you to use the Bot Framework support for OAuth in your bot:
 
     | Sample | BotBuilder version | Demonstrates |
     |:---|:---:|:---|
