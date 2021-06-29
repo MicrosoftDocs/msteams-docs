@@ -7,21 +7,20 @@ keywords: teams authentication SSO silent AAD
 ---
 # Silent authentication
 
-> [!NOTE]
-> For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.
 
-Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Silent authentication in Azure Active Directory (AAD) minimizes the number of times users enter their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
 If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
 
-Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
+Though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
 
-> [!NOTE]
+> [!NOTE]     
+> For authentication to work for your tab on mobile clients, you must use v1.4.1 and later of the Teams JavaScript SDK.
 > Currently, silent authentication only works for tabs. It does not work when signing in from a bot.
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point your app can show a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. As the library specifies `prompt=none`, Azure AD never shows the sign in page. When the user needs to sign in or grant access to the application, the user interaction is required, and AAD immediately returns an error. The ADAL.js reports the error to your app and your app shows a sign in button if required.
 
 ## How to do silent authentication
 
