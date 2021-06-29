@@ -44,7 +44,7 @@ The resource group and the service plan are not strictly necessary, but they all
 You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
 
 1. In your browser, sign into the [**Azure portal**][azure-portal].
-1. In the left navigation pane, select **Resource groups**.
+1. In the left pane, select **Resource groups**.
 1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You will be prompted to provide the following:
     1. **Subscription**. Use your existing subscription.
     1. **Resource group**. Enter the name for the resource group. An example could be *TeamsResourceGroup*. Remember that the name must be unique.
@@ -68,11 +68,11 @@ You use a resource group to create individual resources for the Bot Framework. F
     1. **Region**. Select **West US** or a region close to your applications.
     1. **Pricing Tier**. Make sure that **Standard S1** is selected. This should be the default value.
     1. Select the **Review and create** button. You will see a banner that reads *Validation passed*.
-    1. Select **Create**. It may take a few minutes to create the app service plan. The plan will be listed in the resource group.
+    1. Select **Create**. It will take a few minutes to create the app service plan. The plan will be listed in the resource group.
 
 ## Create the bot channels registration
 
-The bot channels registration registers your web service as a bot with the Bot Framework, provided you have a Microsoft App Id and App password (client secret).
+If you have a Microsoft App ID and App password (client secret), the bot channels registration registers your web service as a bot with the Bot Framework.
 
 > [!IMPORTANT]
 > You only need to register your bot if it is not hosted in Azure. If you [created a bot](/azure/bot-service/abs-quickstart?view=azure-bot-service-4.0&viewFallbackFrom=azure-bot-service-3.0&preserve-view=true) through the Azure portal then it is already registered with the service. If you created your bot through the [Bot Framework](https://dev.botframework.com/bots/new) or [AppStudio](~/concepts/build-and-test/app-studio-overview.md) your bot is not registered in Azure.
@@ -82,21 +82,22 @@ The bot channels registration registers your web service as a bot with the Bot F
 > [!NOTE]
 > The Bot Channels Registration resource will show the **Global** region even if you selected West US. This is expected.
 
-For more information, see [Create a bot for Teams](../create-a-bot-for-teams.md).
+For more information, see [create a bot for Teams](../create-a-bot-for-teams.md).
 
 ## Create the identity provider
 
-You need an identity provider that can be used for authentication.
-In this procedure you'll use an Azure AD provider; other Azure AD supported identity providers can also be used.
+You will use an Azure AD identity provider for authentication; other Azure AD supported identity providers can also be used.
 
-1. In the [**Azure portal**][azure-portal], on the left navigation panel, select **Azure Active Directory**.
+**To create the identity provider**
+
+1. In the [**Azure portal**][azure-portal], on the left pane, select **Azure Active Directory**.
     > [!TIP]
-    > You'll need to create and register this Azure AD resource in a tenant
-    > in which you can consent to delegate permissions requested by an application.
-    > For instruction on creating a tenant, see [Access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
-1. In the left panel, select **App registrations**.
-1. In the right panel, select the **New registration** tab, in the upper left.
-1. You'll be asked to provide the following information:
+    > You must create and register this AAD resource in a tenant.
+    > You can consent to delegate permissions requested by an application.
+    > For instruction on creating a tenant, see [access the portal and create a tenant](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+1. In the left pane, select **App registrations**.
+1. In the right pane in the upper left, select the **New registration** tab.
+1. You will be asked to provide the following information:
    1. **Name**. Enter the name for the application. An example could be *BotTeamsIdentity*. Remember that the name must be unique.
    1. Select the **Supported account types** for your application. Select **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
    1. For the **Redirect URI**:<br/>

@@ -302,6 +302,14 @@
       href: messaging-extensions/how-to/search-commands/respond-to-search.md
   - name: Add link unfurling
     href: messaging-extensions/how-to/link-unfurling.md
+  - name: Authenticate messaging extensions
+    items:
+    - name: Overview
+      href: messaging-extensions/how-to/overview.md
+    - name: Add authentication to your messaging extension
+      href: messaging-extensions/how-to/add-authentication.md
+    - name: Enable SSO for messaging extensions
+      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Build apps for Teams meetings
   items:
   - name: Overview
@@ -378,12 +386,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-  - name: Messaging extensions
-    items:
-    - name: Add authentication to your messaging extension
-      href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for messaging extensions
-      href: messaging-extensions/how-to/enable-SSO-auth-me.md  
 - name: Utilize Teams data with Microsoft Graph
   items:
   - name: Overview
