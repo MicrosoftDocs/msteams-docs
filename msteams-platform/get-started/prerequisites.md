@@ -189,7 +189,7 @@ Visual Studio 2019 prompts you to log in to each service as required. You do not
 
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
----
+
 
     Now that your development environment is configured, you can create, build, and deploy your first Teams app.
 
