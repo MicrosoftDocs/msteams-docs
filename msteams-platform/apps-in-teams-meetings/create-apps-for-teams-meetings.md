@@ -119,7 +119,7 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-* * *
+---
 
 The JSON response body for `GetParticipant` API is:
 
@@ -257,12 +257,13 @@ The `NotificationSignal` API includes the following response codes:
 
 The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
 The API is available through Bot Services.
+
 #### Pre-requisite
+
 Prior to using the Meeting Details API, the necessary RSC permissions must be obtained. The app manifest must have the following webApplicationInfo:
 
-# [JSON](#tab/json)
-
-```"webApplicationInfo": {
+```
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
@@ -347,11 +348,11 @@ The user can receive real-time meeting events. As soon as any app is associated 
 Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
 
 #### Pre-requisite
-The app manifest must have the following webApplicationInfo in order to successfully receive the meeting start and end events.
 
-# [JSON](#tab/json)
+The app manifest must have the following `webApplicationInfo` in order to successfully receive the meeting start and end events.
 
-```"webApplicationInfo": {
+```
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
