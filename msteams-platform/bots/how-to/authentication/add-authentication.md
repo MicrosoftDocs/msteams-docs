@@ -46,8 +46,8 @@ You use a resource group to create individual resources for the Bot Framework. F
 1. In your browser, sign into the [**Azure portal**][azure-portal].
 1. In the left pane, select **Resource groups**.
 1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You will be prompted to provide the following:
-    1. **Subscription**. Use your existing subscription.
-    1. **Resource group**. Enter the name for the resource group. An example could be *TeamsResourceGroup*. Remember that the name must be unique.
+    1. **Subscription**: Use your existing subscription.
+    1. **Resource group**: Enter the name for the resource group. An example is *TeamsResourceGroup*. Remember that the name must be unique.
     1. From the **Region** drop-down menu, select **West US**, or a region close to your applications.
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Select the **Create** button. It may take a few minutes to create the resource group.
