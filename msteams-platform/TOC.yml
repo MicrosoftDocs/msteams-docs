@@ -160,42 +160,30 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-  - name: Create a tab 
-    items:
-    - name: Tab requirements
-      href: tabs/how-to/tab-requirements.md
-    - name: Create a content page
-      href: tabs/how-to/create-tab-pages/content-page.md
-    - name: Create a configuration page
-      href: tabs/how-to/create-tab-pages/configuration-page.md
-    - name: Create a removal page
-      href: tabs/how-to/create-tab-pages/removal-page.md
-    - name: Tabs on mobile
-      href: tabs/design/tabs-mobile.md
-    - name: Get context for your tab
-      href: tabs/how-to/access-teams-context.md  
-    - name: Build tabs with Adaptive Cards
-      href: tabs/how-to/build-adaptive-card-tabs.md
-    - name: Tabs link unfurling and Stage View
-      href: tabs/tabs-link-unfurling.md
-    - name: Create conversational tabs
-      href: tabs/how-to/conversational-tabs.md
-    - name: Tab margin changes
-      href: resources/removing-tab-margins.md
-  - name: Quickstarts
-    items:
-    - name: Personal tab with Node.js
-      href: tabs/quickstarts/create-personal-tab-node-yeoman.md
-    - name: Personal tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-personal-tab-dotnet-core.md
-    - name: Personal tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-personal-tab-dotnet-core-mvc.md
-    - name: Channel tab with Node.js
-      href: tabs/quickstarts/create-channel-group-tab-node-yeoman.md
-    - name: Channel tab with C#/ASP.NET Core
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core.md
-    - name: Channel tab with C#/ASP.NET Core MVC
-      href: tabs/quickstarts/create-channel-group-tab-dotnet-core-mvc.md
+  - name: Prerequisites
+    href: tabs/how-to/tab-requirements.md
+  - name: Create a personal tab
+    href: tabs/how-to/create-personal-tab.md
+  - name: Create a channel tab
+    href: tabs/how-to/create-channel-group-tab.md
+  - name: Create a content page
+    href: tabs/how-to/create-tab-pages/content-page.md
+  - name: Create a configuration page
+    href: tabs/how-to/create-tab-pages/configuration-page.md
+  - name: Create a removal page
+    href: tabs/how-to/create-tab-pages/removal-page.md
+  - name: Tabs on mobile
+    href: tabs/design/tabs-mobile.md
+  - name: Get context for your tab
+    href: tabs/how-to/access-teams-context.md  
+  - name: Build tabs with Adaptive Cards
+    href: tabs/how-to/build-adaptive-card-tabs.md
+  - name: Tabs link unfurling and Stage View
+    href: tabs/tabs-link-unfurling.md
+  - name: Create conversational tabs
+    href: tabs/how-to/conversational-tabs.md
+  - name: Tab margin changes
+    href: resources/removing-tab-margins.md
 - name: Build bots
   items:
   - name: Overview
@@ -219,8 +207,11 @@
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
-    - name: Send proactive messages
+    - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
+      items:
+      - name: Step-by-step guide
+        href: sbs-send-proactive.yml 
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
     - name: Update and delete bot messages
@@ -285,26 +276,28 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-  - name: Create an incoming webhook
-    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-  - name: Create an outgoing webhook
+  - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-  - name: Create an Office 365 Connector
+  - name: Create Incoming Webhooks
+    href: webhooks-and-connectors/how-to/add-incoming-webhook.md
+  - name: Create Office 365 Connectors
     href: webhooks-and-connectors/how-to/connectors-creating.md
-  - name: Send messages to connectors and webhooks
+  - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
 - name: Build cards and task modules
   items:
+  - name: Overview
+    href: task-modules-and-cards/cards-and-task-modules.md
   - name: Build cards
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-cards.md
-    - name: Format card text
-      href: task-modules-and-cards/cards/cards-format.md
-    - name: Add and respond to card actions
-      href: task-modules-and-cards/cards/cards-actions.md
-    - name: Cards reference
+    - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
+    - name: Format cards in Microsoft Teams
+      href: task-modules-and-cards/cards/cards-format.md
+    - name: Card actions
+      href: task-modules-and-cards/cards/cards-actions.md
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
@@ -321,9 +314,11 @@
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Using task modules in tabs
+    - name: Invoke and dismiss task modules
+      href: task-modules-and-cards/task-modules/invoking-task-modules.md  
+    - name: Use task modules in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
-    - name: Using task modules in bots
+    - name: Use task modules from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
@@ -475,13 +470,13 @@
       items:
       - name: Localize your app
         href: concepts/build-and-test/apps-localization.md
-      - name: Localization JSON schema
+      - name: Localize JSON schema reference
         href: resources/schema/localization-schema.md
-    - name: SameSite cookie attribute (2020 update)
+    - name: SameSite cookie attribute 
       href: resources/samesite-cookie-update.md
     - name: Frequently failed cases for store submissions
       href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Contributing to Teams docs
+    - name: Contribute to Teams documentation
       href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md

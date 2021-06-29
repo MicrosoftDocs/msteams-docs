@@ -106,7 +106,9 @@ After this is done, the app can be loaded within the Teams client.  We use the T
 
 To build and run your app locally:
 
+
 1. From Visual Studio Code, press the **F5** key to run your application in debug mode.
+
 
 1. If requested, install the self-signed SSL certificate for local debugging.
 
