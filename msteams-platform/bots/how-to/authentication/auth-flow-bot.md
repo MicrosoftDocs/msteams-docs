@@ -16,8 +16,8 @@ The GitHub repo [Microsoft Teams Authentication Sample](https://github.com/Offic
 
 1. The user sends a message to the bot.
 2. The bot determines if the user needs to sign in.
-   In this example, the bot stores the access token in its user data store. It asks the user to sign in if it does not have a validated token for the selected identity provider, see [View code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76).
-3. The bot constructs the URL to the start page of the authentication flow, and sends a card to the user with a `signin` action, see[view code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190). Like other application auth flows in Teams, the start page must be in a domain that is on your `validDomains` list, and in the same domain as the post-login redirect page.
+   In this example, the bot stores the access token in its user data store. It asks the user to sign in if it does not have a validated token for the selected identity provider, see [view code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/utils/AuthenticationUtils.ts#L58-L76).
+3. The bot constructs the URL to the start page of the authentication flow, and sends a card to the user with a `signin` action, see [view code](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/469952a26d618dbf884a3be53c7d921cc580b1e2/src/dialogs/BaseIdentityDialog.ts#L160-L190). Like other application auth flows in Teams, the start page must be in a domain that is on your `validDomains` list, and in the same domain as the post-login redirect page.
 
     > [!IMPORTANT]
     > The OAuth 2.0 authorization code grant flow calls for a `state` parameter in the authentication request which contains a unique session token to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The example uses a randomly-generated GUID.
