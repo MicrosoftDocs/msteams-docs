@@ -257,18 +257,19 @@ The `NotificationSignal` API includes the following response codes:
 
 The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
 The API is available through Bot Services.
-#### Pre-requisite
+
+#### Prerequisite
+
 Prior to using the Meeting Details API, the necessary RSC permissions must be obtained. The app manifest must have the following webApplicationInfo:
 
-# [JSON](#tab/json)
-
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### Query parameter
