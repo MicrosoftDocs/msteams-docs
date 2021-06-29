@@ -15,7 +15,7 @@ Before you begin with creating your first Teams app, you must install a few tool
 Some of the tools you need depend on how you prefer to build your Teams app:
 
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
-- A browser with developer tools - such as [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
+- A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 - If you are developing with JavaScript, TypeScript, or the SharePoint Framework (SPFx), install [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later.  
 - If you are developing with .NET, install [Visual Studio 2019](https://visualstudio.com/download). Ensure you install the **ASP.NET and web development** or **.NET Core cross-platform development** workload.
 
@@ -58,9 +58,8 @@ To install the Teams Toolkit extension:
 1. Open Visual Studio 2019.
 1. Select **Extensions** > **Manage Extensions**.
 1. In the search box, enter **Teams Toolkit**.
-1. Select the Teams Toolkit extension and select **Download**.
-
-The extension can be downloaded. Close Visual Studio 2019 to install the extension.
+1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
+1. Close Visual Studio 2019 to install the extension.
 
 # [Command line](#tab/cli)
 
@@ -108,12 +107,12 @@ With the Developer Portal for Teams, you can configure, manage, and distribute y
 
 ## Enable sideloading
 
-During development, you must load your app within Teams without distributing it. This is known as "sideloading".
+During development, you must load your app within Teams without distributing it. This is known as sideloading.
 
-1. If you have a Teams account, verify if you can sideload apps in Teams:
+If you have a Teams account, verify if you can sideload apps in Teams:
 
-    1. In the Teams client, select **Apps**.
-    1. Select **Upload a custom app**.
+1. In the Teams client, select **Apps**.
+1. Select **Upload a custom app**.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
@@ -142,7 +141,7 @@ If you wish to host your app or access resources within Azure, you must have an 
 You must have access to two accounts:
 
 - Your Microsoft 365 account credentials. This is the account that you use to sign in to Teams. If you're using a Microsoft 365 developer program tenant, this is the admin account you set up when you registered for the program.
-- - Your Azure credentials. This is the account that you use to access the Azure Portal and for provisioning new cloud resources to support your app.
+- Your Azure credentials. This is the account that you use to access the Azure Portal and for provisioning new cloud resources to support your app.
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -164,7 +163,7 @@ You must have access to two accounts:
 
 1. The sign-in process starts using your normal web browser.  Complete the sign-in process for your Azure account. When are prompted, you can close the browser and return to Visual Studio Code.
 
-When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+    When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
 # [Visual Studio 2019](#tab/vs)
 
@@ -188,11 +187,11 @@ Visual Studio 2019 prompts you to log in to each service as required. You do not
 
     The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. You are prompted when you can close the browser.
 
-The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
 ---
 
-Now that your development environment is configured, you can create, build, and deploy your first Teams app.
+    Now that your development environment is configured, you can create, build, and deploy your first Teams app.
 
 ## See also
 

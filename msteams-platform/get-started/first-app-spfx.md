@@ -63,7 +63,7 @@ Use the Teams Toolkit to create your first project:
 
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
-Your Teams app will be created within a few seconds.
+   Your Teams app will be created within a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -85,7 +85,7 @@ The CLI walks through some questions to create the project.  Each question will 
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
-Once all the questions have been answered, your project will be created.
+   After all the questions have been answered, your project will be created.
 
 ---
 
@@ -95,7 +95,7 @@ Once all the questions have been answered, your project will be created.
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-Once the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams that is hosted within the SharePoint Framework.  The project directories and files display in the Explorer area of Visual Studio Code.
+After the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams that is hosted within the SharePoint Framework.  The project directories and files display in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
@@ -127,7 +127,7 @@ To build and run your app locally:
    > [!NOTE]
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This can take 3-5 minutes to complete.
 
-   Once the SharePoint Workbench is loaded.
+   After the SharePoint Workbench is loaded.
 
    >[!NOTE]
    > The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
@@ -142,10 +142,10 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
 
-Your app should now be running.  You can do normal debugging activities as if this were any other SPFx webpart (such as setting breakpoints).
+   Your app should now be running.  You can do normal debugging activities as if this were any other SPFx webpart (such as setting breakpoints).
 
-> [!TIP]
-> Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
+   > [!TIP]
+   > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
 
 ## Deploy your app to SharePoint
 
@@ -227,9 +227,9 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
     > [!Note]
     > The Sync to Teams process can take a couple of minutes.  You will see a message on the right-hand side of the browser indicating that the app has successfully synchronized to Teams.
 
-Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press the triple-dot on the sidebar, then select **All apps**.  The app will be placed in the **Apps built for your org** category.  You can add the app from there.
+   Open the Teams application (or sign in at `https://teams.microsoft.com`).  Press the triple-dot on the sidebar, then select **All apps**.  The app will be placed in the **Apps built for your org** category.  You can add the app from there.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
 
 ## See also
 

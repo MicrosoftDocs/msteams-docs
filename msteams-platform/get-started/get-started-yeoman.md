@@ -185,7 +185,7 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    ```PowerShell
     yo teams --version
    ```
- Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.
+   Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.
 
  ## See also
 

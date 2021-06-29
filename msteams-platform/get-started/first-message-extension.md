@@ -61,7 +61,7 @@ Use the Teams Toolkit to create your first project:
 
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
-Your Teams app will be created within a few seconds.
+   Your Teams app will be created within a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -80,7 +80,7 @@ The CLI walks through some questions to create the project.  Each question will 
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
-After all the questions have been answered, your project is created.
+   After all the questions have been answered, your project is created.
 
 ---
 
@@ -116,11 +116,11 @@ To build and run your app locally:
 
 1. Select **Add** to add the app to your account.
 
-After the app is loaded, you will be taken directly to a search dialog:
+   After the app is loaded, you will be taken directly to a search dialog:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
 
-Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
+   Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
 
 <!-- markdownlint-disable MD033 -->
 <details>

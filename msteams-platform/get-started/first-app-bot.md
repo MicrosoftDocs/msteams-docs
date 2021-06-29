@@ -111,9 +111,9 @@ To build and run your app locally:
 1. You may be prompted to sign in.  If so, sign in with your M365 account.
 1. When prompted to install the app onto Teams, select **Add**.
 
-After the app is loaded, you will be taken directly to a chat session with the bot.  You can type `intro` to show an introduction card, and `show` to show your details from Microsoft Graph.  (This will require an additional permissions approval).
+   After the app is loaded, you will be taken directly to a chat session with the bot.  You can type `intro` to show an introduction card, and `show` to show your details from Microsoft Graph.  (This will require an additional permissions approval).
 
-Debugging works as you normally would expect - try it yourself! Open the `bot/dialogs/rootDialog.js` file and locate the `triggerCommand(...)` method.  Set a breakpoint on the default case.  Then type some text.
+   Debugging works as you normally would expect - try it yourself! Open the `bot/dialogs/rootDialog.js` file and locate the `triggerCommand(...)` method.  Set a breakpoint on the default case.  Then type some text.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -151,7 +151,7 @@ Before deployment, the application has been running locally:
 1. The backend runs using _Azure Functions Core Tools_.
 1. The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
 
-Deployment involves provisioning resources on an active Azure subscription and deploying (uploading) the backend and frontend code for the application to Azure. The backend uses a variety of Azure services, including Azure App Service and Azure Bot Service.
+   Deployment involves provisioning resources on an active Azure subscription and deploying (uploading) the backend and frontend code for the application to Azure. The backend uses a variety of Azure services, including Azure App Service and Azure Bot Service.
 
 </details>
 

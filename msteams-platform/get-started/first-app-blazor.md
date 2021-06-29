@@ -71,7 +71,7 @@ Use the Teams Toolkit to create your first project:
    teamsfx init
    ```
 
-You can now open the solution in Visual Studio for debugging.
+   You can now open the solution in Visual Studio for debugging.
 
 ---
 
@@ -116,11 +116,11 @@ To build and run your app locally:
 
 1. When prompted to install the app onto Teams, select **Add**.
 
-Your app will now be displayed:
+   Your app will now be displayed:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Screenshot of the completed app":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Screenshot of the completed app":::
 
-You can perform the debugging activities as if this were any other web application like setting breakpoints. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+   You can perform the debugging activities as if this were any other web application like setting breakpoints. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -189,9 +189,9 @@ Deployment consists of two steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
 
-Visual Studio deploys the app to your Azure App Service, and the web app loads in your browser.  Add `/tab` to the end of the URL to see your page.
+   Visual Studio deploys the app to your Azure App Service, and the web app loads in your browser.  Add `/tab` to the end of the URL to see your page.
 
-The project properties **Publish** pane shows the site URL and other details. Make a note of the site URL.
+   The project properties **Publish** pane shows the site URL and other details. Make a note of the site URL.
 
 ## Create an environment for your app
 
@@ -268,7 +268,7 @@ The app manifest loads the tab from a `localhost` URL.  In this section, you wil
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
 
-You can now use the **Preview in Teams** option at the top of the page to launch your app within Teams.
+   You can now use the **Preview in Teams** option at the top of the page to launch your app within Teams.
 
 ## See also
 
