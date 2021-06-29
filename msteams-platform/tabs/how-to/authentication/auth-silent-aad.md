@@ -7,7 +7,6 @@ keywords: teams authentication SSO silent AAD
 ---
 # Silent authentication
 
-
 Silent authentication in Azure Active Directory (AAD) minimizes the number of times users enter their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
 If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
@@ -24,13 +23,14 @@ The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. A
 
 ## How to do silent authentication
 
-The code in this article comes from the Teams sample app that is [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs).
+For silent authentication in tabs, use [Teams authentication sample node](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-auth/nodejs/src/views/tab/silent/silent.hbs) from the Teams sample app.
 
 [Initiate silent and simple authentication configurable tab using AAD](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) and follow the instructions to run the sample on your local machine.
 
 ### Include and configure ADAL
 
-Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL:
+Include the ADAL.js library in your tab pages and configure ADAL with your client ID and redirect URL.
+Use the following code to include and configure ADAL:
 
 ```html
 <script src="https://secure.aadcdn.microsoftonline-p.com/lib/1.0.15/js/adal.min.js" integrity="sha384-lIk8T3uMxKqXQVVfFbiw0K/Nq+kt1P3NtGt/pNexiDby2rKU6xnDY8p16gIwKqgI" crossorigin="anonymous"></script>
@@ -48,7 +48,8 @@ Include the ADAL.js library in your tab pages and configure ADAL with your clien
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign in hint for the current user. This is used as a loginHint in the call to AAD.
+In the tab's content page, call `microsoftTeams.getContext()` to get a sign in hint for the current user. This is used as a `loginHint` in the call to AAD.     
+Use the following code to get the user context.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -63,9 +64,10 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has a token cached for the user that has not expired, use that token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
+If ADAL has a token cached for the user that has not expired, use that token. Alternately, you can get a token silently by calling `acquireToken(resource, callback)`. The ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
-If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
+If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.    
+Use the following code to authenticate:
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -100,7 +102,8 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign in callback page.
 
-Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
+Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.     
+Use the following code to process the return value:
 
 ```javascript
 if (authContext.isCallback(window.location.hash)) {
@@ -119,12 +122,12 @@ if (authContext.isCallback(window.location.hash)) {
 
 Use the following code to handle sign out flow in AAD Auth:
 
-> [!NOTE]
-> While logout for Teams tab or bot is done, the current session is also cleared.
-
 ```javascript
 function logout() {
 localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+
+> [!NOTE]
+> While sign out for Teams tab or bot is done, the current session is also cleared.
