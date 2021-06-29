@@ -347,7 +347,7 @@ The user can receive real-time meeting events. As soon as any app is associated 
 
 Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
 
-#### Prerequisite
+### Prerequisite
 
 Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
