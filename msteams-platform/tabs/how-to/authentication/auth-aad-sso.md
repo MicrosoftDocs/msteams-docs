@@ -174,32 +174,32 @@ After you receive the access token in the success callback, you can decode the a
 |---------------|---------------|------|--------------|
 | Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|
 
-## Known limitations
+## Limitations
 
 ### Apps that require additional Graph scopes
 
-Our current implementation for SSO only grants consent for user-level permissions that is email, profile, offline_access, OpenId and not for other APIs such as User.Read or Mail.Read. If your app needs further Graph scopes, the next section provides some enabling workarounds.
+Currently, implementation for SSO only grants consent for user level permissions, such as email, profile, offline access, OpenId and not for other APIs, such as User.Read or Mail.Read. If your app needs further Graph scopes, the next section provides some enabling workarounds.
 
 #### Tenant Admin Consent
 
-The simplest approach is to get a tenant admin to pre-consent on behalf of the organization. This means users do not have to consent to these scopes and you can then be free to exchange the token server side using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow). This workaround is acceptable for internal line-of-business applications but is not enough for third-party developers who are not able to rely on tenant admin approval.
+The simplest approach is to get a tenant admin to preconsent on behalf of the organization. This means users do not have to consent to these scopes and you can exchange the token server side using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow). This workaround is acceptable for internal line-of-business apps but is not enough for third party developers who cannot rely on tenant admin approval.
 
-A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+To consent on behalf of an organization as a tenant admin, see **https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>**.
 
 #### Ask for additional consent using the Auth API
 
-Another approach for getting additional Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an Azure AD consent dialog box. 
+To get additional Graph scopes, is to present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an Azure AD consent window. 
 
 **To ask for additional consent using the Auth API**
 
-1. The token retrieved using `getAuthToken()` needs to be exchanged server-side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those additional Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+1. The token retrieved using `getAuthToken()` must be exchanged server side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to additional Graph APIs. Ensure to use the v2 Graph endpoint for this exchange.
 2. If the exchange fails, AAD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
-3. When the exchange fails, you must ask for additional consent. Show some user interface (UI) asking the user to grant additional consent. This UI must include a button that triggers an AAD consent dialog box using our [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
-4. When asking for additional consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD does not ask for the additional scopes.
+3. When the exchange fails, you must ask for additional consent. Show some user interface (UI) asking the user to grant additional consent. This UI must include a button that triggers an AAD consent window using [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
+4. To ask additional consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD does not ask for the additional scopes.
     * Instead of `?scope={scopes}`
     * Use this `?prompt=consent&scope={scopes}`
     * Ensure that `{scopes}` includes all the scopes you are prompting the user for, for example, Mail.Read or User.Read.
-5. Once the user has granted additional permission, retry the on-behalf-of-flow to get access to these additional APIs.
+5. After the user gets additional permission, they must retry the on behalf of flow to get access to the additional APIs.
 
 ### Non-AAD authentication
 
