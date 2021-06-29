@@ -1,6 +1,6 @@
 ---
 title: Authenticate tabs
-description: Describes authentication in Teams and how to use it in tabs
+description: Describes how to authenticate tabs
 ms.topic: conceptual
 localization_priority: Normal
 keywords: teams authentication OAuth SSO AAD

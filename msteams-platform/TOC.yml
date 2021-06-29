@@ -208,7 +208,6 @@
     Items:
     - name: Overview
       href: tabs/how-to/authentication/overview.md 
-      href: concepts/authentication/authentication.md
     - name: Authentication flow in tabs
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Use Azure AD authentication
@@ -385,7 +384,7 @@
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
-  -name: Overview
+  - name: Overview
    href: concepts/authentication/authentication.md
   - name: Configure identity providers
     href: concepts/authentication/configure-identity-provider.md
