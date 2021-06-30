@@ -10,8 +10,6 @@ ms.author: surbhigupta
 
 # Integrate QR or barcode scanner capability 
 
-This document guides you on how to integrate the QR or barcode scanner capability. 
-
 Barcode is a method of representing data in a visual and machine-readable form. The barcode contains information about a product, such as a type, size, manufacturer, and Country of origin in the form of bars and spaces. The code is read using the optical scanner on your native device camera. For a richer collaborative experience, you can integrate the QR or barcode scanner capability provided in the Teams platform with your Teams app.   
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides the tools necessary for your app to access the user’s [native device capabilities](native-device-permissions.md). Use the [scanBarCode](/javascript/api/@microsoft/teams-js/microsoftteams.media?view=msteams-client-js-latest&preserve-view=true#scanBarCode__error__SdkError__decodedText__string_____void__BarCodeConfig_) API to integrate the scanner capability within your app. 
@@ -31,7 +29,7 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability.
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the QR or barcode scanner capability. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -65,7 +63,8 @@ The **scanBarCode()** API supports the following barcode types:
 | UPC-A | Yes | Yes |
 | UPC-E | Yes | Yes |
 
-**Web app experience for `ScanBarCode` API for QR or barcode scanner capability**
+The following image depicts web app experience of QR or barcode scanner capability:
+
 ![web app experience for qr or barcode scanner capability](../../assets/images/tabs/qr-barcode-scanner-capability.png)
 
 ## Error handling
@@ -107,3 +106,5 @@ microsoftTeams.media.scanBarCode((error: microsoftTeams.SdkError, decodedText: s
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [Integrate People Picker capability in Teams](people-picker-capability.md)
+
