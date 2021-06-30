@@ -119,7 +119,7 @@ export class MyBot extends TeamsActivityHandler {
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 ```
 
-* * *
+---
 
 The JSON response body for `GetParticipant` API is:
 
@@ -271,7 +271,7 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
-
+ 
 #### Query parameter
 
 The Meeting Details API includes the following query parameter:
