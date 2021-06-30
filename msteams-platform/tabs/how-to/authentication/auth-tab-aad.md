@@ -5,9 +5,10 @@ ms.topic: how-to
 localization_priority: Normal
 keywords: teams authentication tabs AAD
 ---
+
 # Authenticate a user in a Microsoft Teams tab
 
-> [!Note]
+> [!NOTE]
 > To authenticate tab for mobile clients, ensure you're using version 1.4.1 or later of the Teams JavaScript SDK.
 
 Most of the Teams app services require authentication and authorization to obtain access. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article guides on authentication using AAD to get access to this information.
@@ -61,7 +62,7 @@ microsoftTeams.authentication.authenticate({
     }
 });
 ```
-> [!Notes]
+> [!NOTE]
 > * The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In the example: `/tab-auth/simple-start`, must match the information registered in the [AAD Application Registration Portal](https://apps.dev.microsoft.com).
 > * Authentication flow must start on a page that's on your domain. The domain must be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 > * Failing to use `microsoftTeams.authentication.authenticate()` can cause a problem with popup not closing at the end of the sign in process.
