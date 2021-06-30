@@ -22,7 +22,7 @@ Every request to your services includes the user  ID, the user's display name an
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which is used to identify the user’s organization. If applicable, the request also contains the team Id and channel ID from which the request is originated.
+The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user and are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which is used to identify the user’s organization. If applicable, the request also contains the team Id and channel ID from which the request is originated.
 
 ## Authenticate the user
 
@@ -31,16 +31,16 @@ The users must sign in before they use the messaging extension, for services tha
 1. The user issues a query, or the default query is automatically sent to your service. Your service inspects the Teams user ID and checks for user authentication.
 If the user is not authenticated:
 1. Send an `auth` response with an `openUrl` suggested action including the authentication URL. The Microsoft Teams client launches a dialog box hosting your webpage using the authentication URL.
-1. The user needs to sign in.
-1. You should close the window and send an **authentication code** to the Teams client.
+1. The user must sign in.
+1. You can close the window and send an **authentication code** to the Teams client.
 
 The Teams client, includes the passed authentication code and reissues the query to your service.
 
-Your service should verify that the authentication code to ensure a malicious user does not compromise the sign in flow. This effectively 'closes the loop' to finish the secure authentication sequence.
+Your service verifies the authentication code to ensure a malicious user does not compromise the sign in flow. This effectively 'closes the loop' to finish the secure authentication sequence.
 
 ### Respond with a sign-in action
 
-To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL. Refer to the following example:
+To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL. The example is as follows:
 
 #### Response example for a sign-in action
 
@@ -68,7 +68,7 @@ To prompt an unauthenticated user to sign in, respond with a suggested action of
 
 Your sign in experience must be responsive and fit within a pop-up window. It should integrate with the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client), which uses message passing.
 
-Alike embedded experiences inside Microsoft Teams, your code inside the window needs to first call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window, which then passes it to the OAuth sign-in URL.
+Alike embedded experiences inside Microsoft Teams, your code inside the window needs to call `microsoftTeams.initialize()`. If your code performs an OAuth flow, you can pass the Teams user ID into your window that passes it to the OAuth sign-in URL.
 
 ### Complete the sign in flow
 
@@ -77,7 +77,7 @@ When the sign in request completes and redirects back to your page, it must perf
 1. Generate a security code. This is a random number. You must cache this code on your service, along with the credentials obtained through the sign in flow, such as OAuth 2.0 tokens.
 1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
-At this point, the window closes and control is passed to the Teams client. The client reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials and complete the user request.
+At this point, the window closes and the control is passed to Teams client. The client reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials and complete the user request.
 
 #### Reissued request example
 
@@ -132,5 +132,9 @@ At this point, the window closes and control is passed to the Teams client. The 
 |**Sample name** | **Description** |**.NET** | **Node.js**|
 |----------------|-----------------|--------------|----------------|
 |Messaging extensions - auth and config | A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
+
+## See also
+
+[Enable SSO authentiation for messaging extensions](/enable-sso-auth-me.md)
 
  
