@@ -313,7 +313,7 @@
           "redirect_url": "/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant"
       },
       {
-          "source_path": "msteams-platform/get-started/get-started-dotnet-app-studio.md",
+          "source_path": "msteams-platform/tutorials/get-started-dotnet-app-studio.md",
           "redirect_url": "/microsoftteams/platform/get-started/get-started-dotnet-app-studio"
       },
       {
@@ -325,7 +325,7 @@
           "redirect_url": "/microsoftteams/platform/get-started/get-started-dotnet-app-studio"
       },
       {
-          "source_path": "msteams-platform/get-started/get-started-nodejs-app-studio.md",
+          "source_path": "msteams-platform/tutorials/get-started-nodejs-app-studio.md",
           "redirect_url": "/microsoftteams/platform/get-started/get-started-nodejs-app-studio"
       },
       {
