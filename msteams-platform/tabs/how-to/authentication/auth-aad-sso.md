@@ -188,7 +188,7 @@ To consent on behalf of an organization as a tenant admin, see **https://login.m
 
 #### Ask for additional consent using the Auth API
 
-To get additional Graph scopes, is to present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-po-pup-page) which involves popping up an Azure AD consent window. 
+To get additional Graph scopes, is to present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-pop-up-page) which involves popping up an Azure AD consent window. 
 
 **To ask for additional consent using the Auth API**
 
