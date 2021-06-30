@@ -257,18 +257,19 @@ The `NotificationSignal` API includes the following response codes:
 
 The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
 The API is available through Bot Services.
-#### Pre-requisite
-Prior to using the Meeting Details API, the necessary RSC permissions must be obtained. The app manifest must have the following webApplicationInfo:
 
-# [JSON](#tab/json)
+#### Prerequisite
 
-```"webApplicationInfo": {
+To use the Meeting Details API, you must obtain RSC permissions. Use the following example to configure your app manifest's `webApplicationInfo` property:
+
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 #### Query parameter
@@ -346,18 +347,18 @@ The user can receive real-time meeting events. As soon as any app is associated 
 
 Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
 
-#### Pre-requisite
-The app manifest must have the following webApplicationInfo in order to successfully receive the meeting start and end events.
+### Prerequisite
 
-# [JSON](#tab/json)
+Your app manifest must have the `webApplicationInfo` property to receive the meeting start and end events. Use the following example to configure your manifest:
 
-```"webApplicationInfo": {
+```json
+"webApplicationInfo": {
     "id": "<bot id>",
     "resource": "https://RscPermission",
     "applicationPermissions": [
       "OnlineMeeting.ReadBasic.Chat"
     ]
-  }
+}
  ```
 
 ### Example of meeting start event payload
