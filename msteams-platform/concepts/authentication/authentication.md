@@ -60,9 +60,3 @@ The following table lists bot authentication v3 SDK code samples:
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [Authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md)
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Configure identity providers](~/concepts/authentication/configure-identity-provider.md).
-
-
