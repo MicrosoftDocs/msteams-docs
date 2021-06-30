@@ -37,7 +37,7 @@ For more information on creating an Azure account and updating your app manifest
 
 You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on the scenario:
 
-    ```json
+```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
     if(valueObject["authentication"] !=null)
      {
@@ -45,7 +45,7 @@ You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `t
         if(authenticationObject["token"] !=null)
      }
     
-     ```
+```
   
 ## Store authentication token
 
