@@ -86,7 +86,7 @@ Bots enabled in groupchat scope start functioning in meetings. To implement bots
 
 ### Integrate messaging extensions into the meeting lifecycle
 
-To implement messaging extensions, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
+To implement messaging extensions, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 The Teams meeting app concepts allow you to design your app based on participant roles in a meeting.
 
