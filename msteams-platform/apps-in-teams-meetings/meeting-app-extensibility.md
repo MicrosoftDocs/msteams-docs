@@ -1,13 +1,13 @@
 ---
-title: Meeting app extensibility
+title: Meeting app concepts
 author: surbhigupta
-description: Understand the meeting app extensibility 
+description: Understand the meeting app concepts 
 ms.topic: conceptual
 ---
 
-# Meeting app extensibility
+# Meeting app concepts
 
-Teams’ meeting app extensibility is based on the following concepts:
+Teams’ meeting app is based on the following concepts:
 
 * Meeting lifecycle has different stages such as pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
@@ -88,7 +88,7 @@ Bots enabled in groupchat scope start functioning in meetings. To implement bots
 
 To implement messaging extensions, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
 
-The Teams meeting app extensibility allows you to design your app based on participant roles in a meeting.
+The Teams meeting app concepts allow you to design your app based on participant roles in a meeting.
 
 ## Participant roles in a meeting
 
