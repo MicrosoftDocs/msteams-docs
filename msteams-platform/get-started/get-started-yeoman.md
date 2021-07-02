@@ -185,9 +185,11 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    ```PowerShell
     yo teams --version
    ```
- Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.
+   Congrats! You built and deployed your first Microsoft Teams app. You also upgraded Microsoft Teams.
 
  ## See also
 
 * [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
 * [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
