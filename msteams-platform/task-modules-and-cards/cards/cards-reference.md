@@ -54,16 +54,18 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Messaging extensions | Task modules | Outgoing Webhook | Incoming Webhook | O365 Connectors |
-| --- | --- | --- | --- | --- | --- | --- |
-| Adaptive Card | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| O365 Connector card | ✔ | ✔ | ✖ | ✔ | ✔ | ✔ |
-| Hero card | ✔ | ✔ | ✖ | ✔ | ✖ | ✖ |
-| Thumbnail card | ✔ | ✔ | ✖ | ✔ | ✖ | ✖ |
-| List card | ✔ | ✖ | ✖ | ✔ | ✖ | ✖ |
-| Receipt card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ |
-| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Card type | Bots | Messaging extensions result | Task modules | Outgoing Webhook | Incoming Webhook | O365 Connectors | Messaging extensions preview |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Adaptive Card | ✔ | ✔ | ✔ | ✔ | ✔ | ✖ | ✖ |
+| O365 Connector card | ✔ | ✔ | ✖ | ✔ | ✔ | ✔ | ✖ |
+| Hero card | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ | ✔ |
+| Thumbnail card | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ | ✔ |
+| List card | ✔ | ✖ | ✖ | ✔ | ✔ | ✖ | ✖ |
+| Receipt card | ✔ | ✖ | ✖ | ✖ | ✔ | ✖ | ✖ |
+| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
+> [!NOTE]
+> For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 ## Common properties for all cards
 
