@@ -111,7 +111,7 @@ See [install apps for users](/graph/api/userteamwork-post-installedapps) in the 
 
 ## Samples
 
-The following code shows a simple code sample that proactively installs your app using Graph:
+The following code shows a simple code sample that handles proactive notification messages:
 
 # [C#](#tab/dotnet)
 
