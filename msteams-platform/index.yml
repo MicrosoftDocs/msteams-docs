@@ -37,10 +37,10 @@ highlightedContent:
     - title: Publish your app to the Teams store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Tutorials and code samples
+    - title: Code samples
       itemType: sample
       url:  /microsoftteams/platform/tutorials/code-samples
-    - title: Microsoft Build 2021- What's new?
+    - title: What's new?
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 
