@@ -56,6 +56,8 @@ After following the steps to add tabs to an existing meeting on desktop or web, 
 
 ![Mobile pre-meeting experience](../assets/images/apps-in-meetings/mobilepremeeting.png)
 
+---
+
 #### In-meeting app experience
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
@@ -79,6 +81,8 @@ The in-meeting dialog box is displayed where you can enter your response as a fe
 
 ![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
 
+---
+
 > [!NOTE]
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, you are notified that the results successfully downloaded.
@@ -101,6 +105,8 @@ The following image displays the **Contoso** tab with results of poll and feedba
 # [Mobile](#tab/mobile)
 
 ![Mobile post meeting view](../assets/images/apps-in-meetings/mobilePostMeeting.png)
+
+---
 
 > [!NOTE]
 > Tab layout must be organized when there are more than ten polls or surveys.
