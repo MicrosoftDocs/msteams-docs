@@ -37,7 +37,7 @@ In a meeting, users can select **More** :::image type="icon" source="../../asset
 
 # [Mobile](#tab/mobile)
 
-In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: and choose the app they want.
+After you add the app on the desktop, you can choose from the available apps. You can use the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: and choosing the app you want.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
 

@@ -81,6 +81,9 @@ The in-meeting dialog box is displayed where you can enter your response as a fe
 
 ![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
 
+> [!NOTE]
+> You do not require to change the app manifest for the apps to work on mobile.
+
 ---
 
 > [!NOTE]
@@ -91,6 +94,12 @@ The in-meeting dialog box is displayed where you can enter your response as a fe
 The following image illustrates the in-meeting side panel:
 
 ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+The following table describes the behavior of app when it is approved and not approved:
+
+|App capability |Behavior if app is approved | Behavior if app is not approved |
+|---|---|---|
+| Meeting extensibility | The app will be approved and will start appearing in the meetings. | The app will not appear in the meeting stage of the mobile client. |
 
 #### Post-meeting app experience
 

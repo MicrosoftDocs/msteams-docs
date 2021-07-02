@@ -62,7 +62,8 @@ The `context` property determines what must be shown when a user invokes an app 
 | **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. |
 
 > [!NOTE]
-> Context properties **meetingDetailsTab** and **meetingChatTab** is same for mobile. You can specify either of these to ensure apps work in mobile.
+> * Context properties **meetingDetailsTab** and **meetingChatTab** are the same for mobile. You can specify either of these to ensure apps work in mobile.
+> * **meetingStage** is not supported on mobile.
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
