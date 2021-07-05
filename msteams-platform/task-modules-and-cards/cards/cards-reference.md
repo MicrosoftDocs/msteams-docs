@@ -54,7 +54,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message Extension Previews | Message Extension Results | Task Modules | Outgoing Webhooks | Incoming Webhooks | O365 Connectors |
+| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | O365 Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
 | O365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
