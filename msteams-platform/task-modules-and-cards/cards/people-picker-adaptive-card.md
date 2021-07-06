@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # People Picker in Adaptive Cards
 
-You can add a People Picker as an input control to your Adaptive Card through which users can search for people and pick them. You can search for people within the context of the conversation, such as a chat, channel or an organization that the card is sent in. 
+You can add a People Picker as an input control to your Adaptive Card through which users can search for people and select them. You can search for people within the context of the conversation, such as a chat, channel or an organization that the card is sent in. 
 
 For more information on Adaptive Cards, see [Cards Reference](cards-reference.md).
 
@@ -139,7 +139,7 @@ To preselect a person in the control, specify the `AAD ID` of the person as the 
 
 #### Static choices
 The static choices support scenarios where custom profiles must be inserted into the predefined datasets.
-`Input.ChoicSet` supports specifying `choices` statically in the json. Staticare used to create the choices from which the user can pick.
+`Input.ChoicSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
 <br><br>
 Static `choices` are used in conjunction with dynamic datasets. 
 <br><br>
