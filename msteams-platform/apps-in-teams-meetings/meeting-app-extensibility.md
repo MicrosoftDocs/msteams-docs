@@ -54,7 +54,7 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 After the tabs are added to an existing meeting on desktop or web, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-![Mobile pre-meeting experience](../assets/images/apps-in-meetings/mobilepremeeting.png)
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="400"/>
 
 ---
 
@@ -80,7 +80,7 @@ After entering the meeting and adding the app from desktop or web, the app is vi
 
 The in-meeting dialog box is displayed where you can enter your response as a feedback.
 
-![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="400"/>
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
