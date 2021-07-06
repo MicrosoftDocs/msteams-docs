@@ -11,43 +11,43 @@ ms.author: surbhigupta
 > [!NOTE]
 > This feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-Stage View is a new UI component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
+Stage View is a new user interface (UI) component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
  
 > [!NOTE]
 > Currently, Teams mobile clients do no support tabs link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
 
 ## Stage View
 
-Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from the Stage View.
+Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
 ## Advantage of Stage View
 
 Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access. This leads to a higher user engagement with your app.
 
-##  Stage View vs. Task module
+## Stage View vs. Task module
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful when you have a rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  maximum real estate that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that requires user's attention, or collect information required to move to the next step.|
+|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  rich features that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
-## Invoke the Stage View
+## Invoke Stage View
 
-You can invoke the Stage View in the following  ways: 
+You can invoke Stage View in the following  ways:
 
 * [Invoke Stage View from Adaptive Card](#invoke-stage-view-from-adaptive-card)
 * [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
 ## Invoke Stage View from Adaptive Card
 
-When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched and the `tabInfo` is passed in, you can add the ability to pin the stage as a tab.  
+When the user enters a URL on the Teams desktop client, the bot is invoked and returns an [Adaptive Card](../task-modules-and-cards/cards/cards-actions.md) with the option to open the URL in a stage. After a stage is launched and the `tabInfo` is provided, you can add the ability to pin the stage as a tab.  
 
 The following images display a stage opened from an Adaptive Card:
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="400"/>
+<img src="~/assets/images/tab-images/open-stage-from-adaptive-card1.png" alt="Open a stage from Adaptive Card" width="700"/>
 
-<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="400"/>
+<img src="~/assets/images/tab-images/open-stage-from-adaptive-card2.png" alt="Open a stage" width="700"/>
 
-### Example 
+### Example
 
 Following is the code to open a stage from an Adaptive Card:
 
@@ -72,31 +72,31 @@ Following is the code to open a stage from an Adaptive Card:
 } 
 ```
 
-The `invoke` request type must be `composeExtension/queryLink`. 
+The `invoke` request type must be `composeExtension/queryLink`.
 
 > [!NOTE]
 > * `invoke` workflow is similar to the current `appLinking` workflow. 
-> * To maintain consistency, it is recommended to name the `Action.Submit` as `View`.
+> * To maintain consistency, it is recommended to name `Action.Submit` as `View`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
 
-**Process to invoke Stage View**
+Following is the process to invoke Stage View:
 
-1. When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
-1. `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
-1. The bot responds with a `200` code.
+* When the user selects **View**, the bot receives an `invoke` request. The request type is `composeExtension/queryLink`.
+* `invoke` response from bot contains an Adaptive Card with type `tab/tabInfoAction` in it.
+* The bot responds with a `200` code.
 
 > [!NOTE]
 > Currently, Teams mobile clients do not support the Stage View capability. When a user selects **View** on a mobile client, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `microsoftTeams.executeDeeplink(url)` API. The deeplink can also be passed through an `OpenURL` action in the card.
+To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `microsoftTeams.executeDeeplink(url)` API. The deep link can also be passed through an `OpenURL` action in the card.
 
 The following image displays a Stage View invoked through a deep link:
 
 <img src="~/assets/images/tab-images/invoke-stage-view-through-deep-link.png" alt="Invoke a Stage View through a deep link" width="400"/>
 
-### Syntax 
+### Syntax
 
 Following is the deeplink syntax:  
  
@@ -105,7 +105,8 @@ https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[cont
 ### Examples
 
 When a user enters a URL, it is unfurled into an Adaptive card.
-Following are the deep link examples to invoke the Stage View:
+
+Following are the deep link examples to invoke Stage View:
 
 **Example 1**
 
@@ -116,9 +117,9 @@ https://teams.microsoft.com/l/stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?conte
 https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88/0?context={“contentUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“websiteUrl”:”https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FLokisSandbox%2FSitePages%2FSandbox-Page.aspx”,“name”:”Contoso”}
 
 > [!NOTE]
-> * The `name` is optional in deep link. If not included, the app name replaces it. 
-> * The deep link can also be passed through  an `OpenURL` action.
-> * Currently, Teams mobile clients do not support the Stage View capability. When users selects a deep link to a Stage View, they are taken to their device's web browser. The web browser opens the URL specified in the `websiteUrl` parameter of the deep link.
+> * The `name` is optional in deep link. If not included, the app name replaces it.
+> * The deep link can also be passed through an `OpenURL` action.
+> * Currently, Teams mobile clients do not support the Stage View capability. When users select a deep link to a Stage View, they are taken to their device's web browser. The web browser opens the URL specified in the `websiteUrl` parameter of the deep link.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Tab information property
@@ -133,6 +134,12 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 ## See also
 
-[Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
+* [Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 
+## Next step
 
+> [!div class="nextstepaction"]
+> [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)

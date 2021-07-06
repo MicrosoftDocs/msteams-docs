@@ -6,36 +6,38 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
 > * This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
-Use Adaptive Cards to build tabs with ease. You can build your tabs with ready-made UI Lego-blocks that look and feel native on desktop, web, and mobile. Building tabs with Adaptive Cards centralizes all Teams app capabilities around a bot backend and Adaptive Card frontend, thus, eliminating the need for a different backend for your bot and tabs. This greatly reduces server and maintenance costs of your Teams app. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow. 
+When developing a tab using the traditional method, you might run into these issues, such as HTML and CSS considerations, slow load times, iFrame constraints, and server maintenance and costs. Adaptive Card tabs is a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front-end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+
+You can build your tabs with ready-made user interface (UI) Lego-blocks that look and feel native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow.
 
 The following image depicts build tabs with Adaptive Cards in desktop and mobile:
+
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
 ## Prerequisites
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [Task Modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
 * Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Changes to app manifest
 
-Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card Tab are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card Tab or a `contentUrl`, specifying a typical hosted web content tab experience.
+Personal apps that render tabs must include a `staticTabs` array in their app manifest. Adaptive Card tabs are rendered when the `contentBotId` property is provided in the `staticTab` definition. Static tab definitions must contain either a `contentBotId`, specifying an Adaptive Card tab or a `contentUrl`, specifying a typical hosted web content tab experience.
 
 > [!NOTE]
-> The `contentBotId` property is currently available manifest version 1.9 or later. 
+> The `contentBotId` property is currently available in manifest version 1.9 or later.
 
-Provide the `contentBotId` property with the `botId` that the Adaptive Card Tab must communicate with. The `entityId` configured for the Adaptive Card Tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate different Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
+Provide the `contentBotId` property with the `botId` that the Adaptive Card tab must communicate with. The `entityId` configured for the Adaptive Card tab is sent in the `tabContext` parameter of each invoke request, and can be used to differentiate Adaptive Card Tabs that are powered by the same bot. For more information about other static tab definition fields, see [manifest schema](../../resources/schema/manifest-schema.md#statictabs).
 
-Following is a sample Adaptive Card Tab manifest:
+Following is a sample Adaptive Card tab manifest:
 
 ```json
 {
@@ -90,17 +92,17 @@ Following is a sample Adaptive Card Tab manifest:
 
 ## Invoke activities
 
-Communication between your Adaptive Card Tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding *name*. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
+Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
 
 ### Fetch Adaptive Card to render to a tab
 
-`tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card Tabs. When your bot receives the request, it will either send a tab **continue** response or a tab **auth** response.
+`tab/fetch` is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab **continue** response or a tab **auth** response.
 The **continue** response includes an array for **cards**, which is rendered vertically to the tab in the order of the array.
 
 > [!NOTE]
-> The **auth** response is explained in detail in the [authentication](#authentication) section.
+> For more information on **auth** response, see [authentication](#authentication).
 
-The following code snippets are examples of `tab/fetch` request and response:
+The following code provides examples of `tab/fetch` request and response:
 
 **`tab/fetch` request**
 
@@ -152,12 +154,12 @@ The following code snippets are examples of `tab/fetch` request and response:
 
 After an Adaptive Card is rendered in the tab, it must be able to respond to user interactions. This response is handled by the `tab/submit` invoke request.
 
-When a user selects a button on the Adaptive Card Tab, the `tab/submit` request is triggered to your bot with the corresponding data through the *Action.Submit* function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You will receive either of the following responses to your request:
+When a user selects a button on the Adaptive Card tab, the `tab/submit` request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You receive either of the following responses to your request:
 
-* A http status code `200` response with no body. An empty 200 response will result in no action taken by the client.
-* The standard `200` tab **continue** response, as explained in [Fetch Adaptive Card](#fetch-adaptive-card-to-render-to-a-tab) section. A tab **continue** response triggers the client to update the rendered Adaptive Card Tab with the Adaptive Cards provided in the cards array of the **continue** response.
+* An HTTP status code `200` response with no body. An empty 200 response results in no action taken by the client.
+* The standard `200` tab **continue** response, as explained in [fetch Adaptive Card](#fetch-adaptive-card-to-render-to-a-tab). A tab **continue** response triggers the client to update the rendered Adaptive Card tab with the Adaptive Cards provided in the cards array of the **continue** response.
 
-The following code snippets are examples of `tab/submit` request and response:
+The following code provides examples of `tab/submit` request and response:
 
 **`tab/submit` request**
 
@@ -208,13 +210,13 @@ The following code snippets are examples of `tab/submit` request and response:
 
 ## Understand task module workflow
 
-The task module also uses Adaptive Card to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [Using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+The task module also uses Adaptive Card to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-However, with the introduction of Adaptive Card Tab there is a change in how the bot responds to a `task/submit` request. If you are using an Adaptive Card Tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the task module. The Adaptive Card Tab is updated by rendering the new list of cards provided in the tab **continue** response body.
+With the introduction of Adaptive Card tab, there is a change in how the bot responds to a `task/submit` request. If you are using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the task module. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
 
 ### Invoke `task/fetch`
 
-The following code snippets are examples of `task/fetch` request and response:
+The following code provides examples of `task/fetch` request and response:
 
 **`task/fetch` request**
 ```json
@@ -262,7 +264,7 @@ The following code snippets are examples of `task/fetch` request and response:
 
 ### Invoke `task/submit`
 
-The following code snippets are examples of `task/submit` request and response:
+The following code provides examples of `task/submit` request and response:
 
 **`task/submit` request**
 
@@ -315,21 +317,21 @@ The following code snippets are examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections of this article, you have seen that most of the development paradigms could be extrapolated from the task module requests and responses into tab requests and responses. However, when it comes to handling authentication, the workflow for Adaptive Card Tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md). 
+In the previous sections of this article, you have seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
-In the [invoke activities](#invoke-activities) section, you were informed that `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign-in page is shown to the user. 
+`tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign-in page is shown to the user.
 
 **To get an authentication code through `tab/fetch` invoke**
 
 1. Open your app. The sign in page appears.
 
     > [!NOTE]
-    > The app logo is provided through the `icon` property defined in the app manifest, and the title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
+    > The app logo is provided through the `icon` property defined in the app manifest. The title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
 
-1. Select **Sign in**. You are redirected to the authentication URL provided in the `value` property of the **auth** response body. 
+1. Select **Sign in**. You are redirected to the authentication URL provided in the `value` property of the **auth** response body.
 1. A pop-up window appears. This pop-up window hosts your web page using the authentication URL.
-1. After you sign in, close the window. An *authentication code* is sent to the Teams client.
-1. The Teams client then reissues the `tab/fetch` request to your service, which includes the authentication code provided by your hosted web page. 
+1. After you sign in, close the window. An **authentication code** is sent to the Teams client.
+1. The Teams client then reissues the `tab/fetch` request to your service, which includes the authentication code provided by your hosted web page.
 
 ### `tab/fetch` authentication data flow
 
@@ -339,7 +341,7 @@ The following image provides an overview of how the authentication data flow wor
 
 **`tab/fetch` auth response**
 
-The following code snippet is an example of `tab/fetch` auth response:
+The following code provides an example of `tab/fetch` auth response:
 
 ```json
 // tab/auth POST response (openURL)
@@ -361,7 +363,7 @@ The following code snippet is an example of `tab/fetch` auth response:
 
 ### Example
 
-The following shows a reissued request example:
+The following code shows a reissued request example:
 
 ```json
 {
@@ -407,6 +409,13 @@ The following shows a reissued request example:
 
 ## See also
 
-> [!div class="nextstepaction"]
-> [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
