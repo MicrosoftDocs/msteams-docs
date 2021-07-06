@@ -42,13 +42,13 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-# [Desktop](#tab/desktop)
-
-![Pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * You can also add a tab using the meeting **Chat** tab in an existing meeting.
     > * Tab layout must be in an organized state, if there are more than ten polls or surveys.
+
+# [Desktop](#tab/desktop)
+
+![Pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
 
 # [Mobile](#tab/mobile)
 
