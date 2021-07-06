@@ -78,9 +78,9 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in meeting side panel of the app. Users can interact with the app in it and launch it.
 
-    The in-meeting dialog box is displayed where you can enter your response as a feedback.
+The in-meeting dialog box is displayed where you can enter your response as a feedback.
 
-    ![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
+![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
 
 > [!NOTE]
 > You need not change the app manifest for the apps to work on mobile.
