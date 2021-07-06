@@ -106,7 +106,7 @@ The following table describes the behavior of app when it is approved and not ap
 
 #### Post-meeting app experience
 
-With post-meeting app experience, you can view the results of the meeting such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab and get meeting notes and results on which organizers and attendees must take action.
+With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab and get meeting notes and results on which organizers and attendees must take action.
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 

@@ -56,8 +56,8 @@ The `context` property determines what must be shown when a user invokes an app 
 |---|---|
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
-| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. You can specify this tab to ensure apps work in mobile. |
-| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify this tab to ensure apps work in mobile. |
+| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure apps work in Mobile. |
+| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure apps work in Mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
 | **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. This tab is not supported on mobile. |
 
