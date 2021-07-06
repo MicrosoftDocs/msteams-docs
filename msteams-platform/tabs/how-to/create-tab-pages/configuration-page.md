@@ -29,57 +29,57 @@ The following code is an example of corresponding code for the configuration pag
 
 ```html
 <head>
-<script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
+    <script src='https://statics.teams.cdn.office.net/sdk/v1.6.0/js/MicrosoftTeams.min.js'></script>
 </head>
-    <body>
-        <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
-        <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
-        <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
+<body>
+    <button onclick="(document.getElementById('icon').src = '/images/iconGray.png'); colorClickGray()">Select Gray</button>
+    <img id="icon" src="/images/teamsIcon.png" alt="icon" style="width:100px" />
+    <button onclick="(document.getElementById('icon').src = '/images/iconRed.png'); colorClickRed()">Select Red</button>
 
-        <script>
-            microsoftTeams.initialize();
-            let saveGray = () => {
-                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                    microsoftTeams.settings.setSettings({
-                        websiteUrl: "https://yourWebsite.com",
-                        contentUrl: "https://yourWebsite.com/gray",
-                        entityId: "grayIconTab",
-                        suggestedDisplayName: "MyNewTab"
-                    });
-                    saveEvent.notifySuccess();
+    <script>
+        microsoftTeams.initialize();
+        let saveGray = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/gray",
+                    entityId: "grayIconTab",
+                    suggestedDisplayName: "MyNewTab"
                 });
-            }
-            let saveRed = () => {
-                microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
-                    microsoftTeams.settings.setSettings({
-                        websiteUrl: "https://yourWebsite.com",
-                        contentUrl: "https://yourWebsite.com/red",
-                        entityId: "redIconTab",
-                        suggestedDisplayName: "MyNewTab"
-                    });
-                    saveEvent.notifySuccess();
+                saveEvent.notifySuccess();
+            });
+        }
+        let saveRed = () => {
+            microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+                microsoftTeams.settings.setSettings({
+                    websiteUrl: "https://yourWebsite.com",
+                    contentUrl: "https://yourWebsite.com/red",
+                    entityId: "redIconTab",
+                    suggestedDisplayName: "MyNewTab"
                 });
-            }
+                saveEvent.notifySuccess();
+            });
+        }
 
-            let gr = document.getElementById("gray").style;
-            let rd = document.getElementById("red").style;
+        let gr = document.getElementById("gray").style;
+        let rd = document.getElementById("red").style;
 
-            const colorClickGray = () => {
-                gr.display = "block";
-                rd.display = "none";
-                microsoftTeams.settings.setValidityState(true);
-                saveGray()
-            }
+        const colorClickGray = () => {
+            gr.display = "block";
+            rd.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveGray()
+        }
 
-            const colorClickRed = () => {
-                rd.display = "block";
-                gr.display = "none";
-                microsoftTeams.settings.setValidityState(true);
-                saveRed();
-            }
-        </script>
-    </body>
-...
+        const colorClickRed = () => {
+            rd.display = "block";
+            gr.display = "none";
+            microsoftTeams.settings.setValidityState(true);
+            saveRed();
+        }
+    </script>
+    ...
+</body>
 ```
 
 Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon.
