@@ -40,7 +40,7 @@ After you have gone through the prerequisites, you can use the meeting apps API 
 
 ## Meeting apps API references
 
-The new meeting extensibilities provide you with APIs that transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can choose which APIs you want to use to enhance the meeting experience.
+The new meeting extensibilities provide you with APIs that transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can select which APIs you want to use to enhance the meeting experience.
 
 The following table provides a list of these APIs:
 

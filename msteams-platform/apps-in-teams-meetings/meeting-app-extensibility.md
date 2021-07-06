@@ -27,7 +27,7 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> Apps are supported only in private scheduled meetings.
+> Apps are supported in private scheduled meetings only.
 
 #### Pre-meeting app experience
 
@@ -75,21 +75,22 @@ For mobile, meeting apps are hosted in the ellipses menu &#x25CF;&#x25CF;&#x25CF
 
 # [Mobile](#tab/mobile)
 
-After entering the meeting and adding the app as per steps to use tabs during a meeting from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Selecting **Apps** will show the list of apps and user can launch any of the app as an in meeting side panel of the app. User can interact with the app in it and launch it for users.
+1. After entering the meeting, add the app as per steps to use tabs during a meeting from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section.
+1. Select **Apps** to show the list of apps. User can launch any of the apps as an in meeting side panel of the app. Users can interact with the app in it and launch it.
 
-The in-meeting dialog box is displayed where you can enter your response as a feedback.
+    The in-meeting dialog box is displayed where you can enter your response as a feedback.
 
-![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
+    ![Mobile dialog box view](../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png)
 
 > [!NOTE]
-> You do not require to change the app manifest for the apps to work on mobile.
+> You need not change the app manifest for the apps to work on mobile.
 
 ---
 
 > [!NOTE]
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
-> * If the in-meeting dialog box is rendered successfully, you are notified that the results successfully downloaded.
-> * Your app manifest specifies the places where you want them to appear. The context field is used for this purpose. It can also be part of a share-tray experience, subject to specified design guidelines.
+> * If the in-meeting dialog box is rendered successfully, you will get a notification that the results are successfully downloaded.
+> * Your app manifest specifies the places that you want them to appear. The context field is used for this purpose. It is also the part of a share-tray experience, subject to specified design guidelines.
 
 The following image illustrates the in-meeting side panel:
 
@@ -99,7 +100,7 @@ The following table describes the behavior of app when it is approved and not ap
 
 |App capability |Behavior if app is approved | Behavior if app is not approved |
 |---|---|---|
-| Meeting extensibility | The app will be approved and will start appearing in the meetings. | The app will not appear in the meeting stage of the mobile client. |
+| Meeting extensibility | The app will start appearing in the meetings. | The app will not appear in the meeting stage of the mobile client. |
 
 #### Post-meeting app experience
 
@@ -118,7 +119,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 ---
 
 > [!NOTE]
-> Tab layout must be organized when there are more than ten polls or surveys.
+> Tab layout must be organized when there are more than 10 polls or surveys.
 
 ### Integrate bots into the meeting lifecycle
 
