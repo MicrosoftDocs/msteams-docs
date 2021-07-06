@@ -54,7 +54,11 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 After the tabs are added to an existing meeting on desktop or web, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
-<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>
+:::row:::
+  :::column span="2":::
+    <img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+:::column-end:::
+:::row-end:::
 
 ---
 
@@ -116,7 +120,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 # [Mobile](#tab/mobile)
 
-![Mobile post meeting view](../assets/images/apps-in-meetings/mobilePostMeeting.png)
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
 
 ---
 
