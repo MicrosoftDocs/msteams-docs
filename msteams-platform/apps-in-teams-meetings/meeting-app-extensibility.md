@@ -62,7 +62,7 @@ After the tabs are added to an existing meeting on desktop or web, you can see t
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Selecting the **Apps** menu will show all the apps available in the meeting.
+For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select the **Apps** menu to view all the apps available in the meeting.
 
 **To use tabs during a meeting**
 
