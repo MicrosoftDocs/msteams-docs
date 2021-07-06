@@ -50,7 +50,7 @@ People Picker is implemented as an extension of the [Input.ChoiceSet](https://ad
 
 The following properties are the new additions to the `Input.ChoiceSet` schema to enable a People Picker experience on the card.  
 
-#### Input.Choiceset control
+#### Input.ChoiceSet control
 
 |Property |Type |Required |Description |
 |----|----|----|----|
@@ -137,7 +137,7 @@ People Picker supports preselection of people in the control when creating and s
 `Input.ChoiceSet` supports the `value` property which is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
 To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma separated string of `AAD ID`s.
 
-#### Static Choices
+#### Static choices
 The static choices support scenarios where custom profiles must be inserted into the predefined datasets.
 `Input.ChoicSet` supports specifying `choices` statically in the json. Staticare used to create the choices from which the user can pick.
 <br><br>
