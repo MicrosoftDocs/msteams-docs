@@ -199,4 +199,4 @@ Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proa
 ## Additional code samples
 >
 > [!div class="nextstepaction"]
-> [**Teams proactive messaging code samples**](/samples/officedev/msteams-samples-proactive-messaging/msteams-samples-proactive-messaging/)
+> [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
