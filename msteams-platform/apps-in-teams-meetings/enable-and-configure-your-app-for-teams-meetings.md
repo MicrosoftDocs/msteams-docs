@@ -70,7 +70,7 @@ After you enable your app for Teams meetings, you must configure your app before
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> * For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
+> For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios. You can configure your apps to enhance the meeting experience based on participant role or user type. Now you can identify what actions can be taken in the following meeting scenarios:
 

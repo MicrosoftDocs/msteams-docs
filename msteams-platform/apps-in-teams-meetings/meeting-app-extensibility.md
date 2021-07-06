@@ -52,7 +52,7 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 # [Mobile](#tab/mobile)
 
-After following the steps to add tabs to an existing meeting on desktop or web, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
+After the tabs are added to an existing meeting on desktop or web, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
 
 ![Mobile pre-meeting experience](../assets/images/apps-in-meetings/mobilepremeeting.png)
 
@@ -62,21 +62,21 @@ After following the steps to add tabs to an existing meeting on desktop or web, 
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-For mobile, meeting apps are hosted in the ellipses menu &#x25CF;&#x25CF;&#x25CF; in the meeting under **Apps** menu. Selecting the **Apps** menu will show all the apps available in the meeting.
+For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Selecting the **Apps** menu will show all the apps available in the meeting.
 
 **To use tabs during a meeting**
 
 # [Desktop](#tab/desktop)
 
-1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use. An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
+1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use.
+    An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 1. In the in-meeting dialog box, enter your response as a feedback.
 
     ![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
 # [Mobile](#tab/mobile)
 
-1. After entering the meeting, add the app as per steps to use tabs during a meeting from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section.
-1. Select **Apps** to show the list of apps. User can launch any of the apps as an in meeting side panel of the app. Users can interact with the app in it and launch it.
+After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in meeting side panel of the app. Users can interact with the app in it and launch it.
 
     The in-meeting dialog box is displayed where you can enter your response as a feedback.
 
@@ -98,9 +98,9 @@ The following image illustrates the in-meeting side panel:
 
 The following table describes the behavior of app when it is approved and not approved:
 
-|App capability |Behavior if app is approved | Behavior if app is not approved |
+|App capability | App is approved | App is not approved |
 |---|---|---|
-| Meeting extensibility | The app will start appearing in the meetings. | The app will not appear in the meeting stage of the mobile client. |
+| Meeting extensibility | The app will start appearing in the meetings. | The app will not appear in the meetings for the mobile client. |
 
 #### Post-meeting app experience
 
