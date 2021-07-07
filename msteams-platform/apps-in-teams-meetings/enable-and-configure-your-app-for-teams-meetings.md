@@ -15,10 +15,10 @@ To enable your app for Teams meetings, you must update your app manifest and use
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. Scope defines to whom and context defines where your app is available.
+The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. The scope defines to whom and context defines where your app is available.
 
 > [!NOTE]
-> * Try updating your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
+> * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
 > * Apps in meetings require groupchat scope. The team scope works for tabs in channels only.
 
 The app manifest must include the following code snippet:
@@ -50,7 +50,7 @@ The app manifest must include the following code snippet:
 
 ### Context property
 
-The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. Tabs in the `team` or `groupchat` scope can have more than one context. Following are the values for the `context` property from which you can use all or some of the values:
+The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. The tabs in the `team` or `groupchat` scope can have more than one context. Following are the values for the `context` property from which you can use all or some of the values:
 
 |Value|Description|
 |---|---|
@@ -126,7 +126,7 @@ Messaging extension works as expected when a user is in an in-meeting view, and 
 
 #### In-meeting dialog box
 
-The in-meeting dialog box can be used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](API-references.md#notificationsignal-api) API to signal that a bubble notification must be triggered. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. To indicate that a bubble notification must be triggered, use the [`NotificationSignal`](API-references.md#notificationsignal-api) API. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
 In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 

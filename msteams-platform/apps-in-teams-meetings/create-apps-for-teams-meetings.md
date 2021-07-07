@@ -10,7 +10,7 @@ keywords: teams apps meetings user participant role api
 
 # Prerequisites for apps in Teams meetings
 
-To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. You must  go through the prerequisites and you can use the meeting apps API references to enhance the meeting experience.
+To expand the capabilities of your apps across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. You must  fulfill the prerequisites and use the meeting apps API references to enhance the meeting experience.
 
 Before you work with apps for Teams meetings, you must have an understanding of the following:
 
@@ -28,13 +28,13 @@ Before you work with apps for Teams meetings, you must have an understanding of 
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
-* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, see completion `bot Id` parameter in `NotificationSignal` API.
+* For your app to update in real time, it must be up-to-date based on event activities in the meeting. These events can be within the in-meeting dialog box and other stages across the meeting lifecycle. For the in-meeting dialog box, check the completion `bot Id` parameter in `NotificationSignal` API.
 
 * Meeting Details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`.
 
 * For real-time meeting events, you must be familiar with the `TurnContext` object available through the Bot SDK. The `Activity` object in `TurnContext` contains the payload with the actual start and end time. Real-time meeting events require a registered bot ID from the Teams platform.
 
-After you have gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and Meeting Details API that enable you to access information using attributes and display relevant content.
+After completing the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and Meeting Details API that enable you to access information using attributes and display relevant content.
 
 ## See also
 

@@ -107,11 +107,11 @@ The seat dimensions become the canvas for rendering the participant video stream
     >[!NOTE]
     > To delete a scene you created, select **Delete scene** on the top bar.
 
-1. In the **View in Teams** dialog box, select **Preview in Teams**. Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal. Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
+1. In the **View in Teams** dialog box, select **Preview in Teams**. Selecting **Preview** automatically creates a Microsoft Teams app that is viewed in the **Apps** page in the Teams Developer Portal. Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by going to **Apps** from the menu.
 
 1. In the dialog box that appears, select **Add**.
 
-    The scene can be tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
+    The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
 
     ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
 
@@ -119,12 +119,12 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
-1. After preview, the scene can be shipped as an app to Teams by following the steps for app submission.
+1. After preview, the scene is shipped as an app to Teams by following the steps for app submission.
 
     >[!NOTE]
-    > This step requires the app package that is different from the scene package, for the scene that was designed. The app package created automatically can be found in the **Apps** section in the Teams Developer Center.
+    > This step requires the app package that is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-1. Optionally, the scene package can be retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded. Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package can be reviewed for incorporating other changes as described in the Sample scene.json section of this document.
+1. Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file, that is the scene package, is downloaded. Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes as described in the Sample scene.json section of this document.
 
     ![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
@@ -199,7 +199,7 @@ Following is the scene.json sample:
 }
 ```
 
-Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and can be altered as per preference. Seating order number corresponds to the order of people joining the call.
+Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. Seating order number corresponds to the order of people joining the call.
 
 The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required. For more information, see the step-by-step getting started sample. The sample leverages the zOrder.
 
@@ -225,13 +225,13 @@ Get end-to-end information of how an end user engages with scenes in custom Toge
 1. Optionally, the meeting organizer and presenter can **Change scene for all participants** in the meeting.
 
     >[!NOTE]
-    > At any point in time, only one scene can be used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
+    > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
 ## Open a custom Together Mode scenes Scene Package
 
-You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality can be leveraged. This tool helps unwrap a scene package to let the creator continue building the scene.
+You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality is leveraged. This tool helps unwrap a scene package to let the creator continue building the scene.
 
 ![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
 
