@@ -95,7 +95,7 @@ Following is a sample Adaptive Card tab manifest:
 Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
 
 > [!NOTE]
-> All requests sent to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri) of your bot will be received as part of `activity` payload.
+> All requests sent to [service URL](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0#base-uri&preserve-view=true) of your bot will be received as part of `activity` payload.
 
 ### Fetch Adaptive Card to render to a tab
 
