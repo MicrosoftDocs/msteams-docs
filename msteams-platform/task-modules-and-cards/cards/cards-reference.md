@@ -52,6 +52,21 @@ You can identify and use different types of cards based on your application requ
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
+## Features that support different card types
+
+| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | O365 Connectors |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
+| O365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
+| List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
+| Receipt card | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
+| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+
+> [!NOTE]
+> For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
+
 ## Common properties for all cards
 
 You can go through some common properties that are applicable to all cards.

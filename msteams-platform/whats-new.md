@@ -8,38 +8,7 @@ keywords: teams what's new latest
 
 # What's new for developers in Microsoft Teams
 
-Discover Microsoft Teams platform features that are introduced in Microsoft Build 2021, generally available (GA), and in developer preview.
-
-## Microsoft Build 2021
-
-# [Features in developer preview](#tab/devpreview)
-
-| **Date** | **Features** | **Changed topics** |
-| -------- | --------- | ------------------ |
-|06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resouce-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
-|05/26/2021| Build tabs with Adaptive Cards. |[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
-|05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
-|05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
-|05/24/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
-|05/21/2021| Tabs link unfurling and stage view. |[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
-
-> [!NOTE]
-> For more information on features available in developer preview, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
-
-# [Features in GA](#tab/GA)
-
-| **Date** | **Features** | **Changed topics** |
-| -------- | --------- | ------------------ |
-|04/29/2021 | Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | User Specific Views for Adaptive Cards. | [User Specific Views](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | Sequential Workflows for Adaptive Cards. | [Sequential Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | Up to date cards. | [Up to date cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| App customization.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|03/29/2021 | Format cards in Teams. | [Format cards in Teams](task-modules-and-cards/cards/cards-format.md) |
-|02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
-
----
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
 ## GA features
 
