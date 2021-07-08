@@ -128,16 +128,16 @@ Messaging extension works as expected when a user is in an in-meeting view, and 
 
 The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. To indicate that a bubble notification must be triggered, use the [`NotificationSignal`](API-references.md#notificationsignal-api) API. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
-In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
+In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 
 > [!NOTE]
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * If you want your app to support anonymous users, your initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### Shared meeting stage
 
 > [!NOTE]
-> * This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real-time.
 
