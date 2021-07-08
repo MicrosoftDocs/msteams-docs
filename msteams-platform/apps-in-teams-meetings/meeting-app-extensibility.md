@@ -62,13 +62,13 @@ After the tabs are added to an existing meeting on desktop or web, you can see t
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
-For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select the **Apps** menu to view all the apps available in the meeting.
+For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
 
 **To use tabs during a meeting**
 
 1. Go to Teams.
 1. In your calendar, select a meeting where you want to use a tab.
-1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use.
+1. After entering the meeting, from the top upper bar of the chat window, select the required app.
     An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 1. In the in-meeting dialog box, enter your response as a feedback.
 
@@ -78,7 +78,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 # [Mobile](#tab/mobile)
 
-After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in meeting side panel of the app.
+After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
 
 The in-meeting dialog box is displayed where you can enter your response as a feedback.
 
@@ -102,11 +102,11 @@ The following table describes the behavior of app when it is approved and not ap
 
 |App capability | App is approved | App is not approved |
 |---|---|---|
-| Meeting extensibility | The app will start appearing in the meetings. | The app will not appear in the meetings for the mobile client. |
+| Meeting extensibility | The app will appear in meetings. | The app will not appear in meetings for the mobile clients. |
 
 #### Post-meeting app experience
 
-With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab and get meeting notes and results on which organizers and attendees must take action.
+With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab, get meeting notes, and results on which organizers and attendees must take action.
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 
