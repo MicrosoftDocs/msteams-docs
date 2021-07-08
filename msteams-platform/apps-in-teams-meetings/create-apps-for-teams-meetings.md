@@ -460,13 +460,14 @@ The following code provides an example of meeting end event payload:
 
 Your bot receives the event through the `OnEventActivityAsync` handler.
 
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-
+To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.     
+      
 [!NOTE]      
 
 > * Get meeting ID from `turnContext.ChannelData`.    
 > * Do not use conversation ID as meeting ID.     
-> * Do not use meeting ID from meeting events payload `turncontext.activity.value`.      
+> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
+      
 
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start and end event:
 
