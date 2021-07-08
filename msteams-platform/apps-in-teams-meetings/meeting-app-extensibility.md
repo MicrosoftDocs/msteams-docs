@@ -27,8 +27,7 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> * Mobile clients support tabs only in pre and post meeting stages. The in-meeting experiences that is in-meeting dialog and panel are currently not available on mobile.
-> * Apps are supported only in private scheduled meetings.
+> Apps are supported in private scheduled meetings only.
 
 #### Pre-meeting app experience
 
@@ -43,42 +42,86 @@ With the pre-meeting app experience, you can find and add meeting apps and perfo
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-    ![Pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
-
     > [!NOTE]
     > * You can also add a tab using the meeting **Chat** tab in an existing meeting.
     > * Tab layout must be in an organized state, if there are more than ten polls or surveys.
+
+# [Desktop](#tab/desktop)
+
+![Pre-meeting tab view](../assets/images/apps-in-meetings/PreMeetingTab.png)
+
+# [Mobile](#tab/mobile)
+
+After the tabs are added to an existing meeting on desktop or web, you can see the same apps in pre-meeting experience under **More** section of the meeting details.
+
+<img src="../assets/images/apps-in-meetings/mobilepremeeting.png" alt="Mobile pre-meeting experience" width="200"/>  
+
+---
 
 #### In-meeting app experience
 
 With the in-meeting app experience, you can engage participants during the meeting by using apps and the in-meeting dialog box. Meeting apps are hosted in the top upper bar of the meeting window as an in-meeting tab. Use the in-meeting dialog box to showcase actionable content for meeting participants. For more information, see [create apps for Teams meetings](create-apps-for-teams-meetings.md).
 
+For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;&#x25CF; in the meeting. Select **Apps** to view all the apps available in the meeting.
+
 **To use tabs during a meeting**
 
-1. After entering the meeting, from the top upper bar of the chat window, select the app you want to use. An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
+1. Go to Teams.
+1. In your calendar, select a meeting where you want to use a tab.
+1. After entering the meeting, from the top upper bar of the chat window, select the required app.
+    An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
 1. In the in-meeting dialog box, enter your response as a feedback.
 
-    ![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
+# [Desktop](#tab/desktop)
 
-    > [!NOTE]
-    > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
-    > * If the in-meeting dialog box is rendered successfully, you are notified that the results successfully downloaded.
-    > * Your app manifest specifies the places where you want them to appear. The context field is used for this purpose. It can also be part of a share-tray experience, subject to specified design guidelines.
+![Dialog box view](../assets/images/apps-in-meetings/in-meeting-dialog-view.png)
 
-    The following image illustrates the in-meeting side panel:
+# [Mobile](#tab/mobile)
 
-    ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
+
+The in-meeting dialog box is displayed where you can enter your response as a feedback.
+
+<img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
+
+> [!NOTE]
+> You need not change the app manifest for the apps to work on mobile.
+
+---
+
+> [!NOTE]
+> * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
+> * If the in-meeting dialog box is rendered successfully, you will get a notification that the results are successfully downloaded.
+> * Your app manifest specifies the places that you want them to appear. The context field is used for this purpose. It is also the part of a share-tray experience, subject to specified design guidelines.
+
+The following image illustrates the in-meeting side panel:
+
+![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+The following table describes the behavior of app when it is approved and not approved:
+
+|App capability | App is approved | App is not approved |
+|---|---|---|
+| Meeting extensibility | The app will appear in meetings. | The app will not appear in meetings for the mobile clients. |
 
 #### Post-meeting app experience
 
-With post-meeting app experience, you can view the results of the meeting such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab and get meeting notes and results on which organizers and attendees must take action.
+With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback. Select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/> to add a tab, get meeting notes, and results on which organizers and attendees must take action.
 
 The following image displays the **Contoso** tab with results of poll and feedback received from meeting attendees:
 
+# [Desktop](#tab/desktop)
+
 ![Post meeting view](../assets/images/apps-in-meetings/PostMeeting.png)
 
+# [Mobile](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/mobilePostMeeting.png" alt="Mobile post meeting view" width="200"/>
+
+---
+
 > [!NOTE]
-> Tab layout must be organized when there are more than ten polls or surveys.
+> Tab layout must be organized when there are more than 10 polls or surveys.
 
 ### Integrate bots into the meeting lifecycle
 
