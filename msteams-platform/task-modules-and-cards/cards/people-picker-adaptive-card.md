@@ -31,13 +31,13 @@ The following examples show how the People Picker in Adaptive Cards is used in d
 
 # [Mobile](#tab/mobile)
 
-People Picker is supported on the iOS and Android mobile clients. You can selecting People Picker on mobile to launch a new experience from which a search is performed. The search experience is similar to other people selection experience in mobile, such as adding a person to a chat or channel.
+People Picker is supported on the iOS and Android mobile clients. You can select People Picker on mobile to launch a new experience from which a search is performed. The search experience is similar to any other people selection experience in mobile, such as adding a person to a chat or channel.
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
 
 # [Desktop](#tab/desktop)
 
-People Picker is supported in web and desktop client. While searching on the web, People Pickew involves an inline typing experience.
+People Picker is supported in web and desktop client. While searching on the web, People Picker involves an inline typing experience.
 
 ![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
 
@@ -123,7 +123,7 @@ The code example for creating a People Picker with organization search is as fol
 }
 ```  
 
-The following image depicts People Picker Adaptive Card with organization search:
+The following image illustrates People Picker Adaptive Card with organization search:
 
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
