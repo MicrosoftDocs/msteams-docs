@@ -31,7 +31,7 @@ The following examples show how the People Picker in Adaptive Cards is used in d
 
 # [Mobile](#tab/mobile)
 
-People Picker is supported on the iOS and Android mobile clients. Selecting People Picker on mobile launches a new experience from which a search is performed. The search experience is similar to other people selection experience across mobile, such as adding a person to a chat or channel.
+People Picker is supported on the iOS and Android mobile clients. You can selecting People Picker on mobile to launch a new experience from which a search is performed. The search experience is similar to other people selection experience in mobile, such as adding a person to a chat or channel.
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
 
@@ -47,10 +47,12 @@ In a scenario, Robert receives a ticket for a sprint planning task in a channel.
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The control includes the following:
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The control includes the following:   
+
 * Dropdown, such as an expanded selection.
-* Radio button, such as single selection.
+* Radio button, such as a single selection.
 * Check boxes, such as multiple selections.  
+
 > [!NOTE]
 > The `Input.ChoiceSet` control is based on the `style` and `isMultiSelect` properties.  
 
@@ -75,7 +77,7 @@ The following predefined values are provided as a **dataset** for people picker:
 
 |dataset|Search Scope
 |--|--|
-|**graph.microsoft.com/users** |Search all of the organization's members.|
+|**graph.microsoft.com/users** |Search all members of the organization.|
 |**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|  
 
 <br> 
@@ -126,7 +128,7 @@ The following image depicts People Picker Adaptive Card with organization search
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
 >[!NOTE]
-> To enable search within a conversation's member list, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable selecting multiple people in the control. It is set to false by default and allows to select one person only.
+> To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It is set to false by default and this setting allows to select one person only.
 
 #### Data Submission
 When a `Submit Action` is performed on the Adaptive Card, all the inputs provided in the card are sent back to the bot through an `invoke`. This `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
@@ -141,7 +143,7 @@ The format of the value submitted to the bot depends on the value of the `isMult
 |true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concatenated with a 'comma'.|  
 
 #### Preselection of People
-People Picker supports preselection of people in the control when creating and sending an Adaptive Card.  
+People Picker supports preselection of people in the control, when creating and sending an Adaptive Card.  
 `Input.ChoiceSet` supports the `value` property that is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
 To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.
 
