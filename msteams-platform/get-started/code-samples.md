@@ -78,7 +78,9 @@ A **tenant** is like a space, or a container for your organization in Teams, whe
 1. Select **Join Now** and follow the onscreen instructions.
 1. When you get to the welcome screen, select **Set up E5 subscription**.
 1. Set up your administrator account. After you finish, you will see the following image.
+
     :::image type="content" source="../assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+
 1. Log in to Teams using the administrator account you set up.
 1. Verify if you now have the **Upload a custom app** option.
 
