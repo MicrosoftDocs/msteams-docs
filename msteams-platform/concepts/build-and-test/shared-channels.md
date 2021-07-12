@@ -13,20 +13,21 @@ The shared channels in Teams allow users of different organizations to collabora
 
 ![Shared channels](../../assets/images/tab-images/shared-channels.png)
 
-Teams enables collaboration scenarios and effective flow of information among team members. Channels allow team members to have an ongoing conversation.The users also wants to communicate across team or organizational boundaries. 
+Teams enables collaboration scenarios and the effective flow of information among the team members. The channels allow the team members to have an ongoing conversation. The users also want to communicate across the team or organizational boundaries. 
 At present, the user can create a chat with these external members or add them to the Team. Adding members to the team provides access to the entire team content.  
-Group chats with external users are not supported as chats provide limited compliance controls to the admin. Sharing a channel across the organization boundaries and inviting people to a specific channel helps in effective collaboration.    
-Collaborating in channels allows you to work as efficiently with agencies, vendors, or clients as you do internally. With multiple companies working together, each have their unique set of tools to get the work done.
+Group chats with external users are not supported as the chats provide limited compliance controls to the admin. Sharing a channel across the organizational boundaries and inviting people to a specific channel helps in effective collaboration.    
+Collaborating in channels allows you to work as efficiently with agencies, vendors, or clients as you do internally. With multiple companies working together, each has their unique set of tools to get the work done.
 
 ## Apps permissions in shared channels
 
-Apps work between workspaces transparently. In shared channels, due to the nature of connecting to multiple workspaces, there must be restrictions in some scenarios depending on how the service behind the app is designed. For example, a commercial app, such as Salesforce that is tied to a specific workspace's users does not automatically give access to the users on another workspace. The `Conversations API` &  `users.info` method are used to determine the appropriate data access of your app. By default, your app must expose less information in shared channels to protect your users' data.  
+Apps work between workspaces transparently. In shared channels, due to the nature of connecting to multiple workspaces, there must be restrictions in some scenarios depending on how the service behind the app is designed. For example, a commercial app, such as Salesforce that is tied to a specific workspace's users does not automatically give access to the users on another workspace. The `Conversations API` &  `users.info` methods are used to determine the appropriate data access of your app. By default, your app must expose less information in shared channels to protect your users' data.   
+
 Bot users are accessible to all users on the workspace where your app is installed, and any external members in a channel between organizations where your bot is also present. When an external member messages you, the team parameter informs your app which team the message originated from. You can compare this to the `team_id` parameter, which indicates the workspace where the app is installed. If your app shares sensitive information, you can change its behavior for external members.
 
 ## Challenges of Shared channels
 
 * A shared channel presents similar challenges to the platform as private channels.
-    * Private channels can become shared channels.Shared channels have similar isolation challenges as private channels for users that do not belong to the parent team. Use an **allow list** for a set of tabs that functions independent of user groups.
+    * Private channels can become shared channels. Shared channels have similar isolation challenges as private channels for users that do not belong to the parent team. Use an **allow list** for a set of tabs that functions independent of user groups.
 * Apps in federated scenarios.
     * Federated tenants present the issue of users from multiple organizations accessing the same app. Shared channels encounter this issue. For app roster, and app management  the `parentTeam/tenant` pattern is followed.
 
