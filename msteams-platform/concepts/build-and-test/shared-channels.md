@@ -9,10 +9,11 @@ ms.topic: conceptual
 
 # Shared channels
 
-Team members can use chats and channels to communicate among themselves and share information. But there are scenarios where team must communicate with external members. The users use to create new chats with the external members or add the external members to the existing chats or channels for communication, which result in the following:
+Team members use chats and channels to communicate among themselves and share information. There are scenarios, when the team must communicate with external members. The users used to create new chats with the external members or add the external members to the existing chats or channels for communication, which resulted in the following:
 * The external users can access the entire team content.
 * The chats with external member give limited compliance controls to the system admin.
-To resolve the preceding limitations and issues, a combination to share a channel across the organization along with the ability to invite people to a specific channel has been introduced. Currently, people across and outside the organization can collaborate effectively using shared channels. The shared channel provides easy collaboration and allows to work efficiently with agencies, vendors, or clients. The following image illustrates the concept of shared channels:     
+
+To resolve the preceding issues, a combination to share channel across the organization along with the ability to invite people to a specific channel has been introduced. Currently, people across and outside the organization can collaborate effectively using shared channels. The shared channel provides easy collaboration and allows to work efficiently with agencies, vendors, or clients. The following image illustrates the concept of shared channels:     
 
 ![Shared channels](../../assets/images/tab-images/shared-channels.png)     
 
