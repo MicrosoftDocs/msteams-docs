@@ -41,19 +41,19 @@ Depending on what capabilities you want for your app, you will need an appropria
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks |
 |--------|-------------||--------||--------||--------|
-| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams client SDK](https://docs.microsoft.com/javascript/api/overview/msteams-client) | Web technology in general, HTML, CSS, and JavaScript |
+| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams client SDK](/javascript/api/overview/msteams-client) | Web technology in general, HTML, CSS, and JavaScript |
 | Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 | Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 
 The Get started section will take you through recommended tool sets and commonly used technologies, such as Visual Studio Code with Teams extension, React.js for tabs, and Node.js for bots and messaging extensions, although *you are not limited to using these particular stacks*.
 
-If you prefer using a command-line interface (CLI), see [create your first Microsoft Teams app using the Yeoman generator](../tutorials/get-started-yeoman.md).
+If you prefer using a command-line interface (CLI), see [create your first Microsoft Teams app using the Yeoman generator](../get-started/get-started-yeoman.md).
 
 ### Teams does not host your app
 
 You will only install an app package that contains a configuration file, called manifest and app icons to Teams client. The rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Your app in the cloud or localhost during your development accesses Teams via HTTPS.
 
-:::image type="content" source="../assets/images/build-your-first-app/your-app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
 ## Get prerequisites
 
