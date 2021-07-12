@@ -13,22 +13,20 @@ Team members use chats and channels to communicate among themselves and share in
 * The external users can access the entire team content.
 * The chats with external member give limited compliance controls to the system admin.
 
-To resolve the preceding issues, a combination to share channel across the organization along with the ability to invite people to a specific channel has been introduced. Currently, people across and outside the organization can collaborate effectively using shared channels. The shared channel provides easy collaboration and allows to work efficiently with agencies, vendors, or clients. The following image illustrates the concept of shared channels:     
+To resolve the preceding issues, a combination to share channel across the organization along with the ability to invite people to a specific channel has been introduced. Currently, people across and outside the organization can collaborate effectively using shared channels. The shared channel provides easy collaboration and allows to work efficiently with agencies, vendors, or clients. The following image illustrates the concept of shared channels: 
 
-![Shared channels](../../assets/images/tab-images/shared-channels.png)     
-
-## Features of Shared channel
+   
+# Features 
 
 You can share a channel across the organizational boundaries and invite people to a specific channel for effective collaboration and required information. Bot users are accessible to all users in the workspace with apps installed and any external members in a channel between organizations with specified bot. The team parameter informs your app of the message origin for external users. You can use Conversations API and `users.info` method to determine appropriate data access of your app. By default, your app must expose less information in shared channels to protect your users’ data. You must change the app's behavior for external members if your app shares sensitive information. You can have unique set of tools and apps for multiple companies working together.
 
-## Limitations of Shared channels
+## Limitations 
 
 * Private channels: Shared channels have similar isolation challenges as private channels for users who do not belong to the parent team. Use an **allow list** for a set of tabs that functions independent of user groups.
     > [!NOTE]
     > Private channels can be used as Shared channels.    
 
-* Federated users: Federated tenants present the issue of users from multiple organizations accessing the same app. Shared channels encounter this issue. You can follow the `parentTeam/tenant` pattern for app roster, and app management.
-
+* Federated users: In Shared channels, the federated tenants encounter the issue of users from multiple organizations accessing the same app. You can follow the `parentTeam/tenant` pattern for app roster, and app management.
 
 ## JS SDK and Bot SDK
 
