@@ -1,13 +1,13 @@
 ---
-title: Unified meetings platform
+title: Unified meetings apps
 author: surbhigupta
-description: Understand the meeting app concepts 
+description: Understand unified meetings apps 
 ms.topic: conceptual
 ---
 
-# Unified meetings app platform
+# Unified meetings apps
 
-Teams unified meetings app platform is based on the following concepts:
+Teams unified meetings apps is based on the following concepts:
 
 * Meeting lifecycle has different stages, such as pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
@@ -133,7 +133,7 @@ Bots enabled in groupchat scope start functioning in meetings. To implement bots
 
 To implement messaging extension, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
-The Teams meeting app concepts allow you to design your app based on participant roles in a meeting.
+The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
 ## Participant roles in a meeting
 
