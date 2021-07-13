@@ -20,7 +20,24 @@ The users can access apps during meetings using the tab gallery, for example:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-The following flowchart provides an overview of capabilities associated with meeting app extensibility:
+The following table provides an overview of capabilities associated with meeting app extensibility:
+
+| Icon | Meeting app extensibility |
+|---|---|----|---|
+| ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Uses apps in meetings |
+| ![Apps in meetings](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
+| ![Apps in meetings](../assets/images/apps-in-meetings/userinformation.png) | Provides user information |
+| ![Apps in meetings](../assets/images/apps-in-meetings/meetinglifecycle.png) | Helps to plan meeting lifecycle |
+| ![Apps in meetings](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
+| ![Apps in meetings](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
+| ![Apps in meetings](../assets/images/apps-in-meetings/collaborateusers.png) | Collaborates with different users and participant roles |
+| ![Apps in meetings](../assets/images/apps-in-meetings/inmeetingdialog.png) | Keeps the meeting engaging with in-meeting dialog |
+| ![Apps in meetings](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
+| ![Apps in meetings](../assets/images/apps-in-meetings/tabcontent.png) | Retrieves contextual information for tab content |
+| ![Apps in meetings](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users in a meeting |
+| ![Apps in meetings](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
+
+![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 

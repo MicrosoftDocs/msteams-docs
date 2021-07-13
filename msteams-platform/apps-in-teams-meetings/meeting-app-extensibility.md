@@ -1,13 +1,13 @@
 ---
-title: Meeting app concepts
+title: Unified meetings platform
 author: surbhigupta
 description: Understand the meeting app concepts 
 ms.topic: conceptual
 ---
 
-# Meeting app concepts
+# Unified meetings app platform
 
-Teams meeting app is based on the following concepts:
+Teams unified meetings app platform is based on the following concepts:
 
 * Meeting lifecycle has different stages, such as pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
