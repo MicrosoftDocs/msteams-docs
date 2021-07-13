@@ -45,13 +45,13 @@ The web and desktop client support People Picker in Adaptive Card. While searchi
 
 ![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
 
-The preceding image depicts the reassignment scenario, Robert receives a ticket for a sprint planning task in a channel. He realizes that he is not the correct assignee for the task. He selects **Reassign** where the people picker field is prepopulated with his name. He removes his name and selects Mona and Robin for the task. He then reassigns the task that sends the information back to the bot to update the card and notify the appropriate users.
+The preceding image shows the reassignment scenario, Robert receives a ticket for a sprint planning task in a channel. He realizes that he is not the correct assignee for the task. He selects **Reassign** where the people picker field is prepopulated with his name. He removes his name and selects Mona and Robin for the task. He then reassigns the task that sends the information back to the bot to update the card and notify the appropriate users.
 
 ---
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The control includes the following:   
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following:   
 
 * Dropdown, such as an expanded selection.
 * Radio button, such as a single selection.
@@ -134,7 +134,7 @@ The following image illustrates People Picker Adaptive Cards with organization s
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It is set to false by default and this setting allows to select one person only.
 
 #### Data Submission
-You can perform `Submit Action` on an Adaptive Card. You must provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
+You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
 In People Picker, when a person is selected in the control, the `AAD ID` of the person is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
 
