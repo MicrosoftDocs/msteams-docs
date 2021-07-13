@@ -2,7 +2,7 @@
 title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
@@ -18,7 +18,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 > [!NOTE]
 > To test the RSC permissions, your Teams app manifest file must include a **webApplicationInfo** key populated with the following fields:
 >
-> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
 > - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
