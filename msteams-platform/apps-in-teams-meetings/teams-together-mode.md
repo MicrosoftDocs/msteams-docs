@@ -209,7 +209,7 @@ Now that you have gone through the sample scene.json, you can activate the custo
 
 Get end-to-end information of how an end user engages with scenes in custom Together Mode scenes.
 
-**To choose scenes and activate custom Together Mode scenes**
+**To select scenes and activate custom Together Mode scenes**
 
 1. Create a new test meeting.
 

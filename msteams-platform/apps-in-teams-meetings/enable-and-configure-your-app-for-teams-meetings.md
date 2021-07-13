@@ -56,22 +56,17 @@ The `context` property determines what must be shown when a user invokes an app 
 |---|---|
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
-| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. |
-| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. |
+| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
+| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. |
-
-> [!NOTE]
-> `Context` property is currently not supported on mobile clients.
+| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. This tab is not supported on mobile. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> * For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
-> * Mobile clients support tabs only in pre and post meeting stages.
-> * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) while creating your tabs for mobile.
+> For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios. You can configure your apps to enhance the meeting experience based on participant role or user type. Now you can identify what actions can be taken in the following meeting scenarios:
 
