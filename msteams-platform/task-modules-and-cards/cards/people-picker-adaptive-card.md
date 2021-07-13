@@ -10,11 +10,13 @@ ms.author: surbhigupta
 
 # People Picker in Adaptive Cards
 
-You can add a People Picker as an input control to your Adaptive Card through which users can search for people and select them. The people picker supports the following tasks:    
+> [!NOTE]
+> This feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-* Selects multiple users. 
+The People Picker helps users to search and select people. In Adaptive Card, add the People Picker feature as input control, which works across the Adaptive Card surfaces, such as chats, channels, task modules, and tabs. The people picker supports the following tasks:        
+
+* Selects single or multiple users. 
 * Prepopulates the field with selected users.
-* Works across the Adaptive Card surfaces, such as chats, channels, task modules, and tabs. 
 
 For more information on Adaptive Cards, see [Cards Reference](cards-reference.md).
 
