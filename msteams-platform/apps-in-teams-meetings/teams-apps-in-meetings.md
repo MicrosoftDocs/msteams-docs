@@ -25,17 +25,17 @@ The following table provides an overview of capabilities associated with meeting
 | Icon | Meeting app extensibility |
 |---|---|----|---|
 | ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Uses apps in meetings |
-| ![Apps in meetings](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
-| ![Apps in meetings](../assets/images/apps-in-meetings/userinformation.png) | Provides user information |
-| ![Apps in meetings](../assets/images/apps-in-meetings/meetinglifecycle.png) | Helps to plan meeting lifecycle |
-| ![Apps in meetings](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
-| ![Apps in meetings](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
-| ![Apps in meetings](../assets/images/apps-in-meetings/collaborateusers.png) | Collaborates with different users and participant roles |
-| ![Apps in meetings](../assets/images/apps-in-meetings/inmeetingdialog.png) | Keeps the meeting engaging with in-meeting dialog |
-| ![Apps in meetings](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
-| ![Apps in meetings](../assets/images/apps-in-meetings/tabcontent.png) | Retrieves contextual information for tab content |
-| ![Apps in meetings](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users in a meeting |
-| ![Apps in meetings](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
+| ![Meeting experiences](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
+| ![User information](../assets/images/apps-in-meetings/userinformation.png) | Provides user information |
+| ![Meeting lifecycle](../assets/images/apps-in-meetings/meetinglifecycle.png) | Helps to plan meeting lifecycle |
+| ![Integratefeatures](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
+| ![Meeting events](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
+| ![Collaborate users](../assets/images/apps-in-meetings/collaborateusers.png) | Collaborates with different users and participant roles |
+| ![In-meeting dialog](../assets/images/apps-in-meetings/inmeetingdialog.png) | Keeps the meeting engaging with in-meeting dialog |
+| ![Participant roles](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
+| ![Contextual information](../assets/images/apps-in-meetings/tabcontent.png) | Retrieves contextual information for tab content |
+| ![Notifications](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users in a meeting |
+| ![Createscenes](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
 
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
