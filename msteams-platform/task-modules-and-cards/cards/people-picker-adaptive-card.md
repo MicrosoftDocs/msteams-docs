@@ -13,29 +13,32 @@ ms.author: surbhigupta
 > [!NOTE]
 > This feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-The People Picker helps users to search and select people. In Adaptive Card, add the People Picker feature as input control, which works across the Adaptive Card surfaces, such as chats, channels, task modules, and tabs. The People Picker supports the following tasks:        
+People Picker helps users to search and select people in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:        
 
-* Selects single or multiple users. 
-* Prepopulates the field with selected users.
+* Searching single or multiple users.
+* Selecting single or multiple users. 
+* Reassigning to single or multiple users. 
+* Prepopulating the name of selected users.
 
 ## Popular scenarios for People Picker in Adaptive Cards
 
-The following table provides different scenarios and People Picker based actions:
+The following table provides different scenarios and People Picker actions:
 
 |Scenarios|Actions|
 |----------|-------------------------|
-|Approval-based scenarios| To request, assign and reassign the approval to the intended people based on the requirement.|
-|Incident management| To track incidents and notify, assign and reassign the appropriate person for immediate action.| 
-| Project management| To assign tickets or bugs to particular users.|
-|User lookup| To look for people in the organization.|
+|Approval-based scenarios| To request, assign, and reassign the approval to the intended user based on the requirement.|
+|Incident management| To track incidents and notify, assign, and reassign to the intended user for immediate action.| 
+|Project management| To assign tickets or bugs to particular users.|
+|User lookup| To search for users in the organization.|
 
 ## Understand how People Picker works
 
-You can learn how People Picker works in mobile and desktop:
+You can understand how People Picker works in mobile and desktop:
 
 # [Mobile](#tab/mobile)
 
-The iOS and Android mobile clients support People Picker in Adaptive Cards. You can select People Picker on mobile to launch a new experience, from which you can search. The search experience is similar to any other people selection experience in mobile, such as adding a person to a chat or channel.
+Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other people selection experience in mobile, such as adding a person to a chat or channel.
+[place holder to demonstrate the following image]
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
 
@@ -43,15 +46,23 @@ The iOS and Android mobile clients support People Picker in Adaptive Cards. You 
 
 The web and desktop client support People Picker in Adaptive Card. While searching on the web, People Picker involves an inline typing experience.
 
-![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
+User A(Robert) receives a ticket for a sprint planning task in a channel and realizes incorrect assignment. User A reassigns the task that sends the information back to the bot. The bot updates Adaptive Card and notifies the intended users.
 
-The preceding image shows the reassignment scenario in which user A (Robert) receives a ticket for a sprint planning task in a channel and realizes incorrect assignment. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user. User A removes the name and selects user B (Mona) and user C (Robin) for the task. User A reassigns the task that sends the information back to the bot to update the card and notify the appropriate users.
+**To reassign any task**
+
+1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
+1. Remove the incorrect user's name. 
+1. Select intended users as per the image scenario, user B(Mona), and user C(Robin) for the task. 
+
+The following image shows the reassignment scenario:    
+
+![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
 
 ---
 
 ## Implement People Picker
 
-People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following:   
+People Picker is implemented as an extension of the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) control. The input control includes the following selections:   
 
 * Dropdown, such as an expanded selection.
 * Radio button, such as a single selection.
@@ -131,7 +142,7 @@ The following image illustrates People Picker Adaptive Cards with organization s
 
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
-To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It is set to false by default and this setting allows to select one person only.
+To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It's set to false by default and this setting allows you to select one person only.
 
 #### Data Submission
 You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
