@@ -1,6 +1,6 @@
 ---
 title: Enable and configure your apps for Teams meetings
-author: laujan
+author: surbhigupta
 description: Enable and configure your apps for Teams meetings 
 ms.topic: conceptual
 ---
@@ -56,29 +56,25 @@ The `context` property determines what must be shown when a user invokes an app 
 |---|---|
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
-| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. |
-| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. |
+| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
+| **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. |
-
-> [!NOTE]
-> `Context` property is currently not supported on mobile clients.
+| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. This tab is not supported on mobile. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
 ## Configure your app for meeting scenarios
 
 > [!NOTE]
-> * For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
-> * Mobile clients support tabs only in pre and post meeting stages.
-> * The in-meeting experiences that is in-meeting dialog box and tab is currently not supported on mobile clients. For more information, see [guidance for tabs on mobile](../tabs/design/tabs-mobile.md) while creating your tabs for mobile.
+> For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
 
 Teams meetings provides a unique collaborative experience for your organization. It provides the opportunity to configure your app for different meeting scenarios. You can configure your apps to enhance the meeting experience based on participant role or user type. Now you can identify what actions can be taken in the following meeting scenarios:
-* [Pre-meeting](#pre-meeting)
-* [In-meeting](#in-meeting)
-* [Post-meeting](#post-meeting)
 
-### Pre-meeting
+* [Before a meeting](#before-a-meeting)
+* [During a meeting](#during-a-meeting)
+* [After a meeting](#after-a-meeting)
+
+### Before a meeting
 
 Before a meeting, users can add tabs, bots, and messaging extensions. Users with organizer and presenter roles can add tabs to a meeting.
 
@@ -108,7 +104,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
 > * Role assignments can be changed while a meeting is in progress. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
-### In-meeting
+### During a meeting
 
 During a meeting, you can use the meetingSidePanel or the in-meeting dialog box to build unique experiences for your apps.
 
@@ -130,22 +126,21 @@ The in-meeting dialog box can be used to engage participants during the meeting 
 In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 
 > [!NOTE]
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submitting-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, your initial invoke request payload must rely on the `from.id` request metadata in the `from` object, not the `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
-#### Share to stage
+#### Shared meeting stage
 
 > [!NOTE]
 > * This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-> * To use this feature, the app must support an in-meeting meetingSidePanel.
 
-This capability gives developers the ability to share an app to the meeting stage. By enabling share to the meeting stage, meeting participants can collaborate in real-time.
+Shared meeting stage allows meeting participants to interact with and collaborate on app content in real-time.
 
 The required context is `meetingStage` in the app manifest. A prerequisite for this is to have the `meetingSidePanel` context. This enables **Share** in the meetingSidePanel.
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-The manifest change that is needed to enable this capability is as follows:
+To enable shared meeting stage, configure your app manifest like this:
 
 ```json
 "configurableTabs": [
@@ -163,15 +158,17 @@ The manifest change that is needed to enable this capability is as follows:
   ]
 ```
 
-### Post-meeting
+See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
-The post-meeting and [pre-meeting](#pre-meeting) configurations are the same.
+### After a meeting
+
+The configurations after and [before meetings](#before-a-meeting) are the same.
 
 ## Code sample
 
 |Sample name | Description | Sample |
 |----------------|-----------------|--------------|----------------|-----------|
-| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token, which is generated sequentially so that each participant has a fair opportunity to interact. This can be useful in situations like scrum meetings, Q&A sessions, and so on. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token, which is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. This can be useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
 
 ## See also
 

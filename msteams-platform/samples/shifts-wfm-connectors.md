@@ -2,7 +2,7 @@
 title: Production-ready Shifts Connectors
 description: Workforce management Shifts connectors for Teams
 ms.topic: reference
-author: laujan
+author: surbhigupta
 ms.date: 03/09/2020
 localization_priority: Normal
 keywords: Microsoft Teams connectors kronos

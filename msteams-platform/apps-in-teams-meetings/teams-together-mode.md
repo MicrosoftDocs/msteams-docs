@@ -123,7 +123,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
     > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
 
-1. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+1. Select any participant image, and select the **Assign Spot** check box to assign the spot to the participant.
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant.
 
@@ -247,7 +247,7 @@ Now that you have gone through the sample scene.json, you can activate the custo
 
 Get end-to-end information of how an end user engages with scenes in custom Together Mode scenes.
 
-**To choose scenes and activate custom Together Mode scenes**
+**To select scenes and activate custom Together Mode scenes**
 
 1. Create a new test meeting.
 
