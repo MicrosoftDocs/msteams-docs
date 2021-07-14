@@ -23,7 +23,7 @@ items:
     * Proactive hello message in chat        
     ![Proactive hello in chat](~/assets/images/proactive-scenario/proactive-helo.png)
 
-    * Proactive hello message in Adaptive Card    
+    * Proactive hello message as an Adaptive Card    
     ![proactive hello in Adaptive Card](~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png) 
 
 - title: Prerequisites
