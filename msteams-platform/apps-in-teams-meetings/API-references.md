@@ -10,7 +10,7 @@ keywords: teams apps meetings user participant role api
 
 # Meeting apps API references
 
-The new meeting extensibilities provide you with APIs that transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can choose which APIs you want to use to enhance the meeting experience.
+The new meeting extensibilities provide you with APIs that transform the meeting experience. Build apps or integrate existing apps within the meeting lifecycle. Use the APIs to make your app aware of the meeting. Choose which APIs you want to use to enhance the meeting experience.
 
 The following table provides a list of these APIs:
 
@@ -40,7 +40,7 @@ The `GetParticipant` API includes the following query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a participant ID from the Tab SSO. |
+|**participantId**| String | Yes | The participant ID is the user ID and is available in Tab SSO, Bot Invoke, and Teams Client SDK. You must get a participant ID from the Tab SSO. |
 |**tenantId**| String | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
@@ -481,7 +481,7 @@ public class MeetingStartEndEventValue
 | Meetings extensibility | Microsoft Teams meeting extensibility sample for passing tokens. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
 | Meeting content bubble bot | Microsoft Teams meeting extensibility sample for interacting with content bubble bot in a meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-content-bubble/nodejs)|
 | Meeting meetingSidePanel | Microsoft Teams meeting extensibility sample for interacting with the side panel in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-sidepanel/nodejs)|
-| Details Tab in Meeting | Microsoft Teams meeting extensibility sample for iteracting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
+| Details Tab in Meeting | Microsoft Teams meeting extensibility sample for interacting with Details Tab in-meeting. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-details-tab/nodejs)|
 
 ## See also
 

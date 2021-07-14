@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Unified meetings apps
 
-Teams unified meetings apps is based on the following concepts:
+Teams unified meetings apps are based on the following concepts:
 
 * Meeting lifecycle has different stages, such as pre-meeting, in-meeting, and post-meeting.  
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
@@ -15,7 +15,7 @@ Teams unified meetings apps is based on the following concepts:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
 
-This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions in the meeting. It provides the information to identify different participant roles and different user types to perform the tasks.
+This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
 
@@ -33,7 +33,7 @@ Tabs allow the team members to access services and content in a specific space w
 
 #### Pre-meeting app experience
 
-With the pre-meeting app experience, you can find and add meeting apps and perform pre-meeting tasks, such as developing a poll to survey the meeting participants.
+With the pre-meeting app experience, you can find and add meeting apps and do pre-meeting tasks, such as developing a poll to survey the meeting participants.
 
 **To add tabs to an existing meeting**
 
@@ -72,7 +72,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 1. In your calendar, select a meeting where you want to use a tab.
 1. After entering the meeting, from the top upper bar of the chat window, select the required app.
     An app is visible in a Teams meeting in the side panel or the in-meeting dialog box.
-1. In the in-meeting dialog box, enter your response as a feedback.
+1. In the in-meeting dialog box, enter your response as feedback.
 
 # [Desktop](#tab/desktop)
 
@@ -82,7 +82,7 @@ For mobile, meeting apps are available from **Apps** > ellipses &#x25CF;&#x25CF;
 
 After entering the meeting and adding the app from desktop or web, the app is visible in mobile Teams meeting under the **Apps** section. Select **Apps** to show the list of apps. User can launch any of the apps as an in-meeting side panel of the app.
 
-The in-meeting dialog box is displayed where you can enter your response as a feedback.
+The in-meeting dialog box is displayed where you can enter your response as feedback.
 
 <img src="../assets/images/apps-in-meetings/mobile-in-meeting-dialog-view.png" alt="Mobile dialog box view" width="200"/>
 
@@ -100,7 +100,7 @@ The following image illustrates the in-meeting side panel:
 
 ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when approved or not approved:
 
 |App capability | App is approved | App is not approved |
 |---|---|---|
@@ -141,9 +141,9 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 Default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
-* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with M365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
+* **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 * **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter cannot remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is a user who has been invited to attend a meeting but is not authorized to act as a presenter. Attendees can interact with other meeting members but cannot manage any of the meeting settings or share the content.
+* **Attendee**: An attendee is a user who has been invited to attend a meeting. But attendees are not authorized to act as a presenter. Attendees can interact with other meeting members but cannot manage any of the meeting settings or share the content.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
@@ -157,18 +157,18 @@ After you design your app based on participant roles in a meeting, you can ident
 > [!NOTE]
 > The user type is not included in the **getParticipantRole** API.
 
-User types, such as organizer, presenter, or attendee in a meeting can perform one of the [participant roles in a meeting](#participant-roles-in-a-meeting).
+User types, such as organizer, presenter, or attendee in a meeting can do one of the [participant roles in a meeting](#participant-roles-in-a-meeting).
 
 The following list details the different user types along with their accessibility and performance:
 
-* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They are usually full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
-* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD and have same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest user can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
+* **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. They are full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
+* **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD and have same Teams capabilities as a native team member. They have access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
 * **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. They do not have access to your teams or other shared resources from your organization. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
-* **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participants are like external users, but their identity is not projected in the meeting. Anonymous users are not able to access apps in a meeting window. An anonymous user cannot be an organizer but can be a presenter or attendee.
+* **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participants are like external users, but their identity is not shown in the meeting. Anonymous users cannot access apps in a meeting window. An anonymous user cannot be an organizer but can be a presenter or attendee.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
