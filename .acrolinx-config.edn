@@ -1,0 +1,45 @@
+{:allowed-branchname-matches ["master"]
+ :allowed-filename-matches ["msteams-platform/"] 
+ 
+ :use-gh-statuses true
+ 
+ :targets 
+   {
+     :counts {
+              ;;:spelling 
+              ;;:grammar 
+              ;;:total  
+              ;;:issues 
+             }
+     :scores {
+              ;;:terminology 
+              ;;:qualityscore  
+              ;;:spelling 
+             }
+   }
+ 
+ :guidance-profile "d2b6c2c8-00ee-47f1-8d10-b280cc3434c1" ;; Profile ID for "M365-specific"
+
+ :template-header
+
+ "
+## Acrolinx Scorecards 
+ 
+**We do not currently enforce a minimum score for content merged to the default branch. This will change in the future.**
+ 
+Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
+| Article | Score | Issues | Scorecard | Processed |
+| ------- | ----- | ------ | --------- | --------- |
+"
+
+ :template-change
+ "| ${s/file} | ${acrolinx/qualityscore} | ${acrolinx/flags/issues} | [link](${acrolinx/scorecard}) | ${s/status} |
+"
+ 
+ :template-footer
+ "
+**More info about Acrolinx**
+ 
+Use the Acrolinx extension, or sidebar, in Visual Studio Code to check spelling, grammar, style, tone, clarity, and key terminology when you're creating or updating content. For more information, see [Use the Visual Studio Code extension to run Acrolinx locally](https://review.docs.microsoft.com/office-authoring-guide/acrolinx-vscode).
+"
+}
