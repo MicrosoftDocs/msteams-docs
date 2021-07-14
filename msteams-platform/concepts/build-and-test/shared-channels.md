@@ -15,8 +15,9 @@ Team members use chats and channels to communicate among themselves and share in
 
 To resolve the preceding issues, a combination to share channel across the organization along with the ability to invite people to a specific channel has been introduced. Currently, people across and outside the organization can collaborate effectively using shared channels. The shared channel provides easy collaboration and allows to work efficiently with agencies, vendors, or clients. The following image illustrates the concept of shared channels: 
 
-   
-# Features 
+![Shared channels](~/assets/images/shared-channels.png)
+
+## Features 
 
 You can share a channel across the organizational boundaries and invite people to a specific channel for effective collaboration and required information. Bot users are accessible to all users in the workspace with apps installed and any external members in a channel between organizations with specified bot. The team parameter informs your app of the message origin for external users. You can use Conversations API and `users.info` method to determine appropriate data access of your app. By default, your app must expose less information in shared channels to protect your users’ data. You must change the app's behavior for external members if your app shares sensitive information. You can have unique set of tools and apps for multiple companies working together.
 
