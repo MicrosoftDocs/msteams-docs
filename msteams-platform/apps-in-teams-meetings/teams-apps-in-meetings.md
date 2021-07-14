@@ -22,7 +22,7 @@ The users can access apps during meetings using the tab gallery, for example:
 
 The following table provides an overview of the meeting app extensibility features:
 
-| Icons | Features |
+| | Features |
 |---|---|
 | ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Uses apps in meetings |
 | ![Meeting experiences](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
