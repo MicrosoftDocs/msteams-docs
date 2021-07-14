@@ -14,7 +14,7 @@ ms.author: surbhigupta
 
 When developing a tab using the traditional method, you might run into these issues, such as HTML and CSS considerations, slow load times, iFrame constraints, and server maintenance and costs. Adaptive Card tabs is a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front-end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-You can build your tabs with ready-made user interface (UI) Lego-blocks that look and feel native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow.
+You can build your tabs with ready-made user interface (UI) building blocks that look and feel native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow.
 
 The following image depicts build tabs with Adaptive Cards in desktop and mobile:
 

@@ -231,7 +231,7 @@ The app manifest loads the tab from a `localhost` URL.  In this section, you wil
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
-1. There are several places within the manifest that list a `locahost:XXXXX` as part of a URL.  Replace all occurrences with `{{azure_app_url}}`, including the curly braces.
+1. There are several places within the manifest that list a `localhost:XXXXX` as part of a URL.  Replace all occurrences with `{{azure_app_url}}`, including the curly braces.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
