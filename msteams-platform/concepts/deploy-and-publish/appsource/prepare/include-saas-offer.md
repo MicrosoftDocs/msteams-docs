@@ -25,7 +25,7 @@ To create a SaaS offer, you must have a [Partner Center account](create-partner-
 
 Think about the following before you create your SaaS offer:
 
-* Come up with a subscription model. Generic subscription plans available to anyone may work in most cases, but you may want the ability to target specific customers with special deals only they can get. For information, see [private offers in the Microsoft commercial marketplace](/azure/marketplace/private-offers).
+* Come up with a subscription model. Generic subscription plans available to anyone may work in most cases, but you may also want to target specific customers with special deals only for them. For information, see [private offers in the Microsoft commercial marketplace](/azure/marketplace/private-offers).
 * Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
 * Consider using [Azure Active Directory (Azure AD)](/azure/marketplace/azure-ad-saas) to simplify and secure the purchasing process for users. If your offer type is *Sell through Microsoft* (transactable), Azure AD with single sign-on (SSO) identity management and authentication is required.
 * Consider integrating with the [SaaS Fullfillment APIs](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis). This is required if your offer type is *Sell through Microsoft* (transactable).
