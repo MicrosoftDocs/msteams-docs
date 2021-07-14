@@ -45,7 +45,7 @@ The web and desktop client support People Picker in Adaptive Card. While searchi
 
 ![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
 
-The preceding image shows the reassignment scenario, Robert receives a ticket for a sprint planning task in a channel. He realizes that he is not the correct assignee for the task. He selects **Reassign** where the people picker field is prepopulated with his name. He removes his name and selects Mona and Robin for the task. He then reassigns the task that sends the information back to the bot to update the card and notify the appropriate users.
+The preceding image shows the reassignment scenario in which Robert receives a ticket for a sprint planning task in a channel. He realizes that he is not the correct assignee for the task. He selects **Reassign** where the people picker field is prepopulated with his name. He removes his name and selects Mona and Robin for the task. He then reassigns the task that sends the information back to the bot to update the card and notify the appropriate users.
 
 ---
 
