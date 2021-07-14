@@ -20,9 +20,8 @@ The users can access apps during meetings using the tab gallery, for example:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-The following table provides an overview of capabilities associated with meeting app extensibility:
+The following table provides an overview of the meeting app extensibility features:
 
-| Icons | Capabilities |
 |---|---|----|---|
 | ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Uses apps in meetings |
 | ![Meeting experiences](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
@@ -31,11 +30,13 @@ The following table provides an overview of capabilities associated with meeting
 | ![Integrate tabs, bots, and messaging extensions](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
 | ![Meeting events](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
 | ![Collaborate users](../assets/images/apps-in-meetings/collaborateusers.png) | Collaborates with different users and participant roles |
-| ![In-meeting dialog](../assets/images/apps-in-meetings/inmeetingdialog.png) | Keeps meeting engaging with in-meeting dialog |
+| ![In-meeting dialog](../assets/images/apps-in-meetings/inmeetingdialog.png) | Populates in-meeting dialog |
 | ![Participant roles](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
 | ![Contextual information](../assets/images/apps-in-meetings/tabcontent.png) | Retrieves tab content |
 | ![Notifications in a meeting](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users |
 | ![Create scenes](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
+
+The following illustration gives you an idea of the meeting app extensibility features:
 
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
 
