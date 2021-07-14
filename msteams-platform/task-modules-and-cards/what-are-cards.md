@@ -49,7 +49,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 ### People Picker in Adaptive Cards
 
-People Picker supports preselection of people and is implemented as an extension of the `Input.ChoiceSet` control, when creating and sending an Adaptive Card. The mobile and desktop clients support People Picker, which provides an inline typing experience. People Picker works across the Adaptive Card surfaces, such as chats, channels, task modules, and tabs.
+People Picker added as an input control in Adaptive Cards enables search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience. 
 
 ### Adaptive Cards and Incoming Webhooks
 
