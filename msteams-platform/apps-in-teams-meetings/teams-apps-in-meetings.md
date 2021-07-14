@@ -10,7 +10,7 @@ keywords: teams apps meetings user participant role api
 
 # Apps for Teams meetings
 
-Meetings enable collaboration, partnership, informed communication, and shared feedback in an inclusive and active forum. The meeting app can deliver a user experience for each stage of the meeting lifecycle including pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
+Meetings enable collaboration, partnership, informed communication, and shared feedback. The meeting app can deliver a user experience for each stage of the meeting lifecycle. Meeting lifecycle includes pre-meeting, in-meeting, and post-meeting app experience, depending on the attendee's status.
 
 The users can access apps during meetings using the tab gallery, for example:
 
@@ -20,13 +20,34 @@ The users can access apps during meetings using the tab gallery, for example:
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
+The following table provides an overview of the meeting app extensibility features:
+
+| <span> | <span> |
+|---|---|
+| ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Uses apps in meetings |
+| ![Meeting experiences](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
+| ![User information](../assets/images/apps-in-meetings/userinformation.png) | Provides user information |
+| ![Meeting lifecycle](../assets/images/apps-in-meetings/meetinglifecycle.png) | Helps to plan meeting lifecycle |
+| ![Integrate tabs, bots, and messaging extensions](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
+| ![Meeting events](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
+| ![Collaborate users](../assets/images/apps-in-meetings/collaborateusers.png) | Collaborates with different users and participant roles |
+| ![In-meeting dialog](../assets/images/apps-in-meetings/inmeetingdialog.png) | Populates in-meeting dialog |
+| ![Participant roles](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
+| ![Contextual information](../assets/images/apps-in-meetings/tabcontent.png) | Retrieves tab content |
+| ![Notifications in a meeting](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users |
+| ![Create scenes](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
+
+The following illustration gives you an idea of the meeting app extensibility features:
+
+![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
+
 This article provides an overview of meeting app extensibility, API references, enable and configure apps for meetings, and custom Together Mode scenes in Teams.
 
-You can enhance your meeting experience by using the meeting extensibility feature, which enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. With meetings extensibility APIs, you can identify different participant roles and user types, get meeting events, generate in-meeting dialogs, and so on.
+Enhance your meeting experience by using the meeting extensibility feature. This feature enables you to integrate your apps within meetings. It also includes different stages of a meeting lifecycle, where you can integrate tabs, bots, and messaging extensions. You can identify different participant roles and user types, get meeting events, and generate in-meeting dialogs.
 
-To customize Teams with apps for meetings, you can enable your apps for Teams meetings by updating your app manifest and you can also configure your apps for meeting scenarios.
+To customize Teams with apps for meetings, enable your apps for Teams meetings by updating the app manifest and also configure the apps for meeting scenarios.
 
-The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place without being separated by boxes.
+The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
 
 ## See also
 
