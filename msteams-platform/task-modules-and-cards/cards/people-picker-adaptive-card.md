@@ -114,7 +114,7 @@ The following predefined values are provided as **dataset** for people picker:
 
 |dataset|Search Scope
 |--|--|
-|**graph.microsoft.com/users** |Search among the members of the organization.|
+|**graph.microsoft.com/users** |Search all members across the organization.|
 |**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|  
 
 <br> 
@@ -166,7 +166,7 @@ The following image illustrates People Picker in Adaptive Cards with organizatio
 
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It's set to false by default and this setting allows you to select one person only.
 
-## Data Submission
+### Data Submission
 You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
 In People Picker, when a person is selected in the control, the `AAD ID` of the person is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
