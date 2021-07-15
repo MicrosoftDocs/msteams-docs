@@ -24,9 +24,9 @@ The following image illustrates People Picker in Adaptive Cards with conversatio
 
 ![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
 
-## Scenarios for People Picker in Adaptive Cards
+## Popular scenarios for People Picker in Adaptive Cards
 
-The following table provides popular scenarios and People Picker actions:
+The following table provides popular scenarios for People Picker in Adaptive Cards and the corresponding actions:
 
 |Scenarios|Actions|
 |----------|-------------------------|
@@ -35,7 +35,7 @@ The following table provides popular scenarios and People Picker actions:
 |Project management| To assign tickets or bugs to particular users.|
 |User lookup| To search for users in the organization.|
 
-## Understand how People Picker works
+## Understand how People Picker works in mobile and desktop
 
 You can understand how People Picker works in mobile and desktop:
 
@@ -43,7 +43,7 @@ You can understand how People Picker works in mobile and desktop:
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
 
-## Reassignment scenario example
+### Reassignment scenario example
 
 User A (Robert) receives a ticket for a task in a channel and realizes incorrect assignee. User A reassigns the task that sends the information back to the bot. 
 
@@ -64,7 +64,7 @@ The following image shows the reassignment scenario:
 
 The web and desktop client support People Picker in Adaptive Card. While searching on the web, People Picker involves an inline typing experience.
 
-## Reassignment scenario example
+### Reassignment scenario example
 
 User A (Robert) receives a ticket for a task in a channel and realizes incorrect assignee. User A reassigns the task that sends the information back to the bot. 
 
