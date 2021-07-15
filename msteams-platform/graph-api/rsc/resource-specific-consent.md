@@ -153,7 +153,7 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
     "applicationPermissions": [
       "TeamSettings.Read.Group",
       "ChannelMessage.Read.Group",
-      "TeamSettings.Edit.Group",
+      "TeamSettings.ReadWrite.Group",
       "ChannelSettings.ReadWrite.Group",
       "Channel.Create.Group",
       "Channel.Delete.Group",
