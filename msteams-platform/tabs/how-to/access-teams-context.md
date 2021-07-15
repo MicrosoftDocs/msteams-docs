@@ -189,6 +189,7 @@ Steps to get direct channel membership are as follows:
 1.	Use the `GET channel members` API on each `sharedWithTeam` to get full membership.
 
 Following table lists the channel types and their corresponding group IDs:
+
 |  Channel type  | groupId | hostTeamGroupId |
 |-----------------|----------|----------------------|
 |Regular|	Team AAD group ID|	Team AAD group ID|
