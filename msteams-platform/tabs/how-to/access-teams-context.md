@@ -181,7 +181,7 @@ To populate the `channelType` field with `sharedChannel`, you must populate the 
 
 Steps to get direct channel membership are as follows:
 
-1. Call [List members of channel](https://docs.microsoft.com/en-us/graph/api/channel-list-members?view=graph-rest-beta&tabs=http) API.
+1. Call [List members of channel](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
 1. Get host team group ID with HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/members`.
 1. Get host team group ID with HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`. 
 1. Get direct members with the `GET channel members` API.
@@ -189,7 +189,7 @@ Steps to get direct channel membership are as follows:
 1.	Use the `GET channel members` API on each `sharedWithTeam` to get full membership.
 
 Following table lists the channel types and their corresponding group IDs:
-|Channel type|groupId|hostTeamGroupId|
+|  Channel type  | groupId | hostTeamGroupId |
 |-----------------|----------|----------------------|
 |Regular|	Team AAD group ID|	Team AAD group ID|
 |Private|Empty|	Host Team AAD group ID|
