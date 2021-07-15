@@ -20,9 +20,9 @@ People Picker helps users to search and select people in Adaptive Card. You can 
 * Reassigning to single or multiple users. 
 * Prepopulating the name of selected users.
 
-## Popular scenarios for People Picker in Adaptive Cards
+## Scenarios for People Picker in Adaptive Cards
 
-The following table provides different scenarios and People Picker actions:
+The following table provides popular scenarios and People Picker actions:
 
 |Scenarios|Actions|
 |----------|-------------------------|
@@ -38,6 +38,7 @@ You can understand how People Picker works in mobile and desktop:
 # [Mobile](#tab/mobile)
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other people selection experience in mobile, such as adding a person to a chat or channel.
+
 [place holder to demonstrate the following image]
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
@@ -53,7 +54,9 @@ User A(Robert) receives a ticket for a sprint planning task in a channel and rea
 1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
 1. Remove the incorrect user's name. 
 1. Select intended users as per the image scenario, user B(Mona), and user C(Robin) for the task. 
-
+1. User A reassigns the task that sends the information back to the bot. 
+   The bot updates Adaptive Card and notifies the intended users.
+   
 The following image shows the reassignment scenario:    
 
 ![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
