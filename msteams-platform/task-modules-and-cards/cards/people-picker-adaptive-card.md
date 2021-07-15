@@ -24,7 +24,7 @@ The following image illustrates People Picker in Adaptive Cards with **Conversat
 
 ![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
 
-## Popular scenarios for People Picker in Adaptive Cards
+## Popular scenarios 
 
 The following table provides popular scenarios for People Picker in Adaptive Cards and the corresponding actions:
 
