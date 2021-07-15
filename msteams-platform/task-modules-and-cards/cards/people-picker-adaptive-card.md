@@ -182,7 +182,7 @@ With the `AAD ID`,  People Picker preselects the corresponding user.
 
 ## Preselection of user
 
-People Picker supports preselection of user in the control, when creating and sending an Adaptive Card. `Input.ChoiceSet` supports the `value` property that is used to preselect a user. The format of this `value` property is the same as the submitted value format discussed in data submission section. 
+People Picker supports preselection of user in the control, when creating and sending an Adaptive Card. `Input.ChoiceSet` supports the `value` property that is used to preselect a user. The format of this `value` property is the same as the submitted value format in [data submission](#data-submission).  
 The following list provides the information to preselect users:
 
 * For single user in the control, specify the `AAD ID` of the user as the `value`. 
