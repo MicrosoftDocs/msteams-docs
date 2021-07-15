@@ -49,7 +49,7 @@ User A (Robert) receives a ticket for a task in a channel and realizes incorrect
 
 **To reassign any task**
 
-1. Select Reassign where the people picker field is prepopulated with name to reassign the task to the intended user.
+1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
 1. Remove the incorrect user's name.
 1. Select intended users as per the image scenario, user B (Mona), and user C (Robin) for the task.
 1. Select **Done**.
@@ -73,9 +73,9 @@ User A (Robert) receives a ticket for a task in a channel and realizes incorrect
 1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
 1. Remove the incorrect user's name. 
 1. Select intended users as per the image scenario, user B (Mona), and user C (Robin) for the task. 
-1. User A reassigns the task that sends the information back to the bot. 
-   The bot updates Adaptive Card and notifies the intended users.    
-
+1.  Select **Assign**. After assigning, the information is sent to the bot. 
+   The bot updates Adaptive Card and notifies the intended users. 
+ 
 The following image shows the reassignment scenario:    
 
 ![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
@@ -95,7 +95,7 @@ People Picker is implemented as an extension of the [Input.ChoiceSet](https://ad
 
 ### Update schema
 
-The following properties are the new additions to the `Input.ChoiceSet` schema to enable a People Picker experience on the card.  
+The following properties are the new additions to the `Input.ChoiceSet` schema to enable People Picker experience on the card.  
 
 #### Input.ChoiceSet control
 
@@ -110,7 +110,7 @@ The following properties are the new additions to the `Input.ChoiceSet` schema t
 |**dataset** |String |Yes |The type of data that must be fetched dynamically.|   
 
 #### dataset
-The following predefined values are provided as **dataset** for people picker:   
+The following table provides predefined values as **dataset** for people picker:   
 
 |dataset|Search Scope
 |--|--|
@@ -164,12 +164,12 @@ The following image illustrates People Picker in Adaptive Cards with organizatio
 
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
-To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It's set to false by default and this setting allows you to select one person only.
+To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple users  in the control. It's set to false by default and this setting allows you to select single user only.
 
 ### Data Submission
 You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
-In People Picker, when a person is selected in the control, the `AAD ID` of the person is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
+In People Picker, when a user is selected in the control, the `AAD ID` of the user is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
 
@@ -180,28 +180,28 @@ The format of the value submitted to the bot depends on the value of the `isMult
 
 With the `AAD ID`,  People Picker preselects the corresponding user. 
 
-## Preselection of People
+## Preselection of user
 
-People Picker supports preselection of people in the control, when creating and sending an Adaptive Card.  
-`Input.ChoiceSet` supports the `value` property that is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
-To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.
-You can use static choices in reassignment scenario.    
+People Picker supports preselection of user in the control, when creating and sending an Adaptive Card. `Input.ChoiceSet` supports the `value` property that is used to preselect a user. The format of this `value` property is the same as the submitted value format discussed in data submission section. 
+The following list provides the information to preselect users:
+
+* For single user in the control, specify the `AAD ID` of the user as the `value`. 
+* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.   
 
 The following image illustrates the preselection scenario:
 
-![Preselection Scenario](../../assets/images/cards/peoplepicker-preselection.png)
+![Preselection Scenario](../../assets/images/cards/peoplepicker-preselection.png)     
 
 ## Static choices
 
-The static choices support scenarios where custom profiles must be inserted into the predefined datasets.
-`Input.ChoiceSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
+The static choices support scenarios where custom profiles must be inserted into the predefined datasets. `Input.ChoiceSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
 
 > [!NOTE]
 > Static `choices` are used with dynamic datasets. 
 
-The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to people profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.  
+The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to user profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.  
  
-You can implement People Picker, configure it appropriately for efficient task management in popular scenarios.  
+You can implement People Picker for efficient task management in different scenarios.  
 
 ## See also
 
