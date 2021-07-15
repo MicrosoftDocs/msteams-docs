@@ -178,19 +178,30 @@ The format of the value submitted to the bot depends on the value of the `isMult
 |false _(single select)_|The `AAD ID` of the selected user as a string.|
 |true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concatenated with a 'comma'.|  
 
+With the `AAD ID`,  People Picker preselects the corresponding user. 
+
 ## Preselection of People
+
 People Picker supports preselection of people in the control, when creating and sending an Adaptive Card.  
 `Input.ChoiceSet` supports the `value` property that is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
 To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.
+You can use static choices in reassignment scenario.    
+
+The following image illustrates the preselection scenario:
+
+![People Picker on Desktop](../../assets/images/cards/peoplepicker-preselection.png)
 
 ## Static choices
+
 The static choices support scenarios where custom profiles must be inserted into the predefined datasets.
 `Input.ChoiceSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
 
 > [!NOTE]
-> Static `choices` are used in with dynamic datasets. 
+> Static `choices` are used with dynamic datasets. 
 
-The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to people profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.   
+The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to people profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.  
+ 
+You can implement People Picker, configurate it appropriately for efficient task management in popular scenarios.  
 
 ## See also
 
