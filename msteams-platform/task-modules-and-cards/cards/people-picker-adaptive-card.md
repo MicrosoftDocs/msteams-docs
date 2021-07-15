@@ -20,6 +20,10 @@ People Picker helps users to search and select people in Adaptive Card. You can 
 * Reassigns to single or multiple users. 
 * Prepopulates the name of selected users.
 
+The following image illustrates People Picker in Adaptive Cards with conversation member search:
+
+![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
+
 ## Scenarios for People Picker in Adaptive Cards
 
 The following table provides popular scenarios and People Picker actions:
@@ -110,7 +114,7 @@ The following predefined values are provided as **dataset** for people picker:
 
 |dataset|Search Scope
 |--|--|
-|**graph.microsoft.com/users** |Search all members of the organization.|
+|**graph.microsoft.com/users** |Search among the members of the organization.|
 |**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|  
 
 <br> 
@@ -156,13 +160,13 @@ The code example for creating People Picker with organization search is as follo
 }
 ```  
 
-The following image illustrates People Picker Adaptive Cards with organization search:
+The following image illustrates People Picker in Adaptive Cards with organization search:
 
 ![People Picker Org Search](../../assets/images/cards/peoplepicker-org-search.png)
 
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple people in the control. It's set to false by default and this setting allows you to select one person only.
 
-#### Data Submission
+## Data Submission
 You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
 In People Picker, when a person is selected in the control, the `AAD ID` of the person is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
@@ -174,12 +178,12 @@ The format of the value submitted to the bot depends on the value of the `isMult
 |false _(single select)_|The `AAD ID` of the selected user as a string.|
 |true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concatenated with a 'comma'.|  
 
-#### Preselection of People
+## Preselection of People
 People Picker supports preselection of people in the control, when creating and sending an Adaptive Card.  
 `Input.ChoiceSet` supports the `value` property that is used to preselect a person. The format of this `value` property is the same as the submitted value format discussed in data submission section.  
 To preselect a person in the control, specify the `AAD ID` of the person as the `value`. To preselect multiple people, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.
 
-#### Static choices
+## Static choices
 The static choices support scenarios where custom profiles must be inserted into the predefined datasets.
 `Input.ChoiceSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
 
