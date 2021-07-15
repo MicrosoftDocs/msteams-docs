@@ -13,14 +13,14 @@ ms.author: surbhigupta
 > [!NOTE]
 > This feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-People Picker helps users to search and select people in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:        
+People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:        
 
 * Searches single or multiple users.
 * Selects single or multiple users. 
 * Reassigns to single or multiple users. 
 * Prepopulates the name of selected users.
 
-The following image illustrates People Picker in Adaptive Cards with conversation member search:
+The following image illustrates People Picker in Adaptive Cards with **Conversation Member Search**:
 
 ![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
 
@@ -33,7 +33,7 @@ The following table provides popular scenarios for People Picker in Adaptive Car
 |Approval-based scenarios| To request, assign, and reassign the approval to the intended user based on the requirement.|
 |Incident management| To track incidents and notify, assign, and reassign to the intended user for immediate action.| 
 |Project management| To assign tickets or bugs to particular users.|
-|User lookup| To search for users in the organization.|
+|User lookup| To search for users across the organization.|
 
 ## Understand how People Picker works in mobile and desktop
 
@@ -201,7 +201,7 @@ The static choices support scenarios where custom profiles must be inserted into
 
 The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to people profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.  
  
-You can implement People Picker, configurate it appropriately for efficient task management in popular scenarios.  
+You can implement People Picker, configure it appropriately for efficient task management in popular scenarios.  
 
 ## See also
 
