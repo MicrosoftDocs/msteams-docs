@@ -189,7 +189,7 @@ You can use static choices in reassignment scenario.
 
 The following image illustrates the preselection scenario:
 
-![People Picker on Desktop](../../assets/images/cards/peoplepicker-preselection.png)
+![Preselection Scenario](../../assets/images/cards/peoplepicker-preselection.png)
 
 ## Static choices
 
