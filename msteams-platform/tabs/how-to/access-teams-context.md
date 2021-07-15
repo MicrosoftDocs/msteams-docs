@@ -127,7 +127,7 @@ If your page makes use of any of these values, you must check the `channelType` 
 ## Get context in Shared channels
 
 > [!NOTE]     
-> Shared channels are currently available in in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
+> Shared channels are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 Team members use chats and channels to communicate among themselves and share information. There are scenarios, when the team must communicate with external members. The users create new chats with the external members or add the external members to the existing chats or channels for communication, which results in the following issues:
 
