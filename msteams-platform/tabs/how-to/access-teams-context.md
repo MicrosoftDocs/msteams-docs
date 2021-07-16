@@ -151,7 +151,7 @@ In this example, team A is the host team and organization A is the host tenant. 
 ### Limitations 
 
 * Shared channels have similar challenges as private channels, for users who don't belong to the parent team. 
-* In shared channels, the federated tenants come across the issue of users from multiple organizations accessing the same app. 
+* In shared channels, the federated tenants come across the issue of users from multiple organizations, accessing the same app. 
 
 ### App permissions
 
@@ -171,12 +171,12 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
 |`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
 |`teamId`|The property is set to the thread ID of the current shared team. | 
-|`teamName`|The property is set to current shared teamName. |
-|`teamType`|The property is set to current shared team type.|
+|`teamName`|The property is set to current shared `teamName`. |
+|`teamType`|The property is set to current shared `teamType`.|
 |`teamSiteUrl`|The property describes `channelSiteUrl`.| 
 |`teamSitePath`| The property describes `channelSitePath`.| 
 |`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
-|`tenantSKU`| The property describes the host team’s tenant SKU.|
+|`tenantSKU`| The property describes the host team’s `tenantSKU`.|
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
 |`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
@@ -185,17 +185,13 @@ Use the following `getContext` properties to populate the `channelType` field wi
 
 **To get direct channel membership**
  
-1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
-    HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/members`.
-1. Get each shared Team with `GET sharedWithTeam` API.
-    HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`. 
+1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. The corresponding HTTP request is `GET /teams/{host-team-group-id}/channels/{channel-id}/members`.
+1. Get each shared team with `GET sharedWithTeam` API. The corresponding HTTP request is HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`.     
 1. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
 
-### AAD native identity of shared Channel
+### AAD native identity 
 
-Apps must function cross-tenant in installation and usage.
-
-The following table lists the channel types and their corresponding group IDs:
+The apps must function cross-tenant in installation and usage. In the following table, you can see the channel types and their corresponding group IDs:
 
 |  Channel type  | groupId | hostTeamGroupId |
 |-----------------|----------|----------------------|
@@ -203,7 +199,7 @@ The following table lists the channel types and their corresponding group IDs:
 |Private|Empty|	Host Team AAD group ID|
 |Shared|	Empty|	Host Team AAD group ID|
 
-### Manifest update of shared channel
+### Manifest update 
 
 You can use `supportsSharedChannels` boolean property in the app manifest to control LOB app access in shared channel. Teams reads the flag and then gives apps permissions. 
 
