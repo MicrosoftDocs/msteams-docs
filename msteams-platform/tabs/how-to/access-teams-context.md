@@ -37,7 +37,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a sign in hint for AAD. This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a sign-in hint for AAD. This is usually the sign-in name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
 * {userObjectId}: The AAD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
@@ -171,14 +171,10 @@ App permissions in shared channels follow host team's app roster and host tenant
  
 1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
 
-#### HTTP request
-
 ```http
 GET /teams/{host-team-group-id}/channels/{channel-id}/members
 ```
 2. Get each shared team with `GET sharedWithTeam` API.
-
-#### HTTP request
 
 ```http
 GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
