@@ -45,14 +45,14 @@ The following table includes Teams features and whether they are available for G
 
 | Features   | GCC | GCC High | DoD |
 |-------------|---------|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC in `supportedTenantRegions` in its `appDefinition` | ✔️ App is enabled if it has GCCH in `supportedTenantRegions` in its `appDefinition` | ✔️ App is enabled if it has DOD in `supportedTenantRegions` in its `appDefinition` |
-| 3p or third-party apps | ✔️ | ❌ | ❌ |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC in `supportedTenantRegions` in its `appDefinition`. | ✔️ App is enabled if it has GCCH in `supportedTenantRegions` in its `appDefinition`. | ✔️ App is enabled if it has DOD in `supportedTenantRegions` in its `appDefinition`. |
+| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC High | ✔️ Microsoft apps compliant with DoD |
+| 3p or third-party apps | ✔️ Enterprise Catalog apps are available. Disabled by default and tenant admin should enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
-| Lob apps |  ✔️ | ✔️ | ✔️ |
-| Sideloading apps | ✔️ | ❌ | ❌ |
-| Custom tabs |  ✔️ | ✔️ | ✔️ |
-| Custom bots | ✔️ | ❌ | ❌ |
-| Custom InputExtensions | ✔️ | ❌ | ❌ |
+| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
+| Sideloading apps | ✔️ | ✔️ | ✔️ |
+| Custom or Lob bots | ✔️ | ❌ | ❌ |
+| Custom messaging extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
 The following list helps to identify availability of GCC, GCC High, and DoD for the features:

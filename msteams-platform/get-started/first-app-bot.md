@@ -12,10 +12,7 @@ ms.topic: quickstart
 A bot acts as an intermediary between a Teams user and a web service. Users can chat with a bot to quickly get information, initiate workflows, or anything else your web service can do. In this tutorial, you will learn how to build, run, and deploy a Teams bot app.
 
 > [!IMPORTANT]
-> Bots are currently available in Government Community Cloud (GCC) but not available in the following types of Teams orgs:
->
-> * GCC High
-> * DoD (Department of Defense)
+> Bots are currently available in Government Community Cloud (GCC) but not available in GCC High and Department of Defense (DoD).
 
 ## Before you begin
 
@@ -142,10 +139,7 @@ When you pressed F5, the Teams Toolkit:
 To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-sideloading).
 
 > [!IMPORTANT]
-> Sideloading apps are currently available in Government Community Cloud (GCC) but not available in the following types of Teams orgs:
->
-> * GCC High
-> * DoD (Department of Defense)
+> Sideloading apps are currently available in Government Community Cloud (GCC), GCC High, and Department of Defense (DoD).
 
 > [!TIP]
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
