@@ -28,6 +28,10 @@ You can recognize user issues and identify the answers to some common problems t
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
+## Apps in Shared channel
+
+You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [shared channels](~/concepts/build-and-test/shared-channels.md) follow host team's app roster and host tenant's app policy.
+
 ## See also
 
 * [Integrate web apps with Teams](../samples/integrating-web-apps.md)

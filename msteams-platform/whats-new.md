@@ -162,7 +162,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|07/15/2021|Added Get context in shared channels section. |[Get context in shared channels](tabs/how-to/access-teams-context.md), [Build tabs - Overview](tabs/what-are-tabs.md) |
+|07/15/2021| Shared channels. |[Shared channels](concepts/build-and-test/shared-channels.md), [App fundamentals - Overview](concepts/app-fundamentals-overview.md) |
 |06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|  
