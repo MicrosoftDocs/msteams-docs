@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* You can initiate an authentication flow from Azure Active Directory (AAD) or other identity provider. You don't require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you must not use it as proof of identity. For example, an attacker can load your page in a browser and render harmful information or requests.
@@ -33,15 +33,15 @@ You can access context information in two ways:
 
 ### Get context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a login hint for AAD. This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a sign in hint for AAD. This is usually the login name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
 * {userObjectId}: The AAD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
-* {groupId}: The ID of the Office 365 group in which the tab resides.
+* {groupId}: The ID of the Office 365 group in which the tab stays.
 * {tid}: The AAD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
 
@@ -129,7 +129,10 @@ If your page makes use of any of these values, you must check the `channelType` 
 > [!NOTE]     
 > Shared channels are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Shared channels in Teams allows members of an organization to collaborate with external members with access permissions. Members of an organization can create a channel and share it with either members of another team within the same organization or with members of other organizations. 
+Shared channels in Teams allow members of an organization to collaborate with external members with access permissions. Members of an organization can create a channel and share as follows:
+
+* Members of another team within the same organization.
+* Members of other organizations. 
 
 The following image illustrates the concept of shared channels:
 
@@ -147,12 +150,12 @@ In this example, team A is the host team and organization A is the host tenant. 
 
 ### Limitations 
 
-* Shared channels have similar challenges as private channels, for users who do not belong to the parent team. 
-* In shared channels, the federated tenants encounter the issue of users from multiple organizations accessing the same app. 
+* Shared channels have similar challenges as private channels, for users who don't belong to the parent team. 
+* In shared channels, the federated tenants come across the issue of users from multiple organizations accessing the same app. 
 
 ### App permissions
 
-You must customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
+You can customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
 ### JS SDK and Bot SDK of Shared Channel
 
@@ -162,21 +165,21 @@ Use the following `getContext` properties to populate the `channelType` field wi
 
 |Property name|Description|
 |----------|--------------|
-|`channelId`| This property is set to the SC channel thread ID.|
-|`groupId`|This property is blank for shared Channels.|
-|`hostTeamTenantId`| This property describes the host team’s tenant ID. |
-|`hostTeamGroupId`|This property describes the host team’s AAD group ID. This property is distinctly called out from groupID. |
-|`tid`|  This property describes the current user’s tenant ID. This matches with the `homeTid` in the token.|
-|`teamId`|This property is set to the thread ID of the current shared team. | 
-|`teamName`|This property is set to current shared teamName. |
-|`teamType`|This property is set to current shared team type.|
-|`teamSiteUrl`|This property describes `channelSiteUrl`.| 
-|`teamSitePath`| This property describes `channelSitePath`.| 
-|`teamSiteDomain`| This property describes  `channelSiteDomain`.| 
-|`tenantSKU`| This property describes the host team’s tenant SKU.|
-|`userObjectId`|  This property describes current user’s ID, regardless of tenant.|
-|`userPrincipalName`| This property describes the current user’s UPN, regardless of tenant.|
-|`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> sharedChannelMember  |
+|`channelId`| The property is set to the SC channel thread ID.|
+|`groupId`|The property is blank for shared Channels.|
+|`hostTeamTenantId`| The property describes the host team’s tenant ID. |
+|`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
+|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
+|`teamId`|The property is set to the thread ID of the current shared team. | 
+|`teamName`|The property is set to current shared teamName. |
+|`teamType`|The property is set to current shared team type.|
+|`teamSiteUrl`|The property describes `channelSiteUrl`.| 
+|`teamSitePath`| The property describes `channelSitePath`.| 
+|`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
+|`tenantSKU`| The property describes the host team’s tenant SKU.|
+|`userObjectId`|  The property describes current user’s ID.|
+|`userPrincipalName`| The property describes the current user’s UPN.|
+|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
 
 ### Get direct shared channel membership
 
@@ -202,7 +205,7 @@ The following table lists the channel types and their corresponding group IDs:
 
 ### Manifest update of shared channel
 
-You can use `supportsSharedChannels` boolean property in the app manifest to control LOB app access in shared channel. Teams reads the flag and gives apps permissions accordingly. 
+You can use `supportsSharedChannels` boolean property in the app manifest to control LOB app access in shared channel. Teams reads the flag and then gives apps permissions. 
 
 ## Handle theme change
 
