@@ -20,10 +20,10 @@ People Picker helps users to search and select users in Adaptive Card. You can a
 * Reassigns to single or multiple users. 
 * Prepopulates the name of selected users.
 
-The following image illustrates People Picker in Adaptive Cards with **Conversation Member Search**:
+The following image demonstrates selection of multiple users and the response Adaptive Card in People Picker with **Conversation Member Search**:
 
 ![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
-
+ 
 ## Popular scenarios 
 
 The following table provides popular scenarios for People Picker in Adaptive Cards and the corresponding actions:
@@ -146,17 +146,33 @@ The code example for creating People Picker with organization search is as follo
             "isMultiSelect": true
         },
         {
-            "type": "ActionSet",
-            "actions": [
-                {
-                    "type": "Action.Submit",
-                    "title": "Submit"
-                }
-            ]
-        }
-    ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.2"
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "People Picker with Org search enabled"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "choices": [],
+      "choices.data": {
+        "type": "Data.Query",
+        "dataset": "graph.microsoft.com/users"
+      },
+      "id": "people-picker",
+      "isMultiSelect": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Submit"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
 }
 ```  
 
@@ -167,6 +183,7 @@ The following image illustrates People Picker in Adaptive Cards with organizatio
 To enable search within a list of conversation members, use the appropriate dataset defined in the [dataset](#dataset) table. `isMultiSelect` property is used to enable the selection of multiple users  in the control. It's set to false by default and this setting allows you to select single user only.
 
 ### Data Submission
+
 You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
 
 In People Picker, when a user is selected in the control, the `AAD ID` of the user is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
@@ -199,7 +216,30 @@ The static choices support scenarios where custom profiles must be inserted into
 > [!NOTE]
 > Static `choices` are used with dynamic datasets. 
 
-The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to user profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.  
+The choice consists of `title` and `value`. When used along with People Picker, these choices are translated to user profiles that have the `title` as the name and the `value` as the identifier. These custom profiles are also part of the search results when the search query matches the given `title`.    
+The following example describes static choices: 
+
+```json
+{
+	"type": "Input.ChoiceSet",
+	"choices": [
+		{
+			"title": "Result 1",
+			"value": "1000"
+		},
+		{
+			"title": "Result 2",
+			"value": "2000"
+		}
+	],
+	"choices.data": {
+		"type": "Data.Query",
+		"dataset": "graph.microsoft.com/users"
+	},
+	"id": "people-picker",
+	"isMultiSelect": true
+}
+```
  
 You can implement People Picker for efficient task management in different scenarios.  
 
