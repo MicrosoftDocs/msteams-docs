@@ -141,13 +141,12 @@ The following image illustrates the concept of shared channels:
 
 ## Limitations 
 
-* Private channels: Shared channels have similar isolation challenges as private channels for users who do not belong to the parent team. Use an **allow list** for a set of tabs that functions independent of user groups.
-* Federated users: In shared channels, the federated tenants encounter the issue of users from multiple organizations accessing the same app. You can follow the `parentTeam/tenant` pattern for app roster, and app management.
+* Shared channels have similar challenges as private channels, for users who do not belong to the parent team. 
+* In shared channels, the federated tenants encounter the issue of users from multiple organizations accessing the same app. 
 
 ## App permissions
 
-You must change the app's behavior for external members if your app shares sensitive information.
-You can use Conversations API and `users.info` method to determine appropriate data access of your app.
+You must customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
 > [!IMPORTANT]
 > App permissions in shared channels must follow host team's app roster and host tenant's app policy.
@@ -174,7 +173,7 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`tenantSKU`| This property describes the host team’s tenant SKU.|
 |`userObjectId`|  This property describes current user’s ID, regardless of tenant.|
 |`userPrincipalName`| This property describes the current user’s UPN, regardless of tenant.|
-|`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> [New] sharedChannelMember  |
+|`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> sharedChannelMember  |
 
 ## Get direct channel membership
 
