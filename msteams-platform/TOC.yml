@@ -42,6 +42,8 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
+  - name: Shared channels
+    href: concepts/build-and-test/shared-channels.md  
   - name: Device capabilities
     items:
     - name: Overview
