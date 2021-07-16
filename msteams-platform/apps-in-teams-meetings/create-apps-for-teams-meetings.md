@@ -40,7 +40,7 @@ After you have gone through the prerequisites, you can use the meeting apps API 
 
 ## Meeting apps API references
 
-The new meeting extensibilities provide you with APIs that transform the meeting experience. With this new capability, you can build apps or integrate existing apps within the meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can choose which APIs you want to use to enhance the meeting experience.
+The new meeting extensibilities provide APIs to transform the meeting experience. You can build apps or integrate existing apps within meeting lifecycle. You can use the APIs to make your app aware of the meeting. You can select the APIs you want to use to enhance the meeting experience.
 
 The following table provides a list of these APIs:
 
@@ -82,7 +82,7 @@ The `GetParticipant` API includes the following examples:
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -149,7 +149,7 @@ The JSON response body for `GetParticipant` API is:
 
 #### Response codes
 
-The `GetParticipant` API includes the following response codes:
+The `GetParticipant` API returns the following response codes:
 
 |Response code|Description|
 |---|---|
@@ -157,7 +157,6 @@ The `GetParticipant` API includes the following response codes:
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participant cannot be found.|
-| **500** | The meeting has either expired (more than 60 days) since the meeting ended or the participants do not have permissions based on their role.|
 
 ### NotificationSignal API
 
@@ -192,15 +191,7 @@ The `NotificationSignal` API includes the following examples:
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -287,7 +278,7 @@ The Meeting Details API includes the following examples:
 # [C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));

@@ -182,7 +182,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
             // Forward request to correct skill
             var invokeResponse = await _skillHttpClient.PostActivityAsync(this._appId, skill, _skillsConfig.SkillHostEndpoint, turnContext.Activity as Activity, cancellationToken);
 
-            return invokeResponse.GetTaskModuleRespose();
+            return invokeResponse.GetTaskModuleResponse();
         }
         catch (Exception exception)
         {

@@ -77,14 +77,14 @@ A notification bar is a dedicated area for displaying a brief, important message
 
 ## Stage
 
-Stage offers a way for users to open an entity—like an image, file, or website—in Teams instead of opening it in another app or browser. The primary use case of stage is viewing; the surface should not be used for complex interactions.
+Stage lets users view content—like an image, file, or website—on a large surface in Teams without switching context. Stage is primarily for viewing content. Don’t use stage for complex interactions.
 
-(Implementation note: Build your stage using a large [task module](../../task-modules-and-cards/task-modules/design-teams-task-modules.md).)
+Learn how to implement [stage](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
-* Open an entity in Teams instead of another app or browser
-* Spotlight media or other content
+* Display content in a large surface within Teams instead of another app or browser
+* Spotlight media or other rich content
 
 # [Desktop](#tab/desktop)
 

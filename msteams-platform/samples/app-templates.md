@@ -283,9 +283,9 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 The Get Support app is used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes the following features:
 * Requesting assistance on different categories from a Power App.
-* Notifications sent to requestors informing them of who hare assigned.
+* Notifications sent to requestors informing them of who is assigned.
 * Notifications sent to assigned supervisors informing them of who needs assistance. 
-* Analyzing escalations and patterns in SharePoint and PowerBI.S.
+* Analyzing escalations and patterns in SharePoint and Power BI.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
