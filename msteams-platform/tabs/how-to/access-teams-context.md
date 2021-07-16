@@ -172,14 +172,14 @@ You can get direct shared channel membership by following the steps:
 
 1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
 
-```http
-GET /teams/{host-team-group-id}/channels/{channel-id}/members
-```
+    ```http
+    GET /teams/{host-team-group-id}/channels/{channel-id}/members
+    ```
 2. Get each shared team with `GET sharedWithTeam` API.
 
-```http
-GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
-```
+    ```http
+    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
+    ```
 3. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
 
 ### AAD native identity 
