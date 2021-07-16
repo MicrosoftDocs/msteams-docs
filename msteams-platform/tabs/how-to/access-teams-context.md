@@ -134,7 +134,7 @@ Shared channels in Teams allow members of an organization to collaborate with ex
 * Members of another team within the same organization
 * Members of other organizations 
 
-For example, organization A is the host tenant and team A is the host team. Team A creates a channel and shares it with team B within the same organization. Consider organization B is external and consists of members with access permissions. Team A also shares the channel with members of organization B. The following image illustrates the concept of shared channels:
+For example, organization A is the host tenant and team A is the host team. Team A creates a channel and shares it with team B within the same organization. Consider organization B is external and consists of members with access permissions. Team A shares the channel with members of organization B. The following image illustrates the concept of shared channels:
 
 ![Shared channels](~/assets/images/shared-channels.png)
 
@@ -197,7 +197,7 @@ The apps must function cross-tenant in installation and usage. In the following 
 
 ### Manifest update 
 
-You can use `supportsSharedChannels` boolean property in the app manifest to control app access in shared channel. You can set the property value to `true` or `false` and give apps permissions accordingly. 
+You can use `supportsSharedChannels` boolean property in the app manifest to control app access in shared channel. You can set the property value to `true` or `false` and give apps permissions. 
 
 ## Handle theme change
 
