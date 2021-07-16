@@ -140,21 +140,21 @@ In this example, team A is the host team and organization A is the host tenant. 
 > [!IMPORTANT]
 > App permissions in shared channels must follow host team's app roster and host tenant's app policy.
 
-## Advantages
+### Advantages 
 
 * You can share a channel across organizational boundaries and invite people to a specific channel. 
 * You can allow external members to access the shared information and apps with appropriate permissions.
 
-## Limitations 
+### Limitations 
 
 * Shared channels have similar challenges as private channels, for users who do not belong to the parent team. 
 * In shared channels, the federated tenants encounter the issue of users from multiple organizations accessing the same app. 
 
-## App permissions
+### App permissions
 
 You must customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
-## JS SDK and Bot SDK
+## JS SDK and Bot SDK of Shared Channel
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 
@@ -178,7 +178,7 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`userPrincipalName`| This property describes the current user’s UPN, regardless of tenant.|
 |`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> sharedChannelMember  |
 
-## Get direct channel membership
+## Get direct shared channel membership
 
 Steps to get direct channel membership are as follows:
 
@@ -188,11 +188,11 @@ Steps to get direct channel membership are as follows:
     HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`. 
 1. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
 
-## AAD native identity
+### AAD native identity of shared Channel
 
 Apps must function cross-tenant in installation and usage.
 
-Following table lists the channel types and their corresponding group IDs:
+The following table lists the channel types and their corresponding group IDs:
 
 |  Channel type  | groupId | hostTeamGroupId |
 |-----------------|----------|----------------------|
@@ -200,14 +200,13 @@ Following table lists the channel types and their corresponding group IDs:
 |Private|Empty|	Host Team AAD group ID|
 |Shared|	Empty|	Host Team AAD group ID|
 
-## Manifest update
+### Manifest update of shared channel
 
 You can use `supportsSharedChannels` boolean property in the app manifest to control LOB app access in shared channel. Teams reads the flag and gives apps permissions accordingly. 
 
 ## Handle theme change
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
-
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
 ## See also
