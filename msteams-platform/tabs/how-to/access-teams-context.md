@@ -138,7 +138,7 @@ For example, organization A is the host tenant and team A is the host team. Team
 
 ![Shared channels](~/assets/images/shared-channels.png)
 
-### JS SDK and Bot SDK of Shared Channel
+### Properties
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 
@@ -162,13 +162,14 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`userPrincipalName`| The property describes the current user’s UPN.|
 |`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
 
-### App permissions  
+### App permissions 
+
 App permissions in shared channels follow host team's app roster and host tenant's app policy. You can customize the app permission for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
 ### Get direct shared channel membership
 
-**To get direct channel membership**
- 
+You can get direct shared channel membership by following the steps:
+
 1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
 
 ```http
@@ -183,7 +184,7 @@ GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
 
 ### AAD native identity 
 
-The apps must function cross-tenant in installation and usage. In the following table, you can see the channel types and their corresponding group IDs:
+The apps must function cross-tenant in installation and usage. The following table lists the channel types and their corresponding group IDs:
 
 |  Channel type  | groupId | hostTeamGroupId |
 |-----------------|----------|----------------------|
