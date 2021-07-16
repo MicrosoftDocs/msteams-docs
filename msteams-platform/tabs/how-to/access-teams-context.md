@@ -132,7 +132,8 @@ If your page makes use of any of these values, you must check the `channelType` 
 Shared channels in Teams allows members of an organization to collaborate with external members with access permissions. Members of an organization can create a channel and share it with either members of another team within the same organization or with members of other organizations. 
 
 The following image illustrates the concept of shared channels:
-[Shared channels](~/assets/images/shared-channels.md)
+
+![Shared channels](~/assets/images/shared-channels.png)
 
 In this example, team A is the host team and organization A is the host tenant. Team A creates a channel and shares it with team B within the same organization. Team A shares the channel with organization B also. 
 
