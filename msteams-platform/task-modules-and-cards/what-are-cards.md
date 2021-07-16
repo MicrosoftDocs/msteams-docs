@@ -47,6 +47,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 * Connector cards: Used as part of Office 365 Connectors.
 * Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
+### People Picker in Adaptive Cards
+
+People Picker added as an input control in Adaptive Cards enable search and selection of people. You can use it in chats, channels, task modules, and tabs. The mobile and desktop clients support People Picker, which provides an inline typing experience. 
+
 ### Adaptive Cards and Incoming Webhooks
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
