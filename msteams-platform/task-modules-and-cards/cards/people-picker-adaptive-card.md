@@ -115,9 +115,7 @@ The following table provides predefined values as **dataset** for people picker:
 |dataset|Search Scope
 |--|--|
 |**graph.microsoft.com/users** |Search all members across the organization.|
-|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|  
-
-<br> 
+|**graph.microsoft.com/users?scope=currentContext** |Search within the members of the current conversation, such as chat or channel in which the particular card is sent.|      
 
 > [!NOTE]
 > Currently, the search functionality for all the members across the organization is supported in 1:1 chats with bots, Adaptive Card task modules and tabs only. It is not supported in other 1:1 chats, group chats or channels.  
