@@ -23,27 +23,7 @@ For example, organization A is the host tenant and team A is the host team. Team
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
-
-Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
-
-|Property name|Description|
-|----------|--------------|
-|`channelId`| The property is set to the SC channel thread ID.|
-|`groupId`|The property is blank for shared Channels.|
-|`hostTeamTenantId`| The property describes the host team’s tenant ID. |
-|`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
-|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
-|`teamId`|The property is set to the thread ID of the current shared team. | 
-|`teamName`|The property is set to current shared `teamName`. |
-|`teamType`|The property is set to current shared `teamType`.|
-|`teamSiteUrl`|The property describes `channelSiteUrl`.| 
-|`teamSitePath`| The property describes `channelSitePath`.| 
-|`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
-|`tenantSKU`| The property describes the host team’s `tenantSKU`.|
-|`userObjectId`|  The property describes current user’s ID.|
-|`userPrincipalName`| The property describes the current user’s UPN.|
-|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. For more information, see[Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels)  
 
 ## App permissions 
 

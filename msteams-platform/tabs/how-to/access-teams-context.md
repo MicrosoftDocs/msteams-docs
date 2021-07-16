@@ -124,6 +124,32 @@ If your page makes use of any of these values, you must check the `channelType` 
 > [!NOTE]
 > `teamSiteUrl` also works well for standard channels.
 
+## Get context in shared channels
+
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
+
+Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
+
+|Property name|Description|
+|----------|--------------|
+|`channelId`| The property is set to the SC channel thread ID.|
+|`groupId`|The property is blank for shared Channels.|
+|`hostTeamTenantId`| The property describes the host team’s tenant ID. |
+|`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
+|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
+|`teamId`|The property is set to the thread ID of the current shared team. | 
+|`teamName`|The property is set to current shared `teamName`. |
+|`teamType`|The property is set to current shared `teamType`.|
+|`teamSiteUrl`|The property describes `channelSiteUrl`.| 
+|`teamSitePath`| The property describes `channelSitePath`.| 
+|`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
+|`tenantSKU`| The property describes the host team’s `tenantSKU`.|
+|`userObjectId`|  The property describes current user’s ID.|
+|`userPrincipalName`| The property describes the current user’s UPN.|
+|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
+
+For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+
 ## Handle theme change
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
@@ -135,4 +161,3 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Get context in shared channels](~/concepts/build-and-test/shared-channels.md#get-context-in-shared-channels)
