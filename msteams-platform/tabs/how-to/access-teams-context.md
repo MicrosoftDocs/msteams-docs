@@ -129,33 +129,14 @@ If your page makes use of any of these values, you must check the `channelType` 
 > [!NOTE]     
 > Shared channels are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Shared channels in Teams allow members of an organization to collaborate with external members with access permissions. Members of an organization can create a channel and share as follows:
+Shared channels in Teams allow members of an organization to collaborate with external members with access permissions. You can create a channel and share the channel with:
 
-* Members of another team within the same organization.
-* Members of other organizations. 
+* Members of another team within the same organization
+* Members of other organizations 
 
-The following image illustrates the concept of shared channels:
+For example, organization A is the host tenant and team A is the host team. Team A creates a channel and shares it with team B within the same organization. Consider organization B is external and consists of members with access permissions. Team A also shares the channel with members of organization B. The following image illustrates the concept of shared channels:
 
 ![Shared channels](~/assets/images/shared-channels.png)
-
-In this example, team A is the host team and organization A is the host tenant. Team A creates a channel and shares it with team B within the same organization. Team A shares the channel with organization B also. 
-
-> [!IMPORTANT]
-> App permissions in shared channels must follow host team's app roster and host tenant's app policy.
-
-### Advantages 
-
-* You can share a channel across organizational boundaries and invite people to a specific channel. 
-* You can allow external members to access the shared information and apps with appropriate permissions.
-
-### Limitations 
-
-* Shared channels have similar challenges as private channels, for users who don't belong to the parent team. 
-* In shared channels, the federated tenants come across the issue of users from multiple organizations, accessing the same app. 
-
-### App permissions
-
-You can customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
 ### JS SDK and Bot SDK of Shared Channel
 
@@ -181,13 +162,28 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`userPrincipalName`| The property describes the current user’s UPN.|
 |`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
 
+### App permissions  
+App permissions in shared channels follow host team's app roster and host tenant's app policy. You can customize the app permission for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
+
 ### Get direct shared channel membership
 
 **To get direct channel membership**
  
-1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. The corresponding HTTP request is `GET /teams/{host-team-group-id}/channels/{channel-id}/members`.
-1. Get each shared team with `GET sharedWithTeam` API. The corresponding HTTP request is HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`.     
-1. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
+1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
+
+#### HTTP request
+
+```http
+GET /teams/{host-team-group-id}/channels/{channel-id}/members
+```
+2. Get each shared team with `GET sharedWithTeam` API.
+
+#### HTTP request
+
+```http
+GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
+```
+3. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
 
 ### AAD native identity 
 
@@ -201,7 +197,7 @@ The apps must function cross-tenant in installation and usage. In the following 
 
 ### Manifest update 
 
-You can use `supportsSharedChannels` boolean property in the app manifest to control LOB app access in shared channel. Teams reads the flag and then gives apps permissions. 
+You can use `supportsSharedChannels` boolean property in the app manifest to control app access in shared channel. You can set the property value to `true` or `false` and give apps permissions accordingly. 
 
 ## Handle theme change
 
