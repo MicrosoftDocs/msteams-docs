@@ -180,11 +180,11 @@ Use the following `getContext` properties to populate the `channelType` field wi
 
 ## Get direct channel membership
 
-Steps to get direct channel membership are as follows:
-
+**To get direct channel membership**
+ 
 1. Get direct members with [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API.
     HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/members`.
-1. Iterate through each shared Team with `GET sharedWithTeam` API.
+1. Get each shared Team with `GET sharedWithTeam` API.
     HTTP request `GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams`. 
 1. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
 
