@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
+* You can initiate an authentication flow from Azure Active Directory (AAD) or other identity provider. You don't require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
 > Although this user information can help provide a smooth user experience, you must not use it as proof of identity. For example, an attacker can load your page in a browser and render harmful information or requests.
@@ -33,15 +33,15 @@ You can access context information in two ways:
 
 ### Get context by inserting URL placeholder values
 
-Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following:
+Use placeholders in your configuration or content URLs. Microsoft Teams replaces the placeholders with the relevant values when determining the actual configuration or content URL. The available placeholders include all fields on the [context](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true) object. Common placeholders include the following properties:
 
 * {entityId}: The ID you supplied for the item in this tab when first [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md).
 * {subEntityId}: The ID you supplied when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within this tab. This must be used to restore to a specific state within an entity; for example, scrolling to or activating a specific piece of content.
-* {loginHint}: A value suitable as a login hint for AAD. This is usually the login name of the current user in their home tenant.
+* {loginHint}: A value suitable as a sign-in hint for AAD. This is usually the sign-in name of the current user in their home tenant.
 * {userPrincipalName}: The User Principal Name of the current user in the current tenant.
 * {userObjectId}: The AAD object ID of the current user in the current tenant.
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
-* {groupId}: The ID of the Office 365 group in which the tab resides.
+* {groupId}: The ID of the Office 365 group in which the tab stays.
 * {tid}: The AAD tenant ID of the current user.
 * {locale}: The current locale of the user formatted as languageId-countryId. For example, en-us.
 
@@ -105,9 +105,9 @@ The following code provides an example of context variable:
 }
 ```
 
-## Retrieve context in private channels
+## Get context in private channels
 
-> [!Note]
+> [!NOTE]
 > Private channels are currently in private developer preview.
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel:
@@ -121,13 +121,38 @@ When your content page is loaded in a private channel, the data you receive from
 
 If your page makes use of any of these values, you must check the `channelType` field to determine if your page is loaded in a private channel and respond appropriately.
 
-> [!Note]
+> [!NOTE]
 > `teamSiteUrl` also works well for standard channels.
+
+## Get context in shared channels
+
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
+For shared channels, the `groupId` value is `null`. The `hostTeamTenantId` and `hostTeamGroupId` properties are newly added.
+Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
+
+| Property | Description |
+|----------|--------------|
+|`channelId`| The property is set to the SC channel thread ID.|
+|`groupId`|The property is `null` for shared Channels.|
+|`hostTeamTenantId`| The property describes the host team’s tenant ID. |
+|`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
+|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
+|`teamId`|The property is set to the thread ID of the current shared team. | 
+|`teamName`|The property is set to current shared `teamName`. |
+|`teamType`|The property is set to current shared `teamType`.|
+|`teamSiteUrl`|The property describes `channelSiteUrl`.| 
+|`teamSitePath`| The property describes `channelSitePath`.| 
+|`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
+|`tenantSKU`| The property describes the host team’s `tenantSKU`.|
+|`userObjectId`|  The property describes current user’s ID.|
+|`userPrincipalName`| The property describes the current user’s UPN.|
+|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
+
+For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
 
 ## Handle theme change
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
-
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
 ## See also
@@ -136,8 +161,3 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
