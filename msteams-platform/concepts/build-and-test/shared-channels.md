@@ -23,11 +23,11 @@ For example, organization A is the host tenant and team A is the host team. Team
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. For more information, see[Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels)  
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels)  
 
 ## App permissions 
 
-App permissions in shared channels follow host team's app roster and host tenant's app policy. You can customize the app permission for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
+App permissions in shared channels follow host team's app roster and host tenant's app policy. You can customize the app permission for external members, if your app shares important information. 
 
 ## Get direct shared channel membership
 
@@ -43,7 +43,7 @@ You can get direct shared channel membership by following the steps:
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
-3. Use [GET channel members](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API on each `sharedWithTeam` to get full membership.
+3. Use `GET Team member API` on each `sharedWithTeam` to get full membership.
 
 ## AAD native identity 
 
