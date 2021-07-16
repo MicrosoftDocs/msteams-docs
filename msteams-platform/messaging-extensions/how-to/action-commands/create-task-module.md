@@ -115,6 +115,7 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
   "name": "composeExtension/fetchTask"
 }
 ```
+
 ## Payload activity properties when a task module is invoked from a group chat 
 
 The payload activity properties when a task module is invoked from a group chat are listed as follows:
@@ -169,6 +170,48 @@ The payload activity properties when a task module is invoked from a group chat 
     }
   },
   "name": "composeExtension/fetchTask"
+}
+```
+
+## Payload activity properties when a task module is invoked from a meeting chat
+
+The payload activity properties when a task module is invoked from a meeting chat are given in the following example:
+
+```json
+{
+   "type": "invoke",
+   "id": "f:4d271f11-4eed-622f-e820-6d82bf91692f",
+   "channelId": "msteams",
+   "from": {
+      "id": "29:1yLsdbTM1UjxqqD8cjduNUCI1jm8xZaH3lx9u5JQ04t2bknuTCkP45TXdfROTOWk1LzN1AqTgFZUEqHIVGn_qUA",
+      "name": "MOD Administrator",
+      "aadObjectId": "ef16aa89-5b26-4a2c-aebb-761b551577c0"
+   },
+   "conversation": {
+      "tenantId": "c9f9aafd-64ac-4f38-8e05-12feba3fb090",
+      "id": "19:meeting_NTk4ZDY4ZmYtOWEzZS00OTRkLThhY2EtZmUzZmUzMDQyM2M0@thread.v2",
+      "name": "Test meeting"
+   },   
+   "channelData": {
+      "tenant": {
+         "id": "c9f9aafd-64ac-4f38-8e05-12feba3fb090"
+      },
+      "source": {
+         "name": "compose"
+      },
+      "meeting": {
+         "id": "MCMxOTptZWV0aW5nX05UazRaRFk0Wm1ZdE9XRXpaUzAwT1RSa0xUaGhZMkV0Wm1VelptVXpNRFF5TTJNMEB0aHJlYWQudjIjMA=="
+      }
+   },
+   "value": {
+      "commandId": "Test",
+      "commandContext": "compose",
+      "requestId": "c46a6b53573f42b5bc801716e5ccc960",
+      "context": {
+         "theme": "default"
+      }
+   },
+   "name": "composeExtension/fetchTask",
 }
 ```
 
