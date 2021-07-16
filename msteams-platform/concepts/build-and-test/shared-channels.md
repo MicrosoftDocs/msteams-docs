@@ -38,12 +38,12 @@ You can get direct shared channel membership by following the steps:
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
-2. Get each shared team with `GET sharedWithTeam` API.
+2. Get each shared team with GET `sharedWithTeam` API.
 
     ```http
     GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
-3. Use `GET Team member API` on each `sharedWithTeam` to get full membership.
+3. Use GET Team member API on each `sharedWithTeam` to get full membership.
 
 ## AAD native identity 
 
