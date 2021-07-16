@@ -154,7 +154,7 @@ In this example, team A is the host team and organization A is the host tenant. 
 
 You must customize the app for external members, if your app shares important information. You can use `Conversations API` and `users.info` method to determine appropriate data access of your app.
 
-## JS SDK and Bot SDK of Shared Channel
+### JS SDK and Bot SDK of Shared Channel
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
 
@@ -178,7 +178,7 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`userPrincipalName`| This property describes the current user’s UPN, regardless of tenant.|
 |`userTeamRole`| This property describes user’s role in host team:</br>admin </br>user </br> guest </br> sharedChannelMember  |
 
-## Get direct shared channel membership
+### Get direct shared channel membership
 
 Steps to get direct channel membership are as follows:
 
@@ -215,8 +215,3 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
