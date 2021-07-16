@@ -5,7 +5,7 @@ ms.topic: reference
 keywords: Microsoft Teams templates samples demo
 localization_priority: Normal
 ms.author: lajanuar
-author: laujan
+author: surbhigupta
 ---
 
 # App templates for Microsoft Teams
@@ -283,9 +283,9 @@ Conversational Q&A bots are an easy way to provide answers to frequently asked q
 
 The Get Support app is used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes the following features:
 * Requesting assistance on different categories from a Power App.
-* Notifications sent to requestors informing them of who hare assigned.
+* Notifications sent to requestors informing them of who is assigned.
 * Notifications sent to assigned supervisors informing them of who needs assistance. 
-* Analyzing escalations and patterns in SharePoint and PowerBI.S.
+* Analyzing escalations and patterns in SharePoint and Power BI.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-app-get-support/)
 
@@ -678,6 +678,41 @@ The Visitor Management app enables your organization and employees to easily and
     ![Visitor arrival notification](../assets/images/visitor-management-notify-host.png)
 :::column-end:::
 :::row-end:::
+
+## Water Cooler &#9734;
+
+Water Cooler is a custom Teams app that enables corporate teams to create, invite, and join casual conversations among teammates, such as those that take place by the Water Cooler or break room. Use this template for multiple scenarios, such as new non project related announcements, topics of interest, current events, or conversations about hobbies. 
+The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks.    
+
+[Get it on GitHub](https://github.com/microsoft/csapps-msteams-watercooler)     
+
+![Water Cooler appscreens](../assets/images/appScreens.gif)    
+
+### Key features
+
+**Water Cooler Home Page**: You can browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the **Home Page** show a room name, short description, call duration, and room image. 
+
+![Water Cooler Home Page](../assets/images/home-page.png)
+
+**Join room**: Use the **Join room** feature to join an ongoing conversation immediately. Select **Join** from active conversations to join the room.
+
+![Join room](../assets/images/joinRoom.gif)
+
+**Room creation**: Use the **Room creation** feature to create a Teams call or chat for all attendees to interact. Create rooms easily by specifying the room name, short description, up to five colleagues as an initial group and selecting from the provided set of room images. 
+
+![Room Creation](../assets/images/createRoom.gif)
+
+**Find room**: Use the **Find room** feature to search keyword which matches with the topic or short descriptions of ongoing conversations.
+
+![Find conversation](../assets/images/findConversation.gif)
+
+**Attendee invitation**: Use the **Attendee invitation** feature to invite additional users after room creation. This is similar to Teams call.
+
+![Attendee invitation](../assets/images/attendeeInvitation.gif)
+
+**App badge**: The **Water Cooler** icon on the left menu shows a badge with the number of active conversations visible from Teams while using any app. 
+
+![App badge](../assets/images/badge.gif)
 
 ## Workplace Awards
 

@@ -9,16 +9,16 @@ ms.topic: quickstart
 
 # Build and run your first messaging extension for Microsoft Teams
 
+In this tutorial, you will learn how to create a *search command* to search for external data and insert the results into a message. 
+
 There are two types of Teams **messaging extensions**:
 
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) allow you to search external systems and insert the results of that search into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams.
 
-In this tutorial, you will create a *search command* to search for external data and insert the results into a message.  
-
 ## Before you begin
 
-Make sure your development environment is set up by installing the [Prerequisites](prerequisites.md)
+Make sure your development environment is set up by installing the Prerequisites.
 
 > [!div class="nextstepaction"]
 > [Install Prerequisites](prerequisites.md)
@@ -30,7 +30,7 @@ Use the Teams Toolkit to create your first project:
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
-1. Open the Teams Toolkit by selecting the Teams icon in the sidebar:
+1. Select the Teams icon in the sidebar to open the Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
@@ -42,18 +42,18 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. On the **Select capabilities** step, select **Message Extension** and deselect **Tab**.  Press **OK**.
+1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab** and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-1. On the **Bot registration** step, select **Create a new bot registration**.
+1. In the **Bot registration** section, select **Create a new bot registration**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Select create a new bot registration":::
 
    > [!NOTE]
    > Messaging extensions rely on bots to provide a dialog between the user and your code.
 
-1. On the **Programming Language** step, select **JavaScript**.
+1. In the **Programming Language** section, select **JavaScript**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
 
@@ -61,7 +61,7 @@ Use the Teams Toolkit to create your first project:
 
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
-Your Teams app will be created within a few seconds.
+   Your Teams app will be created within a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -74,13 +74,13 @@ teamsfx new
 The CLI walks through some questions to create the project.  Each question will tell you how to answer it (for example, to use arrow keys to select an option).  When you have answered the question, confirm your choice by pressing **Enter**.
 
 1. Select **Create a new Teams app**.
-1. Select the **Message Extension** capability and deselect the **Tab** capability.
+1. Select the **Message Extension** and deselect **Tab**.
 1. Select **Create a new bot registration**.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
-Once all the questions have been answered, your project will be created.
+   After all the questions have been answered, your project is created.
 
 ---
 
@@ -92,7 +92,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bots/messageExtensionBot.js` is the main entry point for the messaging extension.
+The bot code is stored in the `bot` directory.  The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -108,31 +108,31 @@ Teams Toolkit allows you to host your app locally.  To do this:
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press **F5** to run your application in debug mode.
+1. From Visual Studio Code, press the **F5** key to run your application in debug mode.
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
 1. Teams will be loaded in a web browser, and you will be prompted to sign in. If prompted to open Microsoft Teams, select Cancel to remain within the browser. Sign in with your M365 account.
 
-1. Press **Add** to add the app to your account.
+1. Select **Add** to add the app to your account.
 
-Once the app is loaded, you will be taken directly to a search dialog:
+   After the app is loaded, you will be taken directly to a search dialog:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
 
-Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
+   Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-When you pressed F5, the Teams Toolkit:
+When you press the **F5** key, the Teams Toolkit:
 
-1. Registered your application with Azure Active Directory.
-1. Registered your application for "side loading" in Microsoft Teams.
-1. Started your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-1. Started an ngrok tunnel so Teams can communicate with your app.
-1. Started Microsoft Teams with a command to instruct Teams to sideload the application.
+1. Registers your application with Azure Active Directory.
+1. Registers your application for "side loading" in Microsoft Teams.
+1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+1. Starts an ngrok tunnel so Teams can communicate with your app.
+1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
 
 </details>
 
@@ -181,7 +181,12 @@ The Teams Search Auth Config for sample projects on GitHub, demonstrate how to c
 
 ## See also
 
-- [Create a Teams app with React](first-app-react.md)
-- [Create a Teams app with Blazor](first-app-blazor.md)
-- [Create a Teams app as a SharePoint Web Part](first-app-spfx.md) (Azure not required)
-- [Create a conversation bot](first-app-bot.md)
+* [Tutorials Overview](code-samples.md) 
+* [Create an app using React](first-app-react.md)
+* [Create an app using Blazor](first-app-blazor.md)
+* [Create an app using SPFx](first-app-spfx.md)
+* [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
+* [Create an app using Node.js](get-started-nodejs-app-studio.md)
+* [Create an app using Yeoman generator](get-started-yeoman.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

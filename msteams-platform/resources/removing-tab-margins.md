@@ -1,6 +1,6 @@
 ---
 title: Removing tab margins in Microsoft Teams
-author: laujan
+author: surbhigupta
 description: Describes how the removal of tab margins will enhance developer's experience.
 keywords: tab removing margins padding
 ms.topic: reference
@@ -49,3 +49,10 @@ No, you must provide your own padding or margins to the left and right of all ap
 > * All tabs have their margins removed: personal tabs, (group) chat tabs, meeting tabs, and channel tabs.
 > * There is no way to opt-in or opt-out of this change. It will apply to all tabs.
 > * This change can affect tabs that rely on Microsoft Teams to provide margins surrounding their UI.
+
+## See also
+
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)

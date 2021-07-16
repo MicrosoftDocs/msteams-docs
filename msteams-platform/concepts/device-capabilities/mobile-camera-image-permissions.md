@@ -10,9 +10,7 @@ ms.author: lajanuar
 
 # Integrate media capabilities 
 
-This document guides you on how to integrate media capabilities. This integration combines the native device capabilities, such as the **camera** and **microphone** with the Teams platform.  
-
-You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable  media capability APIs to integrate the native device capabilities, such as the **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience. 
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience. 
 
 ## Advantage of integrating media capabilities
 
@@ -24,12 +22,12 @@ For effective integration, you must have a good understanding of [code snippets]
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
 > [!NOTE] 
-> * Currently, Microsoft Teams support for media capabilities is only available for mobile clients.    
-> * Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel. 
+> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.   
+> * Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel.    
 
 ## Update manifest
 
-Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the **camera** to capture the image, open the gallery to select an image to submit as an attachment, or use the **microphone** to record the conversation.
+Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media`. It allows your app to ask for requisite permissions from users before they start using  the **camera** to capture the image, open the gallery to select an image to submit as an attachment, or use the **microphone** to record the conversation. The update for app manifest is as follows:
 
 ``` json
 "devicePermissions": [
@@ -65,17 +63,17 @@ You must use the following set of APIs to enable your device's media capabilitie
 | [**getMedia**](/javascript/api/@microsoft/teams-js/microsoftteams.media.mediachunk?view=msteams-client-js-latest&preserve-view=true)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking of media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/microsoftteams.media.imageuri?view=msteams-client-js-latest&preserve-view=true)| This API enables the user to view images in  full-screen mode as a scrollable list.|
 
+The following image depicts web app experience of `selectMedia` API for image capability:
 
-**Web app experience for selectMedia API for image capability**
 ![device camera and image experience in Teams](../../assets/images/tabs/image-capability.png)
 
-**Web app experience for selectMedia API for microphone capability**
+The following image depicts web app experience of `selectMedia` API for microphone capability:
+
 ![web app experience for microphone capability](../../assets/images/tabs/microphone-capability.png)
 
 ## Error handling
 
 You must ensure to handle these errors appropriately in your Teams app. The following table lists the error codes and the conditions under which the errors are generated: 
-
 
 |Error code |  Error name     | Condition|
 | --------- | --------------- | -------- |
@@ -83,12 +81,8 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **404** | FILE_NOT_FOUND | File specified is not found in the given location.|
 | **500** | INTERNAL_ERROR | Internal error is encountered while performing the required operation.|
 | **1000** | PERMISSION_DENIED |Permission is denied by the user.|
-| **2000** |NETWORK_ERROR | Network issue.|
 | **3000** | NO_HW_SUPPORT | Underlying hardware does not support the capability.|
 | **4000**| INVALID_ARGUMENTS | One or more arguments are invalid.|
-| **5000** | UNAUTHORIZED_USER_OPERATION | User is not authorized to complete this operation.|
-| **6000** |INSUFFICIENT_RESOURCES | Operation could not be completed due to insufficient resources.|
-|**7000** | THROTTLE | Platform throttled the request as the API was invoked frequently.|
 |  **8000** | USER_ABORT |User aborts the operation.|
 | **9000**| OLD_PLATFORM | Platform code is outdated and does not implement this API.|
 | **10000**| SIZE_EXCEEDED |  Return value is too big and has exceeded the platform size boundaries.|
@@ -255,3 +249,5 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
+* [Integrate People Picker capability in Teams](people-picker-capability.md)
+

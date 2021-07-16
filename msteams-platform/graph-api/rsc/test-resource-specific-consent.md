@@ -2,7 +2,7 @@
 title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman
 localization_priority: Normal
-author: laujan
+author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
 keywords: teams authorization OAuth SSO AAD rsc Postman Graph
@@ -10,12 +10,15 @@ keywords: teams authorization OAuth SSO AAD rsc Postman Graph
 
 # Test resource-specific consent permissions in Teams
 
+> [!NOTE]
+> Resource-specific consent for chat scope is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+
 Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration that enables your app to use API endpoints to manage specific resources—either teams or chats—within an organization. For more information, see [Resource-specific consent (RSC) — Microsoft Teams Graph API](resource-specific-consent.md).
 
 > [!NOTE]
 > To test the RSC permissions, your Teams app manifest file must include a **webApplicationInfo** key populated with the following fields:
 >
-> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-via-the-azure-ad-portal).
+> - **id**: Your Azure AD app ID, see [Register your app in the Azure AD portal](resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-aad-portal).
 > - **resource**: Any string, see the note in  [Update your Teams app manifest](resource-specific-consent.md#update-your-teams-app-manifest).
 > - **application permissions**: RSC permissions for  your app, see [Resource-specific Permissions](resource-specific-consent.md#resource-specific-permissions).
 
@@ -70,7 +73,7 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
 >[!NOTE]
 >If the app is meant to support installation in both team and chat scopes, then both team and chat permissions can be specified in the same manifest under `applicationPermissions`.
 
-### Test added RSC permissions to a team using the Postman app
+## Test added RSC permissions to a team using the Postman app
 
 To check whether the RSC permissions are being honored by the API request payload, you need to copy the [RSC JSON test code for team](test-team-rsc-json-file.md) into your local environment and update the following values:
 
