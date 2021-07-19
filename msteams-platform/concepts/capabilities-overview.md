@@ -36,10 +36,7 @@ For example, you can collect user input in a form built as a tab in the app. You
 
 ## Government Community Cloud (GCC)
 
-Government Community Cloud is a government focused copy of the commercial environment. Other types of Teams orgs include:
-
-* GCC High: Department of Defense (DoD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC High was created to meet the needs of DoD and Federal contractors. GCC High is a copy of the DoD cloud but exists in its own sovereign environment.
-* DoD: The DoD cloud is built for the Department of Defense only.
+Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DoD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC High was created to meet the needs of DoD and Federal contractors. GCC High is a copy of the DoD cloud but exists in its own sovereign environment. The DoD cloud is built for the Department of Defense only.
 
 The following table includes Teams features and availability for GCC, GCC High, and DoD:
 
@@ -60,7 +57,7 @@ The following list helps to identify availability of GCC, GCC High, and DoD for 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-* For custom connectors, see [creating Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
+* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 ## See also
 
