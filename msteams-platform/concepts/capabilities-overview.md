@@ -10,13 +10,13 @@ ms.date: 09/22/2020
 
 # Understand Microsoft Teams app capabilities
 
-Extensibility or entry points are different ways in which an app can manifest itself to a user. For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. The various capabilities used to build your Teams app allow you to increase its usage scope.
+Extensibility or entry points are different ways in which an app can manifest itself to a user. For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. The various capabilities used to build your Teams app allows you to increase its usage scope.
 
 There are multiple ways to extend Teams, so every app is unique. Some only have one capability, such as a webhook, while others have more than one feature to give users various options. For example, your app can display data in a central location, that is, the **tab** and present that same information through a conversational interface, that is, the **bot**.
 
 ## App capabilities
 
-Your Teams app have one or all of the following core capabilities:
+Your Teams apps have one or all of the following core capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md)
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md)
@@ -41,7 +41,7 @@ Government Community Cloud is a government focused copy of the commercial enviro
 * GCC High: Department of Defense (DoD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC High was created to meet the needs of DoD and Federal contractors. GCC High is a copy of the DoD cloud but exists in its own sovereign environment.
 * DoD: The DoD cloud is built for the Department of Defense only.
 
-The following table includes Teams features and whether they are available for GCC, GCC High, and DoD:
+The following table includes Teams features and availability for GCC, GCC High, and DoD:
 
 | Features   | GCC | GCC High | DoD |
 |-------------|---------|
