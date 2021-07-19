@@ -245,7 +245,7 @@ After uploading the app package to configure and use the connector in a team, in
 1. Select **Set up a Connector** from the dropdown menu in the bottom right corner of the dialog window.
 
 > [!IMPORTANT]
-> Custom connectors are currently not available in Government Community Cloud (GCC), GCC High, and Department of Defense (DoD).
+> Currently, custom connectors are not available in Government Community Cloud (GCC), GCC High, and Department of Defense (DoD).
 
 The connector is available in the section &#9679;&#9679;&#9679; > **More options** > **Connectors** > **All** > **Connectors for your team** for that team. You can navigate by scrolling to this section or search for the connector app. To configure or modify the connector, select **Configure**.
 

@@ -11,7 +11,7 @@ ms.author: anclear
 A bot also referred to as a chatbot or conversational bot is an app that runs simple and repetitive automated tasks performed by the users, such as customer service or support staff. Examples of bots in everyday use include, bots that provide information about the weather, make dinner reservations, or provide travel information. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services.
 
 > [!IMPORTANT]
-> Bots are currently available in Government Community Cloud (GCC) but not available in GCC High and DoD (Department of Defense).
+> Currently, bots are available in Government Community Cloud (GCC) but not available in GCC High and Department of Defense (DoD).
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/zSIysk0yL0Q]
 

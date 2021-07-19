@@ -167,7 +167,7 @@ The following list details the different user types along with their accessibili
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
     > [!IMPORTANT]
-    > Third-party apps are currently available in Government Community Cloud (GCC) but are turned off by default for GCC High and Department of Defense (DoD).
+    > Currently, third-party apps are available in Government Community Cloud (GCC) but are turned off by default for GCC High and Department of Defense (DoD).
 
 * **Anonymous**: Anonymous users do not have an AAD identity and are not federated with a tenant. The anonymous participants are like external users, but their identity is not projected in the meeting. Anonymous users are not able to access apps in a meeting window. An anonymous user cannot be an organizer but can be a presenter or attendee.
 

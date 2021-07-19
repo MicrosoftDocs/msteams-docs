@@ -82,7 +82,7 @@ Azure Active Directory (AD) is the identity provider for Teams. If your app uses
 Teams has single sign-on (SSO) mechanisms with Azure AD for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and Open ID Connect, known as OIDC.
 
 > [!IMPORTANT]
-> Third-party apps are currently available in Government Community Cloud (GCC) but not available in GCC High and Department of Defense (DoD).
+> Currently, third-party apps are available in Government Community Cloud (GCC) but not available in GCC High and Department of Defense (DoD).
 
 For SharePoint pages, you can only use SSO and cannot add another Azure AD ID if you want SSO to work for another app as the ID is the SharePoint app.
 
