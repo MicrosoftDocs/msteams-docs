@@ -8,15 +8,15 @@ localization_priority: Normal
 
 # Sequential Workflows
 
-Adaptive Cards now support Sequential Workflows that is when Adaptive Cards are updated on user action and user can progress through a series of cards that require user input. This is supported through `Action.Execute`, which allows bot developers to return Adaptive Cards in response to a user action.
+Adaptive Cards now support Sequential Workflows that are updated on user action. Using Sequential Workflows, Adaptive Cards are updated on user action and user can progress through a series of cards that require user input. `Action.Execute` supports Sequential Workflows, which allows bot developers to return Adaptive Cards in response to a user action.
 
-For example, take a scenario where the cafeteria wants to take an order for a team or channel. With `Action.Execute` the user's choice for various items, such as food, drinks, and so on can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
+For example, take a scenario where the cafeteria wants to take an order for a team or channel. With `Action.Execute` the user's choice for various items, such as food and drinks can be recorded sequentially. User can also go back and forth through the cards as per the logic defined by the bot developer. <br/>
 
 The following image shows the Sequential Workflow:
 
 <img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="400"/>
 
-A user can progress through their workflow without modifying the card for other users. This is also useful for conducting quizzes using sequential Adaptive Cards. As shown in the following image, different users can be at different stages of the workflow and they see different states of the card:
+A user can progress through their workflow without modifying the card for other users. The workflow is also useful for conducting quizzes using sequential Adaptive Cards. The following image shows different users can be at different stages of the workflow and states of the card:
 
 :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-catering-bot.png" alt-text="Catering bot states":::
 
@@ -120,9 +120,11 @@ var adaptiveCardResponse = JObject.FromObject(new
 
 ## Code sample
 
-|Sample name | Description | .NETCore |
-|----------------|-----------------|--------------|
-| Teams catering bot | Create a simple bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Sample name | Description | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+| Sequential Workflow Adaptive Cards | Demonstrate how to implement Sequential Workflow, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+
 
 ## See also
 
