@@ -21,7 +21,7 @@ Removing the margins around all tabs will allow developers to build apps that lo
 ## Timelines
 
 * March 5, 2021 - Margins removed in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
-* June 15, 2021 - Margins will be removed in production.
+* July 31, 2021 - Margins will be removed in production.
 
 ## Guidelines
 
