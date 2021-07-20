@@ -39,8 +39,3 @@ After getting access to device capabilities, use Teams media capability APIs to 
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
 
-## Code sample
-
-| **Sample Name** | **Description** | **Node.js** |
-|---------------|--------------|--------|
-|Device permissions | Microsoft Teams tab sample app for demonstrating device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
