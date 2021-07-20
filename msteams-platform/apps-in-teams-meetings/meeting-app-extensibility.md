@@ -27,7 +27,7 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> Apps are supported in private scheduled meetings only.
+> Apps are only supported in private scheduled meetings and standard channel meetings.
 
 #### Pre-meeting app experience
 
@@ -132,6 +132,17 @@ Bots enabled in groupchat scope start functioning in meetings. To implement bots
 To implement messaging extensions, start with [build a messaging extension](../messaging-extensions/how-to/create-messaging-extension.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
 
 The Teams meeting app extensibility allows you to design your app based on participant roles in a meeting.
+
+### Supported capabilities in meeting
+
+| Capability | Support available | In-tenant user type on mobile | Guest user on mobile | Federated or external user on mobile |
+| Scheduled private meetings | ✔️ | | | |
+| Standard channel meetings | ✔️ | | | |
+
+> [!NOTE]
+> * The overall user experience in standard channel meetings will be same as in scheduled private meetings.
+> * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
+> * Apps on the channel will not be available in the meeting by default.
 
 ## Participant roles in a meeting
 
