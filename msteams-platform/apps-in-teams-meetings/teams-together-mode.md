@@ -28,7 +28,7 @@ You must have a basic understanding of the following to use custom Together Mode
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to **Upload a custom app** and to select all filters as part of app setup and meeting policies respectively.
+* Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and to select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices
 
@@ -105,9 +105,9 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
 
     >[!NOTE]
-    > To delete a scene you created, select **Delete scene** on the top bar.
-
-1. In the **View in Teams** dialog box, select **Preview in Teams**. Selecting **Preview** automatically creates a Microsoft Teams app that is viewed in the **Apps** page in the Teams Developer Portal. Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by going to **Apps** from the menu.
+    > * Selecting **View in Teams** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
+    > * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
+    > * To delete a scene you created, select **Delete scene** on the top bar.
 
 1. In the dialog box that appears, select **Add**.
 
