@@ -203,6 +203,13 @@ Looking for app development inspiration? Browse our list of real-world scenarios
    :::column-end:::
 :::row-end:::
 
+## Integrating Teams communication in an external app
+This page focuses on embedding your own experiences into Microsoft Teams. If you'd like to reverse this model and integrate Teams or other communication capabilities into your own app experience, check out [Azure Communication Services](https://docs.microsoft.com/azure/communication-services/overview).
+
+Azure Communication Services are cloud-based services with REST APIs and client library SDKs to help you integrate communication into your own custom applications. A [UI library](https://azure.github.io/communication-ui-library/) for desktop and mobile web browsers can help you quickly embed generic or Teams-styled components for chat and calling.
+
+Azure Communication Services applications can [interoperate with Teams](https://docs.microsoft.com/azure/communication-services/concepts/teams-interop) and enable your custom application to join Teams meetings anonymously. You can also integrate Microsoft 365 identity to build external applications that embed video and PSTN calling on behalf of a Teams user. If you've used [Skype for Business SDKs](https://docs.microsoft.com/skype-sdk/appsdk/skypeappsdk) in the past, these capabilities as part of Azure Communication Services are recommended as a replacement.
+
 ## See also
 
 * [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
