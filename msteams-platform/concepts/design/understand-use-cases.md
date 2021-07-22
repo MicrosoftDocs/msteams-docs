@@ -77,6 +77,7 @@ Identify which new features the user will prefer to have in the current solution
 * [Choose how to distribute your app](../deploy-and-publish/apps-publish-overview.md)
 * [Design tabs](../../tabs/design/tabs.md)
 * [Design bots](../../bots/design/bots.md)
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## Next step
 
