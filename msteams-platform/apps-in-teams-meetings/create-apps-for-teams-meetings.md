@@ -396,7 +396,7 @@ The following code provides an example of meeting start event payload:
     "value": { 
         "MeetingType": "Scheduled", 
         "Title": "Meeting Start/End Event", 
-        "Id": "conversation id", 
+        "Id": "meeting id", 
         "JoinUrl": "url" 
         "StartTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
