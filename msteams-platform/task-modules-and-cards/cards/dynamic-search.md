@@ -43,3 +43,20 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | value	| String | No | Populated for the invoke request to the bot with the input the user provided to the `ChoiceSet`. |
 | count	| Number | No | It is populated for the invoke request to the bot to specify how many elements must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | It is populated for the invoke request to the bot to indicate that users want to paginate and skip ahead in the list. |
+
+## Mobile and desktop experience
+
+# [Mobile](#tab/mobile)
+
+ The following image illustrates mobile experience of type ahead search:
+
+![Mobile experience](../../assets/images/cards/mobile-type-ahead-search.png)
+
+
+# [Desktop](#tab/desktop)
+
+
+
+
+---
+
