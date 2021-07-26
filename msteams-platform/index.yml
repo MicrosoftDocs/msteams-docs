@@ -39,8 +39,8 @@ highlightedContent:
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
     - title: Tutorials and code samples
       itemType: sample
-      url:  /microsoftteams/platform/tutorials/code-samples
-    - title: Microsoft Build 2021- What's new?
+      url:  /microsoftteams/platform/get-started/code-samples
+    - title: What's new?
       itemType: whats-new
       url: /microsoftteams/platform/whats-new
 

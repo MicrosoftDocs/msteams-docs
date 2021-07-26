@@ -33,7 +33,7 @@ You must have a basic understanding of the following to use custom Together Mode
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to **Upload a custom app** and to select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and to select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices
 
@@ -123,7 +123,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * After the scene is shipped, the avatar placements are replaced with actual participant's video streams.
     > * You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
 
-1. Select any participant image, and choose the **Assign Spot** check box to assign the spot to the participant.
+1. Select any participant image, and select the **Assign Spot** check box to assign the spot to the participant.
 
 1. Select **Meeting Organizer** or **Presenter** role for the participant.
 
@@ -135,9 +135,10 @@ The seat dimensions become the canvas for rendering the participant video stream
 1. Select **Save** and select **View in Teams** to quickly test your scene in Microsoft Teams.
 
     >[!NOTE]
-    > To delete a scene you created, select **Delete scene** on the top bar.
+    > * Selecting **View in Teams** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
+    > * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
+    > * To delete a scene you created, select **Delete scene** on the top bar.
 
-1. In the **View in Teams** dialog box, select **Preview in Teams**.
 1. In the dialog box that appears, select **Add**.
 
     The scene can be tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
@@ -145,9 +146,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     ![Launch custom Together Mode scenes](../assets/images/apps-in-meetings/launchtogethermode.png)
 
     >[!NOTE]
-    > * Selecting **Preview** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    > * Selecting **Preview** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
-    > * The scene can then be viewed in the custom Together Mode scenes gallery.
+    > * The scene can be viewed in the custom Together Mode scenes gallery.
 
 1. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
@@ -247,7 +246,7 @@ Now that you have gone through the sample scene.json, you can activate the custo
 
 Get end-to-end information of how an end user engages with scenes in custom Together Mode scenes.
 
-**To choose scenes and activate custom Together Mode scenes**
+**To select scenes and activate custom Together Mode scenes**
 
 1. Create a new test meeting.
 
