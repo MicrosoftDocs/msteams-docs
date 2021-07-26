@@ -9,21 +9,25 @@ ms.author: surbhigupta
 
 # Type ahead search in Adaptive Cards  
 
-Input.ChoiceSet control in Adaptive Card is an important and most widely used component. You can incorporate type ahead control feature for input choice set in Adaptive Cards to enhance the search experience from large dataset. It allows users to select data from a searchable select menu that loads data dynamically. This feature allows users to do the following searches:
+Input.ChoiceSet control in Adaptive Cards allow users to input a choice from a given set of choices. You can enable type ahead search feature for input choice set control in Adaptive Cards to enhance the search experience within a large dataset. This feature allows users to do the following types of searches based on the input choices:
 
 * Static search: Search within the specified values in the Adaptive Card payload.
-* Dynamic search: Type ahead search within a remote database.
+* Dynamic search: Type ahead search from a remote database.
 
 ## Advantages
 
-* The input can fetch the list of choices from a remote backend as the user types dynamically.
-* User can view, select, and clear single or multiple items from the input choice set drop down menu. 
-* User can authenticate if they needs to sign in before taking an action on the Adaptive Card.
+* The user can enter the input that fetches the list of choices from a remote backend dynamically. 
+* The user can view, select, and clear a single item or multiple items from the input choice set drop down menu. 
+* The users must be able to authenticate if they need to sign in before taking an action on the Adaptive Card.
 * You can add images and text as part of the different input choices in dynamically fetched items.
 
-## Scenarios
+## Understand dynamic type ahead search
 
-## Flow diagram to understand the dynamic type ahead search
+Type ahead search is useful in many scenarios.
+
+The following flow diagram explains type ahead search process:
+
+![Dynamic type ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
 ## Update schema
 
