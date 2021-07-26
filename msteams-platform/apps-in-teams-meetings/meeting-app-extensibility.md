@@ -102,7 +102,7 @@ The following table describes the behavior of app when approved and not approved
 
 |App capability | App approved | App not approved |
 |---|---|---|
-| Meeting extensibility | The app will appear in meetings. | The app does not appear in meetings for the mobile clients. |
+| Meeting extensibility | The app will appear in meetings. | The app doesn't appear in meetings for the mobile clients. |
 
 #### Post-meeting app experience
 
@@ -125,7 +125,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-Bots enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
+Bots enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -135,7 +135,7 @@ The Teams meeting app extensibility allows you to design your app based on parti
 
 ### Supported capabilities in meeting
 
-| Capability | Support available | In-tenant user type on mobile | Guest user on mobile | Federated or external user on mobile |
+| Capability | Support available | In-tenant on mobile | Guest on mobile | Federated or external on mobile |
 | :-- | :-- | :-- | :-- | :-- |
 | Scheduled private meetings | ✔️ | | | |
 | Standard channel meetings | ✔️ | | | |
@@ -152,8 +152,8 @@ The Teams meeting app extensibility allows you to design your app based on parti
 Default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. Only users with Microsoft 365 account and Teams license can be organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
-* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter is not allowed to remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
-* **Attendee**: An attendee is invited to attend a meeting but cannot act as a presenter. Attendees can interact with other meeting members but are not allowed to manage any of the meeting settings or share content.
+* **Presenter**: Presenters have same capabilities of organizers with exclusions. A presenter isn't allowed to remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
+* **Attendee**: An attendee is invited to attend a meeting but can't act as a presenter. Attendees can interact with other meeting members but aren't allowed to manage any of the meeting settings or share content.
 
 > [!NOTE]
 > Only an organizer or presenter can add, remove, or uninstall apps.
@@ -173,25 +173,25 @@ The following list details the different user types along with their accessibili
 
 * **In-tenant**: In-tenant users belong to the organization and have credentials in Azure Active Directory (AAD) for the tenant. The users are full-time, onsite, or remote employees. An in-tenant user can be an organizer, presenter, or attendee.
 * **Guest**: A guest is a participant from another organization invited to access Teams or other resources in the organization's tenant. Guests are added to the organization’s AAD. They have the same Teams capabilities as a native team member with access to team chats, meetings, and files. A guest can be an organizer, presenter, or attendee. For more information, see [guest access in Teams](/microsoftteams/guest-access).
-* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. Access to your teams or other shared resources from your organization is not available. Guest access is a better option for external users to have access to teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
+* **Federated or external**: A federated user is an external Teams user in another organization who has been invited to join a meeting. Federated users have valid credentials with federated partners and are authorized by Teams. Access to your teams or other shared resources from your organization isn't available. Guest access is a better option for teams and channels. For more information, see [manage external access in Teams](/microsoftteams/manage-external-access).
 
     > [!NOTE]
     > Your Teams users can add apps when they host meetings or chats with other organizations. The users can use apps shared by external users when your users join meetings or chats hosted by other organizations. The data policies of the hosting user's organization, as well as the data sharing practices of the third-party apps shared by that user's organization, will be in effect.
 
-* **Anonymous**: An AAD identity is not available to anonymous users. They are not federated with a tenant. Anonymous participants are like external users. The meeting does not project their identity. Anonymous users cannot access apps in a meeting window. An anonymous user can be a presenter or attendee but not an organizer.
+* **Anonymous**: An AAD identity isn't available to anonymous users. They aren't federated with a tenant. Anonymous participants are like guests. The meeting doesn't project their identity. Anonymous users can't access apps in a meeting window. An anonymous user can be a presenter or attendee but not an organizer.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
 
-The actions add, remove, or uninstall apps are not available to a guest or anonymous user.
+The actions add, remove, or uninstall apps aren't available to a guest or anonymous user.
 
 The following table provides the user types and what features each user can access:
 
 | User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
-| Guest that is part of the tenant AAD | Interaction is allowed. You cannot create, update, and delete. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
-| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. You cannot create, update, and delete. | Interaction is allowed. You cannot acquire, update, and delete. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
+| Guest that is part of the tenant AAD | Interaction is allowed. You can't create, update, and delete. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
+| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. You can't create, update, and delete. | Interaction is allowed. You can't acquire, update, and delete. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
 
 ## See also
 
