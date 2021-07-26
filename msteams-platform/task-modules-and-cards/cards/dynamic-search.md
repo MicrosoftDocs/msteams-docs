@@ -40,6 +40,8 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 
 ### Data.Query definition
 
+The following table describes the properties of data:
+
 | Property	| Type | Required | Description |
 |-----------|------|----------|-------------|
 | type | Data.Query	| Yes |	Specifies that it is a Data.Query object.|
@@ -52,14 +54,14 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 
 # [Mobile](#tab/mobile)
 
- The following image illustrates mobile experience of type ahead search:
+Android and iOS supports type ahead search in Adaptive Cards. The following image illustrates mobile experience of type ahead dynamic search:
 
 ![Mobile experience](../../assets/images/cards/mobile-type-ahead-search.png)
 
 
 # [Desktop](#tab/desktop)
 
-
+[Placeholder for desktop experience]
 
 
 ---
