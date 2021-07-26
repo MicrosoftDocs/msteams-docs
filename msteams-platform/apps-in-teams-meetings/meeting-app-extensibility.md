@@ -27,7 +27,7 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> Apps are only supported in private scheduled meetings and standard channel meetings.
+> Currently, apps are supported in private scheduled meetings and standard channel meetings only.
 
 #### Pre-meeting app experience
 
@@ -135,13 +135,14 @@ The Teams meeting app extensibility allows you to design your app based on parti
 
 ### Supported capabilities in meeting
 
+The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings:
+
 | Capability | Support available | In-tenant user type on mobile | Guest user on mobile | Federated or external user on mobile |
 | :-- | :-- | :-- | :-- | :-- |
 | Scheduled private meetings | ✔️ | | | |
 | Standard channel meetings | ✔️ | | | |
 
 > [!NOTE]
-> * The overall user experience in standard channel meetings will be same as in scheduled private meetings.
 > * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
 > * Apps on the channel will not be available in the meeting by default.
 
