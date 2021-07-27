@@ -137,7 +137,7 @@ The Teams meeting app extensibility allows you to design your app based on parti
 
 The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings:
 
-| Capability | Support available | In-tenant on mobile | Guest on mobile | Federated or external on mobile |
+| Capability | Support available | In-tenant | Guest | Federated or external |
 | :-- | :-- | :-- | :-- | :-- |
 | Scheduled private meetings | ✔️ | | | |
 | Standard channel meetings | ✔️ | | | |
