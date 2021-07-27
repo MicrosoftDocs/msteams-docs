@@ -182,8 +182,7 @@ To enable search within a list of conversation members, use the appropriate data
 
 ### Data Submission
 
-You can `Submit Action` in an Adaptive Card. You can provide the inputs in the card that are sent back to the bot through an `invoke`. The `Submit Action` is similar to other `Input control` in Adaptive Cards. The `invoke` payload consists of a list of input IDs to their corresponding values.  
-
+You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of AAD IDs or the IDs provided in static list.
 In People Picker, when a user is selected in the control, the `AAD ID` of the user is the value sent back. The `AAD ID` is a string and uniquely identifies a user in the directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
