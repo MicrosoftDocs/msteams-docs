@@ -1,7 +1,7 @@
 ---
 title: Dynamic search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes dynamic type ahead search with input choice set control in Adaptive Cards 
+description: Describes dynamic type ahead search with Input.ChoiceSet control in Adaptive Cards 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Dynamic search in Adaptive Cards  
 
-Dynamic search is useful in scenarios where the users have to search from a dynamically loaded huge data set. You can use dynamic search to overcome the drawback of static search within the specified values in the Adaptive Card payload. You can enable type ahead control for input choice set in Adaptive Cards to incorporate the dynamic search experience. This feature allows users to do type ahead search from a remote database and enhances the search experience.
+Dynamic search is useful in scenarios where the users have to search from a dynamically loaded huge data set. You can use dynamic search to overcome the drawback of static search within the specified values in the Adaptive Card payload. You can enable type ahead control for `Input.ChoiceSet` in Adaptive Cards to incorporate the dynamic search experience. This feature allows users to do type ahead search from a remote database and enhances the search experience.
  
 ## Understand how dynamic search works
 
@@ -35,7 +35,7 @@ Android and iOS supports dynamic search in Adaptive Cards. The following image i
 
 ## Implement dynamic search
 
-`Input.ChoiceSet` in Adaptive Cards allow users to input a choice from a given set of choices. You can add type ahead control to `Input.ChoiceSet` to implement dynamic search with Adaptive Cards.
+You can input a choice from a given set of choices using `Input.ChoiceSet` in Adaptive Cards. You can add type ahead control to `Input.ChoiceSet` to implement dynamic search with Adaptive Cards.
 
 ### Update schema
 
@@ -67,5 +67,5 @@ The following table describes the properties of data:
 
 ## Limitations
 
-* The scope of the feature is limited to input.choice set component of Adaptive Cards only.
-* You can specify text and images as part of the list of dynamically fetched items only. You can not give rich card experiences. 
+* The scope of dynamic search is limited to `Input.ChoiceSet` component of Adaptive Cards only.
+* You can specify text and images as part of the list of dynamically fetched items only. You can not give rich card experiences with dynamic search. 
