@@ -1,35 +1,43 @@
 ---
-title: Type ahead search in Adaptive Cards 
+title: Dynamic search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes type ahead search with input choice set control in Adaptive Cards 
+description: Describes dynamic type ahead search with input choice set control in Adaptive Cards 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Type ahead search in Adaptive Cards  
+# Dynamic search in Adaptive Cards  
 
-Input.ChoiceSet control in Adaptive Cards allow users to input a choice from a given set of choices. You can enable type ahead search feature for input choice set control in Adaptive Cards to enhance the search experience within a large dataset. This feature allows users to do the following types of searches based on the input choices:
+Dynamic search is useful in scenarios where the users have to search from a dynamically loaded huge data set. You can use dynamic search to overcome the drawback of static search within the specified values in the Adaptive Card payload. You can enable type ahead control for input choice set in Adaptive Cards to incorporate the dynamic search experience. This feature allows users to do type ahead search from a remote database and enhances the search experience.
+ 
+## Understand how dynamic search works
 
-* Static search: Search within the specified values in the Adaptive Card payload.
-* Dynamic search: Type ahead search from a remote database.
-
-## Advantages
-
-* The user can enter the input that fetches the list of choices from a remote backend dynamically. 
-* The user can view, select, and clear a single item or multiple items from the input choice set drop down menu. 
-* The users must be able to authenticate if they need to sign in before taking an action on the Adaptive Card.
-* You can add images and text as part of the different input choices in dynamically fetched items.
-
-## Understand dynamic type ahead search
-
-Type ahead search is useful in many scenarios.
-
-The following flow diagram explains type ahead search process:
+The following flow diagram explains the dynamic search process: 
 
 ![Dynamic type ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
-## Update schema
+## Mobile and desktop experience
+
+# [Mobile](#tab/mobile)
+
+Android and iOS supports dynamic search in Adaptive Cards. The following image illustrates mobile experience of dynamic search:
+
+![Mobile experience](../../assets/images/cards/mobile-type-ahead-search.png)
+
+
+# [Desktop](#tab/desktop)
+
+[Placeholder for desktop experience]
+
+
+---
+
+## Implement dynamic search
+
+`Input.ChoiceSet` in Adaptive Cards allow users to input a choice from a given set of choices. You can add type ahead control to `Input.ChoiceSet` to implement dynamic search with Adaptive Cards.
+
+### Update schema
 
 The following properties are the new additions to the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable type ahead search:
 
@@ -50,19 +58,14 @@ The following table describes the properties of data:
 | count	| Number | No | It is populated for the invoke request to the bot to specify how many elements must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | It is populated for the invoke request to the bot to indicate that users want to paginate and skip ahead in the list. |
 
-## Mobile and desktop experience
+## Advantages
 
-# [Mobile](#tab/mobile)
+* The user can enter the input that fetches the list of choices from a remote backend dynamically.
+* The user can view, select, and clear a single item or multiple items from the input choice set drop down menu.
+* The users must be able to authenticate if they need to sign in before taking an action on the Adaptive Card.
+* You can add images and text as part of the different input choices in dynamically fetched items.
 
-Android and iOS supports type ahead search in Adaptive Cards. The following image illustrates mobile experience of type ahead dynamic search:
+## Limitations
 
-![Mobile experience](../../assets/images/cards/mobile-type-ahead-search.png)
-
-
-# [Desktop](#tab/desktop)
-
-[Placeholder for desktop experience]
-
-
----
-
+* The scope of the feature is limited to input.choice set component of Adaptive Cards only.
+* You can specify text and images as part of the list of dynamically fetched items only. You can not give rich card experiences. 

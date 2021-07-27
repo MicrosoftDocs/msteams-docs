@@ -25,7 +25,7 @@ The following types of cards are supported in bots for Teams:
 
 You can format card text using a subset of XML or HTML formatting or Markdown, depending on the card type. You can add and respond to card actions that open a URL, send messages and payload to the bot, or initiate OAuth flow.
 
-You can give a dynamic search experience  within a large dataset using type ahead search in Adaptive Cards. You can invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab. You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
+You can give a [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience  within a huge dataset using type ahead control in Adaptive Cards. You can invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab. You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
 
 ## See also
 
