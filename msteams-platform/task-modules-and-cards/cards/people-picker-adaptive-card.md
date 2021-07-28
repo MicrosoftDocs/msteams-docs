@@ -95,7 +95,7 @@ People Picker is implemented as an extension of the [Input.ChoiceSet](https://ad
 
 ### Update schema
 
-The following properties are the new additions to the `Input.ChoiceSet` schema to enable People Picker experience on the card.  
+The following properties are the new additions to the `Input.ChoiceSet` schema to enable People Picker experience on the card:  
 
 #### Input.ChoiceSet control
 
@@ -189,10 +189,10 @@ The format of the value submitted to the bot depends on the value of the `isMult
 
 |value of `isMultiSelect`|Format|
 |--|--|
-|false _(single select)_|The `AAD ID` of the selected user as a string.|
-|true _(multi select)_|A string composed of all the `AAD ID`s of the selected users concatenated with a 'comma'.|  
+|false _(single select)_|<selected_AAD_ID>.|
+|true _(multi select)_|<selected_AAD_ID_1>,<selected_AAD_ID_2>,<selected_AAD_ID_3>.|  
 
-With the `AAD ID`,  People Picker preselects the corresponding user. 
+With the `AAD ID`, People Picker preselects the corresponding user. 
 
 ## Preselection of user
 
