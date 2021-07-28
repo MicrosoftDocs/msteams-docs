@@ -22,6 +22,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|07/28/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |07/08/2021|Meeting app extensibility is available on mobile. Mobile clients support apps during meeting. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrate People Picker capability.|[Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduced step-by-step guide to send proactive messages. | [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
