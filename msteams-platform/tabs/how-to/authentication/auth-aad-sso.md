@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that is Office 365, and  Outlook. Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign in credentials by silently refreshing the authentication token. You can allow a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If users consent to use your app, they need not consent again on another device and can sign in automatically. In addition, your access token is prefetched to improve performance and load times.  
+Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that are Office 365, and  Outlook. Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their credentials by silently refreshing the authentication token. You can allow a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If users consent to use your app, they need not consent again on another device and can sign in automatically. Your access token is also prefetched to improve performance and load times.  
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -32,9 +32,9 @@ The following image shows how the SSO process works:
 
 **SSO work flow at run time**
 
-1. In the tab, a JavaScript call is made to `getAuthToken()`. This tells Teams to obtain an authentication token for the tab application.
-1. If the current user is using your tab application for the first time, a request prompt appears requesting the user to do one of the following:
-    * Provide consent, if required.
+1. In the tab, a JavaScript call is made to `getAuthToken()`. Teams obtains an authentication token for the tab application.
+1. If the current user is using your tab application for the first time, a request prompt appears with the following actions:
+    * Provide consent, if necessary.
     * Handle step-up authentication, such as two-factor authentication.
 1. Teams requests the tab application token from the Azure Active Directory (AAD) endpoint for the current user.
 1. AAD sends the tab application token to the Teams application.
@@ -79,13 +79,13 @@ Complete the following steps to develop an SSO Teams tab:
     1. Select the **Supported account types**, select single tenant or multitenant account  type. ¹ 
         * Leave**Redirect URI** empty.
     1. Select **Register**.
-1. Go to overview page, copy and save the **Application (client) ID** to update your app manifest later. 
+1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later. 
 1. Go to **Manage** and select **Expose an API**.
 
     > [!NOTE]
     > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`² . For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
 1. In the **Who can consent?** box, enter **Admins and users**.
 1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
@@ -99,7 +99,7 @@ Complete the following steps to develop an SSO Teams tab:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 1. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Graph API:
-    * User.Read enabled by default
+    * User enabled by default
     * email
     * offline_access
     * OpenId
@@ -107,18 +107,14 @@ Complete the following steps to develop an SSO Teams tab:
 
 1. Go to **Authentication**.
 
-    Users must provide consent for the first time when they use an app if it does not have IT admin consent.
+    Users must provide consent for the first time when they use an app.
 
     To enter a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
-    * Enter the **redirect URI** for your app. This is the page where a successful implicit grant flow redirects the user. This is the same fully qualified domain name that you entered in step 5 followed by the API route where an authentication response is sent. If you are following any of the Teams samples, this is `https://subdomain.example.com/auth-end`.
+    * Enter the **redirect URI** for your app. A fully qualified domain name that you entered in step 5 followed by the API route where an authentication response is sent. Fir more information on the Teams sample, see `https://subdomain.example.com/auth-end`.
 
-    Select the following boxes to enable implicit grant: 
-    ✔ ID Token
-    ✔ Access Token
-
-You have completed the app registration prerequisites to proceed with your tab SSO app.
+Complete the app registration prerequisites to continue with your tab SSO app.
 
 > [!NOTE]
 >
@@ -160,9 +156,9 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-When you call `getAuthToken` - and additional user consent is required for user level permissions, the user gets a window to grant additional consent.
+When you call `getAuthToken` - and another user consent is required for user level permissions, the user gets a window to grant consent.
 
-After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. You can also manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
+After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. You can also manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If the UPN in the returned access token is missing, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
