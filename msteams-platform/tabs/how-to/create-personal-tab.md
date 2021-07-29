@@ -111,7 +111,11 @@ In addition, this project requires that you have the following installed in your
 
     **Would you like to include Test framework and initial tests? (y/N)**
 
-    Choose **not** to include a test framework for this project. The default is yes, enter **n**.
+    Choose **not** to include a test framework for this project. The default is no, enter **n**.
+
+    **Would you like to include ESLint support? (y/N)**
+
+    Choose not to include ESLint support. The default is no, enter **n**.
 
     **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
