@@ -55,7 +55,3 @@ Users can have different apps in Teams and each will have to be granted device p
 1. Select the app to which you want to grant access, for example OneNote.
 1. Turn on **Media (Camera, microphone, speakers)**.
 1. Similarly, you can turn on other permissions, such as location or MIDI device as required to use the app.
-
-The following image shows web app experience of location capabilities:
-
-![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
