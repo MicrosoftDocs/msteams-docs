@@ -15,7 +15,7 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 Sideload an app for personal use, collaborating with your team, or testing and debugging. This kind of distribution doesn't require a formal review process.
 
 > [!IMPORTANT]
-> Currently, sideloading apps are available in Government Community Cloud (GCC), GCC High, and Department of Defense (DoD).
+> Currently, sideloading apps are available in Government Community Cloud (GCC), but are not available for GCC High and Department of Defense (DoD).
 
 For more information, see [upload your app in Teams](apps-upload.md).
 

@@ -11,7 +11,7 @@ ms.topic: overview
 You can allow customers to customize some aspects of your Microsoft Teams app in the Teams admin center. This feature is supported only for apps published to the Teams store. Sideloaded apps and apps published for an org can't be customized.
 
 > [!IMPORTANT]
-> Currently, sideloading apps are available in Government Community Cloud (GCC), GCC High, and Department of Defense (DoD).
+> Currently, sideloading apps are available in Government Community Cloud (GCC), but are not available for GCC High and Department of Defense (DoD).
 
 Some possible examples of this feature include:
 
