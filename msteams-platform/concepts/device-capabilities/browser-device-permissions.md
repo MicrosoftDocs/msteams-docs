@@ -24,6 +24,8 @@ Sarah, a lawyer at Contoso Partners, uses OneNote to take meeting notes in Teams
 
 A few months later, Sarah needs to record an important meeting. She decides to use the dictation feature of OneNote. But she is shown a dialog that she doesn’t have microphone access as she had denied access earlier.
 
+![Permissions not available](../../assets/images/tabs/permissionsnotavailable.png)
+
 Sarah then visits her settings in Teams to grant OneNote access to her microphone.
 
 ## Solution
@@ -34,3 +36,20 @@ The solution for the security issue covers the following points:
 * Allow users to manage their device permissions for each app in the browser: Previously device permissions for embedded iframes were handled by the browser. With the recent change to Chromium, settings page is to be provided where users can manage their device permissions for each Teams tab that has requested access.
 
 Users can have different apps in Teams and each one will have to be granted separate device permissions. For example, in OneNote the user will have to grant permissions for media such as camera, microphone, and speakers. There is a property on iframe that will allow the user to use different media for that app.
+
+**To grant access to device permissions**
+
+1. In your browser, open **teams.microsoft.com**.
+1. Select the app that you want to use from the left bar. If you are using OneNote, you can select the **Dictate** button to record your notes. A dialog box is shown for the permissions being denied.
+1. Select the icon for your user account from the upper right corner and select **Manage account**.
+1. From the **Settings** dialog box, select **App permissions**.
+
+    ![Settings for app permissions](../../assets/images/tabs/settingsapppermissions.png)
+
+1. Select the app to which you want to grant access, for example OneNote.
+1. Turn on **Media (Camera, microphone, speakers)**.
+1. Similarly, you can turn on other permissions, such as location or MIDI device as required to use the app.
+
+The following image shows web app experience of location capabilities:
+
+![web app experience for location capabilities](../../assets/images/tabs/location-capability.png)
