@@ -158,7 +158,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 
 When you call `getAuthToken` - and another user consent is required for user level permissions, the user gets a window to grant consent.
 
-After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. You can also manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If the UPN in the returned access token is missing, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
+You receive the access token in the success callback. Then you can decode the access token to view the claims associated with that token. You can also manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If the UPN in the returned access token is missing, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
