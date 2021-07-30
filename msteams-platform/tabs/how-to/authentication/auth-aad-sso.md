@@ -169,13 +169,11 @@ After you receive the access token in the success callback, you can decode the a
 
 ## Known limitations
 
-### Apps that require additional Graph scopes
+### Acquire an access token with Graph permissions
 
-Our current implementation for SSO only grants consent for user-level permissions that is email, profile, offline_access, OpenId and not for other APIs such as User.Read or Mail.Read. If your app needs further Graph scopes, the next section provides some enabling workarounds.
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To acquire the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token acquired from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
-
-The simplest approach is to get a tenant admin to pre-consent on behalf of the organization. This means users do not have to consent to these scopes and you can then be free to exchange the token server side using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow). This workaround is acceptable for internal line-of-business applications but is not enough for third-party developers who are not able to rely on tenant admin approval.
 
 A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
