@@ -126,18 +126,17 @@ If your page makes use of any of these values, you must check the `channelType` 
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
-For shared channels, the `groupId` value is `null`. The `hostTeamTenantId` and `hostTeamGroupId` properties are newly added.
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.`
+For shared channels, the `groupId` value is `null`. The `hostTeamID` and `hostTenantID` properties are newly added.
 Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
 
 | Property | Description |
 |----------|--------------|
 |`channelId`| The property is set to the SC channel thread ID.|
 |`groupId`|The property is `null` for shared Channels.|
-|`hostTeamTenantId`| The property describes the host team’s tenant ID. |
-|`hostTeamGroupId`|The property describes the host team’s AAD group ID and is called out from groupID. |
+|`hostTenantId`| The property is newly added and it describes the host's tenant ID. |
 |`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
-|`teamId`|The property is set to the thread ID of the current shared team. | 
+|`teamId`|The property is newly added and set to the thread ID of the current shared team. | 
 |`teamName`|The property is set to current shared `teamName`. |
 |`teamType`|The property is set to current shared `teamType`.|
 |`teamSiteUrl`|The property describes `channelSiteUrl`.| 
