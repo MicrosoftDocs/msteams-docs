@@ -39,7 +39,7 @@ The following image shows how the SSO process works:
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Acquire an access token with Graph permissions](#acquire-an-access-token-with-graph-permissions).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
 
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
@@ -60,7 +60,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > [!NOTE]
 > There are some important restrictions that you must know:
 >
-> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Acquire an access token with Graph permissions](#acquire-an-access-token-with-graph-permissions).
+> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
 
@@ -170,9 +170,9 @@ After you receive the access token in the success callback, you can decode the a
 
 ## Known limitations
 
-### Acquire an access token with Graph permissions
+### Get an access token with Graph permissions
 
-Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To acquire the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token acquired from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token got from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
 
