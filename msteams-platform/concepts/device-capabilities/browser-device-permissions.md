@@ -16,9 +16,7 @@ Users can grant consent to each app and consent to device permissions. Currently
 
 The request or consent dialog is for the ancestor, in this case, [teams.microsoft.com](https://teams.microsoft.com/). For example, if an app requests microphone access and access is granted, all other apps in Teams automatically grants device permissions for microphone. The user will never see any prompt from these apps. The user isn't prompted as the permission is already granted.
 
-Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience.
-
-The following image demonstrates the device permissions flow:
+Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow:
 
 
 <img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="400"/>
