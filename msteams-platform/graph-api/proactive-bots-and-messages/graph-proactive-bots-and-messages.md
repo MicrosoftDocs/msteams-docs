@@ -188,9 +188,8 @@ Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proa
 ## Code sample
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
-|---------------|--------------|--------|-------------|--------|
+|---------------|--------------|--------|-------------|
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-
 ## See also
 
 * [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)

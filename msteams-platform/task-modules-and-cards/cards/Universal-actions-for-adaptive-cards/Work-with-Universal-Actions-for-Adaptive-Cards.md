@@ -7,30 +7,30 @@ localization_priority: Normal
 
 # Work with Universal Actions for Adaptive Cards
 
-Universal Actions for Adaptive Cards provides a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following:
+Universal Actions for Adaptive Cards provide a way to implement Adaptive Card based scenarios for both, Teams and Outlook. This document covers the following topics:
 
 * [Schema used for Universal Actions for Adaptive Cards](#schema-for-universal-actions-for-adaptive-cards)
 * [Refresh model](#refresh-model)
 * [`adaptiveCard/action` invoke activity](#adaptivecardaction-invoke-activity)
 * [Backward compatibility](#backward-compatibility)
 
-## Quick start guide to leverage Universal Actions for Adaptive Cards in Teams
+## Quick start guide to use Universal Actions for Adaptive Cards in Teams
 
 1. Replace all instances of `Action.Submit` with `Action.Execute` to update an existing scenario on Teams.
-2. Add a `refresh` clause to your Adaptive Card, if you want to leverage the automatic refresh model or if your scenario requires User Specific Views.
+2. Add a `refresh` clause to your Adaptive Card, if you want to use the automatic refresh model or if your scenario requires User Specific Views.
 
     >[!NOTE]
     > Specify the `userIds` property to identify, which users get automatic updates.
 
 3. Handle `adaptiveCard/action` invoke requests in your bot.
-4. Use the invoke request's context to respond back with cards that are specifically created for a user.
+4. Use the invoke request's context to respond back with cards that are created for a user.
 
     > [!NOTE]
     > Whenever your bot returns a new card as a result of processing an `Action.Execute`, the response must conform to the response format.
 
 ## Schema for Universal Actions for Adaptive Cards
 
-Universal Actions for Adaptive Cards is introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
+Universal Actions for Adaptive Cards are introduced in the Adaptive Cards schema version 1.4. To use Adaptive Card effectively, the `version` property of your Adaptive Card must be set to 1.4.
 
 > [!NOTE]
 > Setting the `version` property to 1.4 makes your Adaptive Card incompatible with older clients of the platforms or applications, such as Outlook and Teams, as they do not support the Universal Actions for Adaptive Cards.
@@ -61,13 +61,13 @@ For more information, see [refresh schema and properties](/adaptive-cards/author
 
 The following are the features of UserIds in refresh:
 
-* UserIds is an array of user MRI's which is part of the `refresh` property in Adaptive Cards.
+* UserIds is an array of user MRIs, which is part of the `refresh` property in Adaptive Cards.
 
 * If the `userIds` list property is specified as `userIds: []` in the refresh section of the card, the card is not automatically refreshed. Instead, a **Refresh Card** option is displayed to the user in the triple dot menu in web or desktop and in the long press context menu in mobile, that is, Android or iOS to manually refresh the card.
 
-* UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. To avoid this, the `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
+* UserIds property is added because channels in Teams can include a large number of members. If all members are viewing the channel at the same time, an unconditional automatic refresh results in many concurrent calls to the bot. The `userIds` property must always be included to identify which users must get an automatic refresh with a maximum of *60 (sixty) user MRIs*.
 
-* For more information on how you can fetch Teams conversation member's user MRIs to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
+* You can fetch Teams conversation member's user MRIs. For more information on how to add in userIds list in refresh section of Adaptive Card, see [fetch roster or user profile](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#fetch-the-roster-or-user-profile).
 
 * Sample Teams user MRI is `29:1bSnHZ7Js2STWrgk6ScEErLk1Lp2zQuD5H2qQ960rtvstKp8tKLl-3r8b6DoW0QxZimuTxk_kupZ1DBMpvIQQUAZL-PNj0EORDvRZXy8kvWk`
 
@@ -88,7 +88,7 @@ Next, you can apply backward compatibility to older clients across different pla
 
 ## Backward compatibility
 
-Universal Actions for Adaptive Cards allows you to set properties that enable backward compatibility with older versions of Outlook and Teams.
+Universal Actions for Adaptive Cards allow you to set properties that enable backward compatibility with older versions of Outlook and Teams.
 
 ### Teams
 
@@ -96,11 +96,12 @@ To ensure backward compatibility of your Adaptive Cards with older versions of T
 
 For more information, see [backward compatibility on Teams](/adaptive-cards/authoring-cards/universal-action-model#teams).
 
-## Code sample
+## Code samples
 
-|Sample name | Description | .NETCore |
-|----------------|-----------------|--------------|
-| Teams catering bot | Create a simple bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)|
+|Sample name | Description | .NETCore | Node.js |
+|----------------|-----------------|--------------|--------------|
+| Teams catering bot | Create a bot that accepts food order using Adaptive Cards. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-teams-catering/csharp)| Not yet available |
+| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
