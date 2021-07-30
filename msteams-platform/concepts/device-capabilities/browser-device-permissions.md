@@ -20,6 +20,7 @@ Device permission requests aren't intercepted from the embedded tab application.
 
 The following image demonstrates the device permissions flow:
 
+
 <img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="400"/>
 
 ## Scenario
