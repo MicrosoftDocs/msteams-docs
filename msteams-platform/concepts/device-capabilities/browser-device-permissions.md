@@ -14,7 +14,9 @@ Users can grant consent to each app and consent to device permissions. Currently
 * Microphone
 * Location access
 
-The origin of requesting iframe isn't considered when permissions are requested. The request or consent dialog is for the ancestor, in this case, [teams.microsoft.com](https://teams.microsoft.com/). For example, if an app requests microphone access and access is granted, all other apps in Teams automatically grants device permissions for microphone. The user will never see any prompt from these apps. The user isn't prompted as the permission is already granted. Unlike in the desktop client, device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. There's a need to know, which device permissions to enable before the tab has loaded and can have implications on the user experience.
+The request or consent dialog is for the ancestor, in this case, [teams.microsoft.com](https://teams.microsoft.com/). For example, if an app requests microphone access and access is granted, all other apps in Teams automatically grants device permissions for microphone. The user will never see any prompt from these apps. The user isn't prompted as the permission is already granted.
+
+Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience.
 
 The following image demonstrates the device permissions flow:
 
@@ -34,7 +36,7 @@ Sarah then checks her settings in Teams to grant OneNote access to her microphon
 
 The solution for the security of applications covers the following points:
 
-* Introduce device permissions consent experience in the browser: Each apps' permissions are managed individually instead of relying on the browser to provide the support.
+* Introduce device permissions consent experience in the browser: All apps' permissions are managed individually instead of relying on the browser to provide the support.
 * Allow users to manage their device permissions for each app in the browser: Previously device permissions for embedded iframes were handled by the browser. With the recent change to Chromium, users can manage their device permissions for each Teams tab through the **Settings** dialog box.
 
 Users can have various apps in Teams and each require device permissions. For example, in OneNote the user must grant permissions for media, such as microphone. There's a property on iframe that allows the user to use different media for that app.
@@ -42,7 +44,7 @@ Users can have various apps in Teams and each require device permissions. For ex
 **To grant access to app for device permissions**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
-1. Select the app that you want to use from the left bar. If you're using OneNote, you can select **Dictate** to record your notes. A dialog box appears stating the permissions are denied.
+1. Select the app that you want to use from the left bar. If you're using OneNote, you can select **Dictate** to record your notes. A dialog box appears to state the permissions are denied.
 1. Select the icon for your user account from the upper right corner and select **Manage account**.
 1. From the **Settings** dialog box, select **App permissions**.
 
