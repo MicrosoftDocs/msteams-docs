@@ -17,7 +17,7 @@ Shared channels in Teams allow members of an organization to collaborate with ex
 * Members of another team within the same organization
 * Members of other organizations 
 
-The external members, outside of your organization can collaborate with internal members in Teams without changing their user context. When using guest accounts, the members must sign out of Teams with their account, such as work or school and sign in again using the guest account. The members can also run a separate copy of Teams in a private browser session. The switching between internal and external identities takes time. The members can miss important communications when they sign out of any organization. 
+The external members, outside of your organizations collaborate with internal members in Teams without changing their user context. When using guest accounts, the members must sign out of Teams and sign in again using the guest account. The members also run a separate copy of Teams in a private browser session. The switching between internal and external identities takes time. The members can miss important communications when they sign out of any organization. 
 
 [Place holder for image]
 
@@ -27,7 +27,7 @@ When the content UX is loaded in a shared channel, use the data received from `g
 
 ## Apps in shared channel 
 
-App permissions in shared channels follow host team's app roster and host tenant's app policy. You can collaborate with external members,outside of your organization using shared channels. If your app shares important information, you can also customize the app permission for external members in shared channel.
+App permissions in shared channels follow host team's app roster and host tenant's app policy. You can collaborate with external members, outside of your organization using shared channels. You can also customize the app permission for external members.
 
  ## Get direct shared channel membership
 
@@ -53,7 +53,7 @@ You can get direct shared channel membership by following the steps:
 
 You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `HostTeamTenantID`as follows: 
 
-1. Get tenantID of each direct members
+1. Get tenantID of each direct member
 ```http
 GET /teams/{host-team-id}/channels/{channel-id}/members
 ```
