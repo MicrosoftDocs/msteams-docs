@@ -20,10 +20,8 @@ People Picker helps users to search and select users in Adaptive Card. You can a
 * Reassigns to single or multiple users. 
 * Prepopulates the name of selected users.
 
-The following image demonstrates selection of multiple users and the response Adaptive Card in People Picker with **Conversation Member Search**:
+[Place holder for image]
 
-![People Picker conversation member search](../../assets/images/cards/peoplepicker-conversation-member-search.png)
- 
 ## Popular scenarios 
 
 The following table provides popular scenarios for People Picker in Adaptive Cards and the corresponding actions:
@@ -200,12 +198,40 @@ People Picker supports preselection of user in the control, when creating and se
 The following list provides the information to preselect users:
 
 * For single user in the control, specify the `AAD ID` of the user as the `value`. 
-* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.   
+* For multiple users, such as `isMultiSelect` is `true`, specify a comma-separated string of `AAD ID`s.  
 
-The following image illustrates the preselection scenario:
+The following example describes preselection of a single user:
 
-![Preselection Scenario](../../assets/images/cards/peoplepicker-preselection.png)     
+```json
+{ "type": "Input.ChoiceSet", 
+"choices": [],
+ "choices.data":
+ { 
+   "type": "Data.Query", 
+ "dataset": "graph.microsoft.com/users"
+  }, 
+ "id": "people-picker",
+  "value": "<AAD ID 1>"
+   }
+```  
 
+The following example describes preselection of multiple users:
+
+```json
+{ 
+  "type": "Input.ChoiceSet",
+"choices": [], 
+ "choices.data":
+   { 
+    "type": "Data.Query",
+     "dataset": "graph.microsoft.com/users" 
+    }, 
+  "id": "people-picker",
+  "isMultiSelect": true, 
+  "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>" 
+      }
+```
+ 
 ## Static choices
 
 The static choices support scenarios where custom profiles must be inserted into the predefined datasets. `Input.ChoiceSet` supports specifying `choices` statically in the json. The static choice is used to create the choices from which the user can select.
