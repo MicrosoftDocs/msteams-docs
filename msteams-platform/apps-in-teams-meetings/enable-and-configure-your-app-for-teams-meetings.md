@@ -15,7 +15,7 @@ To enable your app for Teams meetings, update your app manifest and use the cont
 
 ### Update your app manifest
 
-The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. The scope defines to whom and context defines where your app is available.
+The meetings app capabilities are declared in your app manifest using the `configurableTabs`, `scopes`, and `context` arrays. The scope defines who can access and context defines where your app is available.
 
 > [!NOTE]
 > * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
@@ -56,10 +56,10 @@ The `context` property determines what must be shown when a user invokes an app 
 |---|---|
 | **channelTab** | A tab in the header of a team channel. |
 | **privateChatTab** | A tab in the header of a group chat between a set of users, not in the context of a team or meeting. |
-| **meetingChatTab** | A tab in the header of a group chat between a set of users in the context of a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
+| **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. You cannot use this app on mobile. |
+| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. You can't use this app on mobile. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -110,7 +110,7 @@ During a meeting, you can use the meetingSidePanel or the in-meeting dialog box 
 
 #### meetingSidePanel
 
-With the meetingSidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+The meetingSidePanel enables you to customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
 To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
@@ -123,7 +123,7 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 
 The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. To indicate that a bubble notification must be triggered, use the [`NotificationSignal`](API-references.md#notificationsignal-api) API. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
-In-meeting dialog must not use task module. Task module is not invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
+In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 
 > [!NOTE]
 > * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).

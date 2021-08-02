@@ -41,7 +41,7 @@ The `GetParticipant` API includes the following query parameters:
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID and is available in Tab SSO, Bot Invoke, and Teams Client SDK. You must get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It is available in Tab SSO, Bot Invoke, and Teams Client SDK. It is recommended to get a tenant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
 
@@ -123,11 +123,11 @@ The `GetParticipant` API includes the following response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | The app is not allowed to get participant information. This is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.|
+| **403** | The app isn't allowed to get participant information. 403 is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.|
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participant cannot be found.|
-| **500** | The meeting has either expired (more than 60 days) since the meeting ended or the participants do not have permissions based on their role.|
+| **500** | The meeting has either expired more than 60 days. The meeting ended or the participants don't have permissions based on their role.|
 
 ## NotificationSignal API
 
@@ -217,15 +217,15 @@ The `NotificationSignal` API includes the following response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. This can happen due to various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
-| **404** | The meeting chat does not exist. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
+| **404** | The meeting chat doesn't exist. |
 
 ## Meeting Details API
 
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. These are data points that do not change dynamically.
+The Meeting Details API enables your app to get static meeting metadata. The metadata are data points that don't change dynamically.
 The API is available through Bot Services.
 
 ### Prerequisite
