@@ -25,75 +25,118 @@ All app templates are provided under the [MIT License](https://github.com/Office
 * **Customizable and extensible:** While all app templates are deployed with minimal configuration, the entire code base and deployment scripts are provided, so that you can easily customize or extend them to fit your unique needs.
 * **Detailed documentation:** All app templates are accompanied by end-to-end documentation on solution architecture, deployment, and configuration steps.  
 
-## Adoption Bot 
-
-Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub).
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot)
-
-## Adoption Tool- Champion Management Platform &#9734;
-
-The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard and event types for logging, and tools to overlay digital badges to program participants.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-champion-management)
-
 ## Adoption Tool- Microsoft 365 Learning Pathways (Get Started) &#9734;
 
 The Get Started app template allows you to bring the power of Microsoft 365 learning pathways inside of Microsoft Teams. This app template allows you to grant easy access to specific training pages or other intranet assets and load the content directly within Teams. You can also change the app name or logo to match your company branding.
 
 [Get it on GitHub](https://github.com/msft-teams/tools/tree/master/M365%20Learning%20Pathways)
 
-## Appointment Manager 
+## Company Communicator
 
-Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they are quickly assigned and reassigned to staff in a team. Appointment requests are viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time.
+The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
 
-The app template integrates with Microsoft Bookings for easy appointment management. Scheduled appointments automatically appear on assigned staff members' calendars, and consumers receive customizable email notifications and reminders with embedded meeting links.
+The app provides an easy interface for designated users to create, preview, collaborate and send messages.
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager)
+It provides a foundation to build custom targeted communication capabilities such as custom telemetry on how many users acknowledged or interacted with a message.
 
-![Appointment Manager Overview](../assets/images/appointment-manager-overview.png)
-![Appointment Manager in Teams](../assets/images/appointment-manager-2.png)
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
 
-## Ask Away
+![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
-Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Question and Answer, called Q&A sessions within Teams. Using the Ask Away bot, team members can submit and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot is used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live through chat.
+## Co-worker Appreciation 
 
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-askaway)
+Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This is considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
+
+![Overall](../assets/images/coworker-appreciation-1.png)
+
+## FAQ Plus
+
+Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
+
+> [!NOTE]
+> The latest release of **FAQ Plus** supports improved Q&A resolutions by enabling a team of experts to complete the following:
+>
+> &#x2714; Add new Q&As directly to the knowledge base using message extensions.
+>
+> &#x2714; Edit and delete Q&A pairs added by a bot.
+>
+> &#x2714; Track the revision history of Q&As.
+>
+> &#x2714; Configure an answer with additional details to display as an [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+>
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-faqplusv2)
+
+![FAQ Plus gif](../assets/images/FAQPlusEndUser.gif)
+
+## Icebreaker
+
+Icebreaker is a [Microsoft Teams bot](../bots/what-are-bots.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
+
+In addition to encouraging personal connections across your entire team, the Icebreaker app can help cultivate interest-based communities within your organization. For example, you can use this app for a DevOps interest group to help ideas and best practices organically spread across your organization.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
+
+![Icebreaker app](../assets/images/icebreaker.png)
+
+## New Employee Onboarding 
+
+New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app is used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
+
+[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
 
 :::row:::
   :::column span="2":::
-    ![View of the leaderboard pop-up dialog for users to vote on questions](../assets/images/ask-away-app.png)  
-:::column-end:::
-:::row-end:::
-
-## Associate Insights
-
-Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data are shared and used collaboratively by business teams, such as through a Power BI Teams tab, for product improvement and enhancing the customer experience.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
-
-:::row:::
-  :::column span="2":::
-    ![Feedback view of app generated insights](../assets/images/associate-insights-app.png)  
+    **New employee welcome card**
+    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="2":::
-    ![Power BI view of app generated insights](../assets/images/associate-insights-app2.png)
+    **New employee checklist**
+    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
 :::column-end:::
-:::row-end:::
+:::row-end:::## New Employee Onboarding 
 
-## Attendance
+<br>
 
-The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that are pinned in a team. It is designed to record presence in settings, such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees. For more information on teams attendance, see [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-attendance).
+<details>
 
-The following image displays the attendance app demo:  
+<summary><b>App Template Code Samples</b></summary>
 
-![Attendance app demo](../assets/images/attendance-app.png)
+> [!NOTE] 
+> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. The complete source code is also available for free. You can explore, fork, and alter the source code to meet your specific requirements.    
+
+| **Name** | **Scenario** | **GitHub link** |
+| -------- | --------- | ------------------ |
+| Adoption Bot | Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
+| Adoption Tool- Champion Management Platform |  The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard and event types for logging, and tools to overlay digital badges to program participants. |[Adoption Tool- Champion Management Platform](https://github.com/OfficeDev/microsoft-teams-apps-champion-management) |
+| Appointment Manager | Appointment Manager is a Teams app template to help businesses create, manage, and conduct virtual appointments with consumers through Teams. New appointment requests from consumers are visible in Teams channels, where they are quickly assigned and reassigned to staff in a team. Appointment requests are viewed at team or personal levels through custom tabs. Every appointment is associated with a Teams online meeting, hence the staff and consumers can easily join the meeting at the scheduled time.
+
+The app template integrates with Microsoft Bookings for easy appointment management. Scheduled appointments automatically appear on assigned staff members' calendars, and consumers receive customizable email notifications and reminders with embedded meeting links.| [Appointment Manager](https://github.com/OfficeDev/microsoft-teams-apps-appointment-manager) |
+| Ask Away | Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users to conduct Question and Answer, called Q&A sessions within Teams. Using the Ask Away bot, team members can submit and up-vote questions shared by colleagues allowing Q&A hosts to easily gather top-of-mind questions within a channel or chat. The bot is used to conduct a real-time Q&A session in a Teams meeting and allows attendees to submit questions live through chat. | [Ask Away](https://github.com/OfficeDev/microsoft-teams-apps-askaway) |
+| Associate Insights |Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data are shared and used collaboratively by business teams, such as through a Power BI Teams tab, for product improvement and enhancing the customer experience. | [Associate Insights](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights) |
+| Attendance | The Attendance app is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) tab that are pinned in a team. It is designed to record presence in settings, such as learning and training environments. Users can mark or edit attendance for up to 30 days in the past and view summarized attendance reports for an entire group or individual attendees.   | [Attendance](https://github.com/OfficeDev/microsoft-teams-apps-attendance) |
+|Book-a-room | Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations.| [Book-a-room](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom) |
+
+<br>
+
+</details>
+
+
+
+
+
+
+
+
+
+
 
 ## Book-a-room
 
-Book-a-room is a [Microsoft Teams bot](../bots/what-are-bots.md) that allows users quickly to find and reserve a meeting room for 30, 60, or 90 minutes starting from the current time. The default time is 30 minutes. The Book-a-room bot scopes to personal or 1:1 conversations. For more information on Book-a-room app, see [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-bookaroom).  
+ For more information on Book-a-room app, see [Get it on GitHub]().  
 The following image displays the Book-a-room demo:
 
 ![Book-a-room demo](../assets/images/book-a-room.png)
@@ -141,17 +184,6 @@ Classroom Drop-in is a Microsoft [Power Platform](https://powerapps.microsoft.co
 
 ![Classroom drop-in request](../assets/images/classroom-drop-in-request.png)
 
-## Company Communicator
-
-The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allowing organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
-
-The app provides an easy interface for designated users to create, preview, collaborate and send messages.
-
-It provides a foundation to build custom targeted communication capabilities such as custom telemetry on how many users acknowledged or interacted with a message.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-company-communicator-app)
-
-![jCompany Communicator compose box view](../assets/images/CompanyCommunicatorCompose.png)
 
 ## Contact Group Lookup
 
@@ -170,13 +202,6 @@ The Contact Group Lookup app provides a convenient and useful approach to creati
 :::column-end:::
 :::row-end:::
 
-## Co-worker Appreciation 
-
-Using the co-worker appreciation template in Microsoft Teams, users can recognize their colleagues' achievements within the Teams’ context. When co-workers select to reward a colleague, recipients and other team members are tagged in a channel conversation and they receive a notification about the channel's award details. The awards are recorded in the Teams app, which is secure, portable, and easily shareable. This is considered as the PowerApps based version of the Open Badges app template, with a leaderboard.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-coworker-appreciation)
-
-![Overall](../assets/images/coworker-appreciation-1.png)
 
 ## CrowdSourcer
 
@@ -375,15 +400,6 @@ HR Support bot is a friendly Q&A bot that brings a support professional or exper
 
 ![HR Support](../assets/images/expert-user.png)
 
-## Icebreaker
-
-Icebreaker is a [Microsoft Teams bot](../bots/what-are-bots.md) that helps your team get closer by pairing two random team members up every week to meet. The bot makes scheduling easy by automatically suggesting free times that work for both members. Strengthen personal connections and build a tightly knit community with this app.
-
-In addition to encouraging personal connections across your entire team, the Icebreaker app can help cultivate interest-based communities within your organization. For example, you can use this app for a DevOps interest group to help ideas and best practices organically spread across your organization.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-icebreaker-app)
-
-![Icebreaker app](../assets/images/icebreaker.png)
 
 ## Incentives
 
@@ -433,24 +449,7 @@ The employees use the Issue reporting app to log issues and details required to 
 
 ![Issue reporting team view](../assets/images/issue-reporting-team-view.png)  
 
-## New Employee Onboarding 
 
-New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Employee Onboarding Solution](https://lookbook.microsoft.com/details/75e60a32-9849-4ed4-b83e-b2b08983ad19) that enables your organization to provide a consistent, high-quality onboarding experience for employees on their new-hire journey. The app is used by human resource teams and hiring managers to provide relevant information throughout the orientation and induction process and by new hires to share feedback, provide introductions, and complete onboarding tasks.
-
-[Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-newemployeeonboarding)
-
-:::row:::
-  :::column span="2":::
-    **New employee welcome card**
-    ![Image of new employee welcome card](../assets/images/new-employee-welcome-card.png)
-:::column-end:::
-:::row-end:::
-:::row:::
-:::column span="2":::
-    **New employee checklist**
-    ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
-:::column-end:::
-:::row-end:::
 
 ## Open Badges
 
