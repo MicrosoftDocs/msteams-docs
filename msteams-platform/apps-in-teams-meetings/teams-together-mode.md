@@ -9,11 +9,11 @@ ms.topic: conceptual
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-Custom Together Mode scenes in Microsoft Teams provides an immersive and engaging meeting environment that brings people together and encourages them to turn on their video. It digitally combines participants into a single virtual scene and places their video streams in pre-determined seats designed and fixed by the scene creator.
+Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment. It brings people together and encourages them to turn on their video. Custom Together Mode scenes digitally combines participants into a single virtual scene. It places their video streams in pre-determined seats designed and fixed by the scene creator.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
-A scene in custom Together Mode scenes is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have designated seats with video streams rendered in those seats. Scene only apps are recommended as the acquisition experience for such apps is more seamless.
+A scene in custom Together Mode scenes is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams rendered in those seats. Scene only apps are recommended as the acquisition experience for such apps is more lucid.
 
 The following process gives an overview to create a scene only app:
 
@@ -32,23 +32,23 @@ You must have a basic understanding of the following to use custom Together Mode
 
 ## Best practices
 
-Prior to building a scene, consider the following to have a seamless scene building experience:
+Before building a scene, consider the following to have a smooth scene building experience:
 
 * Ensure that all images are in PNG format.
-* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This is a requirement for scenes to be shown successfully.
+* Ensure that the final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
 * Ensure that the maximum scene size is 10 MB.
 * Ensure that the maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image. The individual image resolution must also be an even number.
-* Ensure that the **Transparent** checkbox is selected if the image is transparent. This checkbox is available on the right panel when an image is selected. The overlapping images need to be marked as **Transparent** to indicate that they are overlapping images in the scene.
+* Ensure that the **Transparent** checkbox is selected if the image is transparent. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as **Transparent** to indicate that they're overlapping images in the scene.
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It is available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
+Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
 
 This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
-A scene in the context of the Scene studio is an artifact that contains the following:
+A scene in the context of the Scene studio is an artifact that contains the following elements:
 
-* Seats reserved for meeting organizer and meeting presenters. The presenter does not refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
+* Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. It refers to the [meeting role](https://support.microsoft.com/en-us/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
 * Seat and image for each participant with an adjustable width and height. Only PNG format is supported for the image.
 
@@ -84,7 +84,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
     > * Alternately, you can add background images to the scene using **Add images**.
 
-1. Select the image that you have placed.
+1. Select the image that you've placed.
 
 1. From the right pane, select an alignment for the image or use the **Resize** slider to adjust the image size.
 
@@ -124,15 +124,17 @@ The seat dimensions become the canvas for rendering the participant video stream
     >[!NOTE]
     > This step requires the app package that is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-1. Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package comprises of a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes as described in the Sample scene.json section of this document.
+1. Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A **.zip** file, that is the scene package, is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. These changes are as described in the Sample scene.json section of this document.
 
     ![Export a scene](../assets/images/apps-in-meetings/build-a-scene.png)
 
-A more complex scene that leverages the Z-axis is demonstrated in the step-by-step getting started sample.
+A more complex scene that uses the Z-axis is demonstrated in the step-by-step getting started sample.
 
 ## Sample scene.json
 
-Scene.json along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system with the X-axis pointing to the right and the Y-axis pointing downwards. Custom Together Mode scenes supports zooming in on the current participants. This is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it is closer to the camera. Each participant has its own video feed, which is segmented so that only the foreground is rendered.
+Scene.json along with the images indicate the exact position of the seats. A scene consists of bitmap images, sprites, and rectangles to put participant videos in. These sprites and participant boxes are defined in a world coordinate system. The X-axis points to the right and the Y-axis points downwards.
+
+Custom Together Mode scenes support zooming in on the current participants. This feature is helpful for small meetings in a large scene. A sprite is a static bitmap image positioned in the world. The Z value of the sprite determines the position of the sprite. Rendering starts with the sprite with lowest Z value, so higher Z value means it's closer to the camera. Each participant has its own video feed, which is segmented so only the foreground is rendered.
 
 Following is the scene.json sample:
 
@@ -201,13 +203,13 @@ Following is the scene.json sample:
 
 Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. Seating order number corresponds to the order of people joining the call.
 
-The zOrder represents the order of placing images and seats along the Z-axis. In many cases, it gives a sense of depth or partition if required. For more information, see the step-by-step getting started sample. The sample leverages the zOrder.
+The zOrder represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the zOrder.
 
-Now that you have gone through the sample scene.json, you can activate the custom Together Mode scenes to engage in scenes.
+Now that you've gone through the sample scene.json, you can activate the custom Together Mode scenes to engage in scenes.
 
 ## Activate custom Together Mode scenes
 
-Get end-to-end information of how an end user engages with scenes in custom Together Mode scenes.
+Get more information of how a user engages with scenes in custom Together Mode scenes.
 
 **To select scenes and activate custom Together Mode scenes**
 
@@ -231,7 +233,7 @@ Get end-to-end information of how an end user engages with scenes in custom Toge
 
 ## Open a custom Together Mode scenes Scene Package
 
-You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality is leveraged. This tool helps unwrap a scene package to let the creator continue building the scene.
+You can share the Scene Package that is a .zip file retrieved from the Scene studio to other creators to further enhance the scene. The **Import a Scene** functionality is used. This tool helps unwrap a scene package to let the creator continue building the scene.
 
 ![Scene zip file](../assets/images/apps-in-meetings/scene-zip-file.png)
 
