@@ -40,6 +40,12 @@ The solution for the security of applications covers the following points:
 
 Users can have various apps in Teams and each require device permissions. For example, in OneNote the user must grant permissions for media, such as microphone. There's a property on iframe that allows the user to use different media for that app.
 
+User can manage device permissions in context through the device permission button or drop-down.
+
+![App permissions button](../../assets/images/tabs/apppermissions.png)
+
+![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
+
 **To grant access to app for device permissions**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
