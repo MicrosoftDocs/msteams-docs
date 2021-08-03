@@ -67,7 +67,7 @@ Also, this project requires that you have the following installed in your develo
 
     **What is your solution name?**
 
-    The solution name is your project name. You can accept the suggested name by selecting the **Enter** key.
+    The solution name is your project name. You can accept the suggested name by selecting **Enter**.
 
     **Where do you want to place the files?**
 
@@ -75,7 +75,7 @@ Also, this project requires that you have the following installed in your develo
 
     **Title of your Microsoft Teams app project?**
 
-    The title is your app package name and will be used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+    The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
 
     **Your (company) name? (max 32 characters)**
 
@@ -91,7 +91,7 @@ Also, this project requires that you have the following installed in your develo
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
-    This field isn't required and must be only used if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+    This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
 
     **What do you want to add to your project?**
 
