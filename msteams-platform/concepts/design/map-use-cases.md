@@ -20,7 +20,7 @@ While choosing the app scope, consider the following:
 * An app can exist across scopes.
 * App capabilities, such as messaging extensions, follow users across scopes.
 * Users are often hesitant to add apps to Teams or channels.
-* Guest users can access content exposed in Teams or channels.
+* Guests can access content exposed in Teams or channels.
 
 You can choose between personal scope and team or channel scope for your app depending on the following:
 
@@ -98,4 +98,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 ## See also
 
-[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+[Build your first Microsoft Teams app](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)

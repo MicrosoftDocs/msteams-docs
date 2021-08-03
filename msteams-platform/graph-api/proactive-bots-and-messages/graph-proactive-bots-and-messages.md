@@ -69,7 +69,7 @@ You can retrieve the `teamsAppId` in the following ways:
     **HTTP GET** request:
 
     ```http
-        GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
+    GET https://graph.microsoft.com/v1.0/appCatalogs/teamsApps?$filter=externalId eq '{IdFromManifest}'
     ```
 
     The request must return a `teamsApp` object `id`, which is the app's catalog generated app ID. This is different from the ID that you provided in your Teams app manifest:
