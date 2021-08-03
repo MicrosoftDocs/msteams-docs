@@ -99,17 +99,16 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 :::column-end:::
 :::row-end:::
 
-## <br>
+<br>
 
 <details>
 
-<summary><b>App Template Code Samples</b></summary>
+<summary><H2>App Template Code Samples<H2></summary>
 
 App Template Code Samples are a collection of sample apps for Microsoft Teams platform capabilities.
 
 > [!NOTE] 
 > Currently, Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
-
 |Name|Scenario|GitHub link|    
 |---------|---------||-------|
 |Adoption Bot |Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
@@ -130,7 +129,7 @@ App Template Code Samples are a collection of sample apps for Microsoft Teams pl
 |E-Prescriptions| E-Prescriptions is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) based app that enhances telemedicine and virtual care by automating the process of issuing e-prescriptions to patients. Medical professionals can quickly review appointments, generate e-prescriptions, and send emails with e-prescription attachments to patients directly within the Teams platform.|[E-Prescriptions](https://github.com/OfficeDev/microsoft-teams-apps-eprescription)|
 | Employee Training | Employee training is a Microsoft Teams app that enables organizers to easily publish, track, and promote learning and training events for your organization.  With the app, event planners can send reminders and notifications to event registrants and employees can indicate interest in upcoming events, stay updated on current events, and share event details with colleagues through the Teams messaging extension.|[Employee Training](https://github.com/OfficeDev/microsoft-teams-apps-employeetraining)|
 | Expert Finder| Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifies specific organization members based on their skills, interests, and education attributes. Members find experts within an organization that match a keyword search of Azure Active Directory user profiles.| [Expert Finder](https://github.com/OfficeDev/microsoft-teams-apps-expertfinder)|
-| Get Support App| The Get Support app is used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes the following features: <br/>Requesting assistance on different categories from a Power App.<br/>Notifications sent to requestors informing them of who is assigned.<br/> Notifications sent to assigned supervisors informing them of who needs assistance. <br/>Analyzing escalations and patterns in SharePoint and Power BI.|[Get Support App](https://github.com/OfficeDev/microsoft-teams-app-get-support/) |hub.com/OfficeDev/microsoft-teams-app-get-support/) |
+| Get Support App| The Get Support app is used by organizations that are using Microsoft Teams, to enable any set of users to request assistance from supervisors. This app includes the following features: <br/>Requesting assistance on different categories from a Power App.<br/>Notifications sent to requestors informing them of who is assigned.<br/> Notifications sent to assigned supervisors informing them of who needs assistance. <br/>Analyzing escalations and patterns in SharePoint and Power BI.|[Get Support App](https://github.com/OfficeDev microsoft-teams-app-get-support/) |
 | Goal Tracker|The Goal Tracker app is a comprehensive solution for your organization to support establishing goals, observing progress, and acknowledging success within Microsoft Teams. The app enables users to set, track, and update objectives on a professional, personal, and team level. Team members also receive timely reminders and status updates to remain focused and stay on track. |[Goal Tracker](https://github.com/OfficeDev/microsoft-teams-app-goaltracker) |
 | Great Ideas|The Great Ideas app supports and empowers innovation and creativity within your organization. The app enables your employees to share ideas with colleagues and leadership, discover new submissions, spotlight contributions for peer consideration, and cast their vote for the best proposals within Microsoft Teams. |[Great Ideas](https://github.com/OfficeDev/microsoft-teams-apps-greatideas) |
 |Group Activities | Group Activities is a Microsoft Teams app that makes it easy for team owners to quickly create activity groups and manage collaboration workflows within the context of Microsoft Teams. Activity authors are enabled to create activities, randomly distribute team members in groups, and optionally have the bot send reminders until activities are complete.|[Group Activities](https://github.com/OfficeDev/microsoft-teams-apps-groupactivities) |
@@ -166,7 +165,7 @@ App Template Code Samples are a collection of sample apps for Microsoft Teams pl
 
 </details>
 
-Go to [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u) for providing your feedback.
+For more information on providing feedback, see [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
 ## See also
 
