@@ -108,9 +108,8 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 <summary><b>App Template Code Samples</b></summary>
 
 > [!NOTE] 
-> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.        
-
-|**Name**|**Scenario**|**GitHub link**|
+> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.  
+|**Name**|**Scenario**|**GitHub link**|    
 | -------- | --------- | ------------------ |
 | Adoption Bot | Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
 | Adoption Tool- Champion Management Platform |  The Champion Management Platform (CMP) app template helps you manage, scale, and inspire your teamwork champions to achieve more. This app template is built on the SharePoint Framework and loaded into a tab within a team. Groups can leverage this tool to help manage program membership, provide a leaderboard and event types for logging, and tools to overlay digital badges to program participants. |[Adoption Tool- Champion Management Platform](https://github.com/OfficeDev/microsoft-teams-apps-champion-management) |
