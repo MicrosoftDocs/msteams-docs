@@ -111,7 +111,6 @@ App Template Code Samples is a sample app for Microsoft Teams platform capabilit
 <details>
 
 <summary><b>More code samples</b></summary>
-
 |**Name**|**Scenario**|**GitHub link**|    
 | -------- | --------- | ------------------ |
 | Adoption Bot | Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
