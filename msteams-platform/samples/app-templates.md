@@ -101,14 +101,17 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 
 ## App Template Code Samples
 
+App Template Code Samples is a sample app for Microsoft Teams platform capabilities.
+
+> [!NOTE] 
+> Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.
+
 <br>
 
 <details>
 
-<summary><b>App Template Code Samples</b></summary>
+<summary><b>More code samples</b></summary>
 
-> [!NOTE] 
-> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.  
 |**Name**|**Scenario**|**GitHub link**|    
 | -------- | --------- | ------------------ |
 | Adoption Bot | Adoption Bot is a user care chat bot built with Power Virtual Agent for Teams PVA. It is considered as the PVA version of FAQ Plus. Adoption Bot answers 100+ common questions about Microsoft 365 and Teams. You can edit the existing topics, add your own topics, and ingest existing FAQs. If users need additional help, Adoption Bot can connect them to experts or even be extended to open service tickets with premium flow connectors. This bot is self-installed or built into a custom app, such as the [Adoption Hub](https://github.com/akporzondek/adoption_hub). | [Adoption Bot](https://github.com/OfficeDev/microsoft-teams-apps-adopt-bot) |
