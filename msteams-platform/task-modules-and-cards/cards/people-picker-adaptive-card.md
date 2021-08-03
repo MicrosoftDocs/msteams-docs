@@ -33,10 +33,6 @@ The following table provides popular scenarios for People Picker in Adaptive Car
 |Project management| To assign tickets or bugs to particular users.|
 |User lookup| To search for users across the organization.|
 
-## Understand how People Picker works in mobile and desktop
-
-You can understand how People Picker works in mobile and desktop:
-
 # [Mobile](#tab/mobile)
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
