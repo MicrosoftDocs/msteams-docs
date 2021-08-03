@@ -59,9 +59,9 @@ The following table provides the Bot Framework SDK methods for the APIs:
 
 |API|Bot Framework SDK method|
 |---|---|
-|**GetParticipant**| GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default); |
-|**NotificationSignal** | activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID"); |
-|**Meeting Details** | TeamsMeetingInfo (string id = default); |
+|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
+|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
+|**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
 
 ### GetUserContext API
 
