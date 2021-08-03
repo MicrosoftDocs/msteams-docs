@@ -108,7 +108,7 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 <summary><b>App Template Code Samples</b></summary>
 
 > [!NOTE] 
-> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.    
+> App Template Code Samples is a sample app for Microsoft Teams platform capabilities. Currently, Microsoft is not actively managing the source code. The complete source code is available for free. You can explore, fork, and modify the source code to meet your specific requirements.        
 
 | **Name** | **Scenario** | **GitHub link** |
 | -------- | --------- | ------------------ |
@@ -165,7 +165,6 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 <br>
 
 </details>
-
 
 Go to [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u) page for your feedback.
 
