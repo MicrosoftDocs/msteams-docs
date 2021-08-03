@@ -16,7 +16,7 @@ To expand the app capabilities across the meeting lifecycle, Teams enables you t
 
 Before you work with apps for Teams meetings, you must have an understanding of the following prerequisites:
 
-* Know how to develop Teams apps. For more information, see [Teams app development](../overview.md).
+* Know how to develop Teams apps. For more information on how to develop Teams app, see [Teams app development](../overview.md).
 
 * Update the Teams app manifest to indicate that the app is available for meetings. For more information, see [app manifest](enable-and-configure-your-app-for-teams-meetings.md#update-your-app-manifest).
 
@@ -24,9 +24,9 @@ Before you work with apps for Teams meetings, you must have an understanding of 
 
 * Adhere to general Teams tab design guidelines for pre and post-meeting scenarios. For experiences during meetings, refer to the in-meeting tab and in-meeting dialog design guidelines. For more information, see [Teams tab design guidelines](../tabs/design/tabs.md), [in-meeting tab design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-tab), and [in-meeting dialog design guidelines](../apps-in-teams-meetings/design/designing-apps-in-meetings.md#use-an-in-meeting-dialog).
 
-* Support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and do pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.
+* Support the `groupchat` scope to enable your app in pre-meeting and post-meeting chats. With the pre-meeting app experience, you can find and add meeting apps and do the pre-meeting tasks. With post-meeting app experience, you can view the results of the meeting, such as poll survey results or feedback.
 
-* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. These parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
+* Meeting API URL parameters must have `meetingId`, `userId`, and `tenantId`. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * The `GetParticipant` API must have a bot registration and ID to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
 
@@ -40,7 +40,11 @@ After you've gone through the prerequisites, you can use the meeting apps API re
 
 ## Meeting apps API references
 
-The new meeting extensibilities provide APIs to transform the meeting experience. Build apps or integrate existing apps within meeting lifecycle. Use the APIs to make your app aware of the meeting. Select the APIs you want to use to enhance the meeting experience.
+The following new meeting extensibilities provide APIs to transform the meeting experience:
+
+* Build apps or integrate existing apps within meeting lifecycle.
+* Use the APIs to make your app aware of the meeting.
+* Select the APIs you want to use to enhance the meeting experience.
 
 The following table provides a list of these APIs:
 
@@ -161,7 +165,7 @@ The `GetParticipant` API returns the following response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | The app isn't allowed to get participant information. 403 is the most common error response and is triggered if the app isn't installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.|
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participant cannot be found.|
@@ -246,7 +250,7 @@ The `NotificationSignal` API includes the following response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables the app and the app is blocked during live site migration. In this case, the payload contains a detailed error message. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
 ### Meeting Details API
@@ -254,7 +258,7 @@ The `NotificationSignal` API includes the following response codes:
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata provide data points that don't change dynamically.
+The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
 The API is available through Bot Services.
 
 #### Prerequisite
