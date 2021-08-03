@@ -577,5 +577,4 @@ You can also leverage existing skills from [Bot Framework Solutions repository](
 ## See also
 
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-* [Book-a-room](app-templates.md#book-a-room)
 * [Microsoft Teams bot](../bots/what-are-bots.md)

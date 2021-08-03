@@ -97,8 +97,7 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
     **New employee checklist**
     ![Image of new employee checklist](../assets/images/new-employee-checklist.png)  
 :::column-end:::
-:::row-end:::## New Employee Onboarding 
-
+:::row-end:::
 <br>
 
 <details>
