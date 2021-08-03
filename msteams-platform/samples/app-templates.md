@@ -103,7 +103,7 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 
 <details>
 
-<summary><H2>App Template Code Samples<H2></summary>
+<summary><h2>App Template Code Samples</h2></summary>
 
 App Template Code Samples are a collection of sample apps for Microsoft Teams platform capabilities.
 
@@ -166,7 +166,7 @@ App Template Code Samples are a collection of sample apps for Microsoft Teams pl
 
 </details>
 
-For more information on providing feedback, see [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
+To provide feedback, see [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
 ## See also
 
