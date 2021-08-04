@@ -23,7 +23,7 @@ The external members, outside of your organizations collaborate with internal me
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `HostTeamID` and `hostTenantID`, which are used to get channel membership. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID ` and `hostTenantID`, which are used to get channel membership. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
 
 ## Apps in shared channel 
 
@@ -33,33 +33,42 @@ App permissions in shared channels follow host team's app roster and host tenant
 
 You can get direct shared channel membership by following the steps:
 
-1. Get direct members (Team A) with [GET channel API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
+1. Get direct members (Team A) with [GET channel members API](/graph/api/channel-list-members?view=graph-rest-beta&tabs=http&preserve-view=true) API. 
 
     ```http
-    GET /teams/{host-team-id}/channels/{channel-id}/members
+    GET /teams/{host-team-group-id}/channels/{channel-id}/members
     ```
 2. Get each shared team with GET `sharedWithTeam` API.
 
     ```http
-    GET /teams/{host-team-id}/channels/{channel-id}/sharedWithTeams
+    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
     ```
-3. Use GET Team member API on each `sharedWithTeam` to get full membership.
+3. Use GET members of each shared team with GET `sharedWithTeam` API.
 
     ```http
-   GET /teams/{host-team-id}/channels/{channel-id}/sharedWithTeams/{teamA}members
+   GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamA}members
     ```
 
 ## Classify list of members in shared channel as in-tenant or out-tenant
 
-You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `HostTeamTenantID`as follows: 
+You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `hostTeamTenantID` as follows: 
 
-1. Get tenantID of each direct member
+1. Get `tenantID` of each direct member.
 ```http
-GET /teams/{host-team-id}/channels/{channel-id}/members
+GET /teams/{host-team-group-id}/channels/{channel-id}/members
 ```
-1. Get tenantID of each shared team with GET sharedWithTeam API.
+1. Get `tenantID` of each shared team with GET `sharedWithTeam` API.
 ```http
-GET /teams/{host-team-id}/channels/{channel-id}/sharedWithTeams
+GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams
 ```
-1.	Compare the `tenantID`s of direct members and teams to `HostTenantID`
+1.	Compare the `tenantID`s of direct members and teams to `hostTenantID`
 
+## AAD native identity
+
+The apps must function cross-tenant in installation and usage. The following table lists the channel types and their corresponding group IDs: 
+     
+|Channel type| groupId | hostTeamGroupId |
+|----------|---------|-----------------|
+|Regular | Team AAD group ID | Team AAD group ID |
+|Private |	Empty	| Host Team AAD group ID |
+|Shared	| Empty | Host Team AAD group ID |

@@ -127,7 +127,7 @@ If your page makes use of any of these values, you must check the `channelType` 
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.`
-For shared channels, the `groupId` value is `null`. The `hostTeamID` and `hostTenantID` properties are newly added.
+For shared channels, the `groupId` value is `null`. The `hostTeamGroupID` and `hostTenantID` properties are newly added.
 Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
 
 | Property | Description |
@@ -135,7 +135,7 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`channelId`| The property is set to the SC channel thread ID.|
 |`groupId`|The property is `null` for shared Channels.|
 |`hostTenantId`| The property is newly added and it describes the host's tenant ID. |
-|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
+|`hostTeamGroupId`|- The property is newly added and it describes the host team’s AAD group ID. | 
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. | 
 |`teamName`|The property is set to current shared `teamName`. |
 |`teamType`|The property is set to current shared `teamType`.|
@@ -143,9 +143,10 @@ Use the following `getContext` properties to populate the `channelType` field wi
 |`teamSitePath`| The property describes `channelSitePath`.| 
 |`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
 |`tenantSKU`| The property describes the host team’s `tenantSKU`.|
+|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
-|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`.  |
+|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`. |
 
 For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
 
