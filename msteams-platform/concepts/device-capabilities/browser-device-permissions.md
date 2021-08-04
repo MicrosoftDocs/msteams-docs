@@ -8,18 +8,12 @@ ms.topic: how-to
 
 # Device permissions for the browser
 
-Users can grant consent to each app and consent to device permissions. Currently, when permissions are granted for one app, it's also granted for all other apps. An update made in Chromium browser deprecated HTML5 permissions from cross-origin iframes. Chromium provides a way to allow iframes to request these permissions:
-
-* Camera
-* Microphone
-* Location access
-
-The request or consent dialog box is for the ancestor in the browser. For example, if an app grants microphone access, other apps automatically grants device permissions for microphone. The user will never see any prompt from this app as the permission is already granted.
+Users can grant consent to each app and consent to device permissions. Currently, when permissions are granted for one app, it's also granted for all other apps. For example, if an app grants microphone access, other apps automatically grants device permissions for microphone. The user will never see any prompt from this app as the permission is already granted.
 
 Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow:
 
 
-<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="400"/>
+<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="600"/>
 
 ## Scenario
 
@@ -60,6 +54,8 @@ User can manage device permissions in context through the device permission butt
 
     ![OneNote microphone access granted](../../assets/images/tabs/onenotepermissiongranted.png)
 
+1. In your browser, select **Refresh** to reload the page for new iframe permissions to take effect. A dialog box appears asking you to reload the page.
+1. Select **Refresh now**.
 1. Similarly, you can turn on other permissions, such as location or MIDI device as required to use the app.
 
 ## See also
