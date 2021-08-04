@@ -13,11 +13,11 @@ Users can grant consent to each app and consent to device permissions. Currently
 Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow for denying access:
 
 
-<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="600"/>
+<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow access denied" width="600"/>
 
 The following image demonstrates the device permissions flow for granting access:
 
-<img src="~/assets/images/tabs/grantaccessflowchart.png" alt="Device permissions flow" width="600"/>
+<img src="~/assets/images/tabs/grantaccessflowchart.png" alt="Device permissions flow access granted" width="600"/>
 
 ## Scenario
 
