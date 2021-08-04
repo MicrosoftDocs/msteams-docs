@@ -10,10 +10,14 @@ ms.topic: how-to
 
 Users can grant consent to each app and consent to device permissions. Currently, when permissions are granted for one app, it's also granted for all other apps. For example, if an app grants microphone access, other apps automatically grants device permissions for microphone. The user will never see any prompt from this app as the permission is already granted.
 
-Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow:
+Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow for denying access:
 
 
 <img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow" width="800"/>
+
+The following image demonstrates the device permissions flow for granting access:
+
+<img src="~/assets/images/tabs/grantaccessflowchart.png" alt="Device permissions flow" width="800"/>
 
 ## Scenario
 
@@ -54,8 +58,8 @@ User can manage device permissions in context through the device permission butt
 
     ![OneNote microphone access granted](../../assets/images/tabs/onenotepermissiongranted.png)
 
-1. In your browser, select **Refresh** to reload the page for new iframe permissions to take effect. A dialog box appears asking you to reload the page.
-1. Select **Refresh now**.
+1. In your browser, select **Refresh**. A dialog box appears asking you to reload the page.
+1. Select **Refresh now** to reload the page for new iframe permissions to take effect.
 1. Similarly, you can turn on other permissions, such as location or MIDI device as required to use the app.
 
 ## See also
