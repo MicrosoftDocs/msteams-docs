@@ -139,7 +139,7 @@ When you press the **F5** key, the Teams Toolkit:
 To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-sideloading).
 
 > [!IMPORTANT]
-> Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+> Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
 
 > [!TIP]
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
