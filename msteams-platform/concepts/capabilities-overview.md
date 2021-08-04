@@ -37,6 +37,7 @@ For example, you can collect user input in a form built as a tab in the app. You
 ## See also
 
 [Build apps for Teams](../overview.md)
+[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## Next step
 
