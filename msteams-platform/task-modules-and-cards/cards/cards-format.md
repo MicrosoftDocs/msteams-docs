@@ -4,7 +4,7 @@ description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
 localization_priority: Normal
 ms.topic: reference
-ms.date: 03/29/2018
+ms.date: 06/25/2021
 ---
 
 # Format cards in Microsoft Teams
