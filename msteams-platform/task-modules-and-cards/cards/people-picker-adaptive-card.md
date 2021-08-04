@@ -20,8 +20,6 @@ People Picker helps users to search and select users in Adaptive Card. You can a
 * Reassigns to single or multiple users. 
 * Prepopulates the name of selected users.
 
-[Place holder for image]
-
 ## Popular scenarios 
 
 The following table provides popular scenarios for People Picker in Adaptive Cards and the corresponding actions:
@@ -67,7 +65,7 @@ User A (Robert) receives a ticket for a task in a channel and realizes incorrect
 1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
 1. Remove the incorrect user's name. 
 1. Select intended users as per the image scenario, user B (Mona), and user C (Robin) for the task. 
-1.  Select **Assign**. After assigning, the information is sent to the bot. 
+1. Select **Assign**. After assigning, the information is sent to the bot. 
    The bot updates Adaptive Card and notifies the intended users. 
  
 The following image shows the reassignment scenario:    
