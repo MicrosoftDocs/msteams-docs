@@ -36,14 +36,14 @@ For example, you can collect user input in a form built as a tab in the app. You
 
 ## Government Community Cloud (GCC)
 
-Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DoD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
+Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors are required to meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
 
-The following table includes Teams features and availability for GCC, GCC High, and DOD:
+The following table includes Teams features and availability for GCC, GCC-High, and DOD:
 
-| Features   | GCC | GCC High | DOD |
+| Features   | GCC | GCC-High | DOD |
 |-------------|---------|
-| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC High. | ✔️ App is enabled if it has DoD. |
-| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC High | ✔️ Microsoft apps compliant with DOD |
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
+| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
 | 3p or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
 | Bots | ✔️ | ❌ | ❌ |
 | Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
@@ -52,7 +52,7 @@ The following table includes Teams features and availability for GCC, GCC High, 
 | Custom messaging extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-The following list helps to identify availability of GCC, GCC High, and DOD for the features:
+The following list helps to identify availability of GCC, GCC-High, and DOD for the features:
 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
