@@ -10,7 +10,11 @@ keywords: teams apps meetings user participant role api
 
 # Meeting apps API references
 
-The new meeting extensibilities provide you with APIs that transform the meeting experience. Build apps or integrate existing apps within the meeting lifecycle. Use the APIs to make your app aware of the meeting. Choose which APIs you want to use to enhance the meeting experience.
+The following new meeting extensibilities provide APIs to transform the meeting experience:
+
+* Build apps or integrate existing apps within meeting lifecycle.
+* Use the APIs to make your app aware of the meeting.
+* Select the APIs you want to use to enhance the meeting experience.
 
 The following table provides a list of these APIs:
 
@@ -18,8 +22,16 @@ The following table provides a list of these APIs:
 |---|---|----|---|
 |**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
 |**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to send a signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+
+The following table provides the Bot Framework SDK methods for the APIs:
+
+|API|Bot Framework SDK method|
+|---|---|
+|**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
+|**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
+|**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
 
 ## GetUserContext API
 
@@ -40,7 +52,7 @@ The `GetParticipant` API includes the following query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
-|**participantId**| String | Yes | The participant ID is the user ID and is available in Tab SSO, Bot Invoke, and Teams Client SDK. You must get a participant ID from the Tab SSO. |
+|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
 |**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
 
 ### Example
@@ -52,7 +64,7 @@ The `GetParticipant` API includes the following examples:
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-  TeamsMeetingParticipant participant = GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
   TeamsChannelAccount member = participant.User;
   MeetingParticipantInfo meetingInfo = participant.Meeting;
   ConversationAccount conversation = participant.Conversation;
@@ -119,15 +131,14 @@ The JSON response body for `GetParticipant` API is:
 
 ### Response codes
 
-The `GetParticipant` API includes the following response codes:
+The `GetParticipant` API returns the following response codes:
 
 |Response code|Description|
 |---|---|
-| **403** | The app isn't allowed to get participant information. 403 is the most common error response and is triggered if the app is not installed in the meeting. For example, if the app is disabled by tenant admin or blocked during live site migration.|
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participant cannot be found.|
-| **500** | The meeting has either expired more than 60 days. The meeting ended or the participants don't have permissions based on their role.|
 
 ## NotificationSignal API
 
@@ -162,15 +173,7 @@ The `NotificationSignal` API includes the following examples:
 
 ```csharp
 Activity activity = MessageFactory.Text("This is a meeting signal test");
-
-activity.ChannelData = new TeamsChannelData
-  {
-    Notification = new NotificationInfo()
-                    {
-                        AlertInMeeting = true,
-                        ExternalResourceUrl = "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID"
-                    }
-  };
+activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID");
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
@@ -217,7 +220,7 @@ The `NotificationSignal` API includes the following response codes:
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
-| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons such as the tenant admin disables the app, the app is blocked during live site migration, and so on. In this case, the payload contains a detailed error message. |
+| **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
 
 ## Meeting Details API
@@ -225,7 +228,7 @@ The `NotificationSignal` API includes the following response codes:
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The Meeting Details API enables your app to get static meeting metadata. The metadata are data points that don't change dynamically.
+The Meeting Details API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
 The API is available through Bot Services.
 
 ### Prerequisite
@@ -241,7 +244,7 @@ To use the Meeting Details API, you must obtain RSC permissions. Use the followi
     ]
 }
  ```
-
+ 
 ### Query parameter
 
 The Meeting Details API includes the following query parameter:
@@ -257,7 +260,7 @@ The Meeting Details API includes the following examples:
 # [C#](#tab/dotnet)
 
 ```csharp
-var connectorClient = parameters.TurnContext.TurnState.Get<IConnectorClient>();
+var connectorClient = turnContext.TurnState.Get<IConnectorClient>();
 var creds = connectorClient.Credentials as AppCredentials;
 var bearerToken = await creds.GetTokenAsync().ConfigureAwait(false);
 var request = new HttpRequestMessage(HttpMethod.Get, new Uri(new Uri(connectorClient.BaseUri.OriginalString), $"v1/meetings/{meetingId}"));
@@ -315,7 +318,7 @@ The JSON response body for Meeting Details API is as follows:
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
 
-Actual start and end time of a meeting are different from the scheduled start and end time. The meeting details API provides the scheduled start and end time while the event provides the actual start and end time.
+Actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
 
@@ -375,7 +378,7 @@ The following code provides an example of meeting start event payload:
     "value": { 
         "MeetingType": "Scheduled", 
         "Title": "Meeting Start/End Event", 
-        "Id":"meeting id", 
+        "Id": "meeting id", 
         "JoinUrl": "url" 
         "StartTime": "2021-04-29T16:17:17.4388966Z" 
     }, 
@@ -439,8 +442,13 @@ The following code provides an example of meeting end event payload:
 
 Your bot receives the event through the `OnEventActivityAsync` handler.
 
-To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting resides in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
-
+To deserialize the json payload, a model object is introduced to get the metadata of a meeting. The metadata of a meeting is in the `value` property in the event payload. The `MeetingStartEndEventvalue` model object is created, whose member variables correspond to the keys under the `value` property in the event payload.
+     
+> [!NOTE]      
+> * Get meeting ID from `turnContext.ChannelData`.    
+> * Do not use conversation ID as meeting ID.     
+> * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
+      
 The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start and end event:
 
 ```csharp
