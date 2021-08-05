@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, and so on. You can take advantage by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user consents to use your app, they don't have to consent again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, and so on. You can take advantage by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -31,11 +31,11 @@ The following image shows how the SSO process works:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an authentication token for the tab application.
-2. If the current user has used your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
-3. Teams requests the tab application token from the Azure Active Directory (AAD) endpoint for the current user.
-4. AAD sends the tab application token to the Teams application.
-5. Teams sends the tab application token to the tab as part of the result object returned by the `getAuthToken()` call.
+1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an access token for the tab application.
+2. If the current user is using your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
+3. Teams requests the tab access token from the Azure Active Directory (AAD) endpoint for the current user.
+4. AAD sends the tab access token to the Teams application.
+5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
@@ -100,12 +100,13 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 1. Navigate to **Authentication**.
 
-    If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
+    > [!IMPORTANT]
+    > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
 
     To enter a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
-    * Enter the **redirect URI** for your app. The redirect URI is the page where a successful implicit grant flow redirects the user. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`.
+    * Enter the **redirect URI** for your app. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
     > [!NOTE]
     > Implicit grant is not required for tab SSO.
@@ -140,7 +141,7 @@ Use the following code to add new properties to your Teams manifest:
 >* The resource for an AAD app is usually the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). This value is also used to ensure your request is coming from the same domain. Ensure that the `contentURL` for your tab uses the same domains as your resource property.
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
-### 3. Get an authentication token from your client-side code
+### 3. Get an access token from your client-side code
 
 Use the following authentication API:
 
