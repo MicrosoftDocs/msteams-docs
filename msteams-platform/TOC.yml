@@ -300,7 +300,7 @@
       href: task-modules-and-cards/cards/cards-format.md
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-    - name: Dynamic search in Adaptive Cards 
+    - name: Type-ahead search in Adaptive Cards 
       href: task-modules-and-cards/cards/dynamic-search.md  
     - name: Universal Actions for Adaptive Cards
       items:

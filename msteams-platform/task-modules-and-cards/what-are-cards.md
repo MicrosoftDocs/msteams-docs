@@ -47,10 +47,9 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 * Connector cards: Used as part of Office 365 Connectors.
 * Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
-### Dynamic search in Adaptive Cards  
+### Type-ahead search in Adaptive Cards  
 
-Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a huge dataset. The mobile and desktop clients support type ahead dynamic
-search experience. 
+Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a large dataset. It also allows users to do a type-ahead static search. The mobile and desktop clients support type ahead dynamic search experience. 
 
 ### Adaptive Cards and Incoming Webhooks
 
