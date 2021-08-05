@@ -29,11 +29,11 @@ If the number of choices are more, then the static search becomes challenging. I
 * You can specify text and images as part of the list of dynamically fetched items only. 
 * You can't give rich card experiences with dynamic search. 
  
-## Understand how dynamic search works
+## Understand how type-ahead search works
 
-The following flow diagram explains the dynamic search process: 
+The following flow diagram explains the type-ahead search process: 
 
-![Dynamic type-ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
+![Type-ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
 ## Desktop and mobile experience
 
