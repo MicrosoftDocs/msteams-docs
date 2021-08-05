@@ -11,6 +11,9 @@ ms.author: lajanuar
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
+> [!IMPORTANT]
+> Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+
 The following image shows personal tabs:
 
 ![Personal tabs](../assets/images/tabs/personaltab.png)
@@ -71,6 +74,10 @@ Whether you choose to expose your tab within the channel or group, or personal s
 For channel or group tabs, you can also create an additional configuration page. This page allows you to configure content page URL, typically by using URL query string parameters to load the appropriate content for that context. This is because your channel or group tab can be added to multiple teams or group chats. On each subsequent install, your users can configure the tab, allowing you to tailor the experience as required. When users add or configure a tab, a URL is associated with the tab that is presented in the Teams user interface (UI). Configuring a tab simply adds additional parameters to that URL. For example, when you add the Azure Boards tab, the configuration page allows you to choose, which board the tab loads. The configuration page URL is specified by the  `configurationUrl` property in the `configurableTabs` array in your app manifest.
 
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
+
+### Tools you can use to build tabs
+* [Teams Toolkit for Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit for Visual Stuido](../toolkit/visual-studio-overview.md)
 
 ## See also
 
