@@ -99,15 +99,12 @@ New Employee Onboarding is an integrated Microsoft Teams and [SharePoint New Emp
 
 ## App Template Code Samples
 
-App Template Code Samples are a collection of sample apps for Microsoft Teams platform capabilities.
+App template code samples are a collection of sample apps for Microsoft Teams platform capabilities.
 
 > [!NOTE] 
 > Currently, Microsoft is not actively managing the source code. The complete source code is open source and you can explore, fork, and modify the source code to meet your specific requirements.
-<br>
 
-<details>
-
-<summary><b>Samples</b></summary>
+The following table describes App template code samples:  
 
 |Name|Scenario|GitHub link|    
 |---------|---------||-------|
@@ -161,9 +158,6 @@ App Template Code Samples are a collection of sample apps for Microsoft Teams pl
 |Water Cooler |Water Cooler is a custom Teams app that enables corporate teams to create, invite, and join casual conversations among teammates, such as those that take place by the Water Cooler or break room. Use this template for multiple scenarios, such as new non project related announcements, topics of interest, current events, or conversations about hobbies. The app provides an easy interface for anyone to find an existing conversation or start a new one. It is a foundation for building custom targeted communication capabilities, promoting interaction amongst coworkers who may otherwise not get a chance to socialize during breaks. Key features are: <br/> **Water Cooler Home Page**: You can browse existing rooms where team members are interacting in existing conversations with certain people or topics of interest. Active conversations on the **Home Page** show a room name, short description, call duration, and room image. <br/>**Join room**: Use the **Join room** feature to join an ongoing conversation immediately. Select **Join** from active conversations to join the room.<br/>**Room creation**: Use the **Room creation** feature to create a Teams call or chat for all attendees to interact. Create rooms easily by specifying the room name, short description, up to five colleagues as an initial group and selecting from the provided set of room images. <br/>**Find room**: Use the **Find room** feature to search keyword which matches with the topic or short descriptions of ongoing conversations.<br/>**Attendee invitation**: Use the **Attendee invitation** feature to invite additional users after room creation. This is similar to Teams call.<br/>**App badge**: The **Water Cooler** icon on the left menu shows a badge with the number of active conversations visible from Teams while using any app. |[Water Cooler](https://github.com/microsoft/csapps-msteams-watercooler) |
 | Workplace Awards| Workplace Awards is a Teams app template that provides a positive framework to foster recognition and encourage the culture of employee appreciation in the modern workplace. The app enables you to setup and manage an employee rewards and recognition, called R&R program where employees can easily nominate and endorse colleagues and your R&R leader can view submitted nominations, grant awards, and announce recipients.|[Workplace Awards](https://github.com/OfficeDev/microsoft-teams-apps-workplaceawards) |
 
-<br>
-
-</details>
 
 To provide feedback, see [App template feedback](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR2_7qFm_lcZAr4eqEhnLsZ9UMVZGT1lCT0FXUDdZMUM0RkpBS1BESTAwWC4u).
 
