@@ -10,18 +10,20 @@ keywords: teams apps meetings user participant role api
 
 # Meeting apps API references
 
+The meeting extensibilities provide APIs to transform the meeting experience.
+
 The following new meeting extensibilities provide APIs to transform the meeting experience:
 
 * Build apps or integrate existing apps within meeting lifecycle.
 * Use the APIs to make your app aware of the meeting.
 * Select the APIs you want to use to enhance the meeting experience.
 
-The following table provides a list of these APIs:
+The following table provides a list of APIs:
 
 |API|Description|Request|Source|
 |---|---|----|---|
 |**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
-|**GetParticipant**| This API allows a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
+|**GetParticipant**| This API enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
@@ -316,9 +318,9 @@ The JSON response body for Meeting Details API is as follows:
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
+The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
 
-Actual start and end time of a meeting are different from scheduled start and end time. The meeting details API provides the scheduled start and end time. The event provides the actual start and end time.
+Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
 
 ### Prerequisite
 
