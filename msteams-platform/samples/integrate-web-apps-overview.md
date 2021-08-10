@@ -68,9 +68,9 @@ You can get a rich integration experience between Microsoft Teams and SharePoint
 
 You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
 
-## Integrate device capabilities
+## Integrate People Picker
 
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
+You can integrate the Teams native [people picker control](~/concepts/device-capabilities/people-picker-capability.md) that allows users to search and select people in the web app experience.
 
 ## See also
 
