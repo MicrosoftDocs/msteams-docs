@@ -9,17 +9,21 @@ ms.topic: conceptual
 > [!NOTE]
 > This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
-Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment. It brings people together and encourages them to turn on their video. Custom Together Mode scenes digitally combines participants into a single virtual scene. It places their video streams in pre-determined seats designed and fixed by the scene creator.
+Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
+* Bring people together and encourage them to turn on their video. 
+* Combine participants digitally into a single virtual scene. 
+* Place the participants' video streams in pre-determined seats designed and fixed by the scene creator.
 
-A scene in custom Together Mode scenes is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams rendered in those seats. Scene only apps are recommended as the acquisition experience for such apps is more lucid.
+> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]s
+
+A scene in custom Together Mode scenes is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams rendered in those seats. Scene only apps are recommended as the acquisition experience for such apps is more clear.
 
 The following process gives an overview to create a scene only app:
 
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
-A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list of scenes to users.
+A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
 ## Prerequisites
 
@@ -28,7 +32,7 @@ You must have a basic understanding of the following to use custom Together Mode
 * Definition of scene and seats in a scene.
 * Have a Microsoft Developer account and be familiar with the Microsoft Teams [Developer Portal](../concepts/build-and-test/teams-developer-portal.md) and App Studio.
 * [Concept of app sideloading](../concepts/deploy-and-publish/apps-upload.md).
-* Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and to select all filters as part of App Setup and Meeting policies respectively.
+* Ensure that the Administrator has granted permission to [**Upload a custom app**](../concepts/deploy-and-publish/apps-upload.md) and select all filters as part of App Setup and Meeting policies respectively.
 
 ## Best practices
 
@@ -42,9 +46,7 @@ Before building a scene, consider the following to have a smooth scene building 
 
 ## Build a scene using the Scene studio
 
-Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes).
-
-This document is referring to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
+Microsoft has a Scene studio that allows you to build scenes. It's available on [Scenes Editor - Teams Developer Portal](https://dev.teams.microsoft.com/scenes). This document refers to Scene studio in the Microsoft Teams Developer Portal. The interface and functionalities are all the same in App Studio Scene Designer.
 
 A scene in the context of the Scene studio is an artifact that contains the following elements:
 
@@ -94,7 +96,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. In the upper-right corner, select **Participants** under **Layers**.
 
-1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the participant images around the scene and place them in the required position and resize them using the resize arrow.
+1. Select the number of participants for the scene from the **Number of participants** box, and select **Add**. After the scene is shipped, the avatar placements are replaced with actual participant's video streams. You can drag the images of the participants around the scene and place them in the required position and resize them using the resize arrow.
 
 1. Select any participant image, and select the **Assign Spot** check box to assign the spot to the participant.
 
@@ -106,7 +108,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
     >[!NOTE]
     > * Selecting **View in Teams** automatically creates a Microsoft Teams app that can be viewed in the **Apps** page in the Teams Developer Portal.
-    > * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can access the automatically created app package by navigating to **Apps** from the menu.
+    > * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can go to  **Apps** from the menu and access the automatically created app package.
     > * To delete a scene you created, select **Delete scene** on the top bar.
 
 1. In the dialog box that appears, select **Add**.
@@ -201,7 +203,7 @@ Following is the scene.json sample:
 }
 ```
 
-Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. Seating order number corresponds to the order of people joining the call.
+Each scene has a unique ID and name. The scene JSON also contains information on all the assets used for the scene. Each asset contains a filename, width, height, and position on the X and Y-axis. Similarly, each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is generated automatically and is altered as per preference. The seating order number corresponds to the order of people joining the call.
 
 The zOrder represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. See the step-by-step getting started sample. The sample uses the zOrder.
 
