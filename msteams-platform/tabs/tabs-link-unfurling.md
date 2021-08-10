@@ -14,7 +14,7 @@ ms.author: surbhigupta
 Stage View is a new user interface (UI) component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
  
 > [!NOTE]
-> Currently, Teams mobile clients do no support tabs link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
+> Currently, Teams mobile clients do not support tabs link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
 
 ## Stage View
 
