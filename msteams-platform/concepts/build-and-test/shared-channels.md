@@ -23,7 +23,7 @@ The external members, outside of your organizations collaborate with internal me
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID ` and `hostTenantID`, which are used to get channel membership. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. `getContext` call publishes two new properties, `hostTeamGroupID ` and `hostTenantID`, which are used to retrieve channel membership from the Microsoft Graph API. "Host Team" refers to the Team that created the shared channel. For more information, see [Get context in shared channels](~/tabs/how-to/access-teams-context.md#get-context-in-shared-channels).  
 
 ## Apps and permissions in shared channels
 
