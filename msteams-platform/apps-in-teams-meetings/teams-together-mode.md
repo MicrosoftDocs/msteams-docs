@@ -15,7 +15,7 @@ Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging
 * Combine participants digitally into a single virtual scene. 
 * Place the participants' video streams in pre-determined seats designed and fixed by the scene creator.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]s
+> [!VIDEO https://www.youtube-nocookie.com/embed/MGsNmYKgeTA]
 
 A scene in custom Together Mode scenes is an artifact created by the scene developer using the Microsoft Scene studio. In a conceived scene setting, participants have seats with video streams rendered in those seats. Scene only apps are recommended as the acquisition experience for such apps is more clear.
 
