@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Type-ahead search in Adaptive Cards  
 
-Type-ahead search in Adaptive Cards allows you to search and select data from a huge data set. In this case, a searchable select menu loads data dynamically as the user searches. Type-ahead search in Adaptive Cards enhances the search experience and allows you to perform the following searches:
+Type-ahead search in Adaptive Cards allows you to search and select data from huge data set. In this case, a searchable select menu loads data dynamically as the user searches. Type-ahead search in Adaptive Cards enhances the search experience and allows you to perform the following searches:
 
 * Static search: Search and select within the specified values from the Adaptive Card payload.
 * Dynamic search: Search and select within a huge data set loaded dynamically from the remote backend.
@@ -18,15 +18,15 @@ Static search becomes challenging with more choices. In such cases, the dynamic 
 
 ## Advantages
 
-* The user can enter the input that fetches the list of choices from a remote backend dynamically.
-* The user can view, select, and clear a single item or multiple items from the input choice set drop-down menu.
-* The users must authenticate if they need to sign in before taking an action on the Adaptive Card.
+* You can enter the input that fetches the list of choices from a remote backend dynamically.
+* You can view, select, and clear a single item or multiple items from the input choice set drop-down menu.
+* You can experience a protected access as authentication is needed to take action on the Adaptive Card.
 * You can add images and text as part of the different input choices in dynamically fetched items.
 
 ## Limitations
 
 * The scope of type-ahead search is limited to `Input.ChoiceSet` component of Adaptive Cards only.
-* You can specify text and images as part of the list of dynamically fetched items only. 
+* You can only specify text and images as part of the list of dynamically fetched items. 
 * You can't give rich card experiences with dynamic search. 
  
 ## Understand how type-ahead search works
@@ -93,4 +93,4 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-You can implement type-ahead search in Adaptive Cards to handle search scenarios efficiently.
+You can implement type-ahead search in Adaptive Cards to search and select data efficiently.
