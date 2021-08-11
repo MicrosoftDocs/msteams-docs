@@ -116,9 +116,7 @@ items:
     ngrok http -host-header=rewrite 3978
     ```
 
-    Create new Bot Channel Registration resource in Azure
-
-    Create Bot Channels registration resource in Azure
+    **To create Bot Channels registration resource in Azure**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource** under **Azure services**.
