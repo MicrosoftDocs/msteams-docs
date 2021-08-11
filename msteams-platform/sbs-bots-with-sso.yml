@@ -26,30 +26,29 @@ items:
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution.
     * [M365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to a Teams account with the appropriate permissions to install an app.
 
-- title: Setup for bot SSO
+- title: Create and configure AAD app
   durationInMinutes: 5
   content: |
     This section shows how to setup AAD and Azure Bot Services, which are the steps to enable Bot SSO.
 
-    Create and configure AAD app
-    Create AAD app for SSO
+    **To create AAD app for SSO**
 
     1. Go to [Azure App Registration](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
         ![Azure app registration](~/assets/images/bots/appregistration.png)
     
-    1. Select **New Registration** in the upper left corner.
+    1. Select **New registration** in the upper left corner.
     1. Enter **Name** and select **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
 
         ![Registration details](~/assets/images/bots/registerapp.png)
 
     1. Enter **Redirect URI** as **https://token.botframework.com/.auth/web/redirect** and select **Register**.
 
-        ![AAD app](~/assets/images/bots/aadapp.png)   
+        ![AAD app](~/assets/images/bots/aadapp.png)
 
         Save the Application ID for future reference.
 
-    Create Client secret
+    **To create Client secret**
 
     1. Select **Certificates & secrets** from the left pane.
     1. Select **New client secret** under the **Client secrets** section.
@@ -60,7 +59,7 @@ items:
 
         Save the Value and Secret ID for future reference.
 
-    Expose API endpoint
+    **To expose API endpoint**
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI, use the Application ID you saved previously, and select **Save**.
@@ -80,22 +79,20 @@ items:
 
     1. Select **Add scope**. The Scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
-    Authorize client applications
-
-    1. Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:
+    To authorize client applications add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:
         - 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile/desktop application)
         - 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)
 
         ![Add client application to app](~/assets/images/bots/addclientapplication.png)
 
-    Add any necessary API permissions for downstream calls
+    **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
     1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
 
         ![API user permissions](~/assets/images/bots/APIpermissions.png)
 
-    Enable implicit grant
+    **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
     1. Select the **Access tokens** and **ID tokens** checkboxes.
@@ -104,13 +101,15 @@ items:
 
     1. Select **Save** to save the changes.
 
-    Changes in manifest
+    **To make changes in manifest**
 
     1. Select **Manifest** from the left pane.
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).
     
-    Setup bot in Azure Bot Service
 
+- title: Setup bot in Azure Bot Service
+  durationInMinutes: 5
+  content: |
     Run the following command in ngrok:
 
     ```bash
@@ -157,8 +156,10 @@ items:
 
         You can see the bot listed as a contact that you can send messages to and receives messages from in Microsoft Teams.
 
-    Setup Bot Service Connection
-
+- title: Setup Bot Service connection
+  durationInMinutes: 5
+  content: |
+    
     1. In the Azure portal, go back to **Bot Channels Registration**.
     1. Select **Settings** from the left pane and select **Add Setting** under the **OAuth Connection Settings** section.
     1. Enter the following details in **Connection Setting**:
@@ -167,10 +168,9 @@ items:
         - Enter **Client id** and **Client secret** saved previously.
         - For the **Token Exchange URL**, use the **Application ID URL** obtained previously.
         - Enter **common** as the **Tenant ID**.
-        - Add all the scopes configured when specifying permissions previously to downstream APIs.
+        - Add all the scopes configured while specifying permissions previously to downstream APIs.
 
     1. Select **Save**.
-
 
 - title: Configure bot sample
   durationInMinutes: 5
@@ -180,8 +180,7 @@ items:
 - title: Run your bot sample
   durationInMinutes: 5
   content: |
-    Follow these steps to run your bot sample.
-
+    
     1. Clone the repository by using the following command:
 
     ```bash
@@ -209,7 +208,7 @@ items:
     1. Enter the ID used from the previous step in **AAD App ID**, add "api://botid-" to it, and enter the URI in **Single-Sign-On**.
     1. Select **Test and distribute** under **Finish** and select **Install**.
 
-    By manually updating the manifest.json file
+    By manually updating the **manifest.json** file
 
     1. Edit the **manifest.json** file in the **appPackage/** folder and replace everywhere you see the place holder string {TODO: MicrosoftAppId} with your MicrosoftAppId used previously. The ConnectionName is the name of OAuth Connection you configured previously.
     1. Zip the contents of the **appPackage/** folder to create a **manifest.zip**.
