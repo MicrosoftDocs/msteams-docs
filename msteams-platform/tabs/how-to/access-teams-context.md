@@ -126,27 +126,30 @@ If your page makes use of any of these values, you must check the `channelType` 
 
 ## Get context in shared channels
 
-When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.`
-For shared channels, the `groupId` value is `null`. The `hostTeamGroupID` and `hostTenantID` properties are newly added.
-Use the following `getContext` properties to populate the `channelType` field with `sharedChannel`:
+When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
+For shared channels, the `groupId` value is `null`, since the host team's groupId does not accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. The term "host Team" refers to the Team that created the shared channel. The term "current Team" refers to Team that the current user is accessing the shared channel from. 
+
+For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
+
+Use the following `getContext` properties in shared channels:
 
 | Property | Description |
 |----------|--------------|
 |`channelId`| The property is set to the SC channel thread ID.|
+|`channelType`| The property is set to `sharedChannel` for shared channels.|
 |`groupId`|The property is `null` for shared Channels.|
-|`hostTenantId`| The property is newly added and it describes the host's tenant ID. |
-|`hostTeamGroupId`|- The property is newly added and it describes the host team’s AAD group ID. | 
+|`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
+|`hostTeamGroupId`|- The property is newly added and describes the host team’s AAD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. | 
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. | 
-|`teamName`|The property is set to current shared `teamName`. |
-|`teamType`|The property is set to current shared `teamType`.|
-|`teamSiteUrl`|The property describes `channelSiteUrl`.| 
-|`teamSitePath`| The property describes `channelSitePath`.| 
-|`teamSiteDomain`| The property describes  `channelSiteDomain`.| 
+|`teamName`|The property is set to current shared team's `teamName`. |
+|`teamType`|The property is set to current shared team's `teamType`.|
+|`teamSiteUrl`|The property describes the shared channel's `channelSiteUrl`.| 
+|`teamSitePath`| The property describes the shared channel's `channelSitePath`.| 
+|`teamSiteDomain`| The property describes the shared channel's `channelSiteDomain`.| 
 |`tenantSKU`| The property describes the host team’s `tenantSKU`.|
-|`tid`|  The property describes the current user’s tenant ID, which matches the `homeTid` in the token.|
+|`tid`|  The property describes the current user’s tenant ID.|
 |`userObjectId`|  The property describes current user’s ID.|
 |`userPrincipalName`| The property describes the current user’s UPN.|
-|`userTeamRole`| The property describes user’s role in host team, such as admin, user, guest, and `sharedChannelMember`. |
 
 For more information on shared channels, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
 
