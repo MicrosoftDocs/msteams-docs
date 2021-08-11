@@ -157,7 +157,6 @@ items:
 - title: Setup Bot Service connection
   durationInMinutes: 5
   content: |
-    
     1. In the Azure portal, go back to **Bot Channels Registration**.
     1. Select **Settings** from the left pane and select **Add Setting** under the **OAuth Connection Settings** section.
     1. Enter the following details in **Connection Setting**:
@@ -178,7 +177,6 @@ items:
 - title: Run your bot sample
   durationInMinutes: 5
   content: |
-    
     1. Clone the repository by using the following command:
 
     ```bash
