@@ -112,12 +112,14 @@ The following code provides an example of context variable:
 
 When your content page is loaded in a private channel, the data you receive from the `getContext` call is obfuscated to protect the privacy of the channel. The following fields are changed when your content page is in a private channel:
 
-* `groupId`: Undefined for private channels
-* `teamId`: Set to the threadId of the private channel
-* `teamName`: Set to the name of the private channel
-* `teamSiteUrl`: Set to the URL of a distinct, unique SharePoint site for the private channel
-* `teamSitePath`: Set to the path of a distinct, unique SharePoint site for the private channel
-* `teamSiteDomain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
+| Property | Description |
+|----------|--------------|
+|`groupId`| The property is undefined for private channels.|
+|`teamId` | The property is set to the threadId of the private channel.|
+|`teamName`| The property is set to the name of the private channel.|
+|`teamSiteUrl`|The property is set to the URL of a distinct, unique SharePoint site for the private channel.|
+| `teamSitePath`| The property is set to the path of a distinct, unique SharePoint site for the private channel.|
+|`teamSiteDomain`| The property is set to the domain of a distinct, unique SharePoint site domain for the private channel.|
 
 If your page makes use of any of these values, you must check the `channelType` field to determine if your page is loaded in a private channel and respond appropriately.
 
@@ -139,7 +141,7 @@ Use the following `getContext` properties in shared channels:
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
 |`groupId`|The property is `null` for shared Channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
-|`hostTeamGroupId`|- The property is newly added and describes the host team’s AAD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. | 
+|`hostTeamGroupId`| The property is newly added and describes the host team’s AAD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. | 
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. | 
 |`teamName`|The property is set to current shared team's `teamName`. |
 |`teamType`|The property is set to current shared team's `teamType`.|
