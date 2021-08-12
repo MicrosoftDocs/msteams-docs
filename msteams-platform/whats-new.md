@@ -22,7 +22,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|08/12/2021|Build tabs with Adaptive Cards|[Build tabs](tabs/how-to/build-adaptive-card-tabs.md)|
+|08/12/2021|Build tabs with Adaptive Cards|[Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| Tabs will no longer have margins surrounding their experiences.  | [Removing tab margins](resources/removing-tab-margins.md) |
 |07/08/2021|Meeting app extensibility is available on mobile. Mobile clients support apps during meeting. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrate People Picker capability.|[Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md)|  
