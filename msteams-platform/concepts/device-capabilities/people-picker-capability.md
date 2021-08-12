@@ -14,7 +14,7 @@ People Picker is a control to search and select people. This is a native capabil
 
 You can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), which provides `selectPeople` API to integrate the People Picker within your web app. 
 
-## Advantages of integrating People Picker 
+## Advantages of integrating the native People Picker 
 
 * People Picker control works in all of Teams surfaces, such as task module, a chat, channel, meeting tab, and personal app.
 * This control allows you to search for and select users within a chat, channel, or the entire organization.
