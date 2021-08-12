@@ -119,7 +119,7 @@ items:
     ngrok http -host-header=rewrite 3978
     ```
 
-    **To create Bot Channels registration resource in Azure**
+    **To create Azure Bot resource**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource** under **Azure services**.
@@ -141,22 +141,21 @@ items:
         ![Create resource Azure bot](~/assets/images/bots/createaresourcezurebot.png)
 
     1. If the validation passes, select **Create**.
+
+        It takes a few moments for your bot service to be provisioned.
+
     1. Select **Go to resource group**. The bot and the related Azure Key Vault resources are listed in the resource group you selected.
     1. Select **Download from GitHub** to download the SDK and build your bot with the Bot Framework SDK.
 
         ![Build Bot Framework SDK](~/assets/images/bots/buildfromgithub.png)
 
-    1. Clone the repository.
+    1. Clone the **botframework-sdk** repository.
     1. In the Azure portal, select **Configuration** under **Settings** for the Azure bot that you created.
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages** and select **Apply**.
-    1. In **Microsoft App ID and password**, select **Create New**
-    1. Enter the **AppId** and **Client secret** you saved previously.
-    1. Select **Create**.
-        
-        It takes a few moments for your bot service to be provisioned.
+    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**, and select **Apply**.
+    1. Go to **Home > Bot Services** to find your bot. If necessary, refresh the page to see your bot listed.
 
-    1. After you see a notification indicating the validation process is complete, go to **Home > Bot Services** to find your bot.
-    1. If necessary, refresh the page to see your bot listed.
+        ![Bot Services](~/assets/images/bots/botservices.png)
+
     1. To add the Microsoft Teams channel, open the bot in the [Azure portal](https://portal.azure.com/), select **Channels** in the left pane, and then select **Teams**.
     1. Select **Save**.
     1. Go to the **Channels** page and select **Get bot embed code**.
