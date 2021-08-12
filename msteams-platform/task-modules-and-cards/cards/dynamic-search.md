@@ -12,12 +12,12 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Type-ahead search in Adaptive Cards enhances your search experience. You can search and select data from data set. You can use either static or dynamic search, the details are as follows:
+Type-ahead search in Adaptive Cards enhances your search experience. You can search and select data from data sets. You can use either static or dynamic search, the details are as follows:
 
 * Static search: Search and select within the specified values from the Adaptive Card payload.
 * Dynamic search: Search and select within data set loaded dynamically from the remote backend.
 
-The payload size in static search increaseswith more number of choices. To overcome such challenge, the dynamic search is useful to search and select choices from a dynamically loaded database. 
+The payload size in static search increases with number of choices. To overcome such challenge, the dynamic search is useful to search and select choices from a dynamically loaded database. 
 
 ## Advantages
 
@@ -27,7 +27,7 @@ The payload size in static search increaseswith more number of choices. To overc
 
 ## Limitations
 
-* You can use `Input.ChoiceSet` component of Adaptive Cards only.
+* You can only use `Input.ChoiceSet` component of Adaptive Cards.
 * You can only specify text and images as part of the list of dynamically fetched items. 
 * You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
  
@@ -49,14 +49,15 @@ Android and iOS mobile clients support type-ahead search in Adaptive Cards.
  
 ### Search with a product catalog scenario example:
 
-User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. User A needs to enter the products in the form based on the customer's request. 
+User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. Type-ahead search in Adaptive Card is used to search and select customers' choices.
 
-**To send the request in dynamic search**
+**To use type-ahead search in Adaptive Cards**
 
-1. User A opens the XYZ bot.
-1. User A sends a command to the bot for a **New customer request**.
-1. Bot responds with an Adaptive Card that has an `Input.ChoiceSet` component.
-1. User A enters the fields of the form based on the customer's choice. `Input.ChoiceSet` component contains the following fields: 
+1. User A opens the store bot.
+1. User A sends a command to the bot for a **New customer request**. The bot responds with the Adaptive Card that has `Input.ChoiceSet` component.
+1. User A uses type-ahead search to search and select the information based on the customer's choice. 
+
+The `Input.ChoiceSet` component contains the following fields: 
 
 |Field name|Type |Examples of values|
 |----------|-------|-----------------|
@@ -73,11 +74,11 @@ The following image illustrates mobile experience of dynamic search:
 
 ## Implement type-ahead search
 
-`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a type-ahead search control to `Input.ChoiceSet` component to implement type-ahead search, which is useful to create a form. The input control includes the following selections:       
-* Dropdown, such as an expanded selection.
-* Radio button, such as a single selection.
-* Check boxes, such as multiple selections.     
-You can search and select the required data from the menu. You can use the form to enter the customer's choices and send `invoke` request to the bot.
+`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a type-ahead search control to `Input.ChoiceSet` component to implement type-ahead search. You can search and select the required information with the following selections:       
+
+* Dropdown, such as expanded selection.
+* Radio button, such as single selection.
+* Check boxes, such as multiple selections. 
 
 ### Update schema
 
@@ -85,7 +86,7 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 
 | Property	| Type | Required | Description |
 |-----------|------|----------|-------------|
-| style | Compact <br/> Expanded <br/> Filtered | No | Adds **filtered** style to the list of supported validations for static type-ahead.|
+| style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static type-ahead.|
 | choices.data | Data.Query | No | Enables dynamic type-ahead as the user types, by fetching a remote set of choices from a backend. |
 
 ### Data.Query definition
