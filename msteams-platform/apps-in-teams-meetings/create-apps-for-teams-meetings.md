@@ -10,6 +10,7 @@ keywords: teams apps meetings user participant role api
 
 # Prerequisites and API references for apps in Teams meetings
 
+Testing purpose.
 To expand the app capabilities across the meeting lifecycle, Teams enables you to work with apps for Teams meetings. Go through the prerequisites and use the meeting apps API references to enhance the meeting experience.
 
 ## Prerequisites
