@@ -12,7 +12,6 @@ Users can grant consent to each app and consent to device permissions. Previousl
 
 Device permission requests cannot be intercepted from iframe. You can only allow or deny permissions before the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. If the user needs to change the permissions, they need to reload the iframe. The following image demonstrates the device permissions flow for granting or denying access:
 
-
 <img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow access" width="600"/>
 
 ## Scenario
