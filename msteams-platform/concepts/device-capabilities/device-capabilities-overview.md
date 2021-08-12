@@ -12,6 +12,8 @@ ms.topic: overview
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
 
+Device permissions are different in the browser, see [browser device permissions](browser-device-permissions.md).
+
 ## Native device capabilities
 
 A mobile or desktop device has built-in devices, such as a camera and microphone, called capabilities. You can access the following device capabilities on mobile or desktop through dedicated APIs available in [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true):
@@ -38,6 +40,3 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Share location using [location picker](location-capability.md).
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
-
-Device permissions are different in the browser, see [browser device permissions](browser-device-permissions.md).
-

@@ -8,16 +8,12 @@ ms.topic: how-to
 
 # Device permissions for the browser
 
-Users can grant consent to each app and consent to device permissions. Currently, when permissions are granted for one app, it's also granted for all other apps. For example, if an app grants microphone access, other apps automatically grants device permissions for microphone. The user will never see any prompt from this app as the permission is already granted.
+Users can grant consent to each app and consent to device permissions. Previously browser level permissions were handled as a top level permission for Teams and not per app basis. Earlier the browser handled permissions but now Teams needs to handle permissions on per app basis. At the browser level there are two levels of permissions, one is the Teams overall permission for the browser and the other Teams controls individual permissions for each app.
 
-Device permission requests aren't intercepted from the embedded tab application. You can only allow or deny permissions at the time the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. The following image demonstrates the device permissions flow for denying access:
+Device permission requests cannot be intercepted from iframe. You can only allow or deny permissions before the iframe is loaded. The user must know which device permissions to enable before the tab has loaded to enhance their experience. If the user needs to change the permissions, they need to reload the iframe. The following image demonstrates the device permissions flow for granting or denying access:
 
 
-<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow access denied" width="600"/>
-
-The following image demonstrates the device permissions flow for granting access:
-
-<img src="~/assets/images/tabs/grantaccessflowchart.png" alt="Device permissions flow access granted" width="600"/>
+<img src="~/assets/images/tabs/devicepermissionsflowchart.png" alt="Device permissions flow access" width="600"/>
 
 ## Scenario
 
@@ -27,7 +23,7 @@ A few months later, Sarah needs to record an important meeting. Sarah decides to
 
 ![Permissions not available](../../assets/images/tabs/permissionsnotavailable.png)
 
-Sarah then checks her settings in Teams to grant OneNote access to her microphone.
+Sarah then checks her app permissions or settings in Teams to grant OneNote access to her microphone.
 
 ## Solution
 
@@ -38,16 +34,51 @@ The solution for the security of applications covers the following points:
 
 Users can have various apps in Teams and each require device permissions. For example, in OneNote the user must grant permissions for media, such as microphone. There's a property on iframe that allows the user to use different media for that app.
 
-User can manage device permissions in context through the device permission button or drop-down. The following images demonstrate the same:
+User can manage device permissions in context through the **App permissions** button, app drop-down, or **Settings**.
 
-![App permissions button](../../assets/images/tabs/apppermissions.png)
-
-![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
-
-**To grant access to app for device permissions**
+**To grant access to app for device permissions using the App permission button**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
-1. Select the app that you want to use from the left bar. If you're using OneNote, you can select **Dictate** to record your notes. A dialog box appears to state the permissions are denied.
+1. Select the app, for example, OneNote that you want to use from the left bar.
+
+    ![App permissions button](../../assets/images/tabs/apppermissions.png)
+
+1. Select **App permissions** from the upper right corner.
+
+    ![App permissions dialog](../../assets/images/tabs/onenoteapppermissions.png)
+
+1. Turn on **Media (Camera, microphone, speakers)** and close the dialog box.
+
+    ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
+
+1. Select **Refresh now** to reload the page for new iframe permissions to take effect.
+1. If you're using OneNote, you can select **Dictate** to record your notes as the permissions to microphone are granted.
+
+**To grant access to app for device permissions using the drop-down for a team**
+
+1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
+1. Select a team from Teams where you you want to use an app.
+1. Add the app like OneNote if it isn't already added.
+1. Select the drop-down for **My Notebook** in this case.
+
+    ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
+
+1. Select **App permissions**.
+
+    ![App permissions dialog](../../assets/images/tabs/onenoteapppermissions.png)
+
+1. Turn on **Media (Camera, microphone, speakers)** and close the dialog box.
+
+    ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
+
+1. Select **Refresh now** to reload the page.
+1. If you're using OneNote, you can select **Dictate** to record your notes as the permissions to microphone are granted.
+
+**Optionally to grant access to app for device permissions using Settings**
+
+1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
+1. Select the app, for example, OneNote that you want to use from the left bar.
+1. If you're using OneNote, you can select **Dictate** to record your notes. A dialog box appears to state the permissions are denied.
 1. Select the icon for your user account from the upper right corner and select **Manage account**.
 1. From the **Settings** dialog box, select **App permissions**.
 
