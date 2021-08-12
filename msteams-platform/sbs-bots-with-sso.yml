@@ -137,10 +137,18 @@ items:
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
 
     1. Select **Review + create**.
+
+        ![Create resource Azure bot](~/assets/images/bots/createaresourcezurebot.png)
+
     1. If the validation passes, select **Create**.
     1. Select **Go to resource group**. The bot and the related Azure Key Vault resources are listed in the resource group you selected.
-    1. Select **Get the SDK from Github** to build your bot with the Bot Framework SDK.
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages:**.
+    1. Select **Download from GitHub** to download the SDK and build your bot with the Bot Framework SDK.
+
+        ![Build Bot Framework SDK](~/assets/images/bots/buildfromgithub.png)
+
+    1. Clone the repository.
+    1. In the Azure portal, select **Configuration** under **Settings** for the Azure bot that you created.
+    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages** and select **Apply**.
     1. In **Microsoft App ID and password**, select **Create New**
     1. Enter the **AppId** and **Client secret** you saved previously.
     1. Select **Create**.
