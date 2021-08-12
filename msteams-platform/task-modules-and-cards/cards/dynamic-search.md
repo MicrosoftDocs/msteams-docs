@@ -12,12 +12,12 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Type-ahead search in Adaptive Cards allows you to search and select data from huge data set. In this case, a searchable select menu loads data dynamically as the user searches. Type-ahead search in Adaptive Cards enhances the search experience and allows you to perform the following searches:
+Type-ahead search in Adaptive Cards enhances your search experience. You can search and select data from data set. You can use either static or dynamic search, the details are as follows:
 
 * Static search: Search and select within the specified values from the Adaptive Card payload.
-* Dynamic search: Search and select within a huge data set loaded dynamically from the remote backend.
+* Dynamic search: Search and select within data set loaded dynamically from the remote backend.
 
-Static search becomes challenging with more choices. In such cases, the dynamic search is useful to search and select choices from a dynamically loaded database. 
+The payload size in static search increaseswith more number of choices. To overcome such challenge, the dynamic search is useful to search and select choices from a dynamically loaded database. 
 
 ## Advantages
 
@@ -29,11 +29,11 @@ Static search becomes challenging with more choices. In such cases, the dynamic 
 
 * You can use `Input.ChoiceSet` component of Adaptive Cards only.
 * You can only specify text and images as part of the list of dynamically fetched items. 
-* You can't get rich card experiences with dynamic search, as in the case of query based messaging extensions. 
+* You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
  
 ## Understand how type-ahead search works
 
-You can enter text in type-ahead search in Adaptive Card that supports dynamic search. This initiates the type-ahead search process. The following image demonstrates the process: 
+You can enter text in type-ahead search in Adaptive Card that supports dynamic search. The type-ahead search process starts. The following image demonstrates the process: 
 
 ![Type-ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
@@ -49,7 +49,7 @@ Android and iOS mobile clients support type-ahead search in Adaptive Cards.
  
 ### Search with a product catalog scenario example:
 
-User A is a store employee who works at an online or offline platform of a company to buy glasses. The company uses a bot that is used to take new requests from customers. User A needs to enter the products in the form based on the customer's request. 
+User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. User A needs to enter the products in the form based on the customer's request. 
 
 **To send the request in dynamic search**
 
