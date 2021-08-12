@@ -9,29 +9,31 @@ ms.author: surbhigupta
 
 # Type-ahead search in Adaptive Cards  
 
+> [!NOTE]
+> Currently, this feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+
 Type-ahead search in Adaptive Cards allows you to search and select data from huge data set. In this case, a searchable select menu loads data dynamically as the user searches. Type-ahead search in Adaptive Cards enhances the search experience and allows you to perform the following searches:
 
 * Static search: Search and select within the specified values from the Adaptive Card payload.
 * Dynamic search: Search and select within a huge data set loaded dynamically from the remote backend.
 
-Static search becomes challenging with more choices. In such cases, the dynamic search is useful to search and select choices from a dynamically loaded database. In Adaptive Cards, `Input.ChoiceSet` is one of the important components which is useful to create a form. You can use the form to enter the customer's choices and send them to the bot. 
+Static search becomes challenging with more choices. In such cases, the dynamic search is useful to search and select choices from a dynamically loaded database. 
 
 ## Advantages
 
-* You can enter the input that fetches the list of choices from a remote backend dynamically.
-* You can view, select, and clear a single item or multiple items from the input choice set drop-down menu.
-* You can experience a protected access as authentication is needed to take action on the Adaptive Card.
+* You can get the list of choices from a remote backend dynamically.
+* You can view, select, and remove a single item or multiple items from the input choice set drop-down menu.
 * You can add images and text as part of the different input choices in dynamically fetched items.
 
 ## Limitations
 
-* The scope of type-ahead search is limited to `Input.ChoiceSet` component of Adaptive Cards only.
+* You can use `Input.ChoiceSet` component of Adaptive Cards only.
 * You can only specify text and images as part of the list of dynamically fetched items. 
-* You can't give rich card experiences with dynamic search. 
+* You can't get rich card experiences with dynamic search, as in the case of query based messaging extensions. 
  
 ## Understand how type-ahead search works
 
-The following flow diagram explains the type-ahead search process: 
+You can enter text in type-ahead search in Adaptive Card that supports dynamic search. This initiates the type-ahead search process. The following image demonstrates the process: 
 
 ![Type-ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
@@ -47,7 +49,10 @@ Android and iOS mobile clients support type-ahead search in Adaptive Cards.
  
 ### Search with a product catalog scenario example:
 
-User A is a store employee who works at an online or offline platform for buying glasses. User A's company uses a bot that is used to take new requests from customers. User A needs to enter the products in the form based on the customer's request. User A uses `Input.choiceSet` component in the **new customer order** Adaptive Card to enter the customer's request. The order goes to the headquarters and is shipped to store or to the customer’s address.      
+User A is a store employee who works at an online or offline platform of a company to buy glasses. The company uses a bot that is used to take new requests from customers. User A needs to enter the products in the form based on the customer's request. 
+
+**To send the request in dynamic search**
+
 1. User A opens the XYZ bot.
 1. User A sends a command to the bot for a **New customer request**.
 1. Bot responds with an Adaptive Card that has an `Input.ChoiceSet` component.
