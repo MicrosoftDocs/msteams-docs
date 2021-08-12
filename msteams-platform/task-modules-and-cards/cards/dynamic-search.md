@@ -10,7 +10,7 @@ ms.author: surbhigupta
 # Type-ahead search in Adaptive Cards  
 
 > [!NOTE]
-> Currently, this feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
 Type-ahead search in Adaptive Cards allows you to search and select data from huge data set. In this case, a searchable select menu loads data dynamically as the user searches. Type-ahead search in Adaptive Cards enhances the search experience and allows you to perform the following searches:
 
