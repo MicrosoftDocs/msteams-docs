@@ -31,6 +31,26 @@ The following table provides popular scenarios for People Picker in Adaptive Car
 |Project management| To assign tickets or bugs to particular users.|
 |User lookup| To search for users across the organization.|
 
+# [Desktop](#tab/desktop)
+
+The web and desktop client support People Picker in Adaptive Card. While searching on the web, People Picker involves an inline typing experience.
+
+### Reassignment scenario example
+
+User A (Robert) receives a ticket for a task in a channel and realizes incorrect assignee. User A reassigns the task that sends the information back to the bot. 
+
+**To reassign any task**
+
+1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
+1. Remove the incorrect user's name. 
+1. Select intended users as per the image scenario, user B (Mona), and user C (Robin) for the task. 
+1. Select **Assign**. After assigning, the information is sent to the bot. 
+   The bot updates Adaptive Card and notifies the intended users. 
+ 
+The following image shows the reassignment scenario:    
+
+![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
+
 # [Mobile](#tab/mobile)
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
@@ -51,26 +71,6 @@ User A (Robert) receives a ticket for a task in a channel and realizes incorrect
 The following image shows the reassignment scenario: 
 
 ![People Picker on Mobile](../../assets/images/cards/mobilepp.gif)
-
-# [Desktop](#tab/desktop)
-
-The web and desktop client support People Picker in Adaptive Card. While searching on the web, People Picker involves an inline typing experience.
-
-### Reassignment scenario example
-
-User A (Robert) receives a ticket for a task in a channel and realizes incorrect assignee. User A reassigns the task that sends the information back to the bot. 
-
-**To reassign any task**
-
-1. Select **Reassign** where the people picker field is prepopulated with name to reassign the task to the intended user.
-1. Remove the incorrect user's name. 
-1. Select intended users as per the image scenario, user B (Mona), and user C (Robin) for the task. 
-1. Select **Assign**. After assigning, the information is sent to the bot. 
-   The bot updates Adaptive Card and notifies the intended users. 
- 
-The following image shows the reassignment scenario:    
-
-![People Picker on Desktop](../../assets/images/cards/desktoppp.gif)
 
 ---
 
