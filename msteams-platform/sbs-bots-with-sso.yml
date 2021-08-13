@@ -24,35 +24,6 @@ items:
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution.
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
 
-- title: Create and configure AAD app
-  durationInMinutes: 10
-  content: |
-    **To create AAD app for SSO**
-
-    1. Go to [Azure app registration](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
-
-        ![Azure app registration](~/assets/images/bots/appregistration.png)
-    
-    1. Select **New registration** in the upper left corner.
-    1. Enter **Name** and select **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
-
-        ![Registration details](~/assets/images/bots/registerapp.png)
-
-    **To enable implicit grant**
-    
-    1. Select **Authentication** from the left pane.
-    1. Select the **Access tokens** and **ID tokens** checkboxes.
-
-        ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
-
-    1. Select **Save** to save the changes.
-
-    **To make changes in manifest**
-
-    1. Select **Manifest** from the left pane.
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).
-    
-
 - title: Setup bot in Azure Bot Service
   durationInMinutes: 5
   content: |
