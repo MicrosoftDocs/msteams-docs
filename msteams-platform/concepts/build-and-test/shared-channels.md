@@ -12,12 +12,13 @@ ms.topic: conceptual
 > [!NOTE]     
 > Shared channels are currently available in [developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Shared channels in Teams allow members of an organization to collaborate with external members with access permissions. You can create a channel and share the channel with:
+Shared channels in Teams allow members of a channel to collaborate with users across other Teams and organizations. You can create and share a shared channel with:
 
-* Members of another team within the same organization
-* Members of other organizations 
+* Members of another Team within the same organization
+* Individuals within the same organization
+* Individuals and other Teams of other organizations 
 
-The external members, outside of your organizations collaborate with internal members in Teams without changing their user context. This is adventageous because, when using guest accounts, members must sign out of Teams and sign in again using the guest account. Switching between internal and external identities takes time, and members can miss important communications when they sign out of their organization. 
+This allows external users outside of your organization to collaborate with internal users in Teams without changing their user context. This is adventageous because, unlike when using guest accounts, where members must sign out of Teams and sign in again using a guest account, shared channels facilitates this collaboration seamlessly. Teams applications can now extend this powerful collaboration space. 
 
 [Place holder for image]
 
