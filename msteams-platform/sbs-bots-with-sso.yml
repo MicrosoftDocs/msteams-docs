@@ -55,7 +55,7 @@ items:
 
     1. Enter **Description** and select **Add**.
 
-        Save the Value and Secret ID for future reference.
+        Save the Secret ID for future reference.
 
     **To expose API endpoint**
 
@@ -79,14 +79,14 @@ items:
 
     **To authorize client applications**
     
-    1. Add the ID **1fec8e78-bce4-4aaf-ab1b-5451cc387264** (Teams mobile/desktop application) as **Authorized client applications**.
-    
+    1. Select **Add a client application**.
+    1. Add the ID **1fec8e78-bce4-4aaf-ab1b-5451cc387264** (Teams mobile/desktop application) as **Client ID**.
     1. Select the check box for **Authorized scopes**.
 
         ![Add client application to app](~/assets/images/bots/addclientapplication.png)
 
-    1. Similarly, add the ID **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** (Teams web application) as **Authorized client applications**.
-    1. Select the check box for **Authorized scopes**.
+    1. Select **Add application**.
+    1. Similarly, add the ID **5e3ce6c0-2b1f-4285-8d4b-75ee78787346** (Teams web application) as **Client ID**.
 
     **To add any necessary API permissions for downstream calls**
 
@@ -157,13 +157,21 @@ items:
         ![Bot Services](~/assets/images/bots/botservices.png)
 
     1. To add the Microsoft Teams channel, open the bot in the [Azure portal](https://portal.azure.com/), select **Channels** in the left pane, and then select **Teams**.
+
+        ![Connect to channels](~/assets/images/bots/connettochannels.png)
+
     1. Select **Save**.
     1. If required, select **I agree to the Microsoft Channel Publication Terms and the Microsoft Privacy Statements for my deployment to the Microsoft Teams channel.** and select **Agree**.
     1. Go to the **Channels** page and select **Get bot embed code**.
+
+        ![Get bot embed code](~/assets/images/bots/botembedcodes.png)
+
     1. Copy the https part of the code that is shown in the Get bot embed code dialog. For example, **https://teams.microsoft.com/l/chat/0/0?users=28:b8a22302e-9303-4e54-b348-343232**.
     1. In the browser, paste this address and choose the Microsoft Teams app that you use to add the bot to Teams.
 
         You can see the bot listed as a contact that you can send messages to and receives messages from in Microsoft Teams.
+
+        ![Bot listed as a contact](~/assets/images/bots/botinteamschannel.png)
 
 - title: Setup Bot Service connection
   durationInMinutes: 1
