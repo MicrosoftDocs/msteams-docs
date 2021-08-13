@@ -39,3 +39,4 @@ After getting access to device capabilities, use Teams media capability APIs to 
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
 
+
