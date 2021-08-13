@@ -158,6 +158,7 @@ items:
 
     1. To add the Microsoft Teams channel, open the bot in the [Azure portal](https://portal.azure.com/), select **Channels** in the left pane, and then select **Teams**.
     1. Select **Save**.
+    1. If required, select **I agree to the Microsoft Channel Publication Terms and the Microsoft Privacy Statements for my deployment to the Microsoft Teams channel.** and select **Agree**.
     1. Go to the **Channels** page and select **Get bot embed code**.
     1. Copy the https part of the code that is shown in the Get bot embed code dialog. For example, **https://teams.microsoft.com/l/chat/0/0?users=28:b8a22302e-9303-4e54-b348-343232**.
     1. In the browser, paste this address and choose the Microsoft Teams app that you use to add the bot to Teams.
@@ -167,22 +168,23 @@ items:
 - title: Setup Bot Service connection
   durationInMinutes: 1
   content: |
-    1. In the Azure portal, go back to **Bot Channels Registration**.
-    1. Select **Settings** from the left pane and select **Add Setting** under the **OAuth Connection Settings** section.
-    1. Enter the following details in **Connection Setting**:
-        - Enter **Name** for your new Connection setting. This name is referenced in the settings of your bot service code.
+    1. In the Azure portal, go back to your Azure bot**.
+    1. Select **Configuration** from the left pane.
+    1. Select **Add OAuth Connection Settings**.
+    1. Enter the following details in **New Connection Setting**:
+        - Enter **Name** for your new connection setting. This name is referenced in the settings of your bot service code.
         - Select **Azure Active Directory V2** from **Service Provider**.
-        - Enter **Client id** and **Client secret** saved previously.
-        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously.
+        - Enter **Client id** and **Client secret** saved previously as your Application ID and Secret ID.
+        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint.
         - Enter **common** as the **Tenant ID**.
-        - Add all the scopes configured while specifying permissions previously to downstream APIs.
+        - Add all the **Scopes** configured while specifying permissions previously to downstream APIs.
 
     1. Select **Save**.
 
 - title: Configure bot sample
   durationInMinutes: 1
   content: |
-    Update the **appsettings.json** configuration for the bot to use the Microsoft App ID and App Password generated previously from the Bot Framework registration.
+    Locate the **appsettings.json** file from your **botframework-sdk** cloned repository location. Update the **appsettings.json** configuration for the bot to use the Microsoft App ID and App Password generated previously from the Bot Framework registration.
 
 - title: Run your bot sample
   durationInMinutes: 1
@@ -195,7 +197,7 @@ items:
 
     1. If you're using Visual Studio, select **File -> Open -> Project/Solution**.
     1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore** folder.
-    1. Select the **TeamsAuth.csproj** file.
+    1. Select the **BotSSOCSharp.csproj** file.
     1. Select the **F5** key to run this project.
 
 
@@ -216,9 +218,9 @@ items:
 
     By manually updating the **manifest.json** file
 
-    1. Edit the **manifest.json** file in the **appPackage/** folder and replace everywhere you see the place holder string {TODO: MicrosoftAppId} with your MicrosoftAppId used previously. The ConnectionName is the name of OAuth Connection you configured previously.
+    1. Edit the **manifest.json** file in the **appPackage/** folder and replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your MicrosoftAppId saved previously. The **ConnectionName** is the name of OAuth Connection you configured previously.
     1. Zip the contents of the **appPackage/** folder to create a **manifest.zip**.
-    1. Upload **manifest.zip** to Teams by selecting **Manage your apps** and **Upload a custom app**.
+    1. Upload **manifest.zip** to Teams by selecting **Store**, **Manage your apps**, and **Upload a custom app**.
 
         You can interact with this bot by sending it a message. The bot responds by asking for your consent. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **logout**.
 
