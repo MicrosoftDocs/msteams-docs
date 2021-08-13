@@ -436,8 +436,6 @@
           href: resources/dev-preview/developer-preview-intro.md
         - name: Manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: Features
-          href: resources/dev-preview/developer-preview-features.md
 - name: Integrate with Teams
   items:
   - name: Overview
