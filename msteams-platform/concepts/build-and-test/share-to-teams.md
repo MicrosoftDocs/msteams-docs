@@ -57,11 +57,11 @@ The following image displays the Share-to-Teams pop-up experience:
     </div>
     ```
 
-1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
+1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
 ## Craft your website preview
 
-When your website is shared to Teams, the card that is inserted into the selected channel contains a preview of your website. You can control the behavior of this preview by ensuring the appropriate metadata is added to the website being shared, such as the `data-href` URL.  
+When your website is shared to Teams, the card that is inserted into the selected channel contains a preview of your website. You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared, such as the `data-href` URL.  
 
 **To display the preview**
 
