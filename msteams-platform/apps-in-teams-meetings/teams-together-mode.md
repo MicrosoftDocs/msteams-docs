@@ -72,19 +72,18 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. In the **Scenes Editor** page, select **Create a new scene**.
 
-1. In the **Scene** box, enter a name for the scene.
+1. In the **Scene Name** box, enter a name for the scene.
 
     >[!NOTE]
     > * You can select **Close** to toggle between closing or reopening the right pane.
     > * You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
-1. Drag and drop the image into the environment as displayed in the following image:
+1. Select **Add images** to add the image into the environment as displayed in the following image:
 
-    ![Drag into the scene](../assets/images/apps-in-meetings/drag-and-drop-scene.png)
+    ![Add images into environment](../assets/images/apps-in-meetings/addimages.png)
 
     >[!NOTE]
     > * You can download the [SampleScene.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleScene.zip) and [SampleApp.zip](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/apps-in-teams-meetings/SampleApp.zip) files with the images.
-    > * Alternately, you can add background images to the scene using **Add images**.
 
 1. Select the image that you've placed.
 
@@ -111,6 +110,7 @@ The seat dimensions become the canvas for rendering the participant video stream
     > * Selecting **View in Teams** automatically creates an app package that is appmanifest.json behind the scene. As stated earlier, this is abstracted, but you can go to  **Apps** from the menu and access the automatically created app package.
     > * To delete a scene you created, select **Delete scene** on the top bar.
 
+1. In the **View in Teams** dialog box, select **Preview in Teams**.
 1. In the dialog box that appears, select **Add**.
 
     The scene is tested or accessed by creating a test meeting and launching custom Together Mode scenes. For more information, see [activate custom Together Mode scenes](#activate-custom-together-mode-scenes).
