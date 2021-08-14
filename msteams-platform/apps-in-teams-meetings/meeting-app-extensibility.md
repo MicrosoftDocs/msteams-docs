@@ -23,7 +23,7 @@ A meeting lifecycle consists of pre-meeting, in-meeting, and post-meeting app ex
 
 ### Integrate tabs into the meeting lifecycle
 
-Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, users can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that they want to install.
+Tabs allow the team members to access services and content in a specific space within a meeting. The team works directly with tabs and has conversations about the tools and data available within tabs. In Teams meeting, you can add a tab by selecting <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>, and select the app that you want to install.
 
 > [!IMPORTANT]
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
@@ -40,13 +40,13 @@ With the pre-meeting app experience, you can find and add meeting apps. You can 
 1. In your calendar, select a meeting to which you want to add a tab.
 1. Select the **Details** tab and select <img src="~/assets/images/apps-in-meetings/plusbutton.png" alt="Plus button" width="30"/>. The tab gallery appears.
 
-    ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
+   ![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
 
 1. In the tab gallery, select the app that you want to add and follow the steps as required. The app is installed as a tab.
 
-    > [!NOTE]
-    > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
-    > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
+   > [!NOTE]
+   > * You can also add a tab to an existing meeting using the meeting **Chat** tab.
+   > * Tab layout must be in an organized state, if there are more than 10 polls or surveys.
 
 # [Desktop](#tab/desktop)
 
@@ -127,7 +127,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-Bots that enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Bots that are enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -139,7 +139,7 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
 
-Default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
+The default participant settings are determined by an organization's IT administrator. The following are the participant roles in a meeting:
 
 * **Organizer**: The organizer schedules a meeting, sets the meeting options, assigns meeting roles, and starts the meeting. The users with Microsoft 365 account and Teams license can only be the organizers, and control attendee permissions. A meeting organizer can change the settings for a specific meeting. Organizers can make these changes on the **Meeting options** web page.
 * **Presenter**: The presenters have same capabilities of the organizers with exclusions. A presenter can't remove an organizer from the session or modify meeting options for the session. By default, participants joining a meeting have the presenter role.
