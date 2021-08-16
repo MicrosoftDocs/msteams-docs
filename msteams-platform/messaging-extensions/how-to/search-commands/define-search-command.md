@@ -35,6 +35,9 @@ To add the search command to your app manifest, you must add a new `composeExten
 
 You can create search command using ** App Studio** or **Developer Portal**.
 
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+
 # [App Studio](#tab/AS)
 
 The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
