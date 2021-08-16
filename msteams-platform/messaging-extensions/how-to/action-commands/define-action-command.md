@@ -125,15 +125,15 @@ The following image displays command addition for messaging extension:
 
 1. Go to **(Developer portal)[https://dev.teams.microsoft.com/]**.
 	
-	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp_home_1.png"/>
 	
 1. Go to **Apps**.
 	
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
 	
 1. If you already created your app package in **Developer Portal**, select it from the list. If you have not created an app package, select **Import an existing app**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Go to **App features** under **App features**. 
 

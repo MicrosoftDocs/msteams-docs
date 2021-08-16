@@ -131,15 +131,15 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 1. 1.Go to **Developer (portal preview)**.
 
-     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
 1. Go to **Apps**.
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="430px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
 1. Select **Import an existing app**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
 
