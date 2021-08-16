@@ -73,7 +73,7 @@ The following image displays command addition for messaging extension:
 
 1. Go to **Developer (portal preview)**.
 	
-	     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+	   <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
 	
 1. Go to **Apps**.
 	
@@ -88,17 +88,31 @@ The following image displays command addition for messaging extension:
     <img width="430px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
 
 1. Select **Messaging extensions**. 
-You get a pop-up window to set up the messaging extension.
-
+    
    <img width="430px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-me.png"/>
+ 
+   You get a pop-up window to set up the messaging extension.
 
 1. Select **an message extension bot** from the drop down list under **Messag extensions ID** and select **Save**.
 
-<img width="430px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+    <img width="430px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
 
 1. Select **Add a command**. 
 
-<img width="430px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+    <img width="430px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+    You get a pop-up window to add command.
+
+1. Select **search-based** for search command and enter command fields.
+
+    <img width="430px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+
+1. Enter parameter fields and select **Save**.
+
+    <img width="430px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+
+---
+
 
 ### Create a search command manually 
 
