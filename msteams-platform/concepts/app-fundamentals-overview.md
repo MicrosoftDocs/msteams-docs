@@ -32,6 +32,10 @@ You can recognize user issues and identify the answers to some common problems t
 
 You can customize the app permission for external members in shared channel, if your app shares important information. App permissions in [shared channels](~/concepts/build-and-test/shared-channels.md) follow host team's app roster and host tenant's app policy.
 
+## Integrate device capabilities
+
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
+
 ## See also
 
 * [Integrate web apps with Teams](../samples/integrating-web-apps.md)

@@ -102,4 +102,4 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 
 * [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate QR code or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-* [Integrate People Picker capability in Teams](people-picker-capability.md)
+* [Integrate People Picker in Teams](people-picker-capability.md)
