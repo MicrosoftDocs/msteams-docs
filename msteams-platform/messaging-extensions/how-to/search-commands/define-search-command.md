@@ -76,7 +76,7 @@ The following image displays command addition for messaging extension:
 
 1. Go to **Developer (portal preview)**.
 	
-	   <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
 	
 1. Go to **Apps**.
 	
