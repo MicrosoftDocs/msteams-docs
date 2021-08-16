@@ -150,7 +150,7 @@ The seat dimensions become the canvas for rendering the participant video stream
 
 1. Optionally, you can select **Share** from the **Save** drop-down menu to create a shareable link to easily distribute your scenes for others to use. Opening this link installs the scene for the user and they can start using it.
 
-1. After preview, the scene can be shipped as an app to Teams by going to the Apps section in the Teams Developer Center. From there you can download the app package or publish directly to your organiation.
+1. After preview, the scene can be shipped as an app to Teams by going to the Apps section in the Teams Developer Center. From there you can download the app package or publish directly to your organization.
 
     >[!NOTE]
     > This step requires the app package that is different from the scene package, for the scene that was designed. The app package created automatically can be found in the **Apps** section in the Teams Developer Center.
