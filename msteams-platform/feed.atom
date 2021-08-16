@@ -10,7 +10,7 @@
     <category term="updated"/>
     <entry>
         <title type="html"><![CDATA[Send Proactive Messages | Step-by-step Guide]]></title>
-        <id>CBA3A3A5-C8E6-4595-8E36-DE814864492D</id>
+        <id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive</id>
         <link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive"/>
         <updated>2021-06-25T13:02:57.000Z</updated>
         <summary type="html"><![CDATA[Introducing a step-by-step guide to help you send a proactive message from a bot.]]></summary>
