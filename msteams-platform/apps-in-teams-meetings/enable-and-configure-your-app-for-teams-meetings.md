@@ -19,7 +19,7 @@ The meetings app capabilities are declared in your app manifest using the `confi
 
 > [!NOTE]
 > * You must update your app manifest with the [manifest schema](../resources/schema/manifest-schema-dev-preview.md).
-> * Apps in meetings require groupchat scope. The team scope works for tabs in channels only.
+> * Apps in meetings require `groupchat` scope. The `team` scope works for tabs in channels only.
 
 The app manifest must include the following code snippet:
 
@@ -59,7 +59,7 @@ The `context` property determines what must be shown when a user invokes an app 
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the meetingSidePanel can be shared to the meeting stage. You can't use this app on mobile. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app on mobile. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -70,9 +70,6 @@ Teams meetings provide a collaborative experience for your organization. Configu
 * [Before a meeting](#before-a-meeting)
 * [During a meeting](#during-a-meeting)
 * [After a meeting](#after-a-meeting)
-
-> [!NOTE]
-> For your app to be visible in the tab gallery, it must support configurable tabs and the group chat scope.
 
 ### Before a meeting
 
@@ -86,9 +83,6 @@ Before a meeting, users can add tabs, bots, and messaging extensions. Users with
     <img src="../assets/images/apps-in-meetings/PreMeeting.png" alt="Pre-meeting experience" width="900"/>
 
 1. In the tab gallery that appears, select the app that you want to add and follow the steps as required. The app is installed as a tab.
-
-    > [!NOTE]
-    > Currently, in meetings tab, getting meeting details and participant information is not supported.
 
 **To add a messaging extension to a meeting**
 
@@ -106,11 +100,11 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 ### During a meeting
 
-During a meeting, you can use the meetingSidePanel or the in-meeting dialog box to build unique experiences for your apps.
+During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
 
 #### Meeting Sidepanel
 
-The meetingSidePanel enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
+The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
 To use the `userContext` API to route requests, see [Teams SDK](../tabs/how-to/access-teams-context.md#user-context). For more information, see [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md). Authentication flow for tabs is similar to the authentication flow for websites. So tabs can use OAuth 2.0 directly. For more information, see [Microsoft identity platform and OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
@@ -121,7 +115,7 @@ Messaging extension works as expected when a user is in an in-meeting view. The 
 
 #### In-meeting dialog box
 
-The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. To indicate that a bubble notification must be triggered, use the [`NotificationSignal`](API-references.md#notificationsignal-api) API. As part of the notification request payload, include the URL where the content to be shown is hosted.
+The in-meeting dialog box is used to engage participants during the meeting and collect information or feedback during the meeting. Use the [`NotificationSignal`](API-references.md#notificationsignal-api) API to trigger a bubble notification. As part of the notification request payload, include the URL where the content to be shown is hosted.
 
 In-meeting dialog must not use task module. Task module isn't invoked in a meeting chat. An external resource URL is used to display the content bubble in a meeting. You can use the `submitTask` method to submit data in a meeting chat.
 
@@ -136,7 +130,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
 
-The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the meetingSidePanel.
+The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
@@ -162,7 +156,7 @@ See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/d
 
 ### After a meeting
 
-The configurations after and [before meetings](#before-a-meeting) are the same.
+The configurations of after and [before meetings](#before-a-meeting) are the same.
 
 ## Code sample
 
