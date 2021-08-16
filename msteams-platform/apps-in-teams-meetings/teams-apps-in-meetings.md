@@ -20,21 +20,6 @@ The users can access apps during meetings using the tab gallery from their calen
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/nKAy5rNDus4]
 
-The following table provides an overview of the meeting app extensibility features:
-
-| <span> | <span> |
-|---|---|
-| ![Apps in meetings](../assets/images/apps-in-meetings/appsinmeetings.png) | Creates customized meetings with apps |
-| ![Meeting experiences](../assets/images/apps-in-meetings/meetingexperience.png) | Optimizes meetings experiences |
-| ![User information](../assets/images/apps-in-meetings/userinformation.png) | Enables apps to be aware of meeting context |
-| ![Meeting lifecycle](../assets/images/apps-in-meetings/meetinglifecycle.png) | Helps to plan meeting lifecycle |
-| ![Integrate tabs, bots, and messaging extensions](../assets/images/apps-in-meetings/integratefeatures.png) | Integrates tabs, bots, and messaging extensions |
-| ![Meeting events](../assets/images/apps-in-meetings/meetingevents.png) | Gets meeting events |
-| ![In-meeting dialog](../assets/images/apps-in-meetings/inmeetingdialog.png) | Populates in-meeting dialog |
-| ![Participant roles](../assets/images/apps-in-meetings/participants.png) | Fetches participant roles |
-| ![Notifications in a meeting](../assets/images/apps-in-meetings/notifications.png) | Provides notifications to users |
-| ![Create scenes](../assets/images/apps-in-meetings/scenes.png) | Creates scenes for meetings |
-
 The following illustration gives you an idea of the meeting app extensibility features:
 
 ![Meeting app extensibility](../assets/images/apps-in-meetings/meetingappextensibility.png)
