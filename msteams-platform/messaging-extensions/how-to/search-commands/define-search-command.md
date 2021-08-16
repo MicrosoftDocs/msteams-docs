@@ -72,9 +72,9 @@ The following image displays command addition for messaging extension:
 
 # [Developer Portal](#tab/DP)
 
-**To create search command using Developer Portal**
+**To create a search command using Developer Portal**
 
-1. Go to **Developer (portal preview)**.
+1. Go to **(Developer portal)[https://dev.teams.microsoft.com/]**.
 	
 	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
 	

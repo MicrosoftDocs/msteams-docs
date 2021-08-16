@@ -61,6 +61,13 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 ### Create an action command using App Studio
 
+You can create an action command using ** App Studio** or **Developer Portal**.
+
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+
+# [App Studio](#tab/AS)
+
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
@@ -111,6 +118,60 @@ The following image displays command addition for messaging extension:
 
 1. Select **Save**.
 1. To add more parameters, select the **Add** button in the **Parameters** section.
+
+# [Developer Portal](#tab/DP)
+
+**To create an action command using Developer Portal**
+
+1. Go to **(Developer portal)[https://dev.teams.microsoft.com/]**.
+	
+	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+	
+1. Go to **Apps**.
+	
+    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+	
+1. If you already created your app package in **Developer Portal**, select it from the list. If you have not created an app package, select **Import an existing app**.
+
+    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+
+1. Go to **App features** under **App features**. 
+
+    <img width="430px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+
+1. Select **Messaging extensions**. 
+    
+   <img width="430px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-me.png"/>
+ 
+   You get a pop-up window to set up the messaging extension.
+
+1. Select **an message extension bot** from the drop down list under **Messag extensions ID** and select **Save**.
+
+    <img width="430px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+
+1. Select **Add a command**. 
+
+    <img width="430px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+
+    You get a pop-up window to add a command.
+
+1. Select the type of the command as **action-based** to configure the messaging extension. Select **Dynamic** to create dynamic action command.
+
+    <img width="430px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
+
+1. Select **Static** to create static action command.   
+
+    <img width="430px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
+
+1. Enter the command fields. 
+
+    <img width="430px" alt="TDP messaging extension action command" src="~/assets/images/tdp/tdp-me-action-command.png"/>  
+
+1. Enter parameter fields and select **Save**.
+
+    <img width="430px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+ 
+---
 
 ### Create an action command manually
 
