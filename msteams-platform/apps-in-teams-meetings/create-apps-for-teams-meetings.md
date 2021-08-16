@@ -168,7 +168,7 @@ The `GetParticipant` API returns the following response codes:
 | **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
-| **404** | The meeting has either expired or the participant can't be found.|
+| **404** | The meeting has expired or the participant can't be found.|
 
 ### NotificationSignal API
 
