@@ -21,10 +21,10 @@ Example of localization JSON schema is as follows:
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
-  "name.short": "Le App Studio",
-  "name.full": "App Studio pour Microsoft Teams",
-  "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio.",
-  "description.full": "Créez de nouvelles applications Microsoft Teams, concevez et prévisualisez des cartes bot, et explorez la documentation avec App Studio.",
+  "name.short": "Le App Studio or Developer Portal",
+  "name.full": "App Studio or Developer Portal pour Microsoft Teams",
+  "description.short": "Créez d'excellentes applications pour Microsoft Teams avec App Studio or Developer Portal.",
+  "description.full": "Créez de nouvelles applications Microsoft Teams, concevez et prévisualisez des cartes bot, et explorez la documentation avec App Studio or Developer Portal.",
   "staticTabs[0].name": "Editeur de manifest",
   "staticTabs[1].name": "Editeur de cartes",
   "staticTabs[2].name": "Bibliothèque de contrôles",
