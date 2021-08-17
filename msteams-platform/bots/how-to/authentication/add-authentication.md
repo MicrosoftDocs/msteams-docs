@@ -380,7 +380,7 @@ The following wizard is displayed:
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
 
-You can use either App studio or Developer Portal.
+You can use either App studio or Developer Portal to test the bot.
 
 > [!NOTE]
 >  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
