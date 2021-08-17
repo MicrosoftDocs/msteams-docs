@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Manage your apps with the Developer Portal for Microsoft Teams
 
-The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool to configure, distribute, and manage your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
 ## Register an app
 
-The Developer Portal provides a couple ways to register a Teams app:
+You can register your Teams app in Developer Portal with the following ways:
 
-* Register a brand new app
+* Register a new app
 * Import an existing app package
 
 > [!NOTE]
@@ -25,7 +25,7 @@ The Developer Portal provides a couple ways to register a Teams app:
 
 ## Set up an environment
 
-You can configure environments and global variables to help transition your app from your local runtime to production. Global variables are used across all environments.
+You can configure environments and global variables to help transition of your app from your local runtime to production. Global variables are used across all environments.
 
 **To set up an environment**
 
@@ -48,21 +48,21 @@ Each app includes an **Owners** page, where you can share your app registration 
 
 A Teams app is a web app. Like all web apps, its source code is typically developed in an IDE or code editor and hosted somewhere in the cloud (like Azure).
 
-To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
+To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata that Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
 
 ### Basic app configuration 
 
-**Basic app information:** This is the information users see on your app details page in Teams, such as App ID, app names, descriptions, developer information, dersion, dpp URLs, and Microsoft Partner Network ID.
+**Basic app information:** The users see on your app details page in Teams, such as App ID, app names, descriptions, developer information, version, app URLs, and Microsoft Partner Network ID.
 
-**Branding:** Apps require a color and outline icon in PNG format. To publish your app in the Teams store, the icons must meet specific size requirements.
+**Branding:** Apps require color and outline icon in PNG format. To publish your app in the Teams store, the icons must meet specific size requirements.
 
-**Features:** App features are the Teams features you can include in your app. Add one or more features depending on your app’s use cases.
+**Features:** Teams features that you can include in your app. You can add one or more features depending on your app’s use cases.
 
 **Permissions:** Specify what users must consent to when using your app.
 
-**Single sign-on:** Configure your app to authenticate users with single sign-on (SSO).
+**Single sign-on:** Configure your app to authenticate users with Single sign-on (SSO).
 
-**Domains:** List the domains your app needs to navigate to. Use wildcards to include multiple subdomains. For example, `*.example.com`.
+**Domains:** List all the domains your app needs to navigate to. Use wildcards to include multiple subdomains. For example, `*.example.com`.
 
 ### Advanced app configuration
 
@@ -80,7 +80,7 @@ To install and render your app in Teams, you must include a set of configuration
 
 **Publish to your organization (Microsoft):** Make your app available to people in your organization. Once approved by your IT admin, your app will be featured in Teams under Apps > Built for your org.
 
-**Publish to the Teams store:** The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app. Resolve errors or warnings and read the checklist before submitting.
+**Publish to the Teams store:** The app validation tool checks your app package against the test cases Microsoft uses, when reviewing your app. Resolve errors or warnings and read the checklist before submitting.
 
 ## Test your app directly in Teams
 

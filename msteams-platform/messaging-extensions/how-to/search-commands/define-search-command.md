@@ -75,7 +75,7 @@ The following image displays command addition for messaging extension:
 
 **To create a search command using Developer Portal**
 
-1. Go to **(Developer portal)[https://dev.teams.microsoft.com/]**.
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 	
 	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 	
@@ -87,17 +87,17 @@ The following image displays command addition for messaging extension:
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
-1. Go to **App features** under **App features**. 
+1. Go to **App features**.  
 
     <img width="430px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
 
-1. Select **Messaging extensions**. 
+1. Select **Messaging extensions** from **App features**. 
     
    <img width="430px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-me.png"/>
  
-   You get a pop-up window to set up the messaging extension.
+   A pop-up window appears to set up the messaging extension.
 
-1. Select **an message extension bot** from the drop down list under **Messag extensions ID** and select **Save**.
+1. Select **an message extension bot** from the drop down list under **Message extensions ID** and select **Save**.
 
     <img width="430px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
 
@@ -105,9 +105,9 @@ The following image displays command addition for messaging extension:
 
     <img width="430px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
 
-    You get a pop-up window to add command.
+    A pop-up window appears to add command.
 
-1. Select **search-based** for search command and enter command fields.
+1. Select **search-based** to search command and enter command fields.
 
     <img width="430px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
 

@@ -120,6 +120,9 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **Update the app package**
 
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+
 # [App Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
@@ -129,23 +132,23 @@ Visual Studio has built-in support for app deployment to different providers, in
 **To configure app package in  Developer Portal (preview) in Teams**
 
 
-1. 1.Go to **Developer (portal preview)**.
+1. 1.Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 
-     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
 1. Go to **Apps**.
 
-    <img width="430px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
 1. Select **Import an existing app**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
 
     You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
