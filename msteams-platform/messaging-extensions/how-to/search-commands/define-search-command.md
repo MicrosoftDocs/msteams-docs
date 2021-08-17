@@ -40,7 +40,8 @@ You can create search command using ** App Studio** or **Developer Portal**.
 
 # [App Studio](#tab/AS)
 
-The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+> [!NOTE]
+> The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **To create a search command**
 
