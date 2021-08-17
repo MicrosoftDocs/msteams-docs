@@ -25,7 +25,7 @@ items:
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
-- title: Setup bot in Azure Bot Service
+- title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
     Run the following command in ngrok:
@@ -44,9 +44,10 @@ items:
         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
-    1. Enter a bot handle name in **Bot handle**.
-    1. Select a subscription from the **Subscription** dropdown list.
-    1. Select a resource group from the **Resource group** dropdown list.
+    1. Enter the required bot handle name in **Bot handle**.
+    1. Select the required subscription from the **Subscription** dropdown list.
+    1. Select the required resource group from the **Resource group** dropdown list.
+    1. Select the required location from the **New resource group location** dropdown list.
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
@@ -129,7 +130,7 @@ items:
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**, and select **Apply**.
 
     
-- title: Setup Bot Service connection
+- title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
     1. Select **Add OAuth Connection Settings**.
@@ -153,11 +154,13 @@ items:
 - title: Configure bot sample
   durationInMinutes: 1
   content: |
-    1. Clone the repository by using the following command:
+    1. Clone the repository using the command prompt with the following command or using Visual Studio 2019.
 
         ```bash
         git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
         ```
+
+        
 
     1. In Visual Studio, open the **BotSSOCSharp.csproj** file of **Microsoft-Teams-Samples** repository.
     1. Open the **appsettings.json** file.
