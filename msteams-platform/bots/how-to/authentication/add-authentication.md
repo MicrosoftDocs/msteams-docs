@@ -398,6 +398,8 @@ You can use either App studio or Developer Portal.
 13. Select **App features** and select **Bot**. You can see the icon for the bot you uploaded.
 14. Also, you can see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
 
+---
+
 ### Testing the bot locally in Teams
 
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
