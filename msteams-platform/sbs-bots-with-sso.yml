@@ -47,7 +47,7 @@ items:
     1. Enter the required bot handle name in **Bot handle**.
     1. Select the required subscription from the **Subscription** dropdown list.
     1. Select the required resource group from the **Resource group** dropdown list.
-    1. Select the required location from the **New resource group location** dropdown list.
+    1. If you created a new resource, select the required location from the **New resource group location** dropdown list.
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
@@ -94,10 +94,11 @@ items:
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
+    1. Use the Application ID shown and add **api://botid-** at the beginning of the URI.
 
         ![Expose an API](~/assets/images/bots/exposeAPI.png)
 
-    1. Use the Application ID shown, and select **Save**.
+    1. Select **Save**.
     1. Select **Add a scope**.
     1. Enter **access_as_user** as the **Scope name**.
     1. Select **Admins and users** for **Who can consent?**.
@@ -142,7 +143,7 @@ items:
             > [!NOTE]
             > The Microsoft App ID can be obtained from the bot's Configuration page.
 
-        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint.
+        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint and add **api://botid-** at the beginning of the URL.
         - Enter **common** as the **Tenant ID**.
         - Add all the **Scopes** required while specifying permissions to downstream APIs.
 
@@ -159,8 +160,6 @@ items:
         ```bash
         git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
         ```
-
-        
 
     1. In Visual Studio, open the **BotSSOCSharp.csproj** file of **Microsoft-Teams-Samples** repository.
     1. Open the **appsettings.json** file.
@@ -188,7 +187,7 @@ items:
     1. Select **Bots** under **Capabilities**.
     1. Check the **Bot ID**.
     1. Select **Domains and permissions** under **Finish**.
-    1. Check the **AAD App ID**, which is the Microsoft App ID and **Single-Sign-On** includes the Microsoft App ID with "api://botid-" added to it.
+    1. Check the **AAD App ID**, which is the Microsoft App ID and **Single-Sign-On** includes the Microsoft App ID with **api://botid-** added to it.
     1. Select **Test and distribute** under **Finish** and select **Install**.
     1. Select **Add** to add the conversation bot to your chat.
 
@@ -202,12 +201,19 @@ items:
 
         ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
 
+        The conversation bot asks for permissions.
+
+        ![Permissions to bot](~/assets/images/bots/permissions.png)
+
+    1. Select **Continue** to accept the permissions.
+    1. Select **Accept** for **Permissions requested**.
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
+    ![Logged in to the conversation bot](~/assets/images/bots/loggedin.png)
     
 - content: |
     You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.
