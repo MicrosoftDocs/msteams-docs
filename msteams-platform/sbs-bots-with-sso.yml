@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: Teams Bot with SSO
+title: Teams Bot with Single sign-on (SSO)
 metadata:
   title: Teams Bot with SSO
   description: In this tutorial, you'll learn to setup SSO in a bot for Teams.
@@ -13,17 +13,17 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This tutorial teaches you how to get started with SSO in a bot for Microsoft Teams using the Bot Framework. It contains a series of lessons that begin with setting up bot SSO. These lessons teach you how to use the Bot Framework support for OAuth SSO in your bot. Bot authentication is used to develop a bot that authenticates users to various identity providers, such as Azure Active Directory (AAD), GitHub, and Uber. This tutorial shows how to setup Azure Bot Services, which are the steps to enable Bot SSO.
+    The tutorial guides you to get started with Single sign-on (SSO) in a bot for Microsoft Teams using the Bot Framework. It contains a series of lessons that begin with setting up bot SSO. These lessons guide you to use Bot Framework support for OAuth SSO in your bot. Bot authentication is used to develop a bot that authenticates users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The tutorial provides steps to enable Bot SSO, which helps to setup Azure Bot Services.
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Install the following applications:    
+    Please adhere to the following prerequisites:    
 
-    * Microsoft Teams and have an account (not a guest account).
-    * [Node.js](https://nodejs.org/en/).
-    * [ngrok](https://ngrok.com/) or equivalent tunneling solution.
-    * Visual Studio 2019
-    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
+    * Microsoft Teams with an account (not a guest account)
+    * [Node.js](https://nodejs.org/en/)
+    * [ngrok](https://ngrok.com/) or equivalent tunneling solution
+    * Visual Studio 2019 or the latest version
+    * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
 - title: Setup bot in Azure Bot Service
   durationInMinutes: 5
