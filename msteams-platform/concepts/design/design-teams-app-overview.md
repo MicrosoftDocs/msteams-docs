@@ -27,7 +27,7 @@ Teams apps help people achieve more together. Use these principles to guide your
 
 ### Collaborative
 
-The app is designed to promote collaboration through coordinated and shared activities among the users.
+Teams app promotes collaboration through coordinated and shared activity among users.
 
    :::column-end:::
    :::column span="":::
