@@ -379,13 +379,24 @@ The following wizard is displayed:
 1. Select the **Add to a team** button.
 1. In the next window, select the team where you want to use the bot.
 1. Select the **Set up a bot** button.
-1. Select the three dots (●●●) in the left panel. Then select the App Studio icon.
-1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
-1. Also, you should be able to see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
- 
+
+You can use either App studio or Developer Portal.
+
 > [!NOTE]
 >  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
-> You can test the bot using Developer Portal also. Go to Developer Portal > Import App > App features > Bot.
+
+# [App Studio](#tab/AS)
+
+11. Select the three dots (●●●) in the left panel. Then select the App Studio icon.
+12. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
+13. Also, you should be able to see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
+ 
+# [Developer Portal](#tab/DP)
+
+11. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+12. Select **Apps** in the left panel. Then select **Import App**.
+13. Select **App features** and select **Bot**. You can see the icon for the bot you uploaded.
+14. Also, you can see the bot listed as a contact in the chat list that you can use to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
 
