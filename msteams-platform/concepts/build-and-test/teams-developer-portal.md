@@ -53,23 +53,33 @@ To install and render your app in Teams, you must include a set of configuration
 ### Basic app configuration 
 
 **Basic app information:** This is the information users see on your app details page in Teams, such as App ID, app names, descriptions, developer information, dersion, dpp URLs, and Microsoft Partner Network ID.
+
 **Branding:** Apps require a color and outline icon in PNG format. To publish your app in the Teams store, the icons must meet specific size requirements.
+
 **Features:** App features are the Teams features you can include in your app. Add one or more features depending on your app’s use cases.
+
 **Permissions:** Specify what users must consent to when using your app.
+
 **Single sign-on:** Configure your app to authenticate users with single sign-on (SSO).
+
 **Domains:** List the domains your app needs to navigate to. Use wildcards to include multiple subdomains. For example, `*.example.com`.
 
 ### Advanced app configuration
 
 **App content:** Configure the optional features such as, loading indicator and full-screen mode for your app.
+
 **App customization:** Select the properties that Teams admins can customize about your app.
+
 **First party settings:** Features for first party applications that extend beyond the public functionality.
 
 ### Distribute your app
 
 **App package:** The App package describes your app configuration, capabilities, required resources, and other important attributes. For example, the manifest schema.
+
 **Flights:** Control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
+
 **Publish to your organization (Microsoft):** Make your app available to people in your organization. Once approved by your IT admin, your app will be featured in Teams under Apps > Built for your org.
+
 **Publish to the Teams store:** The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app. Resolve errors or warnings and read the checklist before submitting.
 
 ## Test your app directly in Teams
