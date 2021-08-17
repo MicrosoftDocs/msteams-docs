@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id/>
 	<title>Microsoft Teams Platform</title>
-	<updated>2021-08-17T20:06:24.707Z</updated>
+	<updated>2021-08-17T11:59:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://docs.microsoft.com/legal/termsofuse</rights>
@@ -12,7 +12,7 @@
 		<title type="html"><![CDATA[Build tabs with Adaptive Cards]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-adaptive-card-tabs?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-adaptive-card-tabs?referrer=whats.new.rssfeed"/>
-		<updated>2021-08/12T03:30:00.000Z</updated>
+		<updated>2021-08/12T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Adaptive Card tabs are a new way to build tabs in Teams. You can now render Adaptive Cards to a tab. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -20,7 +20,7 @@
 		<title type="html"><![CDATA[Tabs will no longer have margins surrounding their experiences]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/resources/removing-tab-margins?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/resources/removing-tab-margins?referrer=whats.new.rssfeed"/>
-		<updated>2021-08/04T03:30:00.000Z</updated>
+		<updated>2021-08/04T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Microsoft Teams enhances your app-building experience by removing margins around all tabs. You can now build apps that look more native to Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
 	</entry>
@@ -28,7 +28,7 @@
 		<title type="html"><![CDATA[Meeting app extensibility is available on mobile]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/meeting-app-extensibility?tabs=mobile&referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/meeting-app-extensibility?tabs=mobile&referrer=whats.new.rssfeed"/>
-		<updated>2021-07/08T03:30:00.000Z</updated>
+		<updated>2021-07/08T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Meeting app extensibility is available on mobile. Mobile clients now support apps during meeting. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2033fae5e3-2d98-381c-1b16-82c0acc6f716%0A*%20Version%20Independent%20ID%3A%206124f090-bdb7-c575-2614-60ec85a947b9%0A*%20Content%3A%20%5BMeeting%20app%20extensibility%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility%3Ftabs%3Ddesktop)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
 	</entry>
@@ -36,7 +36,7 @@
 		<title type="html"><![CDATA[Integrate People Picker capability]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/people-picker-capability?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/people-picker-capability?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/28T03:30:00.000Z</updated>
+		<updated>2021-06/28T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ People Picker is a control to search and select people. This is a native capability available in Teams platform. You can integrate Teams native People Picker input control with your web apps.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%202bafb046-4848-f113-8ea4-6ae1865c26fd%0A*%20Version%20Independent%20ID%3A%20bfae5321-cfaf-591e-d5bd-292d9f206462%0A*%20Content%3A%20%5BIntegrate%20People%20Picker%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.  ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -44,7 +44,7 @@
 		<title type="html"><![CDATA[Send Proactive Messages | Step-by-step Guide]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T03:30:00.000Z</updated>
+		<updated>2021-06/25T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Introducing a step-by-step guide to help you send a proactive message from a bot. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
