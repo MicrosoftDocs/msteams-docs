@@ -125,7 +125,7 @@ The following image displays command addition for messaging extension:
 
 1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 	
-	  <img width="500px" alt="Screenshot of TDP1" src="~/assets/images/tdp/tdp_home_1.png"/>
+	  ![Screenshot of TDP](~/assets/images/tdp/tdp_home_1.png)
 
 1. Go to **Apps**.
 	
@@ -141,7 +141,7 @@ The following image displays command addition for messaging extension:
 
 1. Select **Messaging extensions** from **App features**. 
     
-   <img width="550px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
  
    A pop-up window appears to set up the messaging extension.
 
