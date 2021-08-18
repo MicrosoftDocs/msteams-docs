@@ -77,7 +77,7 @@ The following image displays command addition for messaging extension:
 
 1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 	
-	   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
+   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
 	
 1. Go to **Apps**.
 	
