@@ -77,23 +77,23 @@ The following image displays command addition for messaging extension:
 
 1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 	
-	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
+	   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
 	
 1. Go to **Apps**.
 	
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
+    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
 	
 1. If you already created your app package in **Developer Portal**, select it from the list. If you have not created an app package, select **Import an existing app**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
+    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Go to **App features**.  
 
-    <img width="430px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
+    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
 
 1. Select **Messaging extensions** from **App features**. 
     
-   <img width="430px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-me.png"/>
+   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
  
    A pop-up window appears to set up the messaging extension.
 
@@ -103,17 +103,17 @@ The following image displays command addition for messaging extension:
 
 1. Select **Add a command**. 
 
-    <img width="430px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
+    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
 
     A pop-up window appears to add command.
 
 1. Select **search-based** to search command and enter command fields.
 
-    <img width="430px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
+    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
 
 1. Enter parameter fields and select **Save**.
 
-    <img width="430px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
+    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
 
 ---
 
