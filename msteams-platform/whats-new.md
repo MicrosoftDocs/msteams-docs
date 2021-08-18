@@ -184,12 +184,13 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 ## Configure RSS Feeds
 
-1. In Teams, go to <img src="~/assets/images/Teamschannelicon.png" alt="Teams Channel icon" width="35"/>.
+1. Open Teams.
+1. Select **Teams** from the left pane.
 1. Select a channel in the team.
-1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the drop-down list, select **Connectors**.
+1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the dropdown list, select **Connectors**.
 1. Search for **RSS** in the **Connectors** dialog box that appears.
 1. Select **Configure**.
-1. Enter a name in **Enter a name for your RSS connection.**
+1. Enter a name in **Enter a name for your RSS connection.**.
 1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
-1. Select the frequency of the feed in **Digest frequency**.
+1. Select the frequency of the feed from the **Digest frequency** dropdown list.
 1. Select **Save**.
