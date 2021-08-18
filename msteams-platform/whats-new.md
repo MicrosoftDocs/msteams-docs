@@ -184,7 +184,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 ## Configure RSS Feeds
 
-1. In Teams, go to <img src="~/assets/images/Teamschannelicon.png" alt="Teams Channel icon" width="40"/>.
+1. In Teams, go to <img src="~/assets/images/Teamschannelicon.png" alt="Teams Channel icon" width="35"/>.
 1. Select a channel in the team.
 1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the drop-down list, select **Connectors**.
 1. Search for **RSS** in the **Connectors** dialog box that appears.
