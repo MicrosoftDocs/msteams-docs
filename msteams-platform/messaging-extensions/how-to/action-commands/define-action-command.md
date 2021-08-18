@@ -127,8 +127,6 @@ The following image displays command addition for messaging extension:
 	
 	  <img width="500px" alt="Screenshot of TDP1" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-    ![Screenshot of TDP](~/assets/images/tdp/tdp_home_1.png)
-	
 1. Go to **Apps**.
 	
     <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
