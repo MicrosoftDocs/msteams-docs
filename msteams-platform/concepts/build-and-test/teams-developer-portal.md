@@ -27,10 +27,10 @@ You can register your Teams app in Developer Portal with the following ways:
 
 You can configure environments and global variables to help transition of your app from your local runtime to production. Global variables are used across all environments.
 
-**To set up an environment**
+**To configure an environment**
 
 1. In the Developer Portal, select the app you're working on.
-2. Go to the **Environments** page and select **+ Add an environment**.
+2. Go to **Environments** and select **+ Add an environment**.
 3. Select **+ Add a variable** to create configuration variables for your environment.
 
 **To use variables**
@@ -42,7 +42,7 @@ Use the variable names instead of hard-coded values to set your app configuratio
 
 ## Identify app owners
 
-Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
+Each app includes **Owners**, where you can share your app registration with colleagues in your organization. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
 
 ## Configure your app's capabilities and other important metadata
 
@@ -86,25 +86,25 @@ To install and render your app in Teams, you must include a set of configuration
 
 The Developer Portal provides options for testing and debugging your app:
 
-* On the **Overview** page, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
-* The **Preview in Teams** button lets you launch your app quickly in the Teams client for debugging.
+* In **Overview**, you can see a snapshot of whether your app's configurations validate against Teams store test cases.
+* **Preview in Teams** allows you to launch your app quickly in the Teams client for debugging.
 
 ## Distribute your app
 
-From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
+From the Developer Portal, use **Distribute** to download an app package, publish to your org, or publish to the Teams store.
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
 ## Analyze your app's usage
 
-On the **Overview** page, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
+In **Overview**, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an organization's app catalog through Developer Portal and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
-| *Monthly R30* | The default usage metric. It shows you the count of unique active users that used your app within that rolling 30-day window in UTC. |
-| *Daily* | Shows you the count of unique active users that used your app in a given day in UTC. |
+| *Monthly R30* | The default usage metric. It shows the count of unique active users, who have used your app within that rolling 30-days window in UTC. |
+| *Daily* | Shows the count of unique active users, who have used your app in a given day in UTC. |
 
-Monthly and daily usage is shown for the past seven, 30 days, and 60 days. You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
+Monthly and daily usage is shown for the past seven days, 30 days, and 60 days. You should see usage reflected for a given day within 24-48 hours. Usage for new apps can take up to 3-5 days to display.
 
 ## Use tools to create app features
 

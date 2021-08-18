@@ -139,21 +139,17 @@ The following image displays command addition for messaging extension:
 
     <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
 
-1. Select **Messaging extensions** from **App features**. 
+1. Select **Messaging extensions** from **App features**. A pop-up window appears to set up the messaging extension.
     
    <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
  
-   A pop-up window appears to set up the messaging extension.
-
 1. Select **an message extension bot** from the drop down list under **Messag extensions ID** and select **Save**.
 
     <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
 
-1. Select **Add a command**. 
+1. Select **Add a command**. A pop-up window appears to add a command.
 
     <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-    A pop-up window appears to add a command.
 
 1. Select the type of the command as **Action-based** to configure the messaging extension. Select **Dynamic parameters** to create dynamic action command.
 
