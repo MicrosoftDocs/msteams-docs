@@ -6,7 +6,7 @@ localization_priority: Normal
 keywords: teams what's new latest
 ---
 
-# What's new for developers in Microsoft Teams [![Download Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)
+# What's new for developers in Microsoft Teams [![Download Feed](data:image/png;base64,~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
@@ -182,12 +182,14 @@ Along with new features, we also provide [production-ready Teams app templates](
 
 We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
 
-## Configure RSS feeds
+## Configure RSS Feeds
 
-**To configure RSS feeds**
-
-1. In Teams, go to any Teams channel.
-1. Select ellipses &#x25CF;&#x25CF;&#x25CF; for any of that channel's page and from the drop-down list, select **Connectors**.
-1. In the **Connectors** dialog box, search for **RSS**.
-1. From the search results, select **Add** for **RSS** connector.
-1. In the dialog box shown, select **Add**.
+1. In Teams, go to **Teams** and select a team.
+1. Select a channel in the team.
+1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the drop-down list, select **Connectors**.
+1. In the **Connectors** dialog box that appears, search for **RSS**.
+1. Select **Configure**.
+1. Enter a name in **Enter a name for your RSS connection.**
+1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
+1. Select the frequency of the feed in **Digest frequency**.
+1. Select **Save**.
