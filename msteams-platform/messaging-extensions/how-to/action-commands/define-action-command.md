@@ -125,7 +125,9 @@ The following image displays command addition for messaging extension:
 
 1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 	
-	  <img width="430px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
+	  <img width="430px" alt="Screenshot of TDP1" src="~/assets/images/tdp/tdp_home_1.png"/>
+
+    ![Screenshot of TDP](~/assets/images/tdp/tdp_home_1.png)
 	
 1. Go to **Apps**.
 	
@@ -159,7 +161,7 @@ The following image displays command addition for messaging extension:
 
     <img width="430px" alt="TDP messaging extension dynamic action command" src="~/assets/images/tdp/tdp-me-action-command-dynamic.png"/>
 
-1. Select **Static** to create static action command.   
+1. Select **Static parameters** to create static action command.   
 
     <img width="430px" alt="TDP messaging extension static action command" src="~/assets/images/tdp/tdp-me-action-command-static.png"/>
 
