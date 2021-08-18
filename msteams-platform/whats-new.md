@@ -6,7 +6,7 @@ localization_priority: Normal
 keywords: teams what's new latest
 ---
 
-# What's new for developers in Microsoft Teams [![Download Feed](data:image/png;base64,~/assets/images/RSSfeeds.png)](/microsoftteams/platform/feed.atom)
+# What's new for developers in Microsoft Teams [![Download Feed](~/assets/images/RSSfeeds.png)](/microsoftteams/platform/feed.atom)
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
