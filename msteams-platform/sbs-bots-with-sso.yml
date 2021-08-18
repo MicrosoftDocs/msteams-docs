@@ -13,7 +13,10 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The tutorial guides you to get started with Single sign-on (SSO) in a bot using Bot Framework. The lessons begin with setting up bot SSO. These lessons guide you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The tutorial provides steps to enable Bot SSO, which helps to set up Azure Bot Services.
+    The step by step guide helps you to get started with Single sign-on (SSO) in a bot using Bot Framework. The lessons begin with setting up bot SSO in Azure Bot Service. These lessons guide you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The tutorial provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You will see the following output:
+
+    ![Logged in to the conversation bot](~/assets/images/bots/loggedin.png)
+
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -28,7 +31,9 @@ items:
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
-    Run the following command in ngrok:
+    You must register a bot with the Azure Bot Service when you develop and host it in Azure.
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
     ```bash
     ngrok http -host-header=rewrite 3978
@@ -135,6 +140,8 @@ items:
 - title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
+    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app id (MicrosoftAppID) and a client secret (MicrosoftAppPassword). You use these values for bot configuration. You also generate an authentication connection. You add this connection to the bot channel registration settings.
+
     1. Select **Add OAuth Connection Settings**.
     1. Enter the following details in **New Connection Setting**:
         - Enter **Name** for your new connection setting. This name is referenced in the settings of your bot service code.
@@ -148,38 +155,41 @@ items:
         - Enter **common** as the **Tenant ID**.
         - Add all the **Scopes** required while specifying permissions to downstream APIs.
 
-        ![Bot Service connection](~/assets/images/bots/botserviceconnection.png)
+            ![Bot Service connection](~/assets/images/bots/botserviceconnection.png)
 
     1. Select **Save**.
     1. Select **Apply**.
 
-- title: Configure bot sample
+- title: Configure and run your bot sample
   durationInMinutes: 1
   content: |
+    You must configure the bot sample to understand how to use authentication for a bot running in Microsoft Teams.
+
     1. Clone the repository with the following command or using Visual Studio 2019.
 
         ```bash
         git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
         ```
 
-    1. In Visual Studio, open the **BotSSOCSharp.csproj** file of **Microsoft-Teams-Samples** repository.
+    1. In Visual Studio, select **File -> Open -> Project/Solution**.
+    1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore** folder of **Microsoft-Teams-Samples** repository.
+    1. Open the **BotSSOCSharp.csproj** file.
     1. Open the **appsettings.json** file.
     1. Update the **appsettings.json** configuration for the bot to use the Microsoft App ID and App Password generated previously. Use the OAuth connection name as the **Connection Name**.
 
         > [!NOTE]
         > The Microsoft App ID can be obtained from the bot's Configuration page. The App Password is the Value for Client secret that you saved previously.
 
-- title: Run your bot sample
-  durationInMinutes: 1
-  content: |
-    1. If the project file isn't already open, in Visual Studio, select **File -> Open -> Project/Solution**.
-    1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore** folder.
-    1. Select the **BotSSOCSharp.csproj** file.
     1. Select the **F5** key to run this project.
 
 - title: Configure and run the Teams app
   durationInMinutes: 2
   content: |
+    You must configure and run the Teams app either by:
+
+    * Uploading the **manifest.zip** file
+    * Using App Studio
+
     Edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     
     **To run the Teams app by uploading the manifest.zip file**
@@ -201,7 +211,7 @@ items:
 
     **To run the Teams app using App Studio**
 
-    1. In Teams, open your app's zip file in App Studio's manifest editor.
+    1. In Teams, open your app's zip file in **App Studio's** manifest editor.
     1. Select **Bots** under **Capabilities**.
     1. Check the **Bot ID**.
     1. Select **Domains and permissions** under **Finish**.
