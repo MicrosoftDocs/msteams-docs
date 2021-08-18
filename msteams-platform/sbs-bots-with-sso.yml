@@ -13,16 +13,16 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A bot also referred to as a chatbot or conversational bot is an app that runs simple and repetitive automated tasks performed by the users, such as customer service or support staff. A bot behaves differently depending on the conversation it is involved in:
+    A bot referred to as a chatbot or conversational bot is an app that runs simple and repetitive automated tasks. These tasks are performed by the users, such as by customer service. A bot behaves differently depending on the conversation it's involved in:
 
     * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
-    * Bots in a one-to-one conversation do not require an @mention. All messages sent by the user routes to your bot.
+    * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to your bot.
     
-    The step by step guide helps you to get started with Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
+    The step-by-step guide helps you to get started with Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
     
-    The lessons begin with setting up bot SSO in Azure Bot Service. These lessons guide you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The tutorial provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You will see the following output:
+    The lessons begin with setting up bot SSO in Azure Bot Service. These lessons guide you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The tutorial provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You'll see the following output:
 
-    ![Logged in to the conversation bot](~/assets/images/bots/loggedin.png)
+    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -38,7 +38,7 @@ items:
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
-    You must register a bot with the Azure Bot Service when you develop and host it in Azure.
+    Register a bot with the Azure Bot Service when you develop and host it in Azure.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -147,7 +147,7 @@ items:
 - title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
-    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app id (MicrosoftAppID) and a client secret (MicrosoftAppPassword). You use these values for bot configuration. You also generate an authentication connection. You add this connection to the bot channel registration settings.
+    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app ID (MicrosoftAppID) and a client secret (MicrosoftAppPassword). You use these values for bot configuration. You also generate an authentication connection. You add this connection to the bot channel registration settings.
 
     1. Select **Add OAuth Connection Settings**.
     1. Enter the following details in **New Connection Setting**:
@@ -170,7 +170,7 @@ items:
 - title: Configure and run your bot sample
   durationInMinutes: 1
   content: |
-    You must configure the bot sample to understand how to use authentication for a bot running in Microsoft Teams.
+    Configure the bot sample to understand how to use authentication for a bot running in Microsoft Teams.
 
     1. Clone the repository with the following command or using Visual Studio 2019.
 
@@ -192,9 +192,9 @@ items:
 - title: Configure and run the Teams app
   durationInMinutes: 2
   content: |
-    The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
+    The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This method is the only way to test the full functionality available to your bot, across all scopes.
     
-    You must configure and run the Teams app either by:
+    Configure and run the Teams app either by:
 
     * Uploading the **manifest.zip** file
     * Using App Studio
@@ -238,7 +238,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    ![Logged in to the conversation bot](~/assets/images/bots/loggedin.png)
+    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
     
 - content: |
     You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.
