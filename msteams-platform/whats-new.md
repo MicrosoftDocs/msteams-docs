@@ -8,7 +8,10 @@ keywords: teams what's new latest
 
 # What's new for developers in Microsoft Teams [![Download Feed](~/assets/images/RSSfeeds.png)](/microsoftteams/platform/feed.atom)
 
-Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can also integrate and [configure RSS](#get-notifications-on-latest-updates) to subscribe to the feed and receive updates.
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
+
+> [!IMPORTANT]
+> You can now get latest updates by subscribing to the [RSS feed](/microsoftteams/platform/feed.atom). For more information, see [configure RSS](#get-latest-updates).
 
 ## GA features
 
@@ -182,7 +185,11 @@ Along with new features, we also provide [production-ready Teams app templates](
 
 We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
 
-## Get notifications on latest updates
+## Get latest updates
+
+You can get latest Teams documentation updates by configuring the [RSS feed](/microsoftteams/platform/feed.atom).
+
+**To configure RSS feeds**
 
 1. Open Teams.
 1. Select **Teams** from the left pane.
