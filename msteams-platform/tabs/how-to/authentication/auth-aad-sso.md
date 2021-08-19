@@ -156,8 +156,13 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-When you call `getAuthToken` - and another user consent is required for user level permissions, the user gets a window to grant consent.
-After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. For more information, see [access tokens](/azure/active-directory/develop/access-tokens
+When you call `getAuthToken` and another user consent is required for user level permissions, the window to grant consent appears.
+After you receive the access token in the success callback:
+* You can decode the access token to view the claims associated with that token. 
+Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. 
+If you don't receive the UPN in the returned access token:
+* You can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. 
+For more information, see [access tokens](/azure/active-directory/develop/access-tokens
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>
@@ -172,26 +177,26 @@ After you receive the access token in the success callback, you can decode the a
 
 ### Get an access token with Graph permissions
 
-Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token got from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
+Currently, SSO only grants consent for user-level permissions. To get the required permissions for Graph call, SSO solutions must implement a custom web service to exchange the token from Teams JavaScript SDK for a token that includes the necessary. Use AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
 
 A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
-#### Ask for additional consent using the Auth API
+#### Ask for consent using the Auth API
 
-To get additional Graph scopes, is to present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-pop-up-page) which involves popping up an Azure AD consent window. 
+To get Graph scopes, is to present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-pop-up-page) which involves popping up an Azure AD consent window. 
 
 **To ask for additional consent using the Auth API**
 
-1. The token retrieved using `getAuthToken()` must be exchanged server side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to additional Graph APIs. Ensure to use the v2 Graph endpoint for this exchange.
+1. The token retrieved using `getAuthToken()` must be exchanged server side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to Graph APIs. Ensure to use the v2 Graph endpoint for this exchange.
 2. If the exchange fails, AAD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
-3. When the exchange fails, you must ask for additional consent. Show some user interface (UI) asking the user to grant additional consent. This UI must include a button that triggers an AAD consent window using [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
-4. To ask additional consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD does not ask for the additional scopes.
+3. When the exchange fails, you must ask for more consent. The UI must include a button that triggers an AAD consent window using [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
+4. To ask for more consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD doesn't ask for the scopes.
     * Instead of `?scope={scopes}`
-    * Use this `?prompt=consent&scope={scopes}`
-    * Ensure that `{scopes}` includes all the scopes you are prompting the user for, for example, Mail.Read or User.Read.
-5. After the user gets additional permission, they must retry the on behalf of flow to get access to the additional APIs.
+    * Use `?prompt=consent&scope={scopes}`
+    * Include all the `{scopes}`, the user needs.
+5. After the user gets the permissions, they must retry the flow to get access to other APIs.
 
 ### Non-AAD authentication
 
