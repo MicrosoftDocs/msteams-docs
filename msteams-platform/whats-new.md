@@ -191,7 +191,7 @@ You can get the latest Teams platform updates by configuring to the [RSS feed](/
 
 **To configure RSS feed**
 
-1. Open Teams.
+1. Open Microsoft Teams.
 1. Select **Teams** from the left pane.
 1. Select a channel in the team.
 1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the dropdown list, select **Connectors**.
