@@ -108,7 +108,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 During a meeting, you can use the meetingSidePanel or the in-meeting dialog box to build unique experiences for your apps.
 
-#### meetingSidePanel
+#### Meeting Sidepanel
 
 With the meetingSidePanel, you can customize experiences in a meeting that enable organizers and presenters to have different set of views and actions. In your app manifest, you must add meetingSidePanel to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 

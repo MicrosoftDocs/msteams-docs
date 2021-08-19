@@ -26,9 +26,7 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 
 The following image shows how the SSO process works:
 
-<!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
-
 
 **SSO work flow at run time**
 
@@ -42,7 +40,7 @@ The following image shows how the SSO process works:
 1. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user level APIs, such as email, profile, offline_access and OpenId. It is not used for further Graph scopes, such as `User.Read` or `Mail.Read`. For suggested workarounds, see [additional Graph scopes](#apps-that-require-additional-graph-scopes).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
 
 The SSO API also works in [task modules](~/task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -65,10 +63,9 @@ Complete the following steps to develop an SSO Teams tab:
 1. To preauthorize Teams, select the **Add a scope** and in the panel that opens, enter **access_as_user** as the **Scope name**.
 
 > [!NOTE]
->
-> * Only user level Graph API permissions are supported, such as email, profile, offline access, and OpenId. For access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](#apps-that-require-additional-graph-scopes).
-> * Your app's domain name must be same as the domain name that you have registered for your AAD application.
-> * Currently, multiple domains per app are not supported.
+> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+> * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
+> * Currently multiple domains per app are not supported.
 
 ### Register your app through the AAD portal
 
@@ -172,15 +169,13 @@ You receive the access token in the success callback. Then you can decode the ac
 
 ## Limitations
 
-### Apps that require additional Graph scopes
+### Get an access token with Graph permissions
 
-Currently, implementation for SSO only grants consent for user level permissions, such as email, profile, offline access, OpenId and not for other APIs, such as User.Read or Mail.Read. If your app needs further Graph scopes, the next section provides some enabling workarounds.
+Our current implementation for SSO only grants consent for user-level permissions that are not usable for making Graph calls. To get the permissions (scopes) needed to make a Graph call, SSO solutions must implement a custom web service to exchange the token got from the Teams JavaScript SDK for a token that includes the needed scopes. This is accomplished using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow).
 
 #### Tenant Admin Consent
 
-The simplest approach is to get a tenant admin to preconsent on behalf of the organization. This means users do not have to consent to these scopes and you can exchange the token server side using AAD’s [on-behalf-of flow](/azure/active-directory/develop/v1-oauth2-on-behalf-of-flow). This workaround is acceptable for internal line-of-business apps but is not enough for third party developers who cannot rely on tenant admin approval.
-
-To consent on behalf of an organization as a tenant admin, see **https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>**.
+A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
 #### Ask for additional consent using the Auth API
 
