@@ -11,6 +11,9 @@ ms.author: lajanuar
 
 Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML <iframe\> tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client SDK](/javascript/api/overview/msteams-client).
 
+> [!IMPORTANT]
+> Currently, custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
+
 The following image shows personal tabs:
 
 ![Personal tabs](../assets/images/tabs/personaltab.png)
@@ -73,8 +76,8 @@ For channel or group tabs, you can also create an additional configuration page.
 You can have multiple channels or group tabs, and up to 16 personal tabs per app.
 
 ### Tools you can use to build tabs
-* [Teams Toolkit for Visual Stuido Code](../toolkit/visual-studio-code-overview.md)
-* [Teams Toolkit for Visual Stuido](../toolkit/visual-studio-overview.md)
+* [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## See also
 

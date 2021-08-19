@@ -40,7 +40,8 @@ The following image shows how the SSO process works:
 1. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+
+> The `getAuthToken()` is only valid for consenting to a limited set of user level APIs, such as email, profile, offline_access and OpenId. It is not used for further Graph scopes, such as `User.Read` or `Mail.Read`. For suggested workarounds, see [additional Graph scopes](#get-an-access-token-with-graph-permissions).
 
 The SSO API also works in [task modules](~/task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -63,9 +64,11 @@ Complete the following steps to develop an SSO Teams tab:
 1. To preauthorize Teams, select the **Add a scope** and in the panel that opens, enter **access_as_user** as the **Scope name**.
 
 > [!NOTE]
-> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
-> * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
-> * Currently multiple domains per app are not supported.
+
+> * Only user level Graph API permissions are supported, such as email, profile, offline access, and OpenId. For access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](#get-an-access-token-with-graph-permissions).
+> * Your app's domain name must be same as the domain name that you have registered for your AAD application.
+> * Currently, multiple domains per app are not supported.
+
 
 ### Register your app through the AAD portal
 
@@ -154,9 +157,7 @@ microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
 When you call `getAuthToken` - and another user consent is required for user level permissions, the user gets a window to grant consent.
-
-You receive the access token in the success callback. Then you can decode the access token to view the claims associated with that token. You can also manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If the UPN in the returned access token is missing, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD.
-
+After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. For more information, see [access tokens](/azure/active-directory/develop/access-tokens
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
 </p>

@@ -145,7 +145,7 @@ conceptualContent:
           itemType: whats-new
           text: Announcements
     # Card
-    - title: Community help
+    - title: Help
       links:
         - url: /microsoftteams/platform/feedback
           itemType: overview

@@ -9,7 +9,6 @@ ms.author: surbhigupta
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
-> * This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
 When developing a tab using the traditional method, you might run into these issues:
@@ -31,9 +30,8 @@ The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
-* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Changes to app manifest
 
