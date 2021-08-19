@@ -19,6 +19,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
+
 * Capture and view images.
 * Scan QR or barcode.
 * Record and share short videos.
@@ -26,7 +27,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information.
 
 > [!NOTE]
-> Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel. 
+> Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 
 ## Access device permissions
 
@@ -34,13 +35,13 @@ The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Microsoft Teams support for media capabilities and QR barcode scanner capability is only available for mobile clients.
 
 ## Manage permissions
 
 A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
- 
+
 # [Desktop](#tab/desktop)
 
 1. Open your Teams app.
@@ -48,7 +49,7 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select **Settings** > **Permissions** from the drop-down menu.
 1. Select your desired settings.
 
-   ![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
+   ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png)
 
 # [Mobile](#tab/mobile)
 
