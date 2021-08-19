@@ -72,6 +72,10 @@ You can create deep links to the entities in Teams. You can create links to info
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
 
+## Integrate People Picker
+
+You can integrate the Teams native people picker control that allows users to search and select people in the web app experience.
+
 ## See also
 
 * [Map your app's use cases to Teams platform capabilities](~/concepts/design/map-use-cases.md)
@@ -87,3 +91,4 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 * [Add a Teams tab to SharePoint](~/tabs/how-to/tabs-in-sharepoint.md)
 * [Create deep links](~/concepts/build-and-test/deep-links.md)
 * [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+* [people picker control](~/concepts/device-capabilities/people-picker-capability.md)
