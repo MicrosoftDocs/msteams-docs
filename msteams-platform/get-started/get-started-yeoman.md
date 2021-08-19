@@ -73,11 +73,11 @@ This section walks you through the steps to generate your project.
    1. Enter the title of your project. This title will be used in the manifest and description of your app. 
    1. Enter a company name which also will be used in the manifest.
    1. Enter the version of the manifest you want to use. For this tutorial select `v1.5`, which is the current general available schema.
-   1. Select the items you want to add to your project. You can select a single one or any combination of items. For this tutorials, just select *a Tab*:
+   1. Select the items you want to add to your project. You can select a single one or any combination of items. For this tutorial, just select *a Tab*:
 
     ![item selection](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Respond to the next set of follow-up questions that appear based on the items you selected in Step 2.
+1. Respond to the next set of follow-up questions that appear based on the items you selected in Step 3.
 1. Enter a URL for the location where you will host your solution. 
 
    > [!NOTE]
