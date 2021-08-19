@@ -25,19 +25,17 @@ You can add a tab from the Teams store (AppSource) or in one of the following co
 * Channel
 * Meeting (before, during, or after the meeting)
 
-# [Desktop](#tab/desktop)
-
-The following example shows how users can add a tab in a channel.
-
-:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 Users can access tabs by selecting the **More** button in the channel (example below) or chat in which they've been added.
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a channel." border="false":::
 
----
+### Desktop
+
+The following example shows how users can add a tab in a channel.
+
+:::image type="content" source="../../assets/images/tabs/design-add-tab.png" alt-text="Example shows a tab being added in a channel." border="false":::
 
 ## Set up a tab
 
@@ -92,7 +90,17 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 
 ### Anatomy: Tab
 
-# [Desktop](#tab/desktop)
+#### Mobile
+
+:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**Tab name**: Navigation label for your tab.|
+|2|**Tab chat**: Opens a chat that allows users to have a conversation next to the content.|
+|3|**webview**: Displays your app content.|
+
+#### Desktop
 
 :::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
 
@@ -103,19 +111,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 |3|**Tab chat**: Opens a chat to the right, allowing users to have a conversation next to the content.|
 |4|**iframe**: Displays your app content.|
 
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/tabs/mobile-design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|1|**Tab name**: Navigation label for your tab.|
-|2|**Tab chat**: Opens a chat that allows users to have a conversation next to the content.|
-|3|**webview**: Displays your app content.|
-
----
-
-### Designing a tab with UI templates and advanced components
+### Design a tab with UI templates and advanced components
 
 Use one of the following Teams templates and components to help design your tab experience:
 
@@ -134,29 +130,25 @@ Tabs help facilitate conversations about content in a central location.
 
 Users can automatically post to a channel or chat once they’ve added a new tab. This not only notifies team members of the new content and provides a link to tab, it allows people to start talking about the tab.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Example shows a tab being discussed in a channel thread." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-channel.png" alt-text="Example shows a mobile tab being discussed in a channel thread." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-channel.png" alt-text="Example shows a tab being discussed in a channel thread." border="false":::
 
 ### Tab chat
 
 Users can have a conversation next to the tab content they're viewing. On desktop, the chat opens to the side of the app content.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Example shows a tab with a chat open on the right side." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-use-tab-side-chat.png" alt-text="Example shows a mobile tab with an in-context chat area." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-use-tab-side-chat.png" alt-text="Example shows a tab with a chat open on the right side." border="false":::
 
 ### Permissions and role-based views
 
@@ -168,17 +160,7 @@ You can include options to rename, remove, or modify a tab.
 
 ### Anatomy: Tab menu
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab menu." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|1|**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.|
-|2|**Rename**: Users can give the tab a name that’s meaningful to the channel, chat, or meeting.|
-|3|**Remove**: Removes the tab from the channel, chat, or meeting.|
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a mobile tab menu." border="false":::
 
@@ -190,7 +172,15 @@ You can include options to rename, remove, or modify a tab.
 |4|**Rename**: Users can give the tab a name that's meaningful to the channel, chat, or meeting.|
 |5|**Delete**: Removes the tab from the channel, chat, or meeting.|
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-manage-tab-menu-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab menu." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|**Settings**: (Optional) Allows users to modify a tab’s settings after it’s been added.|
+|2|**Rename**: Users can give the tab a name that’s meaningful to the channel, chat, or meeting.|
+|3|**Remove**: Removes the tab from the channel, chat, or meeting.|
 
 ## Tab notifications and deep linking
 
