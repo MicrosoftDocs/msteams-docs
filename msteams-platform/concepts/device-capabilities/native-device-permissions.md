@@ -42,15 +42,6 @@ While access to these features is standard in modern web browsers, you must info
 
 A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
 
-# [Desktop](#tab/desktop)
-
-1. Open your Teams app.
-1. Select your profile icon in the upper right corner of the window.
-1. Select **Settings** > **Permissions** from the drop-down menu.
-1. Select your desired settings.
-
-   ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png)
-
 # [Mobile](#tab/mobile)
 
 1. Open Teams.
@@ -59,6 +50,15 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your desired settings.
 
     ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
+
+# [Desktop](#tab/desktop)
+
+1. Open your Teams app.
+1. Select your profile icon in the upper right corner of the window.
+1. Select **Settings** > **Permissions** from the drop-down menu.
+1. Select your desired settings.
+
+   ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png)
 
 ---
 
@@ -143,9 +143,6 @@ For example:
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-
-
-
 * To use the camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:
 
     ```JavaScript
@@ -169,15 +166,16 @@ For example:
       /* ... *
     /});
     ```
-# [Desktop](#tab/desktop)
-
-   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
 
 # [Mobile](#tab/mobile)
 
    ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
 
-* * * 
+# [Desktop](#tab/desktop)
+
+   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+
+---
 
 ## Permission behavior across login sessions
 
@@ -202,4 +200,3 @@ Device permissions are stored for every login session. It means that if you sign
 
 > [!div class="nextstepaction"]
 > [Integrate location capabilities in Teams](location-capability.md)
-
