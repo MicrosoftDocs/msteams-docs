@@ -52,7 +52,7 @@
 		<title type="html"><![CDATA[Integrage media capabilities]]></title>
 		<id>https://https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/mobile-camera-image-permissions?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/mobile-camera-image-permissions?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-06/10T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can integrate native device capabilities, such as the camera and microphone with your Teams app. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -60,7 +60,7 @@
 		<title type="html"><![CDATA[Reorder static personal tabs]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/create-personal-tab?tabs=nodejs#reorder-static-personal-tabs?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/create-personal-tab?tabs=nodejs#reorder-static-personal-tabs?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-05/27T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can rearrange all tabs in your personal app. You can move the bot chat tab, which always defaults to the first position, anywhere in the personal app tab header. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -68,7 +68,7 @@
 		<title type="html"><![CDATA[Customize Microsoft Teams app]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-05/13T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can allow customers to customize some aspects of your Microsoft Teams app that are published to the Teams store in the Teams admin center. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -76,7 +76,7 @@
 		<title type="html"><![CDATA[Manage your apps with the Developer Portal]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-04/29T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Explore the newly developed tool, Developer Portal for Teams for configuring, distributing, and managing your Microsoft Teams apps. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -84,7 +84,7 @@
 		<title type="html"><![CDATA[Up to date cards]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-04/15T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
