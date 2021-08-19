@@ -26,7 +26,7 @@ You can add a messaging extension in the following Teams contexts:
 * From the Teams store.
 * In a channel, chat, or meeting (before, during, and after) near the compose box. It's worth noting if you add a messaging extension in one of these places, only you can use it in that context.
 
-The following example shows how you add a messaging extension in a channel:
+The following examples show how to add a messaging extension in a channel.
 
 ### Mobile
 
@@ -99,7 +99,7 @@ Once added, users can open your messaging extension by selecting your app icon b
 Once added, users can select the **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: icon on the chat message or channel post to find your extension’s action commands. Your extension may be listed under **More actions** based on usage.
 
 > [!NOTE]
-> Support for more actions from a chat message or channel post is not available on Microsoft Teams mobile platform. 
+> Support for more actions from a chat message or channel post is not available on Microsoft Teams mobile.
 
 #### Chat message
 
@@ -159,7 +159,7 @@ The following scenarios show the primary ways people use messaging extensions.
 
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command." border="false":::
 
-**2. Complete the action**. Your app can receive and process any content or data sent by the message action. This allows users to remain in their conversation and, the following example, not worry about entering information directly in your app.
+**2. Complete the action**. Your app can receive and process any content or data sent by the message action. Users complete the action in your app while remaining in their conversation.
 
 #### Mobile
 
@@ -195,13 +195,13 @@ Messaging extensions also allow you to insert rich links from a recognized URL i
 
 ## Manage a messaging extension
 
-By right clicking your icon, users can pin, remove, or configure your messaging extension.
+By right-clicking your icon, users can pin, remove, or configure your messaging extension.
 
 ## Anatomy
 
 ### Messaging extension in the compose box
 
-The following example is a messaging extension opened from the compose box.
+The following examples show a messaging extension opened from the compose box.
 
 #### Mobile
 

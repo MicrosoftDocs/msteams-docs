@@ -31,7 +31,7 @@ In the meeting details, users can select **Add a tab +** to open the app flyout 
 
 #### Mobile
 
-After you add the app on the desktop, you can select the app and can use the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
+Once app has been added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
 

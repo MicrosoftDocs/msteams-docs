@@ -45,7 +45,7 @@ There's a short setup process to add an app as a channel, chat, or meeting tab. 
 
 :::image type="content" source="../../assets/images/tabs/design-set-up-tab-config.png" alt-text="Example shows a tab configuration modal." border="false":::
 
-### Anatomy: Tab configuration dialog
+#### Anatomy: Tab configuration dialog
 
 :::image type="content" source="../../assets/images/tabs/test.png" alt-text="Illustration showing the UI anatomy of a tab configuration modal." border="false":::
 
@@ -78,15 +78,13 @@ Use one of the following Teams UI templates to help design your tab setup experi
 
 Tabs provide a full-screen web experience in Teams where you can display collaborative content—such task boards and dashboards—and important information.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/tabs/mobile-design-view-tab.png" alt-text="Example shows a mobile tab with a task board." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/tabs/design-view-tab.png" alt-text="Example shows a tab with a task board." border="false":::
 
 ### Anatomy: Tab
 

@@ -21,13 +21,13 @@ You can find comprehensive personal app design guidelines, including elements th
 
 ## Add a personal app
 
-You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
+Users can add a personal app from the Teams store or app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout." border="false":::
 
 ## Use a personal app (private workspace)
 
-With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.
+With a private workspace, users can view app content that's meaningful to them in a central location without leaving Teams.
 
 (Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)
 
@@ -82,7 +82,7 @@ Use one of the following Teams templates and components to help design your pers
 
 ## Use a personal app (bot)
 
-Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on your artboard). The bot is available in a tab you specify.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on on artboard). Users interact with the bot in a tab you specify.
 
 ### Anatomy: Personal app (bot)
 
@@ -109,7 +109,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 ## Manage a personal tab
 
-On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.
+On the left side of Teams, users can right-click the personal app to pin, remove, and configure other app options.
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
