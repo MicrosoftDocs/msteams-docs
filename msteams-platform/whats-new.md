@@ -8,7 +8,7 @@ keywords: teams what's new latest
 
 # What's new for developers in Microsoft Teams [![Download Feed](~/assets/images/RSSfeeds.png)](/microsoftteams/platform/feed.atom)
 
-Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
+Discover Microsoft Teams platform features that are generally available (GA) and in developer preview. You can also [configure RSS feed](#configure-rss-feeds) to receive notifications.
 
 ## GA features
 
