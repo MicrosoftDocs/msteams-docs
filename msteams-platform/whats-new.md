@@ -11,7 +11,7 @@ keywords: teams what's new latest
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
 > [!IMPORTANT]
-> You can now get latest Teams updates by subscribing to [RSS feed](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+> You can now get latest Teams platform updates by subscribing to [RSS feed](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## GA features
 
@@ -187,7 +187,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 ## Get latest updates
 
-You can get latest Teams documentation updates by configuring [RSS feed](/microsoftteams/platform/feed.atom).
+You can get latest Teams platform updates by configuring [RSS feed](/microsoftteams/platform/feed.atom).
 
 **To configure RSS feed**
 
