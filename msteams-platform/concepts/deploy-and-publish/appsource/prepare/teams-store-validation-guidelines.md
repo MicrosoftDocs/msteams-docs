@@ -193,7 +193,7 @@ The long description can provide an engaging narrative that highlights your app'
   * "... working with Microsoft Teams."
   * "... within Microsoft Teams."
   * "... for Microsoft Teams."
-  * “... integrated with Microsoft Teams”
+  * “... integrated with Microsoft Teams.”
   * “... built for... ”
   * “... developed for... ”
   * “... designed for...”
