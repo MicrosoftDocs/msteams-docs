@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
 
-You can create apps to make meetings more productive. For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
+You can create apps to make meetings more productive. For example, ask people to complete a survey during a meeting or send a quick reminder that doesn’t interrupt the flow of the meeting.
 
 ## Microsoft Teams UI Kit
 
@@ -43,7 +43,7 @@ In a meeting, users can select **More** :::image type="icon" source="../../asset
 
 ## Before a meeting
 
-Prior to a meeting, users can add content in the tab. The following example shows a draft survey question that people will answer during the call.
+Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." border="false":::
 
@@ -180,7 +180,7 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their call on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
@@ -191,7 +191,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 :::row:::
    :::column span="1":::
 
-**Edit and review**: Dive into dashboards and planning with everyone on the call.
+**Edit and review**: Dive into dashboards and planning with everyone in the meeting.
 
    :::column-end:::
    :::column span="3":::
@@ -284,7 +284,7 @@ For in-meeting dialogs, remove unnecessary content that doesn't help users accom
 
 #### Don't: Introduce unnecessary elements
 
-A single in-meeting dialog with multiple interactions can distract from the call.
+A single in-meeting dialog with multiple interactions can distract from the meeting.
 
    :::column-end:::
 :::row-end:::
