@@ -6,7 +6,7 @@ localization_priority: Normal
 keywords: teams what's new latest
 ---
 
-# What's new for developers in Microsoft Teams [![Download Feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates)
+# What's new for developers in Microsoft Teams [<img src="~/assets/images/bots/sequentialWorkflow.gif" alt="Sequential Workflow" width="40"/>](https://aka.ms/TeamsPlatformUpdates)
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
