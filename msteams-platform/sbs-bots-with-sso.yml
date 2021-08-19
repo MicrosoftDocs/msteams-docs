@@ -38,7 +38,7 @@ items:
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
-    To set up bot in Azure Bot Service, you need to register a bot with the Azure Bot Service when you develop and host it in Azure.
+    To set up bot in Azure Bot Service, you need to register bot with Azure Bot Service when you develop and host it in Azure.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -50,16 +50,16 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource** under **Azure services**.
-    1. In search box, enter **Azure bot** and select the **Enter** key.
+    1. Enter **Azure bot** in search box and select the Enter key.
     1. Select **Azure Bot**.
 
         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
-    1. Enter the required bot handle name in **Bot handle**.
-    1. Select the required subscription from the **Subscription** dropdown list.
-    1. Select the required resource group from the **Resource group** dropdown list.
-    1. If you created a new resource, select the required location from the **New resource group location** dropdown list.
+    1. Enter required bot handle name in **Bot handle**.
+    1. Select required subscription from **Subscription** dropdown list.
+    1. Select required resource group from **Resource group** dropdown list.
+    1. If you have created a new resource, select required location from **New resource group location** dropdown list.
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
@@ -72,12 +72,10 @@ items:
 
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**. The bot and the related Azure Key Vault resources are listed in the resource group you selected.
+    1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
     1. Select **Download from GitHub** to download the SDK and build your bot with the Bot Framework SDK.
 
         ![Build Bot Framework SDK](~/assets/images/bots/buildfromgithub.png)
-
-    1. Clone the **botframework-sdk** repository.
 
     **To create Client secret**
 
@@ -116,10 +114,10 @@ items:
     1. Select **Admins and users** for **Who can consent?**.
     1. Enter the following values or appropriate values in the boxes:
 
-        - Admin consent display name: **Teams can access the user’s profile**
-        - Admin consent description: **Allows Teams to call the app’s web APIs as the current user.**
-        - User consent display name: **Teams can access your user profile and make requests on your behalf**
-        - User consent description: **Enable Teams to call this app’s APIs with the same rights that you have.**
+        - **Admin consent display name**: **Teams can access the user’s profile**
+        - **Admin consent description**: **Allows Teams to call the app’s web APIs as the current user.**
+        - **User consent display name**: **Teams can access your user profile and make requests on your behalf**
+        - **User consent description**: **Enable Teams to call this app’s APIs with the same rights that you have.**
 
     1. Ensure that **State** is set to **Enabled**.
 
@@ -135,7 +133,7 @@ items:
         ![Connect to channels](~/assets/images/bots/connecttochannels.png)
 
     1. Select **Save**.
-    1. If necessary, select **I agree to the Microsoft Channel Publication Terms and the Microsoft Privacy Statements for my deployment to the Microsoft Teams channel.** and select **Agree**.
+    1. Select **I agree to the Microsoft Channel Publication Terms and the Microsoft Privacy Statements for my deployment to the Microsoft Teams channel.** and select **Agree**.
 
     **To add messaging endpoint**
 
@@ -147,16 +145,18 @@ items:
 - title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
-    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app ID (MicrosoftAppID) and a client secret (MicrosoftAppPassword). You use these values for bot configuration. You also generate an authentication connection. You add this connection to the bot channel registration settings.
+    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot channel registration settings.
+
+    **To configure Bot Service connection**
 
     1. Select **Add OAuth Connection Settings**.
     1. Enter the following details in **New Connection Setting**:
-        - Enter **Name** for your new connection setting. This name is referenced in the settings of your bot service code.
+        - Enter **Name** for your new connection setting. You can use the name in the settings of your bot service code.
         - Select **Azure Active Directory V2** from **Service Provider**.
         - Enter **Client id** and **Client secret** saved previously as your Microsoft App ID and Value for Client secret respectively.
 
             > [!NOTE]
-            > The Microsoft App ID can be obtained from the bot's Configuration page.
+            > You can obtain the Microsoft App ID from the bot's Configuration page.
 
         - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint and add **api://botid-** at the beginning of the URL.
         - Enter **common** as the **Tenant ID**.
@@ -182,10 +182,10 @@ items:
     1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore** folder of **Microsoft-Teams-Samples** repository.
     1. Open the **BotSSOCSharp.csproj** file.
     1. Open the **appsettings.json** file.
-    1. Update the **appsettings.json** configuration for the bot to use the Microsoft App ID and App Password generated previously. Use the OAuth connection name as the **Connection Name**.
+    1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
 
         > [!NOTE]
-        > The Microsoft App ID can be obtained from the bot's Configuration page. The App Password is the Value for Client secret that you saved previously.
+        > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for Client secret that you saved previously.
 
     1. Select the **F5** key to run this project.
 
