@@ -136,21 +136,9 @@ The following scenarios show the primary ways people use messaging extensions.
 
 **1. Select a messaging extension**. Your app can include one or more action commands.
 
-#### Mobile
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command on mobile." border="false":::
-
-#### Desktop
-
 :::image type="content" source="../../assets/images/messaging-extension/select-action-command.png" alt-text="Example shows a user selecting a messaging extension action command." border="false":::
 
 **2. Complete the action**. Your app can receive and process any content or data sent by the message action. Users complete the action in your app while remaining in their conversation.
-
-#### Mobile
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-complete-action-command.png" alt-text="Example on how to take action on a message on mobile." border="false":::
-
-#### Desktop
 
 :::image type="content" source="../../assets/images/messaging-extension/complete-action-command.png" alt-text="Example on how to take action on a message." border="false":::
 
