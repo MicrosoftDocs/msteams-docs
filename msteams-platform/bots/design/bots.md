@@ -261,7 +261,7 @@ Now in that channel, the user can read their message from the bot.
 
 ### Use tabs with bots
 
-In personal apps, a tab can complement what your bot can do. For example, if your bot can create work items, it would be nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
+In personal apps, a tab can complement what your bot can do. For example, if your bot can create work items, it's nice to show all those items in a central location inside a tab. See more about [designing tabs](../../tabs/design/tabs.md).
 
 #### Mobile
 
