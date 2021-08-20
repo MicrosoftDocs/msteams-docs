@@ -1,3 +1,5 @@
+- name: Microsoft Teams Developer documentation
+  href: /microsoftteams/platform
 - name: Overview
   expanded: true 
   items:
@@ -54,8 +56,6 @@
       href: concepts/device-capabilities/qr-barcode-scanner-capability.md
     - name: Integrate location capabilities
       href: concepts/device-capabilities/location-capability.md
-    - name: Integrate People Picker capability 
-      href: concepts/device-capabilities/people-picker-capability.md 
 - name: Design your app
   items:
   - name: Overview
@@ -438,8 +438,6 @@
           href: resources/dev-preview/developer-preview-intro.md
         - name: Manifest schema
           href: resources/schema/manifest-schema-dev-preview.md
-        - name: Features
-          href: resources/dev-preview/developer-preview-features.md
 - name: Integrate with Teams
   items:
   - name: Overview
@@ -470,6 +468,8 @@
     href: tabs/how-to/tabs-in-sharepoint.md
   - name: Create deep links
     href: concepts/build-and-test/deep-links.md
+  - name: Integrate People Picker  
+    href: concepts/device-capabilities/people-picker-capability.md   
 - name: Resources
   items:
     - name: Localization
