@@ -209,6 +209,8 @@
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md
+    - name: Step-by-step guide
+      href: sbs-bots-with-sso.yml 
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       items:
