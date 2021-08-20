@@ -77,7 +77,7 @@ items:
 
         ![Build Bot Framework SDK](~/assets/images/bots/buildfromgithub.png)
 
-    **To create Client secret**
+    **To create client secret**
 
     1. Go back to the Azure portal and select the Azure bot resource that you created.
     1. Select **Configuration** under **Settings**.
@@ -114,10 +114,12 @@ items:
     1. Select **Admins and users** for **Who can consent?**.
     1. Enter the following values or appropriate values in the boxes:
 
-        - **Admin consent display name**: **Teams can access the user’s profile**
-        - **Admin consent description**: **Allows Teams to call the app’s web APIs as the current user.**
-        - **User consent display name**: **Teams can access your user profile and make requests on your behalf**
-        - **User consent description**: **Enable Teams to call this app’s APIs with the same rights that you have.**
+        | Field | Value |
+        | ----- | ----- |
+        | **Admin consent display name** | **Teams can access the user’s profile** |
+        | **Admin consent description** | **Allows Teams to call the app’s web APIs as the current user.** |
+        | **User consent display name** | **Teams can access your user profile and make requests on your behalf** |
+        | **User consent description** | **Enable Teams to call this app’s APIs with the same rights that you have.** |
 
     1. Ensure that **State** is set to **Enabled**.
 
