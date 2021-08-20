@@ -100,21 +100,9 @@ Once added, users can select the **More** :::image type="icon" source="../../ass
 
 #### Chat message
 
-#### Mobile
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-chat-post.png" alt-text="Example shows how to open a messaging extension from a chat post on mobile." border="false":::
-
-#### Desktop
-
 :::image type="content" source="../../assets/images/messaging-extension/open-from-chat-message.png" alt-text="Example shows how to open a messaging extension from a chat message." border="false":::
 
 #### Channel post
-
-#### Mobile
-
-:::image type="content" source="../../assets/images/messaging-extension/mobile-open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
-
-#### Desktop
 
 :::image type="content" source="../../assets/images/messaging-extension/open-from-channel-post.png" alt-text="Example shows how to open a messaging extension from a channel post on mobile." border="false":::
 
