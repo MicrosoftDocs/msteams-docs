@@ -97,7 +97,15 @@ The in-meeting dialog box is displayed where you can enter your response as a fe
 
 The following image illustrates the in-meeting side panel:
 
+# [Desktop](#tab/desktop)
+
 ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+# [Mobile](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+
+---
 
 The following table describes the behavior of app when it is approved and not approved:
 
