@@ -41,7 +41,8 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
          "TeamsTab.Edit.Group",
          "TeamsTab.Delete.Group",
          "TeamSettings.Read.Group",
-         "TeamSettings.Edit.Group"
+         "TeamSettings.Edit.Group",
+         "TeamsActivity.Send.Group"
       ]
    }
 ```
@@ -62,7 +63,8 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
           "TeamsTab.Delete.Chat",
           "TeamsTab.ReadWrite.Chat",
           "TeamsAppInstallation.Read.Chat",
-          "OnlineMeeting.ReadBasic.Chat"
+          "OnlineMeeting.ReadBasic.Chat",
+          "TeamsActivity.Send.Chat"
       ]
    }
 ```

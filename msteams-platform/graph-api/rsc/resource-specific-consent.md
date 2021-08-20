@@ -36,6 +36,7 @@ The granular, Teams-specific, RSC permissions define what an application can do 
 |TeamsTab.ReadWrite.Group|Update this team's tabs. |
 |TeamsTab.Delete.Group|Delete this team's tabs. |
 |TeamMember.Read.Group|Get this team's members. |
+|TeamsActivity.Send.Group|Send activity notification to team's members. |
 
 For more details, see [team resource-specific consent permissions](/graph/permissions-reference#teams-resource-specific-consent-permissions).
 
@@ -56,6 +57,7 @@ The following table provides resource-specific permissions for a chat:
 | TeamsTab.ReadWrite.Chat        | Manage this chat's tabs.                                      |
 | TeamsAppInstallation.Read.Chat | Get which apps are installed in this chat.                   |
 | OnlineMeeting.ReadBasic.Chat   | Get basic properties, such as name, schedule, organizer, and join link of a meeting associated with this chat. |
+| TeamsActivity.Send.Chat         | Send activity notification to chat members. |
 
 For more details, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
@@ -163,7 +165,8 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
       "TeamsTab.ReadWrite.Group",
       "TeamsTab.Delete.Group",
       "Member.Read.Group",
-      "Owner.Read.Group"
+      "Owner.Read.Group",
+      "TeamsActivity.Send.Group"
     ]
   }
 ```
@@ -185,7 +188,8 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
       "TeamsTab.Delete.Chat",
       "TeamsTab.ReadWrite.Chat",
       "TeamsAppInstallation.Read.Chat",
-      "OnlineMeeting.ReadBasic.Chat"
+      "OnlineMeeting.ReadBasic.Chat",
+      "TeamsActivity.Send.Chat"
     ]
   }
 ```
