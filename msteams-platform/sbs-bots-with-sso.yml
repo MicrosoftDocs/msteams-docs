@@ -7,18 +7,18 @@ metadata:
   level: Beginner
   ms.date: 08/06/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: /azure/bot-service/?view=azure-bot-service-4.0
-  nextTutorialTitle: Read more on Azure Bot Service
+  nextTutorialHref: bots/how-to/conversations/subscribe-to-conversation-events.md
+  nextTutorialTitle: Read more on bot authentication
   ms.custom: mvc
 items:
 - durationInMinutes: 1
   content: |
-    A bot referred to as chatbot or conversational bot runs simple and repetitive automated tasks. These tasks are performed by the users, such as by customer service. A bot behaves differently depending on the conversation it's involved in:
+    A bot referred to as chatbot or conversational bot runs simple and repetitive automated tasks. These tasks are performed by the users, such as customer service. A bot behaves differently depending on the conversation it's involved in:
 
     * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
-    The step-by-step guide helps you to practice Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
+    The step-by-step guide helps you to enable Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
     
     The guide helps you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The step-by-step guide provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You'll see the following output:
 
