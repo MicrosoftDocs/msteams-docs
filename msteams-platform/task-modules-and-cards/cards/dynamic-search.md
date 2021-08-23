@@ -12,28 +12,22 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Dynamic search in Adaptive Cards enhances your search experience. You can search and select data from data sets. You can use either static or dynamic search, the details are as follows:
-
-* Static search: Search and select within the specified values from the Adaptive Card payload.
-* Dynamic search: Search and select within data set loaded dynamically from the remote backend.
-
-The payload size in static search increases with number of choices. To overcome such challenge, the dynamic search is useful to search and select choices from a dynamically loaded database. 
+You can use either static or dynamic search in Adaptive Cards. The payload size in static search increases with number of choices. To overcome such challenge, the dynamic search is introduced. The dynamic search in Adaptive Cards enhances your search experience. You can search and select data from various data sets, loaded dynamically from the remote backend.
 
 ## Advantages
 
 * You can get the list of choices from a remote backend dynamically.
-* You can view, select, and remove a single item or multiple items from the input choice set drop-down menu.
-* You can add images and text as part of the different input choices in dynamically fetched items.
+* You can view, select, and, remove single or multiple choices from the input choice set dropdown list.
+* You can add images and text as part of the different input choices.
 
 ## Limitations
 
 * You can only use `Input.ChoiceSet` component of Adaptive Cards.
-* You can only specify text and images as part of the list of dynamically fetched items. 
 * You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
  
 ## Understand how dynamic search works
 
-You can enter text in Adaptive Card that supports dynamic search. The dynamic search process starts. The following image demonstrates the process: 
+To search dynamically, you can enter text in Adaptive Card. The following image demonstrates the dynamic search process: 
 
 ![Dynamic search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
@@ -61,7 +55,6 @@ The `Input.ChoiceSet` component contains the following fields:
 
 |Field name|Type |Examples of values|
 |----------|-------|-----------------|
-|Select Product category|	Static|	Sunglasses, Spectacles, Sports wear.| 
 |Select Brand|	Dynamic (fetched from server) |	Brands x, y, z. |
 |Select Product	|Dynamic (fetched from server) | Different Models available. For example, Model A, Model B, Model C. |
 |Select Color | Dynamic (fetched from server) |	Various color options. |      
@@ -99,4 +92,3 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-You can implement dynamic search in Adaptive Cards to search and select data efficiently.
