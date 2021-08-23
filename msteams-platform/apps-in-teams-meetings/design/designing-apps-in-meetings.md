@@ -8,6 +8,7 @@ ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
 
+Demo purpose.
 You can create apps to make meetings more productive. For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
 
 ## Microsoft Teams UI Kit
