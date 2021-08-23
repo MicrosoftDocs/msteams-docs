@@ -35,12 +35,12 @@ Users can have various apps in Teams and each require device permissions. For ex
 
 User can manage device permissions in context through the **App permissions** button, app drop-down, or **Settings**.
 
-**To grant access to app for device permissions using the App permission button**
+**To grant access to app for device permissions using the App permissions button**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
 1. Select the app, for example, OneNote that you want to use from the left bar.
 
-    ![App permissions button](../../assets/images/tabs/apppermissions.png)
+    <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="500"/>
 
 1. Select **App permissions** from the upper right corner.
 
