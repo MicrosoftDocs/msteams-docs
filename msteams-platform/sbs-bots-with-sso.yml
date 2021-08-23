@@ -38,7 +38,14 @@ items:
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
-    To set up bot in Azure Bot Service, you need to register bot with Azure Bot Service when you develop and host it in Azure.
+    To set up bot in Azure Bot Service, you must register bot with Azure Bot Service when you develop and host it in Azure. To do this, you must:
+
+    * Use ngrok to create a tunnel to your web server's endpoints.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create client secret that enables SSO authentication of the bot.
+    * Expose API endpoint to specify the location from where the resources can be accessed.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -116,10 +123,10 @@ items:
 
         | Field | Value |
         | ----- | ----- |
-        | **Admin consent display name** | **Teams can access the user’s profile** |
-        | **Admin consent description** | **Allows Teams to call the app’s web APIs as the current user.** |
-        | **User consent display name** | **Teams can access your user profile and make requests on your behalf** |
-        | **User consent description** | **Enable Teams to call this app’s APIs with the same rights that you have.** |
+        | Admin consent display name | Teams can access the user’s profile |
+        | Admin consent description | Allows Teams to call the app’s web APIs as the current user. |
+        | User consent display name | Teams can access your user profile and make requests on your behalf |
+        | User consent description | Enable Teams to call this app’s APIs with the same rights that you have. |
 
     1. Ensure that **State** is set to **Enabled**.
 
@@ -147,7 +154,7 @@ items:
 - title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
-    When you register a bot in Azure using Bot Channels Registration, Azure creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot channel registration settings.
+    When you register a bot in Azure, it creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot resource you created. With Azure Bot Service’s OAuth, it is easier for your Teams bot to sign in your users and access external data providers.
 
     **To configure Bot Service connection**
 
@@ -174,6 +181,8 @@ items:
   content: |
     Configure the bot sample to understand how to use authentication for a bot running in Microsoft Teams.
 
+    **To configure and run your bot sample**
+
     1. Clone the repository with the following command or using Visual Studio 2019.
 
         ```bash
@@ -198,8 +207,8 @@ items:
     
     Configure and run the Teams app either by:
 
-    * Uploading the **manifest.zip** file
-    * Using App Studio
+    * Uploading the **manifest.zip** file.
+    * Using **App Studio**.
 
     Edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     
