@@ -20,7 +20,7 @@ Contoso Electronics is an independent software vendor (ISV) that has created a h
 
 Allowing IT Admins to configure apps before making them available to users helps drive a better user experience, and thus drive greater usage of third-party apps.
 
-![App configure before enabling](../assets/images/apps-in-meetings/appconfiguremessage.png)
+![App configure before enabling](../../assets/images/apps-in-meetings/appconfiguremessage.png)
 
 To optionally specify whether the app is blocked by default in a new section in the app manifest, add the `defaultHideUntilAdminAction:true` manifest field.
 
@@ -83,6 +83,6 @@ The cross-tenant scenarios where app is allowed or not allowed are as follows:
 1. In Teams admin center, select **Settings** in the app's **Manage apps** page.
 1. In **Landing Site URL**, enter the URL and select **Save**. The **Desktop settings are updated** message appears.
 
-    ![Change settings for app](../assets/images/apps-in-meetings/appsettingschange.png)
+    ![Change settings for app](../../assets/images/apps-in-meetings/appsettingschange.png)
 
 1. For **Status** for the app, select **Allowed**.
