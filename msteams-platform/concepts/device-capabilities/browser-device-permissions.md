@@ -40,7 +40,7 @@ User can manage device permissions in context through the **App permissions** bu
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
 1. Select the app, for example, OneNote that you want to use from the left bar.
 
-    <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="500"/>
+    <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
 1. Select **App permissions** from the upper right corner.
 
