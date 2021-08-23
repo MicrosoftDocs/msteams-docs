@@ -52,13 +52,14 @@ Users can have various apps in Teams and each require device permissions. For ex
 
     ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
 
-1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes as the permissions to microphone are granted.
+1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes.
 
 **To grant access to app for device permissions using the dropdown list for a team**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
-1. Select a team from Teams where you want to use an app.
-1. Add the app like OneNote if it isn't already added.
+1. Select **Teams** from the left pane.
+1. Select a team where you want to use an app.
+1. Add the app for example, OneNote if it isn't already added.
 1. Select the dropdown list for **My Notebook** in this case and select **App permissions**.
 
     ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
@@ -71,15 +72,15 @@ Users can have various apps in Teams and each require device permissions. For ex
 
     ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
 
-1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes as the permissions to microphone are granted.
+1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes.
 
 **Optionally to grant access to app for device permissions using Settings**
 
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
-1. Select the app, for example, OneNote that you want to use from the left bar.
+1. Select the app, for example, OneNote that you want to use from the left pane.
 1. If you're using OneNote, you can select **Dictate** to record your notes. A dialog box appears to state the permissions are denied.
 1. Select the icon for your user account from the upper right corner and select **Manage account**.
-1. From the **Settings** dialog box, select **App permissions**.
+1. From the **Settings** popup, select **App permissions**.
 
     ![Settings for app permissions](../../assets/images/tabs/settingsapppermissions.png)
 
