@@ -27,7 +27,8 @@ Tabs allow team members to access services and content in a specific space withi
 > If you have integrated a tab with your meeting, then your app must follow the Teams [single sign-on (SSO) authentication flow for tabs](../tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
-> Apps are supported only in private scheduled meetings.
+> * The private scheduled meetings only support apps.
+> * Add app option for Teams meeting extension tab app is not supported in Teams web client.
 
 #### Pre-meeting app experience
 
@@ -96,7 +97,15 @@ The in-meeting dialog box is displayed where you can enter your response as a fe
 
 The following image illustrates the in-meeting side panel:
 
+# [Desktop](#tab/desktop)
+
 ![In-meeting side panel](../assets/images/apps-in-meetings/in-meeting-dialog.png)
+
+# [Mobile](#tab/mobile)
+
+<img src="../assets/images/apps-in-meetings/sidepanelmobile.png" alt="In-meeting side panel mobile" width="300"/>
+
+---
 
 The following table describes the behavior of app when it is approved and not approved:
 
