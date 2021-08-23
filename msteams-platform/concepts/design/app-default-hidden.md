@@ -14,7 +14,7 @@ This feature allows you to specify whether your app can be hidden from users by 
 
 ## Scenario
 
-Contoso Electronics is an independent software vendor (ISV) that has created a help desk app for Microsoft Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants its customers to first set up specific properties of the app. The ISV can specify if they want their app to be blocked by default. The app is available to users only after the Admin allows it.
+Contoso Electronics is an independent software vendor (ISV) that has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants its customers to first set up specific properties of the app. The ISV can specify if they want their app to be blocked by default. The app is available to users only after the Admin allows it.
 
 ## Solution
 
@@ -41,7 +41,7 @@ If you choose not to hide the app by default, you can remove it by updating thei
 
 * For tenants who had never taken an action, that is app remained in `PendingConfig` state, the app will now be allowed.
 
-### IT Admin experience
+### App customization by Admins
 
 Apps that are default hidden until Admin action continue to be treated as their original app type whether first-party or third-party.
 
@@ -55,52 +55,32 @@ The app with `Pending Configuration` status shows as pending configuration in **
 
 Saving the app configuration doesn't affect the app status and the Admin must allow the app.
 
-## User experience within Teams runtime
+### User experience in Teams runtime
 
-Teams Store 
+In Teams Store, if an app is submitted with the default status as blocked, the app is hidden by default from users until an Admin takes an action to allow it.
 
-If an app is submitted with the default status as Blocked, the app will be default hidden from users until an admin takes an action to Allow it.
+On desktop or web and on mobile, when you set an app to block by default, the app is hidden everywhere where that experience is served by Teams, until Admin allows it. This includes but is not limited to the personal app bar, the tab galleries, in chat as a bot, and through the meetings experience.
 
-Desktop/Web 
+App upgrades result in no change of behavior except as related to removal of default block support. When you submit an update of a given app, the normal upgrade process is followed. If you specify `defaultHideUntilAdminAction:true` again, the app is hidden by default until Admin takes action once again.
 
-When app is set to default Block by an app developer, the app will be hidden everywhere where that experience is served by Teams, until Admin Allows it.  This includes but is not limited to the personal app bar, the tab/ME galleries, in chat as a bot, through the meetings experience, etc.
+### User experience outside of Teams runtime
 
-Mobile 
+You can measure how many tenants allow your apps and how many users are using them.
 
-Same experience as in 4.2 will be reflected in Mobile as well.
+Customers in Government Community Cloud (GCC), GCC-High and Department Of Defense (DOD) are affected when you choose to have your app blocked by default until an Admin takes action. Admin action to allow must be handled in compliance with the GCC requirements.
 
-App upgrades result in no change of behavior except as relates to removal of default Block support 
+The cross-tenant scenarios where app is allowed or not allowed are as follows:
 
-When an app developer submits an update of a given app, the normal upgrade process will be followed. If the developer once again specifies `defaultHideUntilAdminAction:true`, the app will be default hidden until Admin takes action once again.
-
-
-Developers can measure how many tenants allow their apps 
-
-We will deliver telemetry to partner center that allows developer to track how many tenants have allowed their apps, and how many users are using it
-
-Default hidden is supported in GCC/GCCH/DOD 
-
-Customers in GCC/GCCH/DOD will also be affected as above when an app developer choose to have their app default Blocked until an Admin takes action. Admin action to allow must be handled in transit and in storage in compliance with the GCC requirements 
-
-Guest users 
-
-Guests will view the app if it is set to Allow in the tenant that they are currently active in.
-
-Anonymous users 
-
-Anonymous users will view the app if it is set to Allow by the tenant that they are currently joined to 
-
-Federated users 
-
-Federated users are technically not supported.
-
-Users in shared channels 
-
-Not currently supported and therefore out of scope.
+| User type | If user can view the app or not |
+| --------- | --------- |
+| Guest users | Guests will view the app if it is set to allow in the tenant that they are currently active in. |
+| Anonymous users | Anonymous users can view the app if it is set to allow by the tenant that they are currently joined in. |
+| Federated users | Federated users are not supported. |
+| Users in shared channels | Users in shared channels are currently not supported and therefore out of scope. |
 
 **To change the configuration settings for the app**
 
-1. In Microsoft Teams admin center, select **Settings** in the app's **Manage apps** page.
+1. In Teams admin center, select **Settings** in the app's **Manage apps** page.
 1. In **Landing Site URL**, enter the URL and select **Save**. The **Desktop settings are updated** message appears.
 
     ![Change settings for app](../assets/images/apps-in-meetings/appsettingschange.png)
