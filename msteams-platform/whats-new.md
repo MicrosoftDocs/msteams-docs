@@ -10,6 +10,9 @@ keywords: teams what's new latest
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
 
+> [!IMPORTANT]
+> You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
+
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
@@ -182,3 +185,20 @@ Along with new features, we also provide [production-ready Teams app templates](
 ## Submit your feedback
 
 We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
+
+## Get latest updates
+
+You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
+
+**To configure RSS feed**
+
+1. Open Microsoft Teams.
+1. Select **Teams** from the left pane.
+1. Select a channel in the team.
+1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the dropdown list, select **Connectors**.
+1. Search for **RSS** in the **Connectors** dialog box that appears.
+1. Select **Configure**.
+1. Enter a name in **Enter a name for your RSS connection.**.
+1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
+1. Select the frequency of the feed from the **Digest frequency** dropdown list.
+1. Select **Save**.
