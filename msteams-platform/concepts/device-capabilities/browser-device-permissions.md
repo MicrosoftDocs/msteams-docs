@@ -59,7 +59,7 @@ Users can have various apps in Teams and each require device permissions. For ex
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
 1. Select **Teams** from the left pane.
 1. Select a team where you want to use an app.
-1. Add the app for example, OneNote if it isn't already added.
+1. Add the app, for example, OneNote if it isn't already added.
 1. Select the dropdown list for **My Notebook** in this case and select **App permissions**.
 
     ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
