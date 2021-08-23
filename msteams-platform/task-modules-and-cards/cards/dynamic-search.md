@@ -1,18 +1,18 @@
 ---
-title: Type-ahead search in Adaptive Cards 
+title: Dynamic search in Adaptive Cards 
 author: Rajeshwari-v
-description: Describes static and dynamic type-ahead search with Input.ChoiceSet control in Adaptive Cards 
+description: Describes dynamic search with Input.ChoiceSet control in Adaptive Cards 
 ms.topic: conceptual
 localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Type-ahead search in Adaptive Cards  
+# Dynamic search in Adaptive Cards  
 
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Type-ahead search in Adaptive Cards enhances your search experience. You can search and select data from data sets. You can use either static or dynamic search, the details are as follows:
+Dynamic search in Adaptive Cards enhances your search experience. You can search and select data from data sets. You can use either static or dynamic search, the details are as follows:
 
 * Static search: Search and select within the specified values from the Adaptive Card payload.
 * Dynamic search: Search and select within data set loaded dynamically from the remote backend.
@@ -31,11 +31,11 @@ The payload size in static search increases with number of choices. To overcome 
 * You can only specify text and images as part of the list of dynamically fetched items. 
 * You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
  
-## Understand how type-ahead search works
+## Understand how dynamic search works
 
-You can enter text in type-ahead search in Adaptive Card that supports dynamic search. The type-ahead search process starts. The following image demonstrates the process: 
+You can enter text in Adaptive Card that supports dynamic search. The dynamic search process starts. The following image demonstrates the process: 
 
-![Type-ahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
+![Dynamic search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
 ## Desktop and mobile experience
 
@@ -45,17 +45,17 @@ You can enter text in type-ahead search in Adaptive Card that supports dynamic s
 
 # [Mobile](#tab/mobile)
 
-Android and iOS mobile clients support type-ahead search in Adaptive Cards. 
+Android and iOS mobile clients support dynamic search in Adaptive Cards. 
  
 ### Search with a product catalog scenario example:
 
-User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. Type-ahead search in Adaptive Card is used to search and select customers' choices.
+User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. Dynamic search in Adaptive Card is used to search and select customers' choices.
 
-**To use type-ahead search in Adaptive Cards**
+**To use dynamic search in Adaptive Cards**
 
 1. User A opens the store bot.
 1. User A sends a command to the bot for a **New customer request**. The bot responds with the Adaptive Card that has `Input.ChoiceSet` component.
-1. User A uses type-ahead search to search and select the information based on the customer's choice. 
+1. User A uses dynamic search to search and select the information based on the customer's choice. 
 
 The `Input.ChoiceSet` component contains the following fields: 
 
@@ -72,9 +72,9 @@ The following image illustrates mobile experience of dynamic search:
 
 ---
 
-## Implement type-ahead search
+## Implement dynamic search
 
-`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a type-ahead search control to `Input.ChoiceSet` component to implement type-ahead search. You can search and select the required information with the following selections:       
+`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a dynamic search control to `Input.ChoiceSet` component to implement dynamic search. You can search and select the required information with the following selections:       
 
 * Dropdown, such as expanded selection.
 * Radio button, such as single selection.
@@ -99,4 +99,4 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-You can implement type-ahead search in Adaptive Cards to search and select data efficiently.
+You can implement dynamic search in Adaptive Cards to search and select data efficiently.
