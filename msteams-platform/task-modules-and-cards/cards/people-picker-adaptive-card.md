@@ -135,26 +135,7 @@ The code example for creating People Picker with organization search is as follo
             "id": "people-picker",
             "isMultiSelect": true
         },
-        {
-  "type": "AdaptiveCard",
-  "body": [
-    {
-      "type": "TextBlock",
-      "size": "Medium",
-      "weight": "Bolder",
-      "text": "People Picker with Org search enabled"
-    },
-    {
-      "type": "Input.ChoiceSet",
-      "choices": [],
-      "choices.data": {
-        "type": "Data.Query",
-        "dataset": "graph.microsoft.com/users"
-      },
-      "id": "people-picker",
-      "isMultiSelect": true
-    }
-  ],
+      ],
   "actions": [
     {
       "type": "Action.Submit",
