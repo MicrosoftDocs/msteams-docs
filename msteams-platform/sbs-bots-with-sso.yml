@@ -13,14 +13,20 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A bot referred to as chatbot or conversational bot runs simple and repetitive automated tasks. These tasks are performed by the users, such as customer service. A bot behaves differently depending on the conversation it's involved in:
+    Conversational bot runs repetitive automated tasks. These tasks are performed by the users, such as customer service. A bot behaves differently depending on the conversation it's involved in:
 
-    * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
+    * Bots in channel and group chat conversations require the user to @mention the bot.
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
-    This step-by-step guide helps you to enable Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
+    Single sign-on (SSO) authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign-in credentials.
+
+    This step-by-step guide helps you to:
+
+    * Enable SSO in a bot using Bot Framework.
+    * Use Bot Framework support for OAuth SSO in your bot.
+    * Set up Azure Bot Services.
     
-    The guide helps you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The step-by-step guide provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You'll see the following output:
+    You'll see the following output:
 
     ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
 
@@ -64,9 +70,9 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select required subscription from **Subscription** dropdown list.
-    1. Select required resource group from **Resource group** dropdown list.
-    1. If you have created a new resource, select required location from **New resource group location** dropdown list.
+    1. Select the subscription from **Subscription** dropdown list.
+    1. Select the resource group from **Resource group** dropdown list.
+    1. If you've created a new resource, select required location from **New resource group location** dropdown list.
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
@@ -154,7 +160,7 @@ items:
 - title: Set up Bot Service connection
   durationInMinutes: 1
   content: |
-    When you register a bot in Azure, it creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot resource you created. With Azure Bot Service’s OAuth, it is easier for your Teams bot to sign in your users and access external data providers.
+    When you register a bot in Azure, it creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot resource you created. With Azure Bot Service’s OAuth, it's easier for your Teams bot to sign in your users and access external data providers.
 
     **To configure Bot Service connection**
 
