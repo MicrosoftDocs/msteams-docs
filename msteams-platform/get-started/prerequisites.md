@@ -17,7 +17,7 @@ Some of the tools you need depend on how you prefer to build your Teams app:
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 - If you are developing with JavaScript, TypeScript, or the SharePoint Framework (SPFx), install [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later.  
-- If you are developing with .NET, install [Visual Studio 2019](https://visualstudio.com/download). Ensure you install the **ASP.NET and web development** or **.NET Core cross-platform development** workload.
+- If you are developing with .NET, install [Visual Studio 2019](https://visualstudio.com/download), ensure that you install the **ASP.NET and web development** or **.NET Core cross-platform development** workload.
 
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
