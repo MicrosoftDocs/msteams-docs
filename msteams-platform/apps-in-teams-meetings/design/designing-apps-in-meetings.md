@@ -10,6 +10,8 @@ ms.topic: conceptual
 
 You can create apps to make meetings more productive. For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
 
+## Sample Heading
+
 ## Microsoft Teams UI Kit
 
 You can find more comprehensive design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
