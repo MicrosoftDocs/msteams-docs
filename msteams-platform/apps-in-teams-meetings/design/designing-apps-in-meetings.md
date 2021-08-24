@@ -15,7 +15,7 @@ You can create apps to make meetings more productive. For example, ask people to
 > [!NOTE]
 > Note content comes here
 
-![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
+![Pre-meeting experience](../../assets/images/apps-in-meetings/PreMeeting.png)
 
 [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
