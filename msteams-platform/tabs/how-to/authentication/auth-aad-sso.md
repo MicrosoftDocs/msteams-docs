@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that is Office 365, Outlook, and so on. You can take advantage of this by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user consents to use your app, they do not have to consent again on another device as they are signed in automatically. In addition, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, and so on. You can take advantage by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -31,16 +31,15 @@ The following image shows how the SSO process works:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
-1. In the tab, a JavaScript call is made to `getAuthToken()`. This tells Teams to obtain an authentication token for the tab application.
-2. If this is the first time the current user has used your tab application, there is a request prompt to consent if consent is required or to handle step-up authentication such as two-factor authentication.
-3. Teams requests the tab application token from the Azure Active Directory (AAD) endpoint for the current user.
-4. AAD sends the tab application token to the Teams application.
-5. Teams sends the tab application token to the tab as part of the result object returned by the `getAuthToken()` call.
+1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an access token for the tab application.
+2. If the current user is using your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
+3. Teams requests the tab access token from the Azure Active Directory (AAD) endpoint for the current user.
+4. AAD sends the tab access token to the Teams application.
+5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
-
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
@@ -79,7 +78,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
     > [!NOTE]
     > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you are using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
+1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`. ² For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you're using a tunneling service such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
 1. In the **Who can consent?** box, enter **Admins and users**.
 1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
@@ -101,18 +100,18 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 
 1. Navigate to **Authentication**.
 
-    If an app has not been granted IT admin consent, users have to provide consent the first time they use an app.
+    > [!IMPORTANT]
+    > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
 
     To enter a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
-    * Enter the **redirect URI** for your app. This is the page where a successful implicit grant flow redirects the user. This is the same fully qualified domain name that you entered in step 5 followed by the API route where an authentication response is sent. If you are following any of the Teams samples, this is `https://subdomain.example.com/auth-end`.
+    * Enter the **redirect URI** for your app. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
 
-    Enable implicit grant by checking the following boxes:
-    ✔ ID Token
-    ✔ Access Token
+    > [!NOTE]
+    > Implicit grant is not required for tab SSO.
 
-Congratulations! You have completed the app registration prerequisites to proceed with your tab SSO app.
+Congratulations! You've completed the app registration prerequisites to continue with your tab SSO app.
 
 > [!NOTE]
 >
@@ -142,7 +141,7 @@ Use the following code to add new properties to your Teams manifest:
 >* The resource for an AAD app is usually the root of its site URL and the appID (e.g. `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`). This value is also used to ensure your request is coming from the same domain. Ensure that the `contentURL` for your tab uses the same domains as your resource property.
 >* You must use manifest version 1.5 or higher to implement the `webApplicationInfo` field.
 
-### 3. Get an authentication token from your client-side code
+### 3. Get an access token from your client-side code
 
 Use the following authentication API:
 
@@ -154,9 +153,9 @@ var authTokenRequest = {
 microsoftTeams.authentication.getAuthToken(authTokenRequest);
 ```
 
-When you call `getAuthToken` - and additional user consent is required for user-level permissions, a dialog is shown to the user to grant additional consent.
+When you call `getAuthToken` and user consent is required for user-level permissions, a dialog is shown to the user to grant consent.
 
-After you receive the access token in the success callback, you can decode the access token to view the claims associated with that token. Optionally, you can manually copy and paste the access token into a tool, such as [jwt.ms](https://jwt.ms/) to inspect its contents. If you are not receiving the UPN in the returned access token, you can add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
+After you receive access token in success callback, decode access token to view claims for that token. Optionally, manually copy and paste access token into a tool, such as [jwt.ms](https://jwt.ms/). If you aren't receiving the UPN in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in AAD. For more information, see [access tokens](/azure/active-directory/develop/access-tokens).
 
 <p>
     <img src="~/assets/images/tabs/tabs-sso-prompt.png" alt="Tab single sign-on SSO dialog prompt" width="75%"/>
@@ -178,20 +177,20 @@ Our current implementation for SSO only grants consent for user-level permission
 
 A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
-#### Ask for additional consent using the Auth API
+#### Ask for consent using the Auth API
 
-Another approach for getting additional Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page) which involves popping up an Azure AD consent dialog box. 
+Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page). This approach involves popping up an Azure AD consent dialog box.
 
 **To ask for additional consent using the Auth API**
 
-1. The token retrieved using `getAuthToken()` needs to be exchanged server-side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those additional Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
+1. The token retrieved using `getAuthToken()` must be exchanged server-side using AAD [on-behalf-of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure you use the v2 Graph endpoint for this exchange.
 2. If the exchange fails, AAD returns an invalid grant exception. There are usually one of two error messages, `invalid_grant` or `interaction_required`.
-3. When the exchange fails, you must ask for additional consent. Show some user interface (UI) asking the user to grant additional consent. This UI must include a button that triggers an AAD consent dialog box using our [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
-4. When asking for additional consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD does not ask for the additional scopes.
+3. When the exchange fails, you must ask for consent. Show some user interface (UI) asking the user to grant other consent. This UI must include a button that triggers an AAD consent dialog box using our [AAD authentication API](~/concepts/authentication/auth-silent-aad.md).
+4. When asking for more consent from AAD, you must include `prompt=consent` in your [query-string-parameter](~/tabs/how-to/authentication/auth-silent-aad.md#get-the-user-context) to AAD, otherwise AAD doesn't ask for the other scopes.
     * Instead of `?scope={scopes}`
     * Use this `?prompt=consent&scope={scopes}`
-    * Ensure that `{scopes}` includes all the scopes you are prompting the user for, for example, Mail.Read or User.Read.
-5. Once the user has granted additional permission, retry the on-behalf-of-flow to get access to these additional APIs.
+    * Ensure that `{scopes}` includes all the scopes you're prompting the user for, for example, Mail.Read or User.Read.
+5. Once the user has granted more permission, retry the on-behalf-of-flow to get access to these other APIs.
 
 ### Non-AAD authentication
 
