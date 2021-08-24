@@ -84,3 +84,7 @@ The scenarios where app is allowed or not allowed are as follows:
     ![Change settings for app](../../assets/images/apps-in-meetings/appsettingschange.png)
 
 1. For **Status** for the app, select **Allowed**.
+
+## See also
+
+[Enable your Microsoft Teams app to be customized](enable-app-customization.md)
