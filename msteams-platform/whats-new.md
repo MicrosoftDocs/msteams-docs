@@ -167,7 +167,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|08/23/2021| Dynamic search in Adaptive Cards | [Dynamic search in Adaptive Cards](~/task-modules-and-cards/cards/dynamic-search.md)
+|08/23/2021| Typeahead search in Adaptive Cards | [Typeahead search in Adaptive Cards](~/task-modules-and-cards/cards/dynamic-search.md)
 |06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
