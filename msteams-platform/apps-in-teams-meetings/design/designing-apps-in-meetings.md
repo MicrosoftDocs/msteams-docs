@@ -12,6 +12,15 @@ You can create apps to make meetings more productive. For example, ask people to
 
 ## Sample Heading
 
+> [!NOTE]
+> Note content comes here
+
+![Pre-meeting experience](../assets/images/apps-in-meetings/PreMeeting.png)
+
+[Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+
+
+
 ## Microsoft Teams UI Kit
 
 You can find more comprehensive design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
