@@ -12,9 +12,12 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Typeahead search provides an enhanced search experience. Typeahead search functionality provides a list of possible choices as you enter the text in the search field. You can incorporate type-ahead search with Adaptive Cards and use it for static or dynamic searches. 
+Typeahead search functionality gives an enhanced search experience. It provides a list of possible choices as you enter the text in the search field. You can incorporate type-ahead search with Adaptive Cards to search and select data.      
+
+You can use typeahead search for following searches: 
 
 **Static search:** Search within the specified values in the Adaptive Card payload. The payload size in static search increases with number of choices.
+
 **Dynamic search:** Search and select data from various data sets, loaded dynamically from the remote backend.
 
 The advantages of typeahead search are as follows:
@@ -25,7 +28,11 @@ The advantages of typeahead search are as follows:
  
 **Typeahead search process**
 
-You can enter texts in the text box typeahead enabled Adaptive Card to start the search. The following image demonstrates the typeahead search process: 
+1. You can enter texts in the text box of typeahead enabled Adaptive Card to start the search. 
+1. The search request goes to the bot as an invoke. The bot sends the response to the chat service.
+1. The response is validated and rendered.
+
+The following image demonstrates the typeahead search process: 
 
 ![Typeahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
