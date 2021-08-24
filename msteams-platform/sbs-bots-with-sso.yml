@@ -1,11 +1,11 @@
 ### YamlMime:Tutorial
-title: Teams Bot with Single sign-on (SSO)
+title: Teams Bot with Single sign-on
 metadata:
   title: Teams Bot with SSO
   description: In this tutorial, you'll learn to set up SSO in a bot for Teams.
   audience: Developer
   level: Beginner
-  ms.date: 08/06/2021
+  ms.date: 08/24/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/conversations/subscribe-to-conversation-events.md
   nextTutorialTitle: Read more on bot authentication
@@ -13,27 +13,21 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Conversational bot runs repetitive automated tasks. These tasks are performed by the users, such as customer service. A bot behaves differently depending on the conversation it's involved in:
+    Teams bot are conversational bots that run repetitive automated tasks performed by the users, such as customer service. The user needs to sign in with their credentials multiple times for performing repetitive tasks. The Single sign-on (SSO) authentication method in Azure Active Directory (AAD) silently refreshes the authentication token. This results in reduction of the number of times users need to enter their sign-in credentials. 
+    
+    A bot behaves differently depending on the conversation it's involved in:
 
     * Bots in channel and group chat conversations require the user to @mention the bot.
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
-    Single sign-on (SSO) authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign-in credentials.
-
-    This step-by-step guide helps you to:
-
-    * Enable SSO in a bot using Bot Framework.
-    * Use Bot Framework support for OAuth SSO in your bot.
-    * Set up Azure Bot Services.
-    
-    You'll see the following output:
+    This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
 
     ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    The prerequisites for the step-by-step guide are as follows:    
+    Ensure that you install the following tools and set up your development environment:  
 
     * Microsoft Teams with an account (not a guest account)
     * [Node.js](https://nodejs.org/en/)
@@ -44,7 +38,7 @@ items:
 - title: Set up bot in Azure Bot Service
   durationInMinutes: 5
   content: |
-    To set up bot in Azure Bot Service, you must register bot with Azure Bot Service when you develop and host it in Azure. To do this, you must:
+    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. To do this, perform the following:
 
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
@@ -62,8 +56,8 @@ items:
     **To create Azure Bot resource**
 
     1. Go to the [Azure portal](https://portal.azure.com/).
-    1. Select **Create a resource** under **Azure services**.
-    1. Enter **Azure bot** in search box and select the Enter key.
+    1. Select **Create a resource**.
+    1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
 
         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
@@ -71,7 +65,7 @@ items:
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
     1. Select the subscription from **Subscription** dropdown list.
-    1. Select the resource group from **Resource group** dropdown list.
+    1. Select the resource group from **Resource group** dropdown list, or select **Create new** and enter a resource name to create a new resource.
     1. If you've created a new resource, select required location from **New resource group location** dropdown list.
 
         > [!NOTE]
@@ -86,22 +80,29 @@ items:
         It takes a few moments for your bot service to be provisioned.
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
-    1. Select **Download from GitHub** to download the SDK and build your bot with the Bot Framework SDK.
 
-        ![Build Bot Framework SDK](~/assets/images/bots/buildfromgithub.png)
+        Now your Azure bot has been created.
+
+        ![Azure bot resource created](~/assets/images/bots/Azurebotresource.png)
 
     **To create client secret**
 
-    1. Go back to the Azure portal and select the Azure bot resource that you created.
     1. Select **Configuration** under **Settings**.
     1. Select **Manage** for the **Microsoft App ID**.
+
+        ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
+
     1. Select **New client secret** under the **Client secrets** section.
 
-        ![Add client secret to app](~/assets/images/bots/addclientsecret.png)  
+        The Add a client secret popup appears.  
 
     1. Enter **Description** and select **Add**.
 
+        ![Add client secret to app](~/assets/images/bots/addclientsecret.png)
+
     1. Select **Copy to clipboard** for **Value** and save the Client secret for future reference.
+
+       ![Value of client secret](~/assets/images/bots/valueclientsecret.png)    
 
     **To add Redirect URL to the Azure bot resource**
 
@@ -113,11 +114,16 @@ items:
 
         ![Configure Redirect URI](~/assets/images/bots/redirectURI.png)
 
+        The Redirect URI is added to the Azure bot resource.
+
+        ![Redirect URI added to bot resource](~/assets/images/bots/redirectURIadded.png)
+
+
     **To expose API endpoint**
 
     1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
-    1. Use the Application ID shown and add **api://botid-** at the beginning of the URI.
+    1. Use the Application ID shown and append **api://botid-** at the beginning of the URI.
 
         ![Expose an API](~/assets/images/bots/exposeAPI.png)
 
@@ -125,7 +131,7 @@ items:
     1. Select **Add a scope**.
     1. Enter **access_as_user** as the **Scope name**.
     1. Select **Admins and users** for **Who can consent?**.
-    1. Enter the following values or appropriate values in the boxes:
+    1. Enter the following values in the boxes:
 
         | Field | Value |
         | ----- | ----- |
@@ -140,22 +146,29 @@ items:
 
     1. Select **Add scope**. The Scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
+        ![API exposed and scope added](~/assets/images/bots/ExposeAPIandaddscope.png)
+
     **To add the Microsoft Teams channel**
 
-    1. Go to **Home** and open your bot.
-    1. Select **Channels** in the left pane and select **Teams**.
+    1. Go to **Home** and open your bot, which is listed in the **Recent resources** section.
 
-        ![Connect to channels](~/assets/images/bots/connecttochannels.png)
+        ![Home page](~/assets/images/bots/homepage.png)
 
+    1. Select **Channels** in the left pane and select **Teams** <icon>.
     1. Select **Save**.
-    1. Select **I agree to the Microsoft Channel Publication Terms and the Microsoft Privacy Statements for my deployment to the Microsoft Teams channel.** and select **Agree**.
+    1. Select the checkbox to accept the terms of service and select **Agree**.
 
     **To add messaging endpoint**
 
     1. Select **Configuration** under **Settings** for the Azure bot that you created.
+    1. Go to ngrok and copy the HTTPS URL for **Forwarding** from https to io.
+
+        ![Home page](~/assets/images/bots/homepage.png)
+
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
     1. Select **Apply**.
 
+        You have set up a bot in Azure Bot Service and now you need to setup a bot service connection.
     
 - title: Set up Bot Service connection
   durationInMinutes: 1
@@ -173,9 +186,9 @@ items:
             > [!NOTE]
             > You can obtain the Microsoft App ID from the bot's Configuration page.
 
-        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint and add **api://botid-** at the beginning of the URL.
+        - For the **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint.
         - Enter **common** as the **Tenant ID**.
-        - Add all the **Scopes** required while specifying permissions to downstream APIs.
+        - Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs.
 
             ![Bot Service connection](~/assets/images/bots/botserviceconnection.png)
 
@@ -189,22 +202,24 @@ items:
 
     **To configure and run your bot sample**
 
-    1. Clone the repository with the following command or using Visual Studio 2019.
-
-        ```bash
-        git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-        ```
-
+    1. Open Visual Studio.
+    1. Select **Clone repository**.
+    1. Enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git** in the **Repository location**. Make sure that you note the path.
     1. In Visual Studio, select **File -> Open -> Project/Solution**.
-    1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore** folder of **Microsoft-Teams-Samples** repository.
+    1. folder of **Microsoft-Teams-Samples** repository
+    1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore**.
     1. Open the **BotSSOCSharp.csproj** file.
     1. Open the **appsettings.json** file.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
+
+        ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
 
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for Client secret that you saved previously.
 
     1. Select the **F5** key to run this project.
+
+        Troubleshooting
 
 - title: Configure and run the Teams app
   durationInMinutes: 2
@@ -216,10 +231,11 @@ items:
     * Uploading the **manifest.zip** file.
     * Using **App Studio**.
 
-    Edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     
     **To run the Teams app by uploading the manifest.zip file**
-
+    
+    1. Go to apppackage folder. In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     1. Zip the contents of the **appPackage/** folder to create a **manifest.zip**.
     1. Upload **manifest.zip** to Teams by selecting **Store**, **Manage your apps**, and **Upload a custom app**.
     1. Select **Add** to add the conversation bot to your chat.
