@@ -36,7 +36,7 @@ The following image demonstrates the typeahead search process:
 
 ![Typeahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
 
-## Static typeahead search:
+## Static typeahead search
 
 In static typeahead search, instead of a regular dropdown, a textbox with a dropdown like arrow is rendered on the right. The arrow indicates that this is a `ChoiceSet`.
 As you start entering the texts, the choices are filtered down to choices that partially match the the input. The matching part of the input is highlighted in the dropdown. When the choice list ends, one choice is visible without drop down arrow.
@@ -53,7 +53,7 @@ Dynamic typeahead search is useful to search and select data from large data set
 
 Android and iOS mobile clients support typeahead search in Adaptive Cards. 
  
-**Search with a product catalog scenario example:**
+**Search with a product catalog scenario example**
 
 User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. Typeahead search in Adaptive Card is used to search and select customers' choices.
 
