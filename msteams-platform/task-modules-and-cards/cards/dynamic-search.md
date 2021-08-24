@@ -14,14 +14,14 @@ ms.author: surbhigupta
 
 Typeahead search functionality gives an enhanced search experience. It provides a list of possible choices as you enter the text in the search field. You can incorporate type-ahead search with Adaptive Cards to search and select data.      
 
-You can use typeahead search for following searches: 
+You can use typeahead search for the following searches: 
 
 * [Static search](#static-typeahead-search)
 * [Dynamic search](#dynamic-typeahead-search)
 
 The advantages of typeahead search are as follows:
 
-* You can get the list of choices from a remote backend dynamically.
+* You can get a list of choices from a remote backend dynamically.
 * You can view, select, and, remove single or multiple choices from the input choice set dropdown list.
 * You can add images and text as part of the different input choices.
  
