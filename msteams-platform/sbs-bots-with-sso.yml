@@ -18,7 +18,7 @@ items:
     * Bots in channel and group chat conversations require the user to @mention the bot to invoke it in a channel.
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
-    The step-by-step guide helps you to enable Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
+    This step-by-step guide helps you to enable Single sign-on (SSO) in a bot using Bot Framework. Single sign-on authentication in Azure Active Directory (AAD) silently refreshes the authentication token. SSO reduces the number of times users need to enter their sign in credentials.
     
     The guide helps you to use Bot Framework support for OAuth SSO in your bot. The bot is developed to authenticate users to various identity providers, such as Azure Active Directory (AAD) and GitHub. The step-by-step guide provides steps to enable Bot SSO, which helps to set up Azure Bot Services. You'll see the following output:
 
