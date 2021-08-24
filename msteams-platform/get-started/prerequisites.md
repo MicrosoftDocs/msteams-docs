@@ -47,7 +47,7 @@ The following tools can be installed by the Visual Studio Code extension when th
 
 - [ngrok](https://ngrok.com/download)
 
-    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
+    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`).
 
 # [Visual Studio 2019](#tab/vs)
 
