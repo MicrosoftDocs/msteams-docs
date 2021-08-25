@@ -30,7 +30,6 @@ items:
     Ensure that you install the following tools and set up your development environment:  
 
     * Microsoft Teams with an account (not a guest account)
-    * [Node.js](https://nodejs.org/en/)
     * [ngrok](https://ngrok.com/) or equivalent tunneling solution
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
@@ -99,7 +98,7 @@ items:
 
     1. Enter **Description** and select **Add**.
 
-        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="700"/>
+        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
 
     1. For **Value**, select **Copy to clipboard** and save the Client secret for future reference.
 
@@ -113,7 +112,7 @@ items:
 
     1. Enter **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect** and select **Configure**.
 
-        ![Configure Redirect URI](~/assets/images/bots/redirectURI.png)
+        <img src="~/assets/images/bots/redirectURI.png" alt="Configure Redirect URI" width="600"/>
 
         The Redirect URI is added to the Azure bot resource.
 
@@ -125,7 +124,7 @@ items:
     1. Select **Set** for the Application ID URI.
     1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
 
-        ![Expose an API](~/assets/images/bots/exposeAPI.png)
+        <img src="~/assets/images/bots/exposeAPI.png" alt="Expose an API" width="500"/>
 
     1. Select **Save**. Make sure to save the **Application ID URI** for future reference.
     1. Select **Add a scope**.
@@ -142,7 +141,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        ![Add a scope to app](~/assets/images/bots/addscope.png)
+        <img src="~/assets/images/bots/addscope.png" alt="Add a scope to app" width="500"/>
 
     1. Select **Add scope**. The Scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
@@ -152,7 +151,7 @@ items:
 
     1. Go to **Home**.
 
-        ![Home page](~/assets/images/bots/homepage.png)
+        <img src="~/assets/images/bots/homepage.png" alt="Home page" width="500"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
@@ -169,7 +168,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        ![Messaging endpoint](~/assets/images/bots/messagingURL.png)
+        <img src="~/assets/images/bots/messagingURL.png" alt="Messaging endpoint" width="500"/>
 
     1. Select **Apply**.
 
@@ -198,7 +197,7 @@ items:
         > [!NOTE]
         > You can obtain the Microsoft App ID from the bot's Configuration page.
 
-        ![Bot Service connection](~/assets/images/bots/botserviceconnection.png)
+        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="400"/>
 
     1. Select **Save**.
     1. Select **Apply**.
@@ -268,11 +267,11 @@ items:
 
     1. Send a message to the bot.
 
-        ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
+        ![Permissions to bot](~/assets/images/bots/permissions.png)
 
         The conversation bot asks for permissions for the first time.
 
-        ![Permissions to bot](~/assets/images/bots/permissions.png)
+        ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
 
     1. Select **Continue** to accept the permissions.
     1. Select **Accept** for **Permissions requested**.
