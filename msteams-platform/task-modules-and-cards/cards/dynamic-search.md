@@ -24,12 +24,10 @@ The advantages of typeahead search are as follows:
 * You can get a list of choices from a remote backend dynamically.
 * You can view, select, and, remove single or multiple choices from the input choice set dropdown list.
 * You can add images and text as part of the different input choices.
- 
+
 **Typeahead search process**
 
-1. You can enter texts in the text box of typeahead enabled Adaptive Card to start the search. 
-1. The search request goes to the bot as an invoke. The bot sends the response to the chat service.
-1. The response is validated and rendered.
+You can enter texts in the text box of typeahead enabled Adaptive Card to start the search. The search request goes to the bot as an invoke. The bot sends the response to the chat service. The response is validated and rendered.
 
 The following image demonstrates the typeahead search process: 
 
@@ -37,9 +35,13 @@ The following image demonstrates the typeahead search process:
 
 ## Static typeahead search
 
-Static typeahead search is the search within the specified values in the Adaptive Card payload. The payload size in static search increases with number of choices. In static typeahead search, instead of a regular dropdown, a textbox with a dropdown like arrow is rendered on the right. The arrow indicates that this is a `ChoiceSet`.
-As you start entering the texts, the choices are filtered down to choices that partially match the the input. The matching part of the input is highlighted in the dropdown. When the choice list ends, one choice is visible without drop down arrow.
+Static typeahead search is the search within the specified values in the Adaptive Card payload. The payload size in static search increases with number of choices. In static typeahead search, instead of a regular dropdown menu, a textbox with a dropdown like arrow is rendered. The arrow indicates a `ChoiceSet`.
+As you start entering the texts, the choices are filtered down to choices that partially match the input. The dropdown list highlights the input characters that match the search. When the choice list ends, one choice is visible without dropdown arrow.     
 
+The following image demonstrates static typeahead search:
+
+![Static typeahead search](../../assets/images/cards/static-type-ahead-search.png)
+ 
 ## Dynamic typeahead search
 
 Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the remote backend. 
@@ -76,6 +78,9 @@ The following image illustrates mobile experience of typeahead search:
 <img src="~/assets/images/cards/mobile-type-ahead-search.png" alt="Mobile experience" width="400"/>
 
 ---
+
+> [!NOTE] 
+> You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
 
 ## Implement typeahead search
 
