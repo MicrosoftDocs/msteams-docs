@@ -22,7 +22,7 @@ items:
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
 
-    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
+    <img src="(~/assets/images/bots/loggedin.png" alt="Signed in to the conversation bot" width="400"/>
 
 - title: Prerequisites
   durationInMinutes: 1
