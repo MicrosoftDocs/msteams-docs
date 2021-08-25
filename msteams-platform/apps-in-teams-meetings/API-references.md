@@ -449,36 +449,21 @@ To deserialize the json payload, a model object is introduced to get the metadat
 > * Do not use conversation ID as meeting ID.     
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
       
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start and end event:
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
 
+Meeting Start Event
 ```csharp
-protected override async Task OnEventActivityAsync(
-ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+protected override async Task OnTeamsMeetingStartAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Event Name is either 'application/vnd.microsoft.meetingStart' or 'application/vnd.microsoft.meetingEnd'
-    var meetingEventName = turnContext.Activity.Name;
-    // Value contains meeting information (ex: meeting type, start time, etc).
-    var meetingEventInfo = turnContext.Activity.Value as JObject; 
-    var meetingEventInfoObject =
-meetingEventInfo.ToObject<MeetingStartEndEventValue>();
-    // Create a very simple adaptive card with meeting information
-var attachmentCard = createMeetingStartOrEndEventAttachment(meetingEventName,
-meetingEventInfoObject);
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(attachmentCard));
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
 
-The MeetingStartEndEventvalue.cs includes the following code:
-
+Meeting End Event
 ```csharp
-public class MeetingStartEndEventValue
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 {
-    public string Id { get; set; }
-    public string Title { get; set; }
-    public string MeetingType { get; set; }
-    public string JoinUrl { get; set; }
-    public string StartTime { get; set; }
-    public string EndTime { get; set; }
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
 
