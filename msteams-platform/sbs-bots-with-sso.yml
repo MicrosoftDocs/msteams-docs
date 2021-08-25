@@ -21,8 +21,8 @@ items:
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
-
-    <img src="../assets/images/bots/loggedin.png" alt="Signed in to the conversation bot" width="400"/>
+    
+    <img src="../../assets/images/bots/loggedin.png" alt="Signed in to the conversation bot" width="400"/>
 
 - title: Prerequisites
   durationInMinutes: 1
