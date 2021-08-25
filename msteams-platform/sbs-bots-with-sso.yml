@@ -65,8 +65,8 @@ items:
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. Select the subscription from **Subscription** dropdown list.
-    1. Select the resource group from **Resource group** dropdown list, or select **Create new**, enter resource name, and select **OK** to create a new resource. If you've created a new resource, select required location from **New resource group location** dropdown list.
+    1. From **Subscription** dropdown list, select the subscription.
+    1. From **Resource group** dropdown list, select the resource group, or select **Create new**, enter resource name, and select **OK** to create a new resource. If you've created a new resource, select required location from **New resource group location** dropdown list.
 
         > [!NOTE]
         > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app id**, and enter **Existing app password**.
@@ -90,8 +90,8 @@ items:
     > [!NOTE]
     > The Microsoft App ID is the client ID.
 
-    1. Select **Configuration** under **Settings**. Save the **Microsoft App ID** for future reference.
-    1. Select **Manage** for the **Microsoft App ID**.
+    1. Under **Settings**, select **Configuration**. Save the **Microsoft App ID** for future reference.
+    1. For the **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
@@ -101,7 +101,7 @@ items:
 
         ![Add client secret to app](~/assets/images/bots/addclientsecret.png)
 
-    1. Select **Copy to clipboard** for **Value** and save the Client secret for future reference.
+    1. For **Value**, select **Copy to clipboard** and save the Client secret for future reference.
 
        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)    
 
@@ -129,7 +129,7 @@ items:
 
     1. Select **Save**. Make sure to save the **Application ID URI** for future reference.
     1. Select **Add a scope**.
-    1. Enter **access_as_user** as the **Scope name**.
+    1. In **Scope name**, enter **access_as_user**.
     1. In **Who can consent?**, switch to **Admins and users**.
     1. Enter the following values in the boxes:
 
@@ -161,7 +161,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. Select **Configuration** under **Settings** for the Azure bot that you created.
+    1. Under **Settings** for the Azure bot that you created, select **Configuration**.
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) from **Forwarding** as shown in the following image:
 
@@ -184,16 +184,20 @@ items:
 
     1. Select **Add OAuth Connection Settings**.
     1. Enter the following details in **New Connection Setting**:
-        - Enter **Name** for your new connection setting. You can use the name in the settings of your bot service code.
-        - Select **Azure Active Directory V2** from **Service Provider**.
-        - Enter **Client id** and **Client secret** saved previously as your Microsoft App ID and Value for Client secret respectively.
+
+        | Field | Value or description |
+        | ----- | ----- |
+        | Name | Enter name for your new connection setting. You can use the name in the settings of your bot service code. |
+        | Service Provider | Select **Azure Active Directory V2**. |
+        | Client id | Saved previously as your Microsoft App ID. |
+        | Client secret | Saved previously as Value for Client secret. |
 
             > [!NOTE]
             > You can obtain the Microsoft App ID from the bot's Configuration page.
 
         - In **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint.
-        - Enter **common** as the **Tenant ID**.
-        - Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs.
+        - In **Tenant ID**, enter **common**.
+        - In **Scopes**, enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs.
 
             ![Bot Service connection](~/assets/images/bots/botserviceconnection.png)
 
@@ -224,7 +228,23 @@ items:
 
     1. Select the **F5** key to run this project.
 
-        Troubleshooting
+        <br>
+
+        <details>
+
+        <summary><b>Troubleshooting</b></summary>
+
+        If you get the **Unable to find package** error, follow these steps:
+
+        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
+        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
+        1.	Select **Add**.
+        1.	Enter **nuget.org** in the **Name** and **https://api.nuget.org/v3/index.json** in the **Source** fields.
+        1.	Select **Update** and **OK**.
+        1.	Rebuild your project.
+        <br>
+
+        </details>
 
 - title: Configure and run the Teams app
   durationInMinutes: 2
@@ -236,14 +256,16 @@ items:
     * Uploading the **manifest.zip** file.
     * Using **App Studio**.
 
-    In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     
     **To run the Teams app by uploading the manifest.zip file**
     
-    1. Go to **appPackage/** folder.
-    1. Edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
-    1. Zip the contents of the **appPackage/** folder to create a **manifest.zip**.
-    1. Upload **manifest.zip** to Teams by selecting **Store**, **Manage your apps**, and **Upload a custom app**.
+    1. In Visual Studio, go to **appPackage/** folder.
+    1. Open the **manifest.json** file.
+    1. In the **manifest.json** file, replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    1. In Windows Explorer, go to **Microsoft-Teams-Samples > samples > bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
+    1. Zip the contents of the **appPackage/** folder to create **manifest.zip**.
+    1. To upload **manifest.zip** to Teams, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
     1. Select **Add** to add the conversation bot to your chat.
 
         You can interact with this bot by sending it a message. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **logout**.
