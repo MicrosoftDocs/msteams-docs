@@ -295,6 +295,9 @@ items:
     1. In **Finish**, select **Domains and permissions**.
     1. Check the **AAD App ID**, which is the Microsoft App ID and **Single-Sign-On** includes the Microsoft App ID with **api://botid-** added to it.
     1. In **Finish**, select **Test and distribute**.
+
+        <img src="~/assets/images/bots/testbot.png" alt="Test and distribute" width="400"/>
+
     1. Select **Install**.
     1. Select **Add** to add the conversation bot to your chat.
 
