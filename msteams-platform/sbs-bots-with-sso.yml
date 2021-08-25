@@ -192,8 +192,8 @@ items:
         | Client id | Saved previously as your Microsoft App ID. |
         | Client secret | Saved previously as Value for Client secret. |
 
-            > [!NOTE]
-            > You can obtain the Microsoft App ID from the bot's Configuration page.
+        > [!NOTE]
+        > You can obtain the Microsoft App ID from the bot's Configuration page.
 
         - In **Token Exchange URL**, use the **Application ID URL** obtained previously while exposing API endpoint.
         - In **Tenant ID**, enter **common**.
