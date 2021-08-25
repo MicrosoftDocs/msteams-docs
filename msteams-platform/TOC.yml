@@ -208,7 +208,7 @@
     - name: Channel and group conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       items:
@@ -348,6 +348,8 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
+    - name: Step-by-step guide for bots with SSO
+      href: sbs-bots-with-sso.yml
   - name: Messaging extensions
     items:
     - name: Add authentication to your messaging extension
