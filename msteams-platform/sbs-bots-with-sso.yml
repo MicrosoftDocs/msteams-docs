@@ -158,7 +158,7 @@ items:
 
     1. Go to **Home**.
 
-        <img src="~/assets/images/bots/homepage.png" alt="Home page" width="500"/>
+        <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
@@ -175,7 +175,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        <img src="~/assets/images/bots/messagingURL.png" alt="Messaging endpoint" width="500"/>
+        <img src="~/assets/images/bots/messagingURL.png" alt="Messaging endpoint" width="600"/>
 
     1. Select **Apply**.
 
@@ -201,7 +201,7 @@ items:
         > [!NOTE]
         > You can obtain the Microsoft App ID from the bot's Configuration page.
 
-        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="400"/>
+        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="300"/>
 
     1. Select **Save**.
     1. Select **Apply**.
