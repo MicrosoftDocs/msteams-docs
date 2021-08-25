@@ -99,7 +99,7 @@ items:
 
     1. Enter **Description** and select **Add**.
 
-        ![Add client secret to app](~/assets/images/bots/addclientsecret.png)
+        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="700"/>
 
     1. For **Value**, select **Copy to clipboard** and save the Client secret for future reference.
 
