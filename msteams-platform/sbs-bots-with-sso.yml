@@ -90,7 +90,7 @@ items:
     > [!NOTE]
     > The Microsoft App ID is the client ID.
 
-    1. Under **Settings**, select **Configuration**. Save the **Microsoft App ID** for future reference.
+    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** for future reference.
     1. For the **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
@@ -161,7 +161,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. Under **Settings** for the Azure bot that you created, select **Configuration**.
+    1.In **Settings** for the Azure bot that you created, select **Configuration**.
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) from **Forwarding** as shown in the following image:
 
@@ -183,7 +183,7 @@ items:
     **To configure Bot Service connection**
 
     1. Select **Add OAuth Connection Settings**.
-    1. Enter the following details in **New Connection Setting**:
+    1. In **New Connection Setting**, enter the following details:
 
         | Field | Value or description |
         | ----- | ----- |
@@ -206,24 +206,23 @@ items:
 - title: Configure and run your bot sample
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to use authentication for a bot running in Microsoft Teams.
+    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams.
 
     **To configure and run your bot sample**
 
     1. Open Visual Studio.
-    1. Select **Clone a repository**.
-    1. Enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git** in the **Repository location**. Make sure that you note the **Path** where the repository is cloned.
-    1. Select **File -> Open -> Project/Solution**.
-    1. Go to the **Microsoft-Teams-Samples** repository location.
-    1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore**.
+    1. In Visual Studio, select **Clone a repository**.
+    1. In the **Repository location**, enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git**. Make sure that you note the **Path** where the repository is cloned.
+    1. Select **File > Open > Project/Solution**.
+    1. Go to **Microsoft-Teams-Samples > samples > bot-conversation-sso-quickstart > csharp_dotnetcore** folder.
     1. Open the **BotSSOCSharp.csproj** file.
     1. Open the **appsettings.json** file.
     1. Update the **appsettings.json** configuration for the bot to use the `MicrosoftAppId` and `MicrosoftAppPassword`. Use the OAuth connection name as the **Connection Name**.
 
-        ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
-
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for Client secret that you saved previously.
+
+        ![Appsettings json](~/assets/images/bots/appsettingsjson.png)
 
     1. Select the **F5** key to run this project.
 
@@ -238,7 +237,7 @@ items:
         1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
         1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
         1.	Select **Add**.
-        1.	Enter **nuget.org** in the **Name** and **https://api.nuget.org/v3/index.json** in the **Source** fields.
+        1.	In **Name**, enter **nuget.org** and in **Source**, enter **https://api.nuget.org/v3/index.json**.
         1.	Select **Update** and **OK**.
         1.	Rebuild your project.
         <br>
@@ -255,8 +254,6 @@ items:
     * Uploading the **manifest.zip** file.
     * Using **App Studio**.
 
-    edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
-    
     **To run the Teams app by uploading the manifest.zip file**
     
     1. In Visual Studio, go to **appPackage/** folder.
@@ -282,14 +279,20 @@ items:
 
     **To run the Teams app using App Studio**
 
-    1. In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
-    
-    1. In Teams, open your app's zip file in **App Studio's** manifest editor.
-    1. Select **Bots** under **Capabilities**.
+    1. In Visual Studio, go to **appPackage/** folder.
+    1. Open the **manifest.json** file.
+    1. In the **manifest.json** file, replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    1. In Windows Explorer, go to **Microsoft-Teams-Samples > samples > bot-conversation-sso-quickstart > csharp_dotnetcore > appPackage** folder.
+    1. Zip the contents of the **appPackage/** folder to create **manifest.zip**.
+    1. In Teams from the left pane, select ellipses &#x25CF;&#x25CF;&#x25CF; and select **App Studio**.
+    1. Select **Import an existing app**.
+    1. Open **manifest.zip**.
+    1. In **Capabilities**, select **Bots**.
     1. Check the **Bot ID**.
-    1. Select **Domains and permissions** under **Finish**.
+    1. In **Finish**, select **Domains and permissions**.
     1. Check the **AAD App ID**, which is the Microsoft App ID and **Single-Sign-On** includes the Microsoft App ID with **api://botid-** added to it.
-    1. Select **Test and distribute** under **Finish** and select **Install**.
+    1. In **Finish**, select **Test and distribute**.
+    1. Select **Install**.
     1. Select **Add** to add the conversation bot to your chat.
 
         You can interact with this bot by sending it a message. It keeps you signed in unless you send a message to **logout**. The conversation bot asks for permissions for the first time.
@@ -308,7 +311,3 @@ items:
 - content: |
     You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.
 
-    For further reading:
-    - [Bot Framework documentation](https://docs.botframework.com/)
-    - [Azure Bot Service introduction](/azure/bot-service/?view=azure-bot-service-4.0)
-    - [Channels and Bot Connector Service](/azure/bot-service/bot-concepts?view=azure-bot-service-4.0)
