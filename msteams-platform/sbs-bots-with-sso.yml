@@ -42,10 +42,6 @@ items:
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
-    * Add Redirect URL to the Azure bot resource.
-    * Expose API endpoint to specify the location from where the resources can be accessed.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Add messaging endpoint to the ngrok tunnel you created.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -103,6 +99,17 @@ items:
     1. For **Value**, select **Copy to clipboard** and save the Client secret for future reference.
 
        ![Value of client secret](~/assets/images/bots/valueclientsecret.png)    
+
+- title: Configure SSO for your bot
+  durationInMinutes: 5
+  content: |
+    To ensure the Bot Service enables user to sign in to access the bot, you must configure SSO for your bot, perform the following steps:
+    
+    * Add Redirect URI to the Azure bot resource.
+    * Expose API endpoint to specify the location from where the resources can be accessed.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add messaging endpoint to the ngrok tunnel you created.
+    * Set up Bot Service connection.
 
     **To add Redirect URL to the Azure bot resource**
 
@@ -174,12 +181,9 @@ items:
 
         You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
     
-- title: Set up Bot Service connection
-  durationInMinutes: 1
-  content: |
     When you register a bot in Azure, it creates an Active Directory (AD) registration application. This application has an app ID `MicrosoftAppId` and a client secret `MicrosoftAppPassword`. You use these values for bot configuration and also generate an authentication connection. You add this connection to the bot resource you created. With Azure Bot Service’s OAuth, it's easier for your Teams bot to sign in your users and access external data providers.
 
-    **To configure Bot Service connection**
+    **To set up Bot Service connection**
 
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
