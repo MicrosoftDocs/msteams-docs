@@ -205,10 +205,10 @@ items:
     **To configure and run your bot sample**
 
     1. Open Visual Studio.
-    1. Select **Clone repository**.
-    1. Enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git** in the **Repository location**. Make sure that you note the path.
-    1. In Visual Studio, select **File -> Open -> Project/Solution**.
-    1. folder of **Microsoft-Teams-Samples** repository
+    1. Select **Clone a repository**.
+    1. Enter **https://github.com/OfficeDev/Microsoft-Teams-Samples.git** in the **Repository location**. Make sure that you note the **Path** where the repository is cloned.
+    1. Select **File -> Open -> Project/Solution**.
+    1. Go to the **Microsoft-Teams-Samples** repository location.
     1. Go to the **samples/bot-conversation-sso-quickstart/csharp_dotnetcore**.
     1. Open the **BotSSOCSharp.csproj** file.
     1. Open the **appsettings.json** file.
@@ -237,7 +237,8 @@ items:
     
     **To run the Teams app by uploading the manifest.zip file**
     
-    1. Go to apppackage folder. In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    1. Go to **appPackage/** folder.
+    1. Edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
     1. Zip the contents of the **appPackage/** folder to create a **manifest.zip**.
     1. Upload **manifest.zip** to Teams by selecting **Store**, **Manage your apps**, and **Upload a custom app**.
     1. Select **Add** to add the conversation bot to your chat.
@@ -257,6 +258,8 @@ items:
 
     **To run the Teams app using App Studio**
 
+    1. In Visual Studio, edit the **manifest.json** file in the **appPackage/** folder. Replace everywhere you see the place holder string **{TODO: MicrosoftAppId}** with your Microsoft App ID.
+    
     1. In Teams, open your app's zip file in **App Studio's** manifest editor.
     1. Select **Bots** under **Capabilities**.
     1. Check the **Bot ID**.
