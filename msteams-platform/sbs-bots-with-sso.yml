@@ -22,7 +22,7 @@ items:
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
     
-    <img src="../../assets/images/bots/loggedin.png" alt="Signed in to the conversation bot" width="400"/>
+    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -73,7 +73,7 @@ items:
 
     1. Select **Review + create**.
 
-        ![Create resource Azure bot](~/assets/images/bots/Azurebotcreate.png)
+        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="400"/>
 
     1. If the validation passes, select **Create**.
 
