@@ -25,6 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|08/19/2021| Installation update event received when you install a bot to a conversation thread. | [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Build tabs with Adaptive Cards|[Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| Tabs will no longer have margins surrounding their experiences.  | [Removing tab margins](resources/removing-tab-margins.md) |
 |07/08/2021|Meeting app extensibility is available on mobile. Mobile clients support apps during meeting. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
@@ -166,7 +167,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
+|06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
