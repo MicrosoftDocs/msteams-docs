@@ -338,8 +338,6 @@
       href: tabs/how-to/authentication/auth-silent-aad.md
     - name: Use SSO authentication
       href: tabs/how-to/authentication/auth-aad-sso.md
-    - name: Step-by-step guide for bots with SSO
-      href: sbs-bots-with-sso.yml
   - name: Bots
     items:
     - name: Authentication flow in bots
@@ -348,6 +346,8 @@
       href: bots/how-to/authentication/add-authentication.md
     - name: Use SSO authentication
       href: bots/how-to/authentication/auth-aad-sso-bots.md
+    - name: Step-by-step guide for bots with SSO
+      href: sbs-bots-with-sso.yml
   - name: Messaging extensions
     items:
     - name: Add authentication to your messaging extension
