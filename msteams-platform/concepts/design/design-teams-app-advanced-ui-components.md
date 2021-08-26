@@ -26,15 +26,13 @@ Breadcrumbs are a navigational aid that convey your app’s hierarchy. They help
 * Communicate hierarchy
 * Navigation
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-breadcrumb.png" alt-text="Example shows a breadcrumb template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/breadcrumb.png" alt-text="Example shows a breadcrumb template on desktop." border="false":::
 
 ## Left nav
 
@@ -45,15 +43,13 @@ Use the left nav to browse multiple pages within your Teams tab. In the followin
 * Browse multiple pages within a Teams tab.
 * Break down complex apps into multiple pages.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-left-nav.png" alt-text="Example shows a left nav template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/left-nav.png" alt-text="Example shows a left nav template on desktop." border="false":::
 
 ## Notification bar
 
@@ -65,15 +61,13 @@ A notification bar is a dedicated area for displaying a brief, important message
 * Success messages
 * Informational or promotional messages
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-notification-bar.png" alt-text="Example shows notification bar UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/notification-bar.png" alt-text="Example shows notification bar UI templates on desktop." border="false":::
 
 ## Stage
 
@@ -86,17 +80,15 @@ Learn how to implement [stage](~/tabs/tabs-link-unfurling.md).
 * Display content in a large surface within Teams instead of another app or browser
 * Spotlight media or other rich content
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 Your app can launch a stage from an Adaptive Card, shared link, or visual components (such as a chart).
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-stage.png" alt-text="Example shows a stage template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/stage.png" alt-text="Example shows a stage template on desktop." border="false":::
 
 ## Toolbar
 
@@ -108,12 +100,10 @@ A toolbar is a container for grouping a set of controls.
 * Contextual filter and find
 * Navigation and breadcrumbs
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-toolbar.png" alt-text="Example shows a toolbar template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/toolbar.png" alt-text="Example shows a toolbar template on desktop." border="false":::

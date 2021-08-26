@@ -21,37 +21,19 @@ You can find comprehensive personal app design guidelines, including elements th
 
 ## Add a personal app
 
-You can add a personal app from the Teams store (AppSource) or the app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
+Users can add a personal app from the Teams store or app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout." border="false":::
 
 ## Use a personal app (private workspace)
 
-With a private workspace, you can view app content that's meaningful to you in a central location without leaving Teams.
+With a private workspace, users can view app content that's meaningful to them in a central location without leaving Teams.
 
 (Implementation note: The private workspace is based on the [*personal tab*](../../build-your-first-app/build-personal-tab.md) capability.)
 
 ### Anatomy: Personal app (private workspace)
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**App attribution**: Your app logo and name.|
-|B|**Tabs**: Provides navigation for your personal app.|
-|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
-|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
-
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Tabs**: Provides navigation for your personal app.|
-|1|**iframe**: Displays your app content.|
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
 
@@ -69,9 +51,25 @@ With a private workspace, you can view app content that's meaningful to you in a
 |A|**Tabs**: Provides navigation for your personal app.|
 |1|**webview**: Displays your app content.|
 
----
+#### Desktop
 
-### Designing with UI templates and advanced components
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**App attribution**: Your app logo and name.|
+|B|**Tabs**: Provides navigation for your personal app.|
+|C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
+|D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
+
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Tabs**: Provides navigation for your personal app.|
+|1|**iframe**: Displays your app content.|
+
+### Design with UI templates and advanced components
 
 Use one of the following Teams templates and components to help design your personal tab:
 
@@ -84,21 +82,11 @@ Use one of the following Teams templates and components to help design your pers
 
 ## Use a personal app (bot)
 
-Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on your artboard). The bot is available in a tab you specify.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on on artboard). Users interact with the bot in a tab you specify.
 
 ### Anatomy: Personal app (bot)
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|A|**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.|
-|B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
-|C|**Compose box**: Input field for sending messages to the bot.|
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
 
@@ -109,11 +97,19 @@ Personal apps can include a bot for one-on-one conversations and private notific
 |C|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
 |D|**Compose box**: Input field for sending messages to the bot.|
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Bot tab**: For example, include a **Chat** tab to access bot conversations and notifications.|
+|B|**Bot message**: Bots often send messages and notifications in the form of a card (such as an Adaptive Card).|
+|C|**Compose box**: Input field for sending messages to the bot.|
 
 ## Manage a personal tab
 
-On the left side of Teams, users can right click the personal app to pin, remove, and configure other app options.
+On the left side of Teams, users can right-click the personal app to pin, remove, and configure other app options.
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 

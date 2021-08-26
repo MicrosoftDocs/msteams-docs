@@ -183,7 +183,7 @@ Microsoft Teams `setSettings()` configuration for removal page:
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
-    entityId: "add unique name here",
+    entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
     removeUrl: "add removal page URL here"

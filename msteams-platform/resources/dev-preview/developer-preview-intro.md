@@ -46,6 +46,5 @@ To enable the public developer preview on a mobile client, you need to do the fo
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
-## Features available in developer preview
 
-For a full list of the features currently enabled in developer preview see: [Features in the public developer preview](../../resources/dev-preview/developer-preview-features.md).
+
