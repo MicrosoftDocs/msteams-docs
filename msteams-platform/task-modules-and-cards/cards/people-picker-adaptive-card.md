@@ -222,12 +222,12 @@ The following example describes static choices:
 	"type": "Input.ChoiceSet",
 	"choices": [
 		{
-			"title": "Result 1",
-			"value": "1000"
+			"title": "Custom Profile 1",
+			"value": "Profile1"
 		},
 		{
-			"title": "Result 2",
-			"value": "2000"
+			"title": "Custom Profile 2",
+			"value": "Profile2"
 		}
 	],
 	"choices.data": {
