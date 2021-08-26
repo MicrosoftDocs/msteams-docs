@@ -69,7 +69,7 @@ Content belongs to third level heading.
   ### Gray background
 
   `Configurabletabs`
-  asdf
+
 
   ### Table
 
