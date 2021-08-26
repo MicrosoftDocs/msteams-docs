@@ -1,13 +1,13 @@
 ---
-title: User manual on types of links
-author: Pallavi
-description: User manual on types of links 
+title: Updating links in Visual Studio Code
+author: GubbaPallavi
+description: Updating links in Visual Studio Code 
 ms.topic: conceptual
 ---
 
-# Introduction
+# Links
 
-This article describes how to use hyperlinks in Markdown editor. Hyperlinks can connect two different documents and various sections in the same document.
+This article describes how to update different types of links in Visual Studio Code. Hyperlinks can connect two different documents and various sections in the same document.
 
 Following are the three different types of links:
 
@@ -25,15 +25,30 @@ For a bookmark link to a heading in the current file, use a hash symbol followed
 
 `[Before a meeting](#before-a-meeting)`
 
+** Testing purpose **
+
+[External links](#external-links)
+
 ## Links from one article to another within the docset
 
 A file can link to other file within the docset using `/` symbol. It helps to divide all the file paths.
 
 `[link text](../directory/article-name.md)`
 
+** Testing purpose **
+
+[API references](../apps-in-teams-meetings/Api-references.md)
+
 ## External links
 
 Use URL links when linking to content outside of the current docset.
 
 `[External link](https://.........)`
+
+** Testing purpose **
+
+[Node.js](https://nodejs.org/en/download/)
+
+## See also
+[Update images in VSC](../apps-in-teams-meetings/Images.md)
 
