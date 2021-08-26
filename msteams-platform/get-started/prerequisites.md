@@ -91,6 +91,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
 
 - [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 If you want to access data stored in Azure or deploy a cloud-based backend for your Teams app in Azure, install these tools:
 
