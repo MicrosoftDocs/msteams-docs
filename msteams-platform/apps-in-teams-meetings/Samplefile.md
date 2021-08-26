@@ -1,9 +1,3 @@
----
-title: Enable and configure your apps for Teams meetings
-author: surbhigupta
-description: Enable and configure your apps for Teams meetings 
-ms.topic: conceptual
----
 
 # Training
 
@@ -50,13 +44,13 @@ Content belongs to third level heading.
   ```
 
   ### Hyperlinks
-  * [Before a Meeting](#before-a-meeting)
-  * [After Meeting](after-a-meeting)
+  * Before a Meeting
+  * After Meeting
 
   ### Ordered List
   **To add ordered list, use 1**
 
-  1. [List1](#before-a-meeting)
+  1. List 1
   1. **List 2**
   1. List 3
 
