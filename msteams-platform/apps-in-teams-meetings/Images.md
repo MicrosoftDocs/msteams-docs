@@ -5,7 +5,7 @@ description: Updating images in Visual Studio Code
 ms.topic: conceptual
 ---
 
-# Introduction
+# Images
 
 This article describes how to update images in Visual Studio Code.
 
