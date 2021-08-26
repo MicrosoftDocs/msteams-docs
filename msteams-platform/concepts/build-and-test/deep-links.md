@@ -211,6 +211,9 @@ Use the following format for a deep link that you can use in a bot, Connector, o
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
 
+> [!NOTE]
+> The search params do not support the `+` signal in place of the whitespace(` `) character. You should ensure your uri encoding code returns `%20` for spaces. Eg: `?subject=test%20subject` is good, but `?subject=test+subject` is bad.  
+
 The query parameters are:
 
 * `attendees`: The optional comma-separated list of user IDs representing the attendees of the meeting. The user performing the action is the meeting organizer. The User ID field currently only supports the Azure AD UserPrincipalName, typically an email address.
