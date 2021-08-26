@@ -168,3 +168,5 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+
+Sample text added here.
