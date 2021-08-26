@@ -30,6 +30,9 @@ When the content UX is loaded in a shared channel, use the data received from `g
 
 You can collaborate with external members outside of your organization using shared channels. App permissions in shared channels follow the host team's app roster and host tenant's app policy. 
 
+> [!NOTE]
+> The [Activity Feed Notification Graph API](https://docs.microsoft.com/en-us/graph/teams-send-activityfeednotifications) does not support cross-tenant notifications for apps in a Shared Channel.
+
 ## Get shared channel membership
 
 You can get direct shared channel membership by using the `hostTeamGroupID` from `getContext` and following these steps:
