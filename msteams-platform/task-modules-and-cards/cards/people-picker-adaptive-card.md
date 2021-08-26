@@ -232,10 +232,10 @@ The following example describes static choices:
 		}
 	],
 	"choices.data": 
-  {
-		"type": "Data.Query",
-		"dataset": "graph.microsoft.com/users"
-	},
+    {
+		  "type": "Data.Query",
+		  "dataset": "graph.microsoft.com/users"
+	  },
 	"id": "people-picker",
 	"isMultiSelect": true
 }
