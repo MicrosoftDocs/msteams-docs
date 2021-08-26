@@ -46,7 +46,8 @@ The app manifest must include the following code snippet:
 ```
 
 > [!NOTE]
-> `meetingStage` is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+> If **Dev preview** is enabled in desktop teams client, add tab to the meeting.
+> If **Dev preview** is disabled, join the meeting and share the side panel tab app. 
 
 ### Context property
 
@@ -124,9 +125,6 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### Shared meeting stage
-
-> [!NOTE]
-> This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
 
