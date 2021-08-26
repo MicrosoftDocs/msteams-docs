@@ -105,7 +105,7 @@ After identifying the common properties for all cards, you can now work with Ada
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards v1.3.0](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### Support for Adaptive Cards
 
@@ -116,7 +116,7 @@ The following table provides the features that support Adaptive Cards:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams platform supports v1.2 or earlier of Adaptive Card features.
+> * Teams platform supports v1.3 or earlier of Adaptive Card features.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 
