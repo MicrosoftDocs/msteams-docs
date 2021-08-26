@@ -22,13 +22,7 @@ items:
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
 
-    # [Desktop](#tab/desktop)
-
-    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
-
-    # [Mobile](#tab/mobile)
-
-    ![Mobile signed in to bot](~/assets/images/bots/mobileloggedin.png)
+    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -273,20 +267,14 @@ items:
 
     1. Select **Accept** for **Permissions requested**.
 
-        ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
+        ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    # [Desktop](#tab/desktop)
-
-    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
-
-    # [Mobile](#tab/mobile)
-
-    ![Mobile signed in to bot](~/assets/images/bots/mobileloggedin.png)
+    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
     
 - content: |
     You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.
