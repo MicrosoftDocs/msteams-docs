@@ -136,11 +136,11 @@ The code example for creating People Picker with organization search is as follo
             "isMultiSelect": true
         }
       ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "title": "Submit"
-    }
+    "actions": [
+       {
+           "type": "Action.Submit",
+          "title": "Submit"
+       }
   ],
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.2"
@@ -178,16 +178,17 @@ The following list provides the information to preselect users:
 The following example describes preselection of a single user:
 
 ```json
-{ "type": "Input.ChoiceSet", 
-"choices": [],
- "choices.data":
- { 
+{ 
+  "type": "Input.ChoiceSet", 
+  "choices": [],
+  "choices.data":
+  { 
    "type": "Data.Query", 
- "dataset": "graph.microsoft.com/users"
+   "dataset": "graph.microsoft.com/users"
   }, 
  "id": "people-picker",
-  "value": "<AAD ID 1>"
-   }
+ "value": "<AAD ID 1>"
+}
 ```  
 
 The following example describes preselection of multiple users:
@@ -195,16 +196,16 @@ The following example describes preselection of multiple users:
 ```json
 { 
   "type": "Input.ChoiceSet",
-"choices": [], 
- "choices.data":
+  "choices": [], 
+  "choices.data":
    { 
     "type": "Data.Query",
-     "dataset": "graph.microsoft.com/users" 
-    }, 
+    "dataset": "graph.microsoft.com/users" 
+   }, 
   "id": "people-picker",
   "isMultiSelect": true, 
   "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>" 
-      }
+}
 ```
  
 ## Static choices
@@ -230,7 +231,8 @@ The following example describes static choices:
 			"value": "Profile2"
 		}
 	],
-	"choices.data": {
+	"choices.data": 
+  {
 		"type": "Data.Query",
 		"dataset": "graph.microsoft.com/users"
 	},
@@ -238,7 +240,12 @@ The following example describes static choices:
 	"isMultiSelect": true
 }
 ```
- 
+
+The following image illustrates People Picker in Adaptive Cards with static choices in organization search:
+
+![People Picker static choice](../../assets/images/cards/peoplepicker-static-choice.png)
+
+
 You can implement People Picker for efficient task management in different scenarios.  
 
 ## See also
