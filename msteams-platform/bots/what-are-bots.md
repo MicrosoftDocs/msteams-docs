@@ -43,6 +43,8 @@ With Microsoft Graph APIs for calls and online meetings, Microsoft Teams apps ca
 
 You can use the Teams bot APIs to get information for one or more members of a chat or team. For more information, see [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+Testing a pull request.
+
 ## See also
 
 [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
@@ -50,4 +52,4 @@ You can use the Teams bot APIs to get information for one or more members of a c
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Bots and SDKs](~/bots/bot-features.md)
+> [Bots and SDKs](~/bots/bot-features.md
