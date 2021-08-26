@@ -25,7 +25,7 @@ For a bookmark link to a heading in the current file, use a hash symbol followed
 
 `[Before a meeting](#before-a-meeting)`
 
-** Testing purpose **
+**Testing purpose**
 
 [External links](#external-links)
 
@@ -35,7 +35,7 @@ A file can link to other file within the docset using `/` symbol. It helps to di
 
 `[link text](../directory/article-name.md)`
 
-** Testing purpose **
+**Testing purpose**
 
 [API references](../apps-in-teams-meetings/Api-references.md)
 
@@ -45,7 +45,7 @@ Use URL links when linking to content outside of the current docset.
 
 `[External link](https://.........)`
 
-** Testing purpose **
+**Testing purpose**
 
 [Node.js](https://nodejs.org/en/download/)
 
