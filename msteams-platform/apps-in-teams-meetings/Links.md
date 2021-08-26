@@ -1,3 +1,10 @@
+---
+title: User manual on types of links
+author: Pallavi
+description: User manual on types of links 
+ms.topic: conceptual
+---
+
 # Introduction
 
 This article describes how to use hyperlinks. Hyperlinks can connect two different documents as well as various sections in the same document.
