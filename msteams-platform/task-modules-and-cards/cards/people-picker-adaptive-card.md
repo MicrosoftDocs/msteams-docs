@@ -55,7 +55,7 @@ The following image shows the reassignment scenario:
 
 Android and iOS mobile clients support People Picker in Adaptive Cards. You can use People Picker in mobile to search and select user to enhance user experience. The search experience is similar to any other user selection experience in mobile.
 
-### Reassignment scenario example
+**Reassignment scenario example**
 
 User A (Robert) receives a ticket for a task in a channel and realizes incorrect assignee. User A reassigns the task that sends the information back to the bot. 
 
