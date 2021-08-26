@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Introduction
 
-This article describes how to use hyperlinks. Hyperlinks can connect two different documents as well as various sections in the same document.
+This article describes how to use hyperlinks. Hyperlinks can connect two different documents and various sections in the same document.
 
 Following are the three different types of links:
 
@@ -17,7 +17,7 @@ Following are the three different types of links:
 
 ## Link text
 
-The words that you write in the link text should be user friendly. This is the text that appears in the document as a link.
+The words that you write in the link text should be user-friendly. This is the text that appears in the document as a link.
 
 ## Bookmark links
 
