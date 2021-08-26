@@ -7,7 +7,7 @@ ms.topic: conceptual
 
 # Introduction
 
-This article describes how to use hyperlinks. Hyperlinks can connect two different documents and various sections in the same document.
+This article describes how to use hyperlinks in Markdown editor. Hyperlinks can connect two different documents and various sections in the same document.
 
 Following are the three different types of links:
 
