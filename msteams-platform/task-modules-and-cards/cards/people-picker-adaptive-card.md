@@ -134,7 +134,7 @@ The code example for creating People Picker with organization search is as follo
             },
             "id": "people-picker",
             "isMultiSelect": true
-        },
+        }
       ],
   "actions": [
     {
