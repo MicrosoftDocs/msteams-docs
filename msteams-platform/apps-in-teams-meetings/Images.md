@@ -1,7 +1,7 @@
 ---
-title: User manual on types of links
+title: Updating images in Visual Studio Code 
 author: GubbaPallavi
-description: User manual on types of links 
+description: Updating images in Visual Studio Code 
 ms.topic: conceptual
 ---
 
