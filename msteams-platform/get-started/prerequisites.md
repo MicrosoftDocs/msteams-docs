@@ -10,6 +10,8 @@ ms.topic: quickstart
 
 Before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
 
+Dummy PR: Doc enhancement
+
 ## Install required tools
 
 Some of the tools you need depend on how you prefer to build your Teams app:
