@@ -50,7 +50,7 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 3. Use GET members of each shared team (Team X) with GET `sharedWithTeams` API.
 
     ```http
-   GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
+    GET /teams/{host-team-group-id}/channels/{channel-id}/sharedWithTeams/{teamX}/members
     ```
 
 ## Classify members in the shared channel as in-tenant or out-tenant
@@ -58,9 +58,10 @@ You can get direct shared channel membership by using the `hostTeamGroupID` from
 You can classify members as in-tenant or out-tenant by comparing `tenantID` of the member or team with `hostTeamTenantID` as follows: 
 
 1. Get the member you wish to compare.
-```http
-GET /teams/{host-team-group-id}/channels/{channel-id}/members
-```
+
+    ```http
+    GET /teams/{host-team-group-id}/channels/{channel-id}/members
+    ```
 2.	Using `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
 
 ## AAD native identity
