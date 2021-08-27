@@ -129,7 +129,7 @@ If your page makes use of any of these values, you must check the `channelType` 
 ## Get context in shared channels
 
 When the content UX is loaded in a shared channel, use the data received from `getContext` call for  shared channel changes. If tab makes use of any of the following values, you must populate the `channelType` field to determine if the tab is loaded in a shared channel, and respond appropriately.
-For shared channels, the `groupId` value is `null`, since the host team's groupId does not accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. The term "host Team" refers to the Team that created the shared channel. The term "current Team" refers to Team that the current user is accessing the shared channel from. 
+For shared channels, the `groupId` value is `null`, since the host team's groupId does not accurately reflect the true membership of the shared channel. To address this, the `hostTeamGroupID` and `hostTenantID` properties are newly added and useful for making Microsoft Graph API calls to retrieve membership. `hostTeam` refers to the Team that created the shared channel. `currentTeam` refers to Team that the current user is accessing the shared channel from. 
 
 For more information about these concepts, see [Shared channels](~/concepts/build-and-test/shared-channels.md).
 
