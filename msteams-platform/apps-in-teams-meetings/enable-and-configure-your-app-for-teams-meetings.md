@@ -102,7 +102,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
 
-#### Meeting Sidepanel
+#### Meeting SidePanel
 
 The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
@@ -163,6 +163,10 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 |Sample name | Description | Sample |
 |----------------|-----------------|--------------|----------------|-----------|
 | Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+
+|Sample name | Description | C# | Nodejs |
+|--------|----------|---------|----------|
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View]([Docenhancement][Addcodesampleissue) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## See also
 
