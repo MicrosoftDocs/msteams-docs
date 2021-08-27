@@ -166,7 +166,7 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 |Sample name | Description | C# | Nodejs |
 |--------|----------|---------|----------|
-|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View]([Docenhancement][Addcodesampleissue) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## See also
 
