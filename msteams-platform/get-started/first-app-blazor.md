@@ -13,6 +13,8 @@ In this tutorial, you will learn how to create a new Microsoft Teams app in .NET
 
 The app that is built displays basic user information for the current user.  When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
 
+Updated for Dummy Feature
+
 ## Before you begin
 
 Make sure your development environment is set up by installing the prerequisites.
