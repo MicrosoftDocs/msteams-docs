@@ -8,17 +8,17 @@ description: Schedule meeting using Teams
 
 ## Overview
 
-In this tutorial you will learn how to schedule meeting in Microsoft Outlook using Teams.
+In this tutorial, you will learn how to schedule meeting in Microsoft Outlook using Teams.
 
 ## Prerequisites
 
-Before you schedule a meeting using Teams, you must login into the teams.
+Before you schedule a meeting in Microsoft Outlook using Teams, you must sign in into the teams.
 
 ## Step- by- step guide to schedule meeting
 
 1. Open **Teams** application.
 
-1. On the left hand side, select **Calendar**.
+1. On the left-hand side, select **Calendar**.
 
 1. Select **New Meeting**.
 
