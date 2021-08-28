@@ -12,7 +12,7 @@ localization_priority: Normal
 > [!NOTE]
 > This feature is currently available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-In your Teams store listing, you can include app subscription plans or licenses for users to purchase. This process includes creating a software-as-a-service (SaaS) offer in Partner Center and linking that offer to your app.
+You can include subscription plans for your Teams app that users can buy directly from your store listing. This process includes creating a software-as-a-service (SaaS) offer in Partner Center and linking that offer to your app.
 
 > [!TIP]
 > We recommend that you create and link your SaaS offer before publishing your app to the Teams store. If your app is already listed in the store, you must republish your app to include the SaaS offer.
