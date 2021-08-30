@@ -97,7 +97,7 @@ The following image displays command addition for messaging extension:
 
 1. Select **an message extension bot** from the drop down list under **Message extensions ID** and select **Save**.
 
-    <img width="430px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
+    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
 
 1. Select **Add a command**. A pop-up window appears to add command.
 
