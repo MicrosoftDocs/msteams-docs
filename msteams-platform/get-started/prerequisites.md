@@ -24,7 +24,7 @@ Some of the tools you need depend on how you prefer to build your Teams app:
 
 ## Install the Teams Toolkit
 
-The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`).
+The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -91,6 +91,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
 
 - [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 If you want to access data stored in Azure or deploy a cloud-based backend for your Teams app in Azure, install these tools:
 

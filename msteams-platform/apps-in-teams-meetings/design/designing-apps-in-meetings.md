@@ -8,7 +8,7 @@ ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
 
-You can create apps to make meetings more productive. For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
+You can create apps to make meetings more productive. For example, ask people to complete a survey during a meeting or send a quick reminder that doesn’t interrupt the flow of the meeting.
 
 ## Microsoft Teams UI Kit
 
@@ -29,23 +29,21 @@ In the meeting details, users can select **Add a tab +** to open the app flyout 
 
 ### Add during a meeting
 
-# [Desktop](#tab/desktop)
+#### Mobile
+
+Once app has been added (for example, on desktop), users can access the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
+
+:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
+
+#### Desktop
 
 In a meeting, users can select **More** :::image type="icon" source="../../assets/icons/teams-client-more.png"::: > **Add an app** and select the app they want.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting." border="false":::
 
-# [Mobile](#tab/mobile)
-
-After you add the app on the desktop, you can select the app and can use the app in a meeting by selecting **More** :::image type="icon" source="../../assets/icons/teams-client-more.png":::.
-
-:::image type="content" source="../../assets/images/apps-in-meetings/mobile-add-during-meeting.png" alt-text="Example shows how to add a meeting extension during a meeting on mobile." border="false":::
-
----
-
 ## Before a meeting
 
-Prior to a meeting, users can add content in the tab. The following example shows a draft survey question that people will answer during the call.
+Prior to a meeting, your app's available to users in a tab. The following example shows a draft survey question that people will answer during the meeting.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/before-meeting-tab.png" alt-text="Example shows how to app content in the meeting details before a call." border="false":::
 
@@ -59,7 +57,7 @@ Prior to a meeting, users can add content in the tab. The following example show
 |2|**Tab overflow**: Opens tab actions, such as rename and remove.|
 |3|**iframe**: Displays your app content.|
 
-### Designing with UI templates
+### Design with UI templates
 
 Use one of the following Teams UI templates to help design your meeting tab:
 
@@ -82,15 +80,13 @@ People might use the in-meeting tab to:
 * Create a poll, survey, or task item for the meeting participants.
 * Display notes relevant to the meeting. For example, information about a sales lead.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-tab.png" alt-text="Example shows how you can present poll content in an in-meeting tab." border="false":::
 
 ### Anatomy: In-meeting tab
 
@@ -140,15 +136,13 @@ In-meeting dialogs are triggered by a user (such as the meeting organizer) who m
 * Submit approvals
 * Get reminders
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/apps-in-meetings/mobile-use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/apps-in-meetings/use-in-meeting-dialog.png" alt-text="Example shows how you can use an in-meeting dialog." border="false":::
 
 ### Anatomy: In-meeting dialog
 
@@ -180,13 +174,13 @@ In-meeting dialogs can vary in size to account for different scenarios. Make sur
 * **Width**: You can specify the width of the dialog's iframe anywhere within the supported size range.
 * **Height**: You can specify the height of the dialog's iframe anywhere within the supported size range. You also can allow users to scroll vertically if your app content exceeds the maximum height.
 
-To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#notificationsignal-api) key.
+To implement, specify the width and height using the [`externalResourceUrl`](~/apps-in-teams-meetings/API-references.md#notificationsignal-api) key.
 
 :::image type="content" source="../../assets/images/apps-in-meetings/in-meeting-dialog-responsive.png" alt-text="Example shows the in-meeting dialog. Width: Min--280 pixels (248 pixels iframe). Max--460 pixels (428 pixels iframe). Height: 300 pixels (iframe)." border="false":::
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their call on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
@@ -197,7 +191,7 @@ The shared meeting stage is all about collaboration and participation. Here are 
 :::row:::
    :::column span="1":::
 
-**Edit and review**: Dive into dashboards and planning with everyone on the call.
+**Edit and review**: Dive into dashboards and planning with everyone in the meeting.
 
    :::column-end:::
    :::column span="3":::
@@ -290,7 +284,7 @@ For in-meeting dialogs, remove unnecessary content that doesn't help users accom
 
 #### Don't: Introduce unnecessary elements
 
-A single in-meeting dialog with multiple interactions can distract from the call.
+A single in-meeting dialog with multiple interactions can distract from the meeting.
 
    :::column-end:::
 :::row-end:::

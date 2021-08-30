@@ -9,14 +9,20 @@ ms.author: surbhigupta
 # Build tabs with Adaptive Cards
 
 > [!IMPORTANT]
-> * This feature is in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md) and is supported in desktop and mobile. Support in the web browser is coming soon.
 > * Tabs with Adaptive Cards are currently only supported as personal apps.
 
-When developing a tab using the traditional method, you might run into these issues, such as HTML and CSS considerations, slow load times, iFrame constraints, and server maintenance and costs. Adaptive Card tabs is a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front-end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+When developing a tab using the traditional method, you might run into these issues:
 
-You can build your tabs with ready-made user interface (UI) Lego-blocks that look and feel native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest, how the invoke activity requests and sends information in tab with Adaptive Cards, and the impact on the task module workflow.
+* HTML and CSS considerations
+* Slow load times
+* iFrame constraints
+* Server maintenance and costs
 
-The following image depicts build tabs with Adaptive Cards in desktop and mobile:
+Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
+
+You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
+
+The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
 :::image type="content" source="../../assets/images/tabs/adaptive-cards-rendered-in-tabs.jpg" alt-text="Example of Adaptive Card rendered in tabs." border="false":::
 
@@ -24,9 +30,8 @@ The following image depicts build tabs with Adaptive Cards in desktop and mobile
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with, [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
-* Be in [Public Developer Preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Changes to app manifest
 
@@ -155,7 +160,7 @@ The following code provides examples of `tab/fetch` request and response:
 
 ### Handle submits from Adaptive Card
 
-After an Adaptive Card is rendered in the tab, it must be able to respond to user interactions. This response is handled by the `tab/submit` invoke request.
+After an Adaptive Card is rendered in the tab, it can respond to user interactions. This response is handled by the `tab/submit` invoke request.
 
 When a user selects a button on the Adaptive Card tab, the `tab/submit` request is triggered to your bot with the corresponding data through the `Action.Submit` function of Adaptive Card. The Adaptive Card data is available through the data property of the `tab/submit` request. You receive either of the following responses to your request:
 
@@ -215,7 +220,7 @@ The following code provides examples of `tab/submit` request and response:
 
 The task module also uses Adaptive Card to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-With the introduction of Adaptive Card tab, there is a change in how the bot responds to a `task/submit` request. If you are using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the task module. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
+With the introduction of Adaptive Card tab, there's a change in how the bot responds to a `task/submit` request. If you're using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the task module. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
 
 ### Invoke `task/fetch`
 
@@ -320,9 +325,9 @@ The following code provides examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections of this article, you have seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for messaging extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
-`tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign-in page is shown to the user.
+`tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign in page is shown to the user.
 
 **To get an authentication code through `tab/fetch` invoke**
 
@@ -331,7 +336,7 @@ In the previous sections of this article, you have seen that most of the develop
     > [!NOTE]
     > The app logo is provided through the `icon` property defined in the app manifest. The title appearing after the logo is defined in the `title` property returned in the tab **auth** response body.
 
-1. Select **Sign in**. You are redirected to the authentication URL provided in the `value` property of the **auth** response body.
+1. Select **Sign in**. You're redirected to the authentication URL provided in the `value` property of the **auth** response body.
 1. A pop-up window appears. This pop-up window hosts your web page using the authentication URL.
 1. After you sign in, close the window. An **authentication code** is sent to the Teams client.
 1. The Teams client then reissues the `tab/fetch` request to your service, which includes the authentication code provided by your hosted web page.
@@ -409,6 +414,12 @@ The following code shows a reissued request example:
     "localTimeZone": "America/Los_Angeles"
 }
 ```
+
+## Code sample
+
+|**Sample name** | **Description** |**.NET** | **Node.js** |
+|----------------|-----------------|--------------|--------------|
+| Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
 ## See also
 

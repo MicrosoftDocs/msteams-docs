@@ -28,10 +28,14 @@ You can recognize user issues and identify the answers to some common problems t
 
 [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
+## Integrate device capabilities
+
+Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK. 
+
 ## See also
 
 * [Integrate web apps with Teams](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md) 
 
 ## Next step
 
