@@ -32,19 +32,17 @@ To enhance user experience, admins configure apps before making them available t
 
 To specify whether the app is hidden by default in a new section in the app manifest, add the `defaultHideUntilAdminAction:true` manifest field.
 
-Apps that are hidden by default until Admin action continue to treat as the original app type whether first-party or third-party. Customized apps appear in the third-party category of the store when viewed during permission policy configuration and don't show as custom apps in the management experience.
+Apps are hidden by default until admin action continue to treat the app type as first-party or third-party. The customized apps appear in third-party category of the store and not as custom apps in the management experience. After an admin allows an app, you can toggle to allow or block the app.
 
-After an Admin allows an app, you can toggle it to allow or block as the current experience allows.
+## Scenario
 
-When an ISV sets `defaultHideUntilAdminAction:true`, a notification is sent to an Admin that the app has requested action by the Admin before being allowed to users. The app status shows as `Pending Configuration`.
+Contoso Electronics is an independent software vendor (ISV) who has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The ISV specifies to hide the app by default. The app is available to users only after the Admin allows it.
+
+When an ISV sets `defaultHideUntilAdminAction:true`, a notification is sent to an admin. The app requests action by the admin before user access. The app status shows as `Pending Configuration`.
 
 The app with `Pending Configuration` status shows as pending configuration in **Manage apps** page and Admins can allow the app from that page.
 
 Saving the app configuration doesn't affect the app status and the Admin must allow the app.
-
-## Scenario
-
-Contoso Electronics is an independent software vendor (ISV) who has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants its customers to first set up specific properties of the app. The ISV specifies to hide the app by default. The app is available to users only after the Admin allows it.
 
 ### User experience in Teams runtime
 
