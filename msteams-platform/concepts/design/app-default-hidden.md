@@ -8,24 +8,25 @@ ms.topic: conceptual
 
 # App hidden by default
 
-You can customize Microsoft Teams app experience by hiding an app until admin provides consent. When an app is published to the global app store, admins can configure the app before making it available to users. To enhance app experience, admins can hide an app until it is set up. By default, all first-party and third-party apps are allowed. This feature allows you to specify whether your app can be hidden from users by default until configured.
+To enhance Teams app experience, you can hide an app until configured. Admins configure the app before publishing to the global app store. Admins hide an app until it's set up. This feature allows you to specify whether your app can be hidden from users by default until configured.
+
+> [!NOTE]
+> By default, all first-party and third-party apps are allowed.
 
 ## App customization options
 
 You can select the following options to hide any app:
 
-* You opt to hide or block the app by default until it is configured or customized by an admin.
+* You opt to hide or block the app by default until it's configured or customized by an admin.
 * You submit a new version of the app to the store with the default hide or block property specified.
 
-You can choose not to hide the app by removing it and updating the manifest. When the new version of the app is approved:
+You can choose not to hide the app by removing it and updating the manifest. When the new version of the app is approved, the app is allowed by default as long as the admin provides consent. 
 
-* The app is allowed by default as long as the admin provides consent.
-* Tenants who have previously blocked the app continue to see it as blocked.
-* For tenants who had never taken an action, the app was in `PendingConfig` state and is now allowed.
+If you've never taken any action, the app, which was in `PendingConfig` state is now allowed.
 
 ## App customization by Admins
 
-To enhance user experience, admins configure apps before making them available to users.
+To enhance user experience, admins configure apps before making them available to users:
 
 ![App configure before enabling](../../assets/images/apps-in-meetings/appconfiguremessage.png)
 
