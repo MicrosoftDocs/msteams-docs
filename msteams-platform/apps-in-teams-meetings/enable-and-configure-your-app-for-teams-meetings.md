@@ -45,10 +45,6 @@ The app manifest must include the following code snippet:
   ]
 ```
 
-> [!NOTE]
-> If **Dev preview** is enabled in desktop teams client, add tab to the meeting.
-> If **Dev preview** is disabled, join the meeting and share the side panel tab app. 
-
 ### Context property
 
 The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. The tabs in the `team` or `groupchat` scope can have more than one context. Following are the values for the `context` property from which you can use all or some of the values:
