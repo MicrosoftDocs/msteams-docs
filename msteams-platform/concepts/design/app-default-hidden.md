@@ -6,44 +6,32 @@ ms.author: surbhigupta
 ms.topic: conceptual
 ---
 
-# Hide app until Admin allows it
+# App hidden by default
 
-You can customize Microsoft Teams app experience by hiding an app from users by default until Admin allows it. When an app is published to the global app store, Admins can configure the app before making it available to users. Admins can allow or not allow the app to ensure the app experience isn't affected until the app is fully set up. A fully configured app enables better adoption and reduces roadblocks in users’ cognitive understanding.
+You can customize Microsoft Teams app experience by hiding an app until admin provides consent. When an app is published to the global app store, admins can configure the app before making it available to users. To enhance app experience, admins can hide an app until it is set up. By default, all first-party and third-party apps are allowed. This feature allows you to specify whether your app can be hidden from users by default until configured.
 
-This feature allows you to specify whether your app can be hidden from users by default until configured.
+## App customization options
 
-## Scenario
+You can select the following options to hide any app:
 
-Contoso Electronics is an independent software vendor (ISV) that has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants its customers to first set up specific properties of the app. The ISV can specify if they want their app to be blocked by default. The app is available to users only after the Admin allows it.
+* You opt to hide or block the app by default until it is configured or customized by an admin.
+* You submit a new version of the app to the store with the default hide or block property specified.
 
-## Solution
+You can choose not to hide the app by removing it and updating the manifest. When the new version of the app is approved:
 
-Allowing IT Admins to configure apps before making them available to users helps drive a better user experience, and drive greater usage of third-party apps.
+* The app is allowed by default as long as the admin provides consent.
+* Tenants who have previously blocked the app continue to see it as blocked.
+* For tenants who had never taken an action, the app was in `PendingConfig` state and is now allowed.
+
+## App customization by Admins
+
+To enhance user experience, admins configure apps before making them available to users.
 
 ![App configure before enabling](../../assets/images/apps-in-meetings/appconfiguremessage.png)
 
-To optionally specify whether the app is blocked by default in a new section in the app manifest, add the `defaultHideUntilAdminAction:true` manifest field.
+To specify whether the app is hidden by default in a new section in the app manifest, add the `defaultHideUntilAdminAction:true` manifest field.
 
-### App configuration support not required
-
-By default, all first-party and third-party apps are allowed. App is blocked by default only when the following options are chosen:
-
-* You opt to hide or block the app by default until it is configured or customized by an Admin.
-* You submit a new version of app to the store with the default block property specified.
-
-### Option to not hide app by default
-
-If you choose not to hide the app by default, you can remove it by updating the manifest. When the new version of the app is approved:
-
-* The app is allowed by default as long as the Admin hasn't taken specific action to block it.  
-
-* Tenants who have previously blocked the app continue to see it as blocked.
-
-* For tenants who had never taken an action, that is app remained in `PendingConfig` state, the app is now allowed.
-
-### App customization by Admins
-
-Apps that are default hidden until Admin action continue to be treated as their original app type whether first-party or third-party. Customized apps appear in the third-party category of the store when viewed during permission policy configuration and don't show as custom apps in the management experience.
+Apps that are hidden by default until Admin action continue to treat as the original app type whether first-party or third-party. Customized apps appear in the third-party category of the store when viewed during permission policy configuration and don't show as custom apps in the management experience.
 
 After an Admin allows an app, you can toggle it to allow or block as the current experience allows.
 
@@ -52,6 +40,10 @@ When an ISV sets `defaultHideUntilAdminAction:true`, a notification is sent to a
 The app with `Pending Configuration` status shows as pending configuration in **Manage apps** page and Admins can allow the app from that page.
 
 Saving the app configuration doesn't affect the app status and the Admin must allow the app.
+
+## Scenario
+
+Contoso Electronics is an independent software vendor (ISV) who has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants its customers to first set up specific properties of the app. The ISV specifies to hide the app by default. The app is available to users only after the Admin allows it.
 
 ### User experience in Teams runtime
 

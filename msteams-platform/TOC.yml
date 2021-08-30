@@ -94,7 +94,7 @@
       href: concepts/design/activity-feed-notifications.md
   - name: Enable app customization
     href: concepts/design/enable-app-customization.md
-  - name: Hide app until Admin allows it
+  - name: App hidden by default
     href: concepts/design/app-default-hidden.md
 - name: Tools and SDKs
   items:
