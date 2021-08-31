@@ -150,8 +150,12 @@ The overall user experience in standard channel meetings will be same as in sche
 
 | Capability | Support available | In-tenant | Guest | Federated or external |
 | :-- | :-- | :-- | :-- | :-- |
-| Scheduled private meetings | ✔️ | | | |
+| **Mobile** | | | | |
+| Scheduled private meetings | ✔️ | | ✔️ | ✔️ |
 | Standard channel meetings | ✔️ | | | |
+| **Desktop** | | | | |
+| Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ |
+| Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 > * On mobile, anonymous users will not be able to access apps in standard channel meetings.  
