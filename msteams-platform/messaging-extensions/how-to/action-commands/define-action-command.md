@@ -165,7 +165,7 @@ The following image displays command addition for messaging extension:
 
 1. Enter parameter fields and select **Save**.
 
-    <img width="550px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
+    <img width="500px" alt="TDP messaging extension action parameter" src="~/assets/images/tdp/tdp-me-action-parameter.png"/>
  
 ---
 
