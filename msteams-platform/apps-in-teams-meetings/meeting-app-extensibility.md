@@ -146,14 +146,10 @@ The Teams unified meetings apps allow you to design your app based on participan
 
 ### Supported capabilities in meeting
 
-The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings:
+The overall user experience in standard channel meetings will be same as in scheduled private meetings, however the capability differs. The following table lists the support availability in meetings for mobile and desktop:
 
-| Capability | Support available | In-tenant | Guest | Federated or external |
+| Capability | Support available for mobile and desktop | In-tenant | Guest | Federated or external |
 | :-- | :-- | :-- | :-- | :-- |
-| **Mobile** | | | | |
-| Scheduled private meetings | ✔️ | | ✔️ | ✔️ |
-| Standard channel meetings | ✔️ | | | |
-| **Desktop** | | | | |
 | Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ |
 | Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ |
 
