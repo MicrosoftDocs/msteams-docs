@@ -34,10 +34,18 @@ Teams tabs must adhere to the following prerequisites:
 
 * MS Teams tab does not support the ability to load intranet websites that use self-signed certificates.
 
+## Tools you can use to build tabs
+* [Teams Toolkit for Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
+* [Teams Toolkit for Visual Studio](../../toolkit/visual-studio-overview.md)
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Build your first app using React](../../get-started/first-app-react.md)
+* [Build your first app using Blazor](../../get-started/first-app-blazor.md)
+* [Build your first app using SPFx](../../get-started/first-app-spfx.md)
+* [Build your first conversational bot](../../get-started/first-app-bot.md)
+* [Build your first message extension](../../get-started/first-message-extension.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 
 ## Next step

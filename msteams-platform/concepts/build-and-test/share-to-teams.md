@@ -7,7 +7,7 @@ keywords: Share Teams Share-to-Teams
 ---
 # Create Share-to-Teams button
 
-Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create, and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
+Third-party websites can use the launcher script to embed Share-to-Teams buttons on their webpages. When you select, it launches the Share-to-Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context. This document guides you on how to create and embed a Share-to-Teams button for your website, craft your website preview, and extend Share-to-Teams for Education.
 
 > [!NOTE]
 > * Only the desktop versions of Edge and Chrome are supported.
@@ -25,7 +25,7 @@ The following image displays the Share-to-Teams pop-up experience:
     <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
     ```
 
-1. Add a HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
+1. Add an HTML element on your webpage with the `teams-share-button` class attribute and the link to share in the `data-href` attribute.
 
     ```html
     <div
@@ -34,7 +34,7 @@ The following image displays the Share-to-Teams pop-up experience:
     </div>
     ```
 
-    After completing this, the Microsoft Teams icon gets added to your website. The following image shows Share-to-Teams icon:
+    After completing this, the Microsoft Teams icon gets added to your website. The following image shows the Share-to-Teams icon:
 
     ![Share to Teams icon](~/assets/icons/share-to-teams-icon.png)
 
@@ -47,7 +47,7 @@ The following image displays the Share-to-Teams pop-up experience:
       data-icon-px-size="64">
     </div>
     ```
-1. If the shared link requires user authentication, and the URL preview from your link to be shared does not render well in Teams then, you can disable the URL preview by adding the `data-preview` attribute set to `false`.
+1. If the shared link requires user authentication, and the URL preview from your link to be shared does not render well in Teams, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
 
     ```html
     <div
@@ -57,7 +57,7 @@ The following image displays the Share-to-Teams pop-up experience:
     </div>
     ```
 
-1. If your page dynamically renders content, you can use the the `shareToMicrosoftTeams.renderButtons()` method to force the **Share** button to render at the appropriate place in the pipeline.
+1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
 ## Craft your website preview
 
@@ -76,7 +76,7 @@ The following table outlines the necessary tags:
 |Description|`<meta name="description" content="Example Page Description">`|`<meta property="og:description" content="Example Page Description">`|
 |Thumbnail Image| none. |`<meta property="og:image" content="http://example.com/image.jpg">`|
 
-You can use either the html default versions, or the Open Graph version.
+You can use either the HTML default versions or the Open Graph version.
 
 ## Share to Teams for Education
 
@@ -91,9 +91,9 @@ For teachers using the Share to Teams button, there is an additional option to `
 | href | `data-href` | string | n/a | The href of the content to share. |
 | preview | `data-preview` | boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
 | iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share-to-Teams button to render. |
-| msgText | `data-msg-text` | string | n/a | Default Text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
-| assignInstr | `data-assign-instr` | string | n/a | Default Text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
-| assignTitle | `data-assign-title` | string | n/a | Default Text to be inserted in the assignments "Title" field. Maximum number of characters is 50. |
+| msgText | `data-msg-text` | string | n/a | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
+| assignInstr | `data-assign-instr` | string | n/a | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
+| assignTitle | `data-assign-title` | string | n/a | Default text to be inserted in the assignments "Title" field. Maximum number of characters is 50. |
 
 ### Methods
 

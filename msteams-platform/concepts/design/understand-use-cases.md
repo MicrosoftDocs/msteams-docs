@@ -72,12 +72,6 @@ Above all, remember that nobody likes spam. Blasting away with personal and chan
 
 Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
 
-## See also
-
-* [Choose how to distribute your app](../deploy-and-publish/apps-publish-overview.md)
-* [Design tabs](../../tabs/design/tabs.md)
-* [Design bots](../../bots/design/bots.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
