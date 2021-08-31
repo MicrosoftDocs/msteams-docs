@@ -109,7 +109,7 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when it's approved and not approved:
 
 |App capability | App is approved | App isn't approved |
 |---|---|---|
@@ -136,7 +136,7 @@ The following image displays the **Contoso** tab with results of poll and feedba
 
 ### Integrate bots into the meeting lifecycle
 
-Bots that are enabled in groupchat scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
+Bots that are enabled in `groupchat` scope start functioning in meetings. To implement bots, start with [build a bot](../build-your-first-app/build-bot.md) and then continue with [create apps for Teams meetings](../apps-in-teams-meetings/API-references.md#meeting-apps-api-references).
 
 ### Integrate messaging extensions into the meeting lifecycle
 
@@ -199,7 +199,7 @@ The following list details the various user types along with their accessibility
     > [!IMPORTANT]
     > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-* **Anonymous**: Anonymous users don't have an AAD identity and aren't federated with a tenant. The anonymous participants are like external users, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
+* **Anonymous**: Anonymous users don't have an AAD identity and aren't federated with a tenant. The anonymous participants are like guests, but their identity isn't shown in the meeting. Anonymous users can't access apps in a meeting window. An anonymous user can't be an organizer but can be a presenter or attendee.
 
     > [!NOTE]
     > Anonymous users inherit the global default user-level app permission policy. For more information, see [manage Apps](/microsoftteams/non-standard-users#anonymous-user-in-meetings-access).
