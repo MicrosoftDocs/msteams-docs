@@ -151,7 +151,7 @@ The overall user experience in standard channel meetings will be same as in sche
 | Capability | Support available | In-tenant | Guest | Federated or external | Anonymous |
 | :-- | :-- | :-- | :-- | :-- |
 | **Mobile** | | | | |
-| Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
+| Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
 | Standard channel meetings | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | **Desktop** | | | | |
 | Scheduled private meetings | ✔️ | ✔️ | ✔️ | ✔️ | ✔️ |
