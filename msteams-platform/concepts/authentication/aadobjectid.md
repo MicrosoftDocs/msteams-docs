@@ -1,5 +1,5 @@
 ---
-title: Teams Support for AAD Object ID and UPN in User Mention 
+title: Support for AAD Object ID and UPN in user mention 
 author: Rajeshwari-v
 description: Describes Teams support for AAD Object ID and UPN in User Mention for bots and incoming webhook connectors
 ms.topic: conceptual
@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Teams Support for AAD Object ID and UPN in User Mention 
+# Support for AAD Object ID and UPN in user mention 
 
 Teams platform allows you to mention users with their AAD Object ID and User Principle Name (UPN) in addition to the existing mention ID types.
 
@@ -25,7 +25,7 @@ The following table describes the newly supported user mention ID types:
 Text messages or Adaptive Cards in Bot including `invoke` support the two ID types in addition to existing IDs for user mentions in different scenarios.
 
 > [!NOTE]
-> Schema update and UI/UX changes are not required for user mentions with AAD Object ID and UPN.
+> Schema update and UI/UX changes are not required for user mentions with Adaptive Card in Bot.
 
 ### Example 
 
@@ -108,4 +108,10 @@ Incoming webhooks support user mention with the two ID types for user mentions i
 Following image illustrates user mention in Incoming Webhook:
 
 ![User mention in Incoming Webhook](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
+
+## Code sample
+
+| Sample name | Description | C# |
+|-------------|-------------|------|
+|Support for AAD Object ID and UPN in User Mention |Microsoft Teams sample app for demonstrating support for AAD Object ID and UPN in user mention.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|
 
