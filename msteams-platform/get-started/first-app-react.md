@@ -139,7 +139,7 @@ To build and run your app locally:
 1. Sign in with your M365 account when prompted.
 1. When prompted to install the app onto Teams, select **Add**.
 
-The app is now displayed:
+You can view the app:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
