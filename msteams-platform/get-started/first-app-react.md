@@ -25,6 +25,18 @@ Use the Teams Toolkit to create your first project:
 # [Visual Studio Code](#tab/vscode)
 
 :::row:::
+
+:::column span="3":::
+Watch this video to follow through the steps to create and run a Teams app.
+:::<!-- blank line -->
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="../assets/images/teams-toolkit-v2/app-react-video-poster.png">
+    <source src="../assets/videos/app-react-sample_0.3.mp4" type="video/mp4">
+  </video>
+</figure>
+<!-- blank line -->:::
+   :::column-end:::
+
    :::column span="3":::
 1. Open Visual Studio code.
 1. Select the Teams icon in the sidebar:
@@ -38,13 +50,7 @@ Use the Teams Toolkit to create your first project:
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
    The Teams app is created within a few seconds.
-
 :::column-end:::
-:::column span="3":::
-Watch this video to follow through the steps to create and run a Teams app.
-:::> [!VIDEO <link to video url>]:::
-
-   :::column-end:::
 
 :::row-end:::
 # [Command line](#tab/cli)
