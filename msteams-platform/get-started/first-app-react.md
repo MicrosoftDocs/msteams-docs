@@ -87,12 +87,12 @@ After the Teams Toolkit configures your project, you have the components to buil
 
 :::row:::
 
-   :::column span="2":::
+   :::column span="1":::
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 :::column-end:::
 
-:::column span="2":::
+:::column span="1":::
 The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected during setup.
 
 Among other items in this directory, the Toolkit maintains:
