@@ -28,13 +28,13 @@ Use the Teams Toolkit to create your first project:
 
    :::column span="3":::
 1. Open Visual Studio code.
-1. Select the Teams icon in the sidebar:
+1. Select the Teams icon in the sidebar.
 1. From the **Development** section, select **Create a new Teams app**.
 1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 1. Verify that **Tab UI-based app** is selected as the capability, and select **OK**.
 1. Select **Azure** as the Frontend hosting type.
 1. You do not need additional cloud resources for this tutorial. Select **OK** to proceed. 
-1. select **JavaScript** as the programming language.
+1. Select **JavaScript** as the programming language.
 1. Select a workspace folder for the app. The Toolkit creates a folder in your workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
@@ -82,17 +82,17 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-After the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams. The project directories and files display in the Explorer area of Visual Studio Code.
+After the Teams Toolkit configures your project, you have the components to build a basic personal app. The project directories and files display in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Teams Toolkit creates a scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory. 
+The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected during setup. It also maintains its state for your app in the `.fx` directory. 
 
 Among other items in this directory:
 
 - The app icons, `color.png` and `outline.png`, are in the `appPackage` directory.
 - The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
-- The settings you chose when creating the project are stored in `settings.json`.
+- The app settings you selected when creating the project are stored in `settings.json`.
 
 As you selected the Tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. The important files in this directory are:
 
@@ -101,9 +101,9 @@ As you selected the Tab capability during setup, the Teams Toolkit scaffolds all
 - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
 - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
 
-Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use are in the same directory.
+Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use is also placed in the same directory.
 
-When you add the cloud functionality, additional directories are added to the project. Note that the `api` directory holds the code to any Azure Functions you write.
+When you add the cloud functionality, Teams Toolkit adds the necessary directories to the project. Note that the `api` directory holds the code to any Azure Functions you write.
 
 ## Run your app locally
 
