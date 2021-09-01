@@ -116,7 +116,7 @@ You can use Teams Toolkit to run the app in the local environment. The environme
 
 - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
-After this is done, you can load the app within the Teams client. You use the Teams web client to view the HTML, CSS, and JavaScript code within a standard web development environment.
+After it is done, you can load the app within the Teams client. You use the Teams web client to view the HTML, CSS, and JavaScript code within a standard web development environment.
 
 ### Build and run your app locally in Visual Studio Code
 
