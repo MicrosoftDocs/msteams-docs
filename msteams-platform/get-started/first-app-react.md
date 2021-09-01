@@ -108,7 +108,7 @@ When you add the cloud functionality, additional directories are added to the pr
 
 You can use Teams Toolkit to run the app in the local environment. The environment needed to run the app includes the following:
 
-- The app is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from the backend resources it accesses.
+- The app is registered with Azure Active Directory. This application has permissions associated with the location that the app is loaded from the backend resources it accesses.
 
 - The Azure Functions Core Tools hosts a web API that assists with authentication tasks. This API acts as a prozy between the app and the Azure Active Directory. You can access it from `https://localhost:5000`
 
