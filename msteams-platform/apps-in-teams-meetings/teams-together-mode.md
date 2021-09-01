@@ -6,9 +6,6 @@ ms.topic: conceptual
 
 # Custom Together Mode scenes in Teams
 
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
 * Bring people together and encourage them to turn on their video. 
