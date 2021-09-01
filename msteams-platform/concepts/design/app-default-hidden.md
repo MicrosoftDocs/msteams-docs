@@ -28,7 +28,9 @@ You can choose not to hide the app:
 1. Remove the hide app option.
 1. Update the manifest.
 
-When the new version of the app is approved, the app is allowed by default as long as the admin provides consent. If you've never taken any action, the app, which was in `PendingConfig` state, is now allowed.
+When the new version of the app is approved, the app is allowed by default as long as the admin provides consent. If you've never taken any action, the app, which was in `PendingConfig` state, is now allowed. 
+
+An app that is blocked by publisher is also blocked by the tenant admin. Now if the publisher decides to allow the app, the app will still be blocked, because the admin explicitly took an action to block it.
 
 ## App customization by Admins
 
