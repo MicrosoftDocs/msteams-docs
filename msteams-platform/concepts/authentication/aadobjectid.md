@@ -15,14 +15,14 @@ Adaptive Cards in bots and Incoming Webhooks in Connectors support the additiona
 
 The following table describes the newly supported user mention ID types:
 
-|ID Format | Used by |	Description	| Example |
+|IDs  | Supporting capabilities |	Description	| Example |
 |----------|--------|---------------|---------|
-| AAD Object ID | 	Bot, Connector | 	AAD user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
+| AAD object ID | 	Bot, Connector |  AAD user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN |	Bot, Connector | 	AAD user’s UPN 	| john.smith@microsoft.com |
 
 ## User mention with Adaptive Card in Bot
 
-Text messages or Adaptive Cards in Bot including `invoke` support the two ID types in addition to existing IDs for user mentions in different scenarios.
+Text messages or Adaptive Cards in Bot including `invoke` support the AAD Object ID and UPN, in addition to the existing IDs for user mentions in different scenarios.
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Card in Bot.
@@ -60,10 +60,11 @@ Following image illustrates user mention with Adaptive Card in Bot:
 
 ## User mention in Incoming Webhook
 
-Incoming webhooks support user mention with the two ID types for user mentions in different scenarios.
+Incoming webhooks support user mention with the AAD Object ID and UPN, in addition to the existing IDs for user mentions in different scenarios.
 
 > [!NOTE]
-> You must enable the user mention in the schema. UI/UX changes are not required for user mentions with AAD Object ID and UPN.
+> You must enable the user mention in the schema for Incoming webhook to support AAD Object ID and UPN. 
+> UI/UX changes are not required for user mentions with AAD Object ID and UPN.
 
 ### Example 
 
@@ -113,5 +114,5 @@ Following image illustrates user mention in Incoming Webhook:
 
 | Sample name | Description | C# |
 |-------------|-------------|------|
-|Support for AAD Object ID and UPN in User Mention |Microsoft Teams sample app for demonstrating support for AAD Object ID and UPN in user mention.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|
+|Support for AAD Object ID and UPN in user mention |Microsoft Teams sample app for demonstrating support for AAD Object ID and UPN in user mention.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|
 
