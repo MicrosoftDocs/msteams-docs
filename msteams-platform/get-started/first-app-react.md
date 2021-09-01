@@ -9,9 +9,7 @@ ms.topic: quickstart
 
 # Build and run your first Microsoft Teams app with React
 
-In this tutorial, you will learn how to create a new Microsoft Teams app in React that implements a simple personal app to pull information from the Microsoft Graph. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to Azure.
-
-The app that is built displays basic user information for the current user. When permission is granted, the app will connect to the Microsoft Graph as the current user to get the complete profile.
+This tutorial walks you through the steps to create, build, and deploy a Teams app using React.
 
 ## Before you begin
 
@@ -32,19 +30,19 @@ Use the Teams Toolkit to create your first project:
 1. Select the Teams icon in the sidebar:
 1. In the **Development** section, select **Create a new Teams app**.
 1. From the **Teams Toolkit: Create a new Teams app (1/1)** section, select **Create a new Teams app**.
-1. In the **Select capabilities (2/4)** section, verify that **Tab UI-based app** is selected and select **OK**.
+1. Verify that **Tab UI-based app** is selected as the capability and select **OK**.
 1. In the **Frontend hosting type (3/6)** section, select **Azure**.
-1. In the **Cloud resources (4/7)** section, select **OK**.  We do not need additional cloud resources for this tutorial.
-1. In the **Programming Language (5/7)** section, select **JavaScript**.
+1. Select **OK** without making any selection. You do not need additional cloud resources for this tutorial.
+1. select **JavaScript** as the programming language.
 1. Select a workspace folder for the app. A folder is created within your workspace folder for the project you are creating.
-1. Enter `HelloWorld` as the application name. The name of the app must consist only of alphanumeric characters.  Select **Enter** to continue.
+1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
    The Teams app is created within a few seconds.
 
 :::column-end:::
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
-:::> [!VIDEO <link to url>]:::
+:::> [!VIDEO <link to video url>]:::
 
    :::column-end:::
 
@@ -57,7 +55,7 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. With each question, you find an instruction on answering it.
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
 For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
@@ -66,9 +64,9 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 1. Select **Azure** frontend hosting. Do not select any cloud resources.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
+1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
 
-   After all the questions have been answered, your project is created.
+   After you have answered all the questions, your project is created.
 
 ---
 
