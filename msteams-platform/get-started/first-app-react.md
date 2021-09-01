@@ -43,6 +43,7 @@ Use the Teams Toolkit to create your first project:
 
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
+
 > [!VIDEO ../assets/videos/app-react-sample_0.3.mp4]
 
 :::row-end:::
