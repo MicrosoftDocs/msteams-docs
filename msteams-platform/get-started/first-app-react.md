@@ -85,14 +85,9 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 After the Teams Toolkit configures your project, you have the components to build a basic personal app. The project directories and files display in the Explorer area of Visual Studio Code.
 
-:::row:::
-
-   :::column span="1":::
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
-:::column-end:::
 
-:::column span="1":::
 The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected during setup.
 
 Among other items in this directory, the Toolkit maintains:
@@ -108,9 +103,6 @@ Among other items in this directory, the Toolkit maintains:
   - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
   - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
   - The code for runtime tabs, such as the privacy notice, terms of use, and configuration tabs, is also placed in the same directory.
-   :::column-end:::
-
-:::row-end:::
 
 When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. Note that the `api` directory holds the code to any Azure Functions you write.
 
