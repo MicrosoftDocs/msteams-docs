@@ -78,20 +78,22 @@ After the Teams Toolkit configures your project, you have the components to buil
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
+The Teams Toolkit creates a scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory. 
 
-- The app icons are stored as PNG files in `color.png` and `outline.png`.
+Among other items in this directory:
+
+- The app icons, `color.png` and `outline.png`, are in the `appPackage` directory.
 - The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
-As you selected the Tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
+As you selected the Tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. The important files in this directory are:
 
 - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
 - `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
 - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
 - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
 
-Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use are located in the same directory.
+Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use are in the same directory.
 
 When you add the cloud functionality, additional directories are added to the project. Note that the `api` directory holds the code to any Azure Functions you write.
 
