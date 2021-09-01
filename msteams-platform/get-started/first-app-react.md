@@ -26,41 +26,29 @@ Use the Teams Toolkit to create your first project:
 
 # [Visual Studio Code](#tab/vscode)
 
+:::row:::
+   :::column span="3":::
 1. Open Visual Studio code.
-1. Open the Teams Toolkit and select the Teams icon in the sidebar:
+1. Select the Teams icon in the sidebar:
+1. In the **Development** section, select **Create a new Teams app**.
+1. From the **Teams Toolkit: Create a new Teams app (1/1)** section, select **Create a new Teams app**.
+1. In the **Select capabilities (2/4)** section, verify that **Tab UI-based app** is selected and select **OK**.
+1. In the **Frontend hosting type (3/6)** section, select **Azure**.
+1. In the **Cloud resources (4/7)** section, select **OK**.  We do not need additional cloud resources for this tutorial.
+1. In the **Programming Language (5/7)** section, select **JavaScript**.
+1. Select a workspace folder for the app. A folder is created within your workspace folder for the project you are creating.
+1. Enter `HelloWorld` as the application name. The name of the app must consist only of alphanumeric characters.  Select **Enter** to continue.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+   The Teams app is created within a few seconds.
 
-1. Select **Create New Project**.
+:::column-end:::
+:::column span="3":::
+Watch this video to follow through the steps to create and run a Teams app.
+:::> [!VIDEO <link to url>]:::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::column-end:::
 
-1. Select **Create a new Teams app**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
-
-1. In the **Select capabilities** section, varify that **Tab** is selected and select **OK**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
-
-1. In the **Frontend hosting type** section, select **Azure**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
-
-1. In the **Cloud resources** section, select **OK**.  We do not need additional cloud resources for this tutorial.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot showing how to add cloud resources for your new app.":::
-
-1. In the **Programming Language** section, select **JavaScript**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
-
-1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
-
-1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
-
-   Your Teams app is created within a few seconds.
-
+:::row-end:::
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
@@ -69,7 +57,9 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project. Each question will tell you how to answer it, for example, use arrow keys to select an option. When you have answered the question, confirm your choice by pressing **Enter**.
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. With each question, you find an instruction on answering it.
+
+For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
 1. Select **Create a new Teams app**.
 1. Select the **Tab** capability.
@@ -96,63 +86,66 @@ The Toolkit automatically creates scaffolding for you in the project directory b
 - The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
 - The settings you chose when creating the project are stored in `settings.json`.
 
-Since you selected the tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
+As you selected the Tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
 
 - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
-- `tabs/src/components/App.jsx` handles URL routing in your app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between your app and Teams.
+- `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
 - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
 - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
 
-Several tabs are required by the Teams runtime, including the privacy notice, terms of use, and configuration tabs.  The code for the privacy notice and terms of use are located in the same directory.
+Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use are located in the same directory.
 
-When you add cloud functionality, additional directories are added to the project.  Most notably, the `api` directory holds the code to any Azure Functions you write.
+When you add the cloud functionality, additional directories are added to the project. Note that the `api` directory holds the code to any Azure Functions you write.
 
 ## Run your app locally
 
-Teams Toolkit allows you to run your app locally.  This consists of several parts that are necessary to provide the correct infrastructure that Teams expects:
+You can use Teams Toolkit to run the app in the local environment. The environment needed to run the app includes the following:
 
-- An application is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from and any backend resources it accesses.
-- A web API is hosted to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  This is run by Azure Functions Core Tools.  It can be accessed at the URL `https://localhost:5000`.
-- The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. It can be accessed at `https://localhost:3000`.
-- An app manifest is generated and exists in the Developer Portal for Teams.  Teams uses the app manifest to tell connected clients where to load the app from.
+- The app is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from the backend resources it accesses.
 
-After this is done, the app can be loaded within the Teams client.  We use the Teams web client so that we can see the HTML, CSS, and JavaScript code within a standard web development environment.
+- The Azure Functions Core Tools hosts a web API that assists with authentication tasks. This API acts as a prozy between the app and the Azure Active Directory. You can access it from `https://localhost:5000`
+
+- The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. You can access the local service from `https://localhost:3000`.
+
+- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+
+After this is done, you can load the app within the Teams client. You use the Teams web client to view the HTML, CSS, and JavaScript code within a standard web development environment.
 
 ### Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press **F5** to run your application in debug mode.
+1. From Visual Studio Code, press **F5** to run the application in debug mode.
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-   The Toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+   The Toolkit prompts you to install a local certificate, if required. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Your web browser starts to run the app. If prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when this happens.
+1. The web browser runs the app. If prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when this happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
 1. Sign in with your M365 account when prompted.
-1. When prompted to install the app onto Teams, press **Add**.
+1. When prompted to install the app onto Teams, select **Add**.
 
-Your app is now displayed:
+The app is now displayed:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
-You can do normal debugging activities as if this were any other web application, such as setting breakpoints. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
+You can do normal debugging activities, such as setting breakpoints, as if this were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-When you press the **F5** key, the Teams Toolkit:
+When you select **F5**, the Teams Toolkit:
 
-* Registers your application with Azure Active Directory.
-* *Sideloads* your app in Teams.
-* Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-* Starts your application front-end hosted locally.
+* Registers the application with Azure Active Directory.
+* *Sideloads* the app in Teams.
+* Starts the application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+* Starts the application front-end hosted locally.
 * Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab`. This is the URL registered in the application manifest.
 
 </details>
