@@ -45,7 +45,8 @@ Use the Teams Toolkit to create your first project:
 Watch this video to follow through the steps to create and run a Teams app.
 
 > [!VIDEO ../assets/videos/app-react-sample_0.3.mp4]
-img src="../assets/videos/app-react-sample_0.3.mp4" alt="Sequential Workflow" width="400"/
+
+img src="~/assets/videos/app-react-sample_0.3.mp4" alt="Sequential Workflow" width="400"/
 :::row-end:::
 
 # [Command line](#tab/cli)
