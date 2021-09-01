@@ -35,7 +35,7 @@ Use the Teams Toolkit to create your first project:
 1. Select **Azure** as the Frontend hosting type.
 1. You do not need additional cloud resources for this tutorial. Select **OK** to proceed. 
 1. Select **JavaScript** as the programming language.
-1. Select a workspace folder for the app. The Toolkit creates a folder in your workspace for your project.
+1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
    The Teams app is created within a few seconds.
@@ -54,6 +54,7 @@ Watch this video to follow through the steps to create and run a Teams app.
    :::column-end:::
 
 :::row-end:::
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
@@ -84,34 +85,42 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 After the Teams Toolkit configures your project, you have the components to build a basic personal app. The project directories and files display in the Explorer area of Visual Studio Code.
 
+:::row:::
+
+   :::column span="2":::
+
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
+:::column-end:::
 
-The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected during setup. It also maintains its state for your app in the `.fx` directory. 
+:::column span="4":::
+The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected during setup.
 
-Among other items in this directory:
+Among other items in this directory, the Toolkit maintains:
 
+- The state for your app in the `.fx` directory. 
 - The app icons, `color.png` and `outline.png`, are in the `appPackage` directory.
-- The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
-- The app settings you selected when creating the project are stored in `settings.json`.
+- The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
+- Your app settings selected during project creation in `settings.json`.
+- The code for the Tab capability in the `tabs` directory. The important files in this directory are:
 
-As you selected the Tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. The important files in this directory are:
+  - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
+  - `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
+  - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
+  - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
+  - The code for runtime tabs, such as the privacy notice, terms of use, and configuration tabs, is also placed in the same directory.
+   :::column-end:::
 
-- `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
-- `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
-- `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
-- `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
+:::row-end:::
 
-Teams requires several tabs at runtime, such as the privacy notice, terms of use, and configuration tabs. The code for the privacy notice and terms of use is also placed in the same directory.
-
-When you add the cloud functionality, Teams Toolkit adds the necessary directories to the project. Note that the `api` directory holds the code to any Azure Functions you write.
+When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. Note that the `api` directory holds the code to any Azure Functions you write.
 
 ## Run your app locally
 
-You can use Teams Toolkit to run the app in the local environment. The environment needed to run the app includes the following:
+You can use Teams Toolkit to run the app in the local environment. To prepare the environment, ensure that:
 
 - The app is registered with Azure Active Directory. This application has permissions associated with the location that the app is loaded from the backend resources it accesses.
 
-- The Azure Functions Core Tools hosts a web API that assists with authentication tasks. This API acts as a prozy between the app and the Azure Active Directory. You can access it from `https://localhost:5000`
+- The Azure Functions Core Tools hosts a web API that assists with authentication tasks. This API acts as a proxy between the app and the Azure Active Directory. You can access it from `https://localhost:5000`
 
 - The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. You can access the local service from `https://localhost:3000`.
 
@@ -123,9 +132,9 @@ After it is done, you can load the app within the Teams client. You use the Team
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press **F5** to run the application in debug mode.
+1. From Visual Studio Code, select **F5** to run the application in debug mode.
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built. A web browser window opens when the build is complete.  This can take 3-5 minutes to complete.
 
    The Toolkit prompts you to install a local certificate, if required. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
 
