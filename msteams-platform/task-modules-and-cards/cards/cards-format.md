@@ -118,7 +118,7 @@ You can add @mentions within an Adaptive Card body for bots and messaging extens
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
-> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards v1.4 on the Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on the Teams platform.
 > * Channel and team mentions are not supported in bot messages.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
