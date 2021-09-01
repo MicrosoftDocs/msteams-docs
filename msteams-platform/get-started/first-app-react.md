@@ -120,7 +120,7 @@ After this is done, the app can be loaded within the Teams client.  We use the T
 
 ### Build and run your app locally in Visual Studio Code
 
-To build and run your app locally:
+To build and run your app in the local environment:
 
 1. From Visual Studio Code, press **F5** to run your application in debug mode.
 
