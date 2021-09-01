@@ -330,6 +330,8 @@
     href: concepts/authentication/authentication.md
   - name: Configure identity providers
     href: concepts/authentication/configure-identity-provider.md
+  - name: Support for AAD Object ID and UPN in User Mention
+    href: concepts/authentication/aadobjectid.md
   - name: Tabs
     items:
     - name: Authentication flow in tabs
