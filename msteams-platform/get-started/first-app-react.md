@@ -29,13 +29,13 @@ Use the Teams Toolkit to create your first project:
    :::column span="3":::
 1. Open Visual Studio code.
 1. Select the Teams icon in the sidebar:
-1. In the **Development** section, select **Create a new Teams app**.
-1. From the **Teams Toolkit: Create a new Teams app (1/1)** section, select **Create a new Teams app**.
-1. Verify that **Tab UI-based app** is selected as the capability and select **OK**.
-1. In the **Frontend hosting type (3/6)** section, select **Azure**.
-1. Select **OK** without making any selection. You do not need additional cloud resources for this tutorial.
+1. From the **Development** section, select **Create a new Teams app**.
+1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+1. Verify that **Tab UI-based app** is selected as the capability, and select **OK**.
+1. Select **Azure** as the Frontend hosting type.
+1. You do not need additional cloud resources for this tutorial. Select **OK** to proceed. 
 1. select **JavaScript** as the programming language.
-1. Select a workspace folder for the app. A folder is created within your workspace folder for the project you are creating.
+1. Select a workspace folder for the app. The Toolkit creates a folder in your workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
    The Teams app is created within a few seconds.
@@ -56,7 +56,7 @@ Watch this video to follow through the steps to create and run a Teams app.
 :::row-end:::
 # [Command line](#tab/cli)
 
-Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
 ``` bash
 teamsfx new
@@ -68,7 +68,8 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 1. Select **Create a new Teams app**.
 1. Select the **Tab** capability.
-1. Select **Azure** frontend hosting. Do not select any cloud resources.
+1. Select **Azure** frontend hosting. 
+1. Do not select any cloud resources.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
 1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
