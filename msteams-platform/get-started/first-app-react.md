@@ -44,9 +44,9 @@ Use the Teams Toolkit to create your first project:
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
 
-> [!VIDEO ../assets/videos/app-react-sample_0.3.mp4]
+> [!VIDEO ~/assets/videos/app-react-sample_0.3.mp4]
 
-img src="~/assets/videos/app-react-sample_0.3.mp4" alt="Sequential Workflow" width="400"
+> img src="~/assets/videos/app-react-sample_0.3.mp4" alt="Sequential Workflow" width="400"
 :::row-end:::
 
 # [Command line](#tab/cli)
@@ -77,7 +77,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-After the Teams Toolkit configures your project, you have the components to build a basic personal app. The project directories and files display in the Explorer area of Visual Studio Code.
+After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
@@ -87,9 +87,9 @@ The Teams Toolkit creates a scaffolding for your project based on the capabiliti
 Among other items in this directory, the Toolkit maintains:
 
 - The state for your app in the `.fx` directory. 
-- The app icons, `color.png` and `outline.png`, are in the `appPackage` directory.
+- The app icons in the `appPackage` directory. The icons are `color.png` and `outline.png`.
 - The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
-- Your app settings selected during project creation in `settings.json`.
+- The app settings, which you selected during project creation, in `settings.json`.
 - The code for the Tab capability in the `tabs` directory. The important files in this directory are:
 
   - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
@@ -112,7 +112,7 @@ You can use Teams Toolkit to run the app in the local environment. To prepare th
 
 - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
-After it's done, you can load the app within the Teams client. You use the Teams web client to view the HTML, CSS, and JavaScript code in a standard web development environment.
+After it's done, load your app in the Teams client. You can see the HTML, CSS, and JavaScript code using the Teams web client.
 
 ### Build and run your app locally in Visual Studio Code
 
@@ -124,13 +124,13 @@ To build and run your app locally:
 
    The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
 1. The web browser runs the app. If you're prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when it happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
-1. Sign in with your M365 account when prompted.
+1. Sign in with your Microsoft 365 account when prompted.
 1. When prompted to install the app onto Teams, select **Add**.
 
 You can view the app:
@@ -172,8 +172,7 @@ Before deployment, the application has been running locally:
 * The backend runs using **Azure Functions Core Tools**.
 * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
 
-Deployment is a two-step process. Provision resources on an active Azure subscription, and then 
-deploy or upload the backend and frontend code for the application to Azure.
+Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
 * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
 * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
