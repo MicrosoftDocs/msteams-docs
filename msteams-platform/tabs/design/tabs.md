@@ -100,7 +100,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="This Illustration shows the UI anatomy of a tab." border="false":::
 
 |Counter|Description|
 |----------|-----------|
