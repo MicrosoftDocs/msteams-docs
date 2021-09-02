@@ -117,33 +117,33 @@ The code example for creating People Picker with organization search is as follo
 
 ```json 
 {
-    "type": "AdaptiveCard",
-    "body": [
-        {
-            "type": "TextBlock",
-            "size": "Medium",
-            "weight": "Bolder",
-            "text": "People Picker with Org search enabled"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "choices": [],
-            "choices.data": {
-                "type": "Data.Query",
-                "dataset": "graph.microsoft.com/users"
-            },
-            "id": "people-picker",
-            "isMultiSelect": true
-        }
-      ],
-    "actions": [
-       {
-           "type": "Action.Submit",
-          "title": "Submit"
-       }
-  ],
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.2"
+	"type": "AdaptiveCard",
+	"body": [
+		{
+			"type": "TextBlock",
+			"size": "Medium",
+			"weight": "Bolder",
+			"text": "People Picker with Org search enabled"
+		},
+		{
+			"type": "Input.ChoiceSet",
+			"choices": [],
+			"choices.data": {
+				"type": "Data.Query",
+				"dataset": "graph.microsoft.com/users"
+			},
+			"id": "people-picker",
+			"isMultiSelect": true
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.2"
 }
 ```  
 
@@ -178,33 +178,69 @@ The following list provides the information to preselect users:
 The following example describes preselection of a single user:
 
 ```json
-{ 
-  "type": "Input.ChoiceSet", 
-  "choices": [],
-  "choices.data":
-  { 
-   "type": "Data.Query", 
-   "dataset": "graph.microsoft.com/users"
-  }, 
- "id": "people-picker",
- "value": "<AAD ID 1>"
+{
+	"type": "AdaptiveCard",
+	"body": [
+		{
+			"type": "TextBlock",
+			"size": "Medium",
+			"weight": "Bolder",
+			"text": "People Picker with Org search enabled"
+		},
+		{
+			"type": "Input.ChoiceSet",
+			"choices": [],
+			"choices.data": {
+				"type": "Data.Query",
+				"dataset": "graph.microsoft.com/users"
+			},
+			"id": "people-picker",
+			"value": "<AAD ID 1>"
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.2"
 }
 ```  
 
 The following example describes preselection of multiple users:
 
 ```json
-{ 
-  "type": "Input.ChoiceSet",
-  "choices": [], 
-  "choices.data":
-   { 
-    "type": "Data.Query",
-    "dataset": "graph.microsoft.com/users" 
-   }, 
-  "id": "people-picker",
-  "isMultiSelect": true, 
-  "value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>" 
+{
+	"type": "AdaptiveCard",
+	"body": [
+		{
+			"type": "TextBlock",
+			"size": "Medium",
+			"weight": "Bolder",
+			"text": "People Picker with Org search enabled"
+		},
+		{
+			"type": "Input.ChoiceSet",
+			"choices": [],
+			"choices.data": {
+				"type": "Data.Query",
+				"dataset": "graph.microsoft.com/users"
+			},
+			"id": "people-picker",
+			"isMultiSelect": true,
+			"value": "<AAD ID 1>,<AAD ID 2>,<AAD ID 3>"
+		}
+	],
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.2"
 }
 ```
  
@@ -220,24 +256,42 @@ The following example describes static choices:
 
 ```json
 {
-	"type": "Input.ChoiceSet",
-	"choices": [
+	"type": "AdaptiveCard",
+	"body": [
 		{
-			"title": "Custom Profile 1",
-			"value": "Profile1"
+			"type": "TextBlock",
+			"size": "Medium",
+			"weight": "Bolder",
+			"text": "People Picker with Org search enabled"
 		},
 		{
-			"title": "Custom Profile 2",
-			"value": "Profile2"
+			"type": "Input.ChoiceSet",
+			"choices": [
+				{
+					"title": "Custom Profile 1",
+					"value": "Profile1"
+				},
+				{
+					"title": "Custom Profile 2",
+					"value": "Profile2"
+				}
+			],
+			"choices.data": {
+				"type": "Data.Query",
+				"dataset": "graph.microsoft.com/users"
+			},
+			"id": "people-picker",
+			"isMultiSelect": true
 		}
 	],
-	"choices.data": 
-    {
-		  "type": "Data.Query",
-		  "dataset": "graph.microsoft.com/users"
-	  },
-	"id": "people-picker",
-	"isMultiSelect": true
+	"actions": [
+		{
+			"type": "Action.Submit",
+			"title": "Submit"
+		}
+	],
+	"$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+	"version": "1.2"
 }
 ```
 
