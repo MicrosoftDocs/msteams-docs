@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: overview
 ---
 
-# App customization
+# Customize and configure your Teams app
 
 ## Enable your Microsoft Teams app to be customized
 
@@ -28,9 +28,11 @@ You can't test this feature during development. App customization isn't supporte
 
 Provide guidelines for customers (specifically Teams admins) who want to customize your app. For more information, see [customize apps in Teams](/MicrosoftTeams/customize-apps).
 
-## App hidden by default
+## Enable your Teams app to be hidden
 
-To enhance Teams app experience, you can hide an app from users by default until allowed by admin. You can configure app before publishing to the global app store.
+When an ISV publishes an app to the global app store, they may need admins to configure/customize the app experience before making it available to end users to ensure the experience is not hampered until the app is fully set up. This introduces a need for enabling app developers to opt-into default hiding the app until Admin Allows it. Doing so reduces roadblocks in users’ cognitive understanding and adoption of the app.
+
+To enhance Teams app experience, you can hide an app from the users by default until the admin allows to unhide the app.
 
 For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it. When `defaultHideUntilAdminAction:true` is set, a notification is sent to an admin. The app requests action by the admin before user can access the app. The app status shows as `Pending Configuration`. From **Manage apps**, the admins can allow the app with `Pending Configuration` status.
 
