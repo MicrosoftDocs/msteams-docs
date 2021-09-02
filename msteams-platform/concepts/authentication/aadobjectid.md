@@ -1,5 +1,5 @@
 ---
-title: Support for AAD Object ID and UPN in user mention 
+title: AAD Object ID and UPN in user mention 
 author: Rajeshwari-v
 description: Describes Teams support for AAD Object ID and UPN in User Mention for bots and incoming webhook connectors
 ms.topic: conceptual
@@ -7,11 +7,11 @@ localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Support for AAD Object ID and UPN in user mention 
+# AAD Object ID and UPN in user mention 
 
-Teams platform allows you to mention users with their AAD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the additional user mention IDs. 
+Teams platform allows to mention users with their AAD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the additional user mention IDs. 
 
-The following table describes the newly supported user mention ID:
+The following table describes the newly supported user mention IDs:
 
 |IDs  | Supporting capabilities |	Description	| Example |
 |----------|--------|---------------|---------|
@@ -20,7 +20,7 @@ The following table describes the newly supported user mention ID:
 
 ## User mention in bots with Adaptive Cards 
 
-Bots support user mentions with the AAD Object ID and UPN, in addition to the existing IDs. The support the two new IDs is available in bots for text messages or Adaptive Cards including `invoke`. 
+Bots support user mentions with the AAD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages and Adaptive Cards. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification on mention with the IDs. 
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Card in Bot.
@@ -69,10 +69,10 @@ Following image illustrates user mention with Adaptive Card in Bot:
 
 ## User mention in Incoming Webhook
 
-Incoming webhooks support user mention with the AAD Object ID and UPN, in addition to the existing IDs in different scenarios.
+Incoming webhooks support user mention with the AAD Object ID and UPN, in addition to the existing IDs.
 
 > [!NOTE]
-> You must enable the user mention in the schema for Incoming webhook to support AAD Object ID and UPN. 
+> Enable user mention in the schema for Incoming webhook to support AAD Object ID and UPN. 
 > UI/UX changes are not required for user mentions with AAD Object ID and UPN.
 
 ### Example 
