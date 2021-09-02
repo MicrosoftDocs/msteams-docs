@@ -717,3 +717,7 @@ You can define any of the following properties:
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
+
+## defaultHideUntilAdminAction
+
+When `defaultHideUntilAdminAction` is set to true, the app is hidden from users by default until Admin allows it.
