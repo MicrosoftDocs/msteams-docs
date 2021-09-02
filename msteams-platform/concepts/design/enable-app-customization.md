@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: overview
 ---
 
-# Customize and configure your Teams app
+# Customize your Teams app
 
 ## Enable your Microsoft Teams app to be customized
 
