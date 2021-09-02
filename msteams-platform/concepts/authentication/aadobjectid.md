@@ -136,6 +136,3 @@ Following image illustrates user mention in Incoming Webhook:
 |-------------|-------------|------|
 |Support for AAD Object ID and UPN in user mention |Microsoft Teams sample app for demonstrating support for AAD Object ID and UPN in user mention.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|
 
-## See also
-
-[Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations?tabs=dotnet#work-with-mentions.md)
