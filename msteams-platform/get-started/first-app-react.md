@@ -49,6 +49,8 @@ Watch this video to follow through the steps to create and run a Teams app.
 > img src="~/assets/videos/app-react-sample_0.3.mp4" alt="Sequential Workflow" width="400"
 :::row-end:::
 
+> video src="~/assets/videos/app-react-sample_0.3.mp4" width="170" height="85" controls
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
