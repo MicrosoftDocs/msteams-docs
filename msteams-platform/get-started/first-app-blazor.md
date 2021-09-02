@@ -24,8 +24,6 @@ Make sure your development environment is set up by installing the prerequisites
 
 Use the Teams Toolkit to create your first project:
 
-# [Visual Studio 2019](#tab/vs)
-
 1. Open Visual Studio 2019.
 
 1. Select **Create a new project**.
