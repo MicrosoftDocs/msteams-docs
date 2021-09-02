@@ -2,7 +2,7 @@
 title: Get started with App Studio for Microsoft Teams
 description: Get started building great apps in Microsoft Teams using App Studio
 keywords: getting started app studio teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ---
 
