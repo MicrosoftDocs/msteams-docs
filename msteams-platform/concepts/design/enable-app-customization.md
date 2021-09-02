@@ -1,5 +1,5 @@
 ---
-title: Enable your app to be customized
+title: Customize your Teams app
 author: heath-hamilton
 description: Understand how Teams admins can customize your app for their org.
 localization_priority: Normal
@@ -44,4 +44,4 @@ A guest and an anonymous user can view the app, if the admin sets it to allow in
 
 ## See also
 
-* [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
+[Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
