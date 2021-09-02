@@ -32,50 +32,15 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 To enhance Teams app experience, you can hide an app from the users by default until the admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
 
-When you set `defaultHideUntilAdminAction:true`, a notification is sent to an admin. The app requests action by the admin before user can access the app. The app status shows as `Pending Configuration`. In Teams admin center, from **Manage apps**, the admins can allow the app with `Pending Configuration` status.
+To hide the app, in the app manifest file, set the `defaultHideUntilAdminAction` parameter to `true`. When the parameter is set to true, a notification is sent to the admin. The admin gets a request to take action before a user can access the app. The app status shows as `Pending Configuration`. In Teams admin center, under **Manage apps**, the admins can allow the app with `Pending Configuration` status.
 
 ![Manage apps](../../assets/images/apps-in-meetings/manageapp.png)
 
-### App customization options
+If by default, you don't want the app to be hidden, you can update the `defaultHideUntilAdminAction` parameter to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin has not taken explicit action to block it.
 
-You can select the following options to hide any app:
+### User experience
 
-* You opt to hide or block the app by default until it's configured or customized by an admin.
-* You submit a new version of the app to the store with the default hide or block property specified.
-
-You can choose not to hide the app:
-1. Remove the hide app option.
-1. Update the manifest.
-
-When the new version of the app is approved, the app is allowed by default as long as the admin provides consent. If you've never taken any action, the app, which was in `PendingConfig` state, is now allowed.
-
-An app is blocked by publisher and is also blocked by the tenant admin. If the publisher allows the app, it's still blocked, because admin has blocked it.
-
-### User experience in Teams runtime
-
-On desktop, web, mobile, and Teams Store, you can set an app to be blocked by default. The app is hidden everywhere where that experience is served by Teams, until admins allow it. The experience includes the following but isn't limited to:
-* Personal app bar
-* Tab galleries
-* In chat as a bot
-* The meetings experience
-
-App upgrades result in no change of behavior except removal of default block support. When you submit an update of any app, the normal upgrade process is followed. If you specify `defaultHideUntilAdminAction:true`, the app is hidden by default until admin takes action once again.
-
-### User experience outside of Teams runtime
-
-You can measure how many tenants allow your apps and how many users are using them.
-
-> [!NOTE]
-> The admin actions to allow any app must be compliant with Government Community Cloud (GCC) requirements.
-
-The following table lists the different user types and their app access support:
-
-| User type | App access support |
-| --------- | --------- |
-| Guest | If it's set to allow in the tenant that they're currently active in, guests can view the app. |
-| Anonymous | If it's allowed by the tenant they're currently joined in, anonymous users can view the app. |
-| Federated | Federated users aren't supported. |
-| Users in shared channels | Users in shared channels are currently not supported and are out of scope. |
+A guest and an anonymous user can view the app, if the admin sets it to allow in the tenant that they're currently active in. Federated and users in shared channels are not supported.
 
 ## See also
 
