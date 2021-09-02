@@ -1,7 +1,7 @@
 ---
 title: App code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---

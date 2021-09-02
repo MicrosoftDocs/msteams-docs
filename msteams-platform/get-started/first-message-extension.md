@@ -5,6 +5,7 @@ description: Create a messaging extension for Microsoft Teams using the Teams To
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first messaging extension for Microsoft Teams
