@@ -20,7 +20,7 @@ The following table describes the newly supported user mention ID:
 
 ## User mention in bots with Adaptive Cards 
 
-Bots support user mentions with the AAD Object ID and UPN, in addition to the existing IDs. Bots with text messages or Adaptive Cards including `invoke` support the two new IDs. 
+Bots support user mentions with the AAD Object ID and UPN, in addition to the existing IDs. The support the two new IDs is available in bots for text messages or Adaptive Cards including `invoke`. 
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Card in Bot.
@@ -35,16 +35,25 @@ Bots support user mentions with the AAD Object ID and UPN, in addition to the ex
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
     }
   ],
   "msteams": {
     "entities": [
       {
         "type": "mention",
-        "text": "<at>Adele</at>",
+        "text": "<at>Adele UPN</at>",
         "mentioned": {
-          "id": "AdeleV@contoso.onmicrosoft.com"
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
         }
       }
     ]
@@ -83,7 +92,7 @@ Incoming webhooks support user mention with the AAD Object ID and UPN, in additi
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -92,11 +101,20 @@ Incoming webhooks support user mention with the AAD Object ID and UPN, in additi
                 "entities": [
                     {
                         "type": "mention",
-                        "text": "<at>Adele</at>",
+                        "text": "<at>Adele UPN</at>",
                         "mentioned": {
-                            "id": "AdeleV@contoso.onmicrosoft.com"
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
                         }
-                    }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
                 ]
             }
         }
