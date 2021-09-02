@@ -18,7 +18,7 @@ Some possible examples of this feature include:
 * Changing the app's accent color to match an org's brand.
 * Updating the app name from *Contoso* to *Contoso Agent*, which is the name users in the org will see. (Note: Users adding a connector to a chat or a channel will still see the original app name, *Contoso*.)
 
-You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This configures `configurableProperties`, which isn't available in versions prior to 1.10 of the Teams app manifest.
+You can enable this feature in the [Developer Portal for Teams](https://dev.teams.microsoft.com/home). This feature configures `configurableProperties`, which isn't available in versions before 1.10 of the Teams app manifest.
 
 ### Test your app
 
@@ -30,7 +30,7 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 ## App hidden by default
 
-To enhance Teams app experience, you can hide an app from users by default until it's allowed by the admin. You can configure the app before publishing to the global app store.
+To enhance Teams app experience, you can hide an app from users by default until allowed by admin. You can configure app before publishing to the global app store.
 
 For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it. When `defaultHideUntilAdminAction:true` is set, a notification is sent to an admin. The app requests action by the admin before user can access the app. The app status shows as `Pending Configuration`. From **Manage apps**, the admins can allow the app with `Pending Configuration` status.
 
@@ -47,7 +47,7 @@ You can choose not to hide the app:
 
 When the new version of the app is approved, the app is allowed by default as long as the admin provides consent. If you've never taken any action, the app, which was in `PendingConfig` state, is now allowed.
 
-An app is blocked by publisher and is also blocked by the tenant admin. Now if the publisher decides to allow the app, the app will still be blocked, because the admin explicitly took an action to block it.
+An app is blocked by publisher and is also blocked by the tenant admin. If the publisher allows the app, it's still blocked, because admin has blocked it.
 
 ### User experience in Teams runtime
 
