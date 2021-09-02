@@ -5,6 +5,7 @@ description: Learn how to build a custom tab with the SharePoint Framework
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
