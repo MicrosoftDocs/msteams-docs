@@ -27,6 +27,8 @@ Bots support user mentions with the AAD Object ID and UPN, in addition to the ex
 
 ### Example 
 
+Example for user mention in bots with Adaptive Cards as follows:
+
 ```json 
 {
   "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -74,6 +76,8 @@ Incoming webhooks support user mention with the AAD Object ID and UPN, in additi
 > UI/UX changes are not required for user mentions with AAD Object ID and UPN.
 
 ### Example 
+
+Example for user mention in Incoming Webhook as follows:
 
 ```json
 {
@@ -132,3 +136,6 @@ Following image illustrates user mention in Incoming Webhook:
 |-------------|-------------|------|
 |Support for AAD Object ID and UPN in user mention |Microsoft Teams sample app for demonstrating support for AAD Object ID and UPN in user mention.|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|
 
+## See also
+
+[Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations?tabs=dotnet#work-with-mentions.md)
