@@ -57,6 +57,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
+## Support for AAD Object ID and UPN in user mention 
+
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
+
 ## See also
 
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)

@@ -25,7 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|09/02/2021|Teams supports AAD Object ID and UPN in user mention. | [AAD Object ID and UPN in user mention](concepts/authentication/aadobjectid.md)|
+|09/03/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [Format cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md)|
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO). | [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Installation update event received when you install a bot to a conversation thread. | [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |

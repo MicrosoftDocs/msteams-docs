@@ -49,6 +49,3 @@ Regardless of the app's authentication flow, configure the identity provider to 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
-## Support for AAD Object ID and UPN in user mention 
-
-Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
