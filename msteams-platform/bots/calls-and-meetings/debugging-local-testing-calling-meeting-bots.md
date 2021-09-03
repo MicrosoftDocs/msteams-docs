@@ -9,7 +9,7 @@ ms.date: 11/18/2018
 
 # Develop calling and online meeting bots on your local PC
 
-In [Run and debug your app](../../concepts/build-and-test/debug.md) we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
+In [Run and debug your app](../../concepts/build-and-test/debug.md), we explain how to use [ngrok](https://ngrok.com) to create a tunnel between your local computer and the internet. In this topic, learn how you can also use ngrok and your local PC to develop bots that support calls and online meetings.
 
 Messaging bots use HTTP, but calls and online meeting bots use the lower-level TCP. Ngrok supports TCP tunnels in addition to HTTP tunnels. 
 
