@@ -4,7 +4,7 @@ author: surbhigupta
 description: Identify prerequisites with apps for Teams meetings 
 ms.topic: conceptual
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams apps meetings user participant role api 
 ---
 

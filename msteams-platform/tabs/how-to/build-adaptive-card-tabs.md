@@ -4,6 +4,7 @@ author: KirtiPereira
 description: Build tabs using Adaptive Cards
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 
 # Build tabs with Adaptive Cards

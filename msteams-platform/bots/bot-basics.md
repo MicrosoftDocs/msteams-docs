@@ -3,7 +3,7 @@ title: Bot activity handlers
 author: surbhigupta
 description: Understand the bot activity handlers in Teams.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 
