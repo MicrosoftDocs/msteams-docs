@@ -2,7 +2,7 @@
 title: Customize your Teams app
 author: heath-hamilton
 description: Understand how Teams admins can customize your app for their org.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 ---
