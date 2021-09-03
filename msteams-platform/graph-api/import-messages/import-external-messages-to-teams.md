@@ -1,7 +1,7 @@
 ---
 title: Use Microsoft Graph to import external platform messages to Teams 
 description: Describes how to use Microsoft Graph to import messages from an external platform to Teams
-localization_priority:  Normal
+ms.localizationpriority: medium
 author: akjo 
 ms.author: lajanuar
 ms.topic: Overview

@@ -4,6 +4,7 @@ description: To publish your app to the Microsoft Teams store, you need a Partne
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 # Create a Partner Center developer account
 

@@ -4,6 +4,7 @@ description: Describes the process for submitting your app to Partner Center and
 ms.topic: overview
 author: heath-hamilton
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 # Publish your app to the Microsoft Teams store
 
