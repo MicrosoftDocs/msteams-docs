@@ -51,4 +51,4 @@ For more information, see [configuring an identity provider](~/concepts/authenti
 
 ## Support for AAD Object ID and UPN in user mention 
 
-Bots with Adaptive Cards and Connectors with Incoming Webhooks support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. 
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
