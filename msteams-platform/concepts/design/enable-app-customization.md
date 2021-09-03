@@ -36,7 +36,7 @@ To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction
 
 ![Manage apps blocked by publisher](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
 
-The admin gets a request to take action before a user can access the app. The app status shows as `Blocked by publisher`. Under **Manage apps**, the admins can select **Allow** to allow the app with `Blocked by publisher` status:
+The admin gets a request to take action before a user can access the app. Under **Manage apps**, the admins can select **Allow** to allow the app with `Blocked by publisher` status:
 
 ![Manage apps](../../assets/images/apps-in-meetings/manageapp.png)
 
