@@ -718,6 +718,19 @@ You can define any of the following properties:
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
-## defaultHideUntilAdminAction
+## defaultBlockUntilAdminAction
 
-When `defaultHideUntilAdminAction` is set to true, the app is hidden from users by default until Admin allows it.
+When `defaultBlockUntilAdminAction` property is set to true, the app is hidden from users by default until Admin allows it.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`type`|boolean|32 characters|✔|Can be **true** or **false**.|
+|`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
+|`default`|||✔|Default is **false**.|
+
+## publisherDocsUrl
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`$ref`|||✔|The URL to the page that provides additional app information for the admins.|
+|`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
