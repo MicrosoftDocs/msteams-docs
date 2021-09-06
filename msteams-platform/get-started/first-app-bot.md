@@ -5,6 +5,7 @@ description: Create a conversational bot for Microsoft Teams using the Teams Too
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build your first conversational bot for Microsoft Teams

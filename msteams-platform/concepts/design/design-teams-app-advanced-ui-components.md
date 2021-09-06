@@ -3,7 +3,7 @@ title: Design your app with advanced UI components
 author: heath-hamilton
 description: Learn about the UI components used across Teams . 
 ms.author: surbhigupta
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ---
 # Designing your Microsoft Teams app with advanced UI components
