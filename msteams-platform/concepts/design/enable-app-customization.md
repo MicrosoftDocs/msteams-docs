@@ -32,7 +32,7 @@ Provide guidelines for customers (specifically Teams admins) who want to customi
 
 To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app. For example, Contoso Electronics has created a help desk app for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first set up specific properties of the app. The app is hidden by default and is available to users only after the admin allows it.
 
-To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to true, in Teams admin center **Blocked by publisher** appears as the app's status. Under **Manage apps** you can view a list of apps with **Blocked by publisher** status:
+To hide the app, in the app manifest file, set the `defaultBlockUntilAdminAction` property to `true`. When the property is set to `true`, in Teams admin center > **Manage apps**, **Blocked by publisher** appears in app's **Status**:
 
 ![Manage apps blocked by publisher](../../assets/images/apps-in-meetings/manageappsblockedapps.png)
 
