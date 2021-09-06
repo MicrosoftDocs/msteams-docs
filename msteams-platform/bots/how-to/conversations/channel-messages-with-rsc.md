@@ -3,7 +3,7 @@ title: Receive all channel messages with RSC
 author: surbhigupta12
 description: Receive all channel messages with RSC permissions
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Receive all channel messages with RSC
@@ -74,6 +74,12 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
     The bot receives the message without being @mentioned.
 
     ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+
+## Code sample
+
+| Sample name | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Channel messages with RSC permissions|	Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## See also
 

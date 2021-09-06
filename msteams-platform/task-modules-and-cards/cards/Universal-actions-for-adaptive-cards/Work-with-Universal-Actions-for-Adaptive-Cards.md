@@ -2,7 +2,7 @@
 title: Work with Universal Actions for Adaptive Cards
 description: Work with the Universal Actions for Adaptive Cards.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Work with Universal Actions for Adaptive Cards

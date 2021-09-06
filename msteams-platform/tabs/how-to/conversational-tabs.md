@@ -5,6 +5,7 @@ description: Create conversational sub-entity chat for your channel tabs
 keywords: teams tabs channel configurable 
 ms.topic: conceptual
 ms.author: lomeybur
+ms.localizationpriority: none
 ---
 
 # Create conversational tabs
@@ -83,6 +84,12 @@ microsoftTeams.conversations.onCloseConversation = (conversationResponse) => {
     // console.log(conversationResponse)
 };
 ```
+
+## Code sample
+
+| Sample name | Description | C# |Node.js|
+|-------------|-------------|------|----|
+|Create Conversational tab|	Microsoft Teams tab sample app for demonstrating create conversation tab. |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp)	|  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |
 
 ## See also
 

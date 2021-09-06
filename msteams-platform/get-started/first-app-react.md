@@ -5,6 +5,7 @@ description: Quickly create a Microsoft Teams app that displays a "Hello, World!
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first Microsoft Teams app with React

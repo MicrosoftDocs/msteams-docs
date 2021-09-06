@@ -3,7 +3,7 @@ title: Understanding your app's use cases
 author: heath-hamilton
 description: When planning your Microsoft Teams app, you should first understand what problems your app is trying to solve.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 

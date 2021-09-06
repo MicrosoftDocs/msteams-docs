@@ -1,7 +1,7 @@
 ---
 title: Test resource-specific consent permissions in Teams
 description: Details testing resource-specific consent in Teams using Postman
-localization_priority: Normal
+ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
 ms.topic: tutorial
@@ -40,7 +40,8 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
         "TeamsTab.Create.Group",
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
-        "TeamMember.Read.Group"
+        "TeamMember.Read.Group",
+        "TeamsActivity.Send.Group"
     ]
    }
 ```
@@ -63,7 +64,8 @@ Resource-specific consent (RSC) is a Microsoft Teams and Graph API integration t
         "TeamsAppInstallation.Read.Chat",
         "OnlineMeeting.ReadBasic.Chat",
         "Calls.AccessMedia.Chat",
-        "Calls.JoinGroupCalls.Chat"
+        "Calls.JoinGroupCalls.Chat",
+        "TeamsActivity.Send.Chat"
     ]
    }
 ```

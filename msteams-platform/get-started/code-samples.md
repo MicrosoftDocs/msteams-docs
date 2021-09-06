@@ -1,7 +1,7 @@
 ---
 title: App code samples
 description: Links and descriptions of sample applications for the Microsoft Teams developer platform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
@@ -40,7 +40,7 @@ A Teams app is made up of one or more [platform capabilities](../concepts/capabi
 Depending on what capabilities you want for your app, you will need an appropriate development toolset.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks |
-|--------|-------------||--------||--------||--------|
+|--------|-------------|--------|--------|--------|
 | Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams client SDK](/javascript/api/overview/msteams-client) | Web technology in general, HTML, CSS, and JavaScript |
 | Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 | Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
