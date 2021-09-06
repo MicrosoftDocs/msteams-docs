@@ -3,7 +3,7 @@ title: Add a bot menu
 description: Describes how to create menus for bots in Microsoft Teams
 keywords: teams bots menus creation
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
 # Add a bot menu in Microsoft Teams
