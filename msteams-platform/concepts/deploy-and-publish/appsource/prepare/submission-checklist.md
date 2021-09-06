@@ -2,7 +2,7 @@
 title: Prepare your store submission  
 description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 ---

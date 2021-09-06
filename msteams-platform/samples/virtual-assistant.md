@@ -1,7 +1,7 @@
 ---
 title: Create Virtual Assistant 
 description: How to create Virtual Assistant bot and skills for use in Microsoft Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams virtual assistant bots
 ---

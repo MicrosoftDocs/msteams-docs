@@ -3,7 +3,7 @@ title: Add Power Virtual Agents chatbot to Teams
 author: surbhigupta
 description: integrating a Power Virtual Agents chatbot in the Teams platform
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 
