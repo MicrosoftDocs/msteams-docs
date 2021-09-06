@@ -189,7 +189,7 @@ Support tickets get resolved in a week. Check for updates sent to the email you 
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
 
-* **Subject Line**: Partner Center Account Issue for *<your app name>*.
+* **Subject Line**: Partner Center Account Issue for *your app name*.
 * **Email body**:
     * Support ticket number.
     * Your seller ID.

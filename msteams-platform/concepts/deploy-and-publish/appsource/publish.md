@@ -25,7 +25,7 @@ When you feel your app is production ready, you can begin the process of getting
 1. [Review the Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) to make sure your app meets Teams app and store standards.
 1. [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md).
 1. [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md), which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
-1. [Submit your app](https://docs.microsoft.com/office/dev/store/add-in-submission-guide) through Partner Center.
+1. [Submit your app](/office/dev/store/add-in-submission-guide) through Partner Center.
 1. If your submission fails, work with Microsoft directly to [resolve the issues and resubmit your app](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md).
 
    :::column-end:::
@@ -40,7 +40,7 @@ When you feel your app is production ready, you can begin the process of getting
 
 ## See also
 
-* [Publishing to Microsoft 365 App Stores](https://docs.microsoft.com/office/dev/store/)
+* [Publishing to Microsoft 365 App Stores](/office/dev/store/)
 * [Upload your Teams app](~/concepts/deploy-and-publish/apps-upload.md)
 * [Publish your Teams app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 
