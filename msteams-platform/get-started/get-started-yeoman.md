@@ -12,7 +12,7 @@ ms.custom: scenarios:getting-started
 > [!Note]
 > This tutorial comes from the [Yeoman generator for Teams wiki](https://github.com/OfficeDev/generator-teams/wiki/Build-Your-First-Microsoft-Teams-App).
 
-In this tutorial, you will learn how to build your very first Microsoft Teams app using the Microsoft Teams Yeoman generator. It also walks you through the process of upgrading your Teams using the Yeoman generator. Before you begin, you must have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
+This tutorial walks you through the steps to create your first Teams app using the Microsoft Teams Yeoman generator. It also covers the process of upgrading your Teams using the Yeoman generator. Before you begin, ensure you have a Teams account that allows [app sideloading](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
 ![yeoman generator git](~/assets/yeoman-demo.gif)
 
@@ -22,21 +22,21 @@ In this tutorial, you will learn how to build your very first Microsoft Teams ap
 
 ## Get Prerequisites
 
-You need to install the following on your machine before starting to use the Yeoman generator:
+Install the following tools on your machine before you use the Yeoman generator:
 
-* Node.js
+* Node.js:
 
-   You need to have Node.js installed on your machine. You should use the latest [LTS version](https://nodejs.org).
+   Use the latest [LTS version](https://nodejs.org).
 
 * A code editor
 
-   You need a code editor. Most of this documentation and images refer to using [Visual Studio Code](https://code.visualstudio.com). However, feel free to use whatever text editor you prefer.
+   This tutorial uses [Visual Studio Code](https://code.visualstudio.com). However, feel free to use whatever text editor you prefer.
 
 * Yeoman and Gulp CLI
 
-   To scaffold projects using the generator, you must install the Yeoman tool and Gulp CLI task manager.
+   To scaffold projects using the generator, install the Yeoman tool and Gulp CLI task manager.
 
-   Open up a command prompt and type the following:
+   Open a command prompt and enter the following to install these tools:
 
    ```bash
    npm install yo gulp-cli --global
@@ -44,13 +44,13 @@ You need to install the following on your machine before starting to use the Yeo
 
 ## Install the generator
 
-Install the Teams Yeoman generator with the following command:
+Install the Teams Yeoman generator using the following command:
 
 ```bash
 npm init yo teams
 ```
 
-Install the preview version of the generator with the following command:
+Install the preview version of the generator using the following command:
 
 ```bash
 npm init yo teams@preview
@@ -68,40 +68,40 @@ This section walks you through the steps to generate your project.
 
    ![yo teams](~/assets/yeoman-images/teams-first-app-1.png)
 
-   1. Enter a name for your project. You can leave it as is by pressing Enter.
-   1. Enter a path for the new directory if you want to create a new directory. As you are already in the directory you want, just press Enter.
-   1. Enter the title of your project. This title will be used in the manifest and description of your app. 
-   1. Enter a company name which also will be used in the manifest.
+   1. Enter a name for your project. You can leave it as is by selecting **Enter**.
+   1. For this tutorial, you've created the directory for your project. Select **Enter**.
+   1. Enter the title of your project. This title is used in the manifest and description of your app. 
+   1. Enter a company name, which is also used in the manifest.
    1. Enter the version of the manifest you want to use. For this tutorial select `v1.5`, which is the current general available schema.
-   1. Select the items you want to add to your project. You can select a single one or any combination of items. For this tutorial, just select *a Tab*:
+   1. Select the items you want to add to your project. You can select one or any combination of items. For this tutorial, select *a Tab*:
 
     ![item selection](~/assets/yeoman-images/teams-first-app-2.png)
 
-1. Respond to the next set of follow-up questions that appear based on the items you selected in Step 3.
-1. Enter a URL for the location where you will host your solution. 
+1. Respond to the next set of follow-up questions that appear. These questions are based on the items you selected in Step 3.
+1. Enter a URL for the location where you want to host your solution. 
 
    > [!NOTE]
    > The URL can be any URL, but by default the generator suggests an Azure web site URL.
 
-1. Confirm if you want to include unit-testing for your solution. The default response is **Yes**. If you opt to include unit-testing, the generated project will have a unit testing framework and some default unit tests for the different items being scaffolded. 
+1. Confirm if you want to include unit-testing for your solution. The default response is **Yes**. If you opt to include unit-testing, the generated project will have a unit testing framework, and some default unit tests for the different items being scaffolded. 
    > [!NOTE]
    > * For this tutorial choose not to include a test framework.
    > * The generator has a lot of built-in advanced features that you can opt-in or opt-out of.
 
-1. In order to make signing-in easy for you, you will also be asked if you want to use Azure Application Insights for signing-in. If you select **Yes**, you will need to provide an Azure Application Insights key. 
+1. Select if you want to use Azure Application Insights for signing-in. This option simplifies the signing in process for you. If you select **Yes**, you need to provide an Azure Application Insights key. 
 
    > [!NOTE]
-   > For this tutorial opt-out of using Application Insights.
+   > For this tutorial, opt-out of using Application Insights.
 
-   The next set of questions will be based on the previously selected items. For a tab you only need to provide a name and optionally choose if you want to be able to use this app as a SharePoint Online web part. After you provide the name the generator will generate the project and install all dependencies. This will take a minute or two.
+   The next set of questions depends on the items you selected. For a tab, you need to provide only a name. You can also choose if you want to use this app as a SharePoint Online web part. After you provide the name, the generator scaffolds the project and installs all dependencies. This step takes a minute or two.
 
 ## Add code to your tab
 
-After the generator is done you can open up the solution in your favorite code editor. Take a minute or two and familiarize yourself with how the code is organized. For more information, see [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
+After you've generated the project, open up the solution in your favorite code editor. Familiarize yourself with how the code is organized. For more information, see [Project Structure](https://github.com/OfficeDev/generator-teams/wiki/Project-Structure) documentation.
 
-Your tab is in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This is the TypeScript React-based class for your tab. 
+Your tab is in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. This code is the TypeScript React-based class for your tab. 
 
-1. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like this:
+1. Locate the `render()` method and add a line of code inside the `<PanelBody>` control so it looks like the following code:
 
    ``` TypeScript
    <PanelBody>
@@ -110,20 +110,21 @@ Your tab is in the `./src/app/scripts/myFirstAppTab/MyFirstAppTab.tsx` file. Thi
       </div>
    </PanelBody>
    ```
-1. Save the file and return to the command prompt.
+1. Save the file, and return to the command prompt.
 
 ## Build your app
 
-You can now build your project. This is done in two steps.
+You can now build your project. This task is done in two steps.
 
-1. Create the Teams App manifest file for the app that you uploaded into Microsoft Teams. This is done by the Gulp task `gulp manifest`. This will validate the manifest and create a zip file in the `./package` directory.
-1. Run the `gulp build` command to build the solution. This will transpile your solution into the `./dist` folder. 
+1. Create the Teams App manifest file for the app that you uploaded into Teams. This step is done by the Gulp task `gulp manifest`. It validates the manifest, and creates a zip file in the `./package` directory.
+1. Run the `gulp build` command to build the solution. Your solution is transpiled into the `./dist` folder. 
 
 ## Run your app
 
-To run your app, use the `gulp serve` command. This will build and start a local web server for you to test your app. The command will also rebuild the application whenever you save a file in your project. 
+To run your app, use the `gulp serve` command. Your app is built. It also starts a local web server for you to test your app. You can use this command to rebuild the application whenever you save a file in your project.
 
-You should now be go to `http://localhost:3007/myFirstAppTab/` and ensure that your tab is rendering. However, it is not in Microsoft Teams yet. 
+Go to `http://localhost:3007/myFirstAppTab/` and ensure that the tab has rendered.
+
 
 **To render your tab in Microsoft Teams**
 
@@ -131,22 +132,22 @@ You should now be go to `http://localhost:3007/myFirstAppTab/` and ensure that y
 
 ### Run your app in Microsoft Teams
 
-Microsoft Teams does not allow you to have your app hosted on localhost, so you need to either publish it to a public URL or use a proxy such as ngrok. Good news is that the scaffolded project has this built-in. 
+To publish your app in Teams, you need to either host it on a public URL, or use a proxy, such as ngrok. The scaffolded project is built to enable publishing. 
 
 **To run your app in Teams**
 
-1. Run `gulp ngrok-serve` in Terminal. When you run `gulp ngrok-serve` the ngrok service will be started in the background, with a unique and public DNS entry and it will also package the manifest with that unique URL and then do the exact same thing as `gulp serve`.
+1. Run `gulp ngrok-serve` in the Terminal. When you run `gulp ngrok-serve`, the ngrok service starts in the background. It has a unique and public DNS entry. ngrok packages the manifest with that unique URL. Then, it follows with the same process as `gulp serve`.
 1. Create a new Microsoft Teams team.
 1. Select the Team name > Teams Settings > Apps.
 1. From the lower right corner, select **Upload a custom app**.
 1. Go to the `package` folder under your project folder. 
-1. Select the zip file in that folder and select open. 
+1. Select the zip file in that folder, and select **Open**. 
    Your App is now sideloaded into Microsoft Teams:
 
    ![sideloaded app](~/assets/yeoman-images/teams-first-app-4.png)
-1. Go back to the **General** channel and select **+** to add a new Tab. You should see your tab in the list of tabs:
+1. Go back to the **General** channel, and select **+** to add a new Tab. You should see your tab in the list of tabs:
    ![configure tab](~/assets/yeoman-images/teams-first-app-5.png)
-1. Select your tab and follow the instructions to add it. Notice that you have a custom configuration dialog, for which you can edit the source. Select *Save* to add your tab to the channel. Your tab is now loaded inside Microsoft Teams!
+1. Select your tab, and follow the instructions to add it. Notice that you have a custom configuration dialog, for which you can edit the source. Select **Save** to add your tab to the channel. Your tab is now loaded inside Microsoft Teams.
 
    ![running tab in teams](~/assets/yeoman-images/teams-first-app-6.png)
 
@@ -156,7 +157,7 @@ You can also upgrade your current Microsoft Teams version to the latest version 
 
 **To upgrade Microsoft Teams**
 
-1. Get current version of Teams with the following command:
+1. Get the current version of Teams with the following command:
 
    ```PowerShell
     yo teams --version
@@ -166,11 +167,11 @@ You can also upgrade your current Microsoft Teams version to the latest version 
    ```PowerShell
     yo
    ```
-3. Use the  arrow keys to select **Update your Generators**:
+3. Use the arrow keys to select **Update your Generators**:
 
    ![image of YoSelectUpdatGen](~/assets/images/Update-Teams/YoSelectUpdateGen.png)
 
-4. Select the generator you want from the list of generators:
+4. Select the generator you want from the list:
    > [!NOTE]
    > Use the space bar to select or clear a selected Teams version from the available options.
 
@@ -178,7 +179,7 @@ You can also upgrade your current Microsoft Teams version to the latest version 
     
 
    > [!NOTE]
-   > It takes few seconds to minutes for Teams installation to complete.
+   > It takes few seconds to a few minutes for Teams installation to complete.
 
 5. After the installation is complete, use the following command to check the installed version:
 
