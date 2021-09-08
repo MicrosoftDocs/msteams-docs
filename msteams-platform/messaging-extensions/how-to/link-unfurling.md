@@ -2,7 +2,7 @@
 title: Link unfurling
 author: surbhigupta
 description: How to perform link unfurling with messaging extension in a Microsoft Teams app.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---

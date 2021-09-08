@@ -2,7 +2,7 @@
 title: Send tenant ID and conversation ID to the request headers of the bot
 description: describes how to send tenant ID and conversation ID to the request headers of the bot.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Send tenant ID and conversation ID to the request headers of the bot

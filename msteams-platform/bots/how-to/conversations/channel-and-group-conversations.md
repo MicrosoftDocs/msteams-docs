@@ -3,7 +3,7 @@ title: Channel and group conversations with a bot
 author: surbhigupta
 description: How to send, receive, and handle messages for a bot in a channel or group chat.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Channel and group chat conversations with a bot
@@ -142,7 +142,7 @@ Your bot can mention other users in messages posted into channels.
 
 The `Mention` object has two properties that you must set using the following:
 
-* Include <at>@username</at> in the message text.
+* Include *@username* in the message text.
 * Include the mention object inside the entities collection.
 
 The Bot Framework SDK provides helper methods and objects to create mentions.

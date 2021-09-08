@@ -2,7 +2,7 @@
 title: Create deep links 
 description: Describes deep links and how to use them in your apps
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams deep link deeplink
 ---
 
@@ -151,13 +151,19 @@ The query parameters are:
 
 * `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Supported file type, such as docx, pptx, xlsx, and pdf
-* `objectUrl`: Object URL of the file, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: Base URL of the file, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Name of the service, app ID
+* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`
+* `serviceName`: Name of the service, app ID. For example, teams.
 * `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
-Following is the sample format of deeplink to files:
+> [!NOTE]
+> You can see `threadId` and `groupId` in the URL from the channel.  
+
+The following deep link format is used in a bot, connector, or messaging extension card:
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+
+The following example format shows the deeplink to files:
 
 `https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 

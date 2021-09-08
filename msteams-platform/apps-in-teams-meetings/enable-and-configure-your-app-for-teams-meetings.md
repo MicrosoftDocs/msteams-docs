@@ -3,6 +3,7 @@ title: Enable and configure your apps for Teams meetings
 author: surbhigupta
 description: Enable and configure your apps for Teams meetings 
 ms.topic: conceptual
+ms.localizationpriority: none
 ---
 
 # Enable and configure your apps for Teams meetings

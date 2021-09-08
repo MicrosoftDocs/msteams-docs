@@ -4,7 +4,7 @@ author: laujan
 description: describes the attributes of SameSite cookie
 keywords: cookie attributes samesite
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
 ---
 

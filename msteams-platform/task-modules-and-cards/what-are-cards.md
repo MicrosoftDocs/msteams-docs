@@ -1,7 +1,7 @@
 ---
 title: Cards
 description: Describes cards and how they are used in bots, connectors, and messaging extensions
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: connectors bots cards messaging
 ms.topic: overview
 ---
