@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Guidelines for apps linked to SaaS offer
 
-If your Teams app is linked to SaaS offer ensure it adheres to the following guidelines: 
+Ensure to adhere to the following guidelines if your Teams app is linked to SaaS offer: 
 
 * Teams monetization capabilities are designed to support a per-user pricing model for assigning licenses to users. 
 
