@@ -430,6 +430,8 @@
       href: concepts/deploy-and-publish/appsource/resolve-submission-issues.md
     - name: Maintain your published app
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
+    - name: Guidelines for apps linked with SaaS offer
+      href: concepts/deploy-and-publish/appsource/guidelines-for-apps-linked-to-saas-offer.md  
 - name: App manifest
   items:
     - name: App manifest schema
