@@ -13,6 +13,11 @@ This document builds on the article on [how bots work](https://aka.ms/how-bots-w
 
 To organize the conversational logic for your bot, an activity handler is used. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Microsoft Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
 
+Adding test table:
+|col 1|col 2|col 3|
+|Sl. no|Name|Id|
+|------|-----|---|
+
 ## Teams activity handlers
 
 Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
