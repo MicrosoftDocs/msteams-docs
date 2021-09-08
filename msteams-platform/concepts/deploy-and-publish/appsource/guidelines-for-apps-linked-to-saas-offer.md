@@ -1,5 +1,5 @@
 ---
-title: Guidelines for apps linked with SaaS offer
+title: Guidelines for apps linked to SaaS offer
 author: Rajeshwari-v
 description: Describes guidelines for Teams app linked to SaaS offer
 ms.topic: conceptual
@@ -7,7 +7,7 @@ localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Guidelines for apps linked with SaaS offer
+# Guidelines for apps linked to SaaS offer
 
 If your Teams app is linked to SaaS offer ensure it adheres to the following guidelines: 
 
