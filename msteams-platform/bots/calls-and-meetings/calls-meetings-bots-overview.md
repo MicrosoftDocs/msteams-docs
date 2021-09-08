@@ -13,10 +13,7 @@ Bots can interact with Teams calls and meetings using real-time voice, video, an
 * Interactive voice response (IVR).
 * Call control.
 * Access to real-time audio and video streams, including desktop and app sharing.
-<<<<<<< Updated upstream
-=======
 Test link : Open this option in [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities)
->>>>>>> Stashed changes
 
 To use these Graph APIs in a Teams app, you create a bot and specify some additional information and permissions.
 
