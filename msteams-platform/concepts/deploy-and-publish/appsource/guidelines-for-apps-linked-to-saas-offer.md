@@ -29,13 +29,13 @@ For example, if your publisher ID is `contoso1234` and your offer ID is `offer01
 
 Following image illustrates the discussed condition:
 
-![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)
+   ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)
 
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers are not accepted for store approval. 
 
-Following image illustrates the discussed condition:
+Following image describes the discussed condition:
 
-![Link SaaS offer to Teams app2](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen2.png)
+   ![Link SaaS offer to Teams app2](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen2.png)
 
 ## Offer metadata 
 
@@ -43,9 +43,8 @@ Following image illustrates the discussed condition:
 
 * Teams app and SaaS offer must be from same publisher/developer. The SaaS offer referenced in the App manifest should belong to the same publisher as the Teams app being submitted to the commercial marketplace. 
 
-* As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product setup section of your offer listing. 
-
-Following image illustrates the discussed condition:
+* As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product setup section of your offer listing.     
+Following image describes the discussed condition:
 
    ![Offer metadata](~/assets/images/store-detail-page/offer-metadata.png)
 
@@ -59,11 +58,11 @@ Following image illustrates the discussed condition:
 
 ### Teams Client purchase expereince
 
-Admin/non-admin users should be able to buy a subscription plan with minimum license quantity and assign them to self or other users in the tenant. 
+* Admin or non-admin users should be able to buy a subscription plan with minimum license quantity and assign them to self or other users in the tenant. 
 
-Admin/non-admin should be able to buy a subscription with bulk license quantity and assign them to self or other users in the tenant. 
+* Admin or non-adminusers should be able to buy a subscription with bulk license quantity and assign them to self or other users in the tenant. 
 
-Admin/Non-Admin should be able to complete end to end purchase experience from Teams Client, post purchase should be able to manage the licenses/s in MAC and should have the feasibility to activate, manage and assign licenses in SaaS application.  
+* Admin or non-admin users should be able to complete end to end purchase experience from Teams Client, post purchase should be able to manage the licenses in MAC and should have the feasibility to activate, manage and assign licenses in SaaS application.  
 
 ### Teams Admin Center purchase expereince 
 
@@ -76,22 +75,19 @@ Admin/Non-Admin should be able to complete end to end purchase experience from T
 
 ## SaaS offer home page and license management  
 
-* Subscriber should be able to navigate to SaaS web application landing page by selecting **configure now** in Teams.     
+* Subscriber should be able to navigate to SaaS web application home page by selecting **configure now** in Teams.     
 Following image illustrates the home page:
 
    ![Home page](~/assets/images/store-detail-page/home-page.png)
 
-* Users completing the purchase must be able to Activate and configure their subscription on your SaaS application landing page.     
+* Users completing the purchase must be able to Activate and configure their subscription on your SaaS application home page.     
 Following image illustrates the home page:
 
    ![Configure subscription ](~/assets/images/store-detail-page/configure-subscription.png)
 
-> [TIP] 
-
+> [!TIP]    
 > * Provide introduction to subscriber on how to use the product 
-
->  Allow the subscriber to assign licenses 
-
+> * Allow the subscriber to assign licenses 
 > * Provide way to engage with support for issues (FAQ, knowledgebase, and/or email address) 
 
 * Users completing a purchase must be able to manage the licenses and must have the following options in SaaS application: 
@@ -128,14 +124,13 @@ Subscribers must be able to do the following:
 
 * Post license assignment, users should have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
 
-* From your Teams app, provide link back to the SaaS application landing page for subscriber to manage the licenses in the future. 
+* From your Teams app, provide link back to the SaaS application home page for subscriber to manage the licenses in the future. 
 
 ## Provide sufficient Details to Configure the SaaS application and Test 
 
 If setup of your app for testing purposes is complex or non-intuitive, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your **Notes for Certification**.   
 
 > [TIP]  
-
 > Add a video recording of how your app and license management works to assist the team for testing. 
 
  
