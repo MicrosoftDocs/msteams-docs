@@ -98,9 +98,9 @@ Following image illustrates the license management:
 
 ## Manage Subscriptions 
 
-* Users completing the purchase must be able to Manage Subscriptions.  
+* Users completing the purchase must be able to Manage Subscriptions.
 
-Subscribers must be able to do the following: 
+* Subscribers must be able to do the following: 
 
    * Adjust licenses, buy, remove licenses  
 
