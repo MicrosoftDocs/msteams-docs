@@ -21,18 +21,12 @@ If your Teams app is linked to SaaS offer ensure it adheres to the following gui
 
 ## Link SaaS offer to Teams app 
 
-* `subscriptionOffer` details mentioned in manifest file must be accurate. 
-
-In your app manifest, add or update node `subscriptionOffer` with value `<publisher id>.<offer id>` as follows: 
-
-For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
-
-Following image illustrates the discussed condition:
+* `subscriptionOffer` details mentioned in manifest file must be accurate. In your app manifest, add or update node `subscriptionOffer` with value `publisher id.offer id`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
+Following image illustrates values and their mention in app manifest:
 
    ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)
 
-* Linked SaaS offer to the Teams app must be live in AppSource and preview offers are not accepted for store approval. 
-
+* Linked SaaS offer to the Teams app must be live in AppSource and preview offers are not accepted for store approval.     
 Following image describes the discussed condition:
 
    ![Link SaaS offer to Teams app2](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen2.png)
@@ -41,7 +35,7 @@ Following image describes the discussed condition:
 
 * Offer metadata should match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
 
-* Teams app and SaaS offer must be from same publisher/developer. The SaaS offer referenced in the App manifest should belong to the same publisher as the Teams app being submitted to the commercial marketplace. 
+* Teams app and SaaS offer must be from same publisher or developer. The SaaS offer referenced in the App manifest should belong to the same publisher as the Teams app being submitted to the commercial marketplace. 
 
 * As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product setup section of your offer listing.     
 Following image describes the discussed condition:
@@ -60,7 +54,7 @@ Following image describes the discussed condition:
 
 * Admin or non-admin users should be able to buy a subscription plan with minimum license quantity and assign them to self or other users in the tenant. 
 
-* Admin or non-adminusers should be able to buy a subscription with bulk license quantity and assign them to self or other users in the tenant. 
+* Admin or non-admin users should be able to buy a subscription with bulk license quantity and assign them to self or other users in the tenant. 
 
 * Admin or non-admin users should be able to complete end to end purchase experience from Teams Client, post purchase should be able to manage the licenses in MAC and should have the feasibility to activate, manage and assign licenses in SaaS application.  
 
@@ -68,7 +62,7 @@ Following image describes the discussed condition:
 
 * Admins must be able to purchase bulk licenses from the Teams Admin Center.  
 
-* Admins should be able to complete end to end purchase experience from TAC, should be able to manage the licenses in MAC and should have the feasibility to activate, manage and assign licenses in SaaS application.  
+* Admins should be able to complete end to end purchase experience from TAC, manage the licenses in MAC and should have the feasibility to activate, manage and assign licenses in SaaS application.  
 
 > [!NOTE]
 > Your offer must provide messages, further guidance to users in all applicable states of purchase flow and must guide a new user. 
