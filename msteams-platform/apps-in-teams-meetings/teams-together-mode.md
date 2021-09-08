@@ -2,6 +2,7 @@
 title: Custom Together Mode Scenes
 description: Work with custom Together Mode scenes
 ms.topic: conceptual
+ms.localizationpriority: none
 ---
 
 # Custom Together Mode scenes in Teams

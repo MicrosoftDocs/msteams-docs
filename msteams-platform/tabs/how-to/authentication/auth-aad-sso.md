@@ -2,7 +2,7 @@
 title: Single sign-on support for tabs
 description: Describes single sign-on (SSO)
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams authentication SSO AAD single sign-on api
 ---
 

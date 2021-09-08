@@ -2,7 +2,7 @@
 title: Designing activity feed notifications
 author: heath-hamilton
 description: Learn how to design activity feed notifications for your Teams app and get the Microsoft Teams UI Kit.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
 ---
