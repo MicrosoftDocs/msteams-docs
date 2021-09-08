@@ -15,7 +15,7 @@ To organize the conversational logic for your bot, an activity handler is used. 
 
 Adding test table:
 |Sl. no|Name|Id|
-|------|-----|---|
+|---|---|---|
 
 ## Teams activity handlers
 
