@@ -130,7 +130,7 @@ Subscribers must be able to do the following:
 
 If setup of your app for testing purposes is complex or non-intuitive, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your **Notes for Certification**.   
 
-> [TIP]  
+> [!TIP]  
 > Add a video recording of how your app and license management works to assist the team for testing. 
 
  
