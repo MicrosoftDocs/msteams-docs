@@ -7,11 +7,13 @@ keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
 ---
 
-# Incoming call notifications Hello this is test line for heading 1
+# Incoming call notifications      Hello this is test line for heading 1
 
 In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the Webhook for calling URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
 
 ## Protocol determination
+
+## This is heading 2
 
 The incoming notification is provided in a legacy format for compatibility with the previous [Skype protocol](/azure/bot-service/dotnet/bot-builder-dotnet-real-time-media-concepts?view=azure-bot-service-3.0&preserve-view=true). In order to convert the call to the Microsoft Graph protocol, your bot must determine whether the notification is in a legacy format and provide the following response:
 
