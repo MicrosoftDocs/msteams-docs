@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-## Bot activity handlers
+# Bot activity handlers
 
 This document builds on the article on [how bots work](https://aka.ms/how-bots-work) in the core [Bot Framework documentation](https://aka.ms/azure-bot-service-docs). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
