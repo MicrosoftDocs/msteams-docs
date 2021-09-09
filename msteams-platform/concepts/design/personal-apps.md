@@ -115,11 +115,11 @@ On the left side of Teams, users can right-click the personal app to pin, remove
 
 ## Add `registerOnFocused` API for tabs or personal apps
 
-When a user is navigating with a keyboard, the `registerOnFocused` SDK API allows the user to return to the personal app and maintain focus on the tab or personal app.
+When a user uses keyboard, the `registerOnFocused` SDK API allows the user to return to the personal app and maintain focus on the tab or personal app.
 
-Currently, users cannot use their keyboard to navigate out or into the key landmark area in Teams. The `registerOnFocused` API specifically allows a user to return into the apps and return focus to the correct spot. This is especially useful for keyboard users who are used to using Ctrl+F6 to navigate around key landmark areas in Teams.
+Currently, users cannot use their keyboard to go out or into the specific area in Teams. The `registerOnFocused` API specifically allows a user to return into the apps and return focus to the correct spot. This is especially useful for keyboard users who are used to using Ctrl+F6 to navigate around key landmark areas in Teams.
 
-The `registerOnFocused` API identifies when the focus is returned to the tab or personal app while a user is navigating with a keyboard that is either using the Tab key to navigate around Teams or when using Ctrl + F6 key. For example, the user navigates away from the personal app to search for something, and then returns to the personal app or uses Ctrl+F6 to navigate around landmark areas. The API is useful if you want to return a keyboard user to the same location in their tab or personal app.
+The `registerOnFocused` API identifies when the focus is returned to the tab or personal app when a user uses a keyboard. The user uses either the Tab key to go around Teams or Ctrl + F6 key. For example, the user moves away from the personal app to search for something, and then returns to the personal app or uses Ctrl+F6 to go around the required places. The API is useful if you want to return a keyboard user to the same location in their tab or personal app.
 
 The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
 
@@ -137,6 +137,7 @@ function handleFocusEnter(navigateForward: boolean): void
   }
 }
 ```
+
 After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines if the navigation is forward that is using the Ctrl+f6 keys or backward using the ctrl+shift+f6 keys.
 
 ```csharp
