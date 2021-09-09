@@ -65,6 +65,13 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
+```dotnetcli
+This is test code sample 
+    "iat": 1466741440,
+    "nbf": 1466741440,
+    "exp": 1466745340,
+```
+
 The OAuth token has the following values, and is signed by Skype:
 
 ```json
