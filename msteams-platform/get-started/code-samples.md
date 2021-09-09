@@ -7,7 +7,7 @@ keywords: Microsoft Teams developer samples
 ---
 # Overview
 
-This tutorial introduces you to building and deploying Microsoft Teams apps. Learn to create a Microsoft Teams app using Teams Toolkit, React, Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator. You also learn to create your first bot and messaging extension. 
+This tutorial introduces you to building and deploying Microsoft Teams apps. Learn how to create a Microsoft Teams app using Teams Toolkit, React, Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator. You also learn to create your first bot and messaging extension. 
 
 You can look through multiple Code Samples for Tabs, Bots, Messaging Extensions, Webhooks and Connectors, and Graph APIs. These samples help you to customize and configure your apps.
 
