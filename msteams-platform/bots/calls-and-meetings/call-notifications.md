@@ -65,7 +65,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-```dotnetcli this is dummy code 
+```dotnetcli this is dummy code
 This is test code sample 
     "iat": 1466741440,
     "nbf": 1466741440,
