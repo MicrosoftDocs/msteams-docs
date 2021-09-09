@@ -100,7 +100,7 @@ The OAuth token has the following values, and is signed by Skype:
 
 Adding sample test image:
 
-:::image type="content" source="~\assets\Sample MS img.GIF" alt-text="Example shows Microsoft Logo." border="1px solid black":::
+:::image type="content" source="~\assets\Sample MS img.GIF" alt-text="Example shows Microsoft Logo." border="2px solid black":::
 
 
 The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each OAuth token value is used as follows:
