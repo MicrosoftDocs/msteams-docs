@@ -113,6 +113,58 @@ On the left side of Teams, users can right-click the personal app to pin, remove
 
 :::image type="content" source="../../assets/images/personal-apps/manage-personal-tab.png" alt-text="Example shows options for managing a personal app." border="false":::
 
+## Add `registerOnFocused` API for tabs or personal apps
+
+When a user is navigating with a keyboard, the `registerOnFocused` SDK API allows the user to return to the personal app and maintain focus on the tab or personal app.
+
+Currently, users cannot use their keyboard to navigate out or into the key landmark area in Teams. The `registerOnFocused` API specifically allows a user to return into the apps and return focus to the correct spot. This is especially useful for keyboard users who are used to using Ctrl+F6 to navigate around key landmark areas in Teams.
+
+The `registerOnFocused` API identifies when the focus is returned to the tab or personal app while a user is navigating with a keyboard that is either using the Tab key to navigate around Teams or when using Ctrl + F6 key. For example, the user navigates away from the personal app to search for something, and then returns to the personal app or uses Ctrl+F6 to navigate around landmark areas. The API is useful if you want to return a keyboard user to the same location in their tab or personal app.
+
+The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines if the navigation is forward that is using the Ctrl+f6 keys or backward using the ctrl+shift+f6 keys.
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### Desktop
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="false":::
+
 ## Best practices
 
 Use these recommendations to create a quality app experience.
