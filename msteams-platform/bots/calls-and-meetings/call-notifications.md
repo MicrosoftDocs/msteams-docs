@@ -7,7 +7,7 @@ keywords: calling calls notifications callback region affinity
 ms.date: 04/02/2019
 ---
 
-# Incoming call notifications
+# Incoming call notifications Hello this is test line for heading 1
 
 In [registering a calls and meetings bot for Microsoft Teams](./registering-calling-bot.md#create-new-bot-or-add-calling-capabilities), the Webhook for calling URL is mentioned. This URL is the webhook endpoint for all incoming calls to your bot.
 
@@ -33,7 +33,6 @@ You call your webhook from the data-center hosting the call. The call starts in 
 HTTP/1.1 302 Found
 Location: your-new-location
 ```
-# Hello this is test line for heading 1
 
 Enable your bot to answer an incoming call using the [answer](https://developer.microsoft.com/graph/docs/api-reference/beta/api/call_answer) API. You can specify the `callbackUri` to handle this particular call. This is useful for stateful instances where your call is handled by a particular partition, and you want to embed this information in the `callbackUri` for routing to the right instance.
 
