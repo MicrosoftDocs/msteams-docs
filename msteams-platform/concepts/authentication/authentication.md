@@ -2,7 +2,7 @@
 title: Authenticating app users
 description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO AAD
 ---
 # Authenticate users in Microsoft Teams

@@ -3,7 +3,7 @@ title: Invoke and dismiss task modules
 description: Invoke and dismiss task modules.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Invoke and dismiss task modules

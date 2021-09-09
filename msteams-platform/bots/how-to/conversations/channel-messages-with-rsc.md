@@ -3,7 +3,7 @@ title: Receive all channel messages with RSC
 author: surbhigupta12
 description: Receive all channel messages with RSC permissions
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Receive all channel messages with RSC

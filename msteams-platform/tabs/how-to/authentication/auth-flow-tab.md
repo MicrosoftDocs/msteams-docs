@@ -2,7 +2,7 @@
 title: Authentication flow for tabs
 description: Describes authentication flow in tabs
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams authentication flow tabs
 ---
 # Microsoft Teams authentication flow for tabs
