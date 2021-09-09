@@ -219,7 +219,7 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     "groupchat": "bot"
   },
   "subscriptionOffer": {
-    "offerId": "Recloud.12345"
+    "offerId": "publisherId.offerId"
   }
 }
 ```
