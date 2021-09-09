@@ -27,7 +27,7 @@ Here's an idea of what you'll know after going through the lessons.
 
 ### Teams app fundamentals
 
-The [Teams developer platform](../overview.md) lets you build custom apps in three steps.
+The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
 
 :::image type="content" source="../assets/images/build-your-first-app/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
 

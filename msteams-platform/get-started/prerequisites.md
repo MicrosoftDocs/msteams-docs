@@ -31,20 +31,27 @@ Some other important tools you need are based on how you prefer to build your Te
 
 ## Install conditional tools
 
-Some tools are dependant on the development environment and hosting options you choose.
-### Prerequisites for Teams Toolkit
+Select tools based on the development environment and hosting options you use.
+<details>
+### <summary>Prerequisites for Teams Toolkit </summary>
 
-| For Teams Toolkit | Install |
+| If you want to use | Install |
 | --- | --- |
 | Teams Toolkit | [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md), and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) |
 | React for app development | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) |
-| **Tools installed from Visual Studio Code Extensions or if you use Linux including WSL** |
-| Run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) It is installed within the project directory (using the npm `devDependencies`) |
-| Install customized bindings for local debugging and Azure Functions app deployments | [.NET SDK](/dotnet/core/install/). If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+
+You also need to install the following Visual Studio Code Extensions.
+
+| If you want to | Install |
+| --- | --- | 
+| Run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) It's installed in the project directory (using the npm `devDependencies`) |
+| Install customized bindings for local debugging and Azure Functions app deployments | [.NET SDK](/dotnet/core/install/). If you haven't installed the .NET 3.1 (or later) SDK globally, install the portable version. |
 |  Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections | [ngrok](https://ngrok.com/download) |
 |
+</details>
 
-### Prerequisites for other languages and tools
+<details>
+### <summary>Prerequisites for other languages and tools </summary>
 If you choose a different environment to build your app, select the appropriate tools and install them.
 
 | If you want to use | Install |
@@ -54,6 +61,26 @@ If you choose a different environment to build your app, select the appropriate 
 | Node.js | Git, Node.js, NPM |
 | Yeoman generator | Yeoman generator, Gulp CLI | 
 |
+</details>
+<details>
+### <summary>Install Optional Tools </summary>
+
+Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
+
+- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
+- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
+
+| To use | Install | 
+|--- | --- |
+| Data stored in Azure or deploy a cloud-based backend for your Teams app in Azure | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+and [Azure CLI](/cli/azure/install-azure-cli) |
+| Microsoft Graph data | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) |
+| Developer Portal for Teams to configure, manage, and distribute your Teams app including to your organization or the Teams store | [Developer Portal for Teams](https://dev.teams.microsoft.com/) |
+|
+
+> [!TIP]
+> If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
+</details>
 
 ## Prepare development environment
 After you've installed the required tools, set up the development environment.
@@ -75,7 +102,7 @@ You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](http
 
 # [Visual Studio 2019](#tab/vs)
 
-You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET. If you are not intending to develop Teams apps in .NET, install the Visual Studio Code version of Teams Toolkit.
+You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
 
 To install the Teams Toolkit extension:
 
@@ -99,42 +126,22 @@ Depending on your configuration, you may need to use `sudo` to install the CLI:
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
 ```
 
-This is more common on Linux and macOS systems.
+This condition is more common on Linux and macOS systems.
 
-Ensure you add the npm global cache to your PATH. This is normally done as part of the Node.js installer.  
+Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
 
 You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
 > [!CAUTION]
-> Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information, refer to the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+> Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information abuut it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
 
 ---
 
- ### Install Optional Tools
+ ## Enable sideloading
 
-Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
+During development, you must load your app in Teams without distributing it. This process is known as sideloading.
 
-- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
-
-If you want to access data stored in Azure or deploy a cloud-based backend for your Teams app in Azure, install these tools:
-
-- [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](/cli/azure/install-azure-cli)
-
-If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
-
-- [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
-
-With the Developer Portal for Teams, you can configure, manage, and distribute your Teams app including to your organization or the Teams store.
-
-- [Developer Portal for Teams](https://dev.teams.microsoft.com/)
-
-## Enable sideloading
-
-During development, you must load your app within Teams without distributing it. This is known as sideloading.
-
-If you have a Teams account, verify if you can sideload apps in Teams:
+If you have a Teams account, verify if sideloading apps in Teams is possible:
 
 1. In the Teams client, select **Apps**.
 1. Select **Upload a custom app**.
@@ -146,12 +153,12 @@ If you have a Teams account, verify if you can sideload apps in Teams:
 
 ## Get a free Teams developer tenant (optional)
 
-If you cannot see the sideload option, or you do not have a Teams account, you can get a free Teams developer account by joining the M365 developer program.  The registration process takes approximately two minutes.
+If you can't see the sideload option or you don't have a Teams account, get a free Teams developer account. You can do so by joining the Microsoft 365 developer program. The registration process takes approximately two minutes.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. In the welcome screen, select **Set up E5 subscription**.
-1. Set up your administrator account. After you finish, you should see a screen like this.
+1. Set up your administrator account. After you finish, the following screen appears.
 
     :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
 
@@ -165,12 +172,12 @@ If you wish to host your app or access resources within Azure, you must have an 
 
 You must have access to two accounts:
 
-- Your Microsoft 365 account credentials. This is the account that you use to sign in to Teams. If you're using a Microsoft 365 developer program tenant, this is the admin account you set up when you registered for the program.
-- Your Azure credentials. This is the account that you use to access the Azure Portal and for provisioning new cloud resources to support your app.
+- Your Microsoft 365 account credentials: Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+- Your Azure credentials: Use this account to access the Azure portal and to provision new cloud resources to support your app.
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code
+1. Open Visual Studio Code.
 1. Select the Teams icon in the sidebar:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
@@ -179,7 +186,8 @@ You must have access to two accounts:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you are prompted, you can close the browser and return to Visual Studio Code.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser and return to Visual Studio Code.
+
 1. Return to the Teams Toolkit within Visual Studio Code.
 1. Select **Sign in to Azure**.
 
@@ -192,7 +200,7 @@ You must have access to two accounts:
 
 # [Visual Studio 2019](#tab/vs)
 
-Visual Studio 2019 prompts you to log in to each service as required. You do not need to sign in to your M365 and Azure accounts in advance.
+Visual Studio 2019 prompts you to log in to each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
 # [Command line](#tab/cli)
 
@@ -202,7 +210,7 @@ Visual Studio 2019 prompts you to log in to each service as required. You do not
     teamsfx account login m365
     ```
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your M365 account. You are prompted when you can close the browser.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. Close the browser when you're prompted.
 
 2. Sign in to Azure with the TeamsFx CLI:
 
@@ -210,13 +218,13 @@ Visual Studio 2019 prompts you to log in to each service as required. You do not
     teamsfx account login azure
     ```
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. You are prompted when you can close the browser.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. Close the browser when you're prompted.
 
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
 
 
-    Now that your development environment is configured, you can create, build, and deploy your first Teams app.
+    Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
 ## See also
 
