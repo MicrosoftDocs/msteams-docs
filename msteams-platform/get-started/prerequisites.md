@@ -33,7 +33,7 @@ Some other important tools you need are based on how you prefer to build your Te
 
 Select tools based on the development environment and hosting options you use.
 <details>
-### <summary>Prerequisites for Teams Toolkit </summary>
+<summary> Prerequisites for Teams Toolkit </summary>
 
 | If you want to use | Install |
 | --- | --- |
@@ -51,7 +51,7 @@ You also need to install the following Visual Studio Code Extensions.
 </details>
 
 <details>
-### <summary>Prerequisites for other languages and tools </summary>
+<summary>Prerequisites for other languages and tools </summary>
 If you choose a different environment to build your app, select the appropriate tools and install them.
 
 | If you want to use | Install |
@@ -63,7 +63,7 @@ If you choose a different environment to build your app, select the appropriate 
 |
 </details>
 <details>
-### <summary>Install Optional Tools </summary>
+<summary>Install Optional Tools </summary>
 
 Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
 

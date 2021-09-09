@@ -123,10 +123,10 @@ To build and run your app locally:
    After the app is loaded, you can try to use the sample functionality:
    You can launch the message extension from three dots in the composing area. Use the search npm packages from the search bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Your Search-based messaging extension in action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="This image shows your Search-based messaging extension in action":::
    
    You can also try to @ your message extension instance. You can find it in the search bar in the top row of Teams and search for npm package.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Your Search-based messaging extension in action":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="The Search-based messaging extension in action":::
 
    Type some text in the search box, then select one of the options. you can create and send adaptive cards of the search results.
     :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Your Search-based messaging extension in action":::

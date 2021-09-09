@@ -7,8 +7,9 @@ keywords: Microsoft Teams developer samples
 ---
 # Overview
 
-In this tutorial, you will learn how to create an app using React, Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator. You will also learn to create your first bot and messaging extension. This tutorial will take you through multiple Code Samples for Tabs, Bots, Messaging Extensions, Webhooks and Connectors, and Graph APIs that will help you to customize and configure your apps. In addition, you can also refer to the Microsoft Learn sections where you can extend the Teams developer platform capabilities by creating custom apps.  
+This tutorial introduces you to building and deploying Microsoft Teams apps. Learn to create a Microsoft Teams app using Teams Toolkit, React, Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator. You also learn to create your first bot and messaging extension. 
 
+You can look through multiple Code Samples for Tabs, Bots, Messaging Extensions, Webhooks and Connectors, and Graph APIs. These samples help you to customize and configure your apps.
 
 ## Build your first Microsoft Teams app overview
 
@@ -37,13 +38,13 @@ Some common scenarios that a custom Microsoft Teams app can help with are:
 * Help users quickly look up information in another system and add the results to a conversation in Teams.
 * Trigger workflows and processes based on a conversation in Teams, preserving the context of the conversation.
 
-Before you begin the tutorials, you should know the following about building apps for Teams.
+Before you begin the tutorials, you should know about app capabilities.
 
 ### App capabilities
 
 A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) and [user interaction points](../concepts/extensibility-points.md).
 
-Depending on what capabilities you want for your app, you will need an appropriate development toolset.
+Depending on the capabilities you want for your app, you need an appropriate development toolset.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks |
 |--------|-------------|--------|--------|--------|
@@ -51,13 +52,19 @@ Depending on what capabilities you want for your app, you will need an appropria
 | Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 | Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 
-The Get started section will take you through recommended tool sets and commonly used technologies, such as Visual Studio Code with Teams extension, React.js for tabs, and Node.js for bots and messaging extensions, although *you are not limited to using these particular stacks*.
+The Get started section takes you through recommended tool sets. It also covers commonly used technologies, such as: 
+- Visual Studio Code with Teams extension.
+- React.js for tabs.
+- Node.js for bots and messaging extensions.
+
+*You aren't limited to using these particular stacks*.
 
 If you prefer using a command-line interface (CLI), see [create your first Microsoft Teams app using the Yeoman generator](../get-started/get-started-yeoman.md).
 
-### Teams does not host your app
+### Teams doesn't host your app
 
-You will only install an app package that contains a configuration file, called manifest and app icons to Teams client. The rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Your app in the cloud or localhost during your development accesses Teams via HTTPS.
+You can only install an app package. This package contains a configuration file, called manifest, and app icons for Teams client. 
+The remaining app logic and data storage are hosted elsewhere, such as Azure Web Services. Your app, in the cloud or localhost during the development, accesses Teams via HTTPS.
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
