@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to integrate People Picker control
 keywords:  people picker control
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 

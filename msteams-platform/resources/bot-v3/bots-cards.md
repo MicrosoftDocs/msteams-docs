@@ -3,7 +3,7 @@ title: Using cards in bots
 description: Describes cards and how they are used in bot messages
 keywords: bots cards messaging
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 03/29/2018
 ---
 # Cards in bot conversations

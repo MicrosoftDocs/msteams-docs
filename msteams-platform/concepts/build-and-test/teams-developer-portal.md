@@ -2,7 +2,7 @@
 title: Manage your apps with the Developer Portal
 description: Learn how to manage your apps using the Developer Portal for Microsoft Teams.
 keywords: getting started developer portal teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ---

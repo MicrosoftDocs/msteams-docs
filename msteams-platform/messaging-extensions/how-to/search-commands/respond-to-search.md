@@ -4,6 +4,7 @@ author: surbhigupta
 description: How to respond to the search command from a messaging extension in a Microsoft Teams app.
 ms.topic: conceptual
 ms.author: anclear
+ms.localizationpriority: none
 ---
 # Respond to search command
 

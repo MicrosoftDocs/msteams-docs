@@ -2,7 +2,7 @@
 title: Moodle learning management system
 description: Overview of Moodle LMS integration with Teams
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
 ---
