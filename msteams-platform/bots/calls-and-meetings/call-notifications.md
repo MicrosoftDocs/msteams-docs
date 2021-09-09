@@ -92,6 +92,9 @@ The OAuth token has the following values, and is signed by Skype:
  > [!NOTE]
  > This is a test note 
 
+ > [!Tip]
+ >This is test tip
+
 The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each OAuth token value is used as follows:
 
 Here is a test sample of external link <https://github.com/v-vasudhab>
