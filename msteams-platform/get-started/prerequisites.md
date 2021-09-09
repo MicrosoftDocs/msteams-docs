@@ -9,21 +9,57 @@ ms.localizationpriority: none
 ---
 # Prerequisites: Get started with Microsoft Teams app development
 
-Before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
+Before you begin creating your first Teams app, install a few tools and set up your development environment.
 
 ## Install required tools
 
-Some of the tools you need depend on how you prefer to build your Teams app:
+The following tools are required for building an app:
 
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
-- If you are developing with JavaScript, TypeScript, or the SharePoint Framework (SPFx), install [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later.  
-- If you are developing with .NET, install [Visual Studio 2019](https://visualstudio.com/download). Ensure you install the **ASP.NET and web development** or **.NET Core cross-platform development** workload.
+
+Some other important tools you need are based on how you prefer to build your Teams app:
+
+| If you use | Install |
+| --- | --- |
+| JavaScript, TypeScript, or SharePoint Framework (SPFx) | [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later |
+| .NET | [Visual Studio 2019](https://visualstudio.com/download);  ASP.NET and web development OR .NET Core cross-platform development workload |
+
 
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-## Install the Teams Toolkit
+## Install conditional tools
+
+Some tools are dependant on the development environment and hosting options you choose.
+### Prerequisites for Teams Toolkit
+
+| For Teams Toolkit | Install |
+| --- | --- |
+| Teams Toolkit | [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md), and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) |
+| React for app development | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) |
+| **Tools installed from Visual Studio Code Extensions or if you use Linux including WSL** |
+| Run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) It is installed within the project directory (using the npm `devDependencies`) |
+| Install customized bindings for local debugging and Azure Functions app deployments | [.NET SDK](/dotnet/core/install/). If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+|  Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections | [ngrok](https://ngrok.com/download) |
+|
+
+### Prerequisites for other languages and tools
+If you choose a different environment to build your app, select the appropriate tools and install them.
+
+| If you want to use | Install |
+| --- | --- | 
+| SharePoint Framework (SPFx) | SharePoint App Catalog |
+| C# or .NET | Git, ngrok |
+| Node.js | Git, Node.js, NPM |
+| Yeoman generator | Yeoman generator, Gulp CLI | 
+|
+
+## Prepare development environment
+After you've installed the required tools, set up the development environment.
+
+
+### Install the Teams Toolkit
 
 The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
@@ -36,19 +72,6 @@ The Teams Toolkit helps simplify the development process with tools to provision
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools can be installed by the Visual Studio Code extension when they are needed. If already installed, the installed version can be used instead. If using Linux including WSL, you must install these tools before use:
-
-- [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
-
-    Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory (using the npm `devDependencies`).
-
-- [.NET SDK](/dotnet/core/install/)
-
-    The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed.
-
-- [ngrok](https://ngrok.com/download)
-
-    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
 # [Visual Studio 2019](#tab/vs)
 
@@ -87,7 +110,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ---
 
-## Install optional tools
+ ### Install Optional Tools
 
 Install browser tools for app development. For instance, if your app is written with React, you can use React Developer Tools:
 
@@ -156,7 +179,7 @@ You must have access to two accounts:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your M365 account. When you are prompted, you can close the browser and return to Visual Studio Code.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you are prompted, you can close the browser and return to Visual Studio Code.
 1. Return to the Teams Toolkit within Visual Studio Code.
 1. Select **Sign in to Azure**.
 

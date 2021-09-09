@@ -9,23 +9,29 @@ keywords: Microsoft Teams developer samples
 
 In this tutorial, you will learn how to create an app using React, Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator. You will also learn to create your first bot and messaging extension. This tutorial will take you through multiple Code Samples for Tabs, Bots, Messaging Extensions, Webhooks and Connectors, and Graph APIs that will help you to customize and configure your apps. In addition, you can also refer to the Microsoft Learn sections where you can extend the Teams developer platform capabilities by creating custom apps.  
 
-## Getting started with Microsoft Learn
-
-| **Capability**| **Learn module**|
-|--------|-------------|
-| Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](/learn/modules/embedded-web-experiences/) |
-| Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](/learn/modules/msteams-webhooks-connectors/) |
-|Messaging extensions  | [Task-oriented interactions in Microsoft Teams with messaging extensions](/learn/modules/msteams-messaging-extensions/)  |
-| Task modules |  [Collect input in Microsoft Teams with Task Modules](/learn/modules/msteams-task-modules/) |
-| Conversational bots  | [Create interactive conversational bots for Microsoft Teams](/learn/modules/msteams-conversation-bots/)  |
 
 ## Build your first Microsoft Teams app overview
 
-In the **get started** lessons, you learn how to create basic Teams apps. Each tutorial walks through how to build a simple, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.
+In the **get started** tutorial, you learn how to create basic Teams apps. Each tutorial walks through how to build a basic, real-world Teams app while introducing you to common tools, fundamental concepts, and more advanced features.  
+
+Additionally, this section includes alternative guides for you who are already familiar with Blazor, SPFx, C# or .NET, and Yeoman Generator.
+
+## What you'll learn
+
+Here's an idea of what you'll know after going through the lessons. 
+
+- Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension) 
+- Get experience with the Toolkit and SDKs 
+- Configure and build different types of Teams apps
+
 
 ### Teams app fundamentals
 
-The [Teams developer platform](../overview.md) lets you build custom apps. Some common scenarios that a custom Microsoft Teams app can help with are:
+The [Teams developer platform](../overview.md) lets you build custom apps in three steps.
+
+:::image type="content" source="../assets/images/build-your-first-app/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
+
+Some common scenarios that a custom Microsoft Teams app can help with are:
 
 * Embed your website or web app directly in the Teams client.
 * Help users quickly look up information in another system and add the results to a conversation in Teams.

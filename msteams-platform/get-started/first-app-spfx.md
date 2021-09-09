@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
 
-In this tutorial, you will learn how to create a new Microsoft Teams app in SharePoint Framework SPFx that implements a simple personal app. For example, a *personal app* includes a set of tabs for individual use. During the tutorial, you will learn about the structure of a Teams app, how to run an app locally, and how to deploy the app to SharePoint.
+This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx.
 
 ## Before you begin
 
@@ -21,7 +21,8 @@ Make sure your development environment is set up by installing the prerequisites
 
 ## Get organized
 
-In addition to the prerequisites, you also need to be an Administrator for a SharePoint Site Collection.  This is where you will deploy your app for hosting.  If you are using an M365 developer program tenant, use the administrator account you set up when you registered for the program.  
+Ensure that you have an Administrator account for a SharePoint Site Collection. You'll need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+
 
 ## Create your project
 
@@ -60,7 +61,7 @@ Use the Teams Toolkit to create your first project:
 
 1. When asked for the **Programming Language**, press **Enter** to accept the default.
 
-1. Select a workspace folder.  A folder will be created within your workspace folder for the project you are creating.
+1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
 
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
@@ -74,7 +75,7 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project.  Each question will tell you how to answer it (for example, to use arrow keys to select an option).  When you have answered the question, confirm your choice by pressing **Enter**.
+The CLI walks through some questions to create the project. Every question includes an instruction on answering it, for example, Use arrow keys to select an option. When you've answered the question, select **Enter** to confirm it.
 
 1. Select **Create a new Teams app**.
 1. Select **Tab**.
@@ -96,27 +97,22 @@ The CLI walks through some questions to create the project.  Each question will 
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-After the Teams Toolkit configures your project, you have the components to build a basic personal app for Teams that is hosted within the SharePoint Framework.  The project directories and files display in the Explorer area of Visual Studio Code.
+After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory. 
+The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
 
-- The settings you chose when creating the project are stored in `.fx/settings.json`.
-- The state of your project is stored in `.fx/env.*.json`.
-
-And the Teams app information is stored in the `appPackage` directory.
-
-- The app icons are stored as PNG files in `appPackage/color.png` and `appPackage/outline.png`.
-- The app manifest for publishing to Developer Portal for Teams is stored in `appPackage/manifest.source.json`.
-
+- The app icons are stored as PNG files in `color.png` and `outline.png`.
+- The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
+- The settings you chose when creating the project are stored in `settings.json`.
 
 Since you selected a SPFx Webpart project, the following files are relevant to your UI:
 
 - The folder `SPFx/src/webparts/{webpart}` contains your SPFx webpart.
 - The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
 
-For more information about SharePoint Webparts for Teams, [refer to the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
+For more information about SharePoint Webparts for Teams, [see the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
 ## Run your app locally
 
@@ -126,19 +122,19 @@ Teams Toolkit allows you to host your app locally and run it through the [ShareP
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press the **F5** key.
+1. From Visual Studio Code, select the **F5** key.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Screenshot showing how to start an SPFx app in a local workbench.":::
 
    > [!NOTE]
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This can take 3-5 minutes to complete.
 
-   After the SharePoint Workbench is loaded.
+   After the SharePoint Workbench is loaded:
 
    >[!NOTE]
    > The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Select **Add Webpart +** icons to add your webpart.
 
@@ -148,14 +144,14 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
 
-   Your app should now be running.  You can do normal debugging activities as if this were any other SPFx webpart (such as setting breakpoints).
+   Your app should now be running.  You can debug the app as any other SPFx webpart (such as setting breakpoints).
 
    > [!TIP]
    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
 
 ## Deploy your app to SharePoint
 
-Ensure a SharePoint App Catalog exists in your deployment.  If one does not exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be fully created.
+Ensure a SharePoint App Catalog exists in your deployment.  If it doesn't exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be created.
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -165,13 +161,13 @@ Ensure a SharePoint App Catalog exists in your deployment.  If one does not exis
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
 
-   You can monitor the progress by watching the dialogs in the bottom right corner.  After a few seconds, you will see the following notice:
+   The Toolkit updates the progress in the bottom-right corner. After a few seconds, you'll see the following notice:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
 1. After provisioning is complete, select **Deploy to the cloud**.
 
-1. Currently, automated deployment is not available.  A dialog will pop up prompting you to build and deploy manually. Select **Build SharePoint Package**.
+1. The Toolkit doesn't deploy the app automatically. When you're prompted to build and deploy manually, select **Build SharePoint Package**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
 
@@ -185,7 +181,7 @@ In your terminal window:
    teamsfx provision
    ```
 
-   You may be prompted to log in to your Azure subscription.  If required, you will be prompted to select an Azure subscription to use for the Azure resources.
+   If you're prompted to log into your Azure subscription, select a subscription to use the Azure resources.
 
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
@@ -202,7 +198,7 @@ In your terminal window:
 
 The SharePoint package is located in `SPFx/sharepoint/solution` within your project.  Upload the package to SharePoint:
 
-1. Log into the M365 Admin Console, then navigate to the SharePoint App Catalog.
+1. Log into Microsoft 365 Admin Console, then navigate to the SharePoint App Catalog.
 
    1. Open `https://admin.microsoft.com/AdminPortal/Home`.
    1. Under **Admin centers**, select the **SharePoint** admin center.

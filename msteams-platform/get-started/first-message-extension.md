@@ -10,12 +10,12 @@ ms.localizationpriority: none
 
 # Build and run your first messaging extension for Microsoft Teams
 
-In this tutorial, you will learn how to create a *search command* to search for external data and insert the results into a message. 
+This tutorial walks you through the steps to create a *search command*. You use it to search for external data and insert the results into a message.
 
 There are two types of Teams **messaging extensions**:
 
-- [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md) allow you to search external systems and insert the results of that search into a message in the form of a card.
-- [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md) allow you present your users with a modal popup to collect or display information, then process their interaction and send information back to Teams.
+- [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
+- [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
 ## Before you begin
 
@@ -43,7 +43,7 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab** and select **OK**.
+1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab**, and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
@@ -58,11 +58,11 @@ Use the Teams Toolkit to create your first project:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
 
-1. Select a workspace folder.  A folder will be created within your workspace folder for the project you are creating.
+1. Select a workspace folder.  A folder is created in your workspace folder for the project.
 
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
-   Your Teams app will be created within a few seconds.
+   Teams Toolkit creates the app in a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -72,13 +72,16 @@ Use the `teamsfx` CLI to create your first project.  Start from the folder where
 teamsfx new
 ```
 
-The CLI walks through some questions to create the project.  Each question will tell you how to answer it (for example, to use arrow keys to select an option).  When you have answered the question, confirm your choice by pressing **Enter**.
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
+For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+
 
 1. Select **Create a new Teams app**.
 1. Select the **Message Extension** and deselect **Tab**.
 1. Select **Create a new bot registration**.
 1. Select **JavaScript** as the programming language.
-1. Press **Enter** to select the default workspace folder.
+1. Select **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
    After all the questions have been answered, your project is created.
@@ -89,55 +92,55 @@ The CLI walks through some questions to create the project.  Each question will 
 
 If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
-A messaging extension uses the [Bot Framework](https://docs.botframework.com) to allow the user to interact with your service via a conversation.  After scaffolding, your project will look like this:
+A messaging extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
+The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
 ## Run your app locally
 
-Teams Toolkit allows you to host your app locally.  To do this:
+You can use Teams Toolkit to host your app in the local environment. To prepare the environment, ensure that:
 
-- An Azure Active Directory Application is registered within the M365 tenant.
+- An Azure Active Directory Application is registered within the Microsoft 365 tenant.
 - An app manifest is submitted to the Developer Portal for Teams.
-- An API is run locally using Azure Functions Core Tools to support your app.
-- [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your messaging extension.
+- An API is run in the local environment using Azure Functions Core Tools to support your app.
+- [ngrok](https://ngrok.io) is installed. You use it to provide a tunnel between Teams and your messaging extension.
 
 To build and run your app locally:
 
-1. From Visual Studio Code, press the **F5** key to run your application in debug mode.
+1. From Visual Studio Code, select **F5** to run your application in debug mode.
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
-1. Teams will be loaded in a web browser, and you will be prompted to sign in. If prompted to open Microsoft Teams, select Cancel to remain within the browser. Sign in with your M365 account.
+1. Teams opens in a web browser. If you're prompted to open Microsoft Teams, select **Cancel** to remain in the browser. Sign in with your Microsoft 365 account when prompted.
 
 1. Select **Add** to add the app to your account.
 
    After the app is loaded, you can try to use the sample functionality:
-   You can launch the message extension from three dots in the composeing area and try search npm packages from the search bar.
+   You can launch the message extension from three dots in the composing area. Use the search npm packages from the search bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Your Search-based messaging extension in action":::
    
-   You can also try to @ your message extension instance from search bar in the top row of Teams and search for npm package.
+   You can also try to @ your message extension instance. You can find it in the search bar in the top row of Teams and search for npm package.
     :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Your Search-based messaging extension in action":::
 
-   Type some text in the search box, then select one of the options, you can create and send adaptive cards of the search results.
+   Type some text in the search box, then select one of the options. you can create and send adaptive cards of the search results.
     :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Your Search-based messaging extension in action":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
 <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-When you press the **F5** key, the Teams Toolkit:
+When you select **F5**, the Teams Toolkit:
 
 1. Registers your application with Azure Active Directory.
 1. Registers your application for "side loading" in Microsoft Teams.
 1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-1. Starts an ngrok tunnel so Teams can communicate with your app.
+1. Starts ngrok tunnel so Teams can communicate with your app.
 1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
 
 </details>
@@ -146,10 +149,10 @@ When you press the **F5** key, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To successfully run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-sideloading).
+To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#enable-sideloading).
 
 > [!TIP]
-> Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to successfully sideload the app.
+> Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
 </details>
 
 [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
@@ -159,12 +162,12 @@ To successfully run your app in Teams, you must have a Microsoft 365 development
 <details>
 <summary>Learn what happens when you deployed your app to Azure</summary>
 
-Before deployment, the application has been running locally:
+Before deployment, the application runs in the local environment:
 
 1. The backend runs using _Azure Functions Core Tools_.
 1. The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
 
-Deployment involves provisioning resources on an active Azure subscription and deploying (uploading) the backend and frontend code for the application to Azure. The backend uses a variety of Azure services, including Azure App Service and Azure Bot Service.
+Deployment involves two steps. First, you provision resources on an active Azure subscription. Then, you deploy (upload) the backend and frontend code for the application to Azure. The backend uses various Azure services, including Azure App Service and Azure Bot Service.
 
 </details>
 
@@ -174,13 +177,15 @@ Deployment involves provisioning resources on an active Azure subscription and d
 
 ## Code sample
 
-The Teams Search Auth Config for sample projects on GitHub, demonstrate how to create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples). The samples also demonstrate how to create message extensions that accept search requests and return the results after the user has signed in.
+Use the Teams Search Auth Config for sample projects on GitHub to see how to: 
+- Create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples).
+- Create message extensions that accept search requests and return the results after the user has signed in.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |-----------------|-----------------|-------------|--------------|--------|
 | Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## Additional code sample
+## More code sample
 
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
