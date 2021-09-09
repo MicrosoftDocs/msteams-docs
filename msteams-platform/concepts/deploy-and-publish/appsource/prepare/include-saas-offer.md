@@ -137,7 +137,7 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
 1. Select **View** to preview your SaaS offer's subscription plans.
 1. If everything looks good, select **Save**.
 
-   The `subscriptionOffer` property is added to your [app manifest](~resources/schema/manifest-schema-dev-preview.md#subscriptionoffer).
+   The `subscriptionOffer` property is added to your [app manifest](~/resources/schema/manifest-schema-dev-preview.md#subscriptionoffer).
 
    ```json
       "subscriptionOffer": {
