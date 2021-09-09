@@ -29,7 +29,7 @@ Here's a general idea of how to do this:
    :::column-end:::
    :::column span="1":::
    
-:::image type="content" source="../../../assets/images/submission/teams-app-store-publish-process.png" alt-text="Diagram showing the Teams app store publishing process." border="false":::
+:::image type="content" source="~/assets/images/saas-offer/saas-offer-diagram.png" alt-text="Diagram showing process for how to include a SaaS offer with your Teams app." border="false":::
 
    :::column-end:::
 :::row-end:::
