@@ -65,7 +65,7 @@ Authentication: Bearer <TOKEN>
 ]
 ```
 
-```dotnetcli this is dummy code
+```dotnetcli
 This is test code sample 
     "iat": 1466741440,
     "nbf": 1466741440,
@@ -88,6 +88,8 @@ The OAuth token has the following values, and is signed by Skype:
 The OpenID configuration published at <https://api.aps.skype.com/v1/.well-known/OpenIdConfiguration> can be used to verify the token. Each OAuth token value is used as follows:
 
 Here is a test sample of external link <https://github.com/v-vasudhab>
+
+Here is test sample of internal link [Calls and online meetings bots](~\bots\calls-and-meetings\calls-meetings-bots-overview.md)
 
 * `aud` where audience is the App ID URI specified for the application.
 * `tid` is the tenant id for Contoso.com.
