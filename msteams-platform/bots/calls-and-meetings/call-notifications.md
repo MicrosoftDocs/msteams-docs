@@ -94,6 +94,7 @@ Here is test sample of internal link [Calls and online meetings bots](~\bots\cal
 * `aud` where audience is the App ID URI specified for the application.
 * `tid` is the tenant id for Contoso.com.
 * `iss` is the token issuer, `https://api.botframework.com`.
+* This is unordered list
 
 For your code handling, the webhook must validate the token, ensure it has not expired, and check whether it has been signed by the published OpenID configuration. You must also check whether aud matches your App ID before accepting the callback request.
 
