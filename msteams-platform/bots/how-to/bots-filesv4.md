@@ -22,7 +22,7 @@ There are two ways to send files to and receive files from a bot:
 
 ## Use the Graph APIs
 
-Post messages with card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
+Post messages with  the card attachments that refer to existing SharePoint files, using the Graph APIs for [OneDrive and SharePoint](/onedrive/developer/rest-api/). To use the Graph APIs, obtain access to either of the following through the standard OAuth 2.0 authorization flow:
 
 * A user's OneDrive folder for `personal` and `groupchat` files.
 * The files in a team's channel for `channel` files.
