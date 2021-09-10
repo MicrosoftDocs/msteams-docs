@@ -88,6 +88,7 @@ The OAuth token has the following values, and is signed by Skype:
 |col 1|col 2|col 3|
 |-----|-----|-----|
 |-----|-----|-----|
+|-----|-----|-----|
 
  > [!NOTE]
  > This is a test note 
