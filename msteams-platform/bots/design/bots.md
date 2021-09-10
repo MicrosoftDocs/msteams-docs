@@ -16,6 +16,7 @@ Bots are conversational apps that perform a specific set of tasks. Based on the 
 To guide your app design, the following information describes and illustrates how people can add, use, and manage bots in Teams.
 
 ## Microsoft Teams UI Kit
+## Microsoft Teams UIKit 1234
 
 You can find more comprehensive bot design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
 
@@ -25,6 +26,9 @@ You can find more comprehensive bot design guidelines, including elements that y
 ## Add a bot
 
 Bots are available in chats, channels, and personal apps.
+**bold**
+***italic***
+:::image type="content" source="~/assets/Image123.png" alt-text="Example shows how to access a mobile bot in a group chat using an @mention." border="false":::
 
 ### Mobile
 
