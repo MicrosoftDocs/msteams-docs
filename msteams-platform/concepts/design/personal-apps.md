@@ -138,8 +138,8 @@ function handleFocusEnter(navigateForward: boolean): void
 }
 ```
 
-After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events.    
-The keys useful for move within Teams are as follows:    
+After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.   
+The keys useful for move events within Teams are as follows:    
 * Forward event -> Ctrl+F6 keys
 * Backward event -> Ctrl+Shift+F6 keys
 
