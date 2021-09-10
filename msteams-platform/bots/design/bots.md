@@ -28,7 +28,7 @@ You can find more comprehensive bot design guidelines, including elements that y
 Bots are available in chats, channels, and personal apps.
 **bold**
 ***italic***
-:::image type="content" source="~/assets/Image123.png" alt-text="Test Image" border="false":::
+:::image type="content" source="~/assets/NewImage.png" alt-text="Test Image" border="false":::
 
 ### Mobile
 
