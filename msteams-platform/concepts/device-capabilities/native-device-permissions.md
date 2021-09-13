@@ -2,7 +2,7 @@
 title: Request device permissions for your Microsoft Teams app
 keywords: teams apps capabilities permissions
 description: How to update your app manifest in order to request access to native features that usually require user consent
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 ---
 
@@ -19,6 +19,7 @@ You can enrich your Teams app with native device capabilities, such as camera, m
 
 You must request the device permissions to access native device capabilities. The device permissions work similarly for all app constructs, such as tabs, task modules, or messaging extensions. The user must go to the permissions page in Teams settings to manage device permissions.
 By accessing the device capabilities, you can build richer experiences on the Teams platform, such as:
+
 * Capture and view images.
 * Scan QR or barcode.
 * Record and share short videos.
@@ -26,7 +27,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information.
 
 > [!NOTE]
-> Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel. 
+> Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
 
 ## Access device permissions
 
@@ -34,21 +35,12 @@ The [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-cli
 
 While access to these features is standard in modern web browsers, you must inform Teams about the features you use by updating your app manifest. This update allows you to ask for permissions while your app runs on the Teams desktop client.
 
-> [!NOTE] 
+> [!NOTE]
 > Currently, Microsoft Teams support for media capabilities and QR barcode scanner capability is only available for mobile clients.
 
 ## Manage permissions
 
 A user can manage device permissions in Teams settings by selecting **Allow** or **Deny** permissions to specific apps.
- 
-# [Desktop](#tab/desktop)
-
-1. Open your Teams app.
-1. Select your profile icon in the upper right corner of the window.
-1. Select **Settings** > **Permissions** from the drop-down menu.
-1. Select your desired settings.
-
-   ![Device permissions desktop settings screen](../../assets/images/tabs/device-permissions.png)
 
 # [Mobile](#tab/mobile)
 
@@ -58,6 +50,15 @@ A user can manage device permissions in Teams settings by selecting **Allow** or
 1. Select your desired settings.
 
     ![Device permissions mobile settings screen](../../assets/images/tabs/MobilePermissions.png)
+
+# [Desktop](#tab/desktop)
+
+1. Open your Teams app.
+1. Select your profile icon in the upper right corner of the window.
+1. Select **Settings** > **Permissions** from the drop-down menu.
+1. Select your desired settings.
+
+   ![Device permissions desktop settings screen](~/assets/images/tabs/device-permissions.png)
 
 ---
 
@@ -142,9 +143,6 @@ For example:
     Notification.requestPermission(function(result) { /* ... */ });
     ```
 
-
-
-
 * To use the camera or access photo gallery, Teams mobile asks permission when you call `selectMedia()`:
 
     ```JavaScript
@@ -168,15 +166,16 @@ For example:
       /* ... *
     /});
     ```
-# [Desktop](#tab/desktop)
-
-   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
 
 # [Mobile](#tab/mobile)
 
    ![Tabs mobile device permissions prompt](../../assets/images/tabs/MobileLocationPermission.png)
 
-* * * 
+# [Desktop](#tab/desktop)
+
+   ![Tabs desktop device permissions prompt](~/assets/images/tabs/device-permissions-prompt.png)
+
+---
 
 ## Permission behavior across login sessions
 
@@ -201,4 +200,3 @@ Device permissions are stored for every login session. It means that if you sign
 
 > [!div class="nextstepaction"]
 > [Integrate location capabilities in Teams](location-capability.md)
-

@@ -2,7 +2,7 @@
 title: Create a personal tab
 author: laujan
 description: A quickstart guide to creating a personal tab with the Yeoman Generator for Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 ---

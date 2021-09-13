@@ -2,7 +2,7 @@
 title: Single sign-on support for bots 
 description: Describes how to get a user token. Currently, a bot developer can use a sign in card or the azure bot service with the OAuth card support.
 keywords: token, user token, SSO support for bots
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 
@@ -140,7 +140,7 @@ If the application contains a bot and a tab, then use the following code to add 
 
 **webApplicationInfo** is the parent of the following elements:
 
-* **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD.
+* **id** - The client ID of the application. This is the application ID that you obtained as part of registering the application with AAD. Do not share this Application ID with multiple Teams apps. Create a new AAD app for each application manifest that uses `webApplicationInfo`.
 * **resource** - The domain and subdomain of your application. This is the same URI, including the `api://` protocol that you registered when creating your `scope` in [Register your app through the AAD portal](#register-your-app-through-the-aad-portal). You must not include the `access_as_user` path in your resource. The domain part of this URI must match the domain and subdomains used in the URLs of your Teams application manifest.
 
 ### Add the code to request and receive a bot token

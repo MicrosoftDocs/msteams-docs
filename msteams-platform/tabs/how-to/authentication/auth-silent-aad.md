@@ -2,7 +2,7 @@
 title: Silent authentication
 description: Describes silent authentication
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams authentication SSO silent AAD
 ---
 # Silent authentication

@@ -2,7 +2,7 @@
 title: Choosing a setup to test and debug your app
 description: Describes options for testing and debugging Microsoft Teams apps
 keywords: teams run debug apps
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 

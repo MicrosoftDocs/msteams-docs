@@ -1,9 +1,10 @@
 ---
-title: Configure identity provider
-description: The document has been merged
-ms.topic: conceptual
-localization_priority: Normal
-keywords: teams authentication AAD
+title: Configure OAuth 2.0 identity providers
+description: Describes how to configure identity providers with a focus on Azure AD
+ms.topic: how-to
+ms.localizationpriority: medium
+keywords: teams authentication AAD oauth identity provider
+
 ---
 
 # Configure identity provider

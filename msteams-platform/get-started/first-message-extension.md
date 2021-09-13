@@ -5,6 +5,7 @@ description: Create a messaging extension for Microsoft Teams using the Teams To
 ms.author: adhal
 ms.date: 05/20/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first messaging extension for Microsoft Teams
@@ -116,11 +117,16 @@ To build and run your app locally:
 
 1. Select **Add** to add the app to your account.
 
-   After the app is loaded, you will be taken directly to a search dialog:
+   After the app is loaded, you can try to use the sample functionality:
+   You can launch the message extension from three dots in the composeing area and try search npm packages from the search bar.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-completed-app.png" alt-text="Your Search-based messaging extension in action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Your Search-based messaging extension in action":::
+   
+   You can also try to @ your message extension instance from search bar in the top row of Teams and search for npm package.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="Your Search-based messaging extension in action":::
 
-   Type some text in the search box, then select one of the options.  An adaptive card will be added to your input box.
+   Type some text in the search box, then select one of the options, you can create and send adaptive cards of the search results.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Your Search-based messaging extension in action":::
 
 <!-- markdownlint-disable MD033 -->
 <details>

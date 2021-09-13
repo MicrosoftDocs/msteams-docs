@@ -2,7 +2,7 @@
 title: Proactive messages
 description: Describes bots can start a conversation in Microsoft Teams
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams scenarios proactive messaging conversation bot
 ---
 # Proactive messaging for bots

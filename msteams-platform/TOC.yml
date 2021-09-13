@@ -92,7 +92,7 @@
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
-  - name: Enable app customization
+  - name: App customization
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
@@ -230,7 +230,7 @@
     - name: Channel and group conversations
       href: bots/how-to/conversations/channel-and-group-conversations.md
     - name: Conversation events in your Teams bot
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md
+      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       items:
@@ -296,12 +296,14 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-  - name: Meeting app extensibility
+  - name: Unified meetings apps
     href: apps-in-teams-meetings/meeting-app-extensibility.md
-  - name: Prerequisites and API references for apps in Teams meetings
+  - name: Prerequisites for apps in Teams meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  - name: Meeting apps API references
+    href: apps-in-teams-meetings/API-references.md
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md   
 - name: Build webhooks and connectors

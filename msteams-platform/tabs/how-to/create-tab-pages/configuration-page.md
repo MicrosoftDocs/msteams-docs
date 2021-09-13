@@ -3,7 +3,7 @@ title: Create a configuration page
 author: surbhigupta
 description: how to create a configuration page
 keywords: teams tabs group channel configurable
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -183,7 +183,7 @@ Microsoft Teams `setSettings()` configuration for removal page:
 ```javascript
 microsoftTeams.settings.setSettings({
     contentUrl: "add content page URL here",
-    entityId: "add unique name here",
+    entityId: "add a unique identifier here",
     suggestedDisplayName: "add name to display on tab here",
     websiteUrl: "add website URL here //Required field for configurable tabs on Mobile Clients",
     removeUrl: "add removal page URL here"

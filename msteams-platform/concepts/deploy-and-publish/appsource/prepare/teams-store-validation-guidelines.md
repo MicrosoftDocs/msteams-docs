@@ -4,6 +4,7 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
+ms.localizationpriority: none
 ---
 # Microsoft Teams store validation guidelines
 
@@ -193,6 +194,11 @@ The long description can provide an engaging narrative that highlights your app'
   * "... working with Microsoft Teams."
   * "... within Microsoft Teams."
   * "... for Microsoft Teams."
+  * “... integrated with Microsoft Teams.”
+  * “... built for... ”
+  * “... developed for... ”
+  * “... designed for...”
+
 
 **Don't:**
 
@@ -203,15 +209,8 @@ The long description can provide an engaging narrative that highlights your app'
 * Include typos, grammatical errors, and unnecessary capitalizations (for example, **Users** instead of **users**).
 * Include links to AppSource.
 * Use the following language unless you are a certified Microsoft partner:
-  * "... integrated with Microsoft Teams"
-  * "... integrates with ..."
-  * "... built for ..."
-  * "... built on ..."
-  * "... runs on ..."
-  * "... enabled by ..."
   * "... certified for ..."
-  * "... developed for ..."
-  * "... designed for ..."
+  * "... powered by ..."
 
 ### Screenshots
 

@@ -2,13 +2,16 @@
 title: What's new
 description: Describes all the new developer features in Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams what's new latest
 ---
 
 # What's new for developers in Microsoft Teams
 
 Discover Microsoft Teams platform features that are generally available (GA) and in developer preview.
+
+> [!IMPORTANT]
+> You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
 ## GA features
 
@@ -22,6 +25,10 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|09/06/2021| Hide Teams app until Admin allows to unhide the app. | [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
+|08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO). | [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
+|08/19/2021| Installation update event received when you install a bot to a conversation thread. | [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Build tabs with Adaptive Cards|[Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md)|
 |08/04/2021| Tabs will no longer have margins surrounding their experiences.  | [Removing tab margins](resources/removing-tab-margins.md) |
 |07/08/2021|Meeting app extensibility is available on mobile. Mobile clients support apps during meeting. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
@@ -163,12 +170,11 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md#meeting-details-api) |
+|06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
 |05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-|05/25/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
 |05/24/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 
@@ -181,3 +187,20 @@ Along with new features, we also provide [production-ready Teams app templates](
 ## Submit your feedback
 
 We encourage Teams developers to ask questions, file bugs, submit feature requests, and make contributions. You can submit feedback through any of the [available channels](feedback.md).
+
+## Get latest updates
+
+You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
+
+**To configure RSS feed**
+
+1. Open Microsoft Teams.
+1. Select **Teams** from the left pane.
+1. Select a channel in the team.
+1. Select ellipses &#x25CF;&#x25CF;&#x25CF; and from the dropdown list, select **Connectors**.
+1. Search for **RSS** in the **Connectors** dialog box that appears.
+1. Select **Configure**.
+1. Enter a name in **Enter a name for your RSS connection.**.
+1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
+1. Select the frequency of the feed from the **Digest frequency** dropdown list.
+1. Select **Save**.

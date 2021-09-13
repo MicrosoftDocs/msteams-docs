@@ -2,7 +2,7 @@
 title: Create a channel or group tab
 author: laujan
 description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
 ---
@@ -194,7 +194,7 @@ gulp build
     gulp serve
     ```
 
-1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser, replace **<yourDefaultAppNameTab>** with your tab name, and view your application's home page as shown in the following image:
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser, replace **yourDefaultAppNameTab** with your tab name, and view your application's home page as shown in the following image:
 
     ![home page screenshot](~/assets/images/tab-images/homePage.png)
 

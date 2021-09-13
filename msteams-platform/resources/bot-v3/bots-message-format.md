@@ -3,7 +3,7 @@ title: Bot message format
 description: Describes the details of formatting for bot messages
 keywords: teams scenarios channels conversation bot message
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.date: 05/20/2019
 ---
 # Message formatting for bots

@@ -2,7 +2,7 @@
 title: Designing activity feed notifications
 author: heath-hamilton
 description: Learn how to design activity feed notifications for your Teams app and get the Microsoft Teams UI Kit.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: reference
 ---
@@ -10,13 +10,13 @@ ms.topic: reference
 
 The activity feed is a surface for users to access their notifications in Microsoft Teams. The feed retains notifications from the past four weeks.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed." border="false":::
-
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile." border="false":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed." border="false":::
 
 ---
 
@@ -47,6 +47,15 @@ Users can manage notifications sent from your app in the Teams settings page.
 
 Each activity generates a system notification. What displays depends on what the user configures in their notification settings. Users can also choose a notification style based on their operating system.
 
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variants of Teams activity feed cards on Android and iOS." border="false":::
+
+|Counter|Description|
+|----------|-----------|
+|1|Android|
+|2|iOS|
+
 # [Desktop](#tab/desktop)
 
 :::image type="content" source="../../assets/images/activity-feed/related-system-notifications.png" alt-text="Variants of Teams activity cards on different operating systems." border="false":::
@@ -56,15 +65,6 @@ Each activity generates a system notification. What displays depends on what the
 |1|Teams custom|
 |2|Windows|
 |3|Mac|
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/activity-feed/mobile-related-system-notifications.png" alt-text="Variants of Teams activity feed cards on Android and iOS." border="false":::
-
-|Counter|Description|
-|----------|-----------|
-|1|Android|
-|2|iOS|
 
 ---
 

@@ -3,7 +3,7 @@ title: Designing your app with UI templates
 author: heath-hamilton
 description: Design your app faster with standardized UI components, layouts, and patterns commonly seen across Microsoft Teams.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ---
 # Designing your Microsoft Teams app with UI templates
@@ -50,15 +50,13 @@ A dashboard displays different types of content in a central location (Teams per
 * Report metrics
 * Organize different information in one place
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-dashboard.png" alt-text="Example shows a dashboard UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/dashboard.png" alt-text="Example shows a dashboard UI template on desktop." border="false":::
 
 ## Data visualization
 
@@ -69,15 +67,13 @@ You can use different card sizes (single, double, and full) to stack and organiz
 * Display complex information
 * Create a dashboard
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-data-viz.png" alt-text="Example shows a data visualization UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/data-viz.png" alt-text="Example shows a data visualization UI template on desktop." border="false":::
 
 ## Empty state
 
@@ -90,15 +86,13 @@ The empty state template can be used for many scenarios, including sign in, firs
 * Success messages
 * Error messages
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-empty-state.png" alt-text="Example shows an empty state UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/empty-state.png" alt-text="Example shows an empty state UI template on desktop." border="false":::
 
 ## Filter
 
@@ -126,15 +120,13 @@ Forms are used to collect, validate, and submit user input in a structured way. 
 * Settings
 * User input collection
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-form.png" alt-text="Example shows a form UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/form.png" alt-text="Example shows a form UI template on desktop." border="false":::
 
 ## List
 
@@ -145,15 +137,13 @@ You can use a list to display related items in a scannable format and allow user
 * Display data
 * Contextual actions on app content
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-list.png" alt-text="Example shows a list UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/list.png" alt-text="Example shows a list UI template on desktop." border="false":::
 
 ## Sign in
 
@@ -163,15 +153,13 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 * Authenticate users
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-sign-in.png" alt-text="Example shows a sign in UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/sign-in.png" alt-text="Example shows a sign in UI template on desktop." border="false":::
 
 ## Settings
 
@@ -193,15 +181,13 @@ A task board, sometimes called a kanban board or swim lanes, is a collection of 
 * Brainstorming. Adding ideas in different categories
 * Sorting exercises. Organizing any kind of information into buckets
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-task-board.png" alt-text="Example shows a task board UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/task-board.png" alt-text="Example shows a task board UI template on desktop." border="false":::
 
 ## Wizard
 
@@ -213,12 +199,10 @@ A wizard guides a user through several screens to complete a task (such as a set
 * Onboarding
 * First-run experiences
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." border="false":::
-
-# [Mobile](#tab/mobile)
+### Mobile
 
 :::image type="content" source="../../assets/images/ui-templates/mobile-wizard.png" alt-text="Example shows a wizard UI template on mobile." border="false":::
 
----
+### Desktop
+
+:::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." border="false":::
