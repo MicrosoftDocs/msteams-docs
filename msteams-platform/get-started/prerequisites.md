@@ -137,23 +137,25 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ---
 
- ## Enable sideloading
+## Set up your Teams development tenant (optional)
 
-During development, you must load your app in Teams without distributing it. This process is known as sideloading.
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. And this space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant, or create a new tenant for developing and testing.
 
-If you have a Teams account, verify if sideloading apps in Teams is possible:
+*Do you already have a tenant, and do you have the admin access? Let's check if you really do.*
 
-1. In the Teams client, select **Apps**.
-1. Select **Upload a custom app**.
+Verify if you can sideload apps in Teams:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
+1. In the Teams client, select the **...** button in the side panel.
+1. From the popup, select **More apps >**.
+1. On the Store page, select **Manage your apps**.
+1. Look for an option to **Upload a custom app**.
+
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration shows the upload a custom app in Teams.":::
+
 
 > [!NOTE]
-> If you still cannot sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
+> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
 
-## Get a free Teams developer tenant (optional)
-
-If you can't see the sideload option or you don't have a Teams account, get a free Teams developer account. You can do so by joining the Microsoft 365 developer program. The registration process takes approximately two minutes.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
@@ -184,7 +186,7 @@ You must have access to two accounts:
 
 1. Select **Sign in to M365**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign-in.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign in.":::
 
     The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser and return to Visual Studio Code.
 
@@ -200,7 +202,7 @@ You must have access to two accounts:
 
 # [Visual Studio 2019](#tab/vs)
 
-Visual Studio 2019 prompts you to log in to each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
+Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
 # [Command line](#tab/cli)
 

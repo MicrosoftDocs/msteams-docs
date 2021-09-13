@@ -19,7 +19,7 @@ Additionally, this section includes alternative guides for you who are already f
 
 ## What you'll learn
 
-Here's an idea of what you'll know after going through the lessons. 
+Here's an idea of what you'll know after going through the lessons:
 
 - Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension) 
 - Get experience with the Toolkit and SDKs 
@@ -30,7 +30,7 @@ Here's an idea of what you'll know after going through the lessons.
 
 The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
 
-:::image type="content" source="../assets/images/build-your-first-app/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
+:::image type="content" source="../assets/images/get-started/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
 
 Some common scenarios that a custom Microsoft Teams app can help with are:
 
@@ -48,9 +48,9 @@ Depending on the capabilities you want for your app, you need an appropriate dev
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks |
 |--------|-------------|--------|--------|--------|
-| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams client SDK](/javascript/api/overview/msteams-client) | Web technology in general, HTML, CSS, and JavaScript |
-| Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
-| Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
+| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams Fx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest) for core libs & [Teams client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest) | Web technology in general, HTML, CSS, and JavaScript |
+| Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams Fx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
+| Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams (Yeoman Generator) | [Teams Fx](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
 
 The Get started section takes you through recommended tool sets. It also covers commonly used technologies, such as: 
 - Visual Studio Code with Teams extension.
