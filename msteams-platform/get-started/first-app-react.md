@@ -45,8 +45,8 @@ Use the Teams Toolkit to create your first project:
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
 
-> <video src="~/assets/videos/app-react-sample_0.3.mp4" width="170" height="85" controls>
-</video>
+[![My First App]({../assets/videos/AppReact_Sample_0.3} "My First App")
+
 :::column-end:::
 
 :::row-end:::
