@@ -87,7 +87,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 Complete the following steps to update the Azure portal with the OAuth connection:
 
-1. In the Azure Portal, navigate to **App registrations**.
+1. In the Azure Portal, go to **App registrations**.
 
 2. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
@@ -96,11 +96,11 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     * OpenId
     * profile
 
-3. In the Azure Portal, navigate to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot).
+3. In the Azure Portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+4. Select **Configuration** on the left pane.
+5. Select **Add OAuth Connection Settings** section.
 
-4. Select **Configuration** on the left pane and choose Add **OAuth Connection Settings** section.
-
-    ![SSOBotHandle2 view](~/assets\ConsotoAirline.png)
+  ![SSOBotHandle2 view](~/assets\ConsotoAirline1.png)
 
 5. Perform the following steps to complete the **New Connection Setting** form:
 
