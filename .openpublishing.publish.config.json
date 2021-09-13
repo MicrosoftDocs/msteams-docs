@@ -26,7 +26,7 @@
     {
       "ConceptualTOC": "msteams-platform/TOC.yml",
       "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest",
-      "DotnetReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.yml?view=msteams-client-dotnet-latest"
+      "DotnetReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.json?view=msteams-client-dotnet-latest"
     }
   ],
   "notification_subscribers": [],
