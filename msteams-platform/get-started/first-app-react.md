@@ -14,7 +14,7 @@ This tutorial walks you through the steps to create, build, and deploy a Teams a
 
 ## Before you begin
 
-Make sure your development environment is set up by installing the prerequisites.
+Make sure the development environment is set up by installing the prerequisites.
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
