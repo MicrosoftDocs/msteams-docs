@@ -3,7 +3,7 @@ title: Sequential Workflows
 description: Sample for Sequential Workflows using Universal Actions
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Sequential Workflows

@@ -2,7 +2,7 @@
 title: Add test data to your Microsoft 365 test tenant
 description: Set up your Office 365 developer program subscription for successful testing of Microsoft Teams Apps
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: testing apps developer program teams
 ms.date: 11/01/2019
 ---
@@ -24,7 +24,7 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 
 ## Allow users to upload apps
 
-By default, only global admins or Teams service admins can upload (sideload) apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings).
+By default, only global admins or Teams service admins can upload (sideload) apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels for testing
 

@@ -2,7 +2,7 @@
 title: Overview of Universal Actions for Adaptive Cards
 description: A quick overview of Universal Actions for Adaptive Cards.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Universal Actions for Adaptive Cards
