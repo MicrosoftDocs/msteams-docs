@@ -177,7 +177,29 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 Use these recommendations to create a quality app experience.
 
-### Primary and secondary actions
+### Mobile
+
+In general, cards designed for a narrow screen scale well on wider screens (the opposite isn't true). It's always good to assume users won't only view your cards on desktop.
+
+#### Column layouts
+
+Use the [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) value to format your card content into into a table or grid.
+
+You can set `"width": "auto"` on columns to better ensure your app content is visible in each column. Keep these things in mind when setting the width like this:
+
+* **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
+* **Don't**: Always set `"width": "auto"`. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with content that must always be completely visible (like a button).
+* **Don't**: ...
+
+#### Text
+
+Dos and don'ts ...
+
+#### Images
+
+Dos and don'ts ...
+
+### Actions
 
 :::row:::
    :::column span="":::
