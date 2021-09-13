@@ -98,6 +98,9 @@ Following is a sample Adaptive Card tab manifest:
 
 ## Invoke activities
 
+> [!NOTE]
+> The invoke payload size increased to 50kb-80kb.
+
 Communication between your Adaptive Card tab and your bot is done through `invoke` activities. Each `invoke` activity has a corresponding **name**. Use the name of each activity to differentiate each request. `tab/fetch` and `tab/submit` are the activities covered in this section.
 
 > [!NOTE]
