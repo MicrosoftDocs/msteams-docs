@@ -96,11 +96,11 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     * OpenId
     * profile
 
-3. In the Azure Portal, navigate to **Bot Channels Registration**.
+3. In the Azure Portal, navigate to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot).
 
-4. Select **Settings** on the left pane and choose **Add Setting** under the **OAuth Connection Settings** section.
+4. Select **Configuration** on the left pane and choose Add **OAuth Connection Settings** section.
 
-    ![SSOBotHandle2 view](../../../assets/images/bots/bots-vuSSOBotHandle2-settings.png)
+    ![SSOBotHandle2 view](~/assets/assets\ConsotoAirline.png)
 
 5. Perform the following steps to complete the **New Connection Setting** form:
 
