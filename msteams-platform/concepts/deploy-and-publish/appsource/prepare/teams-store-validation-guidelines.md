@@ -262,16 +262,16 @@ If your app supports localization, your app package must include a file with lan
 
 ## Apps linked to SaaS offer
 
-If your Teams app is linked to SaaS offer make sure to adhere to the following guidelines : 
+If your Teams app is linked to SaaS offer, adhere to the following guidelines: 
 
 * Teams monetization capabilities are designed to support a per-user pricing model for assigning licenses to users. 
-* ISVs should support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant. 
+* Support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant. 
 * The offer must meet all the [technical requirements](http://aka.ms/saasoffer) for Teams apps linked to a SaaS offer. 
 * The Teams apps linked to SaaS offer must meet all requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
 
 ### Link SaaS offer to Teams app 
 
-* `subscriptionOffer` details mentioned in manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisher id.offer id`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
+* `subscriptionOffer` details mentioned in manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherid.offerid`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.     
 
 ### Offer metadata 
@@ -282,7 +282,7 @@ If your Teams app is linked to SaaS offer make sure to adhere to the following g
 * Plan descriptions and pricing details must provide enough information for users to clearly understand the offer listings.   
 * Any limitations, dependencies on additional services and exceptions to features offered must be accurately called out in plan descriptions.     
 * The Teams apps linked to SaaS offer are designed to support licenses assigned on a named, per-user basis. Sometimes, the SaaS offer is built with other method or has specialized purchase flows. 
-You must clearly mention in the app metadata and subscription plan details about the method and purchase flows.
+You clearly mention in the app metadata and subscription plan details about the method and purchase flows.
 
 ### Purchase flows 
 
@@ -306,7 +306,7 @@ Admins can do the following functions:
 * Activate, manage, and assign licenses in SaaS application.  
 
 > [!NOTE]
-> Your offer must provide messages, further guidance to users in all applicable states of purchase flow and must guide a new user. 
+> Your offer must provide messages and guidance to all users in all applicable states of purchase flow. 
 
 ### SaaS offer home page and license management  
 
@@ -314,34 +314,34 @@ Admins can do the following functions:
 * Users completing the purchase can activate and configure their subscription on your SaaS application home page.     
 
 > [!TIP]    
-> * Provide introduction to subscriber on how to use the product 
-> * Allow the subscriber to assign licenses 
-> * Provide way to engage with support for issues (FAQ, knowledgebase, and/or email address) 
+> * Provide introduction to subscriber on how to use the product. 
+> * Allow the subscriber to assign licenses. 
+> * Provide way to engage with support for issues, such as FAQ, knowledgebase, and email address.
 
-* Users completing a purchase manage the licenses and have the following selections in SaaS application:     
-    * Assign and remove licenses 
-    * Reassign licenses among users
-    * Authorize users to manage licenses 
+* After purchasing, the users can select the options depending on the actions. The users manage the licenses, and get the following options in SaaS application:    
+    * Assign and remove licenses. 
+    * Reassign licenses among users.
+    * Authorize users to manage licenses. 
 
 ### Manage Subscriptions 
 
 * Users completing the purchase can manage subscriptions.
 * Subscribers can do the following functions: 
-   * Adjust licenses, buy, remove licenses  
-   * Change subscription plan
-   * Cancel, repurchase the subscription 
-   * Renew subscriptions
+   * Adjust licenses, buy, remove licenses.  
+   * Change subscription plan.
+   * Cancel, repurchase the subscription.
+   * Renew subscriptions.
 * Any modifications in purchased licenses or plans must be reflected in SaaS application with correct license counts, subscription details, and the right user assignments. 
 
 ### Usability and functionality  
 
 * After successful purchase and assignment of licenses, users must have access to the subscribed plan features described in plan listing. 
-* Post license assignment, users should have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
+* After license assignment, users must have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
 * From your Teams app, provide link back to the SaaS application home page for subscriber to manage the licenses in the future. 
 
-### Provide sufficient Details to configure the SaaS application and test 
+### Configuration of SaaS application 
 
-If set up of your app for testing purposes is complex or non-intuitive, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your **Notes for Certification**.   
+If set up of your app for testing purposes is complex or non-intuitive, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your notes for certification.   
 
 > [!TIP]  
 > Add a video recording of how your app and license management works to assist the team for testing. 
