@@ -14,14 +14,14 @@
     href: get-started/code-samples.md  
   - name: Prerequisites
     href: get-started/prerequisites.md
-  - name: Build your first app using React
+  - name: Hello World - Build your first tab
     href: get-started/first-app-react.md
-  - name: Build your first conversational bot
+  - name: Build your first Bot
     href: get-started/first-app-bot.md
-  - name: Build your first messaging extension
+  - name: Build your first Message Extension
     href: get-started/first-message-extension.md  
   - name: Deploy your first Teams app in Azure
-    href: get-started-deploy-teams-app-azure.md
+    href: get-started/get-started-deploy-teams-app-azure.md
   - name: More Languages and Tools
     items:   
     - name: Build your first app using Blazor
