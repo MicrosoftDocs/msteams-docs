@@ -40,7 +40,7 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. In the **Select capabilities** section, varify that **Tab** is selected and select **OK**.
+1. In the **Select capabilities** section, verify that **Tab** is selected and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
