@@ -262,21 +262,18 @@ If your app supports localization, your app package must include a file with lan
 
 ## Apps linked to SaaS offer
 
-If your Teams app is linked to SaaS offer, adhere to the following guidelines: 
-
-* Teams monetization capabilities are designed to support a per-user pricing model for assigning licenses to users. 
 * Support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant. 
-* The offer must meet all the [technical requirements](placeholder for doclink) for Teams apps linked to a SaaS offer. 
-* The Teams apps linked to SaaS offer must meet all requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
-* `subscriptionOffer` details mentioned in manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherid.offerid`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
+* The offer must meet all the [technical requirements](placeholder for doc link) for Teams apps linked to a SaaS offer. 
+* The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
+* `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherid.offerid`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.     
-* Offer metadata should match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
-* Teams app and SaaS offer must be from same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace. 
+* Offer metadata must match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
+* Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace. 
 * As your submitted offer is a Teams app linked to SaaS offer, you must select **Additional purchases** as **Yes, my product requires purchase of a service or offers additional in-app purchases​** in Partner Center product set-up section of your offer listing.     
 * Plan descriptions and pricing details must provide enough information for users to clearly understand the offer listings.   
 * Any limitations, dependencies on additional services and exceptions to features offered must be accurately called out in plan descriptions.     
 * The Teams apps linked to SaaS offer are designed to support licenses assigned on a named, per-user basis. Sometimes, the SaaS offer is built with other method or has specialized purchase flows. 
-You clearly mention in the app metadata and subscription plan details about the method and purchase flows.
+You must clearly mention in the app metadata and subscription plan details about the method and purchase flows.
 * SaaS offer must provide messages and guidance to all users in all applicable states of purchase flow. 
 * Provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".   
 
