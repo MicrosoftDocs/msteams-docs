@@ -25,8 +25,6 @@ Make sure your development environment is set up by installing the prerequisites
 
 Use the Teams Toolkit to create your first project:
 
-# [Visual Studio 2019](#tab/vs)
-
 1. Open Visual Studio 2019.
 
 1. Select **Create a new project**.
@@ -42,39 +40,6 @@ Use the Teams Toolkit to create your first project:
    1. Select **Project** > **TeamsFx** > **Configure for SSO...**.
    1. When prompted, sign in to your Microsoft 365 administrator account.
 
-# [Command line](#tab/cli)
-
-1. Open a Terminal and select the directory where you wish to create the project.
-
-1. Run `dotnet new -i` to install the template from NuGet:
-
-   ``` bash
-   dotnet new --install Microsoft.TeamsFx.VisualStudio.ProjectTemplates::0.1.43-beta
-   ```
-
-   This step is needed only for the first time or when updating the template. Check [NuGet](https://www.nuget.org/packages/Microsoft.TeamsFx.VisualStudio.ProjectTemplates/) for the latest version of this package.
-
-1. Create a directory:
-
-   ``` bash
-   mkdir helloworld
-   ```
-
-1. Run `dotnet new` to create a new project:
-
-   ``` bash
-   dotnet new teamsapp --shortName my-teams-app --companyName "My Company"
-   ```
-
-1. After scaffolding, configure the project for Teams deployment:
-
-   ``` bash
-   teamsfx init
-   ```
-
-   You can now open the solution in Visual Studio for debugging.
-
----
 
 ## Take a tour of the source code
 
