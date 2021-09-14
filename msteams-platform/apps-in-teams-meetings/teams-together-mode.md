@@ -7,7 +7,8 @@ ms.localizationpriority: none
 
 # Custom Together Mode scenes in Teams
 
->[!NOTE] Custom Together Mode is not available for mobile.
+> [!Note]
+> Custom Together Mode is not available for mobile.
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
