@@ -8,13 +8,19 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build and run your first Microsoft Teams app with React
+# Build your first Microsoft Teams app - Hello world with tabs
 
-This tutorial walks you through the steps to create, build, and deploy a Teams app using React.
+Start Microsoft Teams development by building a personal tab as the "Hello, world!".  
+
+In this tutorial, you'll learn: 
+
+- how to set up a new project with Teams Toolkit 
+- the structure of a basic tab app and how it's built with JavaScript using React 
+- how to run an app locally 
 
 ## Before you begin
 
-Make sure the development environment is set up by installing the prerequisites.
+Before you begin, make sure your development environment is set up by installing the prerequisites.
 
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
@@ -28,11 +34,10 @@ Use the Teams Toolkit to create your first project:
 :::row:::
 
    :::column span="3":::
-1. Open Visual Studio code.
-1. Select the Teams icon in the sidebar.
+1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
 1. From the **Development** section, select **Create a new Teams app**.
 1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
-1. Verify that **Tab UI-based app** is selected as the capability, and select **OK**.
+1. Make sure that **Tab UI-based app** is selected as the capability, and select **OK**.
 1. Select **Azure** as the Frontend hosting type.
 1. You don't need other cloud resources for this tutorial. Select **OK** to continue. 
 1. Select **JavaScript** as the programming language.
@@ -45,7 +50,7 @@ Use the Teams Toolkit to create your first project:
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
 
-[![My First App]({../assets/videos/AppReact_Sample_0.3} "My First App")
+![[My First App](../assets/videos/AppReact_Sample_0.3 "My First App")
 
 :::column-end:::
 
@@ -160,24 +165,6 @@ When you select **F5**, the Teams Toolkit:
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
 To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant-optional).
-
-</details>
-
-[!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
-
-<!-- markdownlint-disable MD033 -->
-<details>
-<summary>Learn what happens when you deployed your app to Azure</summary>
-
-Before deployment, the application has been running locally:
-
-* The backend runs using **Azure Functions Core Tools**.
-* The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
-
-* The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-* The frontend application will be deployed to an Azure Storage account configured for static web hosting.
 
 </details>
 
