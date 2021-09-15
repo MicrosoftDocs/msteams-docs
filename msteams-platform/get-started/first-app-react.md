@@ -181,6 +181,7 @@ Visual Studio 2019 prompts you to log into each service as required. You don't n
 
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
 ---
 
 ### Build and run your app locally in Visual Studio Code
@@ -204,7 +205,7 @@ To build and run your app locally:
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
-1. Congratulations, now your first app is running on Teams!
+1. Congratulations, your first app is running on Teams!
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
