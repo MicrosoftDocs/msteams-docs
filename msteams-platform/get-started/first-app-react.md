@@ -50,7 +50,7 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-cloud-resources.png" alt-text="Cloud Resources":::
 
 1. Select **JavaScript** as the programming language.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-programming-language.png" alt-text="Cloud Resources":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-programming-language.png" alt-text="Programming Language":::
 
 1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
@@ -141,7 +141,7 @@ You must have access to two accounts:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/hw-M365-sign-in.png" alt-text="Sign in to Microsoft 365 and Azure.":::
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser and return to Visual Studio Code.
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser, and return to Visual Studio Code.
 
 1. Return to the Teams Toolkit within Visual Studio Code.
 1. Select **Sign in to Azure**.
@@ -149,11 +149,13 @@ You must have access to two accounts:
     > [!TIP]
     > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
-1. The sign-in process starts using your normal web browser.  Complete the sign-in process for your Azure account. When are prompted, you can close the browser and return to Visual Studio Code.
+1. The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. When are prompted, you can close the browser, and return to Visual Studio Code.
 
     When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-# [Visual Studio 2019](#tab/vs)
+    Now you're ready to build the app and run it locally!
+
+# [Visual Studio 2019](#tab/visualscode)
 
 Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
@@ -178,7 +180,6 @@ Visual Studio 2019 prompts you to log into each service as required. You don't n
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
 
-
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
 ### Build and run your app locally in Visual Studio Code
@@ -187,36 +188,40 @@ To build and run your app locally:
 
 1. From Visual Studio Code, select **F5** to run the application in debug mode.
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built. A web browser window opens when the build is complete.  This can take 3-5 minutes to complete.
+   *Debug can take up a few minutes to complete as all dependencies are downloaded and the app is built for the first time.* 
 
    The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
-1. The web browser runs the app. If you're prompted to open Teams desktop, select **Cancel** to remain in the browser. You may also be prompted to switch to Teams desktop at other times; select the Teams web app when it happens.
+1. Teams web client will be automatically opened in a browser window. Sign in with your Microsoft 365 account when prompted.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
-
-1. Sign in with your Microsoft 365 account when prompted.
 1. When prompted to install the app onto Teams, select **Add**.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-add-app.png" alt-text="Add the app to Teams":::
+ 
+    If you're asked to switch to Teams desktop, select the web app version to run your app. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
-You can view the app:
+1. Congratulations, now your first app is running on Teams!
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/react-finished-app.png" alt-text="Screenshot of the completed app":::
 
 You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
+
 <details>
 <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-When you select **F5**, the Teams Toolkit:
+In case you're wondering, when you press the F5 key the Teams Toolkit:
 
-* Registers the application with Azure Active Directory.
+* Registers your application with Azure Active Directory. This application has permissions for the location that the app is loaded from and the backend resources. 
 * *Sideloads* the app in Teams.
 * Starts the application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 * Starts the application front-end hosted locally.
 * Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab`. This URL is registered in the application manifest.
+* An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
 </details>
 
@@ -228,12 +233,18 @@ To successfully run your app in Teams, you must have a Teams account that allows
 
 </details>
 
+You know how to use Toolkit to set up a tab app and run it locally. Next, let’s learn how to build a conversational chat bot with Toolkit!
+
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Hello World - Build your first Bot](../get-started/first-app-bot.md)
-> [Hello World - Build your first Message Extension](../get-started/first-message-extension.md)
-> [Hello World - Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
+> [Build your first Bot](../get-started/first-app-bot.md)
+
+> [!div class="nextstepaction"]
+> [Build your first Message Extension](../get-started/first-message-extension.md)
+
+> [!div class="nextstepaction"]
+> [Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
 
 ## See also
 
