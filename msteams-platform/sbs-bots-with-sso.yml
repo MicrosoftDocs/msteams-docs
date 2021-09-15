@@ -206,7 +206,7 @@ items:
         ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
     1. Select **Save** to save the changes.
 
-    **To make changes in manifest**
+    **To update manifest**
 
     1. Select **Manifest** from the left pane.
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).
