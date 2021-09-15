@@ -84,7 +84,7 @@ items:
         Now your Azure bot has been created.
 
         ![Azure bot resource created](~/assets/images/bots/Azurebotresource.png)
-        
+
     **To create client secret**
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
@@ -180,6 +180,13 @@ items:
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
         ![API exposed and scope added](~/assets/images/bots/ExposeAPIandaddscope.png)
+
+    **Authorize client applications**
+
+    Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:
+        - 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile/desktop application)
+        - 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)
+        ![Add client application to app](~/assets/images/bots/addclientapplication.png)
     
     **To set up Bot Service connection**
 
