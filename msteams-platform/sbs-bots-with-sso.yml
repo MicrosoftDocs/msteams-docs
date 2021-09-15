@@ -100,7 +100,7 @@ items:
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-       ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
        
     **To add the Microsoft Teams channel**
 
@@ -110,6 +110,9 @@ items:
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+     
+      ![Open Teams from channels](~/assets/images/bots/channel-teams.png)
+
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.
 
@@ -136,6 +139,10 @@ items:
     
     * Add Redirect URI to the Azure bot resource.
     * Expose API endpoint to specify the location from where the resources can be accessed.
+    * Authorize client applications.
+    * Add any necessary API permissions for downstream calls.
+    * Enable implicit grant.
+    * Update manifest.
     * Set up Bot Service connection.
 
     **To add Redirect URI to the Azure bot resource**
@@ -183,10 +190,29 @@ items:
 
     **To authorize client applications**
 
-    Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:    
-        * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile/desktop application)    
-        * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)    
+    Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:  
+
+        - 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)    
+        - 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)    
         ![Add client application to app](~/assets/images/bots/addclientapplication.png)    
+    
+    **To add any necessary API permissions for downstream calls**
+
+    1. Select **API permissions** from the left pane.
+    1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
+        ![API user permissions](~/assets/images/bots/APIpermissions.png)
+
+    **To enable implicit grant**
+    
+    1. Select **Authentication** from the left pane.
+    1. Select the **Access tokens** and **ID tokens** checkboxes.
+        ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
+    1. Select **Save** to save the changes.
+
+    **To make changes in manifest**
+
+    1. Select **Manifest** from the left pane.
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).
     
     **To set up Bot Service connection**
 
