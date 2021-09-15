@@ -192,7 +192,7 @@ To build and run your app locally:
 
    *Debug can take up a few minutes to complete as all dependencies are downloaded and the app is built for the first time.* 
 
-   The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
+   The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** (or **Continue**, depending on your operating system) when the following dialog appears:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
