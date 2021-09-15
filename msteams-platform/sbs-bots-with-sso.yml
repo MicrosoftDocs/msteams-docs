@@ -181,7 +181,7 @@ items:
 
         ![API exposed and scope added](~/assets/images/bots/ExposeAPIandaddscope.png)
 
-    **Authorize client applications**
+    **To authorize client applications**
 
     Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:
         - 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile/desktop application)
