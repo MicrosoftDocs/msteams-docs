@@ -96,7 +96,7 @@ The Teams Toolkit helps simplify the development process with tools to provision
 1. In the search box, enter **Teams Toolkit**.
 1. Select **Install** next to the Teams Toolkit.
 
- :::image type="content" source="~/assets/images/teams-toolkit-v2/install-toolkit-vscode.png" alt-text="Illustration shows the upload a custom app in Teams.":::
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="Illustration shows the upload a custom app in Teams.":::
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -151,7 +151,7 @@ Verify if you can sideload apps in Teams:
 1. In the Teams client, select **Apps** icon
 1. Look for an option to **Upload a custom app** If you see the option, you are able to sideload apps to Teams client.
 
- :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration shows the upload a custom app in Teams.":::
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app-closeup.png" alt-text="Illustration shows the upload a custom app in Teams.":::
 
 > [!NOTE]
 > If you don't have the sideloading option, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details. 
