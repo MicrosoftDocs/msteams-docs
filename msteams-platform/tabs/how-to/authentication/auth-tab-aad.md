@@ -8,29 +8,29 @@ keywords: teams authentication tabs AAD
 # Authenticate a user in a Microsoft Teams tab
 
 > [!Note]
-> For authentication to work for your tab on mobile clients, you need to ensure you're using version 1.4.1 or later of the Teams JavaScript SDK.
+> For authentication to work on mobile clients tab, use 1.4.1 version or later of the Teams JavaScript SDK.
 
-There are many services that you may wish to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+There are many services on the Teams app and most of those services require authentication and authorization. Services includes Facebook, Twitter, and Teams. The Teams users have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This article will mainly focus on authentication using Azure AD to access to the information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The  following examples provide detail information on reading the user's profile information, from Azure AD and Microsoft Graph by using OAuth 2.0 Implicit Grant flow.
 
-The code in this article comes from the Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab that requests an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
+The code sample in this article comes from Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab to request an access token for Microsoft Graph and shows the current user's basic profile information from Azure AD.
 
-For a general overview of authentication flow for tabs see the topic [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
+For information on the authentication flow for tabs see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
 Authentication flow in tabs differs slightly from authentication flow in bots.
 
 ## Configuring identity providers
 
-See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
-Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker as well as confuse the user.
+Authentication flow is triggered by a user action and it should not access directly by the user as it triggers the browser's pop-up blockers and create confusion. Instead, you should wait until the authentication pop-up appears.  
 
-Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
+Add a button to your configuration or content page to enable the user to sign. User can perform  this process in tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider. In the following example this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+Azure AD, like most identity providers, does not allow its content to be placed in an iframe. This means that you will need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -56,7 +56,7 @@ microsoftTeams.authentication.authenticate({
 
 ## Navigate to the authorization page from your popup page
 
-When your popup page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information which can be passed to Azure AD.
+When your popup page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
