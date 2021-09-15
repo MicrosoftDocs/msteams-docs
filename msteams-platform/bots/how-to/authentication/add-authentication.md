@@ -353,7 +353,7 @@ and when for these, and just reference that from here, along with the set of ste
 
     ![auth bot login deployed token](../../../assets/images/authentication/auth-bot-login-deployed-token.PNG).
 
-1. Enter logout to sign out.
+1. Enter logout to sign out. 
 
     ![auth bot deployed logout](../../../assets/images/authentication/auth-bot-deployed-logout.PNG)
 
