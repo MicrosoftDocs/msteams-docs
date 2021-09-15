@@ -162,6 +162,17 @@ Before deployment, the application has been running in your local environment:
 
 </details>
 
+
+Next, let's try building another type of Teams app, or learn how to deploy your bot to Azure!
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build your first Message Extension](../get-started/first-message-extension.md)
+
+> [!div class="nextstepaction"]
+> [Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
+
 ## See also
 
 * [Tutorials Overview](code-samples.md) 
