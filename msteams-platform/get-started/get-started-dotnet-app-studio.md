@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## Build and run the sample
 
-You can build and run the sample after you've cloned it. 
+You can build and run the sample after it is cloned. 
 
 **To build and run the cloned sample**
 

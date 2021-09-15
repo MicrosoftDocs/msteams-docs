@@ -130,7 +130,7 @@ Deployment consists of two steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Select the Publish operation on the project":::
 
-1. In the **Publish** window, select **Azure**, and then select **Next**.
+1. In the **Publish** window, select **Azure** and select **Next**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Select Azure as the publishing target":::
 
