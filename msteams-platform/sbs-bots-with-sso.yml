@@ -109,10 +109,8 @@ items:
         <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
-     
-      ![Open Teams from channels](~/assets/images/bots/channel-teams.png)
-
+    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
+          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.
 
@@ -191,8 +189,8 @@ items:
     **To authorize client applications**
 
     Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:      
-        1. 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
-        2. 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)     
+    * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
+    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)     
         ![Add client application to app](~/assets/images/bots/addclientapplication.png)        
     
     **To add any necessary API permissions for downstream calls**
