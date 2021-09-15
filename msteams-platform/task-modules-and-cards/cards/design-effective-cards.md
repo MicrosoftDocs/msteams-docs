@@ -183,13 +183,16 @@ In general, cards designed for a narrow screen scale well on wider screens (the 
 
 #### Column layouts
 
-Use the [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) value to format your card content into into a table or grid.
+Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid. But keep in mind: The less columns you use, the less layout issues your cards will have on mobile.
 
-You can set `"width": "auto"` on columns to better ensure your app content is visible in each column. Keep these things in mind when setting the width like this:
+There are several options for formatting column width. These guidelines help you understand when to use each one.
 
+`"width": "auto"`: Sizes each column in the `ColumnSet` to fit your app content.
+
+* **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
 * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
-* **Don't**: Always set `"width": "auto"`. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with content that must always be completely visible (like a button).
-* **Don't**: ...
+* **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with content that must always be completely visible (like a button).
+* **Don't**: x
 
 #### Text
 
