@@ -175,6 +175,13 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Hello World - Build your first app](../get-started/first-app-react.md)
+
+
+Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! 
 
 
 ## See also

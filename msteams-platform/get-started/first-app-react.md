@@ -14,9 +14,9 @@ Start Microsoft Teams development by building a personal tab as the "Hello, worl
 
 In this tutorial, you'll learn: 
 
-- how to set up a new project with Teams Toolkit 
-- the structure of a basic tab app and how it's built with JavaScript using React 
-- how to run an app locally 
+- how to set up a new project with Teams Toolkit.
+- the structure of a basic tab app and how it's built with JavaScript using React.
+- how to run an app locally.
 
 ## Before you begin
 
@@ -27,7 +27,7 @@ Before you begin, make sure your development environment is set up by installing
 
 ## Create your project
 
-Use the Teams Toolkit to create your first project:
+If the prerequisites are in place, let's begin! Use the Teams Toolkit to create your first project:
 
 # [Visual Studio Code](#tab/vscode)
 
