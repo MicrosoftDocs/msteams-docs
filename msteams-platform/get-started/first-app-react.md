@@ -120,6 +120,65 @@ You can use Teams Toolkit to run the app in the local environment. To prepare th
 
 After it's done, load your app in the Teams client. You can see the HTML, CSS, and JavaScript code using the Teams web client.
 
+
+## Sign in to your Microsoft 365 and Azure accounts
+
+You must have access to two accounts:
+
+- Your Microsoft 365 account credentials: Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+- Your Azure credentials: Use this account to access the Azure portal and to provision new cloud resources to support your app.
+
+# [Visual Studio Code](#tab/vscode)
+
+1. Open Visual Studio Code.
+1. Select the Teams icon in the sidebar:
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+
+1. Select **Sign in to M365**.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign in.":::
+
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser and return to Visual Studio Code.
+
+1. Return to the Teams Toolkit within Visual Studio Code.
+1. Select **Sign in to Azure**.
+
+    > [!TIP]
+    > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+
+1. The sign-in process starts using your normal web browser.  Complete the sign-in process for your Azure account. When are prompted, you can close the browser and return to Visual Studio Code.
+
+    When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+# [Visual Studio 2019](#tab/vs)
+
+Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
+
+# [Command line](#tab/cli)
+
+1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+    ``` bash
+    teamsfx account login m365
+    ```
+
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. Close the browser when you're prompted.
+
+2. Sign in to Azure with the TeamsFx CLI:
+
+    ``` bash
+    teamsfx account login azure
+    ```
+
+    The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. Close the browser when you're prompted.
+
+    The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+
+
+    Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
 ### Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:

@@ -16,17 +16,17 @@ In this tutorial:
 
 ## Build your first Microsoft Teams app overview
 
-In the **get started** tutorial, you learn how to create basic Teams apps. Each tutorial walks through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.  
+In the **get started** tutorial, you learn how to create basic Teams apps. Each tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.  
 
-Additionally, this section includes alternative guides for you who are already familiar with Blazor, SPFx, C# or .NET, and Yeoman Generator.
+Additionally, this section includes alternative guides for you who are already familiar with Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator.
 
 ## What you'll learn
 
 Here's an idea of what you'll know after going through the lessons:
 
-- Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension)
-- Get experience with the Toolkit and SDKs
-- Configure and build different types of Teams apps
+- Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
+- Get experience with the Toolkit and SDKs.
+- Configure and build different types of Teams apps.
 
 
 ### Teams app fundamentals
