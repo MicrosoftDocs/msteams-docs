@@ -181,6 +181,7 @@ Visual Studio 2019 prompts you to log into each service as required. You don't n
 
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+---
 
 ### Build and run your app locally in Visual Studio Code
 
