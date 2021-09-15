@@ -34,12 +34,26 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 :::row:::
 
 1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Teams Toolkit Sidebar Icon":::
+
 1. From the **Development** section, select **Create a new Teams app**.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-teams-toolkit-dev-bar.png" alt-text="Development Sidebar in Visual Studio Code":::
+
 1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-create-teams-app.png" alt-text="Create App":::
+
 1. Make sure that **Tab UI-based app** is selected as the capability, and select **OK**.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-app-capability.png" alt-text="Select App Capability":::
+
 1. Select **Azure** as the Frontend hosting type.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-hosting-type.png" alt-text="Select Hosting Type":::
+
 1. You don't need other cloud resources for this tutorial. Select **OK** to continue. 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-cloud-resources.png" alt-text="Cloud Resources":::
+
 1. Select **JavaScript** as the programming language.
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-programming-language.png" alt-text="Cloud Resources":::
+
 1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
@@ -49,8 +63,7 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
 
-![[Your First App](../assets/videos/AppReact_Sample_0.3.mp4)]
-
+![[Your First App](../assets/videos/AppReact_Sample.ppsx)]
 :::column-end:::
 
 :::row-end:::
@@ -225,6 +238,13 @@ When you select **F5**, the Teams Toolkit:
 To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
 </details>
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Hello World - Build your first Bot](../get-started/first-app-bot.md)
+> [Hello World - Build your first Message Extension](../get-started/first-message-extension.md)
+> [Hello World - Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
 
 ## See also
 
