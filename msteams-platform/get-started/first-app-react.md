@@ -31,8 +31,6 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
 # [Visual Studio Code](#tab/vscode)
 
-:::row:::
-
 1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Teams Toolkit Sidebar Icon":::
 
@@ -57,16 +55,8 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
-   The Teams app is created within a few seconds.
-:::column-end:::
+    The Teams app is created within a few seconds.
 
-:::column span="3":::
-Watch this video to follow through the steps to create and run a Teams app.
-
-![[Your First App](../assets/videos/AppReact_Sample.ppsx)]
-:::column-end:::
-
-:::row-end:::
 
 # [Command line](#tab/cli)
 
@@ -98,10 +88,9 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
-
-The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected.
+You can find the code for the tab capability scaffolded in the **Tab** folder. Although you're free to choose any UI framework you want (or not to use any), this sample template code provides scaffolding with React components.
 
 Among other items in this directory, the Toolkit maintains:
 
@@ -146,11 +135,11 @@ You must have access to two accounts:
 1. Open Visual Studio Code.
 1. Select the Teams icon in the sidebar:
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
 1. Select **Sign in to M365**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/account-commands.png" alt-text="Location of the Accounts section used to sign in.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/hw-M365-sign-in.png" alt-text="Sign in to Microsoft 365 and Azure.":::
 
     The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser and return to Visual Studio Code.
 
