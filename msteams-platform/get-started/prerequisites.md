@@ -18,6 +18,9 @@ The following tools are required for building an app:
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 
+> [!WARNING]
+> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
+
 Some other important tools you need are based on how you prefer to build your Teams app:
 
 | If you use | Install |
@@ -25,9 +28,6 @@ Some other important tools you need are based on how you prefer to build your Te
 | JavaScript, TypeScript, or SharePoint Framework (SPFx) | [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later |
 | .NET | [Visual Studio 2019](https://visualstudio.com/download);  ASP.NET and web development OR .NET Core cross-platform development workload |
 
-
-> [!WARNING]
-> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
 ## Install conditional tools
 
@@ -92,10 +92,11 @@ The Teams Toolkit helps simplify the development process with tools to provision
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code.
-1. Select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 1. In the search box, enter **Teams Toolkit**.
 1. Select **Install** next to the Teams Toolkit.
+
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="Illustration shows the upload a custom app in Teams.":::
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -137,25 +138,27 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ---
 
-## Set up your Teams development tenant (optional)
+## Set up your Teams development tenant 
 
 A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. And this space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant, or create a new tenant for developing and testing.
 
-*Do you already have a tenant, and do you have the admin access? Let's check if you really do.*
+### Enable sideloading option
+
+Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
 Verify if you can sideload apps in Teams:
 
-1. In the Teams client, select the **...** button in the side panel.
-1. From the popup, select **More apps >**.
-1. On the Store page, select **Manage your apps**.
-1. Look for an option to **Upload a custom app**.
+1. In the Teams client, select **Apps** icon
+1. Look for an option to **Upload a custom app** If you see the option, you are able to sideload apps to Teams client.
 
- :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration shows the upload a custom app in Teams.":::
-
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app-closeup.png" alt-text="Illustration shows the upload a custom app in Teams.":::
 
 > [!NOTE]
-> If you still can't sideload apps, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details.
+> If you don't have the sideloading option, talk to your Teams administrator. See [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for details. 
 
+### Create a free Teams developer tenant (optional)
+
+If you cannot see the sideload option, or you do not have a Teams account, or just want to create a test account anyway, you can get a free Teams developer account by joining the M365 developer program!
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
