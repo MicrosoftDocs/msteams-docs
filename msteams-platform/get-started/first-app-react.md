@@ -36,17 +36,12 @@ Use the Teams Toolkit to create your first project:
 1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
 1. From the **Development** section, select **Create a new Teams app**.
 1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
-1. In the **Select capabilities** section, verify that **Tab** is selected and select **OK**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
-
-1. In the **Frontend hosting type** section, select **Azure**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
-
-1. In the **Cloud resources** section, select **OK**.  We do not need additional cloud resources for this tutorial.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot showing how to add cloud resources for your new app.":::
+1. Make sure that **Tab UI-based app** is selected as the capability, and select **OK**.
+1. Select **Azure** as the Frontend hosting type.
+1. You don't need other cloud resources for this tutorial. Select **OK** to continue. 
+1. Select **JavaScript** as the programming language.
+1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
+1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
    The Teams app is created within a few seconds.
 :::column-end:::
@@ -54,7 +49,7 @@ Use the Teams Toolkit to create your first project:
 :::column span="3":::
 Watch this video to follow through the steps to create and run a Teams app.
 
-![[My First App](../assets/videos/AppReact_Sample_0.3 "My First App")
+![[Your First App](../assets/videos/AppReact_Sample_0.3.mp4)]
 
 :::column-end:::
 
@@ -168,7 +163,7 @@ When you select **F5**, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant-optional).
+To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
 </details>
 

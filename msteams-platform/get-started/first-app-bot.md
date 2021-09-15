@@ -138,7 +138,7 @@ When you select the **F5** key, the Teams Toolkit:
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
-To run your app in Teams, use your Microsoft 365 development account that allows app sideloading. For more information about account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant-optional).
+To run your app in Teams, use your Microsoft 365 development account that allows app sideloading. For more information about account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
 > [!IMPORTANT]
 > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
