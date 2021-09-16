@@ -98,4 +98,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 ## See also
 
-[Build your first Microsoft Teams app](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Build your first Microsoft Teams app](../../get-started/code-samples.md#overview)
