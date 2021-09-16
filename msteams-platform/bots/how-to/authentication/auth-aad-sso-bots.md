@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 # Single sign-on (SSO) support for bots
 
-Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign in credentials by silently refreshing the authentication token. If users agree to use your app, they need not provide consent again on another device and can sign in automatically. The flow is similar to that of [Microsoft Teams tab SSO support](../../../tabs/how-to/authentication/auth-aad-sso.md), however, the difference is in the protocol for how a bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token).
+Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their sign-in credentials by silently refreshing the authentication token. If users agree to use your app, they need not provide consent again on another device and can sign in automatically. The flow is similar to that of [Microsoft Teams tab SSO support](../../../tabs/how-to/authentication/auth-aad-sso.md), however, the difference is in the protocol for how a bot [requests tokens](#request-a-bot-token) and [receives responses](#receive-the-bot-token).
 
 >[!NOTE]
 > OAuth 2.0 is an open standard for authentication and authorization used by AAD and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams.
@@ -26,7 +26,7 @@ Complete the following steps to get authentication and bot application tokens:
     >* The bot token is received from every active user endpoint.
     >* The app must be installed in personal scope for SSO support.
 
-1. If the current user is using your bot application for the first time, a request prompt appears requesting the user to do one of the following:
+1. If the current user is using your bot application for the first time, a request prompt appears to request the user to do one of the following:
     * Provide consent, if required.
     * Handle step-up authentication, such as two-factor authentication.
 
@@ -87,7 +87,7 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 Complete the following steps to update the Azure portal with the OAuth connection:
 
-1. In the Azure Portal, go to **App registrations**.
+1. In the Azure portal, go to **App registrations**.
 
 2. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
@@ -96,13 +96,13 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     * OpenId
     * profile
 
-3. In the Azure Portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
+3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 4. Select **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings** section.
 
-  ![SSOBotHandle2 view](~/assets\ConsotoAirline1.png)
+  ![SSOBotHandle2 view](~/assets\images\Newcontoso.png)
 
-5. Perform the following steps to complete the **New Connection Setting** form:
+6. Perform the following steps to complete the **New Connection Setting** form:
 
     >[!NOTE]
     > **Implicit grant** may be required in the AAD application.
