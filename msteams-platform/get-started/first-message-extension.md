@@ -171,11 +171,20 @@ Deployment involves two steps. First, you provision resources on an active Azure
 
 </details>
 
+Now, you have learned how to build and run a basic message extension.
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
+
+Or keep reading to add more features to the app.
+
 ## Add a configuration page to your messaging extension
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-## Code sample
+### Code sample
 
 Use the Teams Search Auth Config for sample projects on GitHub to see how to: 
 - Create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples).
@@ -185,7 +194,7 @@ Use the Teams Search Auth Config for sample projects on GitHub to see how to:
 |-----------------|-----------------|-------------|--------------|--------|
 | Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## More code sample
+### More code samples
 
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
