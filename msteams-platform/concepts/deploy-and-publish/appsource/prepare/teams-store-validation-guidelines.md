@@ -186,7 +186,7 @@ The long description can provide an engaging narrative that highlights your app'
 * Use active voice and speak to users directly. For example, *You can ...*.
 * List features with bullet points so it's easier to scan the description.
 * Clearly describe limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the user installs your app. The Teams capabilities your app supports must relate to the core functions your listing describes.
-* Ensure app description matches with the functionality available inside Teams app. Any reference to workflows outside of the Teams app must be limited & distinctly called out from the Teams app functionality. 
+* Ensure the app description matches with the functionality available inside Teams app. Any reference to workflows outside of the Teams app must be limited and distinctly called out from the Teams app functionality.
 * Include a help or support link.
 * Refer to **Microsoft 365** instead of **Office 365**.
 * If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
