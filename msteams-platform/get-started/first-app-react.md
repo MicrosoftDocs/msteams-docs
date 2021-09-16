@@ -29,7 +29,7 @@ Before you begin, make sure your development environment is set up by installing
 
 If the prerequisites are in place, let's begin! Use the Teams Toolkit to create your first project:
 
-# [Visual Studio Code](#tab/vscode)
+# [Visual Studio Code](#tab/vsc)
 
 1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
     :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Teams Toolkit Sidebar Icon":::
@@ -130,7 +130,7 @@ You must have access to two accounts:
 - Your Microsoft 365 account credentials: Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 - Your Azure credentials: Use this account to access the Azure portal and to provision new cloud resources to support your app.
 
-# [Visual Studio Code](#tab/vscode)
+# [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
 1. Select the Teams icon in the sidebar:
@@ -155,11 +155,11 @@ You must have access to two accounts:
 
     Now you're ready to build the app and run it locally!
 
-# [Visual Studio 2019](#tab/visualscode)
+# [Visual Studio 2019](#tab/vscode)
 
 Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
-# [Command line](#tab/cli)
+# [Command line](#tab/cline)
 
 1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
