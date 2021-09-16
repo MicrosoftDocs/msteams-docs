@@ -7,18 +7,14 @@ keywords: Microsoft Teams developer samples
 ---
 # Overview
 
-Welcome to the tutorial for building and deploying customized apps for Microsoft Teams! 
+Welcome to the Get started for building and deploying customized apps for Microsoft Teams! 
 
-In this tutorial:
-- Create a Teams app with capabilities like Tabs, Bots, and Message Extension using various languages and tools. 
+Learn how to create basic Teams apps. Each tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.
+
+You will:
+- Create a Teams app with capabilities like Tabs, Bots, and Message Extension. 
 - Deploy an app locally or on the cloud.
 - Look through Code Samples to customize and configure app capabilities.
-
-## Build your first Microsoft Teams app overview
-
-In the **get started** tutorial, you learn how to create basic Teams apps. Each tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.  
-
-Additionally, this section includes alternative guides for you who are already familiar with Blazor, SPFx, C# or .NET, Node.js, and Yeoman Generator.
 
 ## What you'll learn
 
@@ -27,7 +23,6 @@ Here's an idea of what you'll know after going through the lessons:
 - Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
-
 
 ### Teams app fundamentals
 

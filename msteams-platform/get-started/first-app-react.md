@@ -31,22 +31,21 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
 # [Visual Studio Code](#tab/vsc)
 
-1. In Visual Studio code, select the Teams Toolkit icon in the sidebar.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="Teams Toolkit Sidebar Icon":::
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. From the **Development** section, select **Create a new Teams app**.
+1. Select **Create a new Teams app** from the **Development** section.
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-teams-toolkit-dev-bar.png" alt-text="Development Sidebar in Visual Studio Code":::
 
-1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
+1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-create-teams-app.png" alt-text="Create App":::
 
-1. Make sure that **Tab UI-based app** is selected as the capability, and select **OK**.
+1. Ensure that **Tab UI-based app** is selected as the capability, and select **OK**.
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-app-capability.png" alt-text="Select App Capability":::
 
 1. Select **Azure** as the Frontend hosting type.
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-hosting-type.png" alt-text="Select Hosting Type":::
 
-1. You don't need other cloud resources for this tutorial. Select **OK** to continue. 
+1. Select **OK** to continue. You don't need other cloud resources for this tutorial. 
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-cloud-resources.png" alt-text="Cloud Resources":::
 
 1. Select **JavaScript** as the programming language.
@@ -55,7 +54,7 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
-    The Teams app is created within a few seconds.
+    The Teams app is created in a few seconds.
 
 
 # [Command line](#tab/cli)
@@ -84,8 +83,6 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 ## Take a tour of the source code
 
-If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
-
 After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
@@ -108,16 +105,13 @@ Among other items in this directory, the Toolkit maintains:
 
 When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. The `api` directory holds the code to any Azure Functions you write.
 
-## Run your app locally
+## Prepare the local environment
 
 You can use Teams Toolkit to run the app in the local environment. To prepare the environment, ensure that:
 
-- The app is registered with Azure Active Directory. This application has permissions for the location that the app is loaded from and for any backend resources it accesses.
-
-- The Azure Functions Core Tools hosts a web API that assists with authentication tasks. This API acts as a proxy between the app and the Azure Active Directory. You can access it from `https://localhost:5000`
-
+- An application is registered with Azure Active Directory. This application has permissions for the location that the app is loaded from and for any backend resources it accesses.
+- A web api is hosted to assist with authentication tasks. This API acts as a proxy between the app and Azure Active Directory. You can access it from `https://localhost:5000`
 - The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. You can access the local service from `https://localhost:3000`.
-
 - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
 After it's done, load your app in the Teams client. You can see the HTML, CSS, and JavaScript code using the Teams web client.
@@ -133,9 +127,7 @@ You must have access to two accounts:
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
-1. Select the Teams icon in the sidebar:
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::  icon in the sidebar.
 
 1. Select **Sign in to M365**.
 
@@ -184,7 +176,7 @@ Visual Studio 2019 prompts you to log into each service as required. You don't n
 
 ---
 
-### Build and run your app locally in Visual Studio Code
+## Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
 
