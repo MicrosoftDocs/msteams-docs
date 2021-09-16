@@ -207,7 +207,7 @@ The long description can provide an engaging narrative that highlights your app'
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 * Use copyrighted brand names you don't own.
-* * Use the following language unless you are a certified Microsoft partner:
+ * Use the following language unless you are a certified Microsoft partner:
   * "... certified for ..."
   * "... powered by ..."
 * Include typos, grammatical errors, and unnecessary capitalizations (for example, **Users** instead of **users**).
