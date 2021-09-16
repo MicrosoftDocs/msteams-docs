@@ -213,7 +213,7 @@ The long description can provide an engaging narrative that highlights your app'
 * Include typos, grammatical errors, and unnecessary capitalizations, such as **Users** instead of **users**.
 * Include links to AppSource.
 * Make unverified claims (for example: best, top, ranked), unless accompanied by the source of the claim.
-* Compare your offer with other marketplace offers 
+* Compare your offer with other marketplace offers.
 
 
 
