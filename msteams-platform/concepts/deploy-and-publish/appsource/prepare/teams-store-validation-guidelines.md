@@ -210,7 +210,7 @@ The long description can provide an engaging narrative that highlights your app'
  * Use the following language unless you are a certified Microsoft partner:
   * "... certified for ..."
   * "... powered by ..."
-* Include typos, grammatical errors, and unnecessary capitalizations (for example, **Users** instead of **users**).
+* Include typos, grammatical errors, and unnecessary capitalizations, such as **Users** instead of **users**.
 * Include links to AppSource.
 * Make unverified claims such as best, top, ranked etc. unless accompanied by the source of the claim.
 * Compare your offer with other marketplace offers 
