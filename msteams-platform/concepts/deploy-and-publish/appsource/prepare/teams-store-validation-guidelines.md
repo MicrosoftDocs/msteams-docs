@@ -212,7 +212,7 @@ The long description can provide an engaging narrative that highlights your app'
   * "... powered by ..."
 * Include typos, grammatical errors, and unnecessary capitalizations, such as **Users** instead of **users**.
 * Include links to AppSource.
-* Make unverified claims such as best, top, ranked etc. unless accompanied by the source of the claim.
+* Make unverified claims (for example: best, top, ranked), unless accompanied by the source of the claim.
 * Compare your offer with other marketplace offers 
 
 
