@@ -100,7 +100,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 4. Select **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![SSOBotHandle2 view](~/assets\images\Newcontoso.png)
+    ![SSOBotHandle2 view](~/assets\Contosoairlines.png)
 
 6. Perform the following steps to complete the **New Connection Setting** form:
 
