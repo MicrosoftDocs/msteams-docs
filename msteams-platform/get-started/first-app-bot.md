@@ -147,8 +147,6 @@ To run your app in Teams, use your Microsoft 365 development account that allows
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
 </details>
 
-[!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
-
 <!-- markdownlint-disable MD033 -->
 
 <details>
@@ -163,9 +161,9 @@ Before deployment, the application has been running in your local environment:
 </details>
 
 
-Next, let's try building another type of Teams app, or learn how to deploy your bot to Azure!
-
 ## Next step
+
+Next, let's try building another type of Teams app, or go ahead and see how to deploy your bot to Azure!
 
 > [!div class="nextstepaction"]
 > [Build your first Message Extension](../get-started/first-message-extension.md)
