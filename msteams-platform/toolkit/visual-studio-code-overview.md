@@ -23,11 +23,11 @@ You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](http
 
 The following tools are installed by the Visual Studio Code extension when they are needed. If already installed, the installed version is used instead. If using Linux (including WSL), you must install these tools before use:
 
-- [Azure Functions Core Tools](https://docs.microsoft.com/microsoftteams/platform/get-started/code-samples)
+- [Azure Functions Core Tools](~/platform/get-started/code-samples)
 
     Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory using the npm `devDependencies`.
 
-- [.NET SDK](https://docs.microsoft.com/microsoftteams/platform/get-started/code-samples)
+- [.NET SDK](~/platform/get-started/code-samples)
 
     The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 or later SDK globally, the portable version is installed.
 
