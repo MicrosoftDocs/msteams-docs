@@ -98,7 +98,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 
 3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 4. Select **Configuration** on the left pane.
-5. Select **Add OAuth Connection Settings** section.
+5. Select **Add OAuth Connection Settings**.
 
   ![SSOBotHandle2 view](~/assets\images\Newcontoso.png)
 
