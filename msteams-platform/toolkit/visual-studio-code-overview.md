@@ -27,7 +27,7 @@ The following tools are installed by the Visual Studio Code extension when they 
 
     Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory using the npm `devDependencies`.
 
-- .[NET SDK](~/get-started/code-samples.md)
+- [NET SDK](~/get-started/code-samples.md)
 
     The .NET SDK is used to install customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 or later SDK globally, the portable version is installed.
 
