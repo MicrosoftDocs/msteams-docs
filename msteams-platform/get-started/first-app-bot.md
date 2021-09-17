@@ -40,7 +40,7 @@ Use the Teams Toolkit to create your first project:
 
 1. In the **Select capabilities** section, select **Bot**, deselect **Tab**, and select **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities-bot.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
 1. In the **Bot registration** section, select **Create a new bot registration**.
 
@@ -48,7 +48,7 @@ Use the Teams Toolkit to create your first project:
 
 1. In the **Programming Language** section, select **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-languages.png" alt-text="Screenshot showing how to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language.":::
 
 1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
@@ -88,7 +88,7 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 A messaging extension uses the [Bot Framework](https://docs.botframework.com). You can interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="File layout of a bot project.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="Project files scaffolded for bot in Visual Studio Code.":::
 
 The bot code is stored in the `bot` directory. The `bot/teamsBot.js` is the main entry point for the bot.
 
