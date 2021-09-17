@@ -110,9 +110,11 @@ items:
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
-          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)
+          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
+          ![Select Teams](~/assets/images/bots/select-teams.png)    
     1. Select **Save**.
     1. Select the checkbox to accept the terms of service and select **Agree**.
+          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
 
     **To add messaging endpoint**
 
@@ -145,6 +147,8 @@ items:
 
     **To add Redirect URI to the Azure bot resource**
 
+    1. Adjacent to **Microsoft App ID**, select **Manage**.
+        ![Manage app ID](~/assets/images/bots/select-manage.png)
     1. From the left pane of your bot resource, select **Authentication**.
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
@@ -210,9 +214,11 @@ items:
 
     1. Select **Manifest** from the left pane.
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).
-    
+        ![Update manifest](~/assets/images/bots/update-manifest.png)
+
     **To set up Bot Service connection**
 
+    1. Go to **Configuration page** > **Add OAuth Connection Settings**.
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
 
