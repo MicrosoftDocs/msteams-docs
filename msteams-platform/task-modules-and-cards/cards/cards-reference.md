@@ -72,7 +72,7 @@ You can identify and use different types of cards based on your application requ
 You can go through some common properties that are applicable to all cards.
 
 > [!NOTE]
-> Hero and thumbnail cards with multiple actions are automatically split into multiple cards in carousel layout.
+> Hero and thumbnail cards with multiple actions are automatically split into multiple cards in carousel.
 
 ### Inline card images
 
