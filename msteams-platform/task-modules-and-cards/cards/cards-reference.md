@@ -71,6 +71,9 @@ You can identify and use different types of cards based on your application requ
 
 You can go through some common properties that are applicable to all cards.
 
+> [!NOTE]
+> Hero and thumbnail cards with multiple actions are automatically split into multiple cards in carousel layout. 
+
 ### Inline card images
 
 The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public Content Delivery Network (CDN).
