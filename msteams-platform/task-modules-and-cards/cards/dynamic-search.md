@@ -12,7 +12,7 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Typeahead search functionality in adaptive cards gives an enhanced search experience on input choiceset component. It provides a list of choices to enter text in the search field. You can incorporate type-ahead search with Adaptive Cards to search and select data.      
+Typeahead search functionality in Adaptive Cards gives an enhanced search experience on input choiceset component. It provides a list of choices to enter text in the search field. You can incorporate typeahead search with Adaptive Cards to search and select data.      
 
 You can use typeahead search for the following searches: 
 
@@ -34,7 +34,7 @@ As user starts entering the texts, the choices are filtered down to choices that
 
 The following image demonstrates static typeahead search:
 
-![Static typeahead search](../../assets/images/cards/static-type-ahead-search.png)
+[Placeholder for gif image]
  
 ## Dynamic typeahead search
 
@@ -50,7 +50,7 @@ Android and iOS mobile clients support typeahead search in Adaptive Cards.
  
 **Example Scenario**
 
-John is a store employee who works at an xbox retail store. The store uses a bot to take new purchase requests from customers. A customer can search from the thousands of games available Typeahead search in Adaptive Card is used to search and select customers' choices.
+John is a store employee who works at an Xbox retail store. The store uses a bot to take new purchase requests from customers. A customer can search from the thousands of games available. Typeahead search in Adaptive Card is used to search and select customers' choices.
 
 **To use typeahead search in Adaptive Cards**
 
@@ -58,18 +58,9 @@ John is a store employee who works at an xbox retail store. The store uses a bot
 1. User A sends a command to the bot for a **New customer request**. The bot responds with the Adaptive Card that has `Input.ChoiceSet` component.
 1. User A uses typeahead search to search and select the information based on the customer's choice. 
 
-The `Input.ChoiceSet` component contains the following fields: 
-
-|Field name|Type |Examples of values|
-|----------|-------|-----------------|
-|Select Product category |	Static | Sunglasses, Spectacles, Sports wear. |
-|Select Brand|	Dynamic (fetched from server) |	Brands x, y, z. |
-|Select Product	|Dynamic (fetched from server) | Different Models available. For example, Model A, Model B, Model C. |
-|Select Color | Dynamic (fetched from server) |	Various color options. |      
-
 The following image illustrates mobile experience of typeahead search:       
 
-<img src="~/assets/images/cards/mobile-type-ahead-search.png" alt="Mobile experience" width="400"/>
+[Placeholder for gif image]
 
 ---
 
@@ -87,7 +78,7 @@ The following image illustrates mobile experience of typeahead search:
 > [!NOTE]
 > The Input.ChoiceSet control is based on the style and isMultiSelect properties.
 
-### Update schema
+### Schema properties
 
 The following properties are the new additions to the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable typeahead search:
 
