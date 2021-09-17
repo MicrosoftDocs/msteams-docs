@@ -185,7 +185,7 @@ Shared meeting stage helps meeting participants interact with and collaborate on
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 >[!Note] 
->Apps shared to the meeting stage is available only for consumption on mobile. Once an app is shared to stage from desktop, it is available for all the users on Mobile meeting. 
+>Apps shared to the meeting stage is available only for consumption on mobile. Once an app is shared to stage from desktop, it is available for all the users on mobile meeting. 
 
 ### Use cases
 
