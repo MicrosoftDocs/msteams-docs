@@ -1,14 +1,14 @@
 ---
-title: Get started - Build your first conversational bot
+title: Get started - Build your first bot
 author: adrianhall
-description: Create a conversational bot for Microsoft Teams using the Teams Toolkit.
+description: Create a bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build your first conversational bot for Microsoft Teams
+# Build your first bot for Microsoft Teams
 
 In this tutorial, you will learn how to build, run, and deploy a Teams bot app. A bot acts as an intermediary between a Teams user and a web service. Users can chat with a bot to quickly get information, initiate workflows, or anything else your web service can do. 
 
@@ -88,7 +88,7 @@ A messaging extension uses the [Bot Framework](https://docs.botframework.com) to
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/bot-file-layout.png" alt-text="File layout of a bot project.":::
 
-The bot code is stored in the `bot` directory.  The `bot/teamsBot.js` is the main entry point for the bot, and the dialogs are stored in the `dialogs` directory.
+The bot code is stored in the `bot` directory.  The `bot/teamsBot.js` is the main entry point for the bot.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
@@ -99,7 +99,6 @@ Teams Toolkit allows you to host your app locally.  To do this:
 
 - An Azure Active Directory Application is registered within the M365 tenant.
 - An app manifest is submitted to the Developer Center for Teams.
-- An API is run locally using Azure Functions Core Tools to support your app.
 - [ngrok](https://ngrok.io) is installed and used to provide a tunnel between Teams and your bot code.
 
 To build and run your app locally:
@@ -115,9 +114,9 @@ To build and run your app locally:
 1. You may be prompted to sign in.  If so, sign in with your M365 account.
 1. When prompted to install the app onto Teams, select **Add**.
 
-   After the app is loaded, you will be taken directly to a chat session with the bot.  You can type `intro` to show an introduction card, and `show` to show your details from Microsoft Graph.  (This will require an additional permissions approval).
+   After the app is loaded, you will be taken directly to a chat session with the bot.  You can type `welcome` to show an introduction card, and `learn` to go adaptive card and bot command documentation. 
 
-   Debugging works as you normally would expect - try it yourself! Open the `bot/dialogs/rootDialog.js` file and locate the `triggerCommand(...)` method.  Set a breakpoint on the default case.  Then type some text.
+   Debugging works as you normally would expect - try it yourself! Open the `bot/teamsBot.js` file and locate the `onMessage()` method.  Set a breakpoint on any case.  Then type some text.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -127,7 +126,6 @@ When you press the **F5** key, the Teams Toolkit:
 
 1. Registers your application with Azure Active Directory.
 1. Registers your application for "side loading" in Microsoft Teams.
-1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
 1. Starts an ngrok tunnel so Teams can communicate with your app.
 1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
 
@@ -155,7 +153,6 @@ To successfully run your app in Teams, you must have a Microsoft 365 development
 
 Before deployment, the application has been running locally:
 
-1. The backend runs using _Azure Functions Core Tools_.
 1. The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
 
    Deployment involves provisioning resources on an active Azure subscription and deploying (uploading) the backend and frontend code for the application to Azure. The backend uses a variety of Azure services, including Azure App Service and Azure Bot Service.
