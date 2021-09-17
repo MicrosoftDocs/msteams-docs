@@ -12,18 +12,12 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Typeahead search functionality gives an enhanced search experience. It provides a list of possible choices as you enter the text in the search field. You can incorporate type-ahead search with Adaptive Cards to search and select data.      
+Typeahead search functionality in adaptive cards gives an enhanced search experience on input choiceset component. It provides a list of choices to enter text in the search field. You can incorporate type-ahead search with Adaptive Cards to search and select data.      
 
 You can use typeahead search for the following searches: 
 
 * [Static search](#static-typeahead-search)
 * [Dynamic search](#dynamic-typeahead-search)
-
-The advantages of typeahead search are as follows:
-
-* You can get a list of choices from a remote backend dynamically.
-* You can view, select, and, remove single or multiple choices from the input choice set dropdown list.
-* You can add images and text as part of the different input choices.
 
 **Typeahead search process**
 
@@ -35,8 +29,8 @@ The following image demonstrates the typeahead search process:
 
 ## Static typeahead search
 
-Static typeahead search is the search within the specified values in the Adaptive Card payload. The payload size in static search increases with number of choices. In static typeahead search, instead of a regular dropdown menu, a textbox with a dropdown like arrow is rendered. The arrow indicates a `ChoiceSet`.
-As you start entering the texts, the choices are filtered down to choices that partially match the input. The dropdown list highlights the input characters that match the search. When the choice list ends, one choice is visible without dropdown arrow.     
+Static typeahead search allows users to search from values specified within input.choiceset in the Adaptive Card payload. Static Type ahead search can be used to show a few choices to the user. The payload size in static search increases with number of choices specified in the payload.
+As user starts entering the texts, the choices are filtered down to choices that partially match the input. The dropdown list highlights the input characters that match the search.     
 
 The following image demonstrates static typeahead search:
 
@@ -44,7 +38,7 @@ The following image demonstrates static typeahead search:
  
 ## Dynamic typeahead search
 
-Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the remote backend. 
+Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the dataset specified in the card payload. The type ahead functionality helps to filter out the choices as the user types. 
 
 # [Desktop](#tab/desktop)
 
@@ -54,9 +48,9 @@ Dynamic typeahead search is useful to search and select data from large data set
 
 Android and iOS mobile clients support typeahead search in Adaptive Cards. 
  
-**Search with a product catalog scenario example**
+**Example Scenario**
 
-User A is a store employee who works at an online or offline platform for selling glasses. The store uses a bot to take new requests from customers. Typeahead search in Adaptive Card is used to search and select customers' choices.
+John is a store employee who works at an xbox retail store. The store uses a bot to take new purchase requests from customers. A customer can search from the thousands of games available Typeahead search in Adaptive Card is used to search and select customers' choices.
 
 **To use typeahead search in Adaptive Cards**
 
