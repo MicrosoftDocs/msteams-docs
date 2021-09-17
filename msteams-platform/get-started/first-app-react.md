@@ -57,6 +57,8 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
     The Teams app is created in a few seconds.
 
 
+![Build Hello World App](~/assets/app-sample-anim-gif.gif)
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
