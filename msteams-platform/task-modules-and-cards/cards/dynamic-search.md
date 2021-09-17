@@ -19,14 +19,6 @@ You can use typeahead search for the following searches:
 * [Static search](#static-typeahead-search)
 * [Dynamic search](#dynamic-typeahead-search)
 
-**Typeahead search process**
-
-You can enter texts in the text box of typeahead enabled Adaptive Card to start the search. The search request goes to the bot as an invoke. The bot sends the response to the chat service. The response is validated and rendered.
-
-The following image demonstrates the typeahead search process: 
-
-![Typeahead search](../../assets/images/cards/dynamic-type-ahead-search-flow.png)
-
 ## Static typeahead search
 
 Static typeahead search allows users to search from values specified within input.choiceset in the Adaptive Card payload. Static Type ahead search can be used to show a few choices to the user. The payload size in static search increases with number of choices specified in the payload.
@@ -97,5 +89,5 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-
+[Placeholder for code sample]
 
