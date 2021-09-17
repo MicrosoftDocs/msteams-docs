@@ -9,19 +9,19 @@ ms.localizationpriority: none
 ---
 # Prerequisites: Get started with Microsoft Teams app development
 
-Before you begin creating your first Teams app, install a few tools and set up your development environment.
+Before you begin creating your first Teams app, install the tools and set up your development environment.
 
 ## Install required tools
 
 The following tools are required for building an app:
 
-- [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release)
+- [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release) for back-end JavaScript runtime environment
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-Some other important tools you need are based on how you prefer to build your Teams app:
+Other important tools you need are based on how you prefer to build your Teams app:
 
 | If you use | Install |
 | --- | --- |
@@ -50,18 +50,7 @@ You also need to install the following Visual Studio Code Extensions.
 |
 </details>
 
-<details>
-<summary>Prerequisites for other languages and tools </summary>
-If you choose a different environment to build your app, select the appropriate tools and install them.
 
-| If you want to use | Install |
-| --- | --- | 
-| SharePoint Framework (SPFx) | SharePoint App Catalog |
-| C# or .NET | Git, ngrok |
-| Node.js | Git, Node.js, NPM |
-| Yeoman generator | Yeoman generator, Gulp CLI | 
-|
-</details>
 <details>
 <summary>Install Optional Tools </summary>
 
