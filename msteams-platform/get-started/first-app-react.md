@@ -33,8 +33,9 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Create a new Teams app** from the **Development** section.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-teams-toolkit-dev-bar.png" alt-text="Development Sidebar in Visual Studio Code":::
+1. Select **Create a new Teams app**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
     :::image type="content" source="../assets/images/teams-toolkit-v2/hw-create-teams-app.png" alt-text="Create App":::
