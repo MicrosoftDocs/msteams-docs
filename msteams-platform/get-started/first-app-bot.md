@@ -88,7 +88,7 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 A messaging extension uses the [Bot Framework](https://docs.botframework.com). You can interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="Project files scaffolded for bot in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
 The bot code is stored in the `bot` directory. The `bot/teamsBot.js` is the main entry point for the bot.
 
