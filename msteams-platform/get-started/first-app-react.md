@@ -33,27 +33,35 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Create a new Teams app**.
+1. Select **Create a new Teams app**. The UI may look different, depending on your operating system.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-create-teams-app.png" alt-text="Create App":::
 
-1. Ensure that **Tab UI-based app** is selected as the capability, and select **OK**.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-app-capability.png" alt-text="Select App Capability":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
+
+1. In the Select capabilities section, ensure that **Tab UI-based app** is selected as the capability, and select **OK**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
 1. Select **Azure** as the Frontend hosting type.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-hosting-type.png" alt-text="Select Hosting Type":::
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
 
 1. Select **OK** to continue. You don't need other cloud resources for this tutorial. 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-cloud-resources.png" alt-text="Cloud Resources":::
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
 1. Select **JavaScript** as the programming language.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hw-programming-language.png" alt-text="Programming Language":::
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
+
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
     The Teams app is created in a few seconds.
 
@@ -130,11 +138,11 @@ You must have access to two accounts:
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png":::  icon in the sidebar.
+1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar. 
 
 1. Select **Sign in to M365**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/hw-M365-sign-in.png" alt-text="Sign in to Microsoft 365 and Azure.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
     The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser, and return to Visual Studio Code.
 
@@ -185,7 +193,9 @@ To build and run your app locally:
 
 1. From Visual Studio Code, select **F5** to run the application in debug mode.
 
-   *Debug can take up a few minutes to complete as all dependencies are downloaded and the app is built for the first time.* 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
+
+   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
    The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** (or **Continue**, depending on your operating system) when the following dialog appears:
 
