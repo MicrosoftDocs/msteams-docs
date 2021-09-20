@@ -91,6 +91,7 @@ async def on_message_activity(self, turn_context: TurnContext):
             "contentType": "text/html",
             "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
     } 
+    ],
     "entities": [
       { 
         "locale": "en-US",
