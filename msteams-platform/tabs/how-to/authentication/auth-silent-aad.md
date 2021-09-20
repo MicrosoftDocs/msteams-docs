@@ -10,9 +10,9 @@ keywords: teams authentication SSO silent AAD
 > [!NOTE]
 > For authentication to work on mobile clients tab, use least 1.4.1 version or later of the Teams JavaScript SDK.
 
-Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign-in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
-If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
+Whenever you want to keep your code client-side use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript, to get an AAD access token silently. If the user has signed in recently, they won't see a popup dialog box.
 
 Even though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
 
@@ -21,7 +21,7 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. In case, if the user interaction is required to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to the app. At this point, app can only show sign in button if necessary.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign-in page. In case, if the user interaction is required to sign in or grant access, AAD immediately returns an error that ADAL.js reports to the app. At this point, app can only show sign in button if necessary.
 
 ## How to do silent authentication
 
@@ -49,7 +49,7 @@ Include the ADAL.js library in your tab pages and configure ADAL with your clien
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. This is used as a loginHint in the call to AAD.
+In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. It is used as a loginHint in the call to AAD.
 
 ```javascript
 // Set up extra query parameters for ADAL
@@ -66,7 +66,7 @@ if (loginHint) {
 
 If ADAL has a token cached for the user that has not expired, use that token. Alternately, attempt to get a token silently by calling `acquireToken(resource, callback)`. ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
-If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.
+If you get an error in the callback function, show a sign-in button and fall back to an explicit sign-in.
 
 ```javascript
 let authContext = new AuthenticationContext(config); // from the ADAL.js library
@@ -99,7 +99,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### Process the return value
 
-ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign in callback page.
+ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
 
 Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.
 
