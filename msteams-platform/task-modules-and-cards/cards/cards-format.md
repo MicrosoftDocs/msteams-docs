@@ -26,7 +26,7 @@ You can format Adaptive Cards and Office 365 Connector cards with Markdown that 
 The following card types support Markdown formatting in Teams:
 
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
-* O365 Connector cards: Markdown and limited HTML is supported in O365 Connector cards in the text fields.
+* Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
@@ -408,7 +408,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown format for O365 Connector cards](#tab/connector-md)
+# [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -501,12 +501,12 @@ The following code shows an example of formatting for Markdown connector cards:
 
 The following card types support HTML formatting in Teams:
 
-* O365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
+* Office 365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for O365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for O365 Connector cards](#tab/connector-html)
+# [HTML format for Office 365 Connector cards](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 
