@@ -185,7 +185,7 @@ Shared meeting stage helps meeting participants interact with and collaborate on
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 >[!Note] 
->Apps shared to the meeting stage is available only for consumption on mobile. Once an app is shared to stage from desktop, it is available for all the users on mobile meeting. 
+>Apps shared to the meeting stage is accessible only for mobile consumers. Especially,  when an app is shared to meeting stage from desktop, it is accessible for all the mobile meeting users. 
 
 ### Use cases
 
@@ -257,7 +257,7 @@ When the side panel isn't open, the meeting stage is 994x678 pixels by default a
 
 #### Meeting stage (with side panel)
 
-When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixels.
+When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
 
