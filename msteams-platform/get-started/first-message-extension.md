@@ -96,14 +96,21 @@ The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
+## Prepare the local environment
+
+You can use the Teams Toolkit to run your app in the local environment. 
+
+When you completed the [Hello world](first-app-react.md), in your Toolkit you should already have:
+
+- signed in to Microsoft 365 account
+- signed in to Azure account
+
+Also you need:
+
+- Install [ngrok](https://ngrok.io), which is used to provide a tunnel between Teams and your bot code
+- Set up and authenticate ngrok on your local environment. (Please refer the instructions on [ngrok](https://ngrok.io) website)
+
 ## Run your app locally
-
-You can use Teams Toolkit to host your app in the local environment. To prepare the environment, ensure that:
-
-- An Azure Active Directory Application is registered within the Microsoft 365 tenant.
-- An app manifest is submitted to the Developer Portal for Teams.
-- An API is run in the local environment using Azure Functions Core Tools to support your app.
-- [ngrok](https://ngrok.io) is installed. You use it to provide a tunnel between Teams and your messaging extension.
 
 To build and run your app locally:
 
