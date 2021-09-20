@@ -147,7 +147,7 @@ items:
 
     **To add Redirect URI to the Azure bot resource**
 
-    1. Adjacent to **Microsoft App ID**, select **Manage**.
+    1. Adjacent to **Microsoft App ID**, select **Manage**.</br>
         ![Manage app ID](~/assets/images/bots/select-manage.png)
     1. From the left pane of your bot resource, select **Authentication**.
     1. In **Platform configurations**, select **Add a platform**.
@@ -194,27 +194,27 @@ items:
 
     Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:      
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
-    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)     
+    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>     
         ![Add client application to app](~/assets/images/bots/addclientapplication1.png)        
     
     **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
-    1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.
+    1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.</br>
         ![API user permissions](~/assets/images/bots/APIpermissions.png)
 
     **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
-    1. Select the **Access tokens** and **ID tokens** checkboxes.
+    1. Select the **Access tokens** and **ID tokens** checkboxes.</br>
         ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
     1. Select **Save** to save the changes.
 
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).
-        ![Update manifest](~/assets/images/bots/update-manifest.png)
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
+        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
 
     **To set up Bot Service connection**
 
