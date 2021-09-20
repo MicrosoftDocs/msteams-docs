@@ -36,7 +36,7 @@ Use the Teams Toolkit to create your first project:
 
 1. Then, select **Create New Project** from the dropdown menu in the Teams Toolkit.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab**, and select **OK**.
 
