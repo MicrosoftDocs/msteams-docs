@@ -185,7 +185,7 @@ Shared meeting stage helps meeting participants interact with and collaborate on
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 >[!Note] 
->Apps shared to the meeting stage is accessible only for mobile users. Especially,  when an app is shared to meeting stage from desktop is accessible for all the mobile meeting users. 
+>Apps shared to the meeting stage from desktop is accessible only for the mobile meeting users. 
 
 ### Use cases
 
@@ -251,7 +251,7 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 
 #### Meeting stage (without side panel)
 
-When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
+When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
 
@@ -263,7 +263,7 @@ When the side panel is open, the meeting stage is 918x540 pixels by default and 
 
 ## After a meeting
 
-You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between a the pre- and post-meeting tab experience.)
+You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between the pre- and post-meeting tab experience.)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
 
