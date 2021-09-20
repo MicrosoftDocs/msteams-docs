@@ -30,16 +30,11 @@ Use the Teams Toolkit to create your first project:
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code.
-1. Select the Teams icon in the sidebar to open the Teams Toolkit.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+1. Select **Create New Project** from the left-hand side of the Toolkit. It is either a blue button or under "Development" menu, depending on your OS.
 
-1. Select **Create New Project**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
-
-1. Select **Create a new Teams app**.
+1. Then, select **Create New Project** from the dropdown menu in the Teams Toolkit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
@@ -123,8 +118,8 @@ To build and run your app locally:
 1. Once the sample app is loaded, try the app: 
    
    1. Initiate a new conversation
-   1. Launch the message extension from three dots in the composing area 
-   1. Select the message extension app you just installed 
+   2. Launch the message extension from three dots in the composing area 
+   3. Select the message extension app you just installed 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
    
