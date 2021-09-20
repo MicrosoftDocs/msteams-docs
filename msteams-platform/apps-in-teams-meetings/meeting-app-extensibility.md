@@ -96,7 +96,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 > [!NOTE]
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
-> * App manifest uses the context field and specifies the places in which you want the apps to appear. It also acts as a part of share-tray experinece, as mention in the specified design guidelines.
+> * App manifest uses the context field and specifies the places, where the user want the apps to appear. Further, acts as a part of a share-tray experience as mentioned in the specified design guidelines.
 
 The following image illustrates the in-meeting side panel:
 
