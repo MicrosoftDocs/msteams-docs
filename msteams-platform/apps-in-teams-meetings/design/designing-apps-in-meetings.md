@@ -94,7 +94,7 @@ People might use the in-meeting tab to:
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon (selected)**: 16-pixel transparent app logo.|
+|1|**App icon (selected)**: 16-pixels transparent app logo.|
 |2|**App name**|
 |3|**Header**: Includes your app name.|
 |4|**Close button**: Dismisses the tab. Always use the upper-right close icon instead of an action in the footer.|
@@ -257,7 +257,7 @@ When the side panel isn't open, the meeting stage is 994x678 pixels by default a
 
 #### Meeting stage (with side panel)
 
-When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixel.
+When the side panel is open, the meeting stage is 918x540 pixels by default and can be a minimum 472x382 pixels.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-with-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel open." border="false":::
 
