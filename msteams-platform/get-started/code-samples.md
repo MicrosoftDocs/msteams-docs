@@ -7,9 +7,9 @@ keywords: Microsoft Teams developer samples
 ---
 # Overview
 
-Welcome to the Get started for building and deploying customized apps for Microsoft Teams! 
+Welcome to the Get started module for building and deploying customized apps for Microsoft Teams! 
 
-Learn how to create basic Teams apps. Each tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.
+Learn how to create basic Teams apps. This tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.
 
 You will:
 - Create a Teams app with capabilities like Tabs, Bots, and Message Extension. 
@@ -26,17 +26,18 @@ Here's an idea of what you'll know after going through the lessons:
 
 ### Teams app fundamentals
 
-The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
-
-:::image type="content" source="../assets/images/get-started/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
-
 Some common scenarios that a custom Microsoft Teams app can help with are:
 
 * Embed your website or web app directly in the Teams client.
 * Help users quickly look up information in another system and add the results to a conversation in Teams.
 * Trigger workflows and processes based on a conversation in Teams, preserving the context of the conversation.
 
-Before you begin the tutorials, you should know about app capabilities.
+Before you begin, here's a quick glance at the road-map to building and deploying a Teams app.
+
+The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
+
+:::image type="content" source="../assets/images/get-started/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
+
 
 ### App capabilities
 

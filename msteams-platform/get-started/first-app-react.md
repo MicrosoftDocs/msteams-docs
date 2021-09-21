@@ -41,7 +41,7 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-1. In the Select capabilities section, ensure that **Tab UI-based app** is selected as the capability, and select **OK**.
+1. Ensure that **Tab UI-based app** is selected as the capability in the Select capabilities section, and select **OK**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
@@ -116,17 +116,6 @@ Among other items in this directory, the Toolkit maintains:
 
 When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. The `api` directory holds the code to any Azure Functions you write.
 
-## Prepare the local environment
-
-You can use Teams Toolkit to run the app in the local environment. To prepare the environment, ensure that:
-
-- An application is registered with Azure Active Directory. This application has permissions for the location that the app is loaded from and for any backend resources it accesses.
-- A web api is hosted to assist with authentication tasks. This API acts as a proxy between the app and Azure Active Directory. You can access it from `https://localhost:5000`
-- The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. You can access the local service from `https://localhost:3000`.
-- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
-
-After it's done, load your app in the Teams client. You can see the HTML, CSS, and JavaScript code using the Teams web client.
-
 
 ## Sign in to your Microsoft 365 and Azure accounts
 
@@ -181,7 +170,6 @@ Visual Studio 2019 prompts you to log into each service as required. You don't n
     The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. Close the browser when you're prompted.
 
     The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
 
     Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 

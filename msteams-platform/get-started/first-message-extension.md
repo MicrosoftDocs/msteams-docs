@@ -85,9 +85,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 ## Take a tour of the source code
 
-If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
-
-A messaging extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+A message extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
@@ -114,15 +112,19 @@ Also you need:
 
 To build and run your app locally:
 
-1. From Visual Studio Code, select **F5** to run your application in debug mode.
+1. Select **F5** in Visual Studio Code to run your application in debug mode.
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
-1. Teams opens in a web browser. If you're prompted to open Microsoft Teams, select **Cancel** to remain in the browser. Sign in with your Microsoft 365 account when prompted.
+    Teams opens in a web browser. 
+1. 
+1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams. 
+1. 
+1. Sign in with your Microsoft 365 account when prompted.
 
 1. Select **Add** to add the app to your account.
-
-1. Once the sample app is loaded, try the app: 
+    The app is added to Teams, and is loaded.
+1. Try to do the following in the app: 
    
    1. Initiate a new conversation
    2. Launch the message extension from three dots in the composing area 
