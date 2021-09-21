@@ -1,7 +1,7 @@
 ---
 title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: bots cards reference
 ms.topic: reference
 ---
@@ -54,10 +54,10 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | O365 Connectors |
+| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Office 365 Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| O365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |

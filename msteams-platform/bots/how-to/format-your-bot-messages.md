@@ -3,7 +3,7 @@ title: Format your bot messages
 author: surbhigupta
 description: Add rich formatting to your bot messages
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 # Format your bot messages

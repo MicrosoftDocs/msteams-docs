@@ -3,7 +3,7 @@ title: Understanding your app's use cases
 author: heath-hamilton
 description: When planning your Microsoft Teams app, you should first understand what problems your app is trying to solve.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 
@@ -71,13 +71,6 @@ Above all, remember that nobody likes spam. Blasting away with personal and chan
 ## Plan for the future
 
 Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
-
-## See also
-
-* [Choose how to distribute your app](../deploy-and-publish/apps-publish-overview.md)
-* [Design tabs](../../tabs/design/tabs.md)
-* [Design bots](../../bots/design/bots.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
 
 ## Next step
 

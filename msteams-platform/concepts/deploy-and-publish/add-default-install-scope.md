@@ -2,7 +2,7 @@
 title: Configure default install options for your app
 description: Describes how to specify your app's default install options.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 # Configure default install options for your Microsoft Teams app

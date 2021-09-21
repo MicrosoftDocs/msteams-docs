@@ -2,7 +2,7 @@
 title: Microsoft Teams tabs
 author: surbhigupta
 description: An overview of custom tabs on the Teams platform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
 ---
@@ -77,7 +77,7 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 
 ### Tools you can use to build tabs
 * [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md)
-* [Teams Toolkit for Visual Stuido](../toolkit/visual-studio-overview.md)
+* [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
 
 ## See also
 

@@ -3,7 +3,7 @@ title: Up to date views
 description: Sample for up to date views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Up to date cards

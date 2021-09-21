@@ -4,6 +4,7 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
+ms.localizationpriority: high
 ---
 # Microsoft Teams store validation guidelines
 
@@ -193,6 +194,11 @@ The long description can provide an engaging narrative that highlights your app'
   * "... working with Microsoft Teams."
   * "... within Microsoft Teams."
   * "... for Microsoft Teams."
+  * “... integrated with Microsoft Teams.”
+  * “... built for... ”
+  * “... developed for... ”
+  * “... designed for...”
+
 
 **Don't:**
 
@@ -203,15 +209,8 @@ The long description can provide an engaging narrative that highlights your app'
 * Include typos, grammatical errors, and unnecessary capitalizations (for example, **Users** instead of **users**).
 * Include links to AppSource.
 * Use the following language unless you are a certified Microsoft partner:
-  * "... integrated with Microsoft Teams"
-  * "... integrates with ..."
-  * "... built for ..."
-  * "... built on ..."
-  * "... runs on ..."
-  * "... enabled by ..."
   * "... certified for ..."
-  * "... developed for ..."
-  * "... designed for ..."
+  * "... powered by ..."
 
 ### Screenshots
 
@@ -298,7 +297,6 @@ If your app includes a tab, make sure it adheres to these guidelines.
 * Tabs in a personal context may aggregate content from shared instances of the app.
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 * Tabs must use Teams-styled components, such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on whenever possible.
-* You must include a **Settings** tab.
 * Tabs must follow Teams interaction design, such as, in-page navigation, position and use of dialogs, information hierarchies, and so on whenever possible.
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
 

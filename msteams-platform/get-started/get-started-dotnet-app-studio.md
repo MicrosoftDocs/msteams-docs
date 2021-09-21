@@ -3,7 +3,7 @@ title: Tutorial - Create your first app using C#
 description: Learn how to get started building Microsoft Teams apps with C# or .NET.
 keywords: getting started .net c# csharp
 ms.custom: scenarios:getting-started; languages:ASP.NET,C#
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
 ---
@@ -64,7 +64,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 ## Build and run the sample
 
-You can build and run the smaple after it is cloned. 
+You can build and run the sample after it is cloned. 
 
 **To build and run the cloned sample**
 

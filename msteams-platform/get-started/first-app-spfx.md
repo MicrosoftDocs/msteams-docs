@@ -5,6 +5,7 @@ description: Learn how to build a custom tab with the SharePoint Framework
 ms.author: zhenyasa
 ms.date: 05/19/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
@@ -99,11 +100,16 @@ After the Teams Toolkit configures your project, you have the components to buil
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
+The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory. 
 
-- The app icons are stored as PNG files in `color.png` and `outline.png`.
-- The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
-- The settings you chose when creating the project are stored in `settings.json`.
+- The settings you chose when creating the project are stored in `.fx/settings.json`.
+- The state of your project is stored in `.fx/env.*.json`.
+
+And the Teams app information is stored in the `appPackage` directory.
+
+- The app icons are stored as PNG files in `appPackage/color.png` and `appPackage/outline.png`.
+- The app manifest for publishing to Developer Portal for Teams is stored in `appPackage/manifest.source.json`.
+
 
 Since you selected a SPFx Webpart project, the following files are relevant to your UI:
 

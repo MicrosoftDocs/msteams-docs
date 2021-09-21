@@ -1,7 +1,7 @@
 ---
 title: Designing Adaptive Cards for your app
 description: Learn how to design Adaptive Cards for Teams and get the Microsoft Teams UI Kit.
-localization_priority: Priority
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -33,155 +33,139 @@ You also can start designing your Adaptive Cards directly in the browser.
 
 Our largest card. Use for sharing articles or scenarios where an image tells most of the story.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Example shows an Adaptive Card hero card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card." border="false":::
 
 ### Thumbnail
 
 Use for sending a simple actionable message.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." border="false":::
 
 ### List
 
 Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanation.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Example shows an Adaptive Card list card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." border="false":::
 
 ### Digest
 
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." border="false":::
 
 ### Media
 
 Use when you want to combine text and media, like audio or video.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Example shows an Adaptive Card media card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." border="false":::
 
 ### People
 
 Best used when you to efficiently convey who's involved with a task.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Example shows an Adaptive Card people card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." border="false":::
 
 ### Request ticket
 
 Use to get quick inputs from a user to automatically create a task or ticket.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." border="false":::
 
 ### Image set
 
 Use to send multiple image thumbnails.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Example shows an Adaptive Card image set card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card." border="false":::
 
 ### Action set
 
 Use when you want to the user to select a button, then gather addition user input from the same card.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Example shows an Adaptive Card action set card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." border="false":::
 
 ### Choice set
 
 Use to gather multiple inputs from the user.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card on mobile." border="false":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." border="false":::
 
 ## Anatomy
 
 Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest including the following components in every card.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy." border="false":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile." border="false":::
 
----
+|Counter|Description|
+|----------|-----------|
+|A|**Header**: Make your headers clear and concise.|
+|B|**Body copy**: Convey details that are either too long or not important enough to include in the header.|
+|C|**Primary actions**: As a best practice, include 1-3 primary actions. You can have up to six.|
+
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|

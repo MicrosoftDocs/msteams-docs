@@ -4,6 +4,7 @@ description: Describes the options for publishing your Microsoft Teams app.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 
 # Distribute your Microsoft Teams app
