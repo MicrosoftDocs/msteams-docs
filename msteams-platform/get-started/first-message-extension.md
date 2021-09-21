@@ -30,37 +30,32 @@ Use the Teams Toolkit to create your first project:
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code.
-1. Select the Teams icon in the sidebar to open the Teams Toolkit.
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+1. Select **Create New Project** from the left-hand side of the Toolkit. The UI may look different, depending on your operating system.
 
-1. Select **Create New Project**.
+1. Then, select **Create New Project** from the dropdown menu in the Teams Toolkit.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
-
-1. Select **Create a new Teams app**.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
 1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab**, and select **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
 1. In the **Bot registration** section, select **Create a new bot registration**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-bot-registration.png" alt-text="Select create a new bot registration":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
 
    > [!NOTE]
    > Messaging extensions rely on bots to provide a dialog between the user and your code.
 
 1. In the **Programming Language** section, select **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Select a workspace folder.  A folder is created in your workspace folder for the project.
 
-1. Enter a suitable name for your app, like `helloworld`. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
+1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
    Teams Toolkit creates the app in a few seconds.
 
@@ -94,21 +89,28 @@ If you wish to skip this section for now, you can [run your app locally](#run-yo
 
 A messaging extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/msgextn-file-layout.png" alt-text="File layout of a bot project.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
 The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
+## Prepare the local environment
+
+You can use the Teams Toolkit to run your app in the local environment. 
+
+When you completed the [Hello world](first-app-react.md), in your Toolkit you should already have:
+
+- signed in to Microsoft 365 account
+- signed in to Azure account
+
+Also you need:
+
+- Install [ngrok](https://ngrok.io), which is used to provide a tunnel between Teams and your bot code
+- Set up and authenticate ngrok on your local environment. (Please refer the instructions on [ngrok](https://ngrok.io) website)
+
 ## Run your app locally
-
-You can use Teams Toolkit to host your app in the local environment. To prepare the environment, ensure that:
-
-- An Azure Active Directory Application is registered within the Microsoft 365 tenant.
-- An app manifest is submitted to the Developer Portal for Teams.
-- An API is run in the local environment using Azure Functions Core Tools to support your app.
-- [ngrok](https://ngrok.io) is installed. You use it to provide a tunnel between Teams and your messaging extension.
 
 To build and run your app locally:
 
@@ -120,16 +122,21 @@ To build and run your app locally:
 
 1. Select **Add** to add the app to your account.
 
-   After the app is loaded, you can try to use the sample functionality:
-   You can launch the message extension from three dots in the composing area and try search npm packages from the search bar.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="This image shows your Search-based messaging extension in action":::
+1. Once the sample app is loaded, try the app: 
    
-   You can also try to @ your message extension instance. You can find it in the search bar in the top row of Teams and search for npm package.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-teams-search-bar.png" alt-text="The Search-based messaging extension in action":::
+   1. Initiate a new conversation
+   2. Launch the message extension from three dots in the composing area 
+   3. Select the message extension app you just installed 
 
-   Type some text in the search box, then select one of the options. you can create and send adaptive cards of the search results.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/msgext-adptive-card.png" alt-text="Your Search-based messaging extension in action":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
+   
+   This sample app lets you search npm packages. Let's type some name in the search box, such as "cli":
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+
+   Then, select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
+   
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
 <!-- markdownlint-disable MD033 -->
 <details>

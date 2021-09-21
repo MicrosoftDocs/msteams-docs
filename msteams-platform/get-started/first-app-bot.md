@@ -30,31 +30,31 @@ Use the Teams Toolkit to create your first project:
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Create a new Teams app**.
+1. Select **Create a new Teams app**. The UI may look different, depending on your operating system.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
 1. In the **Select capabilities** section, select **Bot**, deselect **Tab**, and select **OK**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
 1. In the **Bot registration** section, select **Create a new bot registration**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
 
 1. In the **Programming Language** section, select **JavaScript**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
 1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
 Your Teams app is created in a few seconds.
 
