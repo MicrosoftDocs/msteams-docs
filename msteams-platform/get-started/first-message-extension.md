@@ -32,11 +32,11 @@ Use the Teams Toolkit to create your first project:
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Create New Project** from the left-hand side of the Toolkit. It is either a blue button or under "Development" menu, depending on your OS.
+1. Select **Create New Project** from the left-hand side of the Toolkit. The UI may look different, depending on your operating system.
 
 1. Then, select **Create New Project** from the dropdown menu in the Teams Toolkit.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
 1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab**, and select **OK**.
 
