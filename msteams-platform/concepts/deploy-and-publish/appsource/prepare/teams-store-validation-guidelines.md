@@ -302,6 +302,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 * Tabs in a personal context may aggregate content from shared instances of the app.
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 * Tabs must use Teams-styled components, such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on whenever possible.
+* If your app functionality requires changes in the settings, include a **Settings** tab.
 * Tabs must follow Teams interaction design, such as, in-page navigation, position and use of dialogs, information hierarchies, and so on whenever possible.
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
 
