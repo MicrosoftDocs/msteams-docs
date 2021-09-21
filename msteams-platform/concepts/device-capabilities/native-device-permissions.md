@@ -28,7 +28,7 @@ By accessing the device capabilities, you can build richer experiences on the Te
 
 > [!NOTE]
 > * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.    
-> * Device permissions are different in the browser, see [browser device permissions](browser-device-permissions.md).
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Access device permissions
 
