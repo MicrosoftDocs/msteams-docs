@@ -106,7 +106,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
        &#x2713; Set the URL to `https://token.botframework.com/.auth/web/redirect`.
    1. Select **Register**.
 
-1. Once it is created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
+1. Once created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
     1. The **Application (client) ID** value. You'll use this value later as the *Client ID* when you register this Azure identity application with your bot.
     1. The **Directory (tenant) ID** value. You'll also use this value later as the *Tenant ID* to register this Azure identity application with your bot.
@@ -121,7 +121,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison), but in general, V2 provides more flexibility in changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign-in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
+Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison). But in general, V2 provides more flexibility in changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign-in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
 
 #### Azure AD V1
 
@@ -134,12 +134,12 @@ The following image displays the corresponding selection in the resource page:
 1. Complete the form as follows:
 
     1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv1*.
-    1. **Service Provider**. Select **Azure Active Directory**. Once you select this, the Azure AD-specific fields will be displayed.
+    1. **Service Provider**. Select **Azure Active Directory**. Once you select, the Azure AD-specific fields will be displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app in the steps above.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app in the steps above.
     1. **Grant Type**. Enter `authorization_code`.
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
-    1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, ,  follow these criteria:
+    1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign,  follow these criteria:
 
         - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
 
@@ -182,13 +182,13 @@ The following image displays the corresponding selection in the resource page:
 
 1. Select the connection entry to open the connection you created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** panel.
-1. The first time you do this will open a new browser window asking you to select an account. Select the one you want to use.
+1. The first time you do, this will open a new browser window asking you to select an account. Select the one you want to use.
 1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
     ![teams bot auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
 
 1. Select **Accept**.
-1. This should then redirect you to a **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page if you get an error. The following image is an example:
+1. Page is redirected to **Test Connection to \<your-connection-name> Succeeded** page. Refresh the page, if you get an error. The following image is an example:
 
     ![teams bots app auth connection str adv1](../../../assets/images/authentication/auth-bot-connection-test-token.PNG)
 
@@ -196,7 +196,7 @@ The connection name is used by the bot code to retrieve user authentication toke
 
 ## Prepare the bot sample code
 
-With the preliminary settings done, let's focus on the creation of the bot to use in this article.
+With the preliminary settings done, let's focus on the creation of the bot to use in the article.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -258,12 +258,12 @@ In Visual Studio, you can follow these steps:
 1. In the displayed window, select the **New** link.
 1. In the dialog window, select **App Service** on the left and **Create New** on the right.
 1. Select the **Publish** button.
-1. In the next dialog window, enter the required information. The following is an example:
+1. In the next dialog window, enter the required information. For example:
 
     ![auth-app-service](../../../assets/images/authentication/auth-bot-app-service.png)
 
 1. Select **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. Moreover, a page is displayed in your default browser saying. Your bot is ready! The URL will be similar to this: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you should see it reflected in Visual Studio.A page is displayed in your default browser. Your bot is ready! The URL will be similar to the: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, navigate to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot should be listed along with the other resources. The following image is an example:
 
@@ -271,7 +271,7 @@ In Visual Studio, you can follow these steps:
 
 1. In the resource group, select the bot channel registration name (link).
 1. In the left panel, select **Settings**.
-1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. This is an example: `https://botteamsauth.azurewebsites.net/api/messages`.
+1. In the **Messaging endpoint** box, enter the URL obtained above followed by `api/messages`. For example: `https://botteamsauth.azurewebsites.net/api/messages`.
 1. Select the **Save** button in the upper left.
 
 ## Test the bot using the Emulator
@@ -291,12 +291,12 @@ If a bot requires authentication, you must configure the Emulator. To configure:
 1. Check the box by **Run ngrok when the Emulator starts up**.
 1. Select the **Save** button.
 
-When the bot displays a sign-in card and the user selects the sign-in button, the Emulator opens a page that the user can use to sign in with the authentication provider.
+When the bot displays a sign-in card and user selects the sign-in button, the Emulator opens a page that the user can use to sign in with the authentication provider.
 Once the user does so, the provider generates a user token and sends it to the bot. After that, the bot can act on behalf of the user.
 
 ### Test the bot locally
 
-After you have configured the authentication mechanism, you can perform the actual bot testing.  
+After configuration of authentication mechanism, do the actual bot testing.  
 
 1. Run the bot sample locally on your machine, via Visual Studio for example.
 1. Start the Emulator.
@@ -321,7 +321,7 @@ After you have configured the authentication mechanism, you can perform the actu
 
     ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. If you select **Yes** when the bot asks *Would you like to view your token?*, you'll get a response similar to the following:
+1. If you select **Yes** when the bot asks *Would you like to view your token? you'll get a response similar to the following:
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
