@@ -7,8 +7,8 @@ ms.localizationpriority: none
 
 # Custom Together Mode scenes in Teams
 
-> [!Note]
-> Custom Together Mode is not available for initiation from Mobile. However, once a user joins a mobile meeting and together mode is turned on from desktop.The mobile users, who are on video on will be shown in together mode on desktop.
+> [!NOTE]
+> Together mode is not available for initiation from Mobile. However once a user joins a mobile meeting and together mode is turned on from desktop, the mobile users who are on video will be shown in together mode on desktop. 
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
