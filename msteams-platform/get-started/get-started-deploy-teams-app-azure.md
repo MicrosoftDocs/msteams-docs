@@ -8,6 +8,20 @@ keywords: Microsoft Teams developer samples
 
 # Deploy your Teams apps to Azure
 
+This tutorial shows you the steps of deploying your Teams app to Azure using Teams Toolkit.
+
+## Before you begin
+
+Make sure your development environment is set up by installing the Prerequisites.
+
+> [!div class="nextstepaction"]
+> [Install Prerequisites](prerequisites.md)
+
+Open an app project in Teams Toolkit. If you haven't created any Temas apps yet, try building the first app.
+
+> [!div class="nextstepaction"]
+> [Hello World - Build your first app](../get-started/first-app-react.md)
+
 [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
 
 <!-- markdownlint-disable MD033 -->

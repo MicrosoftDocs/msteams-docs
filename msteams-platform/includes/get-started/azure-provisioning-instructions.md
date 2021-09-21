@@ -4,11 +4,11 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code.
-1. Select the Teams Toolkit from the sidebar by selecting the Teams icon.
+Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+
 1. Select **Provision in the Cloud**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the provisioning commands":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision.png" alt-text="Screenshot showing the provisioning commands":::
 
 1. Select a subscription to use for the Azure resources, if prompted.
 
@@ -21,9 +21,13 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-complete.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-1. Once provisioning is complete, select **Deploy to the Cloud**. As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+1. Once provisioning is complete, from the **Deployment** panel, select **Deploy to the Cloud**. 
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+
+   As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
 # [Command Line](#tab/cli)
 
@@ -58,3 +62,9 @@ Once the provisioning and deployment steps are finished:
 1. From Visual Studio Code, open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**)
 1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
 1. Press the Play button to launch your app - now running remotely from Azure!
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+
+Now the app running on Azure will be installed to your client!
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot showing the app being installed.":::
