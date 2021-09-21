@@ -178,6 +178,12 @@ The following schema sample shows all extensibility options:
                   "value": "Value of the choice"
                 }
               ]
+               "taskInfo": {
+                  "title": "Initial dialog title",
+                  "width": "Dialog width",
+                  "height": "Dialog height",
+                  "url": "Initial webview URL"
+            },
             }
           ]
         },
@@ -201,12 +207,6 @@ The following schema sample shows all extensibility options:
           ]
         }
       ],
-      "taskInfo": {
-        "title": "Initial dialog title",
-        "width": "Dialog width",
-        "height": "Dialog height",
-        "url": "Initial webview URL"
-      },
       "messageHandlers": [
         {
           "type": "link",
