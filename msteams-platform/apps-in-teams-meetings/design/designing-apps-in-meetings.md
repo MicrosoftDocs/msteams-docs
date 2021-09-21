@@ -180,13 +180,13 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants interact with and collaborate on app content in real time. For example, users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+Shared meeting stage helps meeting participants to interact and collaborate with app content real time. For example, the users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
 >[!NOTE] 
->Apps shared to the meeting stage from desktop is accessible only for the mobile meeting users. 
-
+>Currently, if an app is shared to stage on desktop, it will show for the users on mobile meeting only.
+ 
 ### Use cases
 
 The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
@@ -251,7 +251,7 @@ Apps shared to the meeting stage vary in size based on the state of the meeting 
 
 #### Meeting stage (without side panel)
 
-When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixel.
+When the side panel isn't open, the meeting stage is 994x678 pixels by default and can be a minimum 792x382 pixels.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/meeting-stage-no-side-panel.png" alt-text="Image showing shared meeting stage responsiveness with the side panel closed." border="false":::
 
