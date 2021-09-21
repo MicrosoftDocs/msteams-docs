@@ -36,7 +36,7 @@ Before you begin, here's a quick glance at the road-map to building and deployin
 
 The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
 
-:::image type="content" source="../assets/images/get-started/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
+:::image type="content" source="../assets/images/get-started/the-app-map.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
 
 
 ### App capabilities
@@ -68,6 +68,12 @@ You can install only an app package. This package contains:
 The remaining app logic and data storage are hosted elsewhere, such as Azure Web Services. While in the cloud or localhost during the development, your app accesses Teams via HTTPS.
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prepare to build a Teams app](../get-started/prerequisites.md)
+
 
 ## See also
 

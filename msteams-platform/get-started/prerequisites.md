@@ -7,7 +7,7 @@ ms.date: 05/24/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
-# Prepare to build your app
+# Prepare to build a Teams app
 
 Before you begin creating your first Teams app, install the tools and set up your development environment.
 
@@ -132,13 +132,12 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
+Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! 
+
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Hello World - Build your first app](../get-started/first-app-react.md)
-
-
-Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! 
 
 
 ## See also
