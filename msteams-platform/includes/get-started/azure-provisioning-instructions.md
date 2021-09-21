@@ -4,7 +4,7 @@ Deployment consists of two steps.  First, necessary cloud resources are created 
 
 # [Visual Studio Code](#tab/vscode)
 
-Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Provision in the Cloud**.
 
@@ -21,11 +21,11 @@ Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-too
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog.":::
 
-1. Once provisioning is complete, from the **Deployment** panel, select **Deploy to the Cloud**. 
+1. Once provisioning is complete, select **Deploy to the Cloud** from the **Deployment** panel. 
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the provisioning complete dialog.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
