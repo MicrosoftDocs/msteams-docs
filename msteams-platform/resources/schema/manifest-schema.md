@@ -574,7 +574,7 @@ A list of valid domains for websites the app expects to load within the Teams cl
 
 Do **not** include the domains of identity providers you want to support in your app. For example, to authenticate using a Google ID, it is required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
 
-Teams apps that require their own sharepoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
+Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
@@ -720,20 +720,3 @@ You can define any of the following properties:
 * `developerUrl`: The HTTPS URL of the developer's website.
 * `privacyUrl`: The HTTPS URL of the developer's privacy policy.
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
-
-## defaultBlockUntilAdminAction
-
-When `defaultBlockUntilAdminAction` property is set to true, the app is hidden from users by default until Admin allows it.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`type`|boolean|32 characters|✔|Can be **true** or **false**.|
-|`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
-|`default`|||✔|Default is **false**.|
-
-## publisherDocsUrl
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`$ref`|||✔|The URL to the page that provides additional app information for the admins.|
-|`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|

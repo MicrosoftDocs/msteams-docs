@@ -46,9 +46,6 @@ The app manifest must include the following code snippet:
   ]
 ```
 
-> [!NOTE]
-> `meetingStage` is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-
 ### Context property
 
 The `context` property determines what must be shown when a user invokes an app in a meeting depending on where the user invokes the app. The tab `context` and `scopes` properties enable you to determine where your app must appear. The tabs in the `team` or `groupchat` scope can have more than one context. Following are the values for the `context` property from which you can use all or some of the values:
@@ -103,7 +100,7 @@ In a meeting chat, enter the **@** key and select **Get bots**.
 
 During a meeting, you can use the `meetingSidePanel` or the in-meeting dialog box to build unique experiences for your apps.
 
-#### Meeting Sidepanel
+#### Meeting SidePanel
 
 The `meetingSidePanel` enables you to customize experiences in a meeting that allow organizers and presenters to have different set of views and actions. In your app manifest, you must add `meetingSidePanel` to the context array. In the meeting and in all scenarios, the app is rendered in an in-meeting tab that is 320 pixels in width. For more information, see [FrameContext interface](/javascript/api/@microsoft/teams-js/microsoftteams.framecontext?view=msteams-client-js-latest&preserve-view=true).
 
@@ -125,9 +122,6 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Azure Active Directory (AAD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 #### Shared meeting stage
-
-> [!NOTE]
-> This capability is currently available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
 
@@ -161,9 +155,10 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 ## Code sample
 
-|Sample name | Description | Sample |
-|----------------|-----------------|--------------|----------------|-----------|
-| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/microsoft-teams-sample-meetings-token) |
+|Sample name | Description | C# | Node.js |
+|----------------|-----------------|--------------|----------------|
+| Meeting app | Demonstrates how to use the Meeting Token Generator app to request a token. The token is generated sequentially so that each participant has a fair opportunity to contribute in a meeting. The token is useful in situations like scrum meetings and Q&A sessions. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-token-app/nodejs) |
+|Meeting stage sample | Sample app to show a tab in meeting stage for collaboration | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) |
 
 ## See also
 

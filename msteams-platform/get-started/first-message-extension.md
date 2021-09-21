@@ -118,7 +118,7 @@ To build and run your app locally:
 1. Select **Add** to add the app to your account.
 
    After the app is loaded, you can try to use the sample functionality:
-   You can launch the message extension from three dots in the composeing area and try search npm packages from the search bar.
+   You can launch the message extension from three dots in the composing area and try search npm packages from the search bar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/search-message-extension.png" alt-text="Your Search-based messaging extension in action":::
    

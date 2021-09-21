@@ -23,6 +23,9 @@ The following process gives an overview to create a scene only app:
 
 A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
 
+> [!NOTE]
+> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop. 
+
 ## Prerequisites
 
 You must have a basic understanding of the following to use custom Together Mode scenes:
