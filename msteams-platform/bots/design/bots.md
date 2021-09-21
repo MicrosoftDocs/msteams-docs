@@ -3,7 +3,7 @@ title: Designing your bot
 description: Learn how to design a Teams bot and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.author: lajanuar
 ---
 # Designing your Microsoft Teams bot
