@@ -266,7 +266,7 @@ If your app supports localization, your app package must include a file with lan
 * The offer must meet all the [technical requirements](https://review.docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) for Teams apps linked to a SaaS offer. 
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. 
-    * For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
+    > For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.    
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.     
 * Offer metadata must match across the Teams manifest, the Teams app listing in AppSource, and the SaaS offer in AppSource.
 * Teams app and SaaS offer must be from the same publisher or developer. The SaaS offer referenced in the App manifest must belong to the same publisher as the Teams app is submitted to the commercial marketplace. 
