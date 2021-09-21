@@ -1,7 +1,7 @@
 ---
-title: Get started - Build your first Teams app with React
+title: Get started - Build and test your app
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and React.
+description: Build and test the Hello World app
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart

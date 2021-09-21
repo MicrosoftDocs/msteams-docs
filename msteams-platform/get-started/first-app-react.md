@@ -30,6 +30,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-create-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
     >If you build an app with only Tab capability, Teams Toolkit asks for your Frontend Hosting options. You can choose between Azure and SharePoint (SPFx).
@@ -42,7 +43,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
 1. Select **Create a new bot registration** in the **Bot registration** section.
-    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-bot-registration.png" alt-text="Select App Capability" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-bot-registration.png" alt-text="Create bot registration" border="false":::
     
     > [!NOTE] 
     > This step appears only when you select the Bot and Message Extension capability.
@@ -89,7 +90,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-folders.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-folders.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
 You can find the code for the tab capability scaffolded in the **Tab** folder. Although you're free to choose any UI framework you want (or not to use any), this sample template code provides scaffolding with React components.
 
