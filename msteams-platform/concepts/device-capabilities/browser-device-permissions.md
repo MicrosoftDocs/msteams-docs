@@ -38,6 +38,9 @@ Users can have various apps in Teams and each require device permissions. For ex
 
 **To grant access to app for device permissions using App permissions**
 
+> [!NOTE]  
+> To access camera or microphone, you must enable it. 
+
 1. In your browser, open [teams.microsoft.com](https://teams.microsoft.com/).
 1. Select the app, for example, OneNote that you want to use from the left bar.
 1. Select **App permissions** from the upper right corner.
@@ -46,12 +49,10 @@ Users can have various apps in Teams and each require device permissions. For ex
 
 1. Turn on **Media (Camera, microphone, speakers)** and close the dialog box.
 
-    ![App permissions dialog](../../assets/images/tabs/onenoteapppermissions.png)
+    <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
-1. Select **Refresh now** to reload the page for new iframe permissions to take effect.
-
-    ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
-
+           
+1. Select **Refresh now** to reload the page for new iframe permissions to take effect.       
 1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes.
 
 **To grant access to app for device permissions using the dropdown list for a team**
@@ -65,13 +66,7 @@ Users can have various apps in Teams and each require device permissions. For ex
     ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
 
 1. Turn on **Media (Camera, microphone, speakers)** and close the dialog box.
-
-    ![App permissions dialog](../../assets/images/tabs/onenoteapppermissions.png)
-
 1. Select **Refresh now** to reload the page.
-
-    ![Refresh permissions](../../assets/images/tabs/refreshpermissions.png)
-
 1. Check if the device permission is granted. For example, if you're using OneNote, you can select **Dictate** to record your notes.
 
 **Optionally to grant access to app for device permissions using Settings**
@@ -86,9 +81,6 @@ Users can have various apps in Teams and each require device permissions. For ex
 
 1. Select the app where you want to grant access.
 1. Turn on **Media (Camera, microphone, speakers)**.
-
-    ![OneNote microphone access granted](../../assets/images/tabs/onenotepermissiongranted.png)
-
 1. In your browser, select **Refresh**. A dialog box appears asking you to reload the page.
 1. Select **Refresh now** to reload the page for new iframe permissions to take effect.
 1. Similarly, you can turn on other permissions, such as location or MIDI device as required to use the app.
