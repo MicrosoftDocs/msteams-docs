@@ -727,7 +727,7 @@ When `defaultBlockUntilAdminAction` property is set to true, the app is hidden f
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|boolean|32 characters|✔|Can be **true** or **false**.|
+|`type`|boolean|32 characters|✔|If set to **true** the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
 |`default`|||✔|Default is **false**.|
 
@@ -736,4 +736,6 @@ When `defaultBlockUntilAdminAction` property is set to true, the app is hidden f
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`$ref`|||✔|The URL to the page that provides additional app information for the admins.|
-|`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
+|`description`|string|128 characters||The description that appears to the admins to indicate the purpose of this property.|
+
+also important to clarify here is that, app will be hidden from end users. the tenant admins can see it in teams admin center and take action to allow, block in the same UI
