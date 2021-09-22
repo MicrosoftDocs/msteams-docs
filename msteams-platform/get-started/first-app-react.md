@@ -8,26 +8,19 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build your first Microsoft Teams app - Hello world with tabs
+# Build your first Microsoft Teams app - Hello World
 
-Start Microsoft Teams development by building a personal tab as the "Hello, world!".  
+Start Microsoft Teams app development by building your first app - "Hello, world!".  
 
-In this tutorial, you'll learn: 
+In this tutorial, you'll learn:
 
 - how to set up a new project with Teams Toolkit.
-- the structure of a basic tab app and how it's built with JavaScript using React.
+- how to build the app with JavaScript using React, it's structure and source code.
 - how to run an app locally.
 
-## Before you begin
+## Create your app project
 
-Before you begin, make sure your development environment is set up by installing the prerequisites.
-
-> [!div class="nextstepaction"]
-> [Install prerequisites](prerequisites.md)
-
-## Create your project
-
-If the prerequisites are in place, let's begin! Use the Teams Toolkit to create your first project:
+If the [prerequisites](prerequisites.md) are in place, let's begin!
 
 # [Visual Studio Code](#tab/vsc)
 
@@ -65,9 +58,6 @@ If the prerequisites are in place, let's begin! Use the Teams Toolkit to create 
 
     The Teams app is created in a few seconds.
 
-
-![Build Hello World App](~/assets/app-sample-anim-gif.gif)
-
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
@@ -94,7 +84,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 ## Take a tour of the source code
 
-After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
+Teams Toolkit provides the components for building an app. After creating the project, you can view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
@@ -115,7 +105,6 @@ Among other items in this directory, the Toolkit maintains:
   - This directory also holds the code for tabs needed at runtime. Some of them are the privacy notice, terms of use, and configuration tabs.
 
 When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. The `api` directory holds the code to any Azure Functions you write.
-
 
 ## Sign in to your Microsoft 365 and Azure accounts
 
@@ -215,12 +204,12 @@ You can do normal debugging activities, such as setting breakpoints, as if it we
 
 In case you're wondering, when you press the F5 key the Teams Toolkit:
 
-* Registers your application with Azure Active Directory. This application has permissions for the location that the app is loaded from and the backend resources. 
-* *Sideloads* the app in Teams.
-* Starts the application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-* Starts the application front-end hosted locally.
-* Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab`. This URL is registered in the application manifest.
-* An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+- Registers your application with Azure Active Directory. This application has permissions for the location that the app is loaded from and the backend resources. 
+- *Sideloads* the app in Teams.
+- Starts the application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+= Starts the application front-end hosted locally.
+- Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application from `https://localhost:3000/tab`. This URL is registered in the application manifest.
+- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
 </details>
 
@@ -247,7 +236,7 @@ You know how to use Toolkit to set up a tab app and run it locally. Next, let’
 
 ## See also
 
-* [Tutorials Overview](code-samples.md)
-* [Create a conversational bot app](first-app-bot.md)
-* [Create a messaging extension](first-message-extension.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
+- [Tutorials Overview](code-samples.md)
+- [Create a conversational bot app](first-app-bot.md)
+- [Create a messaging extension](first-message-extension.md)
+- [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
