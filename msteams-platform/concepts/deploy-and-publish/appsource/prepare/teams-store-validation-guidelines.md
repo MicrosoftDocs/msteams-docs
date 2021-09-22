@@ -271,7 +271,8 @@ If your app supports localization, your app package must include a file with lan
 * The offer must meet all the [technical requirements](https://review.docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) for Teams apps linked to a SaaS offer. 
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. 
-    > For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.      
+    > For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`. 
+
 Following image illustrates values and their mention in app manifest:
 
     ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)  
@@ -295,7 +296,7 @@ Following image illustrates the home page:
 
    ![Home page](~/assets/images/store-detail-page/home-page.png)
 
-* Users completing the purchase can activate and configure their subscription on your SaaS application home page.     
+* After completing the purchase, users can activate and configure their subscription on your SaaS application home page.     
 Following image illustrates the SaaS application home page:
 
    ![Configure subscription ](~/assets/images/store-detail-page/configure-subscription.png)
@@ -342,7 +343,7 @@ Following image illustrates the license management:
 
 * After license assignment, users must have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
 
-* From your Teams app, provide link back to the SaaS application home page for subscriber to manage the licenses in the future. 
+* From your Teams app, provide link to the SaaS application home page for subscriber to manage the licenses in the future. 
 
 ### Provide sufficient Details to Configure the SaaS application and Test 
 
