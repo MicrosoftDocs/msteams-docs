@@ -40,7 +40,10 @@ The admin gets a request to take action before a user can access the app. Under 
 
 ![Manage apps](../../assets/images/apps-in-meetings/manageapp.png)
 
-If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken explicit act
+If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
+
+> [!NOTE]
+> `defaultBlockUntilAdminAction` is not supported for LOB apps. If you upload an LOB app with this property then the app will not be blocked.
 
 ## See also
 
