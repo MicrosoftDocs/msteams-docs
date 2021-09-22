@@ -216,7 +216,7 @@ In case you're wondering, when you press the **F5** key the Teams Toolkit:
 - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
 - *Sideloads* the app in Teams.
 - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-= Starts the app's frontend hosted locally.
+- Starts the app's frontend hosted locally.
 - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
 - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
