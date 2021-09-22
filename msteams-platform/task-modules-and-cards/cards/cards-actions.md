@@ -207,7 +207,7 @@ With `imBack`, you can create an action with the following properties:
 | Property | Description |
 | --- | --- |
 | `title` | Appears as the button label. |
-| `value` | This field must contain the text string used in the chat and therefore sent back to the bot. This is the message text you process in your bot to perform the desired logic. |
+| `value` | This field contains the text string used in the chat and therefore sent back to the bot. This is a text message that process in your bot to perform the desired logic. |
 
 > [!NOTE]
 > The `value` field is a simple string. There is no support for formatting or hidden characters.
@@ -421,7 +421,7 @@ Adaptive Cards support four action types:
 * [Action.ShowCard](http://adaptivecards.io/explorer/Action.ShowCard.html)
 * [Action.Execute](/adaptive-cards/authoring-cards/universal-action-model#actionexecute)
 
-You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provide details on how to use existing Bot Framework actions with Adaptive Cards.
+You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
 > Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
@@ -537,7 +537,7 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
-The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
+The following code shows an example of Adaptive Cards `invoke` action with additional payload data:
 
 ```json
 {
