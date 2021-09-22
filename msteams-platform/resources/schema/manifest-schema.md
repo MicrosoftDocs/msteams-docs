@@ -722,21 +722,18 @@ You can define any of the following properties:
 * `termsOfUseUrl`: The HTTPS URL of the developer's terms of use.
 
 ## defaultBlockUntilAdminAction
-
+ 
 When `defaultBlockUntilAdminAction` property is set to true, the app is hidden from users by default until Admin allows it.
-
-> [!NOTE]
-> If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|boolean|32 characters|✔|Can be **true** or **false**.
+|`type`|boolean|32 characters|✔|Can be **true** or **false**. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.|
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
 |`default`|||✔|Default is **false**.|
 
 ## publisherDocsUrl
 
-Optional- string
+**Optional**- string
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
