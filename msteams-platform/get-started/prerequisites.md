@@ -137,7 +137,7 @@ Now you’ve got all tools and set up your account. Next, let's set up your deve
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Hello World - Build your first app](../get-started/first-app-react.md)
+> [Hello World - Create your first app](../get-started/first-app-react.md)
 
 
 ## See also

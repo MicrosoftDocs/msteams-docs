@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build your first Microsoft Teams app - Hello world
+# Hello world - Your first Microsoft Teams app
 
 Start Microsoft Teams development by building your first app - "Hello, world!" with a tab, a bot, and a message extension capability.  
 
@@ -80,13 +80,13 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 1. Select **Create a new Teams app**.
 1. Select the **Tab** capability.
-1. Select **Azure** frontend hosting. 
+1. Select **Azure** frontend hosting.
 1. Don't select any cloud resources.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
 1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
 
-   After you've answered all the questions, your project is created.
+   After you've answered all questions, your project is created.
 
 ---
 
@@ -100,7 +100,7 @@ You can find the code for the tab capability scaffolded in the **Tab** folder. A
 
 Among other items in this directory, the Toolkit maintains:
 
-- The state for your app in the `.fx` directory. 
+- The state for your app in the `.fx` directory.
 - The app icons in the `appPackage` directory. The icons are `color.png` and `outline.png`.
 - The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
 - The app settings, which you selected during project creation, in `settings.json`.

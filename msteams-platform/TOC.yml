@@ -14,11 +14,11 @@
     href: get-started/code-samples.md  
   - name: Prerequisites
     href: get-started/prerequisites.md
-  - name: Hello World - Build your first app
+  - name: Hello World - Your first Teams app
     href: get-started/first-app-react.md
   - name: Build and test your app
     href: get-started/build-and-test-app.md
-  - name: Deploy your first Teams app in Azure
+  - name: Deploy your app in Azure
     href: get-started/get-started-deploy-teams-app-azure.md
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
