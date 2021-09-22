@@ -25,8 +25,11 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|09/13/2021| Guidelines for apps linked to SaaS offer. | [Microsoft Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |  
+|09/22/2021| Guidelines for apps linked to SaaS offer. | [Microsoft Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |  
 |09/08/2021|Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
+|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [Format cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md)|
+|08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). |[Input validation](/adaptive-cards/authoring-cards/input-validation), [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/09/2021|Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO). | [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Installation update event received when you install a bot to a conversation thread. | [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
@@ -43,7 +46,7 @@ Microsoft Teams platform features that are available to all app developers.
 |05/10/2021| New app customization feature.| [Enable orgs to customize your app](concepts/design/enable-app-customization.md) |
 |05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Universal Actions for Adaptive Cards. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | Support for Universal Actions for Adaptive Cards v1.4. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |04/29/2021 | User Specific Views. | [User Specific Views](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
 |04/29/2021 | Sequential Workflows. | [Sequential Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
 |04/29/2021 | Up to date cards. | [Up to date cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
