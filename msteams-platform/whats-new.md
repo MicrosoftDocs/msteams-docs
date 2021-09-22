@@ -25,7 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [AAD Object ID and UPN in user mention](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cconnector-html#aad-object-id-and-upn-in-user-mention), [Cards - Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [AAD Object ID and UPN in user mention](https://docs.microsoft.com/microsoftteams/platform/task-modules-and-cards/cards/cards-format.md#aad-object-id-and-upn-in-user-mention), [Cards - Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). |[Input validation](/adaptive-cards/authoring-cards/input-validation), [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats. | [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
