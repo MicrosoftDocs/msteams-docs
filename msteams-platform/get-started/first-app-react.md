@@ -14,27 +14,30 @@ Start Microsoft Teams app development by building your first app - "Hello, world
 
 In this tutorial, you'll learn:
 
-- how to set up a new project with Teams Toolkit.
-- how to build the app with JavaScript using React, it's structure and source code.
-- how to run an app locally.
+- How to set up a new project with Teams Toolkit.
+- How to build the app with JavaScript using React.
+- How to run an app locally.
 
 ## Create your app project
 
 If the [prerequisites](prerequisites.md) are in place, let's begin!
 
+> [!NOTE]
+> The Visual Studio Code UI may look different, depending on your operating system.
+
 # [Visual Studio Code](#tab/vsc)
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-1. Select **Create a new Teams app**. The UI may look different, depending on your operating system.
+1. Select **Create a new Teams app**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
-1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
+1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-1. Ensure that **Tab UI-based app** is selected as the capability in the Select capabilities section, and select **OK**.
+1. Ensure that **Tab UI-based app** is selected as the capability that you want to build in your app, and select **OK**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
@@ -42,7 +45,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
 
-1. Select **OK** to continue. You don't need other cloud resources for this tutorial. 
+1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
@@ -50,7 +53,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-1. Select a workspace folder for the app. The Toolkit creates a folder in this workspace for your project.
+1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
 
 1. Enter `HelloWorld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
@@ -84,25 +87,25 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 ## Take a tour of the source code
 
-Teams Toolkit provides the components for building an app. After creating the project, you can view the project directories and files in the Explorer area of Visual Studio Code.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project directories and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
-You can find the code for the tab capability scaffolded in the **Tab** folder. Although you're free to choose any UI framework you want (or not to use any), this sample template code provides scaffolding with React components.
+Although you're free to choose any UI framework you want (or not to use any), this sample template code provides scaffolding with React components.
 
-Among other items in this directory, the Toolkit maintains:
+Among other items in this directory structure, the Toolkit maintains:
 
-- The state for your app in the `.fx` directory. 
-- The app icons in the `appPackage` directory. The icons are `color.png` and `outline.png`.
+- The state for your app in the `.fx` folder.
+- The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
 - The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
 - The app settings, which you selected during project creation, in `settings.json`.
-- The code for the Tab capability in the `tabs` directory. The important files in this directory are:
+- The code for the Tab capability in the `Tabs` folder. Some of the important files in this folder are:
 
   - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
   - `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
   - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
   - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
-  - This directory also holds the code for tabs needed at runtime. Some of them are the privacy notice, terms of use, and configuration tabs.
+  - This folder also holds the code for tabs needed at runtime. Some of them are the privacy notice, terms of use, and configuration tabs.
 
 When you add the cloud functionality, the Teams Toolkit adds the necessary directories to the project. The `api` directory holds the code to any Azure Functions you write.
 
@@ -110,29 +113,32 @@ When you add the cloud functionality, the Teams Toolkit adds the necessary direc
 
 You must have access to two accounts:
 
-- Your Microsoft 365 account credentials: Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-- Your Azure credentials: Use this account to access the Azure portal and to provision new cloud resources to support your app.
+- Microsoft 365 account credentials: Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+- Azure credentials: Use this account to access the Azure portal and to provision new cloud resources to support your app.
 
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
-1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar. 
-
+1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to M365**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
-    The sign-in process starts using your normal web browser. Complete the sign-in process for your Microsoft 365 account. When you're prompted, close the browser, and return to Visual Studio Code.
+    Your default web browser opens to let you sign in to the account.
 
-1. Return to the Teams Toolkit within Visual Studio Code.
+1. Sign in to your Microsoft 365 account using your credentials.
+1. Close the browser when prompted, and return to Visual Studio Code.
+1. Return to Teams Toolkit within Visual Studio Code.
 1. Select **Sign in to Azure**.
 
     > [!TIP]
     > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
-1. The sign-in process starts using your normal web browser. Complete the sign-in process for your Azure account. When are prompted, you can close the browser, and return to Visual Studio Code.
+    Your default web browser opens to let you sign in to the account.
+1. Sign in to your Azure account using your credentials.
+1. Close the browser when prompted, and return to Visual Studio Code.
 
-    When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately, together with the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+    When complete, the **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
     Now you're ready to build the app and run it locally!
 
