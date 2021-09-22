@@ -1,17 +1,18 @@
 ---
-title: App code samples
-description: Links and descriptions of sample applications for the Microsoft Teams developer platform
+title: Get started - Overview
+description: Overview to Get started for Microsoft Teams Developer Documentation
 ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
 # Overview
 
-Welcome to the Get started module for building and deploying customized apps for Microsoft Teams! 
+Welcome to Get started for building and deploying customized apps for Microsoft Teams!
 
-Learn how to create basic Teams apps. This tutorial walks you through how to build a basic, real-world Teams app. It introduces you to common tools, fundamental concepts, and more advanced features.
+Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
 
 You will:
+
 - Create a Teams app with capabilities like Tabs, Bots, and Message Extension. 
 - Deploy an app locally or on the cloud.
 - Look through Code Samples to customize and configure app capabilities.
