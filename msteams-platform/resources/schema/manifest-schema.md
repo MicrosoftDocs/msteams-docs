@@ -733,4 +733,5 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Maximum size** - Characters
 
-The URL to an information page where admins can get guidelines before allowing an app, which is blocked by default.
+HTTPS URL to an information page where admins can get guidelines before allowing an app, which is blocked by default.
+
