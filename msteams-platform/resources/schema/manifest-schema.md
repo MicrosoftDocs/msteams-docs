@@ -9,7 +9,7 @@ keywords: teams manifest schema
 
 # Reference: Manifest schema for Microsoft Teams
 
-The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.6 are also supported (using "v1.x" in the URL).
+The Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json`]( https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,..., and 1.11 are also supported (using "v1.x" in the URL).
 For more information on the changes made in each version, see [manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
 
 The following schema sample shows all extensibility options:
@@ -18,8 +18,8 @@ The following schema sample shows all extensibility options:
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.10",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
   "version": "1.0.0",
   "id": "%MICROSOFT-APP-ID%",
   "packageName": "com.example.myapp",
@@ -725,15 +725,19 @@ You can define any of the following properties:
 
 When `defaultBlockUntilAdminAction` property is set to true, the app is hidden from users by default until Admin allows it.
 
+> [!NOTE]
+> If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`type`|boolean|32 characters|✔|If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.|
+|`type`|boolean|32 characters|✔|Can be **true** or **false**.
 |`description`|string|128 characters||The description that appears to users to indicate the purpose of this property.|
 |`default`|||✔|Default is **false**.|
 
 ## publisherDocsUrl
 
+Optional- string
+
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`$ref`|||✔|The URL to the page that provides additional app information for the admins.|
 |`description`|string|128 characters||The description that appears to the admins to indicate the purpose of this property.|
