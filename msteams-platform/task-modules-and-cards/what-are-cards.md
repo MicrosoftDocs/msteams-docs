@@ -8,9 +8,11 @@ ms.topic: overview
 
 # Cards
 
-A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and can include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
+A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-The bots for Teams support the following types of cards: Adaptive Card, hero card, list card, Office 365 Connector card, receipt card, signin card, thumbnail card, and card collections. You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
+The bots for Teams support the following types of cards: Adaptive Card, hero card, list card, Office 365 Connector card, receipt card, signin-card, thumbnail card, and card collections.
+
+You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
 
@@ -40,7 +42,7 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
+[Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
 
@@ -55,9 +57,9 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
-Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
-## Support for AAD Object ID and UPN in user mention 
+## Support for AAD Object ID and UPN in user mention
 
 Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
 
