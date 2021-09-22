@@ -275,7 +275,7 @@ If your app supports localization, your app package must include a file with lan
 
 Following image illustrates values and their mention in app manifest:
 
-    ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)  
+   ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)  
 
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
 
