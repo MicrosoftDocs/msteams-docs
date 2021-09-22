@@ -730,6 +730,7 @@ When `defaultBlockUntilAdminAction` property is set to true, the app is hidden f
 ## publisherDocsUrl
 
 **Optional** - string
+
 **Maximum size** - Characters
 
 The description that appears to the admins to indicate the purpose of this property.
