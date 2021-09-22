@@ -10,7 +10,7 @@ ms.topic: reference
 
 Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
 
-Before you identify the different card types, understand how to create a a hero card, thumbnail card, or Adaptive Card.
+Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
@@ -48,7 +48,7 @@ You can identify and use different types of cards based on your application requ
 | [List card](#list-card) | This card contains a scrolling list of items. |
 | [Office 365 Connector card](#office-365-connector-card) | This card has a flexible layout with multiple sections, fields, images, and actions. |
 | [Receipt card](#receipt-card) | This card provides a receipt to the user. |
-| [Signin card](#signin-card) | This card enables a bot to request that a user signs in. |
+| [Sign in card](#signin-card) | This card enables a bot to request that a user signs in. |
 | [Thumbnail card](#thumbnail-card) | This card typically contains a single thumbnail image, some short text, and one or more buttons. |
 | [Card collections](#card-collections) | This card collection is used to return multiple items in a single response. |
 
@@ -76,11 +76,11 @@ You can go through some common properties that are applicable to all cards.
 
 ### Inline card images
 
-The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is highly recommended you host the image on a public Content Delivery Network (CDN).
+The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is recommended that you host the image on a public Content Delivery Network (CDN).
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must be at most 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF is not supported.
+Images must have size 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF's are not supported.
 
 The following table provides the properties of inline card images:
 
@@ -94,7 +94,7 @@ The following table provides the properties of inline card images:
 
 ### Buttons
 
-Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any additional buttons beyond the maximum number supported by the card are not shown.
+Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any more buttons beyond the maximum number supported by the card are not shown.
 
 For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -466,7 +466,7 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 | `avatar` | Default, `activityImage` is cropped as a circle. |
 | `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
 
-For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The only connector card properties that Teams does not currently support are as follows:
+For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The connector card properties that Teams does not currently support are as follows:
 
 * `heroImage`
 * `hideOriginalBody`
@@ -541,7 +541,7 @@ The following code shows an example of an Office 365 Connector card:
 
 ## Receipt card
 
-Teams supports receipt card. It is a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
+Teams supports receipt card, a card that enables a bot to provide a receipt to the user. It typically contains the list of items to include on the receipt, such as tax and total information.
 
 ### Support for receipt cards
 
