@@ -178,12 +178,6 @@ The following schema sample shows all extensibility options:
                   "value": "Value of the choice"
                 }
               ]
-               "taskInfo": {
-                  "title": "Initial dialog title",
-                  "width": "Dialog width",
-                  "height": "Dialog height",
-                  "url": "Initial webview URL"
-            },
             }
           ]
         },
@@ -194,7 +188,7 @@ The following schema sample shows all extensibility options:
           "context": [
             "message"
           ],
-          "description": "Command Description; e.g., Search for a customer",
+          "description": "Command Description; e.g., Add a customer",
           "initialRun": true,
           "fetchTask": true,
           "parameters": [
@@ -205,6 +199,24 @@ The following schema sample shows all extensibility options:
               "inputType": "text"
             }
           ]
+        },
+         {
+          "id": "exampleCmd3",
+          "title": "Example Command 3",
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "description": "Command Description; e.g., Add a customer",
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Initial dialog title",
+            "width": "Dialog width",
+            "height": "Dialog height",
+            "url": "Initial webview URL"
+          }
         }
       ],
       "messageHandlers": [
@@ -220,7 +232,7 @@ The following schema sample shows all extensibility options:
       ]
     }
   ],
-  "permissions": [
+"permissions": [
     "identity",
     "messageTeamMembers"
   ],
