@@ -82,7 +82,7 @@ Use one of the following Teams templates and components to help design your pers
 
 ## Use a personal app (bot)
 
-Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on on artboard). Users interact with the bot in a tab you specify.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### Anatomy: Personal app (bot)
 
