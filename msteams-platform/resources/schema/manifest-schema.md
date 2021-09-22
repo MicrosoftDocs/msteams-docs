@@ -725,7 +725,7 @@ You can define any of the following properties:
 
 **Optional**—boolean
  
-When `defaultBlockUntilAdminAction` property is set to true, the app is hidden from users by default until Admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.
+When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**.
 
 ## publisherDocsUrl
 
@@ -733,4 +733,4 @@ When `defaultBlockUntilAdminAction` property is set to true, the app is hidden f
 
 **Maximum size** - Characters
 
-The description that appears to the admins to indicate the purpose of this property.
+The URL to an information page where admins can get guidelines before allowing an app, which is blocked by default.
