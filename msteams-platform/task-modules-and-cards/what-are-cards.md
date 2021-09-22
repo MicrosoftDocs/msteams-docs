@@ -59,7 +59,7 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 
 ## Support for AAD Object ID and UPN in user mention 
 
-Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the [AAD Object ID and UPN](task-modules-and-cards/cards/cards-format.md#aad-object-id-and-upn-in-user-mention).
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
 
 ## See also
 
