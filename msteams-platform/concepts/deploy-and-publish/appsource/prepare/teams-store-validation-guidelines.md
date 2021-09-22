@@ -4,7 +4,7 @@ description: Describes the guidelines every app submitted to the Teams store (Ap
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
-ms.localizationpriority: none
+ms.localizationpriority: high
 ---
 # Microsoft Teams store validation guidelines
 
@@ -186,6 +186,7 @@ The long description can provide an engaging narrative that highlights your app'
 * Use active voice and speak to users directly. For example, *You can ...*.
 * List features with bullet points so it's easier to scan the description.
 * Clearly describe limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the user installs your app. The Teams capabilities your app supports must relate to the core functions your listing describes.
+* Ensure the app description matches with the functionality available inside Teams app. Any reference to workflows outside of the Teams app must be limited and distinctly called out from the Teams app functionality.
 * Include a help or support link.
 * Refer to **Microsoft 365** instead of **Office 365**.
 * If you need to reference **Teams**, write the first reference as **Microsoft Teams**. Subsequent references can be shortened to **Teams**.
@@ -206,11 +207,15 @@ The long description can provide an engaging narrative that highlights your app'
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
 * Indicate the app is an offering from Microsoft, including using Microsoft slogans or taglines.
 * Use copyrighted brand names you don't own.
-* Include typos, grammatical errors, and unnecessary capitalizations (for example, **Users** instead of **users**).
-* Include links to AppSource.
-* Use the following language unless you are a certified Microsoft partner:
+ * Use the following language unless you are a certified Microsoft partner:
   * "... certified for ..."
   * "... powered by ..."
+* Include typos, grammatical errors, and unnecessary capitalizations, such as **Users** instead of **users**.
+* Include links to AppSource.
+* Make unverified claims (for example: best, top, ranked), unless accompanied by the source of the claim.
+* Compare your offer with other marketplace offers.
+
+
 
 ### Screenshots
 
@@ -297,6 +302,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 * Tabs in a personal context may aggregate content from shared instances of the app.
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 * Tabs must use Teams-styled components, such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on whenever possible.
+* If your app functionality requires changes in the settings, include a **Settings** tab.
 * Tabs must follow Teams interaction design, such as, in-page navigation, position and use of dialogs, information hierarchies, and so on whenever possible.
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
 
