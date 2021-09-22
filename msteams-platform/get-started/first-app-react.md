@@ -27,12 +27,14 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create a new Teams app**. The UI may look different, depending on your operating system.
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-create-app.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 1. Select **Create a new Teams app** from the dropdown menu to create an app using the Teams Toolkit.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
+    > [!NOTE]
     >If you build an app with only Tab capability, Teams Toolkit asks for your Frontend Hosting options. You can choose between Azure and SharePoint (SPFx).
 
 1. Select all capabilities, and select **OK**.
@@ -40,9 +42,11 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-select-capabilities.png" alt-text="Select App Capability" border="false":::
 
 1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
 1. Select **Create a new bot registration** in the **Bot registration** section.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-bot-registration.png" alt-text="Create bot registration" border="false":::
     
     > [!NOTE] 

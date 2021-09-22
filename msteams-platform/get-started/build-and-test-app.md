@@ -91,7 +91,8 @@ To build and run your app locally:
 
 1. Teams web client opens in a browser window. Sign in with your Microsoft 365 account when prompted.
 
-1. When prompted to install the app onto Teams, select **Add**.
+1. Select **Add** when you're prompted to add the app onto Teams.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-add-app.png" alt-text="Add the app to Teams":::
  
     If you're asked to switch to Teams desktop, select the web app version to run your app. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
@@ -148,17 +149,19 @@ To test the Bot:
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-app-bot.png" alt-text="Screenshot of bot":::
     
 To test the Message Extension:
-1. Click the […] button in the composing area to launch the message extension.
+1. Select the three dots :::image type="icon" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-mex-icon.png"::: icon in the composing area to launch the message extension.
 1.	Enter a search string, like cli, in the search bar, and select Enter.
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-app-mex-query.png" alt-text="Screenshot of message extension query":::
     
-    The search returns result.
+    The search returns the result.
     :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-app-mex-query-resp.png" alt-text="Screenshot of message extension query response":::
     
     You can also try to @ your message extension instance. You can find it in the search bar in the top row of Teams and search for npm package.
 
 To test the Tab:
 - Select **Personal Tab**.
+    
+    The Tab appears.
         :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/hwa-app-tab-editusername.png" alt-text="Screenshot of app tab":::
 
 
@@ -166,3 +169,11 @@ To test the Tab:
 
 > [!div class="nextstepaction"]
 > [Hello World - Deploy your app on Azure](../get-started/get-started-deploy-teams-app-azure.md)
+
+
+## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Create a conversational bot app](first-app-bot.md)
+* [Create a messaging extension](first-message-extension.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

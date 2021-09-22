@@ -1,6 +1,6 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources.
+Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources.
 
 # [Visual Studio Code](#tab/vscode)
 
