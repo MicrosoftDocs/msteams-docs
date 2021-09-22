@@ -320,7 +320,7 @@ If your app supports localization, your app package must include a file with lan
 * After license assignment, users must have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
 * From your Teams app, provide link to the SaaS application home page for subscriber to manage the licenses in the future. 
 
-### Provide sufficient Details to Configure the SaaS application and Test 
+### Configure and test SaaS application
 
 * If setup of your app for testing purposes is complex, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".    
 
