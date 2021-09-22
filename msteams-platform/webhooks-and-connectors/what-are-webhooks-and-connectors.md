@@ -2,7 +2,7 @@
 title: Webhooks and connectors
 author: clearab
 description: Understand how webhooks and connectors can connect your web services to the Teams client.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ---
@@ -28,7 +28,7 @@ Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webho
 
 ### Office 365 Connectors
 
-Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and time of day, to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
+Office 365 Connectors allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using Office 365 Connector cards and have the ability to add a limited set of card actions to them. For example, a weather connector that allows users to select a location and a time of day, to receive updates about tomorrow's weather. They are configured on a channel level but are installed at a team level.
 
 > [!NOTE]
 > You can distribute the Office 365 Connector Teams app to our AppStore.

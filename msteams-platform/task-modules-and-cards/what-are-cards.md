@@ -1,7 +1,7 @@
 ---
 title: Cards
 description: Describes cards and how they are used in bots, connectors, and messaging extensions
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: connectors bots cards messaging
 ms.topic: overview
 ---
@@ -56,6 +56,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+
+## Support for AAD Object ID and UPN in user mention 
+
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
 
 ## See also
 

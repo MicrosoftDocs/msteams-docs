@@ -2,7 +2,7 @@
 title: Text formatting in cards
 description: Describes card text formatting in Microsoft Teams
 keywords: teams bots cards format
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 06/25/2021
 ---
@@ -26,7 +26,7 @@ You can format Adaptive Cards and Office 365 Connector cards with Markdown that 
 The following card types support Markdown formatting in Teams:
 
 * Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
-* O365 Connector cards: Markdown and limited HTML is supported in O365 Connector cards in the text fields.
+* Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
 
@@ -111,14 +111,14 @@ The following code shows an example of Adaptive Cards formatting:
 }
 ```
 
-### Mention support within Adaptive Cards v1.2
+### Mention support within Adaptive Cards 
 
 You can add @mentions within an Adaptive Card body for bots and messaging extension responses. To add @mentions in cards, follow the same notification logic and rendering as that of message based [mentions in channel and group chat conversations](../../bots/how-to/conversations/channel-and-group-conversations.md#work-with-mentions).
 
 Bots and messaging extensions can include mentions within the card content in [TextBlock](https://adaptivecards.io/explorer/TextBlock.html) and [FactSet](https://adaptivecards.io/explorer/FactSet.html) elements.
 
 > [!NOTE]
-> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards v1.2 on the Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions are not supported in bot messages.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
@@ -159,6 +159,130 @@ The following code shows an example of Adaptive Card with a mention:
   }
 }
 ```
+
+### AAD Object ID and UPN in user mention 
+
+Teams platform allows to mention users with their AAD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs. 
+
+The following table describes the newly supported user mention IDs:
+
+|IDs  | Supporting capabilities |	Description	| Example |
+|----------|--------|---------------|---------|
+| AAD object ID | Bot, Connector |  AAD user’s object ID |	49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN |	Bot, Connector | AAD user’s UPN | john.smith@microsoft.com |
+
+#### User mention in bots with Adaptive Cards 
+
+Bots support user mention with the AAD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs. 
+
+> [!NOTE]
+> Schema update and UI/UX changes are not required for user mentions with Adaptive Cards in Bot.
+
+##### Example 
+
+Example for user mention in bots with Adaptive Cards as follows:
+
+```json 
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+    }
+  ],
+  "msteams": {
+    "entities": [
+      {
+        "type": "mention",
+        "text": "<at>Adele UPN</at>",
+        "mentioned": {
+          "id": "AdeleV@contoso.onmicrosoft.com",
+          "name": "Adele Vance"
+        }
+      },
+      {
+        "type": "mention",
+        "text": "<at>Adele AAD</at>",
+        "mentioned": {
+          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+          "name": "Adele Vance"
+        }
+      }
+    ]
+  }
+}
+```
+
+Following image illustrates the user mention with Adaptive Card in Bot:
+
+![User mention in bot with Adaptive Card](~/assets/images/authentication/user-mention-in-bot.png)
+
+#### User mention in Incoming Webhook with Adaptive Cards 
+
+Incoming webhooks start to support user mention in Adaptive Cards with the AAD Object ID and UPN.
+
+> [!NOTE]    
+> * Enable user mention in the schema for Incoming webhooks to support AAD Object ID and UPN. 
+> * UI/UX changes are not required for user mentions with AAD Object ID and UPN.      
+> * The activity feed notification for Incoming Webhook with user mention will be available in the future release.
+
+##### Example 
+
+Example for user mention in Incoming Webhook as follows:
+
+```json
+{
+    "type": "message",
+    "attachments": [
+        {
+        "contentType": "application/vnd.microsoft.card.adaptive",
+        "content": {
+            "type": "AdaptiveCard",
+            "body": [
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "Sample Adaptive Card with User Mention"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele AAD</at>"
+                }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0",
+            "msteams": {
+                "entities": [
+                    {
+                        "type": "mention",
+                        "text": "<at>Adele UPN</at>",
+                        "mentioned": {
+                          "id": "AdeleV@contoso.onmicrosoft.com",
+                          "name": "Adele Vance"
+                        }
+                      },
+                      {
+                        "type": "mention",
+                        "text": "<at>Adele AAD</at>",
+                        "mentioned": {
+                          "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
+                          "name": "Adele Vance"
+                        }
+                      }
+                ]
+            }
+        }
+    }]
+}
+```
+
+Following image illustrates user mention in Incoming Webhook:
+
+![User mention in Incoming Webhook](~/assets/images/authentication/user-mention-in-incoming-webhook.png)
 
 ### Information masking in Adaptive Cards
 
@@ -284,7 +408,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-# [Markdown format for O365 Connector cards](#tab/connector-md)
+# [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
 Connector cards support limited Markdown and HTML formatting.
 
@@ -377,12 +501,12 @@ The following code shows an example of formatting for Markdown connector cards:
 
 The following card types support HTML formatting in Teams:
 
-* O365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
+* Office 365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
-Formatting is different between the desktop and the mobile versions of Teams for O365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
+Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
 
-# [HTML format for O365 Connector cards](#tab/connector-html)
+# [HTML format for Office 365 Connector cards](#tab/connector-html)
 
 Connector cards support limited Markdown and HTML formatting.
 

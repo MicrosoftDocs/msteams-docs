@@ -4,6 +4,7 @@ description: To publish your app to the Microsoft Teams store, you need a Partne
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 # Create a Partner Center developer account
 
@@ -188,7 +189,7 @@ Support tickets get resolved in a week. Check for updates sent to the email you 
 
 Send an email to <a href="mailto:teamsubm@microsoft.com">teamsubm@microsoft.com</a> with the following details:
 
-* **Subject Line**: Partner Center Account Issue for *<your app name>*.
+* **Subject Line**: Partner Center Account Issue for *your app name*.
 * **Email body**:
     * Support ticket number.
     * Your seller ID.

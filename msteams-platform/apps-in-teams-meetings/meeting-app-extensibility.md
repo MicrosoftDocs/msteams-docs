@@ -3,6 +3,7 @@ title: Unified meetings apps
 author: surbhigupta
 description: Understand unified meetings apps 
 ms.topic: conceptual
+ms.localizationpriority: none
 ---
 
 # Unified meetings apps
@@ -95,7 +96,7 @@ The in-meeting dialog box is displayed where you can enter your response as feed
 > [!NOTE]
 > * Apps can leverage the Teams Client SDK to access the `meetingId`, `userMri`, and `frameContext` to render the experience appropriately.
 > * If the in-meeting dialog box is rendered successfully, it sends a notification that the results are successfully downloaded.
-> * Your app manifest specifies the places in which you want the apps to appear. The context field is used for this purpose. It is also the part of a share-tray experience, subject to specified design guidelines.
+> * App manifest uses the context field and specifies the places, where the user wants the apps to appear. Further, acts as a part of a share-tray experience as mentioned in the specified design guidelines.
 
 The following image illustrates the in-meeting side panel:
 
@@ -189,11 +190,11 @@ A guest or anonymous user can't add, remove, or uninstall apps.
 
 The following table provides the user types and lists the features that each user can access:
 
-| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog |
-| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
-| Guest that is part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available |
-| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available |
+| User type | Tabs | Bots | Messaging extensions | Adaptive Cards | Task modules | In-meeting dialog | Meeting Stage | 
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| Anonymous user | Not available | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available | Cannot view but can interact with app on the meeting stage |
+| Guest that is part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Available | Can view and interact with app on the meeting stage |
+| Federated user. For more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from an Adaptive Card are allowed. | Not available | Can view and interact with app on the meeting stage |
 
 ## See also
 

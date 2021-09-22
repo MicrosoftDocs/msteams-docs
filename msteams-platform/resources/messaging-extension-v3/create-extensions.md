@@ -1,7 +1,7 @@
 ---
 title: Initiate actions with messaging extensions
 description: Create Action-based messaging extensions to allow users to trigger external services
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams messaging extensions messaging extensions search
 ---

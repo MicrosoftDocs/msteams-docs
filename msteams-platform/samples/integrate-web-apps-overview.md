@@ -4,6 +4,7 @@ author: Rajeshwari-v
 description: An overview of integrating web applications and device capabilities with Microsoft Teams app.
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 
 # Integrate web apps

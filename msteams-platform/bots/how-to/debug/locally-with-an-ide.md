@@ -3,7 +3,7 @@ title: Test and debug your bot locally
 author: surbhigupta
 description: Testing and debugging your bot locally with an IDE
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 
