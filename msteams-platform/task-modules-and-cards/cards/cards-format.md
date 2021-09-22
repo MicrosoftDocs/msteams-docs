@@ -17,7 +17,7 @@ Cards support formatting in the text property only, not in the title or subtitle
 
 Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
 
-You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF is not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
+You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF's are not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
 You can format Adaptive Cards and Office 365 Connector cards with Markdown that include certain supported styles.
 
@@ -25,7 +25,7 @@ You can format Adaptive Cards and Office 365 Connector cards with Markdown that 
 
 The following card types support Markdown formatting in Teams:
 
-* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, as well as `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
+* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
 * Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
@@ -124,7 +124,7 @@ Bots and messaging extensions can include mentions within the card content in [T
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
 * `<at>username</at>` in the supported Adaptive Card elements.
-* The `mention` object inside of an `msteams` property in the card content includes the Teams user ID of the user being mentioned.
+* The `mention` object inside an `msteams` property in the card content includes the Teams user ID of the user being mentioned.
 * The `userId` is unique to your bot ID and a particular user. It can be used to @mention a particular user. The `userId` can be retrieved using one of the options mentioned in [get the user ID](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=dotnet#get-the-user-id-team-id-or-channel-id).
 
 #### Sample Adaptive Card with a mention
@@ -501,7 +501,7 @@ The following code shows an example of formatting for Markdown connector cards:
 
 The following card types support HTML formatting in Teams:
 
-* Office 365 Connector cards: Limited Markdown and HTML formatting is supported in Office 365 Connector cards.
+* Office 365 Connector cards: Limited Markdown and HTML formatting are supported in Office 365 Connector cards.
 * Hero and thumbnail cards: HTML tags are supported for simple cards, such as the hero and thumbnail cards.
 
 Formatting is different between the desktop and the mobile versions of Teams for Office 365 Connector cards and simple cards. In this section, you can go through the HTML format example for connector cards and simple cards.
