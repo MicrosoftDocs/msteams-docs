@@ -265,18 +265,13 @@ Your app's support URLs should not require authentication. For example, users sh
 
 If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see the [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
-## Apps linked to Software as a Service (SaaS) offer
+## Apps linked to SaaS offer
 
 * Support the ability for multiple users (Subscribers) in the same tenant to manage their own subscription and assign licenses to users in the tenant. 
 * The offer must meet all the [technical requirements](https://review.docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759) for Teams apps linked to a SaaS offer. 
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas). 
 * `subscriptionOffer` details mentioned in the manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. 
-    > For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`. 
-
-Following image illustrates values and their mention in app manifest:
-
-   ![Link SaaS offer to Teams app1](~/assets/images/store-detail-page/link-saas-offer-to-teams-app-screen1.png)  
-
+    > For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.     
 * Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
 
 ### Offer metadata 
@@ -291,58 +286,38 @@ Following image illustrates values and their mention in app manifest:
 
 ### SaaS offer home page and license management  
 
-* Subscriber can go to SaaS web application home page by selecting **configure now** in Teams. 
-Following image illustrates the home page:
-
-   ![Home page](~/assets/images/store-detail-page/home-page.png)
-
-* After completing the purchase, users can activate and configure their subscription on your SaaS application home page.     
-Following image illustrates the SaaS application home page:
-
-   ![Configure subscription ](~/assets/images/store-detail-page/configure-subscription.png)
+* Subscribers must select **configure now** in Teams to go to SaaS web application home page.      
+* Users must complete the purchase to activate and configure their subscription on your SaaS application home page.     
 
 > [!TIP]    
 > * Provide introduction to subscriber on how to use the product. 
 > * Allow the subscriber to assign licenses. 
 > * Provide way to engage with support for issues, such as FAQ, knowledgebase, and email address.
 
-* Users completing a purchase must manage the licenses and have the following selections in SaaS application: 
+* After completing a purchase, users must manage the licenses and have the following selections in SaaS application: 
 
-    * Assign and remove licenses 
+  * Assign and remove licenses. 
+  * Reassign licenses among users.
+  * Authorize users to manage licenses. 
 
-    * Reassign licenses among users
-
-    * Authorize users to manage licenses 
-
-Following image illustrates the license management:
-
-   ![Manage license](~/assets/images/store-detail-page/manage-license.png)
-
-> [!TIP]     
+> [!TIP]             
 > * Validate users to make sure that they don’t already have license assigned through another user. 
 > * If different license types are available, subscribers must manage and assign them appropriately. 
 > * Alert users after license assignment. Also, guide them through Teams chat bot or email on how to add the app to Teams and get started. 
 
 ### Manage Subscriptions 
 
-* Users completing the purchase can manage subscriptions.
-
-* Subscribers can do the following functions: 
-
+* The users must completing the purchase to manage subscriptions . 
+* Subscribers must do the following functions:     
    * Adjust licenses, buy, remove licenses  
-
    * Change subscription plan
-
    * Cancel, repurchase the subscription 
-
    * Renew subscriptions
 
 ### Usability and functionality  
 
 * After successful purchase and assignment of licenses, users must have access to the subscribed plan features described in plan listing. 
-
 * After license assignment, users must have a value addition and significant benefits of subscription plan when compared to users without license assignment. 
-
 * From your Teams app, provide link to the SaaS application home page for subscriber to manage the licenses in the future. 
 
 ### Provide sufficient Details to Configure the SaaS application and Test 
