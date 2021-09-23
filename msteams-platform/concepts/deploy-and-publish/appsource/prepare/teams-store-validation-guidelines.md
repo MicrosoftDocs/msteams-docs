@@ -301,7 +301,7 @@ If your app supports localization, your app package must include a file with lan
 
 ### Configure and test SaaS application
 
-* If setup of your app for testing purposes is complex, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".    
+If setup of your app for testing purposes is complex, provide an end-to-end functional document, linked SaaS offer configuration steps, and instructions for license and user management as part of your "Notes for Certification".    
 
 > [!TIP]  
 > You can add a video on how your app and license management works to assist the team for testing. 
