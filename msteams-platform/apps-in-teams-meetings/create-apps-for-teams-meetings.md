@@ -474,6 +474,16 @@ ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
     await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
 }
 ```
+
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting end event:
+
+```csharp
+protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
+{
+    await turnContext.SendActivityAsync(JsonConvert.SerializeObject(meeting));
+}
+```
+
 * Have parameters `meetingId`, `userId`, and `tenantId` in meeting API URL. The parameters are available as part of the Teams Client SDK and bot activity. Also, you can retrieve reliable information for user ID and tenant ID using [tab SSO authentication](../tabs/how-to/authentication/auth-aad-sso.md).
 
 * Have a bot registration and ID in the `GetParticipant` API to generate auth tokens. For more information, see [bot registration and ID](../build-your-first-app/build-bot.md).
