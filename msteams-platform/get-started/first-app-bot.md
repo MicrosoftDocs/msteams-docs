@@ -92,7 +92,7 @@ The bot code is stored in the `bot` directory. The `bot/teamsBot.js` is the main
 
 ## Prepare the local environment
 
-You can use the Teams Toolkit to run your app in the local environment. 
+You can use the Teams Toolkit to run your app in the local environment.
 
 When you completed the [Hello world](first-app-react.md), in your Toolkit you should already have:
 
@@ -112,7 +112,7 @@ To build and run your app in the local environment:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
 
     Your web browser starts to run the app.
 
@@ -124,7 +124,7 @@ To build and run your app in the local environment:
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/install-bot.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
 
-       Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens. 
+       Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/run-bot.png" alt-text="Screenshot showing the bot is running on Teams client.":::
 

@@ -14,7 +14,7 @@
     href: get-started/code-samples.md  
   - name: Prerequisites
     href: get-started/prerequisites.md
-  - name: Hello World - Build your first tab
+  - name: Hello World - Your first Teams Tab
     href: get-started/first-app-react.md
   - name: Build your first Bot
     href: get-started/first-app-bot.md
