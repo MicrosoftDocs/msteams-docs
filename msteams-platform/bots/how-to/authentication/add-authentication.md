@@ -121,7 +121,7 @@ In this procedure, you'll use an Azure AD provider; other Azure AD supported ide
 
 ### Configure the identity provider connection and register it with the bot
 
-Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2.  The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison). But in general, V2 provides more flexibility in changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign-in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
+Note-there are two options for Service Providers here-Azure AD V1 and Azure AD V2. The differences between the two providers are summarized [here](/azure/active-directory/azuread-dev/azure-ad-endpoint-comparison). But in general, V2 provides more flexibility in changing bot permissions.  Graph API permissions are listed in the scopes field, and as new ones are added, bots will allow users to consent to the new permissions on the next sign-in.  For V1, the bot consent must be deleted by the user for new permissions to be prompted in the OAuth dialog. 
 
 #### Azure AD V1
 
@@ -141,7 +141,7 @@ The following image displays the corresponding selection in the resource page:
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign,  follow these criteria:
 
-        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. Further, it will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts, for example,  Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -170,7 +170,7 @@ The following image displays the corresponding selection in the resource page:
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign,  follow these criteria:
 
-        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. The ID will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -182,7 +182,7 @@ The following image displays the corresponding selection in the resource page:
 
 1. Select the connection entry to open the connection you created.
 1. Select **Test Connection** at the top of the **Service Provider Connection Setting** panel.
-1. The first time you do, this will open a new browser window asking you to select an account. Select the one you want to use.
+1. The first time you connect, a new browser window asking you to select an account. Select the one you want to use.
 1. Next, you'll be asked to allow to the identity provider to use your data (credentials). The following image is an example:
 
     ![teams bot auth connection string adv1](../../../assets/images/authentication/auth-bot-connection-test-accept.PNG)
@@ -203,7 +203,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
 1. Clone [cs-auth-sample][teams-auth-bot-cs].
 1. Launch Visual Studio.
 1. From the toolbar, select **File -> Open -> Project/Solution** and open the bot project.
-1. In C# Update **appsettings.json** as follows:
+1. In C# Update **appsettings.json**, as follows:
 
     - Set `ConnectionName` to the name of the identity provider connection you added to the bot channel registration. The name we used in this example is *BotTeamsAuthADv1*.
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot channel registration.
@@ -278,7 +278,7 @@ In Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](https://aka.ms/bot-framework-emulator-debug-with-emulator).
 
-In order for the bot sample login to work you must configure the Emulator.
+In order for the bot sample login to work, you must configure the Emulator.
 
 ### Configure the Emulator for authentication
 
@@ -324,7 +324,7 @@ After configuration of authentication mechanism, do the actual bot testing.
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
-1. Enter **logout** in the input chat box to sign out and the user token releases. Once, sign-out process takes place, bot does not allow you to the page until you sign in again.
+1. Enter **logout** in the input chat box to sign out and the user token releases. After sign-out, you cannot access the page until you sign in.
 
 > [!NOTE]
 > Bot authentication requires use of the **Bot Connector Service**. The service accesses the bot channels registration information for your bot.
@@ -394,7 +394,7 @@ It launches ngrok to listen on the port you specify. In return, it gives you an 
 
 1. Copy the forwarding HTTPS address. It should be similar to the following address: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`.The **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
-1. One final step is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's perform these steps:
+1. One final step is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's do these steps:
     1. In your browser, navigate to the [**Azure portal**][azure-portal].
     1. Select your **Bot Channel Registration**.
     1. In the left panel, select **Settings**.
