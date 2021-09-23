@@ -34,7 +34,7 @@ First, you must decide the location from where your action command must be invok
 
 The following image displays the locations from where action command is invoked:
 
-![action command invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+![action command invoke locations](~/assets\messaging-extensions.png)
 
 ## Select how to create your task module
 
