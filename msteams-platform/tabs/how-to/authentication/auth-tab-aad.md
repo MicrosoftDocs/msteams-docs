@@ -24,7 +24,7 @@ Authentication flow in tabs differs slightly from authentication flow in bots.
 
 See [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
-## Authentication flow
+## Initiate authentication flow
 
 Authentication flow is triggered by a user action and should not access directly, as it triggers the browser's pop-up blockers and create confusion. Instead, you should wait until the authentication pop-up appears.  
 
