@@ -68,7 +68,7 @@ To identify and retrieve contextual information for your tab content, see [get c
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
 > * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
 
-The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
+The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes. Now the API is supported in both private scheduled/recurring meeting and channel scheduled/recurring meeting. 
 
 #### Query parameters
 
