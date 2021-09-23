@@ -465,7 +465,9 @@ To deserialize the JSON payload, a model object is introduced to get the metadat
 > * Do not use conversation ID as meeting ID.     
 > * Do not use meeting ID from meeting events payload `turncontext.activity.value`. 
       
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start event:
+The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting start/end event:
+
+Meeting Start Event
 
 ```csharp
 protected override async Task OnEventActivityAsync(
@@ -475,7 +477,7 @@ ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
 }
 ```
 
-The following code shows how to capture the metadata of a meeting that is `MeetingType`, `Title`, `Id`, `JoinUrl`, `StartTime`, and `EndTime` from a meeting end event:
+Meeting End Event
 
 ```csharp
 protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meeting, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken)
