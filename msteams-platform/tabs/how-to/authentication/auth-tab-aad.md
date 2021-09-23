@@ -14,7 +14,7 @@ There are many services on the Teams app and most of those services require auth
 
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The  following examples provide detail information on reading the user's profile information, from Azure AD and Microsoft Graph by using OAuth 2.0 Implicit Grant flow.
 
-The code sample in this article comes from Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). It contains a static tab, which  is used request an access token for Microsoft Graph and know the user's basic profile information from Azure AD.
+The code sample comes from Teams sample app [Microsoft Teams tab authentication sample (Node)](https://github.com/OfficeDev/microsoft-teams-sample-complete-node). The code sample contains a static tab. The tab is used  to request an access token for Microsoft Graph and know the basic user profile information from Azure AD.
 
 For information on the authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -26,11 +26,11 @@ See [Configure identity providers](~/concepts/authentication/configure-identity-
 
 ## Initiate authentication flow
 
-Authentication flow is triggered by a user action and should not access directly, as it triggers the browser's pop-up blockers and create confusion. Instead, you should wait until the authentication pop-up appears.  
+Authentication flow should not access directly instead triggered by the user actions. Because when you access directly, it triggers  the browser's pop-up blockers and creates confusion. Instead, you must wait until the authentication pop-up appears.  
 
 Add a button to your configuration or content page to enable the user to sign by using tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers and it does not allow its content to be placed in an iframe. As you need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
+Azure AD, like most identity providers and does not allow its content to be placed in an iframe. As you need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `microsoftTeams.authenticate()` function of the Microsoft Teams client SDK to launch this page when your button is selected.
 
 ```javascript
 microsoftTeams.authentication.authenticate({
@@ -88,9 +88,9 @@ After the user completes authorization, the user is redirected to the callback p
 ### Notes
 
 * See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign-in, which means the user might need to type less. You should not use this context directly as proof of identity. As an attacker could load your page in a malicious browser and provide it with any information, they want.
-* Although the tab context provides useful information regarding the user, do not use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. Treat the identity-related information in the tab context simply as hints and validate them before use.
-* The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback is not matching the parameter you sent during the call, the return call is not verified and terminated.
-* Do not include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
+* Although the tab context provides useful information regarding the user, don't use this information to authenticate the user, whether you get it as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. Treat the identity-related information in the tab context simply as hints and validate them before use.
+* The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback not matching with the parameter you sent during the call, the return call is not verified and terminated.
+* Don't include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
 
 ## The callback page
 
@@ -139,7 +139,7 @@ This code parses the key-value pairs received from Azure AD in `window.location.
 
 In case successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, display an error message.
 
-Your app can set its own session cookie, so that the user need not sign-in again when they return to your tab on the current device.
+Your app can set its own session cookie, so that the user needs not sign-in again when they return to your tab on the current device.
 
 > [!NOTE]
 > Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
