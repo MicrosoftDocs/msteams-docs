@@ -15,7 +15,7 @@ Start Microsoft Teams app development by building your first app, "Hello World!"
 In this tutorial, you'll learn:
 
 - How to set up a new project with Teams Toolkit.
-- How to build the app with JavaScript using React.
+- How to build an app with JavaScript using React.
 - How to run an app locally.
 
 ## Create your app project
@@ -87,7 +87,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 
 ## Take a tour of the source code
 
-Teams Toolkit provides all components for building an app. After creating the project, you can view the project directories and files in the Explorer area of Visual Studio Code.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
@@ -107,7 +107,7 @@ Among other items in this directory structure, the Toolkit maintains:
   - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
   - This folder also holds the code for tabs needed at runtime. Some of them are the privacy notice, terms of use, and configuration tabs.
 
-When you add the cloud functionality, Teams Toolkit adds the necessary directories to the project. The `api` directory holds the code to any Azure Functions you write.
+When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
 ## Sign in to your Microsoft 365 account
 
@@ -182,11 +182,11 @@ To build and run your app locally:
 
 1. Teams web client opens in a browser window. Sign in with your Microsoft 365 account when prompted.
 
-1. Select **Add** when prompted to sideload the app onto Teams on your local machine. It isn't distributed on Azure yet.
+1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/launch-web-browser-add.png" alt-text="Add the app to Teams":::
  
-    If you're asked to switch to Teams desktop, select the web app version. Run your app in the Teams web client. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
+1. Select the web app version, if you're asked to switch to Teams desktop. Run your app in the Teams web client. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
