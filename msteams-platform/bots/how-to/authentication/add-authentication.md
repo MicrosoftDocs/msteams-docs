@@ -324,7 +324,7 @@ After configuration of authentication mechanism, do the actual bot testing.
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
-1. Enter **logout** in the input chat box to sign out and the user token releases. Once sign-out process takes place, bot does not allow you to the page until you sign in again.
+1. Enter **logout** in the input chat box to sign out and the user token releases. Once, sign-out process takes place, bot does not allow you to the page until you sign in again.
 
 > [!NOTE]
 > Bot authentication requires use of the **Bot Connector Service**. The service accesses the bot channels registration information for your bot.
