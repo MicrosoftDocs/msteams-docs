@@ -141,7 +141,7 @@ The following image displays the corresponding selection in the resource page:
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign,  follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts, for example,  Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -170,7 +170,7 @@ The following image displays the corresponding selection in the resource page:
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign,  follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected, either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft AAD directory - Multi tenant)* enter the **tenant ID** you recorded earlier for the AAD app. This will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any AAD directory - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the AAD app will verify through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -291,8 +291,7 @@ If a bot requires authentication, you must configure the Emulator. To configure:
 1. Check the box by **Run ngrok when the Emulator starts up**.
 1. Select the **Save** button.
 
-When the bot displays a sign-in card and user selects the sign-in button, the Emulator opens a page that the user can use to sign in with the authentication provider.
-Once the user does so, the provider generates a user token and sends it to the bot. After that, the bot can act on behalf of the user.
+When the bot displays a sign-in card and user selects the sign-in button, the Emulator opens a page to sign in with the authentication provider. Once the user does so, the provider generates a user token and sends it to the bot. After that, the bot can act on behalf of the user.
 
 ### Test the bot locally
 
@@ -302,15 +301,15 @@ After configuration of authentication mechanism, do the actual bot testing.
 1. Start the Emulator.
 1. Select the **Open bot** button.
 1. In the **Bot URL**, enter the bot's local URL. Usually, `http://localhost:3978/api/messages`.
-1. In the **Microsoft App ID** enter the bot's app ID from `appsettings.json`.
-1. In the **Microsoft App password** enter the bot's app password from the `appsettings.json`.
+1. In the **Microsoft App ID**, enter the bot's app ID from `appsettings.json`.
+1. In the **Microsoft App password**, enter the bot's app password from the `appsettings.json`.
 1. Select **Connect**.
 1. After the bot is up and running, enter any text to display the sign-in card.
 1. Select the **Sign in** button.
-1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
+1. A pop-up dialog is displayed to **Confirm Open URL**. It allows the bot's user (you) to be authenticated.  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-1. Depending which configuration you used for the Emulator, you get one of the following:
+1. Depending which configuration you used for the Emulator, you get one of the following process:
     1. **Using sign-in verification code**  
       &#x2713; A window is opened displaying the validation code.  
       &#x2713; Copy and enter the validation code into the chat box to complete the sign-in.
@@ -321,12 +320,11 @@ After configuration of authentication mechanism, do the actual bot testing.
 
     ![auth bot login emulator](../../../assets/images/authentication/auth-bot-login-emulator.PNG)
 
-1. If you select **Yes** when the bot asks *Would you like to view your token? you'll get a response similar to the following:
+1. If you select **Yes** when the bot asks *Would you like to view your token? you'll get a response similar to the following screen:
 
     ![auth bot login emulator token](../../../assets/images/authentication/auth-bot-login-emulator-token.png)
 
-1. Enter **logout** in the input chat box to sign out.
-This releases the user token, and the bot won't be able to act on your behalf until you sign in again.
+1. Enter **logout** in the input chat box to sign out and the user token releases. Once sign-out process takes place, bot does not allow you to the page until you sign in again.
 
 > [!NOTE]
 > Bot authentication requires use of the **Bot Connector Service**. The service accesses the bot channels registration information for your bot.
@@ -342,10 +340,10 @@ and when for these, and just reference that from here, along with the set of ste
 1. In the resource page, select **Test in Web Chat**. The bot starts and displays the predefined greetings.
 1. Type anything in the chat box.
 1. Select the **Sign in** box.
-1. A pop-up dialog is displayed to **Confirm Open URL**. This is to allow the bot's user (you) to be authenticated.  
+1. A pop-up dialog is displayed to **Confirm Open URL**, which allows the bot's user (you) to be authenticated.  
 1. Select **Confirm**.
 1. If asked, select the applicable user's account.
-    The following image is an example of the bot UI after you have logged in:
+    The following image is an example of the bot UI after login:
 
     ![auth bot login deployed](../../../assets/images/authentication/auth-bot-login-deployed.PNG).
 
@@ -381,8 +379,7 @@ The following wizard is displayed:
 1. Select the **Set up a bot** button.
 1. Select the three dots (&#x25cf;&#x25cf;&#x25cf;) in the left panel. Then select the **App Studio** icon.
 1. Select the **Manifest editor** tab. You should see the icon for the bot you uploaded.
-1. Also, you should be able to see the bot listed as a contact in the chat list
-that you can use to exchange messages with the bot.
+1. See the bot listed as a contact in the chat list and it is useful to exchange messages with the bot.
 
 ### Testing the bot locally in Teams
 
@@ -391,13 +388,13 @@ To set up ngrok in preparation for running your Microsoft Teams app locally, fol
 
 1. In a terminal window, go the directory where you have `ngrok.exe` installed. We suggest setting the *environment variable* path to point to it.
 1. Run, for example, `ngrok http 3978 --host-header=localhost:3978`. Replace the port number as needed.
-This launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
+It launches ngrok to listen on the port you specify. In return, it gives you an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
 
     ![teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
-1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
-1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
-1. One final step to perform is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's perform these steps:
+1. Copy the forwarding HTTPS address. It should be similar to the following address: `https://dea822bf.ngrok.io/`.
+1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`.The **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
+1. One final step is to update the messages endpoint of the deployed bot. In the example, we deployed the bot in Azure. So **let's perform these steps:
     1. In your browser, navigate to the [**Azure portal**][azure-portal].
     1. Select your **Bot Channel Registration**.
     1. In the left panel, select **Settings**.
@@ -416,7 +413,7 @@ This launches ngrok to listen on the port you specify. In return, it gives you a
 
 ### TeamsAppManifest/manifest.json
 
-This manifest contains information needed by Microsoft Teams to connect with the bot:  
+The manifest contains information needed by Microsoft Teams to connect with the bot:  
 
 ```json
 {
@@ -468,7 +465,7 @@ With authentication, Teams behaves slightly differently than other channels, as 
 ### Handling Invoke Activity
 
 An **Invoke Activity** is sent to the bot rather than the Event Activity used by other channels.
-This is done by subclassing the **ActivityHandler**.
+And, it is done by subclassing the **ActivityHandler**.
 
 # [C#/.NET](#tab/dotnet-sample)
 
