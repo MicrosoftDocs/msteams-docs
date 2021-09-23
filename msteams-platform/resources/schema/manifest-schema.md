@@ -731,7 +731,6 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 
 **Optional** - string
 
-**Maximum size** - Characters
+**Maximum size** - 128 characters
 
-HTTPS URL to an information page where admins can get guidelines before allowing an app, which is blocked by default.
-
+The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
