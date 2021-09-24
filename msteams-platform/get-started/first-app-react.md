@@ -15,8 +15,12 @@ Start Microsoft Teams development by building your first app - "Hello, world!" w
 In this tutorial, you'll learn: 
 
 - how to set up a new project with Teams Toolkit.
-- the structure of a basic tab app and how it's built with JavaScript using React.
+- how to build an app with three different capabilities—tab, bot, and message extensions.
+- the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
 
+    > Your app will have three capabilities and each has its own UI and UX:
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
 ## Create your project
 
