@@ -60,7 +60,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 The cloned repository appears in Visual Studio 2019.
 
 |    |     |
-|:--- |:---|
+|:--- | ---:|
 |**Back** : [Overview](../get-started/code-samples.md) | [Build and test your app](../get-started/build-and-test-csharp-app.md) : **Next** |
 |
 

@@ -116,7 +116,7 @@ You can now test the bot in Teams.
 
 
 |    |     |
-|:--- |:---|
+|:--- | ---:|
 |**Back** : [Build and test your app](../get-started/build-and-test-csharp-app.md) | [Deploy your app](../get-started/deploy-csharp-app.md) : **Next** |
 |
 
