@@ -156,8 +156,6 @@
       href: get-started/first-app-blazor.md
     - name: Build your first app using SPFx
       href: get-started/first-app-spfx.md
-    - name: Build your first app using C# or .NET
-      href: get-started/get-started-dotnet-app-studio.md
     - name: Build your first app using Node.js
       href: get-started/get-started-nodejs-app-studio.md
     - name: Build your first app using the Yeoman generator
