@@ -14,19 +14,20 @@ Start Microsoft Teams app development by building your first app, "Hello World!"
 
 In this tutorial, you'll learn:
 
-- How to set up a new project with Teams Toolkit.
-- How to build an app with JavaScript using React.
-- How to run an app locally.
+1. [How to set up a new project with Teams Toolkit](#create-your-app-project)
+1. [About the directory structure of your app project](#take-a-tour-of-the-source-code)
+1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
 ## Create your app project
 
 If the [prerequisites](prerequisites.md) are in place, let's begin!
 
 > [!NOTE]
-> The Visual Studio Code UI may look different, depending on your operating system.
+> The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
 
 # [Visual Studio Code](#tab/vsc)
 
+1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create a new Teams app**.
@@ -44,6 +45,8 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 1. Select **Azure** as the Frontend hosting type.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
+    
+    If you want to host your app on SharePoint, you can select SharePoint Framework (SPFx) in this option.
 
 1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
     
@@ -166,6 +169,22 @@ To build and run your app locally:
 
 1. From Visual Studio Code, select **F5** to run the application in debug mode.
 
+    <!-- markdownlint-disable MD033 -->
+
+    <details>
+    <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+    In case you're wondering, when you press the **F5** key the Teams Toolkit:
+
+    - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
+    - *Sideloads* the app in Teams.
+    - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+    - Starts the app's frontend hosted locally.
+    - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
+    - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+
+    </details>
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
@@ -197,22 +216,6 @@ To build and run your app locally:
 You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
-
-<details>
-<summary>Learn what happens when you run your app locally in the debugger.</summary>
-
-In case you're wondering, when you press the **F5** key the Teams Toolkit:
-
-- Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-- *Sideloads* the app in Teams.
-- Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-- Starts the app's frontend hosted locally.
-- Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-- An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
-
-</details>
-
-<!-- markdownlint-disable MD033 -->
 <details>
 <summary>Learn how to troubleshoot common issues when running your app locally.</summary>
 
@@ -232,6 +235,12 @@ You know how to use Toolkit to set up a tab app and run it locally. Next, let’
 
 > [!div class="nextstepaction"]
 > [Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
+
+| **<<** | **>>** |
+|:--- | ---:|
+| **Back** : [Prerequisites](prerequisites.md) | [Create your first bot app](first-app-bot.md) : **Next**|
+|
+
 
 ## See also
 
