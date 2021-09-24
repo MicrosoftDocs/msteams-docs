@@ -113,7 +113,7 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 
 :::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." border="false":::
 
-### Image set
+### ImageSet
 
 Use to send multiple image thumbnails.
 
@@ -125,7 +125,7 @@ Use to send multiple image thumbnails.
 
 :::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card." border="false":::
 
-### Action set
+### ActionSet
 
 Use when you want to the user to select a button, then gather addition user input from the same card.
 
@@ -137,7 +137,7 @@ Use when you want to the user to select a button, then gather addition user inpu
 
 :::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." border="false":::
 
-### Choice set
+### ChoiceSet
 
 Use to gather multiple inputs from the user.
 
@@ -183,26 +183,18 @@ Cards designed for a narrow screen scale well on wider screens (the opposite isn
 
 #### Column layouts
 
-Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid.
+Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
-There are several options for formatting column width. These guidelines help you understand when to use each one.
-
-`"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
-
-* **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
-* **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
-* **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with content that must always be completely visible (like a button).
-
-`"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
-
-* **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that're all 50 pixels wide.
-
-`"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`. These columns will take up 10, 40, and 50 percent of the available width.
-
-`"width": "<number>px"`: Sizes columns to a specific pixel width. Useful when creating table layouts.
-
-* **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
-* **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like the desktop version.
+* `"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
+   * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
+   * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
+   * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
+* `"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
+   * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that're all 50 pixels wide.
+* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns will take up 10, 40, and 50 percent of the available width.
+* `"width": "<number>px"`: Sizes columns to a specific pixel width. This approach is useful when creating tables.
+   * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
+   * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
 #### Text
 
@@ -215,7 +207,7 @@ A `Container` allows you to group a set of related elements together.
 * **Do**: Use the `style` property to emphasize a container.
 * **Do**: Use the `selectAction` property to associate an action with the other elements in the container.
 * **Do**: Use the `Action.ToggleVisibility` property to make a group of elements collapsible.
-* **Don't**: Use containers for any other reason other than previously mentioned.
+* **Don't**: Use containers for any reason other than previously mentioned.
 
 #### Images
 
@@ -227,7 +219,7 @@ Follow these guidelines when including images in your cards.
 * Regarding background color:
    * **Do**: Use transparent backgrounds so that your images adapt to any Teams theme. 
    * **Don't**: Include a fixed background color unless a specific color must be visible to your users.
-   * **Don't**: Add a background color to a `TextBlock` that hinders readability. For example, if your background is dark, use a lighter text color and vice versa.
+   * **Don't**: Add a background color to a `TextBlock` that hurts readability. For example, if your background is dark, use a lighter text color and vice versa.
 
 ### Actions
 
