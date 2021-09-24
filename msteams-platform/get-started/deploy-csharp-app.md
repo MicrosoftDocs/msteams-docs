@@ -49,7 +49,7 @@ Visual Studio has built-in support for app deployment to different providers, in
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
-|    |     |
+|  <<  |  >>  |
 |:--- | ---:|
 |**Back** : [Build and test your app](../get-started/build-and-test-csharp-app.md) | [Overview](../get-started/code-samples.md) : **Next** |
 |
