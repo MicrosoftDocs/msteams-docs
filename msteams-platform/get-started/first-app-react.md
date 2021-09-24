@@ -199,7 +199,9 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
-1. Teams web client opens in a browser window. Sign in with your Microsoft 365 account when prompted.
+   Teams web client opens in a browser window. 
+
+1. Sign in with your Microsoft 365 account when prompted.
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
@@ -217,9 +219,9 @@ You can do normal debugging activities, such as setting breakpoints, as if it we
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Learn how to troubleshoot common issues when running your app locally.</summary>
+<summary>Learn how to troubleshoot if your doesn't app run locally.</summary>
 
-To successfully run your app in Teams, you must have a Teams account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
 </details>
 
