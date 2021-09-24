@@ -17,7 +17,7 @@
   - name: Hello World - Your first Teams app
     href: get-started/first-app-react.md
   - name: Build and test your app
-    href: get-started/build-and-test-app.md
+    href: get-started/build-and-test-react-app.md
   - name: Deploy your app in Azure
     href: get-started/get-started-deploy-teams-app-azure.md
   - name: Code samples

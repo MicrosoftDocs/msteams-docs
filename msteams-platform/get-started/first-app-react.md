@@ -125,7 +125,7 @@ When you add the cloud functionality, the Teams Toolkit adds the necessary direc
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build and test your app](../get-started/build-and-test-app.md)
+> [Build and test your app](../get-started/build-and-test-react-app.md)
 
 
 ## See also
