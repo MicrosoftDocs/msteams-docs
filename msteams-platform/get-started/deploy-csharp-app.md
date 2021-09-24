@@ -51,5 +51,5 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 |  <<  |  >>  |
 |:--- | ---:|
-|**Back** : [Build and test your app](../get-started/build-and-test-csharp-app.md) | [Overview](../get-started/code-samples.md) : **Next** |
+|**Back** : [Build and test your app](../get-started/build-and-test-csharp-app.md) | [Main page](../get-started/code-samples.md) : **Next** |
 |
