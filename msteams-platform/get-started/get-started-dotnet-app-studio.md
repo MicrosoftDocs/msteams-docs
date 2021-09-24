@@ -12,8 +12,6 @@ ms.date: 11/09/2018
 
 This tutorial walks you through the steps to create your first Teams app using C# or .NET.
 
-## Prepare your development environment
-
 <a name="prepare-your-environment"></a>
 [!include [prepare your environment](~/includes/prepare-environment.md)]
 
