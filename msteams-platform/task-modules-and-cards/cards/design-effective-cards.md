@@ -179,28 +179,55 @@ Use these recommendations to create a quality app experience.
 
 ### Mobile
 
-In general, cards designed for a narrow screen scale well on wider screens (the opposite isn't true). It's always good to assume users won't only view your cards on desktop.
+Cards designed for a narrow screen scale well on wider screens (the opposite isn't true). You should also assume users won't only view your cards on desktop.
 
 #### Column layouts
 
-Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid. But keep in mind: The less columns you use, the less layout issues your cards will have on mobile.
+Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid.
 
 There are several options for formatting column width. These guidelines help you understand when to use each one.
 
-`"width": "auto"`: Sizes each column in the `ColumnSet` to fit your app content.
+`"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
 
 * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
 * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
 * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with content that must always be completely visible (like a button).
-* **Don't**: x
+
+`"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
+
+* **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that're all 50 pixels wide.
+
+`"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`. These columns will take up 10, 40, and 50 percent of the available width.
+
+`"width": "<number>px"`: Sizes columns to a specific pixel width. Useful when creating table layouts.
+
+* **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
+* **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like the desktop version.
 
 #### Text
 
-Dos and don'ts ...
+Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), or [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
+
+#### Containers
+
+A `Container` allows you to group a set of related elements together.
+
+* **Do**: Use the `style` property to emphasize a container.
+* **Do**: Use the `selectAction` property to associate an action with the other elements in the container.
+* **Do**: Use the `Action.ToggleVisibility` property to make a group of elements collapsible.
+* **Don't**: Use containers for any other reason other than previously mentioned.
 
 #### Images
 
-Dos and don'ts ...
+Follow these guidelines when including images in your cards.
+
+* **Do**: Design images for high DPI screens to avoid pixelation. It's better to display a 100x100-pixel image at 50x50 pixels than the other way around.
+* **Do**: If you need to control the exact size of your images, use the `width` and `height` properties.
+* **Don't**: Include padding with your images. This typically introduces undesirable spacing and layout issues.
+* Regarding background color:
+   * **Do**: Use transparent backgrounds so that your images adapt to any Teams theme. 
+   * **Don't**: Include a fixed background color unless a specific color must be visible to your users.
+   * **Don't**: Add a background color to a `TextBlock` that hinders readability. For example, if your background is dark, use a lighter text color and vice versa.
 
 ### Actions
 
