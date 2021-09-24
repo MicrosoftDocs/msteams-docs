@@ -38,6 +38,8 @@ The [Teams developer platform](../overview.md) lets you build a custom app in th
 
 :::image type="content" source="../assets/images/get-started/the-app-map.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
 
+:::image type="content" source="../assets/images/get-started/the-app-map-small.png" alt-text="Image alt text." lightbox="the-app-map-large.png":::
+
 
 ### App capabilities
 
