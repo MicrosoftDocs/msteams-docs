@@ -17,7 +17,7 @@ You can extend your Teams app in multiple ways. To be able to extend your app yo
 
 ## Understand your use cases
 
-You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows: test pr2
 
 * Do you need authentication?
 * What problem is your app going to solve?
