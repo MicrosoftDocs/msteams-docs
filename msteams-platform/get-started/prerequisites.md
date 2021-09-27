@@ -5,6 +5,7 @@ description: Learn how to get started with the Microsoft Teams app development a
 ms.author: adhal
 ms.date: 05/24/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 # Prerequisites: Get started with Microsoft Teams app development
 

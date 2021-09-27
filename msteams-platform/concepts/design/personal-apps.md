@@ -3,7 +3,7 @@ title: Designing your personal app
 description: Learn how to design a Teams personal app and get the Microsoft Teams UI Kit.
 author: heath-hamilton
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 --- 
 # Designing your personal app for Microsoft Teams
@@ -53,7 +53,7 @@ With a private workspace, users can view app content that's meaningful to them i
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="Example shows personal tab's component anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-component-anatomy.png" alt-text="This example shows personal tab's component anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -62,7 +62,7 @@ With a private workspace, users can view app content that's meaningful to them i
 |C|**Popout view**: Pushes your app content from a parent window to a standalone child window.|
 |D|**More menu**: Includes additional app options and information. (You could alternatively make **Settings** a tab.)|
 
-:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="Example shows personal tab's structural anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-tab-structural-anatomy.png" alt-text="This example shows personal tab's structural anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -82,13 +82,13 @@ Use one of the following Teams templates and components to help design your pers
 
 ## Use a personal app (bot)
 
-Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on on artboard). Users interact with the bot in a tab you specify.
+Personal apps can include a bot for one-on-one conversations and private notifications (for instance, when a colleague posts a comment on artboard). Users interact with the bot in a tab you specify.
 
 ### Anatomy: Personal app (bot)
 
 #### Mobile
 
-:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/mobile-personal-bot-anatomy.png" alt-text="Example shows the personal bot component anatomy." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -99,7 +99,7 @@ Personal apps can include a bot for one-on-one conversations and private notific
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows personal bot component anatomy." border="false":::
+:::image type="content" source="../../assets/images/personal-apps/personal-bot-anatomy.png" alt-text="Example shows the anatomy of the personal bot component." border="false":::
 
 |Counter|Description|
 |----------|-----------|

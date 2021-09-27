@@ -3,7 +3,7 @@ title: Bots and SDKs
 author: surbhigupta
 description: Overview of the tools and SDKs for building Microsoft Teams bots.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: anclear
 ---
 

@@ -5,6 +5,7 @@ description: Quickly create a Microsoft Teams app that displays a "Hello, World!
 ms.author: adhal
 ms.date: 05/27/2021
 ms.topic: quickstart
+ms.localizationpriority: none
 ---
 
 # Build and run your first Microsoft Teams app with React
@@ -39,7 +40,7 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. In the **Select capabilities** section, varify that **Tab** is selected and select **OK**.
+1. In the **Select capabilities** section, verify that **Tab** is selected and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
@@ -90,11 +91,15 @@ After the Teams Toolkit configures your project, you have the components to buil
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/react-app-project.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
+The Toolkit automatically creates scaffolding for you in the project directory based on the capabilities you added during setup. The Teams Toolkit maintains its state for your app in the `.fx` directory. 
 
-- The app icons are stored as PNG files in `color.png` and `outline.png`.
-- The app manifest for publishing to the Developer Portal for Teams is stored in `manifest.source.json`.
-- The settings you chose when creating the project are stored in `settings.json`.
+- The settings you chose when creating the project are stored in `.fx/settings.json`.
+- The state of your project is stored in `.fx/env.*.json`.
+
+And the Teams app information is stored in the `appPackage` directory.
+
+- The app icons are stored as PNG files in `appPackage/color.png` and `appPackage/outline.png`.
+- The app manifest for publishing to Developer Portal for Teams is stored in `appPackage/manifest.source.json`.
 
 Since you selected the tab capability during setup, the Teams Toolkit scaffolds all the necessary code for a basic tab in the `tabs` directory. Within this directory there are several important files:
 
@@ -112,7 +117,7 @@ When you add cloud functionality, additional directories are added to the projec
 Teams Toolkit allows you to run your app locally.  This consists of several parts that are necessary to provide the correct infrastructure that Teams expects:
 
 - An application is registered with Azure Active Directory.  This application has permissions associated with the location that the app is loaded from and any backend resources it accesses.
-- A web API is hosted to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory.  This is run by Azure Functions Core Tools.  It can be accessed at the URL `https://localhost:5000`.
+- A web API is hosted to assist with authentication tasks, acting as a proxy between the app and Azure Active Directory. It can be accessed at the URL `https://localhost:5000`.
 - The HTML, CSS, and JavaScript resources that make up the front end of the app are hosted on a local service. It can be accessed at `https://localhost:3000`.
 - An app manifest is generated and exists in the Developer Portal for Teams.  Teams uses the app manifest to tell connected clients where to load the app from.
 
@@ -125,6 +130,9 @@ To build and run your app locally:
 1. From Visual Studio Code, press **F5** to run your application in debug mode.
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
+
+   For the first time to run locally, you will be prompted to install a certificate for local debug. click Continue.
+     :::image type="content" source="../assets/images/teams-toolkit-v2/certificate-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
 
    The Toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 

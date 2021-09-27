@@ -1,7 +1,7 @@
 ---
 title: Get context for your tab
 description: Describes how to get user context to your tabs
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams tabs user context
 ---
@@ -132,7 +132,7 @@ The `theme` argument in the function is a string with a value of `default`, `dar
 
 ## See also
 
-* [Tab design guidelines](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Tab design guidelines](../../tabs/design/tabs.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)

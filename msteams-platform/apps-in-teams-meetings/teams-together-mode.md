@@ -2,12 +2,10 @@
 title: Custom Together Mode Scenes
 description: Work with custom Together Mode scenes
 ms.topic: conceptual
+ms.localizationpriority: none
 ---
 
 # Custom Together Mode scenes in Teams
-
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Custom Together Mode scenes in Microsoft Teams provide an immersive and engaging meeting environment with the following actions:
 
@@ -24,6 +22,9 @@ The following process gives an overview to create a scene only app:
 :::image type="content" source="../assets/images/apps-in-meetings/create-together-mode-scene-flow.png" alt-text="Create scene only app" border="false":::
 
 A scene only app is still an app in Microsoft Teams. The Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
+
+> [!NOTE]
+> Users can't initiate Together Mode from mobile. However, after a user joins a meeting through mobile and Together Mode is turned on from desktop, the mobile users who have turned on the video, will appear in Together Mode on desktop. 
 
 ## Prerequisites
 

@@ -2,7 +2,7 @@
 title: Respond to the task module submit action
 author: surbhigupta
 description: Describes how to respond to the task module submit action from a messaging extension action command
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---

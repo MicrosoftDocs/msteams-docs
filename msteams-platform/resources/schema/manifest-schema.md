@@ -3,7 +3,7 @@ title: Manifest schema reference
 description: Describes the manifest schema for Microsoft Teams
 ms.topic: reference
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams manifest schema
 ---
 
@@ -188,7 +188,7 @@ The following schema sample shows all extensibility options:
           "context": [
             "message"
           ],
-          "description": "Command Description; e.g., Search for a customer",
+          "description": "Command Description; e.g., Add a customer",
           "initialRun": true,
           "fetchTask": true,
           "parameters": [
@@ -199,14 +199,26 @@ The following schema sample shows all extensibility options:
               "inputType": "text"
             }
           ]
+        },
+         {
+          "id": "exampleCmd3",
+          "title": "Example Command 3",
+          "type": "action",
+          "context": [
+            "compose",
+            "commandBox",
+            "message"
+          ],
+          "description": "Command Description; e.g., Add a customer",
+          "fetchTask": false,
+          "taskInfo": {
+            "title": "Initial dialog title",
+            "width": "Dialog width",
+            "height": "Dialog height",
+            "url": "Initial webview URL"
+          }
         }
       ],
-      "taskInfo": {
-        "title": "Initial dialog title",
-        "width": "Dialog width",
-        "height": "Dialog height",
-        "url": "Initial webview URL"
-      },
       "messageHandlers": [
         {
           "type": "link",
@@ -220,7 +232,7 @@ The following schema sample shows all extensibility options:
       ]
     }
   ],
-  "permissions": [
+"permissions": [
     "identity",
     "messageTeamMembers"
   ],
@@ -574,7 +586,7 @@ A list of valid domains for websites the app expects to load within the Teams cl
 
 Do **not** include the domains of identity providers you want to support in your app. For example, to authenticate using a Google ID, it is required to redirect to accounts.google.com, however, you must not include accounts.google.com in `validDomains[]`.
 
-Teams apps that require their own sharepoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
+Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, however, `*.onmicrosoft.com` is not valid.
@@ -607,6 +619,9 @@ Indicates if or not to show the loading indicator when an app or tab is loading.
  **Optional**—boolean
 
 Indicate where a personal app is rendered with or without a tab header bar. Default is **false**.
+
+> [!NOTE]
+> `isFullScreen` works only with SharePoint tabs and store apps.
 
 ## activities
 

@@ -2,13 +2,13 @@
 title: Create low-code custom apps for Microsoft Teams 
 author: surbhigupta 
 description: Detail the available Microsoft low and no code solutions for Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: conceptual
 ---
 # Create low-code custom apps for Microsoft Teams
 
-Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the demand than the apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot, and Virtual Assistant.
+Microsoft Teams is extensible and adaptive. This means that you can build custom applications for Teams that meet the distinct needs of your users. The low code custom apps save time, provide speedy solutions and meet the same demand as apps created from scratch. This document gives an overview of Microsoft Power Platform, Power Virtual Agents chatbot, and Virtual Assistant.
 
 Low code platforms provide an intuitive approach to software development with minimum or no coding to build applications and processes. They allow the developers without experience, to build custom apps easily with little or no coding, and professional developers to develop and deploy the app quickly. These   platforms consist of a visual interface, connectors to backend services, and a built-in app lifecycle management system to build, debug, deploy, and maintain applications. Microsoft Power Platform is the innovative gateway to rapidly build Teams compatible apps using low code attributes.
 

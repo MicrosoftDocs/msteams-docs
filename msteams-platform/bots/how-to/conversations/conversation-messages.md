@@ -3,7 +3,7 @@ title: Messages in bot conversations
 description: Describes ways to have a conversation with a Microsoft Teams bot
 ms.topic: overview
 ms.author: anclear
-localization_priority: Normal
+ms.localizationpriority: medium
 keyword: receive message send message picture message channel data adaptive cards
 ---
 
@@ -85,7 +85,13 @@ async def on_message_activity(self, turn_context: TurnContext):
         "name": "Teams TestBot"
     },
     "textFormat": "plain",
-    "text": "Hello Teams TestBot",
+    "text": "Hello Teams TestBot.Sending bold-italic rich text",
+    "attachments": [
+      {
+            "contentType": "text/html",
+            "content": "<div><div>Hello Teams TestBot. Sending <strong>bold</strong>-<em>italic</em> rich text.</div>\n</div>"
+      } 
+    ],
     "entities": [
       { 
         "locale": "en-US",
