@@ -17,8 +17,9 @@ Before you can deploy your project code to cloud, you will need to complete the 
 ## What will be deployed
 
 Teams Toolkit will deploy or upload the backend and frontend code in your application to the corresponding cloud resources in Azure that provisioned in the previous step.
-•	The backend (Azure Functions if configured) may use a variety of Azure services, including Azure App Service and Azure Storage.
-•	The frontend application will be deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
+
+* The backend (Azure Functions if configured) may use a variety of Azure services, including Azure App Service and Azure Storage.
+* The frontend application will be deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
 
 ## Deployment by project type
 

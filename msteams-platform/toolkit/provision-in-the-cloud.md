@@ -100,16 +100,16 @@ Note that it’s the same if your project contains multiple capabilities.
 
     ![Select provision](~/assets/images/tools-and-sdks/select-provision.png)
 
-Alternatively, you can open command palette and enter **Teams: Provision in the cloud** .
+    Alternatively, you can open command palette and enter **Teams: Provision in the cloud** .
 
-   ![Alternate provision](~/assets/images/tools-and-sdks/alternate-provision.png)
+    ![Alternate provision](~/assets/images/tools-and-sdks/alternate-provision.png)
 
   ### From TeamsFx CLI in Command Window 
 
-1. `cd` to your project directory 
+1. `cd` to your project directory   
 1. Execute command `teamsfx provision` 
 
-    ![Select provision](~/assets/images/tools-and-sdks/
+    ![Execute command](~/assets/images/tools-and-sdks/execute-command.png)
    
 ## Advanced use cases 
 
