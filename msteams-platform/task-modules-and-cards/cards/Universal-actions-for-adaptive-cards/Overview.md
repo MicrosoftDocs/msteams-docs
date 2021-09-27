@@ -11,7 +11,7 @@ Universal Actions for Adaptive Cards evolved from developer feedback that even t
 
 Universal Actions for Adaptive Cards bring the bot as the common backend for handling actions and introduces a new action type, `Action.Execute`, which works across apps, such as Teams and Outlook.
 
-This document helps you to understand how to use Universal Actions model and enhance user experience of interaction with Adaptive Cards across platforms and applications.
+This document helps you to understand, how to use Universal Actions model and enhance user experience of interaction with Adaptive Cards, across platforms and applications.
 
 > [!NOTE]
 > Support for Universal Actions for Adaptive Cards v1.4 is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
@@ -60,7 +60,7 @@ The following image shows the Universal Actions for Adaptive Cards for both Team
 
 Today every user in the Teams chat or channel sees the exact same view and button actions on the Adaptive Card. However, in certain scenarios there is requirement for certain users to act differently and have access to different information within the same chat or channel.
 
-For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users must only be able to view details of the incident. This is made possible by User Specific Views that is enabled by the `refresh` property.
+For example, if you send an incident reporting card in a chat or channel, only the user who is assigned the incident must see a **Resolve** button. On the other hand, the incident creator must see an **Edit** button and all other users can view the details of the incident. Here, the functionality is made possible by User Specific Views that is enabled by the `refresh` property.
 
 The following image shows an example of a ticketing messaging extension (ME) where different users in the chat are shown different actions based on the requirement:
 
@@ -78,7 +78,7 @@ For more information, see [sample for User Specific Views](User-Specific-Views.m
 
 ### Sequential Workflow support
 
-With Sequential Workflow support, users can progress through a series of workflows without sending different cards separately. This is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.
+With Sequential Workflow support, users can progress through a series of workflows without sending different cards separately. Here, the functionality is made possible by the ability of `Action.Execute` to return an Adaptive Card in response to an action. Also, any user in the chat or channel can progress through their workflow without modifying the card for other users in the chat.
 
 The following image illustrates a food ordering bot example: <br/>
 
@@ -102,7 +102,7 @@ Now, you can understand how Adaptive Cards can be transformed with the new Unive
 
 ## Adaptive Cards and the new Universal Actions model
 
-Adaptive Cards are a combination of content, such as text and graphics, and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enable a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
+Adaptive Cards are a combination of content, such as text and graphics and actions that can be performed by a user. For more information, see [Adaptive Cards](http://adaptivecards.io/). The new Universal Actions for Adaptive Cards enable a common handling of the Adaptive Card actions across platforms and applications. For more information, see [Universal Action Model](/adaptive-cards/authoring-cards/universal-action-model).
 
 You can get started by updating scenarios using the [quick start guide](Work-with-universal-actions-for-adaptive-cards.md) and apply Universal Actions.
 
