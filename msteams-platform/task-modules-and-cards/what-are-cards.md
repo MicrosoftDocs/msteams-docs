@@ -44,7 +44,7 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
 
-In addition to Adaptive Cards, Teams also supports two other types of cards:
+Teams also supports two other types of cards:
 
 * Connector cards: Used as part of Office 365 Connectors.
 * Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
@@ -61,7 +61,7 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support for AAD Object ID and UPN in user mention
 
-Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) also to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
 
 ## See also
 
