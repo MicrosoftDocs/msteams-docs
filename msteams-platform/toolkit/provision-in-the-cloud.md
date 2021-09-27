@@ -152,7 +152,7 @@ If you wish to use an existing resource group, change default resource group nam
  
 ## What’s next
 
-* [Add additional cloud resources]()  
-* [Add additional Teams app capabilities]() 
-* [Provision resources with CI/CD pipelines]() 
-* [Deploy your project to cloud](deploy-to-the-cloud.md) 
+* Add additional cloud resources 
+* Add additional Teams app capabilities 
+* Provision resources with CI/CD pipelines 
+* Deploy your project to cloud 
