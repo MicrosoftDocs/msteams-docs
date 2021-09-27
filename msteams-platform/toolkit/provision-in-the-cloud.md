@@ -40,8 +40,8 @@ The reason that these resources are necessary is because:
 ### Azure cloud resources by project type 
 
 Teams application can include different capabilities, and Teams Toolkit provides a most appropriate default Azure service that hosts your application workloads. If you project includes multiple capabilities, all necessary Azure services will be provisioned. 
+(Details Needed)
  
-(Details Needed) 
 |Teams application capabilities| Azure services| Purposes|
 |------------------------------|---------------|----------| 
 |Tab <br> To be hosted on Azure |	Azure Storage Account </br> Azure Web App </br> Azure App Service |	Host frontend static content of your tab application. </br> Host a server side workload to handle authentication logic. </br> Defines a set of compute resources for the web app to run, which are analogous to the [server farm](https://en.wikipedia.org/wiki/Server_farm) in conventional web hosting. |
@@ -49,7 +49,7 @@ Teams application can include different capabilities, and Teams Toolkit provides
 |Bot (and/or Messaging Extension) | Azure Web App </br> Azure App Service </br> Azure Bot Service | Host server logic for your bot application. </br> Defines a set of compute resources for the web app to run, which are analogous to the [server farm](https://en.wikipedia.org/wiki/Server_farm) in conventional web hosting. </br> Handles communication between your bot application and Teams client. |
  		
 > [!NOTE]  
-> Azure services will incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/en-us/pricing/calculator/) to understand an estimate. 
+> Azure services will incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate. 
  
 You can optionally include additional Azure services that serves your application development needs, including: 
 * Azure Functions 
@@ -71,15 +71,15 @@ In addition to creating Azure service instance, Teams Toolkit has also made conf
 ## Where are the resources provisioned and how do I find them 
 
 Teams Toolkit can provision both M365 and Azure resources. 
-* For M365 resources, it will be created under your tenant. You can learn [how to find your M365 tenant ID](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). 
+* For M365 resources, it will be created under your tenant. You can learn [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). 
 * For Azure resources, it will be created under a new resource group in your subscriptions. 
  
 |Resources|	Where to find them|
 |---------|-------------------| 
 |Teams App ID|	You can find the Teams App ID in your project’s manifest file after you packaged your application. Read about App Package (Link to publish section) </br> You can also find your Teams App ID in [Teams Developer Portal](https://dev.teams.microsoft.com/apps). 
-|Azure Active Directory Application|Go to [Azure Portal](http://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations blade under manage section. 
+|Azure Active Directory Application|Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations blade under manage section. 
 You will find your Azure Active Directory application with display name same as your project name. |
-|Azure services |Go to [Azure Portal](http://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg 
+|Azure services |Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg 
 You will find all Azure services provisioned in this resource group. |
  
 ## How to perform provision 
@@ -116,7 +116,7 @@ Alternatively, you can open command palette and enter **Teams: Provision in the 
 There are few common advanced scenarios during cloud resources provision. 
  
 ### You can switch a subscription and re-do provision 
-1. Login to Azure Portal and delete the resource group that was created by Teams Toolkit. 
+1. Sign-in to [Azure Portal](https://portal.azure.com/) and delete the resource group that was created by Teams Toolkit. 
 1. Switch subscription in current account or log out and select a new subscription. 
 1. In your project directory, navigate to `.fx/env.default.json` file, change `provisionSucceeded` flag to false. 
 1. Go through provision flow again. 
@@ -124,11 +124,11 @@ There are few common advanced scenarios during cloud resources provision.
 ### You can use an existing Azure Active Directory application 
 
 In certain cases where you don’t have permission to create an Azure Active Directory application, you can use an existing one with following step: 
-1. Navigate to Azure Portal. 
+1. Go to [Azure Portal](https://portal.azure.com/). 
 1. Find Azure Active Directory section. 
 1. In overview blade, obtain Object ID and Application (client) ID for your AAD application. 
 
-     ![Select provision](~/assets/images/tools-and-sdks/obtain-id.png)
+     ![Obtain ID](~/assets/images/tools-and-sdks/obtain-id.png)
 
 1. In Certificates & secrets blade, obtain Client secret by creating a new one. 
 
@@ -145,7 +145,7 @@ In certain cases where you don’t have permission to create an Azure Active Dir
 ### You can change default resource group and resource suffix name
 
 If you wish to use an existing resource group, change default resource group name, or change the resource suffix name after a provision, you can do so by: 
-1. Login to Azure Portal and delete the resource group that was created by Teams Toolkit. 
+1. Sign-in to [Azure Portal](https://portal.azure.com/) and delete the resource group that was created by Teams Toolkit. 
 1. In your project directory, navigate to `.fx/env.default.json` file, change `resourceGroupName`, `resourceNameSuffix` and `resource_base_name`. 
 1. In the same file, change `provisionSucceeded` flag to false. 
 1. Go through provision flow again. 
