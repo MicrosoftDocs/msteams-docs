@@ -38,10 +38,10 @@ Read more on Add cloud resources (link to add Cloud resources) to learn about de
 
 There are several approaches where you can deploy your project to cloud and they are similar for each project type.   
 
-* Read provision section for Tab project: [Get started - Build your first Teams app with React](~/get-started/first-app-react?tabs=vscode#deploy-your-app-to-azure) 
-* Read provision section for Tab project with SPFx: [Get started - Build your first Teams app with SPFx](~/get-started/first-app-spfx?tabs=cli#deploy-your-app-to-sharepoint)
-* Read provision section for Bot and Messaging Extension project: [Get started - Build your first conversational bot](~/get-started/first-app-bot?tabs=vscode#deploy-your-app-to-azure)  
-* Read provision section for Messaging Extension project: Get started: [Build your first messaging extension](~/get-started/first-message-extension?tabs=vscode#deploy-your-app-to-azure) 
+* Read provision section for Tab project: [Get started - Build your first Teams app with React](~/get-started/first-app-react.md?tabs=vscode#deploy-your-app-to-azure) 
+* Read provision section for Tab project with SPFx: [Get started - Build your first Teams app with SPFx](~/get-started/first-app-spfx.md?tabs=cli#deploy-your-app-to-sharepoint)
+* Read provision section for Bot and Messaging Extension project: [Get started - Build your first conversational bot](~/get-started/first-app-bot.md?tabs=vscode#deploy-your-app-to-azure)  
+* Read provision section for Messaging Extension project: Get started: [Build your first messaging extension](~/get-started/first-message-extension.md?tabs=vscode#deploy-your-app-to-azure) 
 
 > [!NOTE]
 > If your project contains multiple workloads such as tab, bot, functions, APIM, you have the option to deploy at once or deploy each of the workload. 
