@@ -18,7 +18,7 @@ Cards used by bots and messaging extensions in Teams support the following activ
 | `openUrl` | Opens a URL in the default browser. |
 | `messageBack` | Sends a message and payload to the bot from the user who selected the button or tapped the card. Sends a separate message to the chat stream. |
 | `imBack`| Sends a message to the bot from the user who selected the button or tapped the card. This message from user to bot is visible to all conversation participants. |
-| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. This message is not visible. |
+| `invoke` | Sends a message and payload to the bot from the user who selected the button or tapped the card. The invoke message is not visible. |
 | `signin` | Initiates OAuth flow, allowing bots to connect with secure services. |
 
 > [!NOTE]
@@ -88,11 +88,11 @@ With `messageBack`, you can create a fully customized action with the following 
 | Property | Description |
 | --- | --- |
 | `title` | Appears as the button label. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
-| `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
-| `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
+| `displayText` | Optional. Used by the user in the chat stream when actions are done. The displayText is not sent to your bot. |
+| `value` | Sent to your bot when the action is done. You can encode context for the action, such as unique identifiers or a JSON object. |
+| `text` | Sent to your bot when the action is done. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
-The flexibility of `messageBack` means that your code cannot leave a visible user message in the history simply by not using `displayText`.
+The flexibility of `messageBack` means that your code can't leave a visible user message in the history simply by not using `displayText`.
 
 # [JSON](#tab/json)
 
@@ -207,7 +207,7 @@ With `imBack`, you can create an action with the following properties:
 | Property | Description |
 | --- | --- |
 | `title` | Appears as the button label. |
-| `value` | This field contains the text string used in the chat and therefore sent back to the bot. This is a text message that process in your bot to perform the desired logic. |
+| `value` | The value field contains the text string used in the chat and therefore sent back to the bot. The value field is a text message that process in your bot to perform the desired logic. |
 
 > [!NOTE]
 > The `value` field is a simple string. There is no support for formatting or hidden characters.
@@ -316,7 +316,7 @@ CardFactory.actions([
 
 ### Example of incoming invoke message
 
-The top-level `replyToId` property contains the ID of the message that the card action came from. Use it if you want to update the message.
+The top level `replyToId` property contains the ID of the message that the card action came from. Use it if you want to update the message.
 
 The following code shows an example of incoming invoke message:
 
@@ -366,7 +366,7 @@ The following code shows an example of incoming invoke message:
 }
 ```
 
-## Action type signin
+## Action type sign-in
 
 `signin` action type initiates an OAuth flow that permits bots to connect with secure services. For more information, see [authentication flow in bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
@@ -424,11 +424,10 @@ Adaptive Cards support four action types:
 You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. The next section provides details on how to use existing Bot Framework actions with Adaptive Cards.
 
 > [!NOTE]
-> Adding `msteams` to data with a Bot Framework action does not work with an Adaptive Card task module.
+> Adding `msteams` to a data with a Bot Framework action does not work with an Adaptive Card task module.
 
 ### Adaptive Cards with messageBack action
-
-To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object:
+For adding a `messageBack` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -436,9 +435,9 @@ To include a `messageBack` action with an Adaptive Card include the following de
 | Property | Description |
 | --- | --- |
 | `type` | Set to `messageBack`. |
-| `displayText` | Optional. Used by the user in the chat stream when the action is performed. This text is not sent to your bot. |
-| `value` | Sent to your bot when the action is performed. You can encode context for the action, such as unique identifiers or a JSON object. |
-| `text` | Sent to your bot when the action is performed. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
+| `displayText` | Optional. Used by the user in the chat stream when the action is done. The displayText is not sent to your bot. |
+| `value` | Sent to your bot when the action is done. You can encode context for the action, such as unique identifiers or a JSON object. |
+| `text` | Sent to your bot when the action is done. Use this property to simplify bot development. Your code can check a single top-level property to dispatch bot logic. |
 
 The following code shows an example of Adaptive Cards with `messageBack` action:
 
@@ -459,7 +458,7 @@ The following code shows an example of Adaptive Cards with `messageBack` action:
 
 ### Adaptive Cards with imBack action
 
-To include an `imBack` action with an Adaptive Card include the following details in the `msteams` object:
+Adding an `imBack` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -484,9 +483,9 @@ The following code shows an example of Adaptive Cards with `imBack` action:
 }
 ```
 
-### Adaptive Cards with signin action
+### Adaptive Cards with sign-in action
 
-To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:
+Adding a `signin` action with an Adaptive Card include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -513,7 +512,7 @@ The following code shows an example of Adaptive Cards with `signin` action:
 
 ### Adaptive Cards with invoke action
 
-To include an `invoke` action with an Adaptive Card include the following details in the `msteams` object:
+For adding an `invoke` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -537,7 +536,7 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
-The following code shows an example of Adaptive Cards `invoke` action with additional payload data:
+The following code shows an example of Adaptive Cards `invoke` action with another payload data:
 
 ```json
 {
