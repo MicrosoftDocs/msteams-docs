@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Types of cards
 
-Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
+Adaptive, hero, list, Office 365 Connector, receipt, sign in, and thumbnail cards collections are supported in bots for Microsoft Teams. All cards are defined by the Bot Framework but Teams does not support all Bot Framework cards and has added some of its own.
 
 Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
@@ -62,7 +62,7 @@ You can identify and use different types of cards based on your application requ
 | Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
 | Receipt card | ✔ | ✖ | ✖ | ✖ | ✖ | ✔ | ✖ |
-| Signin card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
+| Sign in card | ✔ | ✖ | ✖ | ✖ | ✖ | ✖ | ✖ |
 
 > [!NOTE]
 > For Adaptive Cards in Incoming Webhooks, all native Adaptive Card schema elements, except `Action.Submit`, are fully supported. The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
@@ -76,11 +76,11 @@ You can go through some common properties that are applicable to all cards.
 
 ### Inline card images
 
-The card can contain an inline image by including a link to the publicly available image. For performance purposes, it is recommended that you host the image on a public Content Delivery Network (CDN).
+The card can contain an inline image by including a link to the publicly available image. For performance purposes, you must host the image on a public Content Delivery Network (CDN).
 
 Images are scaled up or down in size to maintain the aspect ratio for covering the image area. Images are then cropped from center to achieve the appropriate aspect ratio for the card.
 
-Images must have size 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF's are not supported.
+Images must have size 1024×1024 and in PNG, JPEG, or GIF format. Animated GIF's not supported.
 
 The following table provides the properties of inline card images:
 
@@ -94,7 +94,7 @@ The following table provides the properties of inline card images:
 
 ### Buttons
 
-Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. Any more buttons beyond the maximum number supported by the card are not shown.
+Buttons are shown stacked at the bottom of the card. Button text is always on a single line and is truncated if the text exceeds the button width. More buttons, that is not supported by cards is not listed. 
 
 For more information, see [card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
@@ -102,7 +102,7 @@ For more information, see [card actions](~/task-modules-and-cards/cards/cards-ac
 
 For more information on text formatting in cards, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
 
-After identifying the common properties for all cards, you can now work with Adaptive Cards, which help you increase engagement and efficiency by adding your actionable content directly into the apps you use.
+Card formatting identifies the common properties for all cards and work with Adaptive Cards. Also, help the user to increase engagement and efficiency by adding your actionable content directly into the apps.
 
 ## Adaptive Card
 
@@ -357,7 +357,7 @@ The following table provides the properties of a list card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
 | items | Array of list items | Set of items applicable to the card.|
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
 
@@ -450,7 +450,7 @@ The important difference between using connector cards from a connector and usin
 | --- | --- |
 | The endpoint receives the card payload through HTTP POST. | The `HttpPOST` action triggers an `invoke` activity that sends only the action ID and body to the bot.|
 
-Each connector card can display a maximum of ten sections, and each section can contain a maximum of five images and five actions.
+Each connector card can display a maximum of 10 sections, and each section can contain a maximum of five images and five actions.
 
 > [!NOTE]
 > Any additional sections, images, or actions in a message do not appear.
@@ -464,7 +464,7 @@ To specify the rendering style for `activityImage`, you can set `activityImageTy
 | Value | Description |
 | --- | --- |
 | `avatar` | Default, `activityImage` is cropped as a circle. |
-| `article` | `activityImage` is displayed as a rectangle and retains its aspect ratio. |
+| `article` | `activityImage` is displayed as a rectangle and keeps its aspect ratio. |
 
 For all other details about connector card properties, see [actionable message card reference](/outlook/actionable-messages/card-reference). The connector card properties that Teams does not currently support are as follows:
 
@@ -611,26 +611,26 @@ Bot Framework reference:
 * [Receipt card Node.js](/javascript/api/botframework-schema/receiptcard?view=botbuilder-ts-latest&preserve-view=true)
 * [Receipt card C#](/dotnet/api/microsoft.bot.schema.receiptcard?view=botbuilder-dotnet-stable&preserve-view=true)
 
-## Signin card
+## Sign in card
 
-The signin card in Teams is similar to the signin card in the Bot Framework except that the signin card in Teams only supports two actions `signin` and `openUrl`.
+The sign-in card in Teams is similar to the sign-in card in the Bot Framework except that the sign-in card in Teams only supports two actions `signin` and `openUrl`.
 
-The signin action can be used from any card in Teams, not just the signin card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
+The sign-in action can be used from any card in Teams, not just the sign-in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### Support for signin cards
+### Support for sign-in cards
 
-The following table provides the features that support signin cards:
+The following table provides the features that support sign-in cards:
 
 | Bots in Teams | Messaging extensions  | Connectors | Bot Framework |
 | --- | --- | --- | --- |
 | ✔ | ✖ | ✖ | ✔ |
 
-### Additional information on signin cards
+### Additional information on sign-in cards
 
 Bot Framework reference:
 
-* [Signin card Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
-* [Signin card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sign in card Node.js](/javascript/api/botframework-schema/signincard?view=botbuilder-ts-latest&preserve-view=true)
+* [Sign in card C#](/dotnet/api/microsoft.bot.schema.signincard?view=botbuilder-dotnet-stable&preserve-view=true)
 
 ## Thumbnail card
 
@@ -652,8 +652,8 @@ The following table provides the properties of a thumbnail card:
 
 | Property | Type  | Description |
 | --- | --- | --- |
-| title | Rich text | Title of the card. Maximum 2 lines.|
-| subtitle | Rich text | Subtitle of the card. Maximum 2 lines.|
+| title | Rich text | Title of the card. Maximum two lines.|
+| subtitle | Rich text | Subtitle of the card. Maximum two lines.|
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 | images | Array of images | Image displayed at the top of the card. Aspect ratio 1:1 square. |
 | buttons | Array of action objects | Set of actions applicable to the current card. Maximum 6. |
@@ -927,7 +927,7 @@ The following table provides the features that support list collections:
 
 Properties of list collections are same as the hero or thumbnail cards.
 
-A list can display a maximum of ten cards per message.
+A list can display a maximum of 10 cards per message.
 
 > [!NOTE]
 > Some combinations of list cards are not yet supported on iOS and Android.
