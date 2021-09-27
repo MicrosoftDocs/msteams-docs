@@ -15,7 +15,7 @@ Following are the two ways to add rich text formatting to your cards:
 
 Cards support formatting in the text property only, not in the title or subtitle properties. Formatting can be specified using a subset of XML or HTML formatting or Markdown, depending on the card type. For current and future development of Adaptive Cards, Markdown formatting is recommended.
 
-Formatting support differs between card types. Rendering of the card can differ slightly between the desktop and the mobile Microsoft Teams clients, as well as Teams in the desktop browser.
+Formatting support differs between card types. Card rendering can differ slightly between the desktop and the mobile Microsoft Teams clients, and Teams in the desktop browser.
 
 You can include an inline image with any Teams card. Images can be formatted as `.png`, `.jpg`, or `.gif` files and must not exceed 1024 ×1024 px or 1 MB. Animated GIF's are not supported. For more information, see [types of cards](./cards-reference.md#inline-card-images).
 
@@ -25,7 +25,7 @@ You can format Adaptive Cards and Office 365 Connector cards with Markdown that 
 
 The following card types support Markdown formatting in Teams:
 
-* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML is not supported in Adaptive Cards.
+* Adaptive Cards: Markdown is supported in Adaptive Card `Textblock` field, and `Fact.Title` and `Fact.Value`. HTML do not support in Adaptive Cards.
 * Office 365 Connector cards: Markdown and limited HTML is supported in Office 365 Connector cards in the text fields.
 
 You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in stage view selectively.
@@ -173,7 +173,7 @@ The following table describes the newly supported user mention IDs:
 
 #### User mention in bots with Adaptive Cards 
 
-Bots support user mention with the AAD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs. 
+Bots support user mention with the AAD Object ID and UPN, also to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and messaging extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs. 
 
 > [!NOTE]
 > Schema update and UI/UX changes are not required for user mentions with Adaptive Cards in Bot.
@@ -311,7 +311,7 @@ The following image is an example of masking information in Adaptive Cards:
 
 ### Full width Adaptive Card
 
-You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
+You can use the `msteams` property to expand the width of an Adaptive Card and make use of another canvas space. The next section provides information on how to use the property.
 
 #### Construct full width cards
 
@@ -394,7 +394,7 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 }
 ```
 
-When users hover over the image, an expand icon appears at the top right corner as shown in the following image:
+When users hover over the image, an expand icon appears at the top-right corner as shown in the following image:
 
 ![Adaptive Card with expandable image](../../assets/images/cards/adaptivecard-hover-expand-icon.png)
 
@@ -625,13 +625,13 @@ On iOS, HTML formatting appears as shown in the following image:
 
 ![HTML formatting in the iOS client](../../assets/images/cards/card-formatting-xml-mobile-v2.png)
 
-Character formatting, such as bold and italic are not rendered on iOS.
+Character formatting, such as bold and italics are not rendered on iOS.
 
 On Android, HTML formatting appears as shown in the following image:
 
 ![HTML formatting in the Android client](../../assets/images/cards/card-formatting-xml-android-60.png)
 
-Character formatting, such as bold and italic display correctly on Android.
+Character formatting, such as bold and italics display correctly on Android.
 
 ### Format example for simple cards
 
