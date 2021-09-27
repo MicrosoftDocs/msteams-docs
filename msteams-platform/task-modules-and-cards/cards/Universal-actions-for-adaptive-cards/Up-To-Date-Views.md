@@ -1,21 +1,21 @@
 ---
-title: Up to date views
-description: Sample for up to date views using Universal Bot
+title: Up-to-date views
+description: Sample for up-to-date views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Up to date cards
+# Up-to-date cards
 
-You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. Update the User Specific Views dynamically to its latest state as and when there is a change on your service. For example, for project management or ticketing cards, update comments and the task status. For approvals the latest state is reflected while also providing differentiated information and actions.
+You can now provide latest information to your users on Adaptive Cards. Include a combination of refresh and message edits in Teams. Update the User-Specific Views dynamically to its latest state as and when there is a change on your service. For example, for project management or ticketing cards, update comments and the task status. For approvals the latest state is reflected while also providing differentiated information and actions.
 
 For example, a user can create an asset approval request in a Teams conversation. Alex creates an approval request and assigns it to Megan and Nestor. The following are the two parts to create the approval request:
 
-* User Specific Views can be applied using the `refresh` property of the Adaptive Cards.
+* User-Specific Views can be applied using the `refresh` property of the Adaptive Cards.
 Using User Specific Views one can show a card with **Approve** or **Reject** buttons to a set of users, and show a card without these buttons to other users.
 
-* To keep the card state always updated, Teams message edit mechanism can be used. For example, for every approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated user specific card.
+* To keep the card state always updated, Teams message edit mechanism can be used. For example, for every approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated user-specific card.
 
 For more information, see [how to do a bot message edit](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
@@ -114,13 +114,13 @@ Following are the two roles that are shown to users depending on the approval re
 
 1. Alex raises an asset approval request in a Teams conversation and assigns it to Megan and Nestor.
 2. Bot sends the approval base card in the conversation.
-3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor, who now see the user specific card with **Approve** or **Reject** buttons as their user MRIs are added to the `userIds` list in the `refresh` property of the Adaptive Card.
+3. All other users in the conversation see the card sent by the bot. Automatic refresh is triggered for Megan and Nestor, who now see the user-specific card with **Approve** or **Reject** buttons as their user MRIs are added to the `userIds` list in the `refresh` property of the Adaptive Card.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-1.png" alt-text="User Specific Views":::
 
 4. Nestor selects the **Approve** button, which is powered with `Action.Execute`. The bot gets an `adaptiveCard/action` invoke request to which it can return an Adaptive Card in response.
 5. The bot triggers a message edit with an updated card, which says Nestor has approved the request while Megan's approval is pending.
-6. Bot message edit triggers an automatic refresh for Megan and she sees the updated user specific card, which says Nestor has approved the request, but also sees the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
+6. Bot message edit triggers an automatic refresh for Megan and she sees the updated user-specific card, which says Nestor has approved the request, but also sees the **Approve** or **Reject** buttons. Nestor's user MRI is removed from the `userIds` list in `refresh` property of this Adaptive Card JSON in steps 4 and 5. Now, automatic refresh is only triggered for Megan.
 
     :::image type="content" source="~/assets/images/adaptive-cards/universal-bots-up-to-date-views-2.png" alt-text="Up to date User Specific Views":::
 
@@ -258,7 +258,7 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 |Sample name | Description | .NETCore | Node.js |
 |----------------|-----------------|--------------|--------------|
-| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up to date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
+| Sequential Workflows Adaptive Cards | Demonstrate how to implement Sequential Workflows, User Specific Views, and up-to-date Adaptive Cards in bots. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-sequential-flow-adaptive-cards/nodejs) |
 
 ## See also
 
