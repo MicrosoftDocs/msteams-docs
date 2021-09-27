@@ -150,7 +150,7 @@ If you wish to use an existing resource group, change default resource group nam
 1. In the same file, change `provisionSucceeded` flag to false. 
 1. Go through provision flow again. 
  
-## What’s next
+## See also
 
 * Add additional cloud resources 
 * Add additional Teams app capabilities 

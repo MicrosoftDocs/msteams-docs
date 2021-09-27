@@ -49,9 +49,11 @@ There are several approaches where you can deploy your project to cloud and they
 
 ## Advanced use case
 
-Any advanced use case or workarounds here customer should be aware of?
+<Placeholder> Any advanced use case or workarounds here customer should be aware of?
 
-## What’s next
+
+## See also
+
 * Add additional cloud resources.
 * Add additional Teams app capabilities.
 * Deploy project code with CI/CD pipelines.
