@@ -106,7 +106,7 @@ Note that it’s the same if your project contains multiple capabilities.
 
   ### From TeamsFx CLI in Command Window 
 
-1. `cd` to your project directory   
+1. Change directory to your project directory   
 1. Execute command `teamsfx provision` 
 
     ![Execute command](~/assets/images/tools-and-sdks/execute-command.png)
