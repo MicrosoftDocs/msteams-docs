@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build your first bot for Microsoft Teams
 
-A bot talks with a web service and helps you use its services. You can get information, initiate workflows, or any other service offered.
+The bot capability of a Teams app is a chatbot or a conversational bot app. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather information, make reservations, or any other service offered.
 
 Learn how to build, run, and deploy a Teams bot app.
 

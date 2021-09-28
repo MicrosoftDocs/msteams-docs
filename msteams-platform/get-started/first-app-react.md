@@ -64,6 +64,8 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
     The Teams app is created in a few seconds.
 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
@@ -98,10 +100,10 @@ Although you're free to choose any UI framework you want (or not to use any), th
 
 Among other items in this directory structure, the Toolkit maintains:
 
-- The state for your app in the `.fx` folder.
-- The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
-- The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
-- The app settings, which you selected during project creation, in `settings.json`.
+- .fx: The state for your app in the `.fx` folder.
+- appPackage: The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
+- manifest.source.json: The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
+- settings.json: The app settings, which you selected during project creation, in `settings.json`.
 - The code for the Tab capability in the `Tabs` folder. Some of the important files in this folder are:
 
   - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
