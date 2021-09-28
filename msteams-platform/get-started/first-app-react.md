@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build your first Microsoft Teams app
 
-Start Microsoft Teams app development by building your first app, "Hello World!". This app uses the Tab capability. 
+Start Microsoft Teams app development by building your first app, "Hello World!". This app uses the Tab capability.
 
 In this tutorial, you'll learn:
 
@@ -43,17 +43,17 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
 1. Select **Azure** as the Frontend hosting type.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
-    
+
     If you want to host your app on SharePoint, you can select SharePoint Framework (SPFx) in this option.
 
 1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png" alt-text="Cloud Resources" border="false":::
 
 1. Select **JavaScript** as the programming language.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
 1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
@@ -66,11 +66,12 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
-<summary>Watch this short video for a quick recap of creating a Teams app.
 <details>
+<summary>A quick recap of creating a Teams app.</summary>
+Watch this short video for a quick recap of creating a Teams app.
+
 ![Create a Teams app](~/assets/videos/react-sample-video.gif)
 </details>
-</summary>
 
 # [Command line](#tab/cli)
 
@@ -123,7 +124,6 @@ When you add the cloud functionality, Teams Toolkit adds the necessary folders t
 ## Sign in to your Microsoft 365 account
 
 Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
 
 # [Visual Studio Code](#tab/viscode)
 
@@ -197,7 +197,7 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
-   The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`. 
+   The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
 
 1. Select **Yes** if the following dialog appears:
 
@@ -207,16 +207,16 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
-   Teams web client opens in a browser window. 
+   Teams web client opens in a browser window.
 
 1. Sign in with your Microsoft 365 account when prompted.
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/launch-web-browser-add.png" alt-text="Add the app to Teams":::
- 
+
 1. Select the web app version, if you're asked to switch to Teams desktop. Run your app in the Teams web client. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
 1. Congratulations, your first app is running on Teams!
@@ -250,7 +250,6 @@ You know how to use Toolkit to set up a tab app and run it locally. Next, let’
 |:--- | ---:|
 | **Back** : [Prerequisites](prerequisites.md) | [Create your first bot app](first-app-bot.md) : **Next**|
 |
-
 
 ## See also
 
