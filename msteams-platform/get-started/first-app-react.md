@@ -64,7 +64,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
     The Teams app is created in a few seconds.
 
-    :::image type="content" source="..\assets\images\teams-toolkit-v2\app-created.png" alt-text="Screenshot showing the app created." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
 # [Command line](#tab/cli)
 
