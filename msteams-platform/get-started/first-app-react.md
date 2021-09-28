@@ -76,11 +76,11 @@ teamsfx new
 
 You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
-For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
 1. Select **Create a new Teams app**.
 1. Select the **Tab** capability.
-1. Select **Azure** frontend hosting. 
+1. Select **Azure** frontend hosting.
 1. Don't select any cloud resources.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
