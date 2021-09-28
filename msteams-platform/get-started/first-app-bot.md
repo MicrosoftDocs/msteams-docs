@@ -14,8 +14,8 @@ The bot capability of a Teams app creates a chatbot or a conversational bot. You
 
 In this tutorial, you'll learn:
 
-1. [How to set up a new project with Teams Toolkit](#create-your-bot-project)
-1. [About the directory structure of your app project](#take-a-tour-of-the-source-code)
+1. [How to set up a new project with Teams Toolkit.](#create-your-bot-project)
+1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
 > [!IMPORTANT]
