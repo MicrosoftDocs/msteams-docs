@@ -107,10 +107,10 @@ Although you're free to choose any UI framework you want (or not to use any), th
 
 Among other items in this directory structure, the Toolkit maintains:
 
-- .fx: The state for your app in the `.fx` folder.
-- appPackage: The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
-- manifest.source.json: The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
-- settings.json: The app settings, which you selected during project creation, in `settings.json`.
+- `.fx`: The state for your app in this folder.
+- `appPackage`: The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
+- `manifest.source.json`: The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
+- `settings.json`: The app settings, which you selected during project creation, in `settings.json`.
 - The code for the Tab capability in the `Tabs` folder. Some of the important files in this folder are:
 
   - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
@@ -209,7 +209,7 @@ To build and run your app locally:
 
    Teams web client opens in a browser window.
 
-1. Sign in with your Microsoft 365 account when prompted.
+1. Sign in with your Microsoft 365 account, if prompted.
 
 1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
