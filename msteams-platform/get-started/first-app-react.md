@@ -66,6 +66,10 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
+Watch this short video for a quick recap of creating a Teams app.
+
+![Create a Teams app](~/assets/videos/react-sample-video.gif)
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
