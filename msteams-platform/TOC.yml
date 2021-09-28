@@ -103,14 +103,14 @@
     - name: Provision in the cloud
       href: toolkit/provision-in-the-cloud.md
     - name: Deploy to the cloud
-      href: toolkit/deplot-to-the-cloud.md
+      href: toolkit/deploy-to-the-cloud.md
     - name: Add capabilities
       href: toolkit/add-capabilities.md
     - name: Add cloud resources
       href: toolkit/add-cloud-resources.md
     - name: Build CI/CD pipelines for Teams application
       href: toolkit/build-pipelines.md
-    - name: Teams Toolkit for Visual Studio Code
+    - name: Build apps with the Teams Toolkit and Visual Studio Code
       href: toolkit/visual-studio-code-overview.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md

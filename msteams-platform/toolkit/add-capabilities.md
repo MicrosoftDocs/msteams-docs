@@ -1,7 +1,7 @@
 ---
-title: Add Capabilities
+title: Add capabilities
 author: Rajeshwari-v
-description:  Describes how to add Capabilities.
+description:  Describes how to add capabilities.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -80,10 +80,10 @@ After you successfully added capabilities, and based on the capabilities you sel
 		
 ## Advanced use case
 
-<Placeholder> Any advanced use case or workarounds here customer should be aware of?
+(Placeholder) Any advanced use case or workarounds here customer should be aware of?
 
 ## See also
 
 * Run your application locally with additional capabilities. (Links to local debug)
 * [Provision necessary cloud resources to host your application with additional capabilities](provision-in-the-cloud.md) 
-* [Deploy your project to cloud with additional capabilities](deplot-to-the-cloud.md)
+* [Deploy your project to cloud with additional capabilities](deploy-to-the-cloud.md)

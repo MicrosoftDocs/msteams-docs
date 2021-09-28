@@ -49,8 +49,7 @@ There are several approaches where you can deploy your project to cloud and they
 
 ## Advanced use case
 
-<Placeholder> Any advanced use case or workarounds here customer should be aware of?
-
+(Placeholder) Any advanced use case or workarounds here customer should be aware of?
 
 ## See also
 
