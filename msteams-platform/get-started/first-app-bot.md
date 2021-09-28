@@ -110,7 +110,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
     Now you're ready to build the app and run it locally!
 
-# [Visual Studio 2019](#tab/vscode)
+# [Visual Studio 2019](#tab/vsc)
 
 Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
