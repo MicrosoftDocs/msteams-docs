@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build your first Microsoft Teams app
 
-Start Microsoft Teams app development by building your first app, "Hello World!".  
+Start Microsoft Teams app development by building your first app, "Hello World!". This app uses the Tab capability. 
 
 In this tutorial, you'll learn:
 
