@@ -21,6 +21,9 @@ Learn how to build, run, and deploy a Teams bot app.
 
 If the [prerequisites](prerequisites.md) are in place, let's begin!
 
+> [!NOTE]
+> The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
+
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio Code.
@@ -52,7 +55,7 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
-Your Teams app is created in a few seconds.
+    Your Teams app is created in a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -71,7 +74,7 @@ For example, use arrow keys to select an option. After you make the choice, sele
 1. Select **Create a new bot registration**.
 1. Select **JavaScript** as the programming language.
 1. Press **Enter** to select the default workspace folder.
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
+1. Enter a suitable name for your app, like `HelloBot`.  The name of the app must consist only of alphanumeric characters.
 
 After all the questions have been answered, your project is created.
 
@@ -109,10 +112,6 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
     The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
     Now you're ready to build the app and run it locally!
-
-# [Visual Studio 2019](#tab/vsc)
-
-Visual Studio 2019 prompts you to log into each service as required. You don't need to sign in to your Microsoft 365 and Azure accounts in advance.
 
 # [Command line](#tab/cline)
 
@@ -181,7 +180,6 @@ To build and run your app in the local environment:
    You can type `welcome` to show an introduction card, and `learn` to go to adaptive card and bot command documentation.
 
    You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then type some text.
-
 
 <!-- markdownlint-disable MD033 -->
 <details>
