@@ -17,3 +17,5 @@ _msteams-samples-hello-world-nodejs/
 _msteams-samples-hello-world-csharp/
 
 desktop.ini
+msteams-platform/assets/images/messaging-extension-invoke-locations.jpg
+*.png
