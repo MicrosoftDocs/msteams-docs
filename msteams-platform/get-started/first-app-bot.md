@@ -12,12 +12,16 @@ ms.localizationpriority: none
 
 The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather information, make reservations, or any other service offered.
 
-Learn how to build, run, and deploy a Teams bot app.
+In this tutorial, you'll learn:
+
+1. [How to set up a new project with Teams Toolkit](#create-your-bot-project)
+1. [About the directory structure of your app project](#take-a-tour-of-the-source-code)
+1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
-## Create your project
+## Create your bot project
 
 If the [prerequisites](prerequisites.md) are in place, let's begin!
 
@@ -137,7 +141,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
 ---
 
-## Run your app locally
+## Build and run your app locally in Visual Studio Code
 
 To build and run your app in the local environment:
 

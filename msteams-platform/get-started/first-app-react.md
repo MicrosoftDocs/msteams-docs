@@ -14,11 +14,11 @@ Start Microsoft Teams app development by building your first app, "Hello World!"
 
 In this tutorial, you'll learn:
 
-1. [How to set up a new project with Teams Toolkit](#create-your-app-project)
+1. [How to set up a new project with Teams Toolkit](#create-your-tab-project)
 1. [About the directory structure of your app project](#take-a-tour-of-the-source-code)
 1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
-## Create your app project
+## Create your tab project
 
 If the [prerequisites](prerequisites.md) are in place, let's begin!
 
