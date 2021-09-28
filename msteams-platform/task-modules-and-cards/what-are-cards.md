@@ -10,7 +10,7 @@ ms.topic: overview
 
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-The bots for Teams support the following types of cards: Adaptive Card, hero card, list card, Office 365 Connector card, receipt card, signin-card, thumbnail card, and card collections.
+The bots for Teams support the following types of cards: Adaptive Card, hero card, list card, Office 365 Connector card, receipt card, signin-card, thumbnail card.
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
@@ -61,7 +61,7 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 ## Support for AAD Object ID and UPN in user mention
 
-Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) also to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
+Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) with the existing IDs. Incoming webhooks also started supporting user mention in Adaptive Card with the help of AAD Object ID and UPN.
 
 ## See also
 
