@@ -66,9 +66,11 @@ If the [prerequisites](prerequisites.md) are in place, let's begin!
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
-Watch this short video for a quick recap of creating a Teams app.
-
+<summary>Watch this short video for a quick recap of creating a Teams app.
+<details>
 ![Create a Teams app](~/assets/videos/react-sample-video.gif)
+</details>
+</summary>
 
 # [Command line](#tab/cli)
 
