@@ -2,7 +2,7 @@
 title: Microsoft Teams Authentication flow for bots
 description: Describes Microsoft Teams authentication flow in bots
 keywords: teams authentication flow bots
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ---
 

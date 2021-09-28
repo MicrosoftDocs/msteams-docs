@@ -2,7 +2,7 @@
 title: Microsoft Teams tabs
 author: surbhigupta
 description: An overview of custom tabs on the Teams platform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: lajanuar
 ---

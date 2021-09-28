@@ -4,6 +4,7 @@ author: Rajeshwari-v
 description: How to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app.  
 ms.topic: conceptual
 ms.author: surbhigupta
+ms.localizationpriority: none
 ---
 
 # Tabs link unfurling and Stage View

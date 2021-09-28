@@ -3,7 +3,7 @@ title: Designing your meeting extension
 author: heath-hamilton
 description: Learn how to design apps in Teams meetings and get the Microsoft Teams UI Kit.
 ms.author: lajanuar
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: conceptual
 ---
 # Designing your Microsoft Teams meeting extension
@@ -94,7 +94,7 @@ People might use the in-meeting tab to:
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon (selected)**: 16-pixel transparent app logo.|
+|1|**App icon (selected)**: 16-pixels transparent app logo.|
 |2|**App name**|
 |3|**Header**: Includes your app name.|
 |4|**Close button**: Dismisses the tab. Always use the upper-right close icon instead of an action in the footer.|
@@ -180,10 +180,13 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants interact with and collaborate on app content in real-time. For example, users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+Shared meeting stage helps meeting participants to interact and collaborate with app content in real time. For example, the users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
 
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
 
+> [!NOTE]
+> Currently, if an app is shared to stage on desktop it will show for the users on mobile meeting only.
+ 
 ### Use cases
 
 The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
@@ -260,7 +263,7 @@ When the side panel is open, the meeting stage is 918x540 pixels by default and 
 
 ## After a meeting
 
-You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between a the pre- and post-meeting tab experience.)
+You can go back to a meeting after it ends and view app content. In this example, the meeting organizer can look at poll results in the **Contoso** tab. (Note: From a design standpoint, there's no difference between the pre- and post-meeting tab experience.)
 
 :::image type="content" source="../../assets/images/apps-in-meetings/post-meeting-experience.png" alt-text="Example illustration shows a post-meeting tab." border="false":::
 

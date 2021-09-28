@@ -4,7 +4,7 @@ author: Rajeshwari-v
 description: How to use Teams JavaScript client SDK to leverage location capabilities
 keywords:  location map capabilities native device permissions 
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 
