@@ -10,6 +10,7 @@ ms.localizationpriority: none
 
 # Build and run your first messaging extension for Microsoft Teams
 
+Message Extension in Teams client provide a way for you to interact with a web service through buttons and forms. You can search and initiate actions in an external system using the compose area, command box, or a message from within the Teams client.
 This tutorial walks you through the steps to create a *search command*. You use it to search for external data and insert the results into a message.
 
 There are two types of Teams **messaging extensions**:

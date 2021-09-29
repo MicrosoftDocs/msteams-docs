@@ -226,8 +226,9 @@ To build and run your app locally:
 You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
 
 <!-- markdownlint-disable MD033 -->
+
 <details>
-<summary>Learn how to troubleshoot if your doesn't app run locally.</summary>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
 To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 

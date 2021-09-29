@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build your first bot for Microsoft Teams
 
-The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather information, make reservations, or any other service offered.
+The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather information, make reservations, or any other service offered using a conversational bot.
 
 In this tutorial, you'll learn:
 
@@ -187,7 +187,7 @@ To build and run your app in the local environment:
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Learn how to troubleshoot if your doesn't app run locally.</summary>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
 To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
