@@ -61,6 +61,8 @@ If the prerequisites are in place, let's begin!
 
     Your Teams app is created in a few seconds.
 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
+
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
