@@ -173,20 +173,6 @@ To build and run your app locally:
 1. Sign in with your Microsoft 365 account when prompted.
 1. Select **Add** to add the app to your account.
    The app is added to Teams, and is loaded.
-1. Try the following steps in the app:
-   1. Start a new conversation.
-   2. Launch the message extension from three dots in the composing area.
-   3. Select the message extension app you installed.
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
-
-   This sample app lets you search npm packages. Let's type some name in the search box, such as "cli":
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
-
-   Then, select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
-
-   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -197,6 +183,25 @@ To run your app in Teams, you must have a Microsoft 365 development account that
 > [!TIP]
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
 </details>
+
+
+### Test the Bot app
+
+Try the following steps in the app to start a new conversation.
+1. Launch the message extension from three dots in the composing area.
+1. Select the message extension app you installed.       
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
+
+   This sample app lets you search npm packages.
+
+1. Enter a search string in the search box, such as "cli":
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+
+1. Select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
 Now, you've learned how to build and run a basic message extension.
 
