@@ -14,9 +14,14 @@ Start Microsoft Teams app development by building your first app, "Hello World!"
 
 In this tutorial, you'll learn:
 
-1. [How to set up a new project with Teams Toolkit.](#create-your-tab-project)
-1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
-1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
+- [How to set up a new project with Teams Toolkit.](#create-your-tab-project)
+- [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
+- [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
+
+
+This diagram shows your development flow. In this page, you will create a project, then build and run the app on your Teams tenant. Later, you will learn how to deploy using Toolkit in [Deploy your first Teams app in Azure](get-started-deploy-teams-app-azure.md) section:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/development-flow.png" alt-text="Your Teams app development flow." border="false":::
 
 ## Create your tab project
 
