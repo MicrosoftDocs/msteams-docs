@@ -10,27 +10,22 @@ ms.localizationpriority: none
 
 # Build and run your first messaging extension for Microsoft Teams
 
-Message Extension in Teams client provide a way for you to interact with a web service through buttons and forms. You can search and initiate actions in an external system using the compose area, command box, or a message from within the Teams client.
-This tutorial walks you through the steps to create a *search command*. You use it to search for external data and insert the results into a message.
+Message Extension provides a way for you to interact with a web service from Teams. You can search and initiate actions in an external system. Use the compose area, command box, or a message in Teams client.
+
+Learn to create a message extension app with a *search command*. You use it to search for external data and insert the results into a message within Teams client.
 
 There are two types of Teams **messaging extensions**:
 
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
-## Before you begin
-
-Make sure your development environment is set up by installing the Prerequisites.
-
-> [!div class="nextstepaction"]
-> [Install Prerequisites](prerequisites.md)
-
 ## Create your project
 
-Use the Teams Toolkit to create your first project:
+If the prerequisites are in place, let's begin!
 
 # [Visual Studio Code](#tab/vscode)
 
+1. Open Visual Studio Code.
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create New Project** from the left-hand side of the Toolkit. The UI may look different, depending on your operating system.
@@ -94,20 +89,6 @@ The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` 
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
-
-## Prepare the local environment
-
-You can use the Teams Toolkit to run your app in the local environment. 
-
-When you completed the [Hello world](first-app-react.md), in your Toolkit you should already have:
-
-- signed in to Microsoft 365 account
-- signed in to Azure account
-
-Also you need:
-
-- Install [ngrok](https://ngrok.io), which is used to provide a tunnel between Teams and your bot code
-- Set up and authenticate ngrok on your local environment. (Please refer the instructions on [ngrok](https://ngrok.io) website)
 
 ## Run your app locally
 

@@ -20,7 +20,7 @@ In this tutorial, you'll learn:
 
 ## Create your tab project
 
-If the [prerequisites](prerequisites.md) are in place, let's begin!
+If the prerequisites are in place, let's begin!
 
 > [!NOTE]
 > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
