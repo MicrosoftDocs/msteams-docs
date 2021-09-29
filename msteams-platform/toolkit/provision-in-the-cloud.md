@@ -23,7 +23,7 @@ Before you can provision cloud resources in Azure and M365, you must have the fo
  
 ## Provision resources
 
-Teams Toolkit provisions cloud resources based on the [Teams application capabilities](add-capabilities.md) and [Azure services](add-resources.md) that you have included in your application. 
+Teams Toolkit provisions cloud resources based on the [Teams application capabilities](add-capabilities.md) and [Azure services](add-cloud-resources.md) that you have included in your application. 
  
 ### M365 Cloud Resources 
 
@@ -65,6 +65,7 @@ For more information on how to add cloud resources, see [Add cloud resources](ad
 In addition to creating Azure service instance, Teams Toolkit has also made configuration changes of these services. 
  
 (Details Needed) 
+
 |Resources |Configurations|	Reason |
 |-----------|-------------|----------|
 |Azure Active Directory Application |Includes a delegated Microsoft Graph Permission `User.Read`|With this permission specified in the AAD app, the hello world application created by Teams Toolkit can retrieve user profile from Microsoft Graph.| 

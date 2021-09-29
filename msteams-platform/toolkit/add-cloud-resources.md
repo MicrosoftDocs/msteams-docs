@@ -55,13 +55,14 @@ TeamsFx provides seamless integrations with these Azure services that are common
 ### Add cloud resources from TeamsFx CLI in Command Window
 
 1. Change directory to your project directory.
-1. Execute following command to add different capabilities:
+1. Execute command to add different capabilities.     
+The following table describes cloud resources and the corresponding commands to add them:
 
 |Cloud Resources|	Command|
 |---------------|----------|
 |Add Azure Functions|	`teamsfx resource add azure-function --function-name your-func-name`|
 |Add Azure SQL Database	|`teamsfx resource add --function-name your-func-name`|
-A|dd Azure API Management|	`teamsfx resource add azure-apim`|
+|Add Azure API Management|	`teamsfx resource add azure-apim`|
 
 ## Add additional cloud resources
 
