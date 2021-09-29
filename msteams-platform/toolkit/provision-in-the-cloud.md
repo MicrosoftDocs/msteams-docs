@@ -56,7 +56,7 @@ You can optionally include additional Azure services that serves your applicatio
 * Azure API Management 
 * Azure SQL Database 
  
-Please read add cloud resources (link to add cloud resources) page for more information about details of these services. 
+For more information on how to add cloud resources, see [Add cloud resources](add-cloud-resources.md). 
  
 ### What has happened behind the scene? 
 
@@ -106,8 +106,8 @@ Note that it’s the same if your project contains multiple capabilities.
 
   ### From TeamsFx CLI in Command Window 
 
-1. Change directory to your project directory   
-1. Execute command `teamsfx provision` 
+1. Change directory to your project directory.   
+1. Execute command `teamsfx provision`. 
 
     ![Execute command](~/assets/images/tools-and-sdks/execute-command.png)
    

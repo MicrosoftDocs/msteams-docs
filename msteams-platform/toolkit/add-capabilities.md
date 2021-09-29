@@ -47,14 +47,23 @@ There are several approaches where you can add additional capabilities to your p
 ### Add capabilities from Teams Toolkit in Visual Studio Code
 
 1. Activate Teams Toolkit from left side.
+
+    ![Activate Teams Toolkit](~/assets/images/tools-and-sdks/teams-toolkit.png)
   
-1. In the Teams Toolkit side bar panel, select `Add capabilities` option.
+1. In the Teams Toolkit side bar panel, select `Add capabilities`.
+
+    ![Add capabilities](~/assets/images/tools-and-sdks/add-capabilities.png)
  
 1. From the pop up, select the capabilities you want to include into your project.
- 
-1. Select OK to continue, there may be additional questions needed based on the capabilities you selected. Read more these on create project section. (links to create project)
 
-Alternatively, you can open the command palette and type: “Teams: Add Capabilities”. Follow the same process as it’s triggered from Tree View.
+    ![Select capabilities](~/assets/images/tools-and-sdks/select-capabilities.png)
+ 
+1. Select **OK** to continue, there may be additional questions needed based on the capabilities you selected. Read more these on create project section. (links to create project)
+
+    Alternatively, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
+
+    ![Alternate add capabilities](~/assets/images/tools-and-sdks/alternate-capabilities.png)
+  
  
 ### Add capabilities from TeamsFx CLI in Command Window
 
