@@ -70,9 +70,9 @@ The remaining app logic and data storage are hosted elsewhere, such as Azure Web
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-## Your first app development flow
+### Your first app development flow
 
-This diagram shows your development flow. At each tutorial, you will create a new app with one capability (for instance, a tab in the first tuorial), then build and run the app on your Teams tenant. 
+This diagram shows what you are goint to do in the Get Started tutorial. At each tutorial, you will create a new app with one capability (for instance, a tab in the first tuorial), then build and run the app on your Teams tenant. 
 
 Later, you will learn how to deploy using Toolkit in [Deploy your first Teams app in Azure](get-started-deploy-teams-app-azure.md) section:
 
@@ -83,4 +83,4 @@ Later, you will learn how to deploy using Toolkit in [Deploy your first Teams ap
 Now, let's build your fisrt app! But first, make sure to check the prerequisites.
 
 > [!div class="nextstepaction"]
-> [Build your first Bot](prerequisites.md)
+> [Prerequisites](prerequisites.md)
