@@ -170,8 +170,14 @@ To build and run your app locally:
 
    Teams opens in a web browser.
 1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
-1. Sign in with your Microsoft 365 account when prompted.
+1. Sign in with your Microsoft 365 account, if prompted.
+ 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-add-app.png" alt-text="Screenshot that shows the button Add the app to Teams" border="false":::
+    
 1. Select **Add** to add the app to your account.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-added.png" alt-text="Screenshot that shows confirmation that app is added" border="false":::
+
    The app is added to Teams, and is loaded.
 
 <!-- markdownlint-disable MD033 -->
@@ -183,7 +189,6 @@ To run your app in Teams, you must have a Microsoft 365 development account that
 > [!TIP]
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
 </details>
-
 
 ### Test the Bot app
 
