@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Build and run your first messaging extension for Microsoft Teams
 
-Message Extension capability is a way for you to interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
+Message Extension capability lets you interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
 
 There are two types of Teams **messaging extensions**:
 

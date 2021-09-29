@@ -8,7 +8,9 @@ keywords: Microsoft Teams developer samples
 
 # Deploy your Teams apps to Azure
 
-This tutorial shows you the steps of deploying your Teams app to Azure using Teams Toolkit.
+You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
+
+Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
 
 ## Sign in to your Azure account
 
