@@ -17,7 +17,7 @@ For more information on Teams app capabilities, see [Understand app capabilities
 
 You need to start with a Teams application with one app capability created by the Teams Toolkit V2. 
 
-## What capabilities you can add to your project
+## Add capabilities to your project
 
 Currently there are the following limitations with TeamsFx when adding additional capabilities:
 * You cannot add each project capabilities more than once.
@@ -40,7 +40,7 @@ Currently there are the following limitations with TeamsFx when adding additiona
 |Tab and Messaging Extension|	No additional capability can be added.|
 |Tab, Bot and Messaging Extension|	No additional capability can be added.|
 
-## How to add capabilities
+## Procedure to add capabilities
 
 There are several approaches where you can add additional capabilities to your project.
 
@@ -78,14 +78,14 @@ There are several approaches where you can add additional capabilities to your p
 |To Add a Messaging Extension With New Bot Registration	|`teamsfx capability add messaging-extension --way-to-register-bot create-new`|
 |To Add a Messaging Extension With Existing Bot Registration|	`teamsfx capability add messaging-extension --way-to-register-bot reuse-existing --bot-id your-bot-id --bot-password your-bot-password`|
 
-## What will happen after you add additional capabilities
+## Add additional capabilities
 
 After you successfully added capabilities, and based on the capabilities you selected, these are the changes made to your project and why they are made.
 
 |Capability Added	|What changed|	Why these changes are made|
 |-------------------|---------------|-------------------------|
-|Bot and Messaging Extension|	A bot template code are added into a subfolder with path `yourProjectFolder/bot` </br></br> `launch.json` and `task.json` updated under `.vscode` folder. </br> </br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world bot application template into your project. </br><br/>To include necessary scripts for Visual Studio Code  that will be executed when you wish to debug your application locally.</br><br/> Learn more about this in local debug section. (Link to local debug document)</br><br/> To include bot related information in the manifest file that represents your application in the Teams Platform. This change includes: </br> The ID of your bot. </br> The scopes of you bot. </br> The commands that this hello world bot application can respond to. </br><br/>Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud. |
-|Tab| A frontend tab template code are added into a subfolder with path `yourProjectFolder/tabs`. </br></br>`launch.json` and `task.json` updated under `.vscode` folder. </br></br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|To include a hello world tab application template into your project.</br></br> To include necessary scripts for Visual Studio Code that will be executed when you wish to debug your application locally.</br></br> Learn more about this in local debug section. (Link to local debug document)</br></br> To include tab related information in the manifest file that represents your application in the Teams Platform. This change includes:</br></br>The configurable and static tabs.</br></br>The scopes of the tabs.</br></br> Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud.|
+|Bot and Messaging Extension|	A bot template code are added into a subfolder with path `yourProjectFolder/bot` </br></br> `launch.json` and `task.json` updated under `.vscode` folder. </br> </br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world bot application template into your project. </br><br/>To include necessary scripts for Visual Studio Code is executed when you wnat to debug your application locally.</br><br/> Learn more about this in local debug section. (Link to local debug document)</br><br/> To include bot related information in the manifest file that represents your application in the Teams Platform. This change includes: </br> The ID of your bot. </br> The scopes of you bot. </br> The commands that this hello world bot application can respond to. </br><br/>Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud. |
+|Tab| A frontend tab template code are added into a subfolder with path `yourProjectFolder/tabs`. </br></br>`launch.json` and `task.json` updated under `.vscode` folder. </br></br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|To include a hello world tab application template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you wish to debug your application locally.</br></br> Learn more about this in local debug section. (Link to local debug document)</br></br> To include tab related information in the manifest file that represents your application in the Teams Platform. This change includes:</br></br>The configurable and static tabs.</br></br>The scopes of the tabs.</br></br> Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud.|
 		
 ## Advanced use case
 

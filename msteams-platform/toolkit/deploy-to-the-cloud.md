@@ -12,14 +12,15 @@ ms.topic: overview
 TeamsFx helps you to deploy your project code to the provisioned cloud resources with a single command.
 
 ## Prerequisite
-Before you can deploy your project code to cloud, you will need to complete the resource provision step.
 
-## What will be deployed
+Before you can deploy your project code to cloud, you must complete the resource provision step.
 
-Teams Toolkit will deploy or upload the backend and frontend code in your application to the corresponding cloud resources in Azure that provisioned in the previous step.
+## Deployment
+
+Teams Toolkit deploys or uploads the backend and frontend code in your application to the corresponding cloud resources in Azure that provisioned in the previous step.
 
 * The backend (Azure Functions if configured) may use a variety of Azure services, including Azure App Service and Azure Storage.
-* The frontend application will be deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
+* The frontend application are deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
 
 ## Deployment by project type
 
@@ -29,13 +30,13 @@ Teams Toolkit will deploy or upload the backend and frontend code in your applic
 |Tab With SharePoint </br> The frontend workload |SharePoint App Catalog|`yourProjectFolder/SPFx`|
 |Bot and Messaging Extension </br> The backend workload | Azure Web App	`yourProjectFolder/bot` |
 
-You are optionally to include other Azure resources that fits your application needs and the corresponding project code will be deployed to that resources, this may include:
+You are optionally to include other Azure resources that fits your application needs and the corresponding project code is deployed to that resources, this may include the following:
 * Azure Functions
 * Azure API Management
 
 Read more on Add cloud resources (link to add Cloud resources) to learn about deployment of these resources.
 
-## How to perform deployment
+## Deploy your project
 
 There are several approaches where you can deploy your project to cloud and they are similar for each project type.   
 

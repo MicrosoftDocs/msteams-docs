@@ -11,8 +11,9 @@ ms.topic: overview
 
 TeamsFx can provision resources that intended to host your application. You can also optionally include additional cloud resources that fits your development needs. 
 
-## Prerequisite
-Before you can provision cloud resources in Azure and M365, you will need:
+## Prerequisites
+
+Before you can provision cloud resources in Azure and M365, you muse have the following:
 * A M365 organizational account.
 * An Azure Account with a valid subscription.
 * A project created. 
@@ -22,14 +23,14 @@ Before you can provision cloud resources in Azure and M365, you will need:
 > * Read account and permission page (link to account page) to learn why these accounts are needed.
 > * You can include each Azure resources only once for your project.
 
-## What additional cloud resources can be added
+## Additional cloud resources can be added
 
 TeamsFx provides seamless integrations with these Azure services that are common for many application scenarios, including:
 * [Azure Functions](/azure/azure-functions/functions-overview): A serverless solution to meet your on-demand compute needs such as creating web APIs for your Teams Application’s backend. 
 * [Azure SQL Database](/azure/azure-sql/database/sql-database-paas-overview): A fully managed platform as a service (PaaS) database engine to serve as your Teams Application’s data store.
 * [Azure API Management](/azure/azure-sql/database/sql-database-paas-overview):  A modern API gateway that can be used to administrate APIs you created for your Teams Application and publish them to be consumed on other applications such as Power Apps.
 
-## How to add cloud resources
+## Add cloud resources
 
 ### Add cloud resources from Teams Toolkit in Visual Studio Code
 
@@ -62,23 +63,23 @@ TeamsFx provides seamless integrations with these Azure services that are common
 |Add Azure SQL Database	|`teamsfx resource add --function-name your-func-name`|
 A|dd Azure API Management|	`teamsfx resource add azure-apim`|
 
-## What will happen after you add additional cloud resources
+## Add additional cloud resources
 
-After you successfully added cloud resources, and based on the resource you selected, these are the changes made to your project and why they are made.
+After you successfully added cloud resources, and based on the resource you selected, following are the changes made to your project and why they are made:
 
 |Resources Added|	What changed|	Why these changes are made|
 |---------------|---------------|-----------------------------|
-|Azure Functions|	An Azure Functions template code are added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code  that will be executed when you wish to debug your application locally. </br></br> Learn more about this in local debug section. (Link to local debug document)</br></br> To include configurations for TeamsFx to track what resources are present in your project so you can easily provision them in cloud.|	
+|Azure Functions|	An Azure Functions template code are added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you wish to debug your application locally. </br></br> Learn more about this in local debug section. (Link to local debug document)</br></br> To include configurations for TeamsFx to track what resources are present in your project so you can easily provision them in cloud.|	
 |Azure SQL|	`env.default.json` and `settings.json` under `.fx` folder.|	To include configurations for TeamsFx to track what resources are present in your project so you can easily provision them in cloud.|
 |Azure API Management|	An Open API Specification file added into a subfolder with path `yourProjectFolder/openapi` </br></br> `env.default.json` and `settings.json` under `.fx` folder.|	This is the API specification file defines how your API can be called after you publish them.</br></br>To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud.|
 
 > [!NOTE]
-> * When adding Azure SQL, we will ask for Azure Function information. It’s because SQL needs to be accessed from server workload. If your project doesn't contain Azure Functions, we will create one for you.
-> * When adding Azure APIM, we will ask for the following information:
-    * Azure function information. It’s because Azure API Management needs to work with Azure Functions. If your project doesn't contain Azure Functions, we will create one for you.
-    * Your subscription information. It’s because we can look up to find an existing APIM instance to use in this project or you can choose to create a new instance.
+> * When adding Azure SQL, we ask for Azure Function information. It’s because SQL needs to be accessed from server workload. If your project doesn't contain Azure Functions, we can create one for you.
+> * When adding Azure APIM, we ask for the following information:
+      * Azure function information. It’s because Azure API Management needs to work with Azure Functions. If your project doesn't contain Azure Functions, we cancreate one for you.
+      * Your subscription information. It’s because we can look up to find an existing APIM instance to use in this project or you can choose to create a new instance.
 
-## What will happen when you provision the resources
+## Provision resources
 
 After you successfully added cloud resources to your project, next step is that you can provision them to your Azure account. These are the service details and configurations Teams Toolkit made behind the scenes.
 
@@ -92,7 +93,7 @@ After you successfully added cloud resources to your project, next step is that 
 		
 Read more about provision cloud resource feature. (Link to provision section)
 
-## What will happen in deployment
+## Deployment
 
 Once your resources has been provisioned in the cloud, you can deploy and upload project code to cloud. Following actions happen for each resources at deployment stage:
 
@@ -100,12 +101,8 @@ Once your resources has been provisioned in the cloud, you can deploy and upload
 
 |Cloud Resources|	What will happen|
 |----------------|------------------|
-|Azure Functions|	•	Build backend API part (under folder `yourProject\api`). 
-•	Deploy the code.
-•	Restart Function App. 
-•	Sync HttpTriggers.
-Azure API Management	Import backend APIs (API in your backend part) to APIM instance as a new or existing version.
-
+|Azure Functions|Build backend API part (under folder `yourProject\api`). </br></br> Deploy the code.</br></br>Restart Function App. </br></br> Sync HttpTriggers.|	
+|Azure API Management	|Import backend APIs (API in your backend part) to APIM instance as a new or existing version.|
 
 ## Advanced use case
 
