@@ -95,50 +95,45 @@ The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` 
 To build and run your app locally:
 
 1. Select **F5** in Visual Studio Code to run your application in debug mode.
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+    When you select **F5**, the Teams Toolkit:
 
-    Teams opens in a web browser. 
-1. 
-1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams. 
-1. 
+    1. Registers your application with Azure Active Directory.
+    1. Registers your application for "side loading" in Microsoft Teams.
+    1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+    1. Starts ngrok tunnel so Teams can communicate with your app.
+    1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
+
+    </details>
+
+   > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+
+   Teams opens in a web browser.
+1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
 1. Sign in with your Microsoft 365 account when prompted.
-
 1. Select **Add** to add the app to your account.
-    The app is added to Teams, and is loaded.
-1. Try to do the following in the app: 
-   
+   The app is added to Teams, and is loaded.
+1. Try to do the following in the app:
    1. Initiate a new conversation
-   2. Launch the message extension from three dots in the composing area 
-   3. Select the message extension app you just installed 
+   2. Launch the message extension from three dots in the composing area
+   3. Select the message extension app you just installed
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
-   
+
    This sample app lets you search npm packages. Let's type some name in the search box, such as "cli":
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
 
    Then, select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
-   
+
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
 <!-- markdownlint-disable MD033 -->
 <details>
-<summary>Learn what happens when you run your app locally in the debugger.</summary>
-
-When you select **F5**, the Teams Toolkit:
-
-1. Registers your application with Azure Active Directory.
-1. Registers your application for "side loading" in Microsoft Teams.
-1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-1. Starts ngrok tunnel so Teams can communicate with your app.
-1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
-
-</details>
-
-<!-- markdownlint-disable MD033 -->
-<details>
-<summary>Learn how to troubleshoot common issues when running your app locally.</summary>
+<summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
 To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
@@ -146,21 +141,7 @@ To run your app in Teams, you must have a Microsoft 365 development account that
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
 </details>
 
-<!-- markdownlint-disable MD033 -->
-
-<details>
-<summary>Learn what happens when you deployed your app to Azure</summary>
-
-Before deployment, the application runs in the local environment:
-
-1. The backend runs using _Azure Functions Core Tools_.
-1. The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
-
-Deployment involves two steps. First, you provision resources on an active Azure subscription. Then, you deploy (upload) the backend and frontend code for the application to Azure. The backend uses various Azure services, including Azure App Service and Azure Bot Service.
-
-</details>
-
-Now, you have learned how to build and run a basic message extension.
+Now, you've learned how to build and run a basic message extension.
 
 ## Next step
 
@@ -175,7 +156,7 @@ Or keep reading to add more features to the app.
 
 ### Code sample
 
-Use the Teams Search Auth Config for sample projects on GitHub to see how to: 
+Use the Teams Search Auth Config for sample projects on GitHub to see how to:
 - Create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples).
 - Create message extensions that accept search requests and return the results after the user has signed in.
 
@@ -187,6 +168,11 @@ Use the Teams Search Auth Config for sample projects on GitHub to see how to:
 
 > [!div class="nextstepaction"]
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
+
+| **<<** | **>>** |
+|:--- | ---:|
+| **Back** : [Create your first bot app](first-app-bot.md) | [Deploy your app](get-started-deploy-teams-app-azure.md) : **Next**|
+|
 
 ## See also
 
