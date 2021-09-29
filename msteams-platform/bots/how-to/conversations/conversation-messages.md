@@ -178,21 +178,7 @@ async def on_members_added_activity(
     "text": "My bot's reply",
     "replyToId": "1632474074231"
 }
-    "entities": [
-        {
-            "locale": "en-US",
-            "country": "US",
-            "platform": "Windows",
-            "type": "clientInfo"
-        }
-    ],
-    "channelData": {
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-        }
-    },
-    "locale": "en-US"
-}
+
 ```
 
 ---
