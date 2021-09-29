@@ -10,18 +10,6 @@ keywords: Microsoft Teams developer samples
 
 This tutorial shows you the steps of deploying your Teams app to Azure using Teams Toolkit.
 
-## Before you begin
-
-Make sure your development environment is set up by installing the Prerequisites.
-
-> [!div class="nextstepaction"]
-> [Install Prerequisites](prerequisites.md)
-
-Open an app project in Teams Toolkit. If you haven't created any Teams apps yet, try building the first app.
-
-> [!div class="nextstepaction"]
-> [Hello World - Build your first app](../get-started/first-app-react.md)
-
 ## Sign in to your Azure account
 
 Use this account to access the Azure portal and to provision new cloud resources to support your app.
@@ -30,6 +18,7 @@ Use this account to access the Azure portal and to provision new cloud resources
 # [Visual Studio Code](#tab/viscode)
 
 1. Open Visual Studio Code.
+1. Open the project folder in which you created the tab app.
 1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
 1. Select **Sign in to Azure**.
 
@@ -90,6 +79,11 @@ Deployment is a two-step process. You provision the resources on an active Azure
 * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
 
 </details>
+
+| **<<** | **>>** |
+|:--- | ---:|
+| **Back** : [Create your first Teams app](first-app-react.md) | [Back to Overview](code-samples.md) : **Next**|
+|
 
 ## See also
 
