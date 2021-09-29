@@ -162,28 +162,22 @@ async def on_members_added_activity(
 
 ```json
 {
-    "text": "hi",
-    "textFormat": "plain",
     "type": "message",
-    "timestamp": "2019-10-31T20:57:27.2347285Z",
-    "localTimestamp": "2019-10-31T13:57:27.2347285-07:00",
-    "id": "1572555447214",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer/",
     "from": {
-        "id": "29:1Xv-kvy4dKirR0rZfSF_kAVUzotoT1SXuEzkC9XGkuZng8YBw8qyu5uh4128fQRjlGgvEiRLx-0XP4KYMwcgdZw",
-        "name": "Jane Doe",
-        "aadObjectId": "df486eae-88fd-42a5-b45e-c581588186db"
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
     },
     "conversation": {
-        "conversationType": "personal",
-        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-        "id": "a:1oAmWTVBBe9E0JrpGxauqNyx4CCE_iQf2ZuWon9D42722Fon3wYIpbhgbRChE3wgVS1Gwl9zS1pZy4FSu6-x1vGEq5KBQK-EbBgyPyeP_C-lbLBY3vxnGk9m9D_282jbg"
+        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+   },
+   "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
     },
-    "recipient": {
-        "id": "28:5baea8d1-d4ea-43a1-b101-882f4c8d9cb4",
-        "name": "Imported Bot"
-    },
+    "text": "My bot's reply",
+    "replyToId": "1632474074231"
+}
     "entities": [
         {
             "locale": "en-US",
