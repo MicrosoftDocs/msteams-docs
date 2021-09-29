@@ -59,7 +59,7 @@ If the prerequisites are in place, let's begin!
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
-    Your Teams app is created in a few seconds.
+    Your Teams app with a Bot capability is created in a few seconds.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
 
