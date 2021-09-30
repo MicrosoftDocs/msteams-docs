@@ -678,11 +678,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 
 ## Add `registerOnFocused` API for tabs or personal apps
 
-When a user uses a keyboard, the `registerOnFocused` SDK API allows the user to return to the personal app and maintain focus on the tab or personal app.
-
-Currently, users cannot use their keyboard to go out or into the specific area in Teams. The `registerOnFocused` API specifically allows a user to return into the apps and return focus to the correct spot. This is especially useful for keyboard users who are used to using Ctrl+F6 to go around the areas in Teams.
-
-The `registerOnFocused` API identifies when the focus is returned to the tab or personal app when a user uses a keyboard. The user uses either the Tab key to go around Teams or Ctrl + F6 key. For example, the user moves away from the personal app to search for something, and then returns to the personal app or uses Ctrl+F6 to go around the required places. The API is useful if you want to return a keyboard user to the same location in their tab or personal app.
+The `registerOnFocused` SDK API allows you to use a keyboard on Teams. You can return to a personal app and maintain focus on a tab or personal app with the help of Ctrl, Shift, and F6 keys. For example, you can move away from the personal app to search for something, and then return to the personal app or use Ctrl+F6 to go around the required places. 
 
 The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
 
