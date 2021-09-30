@@ -1,5 +1,5 @@
 ---
-title: Get started - Hello World
+title: Hello World - Create your first Teams tab app
 author: adrianhall
 description: Quickly create a Microsoft Teams tab app using the Microsoft Teams Toolkit and JavaScript.
 ms.author: adhal
@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Create your first Microsoft Teams app
+# Create your first Teams tab app
 
 Start Microsoft Teams app development by creating your first app, "Hello World!". This app uses the Tab capability.
 

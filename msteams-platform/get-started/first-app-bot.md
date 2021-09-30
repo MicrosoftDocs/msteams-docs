@@ -1,5 +1,5 @@
 ---
-title: Get started - Build your first bot
+title: Create your first Teams bot app
 author: adrianhall
 description: Create a bot for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
@@ -8,7 +8,7 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Create your first bot for Microsoft Teams
+# Create your first Teams bot app
 
 You've built your tab app. Now let's create your first bot app.
  
@@ -22,7 +22,6 @@ In this tutorial, you'll learn:
 
 1. [How to set up a new project with Teams Toolkit.](#create-your-bot-project)
 1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
-1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
 > [!IMPORTANT]
 > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).

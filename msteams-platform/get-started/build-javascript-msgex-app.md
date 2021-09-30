@@ -1,5 +1,5 @@
 ---
-title: Get started - Build your first messaging extension
+title: Build your first Teams messaging extension app
 author: adrianhall
 description: Build a messaging extension for Microsoft Teams using the Teams Toolkit.
 ms.author: adhal
@@ -7,7 +7,7 @@ ms.date: 05/20/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
-# Build your bot project
+# Build your message extension project
 
 After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
 

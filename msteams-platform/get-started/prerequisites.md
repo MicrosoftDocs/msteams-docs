@@ -47,14 +47,14 @@ Either one of:
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
 
-### Optional tools 
+### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
 
 Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli)
+- [Azure CLI](../docs.microsoft.com/cli/azure/install-azure-cli)
 
 
 Browser tools for tabs development with React:

@@ -1,5 +1,5 @@
 ---
-title: Get started - Hello World
+title: Build your first Teams tab app
 author: adrianhall
 description: Build a Microsoft Teams tab app using the Microsoft Teams Toolkit and JavaScript.
 ms.author: adhal

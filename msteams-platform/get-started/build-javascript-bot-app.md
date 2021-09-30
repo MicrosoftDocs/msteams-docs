@@ -1,5 +1,5 @@
 ---
-title: Get started - Build your first bot
+title: Build your first Teams bot app
 author: adrianhall
 description: Build a Microsoft Teams bot app using the Microsoft Teams Toolkit and JavaScript.
 ms.author: adhal
