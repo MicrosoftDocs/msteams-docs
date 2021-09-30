@@ -16,6 +16,11 @@ Let's deploy the first Hello World app with Tab capability on Azure using Teams 
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
 
+In this page, you'll learn to:
+- [Deploy your first app](#deploy-your-app-to-azure)
+- [Create an environment for your app](#create-an-environment-for-your-app)
+- [Update the manifest file](#update-the-app-manifest)
+
 ## Deploy your app to Azure
 
 Deployment consists of two steps:
@@ -141,3 +146,13 @@ The app manifest loads the tab from a `localhost` URL. Configure the app manifes
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
 
    You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
+
+| **<<** | **>>** |
+|:--- | ---:|
+| **Back** : [Build your first Teams app](build-spfx-app.md) | [Back to Overview](code-samples.md) : **Next**|
+|
+
+## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

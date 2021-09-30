@@ -154,6 +154,10 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
+## Get organized
+
+Ensure that you have an Administrator account for a SharePoint Site Collection. You'll need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
+
 Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
 
 | **<<** | **>>** |

@@ -14,14 +14,17 @@ After you set up your project workspace with Teams Toolkit, build your tab proje
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p3.png" alt-text="Image showing phase 3 of building an app." border="false":::
 
+In this page, you'll learn to:
+- [Build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code)
+
 ## Sign in to your Microsoft 365 account
 
 After the project is created, set up single sign-on with Microsoft 365:
 
    1. Select **Project** > **TeamsFx** > **Configure for SSO...**.
-   1.Sign in to your Microsoft 365 administrator account when prompted.
+   1. Sign in to your Microsoft 365 administrator account when prompted.
 
-## Run your app locally
+## Build and run your app locally in Visual Studio Code
 
 To build and run your app locally:
 
@@ -60,5 +63,10 @@ To run your app in Teams, you need a Microsoft 365 development account that allo
 
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [1. Create your first Teams Blazor app](first-app-blazor.md) | [3. Deploy your first Teams Blazor app](deploy-blazor-app.md) : **Next**|
+| **Back** : [1. Create your first Teams Blazor app](first-app-blazor.md) | [4. Deploy your first Teams Blazor app](deploy-blazor-app.md) : **Next**|
 |
+
+## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
