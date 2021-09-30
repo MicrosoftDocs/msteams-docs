@@ -1,7 +1,7 @@
 ---
 title: Teams app with Blazor- Prerequisites
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
+description: Prerequisites for building a Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart

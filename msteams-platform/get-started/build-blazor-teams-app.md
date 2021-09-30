@@ -54,7 +54,7 @@ To build and run your app locally:
 <details>
 <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. For more information about account opening, see [Prerequisites](blazor-app-prerequisites.md.)
+To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. For more information about account opening, see [Blazor App Prerequisites](blazor-app-prerequisites.md).
 
 </details>
 

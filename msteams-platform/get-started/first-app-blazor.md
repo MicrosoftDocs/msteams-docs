@@ -1,7 +1,7 @@
 ---
 title: Create your first Teams app with Blazor
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
+description: Create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
@@ -12,7 +12,7 @@ ms.localizationpriority: none
 
 This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor. The app that is built displays basic user information for the current user. When permission is granted, the app connects to the Microsoft Graph. It gets the complete profile of the current user.
 
-
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
 ## Create your project
 
@@ -32,8 +32,6 @@ Use the Teams Toolkit to create your first project:
 
 
 ## Take a tour of the source code
-
-If you wish to skip this section for now, you can [run your app locally](#run-your-app-locally).
 
 After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code 2019.
 
