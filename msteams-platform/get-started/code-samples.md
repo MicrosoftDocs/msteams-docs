@@ -58,7 +58,7 @@ The Get started section takes you through recommended tool sets. It also covers 
 - Node.js for bots and messaging extensions.
 
 *You aren't limited to using these particular stacks*.
-If you prefer using a command-line interface (CLI), see [create your first Microsoft Teams app using the Yeoman generator](../get-started/get-started-yeoman.md).
+If you prefer using a command-line interface (CLI), see [Build your first Microsoft Teams app using the Yeoman generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md).
 
 ### Teams doesn't host your app
 
