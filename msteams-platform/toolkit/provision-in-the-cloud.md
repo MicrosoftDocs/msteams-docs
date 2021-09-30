@@ -81,13 +81,11 @@ Teams Toolkit can provision M365 and Azure resources.
 |Resources|	Where to find them|
 |---------|-------------------| 
 |Teams App ID|	You can find the Teams App ID in your project’s manifest file after you packaged your application. Read about App Package (Link to publish section) </br> You can also find your Teams App ID in [Teams Developer Portal](https://dev.teams.microsoft.com/apps). 
-|Azure Active Directory Application|Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations blade under manage section. 
-You canfind your Azure Active Directory application with display name same as your project name. |
-|Azure services |Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg 
-You can find all Azure services provisioned in this resource group. |
+|Azure Active Directory Application|Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations blade under manage section. </br> You can find your Azure Active Directory application with display name same as your project name. |
+|Azure services |Go to [Azure Portal](https://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg </br> You can find all Azure services provisioned in this resource group. |
  
 ## Perform provision 
- 
+  
 Note that it’s the same if your project contains multiple capabilities. 
  
 ### Provision from Teams Toolkit in Visual Studio Code 
