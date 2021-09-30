@@ -64,6 +64,12 @@ Complete the following steps to develop an SSO Teams tab:
 
 > [!NOTE]
 
+> There are some important restrictions that you must know:
+>
+> * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+> * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
+> * Currently multiple domains per app are not supported.
+> * The user must set `accessTokenAcceptedVersion` to `v2` for a new application.
 > * Only user level Graph API permissions are supported, such as email, profile, offline access, and OpenId. For access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](#get-an-access-token-with-graph-permissions).
 > * Your app's domain name must be same as the domain name that you have registered for your AAD application.
 > * Currently, multiple domains per app are not supported.
