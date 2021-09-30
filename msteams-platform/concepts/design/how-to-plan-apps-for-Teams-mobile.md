@@ -22,21 +22,21 @@ The following list guides to enhance Teams app experience on mobile:
 * Quick Actions: Allow users to use your app on mobile
 * Enablement: Enable users to create new app experiences and engage on mobile
 
-## Think Mobile Framework
+## Think mobile framework
 
-### Consumption: Start Small
+### Consumption: Start small
 
 While planning to build an app on mobile, you can start with the consumption experience first. The consumption experience will trigger your users to start using the app. Since the mobile world has made users habitual to scrolling for content, you might want to start with showing relevant information. Use engagement mechanisms such as notifications to inform updates.
 
-### Quick Actions: Companion to Desktop App
+### Quick actions: Companion to desktop app
 Once your users have started consuming the content on mobile, you can think about scaling your app to the next level. You can now migrate some of the actions from your desktop app or build newer actions optimized for mobile.
 
-### Enablement: Self-sufficient Experience on Mobile
+### Enablement: Self-sufficient experience on mobile
 Provide full immersive experience on mobile, either at par or above your desktop experience, if your users are engaging with your app. Make all the scenarios responsive on mobile to provide rewarding experience for your users.
 
 ## Scenarios
 
-### Dashboarding & Data Visualization Apps
+### Dashboarding and data visualization apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
@@ -70,7 +70,7 @@ In the third phase, enable users to create content such as, charts and graphics 
 
 Your users should be able to modify the title, description, and insert data items to create visualizations that can be consumed and shared with the broader group in a channel or group chat. Ensure to introduce all the capabilities in your app for mobile.
 
-#### Task Boarding Apps
+#### Task boarding apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
@@ -88,7 +88,7 @@ Enable users to add new projects and boards. You can give an option to expand th
 
 PLACEHOLDER FOR IMAGE
 
-### Coauthor and whiteboarding Apps
+### Coauthor and whiteboard apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
@@ -119,7 +119,7 @@ In the full-fledged experience, you can allow users to create new documents for 
 
 PLACEHOLDER FOR IMAGE
 
-### Learning & Training Apps
+### Learning and training apps
 
 Consumption
 For the apps that provide LMS content to the users, use the mobile apps in the first phase to show the content of all types such as textual, audios and videos. Let the users search for modules, scroll through the sections and read details like duration, tutor, overview etc. You might want to have focus on participant persona in this phase.
