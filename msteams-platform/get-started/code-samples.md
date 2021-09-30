@@ -80,7 +80,7 @@ Later, you will learn how to deploy using Toolkit in [Deploy your first Teams ap
 
 ## Next step 
 
-Now, let's build your fisrt app! But first, make sure to check the prerequisites.
+Now, let's build your fisrt app! But first, prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Prerequisites](prerequisites.md)
+> [Prepare to build a Teams app](prerequisites.md)
