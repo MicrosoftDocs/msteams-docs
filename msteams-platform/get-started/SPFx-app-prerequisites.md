@@ -1,14 +1,14 @@
 ---
-title: Teams app with Blazor- Prerequisites
+title: Teams app with SPFx - Prerequisites
 author: adrianhall
-description: Prerequisites for building a Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
+description: Prerequisites for building a Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and SPFx.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Your first Hello World app with Blazor
+# Your first Hello World app with SPFx
 
 Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability.
 
@@ -16,7 +16,7 @@ In this tutorial, you'll learn:
 
 - how to set up a new project with Teams Toolkit.
 - how to build an app with a tab capability.
-- the structure of the app and how it's built the tab portion with Blazor.
+- the structure of the app and how it's built the tab portion with SPFx.
 
 ## The app road-map
 
@@ -43,7 +43,6 @@ Either one of:
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-
 ### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
@@ -51,7 +50,7 @@ The following Visual Studio Code extensions and tools not required, but helpful 
 Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](//docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Azure CLI](../docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 Browser tools for tabs development with React:
 
@@ -78,17 +77,19 @@ After you've installed the required tools, set up the development environment.
 
 The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
-# [Visual Studio 2019](#tab/vs)
+# [Visual Studio Code](#tab/vscode)
 
-You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
-
-To install the Teams Toolkit extension:
-
-1. Open Visual Studio 2019.
-1. Select **Extensions** > **Manage Extensions**.
+1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 1. In the search box, enter **Teams Toolkit**.
-1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
-1. Close Visual Studio 2019 to install the extension.
+1. Select **Install** next to the Teams Toolkit.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscode.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+
+    The Teams Toolkit icon appears in the Visual Studio Code sidebar after it's installed.
+
+     :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+
+You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
 # [Command line](#tab/cli)
 
@@ -157,7 +158,7 @@ Now you’ve got all tools and set up your account. Next, let's set up your deve
 
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [Overview](code-samples.md) | [2. Create your first Blazor app](first-app-blazor.md) : **Next**|
+| **Back** : [Overview](code-samples.md) | [2. Create your first tab app](first-app-spfx.md) : **Next**|
 |
 
 ## See also

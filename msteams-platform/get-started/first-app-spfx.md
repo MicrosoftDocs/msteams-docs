@@ -8,21 +8,15 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build and run your first Microsoft Teams app with SharePoint Framework (SPFx)
+# Create your first Teams app with SharePoint Framework (SPFx)
 
-This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx.
+This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx. This app will have a tab capability.  
 
-## Before you begin
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
-Make sure your development environment is set up by installing the prerequisites.
-
-> [!div class="nextstepaction"]
-> [Install prerequisites](prerequisites.md)
-
-## Get organized
-
-Ensure that you have an Administrator account for a SharePoint Site Collection. You'll need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
-
+In this page, you'll learn:
+- [How to set up a new project with Teams Toolkit](#create-your-project)
+- [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
 ## Create your project
 
@@ -43,15 +37,15 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. In the **Select capabilities** section, select **Tab** and select **OK**.
+1. Select **Tab** and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-1. In the **Frontend hosting type** section, select **SharePoint Framework (SPFx)**.
+1. Select **SharePoint Framework (SPFx)** as the Frontend hosting type.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
 
-1. In the **Framework** section, select **React**.
+1. Select **React** in the **Framework** section.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
@@ -63,7 +57,7 @@ Use the Teams Toolkit to create your first project:
 
 1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
 
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
 
    Your Teams app will be created within a few seconds.
 

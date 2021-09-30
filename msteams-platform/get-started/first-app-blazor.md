@@ -8,11 +8,15 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Create your first Microsoft Teams app with Blazor
+# Create your first Teams app with Blazor
 
 This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor. The app that is built displays basic user information for the current user. When permission is granted, the app connects to the Microsoft Graph. It gets the complete profile of the current user.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
+
+In this page, you'll learn:
+- [How to set up a new project with Teams Toolkit](#create-your-project)
+- [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
 ## Create your project
 
@@ -54,8 +58,6 @@ You can add backend functionality by adding other ASP.NET Core controllers to yo
 |:--- | ---:|
 | **Back** : [Blazor App Prerequisites](blazor-app-prerequisites.md) | [2. Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
 |
-
-
 
 ## See also
 
