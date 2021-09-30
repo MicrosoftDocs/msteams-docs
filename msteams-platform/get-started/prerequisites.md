@@ -1,5 +1,5 @@
 ---
-title: Get started - Prerequisites
+title: Get started - Build app with JavaScript
 author: adrianhall
 description: Learn how to get started with the Microsoft Teams app development and set up your environment.
 ms.author: adhal
@@ -14,24 +14,20 @@ Start Microsoft Teams development by building your first app - "Hello, world!" w
 In this tutorial, you'll learn:
 
 - how to set up a new project with Teams Toolkit.
-- how to build an app with a different capability each—tab, bot, and message extensions.
+- how to build three apps with a different capability each—tab, bot, and message extension.
 - the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
 
     >Each of your apps will have a capability and each has its own UI and UX:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-It follows a three-step process:
+It follows a four-step process:
 
-:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
+
+    > For this tutorial, you will go through Create and Build phases for each app project.
 
 As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
-
-In this tutorial, you'll learn:
-
-1. [How to set up a new project with Teams Toolkit.](#create-your-tab-project)
-1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
-1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
 
 ## Prepare to build your app
 
@@ -140,7 +136,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ---
 
-## Set up your Teams development tenant 
+## Set up your Teams development tenant
 
 A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
 
