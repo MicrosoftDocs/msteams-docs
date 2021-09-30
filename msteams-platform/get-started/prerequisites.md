@@ -43,30 +43,46 @@ The following tools are required for building an app:
 
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release) for back-end JavaScript runtime environment
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
-- Visual Studio Code, version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
-- Visual Studio 2019, ASP.NET and web development, OR .NET Core cross-platform development workload for .NET
-- Teams Toolkit: Teams Toolkit for Visual Studio Code, Teams Toolkit for Visual Studio Code, and Teamsfx CLI Tool
-- React for app development: React Developer Tools for Chrome OR React Developer Tools for Edge
+
+Either one of:
+
+- [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
+- [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
 
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
 
-Install the following Visual Studio Code extensions and optional tools.
+### Optional tools 
 
-- Azure Functions Core Tools: It's installed in the project directory (using the npm devDependencies): Run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure.
-- .NET SDK: Use customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, install the portable version.
-- Azure Tools for Visual Studio Code: Data stored in Azure (or to deploy a cloud-based backend for your Teams app in Azure) and Azure CLI
-- Microsoft Graph Explorer: Microsoft Graph data
-- Developer Portal for Teams: Developer Portal for Teams to configure, manage, and distribute your Teams app, including to your organization or the Teams store
+The following Visual Studio Code extensions and tools not required, but helpful during development.
+
+Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
+
+- [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+- [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli)
+
+
+Browser tools for tabs development with React:
+
+- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 
+- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
+
+Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data: 
+
+- [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 
 > [!TIP]
 > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
 </details>
 
-## Prepare development environment
-After you've installed the required tools, set up the development environment.
+Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store:
 
+- [Developer Portal for Teams](https://dev.teams.microsoft.com/)
+
+## Prepare development environment
+
+After you've installed the required tools, set up the development environment.
 
 ### Install the Teams Toolkit
 

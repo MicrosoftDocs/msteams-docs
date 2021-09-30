@@ -70,14 +70,17 @@ The remaining app logic and data storage are hosted elsewhere, such as Azure Web
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-## See also
+### Your first app development flow
 
-* [Create an app using React](first-app-react.md)
-* [Create an app using Blazor](first-app-blazor.md)
-* [Create an app using SPFx](first-app-spfx.md)
-* [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
-* [Create an app using Node.js](get-started-nodejs-app-studio.md)
-* [Create an app using Yeoman generator](get-started-yeoman.md)
-* [Create a conversational bot app](first-app-bot.md)
-* [Create a messaging extension](first-message-extension.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
+This diagram shows what you are goint to do in the Get Started tutorial. At each tutorial, you will create a new app with one capability (for instance, a tab in the first tuorial), then build and run the app on your Teams tenant. 
+
+Later, you will learn how to deploy using Toolkit in [Deploy your first Teams app in Azure](get-started-deploy-teams-app-azure.md) section:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/development-flow.png" alt-text="Your Teams app development flow." border="false":::
+
+## Next step 
+
+Now, let's build your fisrt app! But first, prepare your development environment.
+
+> [!div class="nextstepaction"]
+> [Prepare to build a Teams app](prerequisites.md)
