@@ -58,5 +58,10 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 |  <<  |  >>  |
 |:--- | ---:|
-|**Back** : [2Build and test your app](build-and-test-csharp-app.md) | [Overview](code-samples.md) : **Next** |
+|**Back** : [2. Build and test your app](build-and-test-csharp-app.md) | [Overview](code-samples.md) : **Next** |
 |
+
+## See also
+
+* [Tutorials Overview](code-samples.md)
+* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
