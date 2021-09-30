@@ -1,7 +1,7 @@
 ---
 title: Deploy your first Teams app with Blazor
 author: adrianhall
-description: Quickly create a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
+description: Deploy a Microsoft Teams app that displays a "Hello, World!" message using the Microsoft Teams Toolkit and .NET Blazor.
 ms.author: adhal
 ms.date: 04/27/2021
 ms.topic: quickstart
@@ -10,11 +10,15 @@ ms.localizationpriority: none
 
 # Deploy your first Teams app with Blazor
 
-Intro
+You've learned to create, build, and run Teams app with Tab capability.The final step is to deploy your app on Azure.
+
+Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
+
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
 
 ## Deploy your app to Azure
 
-Deployment consists of two steps: 
+Deployment consists of two steps:
 
 1. Necessary cloud resources are created. This process is also known as provisioning.
 1. Start coding and copy your app into the created cloud resources.

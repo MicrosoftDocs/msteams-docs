@@ -12,6 +12,8 @@ You've learned to create, build, and run Teams app with Tab, Bot, and Message Ex
 
 Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
 
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
+
 ## Sign in to your Azure account
 
 Use this account to access the Azure portal and to provision new cloud resources to support your app.
