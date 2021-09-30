@@ -89,9 +89,9 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-## Code sample
+### Example
 
-The sample payload which contains static and dynamic typeahead search with single & multi select options as follows:
+The example payload which contains static and dynamic typeahead search with single & multi select options as follows:
 
 ```json
 {
