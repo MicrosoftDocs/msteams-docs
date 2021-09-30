@@ -21,17 +21,15 @@ In this tutorial, you'll learn:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-It follows a four-step process:
+## Prepare to build your app
+
+Building an app using Teams Toolkit follows a four-step process:
+
+Before you begin creating your first Teams app, install the tools and set up your development environment.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-    > For this tutorial, you will go through Create and Build phases for each app project.
-
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
-
-## Prepare to build your app
-
-Before you begin creating your first Teams app, install the tools and set up your development environment.
+As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app. For this tutorial, you will go through Phases3 and 4 three times, for each app project.
 
 ## Install tools
 
