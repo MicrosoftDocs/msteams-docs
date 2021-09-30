@@ -70,17 +70,18 @@ The remaining app logic and data storage are hosted elsewhere, such as Azure Web
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-### Your first app development flow
-
-This diagram shows what you are goint to do in the Get Started tutorial. At each tutorial, you will create a new app with one capability (for instance, a tab in the first tuorial), then build and run the app on your Teams tenant. 
-
-Later, you will learn how to deploy using Toolkit in [Deploy your first Teams app in Azure](get-started-deploy-teams-app-azure.md) section:
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/development-flow.png" alt-text="Your Teams app development flow." border="false":::
 
 ## Next step
 
-Now, let's build your fisrt app! But first, prepare your development environment.
+Now, let's build your fisrt app using Visual Studio Code tools with JavaScript! But first, prepare your development environment. 
 
 > [!div class="nextstepaction"]
 > [Prepare to build a Teams app](prerequisites.md)
+
+
+Or if you prefer using other languages and tool set:
+
+- [Build your first app using Blazor](blazor-app-prerequisites.md)
+- [Build your first app using SPFx](spfx-app-prerequisites.md)
+- [Build your first app using C# or .NET](get-started-dotnet-app-studio.md)
+- [Build your first app using Node.js CLI](get-started-nodejs-app-studio.md)
