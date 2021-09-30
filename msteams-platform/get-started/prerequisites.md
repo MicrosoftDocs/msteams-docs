@@ -19,7 +19,7 @@ In this tutorial, you'll learn:
 
     >Each of your apps will have a capability and each has its own UI and UX:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
 It follows a four-step process:
 
