@@ -89,5 +89,207 @@ The following properties are the new additions to the [Input.ChoiceSet](https://
 | count	| Number | No | Populates for the invoke request to the bot to specify the number of elements that must be returned. The bot ignores it, if the users want to send a different amount. | 
 | skip | Number | No | Populates for the invoke request to the bot to indicate that users want to paginate and move ahead in the list. |
 
-[Placeholder for code sample]
+## Code sample
+
+The sample payload which contains static and dynamic typeahead search with single & multi select options as follows:
+
+```json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "columns": [
+        {
+          "width": "1",
+          "items": [
+            {
+              "size": null,
+              "url": "https://urlp.asm.skype.com/v1/url/content?url=https%3a%2f%2fi.imgur.com%2fhdOYxT8.png",
+              "height": "auto",
+              "type": "Image"
+            }
+          ],
+          "type": "Column"
+        },
+        {
+          "width": "2",
+          "items": [
+            {
+              "size": "extraLarge",
+              "text": "Game Purchase",
+              "weight": "bolder",
+              "wrap": true,
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "text": "Please fill out the below form to send a game purchase request.",
+      "wrap": true,
+      "type": "TextBlock"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Game: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "choices": [
+                {
+                  "title": "Call of Duty",
+                  "value": "call_of_duty"
+                },
+                {
+                  "title": "Death's Door",
+                  "value": "deaths_door"
+                },
+                {
+                  "title": "Grand Theft Auto V",
+                  "value": "grand_theft"
+                },
+                {
+                  "title": "Minecraft",
+                  "value": "minecraft"
+                }
+              ],
+              "style": "filtered",
+              "placeholder": "Search for a game",
+              "id": "choiceGameSingle",
+              "type": "Input.ChoiceSet"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Multi-Game: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "choices": [
+                {
+                  "title": "Static Option 1",
+                  "value": "static_option_1"
+                },
+                {
+                  "title": "Static Option 2",
+                  "value": "static_option_2"
+                },
+                {
+                  "title": "Static Option 3",
+                  "value": "static_option_3"
+                }
+              ],
+              "isMultiSelect": true,
+              "style": "filtered",
+              "choices.data": {
+                "type": "Data.Query",
+                "dataset": "xbox"
+              },
+              "id": "choiceGameMulti",
+              "type": "Input.ChoiceSet"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Needed by: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        },
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "id": "choiceDate",
+              "type": "Input.Date"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "text": "Buy and download digital games and content directly from your Xbox console, Windows 10 PC, or at Xbox.com.",
+      "wrap": true,
+      "type": "TextBlock"
+    },
+    {
+      "text": "Earn points for what you already do on Xbox, then redeem your points on real rewards. Play more, get rewarded. Start earning today.",
+      "wrap": true,
+      "type": "TextBlock"
+    }
+  ],
+  "actions": [
+    {
+      "data": {
+        "msteams": {
+          "type": "invoke",
+          "value": {
+            "type": "task/submit"
+          }
+        }
+      },
+      "title": "Request Purchase",
+      "type": "Action.Submit"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2"
+}
+```
 
