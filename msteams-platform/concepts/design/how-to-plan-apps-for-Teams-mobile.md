@@ -1,12 +1,12 @@
 ---
-title: Plan apps for Teams mobile platform
+title: Plan for Teams mobile
 author: surbhigupta
 description: Guide to plan for creating an app on Teams mobile 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
 ---
-# Plan apps for Teams mobile platform
+# Plan for Teams mobile
 
 The document provides information to help plan your app on Teams mobile. Your app users can prefer using either desktop or mobile, or both desktop and mobile. Users can prepare or groom data on desktop, but consume and share more data on the move.
 
