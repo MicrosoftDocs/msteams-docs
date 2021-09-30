@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 
-# Build and Test your app
+# Build and test your Node.js app
 
 After you have cloned the repo for C# sample app, you can build and test the app in your local environment.
 

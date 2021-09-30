@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 ---
 
-# Deploy your Teams app
+# Deploy your Teams Node.js app
 
 After you build and test your Teams app, you can host it using Azure.
 

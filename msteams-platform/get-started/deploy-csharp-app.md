@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
 ---
-# Deploy your Teams app
+# Deploy your Teams C# app
 
 After you build and test your Teams app, you can host it using Azure.
 
