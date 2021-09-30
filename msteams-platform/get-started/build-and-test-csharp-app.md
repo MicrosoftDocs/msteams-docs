@@ -16,7 +16,7 @@ After you have cloned the repo for C# sample app, you can build and test the app
 
 In this page, you'll learn to:
 - [Build and run your first app](#build-and-run-the-sample)
-- [Test your app](test-your-sample-app)
+- [Test your app](#test-your-sample-app)
 
 ## Build and run the sample
 

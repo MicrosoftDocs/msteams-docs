@@ -78,7 +78,7 @@ Later, you will learn how to deploy using Toolkit in [Deploy your first Teams ap
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/development-flow.png" alt-text="Your Teams app development flow." border="false":::
 
-## Next step 
+## Next step
 
 Now, let's build your fisrt app! But first, prepare your development environment.
 

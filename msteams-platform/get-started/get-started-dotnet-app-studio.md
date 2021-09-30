@@ -46,6 +46,45 @@ $ git --version
 git version 2.17.1.windows.2
 
 ```
+## Set up your Teams development tenant
+
+A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+
+### Enable sideloading option
+
+After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+  
+Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+Verify if you can sideload apps in Teams:
+
+1. In the Teams client, select **Store** icon.
+1. Select **Manage your apps**.
+1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+ :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+> [!NOTE]
+> If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+
+### Create a free Teams developer tenant (optional)
+
+If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
+
+1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+1. Select **Join Now** and follow the onscreen instructions.
+1. In the welcome screen, select **Set up E5 subscription**.
+1. Set up your administrator account. After you finish, the following screen appears.
+
+    :::image type="content" source="~/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+
+1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+## Get a free Azure account
+
+If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
 > [!NOTE]
 > Use a suitable terminal window on your platform. These examples use Git Bash but can be run on most platforms.
@@ -69,7 +108,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 <a name="BuildRun"></a>
 
-:::image type="content" source="../assets/images/get-started/csharp-teams-sample-tree.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
+:::image type="content" source="../assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
 The cloned repository appears in Visual Studio 2019.
 
