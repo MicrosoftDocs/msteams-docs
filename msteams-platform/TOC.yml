@@ -44,7 +44,7 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
-  - name: Plan apps for Teams mobile platform
+  - name: Plan for Teams mobile
     href: concepts/design/how-to-plan-apps-for-Teams-mobile.md
   - name: Device capabilities
     items:
