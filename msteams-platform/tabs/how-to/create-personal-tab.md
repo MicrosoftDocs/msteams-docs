@@ -676,6 +676,74 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 }
 ```
 
+## Add `registerOnFocused` API for tabs or personal apps
+
+When a user uses a keyboard, the `registerOnFocused` SDK API allows the user to return to the personal app and maintain focus on the tab or personal app.
+
+Currently, users cannot use their keyboard to go out or into the specific area in Teams. The `registerOnFocused` API specifically allows a user to return into the apps and return focus to the correct spot. This is especially useful for keyboard users who are used to using Ctrl+F6 to go around the areas in Teams.
+
+The `registerOnFocused` API identifies when the focus is returned to the tab or personal app when a user uses a keyboard. The user uses either the Tab key to go around Teams or Ctrl + F6 key. For example, the user moves away from the personal app to search for something, and then returns to the personal app or uses Ctrl+F6 to go around the required places. The API is useful if you want to return a keyboard user to the same location in their tab or personal app.
+
+The following code provides an example of handler definition on `registerFocusEnterHandler` SDK when the focus must be returned to the tab or personal app:
+
+```csharp
+export function registerFocusEnterHandler(handler: (navigateForward: boolean) => void): 
+void {
+  HandlersPrivate.focusEnterHandler = handler;
+  handler && sendMessageToParent('registerHandler', ['focusEnter']);
+}
+function handleFocusEnter(navigateForward: boolean): void
+ {
+  if (HandlersPrivate.focusEnterHandler)
+   {
+    HandlersPrivate.focusEnterHandler(navigateForward);
+  }
+}
+```
+
+After the handler is triggered with the keyword `focusEnter`, the handler `registerFocusEnterHandler` is invoked with a callback function `focusEnterHandler` that takes in a parameter called `navigateForward`. The value of `navigateForward` determines the type of events. The `focusEnterHandler` is invoked only by Ctrl+F6 and not by the tab key.   
+The keys useful for move events within Teams are as follows:    
+* Forward event -> Ctrl+F6 keys
+* Backward event -> Ctrl+Shift+F6 keys
+
+```csharp
+case 'focusEnter':     
+this.registerFocusEnterHandler((navigateForward: boolean = true) => {
+this.sdkWindowMessageHandler.sendRequestMessage(this.frame, this.constants.SdkMessageTypes.focusEnter, [navigateForward]);
+// Set focus on iframe or webview
+if (this.frame && this.frame.sourceElem) {
+  this.frame.sourceElem.focus();
+}
+return true;
+});
+}
+
+// callback function to be passed to the handler
+private focusEnterHandler: (navigateForward: boolean) => boolean;
+
+// function that gets invoked after handler is registered.
+private registerFocusEnterHandler(focusEnterHandler: (navigateForward: boolean) => boolean): void {
+this.focusEnterHandler = focusEnterHandler;
+this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
+}
+```
+
+### Personal app
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus.png" alt-text="Example shows options for adding registerOnFocussed API" border="false":::
+
+#### Personal app - Forward event
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-forward-event.png" alt-text="Example shows options for adding registerOnFocussed API forward move" border="false":::
+
+#### Personal app - Backward event
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-backward-event.png" alt-text="Example shows options for adding registerOnFocussed API backward move" border="false":::
+
+### Tab
+
+:::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="false":::
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
