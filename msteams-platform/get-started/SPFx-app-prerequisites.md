@@ -17,6 +17,7 @@ In this tutorial, you'll learn:
 - how to set up a new project with Teams Toolkit.
 - how to build an app with a tab capability.
 - the structure of the app and how it's built the tab portion with SPFx.
+- how to deploy the app to SharePoint
 
 ## The app road-map
 

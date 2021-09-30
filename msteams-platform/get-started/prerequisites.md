@@ -16,6 +16,7 @@ In this tutorial, you'll learn:
 - how to set up a new project with Teams Toolkit.
 - how to build three apps with a different capability each—tab, bot, and message extension.
 - the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
+- how to deploy your app
 
     >Each of your apps will have a capability and each has its own UI and UX:
 
