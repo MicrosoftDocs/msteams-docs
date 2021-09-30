@@ -12,9 +12,9 @@
   items:
   - name: Overview
     href: get-started/code-samples.md  
-  - name: Prerequisites
+  - name: Hello World - with JavaScript
     href: get-started/prerequisites.md
-  - name: Hello World - Your first Teams Tab
+  - name: Hello World - Build your first Teams Tab with JavaScript
     href: get-started/first-app-react.md
   - name: Build your first Bot
     href: get-started/first-app-bot.md

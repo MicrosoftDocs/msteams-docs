@@ -8,9 +8,11 @@ ms.topic: quickstart
 ms.localizationpriority: none
 ---
 
-# Build your first Microsoft Teams app
+# Create your first Microsoft Teams app
 
-Start Microsoft Teams app development by building your first app, "Hello World!". This app uses the Tab capability.
+Start Microsoft Teams app development by creating your first app, "Hello World!". This app uses the Tab capability. It follows a three-step process:
+
+:::image type="content" source="../assets/images/get-started/app-roadmap/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
 In this tutorial, you'll learn:
 
@@ -236,20 +238,9 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 
 You know how to use Toolkit to set up a tab app and run it locally. Next, let’s learn how to build a conversational chat bot with Toolkit!
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build your first Bot](../get-started/first-app-bot.md)
-
-> [!div class="nextstepaction"]
-> [Build your first Message Extension](../get-started/first-message-extension.md)
-
-> [!div class="nextstepaction"]
-> [Deploy your app in Azure](../get-started/get-started-deploy-teams-app-azure.md)
-
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [Prerequisites](prerequisites.md) | [Create your first bot app](first-app-bot.md) : **Next**|
+| **Back** : [1. Prepare to build your app](prerequisites.md) | [3. Create your first bot app](first-app-bot.md) : **Next**|
 |
 
 ## See also

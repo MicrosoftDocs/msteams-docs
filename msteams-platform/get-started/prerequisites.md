@@ -7,7 +7,33 @@ ms.date: 05/24/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
-# Prepare to build your app
+# Your first Hello World app with JavaScript
+
+Start Microsoft Teams development by building your first app - "Hello, world!" with a tab, a bot, and a message extension capability.
+
+In this tutorial, you'll learn:
+
+- how to set up a new project with Teams Toolkit.
+- how to build an app with a different capability each—tab, bot, and message extensions.
+- the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
+
+    >Each of your apps will have a capability and each has its own UI and UX:
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/all-capabilities/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
+
+It follows a three-step process:
+
+:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
+
+As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
+
+In this tutorial, you'll learn:
+
+1. [How to set up a new project with Teams Toolkit.](#create-your-tab-project)
+1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
+1. [How to run an app locally.](#build-and-run-your-app-locally-in-visual-studio-code)
+
+## Prepare to build your app
 
 Before you begin creating your first Teams app, install the tools and set up your development environment.
 
@@ -136,14 +162,12 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Hello World - Build your first app](../get-started/first-app-react.md)
-
-
 Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building! 
 
+| **<<** | **>>** |
+|:--- | ---:|
+| **Back** : [Overview](code-samples.md) | [2. Create your first tab app](first-app-react.md) : **Next**|
+|
 
 ## See also
 
