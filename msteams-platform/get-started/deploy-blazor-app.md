@@ -70,9 +70,10 @@ Deployment consists of two steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
 
-   Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  Add `/tab` to the end of the URL to see your page.
+   Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
+1. Add `/tab` to the end of the URL to see your page.
 
-   The project properties **Publish** pane shows the site URL and other details. Make a note of the site URL.
+   The project properties in the **Publish** pane of Visual Studio shows the site URL and other details. Make a note of the site URL.
 
 ## Create an environment for your app
 
@@ -98,15 +99,18 @@ The Developer Portal for Teams manages where the tabs for your app are loaded wi
 1. Select **Create your first environment variable**.
 
 1. Enter `azure_app_url` as the **Name**.  
-1. Enter your Azure site URL without the `https://` as the **Value**.
+1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the last step of the previous section [Provision and deploy your app to Azure App Service](#provision-and-deploy-your-app-to-azure-app-service)
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
 
 1. Select **Add**.
+   
+    The environment is added.
 
 ## Update the app manifest
 
 The app manifest loads the tab from a `localhost` URL. Configure the app manifest to load the tab from the URL listed in the environment you created.
+
 To update the app manifest:
 - [Update website URL](#update-website-url)
 - [Configure the tab capability](#configure-the-tab-capability)
@@ -124,6 +128,8 @@ To update the app manifest:
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
 1. Select **Save** when you've completed replacement.
+   
+    Your app is now configured to run from the URL you saved in the environment variable.
 
 ### Configure the tab capability
 
@@ -143,6 +149,8 @@ To update the app manifest:
 1. Select **Update**.
 
 1. Select **Save**.
+   
+   Your tab is configured to run from the Azure URL.
 
 ### Configure single-sign-on for your app
 
@@ -162,7 +170,7 @@ To update the app manifest:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
 
-   You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
+   You've now updated the manifest file. You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
 
 | **<<** | **>>** |
 |:--- | ---:|
