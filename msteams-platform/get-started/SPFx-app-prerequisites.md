@@ -35,11 +35,7 @@ The following tools are required for building an app:
 
 - [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release) for back-end JavaScript runtime environment
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
-
-Either one of:
-
 - [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
-- [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
 
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
@@ -48,7 +44,7 @@ Either one of:
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
 
-Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
+Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](../docs.microsoft.com/en-us/cli/azure/install-azure-cli)
@@ -58,7 +54,7 @@ Browser tools for tabs development with React:
 - [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 
 - [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
-Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data: 
+Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
 
 - [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 
@@ -155,7 +151,7 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-## Get organized
+## SharePoint Collection Site Administrator account
 
 Ensure that you have an Administrator account for a SharePoint Site Collection. You'll need this account at deployment for hosting. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 

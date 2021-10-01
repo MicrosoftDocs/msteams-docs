@@ -14,13 +14,13 @@ This tutorial walks you through the steps to create, build, and deploy a Teams a
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
-In this page, you'll learn:
+In this tutorial, you'll learn:
 - [How to set up a new project with Teams Toolkit](#create-your-project)
 - [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
 ## Create your project
 
-Use the Teams Toolkit to create your first project:
+If the prerequisites are in place, let's begin!
 
 # [Visual Studio Code](#tab/vscode)
 
@@ -49,17 +49,15 @@ Use the Teams Toolkit to create your first project:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
-1. When asked for a **Webpart Name**, press **Enter** to accept the default.
+1. Select **Enter** to accept the default **Webpart Name**.
 
-1. When asked for the **Webpart Description**, press **Enter** to accept the default.
-
-1. When asked for the **Programming Language**, press **Enter** to accept the default.
+1. Select **Enter** to accept the default **Webpart Description**.
 
 1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
 
-1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  Press **Enter** to continue.
+1. Enter a suitable name for your app, like `helloworld`. Ensure that the name of the app is alphanumeric.  Select **Enter** to continue.
 
-   Your Teams app will be created within a few seconds.
+   Your Teams app is created within a few seconds.
 
 # [Command line](#tab/cli)
 
@@ -77,7 +75,6 @@ The CLI walks through some questions to create the project. Every question inclu
 1. Select **React** framework.
 1. Press **Enter** for the **Webpart Name**.
 1. Press **Enter** for the **Webpart Description**.
-1. Press **Enter** for the **Programming Language**.
 1. Press **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
 
@@ -93,16 +90,19 @@ After project creation, you have the components to build a basic personal app. Y
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/app-project-files-spfx.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio Code.":::
 
-The Toolkit creates scaffolding for you in the project directory based on the capabilities you added. The Teams Toolkit maintains its state for your app in the `.fx` directory.  Among other items in this directory:
+The Toolkit creates scaffolding for you in the project directory for the tab capability. 
 
-- The app icons are stored as PNG files in `color.png` and `outline.png`.
-- The app manifest for publishing to Developer Portal for Teams is stored in `manifest.source.json`.
-- The settings you chose when creating the project are stored in `settings.json`.
+Among other items in this directory, the Teams Toolkit contains:
+
+- `fx`: App's state in the `.fx` directory.  
+- appPackage: contains the app icons, `color.png` and `outline.png`.
+- `manifest.source.json`: contains the app manifest for publishing to Developer Portal for Teams.
+- `settings.json`: the settings you chose when creating the project.
 
 As you selected an SPFx Webpart project, the following files are relevant to your UI:
 
-- The folder `SPFx/src/webparts/{webpart}` contains your SPFx webpart.
-- The file `.vscode/launch.json` describes the debugging configurations available in the debug palette.
+- `SPFx/src/webparts/{webpart}`: contains your SPFx webpart.
+- `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
 
 For more information about SharePoint Webparts for Teams, [see the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
