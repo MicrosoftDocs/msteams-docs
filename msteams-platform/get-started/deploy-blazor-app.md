@@ -58,7 +58,7 @@ Deployment consists of two steps:
 
     You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
 
-1. Select **Finish**when you're ready.
+1. Select **Finish** when you're ready.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
 
@@ -83,9 +83,9 @@ The Developer Portal for Teams manages where the tabs for your app are loaded wi
 1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). 
 1. Sign in with your Microsoft 365 administrative account.
 
-1. From the sidebar, select **Apps**.
+1. Find **Apps** on the sidebar and  select it.
 
-1. Select your app from the list.
+1. Select your app from the list that appears.
 
 1. Select **Environments**.
 
@@ -97,30 +97,37 @@ The Developer Portal for Teams manages where the tabs for your app are loaded wi
 
 1. Select **Create your first environment variable**.
 
-1. Enter `azure_app_url` for the **Name**.  Enter your Azure site URL without the `https://` as the **Value**.
+1. Enter `azure_app_url` as the **Name**.  
+1. Enter your Azure site URL without the `https://` as the **Value**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
 
-   
 1. Select **Add**.
 
 ## Update the app manifest
 
 The app manifest loads the tab from a `localhost` URL. Configure the app manifest to load the tab from the URL listed in the environment you created.
+To update the app manifest:
+- [Update website URL](#update-website-url)
+- [Configure the tab capability](#configure-the-tab-capability)
+- [Configure single-sign-on for your app](#configure-single-sign-on-for-your-app)
 
-1. From the sidebar, select **Basic information**.
+### Update website URL
+
+1. Select **Basic information** from the sidebar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
     There are several places in the manifest that list a `localhost:XXXXX` as part of a URL.
- 
-1. Replace all occurrences with `{{azure_app_url}}`, including the curly braces.
+1. Replace all occurrences  of `localhost:XXXXX` with `{{azure_app_url}}`, including the curly braces.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
 1. Select **Save** when you've completed replacement.
 
-1. From the sidebar, select **Capabilities**.
+### Configure the tab capability
+
+1. Select **Capabilities** from the sidebar.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
 
@@ -137,7 +144,9 @@ The app manifest loads the tab from a `localhost` URL. Configure the app manifes
 
 1. Select **Save**.
 
-1. From the sidebar, select **Single Sign-On**.
+### Configure single-sign-on for your app
+
+1. Select **Single Sign-On** from the sidebar.
 
 1. Replace the `localhost` within the **Application ID URI** with `{{azure_app_url}}`.
 

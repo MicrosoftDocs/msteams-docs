@@ -46,7 +46,7 @@ To build and run your app locally:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
-1. Teams is loaded in a web browser. 
+    Teams is loaded in a web browser.
 1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams client.
 1. Sign in with your Microsoft 365 account.
 1. Select **Add**, when prompted to install the app to Teams, .
