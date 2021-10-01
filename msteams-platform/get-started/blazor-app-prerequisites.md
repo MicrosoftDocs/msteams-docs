@@ -27,18 +27,16 @@ Before you begin creating your first Teams app, install the tools and set up you
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app. For this tutorial, you will go through Phases3 and 4 three times, for each app project.
+As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
 
 ## Install tools
 
 The following tools are required for building an app:
 
-- [Node.js](https://nodejs.org/en/download/) (use the latest v14 LTS release) for back-end JavaScript runtime environment
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
 
 Either one of:
 
-- [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
 - [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
 
 > [!WARNING]
@@ -54,12 +52,7 @@ Azure tools to access stored data, or deploy a cloud-based backend for your Team
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](//docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
-Browser tools for tabs development with React:
-
-- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 
-- [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
-
-Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data: 
+Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
 
 - [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 
