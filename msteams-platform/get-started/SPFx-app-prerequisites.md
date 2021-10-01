@@ -47,11 +47,11 @@ The following Visual Studio Code extensions and tools not required, but helpful 
 Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](../docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- [Azure CLI](/en-us/cli/azure/install-azure-cli)
 
 Browser tools for tabs development with React:
 
-- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 
+- [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
 Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
