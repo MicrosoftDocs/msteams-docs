@@ -10,7 +10,7 @@ ms.date: 11/09/2018
 
 # Build and test your C# app
 
-After you have cloned the repo for C# sample app, you can build and test the app in your local environment.
+After you have cloned the repo for C# sample app, you can build and run the app in your local environment.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 

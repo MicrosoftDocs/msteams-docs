@@ -16,7 +16,9 @@ Let's deploy the first Hello World app on Azure using Teams Toolkit.
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-3.png" alt-text="Image showing phase 3 of building an app." border="false":::
 
 In this page, you'll learn to:
+
 - [Host your app in Azure](#host-in-azure)
+- [Update the app package](update-the-app-package)
 
 ## Host in Azure
 
@@ -36,7 +38,6 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **To install Developer Portal (preview) in Teams**
 
-
 1. Select the **Apps** icon at the bottom of the left-hand bar, and search for **Developer Portal**.
 
     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
@@ -49,14 +50,13 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
-1. Select **Hello World** and select **Import**. 
-    
+1. Select **Hello World** and select **Import**.
+
     The **Hello World** app is imported in Developer Portal.
 
-**Additional configuration options in Developer Portal**
+    **Additional configuration options in Developer Portal**
 
-You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-
+    You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
@@ -84,7 +84,7 @@ After you've installed the app into Teams, you must configure it to display the 
 **To configure the app tab**
 
 1. Go to a channel in the team where you installed the sample app, and select the **'+'** button to add a new tab.
-1. Select **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to select the tab to display in this channel. 
+1. Select **Hello World** from the **Add a tab** list. A configuration dialog box is displayed that enables you to select the tab to display in this channel.
 1. Select **Save**. The `Hello World` tab is loaded with the tab.
 
     <img width="530px" alt="Screenshot of configure" src="~/assets/images/samples-hello-world-tab-configure.png" />
@@ -95,14 +95,15 @@ You can now test the bot in Teams.
 
 **To test your bot**
 
-* Select a channel in the team where you registered your app and type `@your-bot-name`. This type of message is called an **\@mention**. The bot replies to any message that you send.
+- Select a channel in the team where you registered your app and type `@your-bot-name`. This type of message is called an **\@mention**. The bot replies to any message that you send.
 
     <img width="450px" alt="Bot responses" src="~/assets/images/samples-hello-world-bot.png" />
 
 ### Test your messaging extension
 
 **To test your messaging extension**
-1. Select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed. 
+
+1. Select **...** below the input box in your conversation view. A menu with the **'Hello World'** app is displayed.
 1. Select the menu, a set of random texts is displayed. You can select one of the random texts and that is inserted into your conversation.
 
     <img width="530px" alt="Messaging extension menu" src="~/assets/images/samples-hello-world-messaging-extensions-menu1.png" />
@@ -120,5 +121,5 @@ You can now test the bot in Teams.
 
 ## See also
 
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
+- [Tutorials Overview](code-samples.md)
+- [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
