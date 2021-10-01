@@ -13,7 +13,7 @@ Walk through the steps to build a basic, real-world Teams app. The Get started a
 
 You will:
 
-- Create a Teams app with capabilities like Tabs, Bots, and Message Extension. 
+- Create a Teams app with capabilities like Tabs, Bots, and Message Extension.
 - Deploy an app locally or on the cloud.
 - Look through Code Samples to customize and configure app capabilities.
 
@@ -71,7 +71,7 @@ If you prefer using a command-line interface (CLI), see [Build your first Micros
 
 You can install only an app package. This package contains:
 - A configuration file, called manifest.
-- App icons for Teams client. 
+- App icons for Teams client.
 
 The remaining app logic and data storage are hosted elsewhere, such as Azure Web Services. While in the cloud or localhost during the development, your app accesses Teams via HTTPS.
 
@@ -79,7 +79,7 @@ The remaining app logic and data storage are hosted elsewhere, such as Azure Web
 
 ## Next step
 
-Now, let's build your fisrt app using Visual Studio Code tools with JavaScript! But first, prepare your development environment.
+Now, select the build environment you prefer and let's build your first Teams app. But first, prepare your development environment.
 
 > [!div class="nextstepaction"]
 > [Prepare to build a Teams app](prerequisites.md)
