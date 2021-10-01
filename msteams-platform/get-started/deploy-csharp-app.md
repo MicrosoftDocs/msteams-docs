@@ -49,9 +49,15 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
-1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal.
+1. Select **Hello World** and select **Import**. 
+    
+    The **Hello World** app is imported in Developer Portal.
 
-    You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md target = "_blank").
+**Additional configuration options in Developer Portal**
+
+You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app.
+
+    For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
