@@ -33,21 +33,17 @@ As you proceed through this step-by-step guide, this road-map highlights the pha
 
 The following tools are required for building an app:
 
-- A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/)
-
-Either one of:
-
-- [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
+- A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/).
+- [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET.
 
 > [!WARNING]
-> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
-
+> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS).
 
 ### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
 
-Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
+Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](//docs.microsoft.com/en-us/cli/azure/install-azure-cli)
@@ -147,7 +143,7 @@ If you can't see the option to **Upload a custom app**, or you don't have a Team
 
 If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
+Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
 | **<<** | **>>** |
 |:--- | ---:|

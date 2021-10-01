@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Deploy your first Teams app with Blazor
 
-You've learned to create, build, and run Teams app with Tab capability.The final step is to deploy your app on Azure.
+You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
 
 Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
 
@@ -38,7 +38,7 @@ Deployment consists of two steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Select the Publish operation on the project":::
 
-1. In the **Publish** window, select **Azure** and select **Next**.
+1. Select **Azure** and select **Next** in the **Publish** window.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Select Azure as the publishing target":::
 
@@ -50,11 +50,15 @@ Deployment consists of two steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Create a new instance.":::
 
-1. In the **Create App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.  When ready, select **Create**.
+    In the **Create App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.
+
+1. Select **Create** when you're ready.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Select hosting plan and subscription":::
 
-1. In the **Publish** dialog, the newly created instance has been automatically selected.  When ready, select **Finish**.
+    You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
+
+1. Select **Finish**when you're ready.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
 
@@ -76,7 +80,8 @@ The Developer Portal for Teams manages where the tabs for your app are loaded wi
 
 **To create an environment:**
 
-1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). Sign in with your Microsoft 365 administrative account.
+1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). 
+1. Sign in with your Microsoft 365 administrative account.
 
 1. From the sidebar, select **Apps**.
 
@@ -96,7 +101,8 @@ The Developer Portal for Teams manages where the tabs for your app are loaded wi
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
 
-   Press **Add**.
+   
+1. Select **Add**.
 
 ## Update the app manifest
 
@@ -106,18 +112,20 @@ The app manifest loads the tab from a `localhost` URL. Configure the app manifes
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
-1. There are several places in the manifest that list a `localhost:XXXXX` as part of a URL.  Replace all occurrences with `{{azure_app_url}}`, including the curly braces.
+    There are several places in the manifest that list a `localhost:XXXXX` as part of a URL.
+ 
+1. Replace all occurrences with `{{azure_app_url}}`, including the curly braces.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
-1. When complete, select **Save**.
+1. Select **Save** when you've completed replacement.
 
 1. From the sidebar, select **Capabilities**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
 
 1. Select **Personal Tab**.
-1. Next to the **Personal Tab**, select the triple dots, then select **Edit**.
+1. Select the triple dots next to the **Personal Tab**, and select **Edit**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Edit personal tab settings":::
 
@@ -141,7 +149,7 @@ The app manifest loads the tab from a `localhost` URL. Configure the app manifes
 
 1. Select **Add a domain**.
 
-1. If `{{azure_app_url}}` isn't listed as a valid domain, add it as a valid domain. Then, select **Add**.
+1. Verify if `{{azure_app_url}}` is listed as a valid domain. If it isn't, add it as a valid domain. Then, select **Add**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
 
@@ -149,7 +157,7 @@ The app manifest loads the tab from a `localhost` URL. Configure the app manifes
 
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [Build your first Teams app](build-spfx-app.md) | [Back to Overview](code-samples.md) : **Next**|
+| **Back** : [3. Build your first Teams app](build-blazor-teams-app.md) | [Back to Overview](code-samples.md) : **Next**|
 |
 
 ## See also

@@ -14,7 +14,7 @@ This tutorial walks you through the steps to create, run, and deploy your first 
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
-In this page, you'll learn:
+In this tutorial, you'll learn:
 - [How to set up a new project with Teams Toolkit](#create-your-project)
 - [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
@@ -56,7 +56,7 @@ You can add backend functionality by adding other ASP.NET Core controllers to yo
 
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [Blazor App Prerequisites](blazor-app-prerequisites.md) | [2. Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
+| **Back** : [1. Blazor App Prerequisites](blazor-app-prerequisites.md) | [3. Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
 |
 
 ## See also

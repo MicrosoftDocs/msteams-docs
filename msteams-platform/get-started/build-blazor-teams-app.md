@@ -42,11 +42,14 @@ To build and run your app locally:
     1. Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
 
     </details>
-1. If requested, install the self-signed SSL certificate for local debugging.
+1. Install the self-signed SSL certificate for local debugging, if requested.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
-1. Teams is loaded in a web browser. After you sign in, if you're prompted to open Microsoft Teams, select **Cancel** to remain in the browser. Sign in with your Microsoft 365 account.
-1. When prompted to install the app to Teams, select **Add**.
+
+1. Teams is loaded in a web browser. 
+1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams client.
+1. Sign in with your Microsoft 365 account.
+1. Select **Add**, when prompted to install the app to Teams, .
    Your app will now be displayed:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Screenshot of the completed app":::
@@ -63,7 +66,7 @@ To run your app in Teams, you need a Microsoft 365 development account that allo
 
 | **<<** | **>>** |
 |:--- | ---:|
-| **Back** : [1. Create your first Teams Blazor app](first-app-blazor.md) | [4. Deploy your first Teams Blazor app](deploy-blazor-app.md) : **Next**|
+| **Back** : [2. Create your first Teams Blazor app](first-app-blazor.md) | [4. Deploy your first Teams Blazor app](deploy-blazor-app.md) : **Next**|
 |
 
 ## See also
