@@ -16,11 +16,11 @@ After you have cloned the repo for C# sample app, you can build and test the app
 
 In this page, you'll learn to:
 - [Build your first app](#build-your-first-app)
-- [Run your app](#test-your-sample-app)
+- [Deploy your sample app locally](#deploy-your-sample-app-locally)
 
 ## Build your first app
 
-You can build and run the sample after it is cloned.
+You can build and run the sample after it's cloned.
 
 **To build and run the cloned sample**
 
@@ -61,7 +61,7 @@ ngrok http 44327 -host-header=localhost:44327
 1. Open your browser and go to `https://d0ac14a5.ngrok.io/hello`. This step loads your app's Hello page.
 1. Instead of the URL mentioned in Step 1, use the forwarding address displayed by `ngrok` in your console session.
     > [!NOTE]
-    > If you've used a different port during [build and run](#build-and-run-the-sample), ensure you use the same port number to setup the `ngrok` tunnel.
+    > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
     > [!TIP]
     > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
 

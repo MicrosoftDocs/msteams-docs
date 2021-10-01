@@ -26,7 +26,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
-**Update the app package**
+## Update the app package
 
 # [App Studio](#tab/AS)
 
@@ -49,27 +49,28 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
 
-1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
+1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal.
 
     You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
-## To update the credentials for your hosted app
+### Update the credentials for your hosted app
 
 The sample app requires the environment variables to be set to the values that you saved in the text file.
+ > [!NOTE]
+ > This 
 
-1. Open the `appsettings.json` file. 
-1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file. 
+1. Open the `appsettings.json` file.
+1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file.
 1. Update the **MicrosoftAppPassword** with the bot password that you saved.
 
     <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
 
     After making these changes, rebuild the app. If you're using ngrok, you can run the app locally, and if you've hosted it in Azure, redeploy the app.
 
-<a name="configureapptab"></a>
-## Configure the app tab
+### Configure the app tab
 
 After you've installed the app into Teams, you must configure it to display the content. 
 
