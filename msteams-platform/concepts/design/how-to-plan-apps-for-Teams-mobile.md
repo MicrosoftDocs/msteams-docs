@@ -10,7 +10,7 @@ ms.author: v-abirade
 
 The document provides information to help plan your app on Teams mobile. Your app users can prefer using either desktop or mobile, or both desktop and mobile. Users can prepare or groom data on desktop, but consume and share more data on the move.
 
-## Think mobile-specific strategy
+## Mobile specific strategy
 
 Use the cross-device functionality of your Teams app. It can be difficult to shift entire desktop experience on mobile. You can start with basic but high frequency scenarios. Add functionalities after you gather more insight and user feedback.
 
@@ -22,19 +22,19 @@ The following list guides to enhance Teams app experience on mobile:
 * Quick Actions: Allow users to use your app on mobile
 * Enablement: Enable users to create new app experiences and engage on mobile
 
-## Think mobile framework
+## App development stages
 
 ### Consumption: Start small
 
-While planning to build an app on mobile, you can start with the consumption experience first. The consumption experience will trigger your users to start using the app. Since the mobile world has made users habitual to scrolling for content, you might want to start with showing relevant information. Use engagement mechanisms such as notifications to inform updates.
+To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
 ### Quick actions: Companion to desktop app
-Once your users have started consuming the content on mobile, you can think about scaling your app to the next level. You can now migrate some of the actions from your desktop app or build newer actions optimized for mobile.
+After your users have started consuming the content on mobile, you can think about scaling your app to the next level. You can now migrate some of the actions from your desktop app or build newer actions optimized for mobile.
 
 ### Enablement: Self-sufficient experience on mobile
 Provide full immersive experience on mobile, either at par or above your desktop experience, if your users are engaging with your app. Make all the scenarios responsive on mobile to provide rewarding experience for your users.
 
-## Scenarios
+## Use cases
 
 ### Dashboarding and data visualization apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
@@ -50,7 +50,7 @@ You can show the following information:
 * Data visuals, maps, and infographics
 * Charts, graphs, and tables 
 
-Users can consume the information on mobile, post creating dashboards on desktop app. You can show a detailed view of any chart selected by the user. It appears as an expanded view inside your tabs or by using task modules. 
+After creating dashboards on desktop app, users can access the information using mobile. You can show a detailed view of any chart selected by the user. It appears as an expanded view inside your tabs or by using task modules. 
 
 PLACEHOLDER FOR IMAGE
 
@@ -63,28 +63,37 @@ In the second phase, you can introduce the following actions in the app on mobil
 
 The users can work on the existing charts and visuals created from the desktop experience.
 
-PLACEHOLDER FOR IMAGES
+PLACEHOLDER FOR IMAGE
 
 Enablement
 In the third phase, enable users to create content such as, charts and graphics from scratch. You can use task modules to access specific data items with detailed view.
 
-Your users should be able to modify the title, description, and insert data items to create visualizations that can be consumed and shared with the broader group in a channel or group chat. Ensure to introduce all the capabilities in your app for mobile.
+PLACEHOLDER FOR IMAGE
+
+Provide access to users to modify title, description, and insert data items to create and share visualizations in a channel or group chat. Ensure to introduce all the capabilities in your app for mobile.
 
 #### Task boarding apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
-Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks such as Planned, In Progress, completed etc., provide the filters on the top to see the grouped tasks. At this stage, the tasks are moved from one category to another only on your desktop app.
+Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks such as Planned, In Progress, completed, provide the filters on the top to see the grouped tasks. At this stage, the tasks are moved from one category to another only on your desktop app.
 
 PLACEHOLDER FOR IMAGE
 
 Quick Actions
-Users should be able to create tasks/items with the mandatory fields. Users should be able to change the board type/view. You can let the users see the tasks in detail by expanding the view. Use task modules to show the detailed view. They should be able to move around the tasks into multiple categories and share the relevant tasks with people and channels.
+
+You can provide the following app access to users:
+* Create tasks or items with the mandatory fields. 
+* Change the board type/view. 
+* Check tasks by expanding the view. 
+* Use task modules to see detailed view. 
+* Move around the tasks into multiple categories 
+* Share relevant tasks in chats and channels.
 
 PLACEHOLDER FOR IMAGE
 
 Enablement
-Enable users to add new projects and boards. You can give an option to expand the item to add all the fields. The users can now even make changes to all the details of the tasks by editing fields. This will allow them to close tasks, assign tasks and mention due dates. Here, users can also share the boards, items in channels and groups.
+Enable users to add new projects and boards. You can give an option to expand the item to add all the fields. The users can change all the details of the tasks by editing fields. It will allow them to close tasks, assign tasks and, mention due dates. Here, users can also share the boards, items in channels and groups.
 
 PLACEHOLDER FOR IMAGE
 
@@ -92,7 +101,7 @@ PLACEHOLDER FOR IMAGE
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
-Use your mobile app experience in the first phase to show the content and assets that were created on the desktop. Following items can be shown for consumption here:
+Use your mobile experience in the first phase to show the content and assets that were created on the desktop. Following items can be shown for consumption here:
 
 * Comments/Feedback
 * Zoom in/out
@@ -108,9 +117,10 @@ You can start introducing the actions such as these to the assets/documents crea
 * Adding text, shapes and quick notes
 * Moving around content 
 * Adding layers and filters
-* Delete, Undo and Redo operations 
+* Delete, Undo, and Redo operations 
 
-It is recommended that you expose actions that can be shown easily on the small screens without scrolling.
+> [!TIP]
+> You expose actions that can be shown easily on the small screens without scrolling.
 
 PLACEHOLDER FOR IMAGE
 
