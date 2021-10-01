@@ -33,12 +33,19 @@ Some common scenarios that a custom Microsoft Teams app can help with are:
 * Help users quickly look up information in another system and add the results to a conversation in Teams.
 * Trigger workflows and processes based on a conversation in Teams, preserving the context of the conversation.
 
-Before you begin, here's a quick glance at the road-map to building and deploying a Teams app.
+Before you begin, here's a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
-The [Teams developer platform](../overview.md) lets you build a custom app in three steps.
+The [Teams developer platform](../overview.md) lets you build a custom app in various build environments in addition to Teams Toolkit.
 
-:::image type="content" source="../assets/images/get-started/get-started-build-deploy-app-overview.png" alt-text="Illustration showing three basic steps to build and deploy a Teams app.":::
+:::image type="content" source="../assets/images/get-started/overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
 
+You can choose to build a Teams app from the following options:
+
+- [Teams Toolkit with JavaScript](prerequisites.md)
+- [Teams Toolkit with Blazor](blazor-app-prerequisites.md)
+- [Teams Toolkit with SharePoint Framework (SPFx)](spfx-app-prerequisites.md)
+- [C# or .NET](get-started-dotnet-app-studio.md)
+- [Node.js](get-started-nodejs-app-studio.md)
 
 ### App capabilities
 
@@ -70,10 +77,9 @@ The remaining app logic and data storage are hosted elsewhere, such as Azure Web
 
 :::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
 
-
 ## Next step
 
-Now, let's build your fisrt app using Visual Studio Code tools with JavaScript! But first, prepare your development environment. 
+Now, let's build your fisrt app using Visual Studio Code tools with JavaScript! But first, prepare your development environment.
 
 > [!div class="nextstepaction"]
 > [Prepare to build a Teams app](prerequisites.md)

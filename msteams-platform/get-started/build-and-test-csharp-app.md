@@ -40,7 +40,7 @@ You can build and run the sample after it's cloned.
 
 ## Deploy your sample app locally
 
-Microsoft Teams apps are web applications that provide one or more capabilities. Make your app available on the internet so that the Teams platform can load it. Host your app using `ngrok` to create a tunnel to the local process on your computer. 
+Microsoft Teams apps are web applications that provide one or more capabilities. Make your app available on the internet so that the Teams platform can load it. Host your app using `ngrok` to create a tunnel to the local process on your computer.
 
 After you host your app, make a note of its root URL, such as `https://yourteamsapp.ngrok.io` or `https://yourteamsapp.azurewebsites.net`.
 

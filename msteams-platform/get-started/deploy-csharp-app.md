@@ -18,7 +18,7 @@ Let's deploy the first Hello World app on Azure using Teams Toolkit.
 In this page, you'll learn to:
 
 - [Host your app in Azure](#host-in-azure)
-- [Update the app package](update-the-app-package)
+- [Update the app package](#update-the-app-package)
 
 ## Host in Azure
 

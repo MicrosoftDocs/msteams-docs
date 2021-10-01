@@ -24,7 +24,7 @@ In this tutorial, you'll learn:
 
 ## The app road-map
 
-Building an app using Teams Toolkit follows a three-step process:
+Building an app using C# follows a three-step process:
 
 Before you begin creating your first Teams app, install the tools and set up your development environment.
 
