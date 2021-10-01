@@ -12,7 +12,7 @@ keywords: teams authentication OAuth SSO AAD
 
 To access user information protected by Azure Active Directory (AAD) and to access data from services like Facebook and Twitter, the app establishes a trusted connection with those providers. If the app uses Microsoft Graph APIs in the user scope, authenticate the user to retrieve the appropriate authentication tokens.
 
-In Teams, there are two different authentication flows for the app. Perform a traditional web-based authentication flow in a [content page](~/tabs/how-to/create-tab-pages/content-page.md) embedded in a tab, a configuration page, or a task module. If the app contains a conversational bot, use the OAuthPrompt flow and optionally the Azure Bot Framework's token service to authenticate a user as part of a conversation.
+In Teams, there are two different authentication flows for the app. Perform a traditional web-based authentication flow in a [content page](~/tabs/how-to/create-tab-pages/content-page.md) embedded in a tab, a configuration page, or a task module. If the app contains a conversational bot, use the OAuthPrompt flow and optionally the Azure Bot Framework's token service to authenticate a user as part of a conversation. test pr by Habiba
 
 ## Web-based authentication flow
 
@@ -45,7 +45,7 @@ provides Bot authentication v3 SDK sample.
 
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider.
+Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider. 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
