@@ -60,6 +60,7 @@ You can configure your app using the Teams Developer Portal. The Manifest is fou
 For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
 <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+
 ---
 
 > [!NOTE]
