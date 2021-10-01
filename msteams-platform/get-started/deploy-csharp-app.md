@@ -57,9 +57,9 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app.
 
-    For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+For more information about how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+<img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
 > [!NOTE]
