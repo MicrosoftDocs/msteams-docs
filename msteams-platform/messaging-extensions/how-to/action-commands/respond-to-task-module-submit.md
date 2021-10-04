@@ -36,7 +36,7 @@ For authentication or configuration, after the user completes the process, the o
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If your app contains a conversational bot, it is necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team. For more information to install your conversational bot, see [request to install you conversational bot](~/messaging-extensions/how-to/action-commands/create-task-module.md)
+If your app contains a conversational bot, ensure that your bot is installed in the conversation before loading your task module. This is useful in situations where you need to get more context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team. For more information to install your conversational bot, see [request to install you conversational bot](~/messaging-extensions/how-to/action-commands/create-task-module.md)
 
 
 ## The submitAction invoke event
@@ -67,7 +67,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object here is shortened to highlight the most relevant fields.
+This is an example of the JSON object that you receive. The `commandContext` parameter indicates where your messaging extension was triggered from. The `data` object contains the fields on the form as parameters, and the values the user submitted. The JSON object here shows the most relevant fields.
 
 ```json
 {
@@ -188,10 +188,10 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another task module
 
-You can select to respond to the `submitAction` event with an additional task module. This is useful when:
+You can select to respond to the `submitAction` event with another task module. This is useful when:
 
 * You need to collect large amounts of information.
-* You need to dynamically change the information you are collecting based on user input.
+* You need to dynamically change the information based on user input.
 * You need to validate the information submitted by the user and resend the form with an error message if something is wrong. 
 
 The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you are using the Bot Framework SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
@@ -201,7 +201,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 > [!NOTE]
 > The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your messaging extension for your bot.
  
-You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is very useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it. 
+You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. This is useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it. 
 
 The following scenario shows how the app Polly configures a poll without including the configuration steps in the channel conversation:
 
@@ -210,7 +210,7 @@ The following scenario shows how the app Polly configures a poll without includi
 1. The user selects the messaging extension to invoke the task module.
 1. The user configures the poll with the task module.
 1. After submitting the task module, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not already a member of the channel, select `Send` to add it.
+1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app is not added in the channel, select `Send` to add it.
 
     > [!NOTE] 
     > * The users can also select to `Edit` the message, which returns them to the original task module. 
@@ -219,7 +219,7 @@ The following scenario shows how the app Polly configures a poll without includi
 
 ## Respond to initial submit action
 
-Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not already installed.
+Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -536,7 +536,7 @@ You receive a new `composeExtension/submitAction` message similar to the followi
 
 ### User attribution for bots messages 
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and showcase a more natural interaction flow. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
+In scenarios where a bot sends messages for a user, attributing the message to that user helps with engagement and showcase a more natural flow of interaction. This feature allows you to attribute a message from your bot to a user on whose behalf it was sent.
 
 In the following image, on the left is a card message sent by a bot without user attribution and on the right is a card sent by a bot with user attribution.
 
