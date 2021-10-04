@@ -8,34 +8,47 @@ ms.author: v-abirade
 ---
 # Plan for Teams mobile
 
-The document guides to build your app on Teams mobile. Your app users can prefer using either desktop or mobile, or both desktop and mobile. The users can prepare or groom data on desktop, but consume and share more data using mobile.
+ Teams platform offers oppurtunity to build apps on mobile as well as desktop. The key to build an app is to understand and meet users' needs, your app users can prefer using either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The document guides to build your apps on Teams mobile.
+
+## App identifying specific scope
 
 The following list provides the key information to plan building apps for Teams mobile:
 
-* Use the cross-device functionality of your Teams app. It can be difficult to shift entire desktop experience on mobile. You can start with basic but high frequency scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
-* Ensure to target appropriate user persona on mobile. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona with a larger base and can be early adopters for smaller screen experience.
+* Consider cross-device functionality of Teams app. For example, if you have well performing app on desktop, you can explore to build similar app on mobile. To start, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
+
+* Ensure to target appropriate user persona on mobile. For example, if you build an app to provide service to end users and also to the developers or senior management to access the information. The end users will be using the app more. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona, with a larger base and can be early adopters for smaller screen experience, in this case the end users. You can gradually add the functionalities to support the internal team and management. 
 
 ## App planning stages
 
-The following list guides to enhance Teams app experience on mobile:
+After you have identified the app scope, it is time to understand the three stages to plan any apps on Teams mobile. The following list guides to plan for creating apps and enhancing user experience on mobile:
 
-* Consumption: View app experience on mobile
-* Quick Actions: Use app on mobile
-* Enablement: Create new app experiences to engage on mobile
+* **Consumption**
 
-### Consumption: Start small
-To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
+View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
-### Quick actions: Companion to desktop app
-After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. Optimise and build new actions for mobile.
+* **Quick Actions**: 
 
-### Enablement: Be autonomous on mobile
-As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all scenarios responsive on mobile.
+Use app on mobile. After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. You can optimise and build new actions for mobile.
+
+* **Enablement**: 
+
+Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
 
 ## Use cases
 
+Let us go through use cases to understand how to plan different types of apps for Teams mobile. 
+
+<br>
+
+<details>
+
+<summary><b>Different types of apps</b></summary>
+
+[Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
+
+
 ### Dashboarding and data visualization apps
-You can plan dashboarding and data visualization domain apps on Teams mobile platform.
+You can plan dashboarding and data visualization apps on Teams mobile platform.
 
 **Consumption**
 
