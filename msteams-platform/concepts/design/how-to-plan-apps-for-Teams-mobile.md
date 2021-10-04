@@ -22,18 +22,21 @@ The following list provides the key information to plan building apps for Teams 
 
 After you have identified the app scope, it is time to understand the three stages to plan any apps on Teams mobile. The following list guides to plan for creating apps and enhancing user experience on mobile:
 
-* **Consumption**
+### Consumption
+
 View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
-* **Quick Actions**: 
+### Quick Actions
+
 Use app on mobile. After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. You can optimise and build new actions for mobile.
 
-* **Enablement**: 
+### Enablement
+
 Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
 
 ## Use cases
 
-Let us go through use cases to understand how to plan different types of apps for Teams mobile. 
+Let us go through the use cases to understand how to plan different types of apps for Teams mobile. 
 
 <br>
 
@@ -51,7 +54,7 @@ Let us go through use cases to understand how to plan different types of apps fo
 </details>
 
 ### Dashboarding and data visualization apps
-You can plan dashboarding and data visualization apps on Teams mobile platform.
+You can understand how to build plan dashboarding and data visualization apps on Teams mobile platform.
 
 **Consumption**
 
@@ -85,7 +88,7 @@ You can provide following access to users:
 PLACEHOLDER FOR IMAGE
 
 #### Task boarding apps
-You can plan building Task boarding apps on Teams mobile platform.
+You can understand how to build Task boarding apps on Teams mobile platform.
 
 **Consumption**
 Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks,such as planned, in progress, and completed then provide filters for showing grouped tasks. 
