@@ -181,4 +181,4 @@ These other design and validation guidelines to help depending on the scope of y
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
-* [Validation guidelines](../../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
