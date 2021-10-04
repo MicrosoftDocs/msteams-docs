@@ -19,7 +19,7 @@ There are two types of Teams **messaging extensions**:
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
-For this tutorial, we will create a message extension app with a *search command*. You use it to search for external data and insert the results into a message within Teams client.
+Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
@@ -117,11 +117,4 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 ## See also
 
 * [Tutorials Overview](code-samples.md) 
-* [Create an app using React](first-app-react.md)
-* [Create an app using Blazor](first-app-blazor.md)
-* [Create an app using SPFx](first-app-spfx.md)
-* [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
-* [Create an app using Node.js](get-started-nodejs-app-studio.md)
-* [Create an app using Yeoman generator](get-started-yeoman.md)
-* [Create a conversational bot app](first-app-bot.md)
 * [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

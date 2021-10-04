@@ -19,6 +19,9 @@ In this tutorial, you'll learn:
 - the structure of the app and how it's built the tab portion with SPFx.
 - how to deploy the app to SharePoint.
 
+> [!NOTE]
+> Currently, Visual Studio Code offers only the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
+
 ## The app road-map
 
 Building an app using Teams Toolkit follows a four-step process:

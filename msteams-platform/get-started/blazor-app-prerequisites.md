@@ -10,14 +10,17 @@ ms.localizationpriority: none
 
 # Your first Hello World app with Blazor
 
-Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability.
+Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
 In this tutorial, you'll learn:
 
 - how to set up a new project with Teams Toolkit.
 - how to build an app with a tab capability.
-- the structure of the app and how it's built the tab portion with Blazor.
+- the structure of the app and the tab capability.
 - how to deploy the app
+
+> [!NOTE]
+> Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
 
 ## The app road-map
 

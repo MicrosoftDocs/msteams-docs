@@ -129,6 +129,4 @@ When you add the cloud functionality, Teams Toolkit adds the necessary folders t
 ## See also
 
 - [Tutorials Overview](code-samples.md)
-- [Create a conversational bot app](first-app-bot.md)
-- [Create a messaging extension](first-message-extension.md)
 - [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

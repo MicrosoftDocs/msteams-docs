@@ -10,12 +10,12 @@ ms.localizationpriority: none
 
 # Create your first Teams app with Blazor
 
-This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor. The app that is built displays basic user information for the current user. When permission is granted, the app connects to the Microsoft Graph. It gets the complete profile of the current user.
+This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
 In this tutorial, you'll learn:
-- [How to set up a new project with Teams Toolkit](#create-your-project)
+- [How to set up a new tab project with Teams Toolkit](#create-your-project)
 - [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
 ## Create your project
@@ -23,21 +23,44 @@ In this tutorial, you'll learn:
 Use the Teams Toolkit to create your first project:
 
 1. Open Visual Studio 2019.
-
 1. Select **Create a new project**.
 
-1. Select **Microsoft Teams App**, then select **Next**.  To help find the template, use the project type **Microsoft Teams**.
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/vs-create-project.png" alt-text="Illustration shows the option to create a new project.":::
 
-1. Enter a name and select **Next**.
+1. Select **Microsoft Teams** from **All project types** dropdown list.  
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/create-new-project.png" alt-text="Illustration shows the option to select a template.":::
 
-1. Enter the application name and company name.
+1. Select **Microsoft Teams App** as the template, and select **Next**.
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/configure-new-project.png" alt-text="Illustration shows the options to configure new project.":::
+    
+    The **Configure your new project** screen appears.
 
-1. Select **Create**. The application name and company name are displayed to your end users. Your Teams app is created in a few seconds.
+1. Enter a suitable name for your project.
 
+1. Select the folder path where you want to create the project workspace.
+
+1. Select the name for the solution you're creating, and select **Next**.
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/additional-information.png" alt-text="Illustration shows the option to provide additional information.":::
+
+    The **Additional information** screen appears.
+
+1. Enter the application name.
+
+1. Enter the company name.
+   The application name and company name are displayed to your end users.
+
+1. Select **Create**. 
+    
+    Your Teams app is created in a few seconds.
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/blazor/hwb-app-created.png" alt-text="Illustration shows the app project created in Visual Studio 2019.":::
 
 ## Take a tour of the source code
 
-After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code 2019.
+After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 

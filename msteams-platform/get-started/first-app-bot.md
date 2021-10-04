@@ -113,11 +113,4 @@ Among other items in this directory structure, the Toolkit maintains:
 ## See also
 
 - [Tutorials Overview](code-samples.md)
-- [Create an app using React](first-app-react.md)
-- [Create an app using Blazor](first-app-blazor.md)
-- [Create an app using SPFx](first-app-spfx.md)
-- [Create an app using C# or .NET](get-started-dotnet-app-studio.md)
-- [Create an app using Node.js](get-started-nodejs-app-studio.md)
-- [Create an app using Yeoman generator](get-started-yeoman.md)
-- [Create a messaging extension](first-message-extension.md)
 - [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
