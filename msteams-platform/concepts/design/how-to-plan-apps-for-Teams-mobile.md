@@ -49,11 +49,11 @@ Let us go through the use cases to understand how to plan different types of app
 
 <summary><b>Dashboarding and data visualization apps</b></summary>
 
-You can understand how to build plan dashboarding and data visualization apps on Teams mobile platform.
+You can understand how to plan for dashboarding and data visualization apps on Teams mobile platform.
 
 **Consumption**
 
-In the first phase of the plan, you can implement the most basic consumption experience to view data, on the mobile. The primary purpose of any app in this domain is to show data in the form of visualizations. On your app, you can show recently viewed visualizations on desktop, or the list of all the charts authorized for the users. After creating dashboards on desktop, users can access the information using mobile. For example: You can show a detailed view of any chart selected by the user. It may appear as an expanded view inside your tabs or by using task modules.
+In the first stage, you can implement the most basic consumption experience to view data. The primary purpose of any app in this domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or the list of all the charts authorized for the users. After creating dashboards on desktop, users can access the information using mobile. For example: You can show a detailed view of any chart selected by the user. It may appear as an expanded view inside your tabs or by using task modules.
 
 You can show the following information: 
 
@@ -92,7 +92,7 @@ PLACEHOLDER FOR IMAGE
 
 <summary><b>Task boarding apps</b></summary>
 
-You can understand how to build Task boarding apps on Teams mobile platform.
+You can understand how to plan task boarding apps on Teams mobile platform.
 
 **Consumption**
 Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
@@ -127,11 +127,11 @@ PLACEHOLDER FOR IMAGE
 
 <details>
 
-<summary><b>Coauthoring and whiteboard apps</b></summary>
+<summary><b>Coauthoring and whiteboarding apps</b></summary>
 
-You can plan dashboarding and data visualization domain apps on Teams mobile platform.
+You can understand how to plan coauthoring and whiteboarding apps on Teams mobile platform.
 
-Consumption
+**Consumption**
 Use your mobile experience in the first phase to show the content and assets that were created on the desktop. Following items can be shown for consumption here:
 
 * Comments/Feedback
@@ -142,7 +142,7 @@ Continue to provide the functionally of authoring content on your desktop app.
 
 PLACEHOLDER FOR IMAGE
 
-Quick Actions
+**Quick Actions**
 You can start introducing the actions such as these to the assets/documents created from the desktop app:
 
 * Adding text, shapes and quick notes
@@ -155,39 +155,11 @@ You can start introducing the actions such as these to the assets/documents crea
 
 PLACEHOLDER FOR IMAGE
 
-Enablement
+**Enablement**
+
 In the full-fledged experience, you can allow users to create new documents for signing or create a new board for collaboration. Also, sharing of boards (both internal and guests) and admin permissions such as permitting others to edit, and so on, can be implemented in this stage. Users can pinch and zoom to navigate and add content in the mobile experience too. You can even use the JS SDK APIs to access camera and microphone.
 
 PLACEHOLDER FOR IMAGE
-
-<br>
-
-</details>
-
-<br>
-
-<details>
-
-<summary><b>Learning and training apps</b></summary>
-
-Consumption
-For the apps that provide LMS content to the users, use the mobile apps in the first phase to show the content of all types such as textual, audio, and videos. The users can search for modules, scroll through the sections, and read details like duration, tutor, overview etc. You might want to have focus on participant persona in this phase.
-
-PLACEHOLDER FOR IMAGE
-
-Quick Actions
-You can add actions for participants such as:
-
-* Like the content
-* Comment on the content
-* Save the content to view later
-* Take notes
-* Share course in a channel or group
-
-PLACEHOLDER FOR IMAGE
-
-Enablement
-You can show advanced content to engage users to participate in exercises, answer quizzes, and complete assignments as part of any training module. In this stage, a tutor or mentor views the app on mobile to see progress of participants and engage with them over comments.
 
 <br>
 
