@@ -12,7 +12,7 @@ ms.localizationpriority: none
 
 You've built your tab app. Now let's create your first bot app.
  
-The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather information, make reservations, or any other service offered using a conversational bot.
+The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
@@ -60,7 +60,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select a workspace folder. Teams Toolkit creates a folder in your workspace folder for the app project.
 
-1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
+1. Enter a suitable name for your app, like `HelloBot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
@@ -84,10 +84,10 @@ For example, use arrow keys to select an option. After you make the choice, sele
 1. Select **Bot** and deselect **Tab**.
 1. Select **Create a new bot registration**.
 1. Select **JavaScript** as the programming language.
-1. Press **Enter** to select the default workspace folder.
+1. Select **Enter** to select the default workspace folder.
 1. Enter a suitable name for your app, like `HelloBot`.  The name of the app must consist only of alphanumeric characters.
 
-After all the questions have been answered, your project is created.
+After you've answered all questions, your project is created.
 
 ---
 
@@ -97,7 +97,10 @@ After scaffolding is done, view the project directories and files in the Explore
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
-The bot code is stored in the `bot` directory. The `bot/teamsBot.js` is the main entry point for the bot.
+Among other items in this directory structure, the Toolkit maintains:
+- `bot`: The bot code is stored in the `bot` directory. 
+   
+    -  The `bot/teamsBot.js` is the main entry point for the bot.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.

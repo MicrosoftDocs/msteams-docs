@@ -60,9 +60,6 @@ Visual Studio has built-in support for app deployment to different providers, in
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
 ---
 
-> [!NOTE]
-> The following sections are conditional. Go through them only if you use App Studio to host your app in Azure.
-
 <a name="updatecredentials"></a>
 
 ### Update the credentials for your hosted app
