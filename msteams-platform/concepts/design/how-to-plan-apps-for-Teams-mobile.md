@@ -38,10 +38,10 @@ Provide complete app experiences to engage on mobile. As your users engage with 
 
 Let us go through the use cases to understand how to plan different types of apps for Teams mobile. The following list provides the different use cases:
 
-* [Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
-* [Task boarding apps](#task-boarding-apps)
-* [Coauthor and whiteboard apps](#coauthor-and-whiteboard-apps)
-* [Learning and training apps](#learning-and-training-apps)
+* Dashboarding and data visualization apps
+* Task boarding apps
+* Coauthor and whiteboard apps
+* Learning and training apps
 
 <br>
 
@@ -49,7 +49,6 @@ Let us go through the use cases to understand how to plan different types of app
 
 <summary><b>Dashboarding and data visualization apps</b></summary>
 
-### Dashboarding and data visualization apps
 You can understand how to build plan dashboarding and data visualization apps on Teams mobile platform.
 
 **Consumption**
@@ -93,7 +92,6 @@ PLACEHOLDER FOR IMAGE
 
 <summary><b>Task boarding apps</b></summary>
 
-#### Task boarding apps
 You can understand how to build Task boarding apps on Teams mobile platform.
 
 **Consumption**
@@ -123,15 +121,14 @@ Enable users' experience with the following activities:
 PLACEHOLDER FOR IMAGE
 <br>
 
-<details>
+</details>
 
 <br>
 
 <details>
 
-<summary><b>Coauthor and whiteboard apps</b></summary>
+<summary><b>Coauthoring and whiteboard apps</b></summary>
 
-### Coauthor and whiteboard apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
 
 Consumption
@@ -165,15 +162,13 @@ PLACEHOLDER FOR IMAGE
 
 <br>
 
-<details>
+</details>
 
 <br>
 
 <details>
 
 <summary><b>Learning and training apps</b></summary>
-
-### Learning and training apps
 
 Consumption
 For the apps that provide LMS content to the users, use the mobile apps in the first phase to show the content of all types such as textual, audio, and videos. The users can search for modules, scroll through the sections, and read details like duration, tutor, overview etc. You might want to have focus on participant persona in this phase.
@@ -196,4 +191,4 @@ You can show advanced content to engage users to participate in exercises, answe
 
 <br>
 
-<details>
+</details>
