@@ -95,9 +95,9 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
 1. Select **OK**.
 
-You'll be prompted to choose if you trust the Hello World solution.
+    You'll be prompted to choose if you trust the Hello World solution.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy.":::
 
 1. Verify that **Make this solution available to all sites in the organization** is selected, and select **Deploy**.
 
@@ -119,5 +119,5 @@ You'll be prompted to choose if you trust the Hello World solution.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [3. Build your first Teams SPFx app](build-spfx-app.md) | [Overview](code-samples.md) : **Next**|
+| **Back** : [Build your first Teams SPFx app](build-spfx-app.md) | [Overview](code-samples.md) : **Next**|
 |

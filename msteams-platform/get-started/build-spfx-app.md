@@ -100,5 +100,5 @@ To build and run your app locally:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [2. Create your first Teams SPFx app](first-app-spfx.md) | [4. Deploy your first Teams SPFx app](deploy-spfx-app.md) : **Next**|
+| **Back** : [Create your first Teams SPFx app](first-app-spfx.md) | [Deploy your first Teams SPFx app](deploy-spfx-app.md) : **Next**|
 |

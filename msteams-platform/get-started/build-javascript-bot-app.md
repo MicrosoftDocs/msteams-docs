@@ -122,5 +122,5 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [2. Create your first Teams bot app](first-app-bot.md) | [2. Create your first message extension app](first-message-extension.md) : **Next**|
+| **Back** : [Create your first Teams bot app](first-app-bot.md) | [Create your first message extension app](first-message-extension.md) : **Next**|
 |

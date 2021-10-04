@@ -174,5 +174,5 @@ To update the app manifest:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [3. Build your first Teams app](build-blazor-teams-app.md) | [Back to Overview](code-samples.md) : **Next**|
+| **Back** : [Build your first Teams app](build-blazor-teams-app.md) | [Back to Overview](code-samples.md) : **Next**|
 |

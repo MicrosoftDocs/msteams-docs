@@ -29,7 +29,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select **Create New Project**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
 1. Select **Create a new Teams app**.
 

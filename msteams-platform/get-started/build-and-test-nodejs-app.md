@@ -80,5 +80,5 @@ Note of the URL of your app for registering the app with Teams. You can register
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [1. Plan and Prepare](get-started-nodejs-app-studio.md) | [3. Deploy your app in Azure](deploy-nodejs-app.md) : **Next** |
+|**Back** : [Plan and Prepare](get-started-nodejs-app-studio.md) | [Deploy your app in Azure](deploy-nodejs-app.md) : **Next** |
 |

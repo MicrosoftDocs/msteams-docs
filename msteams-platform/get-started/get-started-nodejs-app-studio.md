@@ -129,5 +129,5 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Overview](code-samples.md) | [2. Build and test your app](build-and-test-csharp-app.md) : **Next** |
+|**Back** : [Overview](code-samples.md) | [Build and test your app](build-and-test-csharp-app.md) : **Next** |
 |

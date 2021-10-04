@@ -143,5 +143,5 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [2. Build and test your app](build-and-test-csharp-app.md) | [Overview](code-samples.md) : **Next** |
+|**Back** : [Build and test your app](build-and-test-csharp-app.md) | [Overview](code-samples.md) : **Next** |
 |

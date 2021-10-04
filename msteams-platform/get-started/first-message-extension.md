@@ -111,5 +111,5 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [3. Build your first bot app](build-javascript-bot-app.md) | [3. Build your first message extension app](build-javascript-msgex-app.md) : **Next**|
+| **Back** : [Build your first bot app](build-javascript-bot-app.md) | [Build your first message extension app](build-javascript-msgex-app.md) : **Next**|
 |

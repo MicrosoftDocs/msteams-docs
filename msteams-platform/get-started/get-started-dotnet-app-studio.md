@@ -112,5 +112,5 @@ The cloned repository appears in Visual Studio 2019.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Overview](code-samples.md) | [2. Build and test your app](build-and-test-csharp-app.md) : **Next** |
+|**Back** : [Overview](code-samples.md) | [Build and test your app](build-and-test-csharp-app.md) : **Next** |
 |
