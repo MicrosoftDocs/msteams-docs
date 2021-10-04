@@ -22,14 +22,13 @@ ms.author: surbhigupta
 |:-----------------:|:-----------------:|:----------------:|
 |Single Asterisk|Harsh|*Harsh*|
 |Double Asterisk|Harsh|**Harsh**|
-|Stikethrough|Harsh|~Harsh~|
 
 ## Salary Sheet
 
 | Name | Salary |
 |:-----------------|:----------------|
 |**Harsh**|15000|
-|**varsh**|15000|
+|**Varsha**|15000|
 |**Abira**|20000|
 |**Vasudha**|15000|
 |**Sreedevi**|25000|
