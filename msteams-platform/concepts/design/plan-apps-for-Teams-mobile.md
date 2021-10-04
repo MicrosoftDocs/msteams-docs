@@ -175,7 +175,7 @@ In the third stage, provide complete experience to your users. You can enable us
 
 </details>
 
-##See also
+## See also
 
 These other design and validation guidelines to help depending on the scope of your app:
 
