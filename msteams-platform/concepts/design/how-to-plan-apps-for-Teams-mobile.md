@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
 ---
-# Plan for Teams mobile
+# Plan apps for Teams mobile
 
  Teams platform offers oppurtunity to build apps on mobile as well as desktop. The key to build an app is to understand and meet users' needs, your app users can prefer using either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The document guides to build your apps on Teams mobile.
 
@@ -41,10 +41,10 @@ Let us go through use cases to understand how to plan different types of apps fo
 
 <summary><b>Different types of apps</b></summary>
 
-[Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
-[Task boarding apps](#task-boarding-apps)
-[Coauthor and whiteboard apps](#coauthor-and-whiteboard-apps)
-[Learning and training apps](#learning-and-training-apps)
+* [Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
+* [Task boarding apps](#task-boarding-apps)
+* [Coauthor and whiteboard apps](#coauthor-and-whiteboard-apps)
+* [Learning and training apps](#learning-and-training-apps)
 
 <br>
 
