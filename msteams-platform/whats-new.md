@@ -25,6 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. |[AAD Object ID and UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
 |08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). |[Input validation](/adaptive-cards/authoring-cards/input-validation), [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/09/2021|Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
@@ -176,7 +177,6 @@ Developer preview is a public program that provides early access to unreleased T
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 |05/25/2021| Updated Teams Toolkit for [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) and [Visual Studio](https://marketplace.visualstudio.com/items?itemName=msft-vsteamstoolkit.vsteamstoolkit&ssr=false#overview). | [Get started with Teams app development](~/get-started/prerequisites.md) |
-|05/25/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |05/24/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |05/21/2021|Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 
