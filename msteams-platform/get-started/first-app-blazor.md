@@ -62,15 +62,15 @@ Use the Teams Toolkit to create your first project:
 
 After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-file-layout.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/blazor-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
-The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected.
+The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, the Teams Toolkit maintains:
 
-- The app icons are stored as PNG files in `color.png` and `outline.png`.
-- The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
-- A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
+- App icons: The app icons are stored as PNG files in `color.png` and `outline.png`.
+- `manifest.json`: The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
+- `BackendController.cs`: A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
 
-As you created a tab app during project creation, the Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
+The Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
 
 - `Pages/Tab.razor` is the front-end application's entry point.
 - `TeamsFx.cs` and `JS/src/index.js` is used for initializing communications with the Teams host.

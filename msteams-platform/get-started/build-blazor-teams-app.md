@@ -49,8 +49,9 @@ To build and run your app locally:
     Teams is loaded in a web browser.
 1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams client.
 1. Sign in with your Microsoft 365 account.
-1. Select **Add**, when prompted to install the app to Teams, .
-   Your app will now be displayed:
+1. Select **Add**, when prompted to install the app to Teams.
+   
+    Your app will now be displayed:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Screenshot of the completed app":::
 
