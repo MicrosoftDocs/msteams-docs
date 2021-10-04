@@ -10,7 +10,6 @@ ms.author: surbhigupta
 
 ## Heading levels in Markdown
 
-[!div class="mx-tdBreakAll"]
 | Markdown Syntax | Output |
 |:-----------------:|:-----------------:|:----------------:|
 |#|# Heading Level 1|
@@ -19,7 +18,6 @@ ms.author: surbhigupta
 
 ## Emphasis in Markdown
 
-[!div class="mx-tdBreakAll"]
 | Markdown Syntax | Content | Output |
 |:-----------------:|:-----------------:|:----------------:|
 |Single Asterisk|Harsh|*Harsh*|
