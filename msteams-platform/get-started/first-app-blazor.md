@@ -77,12 +77,7 @@ The Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor 
 
 You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [1. Blazor App Prerequisites](blazor-app-prerequisites.md) | [3. Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

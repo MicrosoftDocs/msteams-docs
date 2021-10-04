@@ -106,12 +106,7 @@ As you selected an SPFx Webpart project, the following files are relevant to you
 
 For more information about SharePoint Webparts for Teams, [see the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [1. Prepare to build your app](spfx-app-prerequisites.md) | [3. Build your first tab app](build-spfx-app.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

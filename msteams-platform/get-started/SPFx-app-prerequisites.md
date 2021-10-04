@@ -160,12 +160,7 @@ Ensure that you have an Administrator account for a SharePoint Site Collection. 
 
 Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [Overview](code-samples.md) | [2. Create your first tab app](first-app-spfx.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

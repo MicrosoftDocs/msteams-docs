@@ -148,12 +148,7 @@ If you wish to host your app or access resources in Azure, you must have an Azur
 
 Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [Overview](code-samples.md) | [2. Create your first Blazor app](first-app-blazor.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

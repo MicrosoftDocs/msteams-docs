@@ -69,12 +69,7 @@ ngrok http 44327 -host-header=localhost:44327
 
     The paid version of `ngrok` doesn't have this limitation.
 
-|  <<  |  >>  |
+|   |   |
 |:--- | ---:|
 |**Back** : [1. Plan and Prepare](get-started-dotnet-app-studio.md) | [3. Deploy your app](deploy-csharp-app.md) : **Next** |
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

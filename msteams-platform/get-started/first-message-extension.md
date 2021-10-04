@@ -109,12 +109,7 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [3. Build your first bot app](build-javascript-bot-app.md) | [3. Build your first message extension app](build-javascript-msgex-app.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md) 
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

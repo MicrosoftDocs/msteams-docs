@@ -132,12 +132,7 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 
 You know how to use Toolkit to set up a tab app and run it locally. Next, let’s learn how to build a conversational chat bot with Toolkit!
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [2. Create your first tab app](first-app-react.md) | [2. Create your first bot app](first-app-bot.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md) 
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

@@ -105,12 +105,7 @@ Among other items in this directory structure, the Toolkit maintains:
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [Build your first Teams tab app](build-javascript-tab-app.md) | [3. Build your first bot app](build-javascript-bot-app.md) : **Next**|
 |
-
-## See also
-
-- [Tutorials Overview](code-samples.md)
-- [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

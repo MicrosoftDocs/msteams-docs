@@ -120,12 +120,7 @@ To successfully run your app in Teams, ensure that you've enabled sideloading in
 > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
 </details>
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [2. Create your first Teams bot app](first-app-bot.md) | [2. Create your first message extension app](first-message-extension.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md) 
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

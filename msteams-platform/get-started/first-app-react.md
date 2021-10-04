@@ -121,12 +121,7 @@ Among other items in this directory structure, the Toolkit maintains:
 
 When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
-| **<<** | **>>** |
+|   |   |
 |:--- | ---:|
 | **Back** : [1. Prepare to build your app](prerequisites.md) | [3. Build your first tab app](build-javascript-tab-app.md) : **Next**|
 |
-
-## See also
-
-- [Tutorials Overview](code-samples.md)
-- [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)

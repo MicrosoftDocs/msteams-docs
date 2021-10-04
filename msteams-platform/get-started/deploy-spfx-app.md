@@ -107,12 +107,7 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
 
-| **<<** | **>>** |
+|  |   |
 |:--- | ---:|
 | **Back** : [3. Build your first Teams SPFx app](build-spfx-app.md) | [Overview](code-samples.md) : **Next**|
 |
-
-## See also
-
-* [Tutorials Overview](code-samples.md)
-* [Code Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples)
