@@ -15,7 +15,9 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
    > [!NOTE]
    > There are always some Azure resources used for hosting your app.
 
-1. A dialog warns you that costs may be incurred when running resources in Azure. Select **Provision**.
+    A dialog warns you that costs may be incurred when running resources in Azure.
+
+1. Select **Provision**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-warning.png" alt-text="Screenshot of the provisioning dialog." border="false":::
 
@@ -23,11 +25,13 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-success.png" alt-text="Screenshot showing the provisioning complete dialog." border="false":::
 
-1. Once provisioning is complete, select **Deploy to the Cloud** from the **Deployment** panel. 
+1. Select **Deploy to the Cloud** from the **Deployment** panel after provisioning is complete.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud." border="false":::
 
    As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+
+Now, you can use the same process to deploy your Bot and Message Extension apps to Azure. 
 
 # [Command Line](#tab/cli)
 
@@ -59,9 +63,9 @@ In your terminal window:
 
 Once the provisioning and deployment steps are finished:
 
-1. From Visual Studio Code, open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**)
+1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
 1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-1. Press the Play button to launch your app - now running remotely from Azure!
+1. Select the Play button to launch your app - now running remotely from Azure!
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely." border="false":::
 

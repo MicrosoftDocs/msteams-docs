@@ -19,7 +19,7 @@ There are two types of Teams **messaging extensions**:
 - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
 - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
-Learn to create a message extension app with a *search command*. You use it to search for external data and insert the results into a message within Teams client.
+For this tutorial, we will create a message extension app with a *search command*. You use it to search for external data and insert the results into a message within Teams client.
 
 As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
@@ -27,7 +27,7 @@ As you've already prepared for creating these apps, you can set up a new Teams p
 
 In this tutorial, you'll learn:
 
-1. [How to set up a new project with Teams Toolkit.](#create-your-message-extension-project)
+1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project)
 1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 
 ## Create your Message Extension project
@@ -46,30 +46,32 @@ If the prerequisites are in place, let's begin!
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
-1. Then, select **Create New Project** from the dropdown menu in the Teams Toolkit.
+1. Select **Create New Project** to create an app using the Teams Toolkit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-1. In the **Select capabilities** section, select **Message Extension**, deselect **Tab**, and select **OK**.
+1. Select **Message Extension**, deselect **Tab**, and select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
-1. In the **Bot registration** section, select **Create a new bot registration**.
+1. Select **Create a new bot registration** in the **Bot registration** section.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
 
    > [!NOTE]
    > Messaging extensions rely on bots to provide a dialog between the user and your code.
 
-1. In the **Programming Language** section, select **JavaScript**.
+1. Select **JavaScript** as the programming language.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-1. Select a workspace folder.  A folder is created in your workspace folder for the project.
+1. Select a workspace folder. A folder is created in your workspace folder for the project.
 
 1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
    Teams Toolkit creates the app in a few seconds.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
 # [Command line](#tab/cli)
 

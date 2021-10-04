@@ -20,7 +20,7 @@ As you've already prepared for creating these apps, you can set up a new Teams p
 
 In this tutorial, you'll learn:
 
-1. [How to set up a new project with Teams Toolkit.](#create-your-bot-project)
+1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project)
 1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 
 > [!IMPORTANT]
@@ -42,7 +42,7 @@ If the prerequisites are in place, let's begin!
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
-1. Select **Create a new Teams app**.
+1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 

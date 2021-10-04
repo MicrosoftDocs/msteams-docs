@@ -10,12 +10,12 @@ ms.localizationpriority: none
 
 # Build your bot project
 
-After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p3.png" alt-text="Image showing phase 3 of building an app." border="false":::
 
 In this page, you'll learn to:
-- [Build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code)
+- [Build and run your first bot app](#build-and-run-your-first-bot-app-locally)
 
 ## Sign in to your Microsoft 365 account
 
@@ -63,7 +63,7 @@ Use this account to sign in to Teams. If you're using a Microsoft 365 developer 
 
 ---
 
-## Build and run your app locally in Visual Studio Code
+## Build and run your first bot app locally
 
 To build and run your app in the local environment:
 
@@ -74,7 +74,7 @@ To build and run your app in the local environment:
     <details>
     <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-    In case you're wondering, when you press the **F5** key the Teams Toolkit:
+    In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
     - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
     - *Sideloads* the app in Teams.
@@ -87,7 +87,7 @@ To build and run your app in the local environment:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-   > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
+   > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
 
     Your web browser starts to run the app.
 
