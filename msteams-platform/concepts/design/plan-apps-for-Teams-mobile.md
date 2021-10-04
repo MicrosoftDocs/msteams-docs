@@ -140,7 +140,7 @@ You can consider desktop experience in the first phase to show the content and a
 * Zoom in/out
 * Current stage/progress of a document pending for signature.
 
-PLACEHOLDER FOR IMAGE
+![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.md)
 
 **Quick Actions**
 You can introduce the following actions in this stage:
@@ -153,11 +153,11 @@ You can introduce the following actions in this stage:
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
 
-PLACEHOLDER FOR IMAGE
+![Coauthoring and whiteboarding apps quick actions](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-quick-actions.md)
 
 **Enablement**
 
-In the full-fledged experience, you can enable users' experience with the following activities:
+In this stage, provide complete experience to your users. You can enable users' experience with the following activities:
 
 * Create new documents for signing  
 * Create a new board for collaboration  
@@ -166,7 +166,7 @@ In the full-fledged experience, you can enable users' experience with the follow
 * Navigate and add content 
 * Access camera and microphone using JS SDK APIs
 
-PLACEHOLDER FOR IMAGE
+![Coauthoring and whiteboarding apps enablement](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.md)
 
 <br>
 
