@@ -34,6 +34,9 @@ Use app on mobile. After your users start consuming the content on mobile, you c
 
 Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
 
+> [!TIP]
+> To get information on the design guidelines, see [design process for Microsoft Teams apps] (/design-teams-app-process.md)
+
 ## Use cases
 
 Let us go through the use cases to understand how to plan different types of apps for Teams mobile. The following list provides the different use cases:
