@@ -8,7 +8,7 @@ ms.author: v-abirade
 ---
 # Plan apps for Teams mobile
 
- Teams platform offers oppurtunity to build apps on mobile as well as desktop. The key to build an app is to understand and meet users' needs, your app users can prefer using either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The document guides to build your apps on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. The document guides to build your apps on Teams mobile.
 
 ## Identify apps scope
 
@@ -16,33 +16,27 @@ The following list provides the key information to plan building apps for Teams 
 
 * Consider cross-device functionality of Teams app. For example, if you have well performing app on desktop, you can explore to build similar app on mobile. To start, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
 
-* Ensure to target appropriate user persona on mobile. For example, if you build an app to provide service to end users and also to the developers or senior management to access the information. The end users will be using the app more. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona, with a larger base and can be early adopters for smaller screen experience, in this case the end users. You can gradually add the functionalities to support the internal team and management. 
+* Ensure to target appropriate user persona on mobile. For example, if you build an app to provide service to end users and also to developers or senior management to access the information. The end users can use the app more. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona, with a larger base and can be early adopters for smaller screen experience, in this case the end users. You can gradually add the functionalities to support the internal team and management. 
 
 ## Understand different stages to build apps
 
-After you have identified the app scope, it is time to understand the three stages to plan any apps on Teams mobile. The following list guides to plan for creating apps and enhancing user experience on mobile:
+After you've identified the app scope, it's time to understand the three stages to plan any apps on Teams mobile. The following list guides to plan for creating apps and enhancing user experience on mobile:
 
-### Consumption
+1. **Consumption**
 
 View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
-### Quick Actions
+2. **Quick Actions**
 
-Use app on mobile. After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. You can optimise and build new actions for mobile.
+Use app on mobile. After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. You can optimize and build new actions for mobile.
 
-### Enablement
+3. **Enablement**
 
 Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
 
 ## Use cases
 
-Let us go through the use cases to understand how to plan different types of apps for Teams mobile. 
-
-<br>
-
-<details>
-
-<summary><b>Different types of apps</b></summary>
+Let us go through the use cases to understand how to plan different types of apps for Teams mobile. The following list provides the different use cases:
 
 * [Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
 * [Task boarding apps](#task-boarding-apps)
@@ -51,7 +45,9 @@ Let us go through the use cases to understand how to plan different types of app
 
 <br>
 
-</details>
+<details>
+
+<summary><b>Dashboarding and data visualization apps</b></summary>
 
 ### Dashboarding and data visualization apps
 You can understand how to build plan dashboarding and data visualization apps on Teams mobile platform.
@@ -78,20 +74,30 @@ In the second phase, the users can work on the existing charts and visuals from 
 PLACEHOLDER FOR IMAGE
 
 **Enablement**
-In the third phase, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access specific data items with detailed view.
+In the third phase, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access-specific data items with detailed view.
 
 You can provide following access to users:
 * Modify title and description
-* Insert data items to create visualisations
+* Insert data items to create visualizations
 * Share visualizations in a channel or group chat.
 
 PLACEHOLDER FOR IMAGE
+
+<br>
+
+</details>
+
+<br>
+
+<details>
+
+<summary><b>Task boarding apps</b></summary>
 
 #### Task boarding apps
 You can understand how to build Task boarding apps on Teams mobile platform.
 
 **Consumption**
-Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks,such as planned, in progress, and completed then provide filters for showing grouped tasks. 
+Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
 
 PLACEHOLDER FOR IMAGE
 
@@ -115,6 +121,15 @@ Enable users' experience with the following activities:
 * Share the boards and items in channels and groups
 
 PLACEHOLDER FOR IMAGE
+<br>
+
+<details>
+
+<br>
+
+<details>
+
+<summary><b>Coauthor and whiteboard apps</b></summary>
 
 ### Coauthor and whiteboard apps
 You can plan dashboarding and data visualization domain apps on Teams mobile platform.
@@ -148,6 +163,16 @@ In the full-fledged experience, you can allow users to create new documents for 
 
 PLACEHOLDER FOR IMAGE
 
+<br>
+
+<details>
+
+<br>
+
+<details>
+
+<summary><b>Learning and training apps</b></summary>
+
 ### Learning and training apps
 
 Consumption
@@ -169,3 +194,6 @@ PLACEHOLDER FOR IMAGE
 Enablement
 You can show advanced content to engage users to participate in exercises, answer quizzes, and complete assignments as part of any training module. In this stage, a tutor or mentor views the app on mobile to see progress of participants and engage with them over comments.
 
+<br>
+
+<details>
