@@ -63,7 +63,7 @@ You can show the following information:
 
 **Quick actions**
 
-In the second phase, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
+In the second stage, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
 
 * Search content
 * Filter data
@@ -73,12 +73,12 @@ In the second phase, the users can work on the existing charts and visuals from 
 
 **Enablement**
 
-In the third phase, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access-specific data items with detailed view.
+In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access-specific data items with detailed view.
 
 You can provide following access to users:
 * Modify title and description
 * Insert data items to create visualizations
-* Share visualizations in a channel or group chat.
+* Share visualizations in a channel or group chat
 
 ![Dashboarding and data visualization apps enablement](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
 
@@ -97,29 +97,29 @@ You can understand how to plan task boarding apps on Teams mobile platform.
 
 **Consumption**
 
-Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
+In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
 
 ![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
 **Quick actions**
 
-You can provide the following app access to users:
-* Create tasks or items with the mandatory fields. 
-* Change the board type/view. 
-* Check tasks by expanding the view. 
-* Use task modules to see detailed view. 
+In the second stage, you can provide the following app access to users:
+* Create tasks or items with the mandatory fields
+* Change the board type or view
+* Check tasks by expanding the view
+* Use task modules to see detailed view
 * Move around the tasks into multiple categories 
-* Share relevant tasks in chats and channels.
+* Share relevant tasks in chats and channels
 
 ![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
 **Enablement**
 
-You can enable users' experience with the following activities:
+In the third stage, you can enable users' experience with the following activities:
 * Add new projects and boards
 * Provide an option to expand the item to add all required fields 
 * Change details of the tasks by editing fields
-* Close and assign tasks and, mention due dates. 
+* Close and assign tasks and, mention due dates
 * Share the boards and items in channels and groups
 
 ![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
@@ -137,21 +137,21 @@ You can understand how to plan coauthoring and whiteboarding apps on Teams mobil
 
 **Consumption**
 
-You can consider desktop experience in the first phase to show the content and assets in your app.  In this stage, you can show the following functions:
+In the first stage, you can consider desktop experience in the first phase to show the content and assets in your app.  In this stage, you can show the following functions:
 
-* Comments/Feedback
-* Zoom in/out
-* Current stage/progress of a document pending for signature.
+* Comments or feedback
+* Zoom in or out
+* Current stage or progress on a pending document
 
 ![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
 **Quick Actions**
-You can introduce the following actions in this stage:
+In the second stage, you can introduce the following actions in this stage:
 
-* Adding text, shapes and quick notes
+* Adding text, shapes, and quick notes
 * Moving around content 
 * Adding layers and filters
-* Delete, Undo, and Redo operations 
+* Delete, undo, and redo operations 
 
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
@@ -160,11 +160,11 @@ You can introduce the following actions in this stage:
 
 **Enablement**
 
-In this stage, provide complete experience to your users. You can enable users' experience with the following activities:
+In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
 
 * Create new documents for signing  
 * Create a new board for collaboration  
-* Share boards internally and also with guests)  
+* Share boards internally and also with guests
 * Provide admin permissions 
 * Navigate and add content 
 * Access camera and microphone using JS SDK APIs
