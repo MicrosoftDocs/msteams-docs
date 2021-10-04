@@ -38,10 +38,6 @@ Provide complete app experiences to engage on mobile. As your users engage with 
 
 Let us go through the use cases to understand how to plan different types of apps for Teams mobile. The following list provides the different use cases:
 
-* Dashboarding and data visualization apps
-* Task boarding apps
-* Coauthor and whiteboard apps
-
 <br>
 
 <details>
@@ -60,7 +56,7 @@ You can show the following information:
 * Data visuals, maps, and infographics
 * Charts, graphs, and tables 
 
-![Dashboarding and data visualization apps](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
+![Dashboarding and data visualization apps consumption](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-consumption.png)
 
 **Quick actions**
 
@@ -70,7 +66,7 @@ In the second phase, the users can work on the existing charts and visuals from 
 * Filter data
 * Create bookmarks
 
-PLACEHOLDER FOR IMAGE
+![Dashboarding and data visualization apps quick actions](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-quick-actions.png)
 
 **Enablement**
 
@@ -81,7 +77,8 @@ You can provide following access to users:
 * Insert data items to create visualizations
 * Share visualizations in a channel or group chat.
 
-PLACEHOLDER FOR IMAGE
+![Dashboarding and data visualization apps enablement](../../assets/images/app-fundamentals/dashboarding-and-data-visualization-apps-enablement.png)
+
 
 <br>
 
@@ -99,7 +96,7 @@ You can understand how to plan task boarding apps on Teams mobile platform.
 
 Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
 
-PLACEHOLDER FOR IMAGE
+![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
 **Quick actions**
 
@@ -111,7 +108,7 @@ You can provide the following app access to users:
 * Move around the tasks into multiple categories 
 * Share relevant tasks in chats and channels.
 
-PLACEHOLDER FOR IMAGE
+![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
 **Enablement**
 
@@ -122,7 +119,7 @@ You can enable users' experience with the following activities:
 * Close and assign tasks and, mention due dates. 
 * Share the boards and items in channels and groups
 
-PLACEHOLDER FOR IMAGE
+![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
 
 </details>
