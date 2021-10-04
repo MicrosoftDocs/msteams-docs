@@ -11,12 +11,6 @@ ms.custom: scenarios:getting-started; languages:JavaScript,Node.js
 
 Start Microsoft Teams development by building your first app - "Hello, world!" with a tab, a bot, and a message extension capability.
 
-In this tutorial, you'll learn:
-
-- how to build an app with three capabilities—tab, bot, and message extension using Node.js and Visual Studio 2019.
-- how to test the app features.
-- how to deploy your app.
-
     >This app will have all capabilities and each has its own UI and UX:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
@@ -25,11 +19,15 @@ In this tutorial, you'll learn:
 
 Building an app using Teams Toolkit follows a three-step process:
 
-Before you begin creating your first Teams app, install the tools and set up your development environment.
-
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
+
+In this tutorial, you'll learn:
+
+- how to build an app with three capabilities—tab, bot, and message extension using Node.js and Visual Studio 2019.
+- how to test the app features.
+- how to deploy your app.
 
 ## Get prerequisites
 
@@ -129,7 +127,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 <a name="BuildRun"></a>
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 |**Back** : [Overview](code-samples.md) | [2. Build and test your app](build-and-test-csharp-app.md) : **Next** |
 |

@@ -10,27 +10,25 @@ ms.localizationpriority: none
 
 # Your first Hello World app with SPFx
 
-Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability.
-
-In this tutorial, you'll learn:
-
-- how to set up a new project with Teams Toolkit.
-- how to build an app with a tab capability.
-- the structure of the app and how it's built the tab portion with SPFx.
-- how to deploy the app to SharePoint.
-
-> [!NOTE]
-> Currently, Visual Studio Code offers only the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
+Start Microsoft Teams development by building your first app - "Hello World" with a tab capability.
 
 ## The app road-map
 
 Building an app using Teams Toolkit follows a four-step process:
 
-Before you begin creating your first Teams app, install the tools and set up your development environment.
-
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app. For this tutorial, you will go through Phases3 and 4 three times, for each app project.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
+
+In this tutorial, you'll learn:
+
+- how to set up a new project with Teams Toolkit.
+- how to build an app with a tab capability.
+- the structure of the app and how to build the tab capability with SPFx.
+- how to deploy the app to SharePoint.
+
+> [!NOTE]
+> Currently, Visual Studio Code offers only the Tab capability in a Teams app with SharePoint Framework. The Bot and Message Extension capabilities are not available.
 
 ## Install tools
 
@@ -160,7 +158,7 @@ Ensure that you have an Administrator account for a SharePoint Site Collection. 
 
 Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [Overview](code-samples.md) | [2. Create your first tab app](first-app-spfx.md) : **Next**|
 |

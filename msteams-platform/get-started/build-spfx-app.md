@@ -98,7 +98,7 @@ To build and run your app locally:
    > [!TIP]
    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [2. Create your first Teams SPFx app](first-app-spfx.md) | [4. Deploy your first Teams SPFx app](deploy-spfx-app.md) : **Next**|
 |

@@ -9,14 +9,7 @@ ms.localizationpriority: none
 ---
 # Your first Hello World app with JavaScript
 
-Start Microsoft Teams development by building your first app - "Hello, world!" with a tab, a bot, and a message extension capability.
-
-In this tutorial, you'll learn:
-
-- how to set up a new project with Teams Toolkit.
-- how to build three apps with a different capability each—tab, bot, and message extension.
-- the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
-- how to deploy your app
+Start Microsoft Teams development by building your first 'Hello World' Teams app. You will create three Teams apps with a tab, a bot, and a message extension capability.
 
     >Each of your apps will have a capability and each has its own UI and UX:
 
@@ -26,11 +19,16 @@ In this tutorial, you'll learn:
 
 Building an app using Teams Toolkit follows a four-step process:
 
-Before you begin creating your first Teams app, install the tools and set up your development environment.
-
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app. For this tutorial, you will go through Phases3 and 4 three times, for each app project.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on. *For this tutorial, you will go through Phases 3 and 4 three times, once for each app project.*
+
+In this tutorial, you'll learn:
+
+- how to set up a new project with Teams Toolkit.
+- how to build three apps with a different capability each—tab, bot, and message extension.
+- the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
+- how to deploy your app
 
 ## Install tools
 
@@ -47,12 +45,11 @@ Either one of:
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-
 ### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
 
-Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure: 
+Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
 - [Azure CLI](/en-us/cli/azure/install-azure-cli)
@@ -62,7 +59,7 @@ Browser tools for tabs development with React:
 - [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) 
 - [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil)
 
-Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data: 
+Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
 
 - [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
 
@@ -174,7 +171,7 @@ If you wish to host your app or access resources in Azure, you must have an Azur
 
 Now you’ve got all tools and set up your account. Next, let's set up your development environment and start building!
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [Overview](code-samples.md) | [2. Create your first tab app](first-app-react.md) : **Next**|
 |

@@ -146,7 +146,7 @@ Use the Teams Search Auth Config for sample projects on GitHub to see how to:
 > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
 </details>
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [Create your first Teams message extension app](first-message-extension.md) | [4. Deploy your app in Azure](get-started-deploy-teams-app-azure.md) : **Next**|
 |

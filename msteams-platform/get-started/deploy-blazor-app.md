@@ -172,7 +172,7 @@ To update the app manifest:
 
    You've now updated the manifest file. You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [3. Build your first Teams app](build-blazor-teams-app.md) | [Back to Overview](code-samples.md) : **Next**|
 |

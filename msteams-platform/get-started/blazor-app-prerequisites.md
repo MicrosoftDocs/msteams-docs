@@ -12,13 +12,6 @@ ms.localizationpriority: none
 
 Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
-In this tutorial, you'll learn:
-
-- how to set up a new project with Teams Toolkit.
-- how to build an app with a tab capability.
-- the structure of the app and the tab capability.
-- how to deploy the app
-
 > [!NOTE]
 > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
 
@@ -26,11 +19,16 @@ In this tutorial, you'll learn:
 
 Building an app using Teams Toolkit follows a four-step process:
 
-Before you begin creating your first Teams app, install the tools and set up your development environment.
-
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
+
+In this tutorial, you'll learn:
+
+- how to set up a new project with Teams Toolkit.
+- how to build an app with a tab capability.
+- the structure of the app and the tab capability.
+- how to deploy the app
 
 ## Install tools
 
@@ -150,5 +148,5 @@ Now you’ve got all tools and set up your accounts. Next, let's set up your dev
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Overview](code-samples.md) | [:::image type="icon" source="../assets/images/get-started/create-app-icon.png"::: Create your first Blazor app](first-app-blazor.md) : **Next**|
+| **Back** : [Overview](code-samples.md) | [Create your first Blazor app](first-app-blazor.md) : **Next**|
 |

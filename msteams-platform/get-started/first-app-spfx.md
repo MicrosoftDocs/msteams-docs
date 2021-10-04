@@ -25,9 +25,7 @@ If the prerequisites are in place, let's begin!
 # [Visual Studio Code](#tab/vscode)
 
 1. Open Visual Studio code.
-1. Select the Teams icon in the sidebar to open the Teams Toolkit.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
+1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
 1. Select **Create New Project**.
 
@@ -50,14 +48,22 @@ If the prerequisites are in place, let's begin!
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
 1. Select **Enter** to accept the default **Webpart Name**.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/webpart-name.png" alt-text="Enter Webpart name":::
 
 1. Select **Enter** to accept the default **Webpart Description**.
 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/webpart-description.png" alt-text="Enter Webpart description":::
+
 1. Select a workspace folder. The Toolkit creates a folder in the workspace folder for the project.
 
-1. Enter a suitable name for your app, like `helloworld`. Ensure that the name of the app is alphanumeric.  Select **Enter** to continue.
+1. Enter a suitable name for your app, like `HelloWorld`. Ensure that the name of the app is alphanumeric.  Select **Enter** to continue.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-name.png" alt-text="Enter SPFx app name":::
 
    Your Teams app is created within a few seconds.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-created.png" alt-text="SPFx app created":::
 
 # [Command line](#tab/cli)
 
@@ -106,7 +112,7 @@ As you selected an SPFx Webpart project, the following files are relevant to you
 
 For more information about SharePoint Webparts for Teams, [see the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [1. Prepare to build your app](spfx-app-prerequisites.md) | [3. Build your first tab app](build-spfx-app.md) : **Next**|
+| **Back** : [Prepare to build your app](spfx-app-prerequisites.md) | [Build your first tab app](build-spfx-app.md) : **Next**|
 |

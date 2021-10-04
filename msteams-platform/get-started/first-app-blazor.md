@@ -72,12 +72,12 @@ The Teams Toolkit creates a scaffolding for your project based on the capabiliti
 
 The Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
 
-- `Pages/Tab.razor` is the front-end application's entry point.
-- `TeamsFx.cs` and `JS/src/index.js` is used for initializing communications with the Teams host.
+- `Pages/Tab.razor`: is the front-end application's entry point.
+- `TeamsFx.cs` and `JS/src/index.js`: is used for initializing communications with the Teams host.
 
 You can add backend functionality by adding other ASP.NET Core controllers to your application.
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [1. Blazor App Prerequisites](blazor-app-prerequisites.md) | [3. Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
 |

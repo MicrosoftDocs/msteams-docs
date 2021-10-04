@@ -111,7 +111,7 @@ You can now test the bot in Teams.
 
     <img width="530px" alt="Messaging extension send" src="~/assets/images/samples-hello-world-messaging-extensions-send.png" />
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 |**Back** : [2. Build and test your app](build-and-test-csharp-app.md) | [Overview](code-samples.md) : **Next** |
 |

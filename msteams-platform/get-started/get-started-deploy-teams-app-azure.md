@@ -84,7 +84,7 @@ Deployment is a two-step process. You provision the resources on an active Azure
 
 </details>
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 | **Back** : [Build your first Teams Message Extension app](build-javascript-msgex-app.md) | [Back to Overview](code-samples.md) : **Next**|
 |

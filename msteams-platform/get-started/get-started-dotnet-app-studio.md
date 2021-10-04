@@ -10,13 +10,7 @@ ms.date: 11/09/2018
 
 # Create your first Teams app using C#
 
-Start Microsoft Teams development by building your first app - "Hello, world!" with a tab, a bot, and a message extension capability.
-
-In this tutorial, you'll learn:
-
-- how to build an app with three capabilities—tab, bot, and message extension using C# and Visual Studio 2019.
-- how to test the app features.
-- how to deploy your app.
+Start Microsoft Teams development by building your first app - "Hello World" with a tab, a bot, and a message extension capability.
 
     >This app will have all capabilities and each has its own UI and UX:
 
@@ -26,11 +20,15 @@ In this tutorial, you'll learn:
 
 Building an app using C# follows a three-step process:
 
-Before you begin creating your first Teams app, install the tools and set up your development environment.
-
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-As you proceed through this step-by-step guide, this road-map highlights the phase you're on. The first phase is to plan and prepare your environment for building an app.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
+
+In this tutorial, you'll learn:
+
+- how to build an app with three capabilities—tab, bot, and message extension using C# and Visual Studio 2019.
+- how to test the app features.
+- how to deploy your app.
 
 ## Get prerequisites
 
@@ -112,7 +110,7 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 The cloned repository appears in Visual Studio 2019.
 
-|   |   |
+| &nbsp; | &nbsp; |
 |:--- | ---:|
 |**Back** : [Overview](code-samples.md) | [2. Build and test your app](build-and-test-csharp-app.md) : **Next** |
 |
