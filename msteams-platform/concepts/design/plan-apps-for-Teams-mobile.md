@@ -60,7 +60,7 @@ You can show the following information:
 * Data visuals, maps, and infographics
 * Charts, graphs, and tables 
 
-![Dashboarding and data visualization apps](../../assets/images/app-fundamentals.png)
+![Dashboarding and data visualization apps](../assets/images/app-fundamentals.png)
 
 **Quick actions**
 
