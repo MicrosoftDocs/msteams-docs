@@ -174,3 +174,11 @@ In the third stage, provide complete experience to your users. You can enable us
 <br>
 
 </details>
+
+##See also
+
+These other design and validation guidelines to help depending on the scope of your app:
+
+* [Designing your tab](../../tabs/design/tabs.md)
+* [Designing you bot](../../bots/design/bots.md)
+* [Validation guidelines](../../../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
