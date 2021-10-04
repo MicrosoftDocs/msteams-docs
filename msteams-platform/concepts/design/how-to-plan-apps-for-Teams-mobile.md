@@ -41,7 +41,6 @@ Let us go through the use cases to understand how to plan different types of app
 * Dashboarding and data visualization apps
 * Task boarding apps
 * Coauthor and whiteboard apps
-* Learning and training apps
 
 <br>
 
@@ -64,6 +63,7 @@ You can show the following information:
 PLACEHOLDER FOR IMAGE
 
 **Quick actions**
+
 In the second phase, the users can work on the existing charts and visuals from desktop experience. You can introduce the following actions:
 
 * Search content
@@ -73,6 +73,7 @@ In the second phase, the users can work on the existing charts and visuals from 
 PLACEHOLDER FOR IMAGE
 
 **Enablement**
+
 In the third phase, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access-specific data items with detailed view.
 
 You can provide following access to users:
@@ -95,11 +96,13 @@ PLACEHOLDER FOR IMAGE
 You can understand how to plan task boarding apps on Teams mobile platform.
 
 **Consumption**
+
 Your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
 
 PLACEHOLDER FOR IMAGE
 
 **Quick actions**
+
 You can provide the following app access to users:
 * Create tasks or items with the mandatory fields. 
 * Change the board type/view. 
@@ -111,7 +114,8 @@ You can provide the following app access to users:
 PLACEHOLDER FOR IMAGE
 
 **Enablement**
-Enable users' experience with the following activities:
+
+You can enable users' experience with the following activities:
 * Add new projects and boards
 * Provide an option to expand the item to add all required fields 
 * Change details of the tasks by editing fields
@@ -132,18 +136,17 @@ PLACEHOLDER FOR IMAGE
 You can understand how to plan coauthoring and whiteboarding apps on Teams mobile platform.
 
 **Consumption**
-Use your mobile experience in the first phase to show the content and assets that were created on the desktop. Following items can be shown for consumption here:
+
+You can consider desktop experience in the first phase to show the content and assets in your app.  In this stage, you can show the following functions:
 
 * Comments/Feedback
 * Zoom in/out
 * Current stage/progress of a document pending for signature.
 
-Continue to provide the functionally of authoring content on your desktop app. 
-
 PLACEHOLDER FOR IMAGE
 
 **Quick Actions**
-You can start introducing the actions such as these to the assets/documents created from the desktop app:
+You can introduce the follwoing actions in this stage:
 
 * Adding text, shapes and quick notes
 * Moving around content 
@@ -151,13 +154,20 @@ You can start introducing the actions such as these to the assets/documents crea
 * Delete, Undo, and Redo operations 
 
 > [!TIP]
-> You expose actions that can be shown easily on the small screens without scrolling.
+> You expose actions, which can be shown easily on the small screens.
 
 PLACEHOLDER FOR IMAGE
 
 **Enablement**
 
-In the full-fledged experience, you can allow users to create new documents for signing or create a new board for collaboration. Also, sharing of boards (both internal and guests) and admin permissions such as permitting others to edit, and so on, can be implemented in this stage. Users can pinch and zoom to navigate and add content in the mobile experience too. You can even use the JS SDK APIs to access camera and microphone.
+In the full-fledged experience, you can enable users' experience with the following activities:
+
+* Create new documents for signing  
+* Create a new board for collaboration  
+* Share boards to internally and also with guests)  
+* Provide admin permissions 
+* Navigate and add content 
+* Access camera and microphone using JS SDK APIs
 
 PLACEHOLDER FOR IMAGE
 
