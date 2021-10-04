@@ -71,7 +71,7 @@ If the prerequisites are in place, let's begin!
 
    Teams Toolkit creates the app in a few seconds.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
 # [Command line](#tab/cli)
 
