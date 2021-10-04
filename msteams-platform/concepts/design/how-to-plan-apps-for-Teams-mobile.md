@@ -10,7 +10,7 @@ ms.author: v-abirade
 
  Teams platform offers oppurtunity to build apps on mobile as well as desktop. The key to build an app is to understand and meet users' needs, your app users can prefer using either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The document guides to build your apps on Teams mobile.
 
-## App identifying specific scope
+## Identify apps scope
 
 The following list provides the key information to plan building apps for Teams mobile:
 
@@ -18,20 +18,17 @@ The following list provides the key information to plan building apps for Teams 
 
 * Ensure to target appropriate user persona on mobile. For example, if you build an app to provide service to end users and also to the developers or senior management to access the information. The end users will be using the app more. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona, with a larger base and can be early adopters for smaller screen experience, in this case the end users. You can gradually add the functionalities to support the internal team and management. 
 
-## App planning stages
+## Understand different stages to build apps
 
 After you have identified the app scope, it is time to understand the three stages to plan any apps on Teams mobile. The following list guides to plan for creating apps and enhancing user experience on mobile:
 
 * **Consumption**
-
 View apps on mobile. To build an app on mobile, you can start with the consumption experience. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Use engagement mechanisms, such as notifications to inform updates.
 
 * **Quick Actions**: 
-
 Use app on mobile. After your users have started consuming the content on mobile, you can scale your app to the next level by migrating some of the actions from your desktop app. You can optimise and build new actions for mobile.
 
 * **Enablement**: 
-
 Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
 
 ## Use cases
@@ -45,7 +42,13 @@ Let us go through use cases to understand how to plan different types of apps fo
 <summary><b>Different types of apps</b></summary>
 
 [Dashboarding and data visualization apps](#dashboarding-and-data-visualization-apps)
+[Task boarding apps](#task-boarding-apps)
+[Coauthor and whiteboard apps](#coauthor-and-whiteboard-apps)
+[Learning and training apps](#learning-and-training-apps)
 
+<br>
+
+</details>
 
 ### Dashboarding and data visualization apps
 You can plan dashboarding and data visualization apps on Teams mobile platform.
