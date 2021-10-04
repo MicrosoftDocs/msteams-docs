@@ -91,7 +91,7 @@ For example, Use arrow keys to select an option. After you make the choice, sele
 1. Select **Create a new bot registration**.
 1. Select **JavaScript** as the programming language.
 1. Select **Enter** to select the default workspace folder.
-1. Enter a suitable name for your app, like `helloworld`.  The name of the app must consist only of alphanumeric characters.
+1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
 
    After all the questions have been answered, your project is created.
 
@@ -103,7 +103,8 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
-The bot code is stored in the `bot` directory. The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
+- `bot`: The bot code is stored in the `bot` directory. 
+    - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
