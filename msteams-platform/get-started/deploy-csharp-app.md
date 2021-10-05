@@ -30,10 +30,6 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 ## Update the app package
 
-# [App Studio](#tab/AS)
-
-[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
-
 # [Developer Portal](#tab/DP)
 
 **To install Developer Portal (preview) in Teams**
@@ -58,6 +54,11 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
     <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+
+# [App Studio](#tab/AS)
+
+[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+
 ---
 
 <a name="updatecredentials"></a>
