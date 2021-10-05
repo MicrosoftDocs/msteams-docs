@@ -285,15 +285,8 @@ The following schema sample shows all extensibility options:
       }
     ]
   },
-  "defaultBlockUntilAdminAction": {
-    "type": "boolean",
-    "description": "If set to 1, the app will be hidden by default until admin allows it",
-    "default": false
-  },
-  "publisherDocsUrl": {
-    "$ref": "#/definitions/httpsUrl",
-    "description": "The url to the page that provides information for admins to follow before enabling a default-hidden app"    
-  },
+  "defaultBlockUntilAdminAction": true,
+  "publisherDocsUrl": "https://website.com/app-info",
   "defaultInstallScope": "meetings",
   "defaultGroupCapability": {
     "meetings": "tab", 
