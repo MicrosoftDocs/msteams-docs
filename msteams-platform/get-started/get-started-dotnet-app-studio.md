@@ -129,10 +129,10 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 # [Developer Portal](#tab/DP)
 
-**To configure app package in  Developer Portal (preview) in Teams**
+**To configure app package in  Developer Portal in Teams**
 
 
-1. 1.Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 
      <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
