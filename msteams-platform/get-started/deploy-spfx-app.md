@@ -112,7 +112,7 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
 1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
 1. Select the triple-dot on the sidebar, then select **All apps**.  
-   
+
     The app will be placed in the **Apps built for your org** category. You can add the app from there.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams":::
