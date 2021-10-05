@@ -14,7 +14,7 @@ In this article, new writers can find sample contents and also list of markdown 
 
 [Get started](get-started/code-samples.md) with Teams apps.
 
-See Teams app style guide for information on how to use the styles and standards.
+See [Teams app style guide](/style-guide/welcome) for information on how to use the styles and standards.
 
 - The [list of commonly used markdown tags](#list-of-commonly-used-markdown-tags)
 - [Sample image](#sample-image)
@@ -69,6 +69,7 @@ Here are a few best practices/checklist while working with new files and tags
 
 - Add the new file to the table of contents
 - Refer to the existing source files for any detailed guidance on the style and tags to use
+- Refer to [contributors guide](/contribute) for any queries
 
 ## Next step
 
