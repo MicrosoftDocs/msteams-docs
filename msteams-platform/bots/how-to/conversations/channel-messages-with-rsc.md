@@ -28,7 +28,7 @@ The following is an example of the `webApplicationInfo` object:
 * **resource**: Any string. This field has no operation in RSC, but must be added and have a value to avoid error response.
 * **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` must be specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
-The following code provides an example of the app manifest:
+The following codes provide example of the app manifest:
 
 ```json
 "webApplicationInfo": {
@@ -36,6 +36,15 @@ The following code provides an example of the app manifest:
 "resource": "https://AnyString",
 "applicationPermissions": [
 "ChannelMessage.Read.Group"
+    ]
+  }
+```
+```json
+"webApplicationInfo": {
+"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
+"resource": "https://AnyString",
+"applicationPermissions": [
+"ChatMessage.Read.Chat"
     ]
   }
 ```
