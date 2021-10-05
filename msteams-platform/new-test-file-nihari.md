@@ -10,24 +10,23 @@ ms.localizationpriority: none
 
 # Create new test file using Visual Studio Code
 
-In this article new writers can find sample contents and also list of markdown tags that are commanly used in [Teams apps documentation](overview.md).This article also includes few best practices.
+In this article, new writers can find sample contents and also list of markdown tags that are commonly used in [Teams apps documentation](overview.md). This article also includes few best practices.
 
 [Get started](get-started/code-samples.md) with Teams apps.
 
-See [Teams app style guide](https://docs.microsoft.com/en-us/contribute/) for information on how to use the styles and standards.
+See Teams app style guide for information on how to use the styles and standards.
 
-- [Here is the complete list of tags to be used](https://docs.microsoft.com/contribute/markdown-reference)
-- Here is the [list of commanly used markdown tags](#list-of-commanly-used-markdown-tags)
+- The [list of commonly used markdown tags](#list-of-commonly-used-markdown-tags)
 - [Sample image](#sample-image)
 - Best practices
 
-## List of commanly used markdown tags
+## List of commonly used markdown tags
 
-Here are the markdown tags extensively used in Teams apps documentation:
+The list of markdown tags that are extensively used in Teams apps documentation:
 
 ### Table tag
 
-| Test column1 | This is a long test column name | Test column3              |                   |
+| Test column1 | Long test column name | Test column3              |                   |
 |--------:|----------------------------|:--------------------:|:------------------|
 |         |                            |                      |                   |
 |         |                            |                      | Test edit           |
@@ -36,6 +35,12 @@ Here are the markdown tags extensively used in Teams apps documentation:
 |         |                            |                      |                   |
 |         |                            |                      | Test edit |
 |         |                            |                      |                   |
+
+|Test column1 | Test column2 | Test column3 | Test column4 | 
+
+|----------------|-----------------|--------------|--------------|
+
+| Test edit | Test edit | Test edit | Test edit |
 
 ### Note tag
 
@@ -56,7 +61,8 @@ Here are the markdown tags extensively used in Teams apps documentation:
 
 #### csharp
 
-> ```csharp
+ ```csharp
+ ```
     public static void Log(string message)
     {
         _logger.LogInformation(message);
@@ -74,7 +80,6 @@ Here are a few best practices/checklist while working with new files and tags
 
 - Add the new file to the table of contents
 - Refer to the existing source files for any detailed guidance on the style and tags to use
-- Refer to [contributors guide](https://docs.microsoft.com/contribute) for any queries
 
 ## Next step
 
