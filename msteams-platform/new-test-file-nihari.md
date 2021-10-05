@@ -26,20 +26,8 @@ The list of markdown tags that are extensively used in Teams apps documentation:
 
 ### Table tag
 
-| Test column1 | Long test column name | Test column3              |                   |
-|--------:|----------------------------|:--------------------:|:------------------|
-|         |                            |                      |                   |
-|         |                            |                      | Test edit           |
-|         |                            |                      |                   |
-|         |                            | Test edit | but why?          |
-|         |                            |                      |                   |
-|         |                            |                      | Test edit |
-|         |                            |                      |                   |
-
 |Test column1 | Test column2 | Test column3 | Test column4 | 
-
 |----------------|-----------------|--------------|--------------|
-
 | Test edit | Test edit | Test edit | Test edit |
 
 ### Note tag
@@ -61,13 +49,14 @@ The list of markdown tags that are extensively used in Teams apps documentation:
 
 #### csharp
 
- ```csharp
- ```
+ ``` csharp
+
     public static void Log(string message)
     {
         _logger.LogInformation(message);
     }
-    ```
+
+```
 
 ## Sample image
 
