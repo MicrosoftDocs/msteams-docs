@@ -36,7 +36,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **To install Developer Portal in Teams**
 
-1. Open Microsoft Teams.
+1. Open Microsoft Teams. 
 
 1. Select the **Store** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
 
