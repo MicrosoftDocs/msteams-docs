@@ -137,7 +137,7 @@ You can understand how to plan coauthoring and whiteboarding apps on Teams mobil
 
 **Consumption**
 
-In the first stage, you can consider desktop experience in the first phase to show the content and assets in your app.  In this stage, you can show the following functions:
+In the first stage, you can consider desktop experience to show the content and assets in your app.  In this stage, you can show the following functions:
 
 * Comments or feedback
 * Zoom in or out
