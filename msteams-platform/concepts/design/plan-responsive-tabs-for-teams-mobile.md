@@ -97,19 +97,19 @@ You can understand how plan responsive tabs for task boarding apps on Teams mobi
 
 **Consumption**
 
-In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks. 
+In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks also you can show these in the form of headers to see the grouped tasks.
 
 ![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
 **Quick actions**
 
 In the second stage, you can provide the following app access to users:
-* Create tasks or items with the mandatory fields
+* Create tasks or items with the mandatory fields to reduce cognitive load on the users.
 * Change the board type or view
-* Check tasks by expanding the view
+* Review tasks by expanding the view
 * Use task modules to see detailed view
 * Move around the tasks into multiple categories 
-* Share relevant tasks in chats and channels
+* Share relevant tasks in chats and channels through emails and activity feed
 
 ![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
 
@@ -117,10 +117,8 @@ In the second stage, you can provide the following app access to users:
 
 In the third stage, you can enable users' experience with the following activities:
 * Add new projects and boards
-* Provide an option to expand the item to add all required fields 
-* Change details of the tasks by editing fields
-* Close and assign tasks and, mention due dates
-* Share the boards and items in channels and groups
+* Add and modify different categories, such as active, closed and blocked
+* Configure the tasks for comments, attachments, and other complex features.
 
 ![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
@@ -137,7 +135,7 @@ You can understand how to plan responsive tabs for coauthoring and whiteboarding
 
 **Consumption**
 
-In the first stage, you can consider desktop experience to show the content and assets in your app.  In this stage, you can show the following functions:
+In the first stage, you can consider desktop experience to show the content and assets in your app.  You can show the following functions:
 
 * Comments or feedback
 * Zoom in or out
@@ -146,12 +144,12 @@ In the first stage, you can consider desktop experience to show the content and 
 ![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
 **Quick Actions**
-In the second stage, you can introduce the following actions in this stage:
 
-* Adding text, shapes, and quick notes
-* Moving around content 
-* Adding layers and filters
-* Delete, undo, and redo operations 
+In the second stage, you can introduce the following actions:
+
+* Create new board for collaboration or new documents for signing
+* Share boards internally and also with guests
+* Configure admin permissions
 
 > [!TIP]
 > You expose actions, which can be shown easily on the small screens.
@@ -162,11 +160,10 @@ In the second stage, you can introduce the following actions in this stage:
 
 In the third stage, provide complete experience to your users. You can enable users' experience with the following activities:
 
-* Create new documents for signing  
-* Create a new board for collaboration  
-* Share boards internally and also with guests
-* Provide admin permissions 
-* Navigate and add content 
+* Adding text, shapes, and quick notes
+* Navigate around content
+* Add layers and filters
+* Delete, undo and redo operations
 * Access camera and microphone using JS SDK APIs
 
   > [!TIP]
@@ -180,7 +177,7 @@ In the third stage, provide complete experience to your users. You can enable us
 
 ## See also
 
-These other design and validation guidelines to help depending on the scope of your app:
+The following design and validation guidelines help depending on the scope of your app:
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
