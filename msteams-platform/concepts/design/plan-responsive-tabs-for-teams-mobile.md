@@ -8,13 +8,13 @@ ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bot, messaging extension, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience inside the capabilities on Teams mobile. The document guides to plan your responsive web pages on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience inside the capabilities on Teams mobile. The document guides to plan your responsive web pages on Teams mobile.
 
 ## Identify apps scope
 
 The following list provides the key information to plan building apps for Teams mobile:
 
-* Consider cross-device functionality of Teams app. For example, if you've a well functioning app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
+* Consider cross-device functionality of Teams app. For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
 
 * Ensure to target appropriate user persona on mobile. For example, if you're building an app that provides service to end users, and also provides data access to developers and senior managers. The end users can use the app more while you start to build app on Teams mobile. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona with a larger base and possible early adopters for smaller screen experience. As per the example, the end users are the appropriate user personas. You can gradually add functionalities to support other user personas on your Teams mobile. 
 
@@ -32,7 +32,7 @@ After you've identified the app scope, it's time to understand the following thr
 
 3. **Enablement**
 
-   Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide rewarding experience for your users, make all use cases responsive on mobile.
+   Provide complete app experiences to engage on mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use cases responsive on mobile.
 
 > [!TIP]
 > To get information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).
@@ -51,7 +51,7 @@ You can understand how to plan responsive tabs for dashboarding and data visuali
 
 **Consumption**
 
-In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view inside your tabs or by using task modules.
+In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using task modules.
 
 You can show the following information: 
 
@@ -73,7 +73,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 
 **Enablement**
 
-In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example: You can use task modules to help access-specific data items with detailed view.
+In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access-specific data items with detailed view.
 
 You can provide following access to users:
 * Modify title and description
@@ -93,7 +93,7 @@ You can provide following access to users:
 
 <summary><b>Task boarding apps</b></summary>
 
-You can understand how plan responsive tabs for task boarding apps on Teams mobile platform.
+You can understand how to plan responsive tabs for task boarding apps on Teams mobile platform.
 
 **Consumption**
 
@@ -104,7 +104,7 @@ In the first stage, your app can show the list of tasks to the user in a vertica
 **Quick actions**
 
 In the second stage, you can provide the following app access to users:
-* Create tasks or items with the mandatory fields to reduce cognitive load on the users.
+* Create tasks or items with the mandatory fields to reduce cognitive load on the users
 * Change the board type or view
 * Review tasks by expanding the view
 * Use task modules to see detailed view
@@ -118,7 +118,7 @@ In the second stage, you can provide the following app access to users:
 In the third stage, you can enable users' experience with the following activities:
 * Add new projects and boards
 * Add and modify different categories, such as active, closed, and blocked
-* Configure the tasks for comments, attachments, and other complex features.
+* Configure the tasks for comments, attachments, and other complex features
 
 ![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
 <br>
