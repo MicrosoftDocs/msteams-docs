@@ -44,6 +44,7 @@ $ git --version
 git version 2.17.1.windows.2
 
 ```
+
 ## Set up your Teams development tenant
 
 A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.

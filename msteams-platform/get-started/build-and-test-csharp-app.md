@@ -10,7 +10,7 @@ ms.date: 11/09/2018
 
 # Build and test your C# app
 
-After you have cloned the repo for C# sample app, you can build and run the app in your local environment.
+After you've cloned the repo for C# sample app, you can build and run the app in your local environment.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
@@ -25,15 +25,32 @@ You can build and run the sample after it's cloned.
 **To build and run the cloned sample**
 
 1. Open the solution file **Microsoft.Teams.Samples.HelloWorld.sln** from the **Microsoft-Teams-Samples/samples/app-hello-world/csharp** directory of the sample.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
+
 1. Select **Build Solution** from the **Build** menu.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::
+
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
     When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
 
     - `https://localhost:44327/`
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="false":::
+        
     - `https://localhost:44327/hello`
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="false":::
+        
     - `https://localhost:44327/first`
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="false":::
+        
     - `https://localhost:44327/second`
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="false":::
 
     > [!Note]
     > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).
@@ -54,7 +71,7 @@ After you install `ngrok`, open a new terminal window and run the following comm
 ngrok http 44327 -host-header=localhost:44327
 ```
 
-`Ngrok` responds to requests from the internet and routes them to your app running on port 44327. 
+`Ngrok` responds to requests from the internet and routes them to your app running on port 44327.
 
 ### To verify the response
 
