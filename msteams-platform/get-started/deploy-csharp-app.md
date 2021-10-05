@@ -26,8 +26,6 @@ Microsoft Azure hosts your .NET application on a free tier. It uses shared infra
 
 Visual Studio has built-in support for app deployment to different providers, including Azure:
 
-:::image type="content" source="../assets/teams-toolkit-v2/
-
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
 ## Update the app package
