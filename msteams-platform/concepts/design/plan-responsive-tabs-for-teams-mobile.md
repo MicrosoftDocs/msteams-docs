@@ -6,9 +6,9 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-abirade
 ---
-# Plan apps for Teams mobile
+# Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. The document guides to build your apps on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop, but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilites like bot, messaging extension and connectors that work out-of-the-box on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience inside these capabilites on Teams mobile. The document guides to plan your reponsive web pages on Teams mobile.
 
 ## Identify apps scope
 
@@ -16,7 +16,7 @@ The following list provides the key information to plan building apps for Teams 
 
 * Consider cross-device functionality of Teams app. For example, if you have well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
 
-* Ensure to target appropriate user persona on mobile. For example, if you build an app to provide service to end users, and provide data access to developers or senior managers. The end users can use the app more. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona with a larger base and can be early adopters for smaller screen experience, in this case the end users. You can gradually add the functionalities to support the internal team and management. 
+* Ensure to target appropriate user persona on mobile. For example, if you are building an app that provides service to end users, and also provides data access to developers and senior managers. The end users can use the app more while you start to build app on Teams mobile. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona with a larger base and possible early adopters for smaller screen experience, in this case, the end users. You can gradually add functionalities to support other user personas on your Teams mobile app. 
 
 ## Understand different stages to build apps
 
@@ -47,11 +47,11 @@ Let us go through the following use cases to understand how to plan different ty
 
 <summary><b>Dashboarding and data visualization apps</b></summary>
 
-You can understand how to plan for dashboarding and data visualization apps on Teams mobile platform.
+You can understand how to plan responsive tabs for dashboarding and data visualization apps on Teams mobile platform.
 
 **Consumption**
 
-In the first stage, you can implement the most basic consumption experience to view data. The primary purpose of any app in this domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or the list of all the charts authorized for the users. After creating dashboards on desktop, users access the information using mobile. For example: A detailed view of any chart, an expanded view inside tabs or by using task modules. 
+In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view inside your tabs or by leveraging task modules.
 
 You can show the following information: 
 
@@ -93,7 +93,7 @@ You can provide following access to users:
 
 <summary><b>Task boarding apps</b></summary>
 
-You can understand how to plan task boarding apps on Teams mobile platform.
+You can understand how plan responsive tabs for task boarding apps on Teams mobile platform.
 
 **Consumption**
 
@@ -133,7 +133,7 @@ In the third stage, you can enable users' experience with the following activiti
 
 <summary><b>Coauthoring and whiteboarding apps</b></summary>
 
-You can understand how to plan coauthoring and whiteboarding apps on Teams mobile platform.
+You can understand how to plan responsive tabs for coauthoring and whiteboarding apps on Teams mobile platform.
 
 **Consumption**
 
@@ -169,6 +169,9 @@ In the third stage, provide complete experience to your users. You can enable us
 * Navigate and add content 
 * Access camera and microphone using JS SDK APIs
 
+  > [!TIP]
+  > For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md)
+
 ![Coauthoring and whiteboarding apps enablement](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
 
 <br>
@@ -181,4 +184,5 @@ These other design and validation guidelines to help depending on the scope of y
 
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing you bot](../../bots/design/bots.md)
+* [Design task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
