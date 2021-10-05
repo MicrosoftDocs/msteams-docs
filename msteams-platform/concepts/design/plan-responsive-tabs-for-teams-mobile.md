@@ -8,7 +8,7 @@ ms.author: v-abirade
 ---
 # Plan responsive tabs for Teams mobile
 
- Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience inside the capabilities on Teams mobile. The document guides to plan your responsive web pages on Teams mobile.
+ Teams platform offers opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet users' needs. There are capabilities like bots, messaging extensions, and connectors that work seamlessly on desktop and mobile. However, building tabs and task modules require planning for hosting your web experience on Teams mobile. The document guides to plan your responsive web pages on Teams mobile.
 
 ## Identify apps scope
 
@@ -16,7 +16,7 @@ The following list provides the key information to plan building apps for Teams 
 
 * Consider cross-device functionality of Teams app. For example, if you've a well performing app on desktop, you can explore to build similar app on mobile. Initially, it can be difficult to shift entire desktop experience on mobile. You can start with basic but common scenarios. Add functionalities and capabilities after you gather more insight and user feedback.
 
-* Ensure to target appropriate user persona on mobile. For example, if you're building an app that provides service to end users, and also provides data access to developers and senior managers. The end users can use the app more while you start to build app on Teams mobile. You can cater to all the personas that you have on your desktop app. However, it's recommended to start with persona with a larger base and possible early adopters for smaller screen experience. As per the example, the end users are the appropriate user personas. You can gradually add functionalities to support other user personas on your Teams mobile. 
+* Ensure to target appropriate user persona on mobile. For example, if you're building an app that provides service to end users, and also provides data access to developers and senior managers, then the end users can use the app more while you start to build app on Teams mobile. You can cater to all the personas that you have on your desktop app however, it's recommended to start with persona with a larger base and possible early adopters for smaller screen experience. As per the example, the end users are the appropriate user personas. You can gradually add functionalities to support other user personas on your Teams mobile. 
 
 ## Understand different stages to build apps
 
@@ -73,7 +73,7 @@ In the second stage, the users can work on the existing charts and visuals from 
 
 **Enablement**
 
-In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access-specific data items with detailed view.
+In the third stage, enable users to create content such as, charts and graphics from scratch. Ensure to introduce all the capabilities in your app for mobile. For example, you can use task modules to help access specific data items with detailed view.
 
 You can provide following access to users:
 * Modify title and description
@@ -97,18 +97,18 @@ You can understand how to plan responsive tabs for task boarding apps on Teams m
 
 **Consumption**
 
-In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as planned, in progress, and completed then provide filters for showing grouped tasks or as headers to see the grouped tasks.
+In the first stage, your app can show the list of tasks to the user in a vertical stack. If there are multiple categories of tasks, such as **Proposed**, **Active**, and **Closed** then provide filters for showing grouped tasks or as headers to see the grouped tasks.
 
 ![Task boarding apps consumption](../../assets/images/app-fundamentals/taskboarding-apps-consumption.png)
 
 **Quick actions**
 
 In the second stage, you can provide the following app access to users:
-* Create tasks or items with the mandatory fields to reduce cognitive load on the users
+* Create tasks or items with the mandatory fields to reduce cognitive load of the users
 * Change the board type or view
 * Review tasks by expanding the view
 * Use task modules to see detailed view
-* Move around the tasks into multiple categories 
+* Move the tasks into different categories 
 * Share relevant tasks in chats and channels through emails and activity feed
 
 ![Task boarding apps quick actions](../../assets/images/app-fundamentals/taskboarding-apps-quick-actions.png)
@@ -117,7 +117,7 @@ In the second stage, you can provide the following app access to users:
 
 In the third stage, you can enable users' experience with the following activities:
 * Add new projects and boards
-* Add and modify different categories, such as active, closed, and blocked
+* Add and modify different categories, such as **Proposed**, **Active**, and **Closed**
 * Configure the tasks for comments, attachments, and other complex features
 
 ![Task boarding apps enablement](../../assets/images/app-fundamentals/taskboarding-apps-enablement.png)
@@ -139,7 +139,7 @@ In the first stage, you can consider desktop experience to show the content and 
 
 * Comments or feedback
 * Zoom in or out
-* Current stage or progress on a pending document
+* Current stage or progress of a pending document
 
 ![Coauthoring and whiteboarding apps consumption](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-consumption.png)
 
@@ -166,8 +166,8 @@ In the third stage, provide complete experience to your users. You can enable us
 * Delete, undo, and redo operations
 * Access camera and microphone using JS SDK APIs
 
-  > [!TIP]
-  > For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md)
+   > [!TIP]
+   > For more information on device capabilities, see [device capabilities overview](../device-capabilities/device-capabilities-overview.md).
 
 ![Coauthoring and whiteboarding apps enablement](../../assets/images/app-fundamentals/coauthoring-and-whiteboarding-apps-enablement.png)
 
