@@ -26,15 +26,21 @@ Microsoft Azure hosts your .NET application on a free tier. It uses shared infra
 
 Visual Studio has built-in support for app deployment to different providers, including Azure:
 
+:::image type="content" source="../assets/teams-toolkit-v2/
+
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
 ## Update the app package
 
 # [Developer Portal](#tab/DP)
 
-**To install Developer Portal (preview) in Teams**
+**To install Developer Portal in Teams**
 
-1. Select the **Apps** icon at the bottom of the left-hand bar, and search for **Developer Portal**.
+1. Open Microsoft Teams.
+
+1. Select the **Store** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
+
+1. Search for **Dev Portal** in the search bar, and select **Dev Portal (Int)***.
 
     <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
 
