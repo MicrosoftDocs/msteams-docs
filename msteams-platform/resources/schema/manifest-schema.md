@@ -414,7 +414,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Optional**—HTML Hex color code
+**Required**—HTML Hex color code
 
 A color to use and as a background for your outline icons.
 
