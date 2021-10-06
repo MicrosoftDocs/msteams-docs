@@ -21,33 +21,34 @@ In this page, you'll learn to:
 
 After the repository is cloned, you can build the sample app.
 
-1. Run the change directory command in terminal to change the directory to the sample:
+1. Open a terminal window.
+1. Run the change directory command in the terminal to change to the sample app directory :
 
     ```bash
     cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
     ```
 
-1. In build the sample, install all its dependencies using the following command:
+1. Install all dependencies using the following command:
 
     ```bash
     npm install
     ```
 
-    You should see a bunch of dependencies getting installed. 
+    You should see a bunch of dependencies getting installed.
 
-1. Run the app using the following command, after installation is complete:
+1. Run the app using the following command after installation is complete:
 
     ```bash
     npm start
     ```
 
-    When the hello-world app starts, it displays `App started listening on port 3333` in the terminal window.
+    When the Hello World app starts, it displays `App started listening on port 3333` in the terminal window.
 
     > [!NOTE]
     > If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
     > change your environment variable to 3333.
 
-    At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
+1. Open a browser window and use to the following URLs to verify that all the Hello World app URLs are loading:
 
     - `http://localhost:3333`
         
@@ -84,7 +85,7 @@ After you install ngrok, you can create a tunnel to deploy your app locally.
     ngrok http 3333 -host-header=localhost:3333
     ```
 
-    *Ngrok* will listen to requests from the internet and will route them to your app running on port 3333.
+    *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
 
 To verify the app's local deployment:
 
