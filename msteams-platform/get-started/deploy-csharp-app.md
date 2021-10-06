@@ -32,7 +32,7 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 # [Developer Portal](#tab/DP)
 
-**To install Developer Portal in Teams**
+**To upload Hello World app to Developer Portal in Teams**
 
 1. Open Microsoft Teams.
 
