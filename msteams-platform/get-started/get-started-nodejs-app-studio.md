@@ -91,7 +91,7 @@ Verify if you can sideload apps in Teams:
 > [!NOTE]
 > If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
-### Create a free Teams developer tenant (optional)
+### Create a free Teams developer tenant
 
 If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
 

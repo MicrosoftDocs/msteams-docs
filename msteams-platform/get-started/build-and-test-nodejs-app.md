@@ -19,38 +19,42 @@ In this page, you'll learn to:
 
 ## Build and run the sample
 
-After the repository is cloned, run the change directory command in terminal to change the directory to the sample:
+After the repository is cloned, you can build the sample app.
 
-```bash
-cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
-```
+1. Run the change directory command in terminal to change the directory to the sample:
 
-In build the sample, install all its dependencies using the following command:
+    ```bash
+    cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
+    ```
 
-```bash
-npm install
-```
+1. In build the sample, install all its dependencies using the following command:
 
-You should see a bunch of dependencies getting installed. After installation you can run the app with the following command:
+    ```bash
+    npm install
+    ```
 
-```bash
-npm start
-```
+    You should see a bunch of dependencies getting installed. 
 
-When the hello-world app starts, it displays `App started listening on port 3333` in the terminal window.
+1. Run the app using the following command, after installation is complete:
 
-> [!NOTE]
-> If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
-> change your environment variable to 3333.
+    ```bash
+    npm start
+    ```
 
-At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
+    When the hello-world app starts, it displays `App started listening on port 3333` in the terminal window.
 
-- `http://localhost:3333`
-- `http://localhost:3333/hello`
-- `http://localhost:3333/first`
-- `http://localhost:3333/second`
+    > [!NOTE]
+    > If you see a different port number displayed in the message above, it is because you have a PORT environment variable set. You can continue to use that port or
+    > change your environment variable to 3333.
 
-<a name="HostSample"></a>
+    At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
+
+    - `http://localhost:3333`
+    - `http://localhost:3333/hello`
+    - `http://localhost:3333/first`
+    - `http://localhost:3333/second`
+
+        <a name="HostSample"></a>
 
 ## Deploy your sample app
 
@@ -71,7 +75,8 @@ ngrok http 3333 -host-header=localhost:3333
 > [!TIP]
 > It is a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The *ngrok* session will return useful debugging information in this window.
 
-The paid version of *ngrok* allows persistent names. 
+The paid version of *ngrok* allows persistent names.
+
 If you use the free version, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
 Note of the URL of your app for registering the app with Teams. You can register the app using App studio or Developer Portal.
