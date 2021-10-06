@@ -34,21 +34,27 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **To install Developer Portal in Teams**
 
-1. Open Microsoft Teams. 
+1. Open Microsoft Teams.
 
 1. Select the **Store** :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
 
 1. Search for **Dev Portal** in the search bar, and select **Dev Portal (Int)***.
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+   :::image type="content" source="../assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
 
-1. Select **Developer Portal** and select **Open**.
+1. Select **Open**.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/open-dev-portal.png" alt-text="Image showing open Developer Portal app" border="false":::
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    The Developer Portal opens.
 
-1. Select the Apps tab and select **Import an existing app**.
+1. Select the **Apps** tab.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    :::image type="content" source="../assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="false":::
+
+1. Select **Import an existing app**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
 1. Select **Hello World** and select **Import**.
 
@@ -57,7 +63,8 @@ Visual Studio has built-in support for app deployment to different providers, in
     **Additional configuration options in Developer Portal**
 
     You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/configured-tdp.png" alt-text="Image showing configured tdp" border="false":::
 
 # [App Studio](#tab/AS)
 
