@@ -50,11 +50,22 @@ After the repository is cloned, you can build the sample app.
     At this point, you can open a browser window and navigate to the following URLs to verify that all the app URLs are loading:
 
     - `http://localhost:3333`
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host.png" alt-text="Image showing Node.js local host" border="false":::
+    
     - `http://localhost:3333/hello`
+    
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-hello-nodejs.png" alt-text="Image showing Node.js local host hello page" border="false":::
+        
     - `http://localhost:3333/first`
+    
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-first-nodejs.png" alt-text="Image showing Node.js local host first tab" border="false":::
+
     - `http://localhost:3333/second`
 
-        <a name="HostSample"></a>
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
+
+<a name="HostSample"></a>
 
 ## Deploy your sample app
 
@@ -62,13 +73,29 @@ Remember that apps in Microsoft Teams are web applications exposing one or more 
 
 For local testing, you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok*, you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
 
-After you install it, open a new terminal window. Run the following command to create a tunnel. The sample uses port 3333, so use that value:
+### Create an ngrok tunnel
 
-```bash
-ngrok http 3333 -host-header=localhost:3333
-```
+After you install ngrok, you can create a tunnel to deploy your app locally.
 
-*Ngrok* will listen to requests from the internet and will route them to your app running on port 3333. You can verify by opening your browser and going to `https://d0ac14a5.ngrok.io/hello` to load your app's hello page. Ensure that you use the forwarding address displayed by *ngrok* in your console session instead of this URL.
+1. Open a new terminal window.
+1. Run the following command to create a tunnel. The sample app uses port 3333:
+
+    ```bash
+    ngrok http 3333 -host-header=localhost:3333
+    ```
+
+    *Ngrok* will listen to requests from the internet and will route them to your app running on port 3333.
+
+To verify the app's local deployment:
+
+1. Opening your browser.
+1. Load your app using the following URL:
+    
+    `https://<forwarding address in ngrok console session>/hello`
+
+    Here's an example of the URL:
+
+    `https://d0ac14a5.ngrok.io/hello`
 
 > [!NOTE]
 > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
@@ -79,7 +106,7 @@ The paid version of *ngrok* allows persistent names.
 
 If you use the free version, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
-Note of the URL of your app for registering the app with Teams. You can register the app using App studio or Developer Portal.
+Note the URL of your app for registering the app with Teams. You can register the app using App studio or Developer Portal.
 
 <a name="DeployToTeams"></a>
 
