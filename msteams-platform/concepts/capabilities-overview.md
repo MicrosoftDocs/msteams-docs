@@ -52,7 +52,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | Custom messaging extensions | ❌ | ❌ | ❌ |
 | Custom connectors | ❌ | ❌ | ❌ |
 
-The following list helps to identify availability of GCC, GCC-High, and DOD for the features:
+The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
