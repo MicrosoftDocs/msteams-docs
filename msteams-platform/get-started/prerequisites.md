@@ -52,7 +52,7 @@ The following Visual Studio Code extensions and tools not required, but helpful 
 Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
 
 - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](/en-us/cli/azure/install-azure-cli)
+- [Azure CLI](../docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 Browser tools for tabs development with React:
 
