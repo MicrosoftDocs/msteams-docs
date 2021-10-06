@@ -72,7 +72,6 @@ To register your app with Teams, you need:
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 ---
-<a name="updatecredentials"></a>
 
 ## Update the credentials for your hosted app
 
