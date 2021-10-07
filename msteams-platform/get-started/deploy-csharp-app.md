@@ -28,9 +28,14 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 <img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
 
-## Update the app package
+## Upload the app package in Developer Portal
 
-# [Developer Portal](#tab/DP)
+You can use Developer Portal to upload the app package.
+
+[Developer Portal](https://dev.teams.microsoft.com/) is a Teams app that simplifies the creation and registration of an app. Install from the Teams store.
+
+You could use [App Studio](deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
+
 
 **To upload Hello World app to Developer Portal in Teams**
 
@@ -81,12 +86,6 @@ To view the app manifest:
     **Additional configuration options in Developer Portal**
 
     For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-
-# [App Studio](#tab/AS)
-
-[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
-
----
 
 <a name="updatecredentials"></a>
 
