@@ -100,16 +100,20 @@ conceptualContent:
         - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
           itemType: overview
           text: Webhooks and connectors
-        - url: /microsoftteams/platform/concepts/authentication/authentication.md
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
+          itemType: overview
+          text: Apps for Teams meetings
+        - url: /microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings
           itemType: concept
-          text: Authenticate users
+          text: Cards and task modules
+
 
    # Card
     - title: Explore
       links:
-        - url: /microsoftteams/platform/concepts/capabilities-overview
-          itemType: overview
-          text: Teams app capabilities
+        - url: /microsoftteams/platform/concepts/authentication/authentication.md
+          itemType: concept
+          text: Authenticate users
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
@@ -130,9 +134,6 @@ conceptualContent:
     # Card
     - title: Integrate
       links:
-        - url:  /microsoftteams/platform/samples/integrating-web-apps
-          itemType: concept
-          text: Integrate web apps
         - url: /microsoftteams/platform/bots/how-to/add-power-virtual-agents-bot-to-teams
           itemType: how-to-guide
           text: Integrate a Power Virtual Agents chatbot
