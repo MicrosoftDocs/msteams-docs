@@ -11,7 +11,7 @@ ms.localizationpriority: none
 
 Start Microsoft Teams development by building your first 'Hello World' Teams app. You will create three Teams apps with a tab, a bot, and a message extension capability.
 
->Each of your apps will have a capability and each has its own UI and UX:
+>Each of your "Hello world" apps will have a capability, which comes with its own UI and UX: 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
