@@ -106,7 +106,7 @@ conceptualContent:
       links:
         - url: /microsoftteams/platform/concepts/capabilities-overview
           itemType: overview
-          text: Teams app capabilities
+          text: Teams app capabilitie
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
