@@ -68,16 +68,16 @@ You can configure your app using the Teams Developer Portal. You can use the Man
 
 To view the app manifest:
 
-1. Select **Publish** from the left panel to open the dropdown menu.
-        
+1. Select **Publish** from the left panel to open the dropdown list.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
-        
-1. Select *App package**.
-        
+
+1. Select **App package**.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
-        
+
     The manifest file appears on the right pane.
-             
+
     **Additional configuration options in Developer Portal**
 
     For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
