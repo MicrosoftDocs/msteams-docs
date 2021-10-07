@@ -60,9 +60,28 @@ Visual Studio has built-in support for app deployment to different providers, in
 
     The **Hello World** app is imported in Developer Portal.
 
+    :::image type="content" source="../assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
+
+### View the app manifest file
+    
+    You can configure your app using the Teams Developer Portal. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app.
+
+    To view the app manifest:
+
+    1. Select **Publish** from the left panel to open the dropdown menu.
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
+        
+    1. Select *App package**.
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
+        
+        The manifest file appears on the right pane.
+     
+        
     **Additional configuration options in Developer Portal**
 
-    You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+    For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/configured-tdp.png" alt-text="Image showing configured tdp" border="false":::
 
