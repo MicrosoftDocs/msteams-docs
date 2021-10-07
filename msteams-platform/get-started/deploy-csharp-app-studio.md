@@ -11,3 +11,8 @@ ms.date: 11/09/2018
 # Update the app package in App Studio
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
+
+| &nbsp; | &nbsp; |
+|:--- | ---:|
+|**Back** : ([Build and test your app](deploy-csharp-app.md#update-the-credentials-for-your-hosted-app)) | [Overview](code-samples.md) : **Next** |
+|
