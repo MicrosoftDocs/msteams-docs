@@ -19,6 +19,9 @@ metadata:
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
    items: 
+    - title: What's new?
+      itemType: whats-new
+      url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
       url: /microsoftteams/platform/overview
@@ -40,10 +43,6 @@ highlightedContent:
     - title: Tutorials and code samples
       itemType: sample
       url:  /microsoftteams/platform/get-started/code-samples
-    - title: What's new?
-      itemType: whats-new
-      url: /microsoftteams/platform/whats-new
-
    
 # conceptualContent section
 conceptualContent:
@@ -63,6 +62,44 @@ conceptualContent:
         - url: https://support.microsoft.com/en-us/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-US&rs=en-US&ad=US#PickTab=Basics
           itemType: concept
           text: End users
+
+  # Card
+    - title: Learn
+      links:
+        - url: /learn/modules/intro-microsoft-teams-apps
+          itemType: learn
+          text: Build apps for Microsoft Teams
+        - url: /learn/modules/embedded-web-experiences
+          itemType: learn
+          text: Create embedded web experiences with tabs
+        - url:  /learn/modules/msteams-conversation-bots/
+          itemType: learn
+          text: Create conversational interactions with bots
+        - url: /learn/modules/msteams-messaging-extensions/
+          itemType: learn
+          text: Create task-oriented interactions with messaging extensions
+        - url: /learn/modules/msteams-task-modules/
+          itemType: learn
+          text: Collect input and gather information with task modules
+        - url: /learn/modules/msteams-webhooks-connectors/
+          itemType: learn
+          text: Connect web services to channels and teams with webhooks and Office 365 Connectors
+
+    # Card
+    - title: Capabilities
+      links:
+        - url: /microsoftteams/platform/concept/tabs/what-are-tabs
+          itemType: overview
+          text: Tabs
+        - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
+          itemType: overview
+          text: Messaging extensions
+        - url: /microsoftteams/platform/bots/what-are-bots
+          itemType: overview
+          text: Bots
+        - url: /microsoftteams/platform/webhooks-and-connectors/what-are-webhooks-and-connectors
+          itemType: overview
+          text: Webhooks and connectors
 
    # Card
     - title: Explore
@@ -86,27 +123,7 @@ conceptualContent:
           itemType: reference
           text: Best practices for Teams app scenarios
       
-    # Card
-    - title: Learn
-      links:
-        - url: /learn/modules/intro-microsoft-teams-apps
-          itemType: learn
-          text: Build apps for Microsoft Teams
-        - url: /learn/modules/embedded-web-experiences
-          itemType: learn
-          text: Create embedded web experiences with tabs
-        - url:  /learn/modules/msteams-conversation-bots/
-          itemType: learn
-          text: Create conversational interactions with bots
-        - url: /learn/modules/msteams-messaging-extensions/
-          itemType: learn
-          text: Create task-oriented interactions with messaging extensions
-        - url: /learn/modules/msteams-task-modules/
-          itemType: learn
-          text: Collect input and gather information with task modules
-        - url: /learn/modules/msteams-webhooks-connectors/
-          itemType: learn
-          text: Connect web services to channels and teams with webhooks and Office 365 Connectors
+
     # Card
     - title: Integrate
       links:
@@ -133,7 +150,7 @@ conceptualContent:
           text: Integrate production-ready Shifts connectors
 
     # Card
-    - title: Connect
+    - title: Community
       links:
         - url: https://developer.microsoft.com/microsoft-teams/blogs/
           itemType: overview
@@ -144,9 +161,6 @@ conceptualContent:
         - url: https://docs.microsoft.com/en-us/teamblog/
           itemType: whats-new
           text: Announcements
-    # Card
-    - title: Help
-      links:
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams Developer Community and response
