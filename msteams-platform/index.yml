@@ -88,7 +88,7 @@ conceptualContent:
     # Card
     - title: Capabilities
       links:
-        - url: /microsoftteams/platform/concept/tabs/what-are-tabs
+        - url: /microsoftteams/platform/tabs/what-are-tabs
           itemType: overview
           text: Tabs
         - url: /microsoftteams/platform/messaging-extensions/what-are-messaging-extensions
