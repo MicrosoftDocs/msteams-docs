@@ -12,4 +12,4 @@ ms.author: surbhigupta
 # Dummy PR
 
 > [!NOTE]
-> This documentation is a sample dummy PR for Doc enhancement.
+> This documentation is a dummy PR for Doc enhancement.
