@@ -12,7 +12,7 @@
   items:
   - name: Overview
     href: get-started/code-samples.md  
-  - name: Hello World - with JavaScript
+  - name: Build Hello World with JavaScript
     href: get-started/prerequisites.md
   - name: Build your first app using Blazor
     href: get-started/blazor-app-prerequisites.md

@@ -28,6 +28,8 @@ You can build and run the sample after it's cloned.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
 
+
+
 1. Select **Build Solution** from the **Build** menu.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::

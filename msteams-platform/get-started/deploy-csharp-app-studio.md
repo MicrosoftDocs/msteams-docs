@@ -14,5 +14,5 @@ ms.date: 11/09/2018
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : ([Build and test your app](deploy-csharp-app.md#update-the-credentials-for-your-hosted-app)) | [Overview](code-samples.md) : **Next** |
+|**Next** : [Update app credentials](deploy-csharp-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
 |
