@@ -13,3 +13,4 @@
       - name: Publish to the Teams store
         tocHref: /office/dev/store/checklist/add-in-submission-guide/
         topicHref: /microsoftteams/platform/concepts/deploy-and-publish/appsource/
+        
