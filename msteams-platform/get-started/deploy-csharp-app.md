@@ -98,7 +98,7 @@ The sample app requires the environment variables to be set to the values that y
 
 1. Open the `appsettings.json` file.
 
-    :::image type="content" source="../assets/images/team-toolkit-v2/csharp-appsetting-json.png" alt-text="Image showing appsettings.json file" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/csharp-appsetting-json.png" alt-text="Image showing appsettings.json file" border="false":::
     
 1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file.
 1. Update the **MicrosoftAppPassword** with the bot password that you saved.
