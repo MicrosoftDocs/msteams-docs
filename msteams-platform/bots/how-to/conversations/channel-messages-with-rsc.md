@@ -6,13 +6,13 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Receive all channel messages with RSC
+# Receive all channel messages and group chats with RSC
 
 The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios. Bots receive all chat messages via RSC permission. Using RSC, you can  request team owners to consent for a bot to receive user messages across standard channels and **groupchat** without being @mentioned. The capability for is enabled by specifying the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions under under `webApplicationInfo.applicationPermissions` in the manifest of RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
 
 For more information about enabling RSC for your app, see [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
-## Enable bots to receive all channel messages
+## Enable bots to receive all channel and groupchat messages
 
 The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
 
@@ -20,7 +20,7 @@ The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permission is ext
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permission specified in the `webApplicationInfo` property.
 
-![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
+[PLACEHOLDER FR NEW IMAGE]
 
 The following is an example of the `webApplicationInfo` object:
 
@@ -36,14 +36,6 @@ The following codes provide example of the app manifest:
 "resource": "https://AnyString",
 "applicationPermissions": [
 "ChannelMessage.Read.Group"
-    ]
-  }
-```
-```json
-"webApplicationInfo": {
-"id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
-"resource": "https://AnyString",
-"applicationPermissions": [
 "ChatMessage.Read.Chat"
     ]
   }
@@ -51,7 +43,7 @@ The following codes provide example of the app manifest:
 
 ## Sideload in a team to test
 
-To sideload in a team to test, whether all channel messages in a team with RSC are received without being @mentioned:
+To sideload in a team to test, whether all channel OR **groupchat** messages in a team with RSC are received without being @mentioned:
 
 1. Select or create a team.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
