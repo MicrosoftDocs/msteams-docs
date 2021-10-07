@@ -28,11 +28,29 @@ You can build and run the sample after it's cloned.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
 
+1. Select the Project menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="false":::
 
+    The Properties window appears.
+
+1. Select **Debug** from the left pane.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
 
 1. Select **Build Solution** from the **Build** menu.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::
+    
+    The Debug pane opens.
+
+1. Move through the screen to view the Web server settings section.
+    
+    :::image type"content" source="../assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
+    
+1. Ensure the following:
+    - **App URL** is set to `http://localhost:3333/.
+    - **Enable SSL** is cleared.
 
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
