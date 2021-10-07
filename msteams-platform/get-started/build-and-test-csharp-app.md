@@ -28,6 +28,10 @@ You can build and run the sample after it's cloned.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
 
+1. Select **Build Solution** from the **Build** menu.
+    
+    :::image type="content" source="../assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::
+
 1. Select the Project menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="false":::
@@ -47,10 +51,6 @@ You can build and run the sample after it's cloned.
     
     :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
     
-1. Select **Build Solution** from the **Build** menu.
-    
-    :::image type="content" source="../assets/images/teams-toolkit-v2/app-build-complete.png" alt-text="Image showing build completed" border="false":::
-
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
     When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
