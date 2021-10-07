@@ -14,7 +14,7 @@ The most successful apps are native to Teams, so choose your app's entry points 
 
 ## Shared app experiences
 
-Team, channel, and chat are collaboration spaces and apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows or unlocking new social interactions.
+Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows or unlocking new social interactions.
 
 The following list shows how Teams app capabilities are commonly used in collaborative contexts:
 
