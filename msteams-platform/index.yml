@@ -111,7 +111,7 @@ conceptualContent:
    # Card
     - title: Explore
       links:
-        - url: /microsoftteams/platform/concepts/authentication/authentication.md
+        - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
           text: Authenticate users
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
