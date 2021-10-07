@@ -92,11 +92,18 @@ To view the app manifest:
 
 The sample app requires the environment variables to be set to the values that you saved in the text file.
 
+1. Open the Solution Explorer.
+
+    :::image type="content" source="../assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app" border="false":::
+
 1. Open the `appsettings.json` file.
+
+    :::image type="content" source="../assets/images/team-toolkit-v2/csharp-appsetting-json.png" alt-text="Image showing appsettings.json file" border="false":::
+    
 1. Update the **MicrosoftAppId** value with your bot ID that you saved in the text file.
 1. Update the **MicrosoftAppPassword** with the bot password that you saved.
 
-    <img width="560px" alt="Setting the keys" src="~/assets/images/get-started/get-started-net-azure-add-keys.png"/>
+    :::image type="content" source="../assets/images/get-started/get-started-net-azure-add-keys.png" alt-text="Image showing adding Azure keys" border="false":::
 
     After making these changes, rebuild the app. If you're using ngrok, you can run the app locally, and if you've hosted it in Azure, redeploy the app.
 

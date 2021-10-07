@@ -55,19 +55,19 @@ You can build and run the sample after it's cloned.
 
     When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
 
-    - `https://localhost:44327/`
+    - `https://localhost:3333/`
         
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="false":::
         
-    - `https://localhost:44327/hello`
+    - `https://localhost:3333/hello`
         
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="false":::
         
-    - `https://localhost:44327/first`
+    - `https://localhost:3333/first`
         
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="false":::
         
-    - `https://localhost:44327/second`
+    - `https://localhost:3333/second`
         
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="false":::
 
