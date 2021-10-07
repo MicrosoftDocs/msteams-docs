@@ -16,9 +16,14 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams app validation tool helps you fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the test cases used during store validation.
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
+The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
+
+1. Go to [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/validation) in developer portal. 
+    > [!NOTE]
+    > The app validation tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
 1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
