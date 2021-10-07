@@ -46,7 +46,7 @@ You can build and run the sample after it's cloned.
 
 1. Move through the screen to view the Web server settings section.
     
-    :::image type"content" source="../assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
     
 1. Ensure the following:
     - **App URL** is set to `http://localhost:3333/.
