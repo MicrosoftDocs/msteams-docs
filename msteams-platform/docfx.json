@@ -47,7 +47,8 @@
         "feedback_system": "GitHub",
         "feedback_github_repo": "MicrosoftDocs/msteams-docs",
         "feedback_product_url": "https://microsoftteams.uservoice.com/forums/555103-public",
-        "titleSuffix": "Teams"
+        "titleSuffix": "Teams",
+        "recommendations": false
       },
         "fileMetadata": {
             "feedback_system": {

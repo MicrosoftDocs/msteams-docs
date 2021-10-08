@@ -99,10 +99,10 @@ The following image displays a Stage View invoked through a deep link:
 
 ### Syntax
 
-Following is the deeplink syntax:  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”,“name”:”[name]”}
+Following is the deeplink syntax: 
 
+https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl\":\""[contentUrl]"\",\"websiteUrl\":\""[websiteUrl]"\",\"name\":\"Contoso\"}
+ 
 ### Examples
 
 When a user enters a URL, it is unfurled into an Adaptive card.
