@@ -89,8 +89,10 @@ After you install ngrok, you can create a tunnel to deploy your app locally:
 
     ```bash
     ngrok http 3333 -host-header=localhost:3333
-    ```
-ngrok-tunnel
+
+    The ngrok tunnel is created.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
 
     *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
 
@@ -103,7 +105,9 @@ To verify the app's local deployment:
 
     Here's an example of the URL:
 
-    ngrok-verify-tunnel
+    :::image type="content" source="../assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel" border="false":::
+
+1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in teams.
 
     > [!NOTE]
     > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.

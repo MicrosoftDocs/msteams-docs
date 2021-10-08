@@ -36,7 +36,7 @@ Updating the app package includes:
 
 - [Uploading the app package to Developer Portal](#upload-the-app-package-to-developer-portal)
 - [Configuring app capabilities](#configure-your-app-capabilities)
-- [Registering your app in Teams](#register-your-app-in-Teams)
+- [Registering your app in Teams](#register-your-app-in-teams)
 
 > [!NOTE]
 > You could use [*App Studio*](deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.

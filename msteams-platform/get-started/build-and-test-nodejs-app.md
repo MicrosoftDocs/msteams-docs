@@ -21,7 +21,7 @@ In this page, you'll learn to:
 
 After the repository is cloned, you can build the sample app.
 
-1. Open a terminal window in Visual Studio Code.
+1. Open a terminal window.
 1. Run the change directory command in the terminal to change to the sample app directory:
 
     ```bash
@@ -51,22 +51,20 @@ After the repository is cloned, you can build the sample app.
 1. Open a browser window and use to the following URLs to verify that all the Hello World app URLs are loading:
 
     - `http://localhost:3333`
-        
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host.png" alt-text="Image showing Node.js local host" border="false":::
-    
+
     - `http://localhost:3333/hello`
-    
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-hello-nodejs.png" alt-text="Image showing Node.js local host hello page" border="false":::
-        
+
     - `http://localhost:3333/first`
-    
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-first-nodejs.png" alt-text="Image showing Node.js local host first tab" border="false":::
 
     - `http://localhost:3333/second`
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
-
-<a name="HostSample"></a>
+       :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
 
 ## Deploy your sample app
 
@@ -83,10 +81,12 @@ After you install ngrok, you can create a tunnel to deploy your app locally.
 
     ```bash
     ngrok http 3333 -host-header=localhost:3333
-    ```
+
+    The ngrok tunnel is created.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
 
     *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
-ngrok-tunnel-1
 
 To verify the app's local deployment:
 
@@ -96,8 +96,10 @@ To verify the app's local deployment:
     `https://<forwarding address in ngrok console session>/hello`
 
     Here's an example of the URL:
-ngrok-tunnel-verify-2
-    `https://d0ac14a5.ngrok.io/hello`
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel-verify.png" alt-text="Image showing node.js app running locally on ngrok tunnel" border="false":::
+
+1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in teams.
 
 > [!NOTE]
 > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
