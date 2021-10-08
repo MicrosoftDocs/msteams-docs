@@ -11,9 +11,9 @@ Start Microsoft Teams development by building your first 'Hello World' Teams app
 
 >Each of your "Hello world" apps will have a capability, which comes with its own UI and UX: 
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app-with-mobile.png" alt-text="Diagram showing this app has 3 features." border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-## The app road-map
+## The app roadmap
 
 Building an app using Teams Toolkit follows a four-step process:
 
