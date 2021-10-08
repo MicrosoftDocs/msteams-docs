@@ -64,7 +64,7 @@ After the repository is cloned, you can build the sample app.
 
     - `http://localhost:3333/second`
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
 
 ## Deploy your sample app
 

@@ -57,12 +57,12 @@ To register your app with Teams, you need:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-1. Select <path to manifest>  and select **Import**.
+1. Select /path to manifest/  and select **Import**.
 
 
     The **Hello World** app is imported in Developer Portal.
 
-nj-app-manifest-1
+    nj-app-manifest-1
 
     **Additional configuration options in Developer Portal**
 
