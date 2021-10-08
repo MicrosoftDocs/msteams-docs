@@ -192,22 +192,17 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
    * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
    * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
-#### Examples
+#### Example: Know when to stretch columns
 
 # [Design](#tab/design)
 
-:::row:::
-   :::column span="":::
 **Do**: In this screen, there are two columns at the bottom of the card. The input component width is set to `stretch`, while the **Select** button width is set to `auto`. This ensures the button remains completely in view.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
-   :::column-end:::
-   :::column span="":::
+
 **Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Image shows how not to set column width in Adaptive Cards.":::
-   :::column-end:::
-:::row-end:::
 
 # [Code](#tab/code)
 
@@ -376,6 +371,166 @@ Here's the code for implementing the design example you should follow.
         }
       ],
       "spacing": "ExtraLarge"
+    }
+  ]
+}
+```
+
+---
+
+#### Example: Use fewer columns
+
+**Do**: Layouts tend to display better on mobile with fewer columns.
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-do.png" alt-text="Image shows the right amount of columns in Adaptive Cards.":::
+
+**Don't**: Using too many columns can clutter your card content on mobile.
+
+:::image type="content" source="~/assets/images/adaptive-cards/column-amount-dont.png" alt-text="Image shows how too many columns can negatively affect Adaptive Card layout.":::
+
+#### Example: Fixed width has its place
+
+# [Design](#tab/design)
+
+When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
+
+# [Code](#tab/code)
+
+Here's the code for implementing the design example.
+
+```json
+{
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Pick up where you left off?",
+      "weight": "bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "medium",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1083",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Silver Star Mountain Range"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Maps",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.msn.com"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1082",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "style": "emphasis",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Kitchen Remodel for Homes"
+            },
+            {
+              "type": "TextBlock",
+              "text": "With EMPHASIS",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.AdaptiveCards.io"
+      }
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "50px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://unsplash.it/80?image=1080",
+              "size": "medium"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "The Witcher: A Series"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Netflix",
+              "isSubtle": true,
+              "spacing": "none"
+            }
+          ]
+        }
+      ],
+      "selectAction": {
+        "type": "Action.OpenUrl",
+        "url": "https://www.outlook.com"
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Resume all",
+      "url": "ms-cortana:resume-all"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "title": "More activities",
+      "url": "ms-cortana:more-activities"
     }
   ]
 }
