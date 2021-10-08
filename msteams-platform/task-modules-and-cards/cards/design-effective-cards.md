@@ -192,21 +192,26 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
    * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
    * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
-#### Example
+#### Examples
 
 # [Design](#tab/design)
 
-In this screen, there are two columns at the bottom of the card with `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input choice.
-
-:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Image shows how not to set column width in Adaptive Cards.":::
-
-In this screen, the width has been set to ‘Auto’ for the button and the remainder width to stretch for input choice
+:::row:::
+   :::column span="":::
+**Do**: In this screen, there are two columns at the bottom of the card. The input component width is set to `stretch`, while the **Select** button width is set to `auto`. This ensures the button remains completely in view.
 
 :::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
+   :::column-end:::
+   :::column span="":::
+**Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input.
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Image shows how not to set column width in Adaptive Cards.":::
+   :::column-end:::
+:::row-end:::
 
 # [Code](#tab/code)
 
-This code sample shows how to properly implement column layouts for Adaptive Cards.
+Here's the code for implementing the design example you should follow.
 
 ```json
 {
