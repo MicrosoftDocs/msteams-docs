@@ -124,7 +124,7 @@ After you've imported your app into Developer Portal, the next step is to config
 
 To configure personal tab app:
 
-1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Personal app** card, and select **Edit**.
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Personal app** card on the **App features** pane, and select **Edit**.
 
     The details for Hello tab appear.
 
@@ -153,6 +153,99 @@ To configure personal tab app:
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png/" alt-text="Image showing Hello tab and About tab details" border="false":::
 
 #### Configure bot
+
+It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as part of the sample, but you must register it with Teams.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-no-id.png/" alt-text="Image showing bot app imported with no app ID" border="false":::
+
+The bot that was imported from the sample doesn't have an associated App ID. You must create a new bot so that Developer Portal can create a new App ID, and register it with Teams.
+
+Configure a bot involves the following:
+
+1. [Add a new bot](#to-add-a-new-bot)
+1. [Add bot to app](#to-add-bot-to-app)
+1. [Configure bot scope](#to-configure-bot-scope)
+
+##### To add a new bot
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Bot** card on the **App features** pane, and select **Delete**.
+
+1. Select **Bot** on the **App features** pane.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="false":::
+
+1. Select **Create a new bot** on the **Bot** pane.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-page.png" alt-text="Image showing bot pane" border="false":::
+
+1. Select **New Bot** on the **Bot management** pane.
+1. Enter a suitable name for your bot, and select **Add**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="false":::
+
+    The **Configure** pane appears showing details of the new bot in the left pane. 
+
+1. Enter the forwarding URL from the `ngrok` console, and select **Save**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
+
+    The *Bot management** pane shows the new Bot added with an app ID.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-new-bot-id.png" alt-text="Image showing new bot with app ID" border="false":::
+
+1. Ensure that you save the Bot ID. You will need it to update app credentials later.
+
+
+##### To add bot to app
+
+1. Open the **App features** pane, and select the **Bot** card.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-card.png" alt-text="Image showing bot card" border="false":::
+
+    The **Bot** pane appears.
+
+1. Select your bot app from **Select an existing bot**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-new-bot-app.png" alt-text="Image showing how to add an existing bot app" border="false":::
+
+    The new bot is added to your app with its own app ID.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-new-bot-added.png" alt-text="Image showing new bot added to app" border="false":::
+
+##### To configure bot scope
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the new **Bot** card, and select **Edit**.
+
+1. Move through the **Bot** pane to view the **Commands** section, and select **Add a Command**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section" border="false":::
+
+1. Enter a suitable name for the **Command**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details" border="false":::
+
+1. Select all the three scopes for the command, and select **Add**.
+    - **Personal**
+    - **Team**
+    - **Group Chat**
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-command-add.png" alt-text="Image showing how to save commands details" border="false":::
+
+    The new command is added to the **Commands** section of the **Bot** pane.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved" border="false":::
+
+1. Select **Save**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-command-added.png" alt-text="Image showing commands details saved" border="false":::
+
+1. Open **App features** pane, and select **Personal app** card to view your app's tab details.
+
+    You'll see that a tab for your new chat bot is added to your app.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured="false":::
+
+#### Configure Message Extension
 
 
 
