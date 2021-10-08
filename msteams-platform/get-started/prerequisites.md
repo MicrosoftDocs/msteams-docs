@@ -40,9 +40,6 @@ Either one of:
 - [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
 - [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
 
-> [!WARNING]
-> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
-
 ### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.

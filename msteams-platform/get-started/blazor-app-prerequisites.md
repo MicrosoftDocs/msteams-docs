@@ -37,9 +37,6 @@ The following tools are required for building an app:
 - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/).
 - [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET.
 
-> [!WARNING]
-> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS).
-
 ### Optional tools
 
 The following Visual Studio Code extensions and tools not required, but helpful during development.
