@@ -12,7 +12,7 @@ keywords: teams apps meetings user participant role api
 
 The meeting extensibilities provide APIs to transform the meeting experience:
 
-* Build apps or integrate existing apps within meeting lifecycle. test
+* Build apps or integrate existing apps within meeting lifecycle.
 * Use the APIs to make your app aware of the meeting.
 * Select the APIs you want to use to enhance the meeting experience.
 
