@@ -24,19 +24,25 @@ In this page, you'll learn to:
 
 Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
-Visual Studio has built-in support for app deployment to different providers, including Azure:
+Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
 
-<img width="530px" alt="Visual Studio" src="~/assets/images/get-started/publishtoazure1.png"/>
+:::image type="content" source="../assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
 ## Update the app package
 
 You can use Developer Portal to upload the app package.
 
-[Developer Portal](https://dev.teams.microsoft.com/) is a Teams app that simplifies the creation and registration of an app. Install from the Teams store.
+[Developer Portal](https://dev.teams.microsoft.com/) is a Teams app that simplifies the creation and registration of an app. Install from the Teams store. Updating the app package includes:
+
+- [Uploading the app package to Developer Portal](#uploading-the-app-package-to-developer portal)
+- Configuring app capabilities
+- Registering your app in Teams
 
 You could use [App Studio](deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
 
-**To upload Hello World app to Developer Portal in Teams**
+### Upload the app package to Developer Portal
+
+To upload the app package:
 
 1. Open Microsoft Teams.
 
@@ -47,7 +53,7 @@ You could use [App Studio](deploy-csharp-app-studio.md) to upload you app to Tea
    :::image type="content" source="../assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
 
 1. Select **Open**.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/open-dev-portal.png" alt-text="Image showing open Developer Portal app" border="false":::
 
     The Developer Portal opens.
@@ -55,6 +61,8 @@ You could use [App Studio](deploy-csharp-app-studio.md) to upload you app to Tea
 1. Select the **Apps** tab.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/dev-portal-app.png" alt-text="Developer Portal app" border="false":::
+
+/* Search for the app package zip file*/
 
 1. Select **Import an existing app**.
 
@@ -66,9 +74,7 @@ You could use [App Studio](deploy-csharp-app-studio.md) to upload you app to Tea
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
 
-### View the app manifest file
-    
-You can configure your app using the Teams Developer Portal. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app.
+    After you've imported your app to Developer Portal, you can view its manifest file. You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
 
 To view the app manifest:
 
@@ -82,13 +88,19 @@ To view the app manifest:
 
     The manifest file appears on the right pane.
 
-    **Additional configuration options in Developer Portal**
+### Configuring your app capabilities
+
+
+**Additional configuration options in Developer Portal**
 
     For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-<a name="updatecredentials"></a>
+### Register your app in Teams
 
-### Update the credentials for your hosted app
+    
+
+
+## Update the credentials for your hosted app
 
 The sample app requires the environment variables to be set to the values that you saved in the text file.
 
@@ -107,9 +119,11 @@ The sample app requires the environment variables to be set to the values that y
 
     After making these changes, rebuild the app. If you're using ngrok, you can run the app locally, and if you've hosted it in Azure, redeploy the app.
 
-### Configure the app tab
+## Test the app capabilities
 
-After you've installed the app into Teams, you must configure it to display the content.
+### Test your tab in Teams
+
+After you've installed the app into Teams, configure it to display the tab that you want the app to load.
 
 **To configure the app tab**
 
