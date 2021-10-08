@@ -1,9 +1,7 @@
 ---
 title: Get started - Build app with JavaScript
-author: adrianhall
 description: Learn how to get started with the Microsoft Teams app development and set up your environment.
-ms.author: adhal
-ms.date: 05/24/2021
+ms.date: 10/14/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
@@ -13,7 +11,7 @@ Start Microsoft Teams development by building your first 'Hello World' Teams app
 
 >Each of your "Hello world" apps will have a capability, which comes with its own UI and UX: 
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app-with-mobile.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
 ## The app road-map
 
