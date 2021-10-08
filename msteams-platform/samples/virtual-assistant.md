@@ -22,7 +22,7 @@ The decision to add a Virtual Assistant includes many determinants and differs f
 * A central team manages all employee experiences. It has the capability to build a Virtual Assistant experience and manage updates to the core experience including the addition of new skills.
 * Multiple applications exist across business functions and the number is expected to grow in the future.
 * Existing applications are customizable, owned by the organization, and are converted into skills for a Virtual Assistant.
-* The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience.
+* The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience. test
 
 The following image displays the business functions of Virtual Assistant: 
 
