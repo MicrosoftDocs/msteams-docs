@@ -247,7 +247,7 @@ Configure a bot involves the following:
 
 #### Configure Message Extension
 
-
+Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
 
 
 **Additional configuration options in Developer Portal**
