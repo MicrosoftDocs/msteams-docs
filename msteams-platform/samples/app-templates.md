@@ -68,7 +68,7 @@ Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users
 
 ## Associate Insights
 
-Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data is shared and used collaboratively by business teams, through a Power BI Teams tab, for product improvement and enhancing the customer experience.
+Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data is shared and used collaboratively by business teams, through Power BI Teams tab, for product improvement and enhancing the customer experience.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
