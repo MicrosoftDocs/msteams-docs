@@ -622,6 +622,8 @@ Here's the code for implementing the design example you should follow.
 }
 ```
 
+---
+
 ### Containers
 
 A `Container` allows you to group a set of related elements together.
