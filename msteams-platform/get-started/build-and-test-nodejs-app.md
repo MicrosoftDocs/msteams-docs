@@ -21,8 +21,8 @@ In this page, you'll learn to:
 
 After the repository is cloned, you can build the sample app.
 
-1. Open a terminal window.
-1. Run the change directory command in the terminal to change to the sample app directory :
+1. Open a terminal window in Visual Studio Code.
+1. Run the change directory command in the terminal to change to the sample app directory:
 
     ```bash
     cd Microsoft-Teams-Samples/samples/app-hello-world/nodejs/
@@ -86,16 +86,17 @@ After you install ngrok, you can create a tunnel to deploy your app locally.
     ```
 
     *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
+ngrok-tunnel-1
 
 To verify the app's local deployment:
 
 1. Opening your browser.
 1. Load your app using the following URL:
-    
+
     `https://<forwarding address in ngrok console session>/hello`
 
     Here's an example of the URL:
-
+ngrok-tunnel-verify-2
     `https://d0ac14a5.ngrok.io/hello`
 
 > [!NOTE]

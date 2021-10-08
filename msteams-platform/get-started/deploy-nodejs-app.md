@@ -57,9 +57,12 @@ To register your app with Teams, you need:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-1. Select **Hello World** and select **Import**.
+1. Select <path to manifest>  and select **Import**.
+
 
     The **Hello World** app is imported in Developer Portal.
+
+nj-app-manifest-1
 
     **Additional configuration options in Developer Portal**
 
@@ -67,11 +70,32 @@ To register your app with Teams, you need:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/configured-tdp.png" alt-text="Image showing configured tdp" border="false":::
 
-# [App Studio](#tab/AS)
+### Configure your app capabilities
 
-[!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
----
+**Tab**
+nj-add-tab-1
+nj-tab-save-2
+nj-tab-saved-3
+
+**Bot**
+same as C#
+nj-bot-add-1
+nj-bot-saved-1
+nj-bot-added-2
+
+Add bot to app
+nj-add-bot-app-3
+
+configure bot scope
+nj-tab-chat-tab-conf-4
+
+**Msg Ext**
+same as C#
+nj-add-msgext-1
+
+App capabilities conf - 1
+
 
 ## Update the credentials for your hosted app
 

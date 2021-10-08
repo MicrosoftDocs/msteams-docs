@@ -82,20 +82,29 @@ After you host your app, make a note of its root URL, such as `https://yourteams
 
 ### Tunnel using ngrok
 
-For quick testing, you can run the app on your computer. Create a tunnel to it through a web endpoint. [`ngrok`](https://ngrok.com) is a free tool to obtain a web address, such as `https://d0ac14a5.ngrok.io`. You can [download and install](https://ngrok.com/download) ngrok and add it to a location in your `PATH`.
+After you install ngrok, you can create a tunnel to deploy your app locally:
 
-After you install `ngrok`, open a new terminal window and run the following command to create a tunnel:
+1. Open a new terminal window.
+1. Run the following command to create a tunnel. The sample app uses port 3333.
 
-```bash
-ngrok http 44327 -host-header=localhost:44327
-```
+    ```bash
+    ngrok http 3333 -host-header=localhost:3333
+    ```
+ngrok-tunnel
 
-`Ngrok` responds to requests from the internet and routes them to your app running on port 44327.
+    *Ngrok* listens to requests from the internet and will route them to your app running on port 3333.
 
-### To verify the response
+To verify the app's local deployment:
 
-1. Open your browser and go to `https://d0ac14a5.ngrok.io/hello`. This step loads your app's Hello page.
-1. Instead of the URL mentioned in Step 1, use the forwarding address displayed by `ngrok` in your console session.
+1. Opening your browser.
+1. Load your app using the following URL:
+
+    `https://<forwarding address in ngrok console session>/hello`
+
+    Here's an example of the URL:
+
+    ngrok-verify-tunnel
+
     > [!NOTE]
     > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
     > [!TIP]
