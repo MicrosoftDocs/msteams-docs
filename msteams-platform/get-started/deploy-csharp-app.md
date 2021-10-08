@@ -122,7 +122,40 @@ After you've imported your app into Developer Portal, the next step is to config
 
 #### Configure personal tab app
 
-1. 
+To configure personal tab app:
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Personal app** card, and select **Edit**.
+
+    The details for Hello tab appear.
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-edit-tab.png/" alt-text="Image showing Hello tab menu" border="false":::
+
+1. Enter the app details for the Hello tab in **Add a tab to your personal app**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png/" alt-text="Image showing Hello tab details" border="false":::
+
+    Enter the following details:
+    - Name: Hello tab
+    - Content URL and Website URL: the forwarding address in ngrok console session
+
+1. Select **Update**.
+
+    The details of the Hello tab appear on the **Personal app** pane.
+
+1. Select **Save**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-save-tab-update.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
+ 
+    The **Personal app** pane now shows the new tab and an About tab created automatically.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
+
+#### Configure bot
+
+
+
 
 **Additional configuration options in Developer Portal**
 
