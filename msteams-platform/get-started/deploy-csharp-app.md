@@ -150,7 +150,7 @@ To configure personal tab app:
  
     The **Personal app** pane now shows the new tab and an About tab created automatically.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png/" alt-text="Image showing Hello tab and About tab details" border="false":::
 
 #### Configure bot
 
