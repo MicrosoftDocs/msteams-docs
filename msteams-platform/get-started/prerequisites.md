@@ -1,9 +1,7 @@
 ---
 title: Get started - Build app with JavaScript
-author: adrianhall
 description: Learn how to get started with the Microsoft Teams app development and set up your environment.
-ms.author: adhal
-ms.date: 05/24/2021
+ms.date: 10/14/2021
 ms.topic: quickstart
 ms.localizationpriority: none
 ---
@@ -15,7 +13,7 @@ Start Microsoft Teams development by building your first 'Hello World' Teams app
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-## The app road-map
+## The app roadmap
 
 Building an app using Teams Toolkit follows a four-step process:
 
@@ -41,9 +39,6 @@ Either one of:
 
 - [Visual Studio Code](https://code.visualstudio.com/download), version 1.55 or later for JavaScript, TypeScript, or SharePoint Framework (SPFx)
 - [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET
-
-> [!WARNING]
-> There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
 ### Optional tools
 

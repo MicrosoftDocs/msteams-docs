@@ -75,7 +75,7 @@ You can install only an app package. This package contains:
 
 The remaining app logic and data storage are hosted elsewhere, such as Azure Web Services. While in the cloud or localhost during the development, your app accesses Teams via HTTPS.
 
-:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server.":::
+:::image type="content" source="../assets/images/build-your-first-app/app-in-cloud.png" alt-text="Illustration showing your app on Teams is pointing to your app logic in the cloud server." border="false":::
 
 ## Next step
 
