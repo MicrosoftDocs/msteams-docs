@@ -175,13 +175,9 @@ Adaptive Cards have a lot of flexibility. But at minimum, we strongly suggest in
 
 ## Best practices
 
-Use these recommendations to create a quality app experience.
-
-### Mobile
-
 Cards designed for a narrow screen scale well on wider screens (the opposite isn't true). You should also assume users won't only view your cards on desktop.
 
-#### Column layouts
+### Column layouts
 
 Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
@@ -196,11 +192,197 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
    * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
    * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
-#### Text
+#### Example
+
+# [Design](#tab/design)
+
+In this screen, there are two columns at the bottom of the card with `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input choice.
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-dont.png" alt-text="Image shows how not to set column width in Adaptive Cards.":::
+
+In this screen, the width has been set to ‘Auto’ for the button and the remainder width to stretch for input choice
+
+:::image type="content" source="~/assets/images/adaptive-cards/width-auto-do.png" alt-text="Image shows how to set column width in Adaptive Cards.":::
+
+# [Code](#tab/code)
+
+This code sample shows how to properly implement column layouts for Adaptive Cards.
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "I wasn't able to identify the type of expense. Select from the list:",
+      "wrap": true,
+      "id": "typePrompt",
+      "spacing": "Medium",
+      "size": "Medium"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Phone Bill",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Phone Bill",
+              "action": "Phone Bill"
+            },
+            "action": "Phone Bill"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Taxi and Other Transportation",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Taxi and Other Transportation",
+              "action": "Taxi and Other Transportation"
+            },
+            "action": "Taxi and Other Transportation"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Entertainment_misc",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Entertainment_misc",
+              "action": "Entertainment_misc"
+            },
+            "action": "Entertainment_misc"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Car Rental",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Car Rental",
+              "action": "Car Rental"
+            },
+            "action": "Car Rental"
+          }
+        },
+        {
+          "type": "Action.Submit",
+          "title": "Airfare",
+          "data": {
+            "msteams": {
+              "type": "messageBack",
+              "displayText": "Airfare",
+              "action": "Airfare"
+            },
+            "action": "Airfare"
+          }
+        }
+      ],
+      "spacing": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "     ",
+      "wrap": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Input.ChoiceSet",
+              "choices": [
+                {
+                  "title": "Meals",
+                  "value": "Meals"
+                },
+                {
+                  "title": "Parking/Tolls",
+                  "value": "Parking/Tolls"
+                },
+                {
+                  "title": "Accomodation",
+                  "value": "Accomodation"
+                },
+                {
+                  "title": "Fuel-Gas/Petrol/Diesel",
+                  "value": "Fuel-Gas/Petrol/Diesel"
+                },
+                {
+                  "title": "Hotel",
+                  "value": "Hotel"
+                },
+                {
+                  "title": "Meals - Employees Only",
+                  "value": "Meals - Employees Only"
+                },
+                {
+                  "title": "Accomodations",
+                  "value": "Accomodations"
+                },
+                {
+                  "title": "Misc.Expenses",
+                  "value": "Misc.Expenses"
+                },
+                {
+                  "title": "Please Categorize",
+                  "value": "Please Categorize"
+                }
+              ],
+              "placeholder": "All",
+              "id": "expenseTypes",
+              "value": "Meals - Employees Only"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "title": "Select",
+                  "data": {
+                    "msteams": {
+                      "type": "messageBack",
+                      "displayText": "Select",
+                      "action": "applyType"
+                    },
+                    "action": "applyType"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "spacing": "ExtraLarge"
+    }
+  ]
+}
+```
+
+---
+
+### Text
 
 Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), or [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
 
-#### Containers
+### Containers
 
 A `Container` allows you to group a set of related elements together.
 
@@ -209,7 +391,7 @@ A `Container` allows you to group a set of related elements together.
 * **Do**: Use the `Action.ToggleVisibility` property to make a group of elements collapsible.
 * **Don't**: Use containers for any reason other than previously mentioned.
 
-#### Images
+### Images
 
 Follow these guidelines when including images in your cards.
 
