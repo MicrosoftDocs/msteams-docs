@@ -192,7 +192,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
    * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
    * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
 
-#### Example: Know when to stretch columns
+#### Example: Knowing when to stretch columns
 
 # [Design](#tab/design)
 
@@ -378,7 +378,7 @@ Here's the code for implementing the design example you should follow.
 
 ---
 
-#### Example: Use fewer columns
+#### Example: Using fewer columns
 
 **Do**: Layouts tend to display better on mobile with fewer columns.
 
@@ -541,6 +541,86 @@ Here's the code for implementing the design example.
 ### Text
 
 Whether you're using [`TextBlock`](https://adaptivecards.io/explorer/TextBlock.html), [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html), or [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html), set the `wrap` property to `true` so your card text doesn't truncate on mobile.
+
+#### Example: Making sure text doesn't truncate
+
+# [Design](#tab/design)
+
+**Do**: In this screen, the card has a `wrap` property set to `true`. This allows the text to fit to any screen size.
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-true.png" alt-text="Image shows how to wrap text in Adaptive Cards.":::
+
+**Don't**: In this screen, the card doesn't use the `wrap` property, so the text cuts off on a mobile screen.
+
+:::image type="content" source="~/assets/images/adaptive-cards/text-wrap-false.png" alt-text="Image shows what can happen if you don't wrap text in Adaptive Cards.":::
+
+# [Code](#tab/code)
+
+Here's the code for implementing the design example you should follow.
+
+```json
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "What cuisine do you want?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor",
+      "style": "compact",
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Chineese",
+          "value": "1"
+        },
+        {
+          "title": "Indian",
+          "value": "2"
+        },
+        {
+          "title": "Italian",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Select the dishes that you like?"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "myColor2",
+      "style": "expanded",
+      "wrap" : true,
+      "isMultiSelect": false,
+      "value": "1",
+      "choices": [
+        {
+          "title": "Cauliflower with potatoes sautéed with garam masala",
+          "wrap" : true,
+          "value": "1"
+        },
+        {
+          "title": "Patties of potato mixed with some vegetables fried",
+          "wrap" : true,
+          "value": "2"
+        },
+        {
+          "title": "Green capsicum with potatoes sautéed with cumin seeds",
+          "wrap" : true,
+          "value": "3"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### Containers
 
