@@ -243,7 +243,7 @@ Configure a bot involves the following:
 
     You'll see that a tab for your new chat bot is added to your app.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured" border="false":::
 
 #### Configure Message Extension
 
