@@ -160,5 +160,5 @@ Now you’ve got all tools and set up your account. Next, let's set up your deve
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Overview](code-samples.md) | [Create your first tab app](first-app-spfx.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-overview.png":::](code-samples.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-tab.png":::](first-app-spfx.md)|
 |

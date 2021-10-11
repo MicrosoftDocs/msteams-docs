@@ -114,5 +114,5 @@ For more information about SharePoint Webparts for Teams, [see the SharePoint do
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Prepare to build your app](spfx-app-prerequisites.md) | [Build your first tab app](build-spfx-app.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](spfx-app-prerequisites.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-spfx-app.md)|
 |

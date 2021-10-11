@@ -100,5 +100,5 @@ To build and run your app locally:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Create your first Teams SPFx app](first-app-spfx.md) | [Deploy your first Teams SPFx app](deploy-spfx-app.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-create-tab.png":::](first-app-spfx.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](deploy-spfx-app.md)|
 |
