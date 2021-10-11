@@ -251,7 +251,7 @@ Adding and configuring a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-chat-tab-configured.png" alt-text="Image showing chat tab configured" border="false":::
 
-#### Message Extension
+#### Configure message extension
 
 Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
 
@@ -314,7 +314,6 @@ To add a new message extension:
     You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app.
 
 ### Register your app in Teams
-
 
 ## Update the credentials for your hosted app
 

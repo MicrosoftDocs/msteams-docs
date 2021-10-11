@@ -1,8 +1,8 @@
 ---
-title: Deploy your first app using C# in App Studio
-description: Learn how to deploy Microsoft Teams apps with C# or .NET. in App Studio
-keywords: getting started .net c# csharp app studio
-ms.custom: scenarios:getting-started; languages:ASP.NET,C#
+title: Deploy your first app using Node.js in App Studio
+description: Learn how to deploy Microsoft Teams apps with Node.js in App Studio
+keywords: getting started node.js app studio
+ms.custom: scenarios:getting-started; languages:ASP,Node.js
 ms.localizationpriority: medium
 ms.topic: tutorial
 ms.date: 11/09/2018
@@ -29,12 +29,23 @@ Complete the following steps to update the app package:
 
     <img  width="450px" alt="App Studio" src="~/assets/images/get-started/AppStudio.png"/>
 
+    The sample comes with its own manifest and is designed to build an app package when the project is built. On Node.js, this is done by typing `gulp` at the command line in the root directory of the project.
 
-    The sample comes with its own manifest and is designed to build an app package when the project is built. The manifest.json file can be located in Visual Studio in Manifest under ```Microsoft.Teams.Samples.HelloWorld.Web```.
+    You can build the app package on Node.js by typing `gulp` at the command line in the root directory of the project.
 
-     In Visual Studio, the manifest.json file is located in under **Manifest** in `Microsoft.Teams.Samples.HelloWorld.Web`. This step is described by the following image:  
-    
-    <img  width="450px" alt="Build the app package on .NET with Visual Studio" src="~/assets/images/get-started/app-package-on-.NET-with-Visual-Studio.png"/>
+    ```bash
+    $ gulp
+    [13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
+    [13:39:27] Starting 'clean'...
+    [13:39:27] Starting 'generate-manifest'...
+    [13:39:27] Finished 'generate-manifest' after 11 ms
+    [13:39:27] Finished 'clean' after 21 ms
+    [13:39:27] Starting 'default'...
+    Build completed. Output in manifest folder
+    [13:39:27] Finished 'default' after 62 μs
+    ```
+
+    The name of the generated app package is **helloworldapp.zip**. You can search for this file if the location is not clear in the tool you are using.
 
 1. Now to modify this app package, select **Import an existing app** in the **Manifest editor**:
 
@@ -146,7 +157,7 @@ Complete the following steps to setup your messaging extension:
 
 After entering the details of your app, complete the following steps to register your app in Teams:
 
-1. Use **Test and distribute** of App Studio to install your app in Teams.
+1. Use **Test and distribute** of App Studio to install your app in Teams. 
 1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension. 
 1. Select **Test and distribute**  under **Finish** in the left-hand pane of App Studio:
 
@@ -168,5 +179,5 @@ After entering the details of your app, complete the following steps to register
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Next** : [Update app credentials](deploy-csharp-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
+|**Next** : [Update app credentials](deploy-nodejs-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
 |
