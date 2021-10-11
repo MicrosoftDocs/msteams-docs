@@ -476,6 +476,8 @@
     href: concepts/device-capabilities/people-picker-capability.md   
 - name: Resources
   items:
+   - name: Create messaging extension using app studio  
+     href: resources/create-messaging-extension-using-appstudioconcepts.md   
     - name: Localization
       items:
       - name: Localize your app
