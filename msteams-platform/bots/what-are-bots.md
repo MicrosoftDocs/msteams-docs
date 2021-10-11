@@ -47,7 +47,7 @@ You can use the Teams bot APIs to get information for one or more members of a c
 
 [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
 
-## Next step
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Bots and SDKs](~/bots/bot-features.md)
