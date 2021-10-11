@@ -477,7 +477,7 @@
 - name: Resources
   items:
     - name: Create messaging extension using app studio  
-      href: resources/create-messaging-extension-using-appstudioconcepts.md   
+      href: resources/create-messaging-extension-using-appstudio.md   
     - name: Localization
       items:
       - name: Localize your app
