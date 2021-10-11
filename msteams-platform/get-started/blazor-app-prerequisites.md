@@ -145,5 +145,5 @@ Now you’ve got all tools and set up your accounts. Next, let's set up your dev
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Overview](code-samples.md) | [Create your first Blazor app](first-app-blazor.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-overview.png":::](code-samples.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-tab.png":::](first-app-blazor.md)|
 |

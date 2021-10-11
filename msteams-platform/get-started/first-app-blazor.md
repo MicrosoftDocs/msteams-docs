@@ -79,5 +79,5 @@ You can add backend functionality by adding other ASP.NET Core controllers to yo
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Blazor App Prerequisites](blazor-app-prerequisites.md) | [Build your first Teams Blazor app](build-blazor-teams-app.md) : **Next**|
+|[:::image="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](blazor-app-prerequisites.md) | [:::image="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-blazor-teams-app.md)|
 |

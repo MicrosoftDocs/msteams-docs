@@ -67,5 +67,5 @@ To run your app in Teams, you need a Microsoft 365 development account that allo
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Create your first Teams Blazor app](first-app-blazor.md) | [Deploy your first Teams Blazor app](deploy-blazor-app.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-create-tab.png":::] (first-app-blazor.md)| [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](deploy-blazor-app.md)|
 |
