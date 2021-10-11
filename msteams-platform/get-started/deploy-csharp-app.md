@@ -9,7 +9,7 @@ ms.date: 11/09/2018
 ---
 # Deploy your Teams C# app
 
-After you build and test your Teams app, you can host it using Azure.
+After you build and test your Teams app, you can host it on Azure.
 
 Let's deploy the first Hello World app on Azure using Teams Toolkit.
 
@@ -67,7 +67,7 @@ To upload the app package:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/import-app-in-dev-portal.png" alt-text="Image showing Import app button" border="false":::
 
-1. Open the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
+1. Select the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
 
     `<path to cloned C# repo>\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\csharp\Microsoft.Teams.Samples.HelloWorld.Web\bin\Debug\netcoreapp3.1`
 
@@ -75,11 +75,15 @@ To upload the app package:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
 
-    After you've imported your app to Developer Portal, you can view its manifest file.
-
 ### View app information
 
+After you've imported your app to Developer Portal, you can view its details, including the manifest file.
+
 #### View the app manifest
+
+You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
+
+To view the app manifest:
 
 1. Select **Publish** from the left panel to open the dropdown list.
 
@@ -89,7 +93,7 @@ To upload the app package:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
 
-    The manifest file appears on the right pane. You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
+    The manifest file appears on the right pane.
 
 #### View app information
 
@@ -103,7 +107,7 @@ To upload the app package:
     - App URLs
 
 1. Select **Branding** from the left pane to view the branding information.
- 
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-app-branding.png" alt-text="Image showing branding information of the app" border="false":::
 
     These details are important if you are writing a new app for distribution.
@@ -119,6 +123,11 @@ To upload the app package:
 ### Configure your app capabilities
 
 After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
+
+You'll configure:
+- [Configure personal tab app](#configure-personal-tab-app)
+- [Configure bot](#configure-bot)
+- [Configure message extension](#configure-message-extension)
 
 #### Configure personal tab app
 
@@ -154,17 +163,17 @@ To configure personal tab app:
 
 #### Configure bot
 
-It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as part of the sample, but you must register it with Teams.
+It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as its part, but you must register it with Teams.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-no-id.png/" alt-text="Image showing bot app imported with no app ID" border="false":::
 
-The bot that was imported from the sample doesn't have an associated App ID. You must create a new bot so that Developer Portal can create a new App ID, and register it with Teams.
+The bot that was imported from the sample doesn't have an associated app ID. You must delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
 
-Configure a bot involves the following:
+Adding and configuring a bot involves the following:
 
-1. [Add a new bot](#to-add-a-new-bot)
-1. [Add bot to app](#to-add-bot-to-app)
-1. [Configure bot scope](#to-configure-bot-scope)
+1. [Adding a new bot](#to-add-a-new-bot)
+1. [Adding bot to app](#to-add-bot-to-app)
+1. [Configuring bot scope](#to-configure-bot-scope)
 
 ##### To add a new bot
 
@@ -183,18 +192,17 @@ Configure a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="false":::
 
-    The **Configure** pane appears showing details of the new bot in the left pane. 
+    The **Configure** pane appears showing details of the new bot in the left pane.
 
 1. Enter the forwarding URL from the `ngrok` console, and select **Save**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
-    The *Bot management** pane shows the new Bot added with an app ID.
+    The **Bot management** pane shows the new Bot added with an app ID.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-new-bot-id.png" alt-text="Image showing new bot with app ID" border="false":::
 
-1. Ensure that you save the Bot ID. You will need it to update app credentials later.
-
+    Ensure that you save the Bot ID. You will need it to update app credentials later.
 
 ##### To add bot to app
 
@@ -216,11 +224,11 @@ Configure a bot involves the following:
 
 1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the new **Bot** card, and select **Edit**.
 
-1. Move through the **Bot** pane to view the **Commands** section, and select **Add a Command**.
+1. Move through the **Bot** pane to view the **Commands** section, and select **+ Add a Command**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-add-command.png" alt-text="Image showing commands section" border="false":::
 
-1. Enter a suitable name for the **Command**.
+1. Enter a suitable name and description for the **Command**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-bot-command.png" alt-text="Image showing how to add commands details" border="false":::
 
@@ -233,9 +241,11 @@ Configure a bot involves the following:
 
     The new command is added to the **Commands** section of the **Bot** pane.
 
+1. Select **Save**.
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-save-new-bot-command.png" alt-text="Image showing commands details to be saved" border="false":::
 
-1. Select **Save**.
+    The command details are saved.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-command-added.png" alt-text="Image showing commands details saved" border="false":::
 
@@ -245,17 +255,11 @@ Configure a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-tab-chat-tab-conf.png" alt-text="Image showing chat bot configured" border="false":::
 
-#### Configure Message Extension
+#### Configure message extension
 
 Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
 
-
-**Additional configuration options in Developer Portal**
-
-For more information on configuring your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-
 ### Register your app in Teams
-
 
 
 ## Update the credentials for your hosted app
