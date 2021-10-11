@@ -225,7 +225,7 @@ Get more information of how a user engages with scenes in custom Together Mode s
     Optionally, the meeting organizer and presenter can **Change scene for all participants** in the meeting.
 
     >[!NOTE]
-    > At any point in time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
+    > At any point of time, only one scene is used homogeneously for the meeting. If a presenter or organizer changes a scene, it  changes for all. Switching in or out of custom Together Mode scenes is up to individual participants, but while in custom Together Mode scenes, all participants have the same scene.
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
