@@ -148,5 +148,5 @@ Use the Teams Search Auth Config for sample projects on GitHub to see how to:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Create your first Teams message extension app](first-message-extension.md) | [Deploy your app in Azure](get-started-deploy-teams-app-azure.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-create-msgext.png":::](first-message-extension.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](get-started-deploy-teams-app-azure.md)|
 |

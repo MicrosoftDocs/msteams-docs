@@ -103,7 +103,7 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
-- `bot`: The bot code is stored in the `bot` directory. 
+- `bot`: The bot code is stored in the `bot` directory.
     - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
@@ -111,5 +111,5 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Build your first bot app](build-javascript-bot-app.md) | [Build your first message extension app](build-javascript-msgex-app.md) : **Next**|
+| [:::image type="icon" source="../assets/images/get-started/app-roadmap/back.png":::](build-javascript-bot-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-msgext.png":::](build-javascript-msgex-app.md)|
 |
