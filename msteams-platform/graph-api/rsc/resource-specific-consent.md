@@ -117,7 +117,7 @@ The AAD portal provides a central platform for you to register and configure you
 
 ## Review your application permissions in the AAD portal
 
-1. Go to the **Home** > **App registrations** page and select your RSC app.
+1. Go to **Home** > **App registrations** page and select your RSC app.
 1. Choose **API permissions** from the left pane and go through the list of **Configured permissions** for your app. If your app only makes RSC Graph API calls, delete all the permissions on that page. If your app also makes non-RSC calls, keep those permissions as required.
 
 > [!IMPORTANT]
