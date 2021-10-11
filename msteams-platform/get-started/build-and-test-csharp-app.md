@@ -39,7 +39,7 @@ You can build and run the sample after it's cloned.
     The Properties window appears.
 
 1. Select **Debug** from the left pane.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
 
     The Debug pane opens.
@@ -48,27 +48,27 @@ You can build and run the sample after it's cloned.
 1. Ensure the following:
     - **App URL** is set to `http://localhost:3333/`.
     - **Enable SSL** is cleared.
-    
+
     :::image type="content" source="../assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
-    
+
 1. Select the **F5** key, or select **Start Debugging** from the **Debug** menu to run the sample.
 
     When the app starts, a browser window opens. It shows the root of your app. You can go to the following URLs to verify that all the app URLs are loading:
 
     - `https://localhost:3333/`
-        
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-after-debug.png" alt-text="Image showing local host" border="false":::
-        
+
     - `https://localhost:3333/hello`
-        
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-hello.png" alt-text="Image showing Hello page of the app" border="false":::
-        
+
     - `https://localhost:3333/first`
-        
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-first-tab.png" alt-text="Image showing first tab of the app" border="false":::
-        
+
     - `https://localhost:3333/second`
-        
+
         :::image type="content" source="../assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="false":::
 
     > [!Note]
@@ -120,5 +120,5 @@ To verify the app's local deployment:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Plan and Prepare](get-started-dotnet-app-studio.md) | [Deploy your app](deploy-csharp-app.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](get-started-dotnet-app-studio.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](deploy-csharp-app.md)|
 |

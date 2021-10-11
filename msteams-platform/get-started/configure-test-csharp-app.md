@@ -94,5 +94,5 @@ You can now test the bot in Teams.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Deploy your app](deploy-csharp-app.md) | [Overview](get-started-overview.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-deploy.png":::](deploy-csharp-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-overview.png":::](get-started-overview.md)|
 |

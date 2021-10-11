@@ -28,6 +28,12 @@ Visual Studio 2019 has built-in support for app deployment to different provider
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
+Hosting your app on Azure involves:
+- [Updating the app package](#update-the-app-package)
+- [Registering your app in Teams](configure-test-csharp-app.md#register-your-app-in-teams)
+- [Updating the credentials for your hosted app](configure-test-csharp-app.md#update-the-credentials-for-your-hosted-app)
+- [Testing the app capabilities in Teams](configure-test-csharp-app.md#test-the-app-capabilities-in-teams)
+
 ## Update the app package
 
 You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
@@ -316,5 +322,5 @@ To add a new message extension:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Build and run your app](build-and-test-csharp-app.md) | [Configure and test your app ](configure-test-csharp-app.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-build.png":::](build-and-test-csharp-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next.png":::](configure-test-csharp-app.md)|
 |

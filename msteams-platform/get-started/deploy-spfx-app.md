@@ -119,5 +119,5 @@ The SharePoint package is located in `SPFx/sharepoint/solution` within your proj
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Build your first Teams SPFx app](build-spfx-app.md) | [Overview](code-samples.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-build.png":::](build-spfx-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-overview.png":::](code-samples.md)|
 |
