@@ -87,7 +87,7 @@ You use the manifest file to configure capabilities, required resources, and oth
 
 1. Select **App package**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-app-manifest-1.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-app-manifest.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
 
     The manifest file appears on the right pane.
 
@@ -139,7 +139,7 @@ To configure personal tab app:
 
 1. Enter the app details for the Hello tab in **Add a tab to your personal app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-add-tab-1.png/" alt-text="Image showing Hello tab details" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-add-tab.png/" alt-text="Image showing Hello tab details" border="false":::
 
     Enter the following details:
     - Name: Hello tab
@@ -151,11 +151,11 @@ To configure personal tab app:
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-save-2.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-save.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
 
     The **Personal app** pane now shows the new tab and an About tab created automatically.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-saved-3.png/" alt-text="Image showing Hello tab and About tab details" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-saved.png/" alt-text="Image showing Hello tab and About tab details" border="false":::
 
 #### Configure bot
 
