@@ -37,7 +37,7 @@ Before you begin, here's a quick glance at the build environment options you can
 
 The [Teams developer platform](../overview.md) lets you build a custom app in various build environments in addition to Teams Toolkit.
 
-:::image type="content" source="../assets/images/get-started/overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
+:::image type="content" source="../assets/images/get-started/gs-overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
 
 You can choose to build a Teams app from the following options:
 
