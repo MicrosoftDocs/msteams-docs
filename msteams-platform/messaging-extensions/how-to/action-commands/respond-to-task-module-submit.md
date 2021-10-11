@@ -12,7 +12,7 @@ ms.author: anclear
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 This document guides you on how your app responds to the action commands, such as user's task module submit action.
-After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke, otherwise the user receives an error message **Unable to reach the app**, and any reply to the invoke is ignored by the Teams client.
+After a user submits the task module, your web service receives a `composeExtension/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to  invoke, otherwise the user receives an error message **Unable to reach the app**, and any reply to  invoke is ignored by the Teams client.
 
 You have the following options to respond:
 
@@ -36,7 +36,7 @@ For authentication or configuration, after the user completes the process, the o
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtension**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If your app contains a conversational bot, ensure that your bot is installed in the conversation before loading your task module. This is useful in situations where you need to get more context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team. For more information to install your conversational bot, see [request to install your conversational bot](~/messaging-extensions/how-to/action-commands/create-task-module.md?tabs=vscode#Request-to-install-your-conversational-bot).
+If your app contains a conversational bot, ensure that your bot is installed in the conversation before loading your task module. This is useful in situations where you need to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team. For more information to install your conversational bot, see [request to install your conversational bot](~/messaging-extensions/how-to/action-commands/create-task-module.md?tabs=vscode#Request-to-install-your-conversational-bot).
 
 ## The submitAction invoke event
 
@@ -187,13 +187,13 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another task module
 
-You can select to respond to the `submitAction` event with another task module. This is useful when:
+You can select to respond to the `submitAction` event with another task module. This is useful when you need to:
 
-* You need to collect large amounts of information.
-* You need to dynamically change the information based on user input.
-* You need to validate the information submitted by the user and resend the form with an error message if something is wrong. 
+* Collect large amounts of information.
+* Dynamically change the information based on user input.
+* Validate the information submitted by the user and resend the form with an error message if something is wrong. 
 
-The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you are using the Bot Framework SDK the same event triggers for both submit actions. To make this work, you must add logic that determines the correct response.
+The method for response is the same as [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md). If you're using the Bot Framework SDK the same event triggers for both submit actions. To make it work, you must add logic that determines the correct response.
 
 ## Bot response with Adaptive Card
 
@@ -397,12 +397,12 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ### Respond to botMessagePreview edit
 
-If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by re-entering the original information. Use the available information to update the task module so that the user need not fill out all information from scratch.
+If the user edits the card before sending, by selecting **Edit**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = edit`. You must respond by returning the task module you sent, in response to the initial `composeExtension/fetchTask` invoke that began the interaction. This allows the user to start the process by reentering the original information. Use the available information to update the task module so that the user need not fill out all information from scratch.
 For more information on responding to the initial `fetchTask` event, see [responding to the initial `fetchTask` event](~/messaging-extensions/how-to/action-commands/create-task-module.md).
 
 ### Respond to botMessagePreview send
 
-After the user selects the **Send**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service has to create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
+After the user selects the **Send**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service has to create and send a proactive message with the Adaptive Card to the conversation, and also reply to invoke.
 
 # [C#/.NET](#tab/dotnet)
 
