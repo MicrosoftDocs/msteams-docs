@@ -113,5 +113,5 @@ The cloned repository appears in Visual Studio 2019.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Overview](code-samples.md) | [Build and test your app](build-and-test-csharp-app.md) : **Next** |
+| [ :::image type="icon" source="../assets/images/get-started/app-roadmap/back-overview.png":::](get-started-overview.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-and-test-csharp-app.md) |
 |
