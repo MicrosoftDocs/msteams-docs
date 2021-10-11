@@ -36,7 +36,6 @@ Updating the app package includes:
 
 - [Uploading the app package to Developer Portal](#upload-the-app-package-to-developer-portal)
 - [Configuring app capabilities](#configure-your-app-capabilities)
-- [Registering your app in Teams](#register-your-app-in-teams)
 
 > [!NOTE]
 > You could use [*App Studio*](deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
@@ -139,11 +138,11 @@ To configure personal tab app:
 
 1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon for Hello tab, and select **Edit** to open the app details for updating.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-edit-tab.png/" alt-text="Image showing Hello tab menu" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-edit-tab.png" alt-text="Image showing Hello tab menu" border="false":::
 
 1. Enter the app details for the Hello tab in **Add a tab to your personal app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png/" alt-text="Image showing Hello tab details" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-personal-tab-details.png" alt-text="Image showing Hello tab details" border="false":::
 
     Enter the following details:
     - Name: Hello tab
@@ -155,17 +154,17 @@ To configure personal tab app:
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-save-tab-update.png/" alt-text="Image showing Hello tab details to be saved" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-save-tab-update.png" alt-text="Image showing Hello tab details to be saved" border="false":::
  
     The **Personal app** pane now shows the new tab and an About tab created automatically.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png/" alt-text="Image showing Hello tab and About tab details" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-about-tab-added.png" alt-text="Image showing Hello tab and About tab details" border="false":::
 
 #### Configure bot
 
 It's easy to add the bots functionality to your app. The Hello World sample app already has a bot as its part, but you must register it with Teams.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-no-id.png/" alt-text="Image showing bot app imported with no app ID" border="false":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="false":::
 
 The bot that was imported from the sample doesn't have an associated app ID. You must delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
 
@@ -313,7 +312,7 @@ To add a new message extension:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="false":::
 
-    You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app.
+    You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app. The next step is to register your app in Teams and test your app.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|

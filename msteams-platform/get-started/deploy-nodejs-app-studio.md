@@ -166,7 +166,7 @@ After entering the details of your app, complete the following steps to register
 1. To upload your app to Teams, select the **Install** button under **Test and Distribute**:
 
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
-    
+
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
@@ -179,5 +179,5 @@ After entering the details of your app, complete the following steps to register
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Next** : [Update app credentials](deploy-nodejs-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
+|**Next** : [Update app credentials](configure-test-nodejs-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
 |

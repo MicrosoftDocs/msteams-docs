@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Configure and test your C# app
+# Configure and test your Node.js app
 
 After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
 
@@ -25,7 +25,7 @@ After entering the details of your app, complete the following steps to register
 
 1. Select **Publish to store**  under **Publish** in the left-hand pane of Developer Portal:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Preview button" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Publish option in left pane" border="false":::
 
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).

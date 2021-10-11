@@ -25,7 +25,7 @@ After entering the details of your app, complete the following steps to register
 
 1. Select **Publish to store**  under **Publish** in the left-hand pane of Developer Portal:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Preview button" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Publish option in left pane" border="false":::
 
     > [!NOTE]
     > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
@@ -94,5 +94,5 @@ You can now test the bot in Teams.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Deploy your app](deploy-.md) | [Overview](get-started-overview.md) : **Next** |
+|**Back** : [Deploy your app](deploy-csharp-app.md) | [Overview](get-started-overview.md) : **Next** |
 |
