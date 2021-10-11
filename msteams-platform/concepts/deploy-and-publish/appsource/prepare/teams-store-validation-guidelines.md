@@ -77,7 +77,7 @@ Remember the following if your app authenticates users with an external service.
 
 * **Sign in, sign out, and sign up experiences**:
   * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experiences.
-  * When a user signs out, they must sign out only from the app and remain signed in to Teams.
+  * When a user sign out, they must sign out only from the app and remain signed in to Teams.
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in help documentation (or similar resources) how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to unshare content must be present in your Teams app.
 
 #### Government Community Cloud listings
@@ -245,7 +245,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### Privacy policy
 
-The privacy policy can be specific to your Teams app or an overall policy for all of your services.
+The privacy policy can be specific to your Teams app or an overall policy for all your services.
 
 * If you use a generic privacy policy template, you must reference **services**, **applications**, and **platforms** to include your Teams app and your service or website.
 * Must include how you handle user data storage, retention, and deletion. You also must describe the security controls you use for data protection.
@@ -335,7 +335,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Notification-only bots must send a welcome message that conveys it will not reply to users' messages.
 
 > [!TIP]
-> In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features. Including buttons the let users try bot commands is encouraged. For example, **Create a task**.
+> In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features. Including buttons to let users try bot commands is encouraged. For example, **Create a task**.
 
 ### Bot message spamming
 
