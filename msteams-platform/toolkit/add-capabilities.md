@@ -9,7 +9,7 @@ ms.topic: overview
 
 # Add Capabilities
 
-As you continue to develop your project, you may need additional app capabilities. You can start with a Tab application and add a bot to your Teams application later or do so vice-versa.
+As you continue to develop your project, you need additional app capabilities. You can start with a Tab application and add a bot to your Teams application later.
 
 For more information on Teams app capabilities, see [Understand app capabilities](~/concepts/capabilities-overview.md#app-capabilities).
 
@@ -20,9 +20,9 @@ You need to start with a Teams application with one app capability created by th
 ## Add capabilities to your project
 
 Currently there are the following limitations with TeamsFx when adding additional capabilities:
-* You cannot add each project capabilities more than once.
+* You cannot add each project capability more than once.
 * You cannot add any capability if you start with a Tab application with SPFx.
-* You cannot add additional Bot capability if your project contains a Messaging Extension.
+* You cannot add additional Bot capability if your project contains Messaging Extension.
 * You cannot add additional Messaging Extension if your project contains a Bot.
 
 > [!NOTE]
@@ -58,7 +58,7 @@ There are several approaches where you can add additional capabilities to your p
 
     ![Select capabilities](~/assets/images/tools-and-sdks/select-capabilities.png)
  
-1. Select **OK** to continue, there may be additional questions needed based on the capabilities you selected. Read more these on create project section. (links to create project)
+1. Select **OK** to continue, there may be additional questions needed based on the capabilities selected. Read more these on create project section. (links to create project)
 
     Alternatively, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
 
@@ -70,7 +70,7 @@ There are several approaches where you can add additional capabilities to your p
 1. Change directory to your project directory.
 1. Execute following command to add different capabilities:
 
-|Capability and Scenario|	Command|
+|Capability and Scenario| Command|
 |-----------------------|----------|
 |To Add a Tab	|`teamsfx capability add tab`|
 |To Add a Bot With New Bot Registration	|`teamsfx capability add bot --way-to-register-bot create-new`|
@@ -80,7 +80,7 @@ There are several approaches where you can add additional capabilities to your p
 
 ## Add additional capabilities
 
-After you successfully added capabilities, and based on the capabilities you selected, these are the changes made to your project and why they are made.
+After adding capabilities, and based on the capabilities you selected, these are the changes made to your project and why they are made.
 
 |Capability Added	|What changed|	Why these changes are made|
 |-------------------|---------------|-------------------------|
