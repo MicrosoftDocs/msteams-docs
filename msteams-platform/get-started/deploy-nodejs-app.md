@@ -192,11 +192,11 @@ Adding and configuring a bot involves the following:
 
 1. Enter the forwarding URL from the `ngrok` console, and select **Save**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-endpoint-1" alt-text="Image showing how to add bot endpoint" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
     The **Bot management** pane shows the new Bot added with an app ID.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-added-2.png" alt-text="Image showing new bot with app ID" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-added.png" alt-text="Image showing new bot with app ID" border="false":::
 
 1. Ensure that you note the Bot ID. You will need it to update app credentials later.
 
@@ -208,9 +208,9 @@ Adding and configuring a bot involves the following:
 
     The **Bot** pane appears.
 
-1. Select your bot app from **Select an existing bot**.
+1. Select your bot app from **Select an existing bot**, and select **Save**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-add-bot-app-3.png" alt-text="Image showing how to add an existing bot app" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-select-bot-app.png" alt-text="Image showing how to select an existing bot app" border="false":::
 
     The new bot is added to your app with its own app ID.
 

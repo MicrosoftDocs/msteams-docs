@@ -124,7 +124,7 @@ To view the app manifest:
 
 After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
 
-You'll configure:
+Using Developer Portal, you can:
 - [Configure personal tab app](#configure-personal-tab-app)
 - [Configure bot](#configure-bot)
 - [Configure message extension](#configure-message-extension)
