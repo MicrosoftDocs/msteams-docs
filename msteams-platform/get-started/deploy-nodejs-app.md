@@ -120,7 +120,7 @@ You use the manifest file to configure capabilities, required resources, and oth
 
 After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
 
-You'll configure:
+Using Developer Portal, you can:
 - [Configure personal tab app](#configure-personal-tab-app)
 - [Configure bot](#configure-bot)
 - [Configure message extension](#configure-message-extension)
@@ -251,7 +251,7 @@ Adding and configuring a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/nj-tab-chat-tab-configured.png" alt-text="Image showing chat tab configured" border="false":::
 
-**Message Extension**
+#### Message Extension
 
 Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
 
@@ -267,7 +267,7 @@ To add a new message extension:
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-select-msgext-bot.png" alt-text="Image showing Message extension pane"" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-select-msgext-bot.png" alt-text="Image showing Message extension pane" border="false":::
 
     The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
 
@@ -312,6 +312,9 @@ To add a new message extension:
     :::image type="content" source="../assets/images/teams-toolkit-v2/nj-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="false":::
 
     You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app.
+
+### Register your app in Teams
+
 
 ## Update the credentials for your hosted app
 
