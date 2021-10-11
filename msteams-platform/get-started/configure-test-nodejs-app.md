@@ -80,7 +80,7 @@ Where:
 
 <a name="ConfigureTheAppTab"></a>
 
-## Configure your sample app
+## Test the app capabilities in Teams
 
 After you install the app into Teams, you need to configure it to show content.
 
