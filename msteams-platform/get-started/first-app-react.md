@@ -123,5 +123,5 @@ When you add the cloud functionality, Teams Toolkit adds the necessary folders t
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Prepare to build your app](prerequisites.md) | [Build your first tab app](build-javascript-tab-app.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](prerequisites.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-javascript-tab-app.md) |
 |

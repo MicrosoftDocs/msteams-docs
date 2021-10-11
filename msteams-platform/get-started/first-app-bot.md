@@ -107,5 +107,5 @@ Among other items in this directory structure, the Toolkit maintains:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Build your first Teams tab app](build-javascript-tab-app.md) | [Build your first bot app](build-javascript-bot-app.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back.png":::](build-javascript-tab-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-javascript-bot-app.md)|
 |

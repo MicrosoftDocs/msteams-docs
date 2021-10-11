@@ -168,5 +168,5 @@ Now you’ve got all tools and set up your account. Next, let's set up your deve
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Overview](code-samples.md) | [Create your first tab app](first-app-react.md) : **Next**|
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-overview.png":::](get-started-overview.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-tab.png":::](first-app-react.md)|
 |

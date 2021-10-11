@@ -134,5 +134,5 @@ You know how to use Toolkit to set up a tab app and run it locally. Next, let’
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| **Back** : [Create your first tab app](first-app-react.md) | [Create your first bot app](first-app-bot.md) : **Next**|
+| [:::image type="icon" source="../assets/images/get-started/app-roadmap/back-create-tab.png":::](first-app-react.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-bot.png":::](first-app-bot.md)|
 |
