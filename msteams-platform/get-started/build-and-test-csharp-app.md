@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Build and test your C# app
+# Build and run your C# app
 
 After you've cloned the repo for C# sample app, you can build and run the app in your local environment.
 

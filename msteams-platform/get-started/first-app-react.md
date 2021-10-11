@@ -68,10 +68,14 @@ If the prerequisites are in place, let's begin!
 
 <details>
 <summary>A quick recap of creating a Teams app.</summary>
-Watch this short video for a quick recap of creating a Teams app.
+Watch this short recap for creating a Teams app.
 
 ![Create a Teams app](~/assets/videos/react-sample-video.gif)
 </details>
+
+**Video**
+
+:::video source="{~/assets/videos/AppReact_Sample_0.3.mp4}":::
 
 # [Command line](#tab/cli)
 

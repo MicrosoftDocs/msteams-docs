@@ -10,10 +10,29 @@ ms.date: 11/09/2018
 
 # Configure and test your C# app
 
+After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
 
 
 ## Register your app in Teams
 
+After entering the details of your app, complete the following steps to register your app in Teams:
+
+1. Use **Preview** of Developer Portal to install your app in Teams.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Image showing Preview button" border="false":::
+
+1. Update your hosted application with the App ID and password for your bot. For the sample app, use the same App ID and password for both bot and messaging extension.
+
+1. Select **Publish to store**  under **Publish** in the left-hand pane of Developer Portal:
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-publish-left-pane.png" alt-text="Image showing Preview button" border="false":::
+
+    > [!NOTE]
+    > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
+
+1. Select **Add** to install the app on Teams.
+
+    Your app is now available in Teams. However, the bot and the messaging extension will not work until you update the hosted applications environment with the App IDs and passwords.
 
 ## Update the credentials for your hosted app
 
