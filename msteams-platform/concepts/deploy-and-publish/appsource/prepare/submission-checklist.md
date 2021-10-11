@@ -17,7 +17,7 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
 > [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
+>  App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
 
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
@@ -43,9 +43,9 @@ Provide details about your app's capabilities in Teams and steps for testing eac
 
 ### Accounts
 
-Provide test accounts if your app requires a license or backend safelisting. All accounts you provide must include pre-populated data to help in testing.
+Provide test accounts if your app requires a license or backend safe listing. All accounts you provide must include pre-populated data to help in testing.
 
-Depending on your app's features, you may need to provide all of the following accounts:
+Depending on your app's features, you may need to provide all the following accounts:
 
 * Admin account (required)
 * Non-admin account (required)
