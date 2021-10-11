@@ -73,10 +73,6 @@ Watch this short recap for creating a Teams app.
 ![Create a Teams app](~/assets/videos/react-sample-video.gif)
 </details>
 
-**Video**
-
-:::video source="{~/assets/videos/AppReact_Sample_0.3.mp4}":::
-
 # [Command line](#tab/cli)
 
 Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
