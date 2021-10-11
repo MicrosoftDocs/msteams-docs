@@ -176,7 +176,7 @@ See the following section for welcome message requirements:
 * Include a value proposition with the welcome tour.
 * Provide way-forward guidance for using the app.
 * Include guidance on how to sign-up and configure your app.
-* Present easy-to-read text and straightforward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
+* Present easy-to-read text and straight forward dialogue — preferably a card with an actionable welcome tour button that loads a task module.
 * Keep it simple and usable with buttons and cards — avoid long text, chatty dialogue.
 * Include adaptive cards and buttons to make the welcome message more usable.
 * Invoke the welcome message  with one ping, not two or more simultaneous pings.
@@ -196,7 +196,7 @@ Notification-only bots must send a welcome message that includes a message conve
 
 #### Welcome messages in the personal scope
 
-   * **Make your message concise and informative**. The user experience and the knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
+   * **Make your message concise and informative**. The user experience and the knowledge of your app will vary. A user may have used your app on another platform or know nothing about your app. You want to tailor your message to all audiences and in a couple of sentences explain what your bot does and the ways to interact with it. You must also explain the value of the app and how the users will benefit from using it.
 ![Cafe and Dinning bot](../../../../assets/images/faq/cafe-bot.png)
 
 * **Make your message actionable**. Think about the first thing you want users to do after installing your app. Is there a cool command they must try? Is there another onboarding experience they must know about? Do they need to sign-in? You can add actions on an adaptive card or provide specific examples such as *“Try asking….”*, *“This is what I can do…”*.
@@ -207,7 +207,7 @@ Things are a little bit different when the bot is first added to a channel. Norm
 
 ### &#9989; Mobile responsiveness, no direct upsell or payment
 
-* Your tabs, adaptive cards, bot messages and content in task modules must be responsive for a variety of mobile device screens sizes.
+* Your tabs, adaptive cards, bot messages, and content in task modules must be responsive for a variety of mobile device screens sizes.
 * Apps that support iOS must be fully functional on the latest iPad device using the latest version of iOS.
 * Must not include any direct references to in-app purchases, trial offers, offers for paid versions, or links to any online stores where users can purchase or acquire other content, apps, or add-ins from your Teams app on mobile OS (Android, iOS).
 * The iOS or Android version of the add-in must not show any UI or language or link to any other apps, add-ins, or website that ask the user to pay.
