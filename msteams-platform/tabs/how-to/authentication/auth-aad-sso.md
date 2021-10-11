@@ -180,7 +180,7 @@ A simple way of consenting on behalf of an organization as a tenant admin is to 
 
 #### Ask for consent using the Auth API
 
-Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page). This approach involves popping up an Azure AD consent dialog box.
+Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
 **To ask for additional consent using the Auth API**
 
