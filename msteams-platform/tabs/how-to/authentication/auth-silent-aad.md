@@ -8,7 +8,7 @@ keywords: teams authentication SSO silent AAD
 # Silent authentication
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, you need to ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
 Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -121,7 +121,7 @@ if (authContext.isCallback(window.location.hash)) {
 Use the following code to handle sign out flow in AAD Auth:
 
 > [!NOTE]
-> While logout for Teams tab or bot is done, the current session is also cleared.
+> When you logout for Teams tab or bot, the current session is cleared.
 
 ```javascript
 function logout() {

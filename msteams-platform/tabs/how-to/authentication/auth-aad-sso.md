@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, and so on. You can take advantage by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
+When you sign in to Microsoft Teams through your work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. Once you are sign in, you don't have to sign in again on another device as you're signed in automatically. Also, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -22,7 +22,7 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > [!NOTE]
 > **Quickstart**  
 >
-> The simplest path to getting started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+> The simplest path to get started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## How SSO works at runtime
 
