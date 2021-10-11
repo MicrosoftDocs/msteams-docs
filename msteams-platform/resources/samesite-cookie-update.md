@@ -10,7 +10,7 @@ ms.author: lomeybur
 
 # SameSite cookie attribute 
 
-Cookies are text strings, sent from websites, and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties. 
+Cookies are text strings sent from websites and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties. 
 
 ## Types of cookies
 
