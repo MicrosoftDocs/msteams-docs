@@ -259,6 +259,62 @@ Adding and configuring a bot involves the following:
 
 Messaging extensions let users ask for information from your service and post that information. The information is posted in the form of cards into the channel conversation. Messaging extensions appear at the bottom of the compose box.
 
+To add a new message extension:
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/ellipse-icon.png"::: icon on the **Message Extension** card on the **App features** pane, and select **Delete**.
+
+1. Select **Message Extension** from the **App features** pane.
+
+1. Select the name of your bot app from the **Select an existing bot** dropdown list on the **Message extension** pane.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-select-bot.png" alt-text="Image showing Message extension pane to select existing bot" border="false":::
+
+1. Select **Save**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-save.png" alt-text="Image showing Message extension save button" border="false":::
+
+    The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
+
+1. Select **+ Add a command** to add define the scope of what your message extension app can do.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="false":::
+
+1. Ensure that **Search** is selected as the type of command you want to add in the **Add a command** dialog.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-add-new-command.png" alt-text="Image showing Add a Command dialog" border="false":::
+
+1. Enter suitable information the following details:
+    - Command ID
+    - Command title
+    - Command description
+
+1. Move through the dialog to view the remaining details.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-add-command-b.png" alt-text="Image showing remaining details in Add a Command dialog" border="false":::
+
+1. Ensure **Make default** is selected.
+1. Select the following contexts for the message extension command:
+    - Command box
+    - Compose box
+    - Message
+1. Enter suitable information for the following details:
+    - Parameter name
+    - Parameter title
+    - Parameter description
+
+1. Select **Text** as the type of input.
+1. Select **Save**
+1. The message extension command is saved, and shows on the list of commands in the **Message extension** pane.
+
+     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-msgext-command-added.png" alt-text="Image showing new Command added" border="false":::
+
+1. Select **Save**.
+1. Open **App features** pane.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-app-capabilities-configured.png" alt-text="Image showing capabilities configured for Hello World app" border="false":::
+
+    You'll see all three capabilities - personal tab app, bot, and message extension - configured for the Hello World app.
+
 ### Register your app in Teams
 
 
