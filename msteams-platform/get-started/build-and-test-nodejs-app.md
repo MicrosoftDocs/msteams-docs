@@ -116,5 +116,5 @@ Note the URL of your app for registering the app with Teams. You can register th
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Plan and Prepare](get-started-nodejs-app-studio.md) | [Deploy your app in Azure](deploy-nodejs-app.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](get-started-nodejs-app-studio.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](deploy-nodejs-app.md)|
 |

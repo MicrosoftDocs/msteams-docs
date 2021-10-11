@@ -129,5 +129,5 @@ git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Overview](code-samples.md) | [Build and test your app](build-and-test-nodejs-app.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-overview.png":::](code-samples.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-and-test-nodejs-app.md)|
 |

@@ -118,5 +118,5 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Deploy your app](deploy-nodejs-app.md) | [Overview](code-samples.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-deploy.png":::](deploy-nodejs-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-overview.png":::](code-samples.md)|
 |

@@ -15,13 +15,19 @@ Let's deploy the first Hello World app on Azure using Teams Toolkit.
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p-3.png" alt-text="Image showing phase 3 of building an app." border="false":::
 
-In this page, you'll learn to 
+In this page, you'll learn to:
 - [Deploy your app to Microsoft Teams](#deploy-your-app-to-microsoft-teams)
 - [Update the app package](#update-the-app-package)
 
 ## Deploy your app to Microsoft Teams
 
 After deploying your app on the internet, deploy it to Teams by creating an app package. This package contains the app manifest and app icons. The Teams uses these files to display and brand the app.
+
+Hosting your app involves:
+- [Updating the app package](#update-the-app-package)
+- [Registering your app in Teams](configure-test-nodejs-app.md#register-your-app-in-teams)
+- [Updating the credentials for your hosted app](configure-test-nodejs-app.md#update-the-credentials-for-your-hosted-app)
+- [Testing the app capabilities in Teams](configure-test-nodejs-app.md#test-the-app-capabilities-in-teams)
 
 ## Update the app package
 
@@ -313,5 +319,5 @@ To add a new message extension:
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Back** : [Build and test your app](build-and-test-csharp-app.md) | [Configure and test your app](configure-test-nodejs-app.md) : **Next** |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-build.png":::](build-and-test-csharp-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next.png":::](configure-test-nodejs-app.md)|
 |

@@ -168,5 +168,5 @@ After entering the details of your app, complete the following steps to register
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|**Next** : [Update app credentials](configure-test-csharp-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
+|[:::image type="icon" source="../assets/images/get-started/app-roadmap/next.png":::](configure-test-csharp-app.md#update-the-credentials-for-your-hosted-app) | &nbsp; |
 |
