@@ -1,12 +1,12 @@
 - name: Microsoft Teams Developer documentation
   href: /microsoftteams/platform
+- name: What's new?
+  href: whats-new.md
 - name: Overview
   expanded: false 
   items:
     - name: Build apps for Microsoft Teams
       href: overview.md
-    - name: What's new?
-      href: whats-new.md
 - name: Get started
   expanded: false
   items:
