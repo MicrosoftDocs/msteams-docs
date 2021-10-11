@@ -25,6 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|10/08/2021|New best practices for designing Adaptive Cards.|[Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Hide Teams app until Admin allows to unhide the app. | [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|Plan your apps for Teams mobile|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
 |10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps. | [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
