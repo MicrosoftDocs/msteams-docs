@@ -13,14 +13,14 @@ TeamsFx helps you to deploy your project code to the provisioned cloud resources
 
 ## Prerequisite
 
-Before you can deploy your project code to cloud, you must complete the resource provision step.
+Before you can deploy your project code to cloud, complete the resource provision step.
 
 ## Deployment
 
-Teams Toolkit deploys or uploads the backend and frontend code in your application to the corresponding cloud resources in Azure that provisioned in the previous step.
+Teams Toolkit deploys or uploads the backend and frontend code in your application to the corresponding cloud resources in Azure that is provisioned.
 
-* The backend (Azure Functions if configured) may use a variety of Azure services, including Azure App Service and Azure Storage.
-* The frontend application are deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
+* The backend (Azure Functions if configured) may use different kinds of Azure services, including Azure App Service and Azure Storage.
+* The frontend applications are deployed to an Azure Storage account configured for static web hosting or a SharePoint site.
 
 ## Deployment by project type
 
@@ -30,7 +30,7 @@ Teams Toolkit deploys or uploads the backend and frontend code in your applicati
 |Tab With SharePoint </br> The frontend workload |SharePoint App Catalog|`yourProjectFolder/SPFx`|
 |Bot and Messaging Extension </br> The backend workload | Azure Web App	`yourProjectFolder/bot` |
 
-You are optionally to include other Azure resources that fits your application needs and the corresponding project code is deployed to that resources, this may include the following:
+You have to optionally include Azure resources that fit your application needs and the corresponding project code is deployed to the resources, this includes the following:
 * Azure Functions
 * Azure API Management
 
@@ -38,7 +38,7 @@ Read more on Add cloud resources (link to add Cloud resources) to learn about de
 
 ## Deploy your project
 
-There are several approaches where you can deploy your project to cloud and they are similar for each project type.   
+There are several approaches where you can deploy your project to cloud, which is similar for each project type.   
 
 * Read provision section for Tab project: [Get started - Build your first Teams app with React](~/get-started/first-app-react.md?tabs=vscode#deploy-your-app-to-azure) 
 * Read provision section for Tab project with SPFx: [Get started - Build your first Teams app with SPFx](~/get-started/first-app-spfx.md?tabs=cli#deploy-your-app-to-sharepoint)
@@ -54,7 +54,6 @@ There are several approaches where you can deploy your project to cloud and they
 
 ## See also
 
-* Add additional cloud resources.
-* Add additional Teams app capabilities.
-* Deploy project code with CI/CD pipelines.
-
+* [Add additional cloud resources](~\toolkit\add-cloud-resources.md)
+* [Add additional Teams app capabilities](~\toolkit\add-capabilities.md)
+* [Deploy project code with CI/CD pipelines](~\toolkit\build-pipelines.md)
