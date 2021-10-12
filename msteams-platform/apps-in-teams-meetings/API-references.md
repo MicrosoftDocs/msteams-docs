@@ -40,6 +40,24 @@ The following table provides the Bot Framework SDK methods for the APIs:
 |**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
 |**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
 
+## canShareAppSegment API
+The developer app will query the Client SDK whether it can be shared on stage or not.
+This API on Client SDK will further query client, where it will be checking the app manifest to have `meetingStage` as `frameContext` and user role is presenter. Attendee cannot share the app on stage. 
+
+## shareAppContentToStage API
+Start sharing call Client SDK API initiates extensible app sharing.
+
+### Query parameters
+
+The `shareAppContentToStage` API includes the following query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**appId**| --- | --- | ---|
+|**shareURL**| --- | --- | --- |
+
+
+
 ## GetUserContext API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
