@@ -10,7 +10,7 @@ author: surbhigupta
 
 # App templates for Microsoft Teams
 
-App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing the app for your organization. It also provides a sample app that you can install and start using immediately. The complete source code is also available, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
+App templates are examples of complete apps for Microsoft Teams that are open-source and available on GitHub. Each app template contains detailed instructions for deploying and installing that app for your organization. It also provides a sample app that you can install and start using immediately. The complete source code is also available, which allows you to explore it in detail or fork the code and alter it to meet your specific requirements.
 All app templates are provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-eprescription/blob/master/LICENSE) terms.
 
 > [!NOTE] 
@@ -68,7 +68,7 @@ Ask Away is a [Microsoft Teams bot](../bots/what-are-bots.md) that enables users
 
 ## Associate Insights
 
-Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data is shared and used collaboratively by business teams, through Power BI Teams tab, for product improvement and enhancing the customer experience.
+Associate Insights is a [Power Apps](/powerapps/maker/canvas-apps/embed-teams-app) template that empowers firstline workers to directly capture and submit customer opinion, sentiment, and perception. Firstline workers are often the first company representative to engage with customers in a one-to-one point-of contact. The collected data are shared and used collaboratively by business teams, such as through a Power BI Teams tab, for product improvement and enhancing the customer experience.
 
 [Get it on GitHub](https://github.com/OfficeDev/microsoft-teams-apps-associateinsights)
 
@@ -262,7 +262,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ## FAQ Plus
 
-Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query, which gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
+Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which then gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
 
 > [!NOTE]
 > The latest release of **FAQ Plus** supports improved Q&A resolutions by enabling a team of experts to complete the following:
