@@ -177,7 +177,7 @@ items:
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
-        :::image type="content" source=".../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
     1. Ensure that **Tab UI-based app** is selected as the capability that you want to build in your app, and select **OK**.
 
@@ -837,12 +837,9 @@ items:
 
     Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
 
-    :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
-
     ## Sign in to your Azure account
 
     Use this account to access the Azure portal and to provision new cloud resources to support your app.
-
 
     # [Visual Studio Code](#tab/viscode)
 
