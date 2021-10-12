@@ -56,6 +56,26 @@ The `shareAppContentToStage` API includes the following query parameters:
 |**appId**| --- | --- | ---|
 |**shareURL**| --- | --- | --- |
 
+## shareAppContentToStage API
+The API is provided a “shareUrl” from the developer app, which is then later shared to the stage via the Hosted Web Content Component.
+
+### Query parameters
+The `shareAppContentToStage` API includes the following query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**shareURL**| --- | --- | --- |
+
+## stopAppContentSharingToStage API
+API allows for termination of the current app segment share session. No explicit information from the app is needed by the developer.
+
+### Query parameters
+The `stopAppContentSharingToStage` API includes the following query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**TeamsCallId**| --- | --- | ---|
+|**AppId**| --- | --- | --- |
 
 
 ## GetUserContext API
