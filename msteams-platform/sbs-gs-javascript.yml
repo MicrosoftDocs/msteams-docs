@@ -156,7 +156,7 @@ items:
     Start Microsoft Teams app development by creating your first app, "Hello World!". This app uses the Tab capability.
 
     In this page, you'll learn:
-    - [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project)
+    - [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project-workspace)
     - [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
     ## Create your tab project workspace
@@ -169,7 +169,7 @@ items:
     # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
     1. Select **Create a new Teams app**.
 
@@ -394,13 +394,13 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project)
+    1. [How to set up a new Bot project with Teams Toolkit.](#create-your-bot-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 
     > [!IMPORTANT]
     > Currently, bots are available in Government Community Cloud (GCC) but not available in GCC-High and Department of Defense (DOD).
 
-    ## Create your bot project
+    ## Create your bot project workspace
 
     If the prerequisites are in place, let's begin!
 
@@ -609,10 +609,10 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project)
+    1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
     1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 
-    ## Create your Message Extension project
+    ## Create your Message Extension project workspace
 
     If the prerequisites are in place, let's begin!
 
