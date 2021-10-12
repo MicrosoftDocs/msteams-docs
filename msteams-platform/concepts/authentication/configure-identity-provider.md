@@ -19,10 +19,10 @@ Identity providers supporting OAuth 2.0 will not authenticate requests from unkn
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information yet if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
+Replace `<hostname>` with your actual host. This might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`. You may not have this information if you have not completed or hosted your app (or the sample app mentioned above), but you can always return to this page when that information is known.
 
 ## Other authentication providers
 
-* **LinkedIn** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
+* **LinkedIn:** Follow the instructions in [Configuring your LinkedIn application](/linkedin/talent/apply-with-linkedin)
 
-* **Google** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
+* **Google:** Obtain OAuth 2.0 client credentials from the [Google API Console](https://console.developers.google.com/)
