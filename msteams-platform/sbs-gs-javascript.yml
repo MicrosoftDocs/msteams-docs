@@ -255,7 +255,7 @@ items:
     - The code for the Tab capability in the `Tabs` folder. Some of the important files in this folder are:
 
       - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
-      - `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
+      - `tabs/src/components/App.jsx` handles URL routing in the app. It calls the [Microsoft Teams JavaScript client SDK](../msteams-platform/tabs/how-to/using-teams-client-sdk.md) to establish communication between the app and Teams.
       - `tabs/src/components/Tab.jsx` contains the code to implement the UI of your app.
       - `tabs/src/components/TabConfig.jsx` contains the code to implement the UI that configures your app.
       - This folder also holds the code for tabs needed at runtime. Some of them are the privacy notice, terms of use, and configuration tabs.
@@ -375,7 +375,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+    To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
 
     </details>
 
@@ -580,7 +580,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+    To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
 
     > [!IMPORTANT]
     > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
@@ -600,8 +600,8 @@ items:
 
     There are two types of Teams **messaging extensions**:
 
-    - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
-    - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
+    - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
+    - [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
     Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
 
@@ -781,7 +781,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
 
     > [!TIP]
     > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
