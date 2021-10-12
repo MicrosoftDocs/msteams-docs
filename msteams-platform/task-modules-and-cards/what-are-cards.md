@@ -10,7 +10,18 @@ ms.topic: overview
 
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and can include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-The bots for Teams support the following types of cards: Adaptive Card, hero card, list card, Office 365 Connector card, receipt card, signin card, thumbnail card, and card collections. You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
+The bots for Teams support the following types of cards:
+ 
+- Adaptive Card
+- Hero card
+- List card
+- Office 365 Connector card
+- Receipt card
+- Signin card
+- Thumbnail card
+- Card collections
+
+You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
 
