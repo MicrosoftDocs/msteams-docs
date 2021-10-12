@@ -482,425 +482,425 @@ items:
 - title: Build your first bot app
   durationInMinutes: 1
   content: |
-  # Build your bot project
+    # Build your bot project
 
-  After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
 
-  ## Sign in to your Microsoft 365 account
+    ## Sign in to your Microsoft 365 account
 
-  Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-  # [Visual Studio Code](#tab/viscode)
+    # [Visual Studio Code](#tab/viscode)
 
-  1. Open Visual Studio Code.
-  1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-  1. Select **Sign in to M365**.
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
-      Your default web browser opens to let you sign in to the account.
+        Your default web browser opens to let you sign in to the account.
 
-  1. Sign in to your Microsoft 365 account using your credentials.
-  1. Close the browser when prompted, and return to Visual Studio Code.
-  1. Return to Teams Toolkit within Visual Studio Code.
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
 
-      The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
-      Now you're ready to build the app and run it locally!
+        Now you're ready to build the app and run it locally!
 
-  # [Command line](#tab/cline)
+    # [Command line](#tab/cline)
 
-  1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
-      ``` bash
-      teamsfx account login m365
-      ```
+        ``` bash
+        teamsfx account login m365
+        ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-  2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with the TeamsFx CLI:
 
-      ``` bash
-      teamsfx account login azure
-      ```
+        ``` bash
+        teamsfx account login azure
+        ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-      The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-      Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
-  ---
+    ---
 
-  ## Build and run your first bot app locally
+    ## Build and run your first bot app locally
 
-  To build and run your app in the local environment:
+    To build and run your app in the local environment:
 
-  1. Select **F5** in Visual Studio Code to run your app in debug mode.
+    1. Select **F5** in Visual Studio Code to run your app in debug mode.
 
-      <!-- markdownlint-disable MD033 -->
+        <!-- markdownlint-disable MD033 -->
 
-      <details>
-      <summary>Learn what happens when you run your app locally in the debugger.</summary>
+        <details>
+        <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-      In case you're wondering, when you press the **F5** key, the Teams Toolkit:
+        In case you're wondering, when you press the **F5** key, the Teams Toolkit:
 
-      - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
-      - *Sideloads* the app in Teams.
-      - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-      - Starts the app's frontend hosted locally.
-      - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
-      - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
+        - Registers your app with Azure Active Directory. This app has permissions for the location that the app is loaded from and the backend resources.
+        - *Sideloads* the app in Teams.
+        - Starts the app's backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+        - Starts the app's frontend hosted locally.
+        - Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the app from `https://localhost:3000/tab`. This URL is registered in the app's manifest.
+        - An app manifest is generated and exists in the Developer Portal for Teams. Teams uses the app manifest to tell connected clients where to load the app from.
 
-      </details>
+        </details>
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-    > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
+      > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
 
-      Your web browser starts to run the app.
+        Your web browser starts to run the app.
 
-  1. Sign in with your Microsoft 365 account, if prompted.
+    1. Sign in with your Microsoft 365 account, if prompted.
 
-    > You may be asked to open Teams desktop, select **Cancel** to remain in the browser.
+      > You may be asked to open Teams desktop, select **Cancel** to remain in the browser.
 
-  1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/install-bot.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/install-bot.png" alt-text="Screenshot showing the bot is being added on Teams client.":::
 
-    Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
+      Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/run-bot.png" alt-text="Screenshot showing the bot is running on Teams client.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/run-bot.png" alt-text="Screenshot showing the bot is running on Teams client.":::
 
-    You can type `welcome` to show an introduction card, and `learn` to go to adaptive card and bot command documentation.
+      You can type `welcome` to show an introduction card, and `learn` to go to adaptive card and bot command documentation.
 
-    You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then type some text.
+      You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then type some text.
 
-  <!-- markdownlint-disable MD033 -->
-  <details>
-  <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-  To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+    To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
-  > [!IMPORTANT]
-  > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
+    > [!IMPORTANT]
+    > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
 
-  > [!TIP]
-  > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
-  </details> 
+    > [!TIP]
+    > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
+    </details> 
 
 - title: Create project workspace for your message extension app
   durationInMinutes: 1
   content: |
-  # Create your first Teams message extension app
+    # Create your first Teams message extension app
 
-  You've built your bot app. Now, let's create your first message extension app.
+    You've built your bot app. Now, let's create your first message extension app.
 
-  Message Extension capability lets you interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
+    Message Extension capability lets you interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
 
-  There are two types of Teams **messaging extensions**:
+    There are two types of Teams **messaging extensions**:
 
-  - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
-  - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
+    - [Search commands](../messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
+    - [Action commands](../messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
-  Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
+    Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
 
-  As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
-  In this tutorial, you'll learn:
+    In this tutorial, you'll learn:
 
-  1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project)
-  1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
+    1. [How to set up a new Message Extension project with Teams Toolkit.](#create-your-message-extension-project)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-source-code)
 
-  ## Create your Message Extension project
+    ## Create your Message Extension project
 
-  If the prerequisites are in place, let's begin!
-
-  > [!NOTE]
-  > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
-
-  # [Visual Studio Code](#tab/vsc)
-
-  1. Open Visual Studio Code.
-  1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
-
-  1. Select **Create New Project** from the left-hand side of the Toolkit.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
-
-  1. Select **Create New Project** to create an app using the Teams Toolkit.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
-
-  1. Select **Message Extension**, deselect **Tab**, and select **OK**.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
-
-  1. Select **Create a new bot registration** in the **Bot registration** section.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
+    If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > Messaging extensions rely on bots to provide a dialog between the user and your code.
+    > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
 
-  1. Select **JavaScript** as the programming language.
+    # [Visual Studio Code](#tab/vsc)
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-  1. Select a workspace folder. A folder is created in your workspace folder for the project.
+    1. Select **Create New Project** from the left-hand side of the Toolkit.
 
-  1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
-    Teams Toolkit creates the app in a few seconds.
+    1. Select **Create New Project** to create an app using the Teams Toolkit.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-  # [Command line](#tab/cli)
+    1. Select **Message Extension**, deselect **Tab**, and select **OK**.
 
-  Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/select-capabilities-msgext.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
-  ``` bash
-  teamsfx new
-  ```
+    1. Select **Create a new bot registration** in the **Bot registration** section.
 
-  You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
 
-  For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+      > [!NOTE]
+      > Messaging extensions rely on bots to provide a dialog between the user and your code.
+
+    1. Select **JavaScript** as the programming language.
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
+
+    1. Select a workspace folder. A folder is created in your workspace folder for the project.
+
+    1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
+
+      Teams Toolkit creates the app in a few seconds.
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
+
+    # [Command line](#tab/cli)
+
+    Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
+
+    ``` bash
+    teamsfx new
+    ```
+
+    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
+    For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
 
-  1. Select **Create a new Teams app**.
-  1. Select the **Message Extension** and deselect **Tab**.
-  1. Select **Create a new bot registration**.
-  1. Select **JavaScript** as the programming language.
-  1. Select **Enter** to select the default workspace folder.
-  1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
+    1. Select **Create a new Teams app**.
+    1. Select the **Message Extension** and deselect **Tab**.
+    1. Select **Create a new bot registration**.
+    1. Select **JavaScript** as the programming language.
+    1. Select **Enter** to select the default workspace folder.
+    1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
 
-    After all the questions have been answered, your project is created.
+      After all the questions have been answered, your project is created.
 
-  ---
+    ---
 
-  ## Take a tour of the source code
+    ## Take a tour of the source code
 
-  A message extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    A message extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
-  :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
-  - `bot`: The bot code is stored in the `bot` directory.
-      - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
+    - `bot`: The bot code is stored in the `bot` directory.
+        - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
-  > [!Tip]
-  > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+    > [!Tip]
+    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
 - title: Build your first message extension app
   durationInMinutes: 1
   content: |
-  # Build your message extension project
+    # Build your message extension project
 
-  After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
 
-  ## Sign in to your Microsoft 365 account
+    ## Sign in to your Microsoft 365 account
 
-  Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-  # [Visual Studio Code](#tab/vcode)
+    # [Visual Studio Code](#tab/vcode)
 
-  1. Open Visual Studio Code.
-  1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-  1. Select **Sign in to M365**.
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
-      Your default web browser opens to let you sign in to the account.
+        Your default web browser opens to let you sign in to the account.
 
-  1. Sign in to your Microsoft 365 account using your credentials.
-  1. Close the browser when prompted, and return to Visual Studio Code.
-  1. Return to Teams Toolkit within Visual Studio Code.
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
 
-      The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
 
-      Now you're ready to build the app and run it locally!
+        Now you're ready to build the app and run it locally!
 
-  # [Command line](#tab/cline)
+    # [Command line](#tab/cline)
 
-  1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
-      ``` bash
-      teamsfx account login m365
-      ```
+        ``` bash
+        teamsfx account login m365
+        ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-  2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with the TeamsFx CLI:
 
-      ``` bash
-      teamsfx account login azure
-      ```
+        ``` bash
+        teamsfx account login azure
+        ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-      The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-      Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
 
-  ---
+    ---
 
-  ## Build and run your app locally in Visual Studio Code
+    ## Build and run your app locally in Visual Studio Code
 
-  To build and run your app locally:
+    To build and run your app locally:
 
-  1. Select **F5** in Visual Studio Code to run your application in debug mode.
-      <!-- markdownlint-disable MD033 -->
-      <details>
-      <summary>Learn what happens when you run your app locally in the debugger.</summary>
+    1. Select **F5** in Visual Studio Code to run your application in debug mode.
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-      When you select **F5**, the Teams Toolkit:
+        When you select **F5**, the Teams Toolkit:
 
-      1. Registers your application with Azure Active Directory.
-      1. Registers your application for "side loading" in Microsoft Teams.
-      1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
-      1. Starts ngrok tunnel so Teams can communicate with your app.
-      1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
+        1. Registers your application with Azure Active Directory.
+        1. Registers your application for "side loading" in Microsoft Teams.
+        1. Starts your application backend running locally using [Azure Function Core Tools](/azure/azure-functions/functions-run-local?#start).
+        1. Starts ngrok tunnel so Teams can communicate with your app.
+        1. Starts Microsoft Teams with a command to instruct Teams to sideload the application.
 
-      </details>
+        </details>
 
-    > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+      > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
-    Teams opens in a web browser.
-  1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
-  1. Sign in with your Microsoft 365 account, if prompted.
-  
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-add-app.png" alt-text="Screenshot that shows the button Add the app to Teams" border="false":::
-      
-  1. Select **Add** to add the app to your account.
-      
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-added.png" alt-text="Screenshot that shows confirmation that app is added" border="false":::
+      Teams opens in a web browser.
+    1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
+    1. Sign in with your Microsoft 365 account, if prompted.
+    
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-add-app.png" alt-text="Screenshot that shows the button Add the app to Teams" border="false":::
+        
+    1. Select **Add** to add the app to your account.
+        
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/hmx-app-added.png" alt-text="Screenshot that shows confirmation that app is added" border="false":::
 
-    The app is added to Teams, and is loaded.
+      The app is added to Teams, and is loaded.
 
-  <!-- markdownlint-disable MD033 -->
-  <details>
-  <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-  To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
+    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](prerequisites.md#set-up-your-teams-development-tenant).
 
-  > [!TIP]
-  > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
-  </details>
+    > [!TIP]
+    > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
+    </details>
 
-  ### Test the Bot app
+    ### Test the Bot app
 
-  Try the following steps in the app to start a new conversation.
-  1. Launch the message extension from three dots in the composing area.
-  1. Select the message extension app you installed.       
+    Try the following steps in the app to start a new conversation.
+    1. Launch the message extension from three dots in the composing area.
+    1. Select the message extension app you installed.       
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
-    This sample app lets you search npm packages.
+      This sample app lets you search npm packages.
 
-  1. Enter a search string in the search box, such as "cli":
+    1. Enter a search string in the search box, such as "cli":
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
 
-  1. Select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
+    1. Select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
-  Now, you've learned how to build and run a basic message extension.
+    Now, you've learned how to build and run a basic message extension.
 
-  <details>
-  <summary>Add a configuration page to your messaging extension</summary>
+    <details>
+    <summary>Add a configuration page to your messaging extension</summary>
 
-  [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
+    [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-  ### Code sample
+    ### Code sample
 
-  Use the Teams Search Auth Config for sample projects on GitHub to see how to:
-  - Create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples).
-  - Create message extensions that accept search requests and return the results after the user has signed in.
+    Use the Teams Search Auth Config for sample projects on GitHub to see how to:
+    - Create messaging extensions that include a configuration page and [Bot Service authentication](https://github.com/microsoft/BotBuilder-Samples#teams-samples).
+    - Create message extensions that accept search requests and return the results after the user has signed in.
 
-  | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
-  |-----------------|-----------------|-------------|--------------|--------|
-  | Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
+    | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
+    |-----------------|-----------------|-------------|--------------|--------|
+    | Bot builder | To create messaging extensions. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config) | [View]( https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-  ### More code samples
+    ### More code samples
 
-  > [!div class="nextstepaction"]
-  > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
-  </details>
+    > [!div class="nextstepaction"]
+    > [View more Bot Framework Samples on GitHub](https://github.com/OfficeDev/microsoft-teams-samples#messaging-extensions-samples-using-the-v4-sdk)
+    </details>
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-  # Deploy your Teams apps to Azure
+    # Deploy your Teams apps to Azure
 
-  You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
 
-  Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
 
-  :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
+    :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p4.png" alt-text="Image showing phase 4 of building an app." border="false":::
 
-  ## Sign in to your Azure account
+    ## Sign in to your Azure account
 
-  Use this account to access the Azure portal and to provision new cloud resources to support your app.
-
-
-  # [Visual Studio Code](#tab/viscode)
-
-  1. Open Visual Studio Code.
-  1. Open the project folder in which you created the tab app.
-  1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-  1. Select **Sign in to Azure**.
-
-      > [!TIP]
-      > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
-
-      Your default web browser opens to let you sign in to the account.
-  1. Sign in to your Azure account using your credentials.
-  1. Close the browser when prompted, and return to Visual Studio Code.
-
-      The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-      Now you're ready to deploy your app to Azure!
-
-  # [Command line](#tab/cline)
-
-  1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-      ``` bash
-      teamsfx account login m365
-      ```
-
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-  2. Sign in to Azure with the TeamsFx CLI:
-
-      ``` bash
-      teamsfx account login azure
-      ```
-
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-      The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-      Now that the development environment is configured, you can create, build, and deploy your first Teams app.
-
-  ---
+    Use this account to access the Azure portal and to provision new cloud resources to support your app.
 
 
-  [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
+    # [Visual Studio Code](#tab/viscode)
 
-  <!-- markdownlint-disable MD033 -->
-  <details>
-  <summary>Learn what happens when you deployed your app to Azure</summary>
+    1. Open Visual Studio Code.
+    1. Open the project folder in which you created the tab app.
+    1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to Azure**.
 
-  Before deployment, the application has been running locally:
+        > [!TIP]
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
 
-  * The backend runs using **Azure Functions Core Tools**.
-  * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+        Your default web browser opens to let you sign in to the account.
+    1. Sign in to your Azure account using your credentials.
+    1. Close the browser when prompted, and return to Visual Studio Code.
 
-  Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-  * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-  * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+        Now you're ready to deploy your app to Azure!
 
-  </details>
+    # [Command line](#tab/cline)
+
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login m365
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+    2. Sign in to Azure with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login azure
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    ---
+
+
+    [!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions.md)]
+
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn what happens when you deployed your app to Azure</summary>
+
+    Before deployment, the application has been running locally:
+
+    * The backend runs using **Azure Functions Core Tools**.
+    * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+    Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+    * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+    * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
+
+    </details>
