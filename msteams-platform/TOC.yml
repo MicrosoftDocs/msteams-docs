@@ -13,7 +13,11 @@
   - name: Overview
     href: get-started/code-samples.md
   - name: Step-by-step guide for Hello World with JavaScript
-    href: sbs-gs-javascript.yml 
+    href: sbs-gs-javascript.yml
+  - name: Step-by-step guide for Hello World with Blazor
+    href: sbs-gs-blazor.yml
+  - name: Step-by-step guide for Hello World with SPFx
+    href: sbs-gs-spfx.yml
   - name: Build Hello World with JavaScript
     href: get-started/prerequisites.md
   - name: Build your first app using Blazor
