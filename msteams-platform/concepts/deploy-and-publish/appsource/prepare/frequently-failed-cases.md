@@ -20,7 +20,7 @@ This article addresses common reasons submitted apps fail validation. While it's
 
 ### &#9989; General considerations
 
-* Ensure you are using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
+* Ensure you're using version 1.4.1 or later of the [Microsoft Teams SDK](https://www.npmjs.com/package/@microsoft/teams-js).
 * Don't make changes to your app while the validation process is in progress. Doing so will require a complete revalidation of your app.
 * Your app must not stop responding, end unexpectedly, or contain programming errors. If an issue occurs, your app must fail and provide valid information for the way-forward to the user.
 * Your app must not automatically download, install, or launch any executable code in the user environment. All downloads must seek explicit permission from the user.
