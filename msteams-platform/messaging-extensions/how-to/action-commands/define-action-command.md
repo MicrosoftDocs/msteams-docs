@@ -27,7 +27,7 @@ First, you must decide the location from where your action command must be invok
 * Command box: By @mentioning your app in the command box. 
 
    > [!NOTE]
-   > @mention is no longer supported for Messaging extension.
+   > @mention is no longer supported for messaging extension.
 
    > [!NOTE]
    > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
