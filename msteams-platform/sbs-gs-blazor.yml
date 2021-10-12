@@ -56,8 +56,9 @@ items:
 
     ### Install the Teams Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
-
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). 
+    
     # [Visual Studio 2019](#tab/vs)
 
     You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
@@ -190,7 +191,7 @@ items:
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/blazor/blazor-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/blazor-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019.":::
 
     The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, the Teams Toolkit maintains:
 
@@ -234,39 +235,39 @@ items:
 
     1. In Solution Explorer, right-click the project node and select **Publish**. You can also use the **Build** > **Publish** menu item.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Select the Publish operation on the project":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Select the Publish operation on the project":::
 
     1. Select **Azure** and select **Next** in the **Publish** window.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Select Azure as the publishing target":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Select Azure as the publishing target":::
 
     1. Select **Azure App Service (Windows)** and select **Next**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Select Azure App Service as the publishing target":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Select Azure App Service as the publishing target":::
 
     1. Select **+** to create a new App Service instance.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Create a new instance.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Create a new instance.":::
 
         In the **Create App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.
 
     1. Select **Create** when you're ready.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Select hosting plan and subscription":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Select hosting plan and subscription":::
 
         You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
 
     1. Select **Finish** when you're ready.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
 
     1. Select the **Edit** (pencil) icon next to **Deployment Mode**, and select **Self-contained**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="Select self-contained deployment mode.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="Select self-contained deployment mode.":::
 
     1. Select **Publish**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
 
       Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
     1. Add `/tab` to the end of the URL to see your page.
@@ -288,7 +289,7 @@ items:
 
     1. Select **Environments**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments1.png" alt-text="Select environments":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments1.png" alt-text="Select environments":::
 
     1. Select **Create your first environment**.
 
@@ -299,7 +300,7 @@ items:
     1. Enter `azure_app_url` as the **Name**.  
     1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the last step of the previous section [Provision and deploy your app to Azure App Service](#provision-and-deploy-your-app-to-azure-app-service)
 
-        :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
 
     1. Select **Add**.
       
@@ -318,12 +319,12 @@ items:
 
     1. Select **Basic information** from the sidebar.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
         There are several places in the manifest that list a `localhost:XXXXX` as part of a URL.
     1. Replace all occurrences  of `localhost:XXXXX` with `{{azure_app_url}}`, including the curly braces.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
     1. Select **Save** when you've completed replacement.
       
@@ -333,16 +334,16 @@ items:
 
     1. Select **Capabilities** from the sidebar.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
 
     1. Select **Personal Tab**.
     1. Select the triple dots next to the **Personal Tab**, and select **Edit**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Edit personal tab settings":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Edit personal tab settings":::
 
     1. Replace the URL with the environment variable in the **Content Url** and **Website Url** fields.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Edit personal tab URLs":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Edit personal tab URLs":::
 
     1. Select **Update**.
 
@@ -356,7 +357,7 @@ items:
 
     1. Replace the `localhost` within the **Application ID URI** with `{{azure_app_url}}`.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Edit single sign-on Application ID URI":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Edit single sign-on Application ID URI":::
 
     1. Select **Save**.
 
@@ -366,6 +367,6 @@ items:
 
     1. Verify if `{{azure_app_url}}` is listed as a valid domain. If it isn't, add it as a valid domain. Then, select **Add**.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
 
       You've now updated the manifest file. You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
