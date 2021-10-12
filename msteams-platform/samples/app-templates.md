@@ -262,7 +262,7 @@ Expert Finder is a [Microsoft Teams bot](../bots/what-are-bots.md) that identifi
 
 ## FAQ Plus
 
-Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query which, gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
+Conversational Q&A bots are an easy way to provide answers to frequently asked questions by users. But, most bots fail to engage with users in meaningful way because there is no human in the loop when the bot fails. FAQ bot is a friendly Q&A bot that brings a human in the loop when it is unable to help. One can ask the bot a question and the bot responds with an answer if it is contained in the knowledge base. If not, the bot allows the user to submit a query, which gets posted to a pre-configured team of experts who help to provide support by acting upon the notifications from within the team itself.
 
 > [!NOTE]
 > The latest release of **FAQ Plus** supports improved Q&A resolutions by enabling a team of experts to complete the following:

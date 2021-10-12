@@ -65,7 +65,7 @@ A card action data sample code is shown in the following section:
     };
 ```
 
-Next, `SkillCardActionData` class in the Virtual Assistant template introduces to extract `skillId` from the card action payload.
+Next, `SkillCardActionData` class in the Virtual Assistant template is introduced to extract `skillId` from the card action payload.
 A code snippet to extract  `skillId` from card action payload is shown in the following section:
 
 ```csharp
@@ -220,7 +220,7 @@ Additionally, you must include all skill domains in the `validDomains` section i
 
 ### Handle collaborative app scopes
 
-Teams apps can exist in multiple scopes including 1:1 chat, group chat, and channels. The core Virtual Assistant template is designed for 1:1 chats. As part of the onboarding experience Virtual Assistant prompts users for name and maintains user state. Since onboarding experience is not suited for group chat or channel scopes, it has been removed.
+Teams apps can exist in multiple scopes including 1:1 chat, group chat, and channels. The core Virtual Assistant template is designed for 1:1 chats. As part of the onboarding experience Virtual Assistant prompts users for name and maintains user state. Since the onboarding experience is not suited for group chat or channel scopes, it has been removed.
 
 Skills should handle activities in multiple scopes, such as 1:1 chat, group chat, and channel conversation. If any of these scopes are not supported, skills must respond with an appropriate message.
 
@@ -259,7 +259,7 @@ The snippet from a skill's manifest file is shown in the following section:
                 "id": "searchQuery",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    
+    ....   
 ```
 
 The corresponding Virtual Assistant manifest file code snippet is shown in the following section:
@@ -273,7 +273,7 @@ The corresponding Virtual Assistant manifest file code snippet is shown in the f
                 "id": "searchQuery:<skill_id>",
                 "context": [ "compose", "commandBox" ],
                 "description": "Test command to run query",
-    
+    .... 
 ```
 
 Once the commands are invoked by a user, the Virtual Assistant can identify an associated skill by parsing the command ID, update the activity by removing the extra suffix `:<skill_id>` from the command ID,  and forward it to the corresponding skill. The code for a skill doesn't need to handle the extra suffix. Thus, conflicts between command IDs across skills are avoided. With this approach, all the search and action commands of a skill within all contexts, such as **compose**, **commandBox**, and **message** are powered by a Virtual Assistant.
