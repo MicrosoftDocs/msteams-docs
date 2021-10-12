@@ -9,7 +9,7 @@ ms.topic: overview
 
 # Add cloud resources
 
-TeamsFx can provision resources that intended to host your application. You can also optionally include additional cloud resources that fits your development needs. 
+TeamsFx can provision resources that intended to host your application. You can also optionally include additional cloud resource that fits your development needs. 
 
 ## Prerequisites
 
