@@ -19,7 +19,7 @@ The bots for Teams support the following types of cards:
 - Receipt card
 - Signin card
 - Thumbnail card
-- Card collections. 
+- Card collections
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
