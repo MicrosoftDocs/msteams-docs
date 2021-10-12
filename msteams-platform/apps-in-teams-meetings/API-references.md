@@ -24,6 +24,13 @@ The following table provides a list of APIs:
 |**GetParticipant**| This API enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
+|**canShareAppSegment**|This app will query the Client SDK whether it can be shared on stage or not.|--|Microsoft Teams Client SDK|
+|**shareAppContentToStage**|This API allows for sharing a segment of an app to the meeting stage via the meeting’s side panel. |--|Microsoft Teams Client SDK|
+|**getAppContentStageSharingCapabilities**|This API checks whether the app has the capability to be shared to the stage. |--|Microsoft Teams Client SDK|
+|**getAppContentStageSharingState**|This API returns information pertaining to the current stage sharing state for app. |--|Microsoft Teams Client SDK|
+|**stopAppContentSharingToStage**|This API returns information pertaining to the current stage sharing state for app. |--|Microsoft Teams Client SDK|
+|**startAppSegmentSharing**|This API is responsible for sharing app segment to stage |--|Microsoft Teams Client SDK|
+|**stopAppSegmentSharing**|This API is responsible for stopping app segment’s share session  |--|Microsoft Teams Client SDK|
 
 The following table provides the Bot Framework SDK methods for the APIs:
 
