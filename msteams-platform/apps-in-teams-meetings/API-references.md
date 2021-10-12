@@ -43,6 +43,30 @@ The following table provides the Bot Framework SDK methods for the APIs:
 ## canShareAppSegment API
 The developer app will query the Client SDK whether it can be shared on stage or not.
 This API on Client SDK will further query client, where it will be checking the app manifest to have `meetingStage` as `frameContext` and user role is presenter. Attendee cannot share the app on stage. 
+### Example
+```dotnetcli
+canShareAppSegment( 
+
+   callback: (error: SDKError | null) => void 
+
+) : void { 
+
+    
+
+   if(!callback) { 
+
+      throw new Error(‘[can share app segment] callback cannot be null’); 
+
+   } 
+
+ 
+
+   ensureInitialized(FrameContexts.sidePanel); 
+
+   sendMessageToParent(‘meeting.canShareAppSegment,  callback); 
+
+} 
+```
 
 ## shareAppContentToStage API
 Start sharing call Client SDK API initiates extensible app sharing.
@@ -77,6 +101,56 @@ The `stopAppContentSharingToStage` API includes the following query parameters:
 |**TeamsCallId**| --- | --- | ---|
 |**AppId**| --- | --- | --- |
 
+## startAppSegmentSharing API
+
+### Example
+
+```dotnetcli
+startAppSegmentSharing ( 
+
+   callback: (error: SDKError | null) => void, 
+
+   shareUrl: string 
+
+) : void { 
+
+   if(!callback) { 
+
+      throw new Error(‘[start app segment sharing] callback cannot be null’); 
+
+   } 
+
+   ensureInitialized(FrameContexts.sidePanel); 
+   sendMessageToParent(‘meeting.startAppSegmentSharing’,  callback); 
+
+} 
+```
+## stopAppSegmentSharing API
+
+### Example
+```dotnetcli
+stopAppSegmentSharing( 
+
+   callback: (error: SDKError | null) => void 
+
+) : void { 
+
+    
+
+   if(!callback) { 
+
+      throw new Error(‘[stop app segment sharing] callback cannot be null’); 
+
+   } 
+
+ 
+
+   ensureInitialized(FrameContexts.sidePanel); 
+
+   sendMessageToParent(‘meeting.stopAppSegmentSharing’,  callback); 
+
+} 
+```
 
 ## GetUserContext API
 
