@@ -17,7 +17,9 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 | Bot |  Bots allow users to interact with your web service through text, interactive cards, and task modules. |
 | Messaging Extension | Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client.  |
 ## Steps to create new Teams Toolkit
-
+1. Open Visual Studio Code
+1. Select Extensions icon in the sidebar
+    ![Extensions](~\assets\images\tools-and-sdks\extensions.PNG)
 ## Build a Teams app
 Build a Teams app from the beginning, before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
 
