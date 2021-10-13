@@ -25,10 +25,6 @@ First, you must decide the location from where your action command must be invok
 
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning your app in the command box. 
-
-   > [!NOTE]
-   > @mention is no longer supported for messaging extension.
-
    > [!NOTE]
    > If messaging extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
 
@@ -39,6 +35,9 @@ First, you must decide the location from where your action command must be invok
 The following image displays the locations from where action command is invoked:
 
 ![action command invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+
+   > [!NOTE]
+   > @mention is no longer supported for messaging extension.
 
 ## Select how to create your task module
 
@@ -65,10 +64,10 @@ To add the action command to the app manifest, you must add a new `composeExtens
 
 ### Create an action command using App Studio
 
-You can create an action command using ** App Studio** or **Developer Portal**.
+You can create an action command using **App Studio** or **Developer Portal**.
 
 > [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+> App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
 
 # [App Studio](#tab/AS)
 
