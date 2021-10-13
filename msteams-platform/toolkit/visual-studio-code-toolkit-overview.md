@@ -10,16 +10,14 @@ ms.topic: overview
 The Teams Toolkit helps developers create and deploy Teams apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a "zero-configuration" approach to the developer experience.
 
 ## Teams App Capabilities
-Teams apps are a combination of capabilities and entry points. For example, people can chat with your app's bot (capability) in a channel (entry point).
 
-### Tab
-Tab are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user.
-
-### Bot
-Bots allow users to interact with your web service through text, interactive cards, and task modules.
-
-### Messaging Extension
-Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client.
+| **Capability**| **Learn module**|
+|--------|-------------|
+| Tabs  — embedded web experiences  |  [Create embedded web experiences with tabs for Microsoft Teams](/learn/modules/embedded-web-experiences/) |
+| Webhooks and connectors  |  [Connect web services to Microsoft Teams with webhooks and Office 365 Connectors](/learn/modules/msteams-webhooks-connectors/) |
+|Messaging extensions  | [Task-oriented interactions in Microsoft Teams with messaging extensions](/learn/modules/msteams-messaging-extensions/)  |
+| Task modules |  [Collect input in Microsoft Teams with Task Modules](/learn/modules/msteams-task-modules/) |
+| Conversational bots  | [Create interactive conversational bots for Microsoft Teams](/learn/modules/msteams-conversation-bots/)  |
 
 ## Build a Teams app
 Build a Teams app from the beginning or see samples to help you quickly get started with the basic Teams app concepts and code structures.
