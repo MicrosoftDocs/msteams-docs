@@ -1,14 +1,14 @@
 - name: Microsoft Teams Developer documentation
   href: /microsoftteams/platform
+- name: What's new?
+  href: whats-new.md
 - name: Overview
-  expanded: true 
+  expanded: false 
   items:
     - name: Build apps for Microsoft Teams
       href: overview.md
-    - name: What's new?
-      href: whats-new.md
 - name: Get started
-  expanded: true
+  expanded: false
   items:
   - name: Overview
     href: get-started/code-samples.md  
@@ -44,6 +44,8 @@
     href: concepts/design/understand-use-cases.md
   - name: Map use cases to Teams app capabilities
     href: concepts/design/map-use-cases.md
+  - name: Plan responsive tabs for Teams mobile
+    href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Device capabilities
     items:
     - name: Overview
@@ -477,18 +479,18 @@
     href: concepts/device-capabilities/people-picker-capability.md   
 - name: Resources
   items:
-    - name: Localization
-      items:
-      - name: Localize your app
-        href: concepts/build-and-test/apps-localization.md
-      - name: Localize JSON schema reference
-        href: resources/schema/localization-schema.md
-    - name: SameSite cookie attribute 
-      href: resources/samesite-cookie-update.md
-    - name: Frequently failed cases for store submissions
-      href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
-    - name: Contribute to Teams documentation
-      href: resources/teams-contributor-reference.md
+  - name: Localization
+    items:
+    - name: Localize your app
+      href: concepts/build-and-test/apps-localization.md
+    - name: Localize JSON schema reference
+      href: resources/schema/localization-schema.md
+  - name: SameSite cookie attribute 
+    href: resources/samesite-cookie-update.md
+  - name: Frequently failed cases for store submissions
+    href: concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md
+  - name: Contribute to Teams documentation
+    href: resources/teams-contributor-reference.md
 - name: Support and feedback
   href: feedback.md
   
