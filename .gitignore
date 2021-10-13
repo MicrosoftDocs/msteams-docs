@@ -19,3 +19,6 @@ _msteams-samples-hello-world-csharp/
 desktop.ini
 msteams-platform/assets/images/messaging-extension-invoke-locations.jpg
 *.png
+*.md
+msteams-platform/toolkit/provision-in-the-cloud.md
+*.md
