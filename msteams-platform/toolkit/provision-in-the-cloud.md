@@ -9,13 +9,13 @@ ms.topic: overview
 
 # Provision in the cloud 
 
-TeamsFx provides seamless integration with Azure and M365 cloud so that you can easily put your application in a secure cloud environment, provisioning is the first step to deploy an application to cloud. In this step, necessary cloud resources are created in Azure and M365 for your application.
+TeamsFx provides seamless integration with Azure and Microsoft 365 cloud so that you can easily put your application in a secure cloud environment, provisioning is the first step to deploy an application to cloud. In this step, necessary cloud resources are created in Azure and Microsoft 365 for your application.
  
 ## Prerequisites
 
-Before you can provision cloud resources in Azure and M365, you must have the following accounts: 
+Before you can provision cloud resources in Azure and Microsoft 365, you must have the following accounts: 
 
-* A M365 organizational account. 
+* A Microsoft 365 organizational account. 
 * An Azure Account with a valid subscription. 
  
 > [!NOTE]
@@ -25,9 +25,9 @@ Before you can provision cloud resources in Azure and M365, you must have the fo
 
 Teams Toolkit provision cloud resources are based on the [Teams application capabilities](add-capabilities.md) and [Azure services](add-cloud-resources.md) that are included in your application. 
  
-### M365 Cloud Resources 
+### Microsoft 365 Cloud Resources 
 
-For any kind of Teams application, these M365 resources are created in your M365 tenant: 
+For any kind of Teams application, these Microsoft 365 resources are created in your Microsoft 365 tenant: 
 
 * Register an application in Teams. (Commonly referred as Teams App ID). 
 * Register an application in Azure Active Directory (Commonly referred as AAD App ID). 
@@ -37,7 +37,7 @@ The following table describes the necessity of mentioned resources:
 |Resources | Why my application needs it? |
 |----------|--------------------------------|
 |Teams application | This is an application **registered in Teams platform** with the information in manifest and identified by a unique GUID.| 
-|Azure Active Directory application| This is an application **registered in Azure Active Directory** to represent your Teams Application, which is used to manage digital identity and permissions for your application so you could achieve features like single sign-on and ask for user consent when your application requires additional permission to access user’s data in M365. |
+|Azure Active Directory application| This is an application **registered in Azure Active Directory** to represent your Teams Application, which is used to manage digital identity and permissions for your application so you could achieve features like single sign-on and ask for user consent when your application requires additional permission to access user’s data in Microsoft 365. |
  
 ### Azure cloud resources by project type
 
@@ -75,17 +75,12 @@ To create Azure service instance, Teams Toolkit has also made configuration chan
  
 ## Find provisioned resources 
 
-Teams Toolkit can provision M365 and Azure resources. 
-* For M365 resources, provision is created under your tenant. You can learn [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). 
+Teams Toolkit can provision Microsoft 365 and Azure resources. 
+* For Microsoft 365 resources, provision is created under your tenant. You can learn [how to find your Microsoft 365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). 
 * For Azure resources, provision created under a new resource group in your subscriptions. 
  
-<<<<<<< Updated upstream
-|Resources|	Where to find them|
-|---------|-------------------| 
-=======
 |Resources|Where to find them|
 |---------|-------------------|
->>>>>>> Stashed changes
 |Teams App ID|	You can find the Teams App ID in your project’s manifest file after you packaged your application. Read about App Package (Link to publish section) </br> You can also find your Teams App ID in [Teams Developer Portal](https://dev.teams.microsoft.com/apps). 
 |Azure Active Directory Application|Go to [Azure portal](https://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations under manage section. </br> You can find your Azure Active Directory application with display name same as your project name. |
 |Azure services |Go to [Azure portal](https://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg </br> You can find all Azure services provisioned in this resource group. |
