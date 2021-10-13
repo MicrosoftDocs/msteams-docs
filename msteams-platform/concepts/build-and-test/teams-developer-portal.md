@@ -116,8 +116,7 @@ The Developer Portal also includes tools to help you build some key features of 
 
 ## See also
 
-[Include a SaaS offer with your Microsoft Teams app](../../prepare/include-saas-offer.md)
-
+[Include a SaaS offer with your Microsoft Teams app](https://review.docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer?branch=pr-en-us-2759)
 
 
 
