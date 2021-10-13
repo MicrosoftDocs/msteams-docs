@@ -79,8 +79,13 @@ Teams Toolkit can provision M365 and Azure resources.
 * For M365 resources, provision is created under your tenant. You can learn [how to find your M365 tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). 
 * For Azure resources, provision created under a new resource group in your subscriptions. 
  
+<<<<<<< Updated upstream
 |Resources|	Where to find them|
 |---------|-------------------| 
+=======
+|Resources|Where to find them|
+|---------|-------------------|
+>>>>>>> Stashed changes
 |Teams App ID|	You can find the Teams App ID in your project’s manifest file after you packaged your application. Read about App Package (Link to publish section) </br> You can also find your Teams App ID in [Teams Developer Portal](https://dev.teams.microsoft.com/apps). 
 |Azure Active Directory Application|Go to [Azure portal](https://portal.azure.com/) </br> Navigate to Azure Active Directory section. </br> Navigate to App registrations under manage section. </br> You can find your Azure Active Directory application with display name same as your project name. |
 |Azure services |Go to [Azure portal](https://portal.azure.com/) </br> Navigate to Resource groups section.</br> Find a resource group with name of ${yourProjectName}-rg </br> You can find all Azure services provisioned in this resource group. |
