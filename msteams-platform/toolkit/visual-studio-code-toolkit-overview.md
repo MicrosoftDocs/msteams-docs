@@ -9,24 +9,24 @@ ms.topic: overview
 # Teams Toolkit for Visual Studio Code
 The Teams Toolkit helps developers create and deploy Teams apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a "zero-configuration" approach to the developer experience.
 
-# Teams App Capabilities
+## Teams App Capabilities
 Teams apps are a combination of capabilities and entry points. For example, people can chat with your app's bot (capability) in a channel (entry point).
 
-## Tab
+### Tab
 Tab are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user.
 
-## Bot
+### Bot
 Bots allow users to interact with your web service through text, interactive cards, and task modules.
 
-## Messaging Extension
+### Messaging Extension
 Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client.
 
-# Build a Teams app
+## Build a Teams app
 Build a Teams app from the beginning or see samples to help you quickly get started with the basic Teams app concepts and code structures.
 
-# Prerequisites
+## Prerequisites
 Before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
-## Required tools for installation
+### Required tools for installation
 
 Some of the tools you need depend on how you prefer to build your Teams app:
 
@@ -38,7 +38,7 @@ Some of the tools you need depend on how you prefer to build your Teams app:
 > [!WARNING]
 > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-## Install the Teams Toolkit
+### Install the Teams Toolkit
 
 The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). For more information, see [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md), [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md) and [Teamsfx CLI Tool](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli).
 
