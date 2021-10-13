@@ -160,7 +160,7 @@ To use an existing resource group, change default resource group name, or change
  
 ## See also
 
-* Add additional cloud resources 
+* Add additional cloud resources  
 * Add additional Teams app capabilities 
 * Provision resources with CI/CD pipelines 
 * Deploy your project to cloud 
