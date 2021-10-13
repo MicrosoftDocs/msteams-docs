@@ -187,7 +187,9 @@ Adding and configuring a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-page.png" alt-text="Image showing bot pane" border="false":::
 
-1. Select **New Bot** on the **Bot management** pane.
+    The **Bot management** section opens.
+
+1. Select **+ New Bot** on the **Bot management** pane.
 1. Enter a suitable name for your bot, and select **Add**.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-bot.png" alt-text="Image showing how to add bot" border="false":::
@@ -198,11 +200,25 @@ Adding and configuring a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
+1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-client-secrets.png" alt-text="Image showing Client secret section" border="false":::
+
+    Developer Portal generates a password for the bot.
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-client-secret-generated.png" alt-text="Image showing Client secret section" border="false":::
+
+1. Select **OK**.
+
+1. Select **< Bots** to return to **Bot management** pane.
+
     The **Bot management** pane shows the new Bot added with an app ID.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/nj-bot-added.png" alt-text="Image showing new bot with app ID" border="false":::
 
-1. Ensure that you note the Bot ID. You will need it to update app credentials later.
+1. Ensure that you save the Bot ID along with the password from the **Client secret** section.
 
 ##### To add bot to app
 

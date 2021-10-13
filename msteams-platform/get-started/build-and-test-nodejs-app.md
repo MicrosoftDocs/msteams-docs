@@ -114,6 +114,30 @@ Note the URL of your app for registering the app with Teams. You can register th
 
 <a name="DeployToTeams"></a>
 
+## Build Node.js app package
+
+You use `gulp CLI` to build the app package for Node.js.
+
+1. Open terminal window.
+1. Run the following command to build the Node.js app package.
+
+        $ gulp
+        [13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
+        [13:39:27] Starting 'clean'...
+        [13:39:27] Starting 'generate-manifest'...
+        [13:39:27] Finished 'generate-manifest' after 11 ms
+        [13:39:27] Finished 'clean' after 21 ms
+        [13:39:27] Starting 'default'...
+        Build completed. Output in manifest folder
+        [13:39:27] Finished 'default' after 62 μs 
+
+    The app package helloworldapp.zip is created. It is placed at:
+
+    `<path to the cloned repo>/Microsoft-Teams-Samples/samples/app-hello-world/nodejs/manifest`
+    
+    > [!NOTE]
+    > Search for the app package file, helloworldapp.zip, if the location is not clear in the tool you are using.
+
 | &nbsp; | &nbsp; |
 |:--- | ---:|
 |[:::image type="icon" source="../assets/images/get-started/app-roadmap/back-plan.png":::](get-started-nodejs-app-studio.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-deploy.png":::](deploy-nodejs-app.md)|

@@ -74,7 +74,7 @@ To upload the app package:
 
 1. Select the app package **helloworldapp.zip** from the following path in your C# sample repo directory structure:
 
-    `<path to cloned C# repo>\Source\Repos\Microsoft-Teams-Samples\samples\app-hello-world\csharp\Microsoft.Teams.Samples.HelloWorld.Web\bin\Debug\netcoreapp3.1`
+    `<path to cloned C# repo>/Source/Repos/Microsoft-Teams-Samples/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/bin/Debug/netcoreapp3.1`
 
     The **Hello World** app is imported in Developer Portal.
 
