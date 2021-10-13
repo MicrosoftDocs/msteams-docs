@@ -16,6 +16,7 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 | Tabs |  Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. |
 | Bot |  Bots allow users to interact with your web service through text, interactive cards, and task modules. |
 | Messaging Extension | Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client.  |
+## Steps to create new Teams Toolkit
 
 ## Build a Teams app
 Build a Teams app from the beginning, before you begin with creating your first Teams app, you must install a few tools and set up your development environment.
@@ -27,9 +28,9 @@ Before you begin with creating your first Teams app, you must install a few tool
 Verify you have the right prerequisites for building Teams apps and install some recommended development tools
 
 - [Node.js](https://nodejs.org/en/download/) Versions required Node.js v10.x, v12.x or v14.x (v14.x is recommended)
-- [Microsoft 365](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+- [Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)
 The Teams Toolkit requires a Microsoft 365 organizational account where Teams is running and has been registered.
-- [Azure](https://azure.microsoft.com/en-us/free/)
+- [Azure](https://azure.microsoft.com/free/)
 The Teams Toolkit requires an Azure account and subscription to deploy the Azure resources for your project.
 To sign in into Microsoft 365 and Azure accounts, See [Sign in to your Microsoft 365 and Azure accounts](../get-started/prerequisites.md#sign-in-to-your-microsoft-365-and-azure-accounts) 
 
