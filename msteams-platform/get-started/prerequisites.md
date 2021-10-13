@@ -7,7 +7,7 @@ ms.localizationpriority: none
 ---
 # Your first Hello World app with JavaScript
 
-[!include [Build with JavaScript](../msteams-platform/sbs-gs-javascript.yml)]
+[!include [Build with JavaScript](sbs-gs-javascript.yml)]
 
 Start Microsoft Teams development by building your first 'Hello World' Teams app. You will create three Teams apps with a tab, a bot, and a message extension capability.
 
