@@ -25,9 +25,8 @@ After deploying your app on the internet, deploy it to Teams by creating an app 
 
 Hosting your app involves:
 - [Updating the app package](#update-the-app-package)
-- [Registering your app in Teams](configure-test-nodejs-app.md#register-your-app-in-teams)
-- [Updating the credentials for your hosted app](configure-test-nodejs-app.md#update-the-credentials-for-your-hosted-app)
-- [Testing the app capabilities in Teams](configure-test-nodejs-app.md#test-the-app-capabilities-in-teams)
+- [Previewing your app in Teams](configure-test-nodejs-app.md#preview-your-app-in-teams)
+- [Publishing your app to Teams Store](configure-test-nodejs-app.md#publish-your-app-to-teams-store)
 
 ## Update the app package
 
@@ -208,7 +207,7 @@ Adding and configuring a bot involves the following:
 
 1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-client-secret-generated.png" alt-text="Image showing Client secret section" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/nj-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
 
 1. Select **OK**.
 
