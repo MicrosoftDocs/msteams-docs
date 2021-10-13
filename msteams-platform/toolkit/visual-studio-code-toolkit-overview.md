@@ -34,7 +34,7 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 
 1. Select Create a new Teams app.
 
-    ![Create new Teams app](~/assets/images/tools-and-sdks/create-new-app.png)
+    ![Create new Teams](~/assets/images/tools-and-sdks/create-new-app.png)
 
 1. Choose any App capability from the given options.
 
