@@ -30,7 +30,7 @@ Visual Studio 2019 has built-in support for app deployment to different provider
 
 Hosting your app on Azure involves:
 - [Updating the app package](#update-the-app-package)
-- [Previewing and testing your C# app](configure-test-csharp-app.md#preview-and-test-your-c#-app)
+- [Previewing and testing your C# app](configure-test-csharp-app.md#preview-and-test-your-app)
 
 ## Update the app package
 

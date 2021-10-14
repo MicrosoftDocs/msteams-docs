@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.date: 11/09/2018
 ---
 
-# Preview and test your C# app
+# Preview and test your app
 
 After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
 
