@@ -9,7 +9,8 @@ ms.topic: how-to
 # Device permissions for the browser
 
 > [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only. 
+> The device permissions for the browser feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only. 
+> 
 > This feature will be generally available (GA) by January 21, 2022.
 
 Users can grant permission for each app and consent to device permissions. Previously, browser level permissions were handled as top-level permission for Teams only. Consent for each app wasn't provided separately. At the browser level there are two levels of permissions:
