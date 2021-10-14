@@ -63,9 +63,7 @@ For more information on how to add cloud resources, see [Add cloud resources](ad
  
 ### Configuration changes
 
-To create Azure service instance, Teams Toolkit has also made configuration changes of these services. 
- 
-[PLACEHOLDER FOR ADDING MORE INFORMATION]
+To create Azure service instance, Teams Toolkit has also made configuration changes of these services.
 
 |Resources |Configurations|	Reason |
 |-----------|-------------|----------|
@@ -89,7 +87,6 @@ Teams Toolkit can provision Microsoft 365 and Azure resources.
   
 Provisioning is the same if your project contains multiple capabilities. 
 
-[PLACEHOLDER FOR MORE INFORMATION]
  
 ### Provision from Teams Toolkit in Visual Studio Code 
 
@@ -160,7 +157,7 @@ To use an existing resource group, change default resource group name, or change
  
 ## See also
 
-* Add additional cloud resources  
-* Add additional Teams app capabilities 
-* Provision resources with CI/CD pipelines 
-* Deploy your project to cloud 
+* [Add additional cloud resources](...\toolkit\add-cloud-resources.md)  
+* [Add additional Teams app capabilities](...\toolkit\add-capabilities.md)
+* [Provision resources with CI/CD pipelines](...\toolkit\build-pipelines.md) 
+* [Deploy your project to cloud](...\toolkit\deploy-to-the-cloud.md) 
