@@ -151,8 +151,6 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    # Create your first Teams tab app
-
     Start Microsoft Teams app development by creating your first app, "Hello World!". This app uses the Tab capability.
 
     In this page, you'll learn:
@@ -265,8 +263,6 @@ items:
 - title: Build your first tab app
   durationInMinutes: 1
   content: |
-    # Build your tab project
-
     After you set up your project workspace with Teams Toolkit, build your tab project. 
     You'll need to sign in to your Microsoft 365 account.
 
@@ -384,8 +380,6 @@ items:
 - title: Create project workspace for your bot app
   durationInMinutes: 1
   content: |
-    # Create your first Teams bot app
-
     You've built your tab app. Now let's create your first bot app.
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
@@ -482,8 +476,6 @@ items:
 - title: Build your first bot app
   durationInMinutes: 1
   content: |
-    # Build your bot project
-
     After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
@@ -592,8 +584,6 @@ items:
 - title: Create project workspace for your message extension app
   durationInMinutes: 1
   content: |
-    # Create your first Teams message extension app
-
     You've built your bot app. Now, let's create your first message extension app.
 
     Message Extension capability lets you interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
@@ -694,8 +684,6 @@ items:
 - title: Build your first message extension app
   durationInMinutes: 1
   content: |
-    # Build your message extension project
-
     After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
@@ -831,8 +819,6 @@ items:
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-    # Deploy your Teams apps to Azure
-
     You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
 
     Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.

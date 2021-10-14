@@ -148,8 +148,6 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    # Create your first Teams app with SharePoint Framework (SPFx)
-
     This tutorial walks you through the steps to create, build, and deploy a Teams app using SharePoint Framework SPFx. This app will have a tab capability.  
 
     :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
@@ -255,8 +253,6 @@ items:
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-    # Deploy your first Teams app with SPFx
-
     You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
 
     Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.

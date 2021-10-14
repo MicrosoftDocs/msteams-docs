@@ -139,8 +139,6 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    # Create your first Teams app with Blazor
-
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
     In this tutorial, you'll learn:
@@ -209,8 +207,6 @@ items:
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-    # Deploy your first Teams app with Blazor
-
     You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
 
     Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
