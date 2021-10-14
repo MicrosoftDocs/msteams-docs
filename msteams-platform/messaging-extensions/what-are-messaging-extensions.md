@@ -14,6 +14,9 @@ The following image displays the locations from where messaging extensions are i
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
+> [!NOTE]
+> @mention is no longer supported for messaging extension.
+
 ## Scenarios where messaging extensions are used
 
 | Scenario | Example |
