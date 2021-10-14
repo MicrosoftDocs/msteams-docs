@@ -22,8 +22,8 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 
     ![Extensions](~/assets/images/tools-and-sdks/teams-extensions.png)
 
-1. In search bar find Teams Toolkit(Preview).
-1. Install Teams Toolkit .
+1. In search bar, find Teams Toolkit(Preview).
+1. Install Teams Toolkit.
 1. Teams Toolkit icon is available on sidebar.
 
     ![Teams Toolkit](~/assets/images/tools-and-sdks/teams-toolkit.png)
