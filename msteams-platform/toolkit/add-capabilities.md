@@ -9,40 +9,40 @@ ms.topic: overview
 
 # Add Capabilities
 
-As you continue to develop your project, you need additional app capabilities. You can start with a Tab application and add a bot to your Teams application later.
+As you continue to develop your project, you need more app capabilities. You can start with a Tab application and add a bot to your Teams application later.
 
 For more information on Teams app capabilities, see [Understand app capabilities](~/concepts/capabilities-overview.md#app-capabilities).
 
 ## Prerequisite
 
-You need to start with a Teams application with one app capability created by the Teams Toolkit V2. 
+Start with a Teams application with one app capability created by the Teams Toolkit V2. 
 
 ## Add capabilities to your project
 
-Currently there are the following limitations with TeamsFx when adding additional capabilities:
-* You cannot add each project capability more than once.
-* You cannot add any capability if you start with a Tab application with SPFx.
-* You cannot add additional Bot capability if your project contains Messaging Extension.
-* You cannot add additional Messaging Extension if your project contains a Bot.
+Currently there are the following limitations with TeamsFx when adding more capabilities, you can not add:
+* Each project capability more than once.
+* Capability if you start with a Tab application with SPFx.
+* More Bot capability if your project contains Messaging Extension.
+* Extra Messaging Extension if your project contains a Bot.
 
 > [!NOTE]
 > If you want to include both Bot and Messaging Extension capability, you need to include them at the same time, either when you create a new project or add them together to a Tab application.
 
 **Support Matrix:**
 
-|Current Project Capabilities|	Additional capabilities you can add|
+|Current Project Capabilities|	Another capabilities you can add|
 |--------------------|--------------------|
-|Tab With SPFx|	No additional capability can be added.|
+|Tab With SPFx|	No more capability can be added.|
 |Tab with Azure|	Bot, Messaging Extension.|
 |Bot|	Tab|
 |Messaging Extension|	Tab|
-|Tab and Bot|	No additional capability can be added.|
+|Tab and Bot|	No more capabilities can be added.|
 |Tab and Messaging Extension|	No additional capability can be added.|
-|Tab, Bot and Messaging Extension|	No additional capability can be added.|
+|Tab, Bot, Messaging Extension|	No additional capability can be added.|
 
 ## Procedure to add capabilities
 
-There are several approaches where you can add additional capabilities to your project.
+There are several approaches where you can add more capabilities to your project.
 
 ### Add capabilities from Teams Toolkit in Visual Studio Code
 
@@ -54,13 +54,13 @@ There are several approaches where you can add additional capabilities to your p
 
     ![Add capabilities](~/assets/images/tools-and-sdks/add-capabilities.png)
  
-1. From the pop up, select the capabilities you want to include into your project.
+1. From the pop-up, select the capabilities you want to include into your project.
 
     ![Select capabilities](~/assets/images/tools-and-sdks/select-capabilities.png)
  
-1. Select **OK** to continue, there may be additional questions needed based on the capabilities selected. Read more these on create project section. (links to create project)
+1. Select **OK** to continue, there may be more questions needed based on the capabilities selected. For more information, see create project section. (links to create project)
 
-    Alternatively, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
+    instead, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
 
     ![Alternate add capabilities](~/assets/images/tools-and-sdks/alternate-capabilities.png)
   
@@ -80,12 +80,12 @@ There are several approaches where you can add additional capabilities to your p
 
 ## Add additional capabilities
 
-After adding capabilities, and based on the capabilities you selected, these are the changes made to your project and why they are made.
+After adding capabilities, based on the capabilities you selected, the changes reflected to your project and reasons for change are also listed here:
 
 |Capability Added	|What changed|	Why these changes are made|
 |-------------------|---------------|-------------------------|
-|Bot and Messaging Extension|	A bot template code are added into a subfolder with path `yourProjectFolder/bot` </br></br> `launch.json` and `task.json` updated under `.vscode` folder. </br> </br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world bot application template into your project. </br><br/>To include necessary scripts for Visual Studio Code is executed when you wnat to debug your application locally.</br><br/> Learn more about this in local debug section. (Link to local debug document)</br><br/> To include bot related information in the manifest file that represents your application in the Teams Platform. This change includes: </br> The ID of your bot. </br> The scopes of you bot. </br> The commands that this hello world bot application can respond to. </br><br/>Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud. |
-|Tab| A frontend tab template code are added into a subfolder with path `yourProjectFolder/tabs`. </br></br>`launch.json` and `task.json` updated under `.vscode` folder. </br></br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|To include a hello world tab application template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you wish to debug your application locally.</br></br> Learn more about this in local debug section. (Link to local debug document)</br></br> To include tab related information in the manifest file that represents your application in the Teams Platform. This change includes:</br></br>The configurable and static tabs.</br></br>The scopes of the tabs.</br></br> Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project so you can easily move your project to cloud.|
+|Bot and Messaging Extension|	A bot template code is added into a subfolder with path `yourProjectFolder/bot` </br></br> `launch.json` and `task.json` updated under `.vscode` folder. </br> </br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|	To include a hello world bot application template into your project. </br><br/>To include necessary scripts for Visual Studio Code is executed when you want to debug your application locally.</br><br/> Learn more in local debug section. (Link to local debug document)</br><br/> To include bot related information in the manifest file that represents your application in the Teams Platform, the change includes: </br> The ID of your bot. </br> The scopes of your bot. </br> The commands that hello world bot application can respond to. </br><br/>Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx, track what capabilities are present in your project, you can easily move your project to cloud. |
+|Tab| A frontend tab template code is added into a subfolder with path `yourProjectFolder/tabs`. </br></br>`launch.json` and `task.json` updated under `.vscode` folder. </br></br> `manifest.source.json` file under `appPackage` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.|To include a hello world tab application template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you wish to debug your application locally.</br></br> Learn more in local debug section. (Link to local debug document)</br></br> To include tab-related information in the manifest file that represents your application in the Teams Platform, the change includes:</br></br>The configurable and static tabs.</br></br>The scopes of the tabs.</br></br> Learn more about what these fields mean in the [Teams Manifest Schema](~/resources/schema/manifest-schema.md).</br></br> To include configurations for TeamsFx to track what capabilities are present in your project, you can easily move your project to cloud.|
 		
 ## Advanced use case
 
