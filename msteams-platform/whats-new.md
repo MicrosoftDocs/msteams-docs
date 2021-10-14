@@ -25,7 +25,6 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|10/14/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |10/08/2021|New best practices for designing Adaptive Cards.|[Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Hide Teams app until Admin allows to unhide the app. | [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
 |10/05/2021|Plan your apps for Teams mobile|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
@@ -178,6 +177,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|10/14/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
