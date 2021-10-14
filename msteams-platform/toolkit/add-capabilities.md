@@ -19,7 +19,7 @@ Start with a Teams application with one app capability created by the Teams Tool
 
 ## Add capabilities to your project
 
-Currently there are the following limitations with TeamsFx when adding more capabilities, you can not add:
+Currently there are the following limitations with TeamsFx when adding more capabilities, you cannot add:
 * Each project capability more than once.
 * Capability if you start with a Tab application with SPFx.
 * More Bot capability if your project contains Messaging Extension.
@@ -37,8 +37,8 @@ Currently there are the following limitations with TeamsFx when adding more capa
 |Bot|	Tab|
 |Messaging Extension|	Tab|
 |Tab and Bot|	No more capabilities can be added.|
-|Tab and Messaging Extension|	No additional capability can be added.|
-|Tab, Bot, Messaging Extension|	No additional capability can be added.|
+|Tab and Messaging Extension|	No more capabilities can be added.|
+|Tab, Bot, Messaging Extension|	No more capabilities can be added.|
 
 ## Procedure to add capabilities
 
