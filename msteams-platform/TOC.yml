@@ -19,7 +19,7 @@
   - name: Hello World with SPFx
     href: sbs-gs-spfx.yml
   - name: Hello World with C#
-    href: sbs-gs-csharp
+    href: sbs-gs-csharp.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
