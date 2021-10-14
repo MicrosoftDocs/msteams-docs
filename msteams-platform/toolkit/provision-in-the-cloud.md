@@ -157,7 +157,7 @@ To use an existing resource group, change default resource group name, or change
  
 ## See also
 
-* [Add additional cloud resources](...\toolkit\add-cloud-resources.md)  
-* [Add additional Teams app capabilities](...\toolkit\add-capabilities.md)
-* [Provision resources with CI/CD pipelines](...\toolkit\build-pipelines.md) 
-* [Deploy your project to cloud](...\toolkit\deploy-to-the-cloud.md) 
+* [Add additional cloud resources](~/toolkit/add-cloud-resources.md) 
+* [Add additional Teams app capabilities](~/toolkit/add-capabilities.md)
+* [Provision resources with CI/CD pipelines](~/toolkit/build-pipelines.md) 
+* [Deploy your project to cloud](~/toolkit/deploy-to-the-cloud.md) 
