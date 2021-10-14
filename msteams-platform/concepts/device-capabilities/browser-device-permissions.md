@@ -9,7 +9,7 @@ ms.topic: how-to
 # Device permissions for the browser
 
 > [!NOTE]
-> The device permissions for the browser feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only. 
+> The device permissions for the browser feature is currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only. 
 > 
 > This feature will be generally available (GA) by January 21, 2022.
 
