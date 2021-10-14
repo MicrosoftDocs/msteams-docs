@@ -92,7 +92,6 @@ Before a meeting, users can add tabs, bots, and messaging extensions. Users with
 In a meeting chat, enter the **@** key and select **Get bots**.
 
 > [!NOTE]
-
 > * The content bubble posts an adaptive card simultaneously in the meeting chat that users can access. This helps the user when the meeting or the Teams app is minimized.
 > * The user identity must be confirmed using [Tabs SSO](../tabs/how-to/authentication/auth-aad-sso.md). After authentication, the app can retrieve the user role using the `GetParticipant` API.
 > * Based on the user role, the app has the capability to provide role specific experiences. For example, a polling app allows only organizers and presenters to create a new poll.
