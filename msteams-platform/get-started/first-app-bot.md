@@ -60,7 +60,7 @@ If the prerequisites are in place, let's begin!
 
 1. Select a workspace folder. Teams Toolkit creates a folder in your workspace folder for the app project.
 
-1. Enter a suitable name for your app, like `HelloBot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
+1. Enter a suitable name for your app, like `hellobot`. Ensure that your app's name is alphanumeric. Select **Enter** to continue.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 

@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 # Your first Hello World app with Blazor
 
-Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
+Start Microsoft Teams app development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
 > [!NOTE]
 > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
@@ -21,42 +21,29 @@ Building an app using Teams Toolkit follows a four-step process:
 
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
 
-Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
+Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase-Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
 
 In this tutorial, you'll learn:
 
-- how to set up a new project with Teams Toolkit.
-- how to build an app with a tab capability.
-- the structure of the app and the tab capability.
-- how to deploy the app
+- How to set up a new project with Teams Toolkit.
+- How to build an app with a tab capability.
+- The structure of the app and the tab capability.
+- How to deploy the app
 
 ## Install tools
 
 The following tools are required for building an app:
 
-- A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/).
-- [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET.
-
-### Optional tools
-
-The following Visual Studio Code extensions and tools not required, but helpful during development.
-
-Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
-
-- [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-- [Azure CLI](/en-us/cli/azure/install-azure-cli)
-
-Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
-
-- [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
-
-> [!TIP]
-> If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
-</details>
-
-Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store:
-
-- [Developer Portal for Teams](https://dev.teams.microsoft.com/)
+ 
+| &nbsp; | Install | For using ... |
+| --- | --- | --- |
+| **Required** | &nbsp; | &nbsp; |
+| &nbsp; | [Visual Studio 2019](https://visualstudio.com/download) with the following workloads with **ASP.NET and web development** and **.NET Core cross-platform development** | .NET |
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) OR [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| **Optional** | &nbsp; | &nbsp; |
+| **&nbsp;**| [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/en-us/cli/azure/) | Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure. |
+| &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data.|
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store |
 
 ## Prepare development environment
 

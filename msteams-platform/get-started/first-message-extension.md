@@ -104,12 +104,12 @@ A message extension uses the [Bot Framework](https://docs.botframework.com). You
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
 - `bot`: The bot code is stored in the `bot` directory.
-    - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
+- `bot/messageExtensionBot.js`: The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
 > [!Tip]
-> Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+> Familiarize yourself with bots and message extension outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-| [:::image type="icon" source="../assets/images/get-started/app-roadmap/back.png":::](build-javascript-bot-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-create-msgext.png":::](build-javascript-msgex-app.md)|
+| [:::image type="icon" source="../assets/images/get-started/app-roadmap/back.png":::](build-javascript-bot-app.md) | [:::image type="icon" source="../assets/images/get-started/app-roadmap/next-build.png":::](build-javascript-msgex-app.md)|
 |
