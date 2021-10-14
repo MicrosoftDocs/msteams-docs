@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Single sign-on (SSO) support for messaging extensions
  
-Single sign-on support is available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions refreshes the authentication token, which minimizes the number of times you need to enter your sign in credentials for Microsoft Teams.
+Single sign-on support is available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions refreshes the authentication token minimizes the number of times you need to enter your sign in credentials for Microsoft Teams.
 
 ## Prerequisites
 
 The prerequisite to enable SSO for messaging extensions and link unfurling are as follows:
 
 * You must have an [Azure](https://azure.microsoft.com/free/) account.
-* You must configure your app through the AAD portal.
-* You must update your Teams application manifest for your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
+* Configure your app through the AAD portal.
+* Update your Teams application manifest for your bot as defined in [register your app through the AAD portal](../../bots/how-to/authentication/auth-aad-sso-bots.md#register-your-app-through-the-aad-portal).
 For more information on creating an Azure account and updating your app manifest, see [Single sign-on (SSO) support for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 
 ## Enable SSO for messaging extensions and link unfurling
@@ -49,9 +49,9 @@ You receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `t
   
 ## Store authentication token
 
-**To store authenication**
+**To store authentication**
    
-1.  If you are using the OAuth connection: add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file to update or add the token in the store:
+1.  If you're using the OAuth connection: add the following code to the TeamsMessagingExtensionsSearchAuthConfigBot.cs file to update or add the token in the store:
     
    ```C#
    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
