@@ -281,7 +281,7 @@ items:
     - [Configuring app capabilities](#configure-your-app-capabilities)
 
     > [!NOTE]
-    > You could use [*App Studio*](deploy-nodejs-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
+    > You could use [*App Studio*](../msteams-platform/get-started/deploy-nodejs-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
 
     ### Upload the app package to Developer Portal
 
