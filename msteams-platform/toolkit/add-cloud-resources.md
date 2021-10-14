@@ -66,7 +66,7 @@ The following table describes cloud resources and the corresponding commands to 
 
 ## Add additional cloud resources
 
-After adding cloud resources, based on the resource selected, following shows the changes made to your project and why it is made:
+After adding cloud resources, based on the resource selected, list shows the changes made to your project and why it is made:
 
 |Resources Added|	What changed|	Why these changes are made|
 |---------------|---------------|-----------------------------|
@@ -78,7 +78,7 @@ After adding cloud resources, based on the resource selected, following shows th
 > * When adding Azure SQL, we ask for Azure Function information. It’s because SQL needs to be accessed from server workload. If your project doesn't contain Azure Functions, we can create one for you.
 > * When adding Azure APIM, we ask for the following information:
       * Azure function information. It’s because Azure API Management needs to work with Azure Functions. If your project doesn't contain Azure Functions, we cancreate one for you.
-      * Your subscription information. It’s because we can look up to find an existing APIM instance to use in this project or you can choose to create a new instance.
+      * Your subscription information. It’s because we can look up to find an existing APIM instance to use in the project or you can choose to create a new instance.
 
 ## Provision resources
 
@@ -88,8 +88,8 @@ After adding cloud resources to your project, next step is provisioning them to 
 |Azure Services|	What happened during provision|	Reasons|
 |--------------|----------------------------|-------------|
 |Azure Functions|	Created the following resources: </br></br> Azure Function App </br></br> Storage Account </br></br> App Service Plan | To create required services and host, configure Azure Functions.|
-|Azure SQL|Create Azure SQL Server</br></br> Create system assigned, managed identity </br></br> Setup Firewall Rule | This is to create Azure SQL Server instance, set up an identity to access the database and firewall rules for database protection.|
-|Azure API Management|	Provision APIM Instance </br></br> Create and configure APIM Client AAD app.|This is to create a new APIM instance with consumption plan.</br></br> This is to represent a client application for the API published to APIM.|
+|Azure SQL|Create Azure SQL Server</br></br> Create system assigned, managed identity </br></br> Setup Firewall Rule | This creates Azure SQL Server instance, set up an identity to access the database and firewall rules for database protection.|
+|Azure API Management|	Provision APIM Instance </br></br> Create and configure APIM Client AAD app.|This creates a new APIM instance with consumption plan.</br></br> Represents a client application for the API published to APIM.|
 		
 Read more about provision cloud resource feature. (Link to provision section)
 
@@ -107,7 +107,7 @@ Once your resources have been provisioned in the cloud, you can deploy and uploa
 ## Advanced use case
 
 You can skip adding a database user to your Azure SQL instance.
-If you prefer or don’t have permission to create a user in the database, you can skip creating user during provision stage for Azure SQL:
+If you don't have permission to create a user in the database, you can skip creating user during provision stage for Azure SQL:
 Open `.fx\env.default.json` file and set value of `skipAddingUser` value to true under config section `fx-resource-azure-sql`.
  
 ## See also
