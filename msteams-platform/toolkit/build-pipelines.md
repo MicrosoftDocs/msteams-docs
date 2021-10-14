@@ -33,7 +33,7 @@ There are some potential changes you can make to adapt your project:
 You must change the following:
 
 1. How the CD flow is triggered. By default, it happens when new commits are made to the main branch.
-1. Create GitHub repository secrets by environment to hold Azure/M365 login credentials. The following table lists all the secrets you need to create on GitHub, and for detailed usage, refer to the GitHub Actions README.md.
+1. Create GitHub repository secrets by environment to hold Azure/Microsoft 365 login credentials. The following table lists all the secrets you need to create on GitHub, and for detailed usage, refer to the GitHub Actions README.md.
 1. Change the build scripts if necessary.
 1. Remove the test scripts if you don't have tests.
 
