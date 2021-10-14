@@ -293,7 +293,7 @@ The following schema sample shows all extensibility options:
     "team": "bot", 
     "groupchat": "bot"
   },
-  "configurableProperties": [
+ "configurableProperties": {
      "name",
      "shortDescription",
      "longDescription",
@@ -303,7 +303,7 @@ The following schema sample shows all extensibility options:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
-  ]              
+  }
 }
 ```
 
@@ -727,7 +727,7 @@ You can define any of the following properties:
 
 * `name`: The app's display name.
 * `shortDescription`: The app's short description.
-* `longDescription`: The app's detailed description.
+* `longDescription`: The app's long description.
 * `smallImageUrl`: The app's outline icon.
 * `largeImageUrl`: The app's color icon.
 * `accentColor`: The color to use and a background for your outline icons.
