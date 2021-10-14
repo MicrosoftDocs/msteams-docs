@@ -40,11 +40,11 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 
     ![Select app capability](~/assets/images/tools-and-sdks/select-app-capability.png)
 
-1. Select frontend hosting type as Azure.
+1. Choose any frontend hosting type.
 
     ![Azure](~/assets/images/tools-and-sdks/Azure-host.png)
 
-1. Select resources as Azure Function App(optional).
+1. Choose any resource from the option.
    
      ![Azure cloud resources](~/assets/images/tools-and-sdks/Azure-cloud-resources.png)
 
