@@ -11,21 +11,17 @@ Welcome to Get started for building and deploying customized apps for Microsoft 
 
 Walk through the steps to build a basic, real-world Teams app. The Get started also introduces you to common tools, fundamental concepts, and more advanced features.
 
-Here's an idea of what you'll know after going through the lessons:
+Here's an idea of what you'll learn:
 
 - Get up and running quickly with the Microsoft Teams Toolkit (a Visual Studio Code extension).
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
 
-Before you begin, here's a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
-
-The Teams developer platform lets you build a custom app in various build environments in addition to Teams Toolkit.
+Here's a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
 :::image type="content" source="../assets/images/get-started/gs-overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
 
 ## App capabilities
-
-A Teams app is made up of one or more [platform capabilities](../concepts/capabilities-overview.md) and [user interaction points](../concepts/extensibility-points.md).
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
 
@@ -42,16 +38,17 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 Now, select the build environment you prefer and let's build your first Teams app. But first, prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app](prerequisites.md)
+> [Prepare to build a Teams app with JavaScript](prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Build your first app using Blazor](blazor-app-prerequisites.md)
+> [Prepare to build a Teams app with Blazor](blazor-app-prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Build your first app using SPFx](spfx-app-prerequisites.md)
+> [Prepare to build a Teams app with SPFx](spfx-app-prerequisites.md)
 
 > [!div class="nextstepaction"]
-> [Build your first app using C# or .NET](get-started-dotnet-app-studio.md)
+> [Prepare to build a Teams app with C# or .NET](get-started-dotnet-app-studio.md)
 
 > [!div class="nextstepaction"]
-> [Build your first app using Node.js CLI](get-started-nodejs-app-studio.md)
+> [Prepare to build a Teams app with Node.js CLI](get-started-nodejs-app-studio.md)
+

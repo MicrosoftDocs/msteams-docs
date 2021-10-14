@@ -25,8 +25,7 @@ After deploying your app on the internet, deploy it to Teams by creating an app 
 
 Hosting your app involves:
 - [Updating the app package](#update-the-app-package)
-- [Previewing your app in Teams](configure-test-nodejs-app.md#preview-your-app-in-teams)
-- [Publishing your app to Teams Store](configure-test-nodejs-app.md#publish-your-app-to-teams-store)
+- [Previewing and testing your app in Teams](configure-test-nodejs-app.md#preview-your-app-in-teams)
 
 ## Update the app package
 

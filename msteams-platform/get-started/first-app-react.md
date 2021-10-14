@@ -15,8 +15,8 @@ Start Microsoft Teams app development by creating your first app, "Hello World!"
 :::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p2.png" alt-text="Image showing phase 2 of building an app." border="false":::
 
 In this page, you'll learn:
-- [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project)
-- [About the directory structure of your app](#take-a-tour-of-the-source-code)
+1. [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project)
+1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
 ## Create your tab project
 

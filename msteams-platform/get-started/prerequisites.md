@@ -7,19 +7,11 @@ ms.localizationpriority: none
 ---
 # Your first Hello World app with JavaScript
 
-Start Microsoft Teams development by building your first 'Hello World' Teams app. You will create three Teams apps with a tab, a bot, and a message extension capability.
+Start Microsoft Teams app development with your first 'Hello World' Teams app. You'll create a tab app, a bot app, and a message extension app.
 
->Each of your "Hello world" apps will have a capability, which comes with its own UI and UX: 
+Each of your "Hello world" apps will have a capability, which comes with its own UI and UX:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
-
-## The app roadmap
-
-Building an app using Teams Toolkit follows a four-step process:
-
-:::image type="content" source="../assets/images/get-started/app-roadmap/roadmap-p1.png" alt-text="Image showing phase 1 of building an app." border="false":::
-
-Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on. *For this tutorial, you will go through Phases 3 and 4 three times, once for each app project.*
+:::image type="content" source="../assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
 
 In this tutorial, you'll learn:
 
@@ -34,11 +26,11 @@ The following tools are required for building an app:
 
 | &nbsp;    | Install   | For using... |
 | --- | --- | --- |
-| *Required* | &nbsp; | &nbsp; |
+| **Required** | &nbsp; | &nbsp; |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release. It's a required tool. |
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. It's a required tool. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. It's a required tool. |
-| *Optional* | &nbsp; | &nbsp; |
+| **Optional** | &nbsp; | &nbsp; |
 | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/en-us/cli/azure/install-azure-cli) | Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure. It's an optional tool. |
 | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | Browser tools for tabs development with JavaScript. It's an optional tool. |
 | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data. It's an optional tool. |
@@ -71,19 +63,6 @@ The Teams Toolkit helps simplify the development process with tools to provision
      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
 You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-
-# [Visual Studio 2019](#tab/vs)
-
-You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
-
-To install the Teams Toolkit extension:
-
-1. Open Visual Studio 2019.
-1. Select **Extensions** > **Manage Extensions**.
-1. In the search box, enter **Teams Toolkit**.
-1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
-1. Close Visual Studio 2019 to install the extension.
 
 # [Command line](#tab/cli)
 
@@ -120,7 +99,7 @@ After creating the app, you must load your app in Teams without distributing it.
   
 Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-Verify if you can sideload apps in Teams:
+Verify if sideloading apps is enabled in Teams:
 
 1. In the Teams client, select **Store** icon.
 1. Select **Manage your apps**.
@@ -129,9 +108,9 @@ Verify if you can sideload apps in Teams:
  :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
 > [!NOTE]
-> If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> If you don't have the option to upload a custom app, talk to your Teams administrator.
 
-### Create a free Teams developer tenant (optional)
+### Create a free Teams developer tenant
 
 If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
 

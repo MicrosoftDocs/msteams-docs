@@ -22,7 +22,7 @@ In this page, you'll learn to:
 
 ## Deploy your app to SharePoint
 
-Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be created.
+Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one]/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be created.
 
 # [Visual Studio Code](#tab/vscode)
 

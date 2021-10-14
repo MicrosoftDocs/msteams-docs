@@ -98,9 +98,8 @@ After scaffolding is done, view the project directories and files in the Explore
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/bot-code-tree.png" alt-text="Project files scaffolded for bot in Visual Studio Code." border="false":::
 
 Among other items in this directory structure, the Toolkit maintains:
-- `bot`: The bot code is stored in the `bot` directory. 
-   
-    -  The `bot/teamsBot.js` is the main entry point for the bot.
+- `bot`: The bot code is stored in the `bot` directory.
+-  `bot/teamsBot.js`: The `bot/teamsBot.js` is the main entry point for the bot.
 
 > [!Tip]
 > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
