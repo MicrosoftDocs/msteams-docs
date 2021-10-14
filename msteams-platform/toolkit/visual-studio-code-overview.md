@@ -8,7 +8,7 @@ ms.author: lajanuar
 ---
 # Build apps with the Teams Toolkit and Visual Studio Code
 
-The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a “zero-configuration” approach to the developer experience.  
+The Teams Toolkit for Visual Studio Code helps developers to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a “zero-configuration” approach to the developer experience.  
 
 You also can use the toolkit with Visual Studio or as a CLI (called `teamsfx`).
 
@@ -33,7 +33,7 @@ The following tools are installed by the Visual Studio Code extension when they 
 
 - [ngrok](https://ngrok.com/download)
 
-    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.  You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs.  This package is installed within the project directory (using npm `devDependencies`).
+    Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections.  Open your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs.  This package is installed within the project directory (using npm `devDependencies`).
 
 ## Use the Teams Toolkit for Visual Studio Code
 
@@ -44,7 +44,7 @@ The following tools are installed by the Visual Studio Code extension when they 
 
 ## Set up a new Teams project
 
-The Teams Toolkit can create React apps that are hosted in Azure or SPFx web parts that are hosted on your M365 SharePoint environment. To create a new React app to be hosted on Azure:
+The Teams Toolkit can create React apps that are hosted in Azure or SPFx web parts that are hosted on your Microsoft 365 SharePoint environment. To create a new React app to be hosted on Azure:
 
 1. Open Visual Studio code.
 1. Open the Teams Toolkit by selecting the Teams icon in the sidebar:
@@ -87,7 +87,7 @@ For a walk-through of the SPFx creation and publication process, see the [SPFx t
 
 At its core, the Teams app embraces three components:
 
-  1. The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
+  1. The Microsoft Teams client (web, desktop, or mobile) where users interact with your app.
   1. A server that responds to requests for content that is displayed in Teams. For example, HTML tab content or a bot Adaptive Card.
   1. A Teams app package consists of three files:
 
@@ -112,15 +112,15 @@ To build and run your app locally:
 
    > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens when the build is complete.  This can take 3-5 minutes to complete.
 
-   The toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+   The toolkit prompts you to install a local certificate if necessary. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install a SSL certificate to enable Teams to load your application from localhost.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
 1. Your web browser is started to run the application. If prompted to open Microsoft Teams, select Cancel to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select the web app when this happens.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
-1. You may be prompted to sign in. If so, sign in with your M365 account.
+1. You may be prompted to sign in. If so, sign in with your Microsoft 365 account.
 1. When prompted to install the app onto Teams, press **Add**.
 
 Both the backend and frontend are hooked into the Visual Studio Code debugger.  This allows you to set breakpoints anywhere in your code and inspect state.  You can also use any frontend debugging tools (such as the React Developer Tools) within the browser.  For more information about debugging in Visual Studio Code, review [the documentation](https://code.visualstudio.com/Docs/editor/debugging).
