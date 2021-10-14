@@ -38,7 +38,8 @@ The following code provides an example of Adaptive Cards:
       "title": "Refresh",
       "verb": "editOrResolveView",
       "data": {
-              "refresh info": "<refresh info>"
+            "refresh info": "<refresh info>"
+      }
     },
     "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },
