@@ -26,7 +26,7 @@ To add these templates to your repository, you must have your versions of github
 There are some potential changes you can make to adapt your project:
 1. Change how the CI flow is triggered. We default to when a pull request is created targeting the dev branch.
 1. Ensure you have an npm build script, or customize the way you build in the automation code.
-1. Ensure you have an npm test script which returns zero for success, and/or change the test commands.
+1. Ensure you have an npm test script, which returns zero for success, and/or change the test commands.
 
 ## Customize CD Workflow
 
@@ -50,13 +50,13 @@ You must change the following:
 
 | Name|	Description|
 |----------|--------------|
-|AZURE_ACCOUNT_NAME|	The account name of Azure which is used to provision resources.|
+|AZURE_ACCOUNT_NAME|	The account name of Azure, which is used to provision resources.|
 |AZURE_ACCOUNT_PASSWORD|	The password of Azure account.|
 |AZURE_SUBSCRIPTION_ID|	To identify the subscription in which the resources are provisioned.|
 |AZURE_TENANT_ID	|To identify the tenant in which the subscription resides.|
-|M365_ACCOUNT_NAME|	The M365 account for creating and publishing the Teams App.|
-|M365_ACCOUNT_PASSWORD	|The password of the M365 account.|
-|M365_TENANT_ID	|To identify the tenant in which the Teams App is created and published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your M365 tenant ID.|
+|M365_ACCOUNT_NAME|	The Microsoft 365 account for creating and publishing the Teams App.|
+|M365_ACCOUNT_PASSWORD	|The password of the Microsoft 365 account.|
+|M365_TENANT_ID	|To identify the tenant in which the Teams App is created and published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
 
 > [!NOTE] 
 > Refer to the Configure M365/Azure Credentials to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
@@ -67,9 +67,9 @@ You can follow the pre-defined example scripts to build and customize CI/CD pipe
 * CI Scripts
 * CD Scripts
 
-The scripts are based on a cross-platform TeamsFx command line tool TeamsFx-CLI. You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the documentation to customize the scripts.
+The scripts are based on a cross-platform TeamsFx command-line tool TeamsFx-CLI. You can install it with `npm install -g @microsoft/teamsfx-cli` and follow the documentation to customize the scripts.
 
-You must set Azure and M365 credentials in your environment variables safely. For example, if you are using Github as your source code repository, you can use the Github Secrets to securely store your environment variables.
+You must set Azure and Microsoft 365 credentials in your environment variables safely. For example, if you are using GitHub as your source code repository, you can use the GitHub Secrets to securely store your environment variables.
 
 ## See also
 
