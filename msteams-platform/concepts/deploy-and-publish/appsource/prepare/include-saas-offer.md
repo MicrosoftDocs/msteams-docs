@@ -17,7 +17,7 @@ localization_priority: Normal
 
 With a transactable Software-as-a-Service (SaaS) offer, you can monetize your Teams app by selling subscription plans directly from your Teams store listing. For example, say you have a free app anyone can get in the store. Now you can offer premium and enterprise plans for users who want more features.
 
-Here's a general idea of how to do this:
+Here's a general idea of how to monetize your app:
 
 1.	[Plan your SaaS offer](#plan-your-saas-offer).
 
@@ -77,10 +77,10 @@ For complete instructions, see [build the landing page for your SaaS offer](/azu
 
 ### Best practices for landing pages
 
-Think about the following when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
+Consider the following approaches when building a landing page for the Teams app you’re monetizing. See an example landing page in the [end-user purchasing experience](#end-user-purchasing-experience).
 
 * Users must be able to log in to your landing page with the same Azure AD credentials they used to buy the subscription. For more information, see [Azure AD and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
-* Enable users to do the following on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions (for example, you may want to allow only subscription admins to search for users):
+* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions (for example, you may want to allow only subscription admins to search for users):
   * Search for users in their org using email or another form of identity.
   * See users they can assign licenses to in a list.
   * Assign licenses to one or multiple users at the same time.
@@ -101,11 +101,11 @@ See [create a SaaS offer](/azure/marketplace/create-new-saas-offer) for complete
 
 1.	Create a [Partner Center](https://partner.microsoft.com/) account if you don’t have one.
 
-1.	Configure the subscription plans, pricing details, and more for your transactable SaaS offer. In particular, make sure you do the following:
+1.	Configure the subscription plans, pricing details, and more for your transactable SaaS offer. In particular, make sure you complete the following steps:
 
     * Under **Setup details**, select the **Yes** option to specify that you’re selling the offer through Microsoft.
      
-    * Under **Microsoft 365 integration**, add the AppSource link to your app listing. This ensures people can buy your subscription plans in AppSource in addition to Teams.
+    * Under **Microsoft 365 integration**, add the AppSource link to your app listing. This step ensures people can buy your subscription plans in AppSource in addition to Teams.
 
 1. Store your publisher and offer IDs. (You need them later to link the offer to your app in the Developer Portal.)
 
@@ -134,7 +134,7 @@ You’ve published your SaaS offer, but you still must link it to your Teams app
 
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're linking the SaaS offer to.
-1. Go to the **Plans and pricing** page and specify your publisher and offer IDs. (You can find these in Partner Center if you don't have them readily available).
+1. Go to the **Plans and pricing** page and specify your publisher and offer IDs. (You can find these IDs in Partner Center if you don't have them readily available.)
 1. Select **View** to preview your SaaS offer's subscription plans.
 1. If everything looks good, select **Save**.
 
@@ -179,7 +179,7 @@ The following example shows how users can purchase subscription plans for a fict
 
     :::image type="content" source="~/assets/images/saas-offer/saas-offer-set-up.png" alt-text="Setting up the subscription.":::
 
-1. Manage your subscription plan through the *Recloud* website (i.e., [landing page](#build-a-landing-page-for-subscription-management)).
+1. Manage your subscription plan through the *Recloud* website (also known as a [landing page](#build-a-landing-page-for-subscription-management)).
 
     :::image type="content" source="~/assets/images/saas-offer/subscriptionlicenses.png" alt-text="Configuring user licenses.":::
 
