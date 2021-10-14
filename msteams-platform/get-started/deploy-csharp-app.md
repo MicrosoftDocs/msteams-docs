@@ -30,9 +30,7 @@ Visual Studio 2019 has built-in support for app deployment to different provider
 
 Hosting your app on Azure involves:
 - [Updating the app package](#update-the-app-package)
-- [Registering your app in Teams](configure-test-csharp-app.md#register-your-app-in-teams)
-- [Updating the credentials for your hosted app](configure-test-csharp-app.md#update-the-credentials-for-your-hosted-app)
-- [Testing the app capabilities in Teams](configure-test-csharp-app.md#test-the-app-capabilities-in-teams)
+- [Previewing and testing your C# app](configure-test-csharp-app.md#preview-and-test-your-c#-app)
 
 ## Update the app package
 
@@ -203,11 +201,25 @@ Adding and configuring a bot involves the following:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/devp-configure-bot-endpoint.png" alt-text="Image showing how to add bot endpoint" border="false":::
 
+1. Select **Client secrets** and then select **Add a client secret to your bot** to generate a password for the bot.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-add-client-secret-pane.png" alt-text="Image showing Client secret section" border="false":::
+
+    Developer Portal generates a password for the bot.
+
+1. Select the :::image type="icon" source="../assets/images/teams-toolkit-v2/copy-icon.png"::: icon to copy the password, and save it in a text file.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-client-secret-generated.png" alt-text="Image showing Client secret generated" border="false":::
+
+1. Select **OK**.
+
+1. Select **< Bots** to return to **Bot management** pane.
+
     The **Bot management** pane shows the new Bot added with an app ID.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-new-bot-id.png" alt-text="Image showing new bot with app ID" border="false":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/devp-bot-mgmt-pane.png" alt-text="Image showing new bot with app ID" border="false":::
 
-    Ensure that you save the Bot ID. You will need it to update app credentials later.
+1. Ensure that you save the Bot ID along with the password from the **Client secret** section.
 
 ##### To add bot to app
 

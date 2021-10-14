@@ -1,6 +1,6 @@
 ---
-title: Register and Test your first app using Node.js
-description: Learn how to register and test Microsoft Teams apps with Node.js
+title: Preview and Test your first app using Node.js
+description: Learn how to preview and test Microsoft Teams apps with Node.js
 keywords: getting started Node.js
 ms.custom: scenarios:getting-started; languages:Node.js
 ms.localizationpriority: medium
