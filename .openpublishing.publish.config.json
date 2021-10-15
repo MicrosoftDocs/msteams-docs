@@ -25,11 +25,21 @@
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "msteams-platform/TOC.yml",
-      "ReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.json?view=msteams-client-dotnet-latest"
+      "ReferenceTOCUrl": "/dotnet/api/msteams-client-docs-ref-dotnet/toc.json?view=msteams-client-dotnet-latest",
+      "ContainerPageMetadata": {
+        "langs": [
+          "csharp"
+        ]
+      }
     },
     {
       "ConceptualTOC": "msteams-platform/TOC.yml",
-      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest"
+      "ReferenceTOCUrl": "/javascript/api/msteams-client-docs-ref-typescript/toc.json?view=msteams-client-js-latest",
+      "ContainerPageMetadata": {
+        "langs": [
+          "javascript"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
