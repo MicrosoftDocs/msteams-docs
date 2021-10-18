@@ -28,7 +28,7 @@ The following table provides a list of APIs:
 |**shareAppContentToStage**|This API allows for sharing a segment of an app to the meeting stage via the meeting’s side panel. |--|Microsoft Teams Client SDK|
 |**getAppContentStageSharingCapabilities**|This API checks whether the app has the capability to be shared to the stage. |--|Microsoft Teams Client SDK|
 |**getAppContentStageSharingState**|This API returns information pertaining to the current stage sharing state for app. |--|Microsoft Teams Client SDK|
-|**stopAppContentSharingToStage**|This API returns information pertaining to the current stage sharing state for app. |--|Microsoft Teams Client SDK|
+|**stopAppContentSharingToStage**|This API allows termination of current app segment while sharing. |--|Microsoft Teams Client SDK|
 |**startAppSegmentSharing**|This API is responsible for sharing app segment to stage |--|Microsoft Teams Client SDK|
 |**stopAppSegmentSharing**|This API is responsible for stopping app segment’s share session  |--|Microsoft Teams Client SDK|
 
