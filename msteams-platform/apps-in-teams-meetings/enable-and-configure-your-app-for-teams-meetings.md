@@ -123,6 +123,9 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 #### Shared meeting stage
 
+> [!NOTE]
+> The feature is available in dev preview only.
+
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
 
 The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
