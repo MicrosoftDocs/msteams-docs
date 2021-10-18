@@ -139,6 +139,7 @@ The prerequisites are as follows:
 * Provide `MeetingStage` value in one of the manifest fields.
 * Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
 * Include the RSC permission string as a part of the App permissions.
+
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
 To enable shared meeting stage, configure your app manifest as follows:
