@@ -22,7 +22,7 @@ Every request to your services includes the user  ID, the user's display name an
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID of the user, which is used to identify the user’s organization. If applicable, the request also contains the team Id and channel ID from which the request is originated.
+The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
 
 ## Authentication
 
@@ -38,7 +38,7 @@ The sequence is as follows:
 
 Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
-### Respond with a sign-in action
+### Respond with a sign in action
 
 To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
