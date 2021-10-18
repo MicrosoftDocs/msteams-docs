@@ -137,7 +137,6 @@ The prerequisites are as follows:
 * Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
 * Include the RSC permission string as a part of the App permissions.
 
-APIs have already been added as part of the required context is `meetingStage` in the app manifest. To perform further actions, the following API's are added to Client SDK:
 New API's are added to `meetingStage` in the app manifest's Teams Client SDK, which allows the users to:
 * `canShareAppSegment`: sends query to the Client SDK  can be shared to stage.
 * `shareAppContentToStage`: allows sharing a segment of an app to the meeting stage through the meeting’s side panel.
