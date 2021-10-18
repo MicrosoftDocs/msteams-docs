@@ -12,16 +12,16 @@
   items:
   - name: Overview
     href: get-started/code-samples.md  
-  - name: Build Hello World with JavaScript
-    href: get-started/prerequisites.md
-  - name: Build your first app using Blazor
-    href: get-started/blazor-app-prerequisites.md
-  - name: Build your first app using SPFx
-    href: get-started/SPFx-app-prerequisites.md
-  - name: Build your first app using C# or .NET
-    href: get-started/get-started-dotnet-app-studio.md
-  - name: Build your first app using Node.js
-    href: get-started/get-started-nodejs-app-studio.md
+  - name: Hello World with JavaScript
+    href: sbs-gs-javascript.yml
+  - name: Hello World with Blazor
+    href: sbs-gs-blazor.yml
+  - name: Hello World with SPFx
+    href: sbs-gs-spfx.yml
+  - name: Hello World with C#
+    href: sbs-gs-csharp.yml
+  - name: Hello World with Node.js
+    href: sbs-gs-nodejs.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
