@@ -169,7 +169,7 @@ The `GetParticipant` API includes the following query parameters:
 |---|---|----|---|
 |**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
 |**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
-|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
 
 ### Example
 
