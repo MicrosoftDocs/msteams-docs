@@ -29,7 +29,7 @@ The `id` and `aadObjectId` values are guaranteed for the authenticated Teams use
 If your service requires user authentication, the users must sign in before they use the messaging extension. The authentication steps are similar to that of a bot or tab.
 The sequence is as follows:
 
-1. User issues a query, or the default query is automatically sent to your service.
+1. User issues a query or the default query is automatically sent to your service.
 1. Your service checks whether the user is authenticated by inspecting the Teams user ID.
 1. If the user is not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
 1. The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.

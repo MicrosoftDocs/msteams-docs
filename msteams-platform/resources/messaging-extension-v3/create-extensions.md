@@ -13,7 +13,7 @@ Action-based messaging extensions allow your users to trigger actions in externa
 
 ![Example of messaging extension card](~/assets/images/compose-extensions/ceexample.png)
 
-The following sections describe how to do this.
+The following sections describe how to do this:
 
 [!include[Common content for creating extensions](~/includes/messaging-extensions/messaging-extensions-common.md)]
 
