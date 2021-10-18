@@ -28,12 +28,6 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-    ## The app road-map
-
-    Building an app using Teams Toolkit follows a three-step process:
-
-    :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p-1.png" alt-text="Image showing phase 1 of building an app." border="false":::
-
     Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
 
     In this tutorial, you'll learn:
@@ -198,7 +192,7 @@ items:
 
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-nodejs.png" alt-text="Image showing Node.js local host second tab" border="false":::
 
-    ## Deploy your sample app
+    ## Test your sample app in local environment
 
     Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to *host* your app.
 
@@ -222,7 +216,7 @@ items:
 
     To verify the app's local deployment:
 
-    1. Opening your browser.
+    1. Open the browser.
     1. Load your app using the following URL:
 
         `https://<forwarding address in ngrok console session>/hello`
@@ -248,9 +242,10 @@ items:
 
     ## Build Node.js app package
 
-    You use `gulp CLI` to build the app package for Node.js.
+    You can use `gulp CLI` to build the app package for Node.js.
 
-    1. Open terminal window.
+    1. Open a terminal window.
+    1. Ensure that you are in the root directory where the project's directory structure is cloned.
     1. Run the following command to build the Node.js app package.
 
         ```$ gulp```
@@ -284,22 +279,22 @@ items:
         > [!NOTE]
         > Search for the app package file, helloworldapp.zip, if the location is not clear in the tool you are using.
 
-- title: Deploy your first Node.js app
+- title: Deploy your first Node.js app using Dev Portal
   durationInMinutes: 1
   content: |
     You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
 
     Updating the app package includes:
 
-    - [Uploading the app package to Developer Portal](#upload-the-app-package-to-developer-portal)
+    - [Importing the app package to Developer Portal](#import-the-app-package-to-developer-portal)
     - [Configuring app capabilities](#configure-your-app-capabilities)
 
     > [!NOTE]
     > You could use [*App Studio*](../msteams-platform/get-started/deploy-nodejs-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
 
-    ### Upload the app package to Developer Portal
+    ### Import the app package to Developer Portal
 
-    To upload the app package:
+    To import the app package:
 
     1. Open Microsoft Teams.
 
@@ -331,25 +326,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
 
-        After you've imported your app to Developer Portal, you can view its manifest file.
+        After you've imported your app to Developer Portal, you can view its details in Developer Portal.
 
     ### View app information
 
     After you've imported your app to Developer Portal, you can view its details, including the manifest file.
-
-    #### View the app manifest
-
-    You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
-
-    1. Select **Publish** from the left panel to open the dropdown list.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
-
-    1. Select **App package**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-app-manifest.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
-
-        The manifest file appears on the right pane.
 
     #### View app information
 
@@ -376,7 +357,21 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-csharp-app-features.png" alt-text="Image showing features of the app" border="false":::
 
-    ### Configure your app capabilities
+    #### View the app manifest
+
+    You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
+
+    1. Select **Publish** from the left panel to open the dropdown list.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
+
+    1. Select **App package**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-app-manifest.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
+
+        The manifest file appears in the right pane.
+
+    ### Configure your app's capabilities
 
     After you've imported your app into Developer Portal, the next step is to configure app capabilities. Developer Portal contains all the app information in different sections. It makes configuring the app capabilities easy.
 

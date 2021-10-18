@@ -234,21 +234,17 @@ items:
 
         The paid version of `ngrok` doesn't have this limitation.
 
-- title: Build and run your first C# app
+- title: Deploy your first C# app using Dev Portal
   durationInMinutes: 1
   content: |
-    After you build and test your Teams app, you can host it on Azure.
+    After you build and test your Teams app, you can test it using Developer Portal.
 
-    Let's deploy the first Hello World app on Azure using Teams Toolkit.
+    In this page, you'll learn about:
 
-    :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p-3.png" alt-text="Image showing phase 3 of building an app." border="false":::
+    - [Publish option of Visual Studio 2019](#publish-option-in-visual-studio-2019)
+    - [Configure the app package in Developer Portal](#configure-the-app-package)
 
-    In this page, you'll learn to:
-
-    - [Host your app in Azure](#host-in-azure)
-    - [Update the app package](#update-the-app-package)
-
-    ## Host in Azure
+    ## Publish option in Visual Studio 2019
 
     Microsoft Azure hosts your .NET application on a free tier. It uses shared infrastructure that is sufficient to run the `Hello World` sample. For more information, see [creating a new free Azure account](https://azure.microsoft.com/free/).
 
@@ -256,25 +252,22 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
 
-    Hosting your app on Azure involves:
-    - [Updating the app package](#update-the-app-package)
-    - [Previewing and testing your C# app](../msteams-platform/get-started/configure-test-csharp-app.md#preview-and-test-your-app)
 
-    ## Update the app package
+    ## Configure the app package in Developer Portal
 
-    You can use [Developer Portal](https://dev.teams.microsoft.com/) to upload the app package to Teams. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
+    You can use [Developer Portal](https://dev.teams.microsoft.com/) to configure the app package and its capabilities. Developer Portal is a Teams app that simplifies the creation and registration of an app. Install from the Teams store!
 
-    Updating the app package includes:
+    Configuring the app package includes:
 
-    - [Uploading the app package to Developer Portal](#upload-the-app-package-to-developer-portal)
+    - [Importing the app package to Developer Portal](#import-the-app-package-in-developer-portal)
     - [Configuring app capabilities](#configure-your-app-capabilities)
 
     > [!NOTE]
     > You could use [*App Studio*](../msteams-platform/get-started/deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
 
-    ### Upload the app package to Developer Portal
+    ### Import the app package in Developer Portal
 
-    To upload the app package:
+    To import the app package:
 
     1. Open Microsoft Teams.
 
@@ -310,22 +303,6 @@ items:
 
     After you've imported your app to Developer Portal, you can view its details, including the manifest file.
 
-    #### View the app manifest
-
-    You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
-
-    To view the app manifest:
-
-    1. Select **Publish** from the left panel to open the dropdown list.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
-
-    1. Select **App package**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
-
-        The manifest file appears on the right pane.
-
     #### View app information
 
     1. Select **Basic Information** from the left pane of Developer Portal.
@@ -350,6 +327,22 @@ items:
         The App features appear in the right pane. You can view cards for Personal app, Bot, and Message Extension.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-csharp-app-features.png" alt-text="Image showing features of the app" border="false":::
+
+    #### View the app manifest
+
+    You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
+
+    To view the app manifest:
+
+    1. Select **Publish** from the left panel to open the dropdown list.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
+
+    1. Select **App package**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
+
+        The manifest file appears on the right pane.
 
     ### Configure your app capabilities
 
