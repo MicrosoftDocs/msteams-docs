@@ -17,26 +17,26 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
 | Bot |  Bots allow users to interact with your web service through text, interactive cards, and task modules. |
 | Messaging Extension | Messaging extensions allow users to interact with your web service through buttons and forms in the Microsoft Teams client.  |
 ## Steps to create new Teams Toolkit
-1. Open Visual Studio Code
-1. Select Extensions icon in the sidebar.
+1. Open **Visual Studio Code**.
+1. Select **Extensions** in the sidebar.
 
     ![Extensions](~/assets/images/tools-and-sdks/teams-extensions.png)
 
-1. In search bar, find Teams Toolkit(Preview).
-1. Install Teams Toolkit.
+1. In search bar, find **Teams Toolkit(Preview)**.
+1. Install **Teams Toolkit**.
 1. Teams Toolkit icon is available on sidebar.
 
     ![Teams Toolkit](~/assets/images/tools-and-sdks/teams-toolkit.png)
 
-1. Select Create a new Teams app from sidebar explorer.
+1. Select **Create a new Teams app** from sidebar explorer.
 
     ![Create new Teams app](~/assets/images/tools-and-sdks/Create-new-teams-app.png)
 
-1. Select Create a new Teams app.
+1. Select **Create a new Teams app**.
 
     ![Create new Teams](~/assets/images/tools-and-sdks/create-new-app.png)
 
-1. Choose any App capability from the given options.
+1. Choose any **App capability** from the given options.
 
     ![Select app capability](~/assets/images/tools-and-sdks/select-app-capability.png)
 
@@ -48,12 +48,12 @@ The Teams Toolkit helps developers to create and deploy Teams apps with integrat
    
      ![Azure cloud resources](~/assets/images/tools-and-sdks/Azure-cloud-resources.png)
 
-1. Select OK to create resources.
-1. Choose any Programming language from the given options.
+1. Select **OK** to create resources.
+1. Choose any **Programming language** from the given options.
 
     ![Programming language](~/assets/images/tools-and-sdks/programming-language.png)
 1. Select any folder you wish to create with Teams toolkit repository.
-1. Enter Application name and press Enter.
+1. Enter application name and press **Enter**.
 1. Teams Toolkit is created.
 
      ![Teams toolkit](~/assets/images/tools-and-sdks/teams-toolkit-sample.png)

@@ -34,11 +34,11 @@ You have to optionally include Azure resources that fit your application needs a
 * Azure Functions
 * Azure API Management
 
-Read more on Add cloud resources (link to add Cloud resources) to learn about deployment of these resources.
+Read more on Add cloud resources [Add cloud resources](add-cloud-resources.md) to learn about deployment of these resources.
 
 ## Deploy your project
 
-There are several approaches where you can deploy your project to cloud, which is similar for each project type.   
+There are several approaches where you can deploy your project to cloud, which is similar for each project type.
 
 * Read provision section for Tab project: [Get started - Build your first Teams app with React](~/get-started/first-app-react.md?tabs=vscode#deploy-your-app-to-azure) 
 * Read provision section for Tab project with SPFx: [Get started - Build your first Teams app with SPFx](~/get-started/first-app-spfx.md?tabs=cli#deploy-your-app-to-sharepoint)
