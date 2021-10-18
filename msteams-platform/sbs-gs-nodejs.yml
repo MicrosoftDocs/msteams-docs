@@ -141,7 +141,7 @@ items:
 
     In this page, you'll learn to:
     - [Build and run your first app](#build-and-run-the-sample)
-    - [Deploy your sample app](#deploy-your-sample-app)
+    - [Test your sample app](#test-your-sample-app-in-local-environment)
 
     ## Build and run the sample
 
@@ -328,7 +328,7 @@ items:
 
         After you've imported your app to Developer Portal, you can view its details in Developer Portal.
 
-    ### View app information
+    ### Take a tour of your app in Developer Portal
 
     After you've imported your app to Developer Portal, you can view its details, including the manifest file.
 

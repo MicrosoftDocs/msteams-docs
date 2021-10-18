@@ -234,15 +234,12 @@ items:
 
         The paid version of `ngrok` doesn't have this limitation.
 
-- title: Deploy your first C# app using Dev Portal
+- title: Configure your first C# app using Dev Portal
   durationInMinutes: 1
   content: |
     After you build and test your Teams app, you can test it using Developer Portal.
 
-    In this page, you'll learn about:
-
-    - [Publish option of Visual Studio 2019](#publish-option-in-visual-studio-2019)
-    - [Configure the app package in Developer Portal](#configure-the-app-package)
+    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package).
 
     ## Publish option in Visual Studio 2019
 
@@ -251,7 +248,6 @@ items:
     Visual Studio 2019 has built-in support for app deployment to different providers, including Azure:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/publish-to-azure.png" alt-text="Image showing the Publish to Azure menu item in Visual Studio 2019" border="false":::
-
 
     ## Configure the app package in Developer Portal
 
@@ -299,7 +295,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-imported-dev-portal.png" alt-text="Image showing app imported in Teams" border="false":::
 
-    ### View app information
+    ### Take a tour of your app in Developer Portal
 
     After you've imported your app to Developer Portal, you can view its details, including the manifest file.
 
