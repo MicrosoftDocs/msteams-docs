@@ -69,7 +69,7 @@ canShareAppSegment(
 ```
 
 ## shareAppContentToStage API
-Start sharing call Client SDK API initiates extensible app sharing.
+Start sharing call Client SDK API initiates extensible app sharing. The API is provided a “shareUrl” from the developer app, which is then later shared to the stage via the Hosted Web Content Component.
 
 ### Query parameters
 
@@ -79,9 +79,6 @@ The `shareAppContentToStage` API includes the following query parameters:
 |---|---|----|---|
 |**appId**| --- | --- | ---|
 |**shareURL**| --- | --- | --- |
-
-## shareAppContentToStage API
-The API is provided a “shareUrl” from the developer app, which is then later shared to the stage via the Hosted Web Content Component.
 
 ### Query parameters
 The `shareAppContentToStage` API includes the following query parameters:
