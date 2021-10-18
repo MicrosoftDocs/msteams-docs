@@ -239,7 +239,7 @@ items:
   content: |
     After you build and test your Teams app, you can test it using Developer Portal.
 
-    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package).
+    In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
 
     ## Publish option in Visual Studio 2019
 

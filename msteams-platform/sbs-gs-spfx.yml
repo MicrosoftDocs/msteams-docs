@@ -199,9 +199,16 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-name.png" alt-text="Enter SPFx app name":::
 
-      Your Teams app is created within a few seconds.
+        Your Teams app is created within a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-created.png" alt-text="SPFx app created":::
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/spfx-tab-app.gif)
+    </details>
 
     # [Command line](#tab/cli)
 

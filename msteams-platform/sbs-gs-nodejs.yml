@@ -287,7 +287,7 @@ items:
     Updating the app package includes:
 
     - [Importing the app package to Developer Portal](#import-the-app-package-to-developer-portal)
-    - [Configuring app capabilities](#configure-your-app-capabilities)
+    - [Configuring app capabilities](#configure-your-apps-capabilities)
 
     > [!NOTE]
     > You could use [*App Studio*](../msteams-platform/get-started/deploy-nodejs-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
