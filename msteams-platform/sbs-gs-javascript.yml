@@ -209,7 +209,7 @@ items:
     <summary>A quick recap of creating a Teams app.</summary>
     Watch this short recap for creating a Teams app.
 
-    ![Create a Teams app](~/assets/videos/react-sample-video.gif)
+    ![Create a Teams app](~/assets/videos/javascript-tab-app.gif)
     </details>
 
     # [Command line](#tab/cli)
@@ -436,6 +436,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
 
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/javascript-bot-app.gif)
+    </details>
+
     # [Command line](#tab/cli)
 
     Use the `teamsfx` CLI to create your first project.  Start from the folder where you want to create the project folder.
@@ -644,6 +651,13 @@ items:
       Teams Toolkit creates the app in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/javascript-msg-ext-app.gif)
+    </details>
 
     # [Command line](#tab/cli)
 
