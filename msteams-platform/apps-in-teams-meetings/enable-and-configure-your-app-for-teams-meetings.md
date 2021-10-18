@@ -124,17 +124,21 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 #### Shared meeting stage
 
 > [!NOTE]
-> The feature is available in dev preview only.
+> The feature is available in developer preview only.
 
-Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
-New API's have already been added as part of the required context is `meetingStage` in the app manifest. With introdiction to interactive mode new APIs are added to the Teams Client SDK, which allows the users:
-the interactive mode experience provides the following actions:
+
+Shared meeting stage allows meeting participants to interact and collaborate on app content in real time. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
+
+New APIs have already been added as part of the required context is `meetingStage` in the app manifest. In interactive mode new APIs are added to the Teams Client SDK, which allows the users:
+
 * To trigger share to stage for a specific component of the app from the app side panel.
 * To check whether the app is being shared to stage.
 
-A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
-To be able to share to stage, the apps will need "MeetingStage" value in one of the manifest fields. They will also need to build a side panel experience with buttons for invoking the share to stage APIs. Lastly, they will need to include the RSC permission string as a part of the App permissions. 
-
+The prerequisites are as follows:
+* Have `meetingSidePanel` context.
+* Provide `MeetingStage` value in one of the manifest fields.
+* Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
+* Include the RSC permission string as a part of the App permissions.
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
 To enable shared meeting stage, configure your app manifest as follows:
