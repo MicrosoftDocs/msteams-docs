@@ -37,15 +37,15 @@ Microsoft Teams platform features that are available to all app developers.
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO). | [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Installation update event received when you install a bot to a conversation thread. | [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Build tabs with Adaptive Cards|[Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021| Tabs will no longer have margins surrounding their experiences.  | [Removing tab margins](resources/removing-tab-margins.md) |
-|07/08/2021|Meeting app extensibility is available on mobile. Mobile clients support apps during meeting. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
+|08/04/2021|Tabs will no longer have margins surrounding their experiences.  | [Removing tab margins](resources/removing-tab-margins.md) |
+|07/08/2021|Teams mobile adds support for apps in meetings. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
 |06/28/2021|Integrate People Picker capability.|[Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md)|  
 |06/25/2021| Introduced step-by-step guide to send proactive messages. | [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
 |06/09/2021| Stage view for images in Adaptive Cards with `allowExpand` attribute. | [Stage view for images in Adaptive Cards](~/task-modules-and-cards/cards/cards-format.md) |
 |05/31/2021| Conversational tabs. | [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Updated Teams app design guidelines with mobile patterns and more.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)
 |05/13/2021| Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)
-|05/10/2021| Manifest v1.10 is released.|[Manifest schema](resources/schema/manifest-schema.md) |
+|05/10/2021| App manifest v1.10 released.|[Manifest schema](resources/schema/manifest-schema.md) |
 |05/10/2021| New app customization feature.| [Enable orgs to customize your app](concepts/design/enable-app-customization.md) |
 |05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
 |04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
@@ -177,6 +177,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
+|10/14/2021 | Monetize your Teams app with a transactable SaaS offer. | [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
 |06/23/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats. |[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|

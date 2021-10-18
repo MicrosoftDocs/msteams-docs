@@ -218,7 +218,7 @@ The following scenario shows how the app Polly configures a poll without includi
 
 ## Respond to initial submit action
 
-Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and also try to install your bot in the conversation if the bot is not already installed.
+Your task module must respond to the initial `composeExtension/submitAction` message with a preview of the card that the bot sends to the channel. The user can verify the card before sending, and try to install your bot in the conversation if the bot is not already installed.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -402,7 +402,7 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 ### Respond to botMessagePreview send
 
-After the user selects the **Send**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service has to create and send a proactive message with the Adaptive Card to the conversation, and also reply invoke.
+After the user selects the **Send**, you receive a `composeExtension/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
 
 # [C#/.NET](#tab/dotnet)
 
