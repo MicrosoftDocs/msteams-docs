@@ -303,7 +303,7 @@ After the user signs in, the provider generates a user token and sends it to the
 
 After you've configured the authentication mechanism, you can do the actual bot testing.
 
-**To test the bot locally**
+**To test bot locally**
 
 1. Run the bot sample locally on your machine using Visual Studio for example.
 1. Start the Emulator.
