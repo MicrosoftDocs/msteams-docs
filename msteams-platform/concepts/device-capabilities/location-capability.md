@@ -57,7 +57,7 @@ You must use the following set of APIs to enable your device's location capabili
 
 |Sample name | Description | C# | Node.js | 
 |----------------|-----------------|--------------|--------------|
-| App check-in current location | The user can check-in with current location and view all the previous location check-in(s). | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) | 
+| App check-in current location | The user can check-in with current location and view all the previous location check-in(s).| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) | 
 
 
 The following image depicts web app experience of location capabilities:
