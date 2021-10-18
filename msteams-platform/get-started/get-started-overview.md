@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 ms.topic: reference
 keywords: Microsoft Teams developer samples
 ---
-# Overview
+# Get started
 
 Welcome to Get started for building and deploying customized apps for Microsoft Teams!
 
@@ -21,7 +21,7 @@ Here's a quick glance at the build environment options you can choose from, and 
 
 :::image type="content" source="../assets/images/get-started/gs-overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
 
-## App capabilities
+## App capabilities and development tools
 
 Depending on the capabilities you want for your app, choose an appropriate development tool set.
 
