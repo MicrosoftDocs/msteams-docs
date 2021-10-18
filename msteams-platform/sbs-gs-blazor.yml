@@ -185,6 +185,13 @@ items:
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/hwb-app-created.png" alt-text="Illustration shows the app project created in Visual Studio 2019.":::
 
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/blazor-tab-app.gif)
+    </details>
+
     ## Take a tour of the source code
 
     After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
