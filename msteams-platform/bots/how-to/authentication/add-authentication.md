@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ---
 
-# Add authentication to your Teams bot
+# Add authentication to your Teams bots
 
 This article demonstrates how to use Azure Bot Service v4 SDK authentication, based on OAuth 2.0. This article makes it easier to develop a bot that can use authentication tokens based on the user's credentials. You can create bots in Microsoft Teams that can access resources for the user, such as a mail service.
 
