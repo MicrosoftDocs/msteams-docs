@@ -124,7 +124,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 #### Shared meeting stage
 
 > [!NOTE]
-> The feature is available in developer preview only.
+> Curently, the feature is available in developer preview only.
 
 Shared meeting stage allows meeting participants to interact and collaborate on app content in real time. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
 In interactive mode new APIs are added to the Teams Client SDK, which allows the users:
