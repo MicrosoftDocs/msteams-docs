@@ -127,9 +127,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > The feature is available in developer preview only.
 
 Shared meeting stage allows meeting participants to interact and collaborate on app content in real time. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
-
-New APIs have already been added as part of the required context is `meetingStage` in the app manifest. In interactive mode new APIs are added to the Teams Client SDK, which allows the users:
-
+In interactive mode new APIs are added to the Teams Client SDK, which allows the users:
 * To trigger share to stage for a specific component of the app from the app side panel.
 * To check whether the app is being shared to stage.
 
@@ -139,11 +137,15 @@ The prerequisites are as follows:
 * Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
 * Include the RSC permission string as a part of the App permissions.
 
-The following API's are added to Client SDK:
-* canShareAppSegment(): Queries the Client SDK to check app can be shared on stage.
-*
+APIs have already been added as part of the required context is `meetingStage` in the app manifest. To perform further actions, the following API's are added to Client SDK:
 
-
+* `canShareAppSegment`: queries the Client SDK if it can be shared to stage.
+* `shareAppContentToStage`: allows sharing a segment of an app to the meeting stage through the meeting’s side panel.
+* `getAppContentStageSharingCapabilities`: checks whether the app can be shared to stage. 
+* `getAppContentStageSharingState`: returns information on current stage sharing state for app. 
+* `stopAppContentSharingToStage`: terminates current app segment while sharing.
+* `startAppSegmentSharing`: responsible for sharing app segment to stage. 
+* `stopAppSegmentSharing`: responsible for stopping app segment’s share session.
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
