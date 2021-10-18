@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you'll learn to build Hello World app with JavaScript.
   audience: Developer
   level: Beginner
-  ms.date: 08/24/2021
+  ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
@@ -16,6 +16,10 @@ items:
   content: |
     Start Microsoft Teams development by building your first 'Hello World' Teams app. 
     You will create three Teams apps: a tab app, a bot app, and a message extension app. 
+
+    Each of your "Hello world" app will have a capability, which comes with its own UI and UX:
+    
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
     
     In this tutorial, you'll learn:
 
@@ -67,7 +71,9 @@ items:
 
     ### Install the Teams Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more.
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    
+    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
     # [Visual Studio Code](#tab/vscode)
 
