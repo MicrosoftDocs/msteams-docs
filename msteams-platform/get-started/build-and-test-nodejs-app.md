@@ -121,15 +121,18 @@ You use `gulp CLI` to build the app package for Node.js.
 1. Open terminal window.
 1. Run the following command to build the Node.js app package.
 
-    $ gulp
-    [13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
+    ```$ gulp```
+
+    Here's an example of the command output:
+
+    ```[13:39:27] Using gulpfile ~\documents\github\msteams-samples-hello-world-nodejs\gulpfile.js
     [13:39:27] Starting 'clean'...
-    [13:39:27] Starting 'generate-manifest'...
+    [13:39:27] Starting generate-manifest'...
     [13:39:27] Finished 'generate-manifest' after 11 ms
-    [13:39:27] Finished 'clean' after 21 ms
+    [13:39:27] Finished 'clean after 21 ms
     [13:39:27] Starting 'default'...
     Build completed. Output in manifest folder
-    [13:39:27] Finished 'default' after 62 μs 
+    [13:39:27] Finished 'default' after 62 μs```
 
     The app package helloworldapp.zip is created. It is placed at:
 
