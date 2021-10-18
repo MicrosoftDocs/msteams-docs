@@ -250,7 +250,7 @@ With the preliminary settings done, prepare the bot sample code.
 
 ---
 
-### Deploy the bot to Azure
+### Deploy bot to Azure
 
 To deploy the bot, follow the steps in [deploy your bot to Azure](https://aka.ms/azure-bot-deployment-cli).
 
