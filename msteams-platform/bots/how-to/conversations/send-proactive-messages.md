@@ -16,22 +16,22 @@ A proactive message is any message sent by a bot that is not in response to a re
 * Notifications
 * Scheduled messages
 
-For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if required, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed for the user or your user must be part of a team where your app is installed.
+For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed or your user must be part of a team where your app is installed.
 
 Sending a proactive message is different from sending a regular message. There is no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You cannot create a new group chat or a new channel in a team with proactive messaging.
 
 **To send a proactive message**
 
-1. [Get the user ID, team ID, or channel ID](#get-the-user-id-team-id-or-channel-id), if required.
-1. [Create the conversation](#create-the-conversation), if required.
+1. [Get the user ID, team ID, or channel ID](#get-the-user-id-team-id-or-channel-id), if necessary.
+1. [Create the conversation](#create-the-conversation), if necessary.
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
-The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels , see [code sample](#code-sample).
+The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For links to complete working samples for both one-to-one conversations and group or channels, see [code sample](#code-sample).
 
 For using proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging). For certain scenarios, you must [proactively install your app using Graph](#proactively-install-your-app-using-graph). The code snippets in the [samples](#samples) section are for creating a one-to-one conversation. For complete working samples for both one-to-one conversations and groups or channels, see [code sample](#code-sample).
 
-## Get the user ID, team ID or channel ID
+## Get the user ID, team ID, or channel ID
 
 To create a new conversation or conversation thread in a channel, you must have the correct ID. You can receive or retrieve this ID using any of the following:
 
@@ -49,7 +49,7 @@ After you have the user or channel information, you must create the conversation
 
 ## Create the conversation
 
-You must create the conversation, if it does not exist or you do not know the `conversationId`. You must only create the conversation once and store the `conversationId` value or `conversationReference` object.
+You must create the conversation, if it does not exist or you do not know the `conversationId`. You can only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
 After the conversation is created, you must get the conversation ID.
 
@@ -67,13 +67,13 @@ Now that you have sent the proactive message, you must follow these best practic
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is a very effective way to communicate with your users. However, from their perspective, this message can appear completely unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is very important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
+Sending proactive messages to users is an effective way to communicate. However, from their perspective, this message can appear completely unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is very important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. This is also the first time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. This is also the first-time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
 
-* Why a user is receiving the message: It must be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and who installed it.
+* Why a user is receiving the message: It must be clear to the user why they are receiving the message. If your bot was installed in a channel, send a welcome message to all the users, let them know what channel it was installed in and who installed it.
 * What do you offer: Users must be able to identify what they can do with your app and what value can you bring to them.
 * What should they do next: Invite users to try out a command, or interact with your app.
 
@@ -260,7 +260,7 @@ You must supply the user ID and the tenant ID. If the call succeeds, the API ret
 
 ## Code sample
 
-The following table provides a simple code sample that incorporate basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
+The following table provides a code sample that incorporates basic conversation flow into a Teams application and how to create a new conversation thread in a channel in Teams:
 
 | **Sample Name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|--------------|--------|-------------|--------|
