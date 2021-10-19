@@ -19,7 +19,7 @@ items:
     > [!NOTE]
     > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
 
-- title: Prerequisites
+- title: Prerequisites for Blazor tab app
   durationInMinutes: 1
   content: |
     ## Install tools
@@ -238,39 +238,39 @@ items:
 
     1. In Solution Explorer, right-click the project node and select **Publish**. You can also use the **Build** > **Publish** menu item.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish1.png" alt-text="Select the Publish operation on the project":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-build-publish.png" alt-text="Select the Publish operation for the project" border="false":::
 
     1. Select **Azure** and select **Next** in the **Publish** window.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish2.png" alt-text="Select Azure as the publishing target":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish.png" alt-text="Select Azure as the publishing target" border="false":::
 
     1. Select **Azure App Service (Windows)** and select **Next**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish3.png" alt-text="Select Azure App Service as the publishing target":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-azure-app-service.png" alt-text="Select Azure App Service as the publishing target" border="false":::
 
     1. Select **+** to create a new App Service instance.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Create a new instance.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish4.png" alt-text="Create a new instance.":::
 
         In the **Create App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.
 
     1. Select **Create** when you're ready.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Select hosting plan and subscription":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish5.png" alt-text="Select hosting plan and subscription":::
 
         You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
 
     1. Select **Finish** when you're ready.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish6.png" alt-text="Select the new instance.":::
 
     1. Select the **Edit** (pencil) icon next to **Deployment Mode**, and select **Self-contained**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="Select self-contained deployment mode.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish8.png" alt-text="Select self-contained deployment mode.":::
 
     1. Select **Publish**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs2019-publish7.png" alt-text="Publish your app to app service":::
 
       Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
     1. Add `/tab` to the end of the URL to see your page.
