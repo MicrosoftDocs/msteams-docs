@@ -256,7 +256,7 @@ The `NotificationSignal` API includes the following response codes:
 The `Meeting Details` API enables your app to get static meeting metadata. The metadata provides data points that don't change dynamically.
 The API is available through Bot Services.
 
-Currently, both private scheduled or recurring meetings and channel scheduled or recurring meeting supports API with different RSC permissions respectively. For more information, check the following prerequisite section.
+Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively. For more information, check the following prerequisite section.
 
 #### Prerequisite
 
