@@ -8,15 +8,15 @@ ms.localizationpriority: medium
 
 # Cards and task modules
 
-Cards provide users with a variety of visual, audio, and selectable messages and assist in conversation flow.
+Cards provide users with various visual, audio, and selectable messages and assist in conversation flow.
 
-With task modules, you can create modal pop-up experiences in Microsoft Teams. They are particularly useful for starting and completing tasks or displaying rich information like videos or Power business intelligence (BI) dashboards.
+With task modules, you can create modal pop-up experiences in Microsoft Teams. They are useful for starting and completing the tasks or displaying rich information like videos or Power business intelligence (BI) dashboards.
 
 The following types of cards are supported in bots for Teams:
 
 * Adaptive Card
 * Hero card
-* List card
+* List card 
 * Office 365 Connector card
 * Receipt card
 * Signin card
