@@ -66,7 +66,7 @@ Your bot will receive the `conversationUpdate` event just like bots added to a t
 
 ## Blocking a bot in personal chat
 
-users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user will not receive those messages.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means your bots will continue to send messages but the user will not receive those messages.
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 
