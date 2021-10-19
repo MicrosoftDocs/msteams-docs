@@ -67,7 +67,7 @@ Now that you have sent the proactive message, you must follow these best practic
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is an effective way to communicate. However, from their perspective, this message can appear unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted, but in case of welcome messages it will be the first time that they’ve interacted with your app. It is important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 ### Welcome messages
 
