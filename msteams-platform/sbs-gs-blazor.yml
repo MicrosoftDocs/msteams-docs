@@ -152,27 +152,25 @@ items:
     1. Open Visual Studio 2019.
     1. Select **Create a new project**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/vs-create-project.png" alt-text="Illustration shows the option to create a new project.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
 
     1. Select **Microsoft Teams** from **All project types** dropdown list.  
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/create-new-project.png" alt-text="Illustration shows the option to select a template.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
 
     1. Select **Microsoft Teams App** as the template, and select **Next**.
-        
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/configure-new-project.png" alt-text="Illustration shows the options to configure new project.":::
-        
         The **Configure your new project** screen appears.
 
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-configure-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+    
     1. Enter a suitable name for your project.
 
     1. Select the folder path where you want to create the project workspace.
 
     1. Select the name for the solution you're creating, and select **Next**.
-        
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/additional-information.png" alt-text="Illustration shows the option to provide additional information.":::
-
         The **Additional information** screen appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-add-info-create.png" alt-text="Illustration shows the option to provide additional information." border="false":::
 
     1. Enter the application name.
 
@@ -183,7 +181,7 @@ items:
         
         Your Teams app is created in a few seconds.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor/hwb-app-created.png" alt-text="Illustration shows the app project created in Visual Studio 2019.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-tab-app.png" alt-text="Illustration shows the app project created in Visual Studio 2019." border="false":::
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
