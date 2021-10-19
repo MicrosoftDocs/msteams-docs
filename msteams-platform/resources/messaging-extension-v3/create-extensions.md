@@ -232,11 +232,11 @@ There are three ways to collect information from an end user in Teams.
 
 In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
-When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the defined parameters in the manifest. On hitting Submit a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
+When a user chooses a command with static parameters, Teams will generate a form in a Task Module with the defined parameters in the manifest. On hitting Submit, a `composeExtension/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an adaptive card
 
-In this method, your service can define a custom adaptive card to collect the end user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
+In this method, your service can define a custom adaptive card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true` any static parameters defined for the command will be ignored.
 
 In this method, your service receives a `composeExtension/fetchTask` event and responds with an adaptive card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an adaptive card:
 
@@ -304,9 +304,9 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 ### Request to install your conversational bot
 
-If your app contains a conversation bot, ensure that it is installed in the conversation before loading your task module. This is useful when you need to get additional context for your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure that it's installed in the conversation before loading your task module. This is useful when you need to get additional context for your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this by attempting the get roster call. For example, if your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 
@@ -360,11 +360,11 @@ Here's an example of the invoke:
 }
 ```
 
-You should respond to this invoke with the same task response you would have responded with if the bot was already installed.
+Respond to this invoke with the same task response you would have responded with if the bot was already installed.
 
 ## Responding to submit
 
-Once a user completes entering their input your bot will receive a `composeExtension/submitAction` event with the command id and parameter values set.
+Once a user completes entering their input, bot will receive a `composeExtension/submitAction` event with the command ID and parameter values set.
 
 These are the different expected responses to a `submitAction`.
 
@@ -378,7 +378,7 @@ This is used when your extension needs to either authenticate or configure in or
 
 ### Compose extension result response
 
-This used to insert a card into the compose box as a result of a the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+This used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {
@@ -432,8 +432,8 @@ You can also respond to the submit action by inserting a message with an Adaptiv
 
 1. The user clicks the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
-1. After submitting the configuration task module the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot will inserts it into the channel. If the bot is not already a member of the channel, clicking `Send` will add the bot.
+1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` will add the bot.
 1. Interacting with the adaptive card will change the message before sending it.
 1. Once the user clicks `Send` the bot will post the message to the channel.
 
@@ -459,7 +459,7 @@ To enable this flow your task module should respond as in the example below, whi
 }
 ```
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you will need to process:
+Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. Below is an example of the `value` object you'll need to process:
 
 ```json
 {

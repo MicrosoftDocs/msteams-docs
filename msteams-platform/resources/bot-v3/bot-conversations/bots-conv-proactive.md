@@ -21,17 +21,17 @@ Sending a message to start a new conversation thread is different than sending a
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
 1. [Send the message](#examples)
 
-When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you will use to send the message. If you do not, your app will receive a `401: Unauthorized` response. For more information, see [the samples below](#net-example-from-this-sample).
+When creating proactive messages you **must** call `MicrosoftAppCredentials.TrustServiceUrl`, and pass in the service URL before creating the `ConnectorClient` you'll use to send the message. If you don't, your app will receive a `401: Unauthorized` response. For more information, see [the samples below](#net-example-from-this-sample).
 
 ## Best practices for proactive messaging
 
-Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted, but in case of welcome messages it will be the first time that they’ve interacted with your app. It is important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. In case of welcome messages it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user, you must keep in mind that for most people receiving the message they'll have no context for why they're receiving it. This is also the first time they'll have interacted with your app; it is your opportunity to create a good first impression. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, you must keep in mind that for most people receiving the message they'll have no context for why they're receiving it. This is also the first time they'll have interacted with your app, it's your opportunity to create a good first impression. The best welcome messages will include:
 
 * **Why are they receiving this message.** It should be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer.** What can they do with your app? What value can you bring to them?
@@ -51,7 +51,7 @@ When using proactive messaging to send notifications you need to make sure your 
 
 Bots can create new conversations with an individual Microsoft Teams user by obtaining the user's *unique ID* and *tenant ID.* You can obtain these values using one of the following methods:
 
-* By [fetching the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) from a channel your app is installed in.
+* By [fetching the team roster](~/resources/bot-v3/bots-context.md#fetch-the-team-roster) from a channel your app is installed.
 * By caching them when a user [interacts with your bot in a channel](~/resources/bot-v3/bot-conversations/bots-conv-channel.md).
 * When a user is [@mentioned in a channel conversation](~/resources/bot-v3/bot-conversations/bots-conv-channel.md#-mentions) the bot is a part of.
 * By caching them when you [receive the `conversationUpdate`](~/resources/bot-v3/bots-notifications.md#team-member-or-bot-addition) event when your app is installed in a personal scope, or new members are added to a channel or group chat that.
@@ -152,7 +152,7 @@ bot.send(msg);
 
 ## Creating a channel conversation
 
-Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity id and conversation id. If you're using C#, see the example below.
+Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity ID and conversation ID. If you're using C#, see the example below.
 
 Alternatively, you can use the REST API and issue a POST request to [`conversation`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
