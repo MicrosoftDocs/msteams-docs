@@ -10,13 +10,13 @@ ms.date: 03/01/2018
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-There are many services that you may wish to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services include Facebook, Twitter, and of course Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This article will focus on authentication using Azure AD to get access to this information.
+There are many services that you may want to consume inside your Teams app and most of the services require authentication and authorization to get the access, the services includes Facebook, Twitter, and Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This article will focus on authentication using Azure AD to get the access.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow with the goal of eventually reading the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow to eventually read the user's profile information from Azure AD and Microsoft Graph.
 
-The authentication flow described in this article is similar to the tabs except that tabs can use web based authentication flow, and bots require authentication to be driven from code. The concepts in this article will also be useful when implementing authentication from the mobile platform.
+The authentication flow described in this article is similar to the tabs, except that tabs can use web- based authentication flow, and bots require authentication to be driven from code. The concepts in this article will also be useful when implementing authentication from the mobile platform.
 
-For a general overview of authentication flow for bots see the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
+For a general overview of authentication flow for bots, see the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
 ## Configuring identity providers
 
@@ -24,7 +24,7 @@ See the topic [Configure identity providers](~/concepts/authentication/configure
 
 ## Initiate authentication flow
 
-Authentication flow should be triggered by a user action. You should not open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
+Authentication flow should be triggered by a user action. Don't open the authentication pop-up automatically, as this might trigger the browser's pop-up blocker and confuse the user.
 
 ## Add UI to start authentication
 
@@ -63,7 +63,7 @@ Be sure to add the domain of your authentication redirect URL to the [`validDoma
 
 ## Showing user profile information
 
-Although getting an access token is difficult because of all the transitions back and forth across different websites and the security issues that must be addressed, once you have a token, obtaining information from Azure Active Directory is straightforward. The bot makes a call to the `me` Graph endpoint with the access token. Graph responds with the user information for the person who logged in. Information from the response is used to construct a bot card and sent.
+Although to get an access token is difficult, the transitions back and forth across different websites and the security issues need to be addressed. Once you have a token, obtaining information from Azure Active Directory is straightforward. The bot makes a call to the `me` Graph endpoint with the access token. Graph responds with the user information for the person who logged in. Information from the response is used to construct a bot card and sent.
 
 ```typescript
 // Show user profile
@@ -118,6 +118,6 @@ private async handleLogout(session: builder.Session): Promise<void> {
 
 ## Other samples
 
-For sample code showing the bot authentication process see:
+For sample code showing the bot authentication process, see:
 
 * [Microsoft Teams bot authentication sample](https://github.com/OfficeDev/microsoft-teams-sample-auth-node)
