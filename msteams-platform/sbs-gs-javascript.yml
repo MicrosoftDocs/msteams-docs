@@ -159,6 +159,8 @@ items:
   content: |
     Start Microsoft Teams app development by creating your first app, "Hello World!". This app uses the Tab capability.
 
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
+
     In this page, you'll learn:
     - [How to set up a new Tab project with Teams Toolkit](#create-your-tab-project-workspace)
     - [About the directory structure of your app](#take-a-tour-of-the-source-code)
@@ -390,6 +392,8 @@ items:
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, like providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted." border="false":::
+    
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
 
     In this tutorial, you'll learn:
@@ -607,6 +611,8 @@ items:
     - [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
     Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message Extension is highlighted." border="false":::
 
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
