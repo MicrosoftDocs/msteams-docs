@@ -19,7 +19,7 @@ The following sections describe how to do this:
 
 ### Action type message extensions
 
-To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This can include both multiple search and multiple action-based commands.
+To initiate actions from a  messaging extension set the `type` parameter to `action`. Below is an example of a manifest with a search and a create command. A single messaging extension can have up to 10 different commands. This includes both multiple search and multiple action-based commands.
 
 #### Complete app manifest example
 
@@ -304,7 +304,7 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 ### Request to install your conversational bot
 
-If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for you task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
 To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You could accomplish this by attempting the get roster call. For example, if your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot. This requires the user to have permission to install apps in that location, if they can't they'll be presented with a message asking them to contact their administrator.
 

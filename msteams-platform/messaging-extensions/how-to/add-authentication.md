@@ -22,7 +22,7 @@ Every request to your services includes the user  ID, the user's display name an
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They are used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
+The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They're used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
 
 ## Authentication
 
@@ -31,12 +31,12 @@ The sequence is as follows:
 
 1. User issues a query or the default query is automatically sent to your service.
 1. Your service checks whether the user is authenticated by inspecting the Teams user ID.
-1. If the user is not authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
+1. If the user isn't authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
 1. The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.
 1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
 1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
 
-Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user does not try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+Your service should verify the authentication code received in step 6 matches the one from step 5. This ensures a malicious user does'nt try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
 
 ### Respond with a sign in action
 

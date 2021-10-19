@@ -15,7 +15,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Poll responses.
 * External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. In order to send a proactive message you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. In order to send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -25,15 +25,15 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is an effective way to communicate. However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is very important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
+Sending proactive messages to users is an effective way to communicate. However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user you must keep in mind that for most people receiving the message they'll have no context for why they're receiving it. This is also the first time they'll have interacted with your app; it is your opportunity to create a good first impression. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, you must keep in mind that for most people receiving the message they'll have no context for why they're receiving it. This is also the first time they'll have interacted with your app; it is your opportunity to create a good first impression. The best welcome messages will include:
 
-* **Why are they receiving this message.** It should be very clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
+* **Why are they receiving this message.** It should be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer.** What can they do with your app? What value can you bring to them?
 * **What should they do next.** Invite them to try out a command, or interact with your app in some way.
 
@@ -45,7 +45,7 @@ When using proactive messaging to send notifications you need to make sure your 
 * **What it happened to.** It should be clear what item/thing was updated to cause the notification.
 * **Who did it.** Who took the action that caused the notification to be sent.
 * **What they can do about it.** Make it easy for your users to take actions based on your notifications.
-* **How they can opt out.** You need to provide a path for users to opt out of additional notifications.
+* **How they can opt out.** Provide a path for users to opt out of additional notifications.
 
 ## Obtain necessary user information
 
@@ -61,7 +61,7 @@ Bots can create new conversations with an individual Microsoft Teams user by obt
 > [!Note]
 > Proactively installing apps using graph is currently in beta.
 
-Occasionally it may be necessary to proactively message users that have'nt installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario, you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
+Occasionally it may be necessary to proactively message users that haven't installed or interacted with your app previously. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. For this scenario, you can use the Graph API to proactively install your app for your users, then cache the necessary values from the `conversationUpdate` event your app will receive upon install.
 
 You can only install apps that are in your organizational app catalogue, or the Teams app store.
 
@@ -91,7 +91,7 @@ POST /v3/conversations
 }
 ```
 
-You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
+Supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
 ```json
 {
@@ -152,7 +152,7 @@ bot.send(msg);
 
 ## Creating a channel conversation
 
-Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`,which gives you a fully populated address with the correct activity id and conversation id. If you're using C#, see the example below.
+Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity id and conversation id. If you're using C#, see the example below.
 
 Alternatively, you can use the REST API and issue a POST request to [`conversation`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
