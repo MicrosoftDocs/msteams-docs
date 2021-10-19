@@ -266,7 +266,7 @@ items:
 
     When you add the cloud functionality, Teams Toolkit adds the necessary folders to the project. The `api` folder holds the code to any Azure Functions you write.
 
-- title: Build your first tab app
+- title: Build and run your first tab app
   durationInMinutes: 1
   content: |
     After you set up your project workspace with Teams Toolkit, build your tab project. 
@@ -350,7 +350,7 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
-        Or select **Continue**, depending on your operating system:
+      Or select **Continue**, depending on your operating system:
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
 
@@ -486,7 +486,7 @@ items:
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
-- title: Build your first bot app
+- title: Build and run your first bot app
   durationInMinutes: 1
   content: |
     After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
@@ -701,7 +701,7 @@ items:
     > [!Tip]
     > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
 
-- title: Build your first message extension app
+- title: Build and run your first message extension app
   durationInMinutes: 1
   content: |
     After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
