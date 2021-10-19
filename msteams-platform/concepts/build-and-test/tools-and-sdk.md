@@ -39,7 +39,7 @@ The Microsoft Graph SDKs guides you to simplify building high-quality, efficient
 * Service library
 * Core library
 
-For more information, see [Microsoft Graph SDKs](https://docs.microsoft.com/en-us/graph/sdks/sdks-overview)
+For more information, see [Microsoft Graph SDKs](./sdks/sdks-overview)
 
 See also
 
