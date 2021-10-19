@@ -128,26 +128,17 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 Shared meeting stage allows meeting participants to interact and collaborate on app in real time. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
 
-In interactive mode APIs  allows you to:
+In interactive mode the APIs allow you to:
+
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
 
-The following are the prerequisites:
+The prerequisites are as follows:
+
 * Have `meetingSidePanel` context.
 * Provide `MeetingStage` value in one of the manifest fields.
 * Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
-* Include the RSC permission string as a part of the App permissions.
-
-New API's are added to `meetingStage` in the app manifest's Teams Client SDK, which allows the users to:
-* `canShareAppSegment`: sends query to the Client SDK  can be shared to stage.
-* `shareAppContentToStage`: allows sharing a segment of an app to the meeting stage through the meeting’s side panel.
-* `getAppContentStageSharingCapabilities`: checks whether the app can be shared to stage. 
-* `getAppContentStageSharingState`: returns information on current stage sharing state for app. 
-* `stopAppContentSharingToStage`: terminates current app segment while sharing.
-* `startAppSegmentSharing`: responsible for sharing app segment to stage. 
-* `stopAppSegmentSharing`: responsible for stopping app segment’s share session.
-
-![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+* Include RSC permission string as part of App permissions.
 
 To enable shared meeting stage, configure your app manifest as follows:
 
@@ -166,6 +157,18 @@ To enable shared meeting stage, configure your app manifest as follows:
     }
   ]
 ```
+
+The APIs added to Teams Client SDK are as follows:
+
+* `canShareAppSegment`: sends query to the Client SDK  can be shared to stage.
+* `shareAppContentToStage`: allows sharing a segment of an app to the meeting stage through the meeting’s side panel.
+* `getAppContentStageSharingCapabilities`: checks whether the app can be shared to stage. 
+* `getAppContentStageSharingState`: returns information on current stage sharing state for app. 
+* `stopAppContentSharingToStage`: terminates current app segment while sharing.
+* `startAppSegmentSharing`: responsible for sharing app segment to stage. 
+* `stopAppSegmentSharing`: responsible for stopping app segment’s share session.
+
+![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
 See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
