@@ -284,7 +284,7 @@ items:
 
       The **Publish** properties in the **Hosting** pane of Visual Studio shows the site URL and other details. 
       
-    1. Make a note of the site URL by selecting the **Copy** :::image type="icon" source="../assets/images/teams-toolkit-v2/copy-icon.png"::: icon.
+    1. Make a note of the site URL by selecting the **Copy** :::image type="icon" source="..../msteams-platform/assets/images/teams-toolkit-v2/copy-icon.png"::: icon.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-site-url.png" alt-text="Blazor app site URL" border="false":::
 
