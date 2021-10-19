@@ -39,8 +39,6 @@ The Microsoft Graph SDKs guides you to simplify building high-quality, efficient
 * Service library
 * Core library
 
-For more information, see [Microsoft Graph SDKs](./sdks/sdks-overview)
-
 See also
 
 * [Teams Toolkit for Visual Studio Code](../../toolkit/visual-studio-code-toolkit-overview.md)
