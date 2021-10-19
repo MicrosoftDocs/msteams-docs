@@ -605,14 +605,14 @@ items:
 
     Message Extension capability lets you interact with a web service. Use the compose area, command box, or a message in Teams client to search and initiate actions in an external system.
 
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message Extension is highlighted." border="false":::
+
     There are two types of Teams **messaging extensions**:
 
     - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
     - [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal popup to collect or display information. Then, you can process their interaction and send information back to Teams.
 
     Let's create a message extension app with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message Extension is highlighted." border="false":::
 
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
 
