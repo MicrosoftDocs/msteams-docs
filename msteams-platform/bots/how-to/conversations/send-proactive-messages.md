@@ -16,9 +16,9 @@ A proactive message is any message sent by a bot that is not in response to a re
 * Notifications
 * Scheduled messages
 
-For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed or your user must be part of a team where your app is installed.
+For, your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed or your user must be part of a team where your app is installed.
 
-Sending a proactive message is different from sending a regular message. There is no active `turnContext` to use for a reply. You must create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You cannot create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. There is no active `turnContext` to use for a reply. Create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You cannot create a new group chat or a new channel in a team with proactive messaging.
 
 **To send a proactive message**
 
@@ -49,7 +49,7 @@ After you have the user or channel information, you must create the conversation
 
 ## Create the conversation
 
-You must create the conversation, if it does not exist or you do not know the `conversationId`. You can only create the conversation once and store the `conversationId` value or `conversationReference` object.
+Create the conversation, if it does not exist or you do not know the `conversationId`. You can only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
 After the conversation is created, you must get the conversation ID.
 
@@ -61,19 +61,19 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
+Now that you have the right address information, you can send your message. If you are using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. Set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 Now that you have sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is an effective way to communicate. However, from their perspective, this message can appear completely unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is very important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
+Sending proactive messages to users is an effective way to communicate. However, from their perspective, this message can appear unprompted, and in the case of welcome messages, it is the first time they have interacted with your app. Therefore, it is important to use proactive messaging sparingly, not spam your users, and provide enough information to let users understand why they are receiving the messages.
 
 ### Welcome messages
 
 When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. This is also the first-time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
 
-* Why a user is receiving the message: It must be clear to the user why they are receiving the message. If your bot was installed in a channel, send a welcome message to all the users, let them know what channel it was installed in and who installed it.
+* Why a user is receiving the message: It must be clear to the user why they are receiving the message. If your bot was installed in a channel, send a welcome message to all users, let them know what channel it was installed in and who installed it.
 * What do you offer: Users must be able to identify what they can do with your app and what value can you bring to them.
 * What should they do next: Invite users to try out a command, or interact with your app.
 
@@ -87,7 +87,7 @@ To send notifications using proactive messaging, ensure your users have a clear 
 * What was the result: It must be clear what item was updated to cause the notification.
 * Who or what triggered it: Who or what took action that caused the notification to be sent.
 * What can users do in response: Make it easy for your users to take actions based on your notifications.
-* How can users opt-out: You must provide a path for users to opt-out of additional notifications.
+* How can users opt-out: Provide a path for users to opt-out of additional notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
@@ -245,7 +245,7 @@ POST /v3/conversations
 }
 ```
 
-You must supply the user ID and the tenant ID. If the call succeeds, the API returns the following response object:
+Supply the user ID and the tenant ID. If the call succeeds, the API returns the following response object:
 
 ```json
 {
