@@ -292,7 +292,7 @@ items:
 
     The Developer Portal for Teams manages where the tabs for your app are loaded with an **Environment**.  
 
-    **To create an environment:**
+    ### To create an environment
 
     1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). 
     1. Sign in with your Microsoft 365 administrative account.
@@ -303,22 +303,31 @@ items:
 
     1. Select **Environments**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments1.png" alt-text="Select environments":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env.png" alt-text="Select environments" border="false":::
 
     1. Select **Create your first environment**.
 
-    1. Enter a name for your environment, and select **Add**. For example, `_Production_`.
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-env.png" alt-text="Select add new environments" border="false":::
+
+    1. Enter a name for your environment, and select **Download**.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-env-name.png" alt-text="Add new environment name" border="false":::
 
     1. Select **Create your first environment variable**.
 
-    1. Enter `azure_app_url` as the **Name**.  
-    1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the last step of the previous section [Provision and deploy your app to Azure App Service](#provision-and-deploy-your-app-to-azure-app-service)
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env-var.png" alt-text="Add new environment variable" border="false":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments2.png" alt-text="Create environment variable":::
+    1. Enter `azure_app_url` as the **Name**.
+
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-variable.png" alt-text="Create environment variable" border="false":::
+
+    1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the Hosting pane of Publish dialog. 
 
     1. Select **Add**.
       
         The environment is added.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-azure-url-added.png" alt-text="Create environment variable" border="false":::
 
     ## Update the app manifest
 
