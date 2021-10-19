@@ -19,7 +19,7 @@ The following types of cards are supported in bots for Teams:
 * List card 
 * Office 365 Connector card
 * Receipt card
-* Signin card
+* Sign in card
 * Thumbnail card
 * Card collections
 
