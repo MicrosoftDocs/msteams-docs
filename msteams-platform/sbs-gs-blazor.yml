@@ -303,23 +303,23 @@ items:
 
     1. Select **Environments**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env.png" alt-text="Select environments" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env.png" alt-text="Select environments" border="false":::
 
     1. Select **Create your first environment**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-env.png" alt-text="Select add new environments" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-env.png" alt-text="Select add new environments" border="false":::
 
     1. Enter a name for your environment, and select **Download**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-env-name.png" alt-text="Add new environment name" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-env-name.png" alt-text="Add new environment name" border="false":::
 
     1. Select **Create your first environment variable**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env-var.png" alt-text="Add new environment variable" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env-var.png" alt-text="Add new environment variable" border="false":::
 
     1. Enter `azure_app_url` as the **Name**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-variable.png" alt-text="Create environment variable" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-variable.png" alt-text="Create environment variable" border="false":::
 
     1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the Hosting pane of Publish dialog. 
 
