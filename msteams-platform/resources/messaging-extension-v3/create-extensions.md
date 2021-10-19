@@ -304,9 +304,9 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 ### Request to install your conversational bot
 
-If your app also contains a conversational bot, it may be necessary to ensure that your bot is installed in the conversation before loading your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure that it is installed in the conversation before loading your task module. This is useful when you need to get additional context for your task module. This can be useful in situations where you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You could accomplish this by attempting the get roster call. For example, if your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot. This requires the user to have permission to install apps in that location, if they can't they'll be presented with a message asking them to contact their administrator.
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this by attempting the get roster call. For example, if your bot is not installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 

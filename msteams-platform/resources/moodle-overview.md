@@ -19,7 +19,7 @@ In addition, the Microsoft 365 Moodle plugins complement Moodle by providing a c
 * Automate user matching
 * Sync courses to Microsoft Teams and file repositories
 * Connect OneNote assignments
-* Embed Office documents.  
+* Embed Office documents
  
 Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugins, which integrates Moodle into Teams. Faculty and students can take advantage of Moodle's unique features in real-time communication and collaboration.
 

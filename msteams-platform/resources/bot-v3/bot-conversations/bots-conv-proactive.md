@@ -25,7 +25,7 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to users is an effective way to communicate. However, from their perspective this message can appear to come to them completely unprompted, and in the case of welcome messages will be the first time they've interacted with your app. As such, it is important to use this functionality sparingly (don't spam your users), and to provide them with enough information to let them understand why they are being messaged.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted, but in case of welcome messages it will be the first time that they’ve interacted with your app. It is important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
