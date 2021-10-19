@@ -158,10 +158,10 @@ In interactive mode the APIs allow you to:
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
 
-The APIs added to Teams Client SDK are as follows:
+The APIs added to Teams client SDK are as follows:
 
-* `canShareAppSegment`: sends query to the Client SDK  can be shared to stage.
-* `shareAppContentToStage`: allows sharing a segment of an app to the meeting stage through the meeting’s side panel.
+* `canShareAppSegment`: sends query to the client SDK to share to stage.
+* `shareAppContentToStage`: allows sharing a segment of an app to meeting stage through the meeting’s side panel.
 * `getAppContentStageSharingCapabilities`: checks whether the app can be shared to stage. 
 * `getAppContentStageSharingState`: returns information on current stage sharing state for app. 
 * `stopAppContentSharingToStage`: terminates current app segment while sharing.
