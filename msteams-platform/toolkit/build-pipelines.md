@@ -9,21 +9,22 @@ ms.topic: overview
 
 # Build CI/CD pipelines for Teams application
 
-TeamsFx helps automate your development workflow when building a Teams application. You can find templates and tools in the following table for you to quickly get started with CI/CD:
+TeamsFx helps to automate your development workflow when building Teams application. To get started with CI/CD pipelines find templates and tools in the following table:
 
-|Tools and Templates|Description|
+|Tools and templates|Description|
 |-----------------|----------------|
-|teamsfx-cli-action|A ready-to-use GitHub Action.|
-|github-ci-template.yml and github-cd-template.yml|GitHub CI/CD templates for a Teams app.|
-|script-ci-template.sh and script-cd-template.sh|Script template for automation everywhere else outside GitHub.|
+|teamsfx-cli-action|Ready-to-use GitHub action.|
+|github-ci-template.yml and github-cd-template.yml|GitHub CI/CD templates for Teams app.|
+|script-ci-template.sh and script-cd-template.sh|Script template for automation|
 
 ## CI/CD Workflow Templates in GitHub
 
-To add these templates to your repository, you must have your versions of github-ci-template.yml and github-cd-template.yml to be located in your repository under the folder `.github/workflows`.
+You must have templates `github-ci-template.yml` and `github-cd-template.yml` in your repository under the folder `.github/workflows`.
 
 ## Customize CI Workflow
 
-There are some potential changes you can make to adapt your project:
+There are some changes you can make to adapt your project:
+
 1. Change how the CI flow is triggered. We have default pull request targeting the dev branch.
 1. Ensure you have an npm build script, or customize the way you build in the automation code.
 1. Ensure you have an npm test script, which returns zero for success, and/or change the test commands.
