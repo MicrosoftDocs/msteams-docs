@@ -28,8 +28,8 @@ Teams Toolkit helps you to deploy your project code to the provisioned cloud res
 
 ## Build CI/CD Pipeline for Teams application
 
-Teams Toolkit helps to automate your development workflow when building Teams application. You must have templates in your repository to build pipelines workflows. For more information on templates and building pipelines, see [Build CI/CD pipelines for Teams application](build-pipelines.md).
+Teams Toolkit helps to automate your development workflow when building Teams application. For more information on building pipelines, see [Build CI/CD pipelines for Teams application](build-pipelines.md).
 
 ## Build apps with Teams Toolkit and Visual Studio
 
-The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio integrated development environment (IDE). The Microsoft Teams toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app. For more information on building app with Teams Toolkit, see [Build apps with the Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md).
+The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio. The Microsoft Teams toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app. For more information on building app with Teams Toolkit, see [Build apps with the Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md).
