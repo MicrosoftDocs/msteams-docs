@@ -92,9 +92,7 @@ The following table provides the changes made to your project and the reasons:
 |Azure API Management|An Open API Specification file added into a subfolder with path `yourProjectFolder/openapi` </br></br> `env.default.json` and `settings.json` under `.fx` folder.|This is the API specification file defines your API after publishing.</br></br>To include configurations for TeamsFx, to track the capabilities present in your project, you can easily move your project to cloud.|
 
 > [!NOTE]
-
 > * When adding Azure SQL, provide Azure function information. You need to access SQL from server workload. If your project doesn't contain Azure Functions, then it can be created for you.
-
 > * When adding Azure APIM, provide the following information:
 <br>
       * Azure function information, as Azure API Management needs to work with Azure functions. If your project doesn't contain Azure functions, then it can be created for you.</br>
