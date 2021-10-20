@@ -97,9 +97,9 @@ The following table provides the changes made to your project and the reasons:
 > * When adding Azure SQL, provide Azure function information. You need to access SQL from server workload. If your project doesn't contain Azure Functions, then it can be created for you.
 
 > * When adding Azure APIM, provide the following information:
-
-      * Azure function information, as Azure API Management needs to work with Azure functions. If your project doesn't contain Azure functions, then it can be created for you.
-      * Your subscription information, to find an existing APIM instance to use in the project or you can choose to create a new instance.
+<br>
+      * Azure function information, as Azure API Management needs to work with Azure functions. If your project doesn't contain Azure functions, then it can be created for you.</br>
+<br>    * Your subscription information, to find an existing APIM instance to use in the project or you can choose to create a new instance.</br>
 
 ## Provision resources
 
