@@ -31,14 +31,15 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 | Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
 | Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
 
-*You aren't limited to using these particular stacks!*. This tutorial will walk you through the recommended tools, as well as other options.
+*You aren't limited to using these particular stacks!* 
 
-Also, if you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps. 
+If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps. 
 
+This tutorial will walk you through the process with recommended tools, as well as a few other options.
 
 ## Next step
 
-Now, select the build environment you prefer and let's build your first Teams app. But first, prepare your development environment.
+Now, let's build your first Teams app. But first, pick your lauguage (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
 > [Prepare to build a Teams app with JavaScript](prerequisites.md)
