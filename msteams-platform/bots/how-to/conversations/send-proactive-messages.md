@@ -19,7 +19,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 For your bot to send a proactive message to a user, group chat, or team, it must have access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location. 
 You can [proactively install your app using Microsoft Graph](#proactively-install-your-app-using-graph) in a team, if necessary, or use an [app policy](/microsoftteams/teams-custom-app-policies-and-settings) to push apps out to teams and users in your tenant. For users, your app either must be installed or your user must be part of a team where your app is installed.
 
-Sending a proactive message is different from sending a regular message. There are no active `turnContext` to use for a reply. Create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
+Sending a proactive message is different from sending a regular message. There is no active `turnContext` to use for a reply. Create the conversation before sending the message. For example, a new one-to-one chat or a new conversation thread in a channel. You can't create a new group chat or a new channel in a team with proactive messaging.
 
 **To send a proactive message**
 
@@ -72,7 +72,7 @@ Sending proactive messages is an effective way to communicate with your users. H
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. It's also the first-time users interact with your app. It's an opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there is no context for why the users receive the message. It's also the first-time users interact with your app. An opportunity to create a good first impression. The best welcome messages must include:
 
 * Why a user is receiving the message: It must be clear to the user why they're receiving the message. If your bot was installed in a channel, send a welcome message to all users, let them know what channel it was installed in and who installed it.
 * What do you offer: Users can identify what they can do with your app and what value can you bring to them.
