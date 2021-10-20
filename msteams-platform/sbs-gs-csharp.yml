@@ -16,9 +16,6 @@ items:
   content: |
     Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
-    > [!NOTE]
-    > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
-
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -48,6 +45,7 @@ items:
 
     - [Install Git](https://git-scm.com/downloads)
     - [Install Visual Studio 2019](https://www.visualstudio.com/downloads/)
+    - [Install ngrok](https://ngrok.com/download)
 
     You can install the free community edition of Visual Studio 2019. If installation prompts you to add `git` to the path, select it. In a terminal window, run the following command to verify the `git` installation:
 
