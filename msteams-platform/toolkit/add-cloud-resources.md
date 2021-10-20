@@ -20,7 +20,6 @@ Before provisioning cloud resources in Azure and Microsoft 365, you must have th
 * A ready project
 
 > [!NOTE]
-
 > * A tab project created with SPFx doesn’t support addition of any more Azure resources.
 > * You can include each Azure resources only once for your project.
 
