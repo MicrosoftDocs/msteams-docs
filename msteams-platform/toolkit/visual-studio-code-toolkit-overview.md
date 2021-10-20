@@ -8,7 +8,7 @@ ms.topic: overview
 ---
 # Teams Toolkit for Visual Studio Code
 
-Teams Toolkit helps developers to create and deploy Teams apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a "zero-configuration" approach to the developer experience.
+Teams Toolkit helps developers to create and deploy Teams apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365 with a zero-configuration approach to the developer experience.
 
 ## Add capabilities
 
@@ -30,6 +30,6 @@ Teams Toolkit helps you to deploy your project code to the provisioned cloud res
 
 Teams Toolkit helps to automate your development workflow when building Teams application. For more information on building pipelines, see [Build CI/CD pipelines for Teams application](build-pipelines.md).
 
-## Build apps with Teams Toolkit and Visual Studio
+## Build apps with Teams Toolkit and Visual Studio Code
 
-The Microsoft Teams Toolkit enables you to create custom Teams apps directly within the Visual Studio. The Microsoft Teams toolkit guides you through the process and provides everything you need to build, debug, and launch your Teams app. For more information on building app with Teams Toolkit, see [Build apps with the Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md).
+The Teams Toolkit for Visual Studio Code helps developers to create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365. For more information on building app with Teams Toolkit, see [Build apps with the Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md).
