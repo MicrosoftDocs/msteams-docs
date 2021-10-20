@@ -124,7 +124,7 @@ To initiate actions from a messaging extension, set the `type` parameter to `act
 
 ### Initiate actions from messages
 
-In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. It allows you to send the message contents to your bot for processing and optionally reply to that message with a response using the method which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access messaging extension from the overflow `...` menu and then selecting `Take action` as in the following image:
+In addition to initiating actions from the compose message area, you can also use your messaging extension to initiate an action from a message. It allows you to send the message contents to your bot for processing and optionally reply to that message with a response using the method, which is described in [Responding to submit](#responding-to-submit). The response will be inserted as a reply to the message that your users can edit before submitting. Your users can access messaging extension from the overflow `...` menu and then selecting `Take action` as in the following image:
 
 ![Example of initiating an action from a message](~/assets/images/compose-extensions/messageextensions_messageaction.png)
 
@@ -306,7 +306,7 @@ Just like in the adaptive card flow your service sends a `fetchTask` event and r
 
 If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module. It's useful when you need to get additional context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
-To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get this by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
+To facilitate this flow, when your messaging extension first receives the `composeExtension/fetchTask` invoke check to see if your bot is installed in the current context. You can get it,  by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
 Here's an example of the response:
 
@@ -360,7 +360,7 @@ Here's an example of the invoke:
 }
 ```
 
-Respond to this invoke with the same task response you would have responded with if the bot was already installed.
+Respond to the invoke with the same task response you would have responded with if the bot was already installed.
 
 ## Responding to submit
 
@@ -370,15 +370,15 @@ These are the different expected responses to a `submitAction`.
 
 ### Task Module response
 
-It is used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
+It's used when your extension needs to chain dialogs together to get more information. The response is exactly the same as `fetchTask` mentioned earlier.
 
 ### Compose extension auth/config response
 
-It is used when your extension needs to either authenticate or configure in order to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
+It's used when your extension needs to either authenticate or configure to continue. For more information, see [authentication section](~/resources/messaging-extension-v3/search-extensions.md#authentication) in the search section.
 
 ### Compose extension result response
 
-It used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
+It's used to insert a card into the compose box as a result of the command. It's the same response that's used in the search command, but it's limited to one card or one result in the array.
 
 ```json
 {
@@ -428,7 +428,7 @@ It used to insert a card into the compose box as a result of the command. It's t
 
 ### Respond with an adaptive card message sent from a bot
 
-Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user will be able to preview the message before submitting it, and potentially edit/interact with it as well. It can be useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit/interact with it as well. It can be useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user selects the messaging extension to trigger the task module.
 1. The user uses the task module to configure the poll.
