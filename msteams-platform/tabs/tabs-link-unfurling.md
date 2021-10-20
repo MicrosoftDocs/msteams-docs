@@ -11,22 +11,19 @@ ms.localizationpriority: none
 
 Stage View is a new user interface (UI) component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
  
-> [!NOTE]
-> Currently, Teams mobile clients do not support tabs link unfurling and Stage View. Mobile clients use the `websiteUrl` attribute provided by the developer to open the page in the device's web browser.
-
 ## Stage View
 
 Stage View is a full screen UI component that you can invoke to surface your web content. The existing link unfurling service is updated so that it is used to turn URLs into a tab using an Adaptive Card and Chat Services. When a user sends a URL in a chat or channel, the URL is unfurled to an Adaptive Card. The user can select **View** in the card, and pin the content as a tab directly from Stage View.
 
 ## Advantage of Stage View
 
-Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access. This leads to a higher user engagement with your app.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access. It leads to a higher user engagement with your app.
 
 ## Stage View vs. Task module
 
 |Stage View|Task module|
 |:-----------|:-----------|
-|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides  rich features that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
+|Stage View is useful when you have rich content to display to the users, such as a page, a dashboard, a file, and so on. It provides rich features that helps to render your content in the full-screen canvas.|[Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that require user attention, or collect information required to move to the next step.|
   
 ## Invoke Stage View
 
@@ -84,7 +81,7 @@ Following is the process to invoke Stage View:
 * The bot responds with a `200` code.
 
 > [!NOTE]
-> Currently, Teams mobile clients do not support the Stage View capability. When a user selects **View** on a mobile client, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> For apps that are distributed through the AppSource and don't have a mobile-optimized experience, select **View** on a mobile clients, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
@@ -124,11 +121,11 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 
 | Property name | Type | Number of characters | Description |
 |:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays. This is a required field.|
-| `name` | String | 128 | This property is the display name of the tab in the channel interface. This is an optional field.|
-| `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. This is a required field.|
-| `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. This is a required field.|
-| `removeUrl?` | String | 2048 | This property is the https:// URL that points to the UI to be displayed when the user deletes the tab. This is an optional field.|
+| `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays. It is a required field.|
+| `name` | String | 128 | This property is the display name of the tab in the channel interface. It is an optional field.|
+| `contentUrl` | String | 2048 | This property is the https:// URL that points to the entity UI to be displayed in the Teams canvas. It is a required field.|
+| `websiteUrl?` | String | 2048 | This property is the https:// URL to point at, if a user selects to view in a browser. It is a required field.|
+| `removeUrl?` | String | 2048 | This property is the https:// URL that points to the UI to be displayed when the user deletes the tab. It is an optional field.|
 
 ## Code sample
 
