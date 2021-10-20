@@ -15,7 +15,7 @@ A proactive message is a message that is sent by a bot to start a conversation. 
 * Poll responses.
 * External event notifications.
 
-Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. In order to send a proactive message, you need to:
+Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
 1. [Decide what you're going to say](#best-practices-for-proactive-messaging)
 1. [Obtain the user's unique ID and tenant ID](#obtain-necessary-user-information)
@@ -25,15 +25,15 @@ When creating proactive messages you **must** call `MicrosoftAppCredentials.Trus
 
 ## Best practices for proactive messaging
 
-Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. In case of welcome messages it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 Proactive messages generally fall into one of two categories, welcome messages or notifications.
 
 ### Welcome messages
 
-When using proactive messaging to send a welcome message to a user, you must keep in mind that for most people receiving the message they'll have no context for why they're receiving it. This is also the first time they'll have interacted with your app, it's your opportunity to create a good first impression. The best welcome messages will include:
+When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. The best welcome messages will include:
 
-* **Why are they receiving this message-** It should be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
+* **Why they are receiving this message-** It should be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer-** What can they do with your app? What value can you bring to them?
 * **What should they do next-** Invite them to try out a command, or interact with your app in some way.
 
@@ -43,7 +43,7 @@ When using proactive messaging to send notifications you need to make sure your 
 
 * **What happened-** A clear indication of what happened to cause the notification.
 * **What it happened to-** It should be clear what item/thing was updated to cause the notification.
-* **Who did it-** Who took the action that caused the notification to be sent.
+* **Who did it-** Who took the action that caused the notification to be sent?
 * **What they can do about it-** Make it easy for your users to take actions based on your notifications.
 * **How they can opt out-** Provide a path for users to opt out of additional notifications.
 
