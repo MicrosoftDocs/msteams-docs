@@ -9,34 +9,33 @@ ms.topic: overview
 
 # Provision in the cloud 
 
-TeamsFx provides seamless integration with Azure and Microsoft 365 cloud so that you can easily put your application in a secure cloud environment, provisioning is the first step to deploy an application to cloud. In this step, necessary cloud resources are created in Azure and Microsoft 365 for your application.
+TeamsFx provides integration with Azure and Microsoft 365 cloud. You can place your application in a secure cloud environment. In this step, necessary cloud resources are created in Azure and Microsoft 365 for your application.
  
 ## Prerequisites
 
-Before you can provision cloud resources in Azure and Microsoft 365, you must have the following accounts: 
+For provisioning cloud resources in Azure and Microsoft 365, you must have the following accounts:
 
-* A Microsoft 365 organizational account. 
-* An Azure Account with a valid subscription. 
+* Microsoft 365 
+* Azure with valid subscription
  
-> [!NOTE]
-> Read account and permission page (link to account page) to learn why these accounts are needed. 
+For more information, see read account and permission page (link to the page).
  
 ## Provision resources
 
-Teams Toolkit provision cloud resources are based on the [Teams application capabilities](add-capabilities.md) and [Azure services](add-cloud-resources.md) that are included in your application. 
+Teams Toolkit provision cloud resources are based on [Teams application capabilities](add-capabilities.md) and [Azure services](add-cloud-resources.md) that are included in your application.
  
-### Microsoft 365 Cloud Resources 
+### Microsoft 365 Cloud Resources
 
-For any kind of Teams application, these Microsoft 365 resources are created in your Microsoft 365 tenant: 
+The following Microsoft 365 resources are created in your Microsoft 365 tenant for any kind of Teams application:
 
-* Register an application in Teams. (Commonly referred as Teams App ID). 
-* Register an application in Azure Active Directory (Commonly referred as AAD App ID). 
+* Register an application in Teams, referred as Teams App ID.
+* Register an application in Azure Active Directory, commonly referred as AAD App ID.
  
 The following table describes the necessity of mentioned resources:
 
 |Resources | Why my application needs it? |
 |----------|--------------------------------|
-|Teams application | This is an application **registered in Teams platform** with the information in manifest and identified by a unique GUID.| 
+|Teams application | This is an application **registered in Teams platform** with the information in manifest and identified by a unique GUID.|
 |Azure Active Directory application| This is an application **registered in Azure Active Directory** to represent your Teams Application, which is used to manage digital identity and permissions for your application so you could achieve features like single sign-on and ask for user consent when your application requires additional permission to access user’s data in Microsoft 365. |
  
 ### Azure cloud resources by project type
