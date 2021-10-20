@@ -81,7 +81,7 @@ Following is the process to invoke Stage View:
 * The bot responds with a `200` code.
 
 > [!NOTE]
-> For apps that are distributed through the AppSource and don't have a mobile-optimized experience, select **View** on a mobile clients, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> For apps that are distributed through the AppSource and don't have a mobile-optimized experience, select **View** on a mobile client, the user is taken to the device's browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
