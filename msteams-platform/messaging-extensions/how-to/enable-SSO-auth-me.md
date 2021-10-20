@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Single sign-on (SSO) support for messaging extensions
  
-Single sign-on support is now available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions, by default refreshes the authentication token, which minimizes the number of times you need to enter the sign in credentials for Microsoft Teams.
+Single sign-on support is now available for messaging extensions and link unfurling. Enabling Single sign-on (SSO) for messaging extensions, by default refreshes the authentication token. Which minimizes the number of times you need to enter the sign-in credentials for Microsoft Teams.
 
 This document guides you on how to enable the SSO and store your authentication token, if necessary.
 
@@ -36,7 +36,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
     > [!NOTE]
     > We do not support other handlers SSO, except `OnTeamsMessagingExtensionQueryAsync` and `OnTeamsAppBasedLinkQueryAsync` from the TeamsMessagingExtensionsSearchAuthConfigBot.cs file.
    
-4. You will receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you are enabling the SSO for:
+4. You'll receive the token in `OnTeamsMessagingExtensionQueryAsync` handler in the `turnContext.Activity.Value` payload or in the `OnTeamsAppBasedLinkQueryAsync`, depending on which scenario you're enabling the SSO for:
 
     ```json
     JObject valueObject=JObject.FromObject(turnContext.Activity.Value);
