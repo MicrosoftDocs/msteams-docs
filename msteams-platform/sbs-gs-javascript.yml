@@ -428,10 +428,6 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app." border="false":::
 
-    1. Select **Create a new bot registration** in the **Bot registration** section.
-
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-bot-registration.png" alt-text="Select create a new bot registration" border="false":::
-
     1. Select **JavaScript** in the **Programming Language** section.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
@@ -442,9 +438,10 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
-        Your Teams app with a Bot capability is created in a few seconds.
+      Your Teams app with a Bot capability is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
+
 
     <details>
     <summary>A quick recap of creating a Teams app.</summary>
@@ -567,7 +564,7 @@ items:
 
       > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
 
-        Your web browser starts to run the app.
+      Your web browser starts to run the app.
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -820,6 +817,7 @@ items:
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
     Now, you've learned how to build and run a basic message extension.
+
 
     <details>
     <summary>Add a configuration page to your messaging extension</summary>
