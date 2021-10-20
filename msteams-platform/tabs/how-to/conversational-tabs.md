@@ -1,7 +1,7 @@
 ---
 title: Create conversational tabs
 author: surbhigupta
-description: Create conversational sub-entity chat for your channel tabs
+description: Create conversational subentity chat for your channel tabs
 keywords: teams tabs channel configurable 
 ms.topic: conceptual
 ms.author: lomeybur
@@ -10,13 +10,13 @@ ms.localizationpriority: none
 
 # Create conversational tabs
 
-Conversational sub-entities provide a way to allow users to have conversations about sub-entities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content being shown. Conversational sub-entities provide a much more focused conversation experience for dynamic tabs.
+Conversational subentities provide a way to allow users to have conversations about subentities in your tab, such as specific task, patient, and sales opportunity, instead of discussing the entire tab, also known as entity. A traditional channel or configurable tab allows the user to have a conversation about a tab, but the user requires a more focused conversation. The requirement for a more focused conversation can arise either, if there is too much content to have a centralized discussion or because the content changed over time, making the conversation irrelevant to the content being shown. Conversational subentities provide a much more focused conversation experience for dynamic tabs.
 
-Conversational sub-entities are only supported in channels. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
+Conversational subentities are only supported in channels. They can be used from a personal or static tab to create or continue conversations in tabs that are already pinned to a channel. The static tab is useful if you want to provide one location for a user to view and access conversations happening across multiple channels.
 
 ## Prerequisites
 
-In order to support conversational sub-entities, your tab web application must have the ability to store a mapping between sub-entities ↔ conversations in a backend database. The `conversationId` is provided, but you must store that `conversationId` and return it to Teams in order for users to continue the conversation.
+In order to support conversational subentities, your tab web application must have the ability to store a mapping between subentities ↔ conversations in a backend database. The `conversationId` is provided, but you must store that `conversationId` and return it to Teams in order for users to continue the conversation.
 
 ## Start a new conversation
 
@@ -28,7 +28,7 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation** takes the following inputs to start a conversation in a channel:
 
-* **subEntityId**: This is the ID of your specific sub-entity. For example, task-123.
+* **subEntityId**: This is the ID of your specific subentity. For example, task-123.
 * **entityId**: This is the ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
 * **channelId**: This is the channel in which the tab instance resides.
    > [!NOTE]
@@ -65,9 +65,9 @@ The following image shows the conversation panel with the appropriate conversati
 
 ## Enhance a conversation
 
-It is important that your tab includes [deep links to your sub-entity](~/concepts/build-and-test/deep-links.md). For example, user selecting the tab chiclet deep link from the channel conversation. The expected behavior is to receive the deep link, open that sub-entity, and then open the conversation panel for that sub-entity.
+It is important that your tab includes [deep links to your subentity](~/concepts/build-and-test/deep-links.md). For example, user selecting the tab chiclet deep link from the channel conversation. The expected behavior is to receive the deep link, open that subentity, and then open the conversation panel for that subentity.
 
-To support conversational sub-entities from your personal or static tab, you don't have to change anything in your implementation. We only support starting or continuing conversations from channel tabs that are already pinned. Supporting static tabs allows you to provide a single location for your users to interact with all your sub-entities. It is important that you save the `subEntityId`, `entityId`, and `channelId` when your tab is originally created in a channel to have the right properties when opening the conversation view in a static tab.
+To support conversational subentities from your personal or static tab, you don't have to change anything in your implementation. We only support starting or continuing conversations from channel tabs that are already pinned. Supporting static tabs allows you to provide a single location for your users to interact with all your subentities. It is important that you save the `subEntityId`, `entityId`, and `channelId` when your tab is originally created in a channel to have the right properties when opening the conversation view in a static tab.
 
 ## Close a conversation
 
