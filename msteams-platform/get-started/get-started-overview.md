@@ -23,15 +23,18 @@ Here's a quick glance at the build environment options you can choose from, and 
 
 ## App capabilities and development tools
 
-Depending on the capabilities you want for your app, choose an appropriate development tool set.
+Depending on the capabilities you want for your app, choose an appropriate development tool set. 
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks |
 |--------|-------------|--------|--------|--------|
-| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or YoTeams ([Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md)) if you prefer using CLI| [Teams Fx](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs & [Teams client SDK](/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Web technology in general, HTML, CSS, and JavaScript |
-| Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or YoTeams ([Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md)) | [Teams Fx](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
-| Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or YoTeams ([Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md)) | [Teams Fx](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, or Python |
+| Tabs | A full-screen embedded web experience. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) if you prefer using CLI | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) for core libs & [Teams client SDK](/en-us/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) | Web technology in general, HTML, CSS, and JavaScript (incl. React) |
+| Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)  if you prefer using CLI | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
+| Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md)  if you prefer using CLI | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
 
-*You aren't limited to using these particular stacks*.
+*You aren't limited to using these particular stacks!*. This tutorial will walk you through the recommended tools, as well as other options.
+
+Also, if you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps. 
+
 
 ## Next step
 
