@@ -13,7 +13,7 @@ TeamsFx helps you to deploy your project code to the provisioned cloud resources
 
 ## Prerequisite
 
-Before you can deploy your project code to cloud, complete the resource provision step.
+Before you can deploy your project code to cloud, complete the [resource provision](provision-in-the-cloud.md) steps.
 
 ## Deployment
 
