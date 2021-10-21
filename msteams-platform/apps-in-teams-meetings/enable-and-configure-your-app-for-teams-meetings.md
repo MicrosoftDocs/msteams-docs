@@ -156,7 +156,7 @@ In interactive mode the APIs allow you to:
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
 
-For more information on Teams Client SDK APIs, see 
+For more information on Teams Client SDK APIs, see [Meeting apps API references](API-references.md)
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
