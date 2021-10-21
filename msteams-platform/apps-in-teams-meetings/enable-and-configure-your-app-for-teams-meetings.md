@@ -126,7 +126,7 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > [!NOTE]
 > Currently, the feature is available in developer preview only.
 
-Shared meeting stage allows meeting participants to interact and collaborate on app in real time. The existing share to stage capability from the client allows the full app to be shared to stage. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
+Shared meeting stage allows meeting participants to interact and collaborate on app in real time. The  share to stage capability from the client allows to share the full app to stage. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
 
 The prerequisites are as follows:
 
@@ -155,6 +155,8 @@ In interactive mode the APIs allow you to:
 
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
+
+For more information on Teams Client SDK APIs, see 
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 

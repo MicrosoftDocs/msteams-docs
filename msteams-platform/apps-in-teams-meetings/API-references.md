@@ -25,6 +25,8 @@ The following table provides a list of APIs:
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
+## Bot Framework SDK APIs
+
 The following table provides list of APIs added to Bot Framework SDK:
 
 |API|Bot Framework SDK method|
@@ -32,6 +34,8 @@ The following table provides list of APIs added to Bot Framework SDK:
 |**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
 |**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
 |**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
+
+## Teams client SDK APIs
 
 The following table provides APIs added to Teams client SDK:
 
