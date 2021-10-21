@@ -14,7 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
+
+    Start Microsoft Teams app development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
     > [!NOTE]
     > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
@@ -22,33 +23,25 @@ items:
 - title: Prerequisites for Blazor tab app
   durationInMinutes: 1
   content: |
-    ## Install tools
 
-    The following tools are required for building an app:
+    Use this checklist to install the tools for building and deploying a Teams app.
 
-    - A browser with developer tools, such as, [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/).
-    - [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload for .NET.
-
-    ### Optional tools
-
-    The following Visual Studio Code extensions and tools not required, but helpful during development.
-
-    Azure tools to access stored data, or deploy a cloud-based backend for your Teams app in Azure:
-
-    - [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
-    - [Azure CLI](/en-us/cli/azure/install-azure-cli)
-
-    Microsoft Graph Explorer, the browser-based tool that allows you to query Microsoft Graph data:
-
-    - [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)
+    | &nbsp;    | Install   | For using... |
+    | --- | --- | --- |
+    | **Required** | &nbsp; | &nbsp; |
+    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET |
+    | **Optional** | &nbsp; | &nbsp; |    
+    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
+    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
+    | &nbnp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
 
     > [!TIP]
     > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
     </details>
-
-    Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store:
-
-    - [Developer Portal for Teams](https://dev.teams.microsoft.com/)
 
     ## Prepare development environment
 
@@ -142,8 +135,8 @@ items:
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
     In this tutorial, you'll learn:
-    - [How to set up a new tab project with Teams Toolkit](#create-your-project)
-    - [About the directory structure of your app](#take-a-tour-of-the-source-code)
+    1. [How to set up a new tab project with Teams Toolkit](#create-your-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
     ## Create your project
 
@@ -212,6 +205,7 @@ items:
 - title: Deploy your first Teams app locally
   durationInMinutes: 1
   content: |
+
     You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
 
     Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
@@ -286,6 +280,7 @@ items:
 - title: Preview and test your app in Teams 
   durationInMinutes: 1
   content: |
+
     You can use Developer Portal to configure your app to preview and publish it in the Teams environment.
     
     ## Create an environment for your app
