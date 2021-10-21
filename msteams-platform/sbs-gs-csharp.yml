@@ -29,7 +29,6 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    
     Use this checklist to install the tools for building and deploying a Teams app.
 
     | &nbsp; | Install | For using... |
