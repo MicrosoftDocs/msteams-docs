@@ -14,40 +14,41 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
-
-- title: Prerequisites
-  durationInMinutes: 1
-  content: |
     Start Microsoft Teams app development by building your first app, "Hello World", with a tab, a bot, and a message extension capability.
 
     >This app will have all capabilities and each has its own UI and UX:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-    ## The app road-map
-
-    Building an app using C# follows a three-step process:
-
-    :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p-1.png" alt-text="Image showing phase 1 of building an app." border="false":::
-
-    Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
-
     In this tutorial, you'll learn:
 
-    - how to build an app with three capabilities—tab, bot, and message extension using C# and Visual Studio 2019.
-    - how to test the app features.
-    - how to deploy your app.
+    1. how to build an app with three capabilities—tab, bot, and message extension using C# and Visual Studio 2019.
+    1. how to test the app features.
+    1. how to deploy your app.
 
-    ## Get prerequisites
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+    
+    Use this checklist to install the tools for building and deploying a Teams app.
 
-    To complete this tutorial, you need to install the following tools:
+    | &nbsp; | Install | For using... |
+    | --- | --- | --- |
+    | **Required** | &nbsp; | &nbsp; |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET. You can install the free community edition of Visual Studio 2019. |
+    | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample C# app repo from GitHub |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | **Optional** | &nbsp; | &nbsp; |
+    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
 
-    - [Install Git](https://git-scm.com/downloads)
-    - [Install Visual Studio 2019](https://www.visualstudio.com/downloads/)
-    - [Install ngrok](https://ngrok.com/download)
+    > [!WARNING]
+    > There are known issues with `npm@7`, packaged with Node v15 and later. If you have problems running `npm install`, ensure you're using Node v14 (LTS)
 
-    You can install the free community edition of Visual Studio 2019. If installation prompts you to add `git` to the path, select it. In a terminal window, run the following command to verify the `git` installation:
+    ## Verify git installation
+
+    If Visual Studio installation prompts you to add `git` to the path, select it. 
+    In a terminal window, run the following command to verify the `git` installation:
 
     ```bash
     $ git --version
@@ -119,22 +120,21 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
-    The cloned repository appears in Visual Studio 2019.
+    You can view the cloned repository by opening it in Visual Studio 2019. Let's learn about it in the next step, building your first app.
       
 - title: Build and run your first C# app
   durationInMinutes: 1
   content: |
+
     After you've cloned the repo for C# sample app, you can build and run the app in your local environment.
 
-    :::image type="content" source="../msteams-platform/assets/images/get-started/app-roadmap/roadmap-p-2.png" alt-text="Image showing phase 2 of building an app." border="false":::
-
     In this page, you'll learn to:
-    - [Build your first app](#build-your-first-app)
-    - [Deploy your sample app locally](#deploy-your-sample-app-locally)
+    1. [Build your first app](#build-your-first-app)
+    1. [Deploy your sample app locally](#deploy-your-sample-app-locally)
 
     ## Build your first app
 
-    You can build and run the sample after it's cloned.
+    You can build and run the sample app after it's cloned.
 
     **To build and run the cloned sample**
 
@@ -142,7 +142,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/hello-world-sln-open.png" alt-text="Image showing Hello World solution directory structure" border="false":::
 
-    1. Select the Project menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
+    1. Select the **Project** menu, and select **Microsoft.Teams.Samples.HelloWorld.Web Properties**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="false":::
 
@@ -212,7 +212,7 @@ items:
 
     To verify the app's local deployment:
 
-    1. Opening your browser.
+    1. Open the browser.
     1. Load your app using the following URL:
 
         `https://<forwarding address in ngrok console session>/hello`
@@ -235,6 +235,7 @@ items:
 - title: Configure your first C# app using Dev Portal
   durationInMinutes: 1
   content: |
+
     After you build and test your Teams app, you can test it using Developer Portal.
 
     In this page, you'll learn to [configure the app package in Developer Portal](#configure-the-app-package-in-developer-portal).
@@ -253,8 +254,8 @@ items:
 
     Configuring the app package includes:
 
-    - [Importing the app package to Developer Portal](#import-the-app-package-in-developer-portal)
-    - [Configuring app capabilities](#configure-your-app-capabilities)
+    1. [Importing the app package to Developer Portal](#import-the-app-package-in-developer-portal)
+    1. [Configuring app capabilities](#configure-your-app-capabilities)
 
     > [!NOTE]
     > You could use [*App Studio*](../msteams-platform/get-started/deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
@@ -267,7 +268,7 @@ items:
 
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
 
-    1. Search for **Dev Portal** in the search bar, and select **Dev Portal (Int)***.
+    1. Search for **Developer Portal** in the search bar, and select **Developer Portal**.
 
       :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
 
@@ -550,6 +551,7 @@ items:
 - title: Preview and test your first C# app
   durationInMinutes: 1
   content: |
+
     After you've imported your app and configured the capabilities in Developer Portal, you can preview and test the sample app.
 
     ## Preview your app in Teams
