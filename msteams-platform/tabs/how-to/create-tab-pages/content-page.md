@@ -99,9 +99,9 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 
 ## Reorder static personal tabs
 
-Starting with manifest version 1.7, developers can rearrange all tabs in their personal app. In particular, a developer can move the *bot chat* tab, which always defaults to the first position, anywhere in the personal app tab header. We’ve declared two reserved tab entityId keywords, *conversations* and *about*.
+Starting with manifest version 1.7, you can rearrange all tabs in personal app. You can move the *bot chat* tab, which by default is in first position, anywhere in the personal app tab header. The reserved tab entityId keywords are *conversations* and *about*.
 
-If you create a bot with a *personal* scope, it will show up in the first tab position in a personal app by default. If you wish to move it to another position, you must add a static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
+If you create a bot with *personal* scope, in a personal app it will appear in the first tab position by default. To move it to another position, you can add static tab object to your manifest with the reserved keyword, *conversations*. The *conversation* tab appears on web or desktop based on where you add the *conversation* tab in the `staticTabs` array. 
 
 ```json
 {
