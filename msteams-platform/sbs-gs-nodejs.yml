@@ -39,6 +39,7 @@ items:
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample Node.js app repo from GitHub |
@@ -51,7 +52,6 @@ items:
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
     ## Verify version numbers for installed tools
 
@@ -243,7 +243,7 @@ items:
         > It is a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
 
         >[!IMPORTANT] 
-        > If you use the free version, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
+        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
     1. Note the URL of your app for registering the app with Teams. You can register the app using Developer Portal or App studio.
 
