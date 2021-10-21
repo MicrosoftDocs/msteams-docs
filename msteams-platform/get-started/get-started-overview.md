@@ -17,7 +17,7 @@ Here's an idea of what you'll learn:
 - Get experience with the Toolkit and SDKs.
 - Configure and build different types of Teams apps.
 
-Here's a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
+Let's take a quick glance at the build environment options you can choose from, and the road-map to building and deploying a Teams app.
 
 :::image type="content" source="../assets/images/get-started/gs-overview-build-options.png" alt-text="Illustration showing basic steps to build and deploy a Teams app.":::
 
@@ -31,28 +31,28 @@ Depending on the capabilities you want for your app, choose an appropriate devel
 | Bots | A chat bot that converses with members. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
 | Messaging extensions | Shortcuts for inserting external content into a conversation or taking action on messages. | VS Code with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [TeamsFx SDK](/en-us/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true) & [Bot Framework SDK](https://dev.botframework.com/) | Node.js, C#, etc. |
 
-*You aren't limited to using these particular stacks!* 
+*You aren't limited to using these particular stacks!*
 
-If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps. 
+If you are already familiar with Yeoman workflow, you may prefer using [YoTeams Yeoman Generator](https://github.com/pnp/generator-teams/blob/master/docs/docs/tutorials/build-your-first-microsoft-teams-app.md) to build your apps.
 
 This tutorial will walk you through the process with recommended tools, as well as a few other options.
 
-## Next step
+## Build your first Teams app
 
-Now, let's build your first Teams app. But first, pick your lauguage (or framework) and prepare your development environment.
-
-> [!div class="nextstepaction"]
-> [Prepare to build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
+Now, let's build your first Teams app. But first, pick your language (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with Blazor](../sbs-gs-blazor.yml)
+> [Build a Teams app with JavaScript using React](../sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with SPFx](../sbs-gs-spfx.yml)
+> [Build a Teams app with Blazor](../sbs-gs-blazor.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+> [Build a Teams app with SPFx](../sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with Node.js](../sbs-gs-nodejs.yml)
+> [Build a Teams app with C# or .NET](../sbs-gs-csharp.yml)
+
+> [!div class="nextstepaction"]
+> [Build a Teams app with Node.js](../sbs-gs-nodejs.yml)
 

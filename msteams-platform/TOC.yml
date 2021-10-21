@@ -12,15 +12,15 @@
   items:
   - name: Get started overview
     href: get-started/code-samples.md  
-  - name: Hello World with JavaScript
+  - name: Build your first app using JavaScript
     href: sbs-gs-javascript.yml
-  - name: Hello World with Blazor
+  - name: Build your first app using Blazor
     href: sbs-gs-blazor.yml
-  - name: Hello World with SPFx
+  - name: Build your first app using SPFx
     href: sbs-gs-spfx.yml
-  - name: Hello World with C#
+  - name: Build your first app using C#
     href: sbs-gs-csharp.yml
-  - name: Hello World with Node.js
+  - name: Build your first app using Node.js
     href: sbs-gs-nodejs.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
