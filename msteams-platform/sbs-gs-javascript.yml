@@ -788,9 +788,10 @@ items:
         > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
         </details>
 
-    ### Test the Message Extension app
+    ### Try your Message extension 
 
-    Try the following steps in the app to enable the message extension feature you just added.
+    Follow these steps in Teams client to enable the message extension feature you just added:
+
     1. Launch the message extension from three dots in the composing area.
     1. Go to either **Chat** or a **Teams** channel and enable the message compose area.
     1. Launch the message extension from three dots at the bottom of the composing area.

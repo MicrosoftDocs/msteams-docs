@@ -22,9 +22,9 @@ items:
 
     In this tutorial, you'll learn:
 
-    1. how to build an app with three capabilities—tab, bot, and message extension using C# and Visual Studio 2019.
-    1. how to test the app features.
-    1. how to deploy your app.
+    - how to set up a new project
+    - how to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019
+    - how to deploy your app from Developer Portal
 
 - title: Prerequisites
   durationInMinutes: 1
