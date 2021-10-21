@@ -132,7 +132,6 @@ items:
 - title: Create project workspace for your tab app
   durationInMinutes: 1
   content: |
-    
     This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
 
     In this tutorial, you'll learn:
