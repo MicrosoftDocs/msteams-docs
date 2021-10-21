@@ -12,7 +12,7 @@ Teams Toolkit helps developers to create and deploy Teams apps with integrated I
 
 ## Add capabilities
 
-Teams Toolkit provides bots, tabs and messaging extensions as capabilities to integrate with the app. The capabilities used to build your Teams app allows you to increase usage scope. To you develop your project, you need to know more about app capabilities. For more information on App capabilities, see [Understand app capabilities](add-capabilities.md).
+Teams Toolkit provides bots, tabs and messaging extensions as capabilities to integrate with the app. The capabilities used to build your Teams app allows you to increase usage scope. To you develop your project, know more about app capabilities. For more information on App capabilities, see  [Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md).
 
 ## Provision in the cloud
 

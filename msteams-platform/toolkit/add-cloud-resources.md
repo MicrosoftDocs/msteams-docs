@@ -36,38 +36,24 @@ TeamsFx provides seamless integrations with Azure services that are common for t
 ## Add cloud resources from Teams Toolkit in Visual Studio Code
 
 1. Open **Visual Studio Code**.
-1. Select **Extensions** in the sidebar.
+1. Select **Teams Toolkit** from left panel.
 
-    ![Extensions](~/assets/images/tools-and-sdks/teams-extensions.png)
+    ![Activate Teams Toolkit](~/assets/images/tools-and-sdks/teams-toolkit.png)
 
-1. In search bar, find **Teams Toolkit(Preview)**.
-1. Install **Teams Toolkit**.
-1. Teams Toolkit icon is available on sidebar.
+1. In the Teams Toolkit side bar panel, select `Add cloud resources` option.
 
-    ![Teams Toolkit](~/assets/images/tools-and-sdks/teams-toolkit.png)
+    ![Add cloud resources](~/assets/images/tools-and-sdks/add-cloud-resources.png)
 
-1. Select **Create a new Teams app** from sidebar explorer.
-
-    ![Create new Teams app](~/assets/images/tools-and-sdks/Create-new-teams-app.png)
-
-1. Select **Create a new Teams app**.
-
-    ![Create new Teams](~/assets/images/tools-and-sdks/create-new-app.png)
-
-1. Choose any **App capability** from the given options.
-
-    ![Select app capability](~/assets/images/tools-and-sdks/select-app-capability.png)
-
-1. Choose any frontend hosting type.
-
-    ![Azure](~/assets/images/tools-and-sdks/Azure-host.png)
-
+1. From the pop-up, select the cloud resources to include into your project.
 1. Choose any resource from the option.
 
-     ![Azure cloud resources](~/assets/images/tools-and-sdks/Azure-cloud-resources.png)
+     ![Select cloud resources](~/assets/images/tools-and-sdks/select-cloud-resources.png)
 
-1. Select **OK** to create resources.
-  
+1. Select **OK** to continue.
+Open the command palette and enter **Teams: Add cloud resources**. Follow the same process as it’s triggered from Tree View.
+
+    ![Alternate cloud resources](~/assets/images/tools-and-sdks/alternate-cloud-resources.png)
+
 ## Add cloud resources from TeamsFx CLI in Command Window
 
 1. Change directory to your project directory.
