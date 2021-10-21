@@ -225,7 +225,7 @@ items:
         ```bash
         ngrok http 3333 -host-header=localhost:3333
         ````
-        The ngrok tunnel is created.
+        The ngrok tunnel is created. Here's an example:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-tunnel.png" alt-text="Image showing ngrok tunnel" border="false":::
 
@@ -347,15 +347,10 @@ items:
 
     To view the app manifest:
 
-    1. Select **Publish** from the left panel to open the dropdown list.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
-
-    1. Select **App package**.
+    - Select **Publish** from the left panel to open the dropdown list, and then select **App package**.
+        The manifest file appears on the right pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
-
-        The manifest file appears on the right pane.
 
     ### Configure your app capabilities
 
