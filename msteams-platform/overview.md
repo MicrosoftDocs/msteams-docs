@@ -14,7 +14,7 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 > [!div class="nextstepaction"]
-> [Start here](get-started/prerequisites.md)
+> [Start here](get-started/get-started-overview.md)
 
 ## What are Teams apps?
 
@@ -147,7 +147,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
 > [!div class="nextstepaction"]
-> [Build your first app](get-started/prerequisites.md)
+> [Build your first app](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::
