@@ -256,9 +256,6 @@ items:
     1. [Importing the app package to Developer Portal](#import-the-app-package-in-developer-portal)
     1. [Configuring app capabilities](#configure-your-app-capabilities)
 
-    > [!NOTE]
-    > You could use [*App Studio*](../msteams-platform/get-started/deploy-csharp-app-studio.md) to upload you app to Teams, though it has now evolved. Configure, distribute, and manage your Teams apps with the new Developer Portal.
-
     ### Import the app package in Developer Portal
 
     To import the app package:
