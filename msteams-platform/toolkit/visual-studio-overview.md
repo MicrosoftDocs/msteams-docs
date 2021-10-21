@@ -44,7 +44,7 @@ The Microsoft Teams Toolkit for Visual Studio is available for download from the
 
 At its core, the Teams app embraces three components:
 
-- The Microsoft Teams client (web, desktop or mobile) where users interact with your app.
+- The Microsoft Teams client (web, desktop, or mobile) where users interact with your app.
 - A server that responds to requests for content displayed in Teams. For example, HTML tab content or a bot adaptive card.
 - A Teams app package consists of three files:
 
@@ -65,7 +65,7 @@ When an app is installed, the Teams client parses the manifest file to determine
 
 1. To configure your app, select the **Project > TeamsFx > Configure for SSO...** menu.
 
-When prompted, sign in to your Microsoft account that has an Microsoft 365 tenant.
+When prompted, sign in to your Microsoft account that has a Microsoft 365 tenant.
 
 ## Install and run your app locally
 
@@ -80,7 +80,7 @@ The **Project > TeamsFx Validate > Teams Manifest** menu allows you to check tha
 In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), you can upload your app to a team, submit your app to your company custom app store for users in your organization, or submit your app to App Source for all Teams users.
 
 - Your IT admin will review these submissions.
-- You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
+- You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. You can submit updates to your app or cancel any currently active submissions.
 
 ## Next step
 

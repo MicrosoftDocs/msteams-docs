@@ -9,7 +9,7 @@ ms.topic: overview
 
 # Add Capabilities
 
-You can start to create a Teams app with Visual Studio Code by adding capabilities, such as tabs, bots and messaging extensions. The following table describes the different capabilities:
+You can start to create a Teams app with Visual Studio Code by adding capabilities, such as tabs, bots, and messaging extensions. The following table describes the different capabilities:
 
 | **Capability**| **Description**|
 |--------|-------------|
@@ -23,21 +23,21 @@ To add capabilities using Visual Studio Code, you must install Teams Toolkit V2.
 
 ## Limitations to add capabilities
 
-Currently there are the following limitations with TeamsFx when adding more capabilities, you cannot add:
+Currently there are limitations with TeamsFx when adding more capabilities. The limitations are as follows:
 
-* each project capability more than once
-* any capability if you start with a Tab application with SPFx
-* additional bot capabilities if your project contains messaging extension
-* additional messaging extension if your project contains a bot.
+* Each project capability more than once
+* Any capability if you start with a Tab application with SPFx
+* More bot capabilities if your project contains messaging extension
+* More messaging extension if your project contains a bot.
 
 > [!NOTE]
 > If you want to include both bot and messaging extension capabilities, then select them at the same time. You can add them either when you create a new project or a tab application.
 
 **Support Matrix:**
 
-The following table provides the list of current capabilities and additional capabilities they support:
+The following table provides the list of current capabilities and other capabilities they support:
 
-|Current capabilities|Additional capabilities|
+|Current capabilities|Other capabilities|
 |--------------------|--------------------|
 |Tabs with SPFx|None|
 |Tabs with Azure|Bots and messaging extensions|
@@ -45,7 +45,7 @@ The following table provides the list of current capabilities and additional cap
 |Messaging extensions|Tabs|
 |Tabs and bots|None|
 |Tabs and messaging extensions|None|
-|Tabs, bots and messaging extensions|None|
+|Tabs, bots, and messaging extensions|None|
 
 ## Procedure to add capabilities
 
@@ -67,7 +67,7 @@ You can add capabilities in the following ways:
  
 1. Select **OK** to continue.
 
-    instead, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
+    Instead, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
 
     ![Alternate add capabilities](~/assets/images/tools-and-sdks/alternate-capabilities.png)
   
@@ -85,7 +85,7 @@ You can add capabilities in the following ways:
 |To add a messaging extension with new bot registration|`teamsfx capability add messaging-extension --way-to-register-bot create-new`|
 |To add a messaging extension with existing bot registration|`teamsfx capability add messaging-extension --way-to-register-bot reuse-existing --bot-id your-bot-id --bot-password your-bot-password`|
 
-## Add additional capabilities
+## Add more capabilities
 
 After adding capabilities, the following changes reflect in your project:
 
@@ -100,6 +100,6 @@ After adding capabilities, the following changes reflect in your project:
 
 ## See also
 
-* Run your application locally with additional capabilities. (Links to local debug)
-* [Provision necessary cloud resources to host your application with additional capabilities](provision-in-the-cloud.md) 
-* [Deploy your project to cloud with additional capabilities](deploy-to-the-cloud.md)
+* Run your application locally with more capabilities. (Links to local debug)
+* [Provision necessary cloud resources to host your application with more capabilities](provision-in-the-cloud.md) 
+* [Deploy your project to cloud with more capabilities](deploy-to-the-cloud.md)

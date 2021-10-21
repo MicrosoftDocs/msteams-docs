@@ -17,7 +17,7 @@ Before you can deploy your project code to cloud, complete the [resource provisi
 
 ## Deployment
 
-Teams Toolkit deploys or uploads the backend and frontend code in your application to the corresponding cloud resources in Azure that is provisioned.
+Teams Toolkit deploys or uploads the backend and frontend code in your application to provisioned cloud resources in Azure.
 
 * The backend Azure functions if configured, can use different kinds of Azure services, including Azure App service and Azure storage.
 * The frontend applications are deployed to an Azure storage account and configured for static web hosting or a SharePoint site.
@@ -55,6 +55,6 @@ You can consider the following different approaches to deploy your project to cl
 
 ## See also
 
-* [Add additional cloud resources](~\toolkit\add-cloud-resources.md)
-* [Add additional Teams app capabilities](~\toolkit\add-capabilities.md)
+* [Add more cloud resources](~\toolkit\add-cloud-resources.md)
+* [Add more Teams app capabilities](~\toolkit\add-capabilities.md)
 * [Deploy project code with CI/CD pipelines](~\toolkit\build-pipelines.md)

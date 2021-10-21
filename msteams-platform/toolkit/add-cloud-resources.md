@@ -25,7 +25,7 @@ Before provisioning cloud resources in Azure and Microsoft 365, you must have th
 
 For more information, see read account and permission page (link to account page).
 
-## Additional cloud resources can be added
+## More cloud resources can be added
 
 TeamsFx provides seamless integrations with Azure services that are common for the following application scenarios:
 
@@ -67,15 +67,15 @@ The following table describes cloud resources and the corresponding commands to 
 | Azure SQL database|`teamsfx resource add --function-name your-func-name`|
 | Azure API management|`teamsfx resource add azure-apim`|
 
-## Add additional cloud resources
+## Add more cloud resources
 
 The following table provides the changes made to your project and the reasons:
 
 |Resources Added|What changed|Why these changes are made|
 |---------------|---------------|-----------------------------|
-|Azure Functions|An Azure Functions template code are added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.| To include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you want to debug your application locally. </br></br> To learn more in local debug section. (Link to local debug document)</br></br>To include configurations for TeamsFx, to track the capabilities present in your project, you can easily move your project to cloud.|	
+|Azure Functions|An Azure Functions template code are added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.</br></br> `env.default.json` and `settings.json` under `.fx` folder.| Include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you want to debug your application locally. </br></br> To learn more in local debug section. (Link to local debug document)</br></br> To include configurations for TeamsFx, to track the capabilities present in your project, you can easily move your project to cloud.|	
 |Azure SQL|	`env.default.json` and `settings.json` under `.fx` folder.|	To include configurations for TeamsFx, track resources in your project and provision them in cloud.|
-|Azure API Management|An Open API Specification file added into a subfolder with path `yourProjectFolder/openapi` </br></br> `env.default.json` and `settings.json` under `.fx` folder.|This is the API specification file defines your API after publishing.</br></br>To include configurations for TeamsFx, to track the capabilities present in your project, you can easily move your project to cloud.|
+|Azure API Management|An Open API Specification file added into a subfolder with path `yourProjectFolder/openapi` </br></br> `env.default.json` and `settings.json` under `.fx` folder.|This is the API specification file defines your API after publishing.</br></br> To include configurations for TeamsFx, to track the capabilities present in your project, you can easily move your project to cloud.|
 
 > [!NOTE]
 > * When adding Azure SQL, provide Azure function information. You need to access SQL from server workload. If your project doesn't contain Azure Functions, then it can be created for you.
@@ -91,8 +91,8 @@ After adding cloud resources to your project, the next step is to provision them
 |Azure services|Provision resources|Reasons|
 |--------------|----------------------------|-------------|
 |Azure functions|The following resources are created: </br></br> - Azure function App </br></br> - Storage account </br></br> - App service plan | To create required services and host, configure Azure Functions.|
-|Azure SQL|Create Azure SQL server</br></br> Create system assigned, managed identity </br></br> Setup firewall rule | This creates Azure SQL server instance, set up an identity to access the database and firewall rules for database protection.|
-|Azure API management|Provision APIM instance </br></br> Create and configure APIM Client AAD app.|This creates a new APIM instance with consumption plan.</br></br> Represents client application for the API published to APIM.|
+|Azure SQL|Create Azure SQL server.</br></br> Create system assigned, managed identity. </br></br> Setup firewall rule | Creates Azure SQL server instance, set up an identity to access the database and firewall rules for database protection.|
+|Azure API management|Provision APIM instance </br></br> Create and configure APIM Client AAD app.| Creates a new APIM instance with consumption plan.</br></br> Represents client application for the API published to APIM.|
 
 For more information, see [Provision in the cloud](provision-in-the-cloud.md).
 

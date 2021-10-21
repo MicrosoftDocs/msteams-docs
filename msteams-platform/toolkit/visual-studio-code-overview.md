@@ -21,11 +21,11 @@ You also can use the toolkit with Visual Studio or as CLI, such as `teamsfx`.
 
 You also can find the Teams Toolkit on [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools are installed by the Visual Studio Code extension when they are needed. If already installed, then the installed version is used. If ypu are using Linux with WSL, then you must install the following tools:
+The following tools are installed by the Visual Studio Code extension as needed and the installed version is used. For using Linux with WSL, install the following tools:
 
 - [Azure functions core tools](/azure/azure-functions/functions-run-local)
 
-    Azure functions core tools is used to run any backend components locally during a local debug run, including the authentication assistance required to run your services in Azure. It is installed within the project directory using the npm `devDependencies`.
+    Azure functions core tools are used to run any backend components locally during a local debug run, including the authentication assistance required to run your services in Azure. It is installed within the project directory using the npm `devDependencies`.
 
 - [.NET SDK](/dotnet/core/install/)
 
@@ -61,7 +61,7 @@ The Teams Toolkit can create React apps hosted in Azure or SPFx web parts, which
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. The **Tab** capability is already selected for adding capabilities. You can select **Bot** and **Messaging Extension** to add additional capabilities as required. Select **OK**.
+1. The **Tab** capability is already selected for adding capabilities. You can select **Bot** and **Messaging Extension** to add more capabilities as required. Select **OK**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
@@ -83,7 +83,7 @@ The Teams Toolkit can create React apps hosted in Azure or SPFx web parts, which
 
 1. Press **Enter** to continue.
 
-Your Teams app is created within a few seconds. The app contains codes to handle single sign-on with Azure Active Directory and access to Microsoft Graph. If you select Azure resources, then the code for those resources are also available.
+Your Teams app is created within a few seconds. The app contains codes to handle single sign-on with Azure Active Directory and access to Microsoft Graph. If you select Azure resources, then the codes for those resources are also available.
 
 For more information on SPFx creation and publication process, see [SPFx tutorial](../get-started/first-app-spfx.md).
 
@@ -92,7 +92,7 @@ For more information on SPFx creation and publication process, see [SPFx tutoria
 The Teams app consists the following components:
 
   1. The Microsoft Teams client, where users interact with your app.
-  1. A server which responds to requests for Teams content.
+  1. A server, which responds to requests for Teams content.
   1. A Teams app package, which consists of the following files:
 
       > [!div class="checklist"]
@@ -101,7 +101,7 @@ The Teams app consists the following components:
       > - A [color icon](../resources/schema/manifest-schema.md#icons) for your app to display in the public or organization app catalog.
       > - An [outline icon](../resources/schema/manifest-schema.md#icons) for display on the Teams activity bar.
 
-The manifest and icons are stored in the `.fx` folder of your project prior to being uploaded to Teams. When an app is installed, the Teams client parses the manifest file to determine information, such as the name of your app and the URL where the services are located.
+The manifest and icons are stored in the `.fx` folder of your project before being uploaded to Teams. When an app is installed, the Teams client parses the manifest file to determine information, such as the name of your app and the URL where the services are located.
 
 **To configure your app**
 
@@ -122,7 +122,7 @@ You can edit the fields in the App details page, which updates the contents of t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
-1. You can run the application through web browser. If you are prompted to open Microsoft Teams app, select **Cancel** to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select Teams on web browser when this happens.
+1. You can run the application through web browser. If you are prompted to open Microsoft Teams app, select **Cancel** to remain within the browser. You may also be prompted to switch to the Teams application at other times. Select Teams on web browser.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/launch-web-browser-and-pick-webapp.png" alt-text="Screenshot showing how to pick the web version of teams when launched":::
 
