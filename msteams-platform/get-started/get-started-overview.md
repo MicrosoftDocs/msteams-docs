@@ -42,17 +42,17 @@ This tutorial will walk you through the process with recommended tools, as well 
 Now, let's build your first Teams app. But first, pick your lauguage (or framework) and prepare your development environment.
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with JavaScript](prerequisites.md)
+> [Prepare to build a Teams app with JavaScript using React](sbs-gs-javascript.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with Blazor](blazor-app-prerequisites.md)
+> [Prepare to build a Teams app with Blazor](sbs-gs-blazor.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with SPFx](spfx-app-prerequisites.md)
+> [Prepare to build a Teams app with SPFx](sbs-gs-spfx.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with C# or .NET](get-started-dotnet-app-studio.md)
+> [Prepare to build a Teams app with C# or .NET](sbs-gs-csharp.yml)
 
 > [!div class="nextstepaction"]
-> [Prepare to build a Teams app with Node.js CLI](get-started-nodejs-app-studio.md)
+> [Prepare to build a Teams app with Node.js](sbs-gs-nodejs.yml)
 
