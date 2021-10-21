@@ -108,41 +108,41 @@ items:
 
     You can get started with a [Hello, World!](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-hello-world/csharp) sample in C#. To use this sample, clone the sample repo in one of the following ways:
     
-        - Using Git Bash
-        - Using Visual Studio 2019
+    - Using Git Bash
+    - Using Visual Studio 2019
     
     **To use Git Bash to clone sample repo**
     
-        - Run the following command in a terminal window to clone the sample repository to your computer:
+    - Run the following command in a terminal window to clone the sample repository to your computer:
 
-            ```bash
-            git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
-            ```
-            The sample repo for C# app is cloned on your computer in the default location C:\Users\<user name>\Source\Repos
+        ```bash
+        git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
+        ```
+        The sample repo for C# app is cloned on your computer in the default location C:\Users\<user name>\Source\Repos
 
-            > [!TIP]
-            > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repository](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
+        > [!TIP]
+        > You can [fork](https://help.github.com/articles/fork-a-repo/) this [repository](https://github.com/OfficeDev/Microsoft-Teams-Samples) to modify and save your changes to GitHub.
 
-            <a name="BuildRun"></a>
+        <a name="BuildRun"></a>
 
-            You can view the cloned repository by opening it in Visual Studio 2019. 
+        You can view the cloned repository by opening it in Visual Studio 2019. 
 
     **To use Visual Studio clone sample repo**
 
-        1. Open Visual Studio 2019
-        1. Select **Clone a repository**.
+    1. Open Visual Studio 2019
+    1. Select **Clone a repository**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-clone-repo.png" alt-text="Clone sample repo for c# Teams app" border="false":::
 
-        1. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
+    1. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png.png" alt-text="Clone sample repo for c# Teams app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png.png" alt-text="Clone sample repo for c# Teams app" border="false":::
 
-        1. Enter the location where you want to clone the repo, and select **Clone**.
+    1. Enter the location where you want to clone the repo, and select **Clone**.
 
-            The sampele repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
+        The sampele repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
 
-            :::image type="content" source="../msteams-platform/assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
     Now that you've got the sample repo cloned, let's build your first C# app for Teams.
 
