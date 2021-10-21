@@ -788,7 +788,7 @@ items:
         > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
         </details>
 
-    ### Try your Message extension 
+    ### Try your message extension 
 
     Follow these steps in Teams client to enable the message extension feature you just added:
 
