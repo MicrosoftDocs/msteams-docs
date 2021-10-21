@@ -136,7 +136,7 @@ items:
 
     1. Enter `https://github.com/OfficeDev/Microsoft-Teams-Samples.git` as path for cloning the repo:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png.png" alt-text="Clone sample repo for c# Teams app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/repo-clone-path.png" alt-text="Clone sample repo for c# Teams app" border="false":::
 
     1. Enter the location where you want to clone the repo, and select **Clone**.
 
