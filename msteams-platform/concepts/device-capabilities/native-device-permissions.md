@@ -2,7 +2,7 @@
 title: Request device permissions for your Microsoft Teams app
 keywords: teams apps capabilities permissions
 description: How to update your app manifest in order to request access to native features that usually require user consent
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: how-to
 ---
 
@@ -27,7 +27,8 @@ By accessing the device capabilities, you can build richer experiences on the Te
 * Use the location information of the user to display relevant information.
 
 > [!NOTE]
-> Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.
+> * Currently, Teams doesn't support device permissions for multi-window apps, tabs, and the meeting side panel.    
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Access device permissions
 

@@ -3,7 +3,7 @@ title: Cards and task modules
 description: Cards and task modules.
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Cards and task modules

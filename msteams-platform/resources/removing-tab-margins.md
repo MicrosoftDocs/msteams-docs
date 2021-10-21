@@ -4,7 +4,7 @@ author: surbhigupta
 description: Describes how the removal of tab margins enhances app building experience.
 keywords: tab removing margins padding
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: lomeybur
 ---
 

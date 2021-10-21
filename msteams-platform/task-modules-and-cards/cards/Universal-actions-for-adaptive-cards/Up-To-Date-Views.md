@@ -3,7 +3,7 @@ title: Up to date views
 description: Sample for up to date views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Up to date cards
@@ -17,7 +17,7 @@ Using User Specific Views one can show a card with **Approve** or **Reject** but
 
 * To keep the card state always updated, Teams message edit mechanism can be used. For example, for every approval, bot can trigger a message edit to all users. This bot message edit triggers an `adaptiveCard/action` invoke request for all automatic refresh users, to which the bot can respond with the updated user specific card.
 
-For more information, see [how to do a bot message edit](/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
+For more information, see [how to do a bot message edit](/microsoftteams/platform/bots/how-to/update-and-delete-bot-messages?tabs=dotnet#update-cards).
 
 ## Approval base card
 

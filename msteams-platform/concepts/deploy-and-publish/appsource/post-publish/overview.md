@@ -2,7 +2,7 @@
 title: Maintain and support your published app
 description: What to think about once your store is listed on the Teams store and AppSource.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 ---
@@ -22,7 +22,7 @@ Ensure the following when publishing updates:
 
 ### App updates requiring user consent
 
-When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users only have to do this once and new versions of your app install automatically.
+When a user installs your app, they must give the app permission to access the services and information the app requires to function. In most cases, users must do this once and new versions of your app install automatically.
 
 If you make any of the following changes to your app, however, your existing users must accept another permission request to install the update:
 

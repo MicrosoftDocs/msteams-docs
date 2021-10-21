@@ -2,7 +2,7 @@
 title: Overview of Universal Actions for Adaptive Cards
 description: A quick overview of Universal Actions for Adaptive Cards.
 ms.topic: overview
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Universal Actions for Adaptive Cards
@@ -14,7 +14,7 @@ Universal Actions for Adaptive Cards brings the bot as the common backend for ha
 This document helps you to understand how you can use Universal Actions model to enhance user experience of interacting with Adaptive Cards across platforms and applications.
 
 > [!NOTE]
-> Support for Universal Actions for Adaptive Cards is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
+> Support for Universal Actions for Adaptive Cards v1.4 is only available for cards sent by bot. Support for cards sent through compose box and link unfurling cards is coming soon.
 
 ## Enhance user experiences with Universal Actions for Adaptive Cards
 

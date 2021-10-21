@@ -4,13 +4,15 @@ author: Rajeshwari-v
 description:  Overview of native device capabilities.
 ms.author: surbhigupta
 keywords: camera image media microphone mic qr code qrcode bar code barcode scan scanner location map capabilities native device permissions
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ---
 
 # Device capabilities
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to integrate device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location with their web apps. This integration reduces the barrier to app development, speeds-up development-cycle, and creates new scenarios or use-cases for the developer community.
+
+Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Native device capabilities
 
@@ -38,5 +40,3 @@ After getting access to device capabilities, use Teams media capability APIs to 
 * Share location using [location picker](location-capability.md).
 
 Also, you can integrate the Teams native [people picker control](people-picker-capability.md) that allows users to search and select people in the web app experience.
-
-

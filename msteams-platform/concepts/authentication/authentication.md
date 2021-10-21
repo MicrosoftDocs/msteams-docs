@@ -2,7 +2,7 @@
 title: Authenticating app users
 description: Describes authentication in Teams and how to use it in the apps
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams authentication OAuth SSO AAD
 ---
 # Authenticate users in Microsoft Teams
@@ -35,7 +35,7 @@ For more information on using OAuthPrompt, see:
 
 ## Code sample
 
-provides Bot authentication v3 SDK sample.
+Bot Framework v4 authentication samples.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -45,6 +45,7 @@ provides Bot authentication v3 SDK sample.
 
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider.
+Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider. 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
+

@@ -2,7 +2,7 @@
 title: Create deep links 
 description: Describes deep links and how to use them in your apps
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams deep link deeplink
 ---
 
@@ -145,25 +145,33 @@ To use this deep link with your bot, specify this as the URL target in your card
 
 The following deep link format can be used in a bot, connector, or messaging extension card:
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=<tenantid>&fileType=<filetype>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadid>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The query parameters are:
 
+* `fileId`: Unique file ID from Sharepoint Online, aka sourcedoc. For example 1FA202A5-3762-4F10-B550-C04F81F6ACBD
 * `tenantId`: Tenant ID example, 0d9b645f-597b-41f0-a2a3-ef103fbd91bb
 * `fileType`: Supported file type, such as docx, pptx, xlsx, and pdf
-* `objectUrl`: Object URL of the file, `https://microsoft.sharepoint.com/teams/(filepath)`
-* `baseUrl`: Base URL of the file, `https://microsoft.sharepoint.com/teams`
-* `serviceName`: Name of the service, app ID
+* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`
+* `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`
+* `serviceName`: Name of the service, app ID. For example, teams.
 * `threadId`: The threadId is the team ID of the team where the file is stored. It is optional and cannot be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype
-* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e
+* `groupId`: Group ID of the file, ae063b79-5315-4ddb-ba70-27328ba6c31e 
 
-Following is the sample format of deeplink to files:
+> [!NOTE]
+> You can see `threadId` and `groupId` in the URL from the channel.  
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80 ?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+The following deep link format is used in a bot, connector, or messaging extension card:
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+
+The following example format shows the deeplink to files:
+
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
 ### Serialization of this object:
 ```
 {
+fileId: "5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80",
 tenantId: "0d9b645f-597b-41f0-a2a3-ef103fbd91bb",
 filetype: = "pptx",
 objectUrl: "https://microsoft.sharepoint.com/teams/ActionPlatform/Shared Documents/FC7- Bot and Action Infra/Kaizala Actions in Adaptive Cards - Deck.pptx",
@@ -189,7 +197,7 @@ The following deep link format can be used in a bot, connector or messaging exte
 
 The query parameters are:
 
-* `appID`: Your manifest ID **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
+* `appID`: Your manifest ID, for example **fe4a8eba-2a31-4737-8e33-e5fae6fee194**.
 
 * `entityID`: The item ID that you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). For example, **tasklist123**.
 * `entityWebUrl`: An optional field with a fallback URL to use if the client does not support rendering of the tab - `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456`.
@@ -210,6 +218,9 @@ Use the following format for a deep link that you can use in a bot, Connector, o
 `https://teams.microsoft.com/l/meeting/new?subject=<meeting subject>&startTime=<date>&endTime=<date>&content=<content>&attendees=<user1>,<user2>,<user3>,...`
 
 Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&attendees=joe@contoso.com,bob@contoso.com&startTime=10%2F24%2F2018%2010%3A30%3A00&endTime=10%2F24%2F2018%2010%3A30%3A00&content=​​​​​​​test%3Acontent​​​​​​​​​​​​​​`
+
+> [!NOTE]
+> The search parameters don't support `+` signal in place of whitespace (` `). Ensure your uri encoding code returns `%20` for spaces for example, `?subject=test%20subject` is good, but `?subject=test+subject` is bad.
 
 The query parameters are:
 

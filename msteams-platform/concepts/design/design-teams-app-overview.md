@@ -2,7 +2,7 @@
 title: Designing your custom app
 author: heath-hamilton
 description: Learn how to design Microsoft Teams apps. Resources include the Microsoft Teams UI Kit, best practices, examples, and more.
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 ---
@@ -27,7 +27,7 @@ Teams apps help people achieve more together. Use these principles to guide your
 
 ### Collaborative
 
-Teams apps help people achieve more together. Use these principles to guide your design.
+Teams app promotes collaboration through coordinated and shared activity among users.
 
    :::column-end:::
    :::column span="":::
@@ -85,7 +85,7 @@ The UI is easy to understand, pleasant in look and tone, and makes people more p
 
 ### Responsive
 
-The app is device and screen agnostic.
+The app is device- and screen-agnostic.
 
    :::column-end:::
 :::row-end:::

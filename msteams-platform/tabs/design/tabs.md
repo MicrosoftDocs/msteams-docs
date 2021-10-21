@@ -2,7 +2,7 @@
 title: Design tabs for desktop, web, and mobile
 description: Learn how to design a Teams tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit.
 author: heath-hamilton
-localization_priority: Normal
+ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
 ---
@@ -100,7 +100,7 @@ Tabs provide a full-screen web experience in Teams where you can display collabo
 
 #### Desktop
 
-:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="Illustration showing the UI anatomy of a tab." border="false":::
+:::image type="content" source="../../assets/images/tabs/design-view-tab-anatomy.png" alt-text="This Illustration shows the UI anatomy of a tab." border="false":::
 
 |Counter|Description|
 |----------|-----------|

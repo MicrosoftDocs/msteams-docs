@@ -2,7 +2,7 @@
 title: Prepare your store submission  
 description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
 ms.topic: how-to
-localization_priority: Normal
+ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
 ---
@@ -16,16 +16,26 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
+> [!NOTE]
+>  App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
+
 The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
+1. Go to [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/validation) in developer portal. 
+    > [!NOTE]
+    > The app validation tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).
 1. Upload your app package to run the automated tests.
 1. Go to the **Preliminary checklist** and review the test cases that are difficult to automate.
-1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general if the automated tests give you errors or you haven't met all the criteria in the checklist.
+1. [Fix issues with your configurations](~/resources/schema/manifest-schema.md) or app in general. These issues occur if the automated tests give you errors or you haven't met all the criteria in the checklist.
 
 ## Compile testing instructions
 
-Provide instructions and resources to help the reviewers test your app, including test accounts, credentials, and license keys. You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
+Provide instructions and resources to help the reviewers test your app, including:
+* Test accounts
+* Credentials
+* License keys
+
+You can add instructions in Partner Center or upload them to a publicly available location on SharePoint.
 
 ### Feature list
 
@@ -33,13 +43,13 @@ Provide details about your app's capabilities in Teams and steps for testing eac
 
 ### Accounts
 
-You must provide test accounts if your app requires a license or backend safelisting. All accounts you provide must include pre-populated data to facilitate testing.
+Provide test accounts if your app requires a license or backend safe listing. All accounts you provide must include pre-populated data to help in testing.
 
-Depending on your app's features, you may need to provide all of the following:
+Depending on your app's features, you may need to provide all the following accounts:
 
 * Admin account (required)
 * Non-admin account (required)
-* An account that isn't pre-configured in order to properly test the first-run sign-in experience (required)
+* An account that isn't pre-configured to properly test the first-run sign-in experience (required)
 * An account with access to premium or upgraded features (if applicable)
 * Two accounts in the same tenant to test the collaboration experience for apps that work in shared contexts (if applicable)
 
@@ -95,7 +105,13 @@ Make sure your short description adheres to the [store validation guidelines](~/
 
 #### Long description
 
-The long description can provide a narrative that highlights your app's main features, the problems it solves, and its target audience. While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+The long description can provide a narrative that highlights your apps':
+
+* Main features
+* The problems it solves
+* Target audience
+
+While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
 
 :::row:::
 
@@ -129,7 +145,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 :::row-end:::
 
-Remember the following about screenshots:
+Remember the following best practices about screenshots:
 
 * You can have up to five screenshots per listing.
 * Supported file types include PNG, JPEG, and GIF.
@@ -138,36 +154,40 @@ Remember the following about screenshots:
 
 For best practices, see the following resources:
 
-* [Teams store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
+* [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#screenshots)
 * [Craft effective images for Microsoft app stores](/office/dev/store/craft-effective-appsource-store-images)
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate why people should use your app. You should address the following questions in a video:
+A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
 
 * Who is your app for?
 * What problems can your app solve?
 * How does your app work?
 * What other benefits do you get from using your app?
 
+You can add a URL for your YouTube or Vimeo video.
+
 #### Best practices for videos
 
-* Keep your video between 30-90 seconds.
+* Keep your video between 60-90 seconds.
 * Aim for quality. In a listing, users will see your video before screenshots.
+* Communicate the value of the product in narrative form.
+* Demonstrate how the product works.
 
 ### Select a category for your app
 
-During submission, you're asked to categorize your app. The following table maps Teams store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).
+During submission, you're asked to categorize your app. The following table maps Teams Store categories to the categories listed in [Partner Center](https://aka.ms/PartnerCenterHomePage).
 
 | Teams categories       | Partner Center categories  |
 |:---------------------|:---------------|
-| Analytics and BI | Analytics, Data Visualization and BI |
+| Analytics and BI | Analytics, Data Visualization, and BI |
 | Developer and IT | Developer Tools, IT Admin |
 | Education | Education |
 | Human resources | Human Resources and Recruiting |
 | Productivity | Content Management, Files and documents, Productivity, Training and Tutorials, and Utilities |
 | Project management | Communication, Project Management, Workflow, and Business Management |
-| Sales and support | Customer and Contact Management, Customer Support, Financial Management, Sales and Marketing |
+| Sales and support | Customer and Contact Management, Customer Support, Financial Management, and Sales and Marketing |
 | Social and fun | Image and Video Galleries, Lifestyle, News and Weather, Social, Travel, and Navigation |
 
 ### Localize your store listing
@@ -180,7 +200,7 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 ## Complete Publisher Attestation
 
-[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices that can help potential customers make informed decisions about using your app.
+[Publisher Attestation](/microsoft-365-app-certification/docs/attestation) is also required for Teams apps listed in the Store. The process includes completing a self-assessment of your app's security, data handling, and compliance practices. The process can help potential customers make informed decisions about using your app.
 
 > [!NOTE]
 > If you're submitting a new app, you can't officially complete Publisher Attestation until your app is listed on the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app for validation.

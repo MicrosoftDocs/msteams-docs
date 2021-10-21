@@ -2,7 +2,7 @@
 title: Messaging extensions
 author: surbhigupta
 description: An overview of messaging extensions on the Microsoft Teams platform
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
 ---
@@ -13,6 +13,9 @@ Messaging extensions allow the users to interact with your web service through b
 The following image displays the locations from where messaging extensions are invoked:
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
+
+> [!NOTE]
+> @mentioning message extensions is no longer supported in the compose box.
 
 ## Scenarios where messaging extensions are used
 

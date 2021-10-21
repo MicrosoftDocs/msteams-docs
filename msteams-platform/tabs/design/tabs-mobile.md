@@ -2,7 +2,7 @@
 title: Tabs on mobile
 description: Describes developer considerations for implementing tabs on Microsoft Teams mobile.
 ms.topic: conceptual
-localization_priority: Normal
+ms.localizationpriority: medium
 ---
 
 # Tabs on mobile

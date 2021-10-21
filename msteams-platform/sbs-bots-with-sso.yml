@@ -10,6 +10,7 @@ metadata:
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
   nextTutorialTitle: Read more on bot authentication
   ms.custom: mvc
+  ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
@@ -21,8 +22,8 @@ items:
     * Bots in a one-to-one conversation don't require an @mention. All messages sent by the user routes to the bot.
     
     This step-by-step guide helps you to create a bot with SSO authentication enabled. You'll see the following output:
-    
-    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
+
+    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -89,18 +90,18 @@ items:
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
+         ![Microsoft App ID](~/assets/images/bots/MicrosoftAppID.png)
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
     1. Enter **Description** and select **Add**.
-
+ 
         <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-       ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
-
+         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+       
     **To add the Microsoft Teams channel**
 
     1. Go to **Home**.
@@ -108,9 +109,12 @@ items:
         <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
+          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
+          ![Select Teams](~/assets/images/bots/select-teams.png)    
     1. Select **Save**.
-    1. Select the checkbox to accept the terms of service and select **Agree**.
+    1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
 
     **To add messaging endpoint**
 
@@ -135,10 +139,16 @@ items:
     
     * Add Redirect URI to the Azure bot resource.
     * Expose API endpoint to specify the location from where the resources can be accessed.
+    * Authorize client applications.
+    * Add any necessary API permissions for downstream calls.
+    * Enable implicit grant.
+    * Update manifest.
     * Set up Bot Service connection.
 
     **To add Redirect URI to the Azure bot resource**
 
+    1. Adjacent to **Microsoft App ID**, select **Manage**.</br>
+        ![Manage app ID](~/assets/images/bots/select-manage.png)
     1. From the left pane of your bot resource, select **Authentication**.
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
@@ -179,9 +189,36 @@ items:
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
         ![API exposed and scope added](~/assets/images/bots/ExposeAPIandaddscope.png)
+
+    **To authorize client applications**
+
+    Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:      
+    * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
+    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>     
+        ![Add client application to app](~/assets/images/bots/addclientapplication1.png)        
     
+    **To add any necessary API permissions for downstream calls**
+
+    1. Select **API permissions** from the left pane.
+    1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.</br>
+        ![API user permissions](~/assets/images/bots/APIpermissions.png)
+
+    **To enable implicit grant**
+    
+    1. Select **Authentication** from the left pane.
+    1. Select the **Access tokens** and **ID tokens** checkboxes.</br>
+        ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
+    1. Select **Save** to save the changes.
+
+    **To update manifest**
+
+    1. Select **Manifest** from the left pane.
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
+        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
+
     **To set up Bot Service connection**
 
+    1. Go to **Configuration page** > **Add OAuth Connection Settings**.
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
 
@@ -261,20 +298,20 @@ items:
 
     1. Send a message to the bot. The conversation bot asks for permissions for the first time.
 
-        ![Permissions to bot](~/assets/images/bots/permissions.png)
+        ![Permissions to bot](~/assets/images/bots/sbsdesktop-mobile-consent-request.png)
 
     1. Select **Continue** to accept the permissions.
 
     1. Select **Accept** for **Permissions requested**.
 
-        ![Authentication bot](~/assets/images/bots/authenticationbotcreated.png)
+        ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    ![Signed in to the conversation bot](~/assets/images/bots/loggedin.png)
+    ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
     
 - content: |
     You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.

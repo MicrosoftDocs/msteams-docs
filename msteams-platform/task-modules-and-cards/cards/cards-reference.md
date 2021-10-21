@@ -1,7 +1,7 @@
 ---
 title: Types of cards
 description: Describes all the cards and card actions available to bots in Teams
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: bots cards reference
 ms.topic: reference
 ---
@@ -10,7 +10,7 @@ ms.topic: reference
 
 Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
 
-Before you identify the different card types, understand how to create a a hero card, thumbnail card, or Adaptive Card.
+Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
@@ -54,10 +54,10 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | O365 Connectors |
+| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Office 365 Connectors |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔ | ✖ | ✔ | ✔ | ✔ | ✔ | ✖ |
-| O365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
+| Office 365 Connector card | ✔ | ✖ | ✔ | ✖ | ✔ | ✔ | ✔ |
 | Hero card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | Thumbnail card | ✔ | ✔ | ✔ | ✖ | ✔ | ✔ | ✖ |
 | List card | ✔ | ✖ | ✖ | ✖ | ✔ | ✔ | ✖ |
@@ -70,6 +70,9 @@ You can identify and use different types of cards based on your application requ
 ## Common properties for all cards
 
 You can go through some common properties that are applicable to all cards.
+
+> [!NOTE]
+> Hero and thumbnail cards with multiple actions are automatically split into multiple cards in a carousel layout.
 
 ### Inline card images
 
@@ -105,7 +108,7 @@ After identifying the common properties for all cards, you can now work with Ada
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
 
-An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards v1.2.0](https://github.com/microsoft/AdaptiveCards/releases/tag/v1.2.0).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
 
 ### Support for Adaptive Cards
 
@@ -116,7 +119,8 @@ The following table provides the features that support Adaptive Cards:
 | ✔ | ✔ | ✖ | ✔ |
 
 > [!NOTE]
-> * Teams platform supports v1.2 or earlier of Adaptive Card features.
+> * Teams platform supports v1.4 or earlier of Adaptive Card features for bot sent cards and action based messaging extensions.
+> * Teams platform supports v1.3 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based messaging extensions and link unfurling), tabs, and task modules.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are currently not supported in Adaptive Card on the Teams platform.
 

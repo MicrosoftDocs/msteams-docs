@@ -2,7 +2,7 @@
 title: Localize JSON schema reference
 description: Describes the localization schema supported by the localization file for Microsoft Teams
 ms.topic: reference
-localization_priority: Normal
+ms.localizationpriority: medium
 keywords: teams manifest schema localization
 ms.date: 05/20/2019
 ---
@@ -32,6 +32,9 @@ Example of localization JSON schema is as follows:
   "bots[0].commandLists[0].commands[0].description": "Rechercher la documentation Teams pertinente"
 }
 ```
+
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
 
 The schema defines the following properties:
 
