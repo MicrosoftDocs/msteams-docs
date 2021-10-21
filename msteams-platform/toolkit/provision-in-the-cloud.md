@@ -100,7 +100,7 @@ Provisioning is the same if your project contains multiple capabilities.
 
     ![Select provision](~/assets/images/tools-and-sdks/select-provision.png)
 
-    instead, you can open command palette and enter **Teams: Provision in the cloud** .
+    Instead, you can open command palette and enter **Teams: Provision in the cloud** .
 
     ![Alternate provision](~/assets/images/tools-and-sdks/alternate-provision.png)
 

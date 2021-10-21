@@ -53,11 +53,11 @@ The Teams Toolkit can create React apps hosted in Azure or SPFx web parts, which
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
-1. Select **Create New Project**.
+1. Select **Create New Teams app** from the side panel.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Create a new Teams app**.
+1. Select **Create a new Teams app** from  pop-up.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 

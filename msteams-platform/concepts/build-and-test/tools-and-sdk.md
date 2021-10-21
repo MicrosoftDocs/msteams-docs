@@ -43,4 +43,4 @@ The Microsoft Graph SDKs guides you to simplify building high-quality, efficient
 
 * [Teams Toolkit for Visual Studio Code](../../toolkit/visual-studio-code-toolkit-overview.md)
 * [Manage your apps with the Developer Portal for Microsoft Teams](teams-developer-portal.md)
-* [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](../../tabs/how-to/using-teams-client-sdk.md)]
+* [Building tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](../../tabs/how-to/using-teams-client-sdk.md)
