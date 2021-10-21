@@ -25,13 +25,23 @@ The following table provides a list of APIs:
 |**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
-The following table provides the Bot Framework SDK methods for the APIs:
+The following table provides list of APIs added to Bot Framework SDK:
 
 |API|Bot Framework SDK method|
 |---|---|
 |**GetParticipant**| `GetMeetingParticipantAsync (Microsoft.Bot.Builder.ITurnContext turnContext, string meetingId = default, string participantId = default, string tenantId = default, System.Threading.CancellationToken cancellationToken = default);` |
 |**NotificationSignal** | `activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=&height=&width=&title=<title>&completionBotId=BOT_APP_ID");` |
 |**Meeting Details** | `TeamsMeetingInfo (string id = default);` |
+
+The following table provides APIs added to Teams client SDK:
+
+|API|Description|
+|---|----|
+|**canShareAppSegment**|Sends query to the client SDK to share to stage.|
+|**shareAppContentToStage**|Allows sharing a segment of an app to meeting stage through the meeting’s side panel.|
+|**getAppContentStageSharingCapabilities**|Checks whether the app can be shared to stage.|
+|**getAppContentStageSharingState**|Returns information on current stage sharing state for app.|
+|**startAppSegmentSharing**|Responsible for sharing app segment to stage.|
 
 ## GetUserContext API
 
@@ -303,9 +313,6 @@ The JSON response body for Meeting Details API is as follows:
 ```
 
 ## Real-time Teams meeting events
-
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
 

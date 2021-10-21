@@ -132,7 +132,6 @@ The prerequisites are as follows:
 
 * Have `meetingSidePanel` context.
 * Provide `MeetingStage` value in one of the manifest fields.
-* Ensure to build a side panel experience with **Share** in `meetingSidePanel`.
 * Include RSC permission string as part of App permissions.
 
 To enable shared meeting stage, configure your app manifest as follows:
@@ -157,16 +156,6 @@ In interactive mode the APIs allow you to:
 
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
-
-The APIs added to Teams client SDK are as follows:
-
-* `canShareAppSegment`: sends query to the client SDK to share to stage.
-* `shareAppContentToStage`: allows sharing a segment of an app to meeting stage through the meeting’s side panel.
-* `getAppContentStageSharingCapabilities`: checks whether the app can be shared to stage. 
-* `getAppContentStageSharingState`: returns information on current stage sharing state for app. 
-* `stopAppContentSharingToStage`: terminates current app segment while sharing.
-* `startAppSegmentSharing`: responsible for sharing app segment to stage. 
-* `stopAppSegmentSharing`: responsible for stopping app segment’s share session.
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
