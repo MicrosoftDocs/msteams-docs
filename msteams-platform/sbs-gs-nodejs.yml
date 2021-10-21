@@ -28,7 +28,6 @@ items:
     1. how to test the app features.
     1. how to deploy your app.
 
-
 - title: Prerequisites
   durationInMinutes: 1
   content: |
@@ -363,12 +362,10 @@ items:
 
     You use the manifest file to configure capabilities, required resources, and other important attributes for your app.
 
-    1. Select **Publish** from the left panel to open the dropdown list.
+    - Select **Publish** from the left panel to open the dropdown list, and then select **App package**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/open-app-package-devp.png" alt-text="Image showing left pane of Developer Portal" border="false":::
-
-    1. Select **App package**.
-
+        The App manifest appears in the right pane.
+        
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nj-app-manifest.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
 
         The manifest file appears in the right pane.

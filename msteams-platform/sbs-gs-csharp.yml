@@ -348,6 +348,7 @@ items:
     To view the app manifest:
 
     - Select **Publish** from the left panel to open the dropdown list, and then select **App package**.
+        
         The manifest file appears on the right pane.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-manifest-dev-portal.png" alt-text="Image showing App manifest file in Developer Portal" border="false":::
