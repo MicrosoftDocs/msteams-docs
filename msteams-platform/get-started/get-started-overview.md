@@ -23,7 +23,7 @@ Here's a quick glance at the build environment options you can choose from, and 
 
 ## App capabilities and development tools
 
-Depending on the capabilities you want for your app, choose an appropriate development tool set. 
+Depending on the capabilities you want for your app, choose an appropriate development tool set.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Technology stacks / Languages |
 |--------|-------------|--------|--------|--------|

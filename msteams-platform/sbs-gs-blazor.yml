@@ -18,7 +18,7 @@ items:
     Start Microsoft Teams app development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
 
     > [!NOTE]
-    > Currently, Visual Studio offers a template only for the Tab capability in a Teams app. The Bot and Message Extension capabilities are not available.
+    > Currently, Teams Toolkit offers a template only for the Tab capability in a Teams app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.
 
 - title: Prerequisites for Blazor tab app
   durationInMinutes: 1
