@@ -214,11 +214,12 @@ items:
     1. Select **Project** > **TeamsFx** > **Configure for SSO...**.
     1. Sign in to your Microsoft 365 administrator account when prompted.
 
-    ## Build and run your app locally in Visual Studio Code
+    ## Build and run your app
 
     To build and run your app locally:
 
-    1. From Visual Studio Code, press the **F5** key to run your application in debug mode.
+    1. Open Visual Studio 2019. 
+    1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
         <!-- markdownlint-disable MD033 -->
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
