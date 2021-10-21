@@ -10,7 +10,7 @@ ms.author: lomeybur
 
 # SameSite cookie attribute 
 
-Cookies are text strings, sent from websites, and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties. 
+Cookies are text strings sent from websites and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties. 
 
 ## Types of cookies
 
@@ -55,7 +55,7 @@ SameSite cookie attributes are as follows:
 
 ### Tabs, task modules, and messaging extensions
 
-* Teams tabs use `<iframes>` to embed content that is viewed in a top level or first party context.
+* Teams tabs use `<iframes>` to embed content that is viewed at a top level or first party context.
 * Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Messaging extensions allow you to insert enriched content into a chat message from external resources.
 
