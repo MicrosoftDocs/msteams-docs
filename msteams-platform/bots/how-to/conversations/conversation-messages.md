@@ -201,7 +201,7 @@ A typical `channelData` object in an activity sent to your bot contains the foll
 * `team`: Passed only in channel contexts, not in personal chat.
   * `id`: GUID for the channel.
   * `name`: Name of the team passed only in cases of [team rename events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channel`: Passed only in channel contexts when the bot is mentioned or for events in channels in teams where the bot has been added.
+* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot has been added.
   * `id`: GUID for the channel.
   * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
