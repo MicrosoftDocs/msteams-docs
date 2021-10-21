@@ -23,7 +23,8 @@ It is important to familiarize yourself with the [API response errors](#error-ha
 
 > [!NOTE] 
 > * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.   
-> * Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel.    
+> * Currently, Teams does not support device permissions for multi window apps, tabs, and the meeting sidepanel.   
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md). 
 
 ## Update manifest
 
