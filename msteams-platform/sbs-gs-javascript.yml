@@ -436,7 +436,7 @@ items:
 
         Your Teams app with a Bot capability is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/bot-app-created-r.png" alt-text="Screenshot showing the app created." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
 
 
     <details>
@@ -497,7 +497,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
         Your default web browser opens to let you sign in to the account.
 
@@ -652,7 +652,7 @@ items:
 
         Teams Toolkit creates the app in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hmx-app-created.png" alt-text="Screenshot showing the app created." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-msgext.png" alt-text="Screenshot showing the app created." border="false":::
 
       <details>
       <summary>A quick recap of creating a Teams app.</summary>
@@ -712,7 +712,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
 
         Your default web browser opens to let you sign in to the account.
 
@@ -773,8 +773,7 @@ items:
         1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
         1. Sign in with your Microsoft 365 account, if prompted.
         1. Select **Add** to add the app to your account.
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hmx-add-app.png" alt-text="Screenshot that shows the button Add the app to Teams" border="false":::
-            
+    
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/launch-web-browser-add.png" alt-text="Screenshot that shows confirmation that app is added" border="false":::
 
             The app is added to Teams, and is loaded.
