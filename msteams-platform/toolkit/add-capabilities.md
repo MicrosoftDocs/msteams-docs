@@ -100,7 +100,6 @@ After adding capabilities, the following changes reflect in your project:
 
 ## See also
 
-=======
 * Run your application locally with additional capabilities. (Links to local debug)
 * [Provision necessary cloud resources to host your application with additional capabilities](provision-in-the-cloud.md) 
 * [Deploy your project to cloud with additional capabilities](deploy-to-the-cloud.md)
