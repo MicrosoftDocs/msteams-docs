@@ -17,7 +17,7 @@ Stage View is a full screen UI component that you can invoke to surface your web
 
 ## Advantage of Stage View
 
-Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access and leading to a higher user engagement with your app.
+Stage View helps provide a more seamless experience of viewing content in Teams. Users can open and view the content provided by your app without leaving the context, and they can pin the content to the chat or channel for future quick access leading to a higher user engagement with your app.
 
 ## Stage View vs. Task module
 
