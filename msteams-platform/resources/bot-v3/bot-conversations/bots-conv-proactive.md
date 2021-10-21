@@ -33,19 +33,19 @@ Proactive messages generally fall into one of two categories, welcome messages o
 
 When using proactive messaging to send a welcome message to a user you must keep in mind that for most people receiving the message they will have no context for why they are receiving it. This is also the first time they will have interacted with your app; it is your opportunity to create a good first impression. The best welcome messages will include:
 
-* **Why are they receiving this message.** It should be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
-* **What do you offer.** What can they do with your app? What value can you bring to them?
-* **What should they do next.** Invite them to try out a command, or interact with your app in some way.
+* **Why are they receiving this message** - It should be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
+* **What do you offer** - What can they do with your app? What value can you bring to them?
+* **What should they do next** - Invite them to try out a command, or interact with your app in some way.
 
 ### Notification messages
 
 When using proactive messaging to send notifications you need to make sure your users have a clear path to take common actions based on your notification, and a clear understanding of why the notification occurred. Good notification messages will generally include:
 
-* **What happened.** A clear indication of what happened to cause the notification.
-* **What it happened to.** It should be clear what item/thing was updated to cause the notification.
-* **Who did it.** Who took the action that caused the notification to be sent.
-* **What they can do about it.** Make it easy for your users to take actions based on your notifications.
-* **How they can opt out.** You need to provide a path for users to opt out of additional notifications.
+* **What happened** - A clear indication of what happened to cause the notification.
+* **What it happened to** - It should be clear what item/thing was updated to cause the notification.
+* **Who did it** - Who took the action that caused the notification to be sent.
+* **What they can do about it** - Make it easy for your users to take actions based on your notifications.
+* **How they can opt out** - You need to provide a path for users to opt out of additional notifications.
 
 ## Obtain necessary user information
 
