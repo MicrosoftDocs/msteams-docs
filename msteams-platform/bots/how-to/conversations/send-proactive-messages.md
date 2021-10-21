@@ -10,7 +10,7 @@ Keywords: send a message get user ID channel ID conversation ID
 
 [!INCLUDE [v4 to v3 pointer](~/includes/v4-to-v3-pointer-bots.md)]
 
-A proactive message is any message sent by a bot that isn't in response to a request from a user. It can include messages, such as:
+A proactive message is any message sent by a bot that isn't in response to a request from a user. This can include messages, such as:
 
 * Welcome messages
 * Notifications
@@ -72,7 +72,7 @@ Sending proactive messages is an effective way to communicate with your users. H
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. It's also the first-time users interact with your app. An opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first-time users interact with your app. An opportunity to create a good first impression. The best welcome messages must include:
 
 * Why a user is receiving the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel, send a welcome message to all users, let them know what channel it was installed in and who installed it.
 * What do you offer - Users can identify what they can do with your app and what value can you bring to them.
@@ -94,7 +94,7 @@ To send messages to a large group of users, for example to your organization, pr
 
 ### Scheduled messages
 
-When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. It ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
+When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
 
 * Why is the user receiving the message: Make it easy for your users to understand the reason for which they're receiving the message.
 * What can user do next: Users can take the required action based on the message content.
