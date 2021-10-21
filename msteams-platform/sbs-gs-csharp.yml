@@ -142,10 +142,9 @@ items:
 
         The sampele repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
 
-        :::image type="content" source="../msteams-platform/assets/images/get-started/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
     Now that you've got the sample repo cloned, let's build your first C# app for Teams.
-
 
 - title: Build and run your first C# app
   durationInMinutes: 1
@@ -171,15 +170,12 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-menu.png" alt-text="Image showing Project menu to select Properties option" border="false":::
 
-        The Properties window appears.
-
-    1. Select **Debug** from the left pane.
+    1. Select **Debug** from the left pane of the **Properties** window.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-properties.png" alt-text="Image showing Properties window" border="false":::
 
-        The Debug pane opens.
-
     1. Move through the screen to view the Web server settings section.
+
     1. Ensure the following:
         - **App URL** is set to `http://localhost:3333/`.
         - **Enable SSL** is cleared.
