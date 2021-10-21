@@ -10,7 +10,7 @@
 - name: Get started
   expanded: false
   items:
-  - name: Overview
+  - name: Get started overview
     href: get-started/code-samples.md  
   - name: Hello World with JavaScript
     href: sbs-gs-javascript.yml

@@ -813,10 +813,10 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
-      Now, you've learned how to build and run a basic message extension!
+        Now, you've learned how to build and run a basic message extension!
 
-    <details>
-    <summary>Add a configuration page to your messaging extension</summary>
+      <details>
+      <summary>Add a configuration page to your messaging extension</summary>
 
     [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -865,6 +865,9 @@ items:
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
         Now you're ready to deploy your app to Azure!
+
+        Congratulations, you have created three types of Teams apps! 
+        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
 
