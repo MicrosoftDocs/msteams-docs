@@ -9,9 +9,6 @@ ms.localizationpriority: none
 
 # Tabs link unfurling and Stage View
 
-> [!NOTE]
-> This feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-
 Stage View is a new user interface (UI) component, which allows you to render the content that is opened in full screen in Teams and pinned as a tab.
  
 > [!NOTE]
@@ -99,10 +96,10 @@ The following image displays a Stage View invoked through a deep link:
 
 ### Syntax
 
-Following is the deeplink syntax:  
- 
-https://teams.microsoft.com/l/stage/{appId}/0?context={“contentUrl”:”[contentUrl]”,“websiteUrl”:”[websiteUrl]”,“name”:”[name]”}
+Following is the deeplink syntax: 
 
+https://teams.microsoft.com/l/stage/{appId}/0?context={\"contentUrl\":\""[contentUrl]"\",\"websiteUrl\":\""[websiteUrl]"\",\"name\":\"Contoso\"}
+ 
 ### Examples
 
 When a user enters a URL, it is unfurled into an Adaptive card.
