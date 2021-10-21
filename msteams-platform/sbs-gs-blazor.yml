@@ -15,7 +15,11 @@ items:
 - durationInMinutes: 1
   content: |
 
-    Start Microsoft Teams app development by building your first app - "Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
+    Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
+    
+    Start Microsoft Teams app development by building your first app—"Hello, world!" with a tab capability. You'll build this app with Blazor and Visual Studio 2019.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
 
     > [!NOTE]
     > Currently, Teams Toolkit offers a template only for the Tab capability in a Teams app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.

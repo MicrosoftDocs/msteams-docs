@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development by building your first 'Hello World' Teams app. 
+    Start Microsoft Teams app development by building your first "Hello World" Teams app. 
     You will create three Teams apps: a tab app, a bot app, and a message extension app. 
 
     Each of your "Hello world" app will have a capability, which comes with its own UI and UX:

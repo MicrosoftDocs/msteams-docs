@@ -20,13 +20,11 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
 
-    Before you begin creating your first Teams app, install the tools and set up your development environment. This is the first phase - Plan and Prepare. As you proceed through this step-by-step guide, this road-map highlights the phase you're on.
-
     In this tutorial, you'll learn:
 
-    1. how to build an app with three capabilities—tab, bot, and message extension using Node.js.
-    1. how to test the app features.
-    1. how to deploy your app.
+    - how to set up a new project using command-line tools.
+    - how to build three apps with a different capability each—tab, bot, and message extension.
+    - how to deploy your app from Developer Portal
 
 - title: Prerequisites
   durationInMinutes: 1

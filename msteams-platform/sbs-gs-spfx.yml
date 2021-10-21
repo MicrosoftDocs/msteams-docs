@@ -14,7 +14,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams development by building your first app - "Hello World" with a tab capability.
+    The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and extending Microsoft Teams.
+
+    Start Microsoft Teams development with SPFx by building your first app—"Hello World" with a tab capability.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
 
     > [!NOTE]
     > Currently, Visual Studio Code offers only the Tab capability in a Teams app with SharePoint Framework. The Bot and Message Extension capabilities are not available.
