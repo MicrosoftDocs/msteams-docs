@@ -210,7 +210,7 @@ const replyActivity = MessageFactory.text('Hi'); // this could be an adaptive ca
 replyActivity.channelData = {
     notification: {
         alertInMeeting: true,
-        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID’
+        externalResourceUrl: 'https://teams.microsoft.com/l/bubble/APP_ID?url=<url>&height=<height>&width=<width>&title=<title>&completionBotId=BOT_APP_ID'
     }
 };
 await context.sendActivity(replyActivity);
@@ -328,9 +328,6 @@ The JSON response body for the `Meeting Details` API is as follows:
 ```
 
 ## Real-time Teams meeting events
-
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and meeting end time are shared with the bot.
 
