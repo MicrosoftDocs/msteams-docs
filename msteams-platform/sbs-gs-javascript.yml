@@ -780,11 +780,9 @@ items:
     1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
-    
+
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/launch-web-browser-add.png" alt-text="Screenshot that shows the button Add the app to Teams" border="false":::
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/hmx-app-added.png" alt-text="Screenshot that shows confirmation that app is added" border="false":::
-
       The app is added to Teams, and is loaded.
 
     <!-- markdownlint-disable MD033 -->
@@ -797,25 +795,29 @@ items:
     > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
     </details>
 
-    ### Test the Bot app
+    ### Try the message extension
 
-    Try the following steps in the app to start a new conversation.
-    1. Launch the message extension from three dots in the composing area.
+    Try the following steps in the app to enable the message extension feature you just added.
+
+    1. Go to either **Chat** or a **Teams** channel and enable the message compose area.
+
+    1. Launch the message extension from three dots at the bottom of the composing area.
+    
     1. Select the message extension app you installed.       
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-open.png" alt-text="Screenshot that shows how to open the sample messaging extension app" border="false":::
 
-      This sample app lets you search npm packages.
+    This sample app lets you search open-source npm packages from the software registry.
 
-    1. Enter a search string in the search box, such as "cli":
+    1. Let's enter a search string in the search box, such as "cli". You will get a list of the matching items:
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-search.png" alt-text="Screenshot that shows how to use the sample app" border="false":::
 
-    1. Select one of the search results. You can send the result displayed in the Adaptive Card to the channel as a message!
+    1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
-    Now, you've learned how to build and run a basic message extension.
+    Now, you've learned how to build and run a basic message extension!
 
 
     <details>
@@ -910,3 +912,6 @@ items:
     * The frontend application will be deployed to an Azure Storage account configured for static web hosting.
 
     </details>
+
+    Congratulations, you have created three types of Teams apps! 
+    Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
