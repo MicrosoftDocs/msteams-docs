@@ -60,4 +60,3 @@ One thing that is important to know is that for any Teams app, you will only ins
 1. From Visual Studio Code, select “Launch Remote …” from the dropdown list based on your browser preference.
 
  ![Debug using Teams Toolkit](~/assets/images/teams-toolkit-v2/debug-using-teams-toolkit.png)
- 
