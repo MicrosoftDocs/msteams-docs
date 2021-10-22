@@ -10,16 +10,16 @@ ms.date: 03/01/2018
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-There are many services that you may want to consume inside your Teams app, and most of those the services require authentication and authorization to get the access. The Services include Facebook, Twitter, and Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This article will focus on authentication using Azure AD to get access.
+There are many services that you may want to consume inside your Teams app, and most of those the services require authentication and authorization to get the access. The Services include Facebook, Twitter, and Teams. Users of Teams have user profile information stored in Azure Active Directory (Azure AD) using Microsoft Graph. This topic will focus on authentication using Azure AD to get access.
 OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow to eventually read the user's profile information from Azure AD and Microsoft Graph.
 
-The authentication flow described in this article is similar to the tabs, except that tabs can use web-based authentication flow, and bots require authentication to be driven from code. The concepts in this article will also be useful when implementing authentication from the mobile platform.
+The authentication flow described in this topic is similar to the tabs, except that tabs can use web-based authentication flow, and bots require authentication to be driven from code. The concepts in this topic will also be useful when implementing authentication from the mobile platform.
 
-For a general overview of authentication flow for bots, see the article [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
+For a general overview of authentication flow for bots, see the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
 ## Configuring identity providers
 
-See the article [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
+See the topic [Configure identity providers](~/concepts/authentication/configure-identity-provider.md) for detailed steps on configuring OAuth 2.0 callback redirect URL(s) when using Azure Active Directory as an identity provider.
 
 ## Initiate authentication flow
 
@@ -56,7 +56,7 @@ Three buttons have been added to the Hero Card: Sign in, Show Profile, and Sign 
 
 Because of the validation that must be performed for security reasons and the support for the mobile versions of Teams, the code isn't shown here, but [here's an example of the code that kicks off the process when the user presses the Sign in button.](https://github.com/OfficeDev/microsoft-teams-sample-auth-node/blob/e84020562d7c8b83f4a357a4a4d91298c5d2989d/src/dialogs/BaseIdentityDialog.ts#L154-L195).
 
-The validation and mobile support are explained in the article [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
+The validation and mobile support are explained in the topic [Authentication flow in bots](~/resources/bot-v3/bot-authentication/auth-flow-bot.md).
 
 Be sure to add the domain of your authentication redirect URL to the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. If you don't, the sign-in popup won't appear.
 
