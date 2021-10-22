@@ -237,6 +237,90 @@ items:
 
     For more information about SharePoint Web parts for Teams, [see the SharePoint documentation](/sharepoint/dev/spfx/build-for-teams-overview).
 
+- title: Build your tab app
+  durationInMinutes: 1
+  content: |
+    After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+
+    In this page, you'll learn to [build and run your first app](#build-and-run-your-app-locally-in-visual-studio-code)
+
+    ## Sign in to your Microsoft 365 account
+
+    Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    # [Visual Studio Code](#tab/viscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit  :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+
+        Your default web browser opens to let you sign in to the account.
+
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
+
+        Now you're ready to build the app and run it locally!
+
+    # [Command line](#tab/cline)
+
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login m365
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+    2. Sign in to Azure with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login azure
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    ---
+
+    ## Build and run your app locally in Visual Studio Code
+
+    To build and run your app locally:
+
+    1. From Visual Studio Code, select the **F5** key.
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Screenshot showing how to start an SPFx app in a local workbench.":::
+
+        > [!NOTE]
+        > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This can take 3-5 minutes to complete.
+
+        After the SharePoint Workbench is loaded:
+
+        >[!NOTE]
+        > The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+
+    1. Select **Add Webpart +** icons to add your webpart.
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart showing.":::
+
+    1. Select your webpart from the menu.
+
+        :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a webpart selection.":::
+
+        Your app should now be running.  You can debug the app as any other SPFx webpart (such as setting breakpoints).
+
+        > [!TIP]
+        > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
+
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
@@ -319,7 +403,7 @@ items:
 
     1. Select **Choose File**.
 
-    1. Find your `{project}.sppkg` file in the `SPFx/sharepoint/solution` folder in your project. Select **Open**.
+    1. Find your `helloworld.sppkg` file in the `SPFx/sharepoint/solution` folder in your project. Select **Open**.
 
     1. Select **OK**.
 
@@ -334,6 +418,8 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
 
         > [!Note]
         > The Sync to Teams process can take a couple of minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
