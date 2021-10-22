@@ -67,7 +67,7 @@ items:
   durationInMinutes: 5
   content: |
     
-    To authenticate the bot with single sign-on(SSO), you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Do the following steps:
+   To authenticate the bot with single sign-on(SSO), you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Do the following steps:
 
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
@@ -88,7 +88,7 @@ items:
     1. In the search box, enter **Azure bot** and select the Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
