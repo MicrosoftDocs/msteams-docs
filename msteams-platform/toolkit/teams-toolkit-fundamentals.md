@@ -15,7 +15,7 @@ There is also a Teams Toolkit for Visual Studio and a [CLI tool](https://github.
 
 ## Install the Teams Toolkit for Visual Studio Code
 
-1. Open Visual Studio Code.
+1. Open **Visual Studio Code.**
 
 1. Select the Extensions view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
