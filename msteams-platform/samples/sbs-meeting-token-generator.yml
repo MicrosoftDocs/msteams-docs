@@ -288,6 +288,7 @@ items:
 - title: Setting up manifest file
   durationInMinutes: 1
   content: |
+    To set up manifest file:
     
     1. Set up "manifestVersion" to "1.11".
     1. Set up "$schema" to "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json".
@@ -304,9 +305,10 @@ items:
        ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img2.png)
     
 
-- title: Build the client app
+- title: Build the client app using 'nmp install`
   durationInMinutes: 1
   content: |
+    To build client app using 'nmp install`:
     
     1. Navigate to the `App` folder in a terminal.
     1. Run `npm install`.
@@ -323,6 +325,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
+    To build and run the service:
     
     1. From a command line:
 
@@ -356,7 +359,6 @@ items:
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
   content: |
-  
     Follow these instructions to enable developer preview
 
        > [!NOTE]
@@ -381,7 +383,7 @@ items:
 - title: Build the client app
   durationInMinutes: 1
   content: |
-    
+    To build client app
     1. Create a .zip with the following files that are present in the `Resources/Manifest` folder. 
        * manifest.json
        * icon-outline.png
