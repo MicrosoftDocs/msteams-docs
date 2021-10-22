@@ -57,8 +57,7 @@ At its core, the Teams app embraces three components:
 When an app is installed, the Teams client parses the manifest file to determine needed information like the name of your app and the URL where the services are located.
 
 > [!NOTE]
->If you have not done so already, you must sign in to your Microsoft 365 account to continue with the development process.
->
+> If you have not done so already, you must sign in to your Microsoft 365 account to continue with the development process.
 > If you do not have a Microsoft 365 account, you can sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. It's free for 90 days and renews as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits), active for the life of your Visual Studio subscription. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 ### Configuration steps
