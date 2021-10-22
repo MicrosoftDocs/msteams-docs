@@ -100,7 +100,7 @@ For more information, see [Provision in the cloud](provision-in-the-cloud.md).
 
 Once your resources have been provisioned in the cloud, you can deploy and upload project code to cloud. The following actions take place for each resource at deployment stage:
 
-|Cloud Resources|Actions|
+|Cloud resources|Actions|
 |----------------|------------------|
 |Azure functions|Build backend API part (under folder `yourProject\api`). </br></br> Deploy the code.</br></br>Restart function App. </br></br> Sync HttpTriggers.|
 |Azure API management|Import backend APIs to APIM instance as new or existing version.|
