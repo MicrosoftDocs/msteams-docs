@@ -11,7 +11,7 @@ ms.topic: Create new project
 
 You have two choices to use the Teams Toolkit to start your Teams app building, either create new project or create from samples.
 
-(pictures used in this part is already in doc repo) 
+(pictures used in this part is already in doc repo)
 
 1. Open Visual Studio code.
 1. Open the Teams Toolkit and select the Teams icon in the sidebar:
@@ -46,7 +46,7 @@ You have two choices to use the Teams Toolkit to start your Teams app building, 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
-1. You will be asked to Webpart name and Webpart description, please enter a 		name and a description as you like.
+1. You will be asked to Webpart name and Webpart description, please enter a name and a description as you like.
 
 1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
 
@@ -58,11 +58,11 @@ You have two choices to use the Teams Toolkit to start your Teams app building, 
 
 If you do not want to start with hello world application, you can try to explore sample gallery and find something you are interested to start your own work with. Open the the Teams Toolkit for Visual Studio Code. Go to the `DEVELOPMENT` section in Tree View, click on `View samples`.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels.png" alt-text="view samples":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels.png" alt-text="view samples text":::
 
 You will be redirect to sample gallery where you can explore samples and download them to play with.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples image":::
 
 There is another way to open sample app. Go to the `DEVELOPMENT` section in Tree View, click on `Create new project` and select `Start from samples`. Then select one from the sample list. You can explore sample code and start development from samples then.  
 
