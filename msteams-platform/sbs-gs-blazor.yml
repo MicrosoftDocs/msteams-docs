@@ -434,7 +434,7 @@ items:
 
     1. Replace the `localhost` within the **Application ID URI** with `{{azure_app_url}}`.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments8.png" alt-text="Edit single sign-on Application ID URI":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-sso.png" alt-text="Edit single sign-on Application ID URI":::
 
     1. Select **Save**.
 
@@ -444,6 +444,6 @@ items:
 
     1. Verify if `{{azure_app_url}}` is listed as a valid domain. If it isn't, add it as a valid domain. Then, select **Add**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments9.png" alt-text="Add a domain":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-domain.png" alt-text="Add a domain":::
 
       You've now updated the manifest file. You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
