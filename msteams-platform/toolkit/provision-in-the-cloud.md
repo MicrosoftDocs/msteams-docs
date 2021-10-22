@@ -33,7 +33,7 @@ The following list provides required Microsoft 365 resources created in Microsof
  
 The following table describes the necessity of mentioned resources:
 
-|Resources | Why my application needs it? |
+|Resources|Why my application needs it|
 |----------|--------------------------------|
 |Teams application | Application **registered in Teams platform** with information in manifest and is identified by a unique GUID.|
 |Azure Active Directory application| Application **registered in Azure Active Directory** to represent your Teams application used to manage digital identity and permissions for your application. You can access features with single sign-on and ask for user consent when your application requires additional permissions to access user’s data in Microsoft 365. |
