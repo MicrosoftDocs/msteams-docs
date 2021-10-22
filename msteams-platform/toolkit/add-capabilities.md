@@ -11,7 +11,7 @@ ms.topic: overview
 
 You can start to create a Teams app with Visual Studio Code by adding capabilities, such as tabs, bots, and messaging extensions. The following table describes the different capabilities:
 
-| **Capability**| **Description**|
+|**Capability**|**Description**|
 |--------|-------------|
 | Tabs |  Tabs are Teams-aware simple HTML tags that point to domains declared in the app manifest. You can add tabs as part of a channel inside a team, group chat, or personal app for an individual user.|
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
