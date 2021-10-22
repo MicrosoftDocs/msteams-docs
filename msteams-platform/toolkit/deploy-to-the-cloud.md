@@ -24,7 +24,7 @@ Teams Toolkit deploys or uploads the backend and frontend code in your applicati
 
 ## Deployment by project type
 
-| Project Type|	Resources|	Code Location|
+|Project type|Resources|Code location|
 |-------------|----------|---------------|
 |Tabs with React </br> The frontend workload|Azure Storage account|`yourProjectFolder/tabs`|
 |Tabs with SharePoint </br> The frontend workload |SharePoint app catalog|`yourProjectFolder/SPFx`|
