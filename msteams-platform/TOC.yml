@@ -108,20 +108,20 @@
       href: toolkit/create-new-project.md
     - name: Account
       href: toolkit/teams-toolkit-account.md 
-    - name: Debug
-      href: toolkit/teams-toolkit-debug.md
-    - name: Manifest
-      href: toolkit/manifest-editor.md
-    - name: Publish
-      href: toolkit/teams-toolkit-publish.md
     - name: Provision in the cloud
       href: toolkit/provision-in-the-cloud.md
+    - name: Debug
+      href: toolkit/teams-toolkit-debug.md
+    - name: Deploy to the cloud
+      href: toolkit/deploy-to-the-cloud.md
+    - name: Publish
+      href: toolkit/teams-toolkit-publish.md
     - name: Add capabilities
       href: toolkit/add-capabilities.md
     - name: Add cloud resources
       href: toolkit/add-cloud-resources.md
-    - name: Deploy to the cloud
-      href: toolkit/deploy-to-the-cloud.md
+    - name: Manifest
+      href: toolkit/manifest-editor.md
     - name: Build CI/CD pipelines for Teams application
       href: toolkit/build-pipelines.md
     - name: Build apps with the Teams Toolkit and Visual Studio Code
