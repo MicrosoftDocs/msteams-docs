@@ -16,7 +16,7 @@ Teams Toolkit provides bots, tabs, and messaging extensions as capabilities to i
 
 ## Provision in the cloud
 
-Teams Toolkit provides secure environment to place application resources to the cloud, you must have Azure and Microsoft 365 cloud services to host the applications, Teams Toolkit directly access applications from the cloud. For more information, see [Provision in the cloud](provision-in-the-cloud.md)
+Teams Toolkit provides secure environment to place application resources to the cloud, you must have Azure and Microsoft 365 cloud services to host the applications, Teams Toolkit directly access applications from the cloud. For more information, see [Provision in the cloud](provision-in-the-cloud.md).
 
 ## Add cloud resources
 
