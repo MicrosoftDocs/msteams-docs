@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: Create new project
 ---
 
-## Create new project  
+# Create new project  
 
 You have two choices to use the Teams Toolkit to start your Teams app building, either create new project or create from samples.
 
