@@ -18,25 +18,25 @@ items:
 
     >This app will have all capabilities and each has its own UI and UX:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
 
     In this tutorial, you'll learn:
 
-    - how to set up a new project using command-line tools.
-    - how to build three apps with a different capability each—tab, bot, and message extension.
-    - how to deploy your app from Developer Portal
+    - How to set up a new project using command-line tools.
+    - How to build three apps with a different capability each—tab, bot, and message extension.
+    - How to deploy your app from Developer Portal
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
 
-    Use this checklist to install the tools for building and deploying a Teams app.
+    Here's a list of tools you'll need to install for building and deploying a Teams app.
 
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. Use the latest v14 LTS release.|
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
     | &nbsp; | [Install Git](https://git-scm.com/downloads) | Sample Node.js app repo from GitHub |
@@ -103,11 +103,11 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+        > If yTeams doesn't show the option to upload a custom app, talk to your Teams administrator.
 
     ### Create a free Teams developer tenant
 
-    If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -203,7 +203,7 @@ items:
 
     Remember that apps in Microsoft Teams are web applications exposing one or more capabilities. Make your app available on the internet so that the Teams platform can load it. To make your app reachable from the internet, you need to *host* your app.
 
-    For local testing, you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok*, you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in your `PATH`.
+    For local testing, you can run the app on your local machine and create a tunnel to it with a web endpoint. [ngrok](https://ngrok.com) is a free tool that lets you do just that. With *ngrok*, you can get a web address such as `https://d0ac14a5.ngrok.io` (this URL is just an example). You can [download and install](https://ngrok.com/download) *ngrok* for your environment. Make sure you add it to a location in the `PATH`.
 
     ### Create an ngrok tunnel
 
@@ -237,7 +237,7 @@ items:
         > [!NOTE]
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
         > [!TIP]
-        > It is a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app which you might later have to stop, rebuild and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
+        > It's a good idea to run *ngrok* in a different terminal window to keep it running without interfering with the node app, which you might later have to stop, rebuild, and rerun. The *ngrok* session will return useful debugging information in this window. The paid version of *ngrok* allows persistent names.
 
         >[!IMPORTANT] 
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
@@ -415,9 +415,9 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="false":::
 
-    The bot that was imported from the sample doesn't have an associated app ID. You must delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
+    The bot that was imported from the sample doesn't have an associated app ID. You'll need to delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
 
-    Adding and configuring a bot involves the following:
+    Adding and configuring a bot involves:
 
     1. [Adding a new bot](#to-add-a-new-bot)
     1. [Adding bot to app](#to-add-bot-to-app)
@@ -539,7 +539,7 @@ items:
 
         The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
 
-    1. Select **+ Add a command** to add define the scope of what your message extension app can do.
+    1. Select **+ Add a command** to define the scope of what your message extension app can do.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="false":::
 
@@ -600,7 +600,7 @@ items:
         The Developer Portal informs you that your app is sideloaded successfully.
 
     1. Select **Publish** from the left pane, and select **Download app package** to download the configured app package from Developer Portal.
-    1. Save the app package zip file.The file name is Hello World.zip.
+    1. Save the app package zip file. The file name is Hello World.zip.
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
     1. Select **Manage your apps**.
     1. Select **Upload a custom app**.

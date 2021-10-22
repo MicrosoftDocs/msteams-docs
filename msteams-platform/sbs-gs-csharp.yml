@@ -18,18 +18,18 @@ items:
 
     >This app will have all capabilities and each has its own UI and UX:
 
-    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has 3 features." border="false":::
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/your-helloworld-app.png" alt-text="Diagram showing this app has three features." border="false":::
 
     In this tutorial, you'll learn:
 
-    - how to set up a new project
-    - how to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019
-    - how to deploy your app from Developer Portal
+    - How to set up a new project
+    - How to build three apps with a different capability each—tab, bot, and message extension using C# and Visual Studio 2019
+    - How to deploy your app from Developer Portal
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Use this checklist to install the tools for building and deploying a Teams app.
+    Here's a list of tools you'll need to install for building and deploying a Teams app.
 
     | &nbsp; | Install | For using... |
     | --- | --- | --- |
@@ -71,11 +71,11 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+        > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
 
     ### Create a free Teams developer tenant (optional)
 
-    If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
+    If you don't have a Teams account, you can get it free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -137,7 +137,7 @@ items:
 
     1. Enter the location where you want to clone the repo, and select **Clone**.
 
-        The sampele repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
+        The sample repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
@@ -155,7 +155,7 @@ items:
 
     ## Build your first app
 
-    You can build and run the sample app after it's cloned.
+    You can view the project structure in the **Solution Explorer** after the workspace is created. Now, you're to build and run your app.
 
     **To build and run the cloned sample**
 
@@ -173,9 +173,9 @@ items:
 
     1. Move through the screen to view the Web server settings section.
 
-    1. Ensure the following:
-        - **App URL** is set to `http://localhost:3333/`.
-        - **Enable SSL** is cleared.
+    1. Make the following settings in **Debug** pane:
+        - Set **App URL** to `http://localhost:3333/`.
+        - Clear **Enable SSL**.
 
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-project-web-server-settings.png" alt-text="Image showing Web server settings for C# project properties" border="false":::
 
@@ -204,7 +204,7 @@ items:
             :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/local-host-second-tab.png" alt-text="Image showing second tab of the app" border="false":::
 
         > [!Note]
-        > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`. For more information, see [this question on Stack Overflow](https://stackoverflow.com/questions/32780315).
+        > If you receive an error `Could not find a part of the path … bin\roslyn\csc.exe`, update the package with the command `Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r`.
 
     ## Deploy your sample app locally
 
@@ -397,9 +397,9 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-bot-no-id.png" alt-text="Image showing bot app imported with no app ID" border="false":::
 
-    The bot that was imported from the sample doesn't have an associated app ID. You must delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
+    The bot that was imported from the sample doesn't have an associated app ID. You'll need to delete it, and create a new bot. Developer Portal creates a new app ID, and registers it with Teams.
 
-    Adding and configuring a bot involves the following:
+    Adding and configuring a bot involves:
 
     1. [Adding a new bot](#to-add-a-new-bot)
     1. [Adding bot to app](#to-add-bot-to-app)
@@ -519,7 +519,7 @@ items:
 
         The message extension is saved, and the **Commands** section appears on the **Message extension** pane.
 
-    1. Select **+ Add a command** to add define the scope of what your message extension app can do.
+    1. Select **+ Add a command** to define the scope of what your message extension app can do.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-msgext-add-command.png" alt-text="Image showing Command section" border="false":::
 
@@ -578,7 +578,7 @@ items:
         The Developer Portal informs you that your app is sideloaded successfully.
 
     1. Select **Publish** from the left pane, and select **Download app package** to download the configured app package from Developer Portal.
-    1. Save the app package zip file.The file name is Hello World.zip.
+    1. Save the app package zip file. The file name is Hello World.zip.
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon.
     1. Select **Manage your apps**.
     1. Select **Upload a custom app**.

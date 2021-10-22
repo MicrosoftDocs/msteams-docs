@@ -14,8 +14,8 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Start Microsoft Teams app development by building your first "Hello World" Teams app. 
-    You will create three Teams apps: a tab app, a bot app, and a message extension app. 
+    Start Microsoft Teams app development with your first "Hello World" Teams app. 
+    You'll create three Teams apps: a tab app, a bot app, and a message extension app. 
 
     Each of your "Hello world" app will have a capability, which comes with its own UI and UX:
     
@@ -23,16 +23,18 @@ items:
     
     In this tutorial, you'll learn:
 
-    - how to set up a new project with Teams Toolkit.
-    - how to build three apps with a different capability each—tab, bot, and message extension.
-    - the structure of the app and how it's built the tab portion with JavaScript using React, and the rest of the features with Node.js.
-    - how to deploy your app
+    - How to set up a new project with Teams Toolkit.
+    - How to build three apps with a different capability each—tab, bot, and message extension.
+    - The structure of the app:
+        - The tab portion with JavaScript using React.
+        - The rest of the features with Node.js.
+    - How to deploy your app
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
 
-    Use this checklist to install the tools for building and deploying a Teams app.
+    Here's a list of tools you'll need for building and deploying your apps.
 
 
     | &nbsp; | Install | For using... |
@@ -47,9 +49,9 @@ items:
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
-    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
+    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run. It includes the authentication helpers for running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
     | &nbnp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+    | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
 
     > [!TIP]
@@ -126,11 +128,11 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator. For more information, see [enable custom Teams apps and turn on custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+        > If you don't have the option to upload a custom app, talk to your Teams administrator.
 
     ### Create a free Teams developer tenant (optional)
 
-    If you can't see the option to **Upload a custom app**, or you don't have a Teams account, you can get a free Teams developer account. Join the Microsoft 365 developer program!
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
     1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
     1. Select **Join Now** and follow the onscreen instructions.
@@ -179,7 +181,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-new-app.png" alt-text="Wizard start for Create New Project" border="false":::
 
-    1. Ensure that **Tab UI-based app** is selected as the capability that you want to build in your app, and select **OK**.
+    1. Ensure that **Tab UI-based app** is selected as the capability that you want to build in your app. Select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
@@ -244,7 +246,7 @@ items:
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/hw-folder-structure.png" alt-text="Project files scaffolded for the app with Tab capability in Visual Studio Code.":::
 
-    Although you're free to choose any UI framework you want (or not to use any), this sample template code provides a scaffolding with React components.
+    Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
     Among other items in this directory structure, the Toolkit maintains:
 
@@ -339,7 +341,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-        > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
 
         The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
 
@@ -557,7 +559,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-        > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
         Your web browser starts to run the app.
 
@@ -716,7 +718,7 @@ items:
 
         Your default web browser opens to let you sign in to the account.
 
-    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Sign in to your Microsoft 365 account.
     1. Close the browser when prompted, and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
