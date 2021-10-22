@@ -13,7 +13,7 @@ Microsoft Teams app fundamentals give the direction you need to create your cust
 
 ## Capabilities and entry points
 
-You can extend your Teams app in multiple ways. To be able to extend your app you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
+You can extend your Teams app in multiple ways. To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
 
 ## Understand your use cases
 
