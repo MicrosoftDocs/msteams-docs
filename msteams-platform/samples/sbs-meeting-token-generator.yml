@@ -308,10 +308,10 @@ items:
        ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img2.png)
     
 
-- title: Build the client app using 'nmp install`
+- title: Build the client app using 'npm install'
   durationInMinutes: 1
   content: |
-    To build client app using 'nmp install`:
+    To build client app using 'npm install':
     
     1. Navigate to the `App` folder in a terminal.
     1. Run `npm install`.
@@ -323,7 +323,7 @@ items:
 
     This process generates the `/dist` folder inside the app where the assets will get copied. The server will serve the static files from this location.
 
-       ![Dist folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+       ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -351,7 +351,7 @@ items:
        1. Press `F5` to run the project.
     
        > [!NOTE]
-       > If a prompt appears asking for a certification, select `Yes`.
+       > If a prompt appears, asking for a certification, select `Yes`.
 
        ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
