@@ -490,7 +490,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request, you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request, you should send a message to the channel containing the completed adaptive card.
+When responding to the `edit` request, you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request, you should send a message to the channel containing the finalized adaptive card.
 
 # [TypeScript/Node.js](#tab/typescript)
 
