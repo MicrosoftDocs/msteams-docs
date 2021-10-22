@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 ## Teams Toolkit for Visual Studio Code
 
-The Microsoft Teams Toolkit helps you to create and deploy Teams apps to cloud storage with integrated identity access, data from Microsoft Graph, and other services in Azure and Microsoft 365 without configuration.
+The Microsoft Teams Toolkit enables you to create and deploy Teams apps to cloud storage with integrated identity access, data from Microsoft Graph, and other services in Azure and Microsoft 365 without configuration.
 
 ## Teams Toolkit for Visual Studio
 
