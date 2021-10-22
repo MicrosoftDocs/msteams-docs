@@ -78,4 +78,4 @@ You can set Azure and Microsoft 365 credentials in your environment variables sa
 
 ## See also
 
-[Placeholder to add link: Quick Start for GitHub Actions]
+[Placeholder to add link:Quick Start for GitHub Actions]
