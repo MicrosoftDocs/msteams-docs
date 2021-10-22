@@ -274,6 +274,8 @@
     href: apps-in-teams-meetings/meeting-app-extensibility.md
   - name: Prerequisites for apps in Teams meetings
     href: apps-in-teams-meetings/create-apps-for-teams-meetings.md
+  - name: Meeting Token Generator
+    href: apps-in-teams-meetings/sbs-meeting-token-generator.yml
   - name: Enable and configure apps for meetings
     href: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   - name: Meeting apps API references
