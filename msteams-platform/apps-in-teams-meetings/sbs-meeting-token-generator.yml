@@ -14,32 +14,29 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Token Generator app extends meetings in Teams. Through this app, meeting participants request **token**. The tokens are generated sequentially so that each participant has a fair opportunity to interact. 
-    For example, the app is useful in Q&A sessions and in meetings like scrum meetings.
+    Meeting Token Generator app extends meetings in Teams. Through this app, meeting participants request **token**. The tokens are generated sequentially so that each participant has equal opportunity to interact, for example, the app is useful in Q&A sessions and in meetings like scrum meetings. You can create a Meeting Token Generator app to enhance your meeting experience in Teams.
 
     **Key Features**
 
-    The following list provides the key features:
+    The following list provides the key features of the meeting token generator:
 
     * Displays the current token that is being serviced in the meeting.
     * Displays the user list sorted by the token number in ascending order.
     * Generates a token for the user upon request.
     * Displays the current user's token number.
-    * Marks a token as done by the user.
-    * Skips the current token for the organizer of the meeting.
+    * Allows the organizer to skip the current meeting token.
 
     **User Interactions**
 
-    The following list provides different ways for user interaction:
+    The following list provides different ways of user interactions:
 
-    * **Token** - Requests a token for the user.
+    * **Token** - Requests token for the user.
     * **Done** - Confirms that the user is done with the token.
     * **Skip** - Skips the current user and moves on to the next person in line for a token.
 
        > [!NOTE]
-       > The **Skip** button is available to the meeting organizers only.
-
-    This step-by-step guide helps you to create a Meeting Token Generator app, making your meeting experience in Teams better. 
+       > **Skip** is available to the meeting organizers only.
+ 
   
 
 
