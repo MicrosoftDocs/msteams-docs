@@ -62,7 +62,7 @@ If you do not want to start with hello world application, you can try to explore
 
 You will be redirect to sample gallery where you can explore samples and download them to play with.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels.png" alt-text="view samples":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples":::
 
 There is another way to open sample app. Go to the `DEVELOPMENT` section in Tree View, click on `Create new project` and select `Start from samples`. Then select one from the sample list. You can explore sample code and start development from samples then.  
 

@@ -36,7 +36,7 @@ To set up a subscription, you must first join the Microsoft 365 Developer Progra
 1. In the welcome screen, select Set up E5 subscription.
 1. Set up your administrator account. After you finish, you should see a screen like this.
 
-[Placeholder for adding image]
+![Microsoft 365 developer program](~/assets/images/teams-toolkit-v2/microsoft365-developer-program.png)
 
 ## What account can I use to sign up for the Microsoft 365 Developer Program?
 
@@ -58,7 +58,7 @@ One of the ways to check if you have a Teams account, verify if you can sideload
 
 1. Select Upload a custom app.
 
-[Placeholder for adding image]
+![Upload custom app](~/assets/images/teams-toolkit-v2/upload-custom-app.png)
 
 Without sideloading permission, you won’t be able to do any local/remote debugging. So it’s very important to get the sideloading permission for your account before you do any debugging for your Teams app.
 
@@ -70,21 +70,23 @@ Without sideloading permission, you won’t be able to do any local/remote debug
 
 1. Select Show All > Teams.
 
-[Placeholder for image]
+![Custom-app-uploading](~/assets/images/teams-toolkit-v2/custom-app-uploading.png)
 
-![Note]
->It can take up to 24 hours for the Teams option to appear. You can upload your custom app to a Teams environment for testing and validation in that time. 
->Navigate to Teams apps > Setup Policies > Global.
+>[!Note]
+>It can take up to 24 hours for the Teams option to appear. You can upload your custom app to a Teams environment for testing and validation in that time.
+>Navigate to Teams apps
+> Setup Policies.
+> Global.
 
-[Placeholder for image]
+![Setup-global-policies](~/assets/images/teams-toolkit-v2/global-setup-policies.png)
 
 1. Toggle Upload custom apps to the On position. 
 
 1. Select Save. Your test tenant can permit custom app sideloading. 
 
-![Note] 
+>[!Note] 
 > It can take up to 24 hours for the sideloading to be active. In the interim, you can use upload for <your tenant> to test your app. To upload the .zip package file of the app, see upload custom apps.
 
-[Placeholder for adding image]
+![List of custom apps](~/assets/images/teams-toolkit-v2/list-custom-apps.png)
 
 For complete information on how these settings interact, see manage custom app policies and settings in Teams and manage app setup policies in Teams.

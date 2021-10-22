@@ -57,13 +57,13 @@ You can select the capabilities you want when you create the Teams Project.
 
 And Teams Toolkit provides flexibility to add more capabilities in later process of Teams app development.
 
-:::image type="content" source="../msteams-platform\assets\images\tools-and-sdks\add-capabilities.png" alt-text="Add capabilities to Teams Project":::
+:::image type="content" source="../assets/images/tools-and-sdks/add-capabilities.png" alt-text="Teams Toolkit Overview":::
 
 ## Take a Tour of Teams Toolkit for Visual Studio Code
 
 In the Tree View (left sidebar) of Teams Toolkit, there are four sections offers the main features developers will need for Teams app development.
 
-:::image type="content" source="../assets/images/tools-and-sdks/add-capabilities.png" alt-text="Teams Toolkit Overview":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/Teams-Toolkit-Overview.png" alt-text="Teams Toolkit Overview"::: 
 
 - [Typical User Journey](#typical-user-journey-of-teams-toolkit)
 
