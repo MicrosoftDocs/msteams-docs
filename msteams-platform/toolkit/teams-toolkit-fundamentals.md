@@ -125,7 +125,7 @@ During or after the development, a Teams app needs to go through provision, depl
 
 1. Developer Portal for Teams is where you can manage and distribute your Teams app.  
 
-1. Teams Toolkit also provide CI/CD template for popular CI/CD tools like GitHub Workflow, Azure DevOps and Jenkins. For other tools it has guidance on how to build CI/CD pipeline. Refer to [CI/CD Guidance](placeholder, point to CICD page) for more information
+1. Teams Toolkit also provide CI/CD template for popular CI/CD tools like GitHub Workflow, Azure DevOps and Jenkins. For other tools it has guidance on how to build CI/CD pipeline. Refer to [CI/CD Guidance](placeholder, point to CI CD page) for more information
 
 ### HELP AND FEEDBACK
 
