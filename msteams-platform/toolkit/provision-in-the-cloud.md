@@ -115,7 +115,7 @@ Provisioning is the same if your project contains multiple capabilities.
 
 There are few common advanced use cases during cloud resources provision.
  
-### Switch a subscription and re-do provision
+### Switch the subscription and re-do provision
 
 1. Sign in to [Azure portal](https://portal.azure.com/) and delete the resource group that was created by Teams Toolkit.
 1. Switch subscription in current account or log out and select a new subscription.
