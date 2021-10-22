@@ -70,7 +70,7 @@ Without sideloading permission, you won’t be able to do any local/remote debug
 
 1. Select Show All > Teams.
 
-![Custom-app-uploading](~/assets/images/teams-toolkit-v2/custom-app-uploading.png)
+![Custom app uploading](~/assets/images/teams-toolkit-v2/custom-app-uploading.png)
 
 >[!Note]
 >It can take up to 24 hours for the Teams option to appear. You can upload your custom app to a Teams environment for testing and validation in that time.
@@ -84,8 +84,8 @@ Without sideloading permission, you won’t be able to do any local/remote debug
 
 1. Select Save. Your test tenant can permit custom app sideloading. 
 
->[!Note] 
-> It can take up to 24 hours for the sideloading to be active. In the interim, you can use upload for <your tenant> to test your app. To upload the .zip package file of the app, see upload custom apps.
+>[!Note]
+> It can take up to 24 hours for the sideloading to be active. In the interim, you can use upload for your tenant to test your app. To upload the .zip package file of the app, see upload custom apps.
 
 ![List of custom apps](~/assets/images/teams-toolkit-v2/list-custom-apps.png)
 

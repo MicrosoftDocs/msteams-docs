@@ -1,10 +1,10 @@
 ---
-title: Account
+title: Publish
 author: Rajeshwari-v
-description:  Describes about account
+description:  Describes about publishing
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: Account
+ms.topic: Publish
 ---
 
 # Publish Teams apps using Teams Toolkit 
