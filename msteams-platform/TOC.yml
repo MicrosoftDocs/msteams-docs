@@ -102,10 +102,22 @@
     items:
     - name: Overview
       href: toolkit/visual-studio-code-toolkit-overview.md
-    - name: Add capabilities
-      href: toolkit/add-capabilities.md
+    - name: Teams Toolkit Fundamentals
+      href: toolkit/teams-toolkit-fundamentals.md
+    - name: Create new project
+      href: toolkit/create-new-project.md
+    - name: Account
+      href: toolkit/teams-toolkit-account.md 
+    - name: Debug
+      href: toolkit/teams-toolkit-debug.md
+    - name: Manifest
+      href: toolkit/manifest-editor.md
+    - name: Publish
+      href: toolkit/teams-toolkit-publish.md
     - name: Provision in the cloud
       href: toolkit/provision-in-the-cloud.md
+    - name: Add capabilities
+      href: toolkit/add-capabilities.md
     - name: Add cloud resources
       href: toolkit/add-cloud-resources.md
     - name: Deploy to the cloud
