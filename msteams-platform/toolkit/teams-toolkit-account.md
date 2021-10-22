@@ -44,13 +44,13 @@ You can sign up for the developer program by using one of the following account 
 
 1. Microsoft account (created by you for personal use) - Provides access to all consumer-oriented Microsoft products and cloud services, such as Outlook (Hotmail), Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
 
-1. Work account (issued by an admin for business use) - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see Manage your Azure AD directory. 
+1. Work account (issued by an admin for business use) - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see Manage your Azure AD directory.
 
 1. Visual Studio ID (created for your Visual Studio Professional or Enterprise subscriptions) - We recommend that you use this option to join the developer program from within the Visual Studio Gallery to get the full benefits as a Visual Studio subscriber.
 
 ## Teams customer app uploading (sideloading permission) check
 
-During development, you must load your app within your Teams without distributing it. This is known as sideloading.
+During development, you must load your app within your Teams without distributing it. This is known as side loading.
 
 One of the ways to check if you have a Teams account, verify if you can sideload apps in Teams:
 
