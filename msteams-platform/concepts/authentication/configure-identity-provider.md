@@ -5,8 +5,8 @@ ms.topic: how-to
 ms.localizationpriority: medium
 keywords: teams authentication AAD oauth identity provider
 
----
-
 # Configure identity provider
 
 The page has been removed.
+
+

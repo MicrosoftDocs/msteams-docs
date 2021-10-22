@@ -13,7 +13,7 @@ keywords: teams authentication flow tabs
 
 OAuth 2.0 is an open standard for authentication and authorization used by Azure Active Directory (AAD) and many other identity providers. A basic understanding of OAuth 2.0 is a prerequisite for working with authentication in Teams. For more information, see [OAuth 2 simplified](https://aaronparecki.com/oauth-2-simplified/) that is easier to follow than the [complete specification](https://oauth.net/2/). Authentication flows for tabs and bots are different because tabs are similar to websites so they can use OAuth 2.0 directly. Bots do a few things differently, but the core concepts are identical.
 
-For an example of authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
+For example, the authentication flow for tabs and bots using Node and the [OAuth 2.0 implicit grant type](https://oauth.net/2/grant-types/implicit/), see [initiate authentication flow for tabs](~/tabs/how-to/authentication/auth-tab-aad.md#initiate-authentication-flow).
 
 > [!NOTE]
 > You must wait for the SDK initialization to complete, then call `microsoftTeams.authentication.authenticate` API in response to selecting the button and displaying **Login**. You can pass a callback to the `microsoftTeams.initialize` API that is called when initialization completes.
@@ -29,7 +29,7 @@ Similar to other application auth flows in Teams, the start page must be on a do
     > [!NOTE]
     > The OAuth 2.0 implicit grant flow calls for a `state` parameter in the authentication request, which contains unique session data to prevent a [cross-site request forgery attack](https://en.wikipedia.org/wiki/Cross-site_request_forgery). The examples use a randomly-generated GUID for the `state` data.
 
-5. On the provider's site, the user signs in and grants access to the tab.
+5. On the provider's site, the user sign in and grants access to the tab.
 6. The provider takes the user to the tab's OAuth 2.0 redirect page with an access token.
 7. The tab checks that the returned `state` value matches, and calls `microsoftTeams.authentication.notifySuccess()`, which in turn calls the `successCallback` function registered in step 3. Teams closes the pop-up window.
 9. The tab either displays configuration UI, refreshes, or reloads the tabs content, depending on the scenario.

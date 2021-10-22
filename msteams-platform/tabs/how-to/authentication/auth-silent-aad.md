@@ -9,6 +9,9 @@ keywords: teams authentication SSO silent AAD
 
 Silent authentication in Azure Active Directory (AAD) minimizes the number of times users enter their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
+> [!NOTE]
+> For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
+
 If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
 
 Though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
@@ -121,6 +124,9 @@ if (authContext.isCallback(window.location.hash)) {
 ### Handle sign out flow
 
 Use the following code to handle sign out flow in AAD Auth:
+
+> [!NOTE]
+> When you logout from Teams tab or bot, the current session is cleared.
 
 ```javascript
 function logout() {

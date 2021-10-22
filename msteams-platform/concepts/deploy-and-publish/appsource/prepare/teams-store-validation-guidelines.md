@@ -77,7 +77,7 @@ Remember the following if your app authenticates users with an external service.
 
 * **Sign in, sign out, and sign up experiences**:
   * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experiences.
-  * When a user signs out, they must sign out only from the app and remain signed in to Teams.
+  * When a user sign out, they must sign out only from the app and remain signed in to Teams.
 * **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in help documentation (or similar resources) how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to unshare content must be present in your Teams app.
 
 #### Government Community Cloud listings
@@ -102,6 +102,9 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * If your app requires an account, users must be able to sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You may determine whether an account is active indefinitely or for a limited time, but if the account expires, no UI, text, or links indicating the need to pay may be shown.
 * Your app's privacy policy and terms of use pages must be free of any commerce-related UI or links.
+
+> [!NOTE]
+> Teams store listings can include app subscription plans or licenses for purchase. For more information, see [include a SaaS offer with your app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
 ## General functionality and performance
 
@@ -245,7 +248,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 ### Privacy policy
 
-The privacy policy can be specific to your Teams app or an overall policy for all of your services.
+The privacy policy can be specific to your Teams app or an overall policy for all your services.
 
 * If you use a generic privacy policy template, you must reference **services**, **applications**, and **platforms** to include your Teams app and your service or website.
 * Must include how you handle user data storage, retention, and deletion. You also must describe the security controls you use for data protection.
@@ -335,7 +338,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 * Notification-only bots must send a welcome message that conveys it will not reply to users' messages.
 
 > [!TIP]
-> In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features. Including buttons the let users try bot commands is encouraged. For example, **Create a task**.
+> In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features. Including buttons to let users try bot commands is encouraged. For example, **Create a task**.
 
 ### Bot message spamming
 
