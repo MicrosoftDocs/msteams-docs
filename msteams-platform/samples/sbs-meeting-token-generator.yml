@@ -7,18 +7,19 @@ metadata:
   level: Beginner
   ms.date: 10/12/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ./apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: ../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to authenticate apps in Teams meeting
   ms.custom: mvc
   ms.localizationpriority: none
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Token Generator app is a sample Microsoft Teams app that extends meetings in Teams. 
-    Through this app, meeting participants request a "token", which is generated sequentially so that each participant has a fair opportunity to interact. 
-    This app is useful in Q&A sessions and in meetings like scrum meetings.
+    Meeting Token Generator app extends meetings in Teams. Through this app, meeting participants request **token**. The tokens are generated sequentially so that each participant has a fair opportunity to interact. 
+    For example, the app is useful in Q&A sessions and in meetings like scrum meetings.
 
     **Key Features**
+
+    The following list provides the key features:
 
     * Displays the current token that is being serviced in the meeting.
     * Displays the user list sorted by the token number in ascending order.
@@ -29,12 +30,14 @@ items:
 
     **User Interactions**
 
+    The following list provides different ways for user interaction:
+
     * **Token** - Requests a token for the user.
     * **Done** - Confirms that the user is done with the token.
     * **Skip** - Skips the current user and moves on to the next person in line for a token.
 
        > [!NOTE]
-       > The **Skip** button is available only to the meeting organizers.
+       > The **Skip** button is available to the meeting organizers only.
 
     This step-by-step guide helps you to create a Meeting Token Generator app, making your meeting experience in Teams better. 
   
