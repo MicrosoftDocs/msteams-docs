@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
 
     > [!NOTE]
-    > Currently, Teams Toolkit offers a template only for the Tab capability in a Teams app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.
+    > Currently, Teams Toolkit offers a template only for a Tab app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.
 
 - title: Prerequisites for Blazor tab app
   durationInMinutes: 1
@@ -35,7 +35,7 @@ items:
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET |
-    | **Optional** | &nbsp; | &nbsp; |    
+    | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
@@ -396,9 +396,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
 
-        There are several places in the manifest that list a `localhost:XXXXX` as part of a URL.
+        You'll find that `localhost:XXXXX` is mentioned as a part of the URL given in the **Basic information** pane.
 
-    1. Replace all occurrences  of `localhost:XXXXX` with `{{azure_app_url}}`, including the curly braces.
+    1. Replace all occurrences  of `localhost:XXXXX` with `{{azure_app_url}}`, including the curly braces, for **Website (must be a valid HTTPS URL)** and **App URLs**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
 
@@ -408,7 +408,7 @@ items:
 
     ### Configure the tab capability
 
-    1. Select **Capabilities** from the sidebar.
+    1. Select **App features** from the sidebar.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
 
