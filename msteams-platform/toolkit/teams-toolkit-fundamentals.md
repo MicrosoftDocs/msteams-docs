@@ -40,14 +40,13 @@ The .NET SDK is used to install customized bindings for local debugging and Azur
 Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
 ## Supported Teams Apps Capabilities
+[Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points. Your Teams app can contain one or more Teams App Capabilities. Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
 
-[Teams App Capabilities](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/capabilities-overview) are Teams extensibility points. Your Teams app can contain one or more Teams App Capabilities. Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
+* [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
 
-* [Tabs](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/what-are-tabs)
+* [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
 
-* [Bot](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots)
-
-* [Message Extension](https://docs.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions)
+* [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
 
 Your Teams project can contain either one of the capabilities or a mixture of two or three capabilities from above.
 
@@ -57,13 +56,13 @@ You can select the capabilities you want when you create the Teams Project.
 
 And Teams Toolkit provides flexibility to add more capabilities in later process of Teams app development.
 
-:::image type="content" source="../assets/images/tools-and-sdks/add-capabilities.png" alt-text="Teams Toolkit Overview":::
+:::image type="content" source="../assets/images/tools-and-sdks/add-capabilities.png" alt-text="add capabilities":::
 
 ## Take a Tour of Teams Toolkit for Visual Studio Code
 
 In the Tree View (left sidebar) of Teams Toolkit, there are four sections offers the main features developers will need for Teams app development.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/Teams-Toolkit-Overview.png" alt-text="Teams Toolkit Overview"::: 
+:::image type="content" source="../assets/images/teams-toolkit-v2/Teams-Toolkit-Overview.png" alt-text="Take a tour to Teams Toolkit"::: 
 
 - [Typical User Journey](#typical-user-journey-of-teams-toolkit)
 
@@ -82,13 +81,13 @@ Teams Toolkit provides a set of comprehensive features covering the lifecycle of
 
 ### ACCOUNTS
 
-Developers must have a Microsoft 365 account before they start to build Teams app. This is the account you use to sign in to Teams. If you do not have one yet, you can [get a free Teams developer account by joining the M365 developer program](https://docs.microsoft.com/en-us/microsoftteams/platform/get-started/prerequisites?tabs=vscode#get-a-free-teams-developer-tenant-optional). A good practice is to verify whether your Microsoft 365 account has the permission to upload Teams app before you start the Teams app building. In Teams client, select `Apps`. If you cannot see the `Upload custom app` option, you do not have the permission to upload your Teams app.
+Developers must have a Microsoft 365 account before they start to build Teams app. This is the account you use to sign in to Teams. If you do not have one yet, you can get a free Teams developer account by joining the M365 developer program. A good practice is to verify whether your Microsoft 365 account has the permission to upload Teams app before you start the Teams app building. In Teams client, select `Apps`. If you cannot see the `Upload custom app` option, you do not have the permission to upload your Teams app.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/Teams-Toolkit-Accounts.png" alt-text="Teams Toolkit Take a Tour - Accounts":::
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
-Please contact your tenant administrator to [enable Teams custom app and turn on custom app uploading](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading). If you cannot get permission from tenant administrator, you can join M365 developer program. The free Teams developer account you get from M365 developer account is an admin account, so that you can enable the Teams custom app uploading by yourself.
+Please contact your tenant administrator to [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md). If you cannot get permission from tenant administrator, you can join M365 developer program. The free Teams developer account you get from M365 developer account is an admin account, so that you can enable the Teams custom app uploading by yourself.
 
 Azure account is commonly used but not a must-have in Teams app development. If you wish to host your Teams app or access resources on Azure, you need to have an Azure account. Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start. 
 
@@ -105,8 +104,6 @@ Teams Toolkit provides a set of options in the `DEVELOPMENT` section to help dev
 1. `Add capabilities` let developers to add additional Teams Capabilities to their Teams app at any time during development process. For example, you select only Tab when you create a new project because you want to build a Teams Tab app at the beginning, but later you find that a Bot needs to be added to your project due to requirement change or some other reasons. Then you can add new capabilities by clicking this button, Teams Toolkit can help you generate the source code file for the the new capability.  
 1. `Add cloud resources` let developer to add additional cloud resources according to the requirement change.
 1. Developers can use debug feature by clicking the `Run and Debug` button. Teams Toolkit support local debug and remote debug for Teams projects. Before run remote debug, you will need to provision cloud resource first.
-
-:::image type="content" source="~/assets/images/teams-toolkit-v2/Teams-Toolkit-Debug.png" alt-text="Teams Toolkit Take a Tour - Debug":::
 
 1. `Edit manifest file` let developers easily edit how the Teams app integrate with Teams client.  
 
