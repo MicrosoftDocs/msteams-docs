@@ -58,7 +58,7 @@ One of the ways to check if you have a Teams account, verify if you can sideload
 
 1. Select Upload a custom app.
 
-![Upload custom app](~/assets/images/teams-toolkit-v2/upload-custom-app.png)
+![Upload custom app](~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png)
 
 Without sideloading permission, you won’t be able to do any local/remote debugging. So it’s very important to get the sideloading permission for your account before you do any debugging for your Teams app.
 
