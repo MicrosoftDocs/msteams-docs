@@ -11,9 +11,9 @@ keywords: teams scenarios proactive messaging conversation bot
 
 A proactive message is a message that is sent by a bot to start a conversation. You may want your bot to start a conversation for the following reasons:
 
-* Welcome messages for personal bot conversations.
-* Poll responses.
-* External event notifications.
+* Welcome messages for personal bot conversations
+* Poll responses
+* External event notifications
 
 Sending a message to start a new conversation thread is different than sending a message in response to an existing conversation: when your bot starts a new conversation, there is no pre-existing conversation to post the message to. To send a proactive message, you need to:
 
@@ -154,7 +154,7 @@ bot.send(msg);
 
 Your team-added bot can post into a channel to create a new reply chain. If you're using the Node.js Teams SDK, use `startReplyChain()`, which gives you a fully populated address with the correct activity ID and conversation ID. If you're using C#, see the example below.
 
-Alternatively, you can use the REST API and issue a POST request to [`conversation`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
+Alternatively, you can use the REST API and issue a POST request to [`/conversations`](/azure/bot-service/rest-api/bot-framework-rest-connector-send-and-receive-messages?#start-a-conversation) resource.
 
 ### .NET example (from [this sample](https://github.com/OfficeDev/microsoft-teams-sample-complete-csharp/blob/32c39268d60078ef54f21fb3c6f42d122b97da22/template-bot-master-csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs))
 
