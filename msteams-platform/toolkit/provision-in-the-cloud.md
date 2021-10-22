@@ -146,7 +146,7 @@ In certain cases where you don’t have permission to create an Azure Active Dir
  
 ### Change default resource group and resource suffix name
 
-To use an existing resource group, change default resource group name, or change the resource suffix name after a provision.
+To use an existing resource group, change default resource group name, or change the resource suffix name after provision.
 
 **To change default resource group and resource suffix name**
 
