@@ -79,7 +79,7 @@ The Teams Toolkit can create React apps hosted in Azure or SPFx web parts, which
 
 1. Select a workspace folder. A folder is created within your workspace for the project you are creating.
 
-1. Enter a suitable name for your app, like `helloworld`. The name of the app must consist only of alphanumeric characters.  
+1. Enter a suitable name for your app, like `hello world`. The name of the app must consist only of alphanumeric characters.  
 
 1. Press **Enter** to continue.
 
