@@ -23,7 +23,6 @@ Your Teams bot consists of the following:
 * A publicly accessible web service hosted by you.
 * A Bot Framework registration for your web service.
 * Your Teams app package, which connects the Teams client to your web service.
-Hello This is test PR
 
 > [!TIP]
 > Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
@@ -74,7 +73,12 @@ In the cases where bots work better in a channel also work better in a group cha
 
 ### In a one-to-one chat
 
-One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are Q&A bots, bots that initiate workflows in other systems, bots that tell jokes, and bots that take notes. Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
+One-to-one chat is a traditional way for a conversational bot to interact with a user. A few examples of one-to-one conversational bots are:
+* Q&A bots
+* bots that initiate workflows in other systems 
+* bots that tell jokes
+* bots that take notes
+Before creating one-to-one chatbots, consider whether a conversation-based interface is the best way to present your functionality.
 
 ## Disadvantages of bots
 

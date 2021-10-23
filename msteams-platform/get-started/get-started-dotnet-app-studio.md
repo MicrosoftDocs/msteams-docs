@@ -120,32 +120,35 @@ Visual Studio has built-in support for app deployment to different providers, in
 
 **Update the app package**
 
+> [!NOTE]
+>  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+
 # [App Studio](#tab/AS)
 
 [!include [Use App Studio to configure the app package](~/includes/get-started/get-started-use-app-studio.md)]
 
 # [Developer Portal](#tab/DP)
 
-**To install Developer Portal (preview) in Teams**
+**To configure app package in  Developer Portal in Teams**
 
 
-1. Select the **Apps** icon at the bottom of the left-hand bar, and search for **Developer Portal**.
+1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
 
-    <img width="430px" alt="Screenshot of TDP" src="~/assets/images/Screen1.png"/>
+     <img width="600px" alt="Screenshot of TDP" src="~/assets/images/tdp/tdp_home_1.png"/>
 
-1. Select **Developer Portal** and select **Open**.
+1. Go to **Apps**.
 
-    <img width="430px" alt="Screenshot of TDP Open" src="~/assets/images/screen2.png"/>
+    <img width="600px" alt="Open Apps" src="~/assets/images/tdp/screen2.png"/>
 
-1. Select the Apps tab and select **Import an existing app**.
+1. Select **Import an existing app**.
 
-    <img width="430px" alt="Screenshot of import app in tdp" src="~/assets/images/screen3.png"/>
+    <img width="600px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
 
 1. Select **Hello World** and select **Import**. The **Hello World** app is imported in Developer Portal. 
 
     You can configure your app using the Teams Developer Portal. The Manifest is found under Distribute. You can use the Manifest to configure capabilities, required resources, and other important attributes for your app. For more details on how to configure your app using Developer Portal, see [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
 
-    <img width="430px" alt="Screenshot of configure tdp" src="~/assets/images/Screen4.png"/>
+    <img width="600px" alt="Screenshot of configure tdp" src="~/assets/images/tdp/Screen4.png"/>
 ---
 
 <a name="updatecredentials"></a>
