@@ -7,18 +7,20 @@ ms.localizationpriority: medium
 ms.topic: Create new project
 ---
 
-# Create new project  
+# Create a new app
 
-You have two choices to use the Teams Toolkit to start your Teams app building, either create new project or create from samples.
+To build app, you can use Teams toolkit either by creating a new project or by creating from samples.
 
 (pictures used in this part is already in doc repo)
 
+**To create new project**
+
 1. Open Visual Studio code.
-1. Open the Teams Toolkit and select the Teams icon in the sidebar:
+1. Open Teams Toolkit and select **Teams**:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/sidebar-icon.png" alt-text="The Teams Icon in the Visual Studio Code sidebar.":::
 
-1. Select `Create new project`.
+1. Select **Create a new Teams app**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -26,7 +28,7 @@ You have two choices to use the Teams Toolkit to start your Teams app building, 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. In the Select capabilities section, select one of the Teams app capabilities that you want to build. You can select multiple capabilities or you can select one capability and choose `Add capabilities` later when you want.
+1. To add capabilities, select the required app capabilities. You can select multiple capabilities. Fore more information on different capabilities, see 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
