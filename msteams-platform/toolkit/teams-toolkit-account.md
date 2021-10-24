@@ -7,48 +7,47 @@ ms.localizationpriority: medium
 ms.topic: Account
 ---
 
-# Account
+# Require accounts with valid subscription to create apps
 
-To develop a Teams app, you must have the following accounts:
+Teams toolkit enables you to create new apps. To develop Teams app, you must have the following accounts:
 
 * Microsoft 365 account with valid subscription.
 * Azure account only if host your backend resources on Azure.
 
 > [!NOTE}]
-> Azure account is optional if your existing application is hosted on other cloud provider. You can integrate the existing application to Teams platform.
+> Azure account is optional. If your existing application is hosted on other cloud provider, then you can integrate the existing application to Teams platform.
 
-[Better have two icon here]
+[Related images missing]
 
 ## Microsoft 365 Account
 
-If you don’t have an existing Microsoft 365 account with a valid subscription, you can create one by joining the Microsoft 365 developer program. The Microsoft 365 Developer Program includes a Microsoft 365 E5 developer subscription that you can use to create your own sandbox and develop solutions independent of your production environment.  
+You can create Microsoft 365 account by joining Microsoft 365 developer program. The Microsoft 365 developer program includes Microsoft 365 E5 developer subscription. With the valid account, you can create your own sandbox and develop solutions independent of your production environment. The Microsoft 365 E5 developer subscription provides:
+
+* 25 user licenses
+* 90 days free trial for development purposes
 
 ## Azure Account
 
-If you wish to host your app related resources or access resources within Azure, you must have an Azure subscription. You can create a free account before you begin.
-
-Join Microsoft 365 Developer program and create your development environment
-
-If you do not have a Microsoft 365 account, you must sign up for a Microsoft 365 Developer Program subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active. For more information, see set up a Microsoft 365 developer subscription.  
-
-To set up a subscription, you must first join the Microsoft 365 Developer Program. Microsoft 365 developer subscription can be used to build your solutions independent of your production environment. The subscription is a Microsoft 365 E5 Developer subscription with 25 user licenses. It lasts for 90 days and is free to use for development purposes (coding solutions) only. 
+You can create an Azure account if you wish to host your app and access resources within Azure. To set up your subscription, join the Microsoft 365 Developer Program. You can create your development environment with Microsoft 365 developer program. The subscription is free for 90 days and continues to renew. If you have Visual Studio Enterprise or Professional Subscription, both programs include free Microsoft 365 developer subscription. It is active as long as your Visual Studio subscription is active.
 
 ## Microsoft 365 developer program
 
+The following steps guide you to sign-in to Microsoft 365 developer program:
+
 1. Go to the Microsoft 365 developer program.
-1. Select Join Now and follow the onscreen instructions.
-1. In the welcome screen, select Set up E5 subscription.
-1. Set up your administrator account. After you finish, you should see a screen like this.
+1. Select **Join now** and the welcome screen appears.
+1. Select **Set up E5 subscription**.
+1. Set up your administrator account.
+
+The following image depicts Microsoft 365 developer program with valid subscription:
 
 ![Microsoft 365 developer program](~/assets/images/teams-toolkit-v2/microsoft365-developer-program.png)
 
-## What account can I use to sign up for the Microsoft 365 Developer Program?
+You can sign up for developer program with any one of the following account types:
 
-You can sign up for the developer program by using one of the following account types:
+1. Microsoft account for personal use provides access to all consumer-oriented Microsoft products and cloud services, such as Outlook, Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. After you create Microsoft account, you can access consumer-related Microsoft cloud services or Azure.
 
-1. Microsoft account (created by you for personal use) - Provides access to all consumer-oriented Microsoft products and cloud services, such as Outlook (Hotmail), Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
-
-1. Work account (issued by an admin for business use) - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see Manage your Azure AD directory.
+1. Work account issued by admin for business use provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign in  to one of these services as an organization, you can access cloud-based directory provisioned in (AAD) Azure Active Directory to represent your organization. For more information, see: [Manage your Azure AD directory].
 
 1. Visual Studio ID (created for your Visual Studio Professional or Enterprise subscriptions) - We recommend that you use this option to join the developer program from within the Visual Studio Gallery to get the full benefits as a Visual Studio subscriber.
 
