@@ -9,7 +9,7 @@ ms.topic: Create new project
 
 # Create a new app
 
-To build app, you  also use Teams toolkit either by creating a new project or by creating from samples.
+To build any app in Teams, you can use Teams toolkit either by creating a new project or by creating from samples.
 
 (pictures used in this part is already in doc repo)
 
