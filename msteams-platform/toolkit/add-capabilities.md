@@ -33,7 +33,7 @@ Currently there are limitations with TeamsFx when adding more capabilities. The 
 > [!NOTE]
 > If you want to include both bot and messaging extension capabilities, then select them at the same time. You can add them either when you create a new project or a tab application.
 
-## App capabilities support matrix:
+## App capabilities support matrix
 
 The following table provides the list of current capabilities and other capabilities they support:
 

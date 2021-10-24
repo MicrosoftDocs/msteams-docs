@@ -17,7 +17,7 @@ Teams Toolkit helps you to build an app in the following ways:
 
 * Create a new project
 * Create from samples
-For more information, see 
+For more information, see [Create a new app](create-new-project.md)
 
 ## Account
 

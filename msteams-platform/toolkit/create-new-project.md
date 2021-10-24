@@ -9,7 +9,7 @@ ms.topic: Create new project
 
 # Create a new app
 
-To build app, you can use Teams toolkit either by creating a new project or by creating from samples.
+To build app, you  also use Teams toolkit either by creating a new project or by creating from samples.
 
 (pictures used in this part is already in doc repo)
 
@@ -28,48 +28,59 @@ To build app, you can use Teams toolkit either by creating a new project or by c
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-1. To add capabilities, select the required app capabilities. You can select multiple capabilities. Fore more information on different capabilities, see 
+1. Select the required app capability, such as tabs, bots, and messaging extensions. You can also select multiple capabilities. Fore more information on different capabilities, see [app-capabilities-support-matrix]
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-1. In the Frontend hosting type section, select Azure. If you want to host your app in SharePoint, you can select SharePoint Framework(SPFx).
+1. Select **Azure** or **SharePoint Framework(SPFx)** as per the requirement.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
 
-1. If you select Azure, you will jump to Cloud resource section. Select OK if you do not want to add any cloud resources at this time. While if you need additional cloud resources for your application, you can choose to `Add cloud resources` later when you want.
+1. Select the cloud resource from the dropdown or select **OK** if you don't want to add any cloud resources. You can also also add cloud resources later.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-cloud-resources.png" alt-text="Screenshot showing how to add cloud resources for your new app.":::
 
-1. In the Programming Language section, select JavaScript or TypeScript.
+1. Select **JavaScript** or **TypeScript** for programming language
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-programming-languages.png" alt-text="Screenshot showing how to select the programming language.":::
 
-1. If you select SharePoint Framework, select a frontend framework in next section.
+1. Select frontend framework for SharePoint Framework (SPFx) only.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/spfx-which-framework.png" alt-text="Select Framework":::
 
-1. You will be asked to Webpart name and Webpart description, please enter a name and a description as you like.
+1. Enter Webpart name and Webpart description of your choice.
 
-1. Select a workspace folder. A folder is created within your workspace folder for the project you are creating.
+1. Select workspace folder for the built project.
+1. Enter name for your app, such as helloworld. You can only use alphanumeric characters.
+1. Press **Enter** to continue.
 
-1. Enter a suitable name for your app, like helloworld. The name of the app must consist only of alphanumeric characters. Press Enter to continue.
- 
-1. Your hello world Teams app is created within a few seconds.
+You have created a new app.
 
 ## Create from samples
 
-If you do not want to start with hello world application, you can try to explore sample gallery and find something you are interested to start your own work with. Open the the Teams Toolkit for Visual Studio Code. Go to the `DEVELOPMENT` section in Tree View, click on `View samples`.
+You can create an app with the help of samples for reference:
+
+1. Open the the Teams Toolkit for Visual Studio Code.
+1. Go to the **DEVELOPMENT** section in Tree View.
+1. Select **View samples**. 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels.png" alt-text="view samples text":::
 
-You will be redirect to sample gallery where you can explore samples and download them to play with.
+Explore and download samples from **Samples**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples image":::
 
-There is another way to open sample app. Go to the `DEVELOPMENT` section in Tree View, click on `Create new project` and select `Start from samples`. Then select one from the sample list. You can explore sample code and start development from samples then.  
+The following steps provide alternate way to open sample app:
 
-Each sample can run to preview in Teams web client. You can achieve this easily by following the instructions of each sample. Once you downloaded a sample app, an instruction file will be automatically showed up in VS Code. Read it to run the sample.
+1. Go to **DEVELOPMENT**.
+1. Select **Create new project**.
+1. Select **Start from samples**.
+1. Select required sample from the list.
+
+You can run each samples in preview mode for Teams web client. After, you download a sample app, you can see the instruction file with VS Code.
 
 ## See also
 
-[Add links to required sections]
+[Provision in the cloud](provision-in-the-cloud.md)
+[[Add cloud resources](add-cloud-resources.md)
+[Deploy to the cloud](deploy-to-the-cloud.md)
