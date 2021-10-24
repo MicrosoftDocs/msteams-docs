@@ -19,7 +19,9 @@ Teams Toolkit helps you to build an app in the following ways:
 * Create from samples
 For more information, see [Create a new app](create-new-project.md)
 
-## Account
+## Account with valid subscription
+
+Teams toolkit enables you to create new apps with Microsoft 365 account and Azure account only if host your backend resources on Azure. Fore more information on the account details, see [Require accounts with valid subscription to create apps](teams-toolkit-account.md)
 
 ## Provision in the cloud
 
