@@ -51,4 +51,4 @@ For more information, see [configuring an identity provider](~/concepts/authenti
 
 ### Third-party cookies on iOS
 
-After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access. Therefore, the apps that use these cookies for authentication in their Channel or Chat tabs and Personal apps won’t be able to complete the authentication on Teams iOS clients. To ensure the privacy and security concerns, the users must move to a token-based system or use the first-party cookies.
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
