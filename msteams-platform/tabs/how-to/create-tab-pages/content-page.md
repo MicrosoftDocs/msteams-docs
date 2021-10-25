@@ -78,7 +78,7 @@ Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.m
 > [!NOTE]
 > * The behavior on mobile clients is not configurable through the native loading indicator property. Mobile clients show this indicator by default across content pages and iframe-based task modules. This indicator on mobile is shown when a request is made to fetch content and gets dismissed as soon as the request gets completed.
 
-If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, and removal pages and all iframe-based task modules must follow these steps:
+If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based task modules must follow these steps:
 
 **To show the loading indicator**
 
@@ -102,7 +102,6 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-* [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
 
 ## Next step
 
