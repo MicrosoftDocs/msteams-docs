@@ -155,7 +155,7 @@ In interactive mode the APIs allow you to:
 
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
-* Build app to share specific parts of the app to the stage, in client SDK.
+* Build and share specific parts of the app to the stage, in client SDK.
 
 For example: In Trello app you can build each board as a separate URL that can be shared to stage using the API, you can build a button inside the app, when user will clicks button it invokes the API and shares content to stage.
 
