@@ -362,15 +362,10 @@ items:
     ```
 
     1. From an IDE:
-       1. Launch Visual Studio.
-       1. File > Open > Project/Solution.
 
-       ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+       1. Go to Visual Studio.
 
-       1. Navigate to the `TokenApp` folder.
-       1. Select `TokenApp.csproj` file.
-
-       ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
+       1. Open `TokenApp.csproj` file, following the steps given in **Prerequisites** section.
 
        1. Press `F5` to run the project.
     
