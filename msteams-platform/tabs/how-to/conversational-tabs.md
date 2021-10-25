@@ -57,7 +57,7 @@ The `conversationResponse` object contains information related to the conversati
 
 ## Continue a conversation
 
-After a conversation starts, subsequent calls to `openConversation()` require, that you also provide the same inputs as in [start a new conversation](#start-a-new-conversation), but also include the **conversationId**. The conversation panel opens for the users with the appropriate conversation in view. Users can see new or incoming messages in real time.
+After a conversation starts, subsequent calls to `openConversation()` require, that you also provide the same inputs as in [start a new conversation](#start-a-new-conversation), but also include the **conversationId**. The conversation panel opens for the users with the appropriate conversation in view. Users can see new or incoming messages in real-time.
 
 The following image shows the conversation panel with the appropriate conversation:
 
