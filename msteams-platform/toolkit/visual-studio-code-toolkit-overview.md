@@ -29,6 +29,7 @@ Teams Toolkit provides secure environment to place application resources to the 
 
 ## Debug
 
+
 ## Deploy to the cloud
 
 Teams Toolkit helps you to deploy your project code to the provisioned cloud resources with a single command. You can deploy or upload the backend and frontend code in your application to the corresponding provisioned cloud resources in Azure. For more information, see [Deploy to the cloud](deploy-to-the-cloud.md).
