@@ -34,7 +34,7 @@ For using proactive messages effectively, see [best practices for proactive mess
 
 ## Get the user ID, team ID, or channel ID
 
-To create a new conversation or conversation thread in a channel, you must have the correct ID. You can receive or retrieve this ID using any of the below:
+To create a new conversation or conversation thread in a channel, you must have the correct ID. You can receive or retrieve this ID using any of the following:
 
 * When your app is installed in any particular context, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
 * When a new user is added to a context where your app is installed, you receive an [`onMembersAdded` activity](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
@@ -50,7 +50,7 @@ After you have the user or channel information, you must create the conversation
 
 ## Create the conversation
 
-Create the conversation if it does'nt exist or you do'nt know the `conversationId`. You can only create the conversation once and store the `conversationId` value or `conversationReference` object.
+You must create the conversation if it does not exist or you don't know the `conversationId`. You can only create the conversation once and store the `conversationId` value or `conversationReference` object.
 
 After the conversation is created, you must get the conversation ID.
 
@@ -62,7 +62,7 @@ After you get the appropriate address information, you can send your message.
 
 ## Send the message
 
-Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. Set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
+Now that you have the right address information, you can send your message. If you're using the SDK, you must use the `continueConversation` method, and the `conversationId` and `tenantId` to make a direct API call. You must set the `conversationParameters` correctly to successfully send your message. See the [samples](#samples) section or use one of the samples listed in the [code sample](#code-sample) section.
 
 Now that you've sent the proactive message, you must follow these best practices while sending proactive messages for better information exchange between users and the bot.
 
@@ -74,21 +74,20 @@ Sending proactive messages is an effective way to communicate with your users. H
 
 When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. An opportunity to create a good first impression. The best welcome messages must include:
 
-* Why a user is receiving the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel send a welcome message to all users, let them know what channel it was installed in and who installed it.
-* What do you offer - Users must be able to identify what they can do with your app and what value can you bring to them.
-* What should they do next - Invite users to try out a command, or interact with your app.
-
+* Why a user is receiving the message: It must be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and who installed it.
+* What do you offer: Users must be able to identify what they can do with your app and what value can you bring to them.
+* What should they do next: Invite users to try out a command, or interact with your app.
 Poor welcome messages can lead the users to block your bot. Write to the point and clear welcome messages. Iterate on the welcome messages if they are not having the desired effect.
 
 ### Notification messages
 
 To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following:
 
-* What happened - A clear indication of what happened to cause the notification.
+* What happened: A clear indication of what happened to cause the notification.
 * What was the result: It must be clear, what item is updated to get the notification.
-* Who or what triggered it - Who or what took action, that caused the notification to be sent.
-* What can users do in response - Make it easy for your users to take actions based on your notifications.
-* How can users opt-out - Provide a path for users to opt-out of additional notifications.
+* Who or what triggered it: Who or what took action, that caused the notification to be sent.
+* What can users do in response: Make it easy for your users to take actions based on your notifications.
+* How can users opt-out: Provide a path for users to opt-out of additional notifications.
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
@@ -246,7 +245,7 @@ POST /v3/conversations
 }
 ```
 
-Supply the user ID and the tenant ID. If the call succeeds, the API returns the following response object:
+You must supply the user ID and the tenant ID. If the call succeeds, the API returns the following response object:
 
 ```json
 {
