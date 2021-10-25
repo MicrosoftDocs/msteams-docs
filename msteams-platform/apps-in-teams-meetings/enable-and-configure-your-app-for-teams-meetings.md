@@ -126,12 +126,12 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 > [!NOTE]
 > Currently, the feature is available in developer preview only.
 
-Shared meeting stage allows meeting participants to interact and collaborate on app in real time. The  share to stage capability from the client allows to share the full app to stage. The users can share the entire app from the `sidePanel` to meeting stage for co-authoring or collaboration.
+Shared meeting stage allows meeting participants to interact and collaborate on app in real time. The  share to stage capability from the client allows to share the full app to stage. The users can share the entire app from the side panel to meeting stage for co-authoring or collaboration.
 
 The prerequisites are as follows:
 
 * Have `meetingSidePanel` context.
-* Provide `MeetingStage` value in manifest. For more information, see [`MeetingStage` details](API-references.md#prerequisite)
+* Provide `meetingStage` value in manifest. For more information, see [`meetingStage` details](API-references.md#prerequisite).
 
 To enable shared meeting stage, configure your app manifest as follows:
 
@@ -151,14 +151,13 @@ To enable shared meeting stage, configure your app manifest as follows:
   ]
 ```
 
-In interactive mode the APIs allow you to:
+In share to stage the APIs allow you to:
 
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
 * Build and share specific parts of the app to the stage, in client SDK.
 
-If you want to share specific parts of the app, there are few APIs and prerequisites added.
-For more information on Teams Client SDK APIs and prerequisites, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis) and [Prerequisite](API-references.md#prerequisite).
+You can share specific parts of the app by adding Teams client SDK API. For more information on the specific APIs, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis).
 
 For more information on design guidelines, see [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
@@ -169,7 +168,6 @@ The following image shows the full app shared to stage during meeting:
 The following image shows specific parts of the app to be shared to stage during meeting:
 
 ![Share specific parts to stage during meeting experience](~/assets/images/apps-in-meetings/share-specific-content-to-stage.png)
-
 
 ### After a meeting
 
