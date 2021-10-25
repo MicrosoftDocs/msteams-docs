@@ -1,6 +1,6 @@
 ---
-title: M
-author: Rajeshwari-v
+title: Manifest editor
+author: Abira D
 description:  Describes about manifest
 ms.author: surbhigupta
 ms.localizationpriority: medium
@@ -9,7 +9,7 @@ ms.topic: Account
 
 # Manifest editor
 
-A manifest file describes how your app is configured, including its capabilities, required resources, and other important attributes. For each Teams app, a manifest file is needed and should be uploaded to Teams platform through Teams Developer Portal, Teams toolkit, etc to register your app to Teams platform. 
+A manifest file describes how your app is configured, including its capabilities, required resources, and other important attributes. For each Teams app, you need a manifest file uploaded to Teams platform through Teams Developer Portal, Teams toolkit, etc to register your app to Teams platform.
 
 After your app is registered to Teams platform, you can view your Teams app via Teams Developer Portal -> Apps.
 
