@@ -18,7 +18,7 @@ After you have identified *who* the user is and *what* problem you will solve, i
 While choosing the app scope, consider the following:
 
 * An app can exist across scopes.
-* App capabilities, such as messaging extensions, follow users across scopes.
+* App capabilities, such as messaging extensions follow users across scopes.
 * Users are often hesitant to add apps to Teams or channels.
 * Guests can access content exposed in Teams or channels.
 
@@ -29,7 +29,7 @@ You can choose between personal scope and team or channel scope for your app dep
   * Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization wide events in a company.
   * Are there any personalized notifications or messages that will need to be sent to a user throughout the Teams app experience? For example, reminders for approvals or registrations.
 * For a shared scope (team, channel, or chat), ask the following questions:
-  * Is the information presented by the app, either in tab or through a bot, relevant and useful for most members in a Team? For example, Scrum app.
+  * Is the information presented by the app, either in tab or through a bot, relevant and useful for most of the members in a Team? For example, Scrum app.
   * Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. 
   * Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket.
 
@@ -40,7 +40,7 @@ The following scenarios will guide you in understanding the selection of entry p
 
 ## Create, share, and collaborate on items in an external system
 
-App for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
+Apps for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
 
 * **Messaging extensions with search commands**: Search external systems and share the results as an interactive card.
 
