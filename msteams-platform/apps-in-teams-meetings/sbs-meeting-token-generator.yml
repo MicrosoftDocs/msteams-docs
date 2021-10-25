@@ -78,7 +78,7 @@ items:
     Ensure the following changes are made to the properties of `TokenApp.csproj` file:
 
     1. Launch Visual Studio 2019.
-    1. Navigate to File > Open > Project/Solution.
+    1. Navigate to `File > Open > Project/Solution`.
     
        ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
@@ -295,7 +295,7 @@ items:
          ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
      > [!NOTE]
-     > * Users only need to consent to these permissions if the AAD app is registered in a different tenant.
+     > * Users need to consent to these permissions only if the AAD app is registered in a different tenant.
      > * If you get an error that the domain is already owned and you're the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) to register the domain. Then repeat step 7 given earlier. (This error also occurs if you aren't signed in with Admin credentials in the Office 365 tenancy).
      > * If you don't receive the User Principal Name(UPN) in the returned access token, you add it as an [optional claim](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
@@ -303,37 +303,45 @@ items:
 - title: Setting up app settings
   durationInMinutes: 1
   content: |
-    Set up the appsettings.json with the following keys:  
+    1. Navigate to `appsettings.json` in cloned repository:
 
-    * `"MicrosoftAppId"`: Set up with the application (client) ID of the bot's Azure AD application.
-    * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
-    * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used
+        ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
+
+    1. Open `appsettings.json` in **Visual Studio Code** and make the following changes:  
+
+         * `"MicrosoftAppId"`: Set up with the application (client) ID of the bot's Azure AD application.
+         * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
+         * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used
 
        > [!NOTE]
        > The sample will only work in this tenant.
 
-    * `"AzureAd"."ApplicationId "`: Set it to the same value as `MicrosoftAppId` provided earlier.
-    * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
+         * `"AzureAd"."ApplicationId "`: Set it to the same value as `MicrosoftAppId` provided earlier.
+         * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
 
        > [!NOTE]
        > `[WebAppDomain]` will be your ngrok domain, so the content bubble URL will be similar to `https://f631****.ngrok.io/contentBubble.html`.
 
-       ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
+        ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
 - title: Setting up manifest file
   durationInMinutes: 1
   content: |
-    To set up manifest file:
+    1. Navigate to `manifest.json` in cloned repository:
+
+        ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
     
-    1. Set up "manifestVersion" to "1.11".
-    1. Set up "$schema" to "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json".
-    1. Set up "[companyName]" to "Contoso".
-    1. Set up the following sections to your fully qualified domain name:
-       1. [websiteUrl]
-       1. [privacyUrl]
-       1. [termsOfUseUrl]
-    1. Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-    1. Replace all occurrences of `[MicrosoftAppId]` with your application ID as provided in previous steps. 
+    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
+
+         * Set up "manifestVersion" to "1.11".
+         * Set up "$schema" to "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json".
+         * Set up "[companyName]" to "Contoso".
+         * Set up the following sections to your fully qualified domain name:
+           * [websiteUrl]
+           * [privacyUrl]
+           * [termsOfUseUrl]
+         * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
+         * Replace all occurrences of `[MicrosoftAppId]` with your application ID as provided in previous steps. 
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img1.png)
 
@@ -346,6 +354,11 @@ items:
     To build client app using 'npm install':
     
     1. Navigate to the `App` folder in a terminal.
+       1. Copy `App` folder path present in cloned repository.
+       1. In a terminal window, change the directory to the copied `App` path.
+
+       ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
+
     1. Run `npm install`.
     1. Run `npm run build` to build the app.
        * `"id": "[MicrosoftAppId]"`.
@@ -353,7 +366,7 @@ items:
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
-    This process generates the `/dist` folder inside the app where the assets will get copied. The server will serve the static files from this location.
+    This process generates the `/dist` folder inside the `App` folder where the assets get copied. The server will serve the static files from this location.
 
        ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
@@ -414,7 +427,9 @@ items:
   durationInMinutes: 1
   content: |
     To build client app
-    1. Create a .zip with the following files that are present in the `Resources/Manifest` folder. 
+    1. In your cloned repository, navigate to `csharp > Resources > Manifest`.
+
+    1. Create a .zip with the following files that are present in the `Manifest` folder. 
        * manifest.json
        * icon-outline.png
        * icon-color.png
