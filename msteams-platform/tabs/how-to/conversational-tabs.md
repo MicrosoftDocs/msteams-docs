@@ -28,8 +28,8 @@ microsoftTeams.conversations.openConversation(openConversationRequest);
 
 **openConversation** takes the following inputs to start a conversation in a channel:
 
-* **subEntityId**: ID of your specific subentity. For example, task-123.
-* **entityId**: ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
+* **subEntityId**: The ID of your specific subentity. For example, task-123.
+* **entityId**: The ID of the tab instance when it was created. The ID is important to refer back to the same tab instance.
 * **channelId**: The channel in which the tab instance resides.
    > [!NOTE]
    > The **channelId** is optional for channel tabs. However, it is recommended if you want to keep your implementation across channel and static tabs the same.
