@@ -48,7 +48,7 @@ Teams Toolkit provides Azure function app as a cloud resource to host app in clo
 
 ## Manifest editor
 
-The Teams manifest describes how the app integrates into the Microsoft Teams product. 
+The Teams manifest describes how the app integrates into the Microsoft Teams product. For more information, see [Manifest editor](manifest-editor.md)
 
 ## Build CI/CD Pipeline for Teams application
 

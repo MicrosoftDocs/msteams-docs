@@ -7,15 +7,16 @@ ms.localizationpriority: medium
 ms.topic: Publish
 ---
 
-# Publish Teams apps using Teams Toolkit 
+# Publish Teams apps using Teams Toolkit
 
-Once you have finished making the app, you can distribute your Microsoft Teams app to different scope, such as individual, team, organization, or anyone. How you distribute depends on several factors, including needs, business and technical requirements, and your goals for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app need to go through for security and compliance concerns. 
+After creating the app, you can distribute your app to different scope, such as individual, team, organization, or anyone. The distribution depends on multiple factors, including needs, business and technical requirements, and your goal for the app. Distribution to different scope may need different review process. In general, the bigger the scope, the more review the app need to go through for security and compliance concerns.
 
 ## Publish to individual scope (sideloading permission)
 
-Users can add a custom app to Teams by uploading an app package (in a .zip file) directly to a team or in the personal context. This is different from how apps are added through the Teams app store. Adding a custom app by uploading an app package, also known as side loading, lets you test an app as it's being developed,before it's ready to be widely distributed.  This makes sense in the following scenarios:
-* You want to test and debug an app locally yourself or with other developers.
-* You built an app just for yourself. For example, to automate a workflow.
+Users can add custom app to Teams by uploading an app package in a .zip file directly to a team or in personal context. Adding a custom app by uploading an app package, also known as side loading, allows you test app as it's being developed,before it's ready to be widely distributed as mentioned in the following scenarios:
+
+* Test and debug an app locally yourself or with other developers.
+* Built an app just for yourself. For example, to automate a workflow.
 * You built an app for a small set of users, such as, your work group.
 
 It also lets you build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
@@ -23,7 +24,8 @@ It also lets you build an app for internal use only and share it with your team 
  ![Publish to individual scope](~/assets/images/teams-toolkit-v2/upload-app.png)
 
 ## Publish to organization scope
-When the app is ready for use in production, the developer can submit the app using the Teams App Submission API, which can be called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. Doing this makes the app available on the Manage apps page of the Microsoft Teams admin center, where you, the admin, can review and approve it.this
+
+When the app is ready for use in production, the developer can submit the app using the Teams App Submission API, called from Graph API, an integrated development environment (IDE) such as Visual Studio Code installed with Teams toolkit. Doing this makes the app available on the Manage apps page of the Microsoft Teams admin center, where you, and the admin, can review and approve it.
 
 As an admin, the manage apps page in the Microsoft Teams admin center is where you view and manage all Teams apps for your organization. Here, you can see the org-level status and properties of apps, approve or upload new custom apps to your organization's app store, block or allow apps at the org level, add apps to teams, purchase services for third-party apps, view permissions requested by apps, grant admin consent to apps, and manage org-wide app settings.
 [Manage apps page in teams admin center]
@@ -61,10 +63,11 @@ When you feel your app is production ready, you can begin the process of getting
  
 >[!Tip]
 > Following the pre-submission steps closely can increase the possibility that Microsoft approves your app for publishing.
+
 *	Review the Teams store validation guidelines to make sure your app meets Teams app and store standards.
 *	Create a Partner Center developer account.
 *	Prepare your store submission, which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
 *	Submit your app through Partner Center.
-*	If your submission fails, work with Microsoft directly to resolve the issues and resubmit your app(link to resolve the issues and resubmit your app.).
+*	Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app.).
 
  ![Pre submission steps](~/assets/images/teams-toolkit-v2/pre-submission-steps.png)
