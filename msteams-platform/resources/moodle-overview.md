@@ -52,5 +52,5 @@ For more information, see [mConnect by Skooler](https://skooler.com/mconnect/how
 
 ## Microsoft 365 Moodle Plugins
 
-Moodle plugins for Teams make it easy to schedule, deliver, and collaborate on course content. Install the plugins that seamlessly bring the Moodle learning management system into Teams. For more information, see [Install Moodle LMS](moodleInstructions.md).
+Moodle plugins for Teams makes it easy to schedule, deliver, and collaborate on course content. Install the plugins that seamlessly bring the Moodle learning management system into Teams. For more information, see [Install Moodle LMS](moodleInstructions.md).
 
