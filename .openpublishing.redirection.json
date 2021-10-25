@@ -707,10 +707,6 @@
       {
         "source_path": "msteams-platform/get-started/get-started-yeoman.md",
         "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
-      },
-      {
-        "source_path": "msteams-platform/get-started/get-started-yeoman.md",
-        "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
       }
     ]
 }
