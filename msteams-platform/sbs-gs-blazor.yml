@@ -418,7 +418,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Edit personal tab settings":::
 
-    1. Replace the URL with the environment variable in the **Content Url** and **Website Url** fields.
+    1. Replace the URL with the environment variable in the **Content URL** and **Website URL** fields.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Edit personal tab URLs":::
 

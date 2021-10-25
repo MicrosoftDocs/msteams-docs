@@ -50,7 +50,7 @@ items:
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
     | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
     | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run. It includes the authentication helpers for running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
-    | &nbnp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+    | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
     | &nbsp; | [ngrok](https://ngrok.com/download) | Teams app features (conversational bots and messaging extensions) require inbound connections. A tunnel connects your development system to Teams. It isn't required for apps that include only tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
 
@@ -286,7 +286,7 @@ items:
         Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
-    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
@@ -341,7 +341,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-        > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built.  A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
 
         The Toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
 
@@ -504,7 +504,7 @@ items:
         Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
-    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
@@ -559,7 +559,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed.":::
 
-        > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens when the build is complete. This process can take 3-5 minutes to complete.
 
         Your web browser starts to run the app.
 
@@ -575,7 +575,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/run-bot.png" alt-text="Screenshot showing the bot is running on Teams client.":::
 
-        You can type `welcome` to show an introduction card, and `learn` to go to adaptive card and bot command documentation.
+        You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
         You can do normal debugging activities, such as setting breakpoints, as with any other web application. Open the `bot/teamsBot.js` file and locate the `onMessage()` method. Set a breakpoint on any case. Then type some text.
 
@@ -719,7 +719,7 @@ items:
         Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account.
-    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name.
@@ -769,7 +769,7 @@ items:
 
         </details>
 
-        > When you run the app for the first time, all dependencies are downloaded and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This can take 3-5 minutes to complete.
 
           Teams opens in a web browser.
         1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams.
@@ -838,7 +838,7 @@ items:
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
-    1. Close the browser when prompted, and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 

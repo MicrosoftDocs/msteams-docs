@@ -137,7 +137,7 @@ items:
 
     1. Enter the location where you want to clone the repo, and select **Clone**.
 
-        The sample repo is cloned and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
+        The sample repo is cloned, and Visual Studio opens. You can view the cloned repo in the **Solution Explorer**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-repo-cloned.png" alt-text="Sample repo for c# Teams app cloned" border="false":::
 
@@ -244,7 +244,7 @@ items:
         > [!NOTE]
         > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
         > [!TIP]
-        > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app. You have to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
+        > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app, when you'll need to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
 
         The app is available only during the current session on your computer. It isn't available if the machine is shut down or goes to sleep. If you restart the service, the app returns a new address. Then, update every location using the old address with the new one. Remember to do this step when you share the app for testing.
 

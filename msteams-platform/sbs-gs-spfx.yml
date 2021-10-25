@@ -298,7 +298,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Screenshot showing how to start an SPFx app in a local workbench.":::
 
         > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This process can take 3-5 minutes to complete.
 
         After the SharePoint Workbench is loaded:
 
@@ -357,7 +357,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
 
-        The app package is built and you can see a message for uploading the package to SharePoint site.
+        The app package is built, and you can see a message for uploading the package to SharePoint site.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-package-complete.png" alt-text="Screenshot for the Sharepoint App Package message":::
 
@@ -389,7 +389,7 @@ items:
 
     ## Upload the app package to SharePoint
 
-    The SharePoint package is located in `SPFx/sharepoint/solution` within your project. Upload the package to SharePoint:
+    You'll find the SharePoint package at `SPFx/sharepoint/solution`. Upload the package to SharePoint:
 
     1. Log into Microsoft 365 Admin Console.
     1. Open the SharePoint App Catalog.
