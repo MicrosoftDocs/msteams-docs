@@ -166,14 +166,14 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
+    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Create a new Teams app**. (The UI may look different depending on the Toolkit version and your environment.)
+    1. Select **Create a new Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar." border="false":::
 
@@ -812,7 +812,6 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/msgext-app-sample-result.png" alt-text="Screenshot that shows the search result" border="false":::
 
         Now, you've learned how to build and run a basic message extension!
-
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
