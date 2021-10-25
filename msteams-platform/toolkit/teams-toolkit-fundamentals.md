@@ -11,7 +11,7 @@ ms.topic: overview
 
 The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a zero-configuration approach to the developer experience.  
 
-There is also a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) for Teams app development (called `teamsfx`).
+There is a Teams Toolkit for Visual Studio and a [CLI tool](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) for Teams app development (called `teamsfx`).
 
 ## Install the Teams Toolkit for Visual Studio Code
 
@@ -21,15 +21,15 @@ There is also a Teams Toolkit for Visual Studio and a [CLI tool](https://github.
 
 1. In the search box, enter _Teams Toolkit_.
 
-1. Select on the green install button next to the Teams Toolkit.
+1. Select install button next to the Teams Toolkit.
 
-You also can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+You can find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following tools are installed by the Visual Studio Code extension when they are needed. If already installed, the installed version is used instead. If using Linux (including WSL), you must install these tools before use:
+If you are using Linux (including WSL), you must install the following tools:
 
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local)
 
-Azure Functions Core Tools is used to run any backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It is installed within the project directory using the npm `devDependencies`.
+Azure Functions Core Tools is used to run backend components locally during a local debug run, authentication is required when running your services in Azure and installed within the project directory using the npm `devDependencies`.
 
 - [.NET SDK](/dotnet/core/install/)
 
@@ -37,7 +37,7 @@ The .NET SDK is used to install customized bindings for local debugging and Azur
 
 - [ngrok](https://ngrok.com/download)
 
-Some Teams app features (conversational bots, messaging extensions, and incoming webhooks) require inbound connections. You need to expose your development system to Teams through a tunnel. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
+The Teams app features like conversational bots, messaging extensions, and incoming webhooks require inbound connections. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
 ## Supported Teams Apps Capabilities
 [Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points. Your Teams app can contain one or more Teams App Capabilities. Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
@@ -48,13 +48,13 @@ Some Teams app features (conversational bots, messaging extensions, and incoming
 
 * [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
 
-Your Teams project can contain either one of the capabilities or a mixture of two or three capabilities from above.
+Your Teams project can contain either one of the capabilities or all three capabilities from above.
 
-You can select the capabilities you want when you create the Teams Project.
+You can select any capability when you create the Teams Project.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Select capabilities to Create New Project":::
 
-And Teams Toolkit provides flexibility to add more capabilities in later process of Teams app development.
+Teams Toolkit provides flexibility to add more capabilities in further process of Teams app development.
 
 :::image type="content" source="../assets/images/tools-and-sdks/add-capabilities.png" alt-text="add capabilities":::
 
