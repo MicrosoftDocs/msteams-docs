@@ -256,7 +256,7 @@ items:
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
-    1. Select *Add a client application*. 
+    1. Select **Add a client application**. 
 
     1. Enter each of the following client IDs and select the authorized scope you created in the previous step:</br>
          * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application).
