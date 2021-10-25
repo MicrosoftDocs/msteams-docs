@@ -128,11 +128,11 @@ For more information about provision and deploy, see [Provision in the cloud](pr
 
 1. Developer Portal for Teams is where you can manage and distribute your Teams app.  
 
-1. Teams Toolkit also provides CI/CD template for popular CI/CD tools like GitHub Workflow, Azure DevOps and Jenkins. For other tools it has guidance on how to build CI/CD pipeline. Refer to [CI/CD Guidance](placeholder, point to CI CD page) for more information
+1. Teams Toolkit also provides CI/CD template for CI/CD tools like GitHub Workflow, Azure DevOps and Jenkins. For tools on how to build CI/CD pipeline, see [Build CI/CD pipelines for Teams application](build-pipelines.md)
 
 ### HELP AND FEEDBACK
 
-In this section developers can easily find the documentation and resources they need. Developers can click `Report issue on GitHub` button in the Teams Toolkit to get quick support from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to browse and ask questions.
+In this section you can easily find the documentation and resources you need. You can select `Report issue on GitHub` in the Teams Toolkit to get quick support from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to browse and ask questions.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/Teams-Toolkit-Help.png" alt-text="Teams Toolkit Take a Tour - Help and feedback":::
 
