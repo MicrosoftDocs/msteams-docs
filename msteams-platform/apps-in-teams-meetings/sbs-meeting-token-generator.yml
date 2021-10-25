@@ -72,6 +72,9 @@ items:
 
        ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
 
+- title: Setting up project file properties
+  durationInMinutes: 1
+  content: |
     Ensure the following changes are made to the properties of `TokenApp.csproj` file:
 
     1. Launch Visual Studio 2019.
@@ -200,7 +203,7 @@ items:
 - title: Update the AAD app registration for tab SSO
   durationInMinutes: 1
   content: |
-    Follow the steps given below to register your app through the AAD portal:  
+    Register your app through the AAD portal:  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -428,7 +431,7 @@ items:
 
        ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
    
-    1. Select on "Upload a custom app" and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+    1. Select "Upload a custom app" and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
@@ -448,7 +451,7 @@ items:
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
-    1. Now the app will be visible in the meeting chat.
+    Now the app will be visible in the meeting chat.
    
     1. Start the meeting and the icon should be visible in the meeting control bar.
 
