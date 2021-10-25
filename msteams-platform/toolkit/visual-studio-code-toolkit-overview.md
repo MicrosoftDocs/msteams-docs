@@ -27,8 +27,9 @@ Teams toolkit enables you to create new apps with Microsoft 365 account and Azur
 
 Teams Toolkit provides secure environment to place application resources to the cloud, you must have Azure and Microsoft 365 cloud services to host the applications, Teams Toolkit directly access applications from the cloud. For more information, see [Provision in the cloud](provision-in-the-cloud.md).
 
-## Debug
+## Debug app locally or remotely
 
+Teams Toolkit allows you to host your app locally or remotely by launching a Teams app already deployed to a remote cloud. For more information, see [Debug using Teams Toolkit](teams-toolkit-debug.md)
 
 ## Deploy to the cloud
 
@@ -45,7 +46,9 @@ Teams Toolkit provides bots, tabs, and messaging extensions as capabilities to i
 
 Teams Toolkit provides Azure function app as a cloud resource to host app in cloud. After provisioning for resources in cloud, you can add more resources. For more information, see [Add cloud resources](add-cloud-resources.md).
 
-## Manifest
+## Manifest editor
+
+The Teams manifest describes how the app integrates into the Microsoft Teams product. 
 
 ## Build CI/CD Pipeline for Teams application
 
@@ -55,3 +58,4 @@ Teams Toolkit helps to automate your development workflow when building Teams ap
 
 The Microsoft Teams Toolkit helps you to create and deploy. Teams apps to cloud storage with integrated identity access, data from Microsoft Graph, and other services in Azure and Microsoft 365. For more information on building app with Teams Toolkit, see [Build apps with the Teams Toolkit and Visual Studio Code](visual-studio-code-overview.md).
 
+## See also

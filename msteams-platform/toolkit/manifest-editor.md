@@ -1,6 +1,6 @@
 ---
 title: Manifest editor
-author: Abira D
+author: surbhigupta12
 description:  Describes about manifest
 ms.author: surbhigupta
 ms.localizationpriority: medium
@@ -37,4 +37,6 @@ Edit Teams app manifest file within Teams Toolkit
 
 ## See also
 
-[Require accounts with valid subscription to create apps](teams-toolkit-account.md)[Publish Teams apps using Teams Toolkit](teams-toolkit-publish.md)
+* [Require accounts with valid subscription to create apps](teams-toolkit-account.md)
+* [Publish Teams apps using Teams Toolkit](teams-toolkit-publish.md)
+* [Manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)
