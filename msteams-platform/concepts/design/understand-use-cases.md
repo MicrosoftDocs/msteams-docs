@@ -39,7 +39,7 @@ Sometimes the answer is, *We want to solve this problem for all Teams users ever
 
 Knowing the limitations of the apps for data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture. Again, ask relevant questions, such as:
 
-* What are the challenges with back-end integration of the current app?
+* What are the challenges with back end integration of the current app?
 * Who owns the back end data? In-house or third-party.
 * Are there firewalls that impact the functioning of the app?
 * Are there APIs to access the data you need for functioning of your app? 
