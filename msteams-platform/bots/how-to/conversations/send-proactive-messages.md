@@ -72,7 +72,7 @@ Sending proactive messages to the users is an effective way to communicate with 
 
 ### Welcome messages
 
-When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. An opportunity to create a good first impression. The best welcome messages must include:
+When proactive messaging is used to send a welcome message to a user, there's no context for why the users receive the message. This is also the first time users interact with your app. It is an opportunity to create a good first impression. The best welcome messages must include:
 
 * Why a user is receiving the message: It must be very clear to the user why they are receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and who installed it.
 * What do you offer: Users must be able to identify what they can do with your app and what value can you bring to them.
