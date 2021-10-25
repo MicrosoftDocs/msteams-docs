@@ -81,7 +81,7 @@ Following is the process to invoke Stage View:
 * The bot responds with a `200` code.
 
 > [!NOTE]
-> On Mobile Clients, invoking Stage View for apps disrutbed through the [Teams store](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) and not having a moblie-optimized experience will open the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> On Mobile Clients, invoking Stage View for apps disrutbed through the [Teams store](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/apps-publish-overview) and not having a moblie-optimized experience will open the default web browser of the device. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ## Invoke Stage View through deep link
 
