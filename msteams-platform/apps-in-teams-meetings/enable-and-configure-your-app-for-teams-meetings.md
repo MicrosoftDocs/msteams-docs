@@ -131,7 +131,7 @@ Shared meeting stage allows meeting participants to interact and collaborate on 
 The prerequisites are as follows:
 
 * Have `meetingSidePanel` context.
-* Provide `MeetingStage` value in one of the manifest fields.
+* Provide `MeetingStage` value in manifest. For more information, see [`MeetingStage` details](API-references.md#prerequisite)
 
 To enable shared meeting stage, configure your app manifest as follows:
 
@@ -157,20 +157,19 @@ In interactive mode the APIs allow you to:
 * Check whether the app is being shared to stage.
 * Build and share specific parts of the app to the stage, in client SDK.
 
-For example: In Trello app you can build each board as a separate URL that can be shared to stage using the API, you can build a button inside the app, when user will clicks button it invokes the API and shares content to stage.
-
 If you want to share specific parts of the app, there are few APIs and prerequisites added.
 For more information on Teams Client SDK APIs and prerequisites, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis) and [Prerequisite](API-references.md#prerequisite).
 
-The image below shows the full app shared to stage during meeting:
+For more information on design guidelines, see [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+The following image shows the full app shared to stage during meeting:
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
-The image below shows specific parts of the app to be shared to stage during meeting:
+The following image shows specific parts of the app to be shared to stage during meeting:
 
 ![Share specific parts to stage during meeting experience](~/assets/images/apps-in-meetings/share-specific-content-to-stage.png)
 
-See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 ### After a meeting
 

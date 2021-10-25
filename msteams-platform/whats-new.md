@@ -179,7 +179,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|10/25/2021|Interactive mode for shared meeting stage|[Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage)|
+|10/25/2021|Interactive mode for shared meeting stage|[Shared meeting stage](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage), [Teams client SDK APIs](apps-in-teams-meetings/API-references.md#teams-client-sdk-apis)|
 |10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
 |10/14/2021 | Monetize your Teams app with a transactable SaaS offer. | [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md). |
 |06/21/2021|Uninstall behavior for personal app with bot | [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
