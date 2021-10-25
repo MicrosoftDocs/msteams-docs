@@ -35,7 +35,10 @@ Teams Toolkit allows you to host your app locally or remotely by launching a Tea
 
 Teams Toolkit helps you to deploy your project code to the provisioned cloud resources with a single command. You can deploy or upload the backend and frontend code in your application to the corresponding provisioned cloud resources in Azure. For more information, see [Deploy to the cloud](deploy-to-the-cloud.md).
 
-## Publish
+## Publish Teams apps using Teams Toolkit
+
+You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
+Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions. 
 
 ## Add capabilities
 

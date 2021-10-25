@@ -41,6 +41,7 @@ Here's an example of what this app submission step looks like in Visual Studio C
 Keep in mind that this doesn't publish the app to your organization's app store yet. This step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
 
 ## Admin approval for submitted Teams apps
+
 The admin of your Teams tenant can then go to the Manage apps page in the Microsoft Teams admin center (in the left navigation, go to Teams apps > Manage apps), gives you a view into all Teams apps for your organization. The Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
 In the table, a newly submitted app automatically shows a Publishing status of Submitted and Status of Blocked. You can sort the Publishing status column in descending order to quickly find the app.
 
@@ -51,11 +52,13 @@ Click the app name to go to the app details page. On the About tab, you can view
  ![Details about admin approved submitted teams app](~/assets/images/teams-toolkit-v2/about-submitted-app.png)
 
 When you're ready to make the app available to users, publish the app.
+
 1.	In the left navigation of the Microsoft Teams admin center, go to Teams apps > Manage apps.
 2.	Click the app name to go to the app details page, and then in the Publishing status box, select Publish.
 After you publish the app, the Publishing status changes to Published and the Status automatically changes to Allowed.
 
 ## Publish to Microsoft Store
+
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
 Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 Understand the publishing process
