@@ -224,7 +224,7 @@ items:
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
     1. Insert your fully qualified domain name between `api://` and `/{AppID}` as given below:
-        `api://subdomain.example.com/{AppID}`</br>.
+        `api://subdomain.example.com/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
         
@@ -389,7 +389,7 @@ items:
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
   content: |
-    Follow these instructions to enable developer preview
+    Follow these instructions to enable developer preview:
 
        > [!NOTE]
        > Developer preview mode must be enabled on each Teams client app or browser.
