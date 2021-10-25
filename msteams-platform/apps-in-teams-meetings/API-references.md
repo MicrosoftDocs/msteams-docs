@@ -47,6 +47,47 @@ The following table provides APIs added to Teams client SDK:
 |**getAppContentStageSharingState**|Returns information on current stage sharing state for app.|
 |**startAppSegmentSharing**|Responsible for sharing app segment to stage.|
 
+For more information on design of share to stage feature, see [Shared meeting stage](enable-and-configure-your-app-for-teams-meetings.md#shared-meeting-stage)
+
+### Prerequisite
+
+To enable share to stage, your app manifest must have `MeetingStage` property in provided context.
+The manifest file must have the following fields to use the APIs:
+
+* `configurableTabs` field must include `meetingStage` field: This field indicates that the app is allowed to share to the meeting stage.
+* Resource Specific Permission (RSC) must include `Meetinghat.Write.Chat`: This permission must to be included to app for appropriate permissions.
+
+```json
+"configurableTabs": [
+    {
+        "configurationUrl": "https://8b19-172-92-138-172.ngrok.io",
+        "sopes": ["team","groupchat"],
+        "context": [
+            "channelTab",
+            "meetingChatTab",
+            "meetingDetailsTab",
+            "meetingStage",
+            "privateChatTab"
+        ]
+    }
+],
+```
+
+`authorization` is Added in the `resourceSpecific` field, the object 'name' and 'type' must be added with the following fields to indicate app has permissions to use the app content stage sharing APIs:
+
+```json
+"authorization":{
+    "premissions:{
+        "resourceSpecific": [
+        {
+            "name": "onlineMeeting.ReadBasic.Chat",
+            "type": "Delegated"
+        }
+        ]
+    }
+},
+```
+
 ## GetUserContext API
 
 To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.

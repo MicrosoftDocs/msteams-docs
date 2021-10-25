@@ -155,12 +155,23 @@ In interactive mode the APIs allow you to:
 
 * Trigger share to stage for a specific component of the app from the app side panel.
 * Check whether the app is being shared to stage.
+* In the client SDK these APIs will enable you to build app to share specific parts of the app to the stage.
+For example: In Trello app you can build each board as a separate URL that can be shared to stage using the API, you can build a button inside the app, when user will clicks button it invokes the API and shares content to stage.
 
-For more information on Teams Client SDK APIs, see [Meeting apps API references](API-references.md)
+If you want to share specific parts of the app, there are few APIs and prerequisites added.
+For more information on Teams Client SDK APIs and prerequisites, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis)
+
+The image below shows the full app shared to stage during meeting:
 
 ![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
 
+The image below shows specific parts of the app to be shared to stage during meeting:
+
+![Share specific parts to stage during meeting experience](~/assets/images/apps-in-meetings/share-specific-content-to-stage.png)
+
 See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+
+
 
 ### After a meeting
 
