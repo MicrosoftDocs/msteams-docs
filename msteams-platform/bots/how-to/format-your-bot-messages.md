@@ -58,7 +58,7 @@ Support for text formatting varies by type of message and platform.
 
 ### Text-only messages
 
-The following table provides a list of styles and which of these styles are supported on desktop, iOS, and Android:
+The following table provides a list of styles, which are supported on desktop, iOS, and Android:
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |
