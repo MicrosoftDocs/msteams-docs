@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: surbhigupta
 ---
 
-# Single sign-on (SSO) support for messaging extensions
+# Single sign-on support for messaging extensions
  
 Single sign-on (SSO) support is now available for messaging extensions and link unfurling. Enabling Single sign-on for messaging extensions by default refreshes the authentication token, which minimizes the number of times you need to enter the sign in credentials for Microsoft Teams.
 
