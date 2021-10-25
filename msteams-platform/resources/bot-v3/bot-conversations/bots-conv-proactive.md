@@ -91,7 +91,7 @@ POST /v3/conversations
 }
 ```
 
-Supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
+You must supply the user ID and the tenant ID. If the call succeeds, the API returns with the following response object.
 
 ```json
 {
