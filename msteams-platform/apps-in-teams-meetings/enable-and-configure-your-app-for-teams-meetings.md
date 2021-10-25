@@ -173,7 +173,6 @@ The image below shows specific parts of the app to be shared to stage during mee
 See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
 
-
 ### After a meeting
 
 The configurations of after and [before meetings](#before-a-meeting) are the same.
