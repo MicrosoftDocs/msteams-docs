@@ -160,7 +160,7 @@ In interactive mode the APIs allow you to:
 For example: In Trello app you can build each board as a separate URL that can be shared to stage using the API, you can build a button inside the app, when user will clicks button it invokes the API and shares content to stage.
 
 If you want to share specific parts of the app, there are few APIs and prerequisites added.
-For more information on Teams Client SDK APIs and prerequisites, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis)
+For more information on Teams Client SDK APIs and prerequisites, see [Teams client SDK APIs](API-references.md#teams-client-sdk-apis) and [Prerequisite](API-references.md#prerequisite)
 
 The image below shows the full app shared to stage during meeting:
 
