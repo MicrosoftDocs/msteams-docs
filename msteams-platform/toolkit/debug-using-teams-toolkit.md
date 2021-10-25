@@ -1,5 +1,5 @@
 ---
-title: Debug
+title: Debug using Teams Toolkit
 author: Rajeshwari-v
 description:  Describes about debug
 ms.author: surbhigupta

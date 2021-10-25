@@ -1,5 +1,5 @@
 ---
-title: Teams Toolkit Fundamentals
+title: Teams Toolkit fundamentals
 author: Rajeshwari-v
 description:  Describes fundamentals of Teams Toolkit
 ms.author: surbhigupta

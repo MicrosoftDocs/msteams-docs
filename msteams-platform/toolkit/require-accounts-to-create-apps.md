@@ -1,5 +1,5 @@
 ---
-title: Account
+title: Require account to create apps
 author: Rajeshwari-v
 description:  Describes about account
 ms.author: surbhigupta

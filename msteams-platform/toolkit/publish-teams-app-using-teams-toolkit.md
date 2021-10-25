@@ -1,5 +1,5 @@
 ---
-title: Publish
+title: Publish Teams app using Teams Toolkit
 author: Rajeshwari-v
 description:  Describes about publishing
 ms.author: surbhigupta

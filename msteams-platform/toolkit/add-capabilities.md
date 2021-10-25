@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: overview
 ---
 
-# Add Capabilities
+# Add capabilities
 
 You can start to create a Teams app with Visual Studio Code by adding capabilities, such as tabs, bots, and messaging extensions. The following table describes the different capabilities:
 
