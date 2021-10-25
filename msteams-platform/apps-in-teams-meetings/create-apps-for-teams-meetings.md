@@ -34,7 +34,7 @@ With apps for Teams meetings, you can expand the capabilities of your apps acros
 After you've gone through the prerequisites, you can use the meeting apps API references `GetUserContext`, `GetParticipant`, `NotificationSignal`, and `Meeting Details` that enable you to access information using attributes and display relevant content.
 
 > [!NOTE]
-> Teams for SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
+> Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
 
 ## Meeting apps API references
 
