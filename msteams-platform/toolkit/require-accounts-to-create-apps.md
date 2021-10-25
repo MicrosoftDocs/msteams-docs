@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: Account
 ---
 
-# Require accounts with valid subscription to create apps
+# Require accounts to create apps
 
 Teams toolkit enables you to create new apps. To develop Teams app, you must have the following accounts:
 
