@@ -23,8 +23,8 @@ Sending a proactive message is different from sending a regular message. There's
 
 **To send a proactive message**
 
-1. [Get the user ID, team ID, or channel ID](#get-the-user-id-team-id-or-channel-id), if necessary.
-1. [Create the conversation](#create-the-conversation), if necessary.
+1. [Get the user ID, team ID, or channel ID](#get-the-user-id-team-id-or-channel-id), if required.
+1. [Create the conversation](#create-the-conversation), if required.
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
