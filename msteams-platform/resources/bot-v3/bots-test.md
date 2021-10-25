@@ -60,7 +60,7 @@ You can also initiate a conversation with your bot by using its ID. Two methods 
      The app ID should resolve to your bot name.
 
    * Select your bot and send a message to start a conversation.
-   * Instead, you can paste your bot's app ID in the search box in the top left in Microsoft Teams in the search results page, navigate to the People tab to see your bot and to start chatting with it.
+   * Alternatively, you can paste your bot's app ID in the search box in the top left in Microsoft Teams. In the search results page, navigate to the People tab to see your bot and to start chatting with it.
 
 Your bot will receive the `conversationUpdate` event just like bots added to a team, but without the team information in the `channelData` object.
 
