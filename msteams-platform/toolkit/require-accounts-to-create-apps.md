@@ -94,6 +94,6 @@ Your test tenant permits custom app sideloading.
 
 ## See also
 
-* [Debug using Teams Toolkit](teams-toolkit-debug.md)
-* [Publish Teams apps using Teams Toolkit](teams-toolkit-publish.md)
+* [Debug using Teams Toolkit](debug-using-teams-toolkit.md)
+* [Publish Teams apps using Teams Toolkit](publish-teams-app-using-teams-toolkit.md)
 * [Manifest editor](manifest-editor.md)

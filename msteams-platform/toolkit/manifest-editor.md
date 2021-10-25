@@ -37,6 +37,6 @@ Edit Teams app manifest file within Teams Toolkit
 
 ## See also
 
-* [Require accounts with valid subscription to create apps](teams-toolkit-account.md)
-* [Publish Teams apps using Teams Toolkit](teams-toolkit-publish.md)
+* [Require accounts to create apps](require-accounts-to-create-apps.md)
+* [Publish Teams apps using Teams Toolkit](publish-teams-app-using-teams-toolkit.md)
 * [Manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases)

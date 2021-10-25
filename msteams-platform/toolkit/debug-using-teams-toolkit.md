@@ -67,5 +67,5 @@ For any Teams app, you can only install an app package with configuration file, 
 
 ## See also
 
-[Publish Teams apps using Teams Toolkit](teams-toolkit-publish.md)
+[Publish Teams apps using Teams Toolkit](publish-teams-app-using-teams-toolkit.md)
 [Manifest editor](manifest-editor.md)
