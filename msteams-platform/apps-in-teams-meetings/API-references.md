@@ -37,7 +37,7 @@ The following table provides list of APIs added to Bot Framework SDK:
 
 ## Teams client SDK APIs
 
-To enable share to stage, your app manifest must have the `meetingStage` property.
+The Share to stage feature allows a meeting users to share the full tab app to the meeting stage using **share** in the app side panel. You can add the new Teams APIs to Teams Client SDK to enable share to stage. Your app manifest must have the `meetingStage` property.
 
 ### Prerequisite
 
