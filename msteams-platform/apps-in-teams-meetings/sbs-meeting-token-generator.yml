@@ -368,8 +368,6 @@ items:
 
     1. Run `npm install`.
     1. Run `npm run build` to build the app.
-       * `"id": "[MicrosoftAppId]"`.
-       * `"resource": "api://[WebAppDomainName]/[MicrosoftAppId]"`.
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
