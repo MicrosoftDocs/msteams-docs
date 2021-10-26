@@ -200,7 +200,7 @@ items:
     - `manifest.json`: The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
     - `BackendController.cs`: A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
 
-    The Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
+    The Teams Toolkit scaffolds all the necessary code for a basic tab as a Blazor Server.
 
     - `Pages/Tab.razor`: is the front-end application's entry point.
     - `TeamsFx.cs` and `JS/src/index.js`: is used for initializing communications with the Teams host.
@@ -347,7 +347,7 @@ items:
 
     ### To create an environment
 
-    1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). 
+    1. Open the Developer Portal for Teams. 
     1. Sign in with your Microsoft 365 administrative account.
 
     1. Find **Apps** on the sidebar and  select it.
