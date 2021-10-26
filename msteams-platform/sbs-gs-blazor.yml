@@ -266,7 +266,7 @@ items:
 
     You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
 
-    Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
 
     ## Deploy your app to Azure
 

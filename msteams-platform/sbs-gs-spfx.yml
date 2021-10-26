@@ -251,7 +251,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365." border="false":::
 
         Your default web browser opens to let you sign in to the account.
 
@@ -265,21 +265,13 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    - Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
         teamsfx account login m365
         ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
@@ -369,11 +361,6 @@ items:
       ``` bash
       teamsfx provision
       ```
-
-      If you're prompted to log into your Azure subscription, select a subscription to use the Azure resources.
-
-      > [!NOTE]
-      > There are always some Azure resources used for hosting your app.
 
     1. Run `teamsfx deploy`.
 
