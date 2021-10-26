@@ -25,7 +25,7 @@ items:
     > [!NOTE]
     > Currently, Teams Toolkit offers a template only for a Tab app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.
 
-- title: Prerequisites for Blazor tab app
+- title: Prerequisites
   durationInMinutes: 1
   content: |
 
@@ -257,7 +257,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading.
+    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
     </details>
 
 - title: Deploy your first Teams app
@@ -362,7 +362,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-env.png" alt-text="Select add new environments" border="false":::
 
-    1. Enter a name for your environment, and select **Download**.
+    1. Enter a name for your environment, and select **Add**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-env-name.png" alt-text="Add new environment name" border="false":::
 

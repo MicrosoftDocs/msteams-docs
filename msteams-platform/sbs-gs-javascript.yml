@@ -376,7 +376,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       </details>
 
@@ -583,7 +583,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       > [!IMPORTANT]
       > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
@@ -784,11 +784,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading.
-
-        > [!TIP]
-        > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
-        </details>
+        To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
 
     ### Try your message extension 
 
