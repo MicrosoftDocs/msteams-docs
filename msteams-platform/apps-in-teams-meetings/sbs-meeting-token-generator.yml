@@ -318,7 +318,7 @@ items:
 
          * `"MicrosoftAppId"`: Set up with the application (client) ID of the bot's Azure AD application.
          * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
-         * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used
+         * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used.
 
        > [!NOTE]
        > The sample will only work in this tenant.
