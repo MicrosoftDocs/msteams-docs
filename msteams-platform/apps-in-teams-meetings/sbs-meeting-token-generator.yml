@@ -129,12 +129,11 @@ items:
     1. Select **Create new**.
     1. Enter resource name.
     1. Select **OK**.
-    1. Select required location from **New resource group location** dropdown list.
+    1. Select required location from **New resource group location** dropdown list.</br>
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
-        > [!NOTE]
-        > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can either create a new Microsoft app ID or select **Use existing app registration**, and enter **Existing app ID** and **Existing app password**.
+      In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration**, and enter **Existing app id** and **Existing app password** or create a new Microsoft app ID:
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
@@ -146,7 +145,7 @@ items:
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        Now your Azure bot is created.
+        Your Azure bot is created:
 
         ![Azure bot resource created](~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png)
 
@@ -183,7 +182,7 @@ items:
 
     1. Select **Save**.
     
-    1. Select the checkbox to accept the terms of service and select **Agree**.</br>
+    1. Select the checkbox to accept the **Terms of Service** and select **Agree**.</br>
           ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
     **To add messaging endpoint**
@@ -195,8 +194,8 @@ items:
         ![ngrok HTTPS URL](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)
 
         > [!NOTE]
-        > The HTTPS URL (https to io) in your ngrok will be your fully qualified domain name.
-        > The `[WebAppDomain]` will be the fully qualified domain name without `https://` in it.
+        > The HTTPS URL in your ngrok will be your fully qualified domain name.
+        > The `WebAppDomain` will be the fully qualified domain name without `https://` in it.
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
@@ -210,7 +209,7 @@ items:
 - title: Update the AAD app registration for tab SSO
   durationInMinutes: 1
   content: |
-    Register your app through the AAD portal:  
+    To register your app through the AAD portal:  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -218,7 +217,7 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select the same AD application created in previous step for bot registration.
+    1. Select the same AD application created in previous step for bot registration:
 
        ![App registration](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)
 
@@ -230,7 +229,7 @@ items:
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
-    1. Insert your `[WebAppDomain]` value between `api://` and `/{AppID}` as given:</br>
+    1. Insert your `WebAppDomain` value between `api://` and `/{AppID}` as given:</br>
         `api://1d14****.ngrok.io/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
@@ -255,7 +254,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select the Add scope button to save.
+    1. Select the **Add scope** button to save.
          * The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
            `api://1d14****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
@@ -275,12 +274,17 @@ items:
   
     1. Navigate to **API Permissions**. 
 
-    1. Select `Add a permission > Microsoft Graph > Delegated permissions`, and add the following permissions:</br>
-        
-         * User.Read (enabled by default)
+    1. Select **Add a permission**.
+
+    1. Select **Microsoft Graph**.
+
+    1. Select **Delegated permissions**.
+
+        By default User.Read is checked:
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
+     1. Add the following permissions:</br>
          * email
          * offline_access
          * OpenId
@@ -296,13 +300,13 @@ items:
 
          ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
 
-       Enter the redirect URI for your app. This page will be where a successful implicit grant flow will redirect the user. This will be same fully qualified domain name that you entered in step 7 followed by the API route where an authentication response should be sent. If you're following any of the Teams samples, this will be:</br>
+    1. Enter the redirect URI for your app. The page appears with access to implicit grant flow.
+
+    1. Append API route to the domain name:</br>
            `https://1d14****.ngrok.io/auth-end` </br>
          * Enable implicit grant by checking the following boxes:
            * ID Token
            * Access Token
-
-
 
          ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
