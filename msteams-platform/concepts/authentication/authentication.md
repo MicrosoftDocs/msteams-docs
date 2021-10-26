@@ -35,7 +35,7 @@ For more information on using OAuthPrompt, see:
 
 ## Code sample
 
-Bot Framework v4 authentication samples.
+provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
