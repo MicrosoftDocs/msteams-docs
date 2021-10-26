@@ -232,7 +232,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel-verify.png" alt-text="Image showing node.js app running locally on ngrok tunnel" border="false":::
 
-    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in teams.
+    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
         > [!NOTE]
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
@@ -241,8 +241,6 @@ items:
 
         >[!IMPORTANT] 
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
-
-    1. Note the URL of your app for registering the app with Teams. You can register the app using Developer Portal.
 
     <a name="DeployToTeams"></a>
 

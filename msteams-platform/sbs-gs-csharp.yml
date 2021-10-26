@@ -239,16 +239,14 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/csharp-ngrok-verify-tunnel.png" alt-text="Image showing C# app running locally on ngrok tunnel" border="false":::
 
-    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in teams.
+    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
         > [!NOTE]
         > If you've used a different port during [build](#build-your-first-app), ensure you use the same port number to setup the `ngrok` tunnel.
         > [!TIP]
         > It's a good idea to run `ngrok` in a different terminal window. It helps to keep `ngrok` from interfering with the app, when you'll need to stop, rebuild, and rerun the app. The `ngrok` session provides useful debugging information in this window.
-
-        The app is available only during the current session on your computer. It isn't available if the machine is shut down or goes to sleep. If you restart the service, the app returns a new address. Then, update every location using the old address with the new one. Remember to do this step when you share the app for testing.
-
-        The paid version of `ngrok` doesn't have this limitation.
+        > [!IMPORTANT]
+        > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
 - title: Configure your first C# app using Dev Portal
   durationInMinutes: 1

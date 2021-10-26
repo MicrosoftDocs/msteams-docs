@@ -213,8 +213,7 @@ items:
 
     ---
 
-    - [Learn more about developing for SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
-
+  
     ## Take a tour of the source code
 
     After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
@@ -234,7 +233,6 @@ items:
 
     - `SPFx/src/webparts/{webpart}`: contains your SPFx web part.
     - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
-
 
 - title: Build your tab app
   durationInMinutes: 1
@@ -323,9 +321,9 @@ items:
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app.
 
-    Let's deploy the first Hello World app with Tab capability on SharePoint using Teams Toolkit.
+    Let's deploy the first app with Tab capability on SharePoint using Teams Toolkit.
 
     In this page, you'll learn to:
     1. [Deploy your first app](#deploy-your-app-to-sharepoint)
@@ -333,7 +331,7 @@ items:
 
     ## Deploy your app to SharePoint
 
-    Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be created.
+    Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog). It may take up to 15 minutes for the app catalog to be created.
 
     # [Visual Studio Code](#tab/vscode)
 
