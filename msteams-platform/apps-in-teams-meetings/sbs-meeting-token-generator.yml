@@ -133,9 +133,9 @@ items:
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
-      In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration**, and enter **Existing app id** and **Existing app password** or create a new Microsoft app ID:
+       In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration**, and enter **Existing app id** and **Existing app password** or create a new Microsoft app ID:
 
-        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
+       ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
     1. Select **Review + create**.
 
@@ -305,7 +305,7 @@ items:
 
     1. Append API route to the domain name:</br>
            `https://1d14****.ngrok.io/auth-end`. </br>
-           
+
        Enable implicit grant by checking the following boxes:
          * ID Token
          * Access Token
