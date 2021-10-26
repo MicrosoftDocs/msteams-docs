@@ -26,7 +26,7 @@ Microsoft Teams platform features that are available to all app developers.
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ----------------|
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | [Get started with your first Teams app](get-started/get-started-overview.md) 
-|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | [ Add a `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-a-`registerOnFocused`API-for-tabs-or-personal apps) |
+|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
 |09/08/2021| Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [Format cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md)|
 |10/20/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
