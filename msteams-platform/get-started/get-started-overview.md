@@ -38,7 +38,6 @@ If you are already familiar with Yeoman workflow, you may prefer using [YoTeams 
 > [!NOTE]
 > If you have been using App Studio, we recommend that you'd try the Developer Portal to configure, distribute, and manage your Teams apps.
 
-This tutorial will walk you through the process with recommended tools, as well as a few other options.
 
 ## Build your first Teams app
 

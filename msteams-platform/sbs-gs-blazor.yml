@@ -90,7 +90,7 @@ items:
     You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
     > [!CAUTION]
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information about it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
 
     ---
 

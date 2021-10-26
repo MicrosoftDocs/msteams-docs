@@ -105,7 +105,7 @@ items:
     You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
     > [!CAUTION]
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information about it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
 
     ---
 
@@ -376,7 +376,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled [sideloading](#Prerequisites) in your Teams account.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account.
 
       </details>
 
@@ -481,7 +481,7 @@ items:
     - The `bot/teamsBot.js` is the main entry point for the bot.
   
     > [!Tip]
-    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams. For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
 
 - title: Build and run your first bot app
   durationInMinutes: 1
@@ -583,7 +583,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled [sideloading](#Prerequisites) in your Teams account.
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account.
 
       > [!IMPORTANT]
       > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
@@ -784,7 +784,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you must have a Microsoft 365 development account that allows app [sideloading](#Prerequisites).
+        To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading.
 
         > [!TIP]
         > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
