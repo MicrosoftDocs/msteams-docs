@@ -226,7 +226,7 @@ items:
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
     1. Insert your `[WebAppDomain]` value between `api://` and `/{AppID}` as given below:
-        `api://subdomain.ngrok.io/{AppID}`.</br>
+        `api://1d14****.ngrok.io/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
         
@@ -252,7 +252,7 @@ items:
   
     1. Select the Add scope button to save.
          * The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
-           `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+           `api://1d14****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
   
@@ -292,7 +292,7 @@ items:
          ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
 
        Enter the redirect URI for your app. This page will be where a successful implicit grant flow will redirect the user. This will be same fully qualified domain name that you entered in step 7 followed by the API route where an authentication response should be sent. If you're following any of the Teams samples, this will be:</br>
-           `https://subdomain.example.com/auth-end` </br>
+           `https://1d14****.ngrok.io/auth-end` </br>
          * Enable implicit grant by checking the following boxes:
            * ID Token
            * Access Token
