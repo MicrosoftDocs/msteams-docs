@@ -1,0 +1,449 @@
+### YamlMime:Tutorial
+title: Build your first app using Blazor
+metadata:
+  title: Hello World with Blazor
+  description: In this tutorial, you'll learn to build Hello World app with Blazor.
+  audience: Developer
+  level: Beginner
+  ms.date: 08/24/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: ~/get-started/get-started-overview.md
+  nextTutorialTitle: Back to Get started overview
+  ms.custom: mvc
+  ms.localizationpriority: none
+items:
+- durationInMinutes: 1
+  content: |
+
+    Blazor lets you build interactive web UIs using C#, instead of JavaScript. 
+    
+    You can start Microsoft Teams app development by building your first app with a tab capability. 
+    You'll build this app with Blazor and Visual Studio 2019.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/your-helloworld-app-tab.png" alt-text="Diagram showing this app has three features. Tab is highlighted." border="false":::
+
+    > [!NOTE]
+    > Currently, Teams Toolkit offers a template only for a Tab app with Visual Studio 2019 and Blazor. The Bot and Message Extension capabilities are not available.
+
+- title: Prerequisites for Blazor tab app
+  durationInMinutes: 1
+  content: |
+
+    Here's a list of tools you'll need for building and deploying your apps.
+
+    | &nbsp;    | Install   | For using... |
+    | --- | --- | --- |
+    | **Required** | &nbsp; | &nbsp; |
+    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Visual Studio 2019](https://visualstudio.com/download), **ASP.NET and web development**, or **.NET Core cross-platform development** workload | .NET |
+    | **Optional** | &nbsp; | &nbsp; |
+    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
+    | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+    | &nbsp; | **Visual Studio Code Extensions** | &nbsp; |
+    | &nbsp; | [Azure Functions Core Tools](/azure/azure-functions/functions-run-local) | Backend components locally during a local debug run, including the authentication helpers required when running your services in Azure. It's installed within the project directory (using the npm `devDependencies`). |
+    | &nbsp; | [.NET SDK](/dotnet/core/install/) | Customized bindings for local debugging and Azure Functions app deployments. If you have not installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+
+    > [!TIP]
+    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
+    </details>
+
+    ## Prepare development environment
+
+    After you've installed the required tools, set up the development environment.
+
+    ### Install the Teams Toolkit
+
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    You can use the toolkit with Visual Studio Code, Visual Studio, or as a CLI (called `teamsfx`). 
+    
+    # [Visual Studio 2019](#tab/vs)
+
+    You can use Visual Studio 2019 to develop Teams apps with Blazor Server in .NET.
+
+    To install the Teams Toolkit extension:
+
+    1. Open Visual Studio 2019.
+    1. Select **Extensions** > **Manage Extensions**.
+    1. In the search box, enter **Teams Toolkit**.
+    1. Select the Teams Toolkit extension and select **Download**. The extension is downloaded.
+    1. Close Visual Studio 2019 to install the extension.
+
+    # [Command line](#tab/cli)
+
+    To install the TeamsFx CLI, use the `npm` package manager:
+
+    ``` bash
+    npm install -g @microsoft/teamsfx-cli
+    ```
+
+    Depending on your configuration, you may need to use `sudo` to install the CLI:
+
+    ``` bash
+    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+    ```
+
+    This condition is more common on Linux and macOS systems.
+
+    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+
+    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+
+    > [!CAUTION]
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information about it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+
+    ---
+
+    ## Set up your Teams development tenant
+
+    A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+
+    ### Enable sideloading option
+
+    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+      
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    Verify if you can sideload apps in Teams:
+
+    1. In the Teams client, select **Store** icon.
+    1. Select **Manage your apps**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+
+        > [!NOTE]
+        > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
+
+    ### Create a free Teams developer tenant (optional)
+
+    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+    1. Select **Join Now** and follow the onscreen instructions.
+    1. In the welcome screen, select **Set up E5 subscription**.
+    1. Set up your administrator account. After you finish, the following screen appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/build-your-first-app/dev-program-subscription.png" alt-text="Example of what you see after signing up for the Microsoft 365 developer program.":::
+
+    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+    ## Get a free Azure account
+
+    If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+    Now you’ve got all tools and set up your accounts. Next, let's set up your development environment and start building!
+
+- title: Create project workspace for your tab app
+  durationInMinutes: 1
+  content: |
+    This tutorial walks you through the steps to create, run, and deploy your first Teams app using .NET/Blazor.
+
+    In this tutorial, you'll learn:
+    1. [How to set up a new tab project with Teams Toolkit](#create-your-project)
+    1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
+
+    ## Create your project
+
+    Use the Teams Toolkit to create your first project:
+
+    1. Open Visual Studio 2019.
+    1. Select **Create a new project**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-project.png" alt-text="Illustration shows the option to create a new project." border="false":::
+
+    1. Select **Microsoft Teams** from **All project types** dropdown list.  
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-select-teams-app.png" alt-text="Illustration shows the option to select a template." border="false":::
+
+    1. Select **Microsoft Teams App** as the template, and select **Next**.
+        The **Configure your new project** screen appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-configure-project.png" alt-text="Illustration shows the options to configure new project." border="false":::
+    
+    1. Enter a suitable name for your project.
+
+    1. Select the folder path where you want to create the project workspace.
+
+    1. Select the name for the solution you're creating, and select **Next**.
+        The **Additional information** screen appears.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-add-info-create.png" alt-text="Illustration shows the option to provide additional information." border="false":::
+
+    1. Enter the application name.
+
+    1. Enter the company name.
+      The application name and company name are displayed to your end users.
+
+    1. Select **Create**. 
+        
+        Your Teams app is created in a few seconds.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-tab-app.png" alt-text="Illustration shows the app project created in Visual Studio 2019." border="false":::
+
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
+
+    ![Create a Teams app](~/assets/videos/blazor-tab-app.gif)
+    </details>
+
+    ## Take a tour of the source code
+
+    After project creation, you have the components to build a basic personal app. You can view the project directory structure in the **Solution Explorer** area of Visual Studio 2019.
+
+    :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-app-solution-explorer.png" alt-text="Screenshot showing app project files for a personal app in Visual Studio 2019." border="false":::
+
+    The Teams Toolkit creates a scaffolding for your project based on the capabilities you selected. Among other files, the Teams Toolkit maintains:
+
+    - App icons: The app icons are stored as PNG files in `color.png` and `outline.png`.
+    - `manifest.json`: The app manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`.
+    - `BackendController.cs`: A backend controller is provided in `Controllers/BackendController.cs` for assisting with authentication.
+
+    The Teams Toolkit scaffolds all the necessary code for a basic tab as a [Blazor Server](/aspnet/core/blazor).
+
+    - `Pages/Tab.razor`: is the front-end application's entry point.
+    - `TeamsFx.cs` and `JS/src/index.js`: is used for initializing communications with the Teams host.
+
+    You can add backend functionality by adding other ASP.NET Core controllers to your application.
+
+- title: Build and run your first Teams app locally
+  durationInMinutes: 1
+  content: |
+    After you set up your project workspace with Teams Toolkit, build your tab project. You'll need to sign in to your Microsoft 365 account.
+
+    ## Sign in to your Microsoft 365 account
+
+    After the project is created, set up single sign-on with Microsoft 365:
+
+    1. Select **Project** > **TeamsFx** > **Configure for SSO...**.
+    1. Sign in to your Microsoft 365 administrator account when prompted.
+
+    ## Build and run your app
+
+    To build and run your app locally:
+
+    1. Open Visual Studio 2019. 
+    1. Select **Debug** > **Start Debugging** or select **F5** to run your app in debug mode.
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+        When you select **F5**, the Teams Toolkit:
+
+        1. Registers your application with Azure Active Directory.
+        1. Registers your application for "sideloading" in Microsoft Teams.
+        1. Starts your application backend running locally.
+        1. Starts your application front-end hosted locally.
+        1. Starts Microsoft Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+
+        </details>
+    1. Install the self-signed SSL certificate for local debugging, if requested.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing how the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
+
+        Teams is loaded in a web browser.
+    1. Select **Cancel** to remain in the browser, if you're prompted to open Microsoft Teams client.
+    1. Sign in with your Microsoft 365 account.
+    1. Select **Add**, when prompted to install the app to Teams.
+    
+        Your app will now be displayed:
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-completed-app.png" alt-text="Screenshot of the completed app":::
+
+        You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
+
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading.
+    </details>
+
+- title: Deploy your first Teams app
+  durationInMinutes: 1
+  content: |
+
+    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
+
+    Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
+
+    ## Deploy your app to Azure
+
+    Deployment consists of two steps:
+
+    1. Necessary cloud resources are created. This process is also known as provisioning.
+    1. Start coding and copy your app into the created cloud resources.
+
+        > **PREVIEW**
+        >
+        > Support for Blazor apps is new in Teams Toolkit. Provisioning and deployment are done with a combination of Visual Studio 2019 and the Developer Portal for Teams.
+
+    ## Provision and deploy your app to Azure App Service
+
+    1. In Solution Explorer, right-click the project node and select **Publish**. You can also use the **Build** > **Publish** menu item.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-build-publish.png" alt-text="Select the Publish operation for the project" border="false":::
+
+    1. Select **Azure** and select **Next** in the **Publish** window.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-publish.png" alt-text="Select Azure as the publishing target" border="false":::
+
+    1. Select **Azure App Service (Windows)** and select **Next**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-app-service.png" alt-text="Select Azure App Service as the publishing target" border="false":::
+
+    1. Select **+** to create a new App Service instance.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-app-subscription.png" alt-text="Create a new instance." border="false":::
+
+        In the **App Service (Windows)** dialog, the **Name**, **Subscription name**, **Resource Group**, and **Hosting Plan** entry fields are populated. If you've already got an App Service running, existing settings are selected. You can opt to create a new resource group and hosting plan.
+
+    1. Select **Create** when you're ready.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-service-create-new.png" alt-text="Select hosting plan and subscription" border="false":::
+
+        You'll notice that the newly created instance has been automatically selected in the **Publish** dialog.
+
+    1. Select **Finish** when you're ready.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-app-instance.png" alt-text="Select the new instance." border="false":::
+
+    1. Select the **Edit** (pencil) icon next to **Deployment Mode**. 
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-deploy-mode.png" alt-text="Select deployment mode." border="false":::
+          
+          The Publish dialog appears.
+
+    1. Select **Self-contained** as the **Deployment Mode**, and select **Save**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish-setting.png" alt-text="Select self-contained deployment mode." border="false":::
+
+    1. Select **Publish**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/vs-publish.png" alt-text="Publish your app to app service" border="false":::
+
+          Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
+    
+    1. Add `/tab` to the end of the URL to see your page.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-tab-app.png" alt-text="Blazor tab app" border="false":::
+
+        The **Publish** properties in the **Hosting** pane of Visual Studio shows the site URL and other details. 
+      
+    1. Select the **Copy** icon next to the site URL and save it in a text file.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-site-url.png" alt-text="Blazor app site URL" border="false":::
+
+- title: Preview and test your app in Teams 
+  durationInMinutes: 1
+  content: |
+
+    You can use Developer Portal to configure your app to preview and publish it in the Teams environment.
+    
+    ## Create an environment for your app
+
+    The Developer Portal for Teams manages where the tabs for your app are loaded with an **Environment**.  
+
+    ### To create an environment
+
+    1. Open the [Developer Portal for Teams](https://dev.teams.microsoft.com). 
+    1. Sign in with your Microsoft 365 administrative account.
+
+    1. Find **Apps** on the sidebar and  select it.
+
+    1. Select your app from the list that appears.
+
+    1. Select **Environments**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env.png" alt-text="Select environments" border="false":::
+
+    1. Select **Create your first environment**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-env.png" alt-text="Select add new environments" border="false":::
+
+    1. Enter a name for your environment, and select **Download**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-env-name.png" alt-text="Add new environment name" border="false":::
+
+    1. Select **Create your first environment variable**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-create-env-var.png" alt-text="Add new environment variable" border="false":::
+
+    1. Enter `azure_app_url` as the **Name**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-add-variable.png" alt-text="Create environment variable" border="false":::
+
+    1. Enter your Azure site URL without the `https://` as the **Value**. Use the URL you noted in the Hosting pane of Publish dialog. 
+
+    1. Select **Add**.
+      
+        The environment is added.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devp-blazor-azure-url-added.png" alt-text="Create environment variable" border="false":::
+
+    ## Update the app manifest
+
+    The app manifest loads the tab from a `localhost` URL. Configure the app manifest to load the tab from the URL listed in the environment you created.
+
+    To update the app manifest:
+    - [Update website URL](#update-website-url)
+    - [Configure the tab capability](#configure-the-tab-capability)
+    - [Configure single-sign-on for your app](#configure-single-sign-on-for-your-app)
+
+    ### Update website URL
+
+    1. Select **Basic information** from the sidebar.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments3.png" alt-text="Select basic information":::
+
+        You'll find that `localhost:XXXXX` is mentioned as a part of the URL given in the **Basic information** pane.
+
+    1. Replace all occurrences  of `localhost:XXXXX` with `{{azure_app_url}}`, including the curly braces, for **Website (must be a valid HTTPS URL)** and **App URLs**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments4.png" alt-text="Adjust basic information for the environment":::
+
+    1. Select **Save** when you've completed replacement.
+      
+        Your app is now configured to run from the URL you saved in the environment variable.
+
+    ### Configure the tab capability
+
+    1. Select **App features** from the sidebar.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments5.png" alt-text="Select capabilities":::
+
+    1. Select **Personal Tab**.
+    1. Select the triple dots next to the **Personal Tab**, and select **Edit**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments6.png" alt-text="Edit personal tab settings":::
+
+    1. Replace the URL with the environment variable in the **Content URL** and **Website URL** fields.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/devcenter-environments7.png" alt-text="Edit personal tab URLs":::
+
+    1. Select **Update**.
+
+    1. Select **Save**.
+      
+      Your tab is configured to run from the Azure URL.
+
+    ### Configure single-sign-on for your app
+
+    1. Select **Single Sign-On** from the sidebar.
+
+    1. Replace the `localhost` within the **Application ID URI** with `{{azure_app_url}}`.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-sso.png" alt-text="Edit single sign-on Application ID URI":::
+
+    1. Select **Save**.
+
+    1. From the sidebar, select **Domains**.
+
+    1. Select **Add a domain**.
+
+    1. Verify if `{{azure_app_url}}` is listed as a valid domain. If it isn't, add it as a valid domain. Then, select **Add**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-domain.png" alt-text="Add a domain":::
+
+      You've now updated the manifest file. You can use the **Preview in Teams** option at the top of the page to launch your app in Teams.
