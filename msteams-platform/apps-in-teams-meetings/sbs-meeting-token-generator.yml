@@ -98,11 +98,11 @@ items:
   content: |
     Develop a bot, host it in Azure and register it with Azure Bot Service. Do the following steps:
 
-    * Use ngrok to create a tunnel to your web server's endpoints.
-    * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Add messaging endpoint to the ngrok tunnel you created.
+    1. Use ngrok to create a tunnel to your web server's endpoints.
+    1. Create Azure Bot resource to register bot with Azure Bot Service.
+    1. Create client secret that enables SSO authentication of the bot.
+    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    1. Add messaging endpoint to the ngrok tunnel you created.
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
@@ -124,7 +124,12 @@ items:
     1. From the **Subscription** dropdown list, select the subscription.
     1. From the **Resource group** dropdown list, select the resource group.
         
-        To create a new resource, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
+    **To create a new resource** 
+
+    1. Select **Create new**.
+    1. Enter resource name.
+    1. Select **OK**.
+    1. Select required location from **New resource group location** dropdown list.
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
