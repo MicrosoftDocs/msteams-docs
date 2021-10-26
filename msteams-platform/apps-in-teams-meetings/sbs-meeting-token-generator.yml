@@ -35,7 +35,7 @@ items:
     * **Skip** - Skips the current user and moves on to the next person in line for a token.
 
        > [!NOTE]
-       > **Skip** is available to the meeting organizers only.
+       > **Skip** is available only to the meeting organizers.
 
 
 
@@ -62,7 +62,7 @@ items:
 
     * [Apps in Teams meetings](https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/teams-apps-in-meetings)
     * [Create apps for Teams meetings](https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/create-apps-for-teams-meetings?tabs=json)
-    * [Tab single sign-on](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) to get the identity of the user accessing the tab, in a way that can be verified in the server APIs
+    * [Tab single sign-on](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso) to get the identity of the user accessing the tab, in a way that can be verified in the server APIs.
 
     Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
@@ -93,7 +93,7 @@ items:
        ![Token File Properties](~/assets/images/meeting-token-generator/meeting-token-generator-tokenproperties.png)
 
 
-- title: Register your bot in Azure Active Directory(AAD) Portal
+- title: Create and register your bot in Azure Active Directory(AAD) Portal
   durationInMinutes: 5
   content: |
     Develop a bot, host it in Azure and register it with Azure Bot Service. Do the following steps:
@@ -126,12 +126,14 @@ items:
         
         To create a new resource, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
 
+        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
+
         > [!NOTE]
-        > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can select **Use existing app registration**, enter **Existing app ID**, and enter **Existing app password**.
+        > In the Microsoft App ID section, **Create new Microsoft App ID** is already selected. You can either create a new Microsoft app ID or select **Use existing app registration**, and enter **Existing app ID** and **Existing app password**.
+
+        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
     1. Select **Review + create**.
-
-        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
     1. If the validation passes, select **Create**.
 
@@ -160,7 +162,7 @@ items:
 
          ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
        
-    **Add the Microsoft Teams channel**
+    **To add the Microsoft Teams channel**
 
     1. Go to **Home**.
 
@@ -197,7 +199,7 @@ items:
 
     1. Select **Apply**.
 
-        You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
+        You have successfully set up a bot in Azure Bot Service.
 
 
 - title: Update the AAD app registration for tab SSO
@@ -211,7 +213,7 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select the same AD application created in previous step (Bot registration).
+    1. Select the same AD application created in previous step for bot registration.
 
        ![App registration](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)
 
@@ -223,8 +225,8 @@ items:
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
-    1. Insert your fully qualified domain name between `api://` and `/{AppID}` as given below:
-        `api://subdomain.example.com/{AppID}`.</br>
+    1. Insert your `[WebAppDomain]` value between `api://` and `/{AppID}` as given below:
+        `api://subdomain.ngrok.io/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
         
@@ -232,7 +234,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update this value whenever your ngrok subdomain changes.
-        >  `ex: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`.
+        >  `ex: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the Scope name.
   
@@ -325,7 +327,7 @@ items:
          * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
 
        > [!NOTE]
-       > `[WebAppDomain]` will be your ngrok domain, so the content bubble URL will be similar to `https://f631****.ngrok.io/contentBubble.html`.
+       > `[WebAppDomain]` will be your ngrok domain, so the content bubble URL will be similar to `https://1d14****.ngrok.io/contentBubble.html`.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
