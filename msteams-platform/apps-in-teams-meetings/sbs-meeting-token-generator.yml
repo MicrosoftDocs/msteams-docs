@@ -304,7 +304,7 @@ items:
     1. Enter the redirect URI for your app. The page appears with access to implicit grant flow.
 
     1. Append API route to the domain name:</br>
-           `https://1d14****.ngrok.io/auth-end` </br>
+           `https://1d14****.ngrok.io/auth-end`. </br>
        Enable implicit grant by checking the following boxes:</br>
          * ID Token
          * Access Token
