@@ -105,7 +105,7 @@ items:
     You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
     > [!CAUTION]
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information about it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
 
     ---
 
@@ -376,7 +376,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       </details>
 
@@ -407,7 +407,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
+    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -481,7 +481,7 @@ items:
     - The `bot/teamsBot.js` is the main entry point for the bot.
   
     > [!Tip]
-    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams. For more information about bots, see the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+    > Familiarize yourself with bots outside of Teams before you integrate your first bot within Teams.
 
 - title: Build and run your first bot app
   durationInMinutes: 1
@@ -583,7 +583,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. For more information on sideloading, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
+      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
 
       > [!IMPORTANT]
       > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
@@ -625,7 +625,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on whether your operating system is Windows or Linux.
+    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vsc)
 
@@ -688,7 +688,7 @@ items:
 
     ## Take a tour of the source code
 
-    A message extension uses the [Bot Framework](https://docs.botframework.com). You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
 
     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/code-tree.png" alt-text="File layout of a bot project" border="false":::
 
@@ -696,7 +696,7 @@ items:
     - The `bot/messageExtensionBot.js` is the main entry point for the messaging extension.
 
     > [!Tip]
-    > Familiarize yourself with bots and message extension outside of Teams before you integrate your first bot within Teams.  You can find more information about bots by reviewing the [Azure Bot Service](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) tutorials.
+    > Familiarize yourself with bots and message extension outside of Teams before you integrate your bot within Teams.
 
 - title: Build and run your first message extension app
   durationInMinutes: 1
@@ -784,11 +784,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. For more information on account opening, see [Prerequisites](../msteams-platform/get-started/prerequisites.md#set-up-your-teams-development-tenant).
-
-        > [!TIP]
-        > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html), which is included in the toolkit. Fix the errors to sideload the app.
-        </details>
+        To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
 
     ### Try your message extension 
 
@@ -819,7 +815,7 @@ items:
 
     You've learned to create, build, and run Teams app with Tab, Bot, and Message Extension capabilities. The final step is to deploy your app on Azure.
 
-    Let's deploy the first Hello World app with Tab capability on Azure using Teams Toolkit.
+    Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 

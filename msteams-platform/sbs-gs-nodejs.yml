@@ -232,7 +232,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/nodejs-ngrok-tunnel-verify.png" alt-text="Image showing node.js app running locally on ngrok tunnel" border="false":::
 
-    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in teams.
+    1. Make a note of the forwarding address in ngrok console. You need this URL to deploy your app in Teams.
 
         > [!NOTE]
         > If you used a different port during [build and run](#build-and-run-the-sample), make sure you use the same port number to setup the *ngrok* tunnel.
@@ -242,8 +242,6 @@ items:
         >[!IMPORTANT] 
         > If you use the free version of ngrok, your app will be available only during the current session on your development machine. It isn't available if the machine is shut down or goes to sleep. When you restart the service, it returns a new address. Then, you must update every location that uses the outdated address. Remember this step when sharing the app for testing.
 
-    1. Note the URL of your app for registering the app with Teams. You can register the app using Developer Portal.
-
     <a name="DeployToTeams"></a>
 
     ## Build Node.js app package
@@ -251,7 +249,7 @@ items:
     You can use `gulp CLI` to build the app package for Node.js.
 
     1. Open a terminal window.
-    1. Ensure that you are in the directory where the `node.js` is cloned.
+    1. Ensure that you are in the directory where the `node.js` is cloned. This is the folder where `gulfile.js` is placed. 
     1. Run the following command to build the Node.js app package.
 
         ```$ gulp```
@@ -299,7 +297,7 @@ items:
 
     1. Select the **Store** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-store-icon.png"::: icon from the left-hand bar.
 
-    1. Search for **Dev Portal** in the search bar, and select **Dev Portal (Int)***.
+    1. Search for **Developer Portal** in the search bar, and select **Developer Portal***.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-dev-portal-app.png" alt-text="Select Developer Portal app" border="false":::
 
