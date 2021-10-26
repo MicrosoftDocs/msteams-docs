@@ -225,7 +225,7 @@ items:
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
-    1. Insert your `[WebAppDomain]` value between `api://` and `/{AppID}` as given below:
+    1. Insert your `[WebAppDomain]` value between `api://` and `/{AppID}` as given:</br>
         `api://1d14****.ngrok.io/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
