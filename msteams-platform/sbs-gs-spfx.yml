@@ -400,17 +400,17 @@ items:
 
         You'll be prompted to choose if you trust the Hello World solution.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy." border="false":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy." border="true":::
 
     1. Verify that **Make this solution available to all sites in the organization** is selected, and select **Deploy**.
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
         > [!Note]
         > The Sync to Teams process can take a couple of minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
@@ -420,6 +420,6 @@ items:
 
         The app will be placed in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" border="true":::
 
         Congratulations! Your app is now ready to be added to Teams.
