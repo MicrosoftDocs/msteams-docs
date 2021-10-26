@@ -83,7 +83,7 @@ items:
     You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
     > [!CAUTION]
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell. For more information about it, see the [PowerShell documentation](/powershell/module/microsoft.powershell.core/about/about_signing).
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
 
     ---
 
@@ -213,8 +213,7 @@ items:
 
     ---
 
-    - [Learn more about developing for SharePoint Framework](/sharepoint/dev/spfx/sharepoint-framework-overview)
-
+  
     ## Take a tour of the source code
 
     After project creation, you have the components to build a basic personal app. You can view the project directories and files in the Explorer area of Visual Studio Code.
@@ -235,7 +234,6 @@ items:
     - `SPFx/src/webparts/{webpart}`: contains your SPFx web part.
     - `.vscode/launch.json`: describes the debugging configurations available in the debug palette.
 
-
 - title: Build your tab app
   durationInMinutes: 1
   content: |
@@ -253,7 +251,7 @@ items:
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to M365**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/account-signin.png" alt-text="Screenshot showing where to sign in to Microsoft 365." border="false":::
 
         Your default web browser opens to let you sign in to the account.
 
@@ -267,21 +265,13 @@ items:
 
     # [Command line](#tab/cline)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    - Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
         teamsfx account login m365
         ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your account using your credentials. Close the browser when you're prompted.
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
@@ -323,9 +313,9 @@ items:
 - title: Deploy your first Teams app
   durationInMinutes: 1
   content: |
-    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app on Azure.
+    You've learned to create, build, and run Teams app with Tab capability. The final step is to deploy your app.
 
-    Let's deploy the first Hello World app with Tab capability on SharePoint using Teams Toolkit.
+    Let's deploy the first app with Tab capability on SharePoint using Teams Toolkit.
 
     In this page, you'll learn to:
     1. [Deploy your first app](#deploy-your-app-to-sharepoint)
@@ -333,7 +323,7 @@ items:
 
     ## Deploy your app to SharePoint
 
-    Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog).  It may take up to 15 minutes for the app catalog to be created.
+    Ensure a SharePoint App Catalog exists in your deployment. If it doesn't exist, [create one](/sharepoint/use-app-catalog). It may take up to 15 minutes for the app catalog to be created.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -372,11 +362,6 @@ items:
       teamsfx provision
       ```
 
-      If you're prompted to log into your Azure subscription, select a subscription to use the Azure resources.
-
-      > [!NOTE]
-      > There are always some Azure resources used for hosting your app.
-
     1. Run `teamsfx deploy`.
 
       ``` bash
@@ -403,7 +388,7 @@ items:
 
     1. Select **Distribute apps for SharePoint**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint." border="true":::
 
     1. Select **Upload**.
 
@@ -415,17 +400,17 @@ items:
 
         You'll be prompted to choose if you trust the Hello World solution.
 
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy." border="false":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy." border="true":::
 
     1. Verify that **Make this solution available to all sites in the organization** is selected, and select **Deploy**.
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
         > [!Note]
         > The Sync to Teams process can take a couple of minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
@@ -435,6 +420,6 @@ items:
 
         The app will be placed in the **Apps built for your org** category. You can add the app from there.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" border="false":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" border="true":::
 
         Congratulations! Your app is now ready to be added to Teams.
