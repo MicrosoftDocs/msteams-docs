@@ -305,7 +305,8 @@ items:
 
     1. Append API route to the domain name:</br>
            `https://1d14****.ngrok.io/auth-end`. </br>
-       Enable implicit grant by checking the following boxes:</br>
+           
+       Enable implicit grant by checking the following boxes:
          * ID Token
          * Access Token
 
