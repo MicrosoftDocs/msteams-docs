@@ -292,8 +292,9 @@ items:
 
          ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
   
-    1. Navigate to **Authentication**.
+    1. Navigate to **Authentication**. 
        If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.</br>
+       
        Set a redirect URI:
          * Select **Add a platform**.
          * Select **web**.
@@ -304,9 +305,9 @@ items:
 
     1. Append API route to the domain name:</br>
            `https://1d14****.ngrok.io/auth-end` </br>
-       Enable implicit grant by checking the following boxes:
-           * ID Token
-           * Access Token
+       Enable implicit grant by checking the following boxes:</br>
+         * ID Token
+         * Access Token
 
          ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
