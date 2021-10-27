@@ -63,10 +63,7 @@ Teams Toolkit provides flexibility to add more capabilities in further process o
 
 In left sidebar of Teams Toolkit, there are four sections that offers the main features.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/Teams-Toolkit-Overview.png" alt-text="Take a tour to Teams Toolkit":::
-
 ![Teams Toolkit overview](~/assets/images/tools-and-sdks/Teams-Toolkit-Overview.png)
-
 
 - [Typical User Journey](#typical-user-journey-of-teams-toolkit)
 
