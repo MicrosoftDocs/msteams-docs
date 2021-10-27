@@ -261,5 +261,5 @@ You can now interact with the bot in Teams. Choose a channel in the team where y
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|[:::image type="icon" source="../assets/images/get-started/app-roadmap/next.png":::](configure-test-nodejs-app.md) | &nbsp; |
+|[Back](get-started-overview.md) | &nbsp; |
 |

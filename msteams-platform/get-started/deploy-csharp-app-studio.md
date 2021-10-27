@@ -247,5 +247,5 @@ You can now test the bot in Teams.
 
 | &nbsp; | &nbsp; |
 |:--- | ---:|
-|[:::image type="icon" source="../assets/images/get-started/app-roadmap/next.png":::](configure-test-csharp-app.md) | &nbsp; |
+|[Back](get-started-overview.md) | &nbsp; |
 |
