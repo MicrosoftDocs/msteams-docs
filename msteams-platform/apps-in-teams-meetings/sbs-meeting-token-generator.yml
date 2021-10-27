@@ -390,15 +390,8 @@ items:
   durationInMinutes: 1
   content: |
     To build and run the service:
-    
-    1. From a command line:
 
-    ```bash
-    cd TokenApp
-    dotnet run
-    ```
-
-    1. From an IDE:
+    # [Visual Studio 2019](#tab/vs2019)
 
        1. Go to **Visual Studio 2019**.
 
@@ -414,6 +407,14 @@ items:
     A webpage opens with a message `App is ready`:
 
        ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appready.png) 
+
+        
+    # [Command line](#tab/cli)
+
+    ```bash
+    cd TokenApp
+    dotnet run
+    ```
       
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
