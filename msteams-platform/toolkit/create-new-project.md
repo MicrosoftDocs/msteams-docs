@@ -28,7 +28,7 @@ To build any app in Teams, you can use Teams toolkit either by creating a new pr
 
 ![Create new Teams app](~/assets/images/tools-and-sdks/create-new-project-intro.png)
 
-1. Select the required app capability, such as tabs, bots, and messaging extensions. You can also select multiple capabilities. Fore more information on different capabilities, see [app-capabilities-support-matrix]
+1. Select the required app capability, such as tabs, bots, and messaging extensions. You can also select multiple capabilities. For more information on different capabilities, see [app-capabilities-support-matrix]
 
 ![Create capabilities](~/assets/images/tools-and-sdks/create-project-capabilities.png)
 
@@ -51,7 +51,7 @@ To build any app in Teams, you can use Teams toolkit either by creating a new pr
 1. Enter Webpart name and Webpart description of your choice.
 
 1. Select workspace folder for the built project.
-1. Enter name for your app, such as helloworld. You can only use alphanumeric characters.
+1. Enter name for your app, such as "helloworld". You can only use alphanumeric characters.
 1. Press **Enter** to continue.
 
 You have created a new app.
