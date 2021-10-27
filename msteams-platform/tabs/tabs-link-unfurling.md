@@ -114,7 +114,6 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 > [!NOTE]
 > * The `name` is optional in deep link. If not included, the app name replaces it.
 > * The deep link can also be passed through an `OpenURL` action.
-> * Currently, Teams mobile clients do not support the Stage View capability. When users select a deep link to a Stage View, they are taken to their device's web browser. The web browser opens the URL specified in the `websiteUrl` parameter of the deep link.
 > * When you launch a Stage from a certain context, ensure that your app works in that context. For example, if your Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
 ## Tab information property
