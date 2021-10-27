@@ -500,7 +500,7 @@ The shareAppContentToStage includes the following query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| string | Yes | callback contains 2 parameters, error and result. “error” can either contain an error of type SdkError, in case of an error, or null when share is successful. “result” can either contain a true value, in case of a successful share or null when the share fails.|
+|**callback**| String | Yes | callback contains 2 parameters, error and result. “error” can either contain an error of type SdkError, in case of an error, or null when share is successful. “result” can either contain a true value, in case of a successful share or null when the share fails.|
 |**appContentURL**| string | Yes | URL that will be shared onto the stage.|
 
 
@@ -543,6 +543,118 @@ The `shareAppContentToStage` API returns the following response codes:
 | **501** | API not supported iin current context.|
 | **1000** | App does not have proper permissions to allow for sharing.|
 
+## getAppContentStageSharingState API
+
+The getAppContentStageSharingState API enables you to fetch information about app's sharing state on meeting stage. 
+
+### Query parameter
+
+The getAppContentStageSharingState includes the following query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | callback contains 2 parameters, error and result. “error” can contain an error of type SdkError (error indication), or null (non-error indication). “appContentStageSharingState” can either contain an AppContentStageSharingState object (indication of successful retrieval), or null (indication of failed retrieval).|
+
+
+
+### Example
+
+The Meeting Details API includes the following examples:
+
+# [C#](#tab/dotnet)
+
+Not available
+
+# [JavaScript](#tab/javascript)
+
+Not available 
+
+# [JSON](#tab/json)
+
+```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
+  if(result.isAppSharing) {
+    this.setState({ isGameSessionOver: false });
+   }
+  });
+```
+
+---
+
+The JSON response body for `appContentStageSharingState` API is:
+
+```json
+{
+   "isAppSharing":true
+  }
+  
+```
+
+
+### Response codes
+
+The `appContentStageSharingState` API returns the following response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **501** | API not supported iin current context.|
+| **1000** | App does not have proper permissions to allow for sharing.|
+
+##  getAppContentStageSharingCapabilities API
+
+The getAppContentStageSharingCapabilities API enables you to fetch the app's capabilities for sharing to meeting stage 
+
+### Query parameter
+
+The getAppContentStageSharingState includes the following query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | callback contains 2 parameters, error and result. “error” can either contain an error of type SdkError (error indication), or null (non-error indication). “appContentStageSharingCapabilities” can either contain an IAppContentStageSharingCapabilities object (indication of successful retrieval), or null (indication of failed retrieval).|
+
+
+
+### Example
+
+The getAppContentStageSharingCapabilities API includes the following examples:
+
+# [C#](#tab/dotnet)
+
+Not available
+
+# [JavaScript](#tab/javascript)
+
+Not available 
+
+# [JSON](#tab/json)
+
+```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
+  if(result.doesAppHaveSharePermission) {
+    this.setState({ isAppAllowedToShare: true });
+   }
+  });
+```
+
+---
+
+The JSON response body for `getAppContentStageSharingCapabilities` API is:
+
+```json
+{
+   "doesAppHaveSharePermission":true
+  }
+  
+```
+
+
+### Response codes
+
+The `getAppContentStageSharingCapabilities` API returns the following response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **1000** | App does not have proper permissions to allow for sharing.|
 
 ## See also
 
