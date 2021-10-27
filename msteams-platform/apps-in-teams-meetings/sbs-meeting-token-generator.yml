@@ -411,10 +411,12 @@ items:
         
     # [Command line](#tab/cli)
 
+    Navigate to the `csharp` folder in a terminal and enter the following command:
+
     ```bash
-    cd TokenApp
     dotnet run
     ```
+      ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetrun.png)
       
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
