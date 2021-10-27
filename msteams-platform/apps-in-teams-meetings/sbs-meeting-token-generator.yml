@@ -77,7 +77,7 @@ items:
   content: |
     Ensure the following changes are made to the properties of `TokenApp.csproj` file:
 
-    1. Launch Visual Studio 2019.
+    1. Launch **Visual Studio 2019**.
     1. Navigate to `File > Open > Project/Solution`.
     
        ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
@@ -280,7 +280,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default User.Read is checked:
+        By default `User.Read` is checked:
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
@@ -327,7 +327,7 @@ items:
 
     1. Open `appsettings.json` in **Visual Studio Code** and make the following changes:  
 
-         * `"MicrosoftAppId"`: Set up with the application (client) ID of the bot's Azure AD application.
+         * `"MicrosoftAppId"`: Set up with the application ID of the bot's Azure AD application.
          * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
          * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used.
 
@@ -338,7 +338,7 @@ items:
          * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
 
        > [!NOTE]
-       > `[WebAppDomain]` will be your ngrok domain, so the content bubble URL will be similar to `https://1d14****.ngrok.io/contentBubble.html`.
+       > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://1d14****.ngrok.io/contentBubble.html`.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
@@ -400,7 +400,7 @@ items:
 
     1. From an IDE:
 
-       1. Go to Visual Studio.
+       1. Go to **Visual Studio 2019**.
 
        1. Open `TokenApp.csproj` file, following the steps given in **Prerequisites** section.
 
@@ -454,15 +454,15 @@ items:
     
     1. Create a meeting with a few Presenters and Attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select the "Add an app" (+) button.
+    1. Once the meeting is created, go to the meeting details page and select the **Add an app** (+) button.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
-    1. In the pop-up that opens, select "Manage apps".
+    1. In the pop-up that opens, select **Manage apps**.
 
        ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
    
-    1. Select "Upload a custom app" and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+    1. Select **Upload a custom app** and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
@@ -470,15 +470,15 @@ items:
 
        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
-       You will see the app listed in the Manage Apps section
+       You will see the app listed in the **Manage apps** section.
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
-    1. Select the "Add an app" button again. Now in the app selection page, the app should be visible as "Meeting Token App".
+    1. Select the **Add an app** button again. In the app selection page, the app displays as **Meeting Token App**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
-    1. Select the Meeting Token app and select "Save".
+    1. Select the **Meeting Token App** and select **Save**.
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
