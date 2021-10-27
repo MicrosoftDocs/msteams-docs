@@ -124,13 +124,19 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 #### Shared meeting stage
 
-Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time.
+Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. You can share your apps to the collaborative meeting stage in two ways:
+1. Share entire app using the client Share to Stage button
+2. Share specific parts of the app using APIs in the Teams Client SDK. 
 
-The required context is `meetingStage` in the app manifest. A prerequisite is to have the `meetingSidePanel` context and it enables **Share** in the `meetingSidePanel`.
+***Share entire app to Stage***
 
-![Share to stage during meeting experience](~/assets/images/apps-in-meetings/share_to_stage_during_meeting.png)
+The entire app can be shared to the collaborative meeting stage using the client share to stage button in the app side panel.
 
-To enable shared meeting stage, configure your app manifest as follows:
+<img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
+
+The prerequisite for sharing the entire app to stage is to have `meetingStage` and `meetingSidePanel` as frame contexts within the app manifest.
+
+Example:
 
 ```json
 "configurableTabs": [
@@ -147,6 +153,13 @@ To enable shared meeting stage, configure your app manifest as follows:
     }
   ]
 ```
+
+
+***Share specific parts of the app to Stage***
+
+Specific parts of the app can be shared to the collaborative meeting stage by using the Share to Stage APIs available within the Teams Client SDK. These APIs can currently only be invoked from app side panel. See [Teams client SDK APIs](API-references.md#teams-client-sdk-apis) for details on how to configure your apps to use these APIs.
+
+<img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
 See how to [design a shared meeting stage experience](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
