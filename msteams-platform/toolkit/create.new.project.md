@@ -68,8 +68,6 @@ You can create an app with the help of samples for reference:
 
 Explore and download samples from **Samples**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples image":::
-
 ![View samples screen](~/assets/images/tools-and-sdks/view-sampels_screen.png)
 
 The following steps provide alternate way to open sample app:
