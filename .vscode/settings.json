@@ -1,6 +1,11 @@
 {
-    "cSpell.ignoreWords": [
-        "bot's"
+    "cSpell.words": [
+        "addpart",
+        "sideload",
+        "sideloaded",
+        "sideloading",
+        "Webpart",
+        "webparts"
     ],
     "markdownlint.config": {
         "MD028": false,

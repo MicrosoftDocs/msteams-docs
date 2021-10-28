@@ -84,11 +84,11 @@ The following code is an example of corresponding code for the configuration pag
 
 Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon.
 
-The following image displays the tab content with a gray icon:
+The following image displays the tab content with **Gray** icon selected:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-The following image displays the tab content with a red icon:
+The following image displays the tab content with **Red** icon selected:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
