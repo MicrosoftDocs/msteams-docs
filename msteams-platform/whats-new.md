@@ -30,7 +30,7 @@ Microsoft Teams platform features that are available to all app developers.
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. |[Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
 |09/08/2021| Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
 |09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks. | [Format cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md)|
-|10/20/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events.| [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |10/18/2021|Tabs link unfurling and stage view|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
 |10/08/2021|New best practices for designing Adaptive Cards.|[Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Hide Teams app until Admin allows to unhide the app. | [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) 
