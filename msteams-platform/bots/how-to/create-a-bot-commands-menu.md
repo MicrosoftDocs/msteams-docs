@@ -39,7 +39,7 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/deploy-csharp-app-studio.md).
 
 3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
 

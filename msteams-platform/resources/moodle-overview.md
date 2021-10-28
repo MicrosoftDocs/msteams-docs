@@ -9,13 +9,26 @@ author: KirtiPereira
 
 # Moodle learning management system
 
-Moodle is the world’s largest open source learning management system. This app helps educators create and organize their courses through valuable features that include a robust quizzing tool, graded discussions, and a variety of assignment types for students to engage with content.  
+Moodle is the world’s largest open source learning management system. 
+
+This app helps educators create and organize their courses through valuable features, that include:
+* Robust quizzing tool 
+* Graded discussions
+* Various assignment types for students to engage with content  
  
-Moodle integrates with Microsoft Teams. Teams is the hub for real-time collaboration, teamwork, and productivity. With seamless integration with Office 365, hundreds of apps, chat, and live meeting capabilities of up to 300 participants, Teams gives faculty and students the ability to work together more efficiently no matter where they are. 
+Moodle integrates with Microsoft Teams. Teams is the hub for real-time collaboration, teamwork, and productivity. With seamless integration with Office 365, hundreds of apps, chat, and live meeting capabilities of up to 300 participants. Teams gives faculty and students the ability to work together more efficiently no matter where they are. 
  
-In addition, the Microsoft 365 Moodle plugins complements Moodle by providing a comprehensive experience for faculty and students. With the Microsoft 365 Moodle plugins, site administrators can sync users between Office 365 and Moodle, automate user matching, sync courses to Microsoft Teams and file repositories, connect OneNote assignments, and embed Office documents.  
+Microsoft 365 Moodle plugins complement Moodle by providing a comprehensive experience for faculty and students. With the Microsoft 365 Moodle plugins, site administrators can sync users with:
+
+* Office 365 and Moodle
+* Automate user matching
+* Sync courses to Microsoft Teams and file repositories
+* Connect OneNote assignments
+* Embed Office documents
  
-Furthermore, Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugins, which integrates Moodle into Teams, faculty and students can have the best of both worlds by taking advantage of Moodle's unique features while engaging in real-time communication and collaboration.
+Microsoft Teams apps such as mConnect by Skooler and the Microsoft 365 Moodle Plugins, integrates Moodle into Teams.
+
+Faculty and students can take advantage of Moodle's unique features in real-time communication and collaboration.
 
 ## mConnect app by Skooler
 

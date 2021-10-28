@@ -33,9 +33,6 @@ Example of localization JSON schema is as follows:
 }
 ```
 
-> [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
-
 The schema defines the following properties:
 
 |Property|Type|Maximum length|Description|
