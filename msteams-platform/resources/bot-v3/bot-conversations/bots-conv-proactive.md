@@ -33,7 +33,7 @@ Proactive messages generally fall into one of two categories, welcome messages o
 
 When using proactive messaging to send a welcome message to a user, ensure that from the user's perspective, the message appears unprompted. If there is a welcome message, it will be the first time that they’ve interacted with your app. The best welcome messages will include:
 
-* **Why they are receiving this message**: It should be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
+* **Why they are receiving this message**: It should be clear to the user why they're receiving this message. If your bot was installed in a channel and you sent a welcome message to all users, let them know what channel it was installed in and potentially who installed it.
 * **What do you offer**: What can they do with your app? What value can you bring to them?
 * **What should they do next**: Invite them to try out a command, or interact with your app in some way.
 
