@@ -174,7 +174,7 @@ conceptualContent:
 
 # tools section
 tools:
-  title: SDKs and tools # < 60 chars (optional)
+  title: Tools and SDKs # < 60 chars (optional)
   items:
   # Card
     - title: Microsoft Teams Toolkit extension for Visual Studio Code
