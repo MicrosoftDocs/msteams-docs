@@ -158,7 +158,7 @@ Example:
 
 ***Share specific parts of the app to Stage***
 
-Specific parts of the app can be shared to the collaborative meeting stage by using the Share to Stage APIs available within the Teams Client SDK. These APIs can currently only be invoked from app side panel. See [Teams client SDK APIs](API-references.md#teams-client-sdk-apis) for details on how to configure your apps to use these APIs.
+Specific parts of the app can be shared to the collaborative meeting stage by using the Share to Stage APIs available within the Teams Client SDK. These APIs can currently only be invoked from app side panel. See [Teams client SDK APIs](API-references.md) for details on how to configure your apps to use these APIs.
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
