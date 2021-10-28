@@ -8,10 +8,7 @@ ms.localizationpriority: medium
 
 # Receive all channel messages with RSC
 
-> [!NOTE]
-> This feature is currently available in [public developer preview](../../../resources/dev-preview/developer-preview-intro.md) only.
-
-The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios.
+The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is extended to bot scenarios.
 
 Currently, bots can only receive user channel messages when they are @mentioned. Using RSC, you can now request team owners to consent for a bot to receive user messages across standard channels in a team without being @mentioned. This capability is enabled by specifying the `ChannelMessage.Read.Group` permission in the manifest of an RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
 
@@ -21,9 +18,15 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel messages without being @mentioned.
 
+> [!NOTE]
+> The Graph APIs provide access to services including all Teams messages, archived data in channels, and chats.
+
 ## Update app manifest
 
-For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property.
+For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property. Bots use this permission to build and enhance experience for users in Teams.
+
+> [!Note]
+> The bots without RSC permission will be rejected during store approval.
 
 ![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
 
@@ -45,7 +48,7 @@ The following code provides an example of the app manifest:
   }
 ```
 
-## Sideload in a team to test
+## Sideload in a team
 
 To sideload in a team to test, whether all channel messages in a team with RSC are received without being @mentioned:
 
