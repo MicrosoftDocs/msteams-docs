@@ -387,8 +387,6 @@ The getAppContentStageSharingState includes the following query parameter:
 |---|---|----|---|
 |**callback**| String | Yes | callback contains 2 parameters, error and result. “error” can contain an error of type SdkError (error indication), or null (non-error indication). “appContentStageSharingState” can either contain an AppContentStageSharingState object (indication of successful retrieval), or null (indication of failed retrieval).|
 
-
-
 ### Example
 
 The Meeting Details API includes the following examples:
