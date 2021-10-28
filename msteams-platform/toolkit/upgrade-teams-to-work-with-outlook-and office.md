@@ -3,7 +3,7 @@ title: Upgrade Teams to work with Outlook and Office
 description: Upgrading Teams to work with Outlook and Office.com
 keywords: teams visual studio code toolkit
 ms.localizationpriority: medium
-ms.topic: Upgrade TEams
+ms.topic: Upgrade Teams
 ms.author: v-vasudhab
 ---
 
