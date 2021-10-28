@@ -70,6 +70,6 @@ When you feel your app is production ready, you can begin the process of getting
 * Create a Partner Center developer account.
 * Prepare your store submission, which includes running automated tests, compiling test notes, creating a store listing, among other important tasks to help expedite the review process.
 * Submit your app through Partner Center.
-* Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app.).
+* Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app).
 
  ![Pre submission steps](~/assets/images/tools-and-sdks/pre-submission-steps.png)
