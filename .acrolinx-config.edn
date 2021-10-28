@@ -13,7 +13,7 @@
              }
      :scores {
               ;;:terminology 
-              ;;:qualityscore  
+              :qualityscore 80 
               ;;:spelling 
              }
    }
@@ -25,7 +25,7 @@
  "
 ## Acrolinx Scorecards 
  
-**We do not currently enforce a minimum score for content merged to the default branch. This will change in the future.**
+**We currently enforce a minimum score of 80.**
  
 Click the scorecard links for each article to review the Acrolinx feedback on grammar, spelling, punctuation, writing style, and terminology:
 | Article | Score | Issues | Scorecard | Processed |
