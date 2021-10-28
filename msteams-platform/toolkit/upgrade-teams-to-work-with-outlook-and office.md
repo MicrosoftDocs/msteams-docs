@@ -4,7 +4,7 @@ description: Upgrading Teams to work with Outlook and Office.com
 keywords: teams visual studio code toolkit
 ms.localizationpriority: medium
 ms.topic: Upgrade TEams
-ms.author: Vasudha
+ms.author: v-vasudhab
 ---
 
 # Upgrade Teams Application to Work with Outlook and Office.com
@@ -111,11 +111,11 @@ You can try to create a new tab app using Teams Toolkit and run it in Outlook an
 
 1. Select `Tab` in the next window and click `OK`.
 
-![select-capability](../assets/images/upgrade-teams/select-capability.png)
+![select capability](../assets/images/upgrade-teams/select-capability.png)
 
 1. Select `Azure` as hosting type.
 
-![Select hosting type](../assets/images/upgrade-teams/shosting-type.png)
+![Select hosting type](../assets/images/upgrade-teams/hosting-type.png)
 
 1. Select an optional cloud resources, programming language of your choice, project location and a name of your project in the following project creation wizard.
 
