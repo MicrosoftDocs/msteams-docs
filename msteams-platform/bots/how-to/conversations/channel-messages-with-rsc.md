@@ -25,7 +25,7 @@ The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user co
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` permission specified in the `webApplicationInfo` property. Bots use this permission to build and enhance experience for users in Teams.
 
-> [!Note]
+> [!NOTE]
 > The bots without RSC permission will be rejected during store approval.
 
 ![Update app manifest](~/bots/how-to/conversations/Media/appmanifest.png)
