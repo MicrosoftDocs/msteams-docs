@@ -73,7 +73,7 @@ A notification bar is a dedicated area for displaying a brief, important message
 
 Stage view lets users see content—like an image, file, or website—on a large surface in Teams without switching context. This component is primarily for viewing content. Don't use it for complex interactions.
 
-Learn how to implement [stage view](~/tabs/tabs-link-unfurling.md).
+See how to implement [stage view](~/tabs/tabs-link-unfurling.md).
 
 ### Top use cases
 
