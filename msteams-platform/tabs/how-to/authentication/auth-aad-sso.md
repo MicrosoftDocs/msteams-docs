@@ -16,6 +16,8 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > ✔Teams for Android (1416/1.0.0.2020073101 and later)
 >
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
+> 
+> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
 
