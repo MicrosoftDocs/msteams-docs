@@ -149,7 +149,7 @@ You can execute an event handler when the user removes an existing connector con
 
 Download the auto generated `Teams app manifest` from the portal. Perform the following steps, before testing or publishing the app:
 
-1. See [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
+1. [Include two icons](../../concepts/build-and-test/apps-package.md#app-icons).
 1. Modify the `icons` portion of the manifest to include the file names of the icons instead of URLs.
 
 The following manifest.json file contains the elements needed to test and submit the app:
