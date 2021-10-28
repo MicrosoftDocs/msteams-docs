@@ -94,7 +94,7 @@ After adding cloud resources to your project, the next step is to provision them
 |Azure SQL|Create Azure SQL server.</br></br> Create system assigned, managed identity. </br></br> Setup firewall rule | Creates Azure SQL server instance, set up an identity to access the database and firewall rules for database protection.|
 |Azure API management|Provision APIM instance </br></br> Create and configure APIM Client AAD app.| Creates a new APIM instance with consumption plan.</br></br> Represents client application for the API published to APIM.|
 
-
+For more information, see [Provision in the cloud](provision-in-the-cloud.md).
 
 ## Deployment
 
@@ -114,3 +114,6 @@ Set value of `skipAddingUser` to true.
 Under config section `fx-resource-azure-sql`.
 
 ## See also
+
+* [Provision cloud resources](~/toolkit/provision-in-the-cloud.md)
+* [Deploy your project](~/toolkit/deploy-to-the-cloud.md)
