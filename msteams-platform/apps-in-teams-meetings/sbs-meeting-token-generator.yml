@@ -510,7 +510,8 @@ items:
     To maintain token information and service URL for the tenant, the sample app uses an in-memory store. 
     If you restart the project, run the following command to recapture the service URL: `@[BotName] reset`. In our example, `[BotName]` is `MeetingTokenGeneratorBot`.
 
-    When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
+    > [!NOTE]
+    > When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
 
 - title: Complete challenge
   durationInMinutes: 1
