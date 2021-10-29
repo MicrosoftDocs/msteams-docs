@@ -487,10 +487,24 @@ items:
    
     Now the app will be visible in the meeting chat. Start the meeting and the icon should be visible in the meeting control bar.
 
-       ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
+       ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
 
-       ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-yourtoken.png)
+- title: Troubleshoot
+  durationInMinutes: 1
+  content: |
+    To maintain token information and service URL for the tenant, the sample app uses an in-memory store. 
+    If you restart the project, run the following command to recapture the service URL: `@[BotName] reset`. In our example, `[BotName]` is `MeetingTokenGeneratorBot`.
 
+    When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with something like this?
+
+       ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
+
+       ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtoken.png)
 
 - content: |
     You've completed the tutorial to get started with a Meeting Token Generator app.
