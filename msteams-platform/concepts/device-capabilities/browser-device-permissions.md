@@ -20,7 +20,7 @@ Previously, browser handled how to grant access permissions. Now these permissio
 If your app needs device permissions as mentioned in your [application manifest](native-device-permissions.md), **App permissions** option is enabled for app’s device permissions. The **App permissions** option is available in the following capabilities: 
 
 * [Personal apps and task module dialogs](#personal-apps-and-task-module-dialogs)
-* [Chats, channel, or meeting tabs](#chat-,-channel-,-or-meeting-tabs)
+* [Chats, channel, or meeting tabs](#chat-channel-or-meeting-tabs)
 
 ### Personal apps and task module dialogs
 The **App permissions** option is in the upper-right corner of the page.
