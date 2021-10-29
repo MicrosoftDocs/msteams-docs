@@ -162,9 +162,7 @@ Participants can share specific parts of the app to the collaborative meeting st
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-To configure the app to use the share to stage APIs available within the Teams Client SDK, see [Teams client SDK APIs](API-references.md).
-
-For more information on how to design a shared meeting stage experience, see [design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+To share specific parts of the app to stage, you must add the share to stage APIs to Teams client SDK. For more information, see [Teams client SDK APIs](API-references.md).
 
 ### After a meeting
 
@@ -181,3 +179,4 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Shared meeting stage experience design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
