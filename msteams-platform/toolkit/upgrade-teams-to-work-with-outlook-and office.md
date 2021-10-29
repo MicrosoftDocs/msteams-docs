@@ -9,34 +9,34 @@ ms.author: v-vasudhab
 
 # Upgrade Teams Application to Work with Outlook and Office.com
 
-Teams Toolkit offers helpers for Visual Studio Code developers to upgrade Teams applications (Tab application) to work with Outlook and Office. The feature helps upgrade the manifest and `TeamsJS` SDK to the latest version so that the application can run on Outlook and Office.com.
+Teams Toolkit helps you to upgrade Teams applications to work with Outlook and Office. This feature helps to upgrade the manifest and `TeamsJS` SDK to the latest version to run application on Outlook and Office.com.
 
 ![Upgrade Teams](../assets/images/upgrade-teams/upgrade-teams.png)
 
 ## Prerequisite
 
-Install the latest version of Teams Toolkit from Visual Studio Code extension marketplace: [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+Install the latest version of Teams Toolkit from Visual Studio Code extension in marketplace: [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-## Upgrade Manifest and SDK
+### Upgrade Manifest and SDK
 
 In Visual Studio Code, open the command palette and find following commands:
 
-1. Teams: Upgrade Teams Manifest to Work in Outlook and Office
-1. Teams: Upgrade Teams Tab App to Work in Outlook and Office
+1. Upgrade Teams manifest to work in Outlook and Office
+1. Upgrade Teams tab app to work in Outlook and Office
 
 ### Upgrade Manifest
 
-Run the command `Teams: Upgrade Teams Manifest to Work in Outlook and Office` and select your Teams Tab App manifest file to migrate:
+Run the command Upgrade Teams manifest to work in Outlook and Office and select your Teams Tab app manifest file to migrate:
 
-1. Update manifest version to `m365DevPreview`.
+1. Update manifest version to use the latest `m365DevPreview` schema.
 1. Update manifest file to use the latest `DevPreview` schema.
 
 ### Upgrade Custom Tab
 
-Run the command `Teams: Upgrade Teams Tab App to Work in Outlook and Office` and select your Teams Tab App project to migrate:
+Run the command upgrade Teams tab app to work in Outlook and Office and select your Teams tab app project to migrate:
 
-1. Update Teams JS SDK to the latest beta version.
-1. Update function references, Enum and interface references.
+1. Update Teams-js SDK to the latest beta version.
+1. Update function references, `Enum` and interface references.
 1. Add `TODO` comments to finish changing callbacks to promises manually.
 1. Add `TODO` in places where developers may be impacted by changes to the context schema.
 
