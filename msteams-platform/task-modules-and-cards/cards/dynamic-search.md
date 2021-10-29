@@ -26,7 +26,7 @@ As user starts entering the texts, the choices are filtered down to choices that
 
 The following image demonstrates static typeahead search:
 
-[Placeholder for gif image]
+![Static typeahead search](...\assets\images\Cards\static-typehead-search.gif)
  
 ## Dynamic typeahead search
 
