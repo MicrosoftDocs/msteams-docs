@@ -138,4 +138,4 @@ Once the project is created perform the following steps:
 
     ![Create zip folder](../assets/images/upgrade-teams/create-teams-package.png)
 
-Follow steps in Run your Teams application in Outlook and Office.com.
+Follow steps to Run your Teams application in Outlook and Office.com.
