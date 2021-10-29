@@ -28,6 +28,7 @@ items:
     
     This step-by-step guide helps you to build tabs with Adaptive Cards in desktop and mobile.
 
+    The image will be replaced once I get the output
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Prerequisites
@@ -50,10 +51,10 @@ items:
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
 
-- title: Set up bot in Azure Bot Service
+- title: Create a Bot Registration In Azure portal
   durationInMinutes: 5
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    To set up bot in Azure Bot Service, Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
 
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
@@ -71,13 +72,13 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot** and select the Enter key.
+    1. In the search box, enter **Azure bot** and click Enter key.
     1. Select **Azure Bot**.
 
         ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
-    1. Enter required bot handle name in **Bot handle**.
+    1. Enter required bot handle name in **Bot handle** field.
     1. From the **Subscription** dropdown list, select the subscription.
     1. From the **Resource group** dropdown list, select the resource group.
         
