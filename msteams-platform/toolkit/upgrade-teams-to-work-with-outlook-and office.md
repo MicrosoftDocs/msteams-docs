@@ -39,12 +39,12 @@ Run the command `Teams: Upgrade Teams Tab App to Work in Outlook and Office` and
 1. Update function references, Enum and interface references.
 1. Add `TODO` comments to finish changing callbacks to promises manually.
 
-[!Note]
+> [!TIP]
 > changing from callbacks to promises alters control flow and cannot be fully automated. This code will have `TODO` comments for developers review. The typical solution is to make parent function `async` and use `await` next to each promise.
 
 1. Add `TODO` in places where developers may be impacted by changes to the context schema.
 
-[!Note]
+> [!TIP]
 > transforming JavaScript inline within HTML is not supported.
 
 ## Run  your Teams application in Outlook and Office.com
