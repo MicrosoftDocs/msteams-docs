@@ -138,7 +138,7 @@ Participants can share the entire app to the collaborative meeting stage using t
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-To share the entire app to stage, in the app manifest you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
+To share the entire app to stage, in the [app manifest](../resources/schema/manifest-schema-dev-preview.md#configurabletabs) you must configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
 ```json
 "configurableTabs": [
@@ -162,7 +162,7 @@ Participants can share specific parts of the app to the collaborative meeting st
 
 <img src="../assets/images/apps-in-meetings/share-specific-content-to-stage.png" alt="Share specific parts of the app" width = "900"/>
 
-To share specific parts of the app to stage, you must add the share to stage APIs to Teams client SDK. For more information, see [Teams client SDK APIs](API-references.md).
+To share specific parts of the app to stage, you must add the share to stage APIs to Teams client SDK. For more information, see [API reference](API-references.md).
 
 ### After a meeting
 
