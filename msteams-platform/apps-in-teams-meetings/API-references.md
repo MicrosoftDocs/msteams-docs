@@ -486,9 +486,6 @@ The `getAppContentStageSharingCapabilities` API returns the following response c
 
 ## Real-time Teams meeting events
 
-> [!NOTE]
-> This feature is currently available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
-
 The user can receive real-time meeting events. As soon as any app is associated with a meeting, the actual meeting start and end time are shared with the bot.
 
 Actual start and end time of a meeting are different from scheduled start and end time. The Meeting Details API provides the scheduled start and end time. The event provides the actual start and end time.
