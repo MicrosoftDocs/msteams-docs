@@ -9,26 +9,31 @@ ms.topic: how-to
 # Device permissions for the browser
 
 > [!NOTE]
-> The change to how device permissions are handled in the browser is currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only. 
-> This change will be generally available (GA) by January 21, 2022.
+> The new feature on how device permissions are handled in the browser are currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> This new feature will be generally available (GA) by January 21, 2022.
 
-Applications that require device permissions - such as camera or microphone access - now require users to manually grant consent at a per app level in the web browser. Previously, the browser handled how these permissions were granted, but now these permissions will be handled in Microsoft Teams. This has implications on how you design your application if they require these permissions in the browser.
+Teams apps that require device permissions, such as camera or microphone access, now require users to manually grant consent at a per app level in the web browser. 
 
-## Change in behavior
-If your application has declared that it needs device permissions in your [application manifest](native-device-permissions.md), then users will be shown an "app permissions" option where they can enable an app’s device permissions. The "app permissions" option can be found in personal apps, task module dialogs, and tabs in chats, channels or meetings.
+Previously, browser handled how to grant access permissions. Now these permissions are handled in Microsoft Teams. This has implications on how you design your application and if they require these permissions in the browser.
+
+## App permissions 
+If your app needs device permissions as mentioned in your [application manifest](native-device-permissions.md), **App permissions** option is enabled for app’s device permissions. The **App permissions** option is available in the following capabilities: 
+
+* [Personal apps and task module dialogs](#personal-apps-and-task-module-dialogs)
+* [Chats, channel, or meeting tabs](#chat-,-channel-,-or-meeting-tabs)
 
 ### Personal apps and task module dialogs
-The "app permissions" setting can be found in the top-right.
+The **App permissions** option is in the upper-right corner of the page.
 <img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
-### Chat, channel or meeting tabs
-The "app permissions" setting can be found in the tab dropdown.
+### Chat, channel, or meeting tabs
+The **App permissions** option is in the tab dropdown.
 ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
 
-A user will need to enable these permissions in the browser for these permissions to take effect. Once a user changes an app’s device permissions in the browser, they will be prompted to reload the application in Teams. It is important that you make users aware of where to go in order to enable these permissions in Microsoft Teams.
+Users need to enable these permissions in the browser to access device capabilities. After user changes the app’s device permissions in the browser, they're prompted to reload the application in Teams.
 
 ## Recommendation
-Microsoft Teams applications that require device permissions in the browser are expected to show instructions to users on where to find and enable these permissions in the Teams UI. Depending on the context in which your application is running, you will need to ensure your instructions are pointing the user to correct location to access these permissions as they differ for personal apps, task module dialogs, and tabs in chats, channels or meetings.
+Teams apps that require device permissions in the browser needs to display the instructions to users to enable these permissions in the Teams UI. Depending on the app capabilities in which the application is running, the user needs to ensure the correct location to access these permissions as they're different for personal apps, task module dialogs, and tabs in chats, channels, or meetings.
 
 <img src="../../assets/images/tabs/enable-access.png" alt="Enable camera access" width="800"/>
 
