@@ -124,20 +124,21 @@ In-meeting dialog must not use task module. Task module isn't invoked in a meeti
 
 #### Shared meeting stage
 
+> [!NOTE]
+> Currently, this feature is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md) only.
+
 Shared meeting stage allows meeting participants to interact with and collaborate on app content in real time. You can share your apps to the collaborative meeting stage in the following ways:
 
-* Share entire app using the client Share to Stage button
-* Share specific parts of the app using APIs in the Teams Client SDK.
+* [Share entire app to stage](#share-entire-app-to-stage) using the Share to Stage button in Teams client.
+* [Share specific parts of the app to stage](#share-specific-parts-of-the-app-to-stage) using APIs in the Teams Client SDK.
 
-***Share entire app to Stage***
+##### Share entire app to Stage
 
-The entire app can be shared to the collaborative meeting stage using the client share to stage button in the app side panel.
+You can share the entire app to the collaborative meeting stage using the share to stage button from the app side panel. 
 
 <img src="../assets/images/apps-in-meetings/share_to_stage_during_meeting.png" alt="Share full app" width = "900"/>
 
-The prerequisite for sharing the entire app to stage is to have `meetingStage` and `meetingSidePanel` as frame contexts within the app manifest.
-
-Example:
+To share the entire app to stage, in the app manifest configure `meetingStage` and `meetingSidePanel` as frame contexts. For example:
 
 ```json
 "configurableTabs": [
@@ -155,8 +156,7 @@ Example:
   ]
 ```
 
-
-***Share specific parts of the app to Stage***
+##### Share specific parts of the app to Stage
 
 Specific parts of the app can be shared to the collaborative meeting stage by using the Share to Stage APIs available within the Teams Client SDK. These APIs can currently only be invoked from app side panel. See [Teams client SDK APIs](API-references.md) for details on how to configure your apps to use these APIs.
 
