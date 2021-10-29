@@ -307,20 +307,20 @@ The JSON response body for Meeting Details API is as follows:
 
 ## shareAppContentToStage API
 
-The shareAppContentToStage API enables you to share specific parts of your app to the meeting stage. The API is available through Teams Client SDK service. 
+The shareAppContentToStage API enables you to share specific parts of your app to the meeting stage. The API is available through the Teams Client SDK service. 
 
 ### Prerequisite
 
-To use theshareAppContentToStage API, you must obtain RSC permissions. Use the following example to configure your app manifest's `authorization` property and resourceSpecific field's name and type: 
+To use the shareAppContentToStage API, you must obtain RSC permissions. Use the following example to configure your app manifest's `authorization` property and resourceSpecific field's name and type: 
 
 ```json
 "authorization": {
     "permission": { 
     "resourceSpecific": [
-    { 
-    "name": "MeetingStage.Write.Chat",
-    "type": "Delegated"
-    }
+      { 
+      "name": "MeetingStage.Write.Chat",
+      "type": "Delegated"
+      }
     ]
    }
 }
@@ -328,7 +328,7 @@ To use theshareAppContentToStage API, you must obtain RSC permissions. Use the f
 
 ### Query parameter
 
-The shareAppContentToStage includes the following query parameter:
+The shareAppContentToStage includes the following parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
@@ -381,11 +381,13 @@ The getAppContentStageSharingState API enables you to fetch information about ap
 
 ### Query parameter
 
-The getAppContentStageSharingState includes the following query parameter:
+The getAppContentStageSharingState includes the following parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | callback contains 2 parameters, error and result. “error” can contain an error of type SdkError (error indication), or null (non-error indication). “appContentStageSharingState” can either contain an AppContentStageSharingState object (indication of successful retrieval), or null (indication of failed retrieval).|
+
+
 
 ### Example
 
@@ -436,7 +438,7 @@ The getAppContentStageSharingCapabilities API enables you to fetch the apps' cap
 
 ### Query parameter
 
-The getAppContentStageSharingState includes the following query parameter:
+The getAppContentStageSharingState includes the following parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
