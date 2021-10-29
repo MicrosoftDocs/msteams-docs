@@ -426,16 +426,31 @@ items:
        > [!NOTE]
        > Developer preview mode must be enabled on each Teams client app or browser.
 
-    1. Enable uploading of apps in the admin console of your tenant 
+    1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. Select **Show All > Teams**.
-       1. Navigate to Teams apps > Setup Policies > Global.
-       1. Toggle Upload custom apps to the On position.
-       1. Select Save. Your test tenant can permit custom app sideloading.
+       1. Select **Show All** and select **Teams**.
+
+          ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
+
+          > [!NOTE]
+          > It might take up to 24 hours for the **Teams** option to appear.
+
+       1. Navigate to **Teams apps**.
+       1. Select **Setup Policies** and select **Global**.
+
+          ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
+
+       1. Toggle **Upload custom apps** to the `On` position.
+       1. Select **Save**. Your test tenant can permit custom app sideloading.
+
+          > [!NOTE]
+          > It might take up to 24 hours for the sideloading to be active.
+
+          ![Upload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
     1. Select your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu.
     
-    1. Select **About** and choose **Developer** preview.
+    1. Select **About** and select **Developer preview**.
    
     1. Select **Switch to Developer preview**.
  
