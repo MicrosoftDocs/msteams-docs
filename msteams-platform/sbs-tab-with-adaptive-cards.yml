@@ -62,7 +62,7 @@ items:
     1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="/assets/images/adaptive-cards/azure-bot.png" alt-text="Create Azure Bot.":::
+        ![Create Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
