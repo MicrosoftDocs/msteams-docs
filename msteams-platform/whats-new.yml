@@ -13,9 +13,9 @@ landingContent:
   - linkListType: whats-new
     links:
     - text: Monetize your Teams app with a transactable SaaS offer.
-      url: include-saas-offer.md
+      url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
     - text: Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.
-      url: get-started-overview.md
+      url: get-started/get-started-overview.md
     - text: Add a `registerOnFocused` API for tabs or personal apps.
-      url: create-personal-tab.md
+      url: tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps
 
