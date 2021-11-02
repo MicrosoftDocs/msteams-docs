@@ -406,7 +406,7 @@ items:
     ```bash
     dotnet run
     ```
-      ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetrun.png)
+      ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
       
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
