@@ -8,14 +8,17 @@ metadata:
   ms.date: 11/02/2021
   ms.topic: landing-page
 landingContent:
-- title: Updates this month
+- title: Announcements
   linkLists:
   - linkListType: whats-new
     links:
     - text: Monetize your Teams app with a transactable SaaS offer.
       url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+- title: Updates this month
+  linkLists:
+  - linkListType: whats-new
+    links:
     - text: Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.
       url: get-started/get-started-overview.md
     - text: Add a `registerOnFocused` API for tabs or personal apps.
       url: tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps
-
