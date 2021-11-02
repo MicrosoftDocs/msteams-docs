@@ -6,7 +6,7 @@
   expanded: false 
   items:
     - name: Build apps for Microsoft Teams
-      href: overview-new.md
+      href: overview-new.yml
       items:
       - name: It starts with an idea
         href: overview-test.md
