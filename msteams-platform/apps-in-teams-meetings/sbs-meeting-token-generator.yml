@@ -349,14 +349,14 @@ items:
     
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
-         * Set up "manifestVersion" to "1.11".
-         * Set up "$schema" to "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json".
-         * Set up "[companyName]" to "Contoso".
-         * Set up "resource" to "api://[WebAppDomainName]/[MicrosoftAppId]".
+         * Set up `manifestVersion` to `1.11`.
+         * Set up `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
+         * Set up `[companyName]` to `Contoso`.
+         * Set up `resource` to `api://[WebAppDomainName]/[MicrosoftAppId]`.
          * Set up the following sections to your fully qualified domain name:
-           * [websiteUrl]
-           * [privacyUrl]
-           * [termsOfUseUrl]
+           * `[websiteUrl]`
+           * `[privacyUrl]`
+           * `[termsOfUseUrl]`
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
          * Replace all occurrences of `[MicrosoftAppId]` with your application ID as provided in previous steps. 
 
