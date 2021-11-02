@@ -14,7 +14,6 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    This App talks about the Teams tab which displays Adaptive card with CSharp. For reference, please check [Build tabs with Adaptive Cards](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-adaptive-card-tabs)
     
     Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
@@ -34,6 +33,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
+
     Ensure that you install the following tools and set up your development environment:
 
     * Microsoft Teams with an account (not a guest account)
@@ -62,7 +62,7 @@ items:
     1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
+        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
@@ -76,23 +76,21 @@ items:
 
     1. Select **Review + create**.
 
-        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
+        ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
 
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
-        Image will be replaced
-        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
+        ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        Image will be added
-        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
+        ![Go to resource](~assets/images/adaptive-cards/go-to-resource card.png)
 
         Now your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/bots/Azurebotresource.png)
+        ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
 
     **To create client secret**
 
