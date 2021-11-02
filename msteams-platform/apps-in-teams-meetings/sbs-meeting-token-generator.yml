@@ -183,8 +183,10 @@ items:
     ```bash
     ngrok http -host-header=localhost 3978
     ```
-        > [!NOTE]
-        > If you are using `Command line` to build and run the service, ensure to use `localhost 5000` instead of `localhost 3978`.
+
+         > [!NOTE]
+         > If you are using `Command line` to build and run the service, ensure to use `localhost 5000` instead of `localhost 3978`.
+
 
     **To add messaging endpoint**
 
