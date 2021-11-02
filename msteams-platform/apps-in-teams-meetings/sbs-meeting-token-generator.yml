@@ -327,7 +327,7 @@ items:
 
          * `"MicrosoftAppId"`: Set up with the application ID of the bot's Azure AD application.
          * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
-         * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used.
+         * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
        > [!NOTE]
        > The sample will only work in this tenant.
@@ -352,6 +352,7 @@ items:
          * Set up "manifestVersion" to "1.11".
          * Set up "$schema" to "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json".
          * Set up "[companyName]" to "Contoso".
+         * Set up "resource" to "api://[WebAppDomainName]/[MicrosoftAppId]".
          * Set up the following sections to your fully qualified domain name:
            * [websiteUrl]
            * [privacyUrl]
