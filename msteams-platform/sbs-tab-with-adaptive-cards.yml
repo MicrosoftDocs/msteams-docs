@@ -54,14 +54,6 @@ items:
 - title: Create a Bot Registration In Azure portal
   durationInMinutes: 5
   content: |
-    To set up bot in Azure Bot Service, Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
-
-    * Use ngrok to create a tunnel to your web server's endpoints.
-    * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    * Add messaging endpoint to the ngrok tunnel you created.
-
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
     ```bash
@@ -75,7 +67,7 @@ items:
     1. In the search box, enter **Azure bot** and click Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
+        :::image type="content" source="/assets/images/adaptive-cards/Tabs Adaptive cards/azure-bot.png" alt-text="Alt text that describes the content of the image.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
@@ -94,6 +86,9 @@ items:
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
+
+        Image will be replaced
+        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
