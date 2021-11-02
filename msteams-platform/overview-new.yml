@@ -14,6 +14,18 @@ landingContent:
       links:
       - text: Get started with building apps
         url: ../msteams-platform/get-started/get-started-overview.md
+    - linkListType: tutorial
+      links:
+      - text: Build your first app with JavaScript
+        url: sbs-gs-javascript.yml
+      - text: Build your first app with Blazor
+        url: sbs-gs-blazor.yml
+      - text: Build your first app with SPFx
+        url: sbs-gs-spfx.yml
+      - text: Build your first app with C# or .NET
+        url: sbs-gs-csharp.yml
+      - text: Build your first app with Node.js
+        url: sbs-gs-nodejs.yml
 - title: App building - Basics and tools
   linkLists:
   - linkListType: overview
