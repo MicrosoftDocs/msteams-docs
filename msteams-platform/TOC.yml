@@ -6,7 +6,14 @@
   expanded: false 
   items:
     - name: Build apps for Microsoft Teams
-      href: overview.md
+      href: overview-new.md
+      items:
+      - name: It starts with an idea
+        href: overview-test.md
+      - name: Explore Teams Features
+        href: overview-explore.md
+      - name: The Teams solution
+        href: overview-solution.md
 - name: Get started
   expanded: false
   items:
