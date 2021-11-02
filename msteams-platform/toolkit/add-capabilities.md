@@ -101,7 +101,5 @@ After adding capabilities, the following changes reflect in your project:
 ## See also
 
 * Run your application locally with more capabilities. (Links to local debug)
-* [Provision necessary cloud resources to host your application with more capabilities](deploy-to-the-cloud.md#deployment).
+* [Provision necessary cloud resources to host your application with more capabilities]
 * [Deploy your project to cloud with more capabilities](deploy-to-the-cloud.md)
-* [Bots with webhooks and connectors](../bots/bot-features.md#bots-with-webhooks-and-connectors).
-* [Contributor guide page](/help/contribute/?branch=master).
