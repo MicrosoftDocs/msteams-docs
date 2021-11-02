@@ -392,11 +392,11 @@ items:
        > [!NOTE]
        > If a prompt appears, asking for a certification, select `Yes`.
 
-          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+       ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
     A webpage opens with a message `App is ready`:
 
-          ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appready.png) 
+       ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appready.png) 
 
         
     # [Command line](#tab/cli)
