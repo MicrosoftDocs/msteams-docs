@@ -32,17 +32,9 @@ The following image displays the invoke locations of the search command:
 
 To add the search command to your app manifest, you must add a new `composeExtension` object to the top level of your app manifest JSON. You can add the search command either with the help of App Studio, or manually.
 
-### Create a search command 
+### Create a search command using App Studio
 
-You can create search command using ** App Studio** or **Developer Portal**.
-
-> [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
-
-# [App Studio](#tab/AS)
-
-> [!NOTE]
-> The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
+The prerequisite to create a search command is that you must already have created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
 
 **To create a search command**
 
@@ -71,49 +63,6 @@ The following image displays command addition for messaging extension:
     <img src="~/assets/images/messaging-extension/search-command-invoke-location-selection.png" alt="search command invoke location selection]" width="500"/>
 
 1. Add your search parameter and select **Save**.
-
-# [Developer Portal](#tab/DP)
-
-**To create a search command using Developer Portal**
-
-1. Go to **[Developer portal](https://dev.teams.microsoft.com/)**.
-	
-   <img src="~/assets/images/tdp/tdp_home_1.png" alt="Screenshot of TDP" width="500"/>
-	
-1. Go to **Apps**.
-	
-    <img width="500px" alt="Screenshot of TDP Open" src="~/assets/images/tdp/screen2.png"/>
-	
-1. If you already created your app package in **Developer Portal**, select it from the list. If you have not created an app package, select **Import an existing app**.
-
-    <img width="500px" alt="Screenshot of import app in tdp" src="~/assets/images/tdp/screen3.png"/>
-
-1. Go to **App features**.  
-
-    <img width="500px" alt="TDP messaging extension" src="~/assets/images/tdp/tdp-me.png"/>
-
-1. Select **Messaging extensions** from **App features**. A pop-up window appears to set up the messaging extension.
-    
-   <img width="500px" alt="TDP messaging extension set up" src="~/assets/images/tdp/tdp-app-me.png"/>
-
-1. Select **an message extension bot** from the drop down list under **Message extensions ID** and select **Save**.
-
-    <img width="500px" alt="TDP messaging extension bot" src="~/assets/images/tdp/tdp-me-bot.png"/>
-
-1. Select **Add a command**. A pop-up window appears to add command.
-
-    <img width="500px" alt="TDP messaging extension command" src="~/assets/images/tdp/tdp-me-add-command.png"/>
-
-1. Select **search-based** to search command and enter command fields.
-
-    <img width="500px" alt="TDP messaging extension search command" src="~/assets/images/tdp/tdp-me-search-command.png"/>
-
-1. Enter parameter fields and select **Save**.
-
-    <img width="500px" alt="TDP messaging extension search parameter" src="~/assets/images/tdp/tdp-me-search-parameter.png"/>
-
----
-
 
 ### Create a search command manually 
 

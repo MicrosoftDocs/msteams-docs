@@ -54,7 +54,7 @@ Apps for Microsoft Teams is a great way to interact with your data and there are
 
 ## Initiate workflows and processes
 
-Sometimes you just need a quick way to start a process or workflow in an external system.
+Sometimes you just need a quick way to initiate a process or workflow in an external system.
 
 * **Messaging extensions action commands**: Trigger from messages, allowing your users to quickly send the contents of a message to your web services.
 
@@ -88,9 +88,9 @@ A collaboration platform is inherently a social platform. Let your creative side
 
 Tabs are embedded web pages. Pretty much anything you can do in a SPA, you can do in a tab in Teams. Just be sure to pay attention to scope. Group and channel tabs are for shared experiences and personal tabs are for personal experiences. The team's list of stuff goes on the channel tab and the list of your stuff goes in the personal tab.
 
-## Start small
+## Initiate small
 
-Not sure where to start? Feeling a bit overwhelmed with the awesome variety of options available to you? You must choose a core feature of your app and start there. After you get a feel for the flow of information through the various contexts in Teams, it is a lot simpler to picture a more complex interaction.
+Not sure where to initiate? Feeling a bit overwhelmed with the awesome variety of options available to you? You must choose a core feature of your app and initiate there. After you get a feel for the flow of information through the various contexts in Teams, it is a lot simpler to picture a more complex interaction.
 
 ## Put it all together
 
@@ -98,4 +98,4 @@ That being said, the best apps usually combine multiple features, creating an ap
 
 ## See also
 
-[Build your first Microsoft Teams app](~/get-started/code-samples.md#build-your-first-microsoft-teams-app-overview)
+[Build your first Microsoft Teams app](../../get-started/get-started-overview.md)

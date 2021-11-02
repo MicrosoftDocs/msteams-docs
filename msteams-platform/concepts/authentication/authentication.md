@@ -35,7 +35,7 @@ For more information on using OAuthPrompt, see:
 
 ## Code sample
 
-Bot Framework v4 authentication samples.
+provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -49,3 +49,6 @@ Regardless of the app's authentication flow, configure the identity provider to 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
+## Third-party cookies on iOS
+
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
