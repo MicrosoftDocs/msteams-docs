@@ -333,7 +333,7 @@ items:
        > The sample will only work in this tenant.
 
          * `"AzureAd"."ApplicationId "`: Set it to the same value as `MicrosoftAppId` provided earlier.
-         * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
+         * `"ContentBubbleUrl "`: Enter the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
 
        > [!NOTE]
        > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://ae57****.ngrok.io/contentBubble.html`.
