@@ -5,14 +5,14 @@
 - name: Overview
   expanded: false 
   items:
-    - name: Build apps for Microsoft Teams
-      href: overview-new.yml
-    - name: It starts with an idea
-      href: overview-test.md
-    - name: Explore Teams Features
-      href: overview-explore.md
-    - name: The Teams solution
-      href: overview-solution.md
+  - name: Build apps for Microsoft Teams
+    href: overview-new.yml
+  - name: It starts with an idea
+    href: overview-test.md
+  - name: Explore Teams Features
+    href: overview-explore.md
+  - name: The Teams solution
+    href: overview-solution.md
 - name: Get started
   expanded: false
   items:

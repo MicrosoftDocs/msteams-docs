@@ -79,3 +79,5 @@ Let’s dig deeper into this story and find out.
        :::image type="content" source="../msteams-platform/assets/images/overview/us-4.png" alt-text="Image showing user story 4" border="true":::
    :::column-end:::
 :::row-end:::
+
+Let's look at Teams features that help you build a solution.
