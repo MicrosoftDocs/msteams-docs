@@ -18,7 +18,7 @@ items:
     
     Adaptive Card tabs are a new way to build tabs in Teams. Instead of embedding web content in an IFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-    You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile.
+    You can build your tabs with relevant user interface (UI) building blocks native on desktop, web, and mobile.
 
     This article helps you understand:
     
@@ -34,11 +34,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Before you start using Adaptive Cards to build tabs, you must:
-
-    * Be familiar with, [bot development](https://docs.microsoft.com/en-us/microsoftteams/platform/bots/what-are-bots), [Adaptive Cards](https://adaptivecards.io/), and [task modules](https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/task-modules/task-modules-bots?tabs=nodejs) in Teams.
-    * Have a bot running in Teams for your development.
-
+    
     Ensure that you install the following tools and set up your development environment:  
 
     * Microsoft Teams with an account (not a guest account)
@@ -64,15 +60,15 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot** and click Enter key.
+    1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
         :::image type="content" source="/assets/images/adaptive-cards/Tabs Adaptive cards/azure-bot.png" alt-text="Alt text that describes the content of the image.":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
-    1. From the **Subscription** dropdown list, select the subscription.
-    1. From the **Resource group** dropdown list, select the resource group.
+    1. Select subscription from the **Subscription** dropdown list.
+    1. Select resource group from the **Resource group** dropdown list.
         
         To create a new resource, select **Create new**, enter resource name, select **OK**, and select required location from **New resource group location** dropdown list.
 
@@ -92,7 +88,10 @@ items:
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        Now your Azure bot has been created.
+        Image will be added
+        <img src="~/assets/images/bots/Azurebotcreate.png" alt="Create resource Azure bot" width="700"/>
+
+        Now your Azure bot is created.
 
         ![Azure bot resource created](~/assets/images/bots/Azurebotresource.png)
 
