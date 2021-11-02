@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 05/24/2021
 ---
-# Build apps for Microsoft Teams
+# Build apps with Microsoft Teams
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 

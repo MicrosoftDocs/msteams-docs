@@ -1,0 +1,46 @@
+### YamlMime:Landing
+
+title: Microsoft Teams Developer Documentation - Overview
+summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+metadata:
+  title: Microsoft Teams Developer Documentation Overview
+  description: Introducing building apps for Teams
+  ms.date: 11/02/2021
+  ms.topic: landing-page
+landingContent:
+- title: Get started
+  linkLists:
+    - linkListType: get-started
+      links:
+      - text: Get started with building apps
+        url: ~get-started/get-started-overview
+- title: App building - Basics and tools
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: App fundamentals
+      url: ~/concepts/app-fundamentals-overview.md
+    - text: Design your app
+      url: ~/concepts/design/design-teams-app-overview.md
+    - text: Tools and SDKs
+      url: ~/toolkit/visual-studio-code-overview.md
+- title: Building app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+- title: Customize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Add authentication
+        url: ~concepts/authentication/authentication.md
+      - text: Utilize Microsoft Graph features
+        url: ~graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      - text: App manifest
+        url: ~resources/schema/manifest-schema.md
