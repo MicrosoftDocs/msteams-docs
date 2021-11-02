@@ -62,7 +62,7 @@ items:
     1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
-        ![Create Azure bot card](~/assets/images/adaptive-cards/Tabs Adaptive cards/azure-bot.png)
+        <img src="~/assets/images/adaptive-cards/Tabs Adaptive cards/azure-bot.png" alt="Home page" width="600"/>
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
