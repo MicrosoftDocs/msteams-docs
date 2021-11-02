@@ -380,23 +380,23 @@ items:
        1. Launch **Visual Studio 2019**.
        1. Navigate to `File > Open > Project/Solution`.
     
-         ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
+          ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
        1. Navigate to the `TokenApp` folder.
        1. Select `TokenApp.csproj` file.
 
-         ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
+          ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
 
        1. Press `F5` to run the project.
     
        > [!NOTE]
        > If a prompt appears, asking for a certification, select `Yes`.
 
-         ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
+          ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
     A webpage opens with a message `App is ready`:
 
-         ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appready.png) 
+          ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appready.png) 
 
         
     # [Command line](#tab/cli)
