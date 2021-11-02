@@ -185,7 +185,7 @@ items:
      ```
 
     > [!NOTE]
-    > At a later phase, when you build and run the service, you can either use Visual Studio 2019 or Command line. If you choose `Command line`, ensure to use `localhost 5000` instead of `localhost 3978` while creating ngrok tunnel.
+    > At a later phase, when you build and run the service, you can either use **Visual Studio 2019** or **Command line**. If you choose **Command line**, ensure to use `localhost 5000` instead of `localhost 3978` while creating ngrok tunnel.
 
 
     **To add messaging endpoint**
