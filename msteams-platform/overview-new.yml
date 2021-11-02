@@ -13,7 +13,7 @@ landingContent:
     - linkListType: get-started
       links:
       - text: Get started with building apps
-        url: ~get-started/get-started-overview
+        url: ../msteams-platform/get-started/get-started-overview.md
 - title: App building - Basics and tools
   linkLists:
   - linkListType: overview
@@ -39,8 +39,8 @@ landingContent:
     - linkListType: concept
       links:
       - text: Add authentication
-        url: ~concepts/authentication/authentication.md
+        url: ../msteams-platform/concepts/authentication/authentication.md
       - text: Utilize Microsoft Graph features
-        url: ~graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+        url: ../msteams-platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
       - text: App manifest
-        url: ~resources/schema/manifest-schema.md
+        url: ../msteams-platform/resources/schema/manifest-schema.md
