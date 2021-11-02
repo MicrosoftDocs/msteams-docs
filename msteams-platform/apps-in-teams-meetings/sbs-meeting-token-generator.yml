@@ -86,7 +86,7 @@ items:
        ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
 
     1. Select `TokenApp Properties` under Project in the menu bar.
-    1. Set `App URL` to `http://localhost:3333/` and clear `Enable SSL` checkbox.
+    1. Set `App URL` to `http://localhost:3978` and clear `Enable SSL` checkbox.
 
        ![Token File Properties](~/assets/images/meeting-token-generator/meeting-token-generator-tokenproperties.png)
 
@@ -105,7 +105,7 @@ items:
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
 
     ```bash
-    ngrok http 3333 -host-header=localhost:3333
+    ngrok http -host-header=localhost 3978
     ```
 
     **To create Azure Bot resource**
@@ -228,7 +228,7 @@ items:
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
     1. Insert your `WebAppDomain` value between `api://` and `/{AppID}` as given:</br>
-        `api://1d14****.ngrok.io/{AppID}`.</br>
+        `api://ae57****.ngrok.io/{AppID}`.</br>
         
        The domain name is highlighted in the following image:
         
@@ -254,7 +254,7 @@ items:
   
     1. Select the **Add scope** button to save.
          * The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
-           `api://1d14****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
+           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
   
@@ -302,7 +302,7 @@ items:
     1. Enter the redirect URI for your app. The page appears with access to implicit grant flow.
 
     1. Append API route to the domain name:</br>
-           `https://1d14****.ngrok.io/auth-end`. </br>
+           `https://ae57****.ngrok.io/auth-end`. </br>
 
        Enable implicit grant by checking the following boxes:
          * ID Token
@@ -336,7 +336,7 @@ items:
          * `"ContentBubbleUrl "`: Enter the content bubble iframe url (https://[WebAppDomain]/contentBubble.html).
 
        > [!NOTE]
-       > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://1d14****.ngrok.io/contentBubble.html`.
+       > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
