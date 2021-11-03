@@ -494,7 +494,7 @@ items:
 
        ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
 
-    > [!NOTE]
+     > [!NOTE]
 
      > **Troubleshooting:**
      > * To maintain token information and service URL for the tenant, the sample app uses an in-memory store. If you restart the project, run the following command to recapture the service URL: `@[BotName] reset`. In our example, `[BotName]` is `MeetingTokenGeneratorBot`.
