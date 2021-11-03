@@ -3,7 +3,7 @@ title: DevTools for Microsoft Teams tabs
 description: Describes how to get to the DevTools when using the Microsoft Teams Desktop Client
 ms.localizationpriority: medium
 ms.topic: how-to
-keywords: devtools debug mobile chrome desktop client developer tools
+keywords: devtools debug mobile chrome desktop client developer tools tab 
 ---
 
 # DevTools for Microsoft Teams tabs
