@@ -94,7 +94,7 @@
   items:
   - name: Overview
     href: concepts/build-and-test/tools-and-sdks-overview.md
-  - name: Teams Toolkit for Visual Studio Code
+  - name: Teams Toolkit
     items:
     - name: Overview
       href: toolkit/visual-studio-code-toolkit-overview.md
