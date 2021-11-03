@@ -5,6 +5,7 @@ description: A quickstart guide to creating a personal tab with the Yeoman Gener
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
 ---
 
 # Create a personal tab
