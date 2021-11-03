@@ -5,6 +5,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
+keywords: submission store distribute validate app package guidelines localize
 ---
 # Prepare your Microsoft Teams store submission
 
