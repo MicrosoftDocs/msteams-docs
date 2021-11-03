@@ -164,7 +164,7 @@ After entering the details of your app, complete the following steps to register
     <img  width="450px" alt="Adding a messaging extension dialog" src="~/assets/images/get-started/InstallingHelloWorld.png"/>
     
     > [!NOTE]
-    > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](#prepare-your-development-environment).
+    > If you are unable to sideload the app, verify whether you have [enabled custom app uploading](../../get-started/get-started-dotnet-app-studio.md#enable-sideloading-option).
 
 1. Select the **Search** box in the **Add to a team** section and select a team to add the sample app. You can set up a special team for testing.
 1. Select the **Install** button at the bottom of the dialog box.

@@ -11,10 +11,15 @@ keywords: teams authentication SSO AAD single sign-on api
 Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that are Office 365, and  Outlook. Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their credentials by silently refreshing the authentication token. You can allow a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If users consent to use your app, they need not consent again on another device and can sign in automatically. Your access token is also prefetched to improve performance and load times.  
 
 > [!NOTE]
+>
 > **Teams mobile client versions supporting SSO**  
->    
-> * Teams for Android: Version 1416/1.0.0.2020073101 and later.    
-> * Teams for iOS: Version 2.0.18 and later.    
+>
+> ✔Teams for Android (1416/1.0.0.2020073101 and later)
+>
+> ✔Teams for iOS (_Version_: 2.0.18 and later)  
+> 
+> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
+>
 > For the best experience with Teams, use the latest version of iOS and Android.
 
 > [!NOTE]

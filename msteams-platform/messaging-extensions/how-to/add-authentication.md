@@ -12,7 +12,7 @@ ms.author: anclear
 
 ## Identify the user
 
-Every request to your services includes the user  ID, the user's display name and Azure Active Directory object ID.
+Every request to your services includes the user ID, the user's display name, and Azure Active Directory object ID.
 
 ```json
 "from": {
@@ -38,7 +38,16 @@ The Teams client, includes the passed authentication code and reissues the query
 
 Your service verifies the authentication code to ensure a malicious user does not compromise the sign in flow. This effectively 'closes the loop' to finish the secure authentication sequence.
 
-### Respond with a sign-in action
+1. User issues a query or the default query is automatically sent to your service.
+1. Your service checks whether the user is authenticated by inspecting the Teams user ID.
+1. If the user isn't authenticated, send back an `auth` response with an `openUrl` suggested action including the authentication URL.
+1. The Microsoft Teams client launches a dialog box hosting your webpage using the given authentication URL.
+1. After the user signs in, you should close your window and send an **authentication code** to the Teams client.
+1. The Teams client then reissues the query to your service, which includes the authentication code passed in Step 5.
+
+Your service should verify that the authentication code received in step 6 matches the one from step 5. This ensures that a malicious user doesn't try to spoof or compromise the sign in flow. This effectively "closes the loop" to finish the secure authentication sequence.
+
+### Respond with a sign in action
 
 To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL. The example is as follows:
 
@@ -74,10 +83,10 @@ Alike embedded experiences inside Microsoft Teams, your code inside the window n
 
 When the sign in request completes and redirects back to your page, it must perform the following steps:
 
-1. Generate a security code. This is a random number. You must cache this code on your service, along with the credentials obtained through the sign in flow, such as OAuth 2.0 tokens.
+1. Generate a security code, a random number. You must cache this code on your service, along with the credentials obtained through the sign in flow, such as OAuth 2.0 tokens.
 1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
-At this point, the window closes and the control is passed to Teams client. The client reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials and complete the user request.
+At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
 
 #### Reissued request example
 

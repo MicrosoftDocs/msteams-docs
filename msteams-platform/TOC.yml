@@ -10,26 +10,18 @@
 - name: Get started
   expanded: false
   items:
-  - name: Overview
-    href: get-started/code-samples.md  
-  - name: Prerequisites
-    href: get-started/prerequisites.md
-  - name: Build your first app using React
-    href: get-started/first-app-react.md
+  - name: Get started overview
+    href: get-started/get-started-overview.md  
+  - name: Build your first app using JavaScript
+    href: sbs-gs-javascript.yml
   - name: Build your first app using Blazor
-    href: get-started/first-app-blazor.md
+    href: sbs-gs-blazor.yml
   - name: Build your first app using SPFx
-    href: get-started/first-app-spfx.md
+    href: sbs-gs-spfx.yml
   - name: Build your first app using C# or .NET
-    href: get-started/get-started-dotnet-app-studio.md
+    href: sbs-gs-csharp.yml
   - name: Build your first app using Node.js
-    href: get-started/get-started-nodejs-app-studio.md
-  - name: Build your first app using the Yeoman generator
-    href: get-started/get-started-yeoman.md
-  - name: Build your first conversational bot
-    href: get-started/first-app-bot.md
-  - name: Build your first messaging extension
-    href: get-started/first-message-extension.md
+    href: sbs-gs-nodejs.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
 - name: App fundamentals
@@ -434,7 +426,6 @@
       href: concepts/deploy-and-publish/appsource/post-publish/overview.md
     - name: Include a SaaS offer with your app
       href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-- name: Resources
 - name: App manifest
   items:
     - name: App manifest schema
