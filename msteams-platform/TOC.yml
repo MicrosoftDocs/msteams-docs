@@ -92,14 +92,38 @@
     href: concepts/design/enable-app-customization.md
 - name: Tools and SDKs
   items:
+  - name: Overview
+    href: concepts/build-and-test/tools-and-sdks-overview.md
+  - name: Teams Toolkit for Visual Studio Code
+    items:
+    - name: Overview
+      href: toolkit/visual-studio-code-toolkit-overview.md
+    - name: Teams Toolkit fundamentals
+      href: toolkit/teams-toolkit-fundamentals.md
+    - name: Create new project
+      href: toolkit/create-new-project.md
+    - name: Enable accounts for Teams Toolkit
+      href: toolkit/teams-toolkit-account.md
+    - name: Provision in the cloud
+      href: toolkit/provision-in-the-cloud.md
+    - name: Debug using Teams Toolkit
+      href: toolkit/teams-toolkit-debug.md
+    - name: Deploy to the cloud
+      href: toolkit/deploy-to-the-cloud.md
+    - name: Publish teams app using Teams Toolkit
+      href: toolkit/teams-toolkit-publish.md
+    - name: Add capabilities
+      href: toolkit/add-capabilities.md
+    - name: Add resources
+      href: toolkit/add-cloud-resources.md
+    - name: Teams Toolkit Manifest editor
+      href: toolkit/manifest-editor.md
+    - name: Use CI/CD workflow
+      href: toolkit/build-pipelines.md
   - name: Teams Toolkit for Visual Studio Code
     href: toolkit/visual-studio-code-overview.md
   - name: Teams Toolkit for Visual Studio
     href: toolkit/visual-studio-overview.md
-  - name: Yeoman generator for Teams (GitHub)
-    href: https://github.com/pnp/generator-teams
-  - name: App Studio
-    href: concepts/build-and-test/app-studio-overview.md
   - name: Developer Portal for Teams
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
@@ -110,6 +134,10 @@
     href: https://github.com/Microsoft/botbuilder-dotnet
   - name: Microsoft Graph SDKs
     href: https://docs.microsoft.com/graph/sdks/sdks-overview
+  - name: Yeoman generator for Teams (GitHub)
+    href: https://github.com/pnp/generator-teams
+  - name: App Studio
+    href: concepts/build-and-test/app-studio-overview.md
   - name: Legacy SDKs
     items:
     - name: Bots SDK (v3)
