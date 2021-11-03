@@ -245,7 +245,7 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > This deeplink cannot be used for invoking a meeting.
 
 > [!NOTE]
-> Currently, deeplink to call is not supported on mobile platforms.
+> Currently, deeplink to call is not supported on Teams mobile devices.
 
 ### Generate a deep link to a call
 
