@@ -4,6 +4,7 @@ description: Sample for up to date views using Universal Bot
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
+keywords: approval base card reject adaptive 
 ---
 
 # Up to date cards

@@ -5,7 +5,7 @@ description: Identify meeting apps API references
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
-keywords: teams apps meetings user participant role api 
+keywords: teams apps meetings user participant role api usercontext notification signal query 
 ---
 
 # Meeting apps API references

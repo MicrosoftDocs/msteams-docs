@@ -45,3 +45,8 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 
 > [!div class="nextstepaction"]
 > [Meeting app extensibility](meeting-app-extensibility.md)
+
+## See Also
+
+* [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Meeting apps API references - Teams](~/apps-in-teams-meetings/api-references.md)
