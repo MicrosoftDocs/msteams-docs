@@ -75,7 +75,6 @@ You need sideloading permission for your account before you start any debugging 
 ![Custom app uploading](~/assets/images/tools-and-sdks/custom-app-uploading.png)
 
 > [!Note]
-
 > * It can take up to 24 hours for the Teams option to appear. You can upload your custom app to a Teams environment for testing and validation in that time.
 > * Navigate to Teams apps
 > * Setup policies
