@@ -1,6 +1,6 @@
 ---
 title: Publish
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes about publishing
 ms.author: surbhigupta
 ms.localizationpriority: medium

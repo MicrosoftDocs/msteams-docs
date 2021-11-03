@@ -1,6 +1,6 @@
 ---
 title: Account
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes about account
 ms.author: surbhigupta
 ms.localizationpriority: medium

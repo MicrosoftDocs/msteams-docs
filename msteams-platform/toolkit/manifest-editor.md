@@ -4,7 +4,7 @@ author: surbhigupta12
 description:  Describes about manifest
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: Account
+ms.topic: Manifest editor
 ---
 
 # Manifest editor

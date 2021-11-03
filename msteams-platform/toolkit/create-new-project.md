@@ -1,6 +1,6 @@
 ---
 title: Create new project
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes about creating project
 ms.author: surbhigupta
 ms.localizationpriority: medium

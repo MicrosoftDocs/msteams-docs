@@ -1,10 +1,10 @@
 ---
 title: Build CI/CD pipelines for Teams application
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes how to build CI/CD pipelines for Teams application.
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Build Pipelines
 ---
 
 # Build CI/CD pipelines for Teams application

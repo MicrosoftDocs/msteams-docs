@@ -1,13 +1,13 @@
 ---
-title: Teams Toolkit Fundamentals
-author: Rajeshwari-v
+title: Teams Toolkit fundamentals
+author: v-vasudhab
 description:  Describes fundamentals of Teams Toolkit
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Teams Toolkit fundamentals
 ---
 
-# Teams Toolkit
+# Teams Toolkit fundamentals
 
 The Teams Toolkit for Visual Studio Code helps developers create and deploy Teams apps with integrated identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and M365 with a zero-configuration approach to the developer experience.  
 
@@ -40,6 +40,7 @@ The .NET SDK is used to install customized bindings for local debugging and Azur
 The Teams app features like conversational bots, messaging extensions, and incoming webhooks require inbound connections. A tunnel is not required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
 ## Supported Teams Apps Capabilities
+
 [Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md) are Teams extensibility points. Your Teams app can contain one or more Teams App Capabilities. Teams Toolkit for Visual Studio Code supports developers to work on project with the following Teams App Capabilities:
 
 * [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
@@ -66,21 +67,21 @@ In left sidebar of Teams Toolkit, there are four sections that offers the main f
 
 - [Typical User Journey](#typical-user-journey-of-teams-toolkit)
 
-- [ACCOUNTS](#accounts)
+- [Accounts](#accounts)
 
-- [DEVELOPMENT](#development)
+- [Development](#development)
 
-- [DEPLOYMENT](#deployment)
+- [Deployment](#deployment)
 
-- [HELP AND FEEDBACK](#help-and-feedback)
+- [Help and feedback](#help-and-feedback)
 
 ### Typical User Journey of Teams Toolkit
+
 Teams Toolkit provides features of Teams app development to make it easy to debug, deploy and publish. Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following picture shows Teams Toolkit user journey:
 
 ![Teams Toolkit user journey](~/assets/images/tools-and-sdks/teams-toolkit-user-journey.png)
 
-
-### ACCOUNTS
+### Accounts
 
 Developers must have a Microsoft 365 account before they start to build Teams app. If you do not have, you can get a free Teams developer account by joining the M365 developer program. A good practice is to verify whether your Microsoft 365 account has the permission to upload Teams app before you start the Teams app building. In Teams client, select `Apps`. If you cannot see the `Upload custom app` option, you do not have the permission to upload your Teams app.
 
@@ -94,7 +95,7 @@ Azure account is commonly used in Teams app development. If you wish to host you
 
 For more information about Accounts, please check the [Accounts](placeholder, point to Accounts page) guide.
 
-### DEVELOPMENT
+### Development
 
 Teams Toolkit provides options in the `DEVELOPMENT` section to help you make the Teams app development work easiy and quickly.  
 
@@ -109,7 +110,7 @@ Teams Toolkit provides options in the `DEVELOPMENT` section to help you make the
 1. You can use debug feature by clicking the `Run and Debug` button. Teams Toolkit support local debug and remote debug for Teams projects. Before running remote debug, you must provision cloud resource first.
 1. `Edit manifest file` lets you to easily edit how the Teams app integrate with Teams client.  
 
-### DEPLOYMENT
+### Deployment
 
 During or after the development, you must do provision, deployment and publish process before it is accessed by real users. These are accomplished by using a set of options in `DEPLOYMENT` section.
 
@@ -131,7 +132,7 @@ For more information about provision and deploy, see [Provision in the cloud](pr
 
 1. Teams Toolkit also provides CI/CD template for CI/CD tools like GitHub Workflow, Azure DevOps and Jenkins. For tools on how to build CI/CD pipeline, see [Build CI/CD pipelines for Teams application](build-pipelines.md)
 
-### HELP AND FEEDBACK
+### Help and feedback
 
 In this section you can easily find the documentation and resources you need. You can select `Report issue on GitHub` in the Teams Toolkit to get quick support from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to browse and ask questions.
 

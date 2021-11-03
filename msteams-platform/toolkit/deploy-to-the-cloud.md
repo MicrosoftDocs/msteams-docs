@@ -1,10 +1,10 @@
 ---
 title: Deploy to the cloud
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes how to deploy to the cloud.
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Deploy to the cloud
 ---
 
 # Deploy to the cloud

@@ -1,10 +1,10 @@
 ---
 title: Add cloud resources
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes how to add cloud resources.
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Add cloud resources
 ---
 
 # Add cloud resources

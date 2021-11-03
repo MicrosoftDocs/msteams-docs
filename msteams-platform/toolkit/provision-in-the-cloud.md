@@ -1,10 +1,10 @@
 ---
 title: Provision in the cloud
-author: Rajeshwari-v
+author: v-vasudhab
 description:  Describes how to provision in the cloud.
 ms.author: surbhigupta
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Provision in the cloud
 ---
 
 # Provision in the cloud 
