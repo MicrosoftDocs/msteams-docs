@@ -6,11 +6,12 @@ keywords: camera image microphone capabilities native device permissions media
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: media integration manifest microphone camera images api 
 ---
 
-# Integrate media capabilities 
+# Integrate media capabilities
 
-You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience. 
+You can integrate native device capabilities, such as the **camera** and **microphone** with your Teams app. For integration, you can use [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true), that provides the tools necessary for your app to access a user’s [device permissions](native-device-permissions.md). Use suitable media capability APIs to integrate the device capabilities, such as **camera** and **microphone** with the Teams platform within your Microsoft Teams mobile app, and build a richer experience.
 
 ## Advantage of integrating media capabilities
 
@@ -21,10 +22,10 @@ For effective integration, you must have a good understanding of [code snippets]
 
 It is important to familiarize yourself with the [API response errors](#error-handling) to handle the errors in your Teams app.
 
-> [!NOTE] 
-> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.   
-> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.   
-> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md). 
+> [!NOTE]
+> * Currently, Microsoft Teams support for media capabilities is available for mobile clients only.
+> * Currently, Teams does not support device permissions for multi-window apps, tabs, and the meeting side panel.
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
 ## Update manifest
 
@@ -251,4 +252,3 @@ microsoftTeams.media.selectMedia(mediaInput, (error: microsoftTeams.SdkError, at
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
 * [Integrate People Picker in Teams](people-picker-capability.md)
-
