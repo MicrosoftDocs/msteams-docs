@@ -501,6 +501,7 @@ items:
      > * When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
 
 
+
 - title: Complete challenge
   durationInMinutes: 1
   content: |
