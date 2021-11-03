@@ -4,7 +4,7 @@ description: Introduction to conversations
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
-keyword: conversations basics messages
+keyword: conversations basics messages groupchap group channel 
 ---
 
 # Conversation basics

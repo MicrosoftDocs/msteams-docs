@@ -4,6 +4,7 @@ description: Describes Microsoft Teams authentication flow in bots
 keywords: teams authentication flow bots
 ms.localizationpriority: medium
 ms.topic: overview
+keywords: azure authorization token AAD validate verification provisional
 ---
 
 # Authentication flow for bots in Microsoft Teams
