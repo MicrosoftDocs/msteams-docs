@@ -9,8 +9,6 @@ ms.topic: overview
 
 # Teams Toolkit for Visual Studio Code Overview
 
-Teams Toolkit overview gives you a brief description of Teams Toolkit for Visual Studio Code.
-
 ## Teams Toolkit fundamentals
 
 Teams Toolkit helps you to create and deploy Teams apps. You can create the apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365. You can experience zero-configuration approach. For more information, see [Teams Toolkit](teams-toolkit-fundamentals.md)
