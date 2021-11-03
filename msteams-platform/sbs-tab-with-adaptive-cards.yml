@@ -94,7 +94,7 @@ items:
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
-        :::image type="content" source="./assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Microsoft App ID.":::
+        ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
@@ -104,11 +104,11 @@ items:
 
     1. Enter **Description** and select **Add**.
  
-        <img src="~/assets/images/bots/addclientsecret.png" alt="Add client secret to app" width="500"/>
+        :::image type="content" source="./assets/images/adaptive-cards/client-secret.png" alt-text="Client secret.":::
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-         ![Value of client secret](~/assets/images/bots/valueclientsecret.png)
+        :::image type="content" source="./assets/images/adaptive-cards/client-secret-value.png" alt-text="Client secret value.":::
        
     **To add the Microsoft Teams channel**
 
