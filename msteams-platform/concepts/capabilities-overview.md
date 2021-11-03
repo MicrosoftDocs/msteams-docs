@@ -6,6 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
+keywords: tabs bots messaging extensions webhooks connectors gcc
 ---
 
 # Understand Microsoft Teams app capabilities
@@ -59,12 +60,12 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
-## See also
-
-[Build apps for Teams](../overview.md)
-[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Teams app entry points](../concepts/extensibility-points.md)
+
+## See also
+
+[Build apps for Teams](../overview.md)
+[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
