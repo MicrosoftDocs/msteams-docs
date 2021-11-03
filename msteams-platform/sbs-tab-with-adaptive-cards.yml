@@ -8,7 +8,7 @@ metadata:
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
-  nextTutorialTitle: Read more on bot authentication
+  nextTutorialTitle: [Read more on bot framework documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -114,15 +114,20 @@ items:
 
     1. Go to **Home**.
 
-        <img src="~/assets/images/bots/homepage.png" alt="Home page" width="600"/>
+        :::image type="content" source="./assets/images/adaptive-cards/bot-home-page.png" alt-text="Bot home page.":::
 
     1. Open your bot, which is listed in the **Recent resources** section.
-    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.    
-          ![Open Teams from channels](~/assets/images/bots/channel-teams.png)    
-          ![Select Teams](~/assets/images/bots/select-teams.png)    
-    1. Select **Save**.
+    1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Bot home page.":::
+
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
-          ![Terms of service](~/assets/images/bots/select-terms-of-service.png)
+
+        :::image type="content" source="./assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Select terms of service":::
+
+    1. Select **Save**.
+
+        :::image type="content" source="./assets/images/adaptive-cards/select-teams.png" alt-text="Select Teams.":::
 
     **To add messaging endpoint**
 
@@ -134,40 +139,31 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        <img src="~/assets/images/bots/messagingURL.png" alt="Messaging endpoint" width="600"/>
+        :::image type="content" source="./assets/images/adaptive-cards/ngrok-messaging-endpoint.png" alt-text="Messaging endpoint":::
 
     1. Select **Apply**.
 
         You have successfully set up a bot in Azure Bot Service and now you need to set up bot service connection.
 
-- title: Configure SSO for your bot
+- title: Set up bot service connection
   durationInMinutes: 5
   content: |
-    To ensure that the Bot Service enables user to sign in and access the bot, you must configure SSO for your bot. To do so, perform the following steps:
-    
-    * Add Redirect URI to the Azure bot resource.
-    * Expose API endpoint to specify the location from where the resources can be accessed.
-    * Authorize client applications.
-    * Add any necessary API permissions for downstream calls.
-    * Enable implicit grant.
-    * Update manifest.
-    * Set up Bot Service connection.
-
     **To add Redirect URI to the Azure bot resource**
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.</br>
-        ![Manage app ID](~/assets/images/bots/select-manage.png)
-    1. From the left pane of your bot resource, select **Authentication**.
+
+        :::image type="content" source="./assets/images/adaptive-cards/manage-bot-label.png" alt-text="Manage Bot":::
+
+    1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
-
     1. Enter **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect** and select **Configure**.
 
-        <img src="~/assets/images/bots/redirectURI.png" alt="Configure Redirect URI" width="600"/>
+        :::image type="content" source="./assets/images/adaptive-cards/configure-web-redirect-url.png" alt-text="Configure web redirect uri":::
 
         The Redirect URI is added to the Azure bot resource.
 
-        ![Redirect URI added to bot resource](~/assets/images/bots/redirectURIadded.png)
+        :::image type="content" source="./assets/images/adaptive-cards/web-redirect-url-display.png" alt-text="Display web redirect uri":::
 
     **To expose API endpoint**
 
