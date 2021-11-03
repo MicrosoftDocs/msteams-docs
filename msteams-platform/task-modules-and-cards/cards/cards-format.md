@@ -647,3 +647,4 @@ You can test formatting in your own cards by modifying this code.
 
 * [Card actions](./cards-actions.md)
 * [Task modules](~/task-modules-and-cards/cards/cards-format.md)
+* [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)

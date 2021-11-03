@@ -123,3 +123,4 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 ## See also
 
 [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+[Integrate Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)
