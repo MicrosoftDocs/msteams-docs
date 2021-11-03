@@ -43,18 +43,18 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) of version 3.1
-    * [Visual Studio Code](https://code.visualstudio.com/download) of version 1.55 or later.
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
+    * [Visual Studio Code](https://code.visualstudio.com/download) version 1.55 or later.
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-    * [nodejs](https://nodejs.org/en/download/) of LTS version 10.21.0 or above.
-    * [ngrok](https://ngrok.com/download) of latest version (only for devbox testing) or any equivalent tunneling solution.
+    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or above.
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
     
     To gain full understanding of the app, ensure you have the working knowledge of the following technologies:
 
     * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
     * [ECMAScript6](http://es6-features.org/#Constants).
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) of version 3.1.
-    * [React.JS](https://reactjs.org/tutorial/tutorial.html) of version 16+.
+    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1.
+    * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16+.
 
     This app uses the Teams extensibility features described in the following pages:
 
@@ -74,7 +74,7 @@ items:
 - title: Create and register your bot in Azure Active Directory(AAD) Portal
   durationInMinutes: 5
   content: |
-    Develop a bot, host it in Azure and register it with Azure Bot Service. Do the following steps:
+    Perform the following steps to develop a bot and host in Azure:
 
     1. Create Azure Bot resource to register bot with Azure Bot Service.
     1. Create client secret that enables SSO authentication of the bot.
