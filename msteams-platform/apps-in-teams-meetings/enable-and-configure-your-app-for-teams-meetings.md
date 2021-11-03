@@ -177,3 +177,4 @@ The post-meeting and [pre-meeting](#pre-meeting) configurations are the same.
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Add app to chat](/graph/api/chat-post-installedapps.md)
