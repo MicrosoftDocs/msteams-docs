@@ -8,7 +8,7 @@ metadata:
   ms.date: 10/21/2021
   ms.topic: interactive-tutorial
   nextTutorialHref: bots/how-to/authentication/auth-aad-sso-bots.md
-  nextTutorialTitle: [Read more on bot framework documentation](https://docs.microsoft.com/en-us/azure/bot-service/?view=azure-bot-service-4.0)
+  nextTutorialTitle: Read more on bot framework documentation
   ms.custom: mvc
   ms.localizationpriority: none
 items:
@@ -167,11 +167,11 @@ items:
 
     **To expose API endpoint**
 
-    1. From the left pane, select **Expose an API**.
+    1. Select **Expose an API** from the left pane.
     1. Select **Set** for the Application ID URI.
     1. Use the Application ID URI shown and append **api://botid-** at the beginning of the URI.
 
-        <img src="~/assets/images/bots/exposeAPI.png" alt="Expose an API" width="500"/>
+        :::image type="content" source="./assets/images/adaptive-cards/app-id-url.png" alt-text="App ID URI":::
 
     1. Select **Save**. Save the **Application ID URI** for future reference.
     1. Select **Add a scope**.
@@ -188,37 +188,40 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        <img src="~/assets/images/bots/addscope.png" alt="Add a scope to app" width="500"/>
+        :::image type="content" source="./assets/images/adaptive-cards/add-scope.png" alt-text="Add a scope":::
 
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
-
-        ![API exposed and scope added](~/assets/images/bots/ExposeAPIandaddscope.png)
 
     **To authorize client applications**
 
     Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:      
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
-    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>     
-        ![Add client application to app](~/assets/images/bots/addclientapplication1.png)        
+    * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
+
+        :::image type="content" source="./assets/images/adaptive-cards/add-client-aapplication.png" alt-text="Add client application":::       
     
     **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
     1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.</br>
-        ![API user permissions](~/assets/images/bots/APIpermissions.png)
+
+        :::image type="content" source="./assets/images/adaptive-cards/add-permissions.png" alt-text="API permissions":::
 
     **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
     1. Select the **Access tokens** and **ID tokens** checkboxes.</br>
-        ![Authentication check boxes for the app](~/assets/images/bots/authenticationcheckboxes.png)
+
+        :::image type="content" source="./assets/images/adaptive-cards/authentication-tokens.png" alt-text="Authentication Tokens":::
+
     1. Select **Save** to save the changes.
 
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
-        ![Update manifest](~/assets/images/bots/update-manifest.png)</br>
+
+        :::image type="content" source="./assets/images/adaptive-cards/manifest.png" alt-text="Update Manifest":::
 
     **To set up Bot Service connection**
 
@@ -236,12 +239,12 @@ items:
         | Tenant ID | Enter **common**. |
         | Scopes | Enter **User.Read** and also add all the **Scopes** required while specifying permissions to downstream APIs. |
 
-        <img src="~/assets/images/bots/botserviceconnection.png" alt="Bot Service connection" width="300"/>
+        :::image type="content" source="./assets/images/adaptive-cards/oauth-connection-setting.png" alt-text="Bot service connection":::
 
     1. Select **Save**.
     1. Select **Apply**.
 
-- title: Configure and run your bot sample
+- title: Configure and run the bot
   durationInMinutes: 1
   content: |
     Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams.
