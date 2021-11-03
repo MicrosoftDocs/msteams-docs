@@ -17,8 +17,6 @@ Teams toolkit enables you to create new apps. To develop Teams app, you must hav
 > [!NOTE}]
 > Azure account is optional. If your existing application is hosted on other cloud provider, then you can integrate the existing application to Teams platform.
 
-[Related images missing]
-
 ## Microsoft 365 Account
 
 You can create Microsoft 365 account by joining Microsoft 365 developer program. The Microsoft 365 developer program includes Microsoft 365 E5 developer subscription. With the valid account, you can create your own sandbox and develop solutions independent of your production environment. The Microsoft 365 E5 developer subscription provides:
