@@ -333,9 +333,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 ### Bot welcome messages
 
-* Bots should almost always send a welcome message during first run. For the best experience, the message should include the value proposition of your bot, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
+* Bots with that require additional configuration or license needed to use it, almost always send a welcome message during first run. For the best experience, the message should include the value offered by the bot to users, who installed the app in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. If your bot does send welcome messages, it must not send these to users individually (this is considered [spamming](#bot-message-spamming)). The message should also mention the person who added the bot.
-* Notification-only bots must send a welcome message that conveys it will not reply to users' messages.
 
 > [!TIP]
 > In welcome messages to individual users, a carousel tour can provide an effective overview of your bot and any other app features. Including buttons to let users try bot commands is encouraged. For example, **Create a task**.
