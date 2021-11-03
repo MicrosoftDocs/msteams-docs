@@ -451,50 +451,50 @@ items:
   durationInMinutes: 1
   content: |
     To build client app
-    1. In your cloned repository, navigate to `csharp > Resources > Manifest`.
+     1. In your cloned repository, navigate to `csharp > Resources > Manifest`.
 
-    1. Create a .zip with the following files that are present in the `Manifest` folder. 
-       * manifest.json
-       * icon-outline.png
-       * icon-color.png
+     1. Create a .zip with the following files that are present in the `Manifest` folder. 
+        * manifest.json
+        * icon-outline.png
+        * icon-color.png
 
-       ![Zip file](~/assets/images/meeting-token-generator/meeting-token-generator-zipfile.png) 
+        ![Zip file](~/assets/images/meeting-token-generator/meeting-token-generator-zipfile.png) 
     
-    1. Create a meeting with a few Presenters and Attendees.
+     1. Create a meeting with a few Presenters and Attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select the **Add an app** (+) button.
+     1. Once the meeting is created, go to the meeting details page and select the **Add an app** (+) button.
 
-       ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
+        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
-    1. In the pop-up that opens, select **Manage apps**.
+     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
+        ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
    
-    1. Select **Upload a custom app** and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+     1. Select **Upload a custom app** and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
 
-       ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
+        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
-       ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
+        ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
 
-       ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
+        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
-       You will see the app listed in the **Manage apps** section.
+        You will see the app listed in the **Manage apps** section.
 
-       ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
+        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
-    1. Select the **Add an app** button again. In the app selection page, the app displays as **Meeting Token App**.
+     1. Select the **Add an app** button again. In the app selection page, the app displays as **Meeting Token App**.
   
-       ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
+        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
-    1. Select the **Meeting Token App** and select **Save**.
+     1. Select the **Meeting Token App** and select **Save**.
 
-       ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
+        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
-    Now the app will be visible in the meeting chat. Start the meeting and the icon should be visible in the meeting control bar.
+     Now the app will be visible in the meeting chat. Start the meeting and the icon should be visible in the meeting control bar.
 
-       ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
+        ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
 
-     > [!NOTE]
+    > [!NOTE]
 
      > **Troubleshooting:**
      > * To maintain token information and service URL for the tenant, the sample app uses an in-memory store. If you restart the project, run the following command to recapture the service URL: `@[BotName] reset`. In our example, `[BotName]` is `MeetingTokenGeneratorBot`.
