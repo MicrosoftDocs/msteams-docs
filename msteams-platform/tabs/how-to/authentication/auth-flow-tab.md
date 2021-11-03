@@ -1,6 +1,6 @@
 ---
 title: Authentication flow for tabs
-description: Describes authentication flow in tabs
+description: Describes authentication flow in tabs, OAuth by AAD, and provides code sample 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication flow tabs

@@ -673,3 +673,7 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 #### Do: Be concise
 
 It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
+
+## See Also
+
+[Cards and Task modules supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)

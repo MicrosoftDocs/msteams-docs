@@ -138,3 +138,7 @@ If using Azure hosting, you must have provisioned and deployed to the cloud. For
 
 > [!div class="nextstepaction"]
 > [Maintaining and supporting your published app](../concepts/deploy-and-publish/appsource/post-publish/overview.md)
+
+## See Also
+
+[Build tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)

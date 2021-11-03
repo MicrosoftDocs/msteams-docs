@@ -1,6 +1,6 @@
 ---
 title: Silent authentication
-description: Describes silent authentication
+description: Describes silent authentication, Single-sign-on, AAD for tabs
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: teams authentication SSO silent AAD tab

@@ -1,7 +1,7 @@
 ---
 title: Understand app capabilities
 author: heath-hamilton
-description: Teams app capabilities explained
+description: Description of Teams app capabilities, such as Tabs, Bots, Messaging extensions, and Webhooks and connectors.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar

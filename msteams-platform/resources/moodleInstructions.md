@@ -1,7 +1,7 @@
 ---
 title: Install Moodle LMS
 description: How to install and configure the Moodle integration app for Microsoft Teams
-keywords: Teams Moodle app integration plugins deep links
+keywords: Teams Moodle app integration plugins
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
@@ -288,4 +288,3 @@ When a Moodle course is synced, Microsoft Teams automatically installs the Moodl
 - [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 - [Moodle](https://moodle.org/)
 - [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).
-

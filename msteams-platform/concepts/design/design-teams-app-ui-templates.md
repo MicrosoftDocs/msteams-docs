@@ -209,5 +209,5 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 ## See Also
 
-* [Design your app with basic Fluent UI components](~/concepts/design/design-teams-app-basic-ui-component.md)
+* [Design your app with basic Fluent UI components](~/concepts/design/design-teams-app-basic-ui-components.md)
 * 

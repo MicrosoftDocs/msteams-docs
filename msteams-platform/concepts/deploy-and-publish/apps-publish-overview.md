@@ -1,6 +1,6 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app.
+description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta

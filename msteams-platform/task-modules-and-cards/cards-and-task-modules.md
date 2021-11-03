@@ -1,6 +1,6 @@
 ---
 title: Cards and task modules
-description: Cards and task modules.
+description: Cards and task modules, supported in a Teams bot app, such as Adaptive card, Hero card,, List card, Office 365 connector card, and sign in card.  
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
