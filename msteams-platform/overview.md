@@ -205,6 +205,6 @@ Looking for app development inspiration? Browse our list of real-world scenarios
 
 ## See also
 
-* [App fundamentals](concepts/app-fundamentals-overview)
-* [Design your Teams app](concepts/design/design-teams-app-process)
-* [Map your use cases to Teams app capabilities](concepts/design/map-use-cases)
+* [App fundamentals](~/concepts/app-fundamentals-overview.md)
+* [Design your Teams app](~/concepts/design/design-teams-app-process.md)
+* [Map your use cases to Teams app capabilities](~/concepts/design/map-use-cases.md)
