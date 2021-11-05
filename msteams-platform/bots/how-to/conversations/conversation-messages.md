@@ -1,6 +1,6 @@
 ---
 title: Messages in bot conversations
-description: Describes ways to have a conversation with a Microsoft Teams bot
+description: Describes ways to have a conversation with a Microsoft Teams bot. Learn about Teams channel data, notification to your message, picture messages, adaptive cards using Code samples.
 ms.topic: overview
 ms.author: anclear
 ms.localizationpriority: medium
@@ -388,13 +388,12 @@ Following are the status codes and their error code and message values:
 |----------------|-----------------|--------------|----------------|-----------|
 | Teams conversation bot | Messaging and conversation event handling. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/57.teams-conversation-bot)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/57.teams-conversation-bot)| [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/57.teams-conversation-bot) |
 
-## See also
-
-- [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
-
-- [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Bot command menus](~/bots/how-to/create-a-bot-commands-menu.md)
+
+## See also
+
+* [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
+* [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)

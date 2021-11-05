@@ -551,7 +551,6 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
   }
 }
 ```
-
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -559,5 +558,6 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 ## See also
 
-[Cards reference](./cards-reference.md)
-[Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Cards reference](./cards-reference.md)
+* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Adaptive cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

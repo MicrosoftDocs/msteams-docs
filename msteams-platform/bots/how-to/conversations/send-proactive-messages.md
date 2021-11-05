@@ -280,5 +280,5 @@ The following table provides a simple code sample that incorporate basic convers
 
 ## See also
 
-[**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
-[Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
+* [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+* [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
