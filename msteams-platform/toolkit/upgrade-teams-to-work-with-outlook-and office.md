@@ -142,4 +142,4 @@ This step will create a sample application. Once the project has been successful
 
 1. Select **Teams:Zip Teams metadata package**.
 
-    ![Deploy to the cloud](../assets/images/upgrade-teams/zip-metadata-package.png)
+    ![Zip Teams metadata package](../assets/images/upgrade-teams/zip-metadata-package.png)
