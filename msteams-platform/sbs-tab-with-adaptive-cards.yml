@@ -26,7 +26,7 @@ items:
     
     This step-by-step guide helps you to build tabs with Adaptive Cards in desktop and mobile.
 
-    The image will be replaced once I get the output
+    The below image will be replaced once I get the output
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Prerequisites
@@ -310,22 +310,53 @@ items:
 - title: Interacting with the Tab in Teams
   durationInMinutes: 1
   content: |
-    You can use this tab by following the below steps:
-    1. In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
-    
-    1. Tab showing Adaptive card with action controls**
+    Follow the below steps to use this tab.
+
+    *  In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
+    *  Tab showing Adaptive card with action controls.
 
     :::image type="content" source="./assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Tab showing Adaptive card with action controls":::
     
-    **Select Sign In and Pick an account to access the tab
+    *  Select **Sign In** and choose an account to access the tab.
+
+    :::image type="content" source="./assets/images/adaptive-cards/sign-in-page.png" alt-text="Sign In":::
+
+    *  Select **Show Task Module** on the home page.
+
+    :::image type="content" source="./assets/images/adaptive-cards/tab-home-page.png" alt-text="Show Task Module":::
+
+    *  Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
+
+    :::image type="content" source="./assets/images/adaptive-cards/sample-task-module.png" alt-text="Sample Task Module":::
+
+    *  **Submit function of Adaptive Card**
+       **task/submit** request is triggered to your bot with the corresponding data through the Action. 
+
+    :::image type="content" source="./assets/images/adaptive-cards/task-submit.png" alt-text="Task Submit card":::
+
+    *  Tab keeps you signed in unless you select **Sign out**.
+
+    :::image type="content" source="./assets/images/adaptive-cards/sign-out.png" alt-text="Sign out":::
+
+    *  Refresh to **Sign In** again.
+
+    :::image type="content" source="./assets/images/adaptive-cards/success-sign-out.png" alt-text="Success Sign out":::
+
+- title: Deploy the bot to Azure
+  durationInMinutes: 1
+  content: |
+    This step by step process demonstrates how to deploy a bot to Azure. It explains how to prepare your bot for deployment, deploy your bot to Azure, and test your bot in Web Chat.
+
+  
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
+    Below image should be replaced
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
     
 - content: |
-    You've completed the tutorial to get started with SSO in a bot for Microsoft Teams using the Bot Framework.
+    You've completed the tutorial to get started with Adaptive cards for Microsoft Teams using the Bot Framework.
 
