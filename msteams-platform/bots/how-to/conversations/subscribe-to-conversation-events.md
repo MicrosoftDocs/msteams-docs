@@ -1,7 +1,7 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: How to work with conversation events from your Microsoft Teams bot.
+description: How to work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with Code samples.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear

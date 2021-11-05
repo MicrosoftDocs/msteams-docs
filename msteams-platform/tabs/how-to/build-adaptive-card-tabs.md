@@ -1,7 +1,7 @@
 ---
 title: Build Adaptive Card Tabs
 author: KirtiPereira
-description: Build tabs using Adaptive Cards
+description: Learn about building tabs using Adaptive Cards with Code examples, including invoking activities, understanding task module workflow, and authentication. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
@@ -423,6 +423,11 @@ The following code shows a reissued request example:
 |----------------|-----------------|--------------|--------------|
 | Show Adaptive Cards in Teams tab | Microsoft Teams tab sample code, which demonstrates how to show Adaptive Cards in Teams. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/csharp)| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-adaptive-cards/nodejs) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+
 ## See also
 
 * [Adaptive Card](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
@@ -430,8 +435,3 @@ The following code shows a reissued request example:
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)

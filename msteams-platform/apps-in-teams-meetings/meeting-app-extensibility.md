@@ -196,14 +196,14 @@ The following table provides the user types and lists the features that each use
 | Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage |
 | Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+
 ## See also
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
