@@ -15,11 +15,18 @@ author: v-rpatkur
 * A linked file can then be displayed in a new window or embedded in the page. 
 * The OneDrive repository plugin also allows users to upload files to OneDrive/SharePoint from the Moodle file picker.
 
-[Place holder for image]
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 repository.png" alt-text="microsoft 365 repository":::
+
 
 It has the added advantage of using Microsoft 365 as an institution’s file repository while keeping Moodle’s data structure small.
 
 Find documentation, installation instructions, and support here:
-Moodle plugins directory: Microsoft 365 Repository
+[Moodle plugins directory: Microsoft 365 Repository](https://moodle.org/plugins/repository_office365)
+
+# Next step
+
+> [!div class="nextstepaction"]
+> [Teams Meeting](/teamblog)
+
 
 
