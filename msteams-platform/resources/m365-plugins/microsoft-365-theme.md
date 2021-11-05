@@ -1,10 +1,10 @@
 ---
 title: Moodle learning management system
-description: 
-ms.topic: 
+description: Microsoft 365 theme
+ms.topic: Microsoft 365 theme
 ms.localizationpriority: medium
-ms.author: 
-author: 
+ms.author: Surbhi gupta
+author: V-rpatkur
 ---
 
 # Microsoft 365 Teams Theme

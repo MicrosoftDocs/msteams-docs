@@ -11,7 +11,7 @@ author: v-rpatkur
 
 The plugin allows administrators to validate that the integration is functioning properly, synchronize users between Office 365 and Moodle, configure permissions and set up the SharePoint site for course files.
 
-[Place holder for image]
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft 365 integration.png" alt-text="microsoft 365 integration":::
 
 ## Supported uses
 
@@ -20,7 +20,12 @@ The plugin allows administrators to validate that the integration is functioning
 * Validate the Azure AD permissions are properly configured
 
 Find documentation, installation instructions, and support here:
-Moodle plugins directory: Microsoft 365 Integration
+[Moodle plugins directory: Microsoft 365 Integration](https://moodle.org/plugins/local_o365)
+
+# Next step
+
+> [!div class="nextstepaction"]
+> [Microsoft 365 Repository](/teamblog)
 
 
 
