@@ -64,7 +64,7 @@ The following are the steps to Test your application in Outlook and Office.com b
 
 Teams install and launch your app. You can find your app in **More apps**.
 
-![More apps](../assets/images/upgrade-teams/more-apps.png)
+ ![More apps](../assets/images/upgrade-teams/more-apps.png)
 
 ## Run Teams application in Outlook
 
@@ -104,7 +104,7 @@ Perform the following steps to preview your apps in Outlook web client:
 
 The following steps to create a new tab app using Teams Toolkit and run it in Outlook and Office.com:
 
-1. Create a new Teams app in Visual Studio Code with Teams Toolkit, use command palette and run create new project and select **Create a new Teams app**.
+1. Create a new Teams app in Visual Studio Code with Teams Toolkit, use command palette and run `create new project` and select **Create a new Teams app**.
 
     ![Create new teams app](../assets/images/upgrade-teams/create-new-teams-app.png)
 
@@ -118,7 +118,15 @@ The following steps to create a new tab app using Teams Toolkit and run it in Ou
 
     ![Select hosting type](../assets/images/upgrade-teams/hosting-type.png)
 
-1. Choose any cloud resource, programming language, project location and a name to create your project.
+1. Choose any **Cloud resources**.
+
+    ![Cloud resources](../assets/images/upgrade-teams/create-project-cloud-resources.png)
+
+1. Choose any **programming language**.
+
+    ![Select programming language](../assets/images/upgrade-teams/create-project-programming-languages.png)
+
+1. Choose any project location and a name to create your project.
 
 Once the project is created perform the following steps:
 
@@ -138,4 +146,4 @@ Once the project is created perform the following steps:
 
     ![Create zip folder](../assets/images/upgrade-teams/create-teams-package.png)
 
-Follow steps to Run your Teams application in Outlook and Office.com.
+
