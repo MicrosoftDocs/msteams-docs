@@ -721,6 +721,9 @@ When a group install scope is selected, it will define the default capability wh
 The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md).
 
 > [!NOTE]
+> The enable app customization feature is not supported in custom or LOB apps.
+
+> [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
 
 You can define any of the following properties:
