@@ -266,5 +266,6 @@ Following are the query parameters:
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
-[Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Creating Task module deep link](../../task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-deep-link-syntax)

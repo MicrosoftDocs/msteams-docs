@@ -43,3 +43,4 @@ The new custom Together Mode scenes feature enables users to collaborate in a me
 * [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
 * [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
 * [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)

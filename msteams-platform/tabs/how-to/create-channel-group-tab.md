@@ -1,7 +1,7 @@
 ---
 title: Create a channel or group tab
 author: laujan
-description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams.
+description: A quickstart guide to creating a channel and group tab with the Yeoman Generator for Microsoft Teams, including reviewing source code with code examples.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
@@ -631,14 +631,14 @@ Within **Tab.cshtml** the application presents the user with two option buttons 
 
 ---
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
