@@ -51,23 +51,6 @@ Run the command `upgrade Teams manifest` to work in Outlook and Office.com and s
 
 To know more about the required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)
 
-### Upgrade custom tab
-
-Run the command `upgrade Teams tab` app to work in Outlook and Office.com and select Teams tab app project to migrate:
-
-1. Update `Teams-js` SDK to the latest beta version.
-1. Update function references, `Enum` and interface references.
-1. Add `TODO` comments to finish change callbacks manually.
-1. Add `TODO` in places where you get changes to the context schema.
-
-    > [!TIP]
-    > Changing from callbacks alters control flow and cannot be fully automated. This code will have `TODO` comments for your review. The typical solution is to make parent function `async` and use `await`.
-
-1. Add `TODO` in places where you get changes to the context schema.
-
-    > [!TIP]
-    > Transforming JavaScript inline within HTML is not supported.
-
 ### Upgrade Teams JavaScript Client SDK
 
 Run the command `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` and select Teams app project to migrate:
