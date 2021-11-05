@@ -176,3 +176,7 @@ Design Adaptive Cards in our web-based tool.
 
 > [!div class="nextstepaction"]
 > [Try the Adaptive Cards designer](https://adaptivecards.io/designer/)
+
+## See Also
+
+[Prerequisites and API references for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)

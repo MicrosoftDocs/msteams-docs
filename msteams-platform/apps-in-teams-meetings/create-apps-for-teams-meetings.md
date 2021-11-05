@@ -46,13 +46,13 @@ After you've gone through the prerequisites, you can use the meeting apps API re
 > [!NOTE]
 > Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Meeting apps API references](API-references.md)
+
 ## See also
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Meeting apps API references](API-references.md)

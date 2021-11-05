@@ -267,4 +267,4 @@ Following are the query parameters:
 ## See also
 
 [Integrate web apps](~/samples/integrate-web-apps-overview.md)
-
+[Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)

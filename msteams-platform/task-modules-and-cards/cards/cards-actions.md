@@ -552,11 +552,12 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 }
 ```
 
-## See also
-
-[Cards reference](./cards-reference.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Universal Actions for Adaptive Cards](../cards/Universal-actions-for-adaptive-cards/Overview.md)
+
+## See also
+
+[Cards reference](./cards-reference.md)
+[Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
