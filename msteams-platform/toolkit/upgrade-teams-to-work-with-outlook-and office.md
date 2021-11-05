@@ -13,6 +13,24 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 
 ![Upgrade Teams](../assets/images/upgrade-teams/upgrade-teams.png)
 
+To extend your Teams applications in Outlook and Office.com, the following are migration commands:
+
+1. Select the command **Teams manifest to extend in Outlook and Office.com** to upgrade manifest and communicate with Office and Outlook:
+
+1. Select the command **Teams JS SDK to extend in Outlook and Office** to upgrade `TeamsJS` to latest version.
+
+![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
+
+If you have `TeamsJS SDK` in your application you have to:
+
+|Upgrading|Action|
+|---------|------|
+|Upgrading manifest|Required|
+|Upgrading TeamsJS to latest version|Optional|
+
+>[!NOTE]
+> If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application,`TeamsFx` SDK is not currently compatible with the latest version (beta version) of `TeamsJS` SDK package. This will cause potential functional damage to your application when running in Outlook and Office.com. But your Teams application can still be running in Outlook and Office.com. To avoid some function not working in Outlook or Office.com, you can either remove `TeamsFx` packages from your application or do not upgrade to latest `TeamsJS` SDK.
+
 ## Prerequisite
 
 Install the latest version of Teams Toolkit from Visual Studio Code extension in marketplace: [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
@@ -31,6 +49,8 @@ Run the command `upgrade Teams manifest` to work in Outlook and Office.com and s
 1. `update manifest` version to use the latest `m365DevPreview` schema.
 1. `update manifest` file to use the latest `DevPreview` schema.
 
+To know more about the required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)
+
 ### Upgrade custom tab
 
 Run the command `upgrade Teams tab` app to work in Outlook and Office.com and select Teams tab app project to migrate:
@@ -41,12 +61,25 @@ Run the command `upgrade Teams tab` app to work in Outlook and Office.com and se
 1. Add `TODO` in places where you get changes to the context schema.
 
     > [!TIP]
-    > Changing from callbacks alters control flow and cannot be fully automated. This code will have `TODO` comments for developers review. The typical solution is to make parent function `async` and use `await` next to each promise.
+    > Changing from callbacks alters control flow and cannot be fully automated. This code will have `TODO` comments for your review. The typical solution is to make parent function `async` and use `await`.
 
-1. Add `TODO` in places where get changes to the context schema.
+1. Add `TODO` in places where you get changes to the context schema.
 
     > [!TIP]
     > Transforming JavaScript inline within HTML is not supported.
+
+### Upgrade Teams JavaScript Client SDK
+
+Run the command `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` and select Teams app project to migrate:
+
+1. Update `Teams JS SDK` to the latest beta version.
+1. Update function references, `Enum` and interface references.
+1. Add `TODO` comments to finish change callbacks manually.
+
+    > [!TIP]
+    > Changing from callbacks alters control flow and cannot be fully automated. This code will have `TODO` comments for your review. The typical solution is to make parent function `async` and use `await`.
+
+1. Add `TODO` in places where you may get changes to the context schema.
 
 ## Run your Teams application in Outlook and Office.com
 
@@ -100,7 +133,7 @@ Perform the following steps to preview your apps in Outlook web client:
 
     ![Apps in Office](../assets/images/upgrade-teams/office-preview.png)
 
-## Create a custom tab app with Teams Toolkit and run it in Outlook and Office.com
+## Create a sample application with Teams Toolkit and Run it in Outlook and Office.com
 
 The following steps to create a new tab app using Teams Toolkit and run it in Outlook and Office.com:
 
@@ -110,40 +143,20 @@ The following steps to create a new tab app using Teams Toolkit and run it in Ou
 
     ![Create new app](../assets/images/upgrade-teams/create-new-app.png)
 
-1. Select **Tab** in the next window and click **OK**.
+1. Select **Todo List (Works in Teams, Outlook and Office)** in the next window and click **OK**. 
 
-    ![select capability](../assets/images/upgrade-teams/select-capability.png)
+    ![select TODO](../assets/images/upgrade-teams/todo-in-outlook-office.png)
 
-1. Select **Azure** as hosting type.
+This step will create a sample application. Once the project has been successfully created:
 
-    ![Select hosting type](../assets/images/upgrade-teams/hosting-type.png)
+1. Select **Provision in the cloud**.
 
-1. Choose any **Cloud resources**.
+    ![Select provision](../assets/images/upgrade-teams/provision-in-cloud.png)
 
-    ![Cloud resources](../assets/images/upgrade-teams/create-project-cloud-resources.png)
-
-1. Choose any **programming language**.
-
-    ![Select programming language](../assets/images/upgrade-teams/create-project-programming-languages.png)
-
-1. Choose any project location and a name to create your project.
-
-Once the project is created perform the following steps:
-
-1. Open command palette and run: `Teams: Upgrade Teams Manifest to Work in Outlook and Office`.
-
-    ![upgrade manifest in Outlook and Office](../assets/images/upgrade-teams/upgrade-manifest.png)
-
-1. Provision your app in the cloud.
-
-    ![Provisioning to the cloud](../assets/images/upgrade-teams/provision-in-cloud.png)
-
-1. Deploy your app to cloud.
+1. Select **Deploy to the cloud**.
 
     ![Deploy to the cloud](../assets/images/upgrade-teams/deploy-to-the-cloud.png)
 
-1. Create a zip folder for your app package.
+1. Select **Teams:Zip Teams metadata package**.
 
-    ![Create zip folder](../assets/images/upgrade-teams/create-teams-package.png)
-
-
+    ![Deploy to the cloud](../assets/images/upgrade-teams/zip-metadata-package.png)
