@@ -1,7 +1,7 @@
 ---
 title: Moodle learning management system
 description: oEmbed filter
-ms.topic: M365 plugins
+ms.topic: oEmbed filter
 ms.localizationpriority: medium
 ms.author: Surbhi Gupta
 author: v-rpatkur
@@ -11,13 +11,21 @@ author: v-rpatkur
 
 The oEmbed filter is a powerful filter that simplifies the inclusion of external HTML content within Moodle. 
 
-[Place holder for image]
-
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter":::
 
 * It reduces the amount of time it takes an instructor to add a video to an HTML page.
-* Does not require a technical understanding of how to copy embed code from any of the supported services
-* Does not require YouTube API key for video embedding
-* Enables embedding of multiple video content providers (not just YouTube)
+
+* Does not require a technical understanding of how to copy embed code from any of the supported services.
+
+* Does not require YouTube API key for video embedding.
+
+* Enables embedding of multiple video content providers.
 
 Find documentation, installation instructions, and support here:
-Moodle plugins directory: oEmbed Filter
+[Moodle plugins directory: oEmbed Filter](https://moodle.org/plugins/filter_oembed)
+
+# Next step
+
+> [!div class="nextstepaction"]
+> [Partner Apps for Moodle](/teamblog)
+

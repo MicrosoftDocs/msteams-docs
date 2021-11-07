@@ -27,6 +27,3 @@ Find documentation, installation instructions, and support here:
 
 > [!div class="nextstepaction"]
 > [Teams Meeting](/teamblog)
-
-
-

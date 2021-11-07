@@ -1,11 +1,10 @@
 ---
-title: Install Moodle LMS
-description: How to install and configure the Moodle integration app for Microsoft Teams
-keywords: Teams Moodle app integration plugins
-ms.topic: how-to
+title: Moodle learning management system
+description: Partner Apps for Moodle
+ms.topic: Partner Apps for Moodle
 ms.localizationpriority: medium
-ms.author: lajanuar
-author: surbhigupta
+ms.author: Surbhi Gupta
+author: v-rpatkur
 ---
 
 # Partner apps for Moodle
@@ -13,7 +12,7 @@ author: surbhigupta
 Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft Market. 
 You can locate these apps within the Microsoft Teams App Store, and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
 
-## Key benefits of partner apps for Moodle:
+**Key benefits of partner apps for Moodle:**
 
 * Extend Teams to fit your needs: Install and engage with apps designed by education focused experts for improved student engagement and collaboration.
 
@@ -23,12 +22,16 @@ You can locate these apps within the Microsoft Teams App Store, and enjoy their 
 
 ## mConnect
 
-* The mConnect app is a Microsoft certified app that integrates Moodle courses and activities into Teams for learning experiences empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a long-standing, and trusted Microsoft Gold Partner in Education.
+* The mConnect app is a [Microsoft certified](https://docs.microsoft.com/en-us/microsoft-365-app-certification/teams/teams-apps) app that integrates Moodle courses and activities into Teams for learning experiences empowered by leading-edge collaboration and productivity services in the cloud. The app is developed and supported by Skooler, a long-standing, and trusted Microsoft Gold Partner in Education.
 
-* The mConnect app allows Moodle administrators to automatically set up a Team for every Moodle course, making all functionality offered through Teams instantly available for every course in Moodle.
+* The mConnect app allows Moodle administrators to automatically set up a Team for every Moodle course, making all functionality offer through Teams instantly available for every course in Moodle.
 
-This app may be added from the Microsoft Teams App store if customers have a pre-existing account with Skooler, and this app requires an admin to configure it directly from the Moodle site.
+* This app may be added from the Microsoft Teams App store if customers have a pre-existing account with Skooler, and this app requires an admin to configure it directly from the Moodle site.
+  
+Watch the following video to understand how to get started with mConnect and Teams:
+
+> [!VIDEO unavailable]
 
 Find configuration instructions and support here:
-SKOOLER – mConnect - How to
-Video demo: https://www.youtube.com/watch?v=YM4ZXXOEcH  
+[SKOOLER – mConnect - How to](https://skooler.com/mconnect/how-to/)
+
