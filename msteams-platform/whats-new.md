@@ -13,9 +13,14 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 > [!IMPORTANT]
 > You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
-| Announcements |
+| :::image type="icon" source="../msteams-platform/assets/images/overview/banner-announce.png"::: |
 | --- |
 | Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide. [Start here](get-started/get-started-overview.md) |
+|
+
+| :::image type="icon" source="../msteams-platform/assets/images/overview/banner-feature.png"::: |
+| --- |
+| Monetize your Teams app with a transactable SaaS offer [Learn here](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |
 
 ## This month's updates
