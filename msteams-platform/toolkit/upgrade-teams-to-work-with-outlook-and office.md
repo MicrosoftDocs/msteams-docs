@@ -9,6 +9,9 @@ ms.author: v-vasudhab
 
 # Upgrade Teams application to work with Outlook and Office.com
 
+> [!NOTE]
+> This feature is currently available in Developer preview only.
+
 Teams Toolkit helps you to upgrade Teams applications to work with Outlook and Office.com. You must upgrade the manifest and `TeamsJS` SDK to the latest version to run the application on Outlook and Office.com, to extend your Teams applications in Outlook and Office.com, the migration commands in Teams are as follows:
 
 ![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
@@ -110,17 +113,15 @@ Perform the following steps to preview your apps in Outlook web client:
 
 Perform the following steps to create a new tab app using Teams Toolkit and run it in Outlook and Office.com:
 
-1. Create a new Teams app in Visual Studio Code with Teams Toolkit, use command palette and run `create new project` and select **Create a new Teams app**.
+1. Create a new sample Teams app in Visual Studio Code with Teams Toolkit, use command palette and run `create new project` and select **Create a new Teams app**.
 
-    ![Create new teams app](../assets/images/upgrade-teams/create-new-teams-app.png)
-
-    ![Create new app](../assets/images/upgrade-teams/create-new-app.png)
+    ![Create new teams sample app](../assets/images/upgrade-teams/sample-app.png)
 
 1. Select **Todo List (Works in Teams, Outlook and Office)** in the next window and click **OK**. 
 
     ![select TODO](../assets/images/upgrade-teams/todo-in-outlook-office.png)
 
-This step will create a sample application. Once the project has been successfully created:
+    This step will create a sample application. Once the project has been successfully created:
 
 1. Select **Provision in the cloud**.
 
