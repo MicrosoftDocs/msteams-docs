@@ -9,30 +9,29 @@ ms.author: v-vasudhab
 
 # Upgrade Teams application to work with Outlook and Office.com
 
-Teams Toolkit helps you to upgrade Teams applications to work with Outlook and Office.com. You must upgrade the manifest and `TeamsJS` SDK to the latest version to run application on Outlook and Office.com.
+Teams Toolkit helps you to upgrade Teams applications to work with Outlook and Office.com. You must upgrade the manifest and `TeamsJS` SDK to the latest version to run the application on Outlook and Office.com:
 
 ![Upgrade Teams](../assets/images/upgrade-teams/upgrade-teams.png)
 
-To extend your Teams applications in Outlook and Office.com, the following are migration commands in Teams:
+To extend your Teams applications in Outlook and Office.com, the migration commands in Teams are as follows:
 
 ![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
 
 1. Select the command **Teams manifest to extend in Outlook and Office.com** to upgrade manifest and communicate with Office and Outlook:
 
-1. Select the command **Teams JS SDK to extend in Outlook and Office** to upgrade `TeamsJS` to latest version.
+1. Select the command **Teams JS SDK to extend in Outlook and Office** to upgrade `TeamsJS` to the latest version.
 
 > [!NOTE]
-> Upgrading manifest file is required, but upgrading `TeamsJS` to latest version is optional, if you have already installed `TeamsJS SDK' in your application.
 
-> [!NOTE]
-> If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application,`TeamsFx` SDK is not currently compatible with the latest version (beta version) of `TeamsJS` SDK package. This will cause potential functional damage to your application when running in Outlook and Office.com. But your Teams application can still run in Outlook and Office.com.
-> If some functions are not working in Outlook or Office.com, remove `TeamsFx` packages from your application or don't upgrade `TeamsJS` SDK to latest version.
+> * Upgrading manifest file is required, but upgrading `TeamsJS` to latest version is optional, if you have already installed `TeamsJS` SDK in your application.
+> * If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application,`TeamsFx` SDK is not currently compatible with the latest version (beta version) of `TeamsJS` SDK package. It can cause functional damage to your application when running in Outlook and Office.com.
+> * If some functions are not working in Outlook or Office.com, remove `TeamsFx` packages from your application or don't upgrade `TeamsJS` SDK to latest version.
 
 ## Prerequisite
 
 Install the latest version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following are the prerequisites to upgrade manifest and Teams JS Client SDK:
+The following are the prerequisites to upgrade manifest and `TeamsJS` client SDK:
 
 ### Upgrade manifest
 
@@ -52,8 +51,9 @@ Run the command `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` an
 1. Add `TODO` comments to finish change callbacks manually.
 
     > [!TIP]
-    > Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
-    > The typical solution is to make parent function `async` and use `await`.
+
+    > * Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
+    > * The typical solution is to make parent function `async` and use `await`.
 
 1. Add `TODO` in places where you get changes to the context schema.
 
