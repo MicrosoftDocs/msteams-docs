@@ -68,7 +68,7 @@ items:
     1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
-        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
+        :::image type="content" source="./assets/images/adaptive-cards/azure-bot.png" alt-text="Azure Bot":::
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
@@ -82,28 +82,28 @@ items:
 
     1. Select **Review + create**.
 
-        ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
+        :::image type="content" source="./assets/images/adaptive-cards/create-azure-bot.png" alt-text="Create Azure Bot":::
 
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
-        ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
+        :::image type="content" source="./assets/images/adaptive-cards/validation-pane.png" alt-text="Azure Bot validation":::
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        ![Go to resource](~/assets/images/adaptive-cards/go-to-resource card.png)
+        :::image type="content" source="./assets/images/adaptive-cards/go-to-resource card.png" alt-text="Go to resource":::
 
         Now your Azure bot is created.
 
-        ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
+        :::image type="content" source="./assets/images/adaptive-cards/azure-bot-ui.png" alt-text="Azure bot resource created":::
 
     **To create client secret**
     Follow the below steps to create client secret.
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
-        ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
+        :::image type="content" source="./assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Microsoft App ID":::
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
