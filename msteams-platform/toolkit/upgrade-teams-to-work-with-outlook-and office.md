@@ -51,9 +51,8 @@ Run the command `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` an
 1. Add `TODO` comments to finish change callbacks manually.
 
     > [!TIP]
-
-    > * Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
-    > * The typical solution is to make parent function `async` and use `await`.
+    > Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
+    > The typical solution is to make parent function `async` and use `await`.
 
 1. Add `TODO` in places where you get changes to the context schema.
 
