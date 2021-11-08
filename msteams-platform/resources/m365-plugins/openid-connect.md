@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: OpedID connect
 ms.topic: OpenID connect
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
@@ -21,7 +21,7 @@ The OpenID Connect provides institutions with two sign in workflows options to m
 Find documentation, installation instructions, and support here:
 [Moodle plugins directory: OpenID Connect](https://moodle.org/plugins/auth_oidc)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft 365 Integration](/teamblog)
