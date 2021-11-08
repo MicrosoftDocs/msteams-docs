@@ -129,3 +129,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## See Also
+
+[Configure identity providers to use AAD](~/concepts/authentication/configure-identity-provider.md)
