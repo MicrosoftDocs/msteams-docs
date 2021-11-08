@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: Moodle LTI Apps
 ms.topic: Moodle LTI Apps
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
@@ -46,7 +46,7 @@ The Microsoft Teams Meetings LTI app will help educators and students more easil
 
 For more information, see:
 
-https://docs.microsoft.com/en-us/
+https://docs.microsoft.com
 
 
 
