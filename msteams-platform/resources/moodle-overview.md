@@ -23,7 +23,11 @@ If you're wondering why anyone would want to combine Microsoft's cloud services 
 
 * **Citizen Developer Apps** :  Open doorways to new custom apps as differentiators for your school. Simple apps that help to optimize learning can be created in days, and often in minutes! Envision for android with special event schedules, shuttle bookings, library books, mentors, etc. The sky is the limit as to what you can create to showcase value and/or to provide easy-to-use transact activities for students and teachers.
  
-This is just a sample of what you can achieve by combining Microsoft Teams with your Moodle implementations! As you review this section on the Moodle LMS integrations, please do feel empowered to give us feedback, and to share your ideas for integrations below. We look forward to hearing from you as we continue to empower institutions worldwide to optimize learning and planning in education (learn more regarding Microsoft Education [here])(https://www.microsoft.com/en-us/education).
+This is just a sample of what you can achieve by combining Microsoft Teams with your Moodle implementations! As you review this section on the Moodle LMS integrations, please do feel empowered to give us feedback, and to share your ideas for integrations below. We look forward to hearing from you as we continue to empower institutions worldwide to optimize learning and planning in education (learn more regarding Microsoft Education [here])(https://www.microsoft.com/education).
  
-Related Topics <links to other pages in the hierarchy>:
+Related Topics:
+
+* [Moodle LTI Apps](moodle-lti-apps.md)
+* [Microsoft 365 Plugins](m365-plugins)
+* [Partner apps for Moodle](partner-apps-for-moodle.md)
  
