@@ -280,3 +280,4 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Office 365 Connectors for Microsoft Teams](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+* [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)

@@ -125,3 +125,4 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 * [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Create Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
+* [SameSite cookie attributes](~/resources/samesite-cookie-update.md)

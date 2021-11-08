@@ -179,4 +179,6 @@ Design Adaptive Cards in our web-based tool.
 
 ## See Also
 
-[Prerequisites and API references for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Prerequisites and API references for apps in Teams meetings](~/apps-in-teams-meetings/create-apps-for-teams-meetings.md)
+* [Designing your Microsoft Teams bot](~/bots/design/bots.md)
+* [Create Virtual Assistant](~/samples/virtual-assistant.md)
