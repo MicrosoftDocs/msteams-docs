@@ -397,3 +397,4 @@ Following are the status codes and their error code and message values:
 
 * [Send proactive messages](~/bots/how-to/conversations/send-proactive-messages.md)
 * [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+* [Send and receive files through the bot](~/bots/how-to/bots-filesv4.md)

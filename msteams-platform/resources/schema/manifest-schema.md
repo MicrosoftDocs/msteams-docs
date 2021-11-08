@@ -755,3 +755,4 @@ The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockU
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)
+* [Developer Preview Manifest schema reference - Teams](~/resources/schema/manifest-schema-dev-preview.md)
