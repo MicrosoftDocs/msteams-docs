@@ -98,7 +98,7 @@ items:
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
-       In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration**, and enter **Existing app id** and **Existing app password** or select **Create new Microsoft App ID**:
+       In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**:
 
        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
@@ -116,7 +116,11 @@ items:
 
     **To create client secret**
 
-    1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
+    1. In **Settings**, select **Configuration**. 
+
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
+
     1. Next to **Microsoft App ID**, select **Manage**.
 
          ![Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)
