@@ -460,3 +460,7 @@ Apps must not display advertising, including dynamic ads, banner ads, and ads in
 
 > [!div class="nextstepaction"]
 > [Create a Partner Center account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## See Also
+
+[Test and debug your bot locally](../../../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
