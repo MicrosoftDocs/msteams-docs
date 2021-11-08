@@ -5,6 +5,7 @@ description: How to work with conversation events from your Microsoft Teams bot,
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+keywords: events bot channel message reaction conversation
 ---
 
 # Conversation events in your Teams bot

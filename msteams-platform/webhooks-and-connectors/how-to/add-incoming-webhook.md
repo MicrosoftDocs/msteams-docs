@@ -92,3 +92,4 @@ The webhook is available in the Teams channel.
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Create Share-to-Teams button](../../concepts/build-and-test/share-to-teams.md#create-share-to-teams-button)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)

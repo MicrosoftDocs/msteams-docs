@@ -748,3 +748,10 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 **Maximum size** - 128 characters
 
 The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+
+## See Also
+
+* [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
+* [Enable app customization](~/concepts/design/enable-app-customization.md)
+* [Localize your app](~/concepts/build-and-test/apps-localization.md)
+* [Integrate media capabilities](~/concepts/device-capabilities/mobile-camera-image-permissions.md)

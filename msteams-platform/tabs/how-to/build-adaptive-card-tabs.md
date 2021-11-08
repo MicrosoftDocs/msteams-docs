@@ -5,6 +5,7 @@ description: Learn about building tabs using Adaptive Cards with Code examples, 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
+keywords: adaptive card personal app authentication data flow
 ---
 
 # Build tabs with Adaptive Cards

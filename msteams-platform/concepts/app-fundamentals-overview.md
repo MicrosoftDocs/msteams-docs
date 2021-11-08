@@ -5,6 +5,7 @@ description: Describe the foundational concepts of Teams platform development, s
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: entry points extensibility use cases device capability
 ---
 
 # Microsoft Teams app development fundamentals
