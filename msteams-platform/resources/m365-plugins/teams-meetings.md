@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: Teams Meetings
 ms.topic: Teams Meetings
 ms.localizationpriority: medium
-ms.author: Surbhi gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
