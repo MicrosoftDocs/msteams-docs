@@ -141,4 +141,5 @@ If using Azure hosting, you must have provisioned and deployed to the cloud. For
 
 ## See Also
 
-[Build apps with the Teams Toolkit and Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Build apps with the Teams Toolkit and Visual Studio](~/toolkit/visual-studio-overview.md)
+* [Build tabs and other hosted experiences with the Microsoft Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)

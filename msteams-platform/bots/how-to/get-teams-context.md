@@ -5,6 +5,7 @@ description: How to get Microsoft Team's specific context for your bot, includin
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: bot context roster user profile channel list
 ---
 # Get Teams specific context for your bot
 

@@ -126,3 +126,4 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 * [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
 * [Create Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
 * [SameSite cookie attributes](~/resources/samesite-cookie-update.md)
+* [Integrate Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

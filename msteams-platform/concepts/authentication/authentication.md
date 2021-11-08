@@ -55,5 +55,4 @@ After the iOS 14 update, Apple has blocked the [third-party cookie](https://webk
 
 ## See Also
 
-* [Plan user authentication](../design/understand-use-cases.md#provide-authentication)
-* [Authentication flow for bots]
+* [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)

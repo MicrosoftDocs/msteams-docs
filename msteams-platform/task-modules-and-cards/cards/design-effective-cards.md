@@ -676,4 +676,5 @@ It's easy to send multiple cards into a conversation, but once cards scroll out 
 
 ## See Also
 
-[Cards and task modules](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Cards and task modules](~/task-modules-and-cards/cards-and-task-modules.md)
+* [Cards and Task modules supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)

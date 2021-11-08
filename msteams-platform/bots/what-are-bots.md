@@ -50,5 +50,5 @@ You can use the Teams bot APIs to get information for one or more members of a c
 
 ## See also
 
-* [Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
-* [Bot command menus](how-to/create-a-bot-commands-menu.md#bot-command-menus)
+[Create a bot for Teams](~/bots/how-to/create-a-bot-for-teams.md)
+[Register calls and meetings bot for Microsoft Teams](~/bots/calls-and-meetings/registering-calling-bot.md)

@@ -463,4 +463,6 @@ Apps must not display advertising, including dynamic ads, banner ads, and ads in
 
 ## See Also
 
-[Test and debug your bot locally](../../../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
+* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Test and debug your app](~/concepts/build-and-test/debug.md)
