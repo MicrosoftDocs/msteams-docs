@@ -1,9 +1,9 @@
----
+---  
 title: Moodle learning management system
 description: OneNote 
 ms.topic: OneNote
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 

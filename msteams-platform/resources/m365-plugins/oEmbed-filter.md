@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: oEmbed filter
 ms.topic: oEmbed filter
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
@@ -22,7 +22,7 @@ The oEmbed filter is a powerful filter that simplifies the inclusion of external
 * Enables embedding of multiple video content providers.
 
 Find documentation, installation instructions, and support here:
-[Moodle plugins directory: oEmbed Filter](https://moodle.org/plugins/filter_oembed)
+[ Moodle plugins directory: oEmbed Filter](https://moodle.org/plugins/filter_oembed)
 
 # Next step
 

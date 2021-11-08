@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: Frequently asked questions
 ms.topic: FAQs
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
@@ -180,4 +180,4 @@ Meetings scheduled through the app do not appear in the scheduler’s Outlook or
 
 However, you may open the invite and manually add participant names to the Required or Optional lines of the meeting invitation, which will in turn display the remote meeting on their calendars. 
 
-Meetings scheduled through the application will follow the standard timelines based on the date(s) you enter when the meeting is created. See:(https://docs.microsoft.com/en-us/microsoftteams/limits-specifications-teams)
+Meetings scheduled through the application will follow the standard timelines based on the date(s) you enter when the meeting is created. See:(https://docs.microsoft.com/microsoftteams/limits-specifications-teams)
