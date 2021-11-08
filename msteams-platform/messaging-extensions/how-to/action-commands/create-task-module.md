@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.author: anclear
 ---
 # Create and send the task module
-
+ 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
 You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers 
