@@ -36,10 +36,10 @@ items:
 
     * Microsoft Teams with an account (not a guest account)
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-    ```bash
-    # determine dotnet version
-    dotnet --version
-    ```
+      ```bash
+      # determine dotnet version
+      dotnet --version
+      ```
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
     * Visual Studio 2019 or the latest version
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app
