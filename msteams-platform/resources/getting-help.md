@@ -3,7 +3,7 @@ title: Moodle learning management system
 description: Frequently asked questions
 ms.topic: FAQs
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
