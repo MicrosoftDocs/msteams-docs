@@ -1,6 +1,6 @@
 ---
 title: Test resource-specific consent permissions in Teams
-description: Details testing resource-specific consent in Teams using Postman
+description: Details testing resource-specific consent in Teams using Postman with Code Samples
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
@@ -130,5 +130,5 @@ Execute the entire permissions collection for each API call. The permissions tha
 
 ## See also
 
-[Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
-
+* [Microsoft Graph API and Teams](/graph/api/resources/teams-api-overview?view=graph-rest-1.0&preserve-view=true)
+* [Resource-specific consent](~/graph-api/rsc/resource-specific-consent.md)

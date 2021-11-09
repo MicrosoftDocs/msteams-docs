@@ -1,6 +1,6 @@
 ---
 title: Up to date views
-description: Sample for up to date views using Universal Bot
+description: Learn about up to date views using Universal Bot with Code samples
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
