@@ -1,6 +1,6 @@
 ---
-title: Moodle learning management system
-description: Frequently asked questions
+title: Getting Help
+description: Help desk
 ms.topic: FAQs
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -43,4 +43,7 @@ author: v-rpatkur
 * **Contact details:** <include contact details of someone who can work with support to resolve the issue, which may require screen sharing>
 
 * **Priority:** <priority is based on organizational impact – select either P1, P2, or P3 based on the impact to your organization and the number of users who are blocked>
+
+
+
 

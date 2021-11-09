@@ -11,7 +11,7 @@ author: V-rpatkur
 
 Teams theme plugins display a custom view of the Moodle course home page within Teams. This view is only available when users access their Moodle courses within Teams.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text="teams theme":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams theme.png" alt-text=" microsoft teams theme":::
 
 The theme plugin offers users a unified experience in Microsoft Teams. Features of the theme include:
 

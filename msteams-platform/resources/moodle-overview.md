@@ -11,7 +11,7 @@ author: v-rpatkur
 
 [Moodle](https://moodle.com/about/) is the world’s largest open-source learning management system. With over 30 years of experience in remote learning, Moodle has attracted around 300 million users worldwide with its rich set of services, both hosted and cloud-based.
  
-The Moodle LMS partners beautifully with Microsoft Teams; combining Teams secure best-in-class collaboration and productivity services such audio/video, calling, and chat, with student course and activity management, badges and rewards, and analytical insights from both Moodle and Teams, resulting in modern superpowers in learning experiences. 
+The Moodle LMS partners beautifully with Microsoft Teams; combining Teams secure best-in-class collaboration and productivity services such audio/video, calling, and chat, with student course and activity management, badges and rewards, and analytical insights from both Moodle and Teams, resulting in modern superpowers in learning experiences.
  
 If you're wondering why anyone would want to combine Microsoft's cloud services with Moodle's courses and data, here are a few use cases to consider. Accelerate learning potential with:
  

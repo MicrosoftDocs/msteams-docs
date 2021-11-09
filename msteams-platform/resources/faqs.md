@@ -1,6 +1,6 @@
 ---
-title: Moodle learning management system
-description: Frequently asked questions
+title: Frequently asked questions
+description: Answers to some common questions
 ms.topic: FAQs
 ms.localizationpriority: medium
 ms.author: Surbhigupta
