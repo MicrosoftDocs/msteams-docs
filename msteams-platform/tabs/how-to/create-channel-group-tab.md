@@ -642,3 +642,4 @@ Within **Tab.cshtml** the application presents the user with two option buttons 
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Create a removal page](~/tabs/how-to/create-tab-pages/removal-page.md)
