@@ -230,7 +230,7 @@ items:
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update this value whenever your ngrok subdomain changes.
-        >  `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+        > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     1. Select **Add a scope**. In the panel that opens, enter `access_as_user` as the Scope name.
   
