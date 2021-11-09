@@ -103,9 +103,9 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 > [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
 
 ## See also
-
+ 
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
-* [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+* [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
 * [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
 * [DevTools for Microsoft Teams tabs](~/tabs/how-to/developer-tools.md)
