@@ -189,7 +189,7 @@ items:
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png" alt="Messaging endpoint" width="600"/>
+        ![Messaging Endpoint](~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -232,7 +232,7 @@ items:
         > If you're using a tunneling service such as ngrok, ensure you update this value whenever your ngrok subdomain changes.
         >  `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select the **Add a scope** button. In the panel that opens, enter `access_as_user` as the Scope name.
+    1. Select **Add a scope**. In the panel that opens, enter `access_as_user` as the Scope name.
   
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -246,7 +246,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
   
-    1. Select the **Add scope** button to save.
+    1. Select **Add scope** to save.
          * The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
 
@@ -293,10 +293,10 @@ items:
 
          ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
 
-    1. Enter the redirect URI for your app. The page appears with access to implicit grant flow.
-
-    1. Append API route to the domain name:</br>
+    1. Enter the redirect URI for your app by appending API route to the domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
+
+       The page appears with access to implicit grant flow.
 
        Enable implicit grant by checking the following boxes:
          * ID Token
@@ -471,7 +471,7 @@ items:
     
     1. Create a meeting with a few Presenters and Attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select the **Add an app** (+) button.
+    1. Once the meeting is created, go to the meeting details page and select **Add an app**.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
@@ -479,11 +479,15 @@ items:
 
        ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
    
-    1. Select **Upload a custom app** and upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+    1. Select **Upload a custom app**. 
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
+    1. Upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+
        ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
+
+    1. Select **Add**.
 
        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
@@ -491,11 +495,13 @@ items:
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
-    1. Select the **Add an app** button again. In the app selection page, the app displays as **Meeting Token App**.
+    1. Go to the meeting screen and select **Add an app** again. In the app selection page, the app displays as **Meeting Token App**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
-    1. Select the **Meeting Token App** and select **Save**.
+    1. Select the **Meeting Token App**.
+    
+    1. Select **Save**.
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
