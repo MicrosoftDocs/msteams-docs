@@ -133,10 +133,10 @@ items:
  
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png" alt="Add client secret to app" width="500"/>
 
-    1. In the **Value** column, select **Copy to clipboard** 
+    1. In the **Value** column, select **Copy to clipboard**.
     
        > [!TIP]
-       > Save the client secret ID for future reference.
+       > Save the client secret ID value for future reference.
 
          ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
        
@@ -317,8 +317,8 @@ items:
 
     1. Open `appsettings.json` in **Visual Studio Code** and make the following changes:  
 
-         * `"MicrosoftAppId"`: Set up with the application ID of the bot's Azure AD application.
-         * `"MicrosoftAppPassword"`: Provide client secret of the bot's Azure AD application.
+         * `"MicrosoftAppId"`: Provide your bot's application ID.
+         * `"MicrosoftAppPassword"`: Provide your bot's client secret ID value.
          * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
        > [!NOTE]
