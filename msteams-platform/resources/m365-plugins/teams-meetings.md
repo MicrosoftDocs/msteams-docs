@@ -1,7 +1,7 @@
 ---
-title: Moodle learning management system
-description: Teams Meetings
-ms.topic: Teams Meetings
+title: Teams meeting
+description: Introduction to Teams Meeting
+ms.topic: Uses of Teams Meetings
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-rpatkur
@@ -11,7 +11,7 @@ author: v-rpatkur
 
 Teams meetings can be created using the Atto Editor in Calendar, Assignments, Forum posts or wherever else Atto Editor is available.
 
-:::image type="content" source="../../assets/images/MoodleInstructions/teams meeting.png" alt-text="teams meeting":::
+:::image type="content" source="../../assets/images/MoodleInstructions/teams meeting.png" alt-text="signin to teams meeting":::
 
 * Once the plugin is installed, educators and students can create an audio or video meeting from Moodle. 
 
@@ -22,7 +22,7 @@ Teams meetings can be created using the Atto Editor in Calendar, Assignments, Fo
 Find documentation, installation instructions, and support here:
 [Moodle plugins directory: Teams Meeting](https://moodle.org/plugins/atto_teamsmeeting)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft 365 Teams Theme](/teamblog)

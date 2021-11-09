@@ -1,6 +1,6 @@
 ---
-title: Moodle learning management system
-description: oEmbed filter
+title: oEmbed Filter
+description: Introduction to oEmbed filter
 ms.topic: oEmbed filter
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -11,7 +11,7 @@ author: v-rpatkur
 
 The oEmbed filter is a powerful filter that simplifies the inclusion of external HTML content within Moodle. 
 
-:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter":::
+:::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::
 
 * It reduces the amount of time it takes an instructor to add a video to an HTML page.
 
@@ -24,7 +24,7 @@ The oEmbed filter is a powerful filter that simplifies the inclusion of external
 Find documentation, installation instructions, and support here:
 [ Moodle plugins directory: oEmbed Filter](https://moodle.org/plugins/filter_oembed)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Partner Apps for Moodle](/teamblog)

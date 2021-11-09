@@ -1,9 +1,9 @@
 ---
-title: Moodle learning management system
-description: Microsoft 365 Teams Theme
-ms.topic: Microsoft 365 Teams Theme
+title: Microsoft 365 Teams theme
+description: Introduction to Microsoft 365 Teams Theme
+ms.topic: ms.365 Teams Theme
 ms.localizationpriority: medium
-ms.author: Surbhi gupta
+ms.author: Surbhigupta
 author: V-rpatkur
 ---
 
@@ -26,7 +26,7 @@ The theme plugin offers users a unified experience in Microsoft Teams. Features 
 Find documentation, installation instructions, and support here:
 [Moodle plugins directory: Microsoft 365 Teams Theme](https://moodle.org/plugins/theme_boost_o365teams)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [OneNote](/teamblog)

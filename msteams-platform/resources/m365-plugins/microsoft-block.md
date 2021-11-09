@@ -1,6 +1,6 @@
 ---
-title: Moodle learning management system
-description: Microsoft block
+title: Microsoft Block
+description: Introduction to Microsoft block
 ms.topic: Microsoft block
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -21,12 +21,12 @@ The Microsoft Block allows users to access the course SharePoint file location, 
 
 :::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 1.png" alt-text="microsoft block"::: 
 
-:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="microsoft block"::: 
+:::image type="content" source="../../assets/images/MoodleInstructions/microsoft block 2.png" alt-text="outlook calender sync settings"::: 
 
 Find documentation, installation instructions, and support here:
 [ Moodle plugins directory: Microsoft Block](https://moodle.org/plugins/block_microsoft)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [oEmbed Filter](/teamblog)

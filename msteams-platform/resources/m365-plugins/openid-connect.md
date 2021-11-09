@@ -1,7 +1,7 @@
 ---
-title: Moodle learning management system
-description: OpedID connect
-ms.topic: OpenID connect
+title: OpenID Connect
+description: Steps to sign in to OpenID Connect
+ms.topic: Introduction on OpenID connect
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-rpatkur
@@ -11,7 +11,7 @@ author: v-rpatkur
 
 The OpenID Connect plugin authenticate users against any site or authentication tool that supports the OpenID Connect specification. It is used to provide single-sign-on support with Microsoft Office 365. 
 
-:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="openid-connect":::
+:::image type="content" source="../../assets/images/MoodleInstructions/openid-connect.png" alt-text="Login to openid-connect":::
 
 The OpenID Connect provides institutions with two sign in workflows options to meet their specific needs: 
 
@@ -19,7 +19,7 @@ The OpenID Connect provides institutions with two sign in workflows options to m
 * Users may select a link to sign in through Office 365 or the OpenID Connect provider on a Moodle page 
 
 Find documentation, installation instructions, and support here:
-[Moodle plugins directory: OpenID Connect](https://moodle.org/plugins/auth_oidc)
+[ Moodle plugins directory: OpenID Connect](https://moodle.org/plugins/auth_oidc)
 
 ## Next step
 

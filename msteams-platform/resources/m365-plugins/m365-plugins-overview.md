@@ -1,9 +1,9 @@
 ---
-title: Moodle learning management system
+title: Microsoft 365 Plugins 
 description: Microsoft 365 Plugins introduction
 ms.topic: Plugins introduction
 ms.localizationpriority: medium
-ms.author: Surbhi Gupta
+ms.author: Surbhigupta
 author: v-rpatkur
 ---
 
@@ -26,7 +26,7 @@ The Microsoft 365 Plugins are designed by Microsoft to support integration betwe
 | **Enable Atto Editor in Moodle to create a Teams meeting link** | Teams Meeting | atto_teamsmeeting |
 | **Enable video links within Moodle for YouTube and Vimeo** | oEmbed Filter | Filter_oembed |
 
-Related Topics:
+**Related Topics:**
 
 * [OpenID Connect](openid-connect.md)
 * [Microsoft 365 Integration](microsoft-365-integration.md)

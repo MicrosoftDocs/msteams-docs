@@ -1,7 +1,7 @@
 ---
-title: Moodle learning management system
-description: Moodle LTI Apps
-ms.topic: Moodle LTI Apps
+title: Moodle LTI Apps
+description: Classification of Moodle LTI apps
+ms.topic: Moodle LTI apps types
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-rpatkur
@@ -48,7 +48,7 @@ For more information, see:
 
 https://docs.microsoft.com
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [M365 Plugins](/teamblog)

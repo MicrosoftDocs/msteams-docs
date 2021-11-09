@@ -28,6 +28,6 @@ This is just a sample of what you can achieve by combining Microsoft Teams with 
 Related Topics:
 
 * [Moodle LTI Apps](moodle-lti-apps.md)
-* [Microsoft 365 Plugins](m365-plugins)
+* [Microsoft 365 Plugins](m365-plugins/m365-plugins-overview.md)
 * [Partner apps for Moodle](partner-apps-for-moodle.md)
  

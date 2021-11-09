@@ -1,7 +1,7 @@
 ---
-title: Moodle learning management system
-description: Partner Apps for Moodle
-ms.topic: Partner Apps for Moodle
+title: Partner Apps for Moodle
+description: Introduction to Partner Apps
+ms.topic: Partner Apps
 ms.localizationpriority: medium
 ms.author: Surbhigupta
 author: v-rpatkur
@@ -33,5 +33,8 @@ Watch the following video to understand how to get started with mConnect and Tea
 > [!VIDEO unavailable]
 
 Find configuration instructions and support here:
+
 [SKOOLER – mConnect - How to](https://skooler.com/mconnect/how-to/)
+
+
 

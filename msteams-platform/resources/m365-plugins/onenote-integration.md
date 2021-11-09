@@ -1,5 +1,5 @@
 ---  
-title: Moodle learning management system
+title: OneNote Integration
 description: OneNote 
 ms.topic: OneNote
 ms.localizationpriority: medium
@@ -29,7 +29,7 @@ Find documentation, installation instructions, and support here:
 
 * [OneNote Feedback: Moodle plugins directory: OneNote Feedback](https://moodle.org/plugins/assignfeedback_onenote)
 
-# Next step
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft Block](/teamblog)
