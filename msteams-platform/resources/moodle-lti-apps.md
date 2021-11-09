@@ -48,9 +48,8 @@ For more information, see:
 
 https://docs.microsoft.com
 
+# Next step
 
-
-
-
-
+> [!div class="nextstepaction"]
+> [M365 Plugins](/teamblog)
 
