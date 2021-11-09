@@ -57,3 +57,4 @@ After the iOS 14 update, Apple has blocked the [third-party cookie](https://webk
 
 * [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)
