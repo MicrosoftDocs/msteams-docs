@@ -61,3 +61,7 @@ To remove your app, right click the app icon in Teams and select **Uninstall**.
 
 > [!div class="nextstepaction"]
 > [Use your Teams app](https://support.microsoft.com/office/apps-and-services-cc1fba57-9900-4634-8306-2360a40c665b?ui=en-us&rs=en-us&ad=us)
+
+## See Also
+
+[Configure default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)

@@ -90,3 +90,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 > [!div class="nextstepaction"]
 > [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+
+## See Also
+
+[Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)

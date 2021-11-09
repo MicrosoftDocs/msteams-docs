@@ -210,4 +210,5 @@ A wizard guides a user through several screens to complete a task (such as a set
 ## See Also
 
 * [Design your app with basic Fluent UI components](~/concepts/design/design-teams-app-basic-ui-components.md)
+* [Designing your Microsoft Teams app with advanced UI components](~/concepts/design/design-teams-app-advanced-ui-components.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
