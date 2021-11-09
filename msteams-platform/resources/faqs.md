@@ -1,6 +1,6 @@
 ---
 title: Frequently asked questions
-description: Answers to some common questions
+description: Answers to some common questionsp
 ms.topic: FAQs
 ms.localizationpriority: medium
 ms.author: Surbhigupta
@@ -36,7 +36,7 @@ You have multiple sign-in options from the page. If you prefer that users sign i
 
 [Path:](Url not found) https://{moodle_url}/admin/settings.php?Section=authsettingoidc
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 1.png" alt-text="faq 1":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 1.png" alt-text="SSO":::
 
 <br>
 
@@ -47,13 +47,13 @@ You have multiple sign-in options from the page. If you prefer that users sign i
 <summary><b>I don’t want all Azure AD users synchronized with the Moodle site. How can I specify which specific users to sync?</b></summary>
 
 I don’t want all Azure AD users synchronized with the Moodle site. How can I specify which specific users to sync?
-You may specify which specific users will be synchronized in the configuration options of the **local_o365** plugin, using the **User Creation Restriction** field (path and screenshot in enabled state shown in the table left side below). The dropdown menu to the left of the filter value offers many options such as Country, Company Name, and Language (shown in the table right side below.) We do recommended creating a dynamic Microsoft 365 Group whenever there is the need to filter by multiple profile properties (shown in the screenshot below).
+You may specify which specific users will be synchronized in the configuration options of the **local_o365** plugin, using the **User Creation Restriction** field. The dropdown menu to the left of the filter value offers many options such as Country, Company Name, and Language. We do recommended creating a dynamic Microsoft 365 Group whenever there is the need to filter by multiple profile properties.
 
-[Path:](Url not found) https://{moodle_url}/admin/settings.php?section=local_o365&s_local_o365_tabs=1
+[Place holer for URL]
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 2.png" alt-text="faq 2":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 2.png" alt-text="sync":::
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 3.png" alt-text="faq 3":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 3.png" alt-text="azure ad":::
 
 <br>
 
@@ -65,11 +65,11 @@ You may specify which specific users will be synchronized in the configuration o
 
 By default only Moodle Administrators can configure synchronization. However, if the “Allow configure course sync in course” is enabled (see path and screenshot in enabled state below), then the Team Owner can control if a course is synchronized to Teams or not (by default this is the course teacher). Please Refer to the Microsoft 365 Block within the Moodle Course interface (shown in second screenshot below). Important: The block will only show the configuration option to individuals with the appropriate owner permissions.
 
-Path: https://{moodle_url}/admin/settings.php?Section=local_o365&s_local_o365_tabs=1
+[Place holder for url]
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 4.png" alt-text="faq 4":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 4.png" alt-text="admin":::
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 5.png" alt-text="faq 5":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 5.png" alt-text="synchronization":::
 
 
 <br>
@@ -121,11 +121,11 @@ Inconsistencies with Users being able to sign-in may be related to the User mapp
 
 If Users who were able to sign in start to report issues, please validate that the Application Client Secret has not expired. The error message will appear as shown in this screenshot: 
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 6.png" alt-text="faq 6":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 6.png" alt-text="report issue":::
 
 This will also be obvious in the Azure portal as shown in this screenshot:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 7.png" alt-text="faq 7":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 7.png" alt-text="azure portal":::
 
 Consequently, if the Client Secret has expired, then you will need to generate a new Client Secret, and update the configuration found on this page: {moodle_url}/admin/settings.php?Section=authsettingoidc. Users should be able to sign in again after the Client Secret has been updated, but this may take up to 24 hours to reprovision
 
@@ -140,9 +140,9 @@ Consequently, if the Client Secret has expired, then you will need to generate a
 
 Administrators may change the teams instance associated with a course via the **Manage Teams Connections** page (path and screenshot shown below). Select on the **Connect** link on the page next to the course you wish to change, and then select a teams instance. Note: This is especially helpful if you have archived a team by mistake (using Course Reset) and want to link it back to the previous team.
 
-Path: https://{moodle_URL}/local/o365/acp.php?mode=teamconnections
+[Place holder for url]
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 8.png" alt-text="faq 8":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 8.png" alt-text="teams instance":::
 
 <br>
 
@@ -156,13 +156,13 @@ This may be due to the icon reference being missing in the **Toolbar config**. A
 
 *Toolbar icon shown here after Toolbar config adjustment:*
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 9.png" alt-text="faq 9":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 9.png" alt-text="tool bar":::
 
-Path: https://{moodle_URL}//admin/settings.php?Section=editorsettingsatto
+[Place holder for url]
 
 Notice that we have added teams meeting to the right of the links icons:
 
-:::image type="content" source="../../assets/images/MoodleInstructions/faq 10.png" alt-text="faq 10":::
+:::image type="content" source="../assets/images/MoodleInstructions/faq 10.png" alt-text="links icon":::
 
 For general information regarding editing the Atto toolbar please see: 
 [Atto editor - MoodleDocs](https://docs.moodle.org/311/en/Atto_editor)[]
