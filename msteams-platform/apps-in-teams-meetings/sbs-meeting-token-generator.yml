@@ -244,11 +244,14 @@ items:
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. Set up the following fields for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:</br>
-         * **Admin consent display name**: Teams can access the user’s profile.
-         * **Admin consent description**: Allows Teams to call the app’s web APIs as the current user.
-         * **User consent display name**: Teams can access the user profile and make requests on the user's behalf.
-         * **User consent description**: Enable Teams to call this app’s APIs with the same rights as the user.
+    1. To configure the admin and user consent prompts with values that are appropriate for the `access_as_user` scope, set up the following fields:</br>
+         * Enter `Teams can access the user’s profile` as **Admin consent display name**.
+
+         * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
+
+         * Enter `Teams can access the user profile and make requests on the user’s behalf` as **User consent display name**.
+
+         * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
         ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
 
@@ -316,7 +319,7 @@ items:
 
      > [!NOTE]
      > * Users need to consent to these permissions only if the AAD app is registered in a different tenant.
-     > * If you get an error that the domain is already owned and you're the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) to register the domain. Then repeat step 7 given earlier. (This error also occurs if you aren't signed in with Admin credentials in the Office 365 tenancy).
+     > * If you get an error that the domain is already owned and you're the owner, follow the procedure at [Quickstart: Add a custom domain name to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain) to register the domain. Then repeat from step 7. (This error also occurs if you aren't signed in with Admin credentials in the Office 365 tenancy).
      > * If you don't receive the User Principal Name(UPN) in the returned access token, you add it as an [optional claim](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-optional-claims) in AAD.
 
 
