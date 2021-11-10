@@ -18,10 +18,6 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-    - linkListType: concept
-      links:
-      - text: Tools and SDKs
-        url: ~/toolkit/visual-studio-code-overview.md 
 - title: Get started
   linkLists:
     - linkListType: get-started
@@ -30,16 +26,28 @@ landingContent:
         url: ../msteams-platform/get-started/get-started-overview.md
     - linkListType: tutorial
       links:
-      - text: Build your first app with JavaScript
+      - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
-      - text: Build your first app with Blazor
+      - text: Build app with Blazor
         url: sbs-gs-blazor.yml
-      - text: Build your first app with SPFx
+      - text: Build app with SPFx
         url: sbs-gs-spfx.yml
-      - text: Build your first app with C# or .NET
+      - text: Build app with C# or .NET
         url: sbs-gs-csharp.yml
-      - text: Build your first app with Node.js
+      - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
+- title: What's hot
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: Create low-code custom apps
+        url: ~/samples/teams-low-code-solutions.md
+      - text: Power Virtual Agents
+        url: ~/bots/how-to/add-power-virtual-agents-bot-to-teams.md
+      - text: Virtual Assistant
+        url: ~/samples/virtual-assistant.md
 - title: Building app capabilities
   linkLists:
   - linkListType: concept
@@ -74,6 +82,8 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Publish to Teams Store
@@ -82,29 +92,4 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
-- title: What's hot
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Create low-code custom apps
-        url: ~/samples/teams-low-code-solutions.md
-      - text: Power Virtual Agents
-        url: ~/bots/how-to/add-power-virtual-agents-bot-to-teams.md
-      - text: Virtual Assistant
-        url: ~/samples/virtual-assistant.md
-- title: Customize your app
-  linkLists:
-    - linkListType: concept
-      links:
-      - text: Add authentication
-        url: ../msteams-platform/concepts/authentication/authentication.md
-      - text: Utilize Microsoft Graph features
-        url: ../msteams-platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-      - text: App manifest
-        url: ../msteams-platform/resources/schema/manifest-schema.md
-      - text: Power apps - Low code solutions
-        url: ~/samples/teams-low-code-solutions.md
-
 
