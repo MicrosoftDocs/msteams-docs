@@ -269,5 +269,5 @@ Following are the query parameters:
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
-
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

@@ -1,7 +1,7 @@
 ---
 title: Channel and group conversations with a bot
 author: surbhigupta
-description: How to send, receive, and handle messages for a bot in a channel or group chat.
+description: How to send, receive, and handle messages for a bot in a channel or group chat. Learn about design guidelines, creating conversation threads, using @mentions using Code samples
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -264,11 +264,11 @@ Do not send a message in the following cases:
 
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
-## See also
-
-[Get Teams context](~/bots/how-to/get-teams-context.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Subscribe to conversation events](~/bots/how-to/conversations/subscribe-to-conversation-events.md)
+
+## See also
+
+[Get Teams context](~/bots/how-to/get-teams-context.md)
