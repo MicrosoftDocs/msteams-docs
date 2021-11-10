@@ -17,7 +17,7 @@ You can start to create a Teams app with Visual Studio Code by adding capabiliti
 | Bots |  Bots help to interact with your web service through text, interactive cards, and task modules.|
 | Messaging extensions | Messaging extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|
 
-## Prerequisite
+## Prerequisites
 
 To add capabilities using Visual Studio Code, you must install Teams Toolkit V2.
 
@@ -60,18 +60,17 @@ You can add capabilities in the following ways:
 1. Select `Add capabilities` from left side panel.
 
     ![Add capabilities](~/assets/images/tools-and-sdks/add-capabilities.png)
- 
+
 1. From the pop-up, select the capabilities to include into your project.
 
     ![Select capabilities](~/assets/images/tools-and-sdks/select-capabilities.png)
- 
+
 1. Select **OK** to continue.
 
     Instead, you can open the command palette and enter **Teams: Add Capabilities**. Follow the same process as it’s triggered from Tree View.
 
     ![Alternate add capabilities](~/assets/images/tools-and-sdks/alternate-capabilities.png)
-  
- 
+
 ### Add capabilities from TeamsFx CLI in Command Window
 
 1. Change directory to your project directory.

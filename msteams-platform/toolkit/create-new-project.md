@@ -82,5 +82,5 @@ You can run each samples in preview mode for Teams web client. After, you downlo
 ## See also
 
 [Provision in the cloud](provision-in-the-cloud.md)
-[[Add cloud resources](add-cloud-resources.md)
+[Add cloud resources](add-cloud-resources.md)
 [Deploy to the cloud](deploy-to-the-cloud.md)
