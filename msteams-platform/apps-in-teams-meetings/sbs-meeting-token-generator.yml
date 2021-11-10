@@ -74,9 +74,9 @@ items:
   content: |
     To create and register your bot in AAD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service.
+    * Create **Azure Bot** resource to register bot with **Azure Bot Service**.
     * Create client secret that enables SSO authentication of the bot.
-    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add **Microsoft Teams** channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -223,7 +223,7 @@ items:
 
        ![Expose an API](~/assets/images/meeting-token-generator/meeting-token-generator-exposeanapi.png)
 
-    1. Set the Application ID URI in the form of `api://{AppID}`. 
+    1. Set the **Application ID URI** in the form of `api://{AppID}`. 
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
@@ -283,15 +283,15 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default `User.Read` is checked:
+        By default **User.Read** is checked:
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
      1. Add the following permissions:</br>
-         * email
-         * offline_access
-         * OpenId
-         * profile
+         * **email**
+         * **offline_access**
+         * **OpenId**
+         * **profile**
 
          ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
   
@@ -312,8 +312,8 @@ items:
        The page appears with access to implicit grant flow.
 
        Enable implicit grant by checking the following boxes:
-         * ID Token
-         * Access Token
+         * **ID Token**
+         * **Access Token**
 
          ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
@@ -436,7 +436,7 @@ items:
     Follow these instructions to enable developer preview:
 
        > [!NOTE]
-       > Developer preview mode must be enabled on each Teams client app or browser.
+       > **Developer preview** mode must be enabled on each **Teams client app** or browser.
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -471,7 +471,7 @@ items:
     1. Select **Switch to Developer preview**.
  
        > [!NOTE]
-       > In-meeting tabs are available only in the Teams desktop client.
+       > In-meeting tabs are available only in the **Teams desktop client**.
 
 - title: Build the client app
   durationInMinutes: 1
