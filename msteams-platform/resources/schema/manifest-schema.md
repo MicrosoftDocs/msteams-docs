@@ -293,7 +293,7 @@ The following schema sample shows all extensibility options:
     "team": "bot", 
     "groupchat": "bot"
   },
- "configurableProperties": {
+ "configurableProperties": [
      "name",
      "shortDescription",
      "longDescription",
@@ -303,6 +303,9 @@ The following schema sample shows all extensibility options:
      "developerUrl",
      "privacyUrl",
      "termsOfUseUrl"        
+ ],
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -741,7 +744,6 @@ You can define any of the following properties:
  
 When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidden from users by default until admin allows it. If set to **true**, the app is hidden for all tenants and end users. The tenant admins can see the app in the Teams admin center and take action to allow or block the app. The default value is **false**. For more information on default app block, see [Hide Teams app until admin approves](~/concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves).
 
-
 ## publisherDocsUrl
 
 **Optional** - string
@@ -749,6 +751,16 @@ When `defaultBlockUntilAdminAction` property is set to **true**, the app is hidd
 **Maximum size** - 128 characters
 
 The property is dependant on `defaultBlockUntilAdminAction`. When `defaultBlockUntilAdminAction` property is set to **true**, the `publisherDocsUrl` provides HTTPS URL to an information page for admins to get guidelines before allowing an app, which is blocked by default.
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the SaaS offer associated with your app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
 ## See Also
 
