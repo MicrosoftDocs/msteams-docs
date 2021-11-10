@@ -118,6 +118,8 @@ items:
 
     **To create client secret**
 
+      Perform the following steps if you created a new **Microsoft App ID** in the previous section:
+
     1. In **Settings**, select **Configuration**. 
 
        > [!TIP]
@@ -136,7 +138,7 @@ items:
     1. In the **Value** column, select **Copy to clipboard**.
     
        > [!TIP]
-       > Save the client secret ID value for future reference.
+       > Save the client secret ID value or app password for future reference.
 
          ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
        
