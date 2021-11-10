@@ -21,12 +21,12 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md)|
 | 10/21/2021 | Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
 |10/20/2021| Meeting stage is now available in GA.| Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
+|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
 |10/18/2021|Tabs link unfurling and stage view.| Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md)|
 |10/08/2021|New best practices for designing Adaptive Cards.| Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app.| Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
-|10/05/2021|Plan your apps for Teams mobile.| App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)|
+|10/05/2021|Plan your apps for Teams mobile.| App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
+|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
 |
 
 ## GA features
@@ -41,18 +41,18 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ----------------|
-|10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
-|10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| [Get started with your first Teams app](get-started/get-started-overview.md)|
-|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. |[Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
-|10/20/2021| Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|10/20/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
-|10/18/2021|Tabs link unfurling and stage view.|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md)|
-|10/08/2021|New best practices for designing Adaptive Cards.|[Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
-|10/05/2021| Hide Teams app until Admin allows to un-hide the app.| [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
-|10/05/2021|Plan your apps for Teams mobile.|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)|
-|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks.|[AAD Object ID and UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). |[Input validation](/adaptive-cards/authoring-cards/input-validation), [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
+|10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md)|
+|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|10/20/2021| Meeting stage is now available in GA. | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/18/2021| Tabs link unfurling and stage view. | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
+|10/08/2021| New best practices for designing Adaptive Cards. | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
+|10/05/2021| Hide Teams app until Admin allows to un-hide the app.| Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|10/05/2021| Plan your apps for Teams mobile. | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
+|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks.| • Build cards and task modules > Build cards > [AAD Object ID and UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
+|08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). | • Adaptive cards > Authoring cards > [Input validation](/adaptive-cards/authoring-cards/input-validation)</br> • Build cards and task modules > Build cards > Universal actions for adaptive cards > [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats.| [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)|
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO).| [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml)|
 |08/19/2021| Installation update event received when you install a bot to a conversation thread.| [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event)|
@@ -87,6 +87,9 @@ Microsoft Teams platform features that are available to all app developers.
 </details>
 
 <br>
+
+<details>
+<summary><b>Older Updates</b></summary>
 
 <details>
   
@@ -189,6 +192,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <br>
 
+</details>
 </details>
 
 ## Developer preview
