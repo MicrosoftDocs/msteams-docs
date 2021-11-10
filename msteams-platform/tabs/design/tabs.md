@@ -1,10 +1,11 @@
 ---
 title: Design tabs for desktop, web, and mobile
-description: Learn how to design a Teams tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit.
+description: Learn how to design a Teams tab for desktop, web, and mobile, and get the Microsoft Teams UI Kit. Learn about the tab functionality and appearance, building user authentication, tab notifications, and deep linking in tabs.
 author: heath-hamilton
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: lajanuar
+keywords: UI kit manage tab set-up single-sign-on sso deep linking role-based view thread discussion
 ---
 # Design your tab for Microsoft Teams
 
@@ -276,3 +277,7 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
    :::column-end:::
 :::row-end:::
+
+## See Also
+
+[Tab margin changes](~/resources/removing-tab-margins.md)

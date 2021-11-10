@@ -1,6 +1,6 @@
 ---
 title: Use Microsoft Graph to authorize proactive bot installation and messaging in Teams
-description: Describes proactive messaging in Teams and how to implement.
+description: Describes proactive messaging in Teams and how to implement it. Learn about enabling proactive app installation and messaging using code sample. 
 ms.localizationpriority: medium
 author: akjo
 ms.author: lajanuar
@@ -190,12 +190,13 @@ Your bot can [send proactive messages](/azure/bot-service/bot-builder-howto-proa
 | **Sample Name** | **Description** | **.NET** | **Node.js** |
 |---------------|--------------|--------|-------------|
 | Proactive installation of app and sending proactive notifications | This sample shows how you can use proactive installation of app for users and send proactive notifications by calling Microsoft Graph APIs. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/graph-proactive-installation/nodejs) |
-## See also
-
-* [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
-* [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)
 
 ## Additional code samples
 >
 > [!div class="nextstepaction"]
 > [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
+
+## See also
+
+* [**Manage app setup policies in Microsoft Teams**](/MicrosoftTeams/teams-app-setup-policies#create-a-custom-app-setup-policy)
+* [Send proactive notifications to users SDK v4](/azure/bot-service/bot-builder-howto-proactive-message?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true)

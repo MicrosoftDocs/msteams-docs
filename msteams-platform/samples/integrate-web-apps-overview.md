@@ -5,6 +5,7 @@ description: An overview of integrating web applications and device capabilities
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
+keywords: power platform power apps people picker deep link virtual agent assistant share-to-Teams
 ---
 
 # Integrate web apps

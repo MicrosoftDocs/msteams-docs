@@ -288,4 +288,3 @@ When a Moodle course is synced, Microsoft Teams automatically installs the Moodl
 - [Integrate web apps](~/samples/integrate-web-apps-overview.md)
 - [Moodle](https://moodle.org/)
 - [Moodle documentation](https://docs.moodle.org/34/en/Installing_plugins).
-
