@@ -303,7 +303,7 @@ items:
        > If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.
                
          1. Select **Add a platform**.
-         1. Select **web**:
+         1. Select **Web**:
 
             ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
 
