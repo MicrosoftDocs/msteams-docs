@@ -240,7 +240,7 @@ items:
 
     1. Select **Add a scope**. 
     
-    1. In the panel that opens, enter `access_as_user` as the Scope name.
+    1. In the panel that appears, enter `access_as_user` as the **Scope name**.
   
     1. Set **Who can consent?** to `Admins and users`.
   
