@@ -112,7 +112,7 @@ Perform the following steps to preview your apps in Outlook web client:
 
 Perform the following steps to create a new tab app using Teams Toolkit and run it in Outlook and Office.com:
 
-1. Create a new sample Teams app in Visual Studio Code with Teams Toolkit, use command palette and run `create new project` and select **Create a new Teams app**.
+1. Create a new sample Teams app in Visual Studio Code with Teams Toolkit, use command palette and run `start from sample` and select **Start from sample**.
 
     ![Create new teams sample app](../assets/images/upgrade-teams/sample-app.png)
 
