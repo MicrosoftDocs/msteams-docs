@@ -762,7 +762,7 @@ Specifies the SaaS offer associated with your app.
 |---|---|---|---|---|
 |`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|
 
-## See Also
+## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
