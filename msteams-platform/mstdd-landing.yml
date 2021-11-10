@@ -38,7 +38,7 @@ landingContent:
         url: sbs-gs-nodejs.yml
 - title: App building - Basics and tools
   linkLists:
-  - linkListType: overview
+  - linkListType: concept
     links:
     - text: App fundamentals
       url: ~/concepts/app-fundamentals-overview.md
@@ -46,6 +46,8 @@ landingContent:
       url: ~/concepts/design/design-teams-app-overview.md
     - text: Tools and SDKs
       url: ~/toolkit/visual-studio-code-overview.md
+    - text: Distribution
+      url: ~/concepts/deploy-and-publish/apps-publish-overview.md
 - title: Building app capabilities
   linkLists:
   - linkListType: concept
@@ -56,6 +58,12 @@ landingContent:
       url: ~/bots/what-are-bots.md
     - text: Build message extensions
       url: ~/messaging-extensions/what-are-messaging-extensions.md
+    - text: Build apps for Teams meetings
+      url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
+    - text: Build webhooks and connectors
+      url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
+    - text: Build cards and task modules
+      url: ~/task-modules-and-cards/cards-and-task-modules.md
 - title: Customize your app
   linkLists:
     - linkListType: concept
@@ -66,3 +74,25 @@ landingContent:
         url: ../msteams-platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
       - text: App manifest
         url: ../msteams-platform/resources/schema/manifest-schema.md
+- title: Integration
+  linkLists:
+    - linkListType: overview
+      links:
+      - text: Web apps
+        url: ~/samples/integrating-web-apps.md
+      - text: Power apps
+        url: ~/samples/teams-low-code-solutions.md
+- title: Tutorials
+  linkLists:
+    - linkListType: concept
+      links:
+        - text: Proactive messages
+          url: ~/bots/how-to/conversations/send-proactive-messages.md
+        - text: Add authentication to bots
+          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
+    - linkListType: tutorial
+      links:
+        - text: Step-by-step guide
+          url: ~/sbs-send-proactive.yml
+        - text: Step-by-step guide
+          url: ~/sbs-bots-with-sso.yml
