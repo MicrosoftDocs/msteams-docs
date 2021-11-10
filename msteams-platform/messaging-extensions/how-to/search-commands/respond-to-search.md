@@ -10,7 +10,7 @@ ms.localizationpriority: none
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. This invoke is triggered with the following conditions:
+After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters, which is triggered with the following conditions:
 
 * As characters are entered into the search box.
 * `initialRun` is set to true in your app manifest, you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
@@ -73,7 +73,7 @@ The JSON below is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can perform additional lookup, or any other business logic needed to serve the request.
+When the user does a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can do another lookup, or any other business logic needed to serve the request.
 
 Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
@@ -99,15 +99,19 @@ To have a better understanding and overview on cards, see [what are cards](~/tas
 
 To learn how to use the thumbnail and hero card types, see [add cards and card actions](~/task-modules-and-cards/cards/cards-actions.md).
 
-For additional information regarding the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
+For more information about the Office 365 Connector card, see [Using Office 365 Connector cards](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card).
 
-The result list is displayed in the Microsoft Teams UI with a preview of each item. The preview is generated in one of the two ways:
+A card preview is generated in two ways:
 
-* Using the `preview` property within the `attachment` object. The `preview` attachment can only be a Hero or Thumbnail card.
-* Extracted from the basic `title`, `text`, and `image` properties of the attachment. These are used only if the `preview` property is not set and these properties are available.
-* The Hero or Thumbnail card button and tap actions, except invoke, are not supported in the preview card.
+* Using the `preview` property within the `attachment` object.
+* Using the `title`, `text`, and `image` properties of the `attachment` when a `preview` property isn't available.
+* Hero or Thumbnail cards don't support Button and tap actions in the preview.
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview property is not necessary if the results are already Hero or Thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
+Use `preview` property as Adaptive Card or Office 365 Connector card to display a preview of Adaptive Card or Office 365 Connector card.
+
+Use preview attachment as Hero or Thumbnail card to display a preview of Hero or Thumbnail card.
+
+[!NOTE] If the link unfurling doesn't work, check the code for the preview property.
 
 ### Response example
 
@@ -308,7 +312,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that is not dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the messaging extension. Your service can respond to the query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
 The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 

@@ -16,9 +16,13 @@ This document guides you on how to add link unfurling to your app manifest using
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 
-The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
+When a URL is pasted in the compose message area, the web service will "unfurl" the URL into a detailed card.
+
+ The following images display link unfurling feature when a link is pasted in messaging extension:
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
+
+![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
 
 ## Add link unfurling to your app manifest
 
@@ -34,6 +38,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
 
     ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+
     
 ### Add link unfurling manually
 
@@ -64,18 +69,9 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 ## Handle the `composeExtension/queryLink` invoke
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request.
 
-The following card types are supported:
-
-* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
-* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
-* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
-* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-
-To unfurl the URL as card preview, the preview property must be defined in the app manifest. You can expand the card preview using the **Expand Preview** option. See [Link Unfurling](#link-unfurling) for more info.
->[!NOTE]  
-> If the card preview does not appear, check the preview property in the app manifest.
+ Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
 ### Example
 
