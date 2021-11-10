@@ -297,27 +297,26 @@ items:
 
          ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
   
-    1. Select **Authentication** from the left panel. 
+    1. Select **Authentication** from the left panel to set a redirect URI. 
 
        > [!NOTE]
        > If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.
                
-       Set a redirect URI:
-         * Select **Add a platform**.
-         * Select **web**:
+         1. Select **Add a platform**.
+         1. Select **web**:
 
-         ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
+            ![Web](~/assets/images/meeting-token-generator/meeting-token-generator-webauthentication.png)
 
-    1. Enter the redirect URI for your app by appending API route to the domain name:</br> 
+         1. Enter the redirect URI for your app by appending API route to the domain name:</br> 
            `https://ae57****.ngrok.io/auth-end`. </br>
 
-    1. Enable **Implicit grant and hybrid flows** by selecting the following boxes:
-         * **ID tokens**
-         * **Access tokens**
+         1. Enable **Implicit grant and hybrid flows** by selecting the following boxes:
+             * **ID tokens**
+             * **Access tokens**
    
-    1. Select **Configure**:
+         1. Select **Configure**:
 
-         ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
+            ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
      > [!NOTE]
      > * Users need to consent to these permissions only if the AAD app is registered in a different tenant.
