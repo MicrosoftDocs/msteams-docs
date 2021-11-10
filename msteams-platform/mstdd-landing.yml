@@ -64,6 +64,20 @@ landingContent:
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - text: Build cards and task modules
       url: ~/task-modules-and-cards/cards-and-task-modules.md
+- title: Tutorials
+  linkLists:
+    - linkListType: concept
+      links:
+        - text: Proactive messages
+          url: ~/bots/how-to/conversations/send-proactive-messages.md
+        - text: Add authentication to bots
+          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
+    - linkListType: tutorial
+      links:
+        - text: Step-by-step guide
+          url: ~/sbs-send-proactive.yml
+        - text: Step-by-step guide
+          url: ~/sbs-bots-with-sso.yml
 - title: Customize your app
   linkLists:
     - linkListType: concept
@@ -82,17 +96,4 @@ landingContent:
         url: ~/samples/integrating-web-apps.md
       - text: Power apps
         url: ~/samples/teams-low-code-solutions.md
-- title: Tutorials
-  linkLists:
-    - linkListType: concept
-      links:
-        - text: Proactive messages
-          url: ~/bots/how-to/conversations/send-proactive-messages.md
-        - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
-    - linkListType: tutorial
-      links:
-        - text: Step-by-step guide
-          url: ~/sbs-send-proactive.yml
-        - text: Step-by-step guide
-          url: ~/sbs-bots-with-sso.yml
+
