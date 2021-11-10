@@ -338,15 +338,15 @@ items:
 
     1. Open `appsettings.json` in **Visual Studio Code** and update the following information:  
 
-         * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Replace `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Replace `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
+         * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
+         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
           > [!NOTE]
           > The sample will only work in the current tenant.
 
-         * Replace `"AzureAd"."ApplicationId "` to your bot's **Microsoft App ID**.
-         * Replace `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
+         * Set `"AzureAd"."ApplicationId "` to your bot's **Microsoft App ID**.
+         * Set `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
 
        > [!NOTE]
        > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://ae57****.ngrok.io/contentBubble.html`.
@@ -535,7 +535,7 @@ items:
     1. Start the meeting. The icon is visible in the meeting control bar:
 
         ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
-        
+
 
     **Troubleshooting:**
       
