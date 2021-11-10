@@ -16,9 +16,9 @@ This document guides you on how to add link unfurling to your app manifest using
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 
-When a URL is pasted in the compose message area, the web service will "unfurl" the URL into a detailed card.
+When a URL is pasted in the compose message area, the web service **Unfurls** the URL into a detailed card.
 
- The following images display link unfurling feature when a link is pasted in messaging extension:
+ The following image displays link unfurling feature when a link is pasted in messaging extension:
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
