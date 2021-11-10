@@ -84,7 +84,8 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot** and select the Enter key.
+    1. In the search box, enter **Azure bot**.
+    1. Select Enter.
     1. Select **Azure Bot**.
 
          ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
@@ -134,7 +135,9 @@ items:
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
-    1. Enter **Description** and select **Add**.
+    1. Enter **Description**.
+    
+    1. Select **Add**.
  
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png" alt="Add client secret to app" width="500"/>
 
@@ -157,7 +160,9 @@ items:
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select the checkbox to accept the **Terms of Service** and select **Agree**.</br>
+    1. Select the checkbox to accept the **Terms of Service**.
+    
+    1. Select **Agree**.</br>
           ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
     1. Select **Save**.
@@ -208,7 +213,7 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select the same AD application created in previous step for bot registration:
+    1. Select your bot.
 
        ![App registration](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)
 
@@ -233,7 +238,9 @@ items:
         > If you're using a tunneling service such as ngrok, ensure you update this value whenever your ngrok subdomain changes.
         > `For example: api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select **Add a scope**. In the panel that opens, enter `access_as_user` as the Scope name.
+    1. Select **Add a scope**. 
+    
+    1. In the panel that opens, enter `access_as_user` as the Scope name.
   
     1. Set **Who can consent?** to `Admins and users`.
   
@@ -286,8 +293,10 @@ items:
          ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
   
     1. Navigate to **Authentication**. 
-       If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.</br>
-       
+
+       > [!NOTE]
+       > If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.
+               
        Set a redirect URI:
          * Select **Add a platform**.
          * Select **web**.
@@ -320,14 +329,14 @@ items:
 
     1. Open `appsettings.json` in **Visual Studio Code** and make the following changes:  
 
-         * `"MicrosoftAppId"`: Provide your bot's application ID.
+         * `"MicrosoftAppId"`: Provide your bot's **Microsoft App ID**.
          * `"MicrosoftAppPassword"`: Provide your bot's client secret ID value.
          * `"AzureAd"."TenantId"`: Provide the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
        > [!NOTE]
        > The sample will only work in this tenant.
 
-         * `"AzureAd"."ApplicationId "`: Set it to the same value as `MicrosoftAppId` provided earlier.
+         * `"AzureAd"."ApplicationId "`: Provide your bot's **Microsoft App ID**.
          * `"ContentBubbleUrl "`: Enter the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
 
        > [!NOTE]
@@ -353,7 +362,7 @@ items:
            * `[privacyUrl]`
            * `[termsOfUseUrl]`
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-         * Replace all occurrences of `[MicrosoftAppId]` with your application ID as provided in previous steps. 
+         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**. 
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img1.png)
 
@@ -388,7 +397,7 @@ items:
     # [Visual Studio 2019](#tab/vs2019)
 
        1. Launch **Visual Studio 2019**.
-       1. Navigate to `File > Open > Project/Solution`.
+       1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
@@ -428,7 +437,8 @@ items:
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. Select **Show All** and select **Teams**.
+       1. Select **Show All**.
+       1. Select **Teams**.
 
           ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
@@ -436,7 +446,8 @@ items:
           > It might take up to 24 hours for the **Teams** option to appear.
 
        1. Navigate to **Teams apps**.
-       1. Select **Setup Policies** and select **Global**.
+       1. Select **Setup Policies**.
+       1. Select **Global**.
 
           ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
 
@@ -450,7 +461,9 @@ items:
 
     1. Select your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu.
     
-    1. Select **About** and select **Developer preview**.
+    1. Select **About**. 
+    
+    1. Select **Developer preview**.
    
     1. Select **Switch to Developer preview**.
  
@@ -484,7 +497,7 @@ items:
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
-    1. Upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
+    1. Select **Open** to upload the .zip file that was created in the previous steps. This step adds the app to the meeting.
 
        ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
 
@@ -496,7 +509,9 @@ items:
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
-    1. Go to the meeting screen and select **Add an app** again. In the app selection page, the app displays as **Meeting Token App**.
+    1. Go to the meeting screen.
+    
+    1. Select **Add an app**. In the app selection page, the app displays as **Meeting Token App**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
