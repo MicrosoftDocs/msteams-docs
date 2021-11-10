@@ -103,7 +103,7 @@ items:
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
        > [!NOTE]
-       > You can't create two bots with the same **Microsoft App ID**.
+       > You can't create more than one bot with the same **Microsoft App ID**.
 
     1. Select **Review + create**.
 
