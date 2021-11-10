@@ -1,0 +1,68 @@
+### YamlMime:Landing
+
+title: Microsoft Teams Developer Documentation
+summary: Welcome to overview of Microsoft Teams Developer Documentation. Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+metadata:
+  title: Microsoft Teams Developer Documentation
+  description: Introducing building apps for Teams
+  ms.date: 11/10/2021
+  ms.topic: landing-page
+landingContent:
+- title: About Building Apps for Teams
+  linkLists:
+    - linkListType: overview
+      links:
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md
+- title: Get started
+  linkLists:
+    - linkListType: get-started
+      links:
+      - text: Get started with building apps
+        url: ../msteams-platform/get-started/get-started-overview.md
+    - linkListType: tutorial
+      links:
+      - text: Build your first app with JavaScript
+        url: sbs-gs-javascript.yml
+      - text: Build your first app with Blazor
+        url: sbs-gs-blazor.yml
+      - text: Build your first app with SPFx
+        url: sbs-gs-spfx.yml
+      - text: Build your first app with C# or .NET
+        url: sbs-gs-csharp.yml
+      - text: Build your first app with Node.js
+        url: sbs-gs-nodejs.yml
+- title: App building - Basics and tools
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: App fundamentals
+      url: ~/concepts/app-fundamentals-overview.md
+    - text: Design your app
+      url: ~/concepts/design/design-teams-app-overview.md
+    - text: Tools and SDKs
+      url: ~/toolkit/visual-studio-code-overview.md
+- title: Building app capabilities
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Build tabs
+      url: ~/tabs/what-are-tabs.md
+    - text: Build bots
+      url: ~/bots/what-are-bots.md
+    - text: Build message extensions
+      url: ~/messaging-extensions/what-are-messaging-extensions.md
+- title: Customize your app
+  linkLists:
+    - linkListType: concept
+      links:
+      - text: Add authentication
+        url: ../msteams-platform/concepts/authentication/authentication.md
+      - text: Utilize Microsoft Graph features
+        url: ../msteams-platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+      - text: App manifest
+        url: ../msteams-platform/resources/schema/manifest-schema.md
