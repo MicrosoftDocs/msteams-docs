@@ -98,9 +98,12 @@ items:
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
-       In the Microsoft App ID section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**:
+       In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**:
 
-       ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
+        ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
+
+       > [!NOTE]
+       > You can't create two bots with the same **Microsoft App ID**.
 
     1. Select **Review + create**.
 
@@ -152,19 +155,15 @@ items:
 
     1. Select **Channels** in the left pane. 
 
-    1. Select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-    1. Select **Configure Microsoft Teams channel**.
-
-          ![Open Teams from channels](~/assets/images/meeting-token-generator/meeting-token-generator-channels.png)    
+    1. Select the checkbox to accept the **Terms of Service** and select **Agree**.</br>
+          ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
     1. Select **Save**.
 
           ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
     
-    1. Select the checkbox to accept the **Terms of Service** and select **Agree**.</br>
-          ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
-
     **To create tunnel for local web server**
 
     Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
