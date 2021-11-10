@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension action commands
 author: surbhigupta
-description: An overview of messaging extension action commands
+description: An overview of messaging extension action commands with app manifest example
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -221,4 +221,3 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

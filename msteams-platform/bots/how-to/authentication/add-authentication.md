@@ -1,10 +1,11 @@
 ---
 title: Add authentication to your Teams bot
 author: surbhigupta
-description: How to add OAuth authentication to a bot in Microsoft Teams.
+description: How to add OAuth authentication to a bot in Microsoft Teams using AAD. Learn how to create, deploy, and integrate authentication-enabled bots.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: lajanuar
+keywords: resource group bot channel registration azure emulator bot manifest 
 ---
 
 # Add authentication to your Teams bot

@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your messaging extension
 author: surbhigupta
-description: How to add authentication to a messaging extension
+description: Learn how to add authentication to a messaging extension using code examples and sample
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -133,4 +133,6 @@ At this point, the window closes and the control is passed to the Teams client. 
 |----------------|-----------------|--------------|----------------|
 |Messaging extensions - auth and config | A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## See Also
+
+[Single sign-on (SSO) support for messaging extensions](~/messaging-extensions/how-to/enable-sso-auth-me.md)

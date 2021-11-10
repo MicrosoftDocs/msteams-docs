@@ -1,7 +1,7 @@
 ---
 title: Enable and configure your apps for Teams meetings
 author: surbhigupta
-description: Enable and configure your apps for Teams meetings 
+description: Enable and configure your apps for Teams meetings and different meeting scenarios, update app manifest, configure features, such as, in-meeting dialog, shared meeting stage, meeting sidepanel, and more  
 ms.topic: conceptual
 ms.localizationpriority: none
 ---
@@ -57,7 +57,7 @@ The `context` property determines what must be shown when a user invokes an app 
 | **meetingChatTab** | A tab in the header of a group chat between a set of users for a scheduled meeting. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingDetailsTab** | A tab in the header of the meeting details view of the calendar. You can specify either **meetingChatTab** or **meetingDetailsTab** to ensure the apps work in mobile. |
 | **meetingSidePanel** | An in-meeting panel opened through the unified bar (U-bar). |
-| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app on mobile. |
+| **meetingStage** | An app from the `meetingSidePanel` can be shared to the meeting stage. You can't use this app either on mobile or Teams room clients. |
 
 After you enable your app for Teams meetings, you must configure your app before a meeting, during a meeting, and after a meeting.
 
@@ -165,3 +165,4 @@ The configurations of after and [before meetings](#before-a-meeting) are the sam
 
 * [In-meeting dialog design guidelines](design/designing-apps-in-meetings.md#use-an-in-meeting-dialog)
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
+* [Add apps to meetings via Microsoft Graph](/graph/api/chat-post-installedapps.md)

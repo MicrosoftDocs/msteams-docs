@@ -1,9 +1,9 @@
 ---
 title: Calls and online meetings bots
-description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings.
+description: Learn how your Microsoft Teams apps can interact with users using voice and video using Microsoft Graph APIs for calls and online meetings and learn about real-time media streams
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: calling calls audio video IVR voice online meetings
+keywords: calling calls audio video IVR voice online meetings real-time media streams bot 
 ---
 
 # Calls and online meetings bots
@@ -90,23 +90,17 @@ Real-time media refers to scenarios where media must be processed in real-time, 
 | Graph communication | Graph communications to interact with Microsoft's communications platform. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples) |
 | Calling and meeting bot | The sample app demonstartes how Bot can create call, join meeting and transfer call. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-calling-meeting/csharp) |
 
-## See also
-
-- [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
-
-- [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
-
-- [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
-
-- [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
-
-- [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
-
-- [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
-
-- [Technical information on handling incoming call notifications](./call-notifications.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Real-time media calls and meetings](~/bots/calls-and-meetings/real-time-media-concepts.md)
+
+## See also
+
+- [Graph API reference](/graph/api/resources/communications-api-overview?view=graph-rest-beta&preserve-view=true)
+- [Sample apps](https://github.com/microsoftgraph/microsoft-graph-comms-samples)
+- [Registering a bot that supports calls and online meetings](./registering-calling-bot.md)
+- [Graph permissions for calls and online meetings bots](./registering-calling-bot.md#add-graph-permissions)
+- [How to develop calling and online meeting bots on your computer](./debugging-local-testing-calling-meeting-bots.md)
+- [Requirements and considerations for application-hosted media bots](./requirements-considerations-application-hosted-media-bots.md)
+- [Technical information on handling incoming call notifications](./call-notifications.md)

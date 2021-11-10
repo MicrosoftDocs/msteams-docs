@@ -1,7 +1,7 @@
 ---
 title: Tabs link unfurling and Stage View
 author: Rajeshwari-v
-description: How to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app.  
+description: Learn how to unfurl a link, open the Stage View and pin a tab with Microsoft Teams app. Learn about stage view and invoking it using Adaptive card using code example and sample. 
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: none
@@ -133,14 +133,14 @@ https://teams.microsoft.com/l/Meeting_Stage/2a527703-1f6f-4559-a332-d8a7d288cd88
 |Tab in stage view |Microsoft Teams tab sample app for demonstrating tab in stage view.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|
 	
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
+
 ## See also
 
 * [Messaging extensions link unfurling](~/messaging-extensions/how-to/link-unfurling.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
