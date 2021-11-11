@@ -39,7 +39,7 @@ items:
     
     This step-by-step guide helps you to generate meeting token to extend meetings in Teams. You'll see the following output:
 
-     ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+       ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - title: Prerequisites
   durationInMinutes: 1
