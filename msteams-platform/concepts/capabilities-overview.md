@@ -68,4 +68,5 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 ## See also
 
 [Build apps for Teams](../overview.md)
+
 [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
