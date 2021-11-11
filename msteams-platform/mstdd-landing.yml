@@ -8,7 +8,7 @@ metadata:
   ms.date: 11/10/2021
   ms.topic: landing-page
 landingContent:
-- title: Explore Teams features
+- title: Explore new features
   linkLists:
     - linkListType: concept
       links:
@@ -48,7 +48,7 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
-- title: About building Apps for Teams
+- title: About building apps for Teams
   linkLists:
     - linkListType: overview
       links:
@@ -62,7 +62,7 @@ landingContent:
       links:
       - text: What's new
         url: ../msteams-platform/whats-new.md
-- title: Building app capabilities
+- title: Build app capabilities
   linkLists:
   - linkListType: concept
     links:
