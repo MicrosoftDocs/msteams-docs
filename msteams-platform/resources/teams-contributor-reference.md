@@ -65,6 +65,11 @@ For more information on hyperlinks and file paths, see [use links in documentati
 
 Code samples play an important role to use APIs and SDKs effectively. Well presented code samples can communicate how things work more clearly than descriptive text and instructional information alone. Your code samples must be accurate, concise, well documented, and reader friendly. Code that is easy to read must be easy to understand, test, debug, maintain, modify, and extend. For more information, see [how to include code in docs](/contribute/code-in-docs).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get Microsoft Docs updates and the latest announcements](/teamblog)
+
 ## See also
 
 * [Microsoft Docs](/)
@@ -73,9 +78,3 @@ Code samples play an important role to use APIs and SDKs effectively. Well prese
 * [Cutting Edge : Source Code Readability Tips](/archive/msdn-magazine/2014/october/cutting-edge-source-code-readability-tips)
 * [Teams documentation](/microsoftteams/platform/overview)
 * [GitHub](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform)
-
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Get Microsoft Docs updates and the latest announcements](/teamblog)

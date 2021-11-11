@@ -325,7 +325,7 @@ items:
 
           Visual Studio 2019 deploys the app to your Azure App Service, and the web app loads in your browser.  
     
-    1. Add `/tab` to the end of the URL to see your page.
+    1. Add `/tab` to the end of the URL to see your page, as shown in the image. The tab page does not appear unless you add `/tab` to the URL.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-tab-app.png" alt-text="Blazor tab app" border="false":::
 

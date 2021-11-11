@@ -143,3 +143,7 @@ Controls include:
 * Tabs
 * Tables
 * Icons
+
+## See Also
+
+[Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

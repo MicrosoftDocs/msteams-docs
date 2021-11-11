@@ -5,6 +5,7 @@ ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
 author: KirtiPereira
+keywords: moodle LMS mConnect deep links
 ---
 
 # Moodle learning management system
