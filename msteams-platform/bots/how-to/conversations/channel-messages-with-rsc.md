@@ -21,6 +21,7 @@ The `ChannelMessage.Read.Group` RSC permission is extended to bots. With user co
 > [!NOTE]
 > * Services that need access to all Teams message data must use the Graph APIs that also provide access to archived data in channels and chats.
 > * Bots must use the `ChannelMessage.Read.Group` RSC permission appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval.
+> * The `ChannelMessage.Read.Group` RSC permission may not be used by bots as a way to extract large amounts of customer data. Bots requesting the `ChannelMessage.Read.Group` RSC permission must provide meaningful interaction with users, consistent with the Bot's app description.
 
 ## Update app manifest
 
