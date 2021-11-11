@@ -350,7 +350,7 @@ items:
 
     In this page, you'll learn to:
     1. [Deploy your first app](#deploy-your-app-to-sharepoint)
-    1. [Upload the app package to SharePoint](#upload-the-app-package-to-sharepoint)
+    1. [Distribute the app package on SharePoint](#distribute-the-app-package-on-sharepoint)
 
     ## Deploy your app to SharePoint
 
@@ -382,7 +382,7 @@ items:
 
     1. Select the link of the SharePoint site.
 
-        The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharePoint) to SharePoint.
+        The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
 
     # [Command line](#tab/cli)
 
