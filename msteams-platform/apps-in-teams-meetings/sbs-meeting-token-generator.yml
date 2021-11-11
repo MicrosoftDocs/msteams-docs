@@ -565,12 +565,10 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
-
        ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - content: |
-    You've completed the tutorial to get started with a Meeting Token Generator app.
+    You've completed the tutorial to get started with a Meeting Token Generator app:
 
     ![Real time](~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png)
 
