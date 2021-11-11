@@ -191,13 +191,9 @@ Device permissions are stored for every login session. It means that if you sign
 |---------------|--------------|--------|
 |Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## Next steps
+## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+* [Device permissions for the browser](browser-device-permissions.md)
+* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+* [Integrate location capabilities in Teams](location-capability.md)
