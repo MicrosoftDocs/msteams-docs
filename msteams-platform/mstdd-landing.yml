@@ -8,16 +8,28 @@ metadata:
   ms.date: 11/10/2021
   ms.topic: landing-page
 landingContent:
-- title: About Building Apps for Teams
+- title: Explore Teams features
   linkLists:
-    - linkListType: overview
+    - linkListType: concept
       links:
-      - text: Build apps for Microsoft Teams
-        url: ../msteams-platform/overview.md
-    - linkListType: whats-new
+      - text: Monetize your Teams app with a transactable SaaS offer
+        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
+      - text: Create low-code custom apps
+        url: ~/samples/teams-low-code-solutions.md
+- title: Tutorials
+  linkLists:
+    - linkListType: concept
       links:
-      - text: What's new
-        url: ../msteams-platform/whats-new.md
+        - text: Proactive messages
+          url: ~/bots/how-to/conversations/send-proactive-messages.md
+        - text: Add authentication to bots
+          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
+    - linkListType: tutorial
+      links:
+        - text: Step-by-step guide for Proactive messages
+          url: ~/sbs-send-proactive.yml
+        - text: Step-by-step guide for adding authentication to bots
+          url: ~/sbs-bots-with-sso.yml
 - title: Get started
   linkLists:
     - linkListType: get-started
@@ -36,18 +48,20 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
-- title: What's hot
+- title: About building Apps for Teams
   linkLists:
-    - linkListType: concept
+    - linkListType: overview
       links:
-      - text: Monetize your Teams app with a transactable SaaS offer
-        url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-      - text: Create low-code custom apps
-        url: ~/samples/teams-low-code-solutions.md
-      - text: Power Virtual Agents
-        url: ~/bots/how-to/add-power-virtual-agents-bot-to-teams.md
-      - text: Virtual Assistant
-        url: ~/samples/virtual-assistant.md
+      - text: Build apps for Microsoft Teams
+        url: ../msteams-platform/overview.md
+      - text: App fundamentals
+        url: ~/concepts/app-fundamentals-overview.md
+      - text: Design your app
+        url: ~/concepts/design/design-teams-app-overview.md
+    - linkListType: whats-new
+      links:
+      - text: What's new
+        url: ../msteams-platform/whats-new.md
 - title: Building app capabilities
   linkLists:
   - linkListType: concept
@@ -64,26 +78,12 @@ landingContent:
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
     - text: Build cards and task modules
       url: ~/task-modules-and-cards/cards-and-task-modules.md
-- title: Tutorials
-  linkLists:
-    - linkListType: concept
-      links:
-        - text: Proactive messages
-          url: ~/bots/how-to/conversations/send-proactive-messages.md
-        - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
-    - linkListType: tutorial
-      links:
-        - text: Step-by-step guide for Proactive messages
-          url: ~/sbs-send-proactive.yml
-        - text: Step-by-step guide for adding authentication to bots
-          url: ~/sbs-bots-with-sso.yml
+    - text: App manifest
+      url: ../msteams-platform/resources/schema/manifest-schema.md
 - title: Publish and Distribute
   linkLists:
   - linkListType: concept
     links:
-    - text: App manifest
-      url: ../msteams-platform/resources/schema/manifest-schema.md
     - text: Distribution
       url: ~/concepts/deploy-and-publish/apps-publish-overview.md
     - text: Publish to Teams Store
@@ -92,4 +92,3 @@ landingContent:
       url: ~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md
     - text: Maintain your published app
       url: ~/concepts/deploy-and-publish/appsource/post-publish/overview.md
-

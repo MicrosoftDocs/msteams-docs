@@ -39,7 +39,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
@@ -89,13 +89,13 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 <details>
-<summary><b>Older Updates</b></summary>
+<summary><b>Older updates</b></summary>
 
 <details>
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Identity platform integration with Teams Toolkit and Visual Studio Code for tabs.|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8.|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -129,7 +129,7 @@ Microsoft Teams platform features that are available to all app developers.
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -159,7 +159,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -199,7 +199,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
