@@ -322,24 +322,24 @@ items:
 
     To debug using Local workbench.":
 
-        1. Select **Add Web Part +** icons to add your web part.
+    1. Select **Add Web Part +** icons to add your web part.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part showing.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part showing.":::
 
-        1. Select your web part from the menu.
+    1. Select your web part from the menu.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part selection.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part selection.":::
     
-            You can use this interface to explore adding, exploring, ad removing web parts. You can use the **Preview** button to view the web parts in mobile and tab output. 
+        You can use this interface to explore adding, exploring, ad removing web parts. You can use the **Preview** button to view the web parts in mobile and tab output. 
 
-            Note that this interface is intended only for exploring how a web part may appear in a mobile or tab. You would need to write the code for including them in your app and deploy it to view them. 
+        Note that this interface is intended only for exploring how a web part may appear in a mobile or tab. You would need to write the code for including them in your app and deploy it to view them. 
     </details>
 
-            Your app should now be running.  You can debug the app as any other SPFx web part (such as setting breakpoints).
+    Your app should now be running.  You can debug the app as any other SPFx web part (such as setting breakpoints).
 
 
-        > [!TIP]
-        > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
+    > [!TIP]
+    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
