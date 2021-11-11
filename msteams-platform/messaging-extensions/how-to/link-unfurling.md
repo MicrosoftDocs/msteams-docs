@@ -22,8 +22,6 @@ When a URL is pasted in the compose message area, the web service **Unfurls** th
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-![link unfurling](/assets/images/messaging-extension/link-unfurl.gif)
-
 ## Add link unfurling to your app manifest
 
 To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array either with the help of App Studio or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`.
