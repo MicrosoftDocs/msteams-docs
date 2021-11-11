@@ -52,13 +52,13 @@ When planning how to monetize your Teams app, here are some things to consider:
 
 Integrating with the SaaS Fulfillment APIs is required for monetizing your Teams app. These APIs help you manage the lifecycle of a subscription plan once it’s purchased by a user.
 
-For complete instructions and API reference, see the [SaaS Fulfillment APIs documentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2). In general, you’ll implement the following steps using the APIs once a subscription is purchased:
+For complete instructions and API reference, see the [SaaS Fulfillment APIs documentation](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis). In general, you’ll implement the following steps using the APIs once a subscription is purchased:
 
-1.	Receive a [*purchase identification token*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-api-v2#purchased-but-not-yet-activated-pendingfulfillmentstart) via the URL to your landing page.
+1. Receive a [*purchase identification token*](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle#purchased-but-not-yet-activated-pendingfulfillmentstart) via the URL to your landing page.
 
-1.	Use the token to retrieve subscription details.
+1. Use the token to retrieve subscription details.
 
-1.	Notify the commercial marketplace that the subscription is activated.
+1. Notify the commercial marketplace that the subscription is activated.
 
 ### Best practices for implementing subscription management
 
