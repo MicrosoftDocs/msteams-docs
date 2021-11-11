@@ -73,7 +73,7 @@ The JSON below is shortened to highlight the most relevant sections.
 
 ## Respond to user requests
 
-When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can do another lookup, or any other business logic needed to serve the request.
+When the user performs a query, Microsoft Teams issues a synchronous HTTP request to your service. At that point, your code has `5` seconds to provide an HTTP response to the request. During this time, your service can do additional lookup, or any other business logic needed to serve the request.
 
 Your service must respond with the results matching the user query. The response must indicate an HTTP status code of `200 OK` and a valid application or JSON object with the following properties:
 
@@ -111,7 +111,7 @@ Use `preview` property as Adaptive Card or Office 365 Connector card to display 
 
 Use preview attachment as Hero or Thumbnail card to display a preview of Hero or Thumbnail card.
 
-[!NOTE] If the link unfurling doesn't work, check the code for the preview property.
+> [!NOTE] If the link unfurling doesn't work, check the code for preview property mentioned in the earlier section.
 
 ### Response example
 
