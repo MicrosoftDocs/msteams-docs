@@ -5,9 +5,9 @@ ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Considerations for Teams Integration
+title: Considerations for Teams integration
 ---
-# Considerations for Teams Integration 
+# Considerations for Teams integration 
 
 You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
   
