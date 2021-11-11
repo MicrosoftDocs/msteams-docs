@@ -22,7 +22,7 @@ Every request to your services includes the user ID, the user's display name, an
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They're used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request contains the team ID and channel ID from which the request is originated.
+The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They're used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
 
 ## Authentication
 
