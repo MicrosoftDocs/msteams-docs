@@ -134,7 +134,7 @@ items:
 
         ![Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)
 
-    1. In the **Client secrets** section, select **New client secret**. 
+    1. In the **Client secrets** section, select **New client secret**: 
 
         ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
     
@@ -277,12 +277,13 @@ items:
     1. Select **Add a client application**. 
 
     1. Enter each of the following client IDs and select the authorized scope you created in the previous step:</br>
+
          * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application).
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application).
 
          ![Add client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
 
-        The **Client Id** is depicted in the following image:
+       The **Client Id** is depicted in the following image:
 
          ![Client applications](~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png) 
   
@@ -350,7 +351,7 @@ items:
           > The sample will only work in the current tenant.
 
          * Set `"AzureAd"."ApplicationId "` to your bot's **Microsoft App ID**.
-         * Set `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
+         * Set `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`:
 
        > [!NOTE]
        > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://ae57****.ngrok.io/contentBubble.html`.
@@ -375,7 +376,7 @@ items:
            * `[privacyUrl]`
            * `[termsOfUseUrl]`
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**. 
+         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**: 
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img1.png)
 
@@ -565,7 +566,7 @@ items:
   content: |
     Did you come up with something like this?
 
-       ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
+    ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - content: |
     You've completed the tutorial to get started with a Meeting Token Generator app:
