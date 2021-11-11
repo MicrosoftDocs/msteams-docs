@@ -283,34 +283,60 @@ items:
 
     To build and run your app locally:
 
-    1. Select the **Run and Debug** icon from the Visual Studio Code sidebar.
+    1. Select the **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    2. Select one of the following options to run and debug the app."
+    1. Select one of the following options to run and debug the app."
 
         - **Teams workbench (Edge)**
         - **Teams workbench (Chrome)**
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-teams-workbench.png" alt-text="Screenshot showing how to run and debug an SPFx app in a Teams workbench.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-teams-workbench.png" alt-text="Screenshot showing how to run and debug an SPFx app in a Teams workbench.":::
 
+    1. Select the play button or select the **F5** key to start debugging.
         > [!NOTE]
-        > When you run the app for the first time, all dependencies are downloaded, and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This process can take 3-5 minutes to complete.
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens and loads the SharePoint Workbench when the build is complete. This process can take 3-5 minutes to complete.
 
         After the SharePoint Workbench is loaded:
 
         >[!NOTE]
-        > The Toolkit will prompt you to install a local certificate if needed. This certificate allows Teams to load your application from `https://localhost`. Select yes when the following dialog appears:
+        > The Toolkit will prompt you to install a local certificate, if needed. This certificate allows Teams to load your application from `https://localhost`. Select **Yes** when the following dialog appears:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
-    1. Select **Add Web Part +** icons to add your web part.
+        Teams web client opens in a browser window.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part showing.":::
+    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
-    1. Select your web part from the menu.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams":::
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part selection.":::
+    1. Select the web app version, if you're asked to switch to Teams desktop. Run your app in the Teams web client. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
-        Your app should now be running.  You can debug the app as any other SPFx web part (such as setting breakpoints).
+        Congratulations, your first app is running on Teams!
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-added-local.png" alt-text="Screenshot of the completed app in local environment":::
+
+    <details>
+    <summary>Learn what happens when you use Local Workbench for debugging your app </summary>
+    
+    **Local workbench** is the default option to run and debug an app. Although, it is recommended that you choose to debug your app with the Teams workbench, you can choose the Local workbench also. 
+
+    To debug using Local workbench.":
+
+        1. Select **Add Web Part +** icons to add your web part.
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part showing.":::
+
+        1. Select your web part from the menu.
+
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-workbench-addpart2.png" alt-text="Screenshot showing the SPFx workbench running with the popup to add a web part selection.":::
+    
+            You can use this interface to explore adding, exploring, ad removing web parts. You can use the **Preview** button to view the web parts in mobile and tab output. 
+
+            Note that this interface is intended only for exploring how a web part may appear in a mobile or tab. You would need to write the code for including them in your app and deploy it to view them. 
+    </details>
+
+            Your app should now be running.  You can debug the app as any other SPFx web part (such as setting breakpoints).
+
 
         > [!TIP]
         > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. VS Code will stop on breakpoints in your code.
@@ -344,18 +370,19 @@ items:
 
     1. After provisioning is complete, select **Deploy to the cloud**.
 
-        The Toolkit doesn't deploy the app automatically.
-
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/deploying-command.png" alt-text="Screenshot for showing the deploying command":::
 
-    1. Select **Build SharePoint Package**, when you're prompted to build and deploy manually, and select **Build SharePoint Package**.
+        The app package is built, and uploaded to the SharePoint site. The Teams Toolkit displays a message with the local path where the app package is saved.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/build-sharepoint-package.png" alt-text="Screenshot for the Build Sharepoint Package dialog":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
 
-        The app package is built, and you can see a message for uploading the package to SharePoint site.
+        After the package is built, the Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-package-complete.png" alt-text="Screenshot for the Sharepoint App Package message":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
+    1. Select the link of the SharePoint site.
+
+        The SharePoint site opens to the Apps home page. Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharePoint) to SharePoint.
 
     # [Command line](#tab/cli)
 
@@ -377,48 +404,26 @@ items:
 
     ---
 
-    ## Upload the app package to SharePoint
+    ## Distribute the app package on SharePoint
 
-    You'll find the SharePoint package at `SPFx/sharepoint/solution`. Upload the package to SharePoint:
-
-    1. Log into Microsoft 365 Admin Console.
-    1. Open the SharePoint App Catalog.
-
-        1. Open `https://admin.microsoft.com/AdminPortal/Home`.
-        1. Under **Admin centers**, select the **SharePoint** admin center.
-        1. Select **More features** from the sidebar menu.
-        1. Press **Open** under **Apps**.
-        1. Select **App Catalog**.
-        1. Select the option to automatically create catalog site, and select **OK**.
+    You'll find the app package uploaded at the SharePoint site. Distribute the app and sync it to Teams:
 
     1. Select **Distribute apps for SharePoint**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint." border="true":::
 
-    1. Select **Upload**.
-
-    1. Select **Choose File**.
-
-    1. Find your `helloworld.sppkg` file in the `SPFx/sharepoint/solution` folder in your project. Select **Open**.
-
-    1. Select **OK**.
-
-        You'll be prompted to choose if you trust the Hello World solution.
-
-          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-upload-trust-msg-box.png" alt-text="Trust message for deploy." border="true":::
-
-    1. Verify that **Make this solution available to all sites in the organization** is selected, and select **Deploy**.
+        The Apps for SharePoint page opens with your app listed in it.
 
     1. Select the **FILES** tab.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-appcatalog-filestab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-files-tab.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
     1. Select the package you deployed, then select **Sync to Teams**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
         > [!Note]
-        > The Sync to Teams process can take a couple of minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
+        > The Sync to Teams process can take a few minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
     1. Select the triple-dot on the sidebar, then select **All apps**.  
@@ -427,4 +432,10 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-app-in-teams.png" alt-text="Screenshot showing the app within Teams" border="true":::
 
-        Congratulations! Your app is now ready to be added to Teams.
+    1. Select your app, and then select **Add**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-add-app.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::
+
+        Congratulations! Your app is now added to Teams.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-app-added.png" alt-text="Screenshot of completed app to be added in Teams." border="true":::
