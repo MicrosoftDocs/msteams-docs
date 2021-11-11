@@ -111,7 +111,8 @@ Use `preview` property as Adaptive Card or Office 365 Connector card to display 
 
 Use preview attachment as Hero or Thumbnail card to display a preview of Hero or Thumbnail card.
 
-> [!NOTE] If the link unfurling doesn't work, check the code for preview property mentioned in the earlier section.
+> [!NOTE]  
+> If the link unfurling doesn't work, check the code for preview property mentioned in the earlier section.
 
 ### Response example
 

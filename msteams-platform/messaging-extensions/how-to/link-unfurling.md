@@ -22,7 +22,7 @@ When a URL is pasted in the compose message area, the web service **Unfurls** th
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
-![link unfurling](../assets/images/messaging-extension/link-unfurl.gif)
+![link unfurling](/assets/images/messaging-extension/link-unfurl.gif)
 
 ## Add link unfurling to your app manifest
 
