@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Token Generator app helps to extend meetings in Teams. Through this app, meeting participants can request for **token**. The tokens are generated sequentially so that each participant has equal opportunity to interact, for example, the app is useful in Q&A sessions and in meetings, such as scrum meetings. You can create a Meeting Token Generator app to enhance your meeting experience in Teams.
+    Meeting Token Generator app helps to extend meetings in Teams. Through this app, meeting participants can request for **token**. The app generates tokens sequentially so that each participant has equal opportunity to interact, for example, the app is useful in Q&A sessions and in meetings, such as scrum meetings. You can create a Meeting Token Generator app to enhance your meeting experience in Teams.
 
     **Key Features**
 
@@ -99,7 +99,9 @@ items:
 
         <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
 
-    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**.
+    1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
+    
+       You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -124,7 +126,7 @@ items:
 
       Perform the following steps if you created a new **Microsoft App ID** in the previous section:
 
-    1. In the left panel select **Configuration**. 
+    1. In the left panel, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
@@ -252,6 +254,7 @@ items:
     1. Set **Who can consent?** to `Admins and users`.
   
     1. To configure the admin and user consent prompts with values that are appropriate for the `access_as_user` scope, provide the following information in the fields:</br>
+    
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
          * Enter `Allows Teams to call the app’s web APIs as the current user` as **Admin consent description**.
@@ -435,7 +438,8 @@ items:
     ```bash
     dotnet run
     ```
-      ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
+   
+    ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
       
 - title: Enable developer preview in your desktop Teams client
   durationInMinutes: 1
