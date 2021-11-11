@@ -9,7 +9,6 @@ ms.topic: how-to
 # Device permissions for the browser
 
 > [!NOTE]
-
 > The change to how device permissions are handled in the browser is currently available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only. 
 > This change will be generally available (GA) by February 01, 2022.
 
