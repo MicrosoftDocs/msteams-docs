@@ -10,6 +10,7 @@ ms.date: 06/25/2021
 # Format cards in Microsoft Teams
 
 Following are the two ways to add rich text formatting to your cards:
+
 * [Markdown](#format-cards-with-markdown)
 * [HTML](#format-cards-with-html)
 
@@ -647,5 +648,5 @@ You can test formatting in your own cards by modifying this code.
 
 * [Card actions](./cards-actions.md)
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
-* [Task modules](~/task-modules-and-cards/cards/what-are-task-modules.md)
+* [Task modules](~/task-modules-and-cards/cards/cards-format.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
