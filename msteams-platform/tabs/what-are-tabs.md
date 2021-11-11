@@ -79,14 +79,15 @@ You can have multiple channels or group tabs, and up to 16 personal tabs per app
 * [Teams Toolkit for Visual Studio Code](../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit for Visual Studio](../toolkit/visual-studio-overview.md)
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prerequisites](~/tabs/how-to/tab-requirements.md)
+
 ## See also
 
 * [Request device permissions](../concepts/device-capabilities/native-device-permissions.md)
 * [Integrate media capabilities](../concepts/device-capabilities/mobile-camera-image-permissions.md)
 * [Integrate a QR or barcode scanner](../concepts/device-capabilities/qr-barcode-scanner-capability.md)
 * [Integrate location capabilities](../concepts/device-capabilities/location-capability.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Prerequisites](~/tabs/how-to/tab-requirements.md)
+* [Tabs on mobile](design/tabs-mobile.md#tabs-on-mobile)

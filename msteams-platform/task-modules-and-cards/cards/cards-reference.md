@@ -948,3 +948,5 @@ The following cards are implemented by the Bot Framework, but are not supported 
 
 * [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
+* [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)

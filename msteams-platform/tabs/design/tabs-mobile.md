@@ -1,8 +1,9 @@
 ---
 title: Tabs on mobile
-description: Describes developer considerations for implementing tabs on Microsoft Teams mobile.
+description: Learn about implementing tabs on Microsoft Teams mobile, their authentication, low bandwidth connection, testing on mobile clients, distribution, and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
+keywords: app mobile tab channel group authentication distribution
 ---
 
 # Tabs on mobile
@@ -62,14 +63,15 @@ The following table describes tab availability and behavior when the app is list
 
 If you are sideloading your app or publishing to an organization's app catalog, tab behavior is the same as Teams store apps approved by Microsoft for mobile.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+
 ## See also
 
 * [Tab design guidelines](~/tabs/design/tabs.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Get context for your tab](~/tabs/how-to/access-teams-context.md)
+* [Plan for Teams mobile - Teams](~/concepts/design/plan-responsive-tabs-for-teams-mobile.md)

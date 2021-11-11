@@ -85,14 +85,14 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 > * Teams enables the **Remove** button after five seconds, even if your tab has not called `setValidityState()`.
 > * When the user selects **Remove**, Teams removes the tab after 30 seconds regardless of whether the actions have been completed or not.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tabs on mobile](~/tabs/design/tabs-mobile.md)
