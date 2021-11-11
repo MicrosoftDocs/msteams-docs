@@ -283,9 +283,14 @@ items:
 
     To build and run your app locally:
 
-    1. From Visual Studio Code, select the **F5** key.
+    1. Select the **Run and Debug** icon from the Visual Studio Code sidebar.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-debug-local.png" alt-text="Screenshot showing how to start an SPFx app in a local workbench.":::
+    2. Select one of the following options to run and debug the app."
+
+        - **Teams workbench (Edge)**
+        - **Teams workbench (Chrome)**
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-teams-workbench.png" alt-text="Screenshot showing how to run and debug an SPFx app in a Teams workbench.":::
 
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built.  A browser window automatically opens and loads the SharePoint Workbench when the build is complete.  This process can take 3-5 minutes to complete.
