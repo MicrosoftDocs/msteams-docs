@@ -24,8 +24,7 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 > To extend your Teams application in Outlook and Office.com, upgrading manifest file is required. However, it's optional for you to upgrade the `TeamsJS` SDK, as the old version continues to work.
 
 > [!IMPORTANT]
-> If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application,`TeamsFx` SDK is not currently compatible with the latest version (beta version) of `TeamsJS` SDK package. It can cause functional damage to your application when running in Outlook and Office.com.
-> If some functions are not working in Outlook or Office.com, remove `TeamsFx` packages from your application or don't upgrade `TeamsJS` SDK to latest version.
+> If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application and you have upgraded `TeamsJS` SDK to `2.0.0-beta.0` or higher, you need to change `TeamsFx` version to `0.3.1-beta.0` or higher in your `package.json` file to avoid version conflicts.
 
 ## Prerequisites
 
