@@ -401,7 +401,7 @@ items:
 
     The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server will serve the static files from the location:
 
-         ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+       ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -428,7 +428,7 @@ items:
 
       A webpage opens with a message **App is ready**:
 
-        ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
+      ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
 
         
     # [Command line](#tab/cli)
