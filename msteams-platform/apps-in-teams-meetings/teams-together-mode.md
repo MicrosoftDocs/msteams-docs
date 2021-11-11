@@ -238,5 +238,7 @@ You can share the Scene Package that is a .zip file retrieved from the Scene stu
 ## See also
 
 [Apps for Teams meetings](teams-apps-in-meetings.md)
+
 [Calls and meetings bots ](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
+
 [Real-time media calls and meetings with Microsoft Teams](~/bots/calls-and-meetings/real-time-media-concepts.md)
