@@ -115,7 +115,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 
     > Mobile version of the app allows in-app purchase, has UI that aims to upsell to paid versions.
 
-    > ![Online Stores](../assets/images/submission/validation-financial-information-online-stores.png)
+    > ![Online Stores](/assets/images/submission/validation-financial-information-online-stores.png)
 
     > Mobile version has links to online stores where users can make a purchase decision.
 
@@ -323,7 +323,7 @@ Your app's support URLs should not require authentication. For example, users sh
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. If your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket.
 
-  > ![Support URL](../assets/images/submission/validation-supportlinks-authentication.png)
+  > ![Support URL](/assets/images/submission/validation-supportlinks-authentication.png)
 
   > Authentication required to access support link.
 
@@ -343,13 +343,13 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow.
 
-  >![Create new account](../images/submission/validation-tabs-setup-createnewaccount.png)
+  >![Create new account](/images/submission/validation-tabs-setup-createnewaccount.png)
 
   > Way forward link **Create new account** for new users is available.
 
   > Tab configuration dead ends the user, not way forward guidance.
 
-  >![New Uswe Signup](../images/submission/validation-tabs-setup-newuser.png)
+  >![New Uswe Signup](/images/submission/validation-tabs-setup-newuser.png)
 
   > Missing way forward for a new user to sign up.
 
@@ -357,34 +357,34 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tab configuration must not take user outside Teams. The user should not leave the tab configuration experience inside Teams, to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must clearly explain the value of configuration and how to configure.
 
-  > ![Acquire Profile Name](../assets/images/submission/validation-tabs-setup-profilename.png)
+  > ![Acquire Profile Name](/assets/images/submission/validation-tabs-setup-profilename.png)
 
   > Requires navigating outside the configuration experience to acquire **Profile Name**.
 * Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you are building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel.
 
-  > ![Configuration Experience](../images/submission/validation-tabs-setup-configuration-experience.png)  
+  > ![Configuration Experience](/images/submission/validation-tabs-setup-configuration-experience.png)  
   > Configuration experience allows user to configure a specific mind map (project) to the channel. Offers a list of projects to choose from.
-  >  ![Configuration Screen](../images/submission/validation-tabs-setup-configuration-screen.png)  
+  >  ![Configuration Screen](/images/submission/validation-tabs-setup-configuration-screen.png)  
   >  Entire website embedded in tab configuration screen.
 
 * Tab configuration screen must not ask users to embed an URL. Asking users to configure an URL during tab set-up is a broken UX - user leaves tab configuration screen, acquires URL, returns to the configuration screen and inputs the URL. A pre-existing Teams feature already allows users to pin a website link in the channel. If your app asks user to embed a website URL during tab configuration and app functionality is limited to displaying the entire content in this configured website in the channel tab, your app does not offer significant value to the user. Consider adding additional capabilities or workflows to your app. 
-  > ![Configured URL](../assets/images/submission/validation-tabs-setup-configured-url.png)
+  > ![Configured URL](/assets/images/submission/validation-tabs-setup-configured-url.png)
   > App asks user to configure an URL during tab set-up. App functionality extends beyond displaying only the content in configured URL. 
-  > ![Configured URL limited](../assets/images/submission/validation-tabs-setup-configured-url-two.png)
+  > ![Configured URL limited](/assets/images/submission/validation-tabs-setup-configured-url-two.png)
   > App asks user to configure an URL during tab set-up. App functionality limited to displaying content in configured URL.
 
 ### Views
 
 * The sign-in screen area must not use large logos.
-  > ![App Login Emphasis](../images/submission/validation-views-applogin.png)  
+  > ![App Login Emphasis](/images/submission/validation-views-applogin.png)  
   > Emphasis and focus on app login.  
 
-  > ![App Logo](../assets/images/submission/validation-views-applogo.png)
+  > ![App Logo](/assets/images/submission/validation-views-applogo.png)
   >  Focus on app logo and inefficient use of configuration screen. App logo also available in top left corner. Valuable steps to configure the app are hidden under vertical scroll.  
 
 * Content can be simplified by breaking it down across multiple tabs.  
 
-  > ![Multiple Tabs](../images/submission/validation-views-multiple-tabs.png)  
+  > ![Multiple Tabs](/images/submission/validation-views-multiple-tabs.png)  
   > Breakdown complex content in static tabs across multiple tabs.
 
 * Tabs should not have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name.
@@ -399,28 +399,28 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Static tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your static tab, it must not include only icons or only icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail.
 
-  > ![Left navigation](../assets/images/submission/validation-navigation-left-navigation.png)
+  > ![Left navigation](/assets/images/submission/validation-navigation-left-navigation.png)
 
   > Only icons in tab left navigation. Conflicts with Teams left navigation.
 
-  > ![Icon and Text](../assets/images/submission/validation-navigation-icon-text.png)
+  > ![Icon and Text](/assets/images/submission/validation-navigation-icon-text.png)
 
   > Icon and text in tab left navigation mimics Teams navigation.
 
-  >  ![Collapsible Left Rail](../assets/images/submission/validation-navigation-collapsable-left-rail.png)
+  >  ![Collapsible Left Rail](/assets/images/submission/validation-navigation-collapsable-left-rail.png)
 
   > Collapsible left rail that mimics Teams primary navigation.
 
-  > ![Static Tab](../assets/images/submission/validation-navigation-static-tab.png)
+  > ![Static Tab](/assets/images/submission/validation-navigation-static-tab.png)
 
   > Side navigation pane to assist with complex navigation flows in a Static Tab is allowed. 
 
-  > ![Horizonta Rail](../assets/images/submission/validation-navigation-horizontal-rail.png)
+  > ![Horizonta Rail](/assets/images/submission/validation-navigation-horizontal-rail.png)
 
   >  Tab uses a horizontal rail for navigation instead of a left rail that conflicts with Teams primary navigation.
 
 * Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. 
-  > ![Spacing between Toolbar](../assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
+  > ![Spacing between Toolbar](/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
 
   > App provides 20 px spacing between toolbar in left rail and Teams navigation.
 
@@ -432,21 +432,21 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Deep links in tabs must not link to an external webpage but somewhere within Teams. For example, task modules or other tabs.
 
-  > ![Launch button Linked](../assets/images/submission/validation-navigation-launch-button-linked-static-tab.png)
+  > ![Launch button Linked](/assets/images/submission/validation-navigation-launch-button-linked-static-tab.png)
 
   > **Launch** button deep linked within Teams to a static tab.
 
-  > ![View Button not Linked](../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)
+  > ![View Button not Linked](/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)
 
   > **View** button launches external webpage, not deep linked within the Teams app.
 
 * Tabs should not allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows (For example – to raise a support ticket).
 
-  > ![Core Workflow within Configuration Tab](../images/submission/validation-navigation-core-workflow-within-configuration.png)
+  > ![Core Workflow within Configuration Tab](/images/submission/validation-navigation-core-workflow-within-configuration.png)
 
   > App core workflow is collaboration on a blank diagram within a channel. Core workflow is within Teams in a configurable tab.
 
-  > ![App Core Workflow Redirects Outside](../images/submission/validation-navigation-core-workflow-redirects-outside.png)
+  > ![App Core Workflow Redirects Outside](/images/submission/validation-navigation-core-workflow-redirects-outside.png)
 
   > App core workflow is reading articles shared within a channel. To read the article, tab redirects user outside of Teams.
 
