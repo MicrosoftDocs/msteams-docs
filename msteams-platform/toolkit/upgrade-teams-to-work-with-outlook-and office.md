@@ -31,9 +31,9 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 
 Install the latest version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-The following are the prerequisites to upgrade manifest and `TeamsJS` client SDK:
+The following are the steps to upgrade manifest and `TeamsJS` client SDK:
 
-### Upgrade manifest
+## Upgrade manifest
 
 1. From Visual Studio Code, open command platte (Ctrl+Shift+P / ⌘⇧-P). 
 1. Type: `Teams: Upgrade Teams manifest to extend in Outlook and Office` in the search box.
@@ -46,7 +46,7 @@ This command will:
 
 To know more about the required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)
 
-### Upgrade Teams JavaScript Client SDK
+## Upgrade Teams JavaScript Client SDK
 
 1. From Visual Studio Code, open command platte (Ctrl+Shift+P / ⌘⇧-P) 
 1. Type: `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` in the search box. 
@@ -57,12 +57,10 @@ This command will:
 * Update `TeamsJS SDK` to the latest beta version.
 * Update function references, `Enum` and interface references.
 * Add `TODO` comments for yuo to change callbacks manually.
-
     > [!TIP]
     > Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
     > The typical solution is to make parent function `async` and use `await` next to each promise, or use `then/catch/finally` style.
-
-1. Add `TODO` comments in places where you get changes to the context schema.
+* Add `TODO` comments in places where you get changes to the context schema.
 
 ## Run your Teams application in Outlook and Office.com
 
@@ -101,7 +99,12 @@ Perform the following steps to preview personal tab apps in Outlook web app and 
 
 1. Open Outlook desktop client.
 1. Select the three dots on the bottom left bar.
+
+     ![More apps view](../assets/images/upgrade-teams/outlook-desktop-apps.png)
+
 1. Select the name of your app to preview it in Outlook Desktop Client.
+
+     ![app preview](../assets/images/upgrade-teams/outlook-desktop-preview.png)
 
 ## Run Teams application in Office.com
 
@@ -124,7 +127,7 @@ Perform the following steps to create a new tab app using Teams Toolkit and run 
 
     ![Create new teams sample app](../assets/images/upgrade-teams/sample-app.png)
 
-1. Select **Todo List (Works in Teams, Outlook and Office)** in the next window and click **OK**. 
+1. Select **Todo List (Works in Teams, Outlook and Office)** in the next window and click **OK**.
 
     ![select TODO](../assets/images/upgrade-teams/sample-list.png)
 
