@@ -16,18 +16,18 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 
 ![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
 
-1. Select the command **Teams manifest to extend in Outlook and Office.com** to upgrade manifest and communicate with Office and Outlook:
+1. Use the command **Teams: Upgrade Teams manifest to extend in Outlook and Office** to upgrade manifest to the latest version.
 
-1. Select the command **Teams JS SDK to extend in Outlook and Office.com** to upgrade `TeamsJS` to the latest version.
+1. Use the command **Teams: Upgrasde Teams JS SDK to extend in Outlook and Office** to upgrade `TeamsJS` SDK to the latest version.
 
 > [!NOTE]
-> Upgrading manifest file is required, but upgrading `TeamsJS` to latest version is optional, if you have already installed `TeamsJS` SDK in your application.
+> To extend your Teams application in Outlook and Office.com, upgrading manifest file is required. However, it's optional for you to upgrade the `TeamsJS` SDK, as the old version continues to work.
 
 > [!IMPORTANT]
 > If you have both `TeamsFx` and `TeamsJS` SDK packages in your Teams application,`TeamsFx` SDK is not currently compatible with the latest version (beta version) of `TeamsJS` SDK package. It can cause functional damage to your application when running in Outlook and Office.com.
 > If some functions are not working in Outlook or Office.com, remove `TeamsFx` packages from your application or don't upgrade `TeamsJS` SDK to latest version.
 
-## Prerequisite
+## Prerequisites
 
 Install the latest version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -35,26 +35,34 @@ The following are the prerequisites to upgrade manifest and `TeamsJS` client SDK
 
 ### Upgrade manifest
 
-Run the command `upgrade Teams manifest` to work in Outlook and Office.com and select Teams Tab app manifest file to migrate:
+1. From Visual Studio Code, open command platte (Ctrl+Shift+P / ⌘⇧-P). 
+1. Type: `Teams: Upgrade Teams manifest to extend in Outlook and Office` in the search box.
+1. Select Teams app manifest file.
 
-1. `update manifest` version to use the latest `m365DevPreview` schema.
-1. `update manifest` file to use the latest `DevPreview` schema.
+This command will:
+
+* Update manifest version to use the latest `m365DevPreview` version.
+* Update manifest file to use the latest `DevPreview` schema.
 
 To know more about the required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)
 
 ### Upgrade Teams JavaScript Client SDK
 
-Run the command `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` and select Teams app project to migrate:
+1. From Visual Studio Code, open command platte (Ctrl+Shift+P / ⌘⇧-P) 
+1. Type: `Teams: Upgrade Teams JS SDK to extend in Outlook and Office` in the search box. 
+1. Select Teams app project folder.
 
-1. Update `TeamsJS SDK` to the latest beta version.
-1. Update function references, `Enum` and interface references.
-1. Add `TODO` comments to finish change callbacks manually.
+This command will:
+
+* Update `TeamsJS SDK` to the latest beta version.
+* Update function references, `Enum` and interface references.
+* Add `TODO` comments for yuo to change callbacks manually.
 
     > [!TIP]
     > Changing callbacks alters control flow. This code will have `TODO` comments for your review. 
-    > The typical solution is to make parent function `async` and use `await`.
+    > The typical solution is to make parent function `async` and use `await` next to each promise, or use `then/catch/finally` style.
 
-1. Add `TODO` in places where you get changes to the context schema.
+1. Add `TODO` comments in places where you get changes to the context schema.
 
 ## Run your Teams application in Outlook and Office.com
 
@@ -99,8 +107,8 @@ Perform the following steps to preview personal tab apps in Outlook web app and 
 
 Perform the following steps to preview your apps in Outlook web client:
 
-1. Go to www.office.com/m365apps
-1. Find apps listed below “M365 Apps”
+1. Go to www.office.com
+1. Select the three dots on the bottom left bar.
 
     ![Apps in M365](../assets/images/upgrade-teams/m365-app.png)
 
@@ -118,7 +126,7 @@ Perform the following steps to create a new tab app using Teams Toolkit and run 
 
 1. Select **Todo List (Works in Teams, Outlook and Office)** in the next window and click **OK**. 
 
-    ![select TODO](../assets/images/upgrade-teams/todo-in-outlook-office.png)
+    ![select TODO](../assets/images/upgrade-teams/sample-list.png)
 
     This step will create a sample application. Once the project has been successfully created:
 
@@ -133,6 +141,7 @@ Perform the following steps to create a new tab app using Teams Toolkit and run 
 1. Select **Teams:Zip Teams metadata package**.
 
     ![Zip Teams metadata package](../assets/images/upgrade-teams/zip-metadata-package.png)
+1. Follow the `README` file in the sample application project to run the application in Outlook and Office.com.
 
 ## See also
 
