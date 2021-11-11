@@ -114,6 +114,6 @@ You can get started by updating scenarios using the [quick start guide](Work-wit
 ## See also
 
 * [What are bots](~/bots/what-are-bots.md)
-* [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md)
+* [Adaptive Cards overview](~/task-modules-and-cards/what-are-cards.md#adaptive-cards)
 * [Adaptive Cards @ Microsoft Build 2020](https://youtu.be/hEBhwB72Qn4?t=1393)
 * [Adaptive Cards @ Ignite 2020](https://techcommunity.microsoft.com/t5/video-hub/elevate-user-experiences-with-teams-and-adaptive-cards/m-p/1689460)
