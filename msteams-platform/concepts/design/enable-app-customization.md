@@ -49,5 +49,6 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 ## See also
 
 * [App manifest schema](/MicrosoftTeams/manifest-schema)
+
 * [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
 
