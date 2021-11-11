@@ -47,7 +47,6 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
-    * [Visual Studio Code](https://code.visualstudio.com/download) version 1.55 or later.
     * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or above.
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
@@ -451,18 +450,24 @@ items:
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
-       1. Select **Show All**.
+       1. In the left panel, select **Show All**.
        1. Select **Teams**:
 
            ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
 
-       1. Navigate to **Teams apps**.
-       1. Select **Setup Policies**.
+       1. In the left panel, select **Teams apps**.
+       1. Select **Setup Policies**:
+
+          ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
+
        1. Select **Global**:
 
           ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
 
-       1. Toggle **Upload custom apps** to the `On` position.
+       1. Toggle **Upload custom apps** to the `On` position:
+
+          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
+
        1. Select **Save**. Your test tenant can permit custom app sideloading:
 
           > [!NOTE]
@@ -470,13 +475,19 @@ items:
 
           ![Upload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
 
-    1. Select your profile (either in the upper right or lower left of the Teams interface) to display the Teams menu.
+    1. Go to **Microsoft Teams**.
+    
+    1. From the upper right corner of your Teams interface, select `...`.
     
     1. Select **About**. 
     
-    1. Select **Developer preview**.
+    1. Select **Developer preview**: 
+
+        ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
    
-    1. Select **Switch to Developer preview**.
+    1. Select **Switch to Developer preview**:
+
+        ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
  
        > [!NOTE]
        > In-meeting tabs are available only in the **Teams desktop client**.
