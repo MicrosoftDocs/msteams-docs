@@ -442,7 +442,7 @@
   items:
   - name: Overview
     href: samples/integrate-web-apps-overview.md
-  - name: Web apps
+  - name: Considerations for Teams Integration
     href: samples/integrating-web-apps.md
   - name: Power Platform apps
     items:
