@@ -130,7 +130,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message after the file uploads. (See the following image)
-  > ![Confirmation Message](..assets/images/submission/validation-bot-confirmation-message.png)
+  > ![Confirmation Message](/assets/images/submission/validation-bot-confirmation-message.png)
 
 ### External domains
 > [!NOTE]
@@ -389,7 +389,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tabs should not have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name.
 
-  >![Duplicate Header Logo](..assets/images/submission/validation-views-duplicate-header-logo.png) 
+  >![Duplicate Header Logo](/assets/images/submission/validation-views-duplicate-header-logo.png) 
 
   > Tab framework displays your app logo. Recommend removing the duplicate logo from the tab iframe.
 
