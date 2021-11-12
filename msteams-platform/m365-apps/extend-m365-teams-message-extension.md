@@ -18,7 +18,7 @@ The process to update your search-based Teams message extension to run Outlook i
 > * Add an Outlook channel for your bot
 > * Sideload your updated app in Teams
 
-The remainder of this guide will walk you through these steps and show you how to preview your message extension in both Outlook for Windows desktop and web.
+The rest of this guide will walk you through these steps and show you how to preview your message extension in both Outlook for Windows desktop and web.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To complete this tutorial, you'll need:
 
 If you have an existing messaging extension, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID).
 
-If you'd like to use sample code to complete this tutorial, follow the setup steps in [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) to quickly build and register a simple bot.
+If you'd like to use sample code to complete this tutorial, follow the setup steps in [Teams messaging extension search sample](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/javascript_nodejs/50.teams-messaging-extensions-search) to quickly build and register a bot.
 
 ## Update the app manifest
 
@@ -51,7 +51,7 @@ You have two options for updating your app manifest:
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the the `$schema` and `manifestVersion` values with the following:
+Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -61,7 +61,7 @@ Open your Teams app manifest and update the the `$schema` and `manifestVersion` 
 ```
 ---
 
-If you used Teams Toolkit to create your messaging extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command pallette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of vscode).
+If you used Teams Toolkit to create your messaging extension app, you can use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
@@ -71,11 +71,11 @@ In Microsoft Teams, a messaging extension consists of a web service that you hos
 
 For users to interact with your messaging extension from Outlook, you'll need to add an Outlook channel to your bot:
 
-1. From [Azure Portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
+1. From [Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), navigate to your bot resource.
 
 1. From *Settings*, select **Channels**.
 
-1. Click on **Outlook**, select the **Message extensions** tab and then click **Save**.
+1. Click on **Outlook**, select the **Message extensions** tab, then click **Save**.
 
     :::image type="content" source="images/azure-bot-channel-message-extensions.png" alt-text="Add an Outlook 'Message Extensions' channel for your bot from the Azure Bot Channels pane":::
 
@@ -91,7 +91,7 @@ The final step is to sideload your updated messaging extension ([app package](/m
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code":::
 
-1. Log in to Teams with your sandbox tenant account, and ensure you are on the Public Developer Preview. You can verify this in  Teams client by clicking on the ellipsis (**...**) menu by your user profile and opening **About** to check that the *Developer preview* option is toggled on.
+1. Log in to Teams with your sandbox tenant account, and verify you are on the *Public Developer Preview* by clicking on the ellipsis (**...**) menu by your user profile and opening **About** to check that the *Developer preview* option is toggled on.
 
     :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About' and verify 'Developer Preview' option is checked":::
 
@@ -113,7 +113,7 @@ You're now ready to test your messaging extension running in Outlook on Windows 
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email is not supported; Adaptive Cards v1.4 and later are not supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` are not supported for inserted cards. Support is limited to `openURL`: on click, the user will be redirected to the specified URL in a new tab.
 
-As you test your messaging extension, you'll be able to identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which will have the value of `msteams` or `outlook`, depending from where the bot request originates. For more, see  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
+As you test your messaging extension, you can identify the source (originating from Teams versus Outlook) of bot requests by the [channelId](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md#channel-id) of the [Activity](https://github.com/Microsoft/botframework-sdk/blob/main/specs/botframework-activity/botframework-activity.md) object. When a user performs a query, your service receives a standard Bot Framework `Activity` object. One of the properties in the Activity object is `channelId`, which will have the value of `msteams` or `outlook`, depending from where the bot request originates. For more, see  [Search based messaging extensions SDK](/microsoftteams/platform/resources/messaging-extension-v3/search-extensions).
 
 ### Outlook
 
@@ -133,7 +133,7 @@ Outlook-enabled messaging extensions can be distributed to a preview audience ac
 
 * **Teams client**: From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**. This requires approval from your IT admin.
 * **Microsoft Teams admin center**: As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
-* **Microsoft admin center**: As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and depoy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+* **Microsoft admin center**: As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### Multi-tenant distribution
 

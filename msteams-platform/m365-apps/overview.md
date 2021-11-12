@@ -6,13 +6,15 @@ ms.topic: overview
 ---
 # Extend Teams apps across Microsoft 365 (preview)
 
+> [!NOTE]
+> This early developer preview is intended to provide Teams developers with existing applications the chance to try the new functionality and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
+
 You can preview your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client Preview SDK](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md). With this preview, you can:
 
 - Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Microsoft Office Home (office.com).
 - Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
 
-> [!NOTE]
-> This early developer preview is intended to provide Teams developers with existing applications the chance to [try the new functionality](prerequisites.md) and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
+For feedback and issues, please continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback). We look forward to hearing from you!
 
 ## Teams personal tabs in Office and Outlook
 
@@ -28,9 +30,9 @@ Also with this preview, you can extend your search-based Teams messaging extensi
 
 Once sideloaded to Teams, your messaging extension will appear as one of your installed apps within the Outlook compose message area.
 
-Please continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) for feedback and issues. We look forward to hearing from you!
-
 ## Next steps
 
+Set up your dev environment for extending Teams apps across Microsoft 365:
+
 > [!div class="nextstepaction"]
-> [Set up your dev environment](prerequisites.md)
+> [Install prerequisites](prerequisites.md)

@@ -8,7 +8,7 @@ ms.topic: conceptual
 
 In this SDK Preview, the [Microsoft Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/) (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK Preview (`@microsoft/teams-js@next`) is a superset of the current TeamsJS SDK: it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
 
-There are two significant changes in the TeamsJS SDK Preview that your code will need to account for in order to run in other M365 applications:
+There are two significant changes in the TeamsJS SDK Preview that your code will need to account for in order to run in other Microsoft 365 applications:
 
 * [**Callback functions now return Promise objects.**](#callbacks-converted-to-promises) All existing functions with a callback parameter have been modernized to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object for improved handling of asynchronous operations and code readability.
 
@@ -25,15 +25,16 @@ There are two significant changes in the TeamsJS SDK Preview that your code will
 
 ## Updating to the Teams client SDK Preview
 
-The easiest way to update your Teams app to use the TeamsJS SDK Preview is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to perform these steps manually, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
+The easiest way to update your Teams app to use the TeamsJS SDK Preview is to use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code. This section will walk you through the steps to do that. If you prefer to manually update your code, see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections for more details on required API changes.
 
 ### 1. Install the latest Teams Toolkit VS Code extension
 
-From the Visual Studio Code Extensions Marketplace search for Teams Toolkit and install version `2.10.0` or later. The toolkit provides two commands to assist the process:
+In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit** and install version `2.10.0` or later. The toolkit provides two commands to assist the process:
+
 1. A command to update your manifest schema
 1. A command to update your SDK references and call sites
 
-These are the two key updates you'll need to run a Teams personal tab app in other Microsoft 365 applications. 
+These are the two key updates you'll need to run a Teams personal tab app in other Microsoft 365 applications.
 
 ### 2. Updating the manifest
 
@@ -44,7 +45,7 @@ These are the two key updates you'll need to run a Teams personal tab app in oth
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the the `$schema` and `manifestVersion` values with the following:
+Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -54,13 +55,13 @@ Open your Teams app manifest and update the the `$schema` and `manifestVersion` 
 ```
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command pallette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of vscode).
+If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
 ### 2. Update SDK references
 
-To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.0` or higher. To perform these steps manually, and for more details on the API changes see the [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities) sections below.
+To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.0` or higher. To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
 1. Ensure you have [Teams Toolkit](https://aka.ms/teams-toolkit) `v2.10.0` or later
 1. Open the *Command palette*: `Ctrl+Shift+P`
@@ -93,14 +94,15 @@ You'll need to update the way your code calls any of these APIs to use Promises.
 
 # [JavaScript](#tab/javascript)
 
-Code before: 
+This code:
+
 ```js
 import microsoftTeams from "@microsoft/teams-js";
 
 microsoftTeams.getContext((context) => { /* ... */ });
 ```
 
-Would be need to be updated to:
+Needs to be updated to:
 
 ```js
 import { app, Context } from "@microsoft/teams-js";
@@ -109,7 +111,8 @@ app.getContext().then((context: Context) => {
     /*...*/
 });
 ```
-or the equivalent `async/await` code:
+
+...or the equivalent `async/await` pattern:
 
 ```js
 import { app, Context } from "@microsoft/teams-js";
@@ -121,7 +124,9 @@ async function example() {
 ```
 
 # [TypeScript](#tab/typescript)
-Code before:
+
+This code:
+
 ```TypeScript
 import * as microsoftTeams from "@microsoft/teams-js";
 
@@ -130,7 +135,7 @@ microsoftTeams.getContext((context: microsoftTeams.Context) => {
 });
 ```
 
-It would be need to be updated to:
+Needs to be updated to:
 
 ```TypeScript
 import { app, Context } from "@microsoft/teams-js";
@@ -139,7 +144,8 @@ app.getContext().then((context: Context) => {
     /*...*/
 });
 ```
-or the equivalent `async/await` code.
+
+...or the equivalent `async/await` pattern:
 
 ```TypeScript
 import { app, Context } from "@microsoft/teams-js";
@@ -157,9 +163,9 @@ async function example() {
 
 ## APIs organized into capabilities
 
-A *capability* is a logical grouping of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts. A host supports a given capability if it supports all the APIs defined within that capability. A host cannot partially implement a capability.  Capabilities can be feature or content-based, such as *dialog* or *authentication*, but there may also be capabilities for application types such as *tabs/pages* or *bots*, as well as other potential groups not yet anticipated.
+A *capability* is a logical grouping of APIs that provide similar functionality. You can think of Microsoft Teams, Outlook, and Office, as hosts. A host supports a given capability if it supports all the APIs defined within that capability. A host cannot partially implement a capability.  Capabilities can be feature- or content-based, such as *dialog* or *authentication*. There are also capabilities for application types, such as *tabs/pages* or *bots*, and other groupings.
 
-In the TeamsJS SDK Preview, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. If an app is running in a host that supports the dialog capability, then the app can safely call APIs such as `dialog.open` (as well as other dialog-related APIs defined in the namespace). Meanwhile, if an app attempts to call an API that's not supported in that host, the API will throw an exception.
+In the TeamsJS SDK Preview, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. If an app is running in a host that supports the dialog capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). Meanwhile, if an app attempts to call an API that's not supported in that host, the API will throw an exception.
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability. It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run (and appear in the store) for hosts that don't.
 
@@ -167,7 +173,7 @@ The TeamsJS SDK Preview organizes APIs into *capabilities* by way of namespaces.
 
 ### *app* namespace
 
-The `app` namespace contains top-level APIs required for overall app usage, across Microsoft Teams, Office and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace in TeamsJS SDK Preview:
+The `app` namespace contains top-level APIs required for overall app usage, across Microsoft Teams, Office, and Outlook. All the APIs from various other TeamsJS namespaces have been moved to the `app` namespace in TeamsJS SDK Preview:
 
 | Original namespace `global (window)` | New namespace `app` |
 | - | - |

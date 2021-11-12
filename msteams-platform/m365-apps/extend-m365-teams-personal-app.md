@@ -60,7 +60,7 @@ You can either use Teams Toolkit to update your app manifest, or apply the chang
 
 # [Manual steps](#tab/manifest-manual)
 
-Open your Teams app manifest and update the the `$schema` and `manifestVersion` values with the following:
+Open your Teams app manifest and update the `$schema` and `manifestVersion` with the following values:
 
 ```json
 {
@@ -70,7 +70,7 @@ Open your Teams app manifest and update the the `$schema` and `manifestVersion` 
 ```
 ---
 
-If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command pallette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of vscode).
+If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
 
 :::image type="content" source="images/toolkit-validate-manifest-file.png" alt-text="Teams Toolkit 'Validate manifest file' option under 'Deployment' menu":::
 
@@ -78,7 +78,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.0` or higher. While code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of `@microsoft/teams-js` in Outlook and Office will eventually cease.
 
-You can use Teams Toolkit to help automate some of the code changes to adopt the next version of `@microsoft/teams-js`, but if you would like to do the steps manually, please see [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) for details.
+You can use Teams Toolkit to help automate some of the code changes to adopt the next version of `@microsoft/teams-js`, but if you would like to do the steps manually, see [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) for details.
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
@@ -126,7 +126,7 @@ Azure Active Directory Single-sign on (SSO) for personal tabs works the same way
 
 In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
-|Microsoft 365 client application | Client Id |
+|Microsoft 365 client application | Client ID |
 |--|--|
 |Teams desktop, mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
 |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
@@ -141,7 +141,7 @@ In the **Authorized client applications** section, ensure all of the following `
 
 The final step is to sideload your updated personal tab ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) in Microsoft Teams. Once completed, your app will be available to run in Office and Outlook, in addition to Teams.
 
-1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit or in the Command Pallette `Ctrl+Shift+P` of vscode:
+1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams metadata package** option in the *Deployment* menu of Teams Toolkit or in the Command Palette `Ctrl+Shift+P` of Visual Studio Code:
 
     :::image type="content" source="images/toolkit-zip-teams-metadata-package.png" alt-text="'Zip Teams metadata package' option in Teams Toolkit extension for Visual Studio Code":::
 
