@@ -14,14 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Meeting Token Generator app helps to extend meetings in Teams. Through this app, meeting participants can request for **token**. The app generates tokens sequentially so that each participant has equal opportunity to interact, for example, the app is useful in Q&A sessions and in meetings, such as scrum meetings. You can create a Meeting Token Generator app to enhance your meeting experience in Teams.
+    Meeting Token Generator app helps to enhance your meeting experience in Teams by allowing meeting participants to request for token. The app generates tokens sequentially so that each participant has equal opportunity to interact in the meeting. For example, the app is useful in Q&A sessions and in meetings, such as scrum meetings.
 
     > [!NOTE]
-    > In-meeting tabs are available only in the **Teams desktop client**.
+    > The In-meeting tabs for Meeting Token Generator app are available only in the **Teams desktop client**.
 
-    **Key Features**
-
-    The following list provides the key features of the Meeting Token Generator:
+    **Key features of Meeting Token Generator**
 
     * Displays the current token that is being serviced in the meeting.
     * Displays the user list sorted by the token number.
@@ -29,16 +27,14 @@ items:
     * Displays current user's token number.
     * Allows the organizer to skip the current meeting token.
 
-    **User Interactions**
+    **Different ways of user interactions**
 
-    The following list provides different ways of user interactions:
-
-    * **Token** - Requests token for the user.
-    * **Done** - Confirms token generation for the user.
-    * **Skip** - Skips the current user and moves on to the next person in line for a token.
+    * Token: Requests token for the user.
+    * Done: Confirms token generation for the user.
+    * Skip: Skips the current user and moves on to the next person in line for a token.
 
        > [!NOTE]
-       > **Skip** is available only to the meeting organizers.
+       > Skip is available only to the meeting organizers.
     
     This step-by-step guide helps you to generate meeting token to extend meetings in Teams. You'll see the following output:
 
