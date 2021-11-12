@@ -278,6 +278,6 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
    :::column-end:::
 :::row-end:::
 
-## See Also
+## See also
 
-[Tab margin changes](~/resources/removing-tab-margins.md)
+* [Tab margin changes](~/resources/removing-tab-margins.md)
