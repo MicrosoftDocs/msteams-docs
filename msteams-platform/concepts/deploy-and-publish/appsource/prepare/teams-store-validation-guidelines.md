@@ -360,7 +360,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tab configuration must not take user outside Teams. The user shouldn't leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must clearly explain the value of configuration and how to configure.
 
-  ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profilename.png)
+  ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png.png)
 
   Requires navigating outside the configuration experience to acquire **Profile Name**.
 
@@ -494,7 +494,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
   App uses **Calibri** font, different from Teams native font.
 
 * If your app functionality requires changes in the settings, include a **Settings** tab.
-* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on, whenever possible. Refer [Microsoft Teams Fluent UI kit](~/design/design-teams-app-basic-ui-components.md)
+* Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on, whenever possible. Refer [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, etc.
   ![Usability Chatbot within tab](~/assets/images/submission/validation-usability-chatbot-withing-tab.png)  
@@ -697,7 +697,7 @@ for **Start Meeting**, **Upload file to DocuSign** for **Upload file**).
 Messaging extensions must preview recognized links in the Teams compose box. Don't add domains that are outside your control (either absolute URLs or wildcards). For example, `yourapp.onmicrosoft.com` is valid but `*.onmicrosoft.com` isn't valid. Top-level domains also are prohibited (for example, `*.com` or `*.org`).
 
   ![Previw link Unfurls](~/assets/images/submission/validation-preview-links-unfurls-link.png)  
-  :::image type="icon" source="<~/assets/images/submission/validation-correct-icon.png>"::: Message extension unfurls link in the Teams compose box.
+  :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Message extension unfurls link in the Teams compose box.
 
   ![Preview link doesn't unfurl](~/assets/images/submission/validation-preview-links-does-not-unfurl-link.png)  
   Message extension doesn't unfurl link in the Teams compose box.
