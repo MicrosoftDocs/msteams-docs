@@ -325,7 +325,7 @@ Your app's support URLs shouldn't require authentication. For example, users sho
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. If your support URL is hosted on GitHub, the GitHub page must be under your ownership and include your contact details or a way forward for users to raise a support ticket.
 
-  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)
+  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
 
 ### Localization
@@ -374,10 +374,10 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
    If your app asks user to embed a website URL during tab configuration and app functionality is limited to displaying the entire content in this configured website in the channel tab, your app doesn't offer significant value to the user. Consider adding another capabilities or workflows to your app.
     
-  ![Configured URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)
+  ![Configured URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App asks user to configure an URL during tab set-up. App functionality extends beyond displaying only the content in configured URL. 
 
-  ![Configured URL limited](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)
+  ![Configured URL limited](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App asks user to configure an URL during tab set-up. App functionality limited to displaying content in configured URL.
 
 ### Views
@@ -387,7 +387,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
   ![App Login Emphasis](~/assets/images/submission/validation-views-applogin.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Emphasis and focus on app login.  
 
-  ![App Logo](~/assets/images/submission/validation-views-applogo.png)
+  ![App Logo](~/assets/images/submission/validation-views-applogo.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Focus on app logo and inefficient use of configuration screen. App logo also available in top left corner. Valuable steps to configure the app are hidden under vertical scroll.  
 
 * Content can be simplified by breaking it down across multiple tabs.  
@@ -533,16 +533,16 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Listing supported bot commands in your app configurations is highly recommended. These commands display in the compose box when a user tries to message your bot.
 
-  ![Bot Commands Listed](~/assets/images/submission/validation-bot-commands-listed.png)
+  ![Bot Commands Listed](~/assets/images/submission/validation-bot-commands-listed.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot commands listed in manifest.
 
-  ![Bot Commands not Listed](~/assets/images/submission/validation-bot-commands-not-listed.png)
+  ![Bot Commands not Listed](~/assets/images/submission/validation-bot-commands-not-listed.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot commands not listed in manifest.
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help** command.
 
- ![Bot Help Command](~/assets/images/submission/validation-bot-help-command.png)  
- :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot responding to **Help** command.
+  ![Bot Help Command](~/assets/images/submission/validation-bot-help-command.png)  
+  :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot responding to **Help** command.
 
 * Bot commands shouldn't show a dead end to a user, the commands must always provide a way forward.
 
@@ -612,7 +612,7 @@ Bot notifications must include content relevant for the scope you define for the
   ![Bot Notification Relevant](~/assets/images/submission/validation-bot-notifications-relevant.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot notifications are relevant.
 
-  ![Bot Notification not relevant](~/assets/images/submission/validation-bot-notifications-not-relevant.png)
+  ![Bot Notification not relevant](~/assets/images/submission/validation-bot-notifications-not-relevant.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot notifications aren't relevant.
 
 ### Bots and Adaptive Cards
