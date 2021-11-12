@@ -37,13 +37,14 @@ Office 365 Connectors allow you to create a custom configuration page for your I
 
 Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Office 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+
 ## See also
 
 * [Create an Incoming Webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Create an Office 365 Connector](~/webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)

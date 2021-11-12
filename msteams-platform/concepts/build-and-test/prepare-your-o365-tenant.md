@@ -61,6 +61,6 @@ For complete information on how these settings interact, see [manage custom app 
 > [!div class="nextstepaction"] 
 > [Choose a test setup](~/concepts/build-and-test/debug.md)
 
-## See Also
+## See also
 
 [Add test data to your Microsoft 365 test tenant](~/concepts/build-and-test/test-data.md)
