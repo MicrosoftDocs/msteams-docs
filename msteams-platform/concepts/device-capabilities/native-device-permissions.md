@@ -194,9 +194,11 @@ Device permissions are stored for every login session. It means that if you sign
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+> 
 
 ## See also
 
+* [Device permissions for the browser](browser-device-permissions.md)
+* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
 * [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
 * [Integrate location capabilities in Teams](location-capability.md)
