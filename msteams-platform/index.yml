@@ -24,7 +24,7 @@ highlightedContent:
       url: /microsoftteams/platform/whats-new
     - title: New to Teams development? 🚀Start here! 
       itemType: get-started
-      url: /microsoftteams/platform/overview
+      url: /microsoftteams/platform/get-started/overview
     - title: Plan your app
       itemType: overview
       url: /microsoftteams/platform/concepts/design/understand-use-cases
