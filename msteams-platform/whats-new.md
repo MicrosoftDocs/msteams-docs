@@ -25,6 +25,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ----------------|
+|11/13/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), and [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)|
 |10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| [Get started with your first Teams app](get-started/get-started-overview.md)|
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. |[Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
@@ -181,7 +182,6 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md)|
 |06/21/2021|Uninstall behavior for personal app with bot.| [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
 |06/16/2021| Resource-specific consent for chats.|[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
