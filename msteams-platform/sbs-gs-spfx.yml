@@ -298,7 +298,7 @@ items:
 
         The Toolkit may prompt you to install a local certificate, if needed. This certificate allows Teams to load your application from `https://localhost`. 
         
-    1.Select **Yes** when the following dialog appears:
+    1. Select **Yes** when the following dialog appears:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost.":::
 
