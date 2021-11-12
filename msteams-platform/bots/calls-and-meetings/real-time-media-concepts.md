@@ -67,4 +67,4 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 
 ## See also
 
-* [Supported media formats for bots](~/resources/media-formats.md)
+[Supported media formats for bots](~/resources/media-formats.md)

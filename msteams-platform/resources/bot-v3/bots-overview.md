@@ -69,4 +69,4 @@ The following topics will guide you through the process of creating a great bot 
 
 ## See also
 
-* [Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).
+[Bot Framework samples](https://github.com/Microsoft/BotBuilder-Samples/blob/master/README.md).

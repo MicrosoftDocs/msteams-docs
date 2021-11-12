@@ -271,4 +271,4 @@ Do not send a message in the following cases:
 
 ## See also
 
-* [Get Teams context](~/bots/how-to/get-teams-context.md)
+[Get Teams context](~/bots/how-to/get-teams-context.md)
