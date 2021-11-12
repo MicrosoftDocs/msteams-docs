@@ -44,7 +44,9 @@ To complete this tutorial, you'll need:
 
 If you have an existing personal tab app, make a copy or a branch of your production project for testing and update your App ID in the app manifest to use a new identifier (distinct from the production App ID).
 
-If you'd like to use sample code to complete this tutorial, follow the setup steps in [Getting Started with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code.
+If you'd like to use sample code to complete this tutorial, follow the setup steps in [Getting Started with Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend) to build a personal tab app using the Teams Toolkit extension for Visual Studio Code. Or, you can start with the same [Todo List Sample updated for TeamsJS SDK v2 Preview](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/todo-list-with-Azure-backend-M365) and proceed to [Preview your personal tab in other Microsoft 365 experiences](#preview-your-personal-tab-in-other-microsoft-365-experiences). The updated sample is  also available within Teams Toolkit extension: *Development* > *View samples* > **Todo List (Works in Teams, Outlook and Office)**.
+
+:::image type="content" source="images/toolkit-todo-sample.png" alt-text="{alt-text}":::
 
 
 ## Update the app manifest
@@ -83,7 +85,7 @@ You can use Teams Toolkit to help automate some of the code changes to adopt the
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK Preview (`@microsoft/teams-js@next`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK Preview (`@microsoft/teams-js@2.0.0-beta`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 > * `package.json` references to TeamsJS SDK Preview
@@ -166,23 +168,25 @@ You can pin the app for quick access, or you can find your app in the ellipses (
 
 When you upgrade your Teams personal tab and sideload it in Teams, it will also run in Outlook desktop and web clients and Microsoft Office Home (office.com). Here's how to preview it from those Microsoft 365 experiences.
 
-### Microsoft Office Home
-
-To preview your app running in Microsoft Office Home, log into office.com with test tenant credentials. Click on the ellipses (**...**) menu on the side bar. Your sideloaded app title will appear among your installed apps.
-
-Click on your app icon to launch your app in Office Home.
-
 ### Outlook
 
-To view your app running in Outlook on Windows desktop, launch Outlook and sign in using your dev tenant account. Click on the ellipses (**...**) menu on the side bar. Your sideloaded app title will appear among your installed apps.
+To view your app running in Outlook on Windows desktop, launch Outlook and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+
+:::image type="content" source="images/outlook-desktop-more-apps.png" alt-text="Click on the ellipses ('More apps') option on the side bar to see your installed personal tabs":::
 
 Click on your app icon to launch your app in Outlook.
 
 ### Outlook on the web
 
-To view your app in Outlook on the web, visit https://outlook.office.com and sign in using your dev tenant account. Click on the ellipses (**...**) menu on the side bar. Your sideloaded app title will appear among your installed apps.
+To view your app in Outlook on the web, visit https://outlook.office.com and sign in using your dev tenant account. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
 
 Click on your app icon to launch and preview your app running in Outlook on the web.
+
+### Microsoft Office Home
+
+To preview your app running in Microsoft Office Home, log into office.com with test tenant credentials. Click on the ellipses (**...**) on the side bar. Your sideloaded app title will appear among your installed apps.
+
+Click on your app icon to launch your app in Office Home.
 
 ## Next steps
 
@@ -192,9 +196,17 @@ Outlook- and Office-enabled personal tabs are in preview and are not supported f
 
 Outlook- and Office-enabled personal tabs can be distributed to a preview audience across a test (or production) tenant in one of three ways:
 
-* **Teams client**: From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**. This requires approval from your IT admin.
-* **Microsoft Teams Admin Center**: As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
-* **Microsoft Admin Center**: As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+#### Teams client
+
+From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**. This requires approval from your IT admin.
+
+#### Microsoft Teams Admin Center
+
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
+
+#### Microsoft Admin Center
+
+As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### Multi-tenant distribution
 

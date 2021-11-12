@@ -129,11 +129,19 @@ Outlook-enabled Teams messaging extensions are in preview and not supported for 
 
 ### Single-tenant distribution
 
-Outlook-enabled messaging extensions can be distributed to a preview audience across a test (or production) tenant in one of three ways:
+Outlook- and Office-enabled personal tabs can be distributed to a preview audience across a test (or production) tenant in one of three ways:
 
-* **Teams client**: From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**. This requires approval from your IT admin.
-* **Microsoft Teams admin center**: As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
-* **Microsoft admin center**: As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
+#### Teams client
+
+From the *Apps* menu, select *Manage your apps* > **Submit an app to your org**. This requires approval from your IT admin.
+
+#### Microsoft Teams Admin Center
+
+As a Teams admin, you can upload and pre-install the app package for your organization's tenant from https://admin.teams.microsoft.com/. See [Upload your custom apps in the Microsoft Teams admin center](/MicrosoftTeams/upload-custom-apps) for details.
+
+#### Microsoft Admin Center
+
+As a global admin, you can upload and pre-install the app package from https://admin.microsoft.com/. See [Test and deploy Microsoft 365 Apps by partners in the Integrated apps portal](/microsoft-365/admin/manage/test-and-deploy-microsoft-365-apps) for details.
 
 ### Multi-tenant distribution
 
