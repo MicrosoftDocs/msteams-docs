@@ -209,6 +209,6 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 > [!div class="nextstepaction"]
 > [Submit your app](/office/dev/store/add-in-submission-guide)
 
-## See Also
+## See also
 
 [Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

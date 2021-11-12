@@ -157,7 +157,7 @@ Sample code showing the tab authentication process using Azure AD:
 |-----------------|-----------------|-------------|
 | Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
 
-## See Also
+## See also
 
 * [Plan user authentication](../../../concepts/design/understand-use-cases.md#provide-authentication)
 * [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
