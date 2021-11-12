@@ -104,6 +104,8 @@
     href: concepts/build-and-test/teams-developer-portal.md
   - name: Teams JavaScript client SDK
     href: tabs/how-to/using-teams-client-sdk.md
+  - name: Teams JavaScript client SDK Preview
+    href: m365-apps/using-teams-client-sdk-preview.md
   - name: Node.js Bot Framework for bots and messaging extensions (GitHub)
     href: https://github.com/Microsoft/botbuilder-js
   - name: .NET Bot Framework for bots and messaging extensions (GitHub)
@@ -368,6 +370,16 @@
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
+- name: Extend your app across Microsoft 365
+  items:
+  - name: Overview
+    href: m365-apps/overview.md
+  - name: Prerequisites
+    href: m365-apps/prerequisites.md
+  - name: Enable a Teams personal tab for Office and Outlook
+    href: m365-apps/extend-m365-teams-personal-app.md
+  - name: Enable a Teams messaging extension for Outlook
+    href: m365-apps/extend-m365-teams-message-extension.md
 - name: Test your app
   items:
   - name: Overview
