@@ -36,10 +36,6 @@ items:
 
     * Microsoft Teams with an account (not a guest account).
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
-      ```bash
-      # determine dotnet version
-      dotnet --version
-      ```
     * [ngrok](https://ngrok.com/) or [Tunnel Relay](https://github.com/OfficeDev/microsoft-teams-tunnelrelay)
     * Visual Studio 2019 or the latest version.
     * [Microsoft 365 developer account](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) or access to Teams account with the appropriate permissions to install an app.
@@ -329,33 +325,33 @@ items:
   content: |
     Follow the steps to use the tab.
 
-    *  In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
-    *  Tab showing Adaptive card with action controls.
+    1. In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
+    1. Tab showing Adaptive card with action controls.
 
     :::image type="content" source="./assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Tab showing Adaptive card with action controls":::
     
-    *  Select **Sign In** and choose an account to access the tab.
+    1. Select **Sign In** and choose an account to access the tab.
 
     :::image type="content" source="./assets/images/adaptive-cards/sign-in-page.png" alt-text="Sign In":::
 
-    *  Select **Show Task Module** on the home page.
+    1. Select **Show Task Module** on the home page.
 
     :::image type="content" source="./assets/images/adaptive-cards/tab-home-page.png" alt-text="Show Task Module":::
 
-    *  Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
+    1. Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
 
     :::image type="content" source="./assets/images/adaptive-cards/sample-task-module.png" alt-text="Sample Task Module":::
 
-    *  **Submit function of Adaptive Card**
+    1. **Submit function of Adaptive Card**
        **task/submit** request is triggered to your bot with the corresponding data through the Action. 
 
     :::image type="content" source="./assets/images/adaptive-cards/task-submit.png" alt-text="Task Submit card":::
 
-    *  Tab keeps you signed in unless you select **Sign out**.
+    1. Tab keeps you signed in unless you select **Sign out**.
 
     :::image type="content" source="./assets/images/adaptive-cards/sign-out.png" alt-text="Sign out":::
 
-    *  Refresh to **Sign In** again.
+    1. Refresh to **Sign In** again.
 
     :::image type="content" source="./assets/images/adaptive-cards/success-sign-out.png" alt-text="Success Sign out":::
 
