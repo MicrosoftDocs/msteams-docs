@@ -296,8 +296,6 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window automatically opens and loads the SharePoint Workbench when the build is complete. This process can take a few minutes to complete.
 
-        After the SharePoint Workbench is loaded:
-
         The Toolkit may prompt you to install a local certificate, if needed. This certificate allows Teams to load your application from `https://localhost`. 
         
     1.Select **Yes** when the following dialog appears:
@@ -315,6 +313,11 @@ items:
         Congratulations, your first app is running on Teams!
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-added-local.png" alt-text="Screenshot of the completed app in local environment":::
+
+    Your app should now be running. You can debug the app as any other SPFx web part (such as setting breakpoints).
+
+    > [!TIP]
+    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. Visual Studio Code will stop on breakpoints in your code.
 
     <details>
     <summary>Learn what happens when you use Local Workbench for debugging your app.</summary>
@@ -345,14 +348,7 @@ items:
 
         > [!NOTE]
         > This interface is intended only for exploring how a web part may appear in a mobile or a tab. You would need to write the code for including them in your app and deploy it to view them. 
-    ---        
     </details>
-
-    Your app should now be running.  You can debug the app as any other SPFx web part (such as setting breakpoints).
-
-
-    > [!TIP]
-    > Try placing breakpoints in the render method of `SPFx/src/webparts/{webpart}/{webpart}.ts` and reloading the browser window. Visual Studio Code will stop on breakpoints in your code.
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -389,7 +385,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package.png" alt-text="Screenshot for the SPFx App Package message":::
 
-        After the package is built, the Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
+        After the package is built, Teams Toolkit displays a message with the url of the SharePoint site where your app package has been uploaded.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-package-uploaded.png"alt-text="Screenshot for the SPFx package uploaded to SharePoint site":::
 
@@ -415,17 +411,18 @@ items:
 
     1. When prompted, select **Build SharePoint Package**.
 
+        Follow the procedure to [distribute the app](#distribute-the-app-package-on-sharepoint) on SharePoint.
     ---
 
     ## Distribute the app package on SharePoint
 
-    You'll find the app package uploaded at the SharePoint site. Distribute the app and sync it to Teams:
+    You'll find the app package uploaded at the SharePoint site. To distribute the app and sync it to Teams:
 
     1. Select **Distribute apps for SharePoint**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/spfx-distribute-apps.png" alt-text="Distribute apps for SharePoint." border="true":::
 
-        The Apps for SharePoint page opens with your app listed in it.
+        The Apps for SharePoint home page opens. Your app is listed in this page.
 
     1. Select the **FILES** tab.
 
@@ -436,7 +433,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/sp-sync-to-teams.png" alt-text="Select the files tab in the SharePoint App Catalog." border="true":::
 
         > [!Note]
-        > The Sync to Teams process can take a few minutes. You will see a message on the right side of the browser indicating that the app has successfully synchronized to Teams.
+        > The Sync to Teams process can take a few minutes. You will see a message in the browser indicating that the app has been successfully synchronized to Teams.
 
     1. Open the Teams application (or sign in at `https://teams.microsoft.com`).
     1. Select the triple-dot on the sidebar, then select **All apps**.  
