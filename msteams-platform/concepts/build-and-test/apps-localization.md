@@ -8,7 +8,7 @@ ms.date: 05/15/2018
 ---
 # Localize your app
 
-You must consider the following factors to localize your Microsoft Teams app:
+Consider the following factors to localize your Microsoft Teams app:
 
 1. [Localize your AppSource listing](#localize-your-appsource-listing).
 1. [Localize strings in your app manifest](#localize-strings-in-your-app-manifest). 
