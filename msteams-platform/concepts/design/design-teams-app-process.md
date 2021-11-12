@@ -112,4 +112,4 @@ Whether you’re just starting on your app or close to a production-ready app, w
 
 ## See also
 
-* [Designing activity feed notifications](~/concepts/design/activity-feed-notifications.md)
+[Designing activity feed notifications](~/concepts/design/activity-feed-notifications.md)

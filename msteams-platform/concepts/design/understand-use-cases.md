@@ -79,4 +79,4 @@ Identify which new features the user will prefer to have in the current solution
 
 ## See also
 
-* [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
+[Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)
