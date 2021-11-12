@@ -16,6 +16,9 @@ items:
   content: |
     Meeting Token Generator app helps to extend meetings in Teams. Through this app, meeting participants can request for **token**. The app generates tokens sequentially so that each participant has equal opportunity to interact, for example, the app is useful in Q&A sessions and in meetings, such as scrum meetings. You can create a Meeting Token Generator app to enhance your meeting experience in Teams.
 
+    > [!NOTE]
+    > In-meeting tabs are available only in the **Teams desktop client**.
+
     **Key Features**
 
     The following list provides the key features of the Meeting Token Generator:
@@ -62,7 +65,7 @@ items:
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
+    1. From the dropdown menu, select **Open with GitHub Desktop**:
 
        ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
 
@@ -73,9 +76,9 @@ items:
   content: |
     To create and register your bot in AAD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
-    * Create **Azure Bot** resource to register bot with **Azure Bot Service**.
+    * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
-    * Add **Microsoft Teams** channel to deploy the bot to a Teams channel.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Add messaging endpoint to the ngrok tunnel you created.
 
@@ -123,7 +126,7 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you created a new **Microsoft App ID** in the previous section:
+      Perform the following steps if you have created a new **Microsoft App ID** in the previous section:
 
     1. In the left panel, select **Configuration**. 
 
@@ -151,7 +154,7 @@ items:
          ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
        
        > [!TIP]
-       > Save the client secret ID value or app password for future reference.
+       > Save the **Client secrets** value or app password for future reference.
 
     **To add the Microsoft Teams channel**
 
@@ -196,8 +199,8 @@ items:
         ![ngrok HTTPS URL](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)
 
         > [!NOTE]
-        > The HTTPS URL in your ngrok will be your fully qualified domain name.
-        > The `WebAppDomain` will be the fully qualified domain name without `https://` in it.
+        > The HTTPS URL in your ngrok is your fully qualified domain name.
+        > The `WebAppDomain` is fully qualified domain name without `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -315,7 +318,7 @@ items:
     1. Select **Authentication** from the left panel to set a redirect URI. 
 
        > [!NOTE]
-       > If an app is not granted IT admin consent, users will have to provide consent the first time they use an app.
+       > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
                
          1. Select **Add a platform**.
          1. Select **Web**:
@@ -345,16 +348,16 @@ items:
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app will be used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
+         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
           > [!NOTE]
-          > The sample will only work in the current tenant.
+          > The sample works only in the current tenant.
 
          * Set `"AzureAd"."ApplicationId "` to your bot's **Microsoft App ID**.
          * Set `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`:
 
        > [!NOTE]
-       > `WebAppDomain` will be your ngrok domain, so the content bubble URL will be similar to `https://ae57****.ngrok.io/contentBubble.html`.
+       > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
@@ -399,7 +402,7 @@ items:
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
-    The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server will serve the static files from the location:
+    The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location:
 
        ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
@@ -487,9 +490,6 @@ items:
     1. Select **Switch to Developer preview**:
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
- 
-       > [!NOTE]
-       > In-meeting tabs are available only in the **Teams desktop client**.
 
 - title: Build the client app
   durationInMinutes: 1
@@ -527,7 +527,7 @@ items:
 
        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
-       You will see the app listed in the **Manage apps** section:
+       The **Manage apps** section displays the application in the listed apps:
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
@@ -543,7 +543,7 @@ items:
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
-      The app will be visible in the meeting chat. 
+      The app is visible in the meeting chat. 
 
     1. Start the meeting. The icon is visible in the meeting control bar:
 
