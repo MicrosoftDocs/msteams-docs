@@ -47,14 +47,14 @@ items:
     Ensure you install the following tools and set up your development environment:  
 
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
     * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or above.
     * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
     
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
-    * [ECMAScript6](http://es6-features.org/#Constants)
+    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
+    * [ECMAScript6](http://es6-features.org/#Constants).
     * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1.
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16+.
 
@@ -469,7 +469,7 @@ items:
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
-       1. Select **Save**. Your test tenant can permit custom app sideloading:
+       1. Select **Save**. Your test tenant can permit custom app sideloading.
 
           > [!NOTE]
           > It takes some time for the sideloading to be active.
