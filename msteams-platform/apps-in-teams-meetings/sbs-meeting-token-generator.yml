@@ -396,8 +396,8 @@ items:
     **To build client app using npm install**
     
     1. Navigate to the `App` folder in cloned repository.
-    1. Copy `App` folder path.
-    1. In a terminal window, change the directory to the copied `App` path:
+    1. Copy the `App` folder path.
+    1. In a terminal window, change current the directory to the copied `App` path:
 
        ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
 
