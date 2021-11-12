@@ -192,7 +192,7 @@ items:
 
     **To add messaging endpoint**
 
-    1. From ngrok, copy the HTTPS URL (https to io) as shown in the following image:
+    1. From ngrok, copy the HTTPS URL (https to io) as shown in the following image.
 
         ![ngrok HTTPS URL](~/assets/images/meeting-token-generator/meeting-token-generator-ngrok.png)
 
@@ -202,7 +202,7 @@ items:
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
-    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**:
+    1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
         ![Messaging Endpoint](~/assets/images/meeting-token-generator/meeting-token-generator-messaging-endpoint.png)
 
@@ -222,22 +222,22 @@ items:
 
     1. In the left navigation panel, select **App Registrations**.
 
-    1. Select your bot:
+    1. Select your bot.
 
        ![App registration](~/assets/images/meeting-token-generator/meeting-token-generator-appregister.png)
 
     1. Under **Manage**, select **Expose an API**.
 
-    1. Select **Set**:
+    1. Select **Set**.
 
        ![Expose an API](~/assets/images/meeting-token-generator/meeting-token-generator-exposeanapi.png)
 
-    1. Set the **Application ID URI** in the form of `api://{AppID}`: 
+    1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
     1. Insert your `WebAppDomain` value between `api://` and `/{AppID}` as given:</br>
-        `api://ae57****.ngrok.io/{AppID}`.</br>
+        `api://ae57****.ngrok.io/{AppID}`</br>
         
        The domain name is highlighted in the following image:
         
@@ -403,7 +403,7 @@ items:
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
-    The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location:
+       The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location:
 
        ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
