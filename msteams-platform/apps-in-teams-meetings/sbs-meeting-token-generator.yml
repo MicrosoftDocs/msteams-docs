@@ -45,17 +45,18 @@ items:
   content: |
     Ensure you install the following tools and set up your development environment:  
 
-    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1.
-    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
-    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or above.
-    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution.
+    * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
+    * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
+    * [nodejs](https://nodejs.org/en/download/) LTS version 10.21.0 or later
+    * [ngrok](https://ngrok.com/download) latest version (only for devbox testing) or any equivalent tunneling solution
+    * [Get a free Teams developer tenant](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
     
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
-    * [ECMAScript6](http://es6-features.org/#Constants).
-    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1.
-    * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16+.
+    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [ECMAScript6](http://es6-features.org/#Constants)
+    * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
+    * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
 
     Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
@@ -67,10 +68,10 @@ items:
 
     1. Select **Clone**.
 
-- title: Create and register your bot in Azure Active Directory(AAD) Portal
+- title: Create and register your bot in AAD portal
   durationInMinutes: 5
   content: |
-    To create and register your bot in AAD, create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
+    To create and register your bot in Azure Active Directory(AAD), create a tunnel using ngrok, and add messaging endpoint, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot Service.
     * Create client secret that enables SSO authentication of the bot.
@@ -83,28 +84,28 @@ items:
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
     1. In the search box, enter **Azure bot**.
-    1. Select Enter.
-    1. Select **Azure Bot**:
+    1. Select **Enter**.
+    1. Select **Azure Bot**.
 
          ![Create Azure bot card](~/assets/images/bots/createazurebot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle**.
-    1. From the **Subscription** dropdown list, choose **msteams.nonprod.pub.msft.aplt**.
-    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group: select **Create new** > enter resource name > select **OK**.
+    1. From the **Subscription** dropdown list, select **msteams.nonprod.pub.msft.aplt**.
+    1. From the **Resource group** dropdown list, select your existing resource group. You can also create a new resource group (select **Create new** > enter resource name > select **OK**).
     
-    1. Select required location from **New resource group location** dropdown list:
+    1. Select the required location from **New resource group location** dropdown list.
 
         ![Create resource Azure bot](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**.
+       You can either select **Use existing app registration** and enter **Existing app id** and **Existing app password**, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
 
-    1. Select **Review + create**:
+    1. Select **Review + create**.
 
         ![Create Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-appidcreate.png)
 
@@ -112,7 +113,7 @@ items:
 
         It takes a few moments for your bot service to be provisioned.
 
-    1. Select **Go to resource**: 
+    1. Select **Go to resource**. 
 
         ![Deploy App](~/assets/images/meeting-token-generator/meeting-token-generator-botdeployment.png)
 
@@ -122,18 +123,18 @@ items:
 
     **To create client secret**
 
-      Perform the following steps if you have created a new **Microsoft App ID** in the previous section:
+      Perform the following steps if you have created a new **Microsoft App ID**:
 
     1. In the left panel, select **Configuration**. 
 
        > [!TIP]
        > Save the **Microsoft App ID** or **Client ID** for future reference.
 
-    1. Next to **Microsoft App ID**, select **Manage**:
+    1. Next to **Microsoft App ID**, select **Manage**.
 
         ![Microsoft App ID](~/assets/images/meeting-token-generator/meeting-token-generator-config.png)
 
-    1. In the **Client secrets** section, select **New client secret**: 
+    1. In the **Client secrets** section, select **New client secret**. 
 
         ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
     
@@ -141,11 +142,11 @@ items:
 
     1. Enter **Description**.
     
-    1. Select **Add**:
+    1. Select **Add**.
 
         ![Add client secret to app](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)
 
-    1. In the **Value** column, select **Copy to clipboard**:
+    1. In the **Value** column, select **Copy to clipboard**.
 
          ![Value of client secret](~/assets/images/meeting-token-generator/meeting-token-generator-clientvalue.png)
        
@@ -154,7 +155,7 @@ items:
 
     **To add the Microsoft Teams channel**
 
-    1. Select **Home**:
+    1. Select **Home**.
 
         ![Home page](~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png)
 
@@ -166,11 +167,11 @@ items:
 
     1. Select the checkbox to accept the **Terms of Service**.
     
-    1. Select **Agree**:
+    1. Select **Agree**.
 
           ![Terms of service](~/assets/images/meeting-token-generator/meeting-token-generator-terms.png)
 
-    1. Select **Save**:
+    1. Select **Save**.
 
           ![Select Teams](~/assets/images/meeting-token-generator/meeting-token-generator-config-teams.png)   
     
