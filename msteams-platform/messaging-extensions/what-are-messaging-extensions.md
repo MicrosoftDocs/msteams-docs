@@ -78,9 +78,7 @@ The following images display link unfurling feature when a link is pasted in mes
 > [!div class="nextstepaction"]
 > [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
-
 ## See also
 
+* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 * [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
