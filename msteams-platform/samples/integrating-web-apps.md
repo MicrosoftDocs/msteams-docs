@@ -1,13 +1,13 @@
 ---
 author: heath-hamilton
-description: Best practices for integrating existing web apps with Microsoft Teams
+description: Best practices or considerations for integrating existing web apps with Microsoft Teams
 ms.author: v-heha
 ms.date: 08/26/2020
 ms.localizationpriority: medium
 ms.topic: conceptual
-title: Web apps
+title: Considerations for Teams integration
 ---
-# Web apps 
+# Considerations for Teams integration 
 
 You can make web apps suitable with Teams' social and collaborative features, by properly integrating them with Teams.
   
@@ -106,12 +106,12 @@ You can create links to information and features within Teams. Use [deep links](
 
 Use a [bot](../bots/what-are-bots.md) in your Teams app for multi-threaded conversation, as it offers more flexibility than a [webhook](../webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
-Bots also allow you to send **proactive messages** to individual users or channels. The proactive messages are unprompted messages triggered by an outside event and not a message sent to a bot. For example, your bot sends a welcome message when it is installed or a new user joins a channel. 
+Bots also allow you to send **proactive messages** to individual users or channels. The proactive messages are unprompted messages triggered by an outside event and not a message sent to a bot. For example, your bot sends a welcome message when it is installed or a new user joins a channel.
 
 Sending proactive messages requires Teams-specific identifiers. You can capture the information by [fetching roster or user profile data](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile), [subscribing to conversation events](../bots/how-to/conversations/subscribe-to-conversation-events.md), or using [Microsoft Graph](/microsoftteams/platform/graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages?context=graph/context#proactive-messaging-in-teams).
 
-Do not spam users with excessive messages. If the Teams capability supports it, the users can configure notification settings for your app.   
-Following is an example of a notification message: 
+Do not spam users with excessive messages. If the Teams capability supports it, the users can configure notification settings for your app.
+Following is an example of a notification message:
 **Don't send me unprompted messages**.
 
 ## Use SharePoint for file and data storage
@@ -122,4 +122,8 @@ When a team is created, a [SharePoint site collection](/microsoftteams/sharepoin
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Low-code and no-code solutions for Microsoft Teams](~/samples/teams-low-code-solutions.md)
+* [Create Share-to-Teams button](../concepts/build-and-test/share-to-teams.md)
+* [SameSite cookie attributes](~/resources/samesite-cookie-update.md)
+* [Integrate Power Virtual Agents chatbot](~/bots/how-to/add-power-virtual-agents-bot-to-teams.md)

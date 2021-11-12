@@ -1,7 +1,7 @@
 ---
 title: Add authentication to your messaging extension
 author: surbhigupta
-description: How to add authentication to a messaging extension
+description: Learn how to add authentication to a messaging extension using code examples and sample
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -42,7 +42,7 @@ Your service should verify that the authentication code received in step 6 match
 
 To prompt an unauthenticated user to sign in, respond with a suggested action of type `openUrl` that includes the authentication URL.
 
-#### Response example for a sign-in action
+#### Response example for a sign in action
 
 ```json
 {
@@ -74,7 +74,7 @@ As with other embedded experiences running inside Microsoft Teams, your code ins
 
 When the sign in request completes and redirects back to your page, it must perform the following steps:
 
-1. Generate a security code, a random number. You must cache this code on your service, along with the credentials obtained through the sign in flow, such as OAuth 2.0 tokens.
+1. Generate a security code, a random number. You must cache this code on your service, along with the credentials obtained through the sign-in flow, such as OAuth 2.0 tokens.
 1. Call `microsoftTeams.authentication.notifySuccess` and pass the security code.
 
 At this point, the window closes and the control is passed to the Teams client. The client now reissues the original user query, along with the security code in the `state` property. Your code can use the security code to look up the credentials stored earlier to complete the authentication sequence and then complete the user request.
@@ -133,4 +133,6 @@ At this point, the window closes and the control is passed to the Teams client. 
 |----------------|-----------------|--------------|----------------|
 |Messaging extensions - auth and config | A Messaging Extension that has a configuration page, accepts search requests, and returns results after the user has signed in. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/csharp_dotnetcore/52.teams-messaging-extensions-search-auth-config)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/52.teams-messaging-extensions-search-auth-config)| 
 
- 
+## See Also
+
+[Single sign-on (SSO) support for messaging extensions](~/messaging-extensions/how-to/enable-sso-auth-me.md)

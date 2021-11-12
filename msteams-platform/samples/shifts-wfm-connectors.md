@@ -1,6 +1,6 @@
 ---
 title: Production-ready Shifts Connectors
-description: Workforce management Shifts connectors for Teams
+description: Learn about the benefits of using Workforce management Shifts connectors for Teams, such as Kronos-to-Teams Shifts connector and JDA-to-Teams Shifts connector
 ms.topic: reference
 author: surbhigupta
 ms.date: 03/09/2020
@@ -11,9 +11,9 @@ ms.author: lajanuar
 
 # Production-ready Shifts Connectors  
 
-Teams Shifts Workforce management (WFM) connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts. 
+Teams Shifts Workforce management (WFM) connectors are production-ready, open-source, and community-driven integrations, useful for firstline workers. They offer a seamless experience and quick process for the digital transformation of firstline workers with Teams Shifts.
 
-Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.   
+Each connector provides detailed guidance for deployment and integration to your organization. The complete source code is available in GitHub repository. You can explore in detail or fork, and customize to meet your specific needs.
 
 This document gives an overview of key benefits of Teams Shifts WFM connectors, Kronos-to-Teams Shifts connector, and JDA-to-Teams Shifts connector.
 

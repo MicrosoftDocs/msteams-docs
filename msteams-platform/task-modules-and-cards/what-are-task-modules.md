@@ -45,11 +45,11 @@ A task module includes the following as shown in the previous image:
 6. If you are displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) the padding is added for you. For more information, see [task module CSS for HTML or JavaScript task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#task-module-css-for-html-or-javascript-task-modules).
 7. Adaptive Card buttons render after you select **Sign up**. When using your own page, create your own buttons.
 
-## See also
-
-[Cards](~/task-modules-and-cards/what-are-cards.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+
+## See also
+
+[Cards](~/task-modules-and-cards/what-are-cards.md)

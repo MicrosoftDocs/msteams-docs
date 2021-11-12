@@ -4,7 +4,7 @@ description: Overview of Moodle LMS integration with Teams
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: surbhigupta
-author: v-rpatkur
+keywords: moodle LMS mConnect deep links
 ---
 
 # Overview
