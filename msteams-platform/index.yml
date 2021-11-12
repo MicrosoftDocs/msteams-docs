@@ -40,9 +40,9 @@ highlightedContent:
     - title: Publish your app to the Teams store
       itemType: deploy
       url: /microsoftteams/platform/concepts/deploy-and-publish/appsource/publish
-    - title: Tutorials and code samples
+    - title: Code samples
       itemType: sample
-      url:  /microsoftteams/platform/get-started/code-samples
+      url: https://github.com/OfficeDev/Microsoft-Teams-Samples
    
 # conceptualContent section
 conceptualContent:
