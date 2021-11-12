@@ -53,8 +53,8 @@ items:
     
     Ensure you have working knowledge of the following technologies:
 
-    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments).
-    * [ECMAScript6](http://es6-features.org/#Constants).
+    * [C#](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
+    * [ECMAScript6](http://es6-features.org/#Constants)
     * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1.
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16+.
 
@@ -472,9 +472,7 @@ items:
        1. Select **Save**. Your test tenant can permit custom app sideloading:
 
           > [!NOTE]
-          > It might take up to 24 hours for the sideloading to be active.
-
-          ![Upload app view](~/assets/images/prepare-test-tenant/upload-for-contoso.png)
+          > It takes some time for the sideloading to be active.
 
     1. Go to **Microsoft Teams**.
     
