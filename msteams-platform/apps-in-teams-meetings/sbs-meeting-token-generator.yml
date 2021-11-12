@@ -101,8 +101,6 @@ items:
 
         ![Create resource Azure bot](~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png)
 
-        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-review-plus-create.png" alt="Create resource Azure bot" width="700"/>
-
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
        You can either select **Use existing app registration** and enter **Existing app id**, and **Existing app password** or select **Create new Microsoft App ID**.
@@ -148,8 +146,8 @@ items:
     1. Enter **Description**.
     
     1. Select **Add**:
- 
-        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png" alt="Add client secret to app" width="500"/>
+
+        ![Add client secret to app](~/assets/images/meeting-token-generator/meeting-token-generator-clientsecret.png)
 
     1. In the **Value** column, select **Copy to clipboard**:
 
@@ -162,7 +160,7 @@ items:
 
     1. Select **Home**:
 
-        <img src="~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png" alt="Home page" width="600"/>
+        ![Home page](~/assets/images/meeting-token-generator/meeting-token-generator-gotohome.png)
 
     1. Select your bot from **Recent resources**.
 
