@@ -1,6 +1,6 @@
 ---
 title: Cards and task modules
-description: Cards and task modules.
+description: Learn about types of cards supported in bots for Teams, such as, Adaptive cards, Hero card, Thumbnail card, and more. Learn about card actions and invoking task modules in channels, bots, or deep links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 
 # Cards and task modules
 
-Cards provide users with a variety of visual, audio, and selectable messages and assist in conversation flow.
+Cards provide users with various visual, audio, and selectable messages and help in conversation flow.
 
-With task modules, you can create modal pop-up experiences in Microsoft Teams. They are particularly useful for starting and completing tasks or displaying rich information like videos or Power business intelligence (BI) dashboards.
+With task modules, you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards.
 
 The following types of cards are supported in bots for Teams:
 
@@ -19,13 +19,19 @@ The following types of cards are supported in bots for Teams:
 * List card
 * Office 365 Connector card
 * Receipt card
-* Signin card
+* Sign in card
 * Thumbnail card
 * Card collections
 
-You can format card text using a subset of XML or HTML formatting or Markdown, depending on the card type. You can add and respond to card actions that open a URL, send messages and payload to the bot, or initiate OAuth flow.
+You can format card text using a subset of XML or HTML formatting or Markdown depending on the card type.
 
-You can invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab. You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
+You can add and respond to card actions that:
+* Open a URL
+* Send messages and payload to the bot
+* Initiate OAuth flow
+
+You can invoke the task modules in channel or personal tabs, bots, or deep links. Your user's experience for any workflows that requires data input can be improved by adding a task module to the user's tab.
+You can invoke task modules from Teams bots using buttons on Adaptive Cards and Bot Framework cards.
 
 ## See also
 

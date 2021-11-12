@@ -1,6 +1,6 @@
 ---
 title: Microsoft Teams Authentication flow for bots
-description: Describes Microsoft Teams authentication flow in bots
+description: Describes Microsoft Teams authentication flow in bots with Code sample.
 keywords: teams authentication flow bots
 ms.localizationpriority: medium
 ms.topic: overview
