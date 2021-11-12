@@ -32,7 +32,7 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure that you install the following tools and set up your development environment:
+    Ensure that you install the following tools and set up your development environment
 
     * Microsoft Teams with an account (not a guest account).
     * [.NET Core SDK](https://dotnet.microsoft.com/download) version 3.1
@@ -65,7 +65,7 @@ items:
     1. In the search box, enter **Azure bot** and press Enter key.
     1. Select **Azure Bot**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/azure-bot.png" alt-text="Azure Bot":::
+        ![Azure Bot](~/assets/images/adaptive-cards/azure-bot.png)
 
     1. Select **Create**.
     1. Enter required bot handle name in **Bot handle** field.
@@ -79,21 +79,21 @@ items:
 
     1. Select **Review + create**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/create-azure-bot.png" alt-text="Create Azure Bot":::
+        ![Create Azure Bot](~/assets/images/adaptive-cards/create-azure-bot.png)
 
     1. If the validation passes, select **Create**.
 
         It takes a few moments for your bot service to be provisioned.
 
-        :::image type="content" source="./assets/images/adaptive-cards/validation-pane.png" alt-text="Azure Bot validation":::
+        ![Azure Bot validation](~/assets/images/adaptive-cards/validation-pane.png)
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        :::image type="content" source="./assets/images/adaptive-cards/go-to-resource card.png" alt-text="Go to resource":::
+        ![Go to resource](~/assets/images/adaptive-cards/go-to-resource card.png)
 
         Now your Azure bot is created.
 
-        :::image type="content" source="./assets/images/adaptive-cards/azure-bot-ui.png" alt-text="Azure bot resource created":::
+        ![Azure bot resource created](~/assets/images/adaptive-cards/azure-bot-ui.png)
 
     **To create client secret**
 
@@ -101,21 +101,21 @@ items:
 
     1. In **Settings**, select **Configuration**. Save the **Microsoft App ID** (client ID) for future reference.
 
-        :::image type="content" source="./assets/images/adaptive-cards/config-microsoft-app-id.png" alt-text="Microsoft App ID":::
+        ![Microsoft App ID](~/assets/images/adaptive-cards/config-microsoft-app-id.png)
 
     1. Adjacent to **Microsoft App ID**, select **Manage**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/manage-bot-label.png" alt-text="Manage Bot.":::
+        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
     1. In the **Client secrets** section, select **New client secret**. The **Add a client secret** window appears.  
 
     1. Enter **Description** and select **Add**.
  
-        :::image type="content" source="./assets/images/adaptive-cards/client-secret.png" alt-text="Client secret.":::
+        ![Client secret](~/assets/images/adaptive-cards/client-secret.png)
 
     1. In the **Value** column, select **Copy to clipboard** and save the client secret ID for future reference.
 
-        :::image type="content" source="./assets/images/adaptive-cards/client-secret-value.png" alt-text="Client secret value.":::
+        ![Client secret value](~/assets/images/adaptive-cards/client-secret-value.png)
        
     **To add the Microsoft Teams channel**
 
@@ -123,20 +123,20 @@ items:
 
     1. Go to **Home**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/bot-home-page.png" alt-text="Bot home page.":::
+        ![Bot home page](~/assets/images/adaptive-cards/bot-home-page.png)
 
     1. Open your bot, which is listed in the **Recent resources** section.
     1. Select **Channels** in the left pane and select **Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-        :::image type="content" source="./assets/images/adaptive-cards/channel-teams.png" alt-text="Bot home page.":::
+        ![Channel Teams](~/assets/images/adaptive-cards/channel-teams.png)
 
     1. Select the checkbox to accept the terms of service and select **Agree**.</br>
 
-        :::image type="content" source="./assets/images/adaptive-cards/select-terms-of-service.png" alt-text="Select terms of service":::
+        ![Select terms of service](~/assets/images/adaptive-cards/select-terms-of-service.png)
 
     1. Select **Save**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/select-teams.png" alt-text="Select Teams.":::
+        ![Select Teams](~/assets/images/adaptive-cards/select-teams.png)
 
     **To add messaging endpoint**
 
@@ -146,11 +146,11 @@ items:
     1. Go to ngrok.
     1. Copy the HTTPS URL (https to io) as shown in the following image:
 
-        ![ngrok HTTPS URL](~/assets/images/bots/ngrokURL.png)
+        ![ngrok HTTPS URL](~/assets/images/adaptive-cards/ngrok-url.png)
 
     1. In **Messaging endpoint**, use the HTTPS URL available from ngrok and at the end of the URL add **/api/messages**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/ngrok-messaging-endpoint.png" alt-text="Messaging endpoint":::
+        ![Messaging endpoint](~/assets/images/adaptive-cards/ngrok-messaging-endpoint.png)
 
     1. Select **Apply**.
 
@@ -165,18 +165,18 @@ items:
 
     1. Select **Manage** next to **Microsoft App ID**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/manage-bot-label.png" alt-text="Manage Bot":::
+        ![Manage Bot](~/assets/images/adaptive-cards/manage-bot-label.png)
 
     1. Select **Authentication** from the left pane of your bot resource.
     1. In **Platform configurations**, select **Add a platform**.
     1. Select **Web**.
     1. Enter **Redirect URIs** as **https://token.botframework.com/.auth/web/redirect** and select **Configure**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/configure-web-redirect-url.png" alt-text="Configure web redirect uri":::
+        ![Configure web redirect url](~/assets/images/adaptive-cards/configure-web-redirect-url.png)
 
         The Redirect URI is added to the Azure bot resource.
 
-        :::image type="content" source="./assets/images/adaptive-cards/web-redirect-url-display.png" alt-text="Display web redirect uri":::
+        ![Display web redirect url](~/assets/images/adaptive-cards/web-redirect-url-display.png)
 
     **To expose API endpoint**
 
@@ -184,7 +184,7 @@ items:
     1. Select **Set** for the Application ID URI.
     1. Use the **Application ID URI** shown and append **api://botid-** at the beginning of the URI.
 
-        :::image type="content" source="./assets/images/adaptive-cards/app-id-url.png" alt-text="App ID URI":::
+        ![App ID URI](~/assets/images/adaptive-cards/app-id-url.png)
 
     1. Select **Save**. Save the **Application ID URI** for future reference.
     1. Select **Add a scope**.
@@ -201,7 +201,7 @@ items:
 
     1. Ensure that **State** is set to **Enabled**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/add-scope.png" alt-text="Add a scope":::
+        ![Add a scope](~/assets/images/adaptive-cards/add-scope.png)
 
     1. Select **Add scope**. The scope name automatically matches the Application ID URI, with **/access_as_user** added to the end.
 
@@ -211,21 +211,21 @@ items:
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
     * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
 
-        ![Add client application](~/assets/images/adaptive-cards/add-client-aapplication.png)       
+        ![Add client application](~/assets/images/adaptive-cards/add-client-aapplication.png)      
     
     **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
     1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.</br>
 
-        :::image type="content" source="./assets/images/adaptive-cards/add-permissions.png" alt-text="API permissions":::
+        ![API permissions](~/assets/images/adaptive-cards/add-permissions.png)
 
     **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
     1. Select the **Access tokens** and **ID tokens** checkboxes.</br>
 
-        :::image type="content" source="./assets/images/adaptive-cards/authentication-tokens.png" alt-text="Authentication Tokens":::
+        ![Authentication Tokens](~/assets/images/adaptive-cards/authentication-tokens.png)
 
     1. Select **Save** to save the changes.
 
@@ -234,7 +234,7 @@ items:
     1. Select **Manifest** from the left pane.
     1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
 
-        :::image type="content" source="./assets/images/adaptive-cards/manifest.png" alt-text="Update Manifest":::
+        ![Update Manifest](~/assets/images/adaptive-cards/manifest.png)
 
     **To set up Bot Service connection**
 
@@ -268,7 +268,7 @@ items:
     1. Select **code** and select the dropdown.
     1. Select **Download ZIP**.
 
-        :::image type="content" source="./assets/images/adaptive-cards/repo-download.png" alt-text="Repo Download":::
+        ![Repo Download](~/assets/images/adaptive-cards/repo-download.png)
 
     1. Ensure that you note the Path where the repository is downloaded.
     1. In the Windows Explorer, Select the **Project**.
@@ -280,7 +280,7 @@ items:
         > [!NOTE]
         > You can obtain the `MicrosoftAppId` from the bot's Configuration page. The `MicrosoftAppPassword` is the Value for client secret ID that you saved previously.
 
-        :::image type="content" source="./assets/images/adaptive-cards/appsettings-json.png" alt-text="Appsettings Json":::
+        ![Appsettings Json](~/assets/images/adaptive-cards/appsettings-json.png)
 
     1. Select the **F5** key to run this project.
 
@@ -304,20 +304,20 @@ items:
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
     1. Select **Add** to add the conversation bot to your chat.
 
-        :::image type="content" source="./assets/images/adaptive-cards/tab-in-teams.png" alt-text="Tab in Teams app":::
+        ![Tab in Teams app](~/assets/images/adaptive-cards/tab-in-teams.png)
 
         You can interact with this bot by sending it a message. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **logout**.
 
     1. Send a message to the bot. The conversation bot asks for permissions for the first time.
 
-        (Image to be replaced)
+        (Image to be replaced once I get the output)
         ![Permissions to bot](~/assets/images/bots/sbsdesktop-mobile-consent-request.png)
 
     1. Select **Continue** to accept the permissions.
 
     1. Select **Accept** for **Permissions requested**.
 
-        (Image to be replaced)
+        (Image to be replaced once I get the output)
         ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
 
 - title: Interacting with the Tab in Teams
@@ -328,32 +328,32 @@ items:
     1. In the navigation bar located on the left pane of the Teams, select the ellipses ●●● and choose your app from the list.
     1. Tab showing Adaptive card with action controls.
 
-    :::image type="content" source="./assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Tab showing Adaptive card with action controls":::
+        ![Tab showing Adaptive card with action controls](~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png)
     
     1. Select **Sign In** and choose an account to access the tab.
 
-    :::image type="content" source="./assets/images/adaptive-cards/sign-in-page.png" alt-text="Sign In":::
+        ![Sign In](~/assets/images/adaptive-cards/sign-in-page.png)
 
     1. Select **Show Task Module** on the home page.
 
-    :::image type="content" source="./assets/images/adaptive-cards/tab-home-page.png" alt-text="Show Task Module":::
+        ![Show Task Module](~/assets/images/adaptive-cards/tab-home-page.png)
 
     1. Tab/fetch is the first invoke request that your bot receives when a user opens an Adaptive Card tab. When your bot receives the request, it either sends a tab continue response or a tab auth response.
 
-    :::image type="content" source="./assets/images/adaptive-cards/sample-task-module.png" alt-text="Sample Task Module":::
+        ![Sample Task Module](~/assets/images/adaptive-cards/sample-task-module.png)
 
     1. **Submit function of Adaptive Card**
        **task/submit** request is triggered to your bot with the corresponding data through the Action. 
 
-    :::image type="content" source="./assets/images/adaptive-cards/task-submit.png" alt-text="Task Submit card":::
+        ![Task Submit card](~/assets/images/adaptive-cards/task-submit.png)
 
     1. Tab keeps you signed in unless you select **Sign out**.
 
-    :::image type="content" source="./assets/images/adaptive-cards/sign-out.png" alt-text="Sign out":::
+        ![Sign out](~/assets/images/adaptive-cards/sign-out.png)
 
     1. Refresh to **Sign In** again.
 
-    :::image type="content" source="./assets/images/adaptive-cards/success-sign-out.png" alt-text="Success Sign out":::
+        ![Success Sign out](~/assets/images/adaptive-cards/success-sign-out.png)
 
 - title: Deploy the bot to Azure
   durationInMinutes: 1
@@ -367,7 +367,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    Below image should be replaced
+    Below image should be replaced once I get the output
     ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
     
 - content: |
