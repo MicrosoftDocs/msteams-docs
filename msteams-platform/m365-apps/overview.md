@@ -6,7 +6,7 @@ ms.topic: overview
 ---
 # Extend Teams apps across Microsoft 365 (preview)
 
-You can preview your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client Preview SDK](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](manifest-schema-dev-preview.md). With this preview, you can:
+You can preview your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client Preview SDK](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](resources/schema/manifest-schema-dev-preview.md). With this preview, you can:
 
 - Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Microsoft Office Home (office.com).
 - Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
