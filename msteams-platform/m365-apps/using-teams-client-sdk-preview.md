@@ -159,7 +159,7 @@ async function example() {
 ---
 
 > [!TIP]
-> When you update your code for the TeamsJS SDK v2 Preview using [Teams Toolkit](#updating-to-the-teams-client-sdk-preview), the required updates are flagged for you with `TODO` comments in your client code.
+> When you update your code for the TeamsJS SDK v2 Preview using [Teams Toolkit](#updating-to-the-teams-client-sdk-v2-preview), the required updates are flagged for you with `TODO` comments in your client code.
 
 ## APIs organized into capabilities
 
@@ -171,7 +171,7 @@ In the TeamsJS SDK v2 Preview, APIs are defined as functions in a JavaScript nam
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run (and appear in the store) for hosts that don't.
 
-The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It is also available as a `{hostName}` [URL placeholder value](../tabs/how-to/access-teams-context.md#getting-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
+The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It is also available as a `{hostName}` [URL placeholder value](../tabs/how-to/access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
 
 * **Don't** assume certain functionality is or isn't available in a host based on the *hostName* property value. Instead, check for capability support (`isSupported`).
 * **Don't** use *hostName* to gate API calls. Instead, check for capability support (`isSupported`).
