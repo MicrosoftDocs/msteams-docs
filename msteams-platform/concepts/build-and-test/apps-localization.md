@@ -154,6 +154,6 @@ If your provide localized versions of your application, the users respond with t
 |-------------|-------------|------|------|
 | App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
-## See Also
+## See also
 
 [Localize JSON schema reference](~/resources/schema/localization-schema.md)
