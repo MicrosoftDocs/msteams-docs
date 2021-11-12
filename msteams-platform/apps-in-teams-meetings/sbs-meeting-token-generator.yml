@@ -201,7 +201,7 @@ items:
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your fully qualified domain name.
-        > The `WebAppDomain` is fully qualified domain name without `https://` in it.
+        > The `WebAppDomain` is a fully qualified domain name that does not include `https://` in it.
 
     1. In **Settings** for the Azure bot that you created, select **Configuration**.
 
@@ -217,7 +217,7 @@ items:
 - title: Update the AAD app registration for tab SSO
   durationInMinutes: 1
   content: |
-    To register your app through the AAD portal:  
+    **To register your app through the AAD portal**  
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
@@ -256,7 +256,7 @@ items:
   
     1. Set **Who can consent?** to `Admins and users`.
   
-    1. To configure the admin and user consent prompts with values that are appropriate for the `access_as_user` scope, provide the following information in the fields:</br>
+    1. To configure the admin and user consent prompts with appropriate values for `access_as_user` scope, provide the following information in the fields:</br>
     
          * Enter `Teams can access the user’s profile` as **Admin consent display name**.
 
@@ -266,6 +266,8 @@ items:
 
          * Enter `Enable Teams to call this app’s APIs with the same rights as the user` as **User consent description**.
   
+       The following image shows the fields and the values:
+
         ![Add a scope](~/assets/images/meeting-token-generator/meeting-token-generator-addascope.png)
 
     1. Ensure that **State** is set to **Enabled**.
