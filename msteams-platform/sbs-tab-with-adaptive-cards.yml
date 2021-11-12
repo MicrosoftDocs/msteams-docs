@@ -89,7 +89,7 @@ items:
 
     1. Select **Go to resource**. The bot and the related resources are listed in the resource group.
 
-        ![Go to resource](~/assets/images/adaptive-cards/go-to-resource card.png)
+        ![Go to resource](~/assets/images/adaptive-cards/go-to-resource-card.png)
 
         Now your Azure bot is created.
 
