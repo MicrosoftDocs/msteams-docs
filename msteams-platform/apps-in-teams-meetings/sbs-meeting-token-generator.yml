@@ -460,10 +460,11 @@ items:
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
        1. In the left panel, select **Show All**.
        1. Select **Teams**:
-
-           ![Admin center menu](~/assets/images/prepare-test-tenant/admin-center.png)
+ 
+          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenter.png)
 
        1. In the left panel, select **Teams apps**.
+       
        1. Select **Setup Policies**:
 
           ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
@@ -472,7 +473,7 @@ items:
 
           ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
 
-       1. Toggle **Upload custom apps** to the **On** position:
+       1. Toggle **Upload custom apps** to **On** position:
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
@@ -555,8 +556,6 @@ items:
 
      > [!NOTE] 
      > When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
-
-
 
 - title: Complete challenge
   durationInMinutes: 1
