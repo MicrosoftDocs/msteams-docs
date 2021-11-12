@@ -1,6 +1,6 @@
 ---
 title: User Specific Views
-description: Sample for User Specific Views using Universal Actions
+description: Learn about User Specific Views using Universal Actions with Code Sample 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
