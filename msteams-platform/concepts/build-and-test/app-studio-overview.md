@@ -144,6 +144,6 @@ Controls include:
 * Tables
 * Icons
 
-## See Also
+## See also
 
-[Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)
+* [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

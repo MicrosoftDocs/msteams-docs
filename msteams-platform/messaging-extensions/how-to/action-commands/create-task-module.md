@@ -990,4 +990,4 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-[Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)
+* [Define action commands](~/messaging-extensions/how-to/action-commands/define-action-command.md)

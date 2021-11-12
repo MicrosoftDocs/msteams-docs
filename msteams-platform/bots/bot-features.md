@@ -119,7 +119,7 @@ One of the disadvantages of bots is that it is difficult to maintain a large ret
 > [!div class="nextstepaction"]
 > [Bot activity handlers](~/bots/bot-basics.md)
 
-## See Also
+## See also
 
 * [Calls and meetings bots](~/bots/calls-and-meetings/calls-meetings-bots-overview.md)
 * [Bot conversations](~/bots/how-to/conversations/conversation-basics.md)
