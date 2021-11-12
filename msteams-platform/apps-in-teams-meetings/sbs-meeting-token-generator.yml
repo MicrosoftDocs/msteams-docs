@@ -390,10 +390,10 @@ items:
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest.png)
 
-- title: Build the client app using 'npm install'
+- title: Build the client app using npm install
   durationInMinutes: 1
   content: |
-    **To build client app using 'npm install'**
+    **To build client app using npm install**
     
     1. Navigate to the `App` folder in cloned repository.
     1. Copy `App` folder path.
