@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that are Office 365, and  Outlook. Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their credentials by silently refreshing the authentication token. You can allow a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If users consent to use your app, they need not consent again on another device and can sign in automatically. Your access token is also prefetched to improve performance and load times.  
+Users sign in to Microsoft Teams through their work, school, or Microsoft accounts that are Office 365, and  Outlook. Single sign-on authentication in Azure Active Directory (AAD) minimizes the number of times users need to enter their credentials by silently refreshing the authentication token. You can allow a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If users consent to use your app, they shouldn’t consent again on another device. They can sign in automatically. Your access token is also prefetched to improve performance and load times.  
 
 > [!NOTE]
 >
@@ -96,12 +96,13 @@ Complete the following steps to develop an SSO Teams tab:
     > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+1. Select **Save and Continue**.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
 1. In the **Who can consent?** box, enter **Admins and users**.
 1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
-    * **Admin consent title:** Teams can access the user’s profile.
+    * **Admin consent display name:** Teams can access the user’s profile.
     * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent title**: Teams can access your profile and make requests on your behalf.
+    * **User consent display name**: Teams can access your profile and make requests on your behalf.
     * **User consent description:** Teams can call this app’s APIs with the same rights as you have.
 1. Ensure that **State** is set to **Enabled**.
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
@@ -201,7 +202,7 @@ A simple way of consenting on behalf of an organization as a tenant admin is to 
 
 #### Ask for consent using the Auth API
 
-To get Graph scopes, you can present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-pop-up-page) which involves popping up an Azure AD consent window. 
+To get Graph scopes, you can present a consent window using existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md) which involves popping up an Azure AD consent window. 
 
 **To ask for additional consent using the Auth API**
 

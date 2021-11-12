@@ -12,9 +12,9 @@ Silent authentication in Azure Active Directory (AAD) minimizes the number of ti
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
-If you want to keep your code completely client-side, you can use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they never see a popup dialog box.
+To keep your code completely client-side, use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they won't see a popup dialog box.
 
-Though the ADAL.js library is optimized for AngularJS applications, it also works with pure JavaScript single-page applications.
+The ADAL.js library is optimized for AngularJS applications, but it also works with pure JavaScript single-page applications.
 
 > [!NOTE]     
 > For authentication to work for your tab on mobile clients, you must use v1.4.1 and later of the Teams JavaScript SDK.
@@ -22,7 +22,7 @@ Though the ADAL.js library is optimized for AngularJS applications, it also work
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. As the library specifies `prompt=none`, Azure AD never shows the sign in page. When the user needs to sign in or grant access to the application, the user interaction is required, and AAD immediately returns an error. The ADAL.js reports the error to your app and your app shows a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. The library specifies `prompt=none`, and Azure AD never shows the sign-in page. When the user needs to sign in or grant access to the application, the user interaction is required, and AAD immediately returns an error. The ADAL.js reports the error to your app and your app shows a sign in button if required.
 
 ## How to do silent authentication
 
@@ -67,7 +67,7 @@ if (loginHint) {
 
 ### Authenticate
 
-If ADAL has a token cached for the user that has not expired, use that token. Alternately, you can get a token silently by calling `acquireToken(resource, callback)`. The ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
+If ADAL has a token cached for the user that hasn't expired, use that token. Alternately, you can get a token silently by calling `acquireToken(resource, callback)`. The ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
 If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.    
 Use the following code to authenticate:

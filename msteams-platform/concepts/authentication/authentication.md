@@ -18,7 +18,7 @@ In Teams, there are two authentication flows for the app:
 
 ## Configure the identity provider
 
-The identity provider communicates with Teams app regardless of the app's authentication flow. You can use AAD as the identity provider. For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
+The identity provider communicates with Teams app regardless of the app's authentication flow. You can use AAD as the identity provider. The concepts however, apply regardless of the identity provider. For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
 ## Web-based authentication flow
 
@@ -48,10 +48,6 @@ The following table lists Bot Framework v4 authentication samples:
 |---------------|------------|------------|-------------|---------------|
 | Bot authentication | This sample shows how to get started with authentication in a bot for Microsoft Teams. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/46.teams-auth) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/46.teams-auth) |
 | Tab, Bot, and Messaging Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME - search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | Not available |
-
-## Configure the identity provider
-
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider. 
 
 ## See also
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)

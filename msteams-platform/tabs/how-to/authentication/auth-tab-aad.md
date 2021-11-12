@@ -31,9 +31,11 @@ The applications must be registerd. The identity providers supporting OAuth 2.0 
 
 2. Select **New Registration**.
 3. Provide user-facing display name for this application. The name can be changed later.
-4. Find **Redirect URI** section for the app.
-5. From the dropdown menu, select **Web**. 
-6. Update the URL to authentication endpoint. For example, the redirect URL for TypeScript/Node.js and C# sample apps on GitHub is as follows:
+4. Find **Redirect URl** section for the app.
+5. Select **Add a Redirect URl**, you’ll be directed to Platform Configurations. 
+6. Now, select **Add a platform**.
+7. Enter the redirect URl of the application in **Redirect URls** and select **Configure**
+7. Update the URL to authentication endpoint. For example, the redirect URL for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
@@ -65,13 +67,13 @@ microsoftTeams.authentication.authenticate({
 });
 ```
 > [!NOTE]
-> * The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In the example: `/tab-auth/simple-start`, must match the information registered in the [AAD Application Registration Portal](https://apps.dev.microsoft.com).
+> * The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In the example, `/tab-auth/simple-start` must match the information registered in the [AAD Application Registration Portal](https://apps.dev.microsoft.com).
 > * Authentication flow must start on a page that's on your domain. The domain must be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 > * Failing to use `microsoftTeams.authentication.authenticate()` can cause a problem with popup not closing at the end of the sign in process.
 
 ### Notes
 
-* The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Azure AD Application Registration Portal](https://apps.dev.microsoft.com).
+* The URL you pass to `microsoftTeams.authentication.authenticate()` is the start page of the authentication flow. In this example, `/tab-auth/simple-start` should match the information registered in the [Azure AD Application Registration Portal](https://apps.dev.microsoft.com).
 
 * Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
 
@@ -79,7 +81,7 @@ microsoftTeams.authentication.authenticate({
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. This also allows `microsoftTeams.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed, the following code is run. The main goal of this page is to redirect to your identity provider so the user can sign in. This redirection could be done on the server side using HTTP 302, but in this case it is done on the client side using with a call to `window.location.assign()`. Use `microsoftTeams.getContext()` to retrieve hinting information, and pass it to Azure AD.
 
 ```javascript
 microsoftTeams.getContext(function (context) {
@@ -108,8 +110,8 @@ microsoftTeams.getContext(function (context) {
 
 After the user completes authorization, the user is redirected to the callback page you specified for your app at `/tab-auth/simple-end`.
 
-* You can use the user's login name as the `login_hint` value for Azure AD sign-in, which helps the user provide less information. Don't use the context directly as proof of identity as an attacker could load your page in a malicious browser and update any information.For more information on accessing Teams context to help build authentication requests and URLs, see [get user context information](~/tabs/how-to/access-teams-context.md).
-*  The tab context provides useful information regarding the user, don't use the information to authenticate the user as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams can load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
+* Use the user's login name as the `login_hint` value for Azure AD sign-in, which helps the user to provide less information. Don't use the context directly as proof of identity as an attacker could load your page in a malicious browser and update any information. For more information on accessing Teams context to help build authentication requests and URLs, see [get user context information](~/tabs/how-to/access-teams-context.md).
+*  The tab context provides useful information about the user. Don't use the information to authenticate the user as URL parameters to your tab content URL or by calling the `microsoftTeams.getContext()` function in the Microsoft Teams client SDK. A malicious actor can invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams can load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm and match the service calling the callback URL. If the `state` parameter in the callback does not match the parameter you sent during the call, the return call can't be verified and should be terminated.
 
 ### Notes
@@ -121,7 +123,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ## The callback page
 
-You can call the AAD authorization service and pass in user and app information. The AAD can present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. AAD calls the callback page that you provided (`/tab-auth/simple-end`).
+You can call the AAD authorization service and pass in user and app information. The AAD can present the user with its own monolithic authorization experience. Your app has no control over the actions in this experience. AAD calls the callback page that you provided (`/tab-auth/simple-end`).
 In this page you need to determine success or failure based on the information returned by AAD and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()`. If the login is successful you can have access to service resources.
 
 ````javascript
@@ -159,7 +161,7 @@ The code parses the key-value pairs received from AAD in `window.location.hash` 
 * `CancelledByUser`: the user has closed the pop-up window before completing the authentication flow.
 * `FailedToOpenWindow`: the pop-up window was not open while running Microsoft Teams in a browser, results being blocked by a popup blocker.
 
-If successful, you can refresh or reload the page and show relevant content to the now-authenticated user. If authentication fails, it display an error message.
+If successful, refresh or reload the page to show relevant content to the now-authenticated user. If authentication fails, it displays an error message.
 `NotifyFailure()` has the following predefined failure reasons:
 
 * `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
