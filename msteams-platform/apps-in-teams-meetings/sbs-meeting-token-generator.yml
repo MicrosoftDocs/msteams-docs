@@ -289,7 +289,7 @@ items:
 
          ![Add client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
 
-       The **Client Id** is depicted in the following image:
+       The following image depicts the **Client Id**:
 
          ![Client applications](~/assets/images/meeting-token-generator/meeting-token-generator-clientapps.png) 
   
@@ -314,11 +314,11 @@ items:
          * **OpenId**
          * **profile**
 
-         ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
-  
-    1. Select **Add permissions**. 
+    1. Select **Add permissions**:
 
-    1. Select **Authentication** from the left panel to set a redirect URI. 
+         ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
+
+    1. From the left panel, select **Authentication** to set a redirect URI. 
 
        > [!NOTE]
        > If an app is not granted IT admin consent, users must provide consent the first time they use an app.
@@ -356,8 +356,8 @@ items:
           > [!NOTE]
           > The sample works only in the current tenant.
 
-         * Set `"AzureAd"."ApplicationId "` to your bot's **Microsoft App ID**.
-         * Set `"ContentBubbleUrl "` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`:
+         * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**.
+         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`:
 
        > [!NOTE]
        > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
@@ -374,6 +374,10 @@ items:
     1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
 
          * Set `manifestVersion` to `1.11`.
+
+           > [!NOTE]
+           > Provide the latest version.
+
          * Set `$schema` to `https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json`.
          * Set `resource` to `api://[WebAppDomainName]/[MicrosoftAppId]`.
          * Replace `[companyName]` to `Contoso`.
@@ -384,10 +388,7 @@ items:
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
          * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**: 
 
-       ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img1.png)
-
-       ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-img2.png)
-    
+       ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest.png)
 
 - title: Build the client app using 'npm install'
   durationInMinutes: 1
@@ -432,7 +433,7 @@ items:
 
           ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
-      A webpage opens with a message **App is ready**:
+      A webpage opens with a message **App is ready!**:
 
       ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
 
@@ -471,7 +472,7 @@ items:
 
           ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
 
-       1. Toggle **Upload custom apps** to the `On` position:
+       1. Toggle **Upload custom apps** to the **On** position:
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
@@ -530,11 +531,11 @@ items:
 
        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
-       The **Manage apps** section displays the application in the listed apps:
+       The **Manage apps** section displays the list of applications:
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
-    1. Go to the meeting screen.
+    1. Go to Teams meeting.
     
     1. Select **Add an app**. In the app selection page, the app displays as **Meeting Token App**:
   
@@ -551,11 +552,6 @@ items:
     1. Start the meeting. The icon is visible in the meeting control bar:
 
         ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
-
-
-    **Troubleshooting:**
-      
-      To maintain token information and service URL for the tenant, the sample app uses an in-memory store. If you restart the project, run the following command to recapture the service URL: `@[BotName] reset`. In our example, `[BotName]` is `MeetingTokenGeneratorBot`.
 
      > [!NOTE] 
      > When you work on your own project, ensure to use a durable storage mechanism to store the token information and service URL for the tenant.
