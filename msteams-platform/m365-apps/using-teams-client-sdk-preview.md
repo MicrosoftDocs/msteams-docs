@@ -6,7 +6,7 @@ ms.topic: conceptual
 ---
 # Microsoft Teams JavaScript client SDK v2 Preview
 
-With the Microsoft Teams JavaScript client SDK v2 Preview, the [existing Teams SDK](/javascript/api/@microsoft/teams-js/) (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta`) is a superset of the current TeamsJS SDK: it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
+With the Microsoft Teams JavaScript client SDK v2 Preview, the [existing Teams SDK](/javascript/api/@microsoft/teams-js/) (`@microsoft/teams-js`, or simply `TeamsJS`) has been refactored to enable Teams developers the ability to [extend Teams apps to run in Outlook and Office](overview.md). From a functional perspective, the TeamsJS SDK v2 Preview (`@microsoft/teams-js@next`) is a superset of the current TeamsJS SDK: it supports existing Teams app functionality while adding the ability to host Teams apps in Outlook and Office.
 
 There are two significant changes in the TeamsJS SDK v2 Preview that your code will need to account for in order to run in other Microsoft 365 applications:
 
@@ -21,7 +21,7 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 > 1. Dependency on the `@microsoft/teams-js@2.0.0-beta.1` or higher, and
 > 2. Modifying existing application code according to the required changes described in this document.
 >
->  If you reference the `@microsoft/teams-js@2.0.0-beta` SDK from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. Once you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
+>  If you reference the `@microsoft/teams-js@2.0.0-beta.1` SDK from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. Once you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
 
 ## Updating to the Teams client SDK v2 Preview
 
@@ -67,7 +67,7 @@ To run in Outlook and Office, your app will need to depend on the [npm package](
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta.1`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 > * `package.json` references to TeamsJS SDK v2 Preview
