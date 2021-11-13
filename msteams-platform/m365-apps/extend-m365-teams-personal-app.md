@@ -78,7 +78,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update SDK references
 
-To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.0` or higher. While code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of `@microsoft/teams-js` in Outlook and Office will eventually cease.
+To run in Outlook and Office, your app will need to depend on the npm package `@microsoft/teams-js@2.0.0-beta.1` or higher. While code with downlevel versions of `@microsoft/teams-js` is supported in Outlook and Office, deprecation warnings will be logged, and support for downlevel versions of `@microsoft/teams-js` in Outlook and Office will eventually cease.
 
 You can use Teams Toolkit to help automate some of the code changes to adopt the next version of `@microsoft/teams-js`, but if you would like to do the steps manually, see [Microsoft Teams JavaScript client SDK Preview](using-teams-client-sdk-preview.md) for details.
 

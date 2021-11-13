@@ -18,10 +18,10 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 
 > [!NOTE]
 > Enabling an existing Teams app to run in Outlook and Office requires both:
-> 1. Dependency on the `@microsoft/teams-js@2.0.0-beta.0` or higher, and
+> 1. Dependency on the `@microsoft/teams-js@2.0.0-beta.1` or higher, and
 > 2. Modifying existing application code according to the required changes described in this document.
 >
->  If you reference the `@microsoft/teams-js@2.0.0-beta.0` SDK version from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. Once you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
+>  If you reference the `@microsoft/teams-js@2.0.0-beta` SDK from an existing Teams app, you will see deprecation warnings if your code calls APIs that have changed. An API translation layer (mapping current SDK to preview SDK API calls) is provided to enable existing Teams apps to continue working in Teams until they are able to update code to work with the TeamsJS SDK v2 Preview. Once you update your code with the changes outlined in this article, your personal tab will also run in Outlook and Office.
 
 ## Updating to the Teams client SDK v2 Preview
 
@@ -61,7 +61,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ### 2. Update SDK references
 
-To run in Outlook and Office, your app will need to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0-beta.0) `@microsoft/teams-js@2.0.0-beta.0` or higher. To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
+To run in Outlook and Office, your app will need to depend on the [npm package](https://www.npmjs.com/package/@microsoft/teams-js/v/2.0.0-beta.1) `@microsoft/teams-js@2.0.0-beta.1` or higher. To perform these steps manually, and for more information on the API changes, see the following sections on [Callbacks converted to promises](#callbacks-converted-to-promises) and [APIs organized into capabilities](#apis-organized-into-capabilities).
 
 1. Ensure you have [Teams Toolkit](https://aka.ms/teams-toolkit) `v2.10.0` or later
 1. Open the *Command palette*: `Ctrl+Shift+P`
@@ -357,7 +357,7 @@ You can also visualize the changes by reviewing the  [`transformLegacyContextToA
 
 ## Next steps
 
-You can also learn more about breaking changes coming in the *v2.0.0-beta.0* release from the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md).
+You can also learn more about breaking changes in the [TeamsJS SDK v2 Preview changelog](https://github.com/OfficeDev/microsoft-teams-library-js/blob/2.0-preview/CHANGELOG.md).
 
 When you're ready to test your Teams apps running in Outlook and Office, see:
 
