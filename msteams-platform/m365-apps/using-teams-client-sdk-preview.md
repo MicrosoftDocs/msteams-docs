@@ -169,7 +169,7 @@ In the TeamsJS SDK v2 Preview, APIs are defined as functions in a JavaScript nam
 
 ### Differentiating your app experience
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run (and appear in the store) for hosts that don't.
+You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
 The name of the host your app is running in is exposed as a *hostName* property on the Context interface (`app.Context.app.host.name`), which can be queried at runtime by calling `getContext`. It is also available as a `{hostName}` [URL placeholder value](../tabs/how-to/access-teams-context.md#get-context-by-inserting-url-placeholder-values). Best practice is to use the *hostName* mechanism sparingly:
 
