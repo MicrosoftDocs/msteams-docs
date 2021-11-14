@@ -210,12 +210,6 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
 > [!div class="nextstepaction"]
 > [Extend your app](/m365-apps/overview.md)
 
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
 ## See also
 
 * [App fundamentals](~/concepts/app-fundamentals-overview.md)
