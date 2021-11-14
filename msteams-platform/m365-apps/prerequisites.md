@@ -13,7 +13,7 @@ The development environment for extending Teams apps across Microsoft 365 is sim
 > * Obtain an M365 Developer (Sandbox) Tenant and enable sideloading
 > * Enroll your M365 tenant in *Office 365 Targeted Releases*
 > * Configure your account to access preview versions of Outlook and Office apps
-> * Install Teams Toolkit vscode extension (optional)
+> * [*Optional*] Install Teams Toolkit vscode extension
 
 ## Prepare a Developer Tenant for testing
 
