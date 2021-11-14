@@ -28,7 +28,7 @@ Once sideloaded to Teams, your personal tab will appear as one of your installed
 
 Also with this preview, you can extend your search-based Teams messaging extensions to Outlook on the web and Windows desktop, enabling customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
 
-Once sideloaded to Teams, your messaging extension will appear as one of your installed apps within the Outlook compose message area.
+After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
 ## Next steps
 
