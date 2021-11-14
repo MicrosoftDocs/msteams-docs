@@ -20,7 +20,7 @@ For feedback and issues, please continue using the relevant [Microsoft Teams dev
 
 With this preview, you can extend a Teams personal tab application to run in both Outlook on Windows desktop and the web, and also Microsoft Office Home (office.com).
 
-Once sideloaded to Teams, your personal tab will appear as one of your installed apps in Outlook and Office.
+After sideloading to Teams, your personal tab appears as one of your installed apps in Outlook and Office.
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
 
