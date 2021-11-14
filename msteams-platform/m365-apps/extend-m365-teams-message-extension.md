@@ -4,10 +4,10 @@ description: Here's how to update your search-based Teams messaging extension to
 ms.date: 11/15/2021
 ms.topic: tutorial
 ---
-# Extend a Teams message extension across Microsoft 365 (preview)
+# Extend a Teams message extension across Microsoft 365
 
 > [!NOTE]
-> Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
+> *Extending a Teams message extension across Microsoft 365* is currently available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
 Search-based [messaging extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. By [extending your Teams apps across Microsoft 365 (preview)](overview.md), you can now bring your search-based Teams message extensions to Outlook for Windows desktop and web experiences.
 
