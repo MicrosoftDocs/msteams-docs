@@ -79,7 +79,7 @@ Sign in to Teams with your sandbox tenant account, and toggle on Public Develope
 
 :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About' and verify 'Developer Preview' option is checked":::
 
-## (Optional) Install Visual Studio Code and Teams Toolkit Preview extension
+## Install Visual Studio Code and Teams Toolkit Preview extension
 
 Optionally, you can take advantage of tooling in [Visual Studio Code](https://code.visualstudio.com/) to help extend Teams apps into Office and Outlook.
 
