@@ -197,4 +197,4 @@ If you unlink a SaaS offer included in your Teams store listing, you must republ
 
 ## See also
 
-* [Maintaining and supporting your published app](../post-publish/overview.md)
+[Maintaining and supporting your published app](../post-publish/overview.md)
