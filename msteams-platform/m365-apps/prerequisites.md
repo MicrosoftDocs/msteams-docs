@@ -77,7 +77,11 @@ If you're opted in to targeted releases but you don't see these ellipses options
 
 ## Switch to the Developer Preview version of Teams
 
-Sign in to Teams with your sandbox tenant account, and toggle on Public Developer Preview. From the ellipsis (**...**) menu next to your user profile, open **About** and select the *Developer preview* option. Once the dialog appears, select **Switch to developer preview** to restart Teams and check that Developer Preview is now enabled.
+You'll also need to opt in to the *Public Developer Preview* from your Microsoft Teams client.
+
+1. Sign in to Teams with your sandbox tenant account.
+1. From the ellipsis (**...**) menu next to your user profile, open **About** and select the *Developer preview* option.
+1. After the dialog appears, select **Switch to developer preview** to restart Teams and check that Developer Preview is now enabled.
 
 :::image type="content" source="images/teams-dev-preview.png" alt-text="From Teams ellipses menu, open 'About' and verify 'Developer Preview' option is checked":::
 
