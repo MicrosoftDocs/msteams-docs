@@ -9,7 +9,7 @@ ms.topic: tutorial
 > [!NOTE]
 > Features included in preview may not be complete, and may undergo changes before becoming available in the public release. They are provided for testing and exploration purposes only. They should not be used in production applications.
 
-Personal tabs provide a great way for developers to enhance the Microsoft Teams experience. Using personal tabs, a developer can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. The following tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Microsoft Office Home (office.com).
+Personal tabs provide a great way to enhance the Microsoft Teams experience. Using personal tabs, you can provide a user access to their application right within Teams, without the user having to leave the experience or sign in again. With this preview, personal tabs can light up within other Microsoft 365 applications. This tutorial demonstrates the process of taking an existing Teams personal tab and updating it to run in both Outlook desktop and web experiences, and also Microsoft Office Home (office.com).
 
 Updating your personal app to run in Outlook and Office Home involves these steps:
 
