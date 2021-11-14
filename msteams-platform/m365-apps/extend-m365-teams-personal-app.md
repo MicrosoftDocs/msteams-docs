@@ -122,7 +122,7 @@ Azure Active Directory Single-sign on (SSO) for personal tabs works the same way
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account
 1. Open the **App registrations** blade.
 1. Select the name of your personal tab application to open its app registration. 
-1. Select  **Expose an API** (under *Manage*)
+1. Select  **Expose an API** (under *Manage*).
 
 :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Authorize client Ids from the *App registrations* blade on Azure Portal":::
 
