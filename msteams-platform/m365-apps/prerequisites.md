@@ -57,7 +57,7 @@ Here are the steps for installing Office 365 *Beta Channel* applications in your
 
 1. In your test environment, sign in to Microsoft 365 admin center (https://admin.microsoft.com) using the credentials that you created for your test tenant (for example, *username*@*domain*.onmicrosoft.com).
 1. From the admin center, select **Install Office** (or *Go to guided setup*) to install desktop apps in your test environment. Optionally, add a test user (useful for testing).
-1. Next, download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
+1. Download the [Office Deployment Tool](https://www.microsoft.com/download/details.aspx?id=49117) and extract to a local folder.
 1. Open *configuration-Office365-x86.xml* (or the **x64.xml*, depending on your environment) in a text editor and update the *Channel* value to `BetaChannel`. Next, open an elevated Command Prompt and run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
 1. Open Outlook (desktop client) and set up the mail account using your test tenant credentials.
 1. In Outlook, open File > Office Account > **About Outlook**, and confirm that you are now on the *Beta Channel* and that your build number is **14416** or higher.
