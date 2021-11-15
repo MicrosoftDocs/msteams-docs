@@ -1,14 +1,14 @@
 - name: Microsoft Teams Developer documentation
-  href: /microsoftteams/platform
+  href: overview-new.yml
 - name: What's new?
   href: whats-new.md
 - name: Overview
   expanded: false 
   items:
   - name: Build apps for Microsoft Teams
-    href: overview-new.yml
+    href: overview.md
   - name: It starts with an idea
-    href: overview-test.md
+    href: overview-story.md
   - name: Explore Teams Features
     href: overview-explore.md
   - name: The Teams solution
