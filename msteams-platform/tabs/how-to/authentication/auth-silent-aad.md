@@ -7,12 +7,12 @@ keywords: teams authentication SSO silent AAD
 ---
 # Silent authentication
 
-Silent authentication in Azure Active Directory (AAD) minimizes the number of times users enter their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
+Silent authentication in Azure Active Directory (AAD) minimizes the number of times users enter their sign-in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
 > [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
-To keep your code completely client-side, use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they won't see a popup dialog box.
+To keep your code client-side, use the [AAD authentication library](/azure/active-directory/develop/active-directory-authentication-libraries) for JavaScript to get an AAD access token silently. If the user has signed in recently, they won't see a popup dialog box.
 
 The ADAL.js library is optimized for AngularJS applications, but it also works with pure JavaScript single-page applications.
 
@@ -22,7 +22,7 @@ The ADAL.js library is optimized for AngularJS applications, but it also works w
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. The library specifies `prompt=none`, and Azure AD never shows the sign-in page. When the user needs to sign in or grant access to the application, the user interaction is required, and AAD immediately returns an error. The ADAL.js reports the error to your app and your app shows a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. The library specifies `prompt=none`, and Azure AD never shows the sign-in page. When the user needs to sign in or grant access to the application, the user interaction is required, and AAD immediately returns an error. The ADAL.js reports the error to your app and your app shows a sign-in button.
 
 ## How to do silent authentication
 
@@ -51,7 +51,7 @@ Use the following code to include and configure ADAL:
 
 ### Get the user context
 
-In the tab's content page, call `microsoftTeams.getContext()` to get a sign in hint for the current user. This is used as a `loginHint` in the call to AAD.     
+In the tab's content page, call `microsoftTeams.getContext()` to get a sign-in hint for the current user. This action is used as a `loginHint` in the call to AAD.     
 Use the following code to get the user context.
 
 ```javascript
@@ -69,7 +69,7 @@ if (loginHint) {
 
 If ADAL has a token cached for the user that hasn't expired, use that token. Alternately, you can get a token silently by calling `acquireToken(resource, callback)`. The ADAL.js calls the callback function with the requested token, or gives an error if authentication fails.
 
-If you get an error in the callback function, show a sign in button and fall back to an explicit sign in.    
+If you get an error in the callback function, show a sign-in button and fall back to an explicit sign in.    
 Use the following code to authenticate:
 
 ```javascript
@@ -103,7 +103,7 @@ authContext.acquireToken(config.clientId, function (errDesc, token, err, tokenTy
 
 ### Process the return value
 
-ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign in callback page.
+ADAL.js parses the result from AAD by calling `AuthenticationContext.handleWindowCallback(hash)` in the sign-in callback page.
 
 Check that you have a valid user and call `microsoftTeams.authentication.notifySuccess()` or `microsoftTeams.authentication.notifyFailure()` to report the status to your main tab content page.     
 Use the following code to process the return value:

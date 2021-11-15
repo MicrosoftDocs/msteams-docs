@@ -198,7 +198,7 @@ Currently, SSO only grants consent for user-level permissions. To get the requir
 
 #### Tenant Admin Consent
 
-A simple way of consenting on behalf of an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
+A simple way of consenting for an organization as a tenant admin is to refer to `https://login.microsoftonline.com/common/adminconsent?client_id=<AAD_App_ID>`.
 
 #### Ask for consent using the Auth API
 
