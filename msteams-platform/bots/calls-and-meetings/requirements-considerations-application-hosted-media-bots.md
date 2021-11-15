@@ -1,6 +1,6 @@
 ---
 title: Requirements and considerations for application-hosted media bots
-description: Understand important requirements and considerations related to creating application-hosted media bots for Microsoft Teams.
+description: Understand important requirements and considerations, and scalability and performance considerations related to creating application-hosted media bots for Microsoft Teams using code example and samples. 
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: application-hosted media windows server azure vm
@@ -68,6 +68,11 @@ Application-hosted media bots samples are as follows:
 | Local media sample | Samples that illustrates different local media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples) |
 | Remote media sample | Samples that illustrates different remote media scenarios. | [View](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/RemoteMediaSamples) |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Supported media formats](~/resources/media-formats.md)
+
 ## See also
 
 - [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
@@ -81,8 +86,3 @@ The next section provides samples that illustrate different local media scenario
 
 - [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
 - [Graph calling SDK documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Supported media formats](~/resources/media-formats.md)

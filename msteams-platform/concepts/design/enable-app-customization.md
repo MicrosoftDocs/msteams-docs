@@ -5,6 +5,7 @@ description: Understand how Teams admins can customize your app for their org.
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
+keywords: accent color brand hide app approval
 ---
 
 # Customize your Teams app
@@ -47,6 +48,6 @@ If by default, you don't want the app to be hidden, you can update the `defaultB
 
 ## See also
 
-* [App manifesh schema](/MicrosoftTeams/manifest-schema)
+* [App manifest schema](/microsoftteams/platform/resources/schema/manifest-schema)
 * [Customize apps in the Teams admin center](/MicrosoftTeams/customize-apps)
 

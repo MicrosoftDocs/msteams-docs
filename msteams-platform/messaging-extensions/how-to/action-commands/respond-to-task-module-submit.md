@@ -1,7 +1,7 @@
 ---
 title: Respond to the task module submit action
 author: surbhigupta
-description: Describes how to respond to the task module submit action from a messaging extension action command
+description: Describes how to respond to the task module submit action from a messaging extension action command with Proactive message, another task module, Adaptive card bot, and more using Code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -600,3 +600,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 > [!div class="nextstepaction"]
 > [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
+## See also
+
+[Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

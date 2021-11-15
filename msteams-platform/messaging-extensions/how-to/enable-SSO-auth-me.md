@@ -1,7 +1,7 @@
 ---
 title: SSO support for your messaging extensions
 author: KirtiPereira
-description: How to enable SSO support for your messaging extensions
+description: Learn how to enable SSO support for your messaging extensions with Code samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: surbhigupta
@@ -114,4 +114,3 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
 * [Add authentication to your messaging extensions](add-authentication.md)
 * [Use SSO for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md)
 * [Link unfurling](link-unfurling.md)
-

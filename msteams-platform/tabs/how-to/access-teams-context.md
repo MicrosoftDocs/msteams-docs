@@ -22,7 +22,7 @@ Context about the user, team, or company can be especially useful when:
 * You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. For more information, see [authenticate a user in your Microsoft Teams tab](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
-> Although this user information can help provide a smooth user experience, you must not use it as proof of identity. For example, an attacker can load your page in a browser and render harmful information or requests.
+> Although this user information can help provide a smooth user experience, you must not use it as proof of identity.  For example, an attacker can load your page in a browser and render harmful information or requests.
 
 ## Access context information
 
@@ -130,14 +130,15 @@ You can register your app to be informed if the theme changes by calling `micros
 
 The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+
 ## See also
 
 * [Tab design guidelines](../../tabs/design/tabs.md)
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Use task modules in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md)
