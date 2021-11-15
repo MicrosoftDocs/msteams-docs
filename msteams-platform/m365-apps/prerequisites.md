@@ -42,7 +42,8 @@ For more information on Office 365 release options, see [Set up the Standard or 
 
 :::image type="content" source="images/outlook-web-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in outlook.com":::
 
-1. Verify test tenant support for messaging extensions in outlook.com by checking for a **More apps** option in the Outlook compose message area.
+1. Verify test tenant support for messaging extensions in outlook.com by checking for the **More apps** option in the Outlook compose message area.
+``
 
 > [!NOTE]
 > If you're opted in to targeted releases but you don't see these options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
