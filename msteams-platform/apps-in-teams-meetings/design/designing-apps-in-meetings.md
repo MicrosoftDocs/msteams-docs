@@ -181,13 +181,19 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-Shared meeting stage helps meeting participants to interact and collaborate with app content in real time. For example, the users can focus their meeting on editing a document, brainstorming with a whiteboard, or reviewing a dashboard.
+You can allow users to share and interact with some or all of your app content on the meeting stage. Here are some examples of how people might use this feature during a meeting:
 
-Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants.
+* Editing a document
+* Whiteboarding
+* Reviewing a dashboard
+* Watching a video
+* Playing a game
+
+Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
 
 > [!NOTE]
 > All the users in meeting can see the app when shared from desktop. However, the capability to share an app to stage from mobile is currently not available.
- 
+
 ### Use cases
 
 The shared meeting stage is all about collaboration and participation. Here are some example scenarios to help you get started.
