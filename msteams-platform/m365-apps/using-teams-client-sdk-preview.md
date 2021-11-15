@@ -67,7 +67,7 @@ To run in Outlook and Office, your app will need to depend on the [npm package](
 1. Open the *Command palette*: `Ctrl+Shift+P`
 1. Run the command `Teams: Upgrade Teams JS SDK references to support Outlook and Office apps`
 
-Upon completion, the utility will have updated your `package.json` file with the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta.1`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
+After completion, the utility will have updated your `package.json` file with the TeamsJS SDK v2 Preview (`@microsoft/teams-js@2.0.0-beta.1`) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
 > * `package.json` references to TeamsJS SDK v2 Preview
