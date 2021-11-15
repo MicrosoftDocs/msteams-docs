@@ -34,7 +34,8 @@ In the *Visual Studio Code Extensions Marketplace*, search for **Teams Toolkit**
 1. A command to update your manifest schema
 1. A command to update your SDK references and call sites
 
-These are the two key updates you'll need to run a Teams personal tab app in other Microsoft 365 applications.
+Following are the two key updates you'll need to run a Teams personal tab app in other Microsoft 365 applications:
+``
 
 ### 2. Updating the manifest
 
