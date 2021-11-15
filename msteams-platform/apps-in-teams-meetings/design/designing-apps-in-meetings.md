@@ -99,7 +99,7 @@ People might use the in-meeting tab to:
 |2|**App name**|
 |3|**Header**: Includes your app name.|
 |4|**Close button**: Dismisses the tab. Always use the upper-right close icon instead of an action in the footer.|
-|5|**Notification bar**: Error alerts display directly below the header and push the iframe content down by 20 pixels.|
+|5|**Notification bar**: Error alerts display directly below the header and push the rest of your iframe content down 20 pixels.|
 |6|**iframe**: Displays your app content.|
 
 ### Spacing
