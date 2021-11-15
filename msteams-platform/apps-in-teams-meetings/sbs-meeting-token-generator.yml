@@ -458,7 +458,7 @@ items:
        1. In the left panel, select **Show All**.
        1. Select **Teams**.
  
-          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenter.png)
+          ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenterimage.png)
 
        1. In the left panel, select **Teams apps**.
        
@@ -468,7 +468,7 @@ items:
 
        1. Select **Global**.
 
-          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideload.png)
+          ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-turnonsideloadimage.png)
 
        1. Toggle **Upload custom apps** to **On** position.
 
@@ -515,7 +515,7 @@ items:
    
     1. In the pop-up that opens, select **Manage apps**.
 
-       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
+       ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsimage.png)
    
     1. Select **Upload a custom app**. 
 
