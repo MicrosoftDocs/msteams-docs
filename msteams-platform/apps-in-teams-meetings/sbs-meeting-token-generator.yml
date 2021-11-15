@@ -284,8 +284,8 @@ items:
 
     1. Enter each of the following client IDs and select the authorized scope:</br>
 
-         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or Teams desktop application).
-         * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application).
+         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or desktop application)
+         * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application)
 
          ![Add client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
 
@@ -343,15 +343,15 @@ items:
 - title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to `appsettings.json` in cloned repository.
+    1. Navigate to **appsettings.json** in cloned repository.
 
         ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
 
-    1. Open `appsettings.json` in **Visual Studio Code** and update the following information:  
+    1. Open **appsettings.json** in **Visual Studio Code** and update the following information:  
 
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
-         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
+         * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used.
 
              > [!NOTE]
              > The sample works only in the current tenant.
@@ -367,11 +367,11 @@ items:
 - title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in cloned repository.
+    1. Navigate to **manifest.json** in cloned repository.
 
         ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
     
-    1. Open `manifest.json` in **Visual Studio Code** and make the following changes:
+    1. Open **manifest.json** in **Visual Studio Code** and make the following changes:
 
          * Set `manifestVersion` to `1.11`.
 
@@ -390,14 +390,14 @@ items:
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest.png)
 
-- title: Build the client app using npm install
+- title: Build client app using npm install
   durationInMinutes: 1
   content: |
-    **To build client app using npm install**
+    **To build client app using npm install to generate distributable folder**
     
-    1. Navigate to the `App` folder in cloned repository.
-    1. Copy the `App` folder path.
-    1. In a terminal window, change current the directory to the copied `App` path.
+    1. Navigate to the **App** folder in cloned repository.
+    1. Copy the **App** folder path.
+    1. Open a Command Prompt window, change the current directory to the copied **App** path.
 
        ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
 
@@ -406,14 +406,14 @@ items:
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
-       The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location.
+       The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server serves the static files from the location.
 
-       ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
+       ![Distributable folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    **To build and run the service**
+    **To build and run the service using Visual Studio 2019 or Command line**
 
     # [Visual Studio 2019](#tab/vs2019)
 
@@ -422,11 +422,11 @@ items:
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
-       1. Select `TokenApp.csproj` file from `csharp` folder.
+       1. Select **TokenApp.csproj** file from **csharp** folder.
 
           ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
 
-       1. Press `F5` to run the project.
+       1. Press **F5** to run the project.
     
           > [!NOTE]
           > If a prompt appears, asking for a certification, select **Yes**.
@@ -440,7 +440,7 @@ items:
         
     # [Command line](#tab/cli)
 
-    Navigate to the `csharp` folder in a terminal and enter the following command:
+    Navigate to the **csharp** folder in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
@@ -448,13 +448,10 @@ items:
    
     ![Dotnet](~/assets/images/meeting-token-generator/meeting-token-generator-dotnetruncmd.png)
       
-- title: Enable developer preview in your desktop Teams client
+- title: Enable developer preview
   durationInMinutes: 1
   content: |
-    **To enable developer preview**
-
-       > [!NOTE]
-       > **Developer preview** mode must be enabled on each **Teams client app** or browser.
+    **To enable developer preview in your desktop Teams client**
 
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
@@ -496,14 +493,14 @@ items:
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
-- title: Build the client app
+- title: Add Meeting Token App to Teams
   durationInMinutes: 1
   content: |
-    **To build client app**
+    **To create a meeting and add Meeting Token App**
 
-    1. In your cloned repository, navigate to `csharp > Resources > Manifest`.
+    1. In your cloned repository, navigate to **csharp > Resources > Manifest**.
 
-    1. Create a .zip with the following files that are present in the `Manifest` folder: 
+    1. Create a .zip with the following files that are present in the **Manifest** folder: 
        * manifest.json
        * icon-outline.png
        * icon-color.png
@@ -524,7 +521,7 @@ items:
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
-    1. Select **Open** to upload the .zip file that you created in the `Manifest` folder.
+    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
 
        ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
 
