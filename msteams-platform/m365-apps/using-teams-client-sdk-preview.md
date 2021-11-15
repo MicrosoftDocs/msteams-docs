@@ -167,7 +167,7 @@ A *capability* is a logical grouping of APIs that provide similar functionality.
 
 In the TeamsJS SDK v2 Preview, APIs are defined as functions in a JavaScript namespace whose name matches their required capability. If an app is running in a host that supports the dialog capability, then the app can safely call APIs such as `dialog.open` (in addition to other dialog-related APIs defined in the namespace). Meanwhile, if an app attempts to call an API that's not supported in that host, the API will throw an exception.
 
-### Differentiating your app experience
+### Differentiate your app experience
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It will return `true` if it is supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
