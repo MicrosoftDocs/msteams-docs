@@ -41,7 +41,7 @@ These are the two key updates you'll need to run a Teams personal tab app in oth
 # [Teams Toolkit](#tab/manifest-teams-toolkit)
 
 1. Open the *Command palette*: `Ctrl+Shift+P`
-1. Run the `Teams: Upgrade Teams manifest to support Outlook and Office apps` command and select your app manifest file. Changes will be made in place.
+1. Run **Teams: Upgrade Teams manifest to support Outlook and Office apps** command and select your app manifest file. Changes will be made in place.
 
 # [Manual steps](#tab/manifest-manual)
 
