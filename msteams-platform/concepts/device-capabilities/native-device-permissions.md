@@ -191,11 +191,6 @@ Device permissions are stored for every login session. It means that if you sign
 |---------------|--------------|--------|
 |Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## Next step
-
-> [!div class="nextstepaction"]
-> 
-
 ## See also
 
 * [Device permissions for the browser](browser-device-permissions.md)
