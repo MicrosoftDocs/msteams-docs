@@ -36,7 +36,7 @@ To preview Teams apps running in outlook.com or office.com, opt in your test ten
 
 :::image type="content" source="images/m365-admin-center-targeted-releases.png" alt-text="Microsoft 365 admin center 'Release preferences' menu with Targeted release option selected":::
 
-For more on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 admin center help*.
+For more information on Office 365 release options, see [Set up the Standard or Targeted release options](/microsoft-365/admin/manage/release-options-in-office-365) in *Microsoft 365 admin center help*.
 
 1. Verify your tenant has support for Teams personal tabs running on office.com and outlook.com by signing in with your test tenant credentials. If you see an ellipses (**...**) option on the side bar (the entry point for sideloaded Teams personal tabs), your tenant has support.
 
