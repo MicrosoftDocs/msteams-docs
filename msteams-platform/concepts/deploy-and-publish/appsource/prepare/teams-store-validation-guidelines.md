@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ---
 # Microsoft Teams store validation guidelines
 
-Following these guidelines increases the likelihood your app will pass the Microsoft Teams store submission process. These Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
+The following guidelines increase the chances for your app to pass the Microsoft Teams store submission process. The Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
 > [!NOTE]
 > Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
@@ -18,12 +18,12 @@ For an ideal user experience, we suggest you fix these, however, your app submis
 
 ## Value proposition
 > [!NOTE]  
-> This section refrences Microsoft Commercial Certification Policy # 1140.1 and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+> The value proposition refrences Microsoft Commercial Certification Policy # 1140.1 and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
 ### App name
 
 > [!NOTE]  
-> This section references Microsoft Commercial Certification Policy # 1140.1.1 and provides additional guidance to developers on naming their apps.
+> The value proposition references Microsoft Commercial Certification Policy # 1140.1.1 and provides additional guidance to developers on naming their apps.
 
 An app's name plays a critical role in how users discover it in the store. Remember the following points about app names:
 
@@ -43,7 +43,7 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
-* •	Region-specific functionality of the app must be called out in the title, metadata, first response app experience and help sections (example: Title must be Contoso Mexico). App title must be clearly differentiated from the pre-existing app from the same developer to avoid end-user confusion.
+* Region-specific functionality of the app must be called out in the title, metadata, first response app experience and help sections (example: Title must be Contoso Mexico). App title must be clearly differentiated from the pre-existing app from the same developer to avoid end-user confusion.
 * When uploading the app package in Partner Center, you must select the right **Markets** where the app will be available under the **Availability** section.
 
  > [!TIP]  
@@ -55,7 +55,7 @@ An app's name plays a critical role in how users discover it in the store. Remem
 ### Suitable for workplace consumption
 
 > [!NOTE]  
-> This section references Microsoft Commercial Certification Policy # 1140.1.2, # 100.8, and #100.10 and provides additional guidance to developers on building workplace appropriate apps.
+> The value proposition references Microsoft Commercial Certification Policy # 1140.1.2, # 100.8, and #100.10 and provides additional guidance to developers on building workplace appropriate apps.
 
 App content must be suitable for general workplace consumption and abide by all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
@@ -64,7 +64,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 ### Similar platforms and services
 
 > [!NOTE]  
-> This section references Microsoft Commercial Certification Policy # 1140.1.3. 
+> The value proposition references Microsoft Commercial Certification Policy # 1140.1.3. 
 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services such as Slack, Zoom, Webex, Discord, Flock, Stride, Hip chat, Hangouts Meet, G Suite, and Workplace by Facebook, within the app content or in the app’s metadata unless your app provides specific interoperability.
 
@@ -75,7 +75,7 @@ App feature names in buttons and other UI text must not conflict with terminolog
 ### Authentication
 
 > [!NOTE]  
-> This section refrences Microsoft Commercial Certification Policy #1140.1.4 and provides guidance to developers on authenticating their apps with external services. 
+> The value proposition refrences Microsoft Commercial Certification Policy #1140.1.4 and provides guidance to developers on authenticating their apps with external services. 
 
 For information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
@@ -96,11 +96,11 @@ For information on how to implement app authentication, see [authentication in T
 
 ## Security
 > [!NOTE]  
-> This section references Microsoft Commercial Certification Policy # 1140.3.
+> The value proposition references Microsoft Commercial Certification Policy # 1140.3.
 
 ### Financial information
 > [!NOTE]  
-> This section references Microsoft Commercial Certification Policy #1140.3.1 and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
+> The value proposition references Microsoft Commercial Certification Policy #1140.3.1 and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
 Apps must not ask users to make payments within the Teams interface (see the following image). App shouldn't transmit financial instrument details to users through a bot interface.
   ![In App Payments](~/assets/images/submission/validation-financial-information-1.png)
@@ -127,7 +127,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 
 ### Bots
 > [!NOTE]
-> This section references Microsoft Commercial Marketplace Policy # 1140.3.2
+> The value proposition references Microsoft Commercial Marketplace Policy # 1140.3.2
 
 For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
@@ -136,7 +136,7 @@ Bots must always ask permission to upload a file and display a confirmation mess
 
 ### External domains
 > [!NOTE]
-> This section references Microsoft Commercial Marketplace Policy #1140.3.3 and provides developer guidance on usage of restricted domains in the validDomains manifest property.
+> The value proposition references Microsoft Commercial Marketplace Policy #1140.3.3 and provides developer guidance on usage of restricted domains in the validDomains manifest property.
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
@@ -156,7 +156,7 @@ Warn users before your app downloads any files or executables (.exe) into the us
 ## General functionality and performance
 
 > [!NOTE]
-> This section references Microsoft Commercial Marketplace Policy #1140.4.
+> The value proposition references Microsoft Commercial Marketplace Policy #1140.4.
 
 ### Launching external functionality
 
@@ -334,7 +334,7 @@ If your app supports localization, your app package must include a file with lan
 
 ## Tabs
 > [!NOTE]  
-> This section references Microsoft Commercial Marketplace Policy #1140.4.2.
+> The value proposition references Microsoft Commercial Marketplace Policy #1140.4.2.
 If your app includes a tab, make sure it adheres to these guidelines.
 
 > [!TIP]
@@ -520,7 +520,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 ## Bots
 
 > ![NOTE]
-> This section references Microsoft Commercial Marketplace Policy # 1140.4.3.
+> The value proposition references Microsoft Commercial Marketplace Policy # 1140.4.3.
 
 If your app includes a bot, make sure it adheres to these guidelines.
 
@@ -652,7 +652,7 @@ Apps that provide only notifications with content such as **You have a new notif
 ## Messaging extensions
 
 > [!NOTE]
-> This section references Microsoft Commercial Marketplace Policy # 1140.4.4.
+> The value proposition references Microsoft Commercial Marketplace Policy # 1140.4.4.
 
 If your app includes a messaging extension, make sure it adheres to these guidelines.
 
@@ -729,7 +729,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 ## Task modules
 
 > ![NOTE]
-> This section references Microsoft Commercial Marketplace Policy #1140.4.2.
+> The value proposition references Microsoft Commercial Marketplace Policy #1140.4.2.
 
 A task module must include an icon and the short name of the app it's associated with.
 
@@ -813,7 +813,7 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 ## Notifications
 
 >[!NOTE]
-> This section references Microsoft Commercial Marketplace Policy #1140.4.2.
+> The value proposition references Microsoft Commercial Marketplace Policy #1140.4.2.
 
 If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), make sure it adheres to the following guidelines.
 
@@ -842,7 +842,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 ## Advertising
 
 >[!NOTE]
-> This section reference Microsoft Commercial Marketplace Policy # 1140.7
+> The value proposition reference Microsoft Commercial Marketplace Policy # 1140.7
 Apps must not display advertising, including dynamic ads, banner ads, and ads in message
 
 ## Next step
