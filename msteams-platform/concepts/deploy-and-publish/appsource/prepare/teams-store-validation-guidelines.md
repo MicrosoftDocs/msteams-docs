@@ -25,7 +25,7 @@ For an ideal user experience, we suggest you fix these, however, your app submis
 > [!NOTE]  
 > This section references Microsoft Commercial Certification Policy # 1140.1.1 and provides additional guidance to developers on naming their apps.
 
-An app's name plays a critical role in how users discover it in the store. Remember the following about app names:
+An app's name plays a critical role in how users discover it in the store. Remember the following points about app names:
 
 * The name must include terms relevant to your users.
 * Names of core Teams features shouldn't be included in your app name, such as:  
@@ -86,7 +86,7 @@ For information on how to implement app authentication, see [authentication in T
 * **Sign in, sign out, and sign up experiences**:
   * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience.
   * When users sign out, they must sign out only from the app and remain signed in to Teams.
-  * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and potentially acquire credentials.  Way forward must be provided in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup or config page).
+  * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and potentially acquire credentials.  Way forward must be provided in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page).
   * Apps that require tenant admin to complete one time setup must clearly call out dependency on tenant admin to configure the app (before any other tenant user can install and use the app).
   
   Dependency must be available in the app’s manifest and AppSource long description, all first run experience touchpoints including bot welcome message, tab setup, or config page, help text as considered necessary as part of bot response or compose extension or static tab content. 
@@ -102,7 +102,7 @@ For information on how to implement app authentication, see [authentication in T
 > [!NOTE]  
 > This section references Microsoft Commercial Certification Policy #1140.3.1 and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
-Apps must not ask users to make payments within the Teams interface (see the following image). Financial instrument details must not be transmitted to users through a bot interface.
+Apps must not ask users to make payments within the Teams interface (see the following image). App shouldn't transmit financial instrument details to users through a bot interface.
   ![In App Payments](~/assets/images/submission/validation-financial-information-1.png)
 
 
@@ -375,10 +375,10 @@ If your app includes a tab, make sure it adheres to these guidelines.
    If your app asks user to embed a website URL during tab configuration and app functionality is limited to displaying the entire content in this configured website in the channel tab, your app doesn't offer significant value to the user. Consider adding another capabilities or workflows to your app.
     
   ![Configured URL](~/assets/images/submission/validation-tabs-setup-configured-url.png)  
-  :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App asks user to configure an URL during tab set-up. App functionality extends beyond displaying only the content in configured URL. 
+  :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App asks user to configure a URL during tab set-up. App functionality extends beyond displaying only the content in configured URL. 
 
   ![Configured URL limited](~/assets/images/submission/validation-tabs-setup-configured-url-two.png)  
-  :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App asks user to configure an URL during tab set-up. App functionality limited to displaying content in configured URL.
+  :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App asks user to configure a URL during tab set-up. App functionality limited to displaying content in configured URL.
 
 ### Views
 
@@ -591,7 +591,7 @@ Bots must not spam users by sending multiple messages in short succession.
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: User receives only one welcome message.
 
   ![Bot Spamming Multiple Message](~/assets/images/submission/validation-bot-message-spamming-multiple-messages.png)  
-  :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: User receives the same welcome message multiple seperate posts.
+  :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: User receives the same welcome message multiple separate posts.
 
 
 * **Bot messages in personal apps**: Don't send multiple messages in quick succession. Send one message with complete information. Avoid multi-turn conversations to complete a single workflow. Use a form (or task module) to collect all inputs from a user at one time.
