@@ -77,6 +77,6 @@ Identify which new features the user will prefer to have in the current solution
 > [!div class="nextstepaction"]
 > [Map your use cases](../../concepts/design/map-use-cases.md)
 
-## See Also
+## See also
 
 [Device capabilities](~/concepts/device-capabilities/device-capabilities-overview.md)

@@ -47,4 +47,4 @@ For more information, see [publish to the Teams store](~/concepts/deploy-and-pub
 
 ## See also
 
-* [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
+[Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
