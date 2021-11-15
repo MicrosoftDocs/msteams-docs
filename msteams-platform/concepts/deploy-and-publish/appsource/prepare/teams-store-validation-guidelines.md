@@ -826,7 +826,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 Ensure to adhere to the following guidelines:
 
-* All the notification triggers specified in your app configuration should get a notification.
+* All the notification triggers that are specified in your app configuration should get a notification.
 * Notifications must be localized per the supported languages configured for your app.
 * Notifications must display within five seconds of user action.
 
