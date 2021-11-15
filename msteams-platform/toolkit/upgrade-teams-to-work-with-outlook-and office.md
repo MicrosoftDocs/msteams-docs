@@ -10,15 +10,15 @@ ms.author: v-vasudhab
 # Upgrade Teams application to work with Outlook and Office.com
 
 > [!NOTE]
-> This feature is currently available in Developer preview only.
+> Currently, this feature is available in [developer preview](../resources/dev-preview/developer-preview-intro.md) only.
 
 Teams Toolkit helps you to upgrade Teams applications to work with Outlook and Office.com. To extend your Teams applications in Outlook and Office.com, the migration commands in Teams are as follows:
-
-![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
 
 1. Use the command **Teams: Upgrade Teams manifest to support Outlook and Office apps** to upgrade manifest to the latest version.
 
 1. Use the command **Teams: Upgrade Teams JS SDK references to support Outlook and Office apps** to upgrade `TeamsJS` SDK to the latest version.
+
+![Migration of Teams](../assets/images/upgrade-teams/teams-extended-in-outlook-and-office.png)
 
 > [!NOTE]
 > To extend your Teams application in Outlook and Office.com, upgrading manifest file is required. However, it's optional for you to upgrade the `TeamsJS` SDK, as the old version continues to work.
@@ -28,8 +28,8 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 
 ## Prerequisites
 
-1. Install `2.10.0` or a higher version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-1. [Set up your dev environment](msteams-platform/m365-apps/prerequisites.md)
+1. Install `2.10.0` or later version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+1. [Set up your dev environment](msteams-platform/m365-apps/prerequisites.md).
 
 The following are the steps to upgrade manifest and `TeamsJS` client SDK:
 
@@ -44,7 +44,7 @@ This command will:
 * Update manifest version to use the latest `m365DevPreview` version.
 * Update manifest file to use the latest `DevPreview` schema.
 
-To know more about the required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview)
+For more information on required manifest schema and version, see [Developer Preview manifest schema](/microsoftteams/platform/resources/schema/manifest-schema-dev-preview).
 
 ## Upgrade Teams JavaScript Client SDK
 
@@ -63,7 +63,7 @@ This command will:
 * `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#callbacks-converted-to-promises) has gone well at every call site the tool found
 
 > [!IMPORTANT]
-> Be sure to review any of the `TODO` items deposited by the tool.
+> Ensure that you review any of the `TODO` items deposited by the tool.
 
 ## Run your Teams application in Outlook and Office.com
 
@@ -89,7 +89,7 @@ Perform the following steps to preview personal tab apps in Outlook web app and 
 
 ### Outlook web application
 
-1. Go to https://outlook.office.com
+1. Go to https://outlook.office.com.
 1. Select the three dots on the bottom left bar.
 
     ![More apps](../assets/images/upgrade-teams/apps.png)
@@ -113,12 +113,12 @@ Perform the following steps to preview personal tab apps in Outlook web app and 
 
 Perform the following steps to preview your apps in Outlook web client:
 
-1. Go to www.office.com
+1. Go to www.office.com.
 1. Select the three dots on the bottom left bar.
 
     ![Apps in M365](../assets/images/upgrade-teams/m365-app.png)
 
-1. Select the name of your app to preview it in office.com
+1. Select the name of your app to preview it in `office.com`.
 
     ![Apps in Office](../assets/images/upgrade-teams/office-preview.png)
 
@@ -151,4 +151,4 @@ Perform the following steps to create a new tab app using Teams Toolkit and run 
 
 ## See also
 
-[Placeholder for see also links]
+[Overview](msteams-platform/m365-apps/overview.md)
