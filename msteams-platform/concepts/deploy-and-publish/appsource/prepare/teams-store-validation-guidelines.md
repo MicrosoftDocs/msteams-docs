@@ -47,10 +47,7 @@ An app's name plays a critical role in how users discover it in the store. Remem
 * When uploading the app package in Partner Center, you must select the right **Markets** where the app will be available under the **Availability** section.
 
  > [!TIP]  
- >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots and video, short description and website either separately or taken together must not mimic or impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
-
- > [!NOTE]  
- > App name, short description, long description. 
+ >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots and video, short description and website either separately or taken together must not mimic or impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering. 
 
 ### Suitable for workplace consumption
 
