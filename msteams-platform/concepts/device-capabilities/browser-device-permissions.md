@@ -20,11 +20,9 @@ If your Teams app has declared in the [application manifest](native-device-permi
 
 * **Personal apps and task module dialogs**: The **App permissions** option is available in the upper-right corner of the page.
 
-<img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" align="left" width="800"/>
+<img src="../../assets/images/tabs/apppermissions.png" alt="App permissions button" width="800"/>
 
 * **Chats, channel, or meeting tabs**: The **App permissions** option is available in the dropdown of the tab.
-
-
 ![App permissions drop-down](../../assets/images/tabs/drop-downapppermissions.png)
 
 After the **App permissions** option is selected, a popup appears where the user can enable the permissions button.
