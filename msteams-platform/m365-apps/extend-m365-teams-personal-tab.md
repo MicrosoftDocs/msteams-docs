@@ -95,9 +95,6 @@ Upon completion, the utility will have updated your `package.json` file with the
 > * `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](using-teams-client-sdk-preview.md#callbacks-converted-to-promises) has gone well at every call site the tool found
 
 > [!IMPORTANT]
-> Be sure to review all `TODO` items flagged by the tool.
-
-> [!IMPORTANT]
 > Code inside *.html* files is not supported by the upgrade tooling and will require manual changes.
 
 > [!NOTE]

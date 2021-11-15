@@ -13,8 +13,8 @@ There are two significant changes in the TeamsJS SDK v2 Preview that your code w
 * [**Callback functions now return Promise objects.**](#callbacks-converted-to-promises) All existing functions with a callback parameter have been modernized to return a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object for improved handling of asynchronous operations and code readability.
 
  - [**APIs are now organized into *capabilities*.**](#apis-organized-into-capabilities) You can think of capabilities as logical groupings of APIs that provide similar functionality, such as `authentication`, `calendar`, `mail`, `monetization`, `meeting`, and `sharing`.
- 
- You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code to simplify the update process for your Teams app, as described in the next section.
+
+ You can use the [Teams Toolkit extension](https://aka.ms/teams-toolkit) for Visual Studio Code to simplify the update process for your Teams app, as described in the following section.
 
 > [!NOTE]
 > Enabling an existing Teams app to run in Outlook and Office requires both:
@@ -76,9 +76,6 @@ After completion, the utility will have updated your `package.json` file with th
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS SDK v2 Preview
 > * `TODO` comment reminders to review areas that might be impacted by [Context](#updates-to-the-context-interface) interface changes
 > * `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](#callbacks-converted-to-promises) has gone well at every call site the tool found
-
-> [!IMPORTANT]
-> Be sure to review all `TODO` items flagged by the tool.
 
 > [!IMPORTANT]
 > Code inside html files is not supported by the upgrade tooling and will require manual changes.
