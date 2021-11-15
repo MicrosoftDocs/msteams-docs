@@ -81,7 +81,7 @@ The following are the steps to Test your application in Outlook and Office.com b
 
 Teams install and launch your app. You can find your app in **More apps**.
 
- ![More apps](../assets/images/upgrade-teams/more-apps.png)
+ ![View apps](../assets/images/upgrade-teams/more-apps.png)
 
 ## Run Teams application in Outlook
 
