@@ -182,7 +182,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Notes** | **Changed topics** |
 | -------- | --------- | ------------------ |
-|11/15/2021|Personal tabs and messaging extensions run in Outlook and Office|[Extend Teams apps across Microsoft 365](/m365-apps/overview.md)
+|11/15/2021|Personal tabs and messaging extensions run in Outlook and Office|[Extend Teams apps across Microsoft 365](m365-apps/overview.md)
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md)|
 |10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md)|
 |06/21/2021|Uninstall behavior for personal app with bot.| [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
