@@ -4,7 +4,7 @@ description: Here are the prerequisites for extending your Teams apps across Mic
 ms.date: 11/15/2021
 ms.topic: how-to
 ---
-# Set up your dev environment for extending Teams apps across Microsoft 365 (preview)
+# Set up your dev environment for extending Teams apps across M365 (preview)
 
 The development environment for extending Teams apps across Microsoft 365 is similar to what you use for Microsoft Teams development. This article discusses specific configurations required to run preview builds of Microsoft Teams and Microsoft Office applications in order to preview Teams apps running in Outlook and Office. To set up your development environment, you'll need to:
 
@@ -19,7 +19,7 @@ The development environment for extending Teams apps across Microsoft 365 is sim
 
 If you don't already have one, create a [Microsoft 365 developer subscription](/office/developer-program/microsoft-365-developer-program-get-started) sandbox tenant or obtain a test tenant through your organization.
 
-After you have a tenant, you'll need to [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your tenant by signing in to [Microsoft 365 admin center](https://admin.microsoft.com) and navigating to Show All > Teams > Teams apps > Setup policies > **Global**.  From there, toggle on **Upload custom apps** and **Save**.
+After you have a tenant, you'll need to [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading) for your tenant by signing in to [Microsoft 365 admin center](https://admin.microsoft.com) and navigating to Show All > Teams > Teams apps > Setup policies > **Global**.  Toggle on **Upload custom apps** and **Save**.
 
 If you have an existing tenant, verify that sideloading is enabled by signing in to Teams and selecting **Apps**. You will see the **Upload a custom app** option if sideloading is enabled for your tenant.
 
@@ -68,7 +68,7 @@ Here are the steps for installing Office 365 *Beta Channel* applications in your
 
    :::image type="content" source="images/outlook-coming-soon.png" alt-text="'Coming Soon' button in Outlook desktop toggled to 'On'}":::
 
-You can verify your tenant has support for Teams personal tabs running on Outlook for Windows desktop by signing in with your test tenant credentials. If you see an ellipses (**...**) option on the side bar (the entry point for sideloaded Teams personal tabs), your tenant has support.
+You can verify your tenant supports Teams personal tabs running on Outlook for Windows desktop by signing in with your test tenant credentials and looking for an ellipses (**...**) option on the side bar (the entry point for sideloaded Teams personal tabs).
 
 :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in Outlook for desktop":::
 
@@ -78,7 +78,7 @@ If you're opted in to targeted releases but you don't see these ellipses options
 
 ## Switch to the Developer Preview version of Teams
 
-You'll also need to opt in to the *Public Developer Preview* from your Microsoft Teams client.
+Ensure that you opt in to the [*Public Developer Preview*](../resources/dev-preview/developer-preview-intro) from your Microsoft Teams client.
 
 1. Sign in to Teams with your sandbox tenant account.
 1. From the ellipsis (**...**) menu next to your user profile, select **About** and select the **Developer preview** option.
@@ -88,7 +88,7 @@ You'll also need to opt in to the *Public Developer Preview* from your Microsoft
 
 ## Install Visual Studio Code and Teams Toolkit Preview extension
 
-Optionally, you can take advantage of the [Visual Studio Code](https://code.visualstudio.com/) toolkit to help extend Teams apps into Office and Outlook.
+Optionally, you can take advantage of [Visual Studio Code](https://code.visualstudio.com/) to help extend Teams apps into Office and Outlook.
 
 The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. Continue to [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md) to learn more.
 
