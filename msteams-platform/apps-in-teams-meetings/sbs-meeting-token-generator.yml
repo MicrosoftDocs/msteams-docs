@@ -103,7 +103,7 @@ items:
 
     1. In the **Microsoft App ID** section, by default **Create new Microsoft App ID** is selected. 
     
-       You can either select **Use existing app registration** and enter **Existing app id** and **Existing app password**, or select **Create new Microsoft App ID**.
+       You can either select **Use existing app registration** and enter **Existing app ID** and **Existing app password**, or select **Create new Microsoft App ID**.
 
        > [!NOTE]
        > You can't create more than one bot with the same **Microsoft App ID**.
@@ -509,7 +509,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select **Add an app**.
+    1. Once the meeting is created, go to the meeting details page and select **Add** **an app**.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
