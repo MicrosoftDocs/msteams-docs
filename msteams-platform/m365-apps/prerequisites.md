@@ -90,7 +90,7 @@ You'll also need to opt in to the *Public Developer Preview* from your Microsoft
 
 Optionally, you can take advantage of tooling in [Visual Studio Code](https://code.visualstudio.com/) to help extend Teams apps into Office and Outlook.
 
-The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. Continue to [Enable a Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md) to learn more.
+The extension [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit) (`v2.10.0` or later) provides commands that can help modify your existing Teams code to be compatible with Outlook and Office. Continue to [enable Teams personal tab for Office and Outlook](extend-m365-teams-personal-tab.md) to learn more.
 
 ## Next steps
 
