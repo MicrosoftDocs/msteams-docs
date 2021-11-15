@@ -43,7 +43,7 @@ items:
 - title: Create a Bot Registration In Azure portal
   durationInMinutes: 5
   content: |
-    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps:
+    To authenticate the bot with SSO, you can set up bot in Azure Bot Service. Register bot with Azure Bot Service when you develop and host it in Azure. Perform the following steps for bot registration:
 
     * Use ngrok to create a tunnel to your web server's endpoints.
     * Create Azure Bot resource to register bot with Azure Bot Service.
@@ -232,7 +232,7 @@ items:
     **To update manifest**
 
     1. Select **Manifest** from the left pane.
-    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already in testing your bot in Teams, you must signout this app and signout Teams. Then signin again to see this change).</br>
+    1. Ensure the config item is set to **"accessTokenAcceptedVersion": 2**. If not, change its value to **2** and select **Save**. (If you are already testing your bot in Teams, you must sign out this app and sign out Teams. Then sign in again to see this change).</br>
 
         ![Update Manifest](~/assets/images/adaptive-cards/manifest.png)
 
