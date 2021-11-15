@@ -48,7 +48,7 @@ landingContent:
         url: sbs-gs-csharp.yml
       - text: Build app with Node.js
         url: sbs-gs-nodejs.yml
-- title: About building apps for Teams
+- title: Build apps for Teams
   linkLists:
     - linkListType: overview
       links:
@@ -80,7 +80,7 @@ landingContent:
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
-- title: Publish and Distribute
+- title: Publish and distribute
   linkLists:
   - linkListType: concept
     links:
