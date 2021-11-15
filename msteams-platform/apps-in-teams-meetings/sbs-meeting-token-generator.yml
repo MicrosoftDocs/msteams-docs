@@ -58,7 +58,10 @@ items:
     * [ASP.NET core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1) version 3.1
     * [React.JS](https://reactjs.org/tutorial/tutorial.html) version 16 or later
 
-    Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
+- title: Set up local environment
+  durationInMinutes: 1
+  content: |
+   Clone `Microsoft-Teams-Samples` repository to your local GitHub:  
 
     1. Open [Microsoft Teams Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
     1. Select **Code**.
@@ -66,7 +69,7 @@ items:
 
        ![Clone repository](~/assets/images/meeting-token-generator/meeting-token-generator-clonerepository.png)
 
-    1. Select **Clone**.
+    1. Select **Clone**. 
 
 - title: Create and register your bot in AAD portal
   durationInMinutes: 5
@@ -138,7 +141,7 @@ items:
 
         ![New client secret](~/assets/images/meeting-token-generator/meeting-token-generator-newclientsecret.png)
     
-    The **Add a client secret** window appears.  
+      The **Add a client secret** window appears.  
 
     1. Enter **Description**.
     
@@ -271,7 +274,7 @@ items:
   
     1. Select **Add scope** to save.
        The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
-           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`:
+           `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
   
@@ -279,9 +282,9 @@ items:
     
     1. Select **Add a client application**. 
 
-    1. Enter each of the following client IDs and select the authorized scope you created in the previous step:</br>
+    1. Enter each of the following client IDs and select the authorized scope:</br>
 
-         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile/desktop application).
+         * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` (Teams mobile or Teams desktop application).
          * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` (Teams web application).
 
          ![Add client application](~/assets/images/meeting-token-generator/meeting-token-generator-addclientapplication.png) 
@@ -301,7 +304,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default **User.Read** is checked:
+        By default **User.Read** is checked.
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
@@ -311,7 +314,7 @@ items:
          * **OpenId**
          * **profile**
 
-    1. Select **Add permissions**:
+    1. Select **Add permissions**.
 
          ![Other permissions](~/assets/images/meeting-token-generator/meeting-token-generator-otherpermissions.png)
 
@@ -332,15 +335,15 @@ items:
              * **ID tokens**
              * **Access tokens**
    
-         1. Select **Configure**:
+         1. Select **Configure**.
 
             ![Auth-end](~/assets/images/meeting-token-generator/meeting-token-generator-authend.png)
 
 
-- title: Setting up app settings
+- title: Set up app settings
   durationInMinutes: 1
   content: |
-    1. Navigate to `appsettings.json` in cloned repository:
+    1. Navigate to `appsettings.json` in cloned repository.
 
         ![App settings location](~/assets/images/meeting-token-generator/meeting-token-generator-appsettingslocation.png)
 
@@ -350,21 +353,21 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"AzureAd"."TenantId"` to the tenant ID of the tenant where the app is used. In our example, use `meganb@M365x682156.onmicrosoft.com` as the tenant ID. 
 
-          > [!NOTE]
-          > The sample works only in the current tenant.
+             > [!NOTE]
+             > The sample works only in the current tenant.
 
          * Set `"AzureAd"."ApplicationId"` to your bot's **Microsoft App ID**.
-         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`:
+         * Set `"ContentBubbleUrl"` to the content bubble iframe url `(https://[WebAppDomain]/contentBubble.html)`.
 
-       > [!NOTE]
-       > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
+             > [!NOTE]
+             > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
         ![App settings](~/assets/images/meeting-token-generator/meeting-token-generator-appsettings.png)
 
-- title: Setting up manifest file
+- title: Set up manifest file
   durationInMinutes: 1
   content: |
-    1. Navigate to `manifest.json` in cloned repository:
+    1. Navigate to `manifest.json` in cloned repository.
 
         ![Manifest file location](~/assets/images/meeting-token-generator/meeting-token-generator-manifestlocation.png)
     
@@ -383,7 +386,7 @@ items:
            * `[privacyUrl]`
            * `[termsOfUseUrl]`
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
-         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**: 
+         * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
 
        ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest.png)
 
@@ -394,16 +397,16 @@ items:
     
     1. Navigate to the `App` folder in cloned repository.
     1. Copy the `App` folder path.
-    1. In a terminal window, change current the directory to the copied `App` path:
+    1. In a terminal window, change current the directory to the copied `App` path.
 
        ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
 
     1. Run `npm install`.
-    1. Run `npm run build` to build the app:
+    1. Run `npm run build` to build the app.
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
 
-       The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location:
+       The process generates the `/dist` folder inside the `App` folder where the assets get copied. The server serves the static files from the location.
 
        ![Distribution folder](~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png)
 
@@ -415,22 +418,22 @@ items:
     # [Visual Studio 2019](#tab/vs2019)
 
        1. Launch **Visual Studio 2019**.
-       1. Navigate to **File** > **Open** > **Project/Solution**:
+       1. Navigate to **File** > **Open** > **Project/Solution**.
     
           ![Open file](~/assets/images/meeting-token-generator/meeting-token-generator-VSopenfile.png)
 
-       1. Select `TokenApp.csproj` file from `csharp` folder:
+       1. Select `TokenApp.csproj` file from `csharp` folder.
 
           ![Token File](~/assets/images/meeting-token-generator/meeting-token-generator-Tokenfileready.png)
 
-       1. Press `F5` to run the project:
+       1. Press `F5` to run the project.
     
           > [!NOTE]
           > If a prompt appears, asking for a certification, select **Yes**.
 
           ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
-      A webpage opens with a message **App is ready!**:
+      A webpage opens with a message **App is ready!**.
 
       ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
 
@@ -456,21 +459,21 @@ items:
     1. Enable uploading of apps in the admin console of your tenant.
        1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
        1. In the left panel, select **Show All**.
-       1. Select **Teams**:
+       1. Select **Teams**.
  
           ![Admin center menu](~/assets/images/meeting-token-generator/meeting-token-generator-admincenter.png)
 
        1. In the left panel, select **Teams apps**.
        
-       1. Select **Setup Policies**:
+       1. Select **Setup Policies**.
 
           ![Setup policies](~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png) 
 
-       1. Select **Global**:
+       1. Select **Global**.
 
           ![Turn on sideload view](~/assets/images/prepare-test-tenant/turn-on-sideload.png) 
 
-       1. Toggle **Upload custom apps** to **On** position:
+       1. Toggle **Upload custom apps** to **On** position.
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
@@ -485,11 +488,11 @@ items:
     
     1. Select **About**. 
     
-    1. Select **Developer preview**: 
+    1. Select **Developer preview**.
 
         ![Developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-devpreview.png)
    
-    1. Select **Switch to Developer preview**:
+    1. Select **Switch to Developer preview**.
 
         ![Switch to developer preview](~/assets/images/meeting-token-generator/meeting-token-generator-switchtodevpreview.png)
 
@@ -509,45 +512,45 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select **Add an app**:
+    1. Once the meeting is created, go to the meeting details page and select **Add an app**.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
-    1. In the pop-up that opens, select **Manage apps**:
+    1. In the pop-up that opens, select **Manage apps**.
 
        ![Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageapps.png)
    
-    1. Select **Upload a custom app**: 
+    1. Select **Upload a custom app**. 
 
        ![Upload custom app](~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png)
 
-    1. Select **Open** to upload the .zip file that was created in the previous steps:
+    1. Select **Open** to upload the .zip file that you created in the `Manifest` folder.
 
        ![Select zip file](~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png)
 
-    1. Select **Add**:
+    1. Select **Add**.
 
        ![Add the app](~/assets/images/meeting-token-generator/meeting-token-generator-addtheapp.png)
 
-       The **Manage apps** section displays the list of applications:
+       The **Manage apps** section displays the list of applications.
 
        ![App in Manage apps](~/assets/images/meeting-token-generator/meeting-token-generator-manageappsection.png)
    
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. In the app selection page, the app displays as **Meeting Token App**:
+    1. Select **Add an app**. In the app selection page, the app displays as **Meeting Token App**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
     1. Select the **Meeting Token App**.
     
-    1. Select **Save**:
+    1. Select **Save**.
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
       The app is visible in the meeting chat. 
 
-    1. Start the meeting. The icon is visible in the meeting control bar:
+    1. Start the meeting. The icon is visible in the meeting control bar.
 
         ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
 
@@ -562,7 +565,7 @@ items:
     ![Your Token](~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png)
 
 - content: |
-    You've completed the tutorial to get started with a Meeting Token Generator app:
+    You've completed the tutorial to get started with a Meeting Token Generator app.
 
     ![Real time](~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png)
 
