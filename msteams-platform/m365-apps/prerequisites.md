@@ -30,7 +30,7 @@ If you have an existing tenant, verify that sideloading is enabled by signing in
 > [!IMPORTANT]
 > Refer to the latest in [Microsoft Teams - Microsoft 365 Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/) to check if outlook.com and office.com support for Teams apps is available to your test tenant.
 
-To preview Teams apps running in outlook.com or office.com, you'll need to opt in your test tenant to Office 365 [Targeted releases](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release).
+To preview Teams apps running in outlook.com or office.com, opt in your test tenant to Office 365 [Targeted releases](/microsoft-365/admin/manage/release-options-in-office-365#targeted-release).
 
 1. Sign in to Microsoft 365 admin center using credentials for your test tenant and navigate to the [Organizational profile](https://admin.microsoft.com/AdminPortal/Home?#/Settings/OrganizationProfile) tab. Select **Release preferences** and select one of the *Targeted release* preferences:
 
