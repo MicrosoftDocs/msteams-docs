@@ -72,7 +72,7 @@ You can verify your tenant has support for Teams personal tabs running on Outloo
 
 :::image type="content" source="images/outlook-desktop-ellipses.png" alt-text="Ellipses '...' entry point to sideloaded Teams tab apps in Outlook for desktop":::
 
-Similarly, you can verify test tenant support for messaging extensions in Outlook for Windows desktop by checking for a **More apps** option in the Outlook compose message ribbon.
+Similarly, you can verify test tenant support for messaging extensions in Outlook for Windows desktop by checking for the **More apps** option in the Outlook compose message ribbon.
 
 If you're opted in to targeted releases but you don't see these ellipses options, it's likely that preview feature support is still in the process of rolling out to your tenant. For the latest updates, see [Microsoft Teams Developer Blog](https://devblogs.microsoft.com/microsoft365dev/category/teams/).
 
