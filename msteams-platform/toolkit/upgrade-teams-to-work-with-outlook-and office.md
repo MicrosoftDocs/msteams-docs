@@ -29,7 +29,7 @@ Teams Toolkit helps you to upgrade Teams applications to work with Outlook and O
 ## Prerequisites
 
 1. Install `2.10.0` or a higher version of Teams Toolkit from Visual Studio Code extension in [Teams Toolkit (Preview) - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-1. [Set up your dev environment](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/prerequisites?branch=pr-en-us-2017)
+1. [Set up your dev environment](msteams-platform/m365-apps/prerequisites.md)
 
 The following are the steps to upgrade manifest and `TeamsJS` client SDK:
 
@@ -57,10 +57,10 @@ This command will:
 [!div class="checklist"]
 * `package.json` references to TeamsJS SDK Preview
 * Import statements for TeamsJS SDK Preview
-* [Function](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/using-teams-client-sdk-preview?branch=pr-en-us-2017&tabs=manifest-teams-toolkit%2Cjavascript#functions) references for TeamsJS SDK Preview
-* [Enum](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/using-teams-client-sdk-preview?branch=pr-en-us-2017&tabs=manifest-teams-toolkit%2Cjavascript#enums) and [Interface](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/using-teams-client-sdk-preview?branch=pr-en-us-2017&tabs=manifest-teams-toolkit%2Cjavascript#interfaces) references for TeamsJS SDK Preview
-* `TODO` comment reminders to review areas that might be impacted by [Context](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/using-teams-client-sdk-preview?branch=pr-en-us-2017&tabs=manifest-teams-toolkit%2Cjavascript#context-interface) interface changes
-* `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](https://review.docs.microsoft.com/en-us/windows/uwp/m365-apps/using-teams-client-sdk-preview?branch=pr-en-us-2017&tabs=manifest-teams-toolkit%2Cjavascript#callbacks-converted-to-promises) has gone well at every call site the tool found
+* [Function](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#functions) references for TeamsJS SDK Preview
+* [Enum](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#enums) and [Interface](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#interfaces) references for TeamsJS SDK Preview
+* `TODO` comment reminders to review areas that might be impacted by [Context](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#context-interface) interface changes
+* `TODO` comment reminders to ensure [conversion to promises functions from callback style functions](msteams-platform/m365-apps/using-teams-client-sdk-preview.md#callbacks-converted-to-promises) has gone well at every call site the tool found
 
 > [!IMPORTANT]
 > Be sure to review any of the `TODO` items deposited by the tool.
@@ -92,7 +92,7 @@ Perform the following steps to preview personal tab apps in Outlook web app and 
 1. Go to https://outlook.office.com
 1. Select the three dots on the bottom left bar.
 
-    ![More apps view](../assets/images/upgrade-teams/apps.png)
+    ![More apps](../assets/images/upgrade-teams/apps.png)
 
 1. Select the name of your app to preview in Outlook web application.
 
