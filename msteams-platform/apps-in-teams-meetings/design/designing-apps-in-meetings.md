@@ -208,6 +208,8 @@ The shared meeting stage is all about collaboration and participation. Here are 
 
 :::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review.png" alt-text="Example shows a dashboard being reviewed on the shared meeting stage." border="false":::
 
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Example shows a dashboard component being reviewed on the shared meeting stage." border="false":::
+
    :::column-end:::
 :::row-end:::
 
