@@ -1,23 +1,15 @@
 ---
-title: Overview to building apps for the Microsoft Teams platform
+title: Overview - User story for Microsoft Teams platform
 author: heath-hamilton
-description: Overview of how developers can extend Microsoft Teams features with custom apps.
+description: Overview user story of how app idea fits 
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---
-# Build apps for Microsoft Teams
+# It starts with an idea
 
-Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
-
-Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
-
-Learn how apps can help you help your users in Teams environment.
-
-## It starts with an idea
-
-Let's look at a scenario.
+Learn how apps can help you help your users in Teams environment. Let's look at a scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-1.png" alt-text="Image showing user story" border="true":::
 
