@@ -205,7 +205,7 @@ Looking for app development inspiration? Browse our list of real-world scenarios
 
 ## Test your app running across Microsoft 365
 
-You can preview your Teams apps running in other high usage Microsoft 365 experiences with the Microsoft Teams JavaScript client SDK v2 Preview.
+You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
 
 > [!div class="nextstepaction"]
 > [Extend your app](/m365-apps/overview.md)
