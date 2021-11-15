@@ -9,7 +9,9 @@ ms.date: 11/02/2021
 ---
 # It starts with an idea
 
-Learn how apps can help you help your users in Teams environment. Let's look at a scenario:
+Learn how apps can help you help your users in Teams environment.
+
+Let's look at a scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-1.png" alt-text="Image showing user story" border="true":::
 

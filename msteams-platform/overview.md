@@ -16,9 +16,32 @@ Apps are how you extend Teams to fit your needs. Create something brand new for 
 > [!div class="nextstepaction"]
 > [Start here](get-started/get-started-overview.md)
 
-## What are Teams apps?
+## Why build your apps with Teams?
 
 Teams apps are a combination of [capabilities](concepts/capabilities-overview.md). Some apps are simple (send notifications), while others are complex (manage patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
+
+This document is about building apps for Microsoft Teams. These apps extend Microsoft capabilities to suit the requirements of your users. Building your apps with Teams brings your users the advantages of collaborative communication.
+
+With a Teams app, you can:
+
+- Design your app on the basis of purpose, features, complexity, and user interaction.
+- Build personal apps, a shared or collaborative apps, or custom apps.
+- Use the benefits of Teams Toolkit that scaffolds the basic app workspace for you with minimal effort.
+- Try ready made solutions.
+- Integrate with low-code and no-code Apps in Teams.
+- Automate tasks and low-code applications.
+- Integrate your existing apps with Teams.
+- Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
+- Include features, such as, user authentication, integration with other applications and web apps, utilizing Teams data from Microsoft Graph, and using Developer Portal to manage your app.
+- Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
+- Utilize a wide library of UI toolkit to design the layout and appearance of your app.
+
+In addition to providing details about Teams features, this document also includes the following:
+
+- Code samples, snippets, and examples.
+- Step-by-step guides.
+- Guidelines to publish and distribute your app to Teams store.
+- Best practices for Teams app scenarios.
 
 ### Personal apps
 
