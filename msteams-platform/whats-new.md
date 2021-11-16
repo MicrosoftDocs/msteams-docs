@@ -18,6 +18,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 | Date | Update | Find here  |
 | --- | --- | --- |
 | 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+| 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |
 
 ## GA features
@@ -32,6 +33,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
