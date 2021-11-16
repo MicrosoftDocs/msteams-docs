@@ -31,7 +31,7 @@ items:
 
     * Token: Requests token for the user.
     * Done: Confirms token generation for the user.
-    * Skip: Skips the current user and moves on to the next person in line for a token.
+    * Skip: Skips the current user and moves to the next person in line for a token.
 
        > [!NOTE]
        > Skip is available only to the meeting organizers.
@@ -86,7 +86,7 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
-    1. In the search box, enter **Azure bot**.
+    1. In the search box, enter **Azure Bot**.
     1. Select **Enter**.
     1. Select **Azure Bot**.
 
@@ -239,7 +239,7 @@ items:
 
        ![Set link](~/assets/images/meeting-token-generator/meeting-token-generator-setlink.png)
 
-    1. Insert your `WebAppDomain` value between `api://` and `/{AppID}` as given:</br>
+    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api://ae57****.ngrok.io/{AppID}`</br>
         
        The domain name is highlighted in the following image:
@@ -273,7 +273,7 @@ items:
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
-       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended to the end:</br>
+       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end:</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
@@ -304,7 +304,7 @@ items:
 
     1. Select **Delegated permissions**.
 
-        By default **User.Read** is checked.
+        By default, **User.Read** is checked.
 
          ![User](~/assets/images/meeting-token-generator/meeting-token-generator-userpermission.png)
 
@@ -397,11 +397,11 @@ items:
     
     1. Navigate to the **App** folder in cloned repository.
     1. Copy the **App** folder path.
-    1. Open a Command Prompt window, change the current directory to the copied **App** path.
+    1. Open a new Command Prompt window, change the current directory to the copied **App** path.
 
        ![App folder path](~/assets/images/meeting-token-generator/meeting-token-generator-appfolderlocation.png)
 
-    1. Run `npm install`.
+    1. Run `npm install` to download packages and dependencies.
     1. Run `npm run build` to build the app.
 
        ![Build app](~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png)
@@ -428,14 +428,13 @@ items:
 
        1. Press **F5** to run the project.
     
-          > [!NOTE]
-          > If a prompt appears, asking for a certification, select **Yes**.
+       1. Select **Yes** if the following dialog appears:
 
           ![Trust Certificate](~/assets/images/meeting-token-generator/meeting-token-generator-certificate.png)
 
-      A webpage opens with a message **App is ready!**.
+          A webpage opens with a message **App is ready!**.
 
-      ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
+          ![App ready](~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png) 
 
         
     # [Command line](#tab/cli)
@@ -474,10 +473,12 @@ items:
 
           ![Toggle On](~/assets/images/meeting-token-generator/meeting-token-generator-toggleOn.png)
 
-       1. Select **Save**. Your test tenant can permit custom app sideloading.
+       1. Select **Save**. 
+       
+          Your test tenant can permit custom app sideloading.
 
           > [!NOTE]
-          > It takes some time for the sideloading to be active.
+          > The sideloading takes some time to become active.
 
     1. Go to **Microsoft Teams**.
     
@@ -509,7 +510,7 @@ items:
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. Once the meeting is created, go to the meeting details page and select **Add** **an app**.
+    1. After the meeting is created, go to the meeting details page and select **Add** **an app**.
 
        ![Add an app](~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png) 
    
@@ -535,7 +536,9 @@ items:
    
     1. Go to Teams meeting.
     
-    1. Select **Add an app**. In the app selection page, the app displays as **Meeting Token App**.
+    1. Select **Add an app**. 
+    
+       In the app selection page, the app displays as **Meeting Token App**.
   
        ![App icon in Teams](~/assets/images/meeting-token-generator/meeting-token-generator-appicon.png)
 
@@ -545,9 +548,11 @@ items:
 
        ![Welcome App](~/assets/images/meeting-token-generator/meeting-token-generator-welcomeapp.png)
    
-      The app is visible in the meeting chat. 
+       The app is visible in the meeting chat. 
 
-    1. Start the meeting. The icon is visible in the meeting control bar.
+    1. Start the meeting. 
+    
+       The icon is visible in the meeting control bar.
 
         ![Token in Meet](~/assets/images/meeting-token-generator/meeting-token-generator-tokeninmeet.png)
 
