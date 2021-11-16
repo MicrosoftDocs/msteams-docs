@@ -35,4 +35,4 @@ The following table lists tab SSO authentication v3 SDK code samples:
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
 * [AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md)
 * [Silent authentication AAD](~/tabs/how-to/authentication/auth-silent-AAD.md)
-* [Single Sign-on authentication in tabs](~/tabs/how-to/authentication/auth-add-sso.md)
+* [Single Sign-on authentication in tabs](auth-aad-sso.md)
