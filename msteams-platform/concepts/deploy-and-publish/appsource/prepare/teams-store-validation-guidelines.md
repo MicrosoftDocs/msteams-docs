@@ -32,7 +32,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
 
 * The name must include terms relevant to your users.
-* Names of core Teams features shouldn't be included in your app name, such as:  
+* Names of core Teams features must not be included in your app name, such as:  
   * **Chat**
   * **Contacts**
   * **Calendar**
@@ -62,7 +62,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 
 App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
-Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps shouldn't require a substantial time investment of over 60 mins per session or affect productivity.
+Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps must not require a substantial time investment of over 60 mins per session or affect productivity.
 
 ### Similar platforms and services
 
@@ -71,7 +71,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 > [!NOTE]  
 > This section is inline with Microsoft commercial certification policy number 1140.1.3. 
 
-Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services, such as Slack, Zoom, and Webex, and so on within the app content or in the app’s metadata unless the app provides specific interoperability.
+Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services, such as Slack, Zoom, and WebEx, and so on within the app content or in the app’s metadata unless the app provides specific interoperability.
 
 ### Feature names
 
@@ -128,7 +128,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
-* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app shouldn't show UI, text, or links indicating the need to pay.
+* You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
 * Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
 
 ### Bots
@@ -136,7 +136,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 [*Mandatory Fix*]
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.3.2.
+> This section is inline with Microsoft commercial marketplace policy number 1140.3.2.
 
 For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
@@ -148,7 +148,7 @@ Bots must always ask permission to upload a file and display a confirmation mess
 [*Mandatory Fix*]
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.3.3 and provides developer guidance on usage of restricted domains in the `validDomains` manifest property.
+> This section is inline with Microsoft commercial marketplace policy number 1140.3.3 and provides developer guidance on usage of restricted domains in the `validDomains` manifest property.
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
@@ -170,7 +170,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 ## General functionality and performance
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.
 
 ### Launching external functionality
 
@@ -219,7 +219,7 @@ App packages must be correctly formatted and include all required information an
 > * Testing instructions
 > * Steps to configure the app
 Test accounts (in case app depends on external accounts for authentication).
-> * Summary of expected app behaviour for the core workflows within Teams.
+> * Summary of expected app behavior for the core workflows within Teams.
 > * Limitations, conditions, or exceptions to the functionality, features, and deliverables.
 > * Emphasis on any considerations for testers while validating your app.  
 > * Pre-populate the test accounts with dummy data to aid testing.
@@ -239,7 +239,7 @@ The Teams app manifest defines your app's configuration.
 
 [*Mandatory Fix*]
 
-Icons are one of the main elements people see when browsing the Teams store. Your icons should communicate your app's brand and purpose while adhering to the following requirements:
+Icons are one of the main elements people see when browsing the Teams store. Your icons must communicate your app's brand and purpose while adhering to the following requirements:
 
 * Your app package must include two PNG versions of your app icon: A color icon and an outline icon.
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
@@ -247,7 +247,7 @@ Icons are one of the main elements people see when browsing the Teams store. You
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
   * When a user pins your app's messaging extension. 
 
-* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon shouldn't have any extra padding around the symbol.
+* The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
 
 * You app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
 
@@ -257,7 +257,7 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 You must have a short and long description of your app. The descriptions in your app configurations and Partner Center must be the same.
 
-Descriptions shouldn't directly or through insinuation disparage another brand (Microsoft owned or otherwise). Make sure your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
+Descriptions must not directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure your description doesn't include claims that can't be substantiated. For example, **Guaranteed 200 percent increase in efficiency**.
 
 #### Short description
 
@@ -325,7 +325,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 
 * You can have up to five screenshots per listing.
 * Supported file types include PNG, JPEG, and GIF.
-* Dimensions should be 1366x768 pixels.
+* Dimensions must be 1366x768 pixels.
 * Maximum size of 1,024 KB.
 
 **Dos:**
@@ -345,7 +345,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * Include mockups that inaccurately reflect your app's actual UI, such as showing your app being used outside of Teams.
 
 > [!TIP]  
-> A video can be the most effective way to communicate why people should use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
+> A video can be the most effective way to communicate why people must use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
 ### Privacy policy
 
@@ -366,16 +366,16 @@ The privacy policy can be specific to your Teams app or an overall policy for al
 [*Mandatory Fix*]
 
 Use the following guidelines to write the Terms of use:
- * Should be Specific and applicable to your offering.
- * Should be Hosted on your own domain.
- * Should have a secure (HTTPS) link.
+ * Must be Specific and applicable to your offering.
+ * Must be Hosted on your own domain.
+ * Must have a secure (HTTPS) link.
  * Access to Terms of use must not require authentication.
 
 ### Support links
 
 [*Mandatory Fix*]
 
-Your app's support URLs shouldn't require authentication. For example, users shouldn't login to contact you. 
+Your app's support URLs must not require authentication. For example, users must not login to contact you. 
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, which must be under your ownership and include your contact details or a way forward for users to raise a support ticket.
 
@@ -390,7 +390,7 @@ If your app supports localization, your app package must include a file with lan
 
 ## Tabs
 > [!NOTE]  
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.2.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.2.
 If your app includes a tab, ensure it adheres to these guidelines.
 
 > [!TIP]
@@ -413,7 +413,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * For the best first run experience, authenticate your users during the tab setup and not after. Authentication can happen outside the tab configuration window. [*Suggested Fix*]
 
-* The user shouldn't leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
+* The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
   ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Requires navigating outside the configuration experience to acquire **Profile Name**.
@@ -449,7 +449,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
   ![Multiple Tabs](~/assets/images/submission/validation-views-multiple-tabs.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Breakdown complex content in static tabs across multiple tabs.
 
-* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
+* Tabs must not have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
   ![Duplicate Header Logo](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Tab framework displays your app logo. Recommend removing the duplicate logo from the tab iframe.
@@ -462,7 +462,7 @@ The following are the navigation guidelines:
 
 * Static tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your static tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
-Design your app with basic and advanced Fulent UI components.
+Design your app with basic and advanced Fluent UI components.
 
   ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
@@ -488,7 +488,7 @@ Design your app with basic and advanced Fulent UI components.
     * Back buttons
     * Page headers
     * Hamburger menus
-* Tab shouldn't have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
+* Tab must not have a horizontal scroll. Whiteboarding apps and other apps that require a larger canvas to allow users to collaborate without a perceived broken app experience, can use horizontal scroll depending on their business need. [*Suggested Fix*]
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
@@ -522,7 +522,7 @@ Design your app with basic and advanced Fulent UI components.
 
 * Users can undo their last action in the tab. 
 
-* Tabs in a personal context may aggregate content from shared instances of the app. For example, a project management app with a configurable tab that lets channel members comment on the project on Kanban cards, should aggregate this content and display in the personal app. [*Suggested Fix*]
+* Tabs in a personal context may aggregate content from shared instances of the app. For example, a project management app with a configurable tab that lets channel members comment on the project on Kanban cards, must aggregate this content and display in the personal app. [*Suggested Fix*]
 
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 
@@ -570,7 +570,7 @@ Design your app with basic and advanced Fulent UI components.
 ## Bots
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.3.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.3.
 
 If your app includes a bot, ensure it adheres to these guidelines.
 
@@ -594,7 +594,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
   ![Bot Help Command](~/assets/images/submission/validation-bot-help-command.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot responding to **Help** command.
 
-* Bot commands shouldn't show a dead end to a user, the commands must always provide a way forward.
+* Bot commands must not show a dead end to a user, the commands must always provide a way forward.
 
   ![Bot Command Dead](~/assets/images/submission/validation-bot-commands-deadend.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot command with a dead end to the user.
@@ -664,7 +664,7 @@ Bot notifications must include content relevant for the scope you define for the
 
 ### Bots and Adaptive Cards
 
-Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include upto six actions. To display more content, consider using a task module or tab.
+Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
 
 For more information about cards, see:
 
@@ -696,7 +696,7 @@ Apps that provide only notifications with content such as **You have a new notif
 ## Messaging extensions
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.4.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.4.
 
 If your app includes a messaging extension, ensure it adheres to these guidelines.
 
@@ -705,7 +705,7 @@ If your app includes a messaging extension, ensure it adheres to these guideline
 
 ### Action commands
 
-Action-based messaging extensions should do the following:
+Action-based messaging extensions must do the following:
 
 * Allow users to trigger actions on a message without completing intermediate steps, such as sign in.
 
@@ -770,7 +770,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 ## Task modules
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.2.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.2.
 
 A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action. [*Mandatory Fix*]
 
@@ -788,7 +788,7 @@ For more information, see [task module design guidelines](/platform/task-modules
 ## Meeting extensions
 
 > [!NOTE]
-> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.2.
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.2.
 
 
 > [!TIP]
@@ -815,13 +815,13 @@ Use the following guidelines for meeting extensions:
 
 * Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md).
 * Tabs must not have horizontal scrolling.
-* Tabs should have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
+* Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting).
 * Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**.
 
 ### In-meeting experience
 
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
-* A tooltip should display the app name when hovering over the app icon during meetings.
+* A tooltip must display the app name when hovering over the app icon during meetings.
   
   ![Tooltip Display app name](~/assets/images/submission/validation-in-meeting-exp-display-app-name.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Tooltip displays app name (on hover).
@@ -855,42 +855,65 @@ Use the following guidelines for meeting extensions:
 
 * Must be dismissed after a user selects a button or performs an action.
 
+* **Together mode**: Ensure that you consider the following best practices for a scene building experience: 
+  * All images are in PNG format.
+  * The final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
+  * The maximum scene size is 10 MB.
+  * The maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
+  * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene. 
+
 ## Notifications
 
->[!NOTE]
-> The topics under Notifications are inline with Microsoft Commercial Marketplace Policy number 1140.4.2.
+> [!NOTE]
+> This section is inline with Microsoft commercial marketplace policy number 1140.4.2.
 
-If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), make sure it adheres to the following guidelines.
+If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/teams-send-activityfeednotifications), ensure it adheres to the following guidelines.
 
 ### General
 
-Ensure to adhere to the following guidelines:
-
-* All the notification triggers specified in your app configuration should work.
+* All the notification triggers specified in your app configuration must work.
 * Notifications must be localized per the supported languages configured for your app.
 * Notifications must display within five seconds of user action.
 
 ### Avatars
 
-Ensure to adhere to the following guidelines:
-
-* The notification avatar should match your app's color icon.
-* Notifications triggered by a user should include the user's avatar.
+* The notification avatar must match your app's color icon.
+* Notifications triggered by a user must include the user's avatar.
 
 ### Spamming
 
-Ensure to adhere to the following guidelines:
-
 * Apps must not send more than 10 notifications per minute to a user.
-* Bots and the activity feed shouldn't trigger duplicate notifications.
+* Bots and the activity feed must not trigger duplicate notifications.
 * Notifications must provide some value to users and not be used for trivial or irrelevant events.
 
 ### Navigation and layout
 
-Ensure to adhere to the following guidelines:
-
 * Notifications must adhere to the Teams activity feed layout and experience.
 * When selecting a notification, the user must be directed to relevant content within Teams.
+
+## Microsoft 365 App Compliance Program 
+
+> [!NOTE]
+> This section is inline with Microsoft commercial marketplace policy number 1140.6. 
+
+The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program: 
+
+  * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory (Azure AD) consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
+
+   ![Publisher Verification](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
+   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Blue verified badge on AAD consent dialog.
+
+  * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. 
+
+> [!NOTE] 
+> If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app. 
+
+## Advertising 
+
+> [!NOTE]
+> This section is in line with Microsoft commercial marketplace policy number 1140.7.
+
+Apps must not display advertising, including dynamic ads, banner ads, and ads in message.
 
 ## Next step
 
