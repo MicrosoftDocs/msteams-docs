@@ -7,7 +7,7 @@ metadata:
   level: Beginner
   ms.date: 10/12/2021
   ms.topic: interactive-tutorial
-  nextTutorialHref: ../apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
+  nextTutorialHref: apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md
   nextTutorialTitle: Read more to authenticate apps in Teams meeting
   ms.custom: mvc
   ms.localizationpriority: none
