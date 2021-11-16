@@ -14,7 +14,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced the guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
 > * The guidelines are marked as **Mandatory Fix** and **Suggested Fix**.
-  > * **Mandatory Fix**: If your app submission doesn’t pass the Microsoft Teams Store Validation, you'll receive a failure report with mitigation steps. Fix the issues for your app to pass the Microsoft Teams store submission process.
+ > * **Mandatory Fix**: If your app submission doesn’t pass the Microsoft Teams Store Validation, you'll receive a failure report with mitigation steps. Fix the issues for your app to pass the Microsoft Teams store submission process.
   > * **Suggested Fix**: Fix the issues for an ideal user experience. However, if you choose not to fix the issues, your app submission will not be blocked from publishing on the Teams store.
 
 
@@ -464,7 +464,6 @@ The following are the navigation guidelines:
   ![Usability App Provides Workflows](~/assets/images/submission/validation-usability-app-provides-workflows.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App provides workflows in a configurable tab that are valuable to the channel members within a Team. Developer has enabled relevant workflows for implementation within Teams.
 
-* Users can undo their last action in the tab.
   ![Usability Website I-Frame](~/assets/images/submission/validation-usability-website-i-framed.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: The entire website is within the iframe in the configurable tab. Website has header, footer, and native navigational elements that navigate user from the home page.
 
@@ -721,8 +720,7 @@ A card shared via a messaging extension provides value in Teams if:
 1.	Posted card provides adequate preview information for a user to take action or decide to view 
 further details in a link opening outside Teams.
 
-For a search-based message extension only app to pass validation, points 1 and 2 mentioned earlier are required as 
-baseline to ensure the user experience isn't broken.
+For a search-based message extension only app to pass validation, points 1 and 2 mentioned earlier are required as baseline to ensure the user experience isn't broken.
 
   ![Search based messaging inadequate](~/assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Inadequate information in posted card.
