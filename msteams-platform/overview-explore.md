@@ -24,12 +24,18 @@ Let's learn about some of Teams' features.
 | Messaging extensions | Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They search or initiate actions in an external system. You can send back the result of that interaction to the Microsoft Teams client in the form of a richly formatted card. | Reserve a resource and allow the channel to know the reserved time slot. Search for a work item in Azure DevOps, and share it with the group as an Adaptive Card. Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details. |
 |
 
+### Additional Use Cases
+
+Following is a list of use cases where Teams features are useful:
+
+- Add feature-wise use cases
+
 ## App scope
 
 Teams lets you determine the scope of app usage - on an individual level or in a collaborative context.
 
 - Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-- Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows or unlocking new social interactions.
+- Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows for your app's interactions or unlocking new social interactions.
 
 ## Diving Deeper
 
