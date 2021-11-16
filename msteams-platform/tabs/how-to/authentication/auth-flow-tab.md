@@ -47,7 +47,7 @@ Sample code showing the tab authentication process:
 |-----------------|-----------------|-------------|------------|
 | Teams tab authentication | Authentication process for tabs using AAD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-complete-sample/nodejs) |
 
-## More details
+## See also
 
 For a detailed implementation for tab authentication using AAD, see:
 

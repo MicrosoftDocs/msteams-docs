@@ -110,6 +110,6 @@ Whether you’re just starting on your app or close to a production-ready app, w
 * **Microsoft Teams store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
 
-## See Also
+## See also
 
 [Designing activity feed notifications](~/concepts/design/activity-feed-notifications.md)

@@ -207,7 +207,7 @@ A wizard guides a user through several screens to complete a task (such as a set
 
 :::image type="content" source="../../assets/images/ui-templates/wizard.png" alt-text="Example shows a wizard UI template on desktop." border="false":::
 
-## See Also
+## See also
 
 * [Design your app with basic Fluent UI components](~/concepts/design/design-teams-app-basic-ui-components.md)
 * [Designing your Microsoft Teams app with advanced UI components](~/concepts/design/design-teams-app-advanced-ui-components.md)

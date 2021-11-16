@@ -674,10 +674,10 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
 
-## See Also
+## See also
 
 * [Cards and task modules](~/task-modules-and-cards/cards-and-task-modules.md)
-* [Cards and Task modules supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)
+* [Cards and task modules supported in Teams bot](~/task-modules-and-cards/what-are-task-modules.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [User Specific Views](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)

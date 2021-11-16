@@ -75,6 +75,6 @@ To load and run your experience within Microsoft Teams, you need to create a pac
 > [!div class="nextstepaction"] 
 > [Add test data to your environment](~/concepts/build-and-test/test-data.md)
 
-## See Also
+## See also
 
 [Test and debug your bot locally](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)

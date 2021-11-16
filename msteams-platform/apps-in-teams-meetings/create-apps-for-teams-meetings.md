@@ -49,7 +49,7 @@ After you've gone through the prerequisites, you can use the meeting apps API re
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Meeting apps API references](API-references.md)
+> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)
 
 ## See also
 
