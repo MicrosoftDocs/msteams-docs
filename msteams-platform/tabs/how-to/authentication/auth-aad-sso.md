@@ -83,13 +83,17 @@ Complete the following steps to develop an SSO Teams tab:
 ### Register your app through the AAD portal
 
 1. Register a new application in the [AAD App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+
 1. Select **New Registration**. The **Register an application** page appears.
+
+![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
+
 1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
     1. Select the **Supported account types**, select single tenant or multitenant account  type. ¹ 
         * Leave**Redirect URI** empty.
     1. Select **Register**.
-1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later. 
+1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
 1. Go to **Manage** and select **Expose an API**.
 
     > [!NOTE]
