@@ -707,6 +707,10 @@
       {
         "source_path": "msteams-platform/get-started/get-started-yeoman.md",
         "redirect_url": "/microsoftteams/platform/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/frequently-failed-cases.md",
+        "redirect_url": "/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines"
       }
     ]
 }

@@ -1,6 +1,6 @@
 ---
 title: Configure default install options for your app
-description: Describes how to specify your app's default install options.
+description: Describes how to specify your app's default install options and default capability for shared scopes.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: surbhigupta

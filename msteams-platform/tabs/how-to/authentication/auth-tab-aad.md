@@ -156,3 +156,11 @@ Sample code showing the tab authentication process using Azure AD:
 | **Sample name** | **description** | **.NET** | **Node.js** |
 |-----------------|-----------------|-------------|
 | Microsoft Teams tab authentication | Tab authentication process using Azure AD. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-group-config-page-auth/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs) |
+
+## See also
+
+* [Plan user authentication](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
+* [Silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)
+* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)
+* [Single sign-on (SSO) support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)

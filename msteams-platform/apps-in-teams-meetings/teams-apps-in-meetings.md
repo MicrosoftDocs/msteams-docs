@@ -32,16 +32,16 @@ To customize Teams with apps for meetings, enable your apps for Teams meetings b
 
 The new custom Together Mode scenes feature enables users to collaborate in a meeting with their team in one place.
 
-## See also
-
-* [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
-* [Bot](../bots/what-are-bots.md)
-* [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
-* [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-* [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
-* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Meeting app extensibility](meeting-app-extensibility.md)
+
+## See also
+
+* [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+* [Designing your Microsoft Teams meeting extension](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md)
+* [Meeting apps API references - Teams](~/apps-in-teams-meetings/api-references.md)
+* [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)
+* [Enable and configure your apps for Teams meetings](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)
+* [Meeting lifecycle](meeting-app-extensibility.md#meeting-lifecycle)

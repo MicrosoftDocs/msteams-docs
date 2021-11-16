@@ -38,17 +38,15 @@ Teams tabs must adhere to the following prerequisites:
 * [Teams Toolkit for Visual Studio Code](../../toolkit/visual-studio-code-overview.md)
 * [Teams Toolkit for Visual Studio](../../toolkit/visual-studio-overview.md)
 
-## See also
-
-* [Teams tabs](~/tabs/what-are-tabs.md)
-* [Build your first app using React](../../get-started/first-app-react.md)
-* [Build your first app using Blazor](../../get-started/first-app-blazor.md)
-* [Build your first app using SPFx](../../get-started/first-app-spfx.md)
-* [Build your first conversational bot](../../get-started/first-app-bot.md)
-* [Build your first message extension](../../get-started/first-message-extension.md)
-* [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Create a personal tab](~/tabs/how-to/create-personal-tab.md)
+
+## See also
+
+* [Teams tabs](~/tabs/what-are-tabs.md)
+* [Build your first app using JavaScript](../../get-started/first-app-react.md)
+* [Build your first app using Blazor](../../get-started/first-app-blazor.md)
+* [Build your first app using SPFx](../../get-started/first-app-spfx.md)
+* [Tabs on mobile](~/tabs/design/tabs-mobile.md)

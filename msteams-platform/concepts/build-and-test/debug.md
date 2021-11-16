@@ -1,7 +1,7 @@
 ---
 title: Choosing a setup to test and debug your app
-description: Describes options for testing and debugging Microsoft Teams apps
-keywords: teams run debug apps
+description: Describes options for testing and debugging Microsoft Teams apps in local and cloud-hosted environment.
+keywords: teams run debug apps local cloud-hosted host
 ms.localizationpriority: medium
 ms.topic: conceptual
 ---
@@ -14,7 +14,7 @@ Microsoft Teams apps contain one or more capabilities and the ways to run or eve
 * **Locally hosted in Teams**: This involves running the app locally in tunneling software and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams. This permits you to easily run and debug your app within the Teams client.
 * **Cloud-hosted in Teams**: This truly simulates the production level support for a Teams app. It involves uploading your solution to your externally accessible server or cloud provider of choice and [creating a package](~/concepts/build-and-test/apps-package.md) to [upload](~/concepts/deploy-and-publish/apps-upload.md) into Teams.
 
-Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging. 
+Run the experience from your own computer for purely local or local Teams testing. By doing this, you can compile and run within your integrated development environment and take full advantage of techniques, such as breakpoints and step debugging.
 
 > [!NOTE]
 > For production-scale debugging and testing, we recommend that you follow your own company guidelines to ensure you are able to support testing, staging, and deployment through your own processes.
@@ -75,3 +75,6 @@ To load and run your experience within Microsoft Teams, you need to create a pac
 > [!div class="nextstepaction"] 
 > [Add test data to your environment](~/concepts/build-and-test/test-data.md)
 
+## See also
+
+[Test and debug your bot locally](../../bots/how-to/debug/locally-with-an-ide.md#test-and-debug-your-bot-locally)
