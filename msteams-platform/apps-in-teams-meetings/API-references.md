@@ -1,7 +1,7 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Identify meeting apps API references with examples and Code samples
+description: Identify the meeting apps API references with examples and Code samples
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
