@@ -17,8 +17,8 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
-| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |
 
 ## GA features
