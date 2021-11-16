@@ -19,7 +19,7 @@ Teams has different authentication flows for the app. Use the web-based authenti
 * [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md) describes how tab authentication works in Teams. This section shows a typical web-based authentication flow used for tabs.
 * [AAD authentication in tabs](~/tabs/how-to/authentication/auth-tab-AAD.md) describes how to connect to AAD from within a tab in the app in Teams.
 * [Silent authentication AAD](~/tabs/how-to/authentication/auth-silent-AAD.md) describes how to reduce sign in or consent prompts in the app using AAD.
-* [Single Sign-on authentication in tabs](~/tabs/how-to/authentication/auth-add-sso.md) describes how to authorize Teams tab or task module on desktop or mobile client.
+* Single Sign-on authentication in tabs describes how to authorize Teams tab or task module on desktop or mobile client.
 
 ## Code sample
 

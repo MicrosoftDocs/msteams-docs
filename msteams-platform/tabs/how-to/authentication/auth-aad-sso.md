@@ -33,30 +33,39 @@ The following image shows how the SSO process works:
 <!-- markdownlint-disable MD033 -->
 <img src="~/assets/images/tabs/tabs-sso-diagram.png" alt="Tab single sign-on SSO diagram" width="75%"/>
 
+**SSO work flow at run time**
+
 1. In the tab, a JavaScript call is made to `getAuthToken()`. `getAuthToken()` tells Teams to obtain an access token for the tab application.
-2. If the current user is using your tab application for the first time, there's a request prompt to consent if consent is required. Alternately, there's a request prompt to handle step-up authentication such as two-factor authentication.
-3. Teams requests the tab access token from the Azure Active Directory (AAD) endpoint for the current user.
-4. AAD sends the tab access token to the Teams application.
-5. Teams sends the tab access token to the tab as part of the result object returned by the `getAuthToken()` call.
+2. If the current user is using your tab application for the first time, a request prompt appears with the following actions:
+    * Provide consent, if necessary.
+    * Handle step-up authentication, such as two-factor authentication.
+3. Teams requests the tab application token from the Azure Active Directory (AAD) endpoint for the current user.
+4. AAD sends the tab application token to the Teams application.
+5. Teams sends the tab application token to the tab as part of the result object returned by the `getAuthToken()` call.
 6. The token is parsed in the tab application using JavaScript, to extract required information, such as the user's email address.
 
 > [!NOTE]
-> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs that is email, profile, offline_access, and OpenId. It is not used for further Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
+> The `getAuthToken()` is only valid for consenting to a limited set of user-level APIs, such as email, profile, offline_access and OpenId. It is not used for further Graph scopes, such as `User.Read` or `Mail.Read`. For suggested workarounds, see [additional Graph scopes](#get-an-access-token-with-graph-permissions).
 
 The SSO API also works in [task modules](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
 
 ## Develop an SSO Microsoft Teams tab
 
-This section describes the tasks involved in creating a Teams tab that uses SSO. These tasks are language- and framework-agnostic.
+This section describes the tasks involved in creating a Teams tab that uses SSO.    
+Complete the following steps to develop an SSO Teams tab:   
+
+1. [Create your AAD application](#create-your-aad-application)
+1. [Register your app through the AAD portal](#register-your-app-through-the-aad-portal)
+1. [Update your Teams application manifest](#update-your-teams-application-manifest)
 
 ### 1. Create your AAD application
 
 **To register your application in the [AAD portal](https://azure.microsoft.com/features/azure-portal/) overview**
 
 1. Get your [AAD Application ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in). 
-1. Specify the permissions that your application needs for the AAD endpoint and, optionally, Graph.
+1. Specify the permissions that your application needs for the AAD endpoint and, Graph.
 1. [Grant permissions](/azure/active-directory/develop/howto-create-service-principal-portal#configure-access-policies-on-resources) for Teams desktop, web, and mobile applications.
-1. Pre-authorize Teams by selecting the **Add a scope** button and in the panel that opens, enter **access_as_user** as the **Scope name**.
+1. To preauthorize Teams, select the **Add a scope** and in the panel that opens, enter **access_as_user** as the **Scope name**.
 
 > [!NOTE]
 > There are some important restrictions that you must know:
@@ -65,6 +74,9 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
 > * The user must set `accessTokenAcceptedVersion` to `v2` for a new application.
+> * Only user level Graph API permissions are supported, such as email, profile, offline access, and OpenId. For access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [recommended workaround](#get-an-access-token-with-graph-permissions).
+> * Your app's domain name must be same as the domain name that you have registered for your AAD application.
+> * Currently, multiple domains per app are not supported.
 
 **To register your app through the AAD portal**
 
@@ -198,6 +210,8 @@ Another approach for getting Graph scopes is to present a consent dialog using o
 ### Non-AAD authentication
 
 The above-described authentication solution only works for apps and services that support AAD as an identity provider. Apps that want to authenticate using non-AAD based services must continue using the pop-up-based [web authentication flow](~/concepts/authentication.md).
+
+
 
 > [!NOTE]
 > SSO is supported for customer owned apps within the AAD B2C tenants.
