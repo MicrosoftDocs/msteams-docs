@@ -65,7 +65,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 > [!NOTE]  
 > The following content is inline with Microsoft Commercial Certification Policy number 1140.1.3. 
 
-Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services such as Slack, Zoom, Webex, and so on, within the app content or in the app’s metadata unless the app provides specific interoperability.
+Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services, such as Slack, Zoom, and Webex, and so on within the app content or in the app’s metadata unless the app provides specific interoperability.
 
 ### Feature names
 
@@ -111,12 +111,10 @@ Don't make any payments through an app for goods or services prohibited by Gener
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.  
-    ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)
-    
+    ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase, which has UI that aims to upsell to paid versions.
 
-    ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)
-    
+    ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
@@ -359,7 +357,6 @@ If your app includes a tab, make sure it adheres to these guidelines.
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow.
 
   ![Create new account](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
-
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Way forward link **Create new account** for new users is available.
 
   ![Missing Forward Guidance](~/assets/images/submission/validation-tabs-missing-forward-guidance.png)  
@@ -372,8 +369,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * The user shouldn't leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure.
 
-  ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png)
-
+  ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Requires navigating outside the configuration experience to acquire **Profile Name**.
 
 * Tab configuration screen must not embed an entire website and keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app.
@@ -411,8 +407,7 @@ If your app includes a tab, make sure it adheres to these guidelines.
 
 * Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name.
 
-  ![Duplicate Header Logo](~/assets/images/submission/validation-views-duplicate-header-logo.png) 
-
+  ![Duplicate Header Logo](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Tab framework displays your app logo. Recommend removing the duplicate logo from the tab iframe.
 
 ### Navigation
@@ -424,28 +419,23 @@ The following are the navigation guidelines:
 * Static tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your static tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar).
 * Include icons with inline text or only text or use hamburger menus instead of tab left rail.
 
-  ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)
-
+  ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
-  ![Icon and Text](~/assets/images/submission/validation-navigation-icon-text.png)
 
+  ![Icon and Text](~/assets/images/submission/validation-navigation-icon-text.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Icon and text in tab left navigation mimics Teams navigation.
 
-  ![Collapsible Left Rail](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)
-
+  ![Collapsible Left Rail](~/assets/images/submission/validation-navigation-collapsable-left-rail.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Collapsible left rail that mimics Teams primary navigation.
 
-  ![Static Tab](~/assets/images/submission/validation-navigation-static-tab.png)
-
+  ![Static Tab](~/assets/images/submission/validation-navigation-static-tab.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Side navigation pane to assist with complex navigation flows in a Static Tab is allowed. 
 
-  ![Horizonta Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)
-
+  ![Horizonta Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Tab uses a horizontal rail for navigation instead of a left rail that conflicts with Teams primary navigation.
 
 * Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. 
   ![Spacing between Toolbar](~/assets/images/submission/validation-navigation-spacing-between-toolbar.png)  
-
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App provides 20px spacing between toolbar in left rail and Teams navigation.
 
 * The secondary and third pages in a tab must be opened in a level 2 and level 3 view in the main tab area, which is navigated via breadcrumbs or left navigation. You can also include the following components to aid tab navigation:
@@ -456,18 +446,15 @@ The following are the navigation guidelines:
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs.
 
-  ![View Button not Linked](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)
-
+  ![View Button not Linked](~/assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: **View** button launches external webpage, not deep linked within the Teams app.
 
 * Tabs shouldn't allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows. For example, to raise a support ticket.
 
-  ![Core Workflow within Configuration Tab](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)
-
+  ![Core Workflow within Configuration Tab](~/assets/images/submission/validation-navigation-core-workflow-within-configuration.png)  
   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: App core workflow is collaborating on a blank diagram within a channel. Core workflow is within Teams in a configurable tab.
 
-  ![App Core Workflow Redirects Outside](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)
-
+  ![App Core Workflow Redirects Outside](~/assets/images/submission/validation-navigation-core-workflow-redirects-outside.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App core workflow is reading articles shared within a channel. To read the article, tab redirects user outside of Teams.
 
 ### Usability
@@ -511,6 +498,7 @@ The following are the navigation guidelines:
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, etc.
+
   ![Usability Chatbot within tab](~/assets/images/submission/validation-usability-chatbot-withing-tab.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Includes a chatbot within the tab.
 
@@ -875,7 +863,6 @@ Ensure to adhere to the following guidelines:
 ## Next step
 
 > [!div class="nextstepaction"]
-
 > [Create a Partner Center account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
 
 ## See also
