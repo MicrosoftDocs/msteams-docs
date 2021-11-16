@@ -21,7 +21,7 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 :::row:::
    :::column span="1":::
 
-**Help people focus**: A [personal app](~/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+**Help people focus**: A [personal app](../design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 
    :::column-end:::
 
