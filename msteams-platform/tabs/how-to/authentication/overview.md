@@ -7,7 +7,7 @@ keywords: teams authentication OAuth SSO AAD
 ---
 # Authenticate tabs
 
-Teams establishes a trusted connection with providers, to access data from services like Facebook, Twitter, and to access user information protected by Azure Active Directory (AAD). Teams has different authentication flows for the app. Use the web-based authentication flow for tabs and web-based authentication flow in a content page embedded in tab
+Teams establishes a trusted connection with providers to access data from services like Facebook, Twitter, and to access user information protected by Azure Active Directory (AAD). Teams has different authentication flows for the app. Use the web-based authentication flow for tabs and web-based authentication flow in a content page embedded in tab
 
  > [!NOTE]
  > Web-based authentication on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
