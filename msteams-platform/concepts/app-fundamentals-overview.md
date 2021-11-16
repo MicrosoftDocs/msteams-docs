@@ -21,13 +21,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 :::row:::
    :::column span="1":::
 
-**Help people focus**: A [personal app](concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+**Help people focus**: A [personal app](~/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
 
    :::column-end:::
 
@@ -38,13 +38,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 :::row:::
    :::column span="1":::
 
-**Collaborate more conveniently**: Display your web-based content in a [tab](tabs/what-are-tabs.md) where people can discuss and work on it together.
+**Collaborate more conveniently**: Display your web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
    :::column-end:::
 
@@ -55,13 +55,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 :::row:::
    :::column span="1":::
 
-**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
    :::column-end:::
 
@@ -73,13 +73,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
    :::column span="1":::
 
-**Make it easier to multitask**: With [messaging extensions](messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+**Make it easier to multitask**: With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -90,13 +90,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
    :::column span="1":::
 
-**Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+**Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
    :::column-end:::
 
    :::column span="3":::
 
-:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -107,13 +107,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
    :::column span="":::
 
-**Communicate with external apps**: [Incoming webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
+**Communicate with external apps**: [Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
+:::image type="content" source="../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
 
    :::column-end:::
 :::row-end:::
@@ -130,7 +130,7 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
    :::column span="":::
 
-:::image type="content" source="assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
+:::image type="content" source="../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
 
    :::column-end:::
 :::row-end:::
