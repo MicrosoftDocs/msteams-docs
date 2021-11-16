@@ -23,9 +23,7 @@ Teams has different authentication flows for the app. Use the web-based authenti
 
 Check out this video to understand authentication:
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/watch?v=uIUhLuzEqcI&t=2s" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
+[!VIDEO https://www.youtube.com/watch?v=uIUhLuzEqcI&t=2s]
 
 ## Code sample
 
