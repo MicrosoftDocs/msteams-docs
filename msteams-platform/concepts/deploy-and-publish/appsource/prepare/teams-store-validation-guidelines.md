@@ -22,7 +22,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 > [!NOTE]  
 > The topics under Value proposition are inline with Microsoft commercial certification policy number 1140.1 and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
-### App name [*Mandatory Fix*]
+### App name
+
+[*Mandatory Fix*]
 
 > [!NOTE]  
 > This section is inline with Microsoft commercial certification policy number 1140.1.1 and provides additional guidance to developers on naming their apps.
@@ -71,7 +73,9 @@ Apps must focus on the Teams experience and not include the names, icons, or ima
 
 App feature names in buttons and other UI text must not duplicate with terminology reserved for Teams and other Microsoft products. For example, **Start meeting**, **Make call**, or **Start chat**. If necessary, include your app name, such as **Start Contoso meeting**.
 
-### Authentication [*Mandatory Fix*]
+### Authentication
+
+[*Mandatory Fix*]
 
 > [!NOTE]  
 > This section is inline with Microsoft commercial certification policy number 1140.1.4 and provides guidance to developers on authenticating their apps with external services. 
