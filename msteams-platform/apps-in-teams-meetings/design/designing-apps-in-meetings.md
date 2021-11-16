@@ -247,21 +247,21 @@ The shared meeting stage is all about collaboration and participation. Here are 
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
 |2|**Share to meeting button**: The entry point to share the app to the meeting. Displays if you configure your app to use the shared meeting stage.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|4|**iframe**: Displays your app content.|
+|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
 
 ### Anatomy: Share specific app content to a meeting
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy-component.png" alt-text="Image shows the design anatomy of the shared meeting stage when only specific app content is shared." border="false":::
 
 |Counter|Description|
 |----------|-----------|
 |1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
 |2|**Share to meeting button**: The entry point to share the app to the meeting. For a consistent experience, always use the standard Teams share icon. **Share to meeting** is the recommended default text, but you can also customize it for your use cases. For example, **Play together** for a gaming app or **Watch together** for a video app. Either way, make it clear that the action will create a shared, interactive experience with everyone in the meeting.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|3|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|4|**iframe**: Displays your app content.|
+|5|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
 
 ### Responsive behavior: Shared meeting stage
 
