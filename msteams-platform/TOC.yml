@@ -330,6 +330,8 @@
     href: concepts/authentication/configure-identity-provider.md
   - name: Tabs
     items:
+    - name: Overview
+      href: tabs/how-to/authentication/overview.md
     - name: Authentication flow in tabs
       href: tabs/how-to/authentication/auth-flow-tab.md
     - name: Use Azure AD authentication
