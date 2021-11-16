@@ -43,22 +43,12 @@ In addition to providing details about Teams features, this document also includ
 - Guidelines to publish and distribute your app to Teams store.
 - Best practices for Teams app scenarios.
 
-
 ## Start building
 
 Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
 > [!div class="nextstepaction"]
 > [Build your first app](get-started/get-started-overview.md)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
 
 ## Integrate with Teams
 
