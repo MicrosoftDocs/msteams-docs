@@ -13,19 +13,19 @@ Following these guidelines increases the chances of your app to pass the Microso
 > [!NOTE]
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced the guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
-> * The guidelines are marked as **Mandatory Fix** and **Suggested Fix**.
- > * **Mandatory Fix**: If your app submission doesn’t pass the Microsoft Teams Store Validation, you'll receive a failure report with mitigation steps. Fix the issues for your app to pass the Microsoft Teams store submission process.
-  > * **Suggested Fix**: Fix the issues for an ideal user experience. However, if you choose not to fix the issues, your app submission will not be blocked from publishing on the Teams store.
+> * The guidelines are marked as:
+>   * **Mandatory Fix**: If your app submission doesn’t pass the Microsoft Teams Store Validation, you'll receive a failure report with mitigation steps. Fix the issues for your app to pass the Microsoft Teams store submission process.
+>   * **Suggested Fix**: Fix the issues for an ideal user experience. However, if you choose not to fix the issues, your app submission will not be blocked from publishing on the Teams store.
 
 
 ## Value proposition
 > [!NOTE]  
-> The topics under Value proposition are inline with Microsoft Commercial Certification Policy number 1140.1 and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+> The topics under Value proposition are inline with Microsoft commercial certification policy number 1140.1 and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
-### App name
+### App name [*Mandatory Fix*]
 
 > [!NOTE]  
-> The following content is inline with Microsoft Commercial Certification Policy number 1140.1.1 and provides additional guidance to developers on naming their apps.
+> This section is inline with Microsoft commercial certification policy number 1140.1.1 and provides additional guidance to developers on naming their apps.
 
 An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
 
@@ -39,31 +39,31 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * **Activity**
   * **Apps**
   * **Help**
-* Prefix or suffix common names with the developer's name. For example, **Contoso Tasks** rather than **Tasks**.
-* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
+* Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**.
+* Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, Xbox, and so on that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).
 * If your app is part of an official partnership with Microsoft, the name of your app must come first. For example, **Contoso Connector for Microsoft Teams**.
 * Must not copy the name of an app listed in the store or other offer in the commercial marketplace.
 * Must not contain profane or derogatory terms. The name also must not include racially or culturally insensitive language.
 * Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and  Microsoft AppSource and you want to list another app specific to a geography, such as Contoso Mexico, your submission must meet the following criteria:
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion.
-  * When uploading the app package in Partner Center, select the right **Markets** under the **Availability** section.
+  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
  > [!TIP]  
  >  Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, Microsoft AppSource, screenshots, video, short description, and website must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
-### Suitable for workplace consumption
+### Suitable for workplace consumption [*Mandatory Fix*]
 
 > [!NOTE]  
-> The following content is inline with Microsoft Commercial Certification Policy number 1140.1.2, 100.8, and 100.10 and provides additional guidance to developers on building workplace appropriate apps.
+> This section is inline with Microsoft commercial certification policy number 1140.1.2, 100.8, and 100.10 and provides additional guidance to developers on building workplace appropriate apps.
 
 App content must be suitable for general workplace consumption and follow all restrictions listed in the commercial marketplace certification policies. Content related to religion, politics, gambling, and prolonged entertainment is prohibited.
 
-Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps shouldn't require over 60 mins per session or affect productivity.
+Your app must enable group collaboration, improve an individual's productivity, or both. Apps intended for team bonding and socializing must be collaborative and designed for multiple participants. The apps shouldn't require a substantial time investment of over 60 mins per session or affect productivity.
 
-### Similar platforms and services
+### Similar platforms and services [*Mandatory Fix*]
 
 > [!NOTE]  
-> The following content is inline with Microsoft Commercial Certification Policy number 1140.1.3. 
+> This section is inline with Microsoft commercial certification policy number 1140.1.3. 
 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services, such as Slack, Zoom, and Webex, and so on within the app content or in the app’s metadata unless the app provides specific interoperability.
 
@@ -71,10 +71,10 @@ Apps must focus on the Teams experience and not include the names, icons, or ima
 
 App feature names in buttons and other UI text must not duplicate with terminology reserved for Teams and other Microsoft products. For example, **Start meeting**, **Make call**, or **Start chat**. If necessary, include your app name, such as **Start Contoso meeting**.
 
-### Authentication
+### Authentication [*Mandatory Fix*]
 
 > [!NOTE]  
-> The following content is inline with Microsoft Commercial Certification Policy number 1140.1.4 and provides guidance to developers on authenticating their apps with external services. 
+> This section is inline with Microsoft commercial certification policy number 1140.1.4 and provides guidance to developers on authenticating their apps with external services. 
 
 For more information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
@@ -85,23 +85,22 @@ For more information on how to implement app authentication, see [authentication
 * **Sign in, sign out, and sign up experiences**:
   * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience.
   * When users sign out, they must sign out only from the app and remain signed in to Teams.
-  * Apps that depend on external accounts or services must provide additional information for new users to sign up or contact the app publisher to learn more about the services and acquire credentials.  
-  The information must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup, or config page). 
+  * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services. 
+  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup or config page). 
   * Apps that require tenant admin to complete one time setup must call out dependency on tenant admin to configure the app (before any other tenant user can install and use the app).  
-  Dependency must be available in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup, or config page), help text as considered necessary as part of bot response, or compose extension or static tab content.
+  Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup or config page), help text as considered necessary as part of bot response, compose extension, or static tab content.
   
-* **Content sharing experiences**: 
-  * Apps can also initiate a way to disconnect or stop sharing content on an external platform instead of within the Teams app. However, the steps must be documented.
+* **Content sharing experiences**: Apps that require authentication with an external service to share content in Teams channels must clearly state in the help documentation (or similar resources) on how to disconnect or unshare content if that feature is supported on the external service. This does not mean the ability to un share content must be present in your Teams app.
 
 ## Security
 > [!NOTE]  
-> The topics under Security are inline with Microsoft Commercial Certification Policy number 1140.3.
+> This section is inline with Microsoft commercial certification policy number 1140.3.
 
-### Financial information
+### Financial information [*Mandatory Fix*]
 > [!NOTE]  
-> The following content is inline with Microsoft Commercial Certification Policy number 1140.3.1 and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
+> This section is inline with Microsoft commercial certification policy number 1140.3.1 and provides guidance on transmission of financial information within the Teams interface and notifies developers of restricted payment scenarios on the mobile (Android  and iOS) version of their Teams app.
 
-Apps must not ask users to make payments within the Teams interface and shouldn't transmit financial information to users through a bot interface.  
+Apps must not ask users to make payments within the Teams interface and transmit financial information to users through a bot interface.  
   ![In App Payments](~/assets/images/submission/validation-financial-information-1.png)
 
 You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agreed to use the app.
@@ -121,18 +120,18 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app shouldn't show UI, text, or links indicating the need to pay.
 * Your app's privacy policy and terms of use must be free of any commerce-related UI or links.
 
-### Bots- Azure Bot service
+### Bots [*Mandatory Fix*]
 > [!NOTE]
-> The following content is inline with Microsoft Commercial Marketplace Policy number 1140.3.2.
+> This section is inline with Microsoft Commercial Marketplace Policy number 1140.3.2.
 
 For apps that use the Microsoft Azure Bot Service (such as bots and messaging extensions), you must follow all requirements defined in the Microsoft [Online Services Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=46).
 
 Bots must always ask permission to upload a file and display a confirmation message.
   ![Confirmation Message](~/assets/images/submission/validation-bot-confirmation-message.png)
 
-### External domains
+### External domains [*Mandatory Fix*]
 > [!NOTE]
-> The following content is inline with Microsoft Commercial Marketplace Policy number 1140.3.3 and provides developer guidance on usage of restricted domains in the validDomains manifest property.
+> This section is inline with Microsoft Commercial Marketplace Policy number 1140.3.3 and provides developer guidance on usage of restricted domains in the `validDomains` manifest property.
 
 Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
 
@@ -143,26 +142,26 @@ Don't include domains outside of your organization's control (including wildcard
 
 To distribute your app to Government Community Cloud (GCC) users, the authentication process must identify and route users to a GCC-specific or expected URL while avoiding duplicate listings in the Teams store.
 
-### Sensitive content
+### Sensitive content [*Mandatory Fix*]
 
-Your app must not post sensitive data, such as credit card, financial payment details, health, contact tracing, or other personally identifiable information (PII) to the external audience.
+Your app must not post sensitive data, such as credit card, financial payment details, health, contact tracing, or other personally identifiable information (PII) to an audience not intended to view the content.
 
-App must Warn users before downloading any files or executables (.exe) into the user's machine or environment.
+App must warn users before downloading any files or executables (.exe) into the user's machine or environment.
 
 ## General functionality and performance
 
 > [!NOTE]
-> The topics under General functionality and performance are inline with Microsoft Commercial Marketplace Policy number 1140.4.
+> This section is inline with Microsoft Commercial Marketplace Policy number 1140.4.
 
-### Launching external functionality
+### Launching external functionality [*Mandatory Fix*]
 
-Apps must not take users out of Teams for core user scenarios. App content and interactions should occur within Teams capabilities, such as bots, adaptive cards, and task modules.
+Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, and task modules.
 
 Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality. 
 
 Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
-### Compatibility
+### Compatibility [*Mandatory Fix*]
 
 Apps must be fully functional on the latest versions of the following operating systems and browsers:
 
@@ -175,16 +174,16 @@ Apps must be fully functional on the latest versions of the following operating 
 
 Your app must show a graceful failure message on unsupported browsers and operating systems.
 
-### Response time
+### Response time [*Mandatory Fix*]
 
-Teams apps must respond within a reasonable timeframe or show a warning message.
+Teams apps must respond within a reasonable timeframe or show a loading or typing indicator or message or warning.
 
 * Tabs must respond within two seconds or display a loading message or warning.
 * Bots must respond to user commands within two seconds or display a typing indicator.
 * Messaging extensions must respond to user commands within two seconds.
 * Notifications must display within two seconds of the user action.
 
-## App package and store listing
+## App package and store listing [*Mandatory Fix*]
 
 App packages must be correctly formatted and include all required information and components.
 
@@ -199,7 +198,7 @@ Test accounts (in case app depends on external accounts for authentication).
 > * Pre-populate the test accounts with dummy data to aid testing.
 
 
-### App manifest
+### App manifest [*Mandatory Fix*]
 
 The Teams app manifest defines your app's configuration.
 
@@ -207,7 +206,7 @@ The Teams app manifest defines your app's configuration.
 * If your app includes a bot or messaging extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
 * If your app uses Azure Active Directory (Azure AD) for authentication, include the Azure AD Application (client) ID in the manifest. For more information, see the [manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
-### App icons
+### App icons [*Mandatory Fix*]
 
 Icons are one of the main elements people see when browsing the Teams store. Your icons should communicate your app's brand and purpose while adhering to the following requirements:
 
@@ -238,11 +237,11 @@ A short description is a concise summary of your app that highlights its value p
 * Keep the short description to one sentence.
 * Put the most important information first.
 * Include keywords that customers are likely to search for.
-* Make efficient use of the available character limit. For example, Don't repeat your app name.
+* Make efficient use of the available character limit. For example, don't repeat your app name.
 
-**Don't:**
+**Don't:** [*Mandatory Fix*]
 
-* Use the word **app** in the short description.
+Use the word **app** in the short description.
 
 #### Long description
 
@@ -269,7 +268,7 @@ The long description can provide an engaging narrative that highlights your app'
   * **.. designed for...**
 
 
-**Don'ts:**
+**Don'ts:** [*Mandatory Fix*]
 
 * Exceed 500 words.
 * Abbreviate **Microsoft** as **MS** or **MSFT**.
@@ -301,7 +300,7 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 * Use text judiciously.
 * Frame screenshots with a color that reflects your brand and include marketing content.
 
-**Don'ts:**
+**Don'ts:** [*Suggested Fix*]
 
 * Show specific devices, such as phones or laptops.
 * Display chrome or UI that isn't in your app.
@@ -311,11 +310,11 @@ Screenshots provide a prominent visual preview of your app to complement your ap
 > [!TIP]  
 > A video can be the most effective way to communicate why people should use your app. A video also is the first thing users see in your listing. For more information, see [create a video for your store listing](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md#create-a-video).
 
-### Privacy policy
+### Privacy policy [*Mandatory Fix*]
 
 The privacy policy can be specific to your Teams app or an overall policy for all your services.
 
-* If you use a generic privacy policy template, you must add a reference to **services**, **applications**, and **platforms in the scope of your privacy policy**. You don’t need to specify your Teams app in the scope, if you include a reference to **services**, **applications** and **platforms**. The app validation process will interpret these references to include your Teams app along with your other services or websites.
+* If you use a generic privacy policy template, you must add a reference to **services**, **applications**, or **platforms in the scope of your privacy policy**. You don’t need to specify your Teams app in the scope, if you include a reference to **services**, **applications** and **platforms**. The app validation process will interpret these references to include your Teams app along with your other services or websites.
 * Must include how you handle user data storage, retention, and deletion. You must describe the security controls for data protection.
 * Must include your contact information.
 * Must not include URLs that are broken or for beta or staging purposes.
@@ -323,7 +322,7 @@ The privacy policy can be specific to your Teams app or an overall policy for al
 * Must not require authentication to access privacy policy.
 * Must not include any commerce UI or store links.
 
-### Terms of use
+### Terms of use [*Mandatory Fix*]
 
 Use the following guidelines to write the Terms of use:
  * Should be Specific and applicable to your offering.
@@ -331,16 +330,16 @@ Use the following guidelines to write the Terms of use:
  * Should have a secure (HTTPS) link.
  * Access to Terms of use must not require authentication.
 
-### Support links
+### Support links [*Mandatory Fix*]
 
 Your app's support URLs shouldn't require authentication. For example, users shouldn't login to contact you. 
 
-Support URLs must include your contact details or additional information for users to raise a support ticket. For example, if your support URL is hosted on GitHub which must be under your ownership and include your contact details or additional information for users to raise a support ticket.
+Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, which must be under your ownership and include your contact details or a way forward for users to raise a support ticket.
 
   ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
 
-### Localization
+### Localization [*Mandatory Fix*]
 
 If your app supports localization, your app package must include a file with language translations that display based on the Teams language setting. The file must conform to the Teams localization schema. For more information, see [Teams localization schema](~/concepts/build-and-test/apps-localization.md).
 
