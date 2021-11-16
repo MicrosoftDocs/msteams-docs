@@ -900,8 +900,8 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 
   * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory (Azure AD) consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
 
-   ![Publisher Verification](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
-   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Blue verified badge on AAD consent dialog.
+    ![Publisher Verification](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
+     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Blue verified badge on AAD consent dialog.
 
   * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. 
 
