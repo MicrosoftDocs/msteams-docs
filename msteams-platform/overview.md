@@ -36,7 +36,7 @@ With a Teams app, you can:
 - Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
 - Utilize a wide library of UI toolkit to design the layout and appearance of your app.
 
-In addition to providing details about Teams features, this document also includes the following:
+In addition to providing details about Teams features, it also includes the following:
 
 - Code samples, snippets, and examples.
 - Step-by-step guides.
