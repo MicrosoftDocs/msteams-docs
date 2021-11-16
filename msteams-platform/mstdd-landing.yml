@@ -28,7 +28,7 @@ landingContent:
         - text: Proactive messages
           url: ~/bots/how-to/conversations/send-proactive-messages.md
         - text: Add authentication to bots
-          url: ~/bots/how-to/authentication/auth-aad-sso-bots.md
+          url: ~/bots/how-to/authentication/add-authentication.md
     - linkListType: tutorial
       links:
         - text: Step-by-step guide for Proactive messages
