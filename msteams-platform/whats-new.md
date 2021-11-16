@@ -13,6 +13,14 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 > [!IMPORTANT]
 > You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
+
+| Date | Update | Find here  |
+| --- | --- | --- |
+| 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|
+
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
@@ -23,49 +31,49 @@ Microsoft Teams platform features that are available to all app developers.
 
 <summary><b>2021</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|11/13/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), and [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md)|
-|10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)|
-|10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| [Get started with your first Teams app](get-started/get-started-overview.md)|
-|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. |[Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps)|
-|10/20/2021| Meeting stage is now available in GA.|[Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md)|
-|10/20/2021| Meeting Details API and real-time Teams meeting events. | [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api)|
-|10/18/2021|Tabs link unfurling and stage view.|[Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md)|
-|10/08/2021|New best practices for designing Adaptive Cards.|[Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md)|
-|10/05/2021| Hide Teams app until Admin allows to un-hide the app.| [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves)|
-|10/05/2021|Plan your apps for Teams mobile.|[Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md)|
-|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)|
-|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks.|[AAD Object ID and UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown), [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention)|
-|08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). |[Input validation](/adaptive-cards/authoring-cards/input-validation), [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)|
-|08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats.| [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md)|
-|08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO).| [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml)|
-|08/19/2021| Installation update event received when you install a bot to a conversation thread.| [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event)|
-|08/12/2021|Build tabs with Adaptive Cards.|[Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md)|
-|08/04/2021|Tabs will no longer have margins surrounding their experiences.| [Removing tab margins](resources/removing-tab-margins.md)|
-|07/08/2021|Teams mobile adds support for apps in meetings. |[Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md)|
-|06/28/2021|Integrate People Picker capability.|[Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md)|  
-|06/25/2021| Introduced step-by-step guide to send proactive messages.| [Step-by-step guide to send proactive messages](sbs-send-proactive.yml)|
-|06/09/2021| Stage view for images in Adaptive Cards with `allowExpand` attribute.| [Stage view for images in Adaptive Cards](~/task-modules-and-cards/cards/cards-format.md)|
-|05/31/2021| Conversational tabs. | [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md)|
-|05/24/2021| Updated Teams app design guidelines with mobile patterns.|[Designing your Teams app](~/concepts/design/design-teams-app-overview.md)|
-|05/13/2021| Added information on mConnect and Skooler.|[Moodle learning management system](resources/moodle-overview.md)|
-|05/10/2021| App manifest v1.10 released.|[Manifest schema](resources/schema/manifest-schema.md) |
-|05/10/2021| New app customization feature.| [Enable orgs to customize your app](concepts/design/enable-app-customization.md)|
-|05/07/2021| Deep links for audio and video calls in chat. |[Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call)|
-|04/30/2021|New guidance on how to publish apps to the Teams store.|[Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md), [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
-|04/29/2021 | Support for Universal Actions for Adaptive Cards v1.4. | [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
-|04/29/2021 | User Specific Views. | [User Specific Views](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
-|04/29/2021 | Sequential Workflows. | [Sequential Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
-|04/29/2021 | Up to date cards. | [Up to date cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
-|04/08/2021| App customization feature.|[Design teams app overview](concepts/design/enable-app-customization.md), [App studio overview](concepts/build-and-test/app-studio-overview.md#connectors), and [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
-|03/18/2021|Notice: Update to version 4.10 or above of the Bot Framework SDK, as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
-|03/05/2021|Default install scope and group capability.| [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
-|03/05/2021|Reorder personal app tabs.|[Reorder the chat tab in personal apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs)|
-|03/04/2021|Information masking in Adaptive cards.| [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
-|02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md), [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
-|02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md), [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
-|02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files.|[Overview](concepts/device-capabilities/device-capabilities-overview.md), [Request device permissions](concepts/device-capabilities/native-device-permissions.md), [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
+| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|10/28/2021 | Monetize your Teams app with a transactable SaaS offer.| Distribute your app > Publish to the Teams store > [Include a SaaS offer with your Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) |
+|10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide.| Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
+|10/21/2021| Add a `registerOnFocused` API for tabs or personal apps. | Build tabs > Create personal tabs > [Add `registerOnFocused` API for tabs or personal apps](tabs/how-to/create-personal-tab.md#add-registeronfocused-api-for-tabs-or-personal-apps) |
+|10/20/2021| Meeting stage is now available in GA. | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
+|10/20/2021| Meeting Details API and real-time Teams meeting events. | Build apps for Teams meetings > [Create apps for Teams meetings](~/apps-in-teams-meetings/API-references.md#meeting-details-api) |
+|10/18/2021| Tabs link unfurling and stage view. | Build tabs > [Tabs link unfurling and stage view](tabs/tabs-link-unfurling.md) |
+|10/08/2021| New best practices for designing Adaptive Cards. | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
+|10/05/2021| Hide Teams app until Admin allows to un-hide the app.| Design your app > [Hide Teams app until admin approves](concepts/design/enable-app-customization.md#hide-teams-app-until-admin-approves) |
+|10/05/2021| Plan your apps for Teams mobile. | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
+|10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps.| Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
+|09/21/2021|Teams supports AAD Object ID and UPN in user mention for bots and Incoming Webhooks.| • Build cards and task modules > Build cards > [AAD Object ID and UPN in user mention](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/what-are-cards.md#support-for-aad-object-id-and-upn-in-user-mention) |
+|08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards). | • Adaptive cards > Authoring cards > [Input validation](/adaptive-cards/authoring-cards/input-validation)</br> • Build cards and task modules > Build cards > Universal actions for adaptive cards > [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats.| Build apps for Teams meetings > [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
+|08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO).| Add authentication > Bots > [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
+|08/19/2021| Installation update event received when you install a bot to a conversation thread.| Build bots > Bot conversations > [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
+|08/12/2021|Build tabs with Adaptive Cards.| Build tabs > [Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md) |
+|08/04/2021|Tabs will no longer have margins surrounding their experiences.| Build tabs > [Removing tab margins](resources/removing-tab-margins.md) |
+|07/08/2021|Teams mobile adds support for apps in meetings. | Build apps for Teams meetings > [Meeting app extensibility](apps-in-teams-meetings/meeting-app-extensibility.md) |
+|06/28/2021|Integrate People Picker capability. | Integrate with Teams > [Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md) |  
+|06/25/2021| Introduced step-by-step guide to send proactive messages. | Build bots > Bot conversation > Proactive messages > [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
+|06/09/2021| Stage view for images in Adaptive Cards with `allowExpand` attribute.| Build cards and task modules > Build cards > [Stage view for images in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
+|05/31/2021| Conversational tabs. | Build tabs > [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md) |
+|05/24/2021| Updated Teams app design guidelines with mobile patterns. | Design your app > [Designing your Teams app](~/concepts/design/design-teams-app-overview.md) |
+|05/13/2021| Added information on mConnect and Skooler.| Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|
+|05/10/2021| App manifest v1.10 released. | App manifest > [Manifest schema](resources/schema/manifest-schema.md) |
+|05/10/2021| New app customization feature. | Design your app > [Enable orgs to customize your app](concepts/design/enable-app-customization.md) |
+|05/07/2021| Deep links for audio and video calls in chat. | Integrate with Teams > [Deep links](concepts/build-and-test/deep-links.md#deep-linking-to-an-audio-or-audio-video-call) |
+|04/30/2021|New guidance on how to publish apps to the Teams store. | • Publish to the Teams store > [Publish your app to the Teams store](concepts/deploy-and-publish/appsource/publish.md)</br> • Publish to the Teams store > [Teams store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) |
+|04/29/2021 | Support for Universal Actions for Adaptive Cards v1.4. | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [Universal Actions for Adaptive Cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
+|04/29/2021 | User Specific Views. | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [User Specific Views](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/User-Specific-Views.md) |
+|04/29/2021 | Sequential Workflows. | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [Sequential Workflows](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Sequential-Workflows.md) |
+|04/29/2021 | Up to date cards. | Build cards and task module > Build cards > Universal actions for Adaptive Cards > [Up to date cards](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/Up-To-Date-Views.md) |
+|04/08/2021| App customization feature.| • Design your apps > [Design teams app overview](concepts/design/enable-app-customization.md)</br> • Tools and SDKs > [Developer Portal](concepts/build-and-test/teams-developer-portal.md) </br> • App manifest > Public developer preview > [Manifest schema](resources/schema/manifest-schema-dev-preview.md) |
+|03/18/2021| Notice: Update to version 4.10 or above of the Bot Framework SDK, as we've started with the deprecation process for `TeamsInfo.getMembers` and `TeamsInfo.GetMembersAsync`. | Build bots > [Bot API Changes for Team/Chat Members](resources/team-chat-member-api-changes.md) |
+|03/05/2021|Default install scope and group capability.| Distribute your app > [Default install scope and group capability](concepts/deploy-and-publish/add-default-install-scope.md) |
+|03/05/2021|Reorder personal app tabs. | Build tabs > [Reorder the chat tab in personal apps](tabs/how-to/create-personal-tab.md#reorder-static-personal-tabs) |
+|03/04/2021|Information masking in Adaptive cards.| Build cards and task modules > Build cards > [Information masking in Adaptive cards](task-modules-and-cards/cards/cards-format.md#information-masking-in-adaptive-cards) |
+|02/19/2021|Added location capabilities. <br/> Location capabilities information is added in the device capabilities overview, native device permissions, integrate media capabilities, and QR or barcode scanner capability files.| • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) </br> • App fundamentals > Device capabilities > [Integrate location capabilities](concepts/device-capabilities/location-capability.md) |
+|02/18/2021|Added QR or barcode scanner capability. <br/> QR or barcode scanner  capability information is added in the device capabilities overview, native device permissions, and integrate media capabilities files.| • App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> • App fundamentals > Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate QR or barcode scanner capability](concepts/device-capabilities/qr-barcode-scanner-capability.md) |
+|02/09/2021|Added device capabilities overview. <br/> Microphone capability information is added in the native device permissions and integrate media capabilities files.|• App fundamentals > Device capabilities > [Overview](concepts/device-capabilities/device-capabilities-overview.md) </br> App fundamentals > • Device capabilities > [Request device permissions](concepts/device-capabilities/native-device-permissions.md) </br> • App fundamentals > Device capabilities > [Integrate media capabilities](concepts/device-capabilities/mobile-camera-image-permissions.md)|
 
 <br>
 
@@ -74,10 +82,13 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 <details>
+<summary><b>Older updates</b></summary>
+
+<details>
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Identity platform integration with Teams Toolkit and Visual Studio Code for tabs.|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8.|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -111,7 +122,7 @@ Microsoft Teams platform features that are available to all app developers.
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -141,7 +152,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -155,7 +166,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Messaging extensions now supports multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation has also been revised and expanded for clarity.| [Connectors](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | Your bot can now send and receive files.| [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
+| 08/06/2018 | Your bot can now send and receive files. | [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Information about app re-certification has been added to the Publishing section. |[Manifest permissions](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | More space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](tabs/design/tabs.md)|
 | 07/12/2018 | Information on guest access. | [Guest access in Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
@@ -175,18 +186,19 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 </details>
+</details>
 
 ## Developer preview
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|11/15/2021|Personal tabs and messaging extensions run in Outlook and Office|[Extend Teams apps across Microsoft 365](m365-apps/overview.md)
-|10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).|[Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md), [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md), [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md), and [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md)|
-|10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md)|
-|06/21/2021|Uninstall behavior for personal app with bot.| [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Resource-specific consent for chats.|[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
+| 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+|10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|06/21/2021|Uninstall behavior for personal app with bot.| Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|06/16/2021| Resource-specific consent for chats.| • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -202,7 +214,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
 
-**To configure RSS feed**
+### To configure RSS feed
 
 1. Open Microsoft Teams.
 1. Select **Teams** from the left pane.
@@ -211,6 +223,6 @@ You can get the latest Teams platform updates by configuring to the [RSS feed](h
 1. Search for **RSS** in the **Connectors** dialog box that appears.
 1. Select **Configure**.
 1. Enter a name in **Enter a name for your RSS connection.**.
-1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
+1. Enter **<https://aka.ms/TeamsPlatformUpdates>** in **Address for RSS feed**.
 1. Select the frequency of the feed from the **Digest frequency** dropdown list.
 1. Select **Save**.
