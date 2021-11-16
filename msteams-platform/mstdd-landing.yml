@@ -8,18 +8,18 @@ metadata:
   ms.date: 11/10/2021
   ms.topic: landing-page
 landingContent:
-- title: Explore new features
+- title: Explore the latest
   linkLists:
     - linkListType: concept
       links:
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
+      - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
+        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md        
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Create low-code custom apps
         url: ~/samples/teams-low-code-solutions.md
-      - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
-        url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
 
 - title: Tutorials
   linkLists:
@@ -63,8 +63,6 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md
       - text: Design your app
         url: ~/concepts/design/design-teams-app-overview.md
-      - text: Apps for Teams meetings
-        url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - linkListType: whats-new
       links:
       - text: What's new
