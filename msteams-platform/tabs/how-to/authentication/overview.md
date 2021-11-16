@@ -23,7 +23,7 @@ Teams has different authentication flows for the app. Use the web-based authenti
 
 Check out this video to understand authentication:
 
-> [!VIDEO](https://www.youtube.com/watch?v=uIUhLuzEqcI&t=2s)
+> [!VIDEO](~/assets/videos/authenticationvideos/Implement-authentication-in-a-Teams-tab.mp4)
 
 ## Code sample
 
