@@ -72,7 +72,7 @@ conceptualContent:
           itemType: learn
           text: Connect web services to channels and teams with webhooks and Office 365 Connectors
         - url: /microsoftteams/m365-apps/overview
-          itemType: learn
+          itemType: overview
           text: Extend Teams apps across Microsoft 365
 
     # Card
