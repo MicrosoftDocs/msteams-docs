@@ -13,6 +13,14 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 > [!IMPORTANT]
 > You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Latest updates ![bullhorn icon](~/assets/images/bullhorn.png)
+
+| Date | Update | Find here  |
+| --- | --- | --- |
+| 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+| 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
+|
+
 ## GA features
 
 Microsoft Teams platform features that are available to all app developers.
@@ -75,10 +83,13 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 <details>
+<summary><b>Older updates</b></summary>
+
+<details>
   
 <summary><b>2020</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 |11/30/2020|Identity platform integration with Teams Toolkit and Visual Studio Code for tabs.|[Single sign-on authentication with Teams Toolkit and Visual Studio Code for tabs](toolkit/visual-studio-code-tab-sso.md)|
 |11/16/2020|Teams app manifest updated to version 1.8.|[Reference: Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md)|
@@ -112,7 +123,7 @@ Microsoft Teams platform features that are available to all app developers.
   
 <summary><b>2019</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 12/26/2019 | The `replyToId` parameter in payloads sent to a bot is no longer encrypted, allowing you to use this value to construct deeplinks to these messages. Message payloads include the encrypted values in the parameter `legacy.replyToId`.  |
 | 11/05/2019 | Single sign-on using the Teams JavaScript SDK. | [Single sign-on](tabs/how-to/authentication/auth-aad-sso.md) |
@@ -142,7 +153,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 <summary><b>2018</b></summary>
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Tabs in group chat is now available in the released version of Teams. As part of this work, the tabs section has been reworked for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
 | 11/11/2018 | Getting started for Node JS and for .NET/C# has been updated to use App Studio in Teams, and a new section has been added on hosting Node based Teams apps in Azure. | [Get started on the Microsoft Teams platform with C#/.NET and App Studio](~/get-started/get-started-dotnet-app-studio.md),  [Get started on the Microsoft Teams platform with Node JS and App Studio](~/get-started/get-started-nodejs-app-studio.md), [Host your Node Teams app in Azure](~/get-started/get-started-nodejs-in-azure.md)|
@@ -156,7 +167,7 @@ Microsoft Teams platform features that are available to all app developers.
 | 08/10/2018 | Client support for DevTools.| [DevTools for the Microsoft Teams Desktop Client](~/resources/dev-preview/developer-preview-tools.md)|
 | 08/08/2018 | Messaging extensions now supports multiple commands. | [composeExtensions.commands](~/resources/schema/manifest-schema.md#composeextensionscommands)|
 | 08/07/2018 | Inline configuration is now supported in Connectors. The Connectors documentation has also been revised and expanded for clarity.| [Connectors](~/concepts/connectors/connectors.md)|
-| 08/06/2018 | Your bot can now send and receive files.| [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
+| 08/06/2018 | Your bot can now send and receive files. | [Send and receive files through your bot](~/bots/how-to/bots-filesv4.md)|
 | 07/23/2018 | Information about app re-certification has been added to the Publishing section. |[Manifest permissions](resources/schema/manifest-schema.md#permissions)|
 | 07/16/2018 | More space has been allocated to the tab configuration page. | [The tab configuration page is significantly taller](tabs/design/tabs.md)|
 | 07/12/2018 | Information on guest access. | [Guest access in Microsoft Teams](/microsoftteams/guest-access#guest-access-overview)|
@@ -176,16 +187,19 @@ Microsoft Teams platform features that are available to all app developers.
 <br>
 
 </details>
+</details>
 
 ## Developer preview
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.  
 
-| **Date** | **Notes** | **Changed topics** |
+| **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
-|10/19/2021|Device permissions for the browser.| [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md)|
-|06/21/2021|Uninstall behavior for personal app with bot.| [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
-|06/16/2021| Resource-specific consent for chats.|[Resource-specific consent](graph-api/rsc/resource-specific-consent.md), [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
+|11/15/2021|Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
+|10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
+|10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |
+|06/21/2021|Uninstall behavior for personal app with bot.| Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
+|06/16/2021| Resource-specific consent for chats.| • Utilize Teams data with Microsoft Graph > [Resource-specific consent](graph-api/rsc/resource-specific-consent.md) </br> • Test your app > Microsoft Graph > [Test resource-specific consent permissions in Teams](graph-api/rsc/test-resource-specific-consent.md)|
 
 For more information, see [public developer preview for Teams](~/resources/dev-preview/developer-preview-intro.md).
 
@@ -201,7 +215,7 @@ We encourage Teams developers to ask questions, file bugs, submit feature reques
 
 You can get the latest Teams platform updates by configuring to the [RSS feed](https://aka.ms/TeamsPlatformUpdates).
 
-**To configure RSS feed**
+### To configure RSS feed
 
 1. Open Microsoft Teams.
 1. Select **Teams** from the left pane.
@@ -210,6 +224,6 @@ You can get the latest Teams platform updates by configuring to the [RSS feed](h
 1. Search for **RSS** in the **Connectors** dialog box that appears.
 1. Select **Configure**.
 1. Enter a name in **Enter a name for your RSS connection.**.
-1. Enter **https://aka.ms/TeamsPlatformUpdates** in **Address for RSS feed**.
+1. Enter **<https://aka.ms/TeamsPlatformUpdates>** in **Address for RSS feed**.
 1. Select the frequency of the feed from the **Digest frequency** dropdown list.
 1. Select **Save**.
