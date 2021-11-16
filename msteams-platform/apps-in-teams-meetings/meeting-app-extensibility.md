@@ -116,7 +116,7 @@ The following table describes the behavior of app when it is validated and not v
 |---|---|---|
 | Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
 
-For more information on store validation guidelines, see (../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### Post-meeting app experience
 
