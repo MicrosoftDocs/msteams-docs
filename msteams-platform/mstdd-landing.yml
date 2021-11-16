@@ -16,7 +16,7 @@ landingContent:
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Create low-code custom apps
         url: ~/samples/teams-low-code-solutions.md
-      - text: Enabled bots to receive all channel messages using resource-specific consent (RSC).
+      - text: Enable bots to receive all channel messages using resource-specific consent (RSC).
         url: ~/bots/how-to/conversations/channel-messages-with-rsc.md
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
