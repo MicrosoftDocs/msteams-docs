@@ -564,5 +564,7 @@ items:
 - content: |
     You've completed the tutorial to get started with a Meeting Token Generator app.
 
-    ![Real time](~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png)
+    Take a look at how your app appears in a real-time scenario:
+
+    ![Real time](~/assets/images/meeting-token-generator/meeting-token-generator-realtimescenario.png)
 
