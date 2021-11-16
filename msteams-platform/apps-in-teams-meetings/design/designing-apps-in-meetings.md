@@ -181,7 +181,7 @@ To implement, specify the width and height using the [`externalResourceUrl`](~/a
 
 ## Use the shared meeting stage
 
-You can allow users to share and interact with some or all of your app content on the meeting stage. Here are some examples of how people might use this feature during a meeting:
+You can allow users to share and interact with some or all of your app content on the meeting stage. Here are examples of how people might use this feature during a meeting:
 
 * Editing a document
 * Whiteboarding
