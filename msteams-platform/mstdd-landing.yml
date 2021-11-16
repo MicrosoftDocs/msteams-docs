@@ -62,6 +62,8 @@ landingContent:
         url: ~/concepts/app-fundamentals-overview.md
       - text: Design your app
         url: ~/concepts/design/design-teams-app-overview.md
+      - text: Apps for Teams meetings
+        url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - linkListType: whats-new
       links:
       - text: What's new
