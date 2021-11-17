@@ -272,7 +272,7 @@
   - name: Authenticate messaging extensions
     items: 
     - name: Overview
-      href: messaging-extensions/how-to/overview-auth.md
+      href: messaging-extensions/how-to/overview.md
     - name: Add authentication to your messaging extension
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for messaging extension
