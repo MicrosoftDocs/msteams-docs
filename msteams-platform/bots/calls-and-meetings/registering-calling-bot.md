@@ -1,6 +1,6 @@
 ---
 title: Register calls and meetings bot for Microsoft Teams
-description: Learn how to register a new audio/video calling bot for Microsoft Teams
+description: Learn how to register a new audio/video calling bot for Microsoft Teams, create a new bot or add calling capability, and add graph permissions.
 ms.topic: conceptual
 ms.localizationpriority: medium
 keywords: calling bot audio/video audio video media
@@ -90,3 +90,8 @@ You can rely on an administrator to grant the permissions your app needs at the 
 
 > [!div class="nextstepaction"]
 > [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+
+## See also
+
+* [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
+* [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

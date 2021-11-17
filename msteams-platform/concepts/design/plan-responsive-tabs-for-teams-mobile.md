@@ -179,4 +179,4 @@ The following design and validation guidelines help depending on the scope of yo
 * [Designing your tab](../../tabs/design/tabs.md)
 * [Designing your bot](../../bots/design/bots.md)
 * [Designing task modules](../..//task-modules-and-cards/task-modules/design-teams-task-modules.md)
-* [Validating guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)
+* [Store validation guidelines](../deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)

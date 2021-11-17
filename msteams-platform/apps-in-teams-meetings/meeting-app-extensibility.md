@@ -1,7 +1,7 @@
 ---
 title: Unified meetings apps
 author: surbhigupta
-description: Understand unified meetings apps 
+description: Learn about Meeting lifecycle, building user's meeting experience throughout meeting lifecycle in desktop and mobile environment, participant roles and user types. In addition, learn about integrating bots and messaging extension in meeting lifecycle.
 ms.topic: conceptual
 ms.localizationpriority: none
 ---
@@ -110,11 +110,13 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when it is validated and not validated:
 
-|App capability | App is approved | App isn't approved |
+|App capability | App is validated | App isn't validated |
 |---|---|---|
 | Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### Post-meeting app experience
 
@@ -196,14 +198,14 @@ The following table provides the user types and lists the features that each use
 | Guest, part of the tenant AAD | Interaction is allowed. Create, update, and delete aren't allowed. | Not available | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Available | Can start, view, and interact with app on the meeting stage |
 | Federated user, for more information, see [non-standard users](/microsoftteams/non-standard-users). | Interaction is allowed. Create, update, and delete aren't allowed. | Interaction is allowed. Acquire, update, and delete aren't allowed. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. | Not available | Can start, view, and interact with app on the meeting stage |
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
+
 ## See also
 
 * [Tab](../tabs/what-are-tabs.md#understand-how-tabs-work)
 * [Bot](../bots/what-are-bots.md)
 * [Messaging extension](../messaging-extensions/what-are-messaging-extensions.md)
 * [Design your app](../apps-in-teams-meetings/design/designing-apps-in-meetings.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Prerequisites and API references for apps in Teams meetings](create-apps-for-teams-meetings.md)
