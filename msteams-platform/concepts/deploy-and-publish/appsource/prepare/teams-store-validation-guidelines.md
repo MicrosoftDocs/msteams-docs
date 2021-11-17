@@ -12,9 +12,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 > [!NOTE]
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
-> * We've cross-referenced the guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process. If your app submission doesn’t pass the Microsoft Teams Store Validation, you'll receive a failure report with mitigation steps.The report includes guidelines marked as **Mandatory Fix** and **Suggeste Fix**.
->   * *Mandatory Fix*:  Fix the issues for your app to pass the Microsoft Teams store submission process.
->   * *Suggested Fix*: For an ideal user experience. However, if you choose not to fix the issues, your app submission will not be blocked from publishing on the Teams store.
+> * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
+> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure > report from us with steps to mitigate. Your app submission will pass Microsoft Teams Store Validation only after you have fixed the issues. 
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues. 
 
 
 ## Value proposition
@@ -50,7 +50,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
  > [!TIP]  
- >  Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description, and website must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either seperately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 ### Suitable for workplace consumption
 
@@ -115,7 +115,7 @@ Apps must not ask users to make payments within the Teams interface and transmit
 
 You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app.
 
-Don't fecilitate payments through an app for goods or services prohibited by [General policy number 100.10](/legal/marketplace/certification-policies#10010-inappropriate-content) Inappropriate content.
+Don't fecilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content).
 
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
@@ -214,7 +214,7 @@ Teams apps must respond within a reasonable timeframe or show a loading or typin
 App packages must be correctly formatted and include all required information and components.
 
 > [!TIP]  
-> You must include the following Testing instructions for validating your app submission:
+> You must include the following detailed testing instructions for validating your app submission:
 > * **Steps to configure the app Test accounts** in case app depends on external accounts for authentication.
 > * Summary of **expected app behavior** for the core workflows within Teams.
 > * **Clearly describe Limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
@@ -372,7 +372,7 @@ Use the following guidelines to write the Terms of use:
 
 Your app's support URLs must not require authentication. For example, users must not login to contact you. 
 
-Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
+Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
 
     ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
@@ -411,7 +411,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
     ![Acquire Profile Name](~/assets/images/submission/validation-tabs-setup-profile-name.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Requires navigating outside the configuration experience to acquire **Profile Name**.
 
-* Tab configuration screen must Keep your configuration experience focused and not embed an entire website. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
+* Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
     ![Configuration Experience](~/assets/images/submission/validation-tabs-setup-configuration-experience.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Configuration experience allows user to configure a specific mind map (project) to the channel and offers a list of projects to choose.
@@ -523,7 +523,7 @@ Design your app with [basic](/concepts/design/design-teams-app-basic-ui-componen
     ![Usability unresponsive tabs](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Unresponsive to **Dark** theme within a Teams meeting.
 
-* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. Follow [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
+* Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
     ![Usability different font](~/assets/images/submission/validation-usability-app-uses-diff-font.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App uses **Calibri** font, different from Teams native font.
@@ -533,7 +533,7 @@ Design your app with [basic](/concepts/design/design-teams-app-basic-ui-componen
 
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
 
-* Content in the landing page of the configurable tabs must be contextually same for all members of the channel. 
+* Content in the landing page of the configurable tabs must be contextually same for all members of the channel.
 
 * Content in the landing page of configurable tabs must not be scoped for individual use and not include personal content such as **My Tasks** or **My Dashboard**.
 
@@ -580,10 +580,10 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
     ![Bot Help Command](~/assets/images/submission/validation-bot-help-command.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot responding to **Help** command.
 
-* Bot commands must not dead end a user, the commands must always provide a way forward.
+* Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
 
     ![Bot Command Dead](~/assets/images/submission/validation-bot-commands-deadend.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot command with a dead end  user.
+    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot leading the user to a dead end.
 
 > [!TIP]
 > For personal bots, include a **Help** tab that further describes what your bot can do.
@@ -591,7 +591,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### Bot welcome messages
 
 
-* If the app is complex and requires additional configuration or license that is needed to use, the bot within the app must always send a welcome message during the first run. For the best experience, the message must include the value offered by the bot to users, who installed the app in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
+* If the app is complex and requires additional configuration or license that is needed to use, the bot within the app must always send a welcome message during the first run. For best experience, the message must include the value offered by the bot to users, who installed the app in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
 
     ![Bot Welcome Message](~/assets/images/submission/validation-bot-welcome-message.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot sends FRE welcome message describing supported bot commands.
@@ -779,13 +779,13 @@ For more information, see [task module design guidelines](/platform/task-modules
 
 Use the following guidelines for meeting extensions:
 
-* Meeting extensibility apps must offer a responsive in-meeting experience aligned to the Teams meeting experience. In-meeting experience is mandatory, Pre and post-meeting experiences aren't mandatory.
+* Meeting extensibility apps must offer a responsive in-meeting experience and aligned to the Teams meeting experience. In-meeting experience is mandatory, Pre and post-meeting experiences aren't mandatory.
 
-  * In-meeting app experience: You can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not go outside the Teams meeting for completing core user workflows.
+  * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks, such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
 
-  * Pre-meeting app experience: If If your app provides a post-meeting experience, ensure sers can find and add meeting apps, perform pre-meeting tasks such as developing a poll to survey the meeting participants. 
+  * With the post-meeting app experience, users can view the results of the meeting, such as poll survey results or feedback as well as other app content. If your app provides a post-meeting experience, it must be relevant to the workflow of the meeting.
 
-  * Post-meeting app experience: If your app provides a post-meeting experience, ensure users can view the results of the meeting such as poll survey results or feedback and other app content.
+  * With the in-meeting app experience, you can engage meeting participants during the meeting and enhance the meeting experience for all the attendees. Attendees must not be taken outside of the Teams meeting for completing core user workflows of your app.
 
 * Your app must offer value beyond providing custom Together Mode scenes in Teams. 
 
