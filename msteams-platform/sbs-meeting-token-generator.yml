@@ -385,10 +385,13 @@ items:
            * `[websiteUrl]`
            * `[privacyUrl]`
            * `[termsOfUseUrl]`
+
+           ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png)
+
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
          * Replace all occurrences of `[MicrosoftAppId]` with your bot's **Microsoft App ID**.
 
-       ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest.png)
+           ![Manifest image2](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-2.png)
 
 - title: Build client app using npm install
   durationInMinutes: 1
