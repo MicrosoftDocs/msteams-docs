@@ -267,10 +267,10 @@
     href: resources/team-chat-member-api-changes.md
 - name: Build messaging extensions
   items:
-  - name: Overview
-    href: messaging-extensions/what-are-messaging-extensions.md
   - name: Authenticate messaging extensions
     items: 
+    - name: Overview
+      href: messaging-extensions/what-are-messaging-extensions.md
     - name: Add authentication to your messaging extension
       href: messaging-extensions/how-to/add-authentication.md
     - name: Enable SSO for messaging extension
