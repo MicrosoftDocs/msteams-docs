@@ -52,70 +52,6 @@ The following Markdown tags are not supported:
 * Preformatted text
 * Blockquotes
 
-### Overflow Menu on Adaptive Cards on Mobile (Preview)
-
-Overflow menu on adaptive cards, originally developed for mobile.
-
-Using overflow menu, developers can now choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. developers can now have more than six buttons in one action set.
-
-### Overflow Menu - Goals and Principles
-
-Introduce the concept of secondary actions.
-* The developer can define in cards that are based on buttons with adaptable cards.
-* The actions in the overflow menu are essentially equivilent to those in buttons-based cards.
-* Use the existing model for "More Options" menus.
-* Multiple menus should be consolidated to ensure that the user is not confused. 
-
-### Overflow Menu Types
-
-Action
-
-In an action, primary buttons are in display, secondary is placed inside the overflow. Developers can have up to six buttons on display.
-
-Action Set
-
-In an action set, buttons are placed at the end of the card, developers can have buttons for each action sets on the adaptable card, which can be multiple and have an overflow menu for each of them.
-
-### Existing Overflow Menus in Teams clients and differences between mobile and desktop
-
-The action takes on a message
-(image and table)
-
-Action taken on card sent by bot
-(image and table)
-
-Actions taken on a card sent by a user (ME Cards)
-(image and table)
-
-Actions taken on ACV2 cards
-(image and table)
-
-Integrated action sheet on Mobile
-(image and table)
-
-### Overflow Requirements
-
-Requirements                                                                Priority
-
-* To designate the importance of all actions, a new attribute is added:        P1
-primary and secondary
-* If there are any secondary actions, the renderer will add a "overflow":      P1
-button to the action bar's end.
-* The title of the overflow button will be set to "..." by default.            P1
-* When you select the overflow menu, a flyout menu appears , dislpaying        P1
-all of the secondary actions in a vertical list.
-* When you select one of the secondary actions, the flyout closes just         P1
-like any other option.
-* The flyoout must be dismissed by clicking outside of it.                     P1
-* Regardless of the order in which they are placed in an array, the primary    P1
-actions are rendered first.
-* Automatic overflow due to Host constraints: when the card creator provides   P1
-more main actions that are allowed in Host settings, instead of removing them,
-we should automatically overflow them onto the secondary menu(as is the 
-current behaviour).
-* The  secondary actions(menu items) need to support icons and title.          P1
-* ME cards should have the ability to be copied.                               P2
-
 ### Newlines for Adaptive Cards
 
 You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n` in lists causes the next element in the list to be indented. If you require newlines elsewhere in the TextBlock, use `\n\n`.
@@ -471,6 +407,114 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > [!NOTE]
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+
+### Overflow menu on Adaptive Cards on Mobile
+
+New feature is added to adaptive cards. This allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
+
+### Overview - Overflow menu 
+
+This article covers the following:
+
+* The developer can define in cards that are based on buttons with adaptable cards.
+* The actions in the overflow menu are essentially equivilent to those in buttons-based cards.
+* Use the existing model for "More Options" menus.
+* Consolidation of appropriate actions to ensure user is not confused by multiple menus 
+
+### Overflow menu types
+
+Action
+
+In an action, primary buttons are in display, secondary is placed inside the overflow. Developers can have up to six buttons on display.
+
+The following image shows:
+(image need to be added)
+
+Code sample of an action:
+(image needs to be added)
+
+Action set
+In an action set, all the actions are marked as secondary, a single overflow button would be rendered on the card, individual actions would be available when the flyout is activated.
+
+The following image shows:
+(image need to be added)
+
+Code sample for an action set:
+(image needs to be added)
+
+
+Action Set
+
+In an action set, buttons are placed at the end of the card, developers can have buttons for each action sets on the adaptable card, which can be multiple and have an overflow menu for each of them.
+
+### Existing Overflow Menus in Teams clients and differences between mobile and desktop
+
+The action takes on a message 
+
+Desktop
+Hover on a message
+image
+
+Mobile
+Long press of a message.
+image
+Note: The long press is a well known functionality on mobile.
+Teams Mobile Chat MAU - 60 Mil (46% of Teams MAU)
+Scenario
+User long presses on the message to bring up the sction sheet
+MAU
+20 Mil
+
+Action taken on card sent by a bot
+
+Desktop
+There are No actions that can be taken on a card, actions can only be taken on a message.
+
+Mobile
+Long presses on the bot card result in actions that can be taken on the message.
+(image needs to be added)
+
+Actions taken on a card sent by a user (ME Cards)
+Desktop
+(image needs to be added)
+How many users use the copy functionality for ME cards?
+Events - 205K (MAU)
+Unique users- 137K
+Link
+(Not a widely used feature on a desktop)
+Other options that appear in the overflow menu today
+(image needs to be added)
+get app as an acquisition entry point
+
+Mobile
+(image needs to be added)
+The ability to copy the card is not available on mobile devices. The message related activities appear when you long press the card for a long time. Forward in a way can assist achieve the same goal(but than the message content is not modifiable)
+
+
+Actions taken on ACV2 cards
+
+Desktop
+(image needs to be added)
+The message overflow option includes the ACV2 card action(refresh)
+
+Mobile
+(image needs to be added)
+New UX for ACV2: Rolled out till R3 on both IOS and Android
+
+
+Integrated action sheet on Mobile
+
+Desktop
+(image needs to be added)
+
+Mobile
+(image needs to be added)
+
+### Proposed experience
+
+
+
+
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
