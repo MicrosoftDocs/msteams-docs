@@ -3,7 +3,7 @@ title: What's new
 description: Describes all the new developer features in Microsoft Teams
 ms.topic: reference
 ms.localizationpriority: medium
-keywords: teams what's new latest
+keywords: teams what's new latest updates and features
 ---
 
 # What's new for developers in Microsoft Teams
