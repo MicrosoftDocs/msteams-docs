@@ -26,7 +26,7 @@ As user starts entering the texts, the choices are filtered, which partially mat
 
 The following image demonstrates static typeahead search:
 
-![Static typeahead search](~/assets/images/Cards/static-typehead-search.gif)
+![Static typeahead search](~/assets/images/Cards/static-typeahead-search.gif)
 
 ## Dynamic typeahead search
 
@@ -54,7 +54,7 @@ John is a store employee who works at an Xbox retail store. The store uses a bot
 
 The following image illustrates mobile experience of typeahead search:
 
-![Static typeahead search](~/assets/images/Cards/static-typehead-search.gif)
+![Static typeahead search](~/assets/images/Cards/static-typeahead-search.gif)
 
 ---
 
