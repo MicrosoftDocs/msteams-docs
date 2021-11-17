@@ -25,7 +25,7 @@ You can find more comprehensive design guidelines, including elements that you c
 
 The following images show how users can apply different effects to their Teams meeting video.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects-at-glance.png" alt-text="Group of three images showing no effects on, blurred background on only, and blurred background and camera effect on.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/camera-effects-at-glance.png" alt-text="Group of three images showing no effects on, blurred background on only, and blurred background and camera effect on.":::
 
 ## Apply a camera effect before a meeting
 
