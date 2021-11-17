@@ -30,8 +30,7 @@ Messaging extension search commands allow users to search external systems and s
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
-Need to replace the image
-:::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
+
 
 ## Next step
 
@@ -40,6 +39,3 @@ Set up your dev environment for extending Teams apps across Microsoft 365:
 > [!div class="nextstepaction"]
 > [Install prerequisites](prerequisites.md)
 
-
-
-[Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
