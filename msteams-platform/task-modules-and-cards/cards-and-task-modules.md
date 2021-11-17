@@ -1,6 +1,6 @@
 ---
 title: Cards and task modules
-description: Cards and task modules.
+description: Learn about types of cards supported in bots for Teams, such as, Adaptive cards, Hero card, Thumbnail card, and more. Learn about card actions and invoking task modules in channels, bots, or deep links.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -16,14 +16,16 @@ The following types of cards are supported in bots for Teams:
 
 * Adaptive Card
 * Hero card
-* List card 
+* List card
 * Office 365 Connector card
 * Receipt card
 * Sign in card
 * Thumbnail card
 * Card collections
 
-You can format card text using a subset of XML or HTML formatting or Markdown depending on the card type. You can add and respond to card actions that:
+You can format card text using a subset of XML or HTML formatting or Markdown depending on the card type.
+
+You can add and respond to card actions that:
 * Open a URL
 * Send messages and payload to the bot
 * Initiate OAuth flow

@@ -244,6 +244,9 @@ In case of a video call, the client will ask for confirmation and turn on the ca
 > [!NOTE]
 > This deeplink cannot be used for invoking a meeting.
 
+> [!NOTE]
+> Currently, deeplink to call is not supported on Teams mobile devices.
+
 ### Generate a deep link to a call
 
 | Deep link | Format | Example |
@@ -266,5 +269,5 @@ Following are the query parameters:
 
 ## See also
 
-[Integrate web apps](~/samples/integrate-web-apps-overview.md)
-
+* [Integrate web apps](~/samples/integrate-web-apps-overview.md)
+* [Moodle LMS](~/resources/moodleinstructions.md)

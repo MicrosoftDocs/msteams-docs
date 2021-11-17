@@ -1,7 +1,7 @@
 ---
 title: Request device permissions for your Microsoft Teams app
-keywords: teams apps capabilities permissions
-description: How to update your app manifest in order to request access to native features that usually require user consent
+keywords: teams apps capabilities permissions device native scan qr barcode image audio video 
+description: How to update your app manifest in order to request access to native features that usually require user consent, such as scan qr, barcode, image, audio, video capabilities
 ms.localizationpriority: medium
 ms.topic: how-to
 ---
@@ -191,13 +191,9 @@ Device permissions are stored for every login session. It means that if you sign
 |---------------|--------------|--------|
 |Device permissions | Use Microsoft Teams tab sample app to demonstrate device permissions |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-device-permissions/nodejs) |
 
-## Next steps
+## See also
 
-> [!div class="nextstepaction"]
-> [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
-
-> [!div class="nextstepaction"]
-> [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
-
-> [!div class="nextstepaction"]
-> [Integrate location capabilities in Teams](location-capability.md)
+* [Device permissions for the browser](browser-device-permissions.md)
+* [Integrate media capabilities in Teams](mobile-camera-image-permissions.md)
+* [Integrate QR or barcode scanner capability in Teams](qr-barcode-scanner-capability.md)
+* [Integrate location capabilities in Teams](location-capability.md)

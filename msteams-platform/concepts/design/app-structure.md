@@ -5,6 +5,7 @@ author: heath-hamilton
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
+keywords: wireframe channel chat meeting messaging extensions mobile desktop
 --- 
 # Understand the Microsoft Teams app structure
 

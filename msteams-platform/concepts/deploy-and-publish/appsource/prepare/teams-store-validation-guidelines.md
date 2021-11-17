@@ -185,7 +185,7 @@ The long description can provide an engaging narrative that highlights your app'
 
 **Do:**
 
-* Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.
+* Use Markdown to format your description.
 * Use active voice and speak to users directly. For example, *You can ...*.
 * List features with bullet points so it's easier to scan the description.
 * Clearly describe limitations, conditions, or exceptions to the functionality, features, and deliverables described in the listing and related materials before the user installs your app. The Teams capabilities your app supports must relate to the core functions your listing describes.
@@ -460,3 +460,10 @@ Apps must not display advertising, including dynamic ads, banner ads, and ads in
 
 > [!div class="nextstepaction"]
 > [Create a Partner Center account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)
+
+## See also
+
+* [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
+* [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Test and debug your app](~/concepts/build-and-test/debug.md)
+* [Create a Partner Center developer account](~/concepts/deploy-and-publish/appsource/prepare/create-partner-center-dev-account.md)

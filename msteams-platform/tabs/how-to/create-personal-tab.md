@@ -1,10 +1,11 @@
 ---
 title: Create a personal tab
 author: laujan
-description: A quickstart guide to creating a personal tab with the Yeoman Generator for Microsoft Teams.
+description: A quickstart guide to creating a personal tab with the Yeoman Generator, ASP.NET Core, or ASP.NET Core MVC for Microsoft Teams using Node.js, and updating app manifest.
 ms.localizationpriority: medium
 ms.topic: quickstart
 ms.author: lajanuar
+keywords: yeoman ASP.NET MVC package appmanifest conversation domain permission store
 ---
 
 # Create a personal tab
@@ -740,14 +741,14 @@ this.layoutService.registerAppFocusEnterCallback(this.focusEnterHandler);
 
 :::image type="content" source="../../assets/images/personal-apps/registerfocus-tab.png" alt-text="Example shows options for adding registerOnFocussed API for tab" border="false":::
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
 * [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
