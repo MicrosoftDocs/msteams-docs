@@ -398,16 +398,16 @@ Not available
 
 # [JavaScript](#tab/javascript)
 
-Not available 
-
-# [JSON](#tab/json)
-
 ```microsoftTeams.meeting.getAppContentStageSharingState((err, result)) => {
   if(result.isAppSharing) {
     this.setState({ isGameSessionOver: false });
    }
   });
-```
+``` 
+
+# [JSON](#tab/json)
+
+Not available
 
 ---
 
@@ -453,16 +453,16 @@ Not available
 
 # [JavaScript](#tab/javascript)
 
-Not available 
-
-# [JSON](#tab/json)
-
 ```microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result)) => {
   if(result.doesAppHaveSharePermission) {
     this.setState({ isAppAllowedToShare: true });
    }
   });
-```
+``` 
+
+# [JSON](#tab/json)
+
+Not available
 
 ---
 
