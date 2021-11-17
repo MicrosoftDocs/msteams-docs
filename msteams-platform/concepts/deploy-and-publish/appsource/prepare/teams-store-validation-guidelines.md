@@ -615,7 +615,8 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 ### Bot welcome messages
 
 
-* If the app is complex and requires additional configuration or license that is needed to use, the bot within the app must always send a welcome message during the first run. For best experience, the message must include the value offered by the bot to users, who installed the app in channel, how to configure the bot, and briefly describe all supported bot commands. You can display the message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md).
+* If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run. For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
+
 
     ![Bot Welcome Message](~/assets/images/submission/validation-bot-welcome-message.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot sends FRE welcome message describing supported bot commands.
