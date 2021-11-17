@@ -192,7 +192,7 @@ You can allow users to share and interact with some or all of your app content o
 Apps shared to the meeting stage occupy the same space as a shared screen. The stage reorients for all meeting participants the same way, too.
 
 > [!NOTE]
-> Currently, mobile users can't share app content to the meeting stage.
+> Currently, mobile users can't share app content to the meeting stage. They can see content shared from desktop, though.
 
 ### Use cases
 

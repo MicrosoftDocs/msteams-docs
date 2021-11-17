@@ -1,5 +1,5 @@
 - name: Microsoft Teams Developer documentation
-  href: /microsoftteams/platform
+  href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
 - name: Overview
@@ -300,6 +300,8 @@
       href: task-modules-and-cards/cards/cards-format.md
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
+    - name: Typeahead search in Adaptive Card
+      href: task-modules-and-cards/cards/dynamic-search.md  
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
