@@ -267,24 +267,16 @@
     href: resources/team-chat-member-api-changes.md
 - name: Build messaging extensions
   items:
-  -name: Overview
-   href: messaging-extensions/what-are-messaging-extensions.md
+  - name: Overview
+    href: messaging-extensions/what-are-messaging-extensions.md
   - name: Authenticate messaging extensions
-    items: 
+    items:
     - name: Overview
       href: messaging-extensions/how-to/overview.md
     - name: Add authentication to your messaging extension
       href: messaging-extensions/how-to/add-authentication.md
-    - name: Enable SSO for messaging extension
+    - name: Enable SSO for messaging extensions
       href: messaging-extensions/how-to/enable-SSO-auth-me.md
-  - name: Action commands
-    items:
-    - name: Define action commands
-      href: messaging-extensions/how-to/action-commands/define-action-command.md
-    - name: Create a task module
-      href: messaging-extensions/how-to/action-commands/create-task-module.md
-    - name: Respond to action commands
-      href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
   - name: Search commands
     items:
     - name: Define search commands
