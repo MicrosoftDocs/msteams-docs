@@ -82,15 +82,16 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
                 JObject valueObject = JObject.FromObject(turnContext.Activity.Value);
                 var tokenExchangeRequest =
                 ((JObject)valueObject["authentication"])?.ToObject<TokenExchangeInvokeRequest>();
-                tokenExchangeResponse = await (turnContext.Adapter as IExtendedUserTokenProvider).ExchangeTokenAsync(
-                 turnContext,
-                 _connectionName,
-                 turnContext.Activity.From.Id,
-                 new TokenExchangeRequest
+                var userTokenClient = turnContext.TurnState.Get<UserTokenClient>();
+                tokenExchangeResponse = await userTokenClient.ExchangeTokenAsync(
+                                turnContext.Activity.From.Id,
+                                 _connectionName,
+                                 turnContext.Activity.ChannelId,
+                                 new TokenExchangeRequest
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 cancellationToken).ConfigureAwait(false);
+                 Token = tokenExchangeRequest.Token,
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
