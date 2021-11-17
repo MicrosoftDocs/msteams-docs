@@ -29,7 +29,7 @@ You can find more comprehensive design guidelines, including elements that you c
 
 While joining a meeting, the user can quickly select and preview different camera effects (including your app's). If they have time, they can select **Edit** to browse all available effects from you and other app publishers.
 
-:::image type="content" source="~assets/images/apps-in-meetings/camera-effects/apply-before-meeting.png" alt-text="Image shows an example of applying a camera effect before a meeting." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/apply-before-meeting.png" alt-text="Image shows an example of applying a camera effect before a meeting." border="false":::
 
 ### Browse your app's effects before a meeting
 
