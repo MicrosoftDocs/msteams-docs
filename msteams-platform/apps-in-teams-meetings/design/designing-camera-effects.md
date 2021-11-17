@@ -69,23 +69,26 @@ If the user hasn't used your app before, they'll have to add it before they can 
 |B|**Add button**: Adds the app to Teams for the user.|
 |C|**Text**: Text component for your app permissions.|
 |D|**Back button**: Takes the user back to the previous page.|
-|1|**App icon**: The color icon for your app.|
-|2|**App short name**|
-|3|**Developer name**: The display name for the developer.|
+|1|**App icon**: The [color icon](~/concepts/build-and-test/apps-package.md#color-icon) for your app.|
+|2|**App short name**: The [short display name](~/resources/schema/manifest-schema.md#name) for your app.|
+|3|**Developer name**: The [display name for the developer](~/resources/schema/manifest-schema.md#developer).|
 |4|**Text**: Specifies the number of effects your app offers.|
-|5|**Text**: Includes your app's short description and links to your privacy policy and terms of use. The permissions link takes the user to a page where they can review your app’s permissions.|
+|5|**Text**: Includes your app's [short description](~/resources/schema/manifest-schema.md#description) and links to your [privacy policy](~/resources/schema/manifest-schema.md#developer) and [terms of use](~/resources/schema/manifest-schema.md#developer). The permissions link takes the user to a page where they can review your app's permissions.|
 
 ### Anatomy: Effect tile
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
+A camera effect tile is what the user selects when they want to preview and apply your effect. The tile displays in the quick picker tray, your app's tab, and the **Video effects** tab.
+
+The tile is 74x42 pixels in the quick picker tray and 88x50 pixels in the tabs.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/effects-tile-anatomy.png" alt-text="Image shows the design anatomy of the effects tile." border="false":::
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
-|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|A|**Thumbnail image**: Previews what the effect does.|
+|B|**Badge**: Indicates that the effect is new.|
+|C|**Checkmark**: Indicates that the effect is selected.|
+|1|**App icon**: The [color icon](~/concepts/build-and-test/apps-package.md#color-icon) for your app.|
 
 ## Apply a camera effect during a meeting
 
