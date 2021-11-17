@@ -14,7 +14,7 @@ Teams establishes a trusted connection with providers to access data from servic
 
 Ways to authenticate tabs:
 
-![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+![Authentication ways](~/assets/images/authentication/tabs-authentication-ways2.png)
 
 ## Web-based authentication flow
 
