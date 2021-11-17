@@ -7,10 +7,7 @@ localization_priority: Normal
 ms.author: surbhigupta
 ---
 
-# Typeahead search in Adaptive Cards  
-
-> [!NOTE]
-> Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
+# Typeahead search in Adaptive Cards
 
 Typeahead search functionality in Adaptive Cards gives an enhanced search experience on `input.choiceset` component. It provides a list of choices to enter text in the search field. You can incorporate typeahead search with Adaptive Cards to search and select data.
 
@@ -296,3 +293,6 @@ The example payload which contains static and dynamic typeahead search with sing
 ```
 
 ## See also
+
+* [Universal Actions for Adaptive Cards](Universal-actions-for-adaptive-cards/Overview.md)
+* [Task modules](../what-are-task-modules.md)
