@@ -32,10 +32,12 @@ With a Teams app, you can:
 - Automate tasks and low-code applications.
 - Integrate your existing apps with Teams.
 - Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
-- Include features, such as, user authentication, integration with other applications and web apps, utilizing Teams data from Microsoft Graph, and using Developer Portal to manage your app.
 - Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
+- Dive deeper with user authentication, integration with other applications and web apps, utilizing Teams data from Microsoft Graph, and using Developer Portal to manage your app.
 - Utilize a wide library of UI toolkit to design the layout and appearance of your app.
 
+## About Microsoft Teams Developer Documentation
+ 
 In addition to providing details about Teams features, it also includes the following:
 
 - Code samples, snippets, and examples.
