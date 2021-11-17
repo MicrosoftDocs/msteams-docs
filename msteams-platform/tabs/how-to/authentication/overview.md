@@ -14,7 +14,7 @@ Teams establishes a trusted connection with providers to access data from servic
 
 Ways to authenticate tabs:
 
-[Authentication ways](~/assets/images/authentication/tabs-authentication-ways.png)
+![Authentication ways](~/assets/images/authentication/tabs-authentication-ways.png)
 
 ## Web-based authentication flow
 
@@ -28,7 +28,7 @@ Teams has different authentication flows for the app. Use the web-based authenti
 Check out this video to understand authentication:
 
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/uIUhLuzEqcI&t=2s]
+> ![VIDEO https://www.youtube-nocookie.com/embed/uIUhLuzEqcI&t=2s]
 
 
 ## Code sample
