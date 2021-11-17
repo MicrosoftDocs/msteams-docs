@@ -14,7 +14,7 @@ Microsoft Teams apps bring key information, common tools, and trusted processes 
 Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 > [!div class="nextstepaction"]
-> [Start here](get-started/prerequisites.md)
+> [Start here](get-started/get-started-overview.md)
 
 ## What are Teams apps?
 
@@ -147,7 +147,7 @@ Teams apps are a combination of [capabilities](concepts/capabilities-overview.md
 Quickly familiarize yourself with building for Teams by setting up your environment and creating a simple app.
 
 > [!div class="nextstepaction"]
-> [Build your first app](get-started/prerequisites.md)
+> [Build your first app](get-started/get-started-overview.md)
 
    :::column-end:::
    :::column span="":::
@@ -203,10 +203,15 @@ Looking for app development inspiration? Browse our list of real-world scenarios
    :::column-end:::
 :::row-end:::
 
+## Test your app running across Microsoft 365
+
+You can preview your Teams apps running in other high usage Microsoft 365 experiences with Microsoft Teams JavaScript client SDK v2 Preview.
+
+> [!div class="nextstepaction"]
+> [Extend your app](m365-apps/overview.md)
+
 ## See also
 
-* [Add a Share-to-Teams button to your website](concepts/build-and-test/share-to-teams.md)
-* [Design your Teams app](concepts/design/design-teams-app-overview.md)
-* [Microsoft Teams JavaScript client SDK](/javascript/api/@microsoft/teams-js/?view=msteams-client-js-latest&preserve-view=true)
-* Bot Framework SDK for [JavaScript](https://github.com/Microsoft/botbuilder-js) and [.NET](https://github.com/Microsoft/botbuilder-dotnet/)
-* [Distribute your Teams app](concepts/deploy-and-publish/apps-publish-overview.md)
+* [App fundamentals](~/concepts/app-fundamentals-overview.md)
+* [Design your Teams app](~/concepts/design/design-teams-app-process.md)
+* [Map your use cases to Teams app capabilities](~/concepts/design/map-use-cases.md)

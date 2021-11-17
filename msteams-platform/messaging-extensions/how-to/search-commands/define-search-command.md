@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension search commands
 author: surbhigupta
-description: Define messaging extension search commands for Microsoft Teams apps.
+description: Learn about messaging extension search commands for Microsoft Teams apps, to create a search command through app manifest and manually using code examples and sample.
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
@@ -22,7 +22,7 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+  When search command is invoked from the compose message area, the user sends the results to the conversation. When it is invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
@@ -64,7 +64,7 @@ The following image displays command addition for messaging extension:
 
 1. Add your search parameter and select **Save**.
 
-### Create a search command manually 
+### Create a search command manually
 
 To manually add your messaging extension search command to your app manifest, you must add the following parameters to your `composeExtension.commands` array of objects:
 
@@ -89,7 +89,7 @@ You must add the details of the search parameter, that defines the text visible 
 
 #### Example
 
-Following section is an example of the simple app manifest of the `composeExtensions` object defining a search command: 
+Following section is an example of the simple app manifest of the `composeExtensions` object defining a search command:
 
 ```json
 {

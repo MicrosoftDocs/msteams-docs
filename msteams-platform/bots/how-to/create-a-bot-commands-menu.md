@@ -1,10 +1,11 @@
 ---
 title: Create a command menu for your bot
 author: surbhigupta
-description: How to create a command menu for your Microsoft Teams bot
+description: Learn how to create a command menu for your Microsoft Teams bot with Code samples.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
+keywords: command menu compose message conversation @mention 
 ---
 
 # Bot command menus
@@ -33,13 +34,13 @@ A prerequisite to create a command menu for your bot is that you must edit an ex
 
 **To create a command menu for your bot using App Studio**
 
-1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**. 
+1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **App Studio**, and select **Open**.
    > [!NOTE]
    > If you do not have **App Studio**, you can download it. For more information, see [installing App Studio](~/concepts/build-and-test/app-studio-overview.md#installing-app-studio).
 
     ![App Studio](./conversations/media/AppStudio.png)
 
-2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/get-started-dotnet-app-studio.md#use-app-studio-to-update-the-app-package).
+2. In **App Studio**, select the **Manifest editor** tab. If you do not have an existing app package, you can create or import an existing app. For more information, see [update an app package](~/get-started/deploy-csharp-app-studio.md).
 
 3. In the left pane of the **Manifest editor** and in the **Capabilities** section, select **Bots**.
 

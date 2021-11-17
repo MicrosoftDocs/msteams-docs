@@ -31,7 +31,7 @@ The activity feed is a surface for users to access their notifications in Micros
 |3|**Title (first line): Actor + reason**: *Actor*: Name of the user or app that initiated the activity. *Reason*: Describes the activity.|
 |4|**Timestamp**: Shows when the activity happened.|
 |5|**Location (second line)**: Shows where the activity happened in Teams.|
-|6|**Tertiary information (third line)**: Optional. Shows preview text or additional information.|
+|6|**Text preview (third line)**: Shows a truncated line from the start of the notification.|
 
 ## Types of activity feed notification cards
 

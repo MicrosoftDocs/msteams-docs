@@ -1,6 +1,6 @@
 ---
 title: Manage your apps with the Developer Portal
-description: Learn how to manage your apps using the Developer Portal for Microsoft Teams.
+description: Learn how to configure, distribute, and manage your apps using the Developer Portal for Microsoft Teams.
 keywords: getting started developer portal teams
 ms.localizationpriority: medium
 ms.topic: overview
@@ -8,9 +8,6 @@ ms.author: surbhigupta
 ---
 
 # Manage your apps with the Developer Portal for Microsoft Teams
-
-> [!NOTE]
-> The Developer Portal for Teams is currently in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
@@ -84,3 +81,7 @@ The Developer Portal also includes tools to help you build some key features of 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
 * **Microsoft identity platform management**: Register your apps with Azure Active Directory (Azure AD) to help users sign in and provide access to APIs.
+
+## See also
+
+[Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)

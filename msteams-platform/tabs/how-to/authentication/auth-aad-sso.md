@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, and so on. You can take advantage by allowing a single sign-on to authorize your Teams tab or task module on desktop or mobile clients. If a user signs in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in oncem they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -16,13 +16,15 @@ Users sign in to Microsoft Teams through their work, school, or Microsoft accoun
 > ✔Teams for Android (1416/1.0.0.2020073101 and later)
 >
 > ✔Teams for iOS (_Version_: 2.0.18 and later)  
+> 
+> ✔Teams JavaScript SDK (_Version_: 1.10 and later) for SSO to work in meeting side panel. 
 >
 > For the best experience with Teams, use the latest version of iOS and Android.
 
 > [!NOTE]
 > **Quickstart**  
 >
-> The simplest path to getting started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
+> The simplest path to get started with tab SSO is with the Teams toolkit for Visual Studio Code. For more information, see [SSO with Teams toolkit and Visual Studio Code for tabs](../../../toolkit/visual-studio-code-tab-sso.md)
 
 ## How SSO works at runtime
 
@@ -180,7 +182,7 @@ A simple way of consenting on behalf of an organization as a tenant admin is to 
 
 #### Ask for consent using the Auth API
 
-Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-popup-page). This approach involves popping up an Azure AD consent dialog box.
+Another approach for getting Graph scopes is to present a consent dialog using our existing [web-based Azure AD authentication approach](~/tabs/how-to/authentication/auth-tab-aad.md#navigate-to-the-authorization-page-from-your-pop-up-page). This approach involves popping up an Azure AD consent dialog box.
 
 **To ask for additional consent using the Auth API**
 

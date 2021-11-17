@@ -1,7 +1,7 @@
 ---
 title: Create a configuration page
 author: surbhigupta
-description: how to create a configuration page
+description: Learn how to create a configuration page to configure a channel or group chat for settings, such as, getting context data, inserting placeholders, and authentication using code examples.
 keywords: teams tabs group channel configurable
 ms.localizationpriority: medium
 ms.topic: conceptual
@@ -84,11 +84,11 @@ The following code is an example of corresponding code for the configuration pag
 
 Choose either **Select Gray** or **Select Red** button in the configuration page, to display the tab content with a gray or red icon.
 
-The following image displays the tab content with a gray icon:
+The following image displays the tab content with **Gray** icon selected:
 
 <img src="~/assets/images/tab-images/configure-tab-with-gray.png" alt="Configure tab with select gray" width="400"/>
 
-The following image displays the tab content with a red icon:
+The following image displays the tab content with **Red** icon selected:
 
 <img src="~/assets/images/tab-images/configure-tab-with-red.png" alt="Configure tab with select red" width="400"/>
 
@@ -194,6 +194,11 @@ microsoftTeams.settings.setSettings({
 
 If you choose to have your channel or group tab appear on the Teams mobile clients, the `setSettings()` configuration must have a value for `websiteUrl`. For more information, see [guidance for tabs on mobile](~/tabs/design/tabs-mobile.md).
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)
+
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
@@ -201,8 +206,3 @@ If you choose to have your channel or group tab appear on the Teams mobile clien
 * [Create a channel or group tab](~/tabs/how-to/create-channel-group-tab.md)
 * [Create a content page](~/tabs/how-to/create-tab-pages/content-page.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create a removal page for your tab](~/tabs/how-to/create-tab-pages/removal-page.md)

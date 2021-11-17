@@ -1,10 +1,11 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
+description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
+keywords: submission store distribute validate app package guidelines localize
 ---
 # Prepare your Microsoft Teams store submission
 
@@ -16,7 +17,10 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams app validation tool helps you fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the test cases used during store validation.
+> [!NOTE]
+>  App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/)
+
+The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during store validation.
 
 1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html). (Note: The tool is also available in [App Studio](../../../build-and-test/app-studio-overview.md).)
 1. Upload your app package to run the automated tests.
@@ -38,9 +42,9 @@ Provide details about your app's capabilities in Teams and steps for testing eac
 
 ### Accounts
 
-Provide test accounts if your app requires a license or backend safelisting. All accounts you provide must include pre-populated data to help in testing.
+Provide test accounts if your app requires a license or backend safe listing. All accounts you provide must include pre-populated data to help in testing.
 
-Depending on your app's features, you may need to provide all of the following accounts:
+Depending on your app's features, you may need to provide all the following accounts:
 
 * Admin account (required)
 * Non-admin account (required)
@@ -204,3 +208,7 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 > [!div class="nextstepaction"]
 > [Submit your app](/office/dev/store/add-in-submission-guide)
+
+## See also
+
+[Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

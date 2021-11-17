@@ -35,7 +35,7 @@ For more information on using OAuthPrompt, see:
 
 ## Code sample
 
-Bot Framework v4 authentication samples.
+provides Bot authentication v3 SDK sample.
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** |
 |---------------|------------|------------|-------------|---------------|
@@ -45,7 +45,16 @@ Bot Framework v4 authentication samples.
 
 ## Configure the identity provider
 
-Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider.
+Regardless of the app's authentication flow, configure the identity provider to communicate with the Teams app. Most samples and walkthroughs primarily deal with using AAD as the identity provider. The concepts however, apply regardless of the identity provider. 
 
 For more information, see [configuring an identity provider](~/concepts/authentication/configure-identity-provider.md).
 
+## Third-party cookies on iOS
+
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all the apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps will not be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+
+## See also
+
+* [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md)
+* [Single sign-on support for bots](~/bots/how-to/authentication/auth-aad-sso-bots.md)
+* [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)

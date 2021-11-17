@@ -1,7 +1,7 @@
 ---
 title: Define messaging extension action commands
 author: surbhigupta
-description: An overview of messaging extension action commands
+description: An overview of messaging extension action commands with app manifest example
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -11,9 +11,9 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually. 
+Action commands allow you to present your users with a modal popup called a task module in Teams. The task module collects or displays information, processes the interaction, and sends the information back to Teams. This document guides you on how to select action command invoke locations, create your task module, send final message, or card, create action command using app studio, or create it manually. 
 
-Before creating the action command you must decide the following factors:
+Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
 1. [How will the task module be created?](#select-how-to-create-your-task-module)
@@ -60,6 +60,13 @@ To add the action command to the app manifest, you must add a new `composeExtens
 * [Create an action command manually](#create-an-action-command-manually)
 
 ### Create an action command using App Studio
+
+You can create an action command using **App Studio** or **Developer Portal**.
+
+> [!NOTE]
+> App Studio will soon be deprecated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
+
+# [App Studio](#tab/AS)
 
 > [!NOTE]
 > The prerequisite to create an action command is that you have already created a messaging extension. For information on how to create a messaging extension, see [create a messaging extension](~/messaging-extensions/how-to/create-messaging-extension.md).
@@ -214,4 +221,3 @@ If you are using the parameters or an embedded web view with a `taskInfo` object
 
 > [!div class="nextstepaction"]
 > [Respond to task module submit](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
-

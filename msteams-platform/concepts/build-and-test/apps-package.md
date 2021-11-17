@@ -16,7 +16,7 @@ You need an app package however you plan to distribute your Microsoft Teams app.
 
 Your app manifest file must be at the top level of the package with the name `manifest.json`. 
 
-When publishing to the Teams store, make sure your manifest references the latest [schema](~/resources/schema/manifest-schema.md).
+When publishing to the Teams store, make sure your manifest references to the latest [schema](~/resources/schema/manifest-schema.md).
 
 ## App icons
 
@@ -97,3 +97,7 @@ Choose how you plan to distribute your app:
 > [Publish your app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
 > [Publish your app to the store](~/concepts/deploy-and-publish/appsource/publish.md)
+
+## See also
+
+[Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

@@ -1,19 +1,19 @@
 ---
-title: Developer Preview Manifest schema reference
-description: Describes the schema supported by the manifest for Microsoft Teams
+title: Public developer preview manifest schema reference
+description: Sample manifest file and description of all its components that are supported for Microsoft Teams
 ms.topic: reference
 keywords: teams manifest schema Developer Preview
 ms.localizationpriority: medium
-ms.date: 05/20/2019
+ms.date: 11/15/2021
 ---
-# Developer preview manifest schema for Microsoft Teams
+# Reference: Public developer preview manifest schema for Microsoft Teams
 
 For information on how to enable developer preview, see [public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md).
 
 > [!NOTE]
-> * If you aren't using developer preview features, use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
+> If you aren't using developer preview features, including running [Teams personal tabs and messaging extensions in Outlook and Office](../../m365-apps/overview.md), use the [app manifest for GA features](~/resources/schema/manifest-schema.md) instead.
 
-The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams product. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
+The Microsoft Teams manifest describes how the app integrates into the Microsoft Teams platform. Your manifest must conform to the schema hosted at [`https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json`](https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json).
 
 ## Sample full manifest
 
@@ -217,6 +217,9 @@ The Microsoft Teams manifest describes how the app integrates into the Microsoft
     "meetings": "tab", 
     "team": "bot", 
     "groupchat": "bot"
+  },
+  "subscriptionOffer": {
+    "offerId": "publisherId.offerId"
   }
 }
 ```
@@ -227,13 +230,13 @@ The schema defines the following properties:
 
 *Optional, but recommended* &ndash; String
 
-The https:// URL referencing the JSON Schema for the manifest.
+The `https://` URL referencing the JSON Schema for the manifest.
 
 ## manifestVersion
 
 **Required** &ndash; String
 
-The version of the manifest schema this manifest is using. It should be "devPreview".
+The version of the manifest schema this manifest is using. Use `m365DevPreview` only if you are previewing [Teams apps running in Office and Outlook](../../m365-apps/overview.md). Otherwise, use `devPreview` for all other Teams preview features.
 
 ## version
 
@@ -438,7 +441,7 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command should be run initially with no parameters. Default: `false`|
-|`context`|Array of Strings|3||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
+|`context`|Array of Strings|3||Defines where the messaging extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. Default is `["compose", "commandBox"]`|
 |`fetchTask`|Boolean|||A boolean value that indicates if it should fetch the task module dynamically.|
 |`taskInfo`|Object|||Specify the task module to preload when using a messaging extension command.|
 |`taskInfo.title`|String|64||Initial dialog title.|
@@ -497,12 +500,12 @@ The object is an array with all elements of the type `string`.
 
 **Optional**
 
-Specify your AAD App ID and Graph information to help users seamlessly sign into your AAD app.
+Specify your Azure AD App ID and Graph information to help users seamlessly sign into your Auzre AD app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String|36 characters|✔|AAD application id of the app. This id must be a GUID.|
-|`resource`|String|2048 characters|✔|Resource url of app for acquiring auth token for SSO.|
+|`id`|String|36 characters|✔|Azure AD application ID of the app. This ID must be a GUID.|
+|`resource`|String|2048 characters|✔|Resource URL of the app for acquiring auth token for SSO.|
 |`applicationPermissions`|Array|Maximum 100 items|✔|Resource permissions for application.|
 
 ## configurableProperties
@@ -550,3 +553,13 @@ When a group install scope is selected, it will define the default capability wh
 |`team`|string|||When the install scope selected is `team`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`groupchat`|string|||When the install scope selected is `groupchat`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
 |`meetings`|string|||When the install scope selected is `meetings`, this field specifies the default capability available. Options: `tab`, `bot`, or `connector`.|
+
+## subscriptionOffer
+
+**Optional** - object
+
+Specifies the SaaS offer associated with your app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`offerId`| string | 2,048 characters | ✔ | A unique identifier that includes your Publisher ID and Offer ID, which you can find in [Partner Center](https://partner.microsoft.com/dashboard). You must format the string as `publisherId.offerId`.|

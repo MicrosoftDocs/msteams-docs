@@ -1,16 +1,16 @@
 ---
 title: SameSite cookie attribute 
 author: laujan
-description: describes the attributes of SameSite cookie
+description: Learn about Types of cookies, including SameSite cookies, their attributes, their implications in Teams tabs, task modules, and messaging extensions, and their authentication in Teams
 keywords: cookie attributes samesite
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: lomeybur
 ---
 
-# SameSite cookie attribute 
+# SameSite cookie attribute
 
-Cookies are text strings, sent from websites, and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties. 
+Cookies are text strings sent from websites and stored on a computer by the web browser. They are used for authentication and personalization. For example, cookies are used to recall stateful information, preserve user settings, record browsing activity, and display relevant ads. Cookies are always linked to a particular domain and are installed by various parties.
 
 ## Types of cookies
 
@@ -34,7 +34,7 @@ You can opt out of adding the SameSite cookie attribute to the `SetCookie` heade
 
 ## SameSite cookie attribute: 2020 release
 
-Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.    
+Chrome 80, released in February 2020, introduces new cookie values and imposes cookie policies by default. Three values are passed into the updated SameSite attribute: **Strict**, **Lax**, or **None**. If not specified, cookies SameSite attribute takes the value `SameSite=Lax` by default.
  
 SameSite cookie attributes are as follows:
 
@@ -55,7 +55,7 @@ SameSite cookie attributes are as follows:
 
 ### Tabs, task modules, and messaging extensions
 
-* Teams tabs use `<iframes>` to embed content that is viewed in a top level or first party context.
+* Teams tabs use `<iframes>` to embed content that is viewed at a top level or first party context.
 * Task modules allow you to create modal popup experiences in your Teams application. Similar to a tab, a modal window opens inside the current page.
 * Messaging extensions allow you to insert enriched content into a chat message from external resources.
 
@@ -75,9 +75,9 @@ According to the updated SameSite restrictions, a browser does not add a cookie 
 
 Android WebView is a Chrome system component that allows Android apps to display the web content. While the new restrictions are default, starting with Chrome 80, they are not immediately enforced on WebViews. They will be applied in the future. To prepare, Android allows native apps to set cookies directly through the [CookieManager API](https://developer.android.com/reference/android/webkit/CookieManager).
 
-> [!NOTE]     
-> * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.      
-> * You must declare third party cookies as `SameSite=None; Secure`.   
+> [!NOTE]
+> * You must declare first party cookies as `SameSite=Lax` or `SameSite=Strict`, as appropriate.
+> * You must declare third party cookies as `SameSite=None; Secure`.
 
 ## See also
 

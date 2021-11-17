@@ -10,7 +10,7 @@ ms.topic: reference
 
 Adaptive, hero, list, Office 365 Connector, receipt, signin, and thumbnail cards and card collections are supported in bots for Microsoft Teams. They are based on cards defined by the Bot Framework, but Teams does not support all Bot Framework cards and has added some of its own.
 
-Before you identify the different card types, understand how to create a a hero card, thumbnail card, or Adaptive Card.
+Before you identify the different card types, understand how to create a hero card, thumbnail card, or Adaptive Card.
 
 ## Create a hero card, thumbnail card, or Adaptive Card
 
@@ -948,3 +948,5 @@ The following cards are implemented by the Bot Framework, but are not supported 
 
 * [Task modules](~/task-modules-and-cards/what-are-task-modules.md)
 * [Format cards](~/task-modules-and-cards/cards/cards-format.md)
+* [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
+* [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
