@@ -52,6 +52,70 @@ The following Markdown tags are not supported:
 * Preformatted text
 * Blockquotes
 
+### Overflow Menu on Adaptive Cards on Mobile (Preview)
+
+Overflow menu on adaptive cards, originally developed for mobile.
+
+Using overflow menu, developers can now choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. developers can now have more than six buttons in one action set.
+
+### Overflow Menu - Goals and Principles
+
+Introduce the concept of secondary actions.
+* The developer can define in cards that are based on buttons with adaptable cards.
+* The actions in the overflow menu are essentially equivilent to those in buttons-based cards.
+* Use the existing model for "More Options" menus.
+* Multiple menus should be consolidated to ensure that the user is not confused. 
+
+### Overflow Menu Types
+
+Action
+
+In an action, primary buttons are in display, secondary is placed inside the overflow. Developers can have up to six buttons on display.
+
+Action Set
+
+In an action set, buttons are placed at the end of the card, developers can have buttons for each action sets on the adaptable card, which can be multiple and have an overflow menu for each of them.
+
+### Existing Overflow Menus in Teams clients and differences between mobile and desktop
+
+The action takes on a message
+(image and table)
+
+Action taken on card sent by bot
+(image and table)
+
+Actions taken on a card sent by a user (ME Cards)
+(image and table)
+
+Actions taken on ACV2 cards
+(image and table)
+
+Integrated action sheet on Mobile
+(image and table)
+
+### Overflow Requirements
+
+Requirements                                                                Priority
+
+* To designate the importance of all actions, a new attribute is added:        P1
+primary and secondary
+* If there are any secondary actions, the renderer will add a "overflow":      P1
+button to the action bar's end.
+* The title of the overflow button will be set to "..." by default.            P1
+* When you select the overflow menu, a flyout menu appears , dislpaying        P1
+all of the secondary actions in a vertical list.
+* When you select one of the secondary actions, the flyout closes just         P1
+like any other option.
+* The flyoout must be dismissed by clicking outside of it.                     P1
+* Regardless of the order in which they are placed in an array, the primary    P1
+actions are rendered first.
+* Automatic overflow due to Host constraints: when the card creator provides   P1
+more main actions that are allowed in Host settings, instead of removing them,
+we should automatically overflow them onto the secondary menu(as is the 
+current behaviour).
+* The  secondary actions(menu items) need to support icons and title.          P1
+* ME cards should have the ability to be copied.                               P2
+
 ### Newlines for Adaptive Cards
 
 You can use the `\r` or `\n` escape sequences for newlines in lists. Using `\n\n` in lists causes the next element in the list to be indented. If you require newlines elsewhere in the TextBlock, use `\n\n`.
