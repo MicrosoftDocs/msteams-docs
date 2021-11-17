@@ -12,76 +12,77 @@ ms.author: surbhigupta
 > [!NOTE]
 > Currently, this feature is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) only.
 
-Typeahead search functionality in Adaptive Cards gives an enhanced search experience on input choiceset component. It provides a list of choices to enter text in the search field. You can incorporate typeahead search with Adaptive Cards to search and select data.      
+Typeahead search functionality in Adaptive Cards gives an enhanced search experience on `input.choiceset` component. It provides a list of choices to enter text in the search field. You can incorporate typeahead search with Adaptive Cards to search and select data.
 
-You can use typeahead search for the following searches: 
+You can use typeahead search for the following searches:
 
 * [Static search](#static-typeahead-search)
 * [Dynamic search](#dynamic-typeahead-search)
 
 ## Static typeahead search
 
-Static typeahead search allows users to search from values specified within input.choiceset in the Adaptive Card payload. Static Type ahead search can be used to show a few choices to the user. The payload size in static search increases with number of choices specified in the payload.
-As user starts entering the texts, the choices are filtered down to choices that partially match the input. The dropdown list highlights the input characters that match the search.     
+Static typeahead search allows users to search from values specified within `input.choiceset` in the Adaptive Card payload. Static typeahead search can be used to show multiple choices to the user. The payload size in static search increases with number of choices specified in the payload.
+As user starts entering the texts, the choices are filtered, which partially match the input. The dropdown list highlights the input characters that match the search.
 
 The following image demonstrates static typeahead search:
 
 ![Static typeahead search](~/assets/images/Cards/static-typehead-search.gif)
- 
+
 ## Dynamic typeahead search
 
-Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the dataset specified in the card payload. The type ahead functionality helps to filter out the choices as the user types. 
+Dynamic typeahead search is useful to search and select data from large data sets. The data sets are loaded dynamically from the dataset specified in the card payload. The type ahead functionality helps to filter out the choices as the user types.
 
 # [Desktop](#tab/desktop)
 
-[Placeholder for desktop experience]
+![Dynamic typeahead search](~/assets/images/Cards/dynamic-tyahead-search-desktop.png)
+![Dynamic typeahead search image 2](~/assets/images/Cards/dynamic-tyahead-search-desktop-2.png)
 
 # [Mobile](#tab/mobile)
 
-Android and iOS mobile clients support typeahead search in Adaptive Cards. 
- 
-**Example Scenario**
+Android and iOS mobile clients support typeahead search in Adaptive Cards.
 
-John is a store employee who works at an Xbox retail store. The store uses a bot to take new purchase requests from customers. A customer can search from the thousands of games available. Typeahead search in Adaptive Card is used to search and select customers' choices.
+**Scenario**
+
+John is a store employee who works at an Xbox retail store. The store uses a bot to take new purchase requests from customers. A customer can search from the thousands of games available. Typeahead search in Adaptive Cards is used to search and select customers' choices.
 
 **To use typeahead search in Adaptive Cards**
 
 1. User A opens the store bot.
 1. User A sends a command to the bot for a **New customer request**. The bot responds with the Adaptive Card that has `Input.ChoiceSet` component.
-1. User A uses typeahead search to search and select the information based on the customer's choice. 
+1. User A uses typeahead search to search and select the information based on the customer's choice.
 
-The following image illustrates mobile experience of typeahead search:       
+The following image illustrates mobile experience of typeahead search:
 
-[Placeholder for gif image]
+![Static typeahead search](~/assets/images/Cards/static-typehead-search.gif)
 
 ---
 
-> [!NOTE] 
-> You can't get rich card experiences with dynamic search, such as query based messaging extensions. 
+> [!NOTE]
+> You can't get rich card experiences with dynamic search, such as query based messaging extensions.
 
 ## Implement typeahead search
 
-`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a typeahead search control to `Input.ChoiceSet` component to implement typeahead search. You can search and select the required information with the following selections:       
+`Input.ChoiceSet` is one of the important input components in Adaptive Cards. You can add a typeahead search control to `Input.ChoiceSet` component to implement typeahead search. You can search and select the required information with the following selections:
 
 * Dropdown, such as expanded selection.
 * Radio button, such as single selection.
 * Check boxes, such as multiple selections.
 
 > [!NOTE]
-> The Input.ChoiceSet control is based on the style and isMultiSelect properties.
+> The `Input.ChoiceSet` control is based on the style and `isMultiSelect` properties.
 
 ### Schema properties
 
-The following properties are the new additions to the [Input.ChoiceSet](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable typeahead search:
+The following properties are the new additions to the [`Input.ChoiceSet`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema to enable typeahead search:
 
-| Property	| Type | Required | Description |
+| Property| Type | Required | Description |
 |-----------|------|----------|-------------|
 | style | Compact <br/> Expanded <br/> Filtered | No | Adds filtered style to the list of supported validations for static type-ahead.|
 | choices.data | Data.Query | No | Enables dynamic type-ahead as the user types, by fetching a remote set of choices from a backend. |
 
 ### Data.Query definition
 
-| Property	| Type | Required | Description |
+| Property| Type | Required | Description |
 |-----------|------|----------|-------------|
 | type | Data.Query	| Yes |	Specifies that it's a Data.Query object.|
 | dataset | String | Yes | Specifies the type of data that is fetched dynamically. |
@@ -293,3 +294,4 @@ The example payload which contains static and dynamic typeahead search with sing
 }
 ```
 
+## See also
