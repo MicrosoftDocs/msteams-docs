@@ -96,7 +96,7 @@ Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and
 
 * Set `settings.setValidityState(true)` to true. 
 * The `microsoftTeams.settings.registerOnSaveHandler()` event handler is triggered.
-* **Save** on the app's configuration page, is enabled.
+* **Save** option is enabled in the app's configuration page.
 
 The configuration page code informs Teams that the configuration requirements are satisfied and the installation can proceed. When the user selects **Save**, the parameters of `settings.setSettings()` are set, as defined by the `Settings` interface. For more information, see [settings interface](/javascript/api/@microsoft/teams-js/microsoftteams.settings.settings?view=msteams-client-js-latest&preserve-view=true). `saveEvent.notifySuccess()` is called to indicate that the content URL has successfully resolved.
 
