@@ -35,6 +35,7 @@ Dynamic typeahead search is useful to search and select data from large data set
 # [Desktop](#tab/desktop)
 
 ![Dynamic typeahead search](~/assets/images/Cards/dynamic-tyahead-search-desktop.png)
+
 ![Dynamic typeahead search image 2](~/assets/images/Cards/dynamic-tyahead-search-desktop-2.png)
 
 # [Mobile](#tab/mobile)
