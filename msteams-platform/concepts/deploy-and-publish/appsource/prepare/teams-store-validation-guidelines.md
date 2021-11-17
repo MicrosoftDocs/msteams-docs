@@ -127,14 +127,28 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
    :::column span="":::
     ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
-    ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
    :::column-end:::
    :::column span="":::
       Content...
    :::column-end:::
 :::row-end:::
+
+|||:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.|||
+
+:::row:::
+   :::column span="":::
+      Content...
+   :::column-end:::
+   :::column span="":::  
+    ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
+   :::column-end:::
+   :::column span="":::
+      Content...
+   :::column-end:::
+:::row-end:::
+
+|||:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.|||
+
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
@@ -384,8 +398,8 @@ Your app's support URLs must not require authentication. For example, users must
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
 
-    ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
+  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+  :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
 
 ### Localization
 
@@ -904,7 +918,7 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
 ## Advertising 
 
 > [!NOTE]
-> This section is in line with [Microsoft commercial marketplace policy number 1140.7](legal/marketplace/certification-policies#11407-advertising).
+> This section is in line with [Microsoft commercial marketplace policy number 1140.7](/legal/marketplace/certification-policies#11407-advertising).
 
 Apps must not display advertising, including dynamic ads, banner ads, and ads in message.
 
