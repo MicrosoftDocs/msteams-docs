@@ -21,9 +21,11 @@ You can find more comprehensive design guidelines, including elements that you c
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
-## At a glance
+## Camera effects at a glance
 
-:::image type="content" source="<folderPath>" alt-text="<alt text>":::
+The following images show how users can apply different effects to their Teams meeting video.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects-at-glance.png" alt-text="Group of three images showing no effects on, blurred background on only, and blurred background and camera effect on.":::
 
 ## Apply a camera effect before a meeting
 
