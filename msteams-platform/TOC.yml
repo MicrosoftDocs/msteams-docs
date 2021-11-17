@@ -74,6 +74,8 @@
       href: messaging-extensions/design/messaging-extension-design.md  
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+    - name: Camera effects
+      href: apps-in-teams-meetings/design/designing-camera-effects.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
   - name: UI components
