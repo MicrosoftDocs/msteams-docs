@@ -411,7 +411,7 @@ Not available
 
 ---
 
-The JSON response body for `appContentStageSharingState` API is:
+The JSON response body for the `appContentStageSharingState` API is:
 
 ```json
 {
@@ -423,7 +423,7 @@ The JSON response body for `appContentStageSharingState` API is:
 
 ### Response codes
 
-The `appContentStageSharingState` API returns the following response codes:
+The `getAppContentStageSharingState` API returns the following response codes:
 
 |Response code|Description|
 |---|---|
@@ -437,7 +437,7 @@ The `getAppContentStageSharingCapabilities` API enables you to fetch the apps' c
 
 ### Query parameter
 
-The `getAppContentStageSharingState` includes the following parameters:
+The `getAppContentStageSharingCapabilities` includes the following parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
