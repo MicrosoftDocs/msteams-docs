@@ -386,6 +386,7 @@ items:
            * `[privacyUrl]`
            * `[termsOfUseUrl]`
 
+
            ![Manifest image1](~/assets/images/meeting-token-generator/meeting-token-generator-manifest-1.png)
 
          * Replace all occurrences of `[WebAppDomainName]` with your ngrok domain name.
