@@ -412,10 +412,6 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 Overflow menu is added to Adaptive Cards, which allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
 
-The following image shows a de-cluttered card, giving prominence to primary actions
-
-  ![Action card](~/assets/images/Cards\decluttered-image.png)
-
 ### Overview
    
 This section covers the following:
@@ -436,6 +432,7 @@ The following image shows:
   ![Action card](~/assets/images/Cards/actions-card.png) 
     
 Code sample of an action:
+
 (image needs to be added)
 
 Action set:
@@ -446,65 +443,77 @@ The following image shows:
   ![Action set card](~/assets/images/Cards/action-set-card.png)
 
 Code sample for an action set:
+
 (image needs to be added)
 
 ### Existing Overflow Menus in Teams clients and differences between mobile and desktop
 
-* The action taken on a message 
+**The action taken on a message**
 
-Desktop
-The following image shows the action that takes place, when the user Hovers on a message
+**Desktop**
+
+The action that takes place when a user hovers on a message is seen in the following image.
 
   ![action card](~/assets/images/Cards/action-taken-on-message-desktop.png)
 
-Mobile
-The following image shows the action that takes place, when the user Long presses a message.
+**Mobile**
+
+The action that takes place when a user long presses a message is seen in the following image.
     
   ![action card](~/assets/images/Cards/action-taken-on-message-mobile.png)
     
 > [!NOTE]
 > The long press is a well known functionality on mobile. *Teams Mobile Chat MAU - 60 Mil (46% of Teams MAU)*.
 
-* Action taken on card sent by a bot
+**Action taken on card sent by a bot**
 
-Desktop
+**Desktop**
+
 There are No actions that can be taken on a card, actions can only be taken on a message.
 
-Mobile
-Long presses on the bot card result in actions that can be taken on the message.
+**Mobile**
+
+When a user long presses on the bot card, the following image depicts the actions that occur on a message.
     
   ![action card](~/assets/images/Cards/action-taken-on-card-sent-by-bot.png)
     
-* Actions taken on a card sent by a user (ME Cards)
-Desktop
-    
+**Actions taken on a card sent by a user (ME Cards)**
+
+**Desktop**
+
+  The following image shows the action taken on a card sent by a user.
+
   ![action card](~/assets/images/Cards/actions-taken-on-card-sent-by-user-desktop.png)
     
-Other options that appear in the overflow menu today
+**Other options that appear in the overflow menu today**
     
   ![action card](~/assets/images/Cards/options-on-overflow-menu.png)
 
 
-Mobile
-The ability to copy the card is not available on mobile devices. The message related activities appear when you long press the card for a long time. Forward in a way can assist achieve the same goal(but than the message content is not modifiable)
+**Mobile**
+
+The ability to copy the card is not available on mobile devices. The message related activities appear when you long press the card for a long time. Forward in a way can assist achieve the same goal(but than the message content is not modifiable).
     
   ![action card](~/assets/images/Cards/actions-taken-on-card-sent-by-user-mobile.png)
 
-* Actions taken on ACV2 cards
+**Actions taken on ACV2 cards**
 
-Desktop
-The message overflow option includes the ACV2 card action(refresh)
+**Desktop**
+
+The message overflow option, which includes the ACV2 card action, is shown in the following image.
     
   ![action card](~/assets/images/Cards/actions-taken-on-acv2-desktop.png)
 
-Mobile
-ACV2's new user interface has been rolled out on both iOS and Android until RE
+**Mobile**
+
+The following image shows the ACV2's new user interface which has been rolled out on both iOS and Android until RE.
     
   ![action card](~/assets/images/Cards/actions-taken-on-acv2-mobile.png)
     
-* Integrated action sheet on Mobile
+**Integrated action sheet on Mobile**
 
-Mobile
+**Mobile**
+
   ![Action card](~/assets/images/Cards/integrated-action-sheet-mobile.png)
     
 
