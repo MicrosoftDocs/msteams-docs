@@ -56,7 +56,7 @@ In Teams, a calendar is where a user views, schedules, and manages upcoming and 
 
 ## Dashboard
 
-A dashboard displays different types of content in a central location (Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
+A dashboard displays different types of content in a central location (such as a Teams personal app or tab). Users should be able to customize at least some of what they see on a dashboard.
 
 ### Top use cases
 
