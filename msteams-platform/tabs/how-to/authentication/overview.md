@@ -12,6 +12,10 @@ Teams establishes a trusted connection with providers to access data from servic
  > [!NOTE]
  > Web-based authentication on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
 
+Ways to authenticate tabs:
+
+[Authentication ways](~/assets/images/authentication/tabs-authentication-ways.png)
+
 ## Web-based authentication flow
 
 Teams has different authentication flows for the app. Use the web-based authentication flow for [tabs](~/tabs/what-are-tabs.md). Use the [Microsoft Teams JavaScript client SDK](/javascript/api/overview/msteams-client) in a web content page to enable authentication. After enabling authentication, embed the [content page](~/tabs/how-to/create-tab-pages/content-page.md) in a tab, a configuration page, or a task module. For more information on web-based authentication flow, see:
