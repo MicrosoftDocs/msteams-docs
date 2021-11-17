@@ -422,8 +422,7 @@ This article covers the following:
 * Consolidation of appropriate actions to ensure user is not confused by multiple menus 
 
 ### Overflow menu types
-
-Action
+Action:
 
 In an action, primary buttons are in display, secondary is placed inside the overflow. Developers can have up to six buttons on display.
 
@@ -433,7 +432,7 @@ The following image shows:
 Code sample of an action:
 (image needs to be added)
 
-Action set
+Action set:
 In an action set, all the actions are marked as secondary, a single overflow button would be rendered on the card, individual actions would be available when the flyout is activated.
 
 The following image shows:
@@ -442,14 +441,9 @@ The following image shows:
 Code sample for an action set:
 (image needs to be added)
 
-
-Action Set
-
-In an action set, buttons are placed at the end of the card, developers can have buttons for each action sets on the adaptable card, which can be multiple and have an overflow menu for each of them.
-
 ### Existing Overflow Menus in Teams clients and differences between mobile and desktop
 
-The action takes on a message 
+* The action takes on a message 
 
 Desktop
 Hover on a message
@@ -465,7 +459,7 @@ User long presses on the message to bring up the sction sheet
 MAU
 20 Mil
 
-Action taken on card sent by a bot
+* Action taken on card sent by a bot
 
 Desktop
 There are No actions that can be taken on a card, actions can only be taken on a message.
@@ -474,7 +468,7 @@ Mobile
 Long presses on the bot card result in actions that can be taken on the message.
 (image needs to be added)
 
-Actions taken on a card sent by a user (ME Cards)
+* Actions taken on a card sent by a user (ME Cards)
 Desktop
 (image needs to be added)
 How many users use the copy functionality for ME cards?
@@ -491,7 +485,7 @@ Mobile
 The ability to copy the card is not available on mobile devices. The message related activities appear when you long press the card for a long time. Forward in a way can assist achieve the same goal(but than the message content is not modifiable)
 
 
-Actions taken on ACV2 cards
+* Actions taken on ACV2 cards
 
 Desktop
 (image needs to be added)
@@ -502,7 +496,7 @@ Mobile
 New UX for ACV2: Rolled out till R3 on both IOS and Android
 
 
-Integrated action sheet on Mobile
+* Integrated action sheet on Mobile
 
 Desktop
 (image needs to be added)
