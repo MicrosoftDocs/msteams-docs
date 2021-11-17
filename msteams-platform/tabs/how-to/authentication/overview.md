@@ -12,7 +12,7 @@ Teams establishes a trusted connection with providers to access data from servic
  > [!NOTE]
  > Web-based authentication on mobile clients requires Teams JavaScript client SDK version 1.4.1 or later.
 
-Ways to authenticate tabs:
+#### Ways to authenticate tabs:
 
 ![Authentication ways](~/assets/images/authentication/tabs-authentication/tabs-authentication-ways1.png)
 
