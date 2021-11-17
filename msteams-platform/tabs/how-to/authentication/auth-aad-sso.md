@@ -105,8 +105,8 @@ Complete the following steps to develop an SSO Teams tab:
 ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png) 
 
 
-    > [!NOTE]
-    > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+> [!NOTE]
+> If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Save and Continue**.
@@ -170,8 +170,8 @@ Complete the app registration prerequisites to continue with your tab SSO app.
 ![COnfigure]](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
 
 
-    > [!NOTE]
-    > Implicit grant is not required for tab SSO.
+> [!NOTE]
+> Implicit grant is not required for tab SSO.
 
 Congratulations! You've completed the app registration prerequisites to continue with your tab SSO app.
 
