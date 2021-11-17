@@ -110,11 +110,13 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when it is validated and not validated:
 
-|App capability | App is approved | App isn't approved |
+|App capability | App is validated | App isn't validated |
 |---|---|---|
 | Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### Post-meeting app experience
 
