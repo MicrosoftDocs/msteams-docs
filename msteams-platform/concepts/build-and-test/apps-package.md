@@ -98,6 +98,6 @@ Choose how you plan to distribute your app:
 > [!div class="nextstepaction"]
 > [Publish your app to the store](~/concepts/deploy-and-publish/appsource/publish.md)
 
-## See Also
+## See also
 
 [Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

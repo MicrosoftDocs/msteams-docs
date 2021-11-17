@@ -600,6 +600,6 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 > [!div class="nextstepaction"]
 > [Define search commands](~/messaging-extensions/how-to/search-commands/define-search-command.md)
 
-## See Also
+## See also
 
 [Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
