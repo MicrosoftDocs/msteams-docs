@@ -1,7 +1,7 @@
 ---
 title: Link unfurling
 author: surbhigupta
-description: How to perform link unfurling with messaging extension in a Microsoft Teams app.
+description: Learn how to add link unfurling with messaging extension in a Microsoft Teams app with app manifest or manually using code examples and samples.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear

@@ -1,19 +1,19 @@
 ---
 title: Create Virtual Assistant 
-description: How to create Virtual Assistant bot and skills for use in Microsoft Teams
+description: Learn how to create Virtual Assistant bot for Microsoft Teams using Code examples and snippets with features such as, Adaptive cards; handling interruptions, task module requests, collaborative app scopes, and message extensions; using skill manifest; Support for multiple languages, claim validation, LUIS integration, and mode.
 ms.localizationpriority: medium
 ms.topic: how-to
 keywords: teams virtual assistant bots
 ---
 
-# Create Virtual Assistant 
+# Create Virtual Assistant
 
 Virtual Assistant is a Microsoft open-source template that enables you to create a robust conversational solution while maintaining full control of user experience, organizational branding, and necessary data. The [Virtual Assistant core template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template) is the basic building block that brings together the Microsoft technologies required to build a Virtual Assistant, including the [Bot Framework SDK](https://github.com/microsoft/botframework-sdk), [Language Understanding (LUIS)](https://www.luis.ai/), and [QnA Maker](https://www.qnamaker.ai/). It also brings together the essential capabilities including  skills registration, linked accounts, basic conversational intent to offer a range of seamless interactions and experiences to users. In addition, the template capabilities include rich examples of reusable conversational [skills](https://microsoft.github.io/botframework-solutions/overview/skills).  Individual skills are integrated in a Virtual Assistant solution to enable multiple scenarios. Using the Bot Framework SDK, skills are presented in source code form, enabling you to customize and extend as required. For more information on skills of Bot Framework, see [What is a Bot Framework skill](https://microsoft.github.io/botframework-solutions/overview/skills/). This document guides you on Virtual Assistant implementation considerations for organizations, how to create a Teams focused Virtual Assistant, related example, code sample, and limitations of Virtual Assistant.
 The following image displays the overview of virtual assistant:
 
 ![Virtual Assistant overview diagram](../assets/images/bots/virtual-assistant/overview.png)
 
-Text message activities are routed to associated skills by the Virtual Assistant core using a [dispatch](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) model. 
+Text message activities are routed to associated skills by the Virtual Assistant core using a [dispatch](/azure/bot-service/bot-builder-tutorial-dispatch?view=azure-bot-service-4.0&tabs=cs&preserve-view=true) model.
 
 ## Implementation considerations
 
@@ -24,7 +24,7 @@ The decision to add a Virtual Assistant includes many determinants and differs f
 * Existing applications are customizable, owned by the organization, and are converted into skills for a Virtual Assistant.
 * The central employee experiences team is able to influence customizations to existing apps. It also provides necessary guidance for integrating existing applications as skills in Virtual Assistant experience.
 
-The following image displays the business functions of Virtual Assistant: 
+The following image displays the business functions of Virtual Assistant:
 
 ![Central team maintains the assistant, and business function teams contribute skills](../assets/images/bots/virtual-assistant/business-functions.png)
 

@@ -1,7 +1,7 @@
 ---
 title: Respond to search command
 author: surbhigupta
-description: How to respond to the search command from a messaging extension in a Microsoft Teams app.
+description: Learn how to respond to the search command from a messaging extension in a Microsoft Teams app using code examples and samples
 ms.topic: conceptual
 ms.author: anclear
 ms.localizationpriority: none
@@ -345,14 +345,11 @@ The default query has the same structure as any regular user query, with the `na
 |Teams messaging extension action| Describes how to define action commands, create task module, and  respond to task module submit action. |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | 
 |Teams messaging extension search   |  Describes how to define search commands and respond to searches.        |[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search)|[View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search)|
 
-## See also
-
-[Add configuration to a messaging extension](~/get-started/first-message-extension.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Add authentication to a messaging extension](~/messaging-extensions/how-to/add-authentication.md)
 
+## See also
 
-
+[Add configuration to a messaging extension](~/get-started/first-message-extension.md)

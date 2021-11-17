@@ -72,12 +72,13 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 
 Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
 
-## See also
-
-* [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
-* [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Types of cards](~/task-modules-and-cards/cards/cards-reference.md)
+
+## See also
+
+* [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
+* [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
+* [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

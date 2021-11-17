@@ -46,5 +46,6 @@ To enable the public developer preview on a mobile client, you need to do the fo
 
 Use the same menu item under About → Developer preview, and click on it to turn it off.
 
+## See also
 
-
+[Test and debug your Microsoft Teams app](~/concepts/build-and-test/debug.md)
