@@ -120,11 +120,57 @@ Don't fecilitate payments through an app for goods or services prohibited by [Ge
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
 * Apps must not include in-app purchases, trial offers, or UI that aims to upsell users to paid versions or online stores to purchase other content, apps, or add-ins.  
-         ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
-         :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.
 
+:::row:::
+   :::column span="3":::
+      Content...
+   :::column-end:::
+   :::column span="":::
+    ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
+    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
     ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
+
+   :::column-end:::
+   :::column span="":::
+      Content...
+   :::column-end:::
+:::row-end:::
+
+   :::row:::
+   :::column span="3":::
+      **This is a 3-span column with lots of text.**
+
+      Lorem
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment.](media/markdown-reference/document.png)
+   :::column-end:::
+   :::column span="":::
+   :::column-end:::
+:::row-end:::
+
+
+:::row:::
+   :::column span="2":::
+      **This is a 2-span column with lots of text.**
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc
+      ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec
+      rutrum non eros eget consectetur.
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment.](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
+
+    
+
+    
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
