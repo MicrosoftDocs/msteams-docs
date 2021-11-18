@@ -13,7 +13,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 > [!NOTE]
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
-> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure > report from us with steps to mitigate. Your app submission will pass Microsoft Teams Store Validation only after you have fixed the issues. 
+> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Microsoft Teams Store Validation only after you have fixed the issues. 
 > * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues. 
 
 
@@ -50,7 +50,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
  > [!TIP]  
- >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either seperately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 ### Suitable for workplace consumption
 
@@ -115,7 +115,7 @@ Apps must not ask users to make payments within the Teams interface and transmit
 
 You may provide link to secure external payment services only if you disclose it in your terms of use, privacy policy, profile page, or website before the user agrees to use the app.
 
-Don't fecilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content).
+Don't facilitate payments through an app for goods or services prohibited by [General policy number 100.10 Inappropriate content](/legal/marketplace/certification-policies#10010-inappropriate-content).
 
 Apps running on the iOS or Android version of Teams must adhere to the following guidelines:
 
@@ -133,7 +133,8 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
 :::row-end:::
 
-||:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.||
+|:---------------:|:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions. |:---------------:|
+
 
 :::row:::
    :::column span="":::
@@ -147,7 +148,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
 :::row-end:::
 
-||:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.||
+|:---------------:|:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.|:---------------:|
 
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
@@ -173,7 +174,7 @@ Bots must always ask permission to upload a file and display a confirmation mess
 > [!NOTE]
 > This section is inline with [Microsoft commercial marketplace policy number 1140.3.3](/legal/marketplace/certification-policies#114033-external-domains) and provides developer guidance on usage of restricted domains in the `validDomains` manifest property.
 
-Don't include domains outside of your organization's control (including wildcards) and tunneling services in your app's domain configurations. The following exceptions include:
+Don't include domains outside of your organization's control (including wildcards) and tunnelling services in your app's domain configurations. The following exceptions include:
 
   * If your app uses the Azure Bot Service's OAuthCard, you must include `token.botframework.com` as a valid domain or the **Sign in** button won't work.
   * If your app relies on SharePoint, you can include the associated root SharePoint site as a valid domain using the `{teamSiteDomain}` context property.
@@ -199,7 +200,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 [*Mandatory Fix*]
 
-Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs and task modules.
+Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
 
 Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality. 
 
@@ -239,7 +240,7 @@ App packages must be correctly formatted and include all required information an
 
 > [!TIP]  
 > You must include the following detailed testing instructions for validating your app submission:
-> * **Steps to configure the app Test accounts** in case app depends on external accounts for authentication.
+> * **Steps to configure the app test accounts** in case app depends on external accounts for authentication.
 > * Summary of **expected app behavior** for the core workflows within Teams.
 > * **Clearly describe Limitations**, conditions, or exceptions to the functionality, features, and deliverables in the app long description and related materials.
 > * **Emphasis on any considerations** for testers while validating your app submission.  
@@ -270,7 +271,7 @@ Icons are one of the main elements people see when browsing the Teams store. You
 
 * The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
 
-* You app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
+* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata.
 
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
@@ -455,18 +456,12 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
 
-    ![App Login Emphasis](~/assets/images/submission/validation-views-applogin.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Emphasis and focus on app login.  
-
-    ![App Logo](~/assets/images/submission/validation-views-applogo.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Focus on app logo and inefficient use of configuration screen. App logo also available in the upper left corner. Informative steps to configure the app are available under the vertical scroll.  
-
 * Content can be simplified by breaking down across multiple tabs. [*Suggested Fix*]
 
     ![Multiple Tabs](~/assets/images/submission/validation-views-multiple-tabs.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Breakdown complex content in static tabs across multiple tabs.
 
-* Tabs should'nt have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
+* Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
     ![Duplicate Header Logo](~/assets/images/submission/validation-views-duplicate-header-logo.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Tab framework displays your app logo. Recommend removing the duplicate logo from the tab iframe.
@@ -477,7 +472,7 @@ The following are the navigation guidelines:
 
 * Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
-Design your app with [basic](/concepts/design/design-teams-app-basic-ui-components) and [advanced](/concepts/design/design-teams-app-advanced-ui-components) Fluent UI components.
+Design your app with [basic](/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](/concepts/design/design-teams-app-advanced-ui-components.md) Fluent UI components.
 
    ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
@@ -491,7 +486,7 @@ Design your app with [basic](/concepts/design/design-teams-app-basic-ui-componen
    ![Static Tab](~/assets/images/submission/validation-navigation-static-tab.png)  
    :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Side navigation pane to assist with complex navigation flows in a Static Tab is allowed. 
 
-   ![Horizonta Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
+   ![Horizontal Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
    :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Tab uses a horizontal rail for navigation instead of a left rail that conflicts with Teams primary navigation.
 
 * Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. [*Mandatory Fix*]
@@ -541,7 +536,7 @@ Design your app with [basic](/concepts/design/design-teams-app-basic-ui-componen
 
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 
-    ![Usability Resposive tabs](~/assets/images/submission/validation-usability-responsive-tabs.png)  
+    ![Usability Responsive tabs](~/assets/images/submission/validation-usability-responsive-tabs.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Responsive to **Dark** theme within a Teams meeting.
 
     ![Usability unresponsive tabs](~/assets/images/submission/validation-usability-unresponsive-tabs.png)  
@@ -552,7 +547,7 @@ Design your app with [basic](/concepts/design/design-teams-app-basic-ui-componen
     ![Usability different font](~/assets/images/submission/validation-usability-app-uses-diff-font.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: App uses **Calibri** font, different from Teams native font.
 
-* If your app functionality require changes in settings, include a **Settings** tab. [*Suggested Fix*]
+* If your app functionality requires changes in settings, include a **Settings** tab. [*Suggested Fix*]
 * Tabs must follow Teams interaction design such as, in-page navigation, position and use of dialogs, information hierarchies, and so on. For more information, see [Microsoft Teams Fluent UI kit](~/concepts/design/design-teams-app-basic-ui-components.md)
 
 * Tab content in the iframe must not include features that mimic Teams core capabilities. For example, bots, messaging extensions, calling, meeting, and so on.
@@ -658,7 +653,7 @@ Bots must not spam users by sending multiple messages in short duration.
     ![Bot Using task Module](~/assets/images/submission/validation-bot-messages-using-task-module.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot using a task module to collect information.
 
-    ![Bot Using Mutliple Conversation](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)  
+    ![Bot Using Multiple Conversation](~/assets/images/submission/validation-bot-messages-using-mutliple-conversation.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Bot using multi turn conversation to complete a repetitive workflow.
 
 * **Welcome messages**: Don't repeat the same welcome message over regular intervals. For example, when a new member is added to a team, don't spam the other members with a welcome message. Message the new member personally.
@@ -682,7 +677,7 @@ For more information about cards, see:
 * [Designing Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
-Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to users base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
+Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to user's base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
 
 
 ### Notification only Bots 
@@ -853,7 +848,7 @@ Use the following guidelines for meeting extensions:
 
 ### In-meeting dialogs
 
-* Must be used sparingly and for scenarios that are light and task-oriented.
+* Must be used sparingly and for scenarios that are light and task oriented.
 * Must display content in a single column and not have multiple navigation levels.
 * Must not use task modules.
 * Must align with the center of the meeting stage.
