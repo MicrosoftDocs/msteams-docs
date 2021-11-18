@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---
-# Exploring Teams app building features
+# Explore Teams app building features
 
 With Teams, you can build your app in a feature-rich environment. It lets you extend the Teams capabilities for your app solution. 
 
@@ -39,7 +39,7 @@ Teams lets you determine the scope of app usage - on an individual level or in a
 - Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 - Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on additional workflows for your app's interactions or unlocking new social interactions.
 
-## Diving Deeper
+## Dive Deeper
 
 In addition to the main features, you can also choose to customize your app with user authentication and Microsoft Graph features.
 
