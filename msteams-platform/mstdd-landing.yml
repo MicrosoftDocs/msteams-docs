@@ -47,8 +47,6 @@ landingContent:
       links:
       - text: Build app with JavaScript
         url: sbs-gs-javascript.yml
-      - text: Build app with Blazor
-        url: sbs-gs-blazor.yml
       - text: Build app with SPFx
         url: sbs-gs-spfx.yml
       - text: Build app with C# or .NET
