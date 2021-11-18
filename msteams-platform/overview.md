@@ -20,7 +20,7 @@ Apps are how you extend Teams to fit your needs. Create something brand new for 
 
 Teams apps are a combination of [capabilities](concepts/capabilities-overview.md). Some apps are simple (send notifications), while others are complex (manage patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
 
-This document is about building apps for Microsoft Teams. These apps extend Microsoft capabilities to suit the requirements of your users. Building your apps with Teams brings your users the advantages of collaborative communication.
+Building your apps with Teams brings your users the advantages of collaborative communication.
 
 With a Teams app, you can:
 
@@ -37,8 +37,8 @@ With a Teams app, you can:
 - Utilize a wide library of UI toolkit to design the layout and appearance of your app.
 
 ## About Microsoft Teams Developer Documentation
- 
-In addition to providing details about Teams features, it also includes the following:
+
+This document is about building apps for Microsoft Teams. These apps extend Microsoft capabilities to suit the requirements of your users. In addition to details about Teams features, it also includes the following:
 
 - Code samples, snippets, and examples.
 - Step-by-step guides.
@@ -106,6 +106,6 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
 
 ## See also
 
-* [App fundamentals](~/concepts/app-fundamentals-overview.md)
-* [Design your Teams app](~/concepts/design/design-teams-app-process.md)
-* [Map your use cases to Teams app capabilities](~/concepts/design/map-use-cases.md)
+- [App fundamentals](~/concepts/app-fundamentals-overview.md)
+- [Design your Teams app](~/concepts/design/design-teams-app-process.md)
+- [Map your use cases to Teams app capabilities](~/concepts/design/map-use-cases.md)
