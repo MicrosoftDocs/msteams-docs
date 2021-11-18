@@ -412,10 +412,6 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is secondary set of buttons will be placed inside the overflow menu.
 
-**Following image is an example for overflow menu (…)**
-
-  ![overflow menu](~/assets/images/Cards/overflow-image.png)
-
 **There are two types of overflow Menu:**
 
 * **Actions**: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
