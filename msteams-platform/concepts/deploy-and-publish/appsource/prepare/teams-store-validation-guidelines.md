@@ -133,7 +133,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
 :::row-end:::
 
-|:---------------:|:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions. |:---------------:|
+       :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.         
 
 
 :::row:::
