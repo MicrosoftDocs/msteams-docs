@@ -145,13 +145,6 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 As you familiarize yourself with Teams app development, you understand its core fundamentals. You understand that there is more than one way to build certain features. In such scenarios, consider how you can provide a more native experience to your user.
 For example, you can collect user input in a form built as a tab in the app. You can also do this using a task module without switching views and disrupting user's workflow. It is important to choose extension points that provide least deviation from a user's regular workflow.
 
-
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Teams app entry points](../concepts/extensibility-points.md)
-
 ## See also
 
 * [Build apps for Teams](../overview.md)

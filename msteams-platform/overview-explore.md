@@ -11,8 +11,7 @@ ms.date: 11/02/2021
 
 With Teams, you can build your app in a feature-rich environment. It lets you extend the Teams capabilities for your app solution.
 
-//Add image for Teams apps//
-
+//Add image for Teams features//
 
 ## Teams Features
 
