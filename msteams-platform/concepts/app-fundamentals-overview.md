@@ -1,16 +1,35 @@
 ---
-title: App development fundamentals overview
+title: Plan your app overview
 author: heath-hamilton
-description: Describe the foundational concepts of Teams platform development, such as app capabilities and entry points, understanding use cases and mapping them to app capabilities, and planning apps.
+description: Introduce the elements of planning an app, such as understanding use cases and mapping them to app capabilities, app capabilities, and other Teams features.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 keywords: entry points extensibility use cases device capability
 ---
 
-# Microsoft Teams app development fundamentals
+# Plan your app with Teams capabilities
 
-Microsoft Teams app fundamentals give the direction you need to create your custom Teams app. You can recognize the framework required to plan your Teams app. The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
+An app's design, features, and capabilities stem from its purpose. The app user and their need form the basic guideline that determines all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
+
+The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
+
+## Plan your Teams solution
+
+The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution:
+
+- Understand your use cases
+
+    You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+
+  - Do you need authentication?
+  - What problem is your app going to solve?
+  - Who are the end-users of the app?
+  - How should the onboarding experience be and what else the app can do?
+
+- Map your use cases to Teams app capabilities
+
+    [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
 ## Teams Capabilities
 
@@ -143,23 +162,6 @@ Teams, as a platform, helps you build a single- or multi-capability app that is 
 You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
 
 Together, these capabilities bring your app solution to life.
-
-## Plan your Teams solution
-
-The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution:
-
-- Understand your use cases
-
-    You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
-
-  - Do you need authentication?
-  - What problem is your app going to solve?
-  - Who are the end-users of the app?
-  - How should the onboarding experience be and what else the app can do?
-
-- Map your use cases to Teams app capabilities
-
-    [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
 ## Plan responsive tabs for Teams mobile
 
