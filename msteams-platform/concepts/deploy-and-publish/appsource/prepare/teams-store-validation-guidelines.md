@@ -136,7 +136,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column span="":::
      
    :::column-end:::
-   :::column span="5":::
+   :::column span="3":::
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
    :::column-end:::
    :::column span="":::
@@ -144,21 +144,8 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
 :::row-end:::
 
-
-:::row:::
-   :::column span="":::
-    ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column span="5":::
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
-   :::column-end:::
-:::row-end:::
-
-
 | |![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png) | |
-||:---------------:||
+|----------|:---------------:|------------|
 | |:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision. | |
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
