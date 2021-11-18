@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI kit camera effects meetings
 ---
-# Designing camera effects for Microsoft Teams meetings
+# Designing your camera effects for Microsoft Teams meetings
 
 Your app can include camera effects to make Teams meetings more engaging and fun.
 
