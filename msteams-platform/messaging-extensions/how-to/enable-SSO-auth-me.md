@@ -91,7 +91,7 @@ After the prerequisites are completed, you can enable SSO for messaging extensio
                  {
                      Token = tokenExchangeRequest.Token,
                  },
-                 Token = tokenExchangeRequest.Token,
+                  cancellationToken).ConfigureAwait(false);
             }
     #pragma warning disable CA1031 //Do not catch general exception types (ignoring, see comment below)
             catch
