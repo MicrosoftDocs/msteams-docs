@@ -472,7 +472,7 @@ The following are the navigation guidelines:
 
 * Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
-Design your app with [basic](../../../concepts/design/design-teams-app-basic-ui-components.md) and [advanced](../../../concepts/design/design-teams-app-advanced-ui-components.md) Fluent UI components.
+Design your app with [basic](../../concepts/design/design-teams-app-basic-ui-components.md) and [advanced](../../concepts/design/design-teams-app-advanced-ui-components.md) Fluent UI components.
 
    ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
