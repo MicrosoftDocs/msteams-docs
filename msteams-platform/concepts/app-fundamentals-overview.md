@@ -16,12 +16,11 @@ Microsoft Teams app fundamentals give the direction you need to create your cust
 
 You can extend your Teams app in multiple ways. To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
 
-### Personal apps
-
 :::row:::
    :::column span="":::
+### Personal apps
 
-**Help people focus**: A [personal app](../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+A [personal app](../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 
    :::column-end:::
 
@@ -33,12 +32,12 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
 :::row-end:::
 
-### Tabs
-
 :::row:::
    :::column span="":::
 
-**Collaborate more conveniently**: Display your web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
+### Tabs
+
+Display your web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
 
    :::column-end:::
 
@@ -50,12 +49,12 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
 :::row-end:::
 
-### Bots
-
 :::row:::
    :::column span="":::
 
-**Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+### Bots
+
+Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
    :::column-end:::
 
@@ -67,13 +66,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
 :::row-end:::
 
-### Messaging extensions
-
 :::row:::
 
    :::column span="":::
 
-**Make it easier to multitask**: With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+### Messaging extensions
+
+With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
@@ -84,13 +83,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
    :::column-end:::
 :::row-end:::
 
-### Meeting extensions
-
 :::row:::
 
    :::column span="":::
 
-**Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+### Meeting extensions
+
+There are a few options for [incorporating your app into the Teams calling experience](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
    :::column-end:::
 
@@ -101,13 +100,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
    :::column-end:::
 :::row-end:::
 
-### Webhooks and connectors
-
 :::row:::
 
    :::column span="":::
 
-**Communicate with external apps**: [Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
+### Webhooks and connectors
+
+[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
 
    :::column-end:::
 
@@ -118,13 +117,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
    :::column-end:::
 :::row-end:::
 
-### Microsoft Graph for Teams
-
 :::row:::
 
    :::column span="":::
 
-**Utilize Teams data**: The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
+### Microsoft Graph for Teams
+
+The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
 
    :::column-end:::
 
