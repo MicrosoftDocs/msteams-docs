@@ -14,8 +14,6 @@ Teams unified meetings apps are based on the following concepts:
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
-
 This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
