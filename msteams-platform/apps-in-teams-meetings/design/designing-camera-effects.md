@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.topic: conceptual
 keywords: UI kit camera effects meetings
 ---
-# Designing camera effects for Microsoft Teams
+# Designing camera effects for Microsoft Teams meetings
 
 Your app can include camera effects to make Teams meetings more engaging and fun.
 
@@ -69,7 +69,7 @@ If the user hasn't used your app before, they'll have to add it before they can 
 |B|**Add button**: Adds the app to Teams for the user.|
 |C|**Text**: Text component for your app permissions.|
 |D|**Back button**: Takes the user back to the previous page.|
-|1|**App icon**: The [color icon](~/concepts/build-and-test/apps-package.md#color-icon) for your app.|
+|1|**App color icon**: The [color icon](~/concepts/build-and-test/apps-package.md#color-icon) for your app.|
 |2|**App short name**: The [short display name](~/resources/schema/manifest-schema.md#name) for your app.|
 |3|**Developer name**: The [display name for the developer](~/resources/schema/manifest-schema.md#developer).|
 |4|**Text**: Specifies the number of effects your app offers.|
@@ -106,7 +106,7 @@ When the user selects **Edit** in the **Private preview** window, they can view 
 
 The user can see what the camera effect looks like before applying it.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/preview-effect-during-anatomy.png" alt-text="Image shows the design anatomy of previewing a camera effect before a meeting." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/preview-effect-during-anatomy.png" alt-text="Image shows the design anatomy of previewing a camera effect during a meeting." border="false":::
 
 |Counter|Description|
 |----------|-----------|
@@ -122,15 +122,17 @@ The user can see what the camera effect looks like before applying it.
 
 If the user hasn't used your app before, they'll have to add it before they can apply the camera effect.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/add-app-during-anatomy.png" alt-text="Image shows the design anatomy of adding a camera effect during a meeting." border="false":::
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
-|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|A|**Dismiss**: Closes the add app details page and returns to the video preview.|
+|B|**Add button**: Adds the app to Teams for the user.|
+|1|**App color icon**: The [color icon](~/concepts/build-and-test/apps-package.md#color-icon) for your app.|
+|2|**App short name**: The [short display name](~/resources/schema/manifest-schema.md#name) for your app.|
+|3|**Developer name**: The [display name for the developer](~/resources/schema/manifest-schema.md#developer).|
+|4|**Text**: Specifies the number of effects your app offers.|
+|5|**Text**: Includes your app's [short description](~/resources/schema/manifest-schema.md#description) and links to your [privacy policy](~/resources/schema/manifest-schema.md#developer) and [terms of use](~/resources/schema/manifest-schema.md#developer). The permissions link takes the user to a page where they can review your app's permissions.|
 
 ## Best practices
 
