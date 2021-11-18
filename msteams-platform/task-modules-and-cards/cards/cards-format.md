@@ -410,112 +410,30 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards on Mobile
 
-Overflow menu is added to Adaptive Cards, which allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
+ Overflow menu is added to Adaptive Cards, which allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
 
-### Overview
-   
-This section covers the following:
+ Select More to enable another set of buttons on Adaptive Cards as a overflow menu. Primary buttons are displayed in the Adaptive card and rest of the buttons are in overflow menu.
 
-* The developer can specify multiple overflow menu with adaptive cards.
-* The actions in the overflow menu are essentially equivilent to those in buttons-based cards.
-* Use the existing model **More** menu.
-* Consolidation of appropriate actions to ensure user is not confused by multiple menus 
+**Two types of overflow menu:**
+ 1.	Actions – The actions are at the end of the card. Following screen is an example for the Action.
 
-### Overflow menu types
+    ![action card](~/assets/images/Cards/actions-card.png)
 
-Action:
+ 2.	Action set - Adaptive cards there are buttons at the end of card. You can have multiple action sets and for each of an action set there is an overflow menu. Following screen is and example for Action set
 
-In an action, primary buttons are in display, secondary is placed inside the overflow. Developers can have up to six buttons on display.
-
-The following image shows:
-
-  ![Action card](~/assets/images/Cards/actions-card.png) 
     
-Code sample of an action:
+    ![action set card](~/assets/images/Cards/action-set-card.png)
 
-(image needs to be added)
-
-Action set:
-In an action set, all the actions are marked as secondary, a single overflow button would be rendered on the card.
-
-The following image shows:
-
-  ![Action set card](~/assets/images/Cards/action-set-card.png)
-
-Code sample for an action set:
-
-(image needs to be added)
-
-### Existing Overflow Menus in Teams clients and differences between mobile and desktop
-
-**The action taken on a message**
-
-**Desktop**
-
-The action that takes place when a user hovers on a message is seen in the following image.
-
-  ![action card](~/assets/images/Cards/action-taken-on-message-desktop.png)
-
-**Mobile**
-
-The action that takes place when a user long presses a message is seen in the following image.
+ > [!NOTE]
+ > The developers can define up to six buttons and then have a overflow both in Actions and Action set 
     
-  ![action card](~/assets/images/Cards/action-taken-on-message-mobile.png)
-    
-> [!NOTE]
-> The long press is a well known functionality on mobile. *Teams Mobile Chat MAU - 60 Mil (46% of Teams MAU)*.
+ When a user selects overflow menu, all the buttons that are defined by the developer displays. Three is an integrated action sheet on Mobile, which shows overflow menu the actions only related to the card with message option. Long press on any message on Mobile, it displays the related messages. This option is available only for the Actions.
 
-**Action taken on card sent by a bot**
+ **Schema**
+ The developer needs to define the schema details in the Mode property. Follow the steps to define:
+1.	Primary: Add primary in the Mode to display the buttons in the card
+2.	Secondary – Add secondary in the Mode to displays the buttons in overflow menu. 
 
-**Desktop**
-
-There are No actions that can be taken on a card, actions can only be taken on a message.
-
-**Mobile**
-
-When a user long presses on the bot card, the following image depicts the actions that occur on a message.
-    
-  ![action card](~/assets/images/Cards/action-taken-on-card-sent-by-bot.png)
-    
-**Actions taken on a card sent by a user (ME Cards)**
-
-**Desktop**
-
-  The following image shows the action taken on a card sent by a user.
-
-  ![action card](~/assets/images/Cards/actions-taken-on-card-sent-by-user-desktop.png)
-    
-**Other options that appear in the overflow menu today**
-    
-  ![action card](~/assets/images/Cards/options-on-overflow-menu.png)
-
-
-**Mobile**
-
-The ability to copy the card is not available on mobile devices. The message related activities appear when you long press the card for a long time. Forward in a way can assist achieve the same goal(but than the message content is not modifiable).
-    
-  ![action card](~/assets/images/Cards/actions-taken-on-card-sent-by-user-mobile.png)
-
-**Actions taken on ACV2 cards**
-
-**Desktop**
-
-The message overflow option, which includes the ACV2 card action, is shown in the following image.
-    
-  ![action card](~/assets/images/Cards/actions-taken-on-acv2-desktop.png)
-
-**Mobile**
-
-The following image shows the ACV2's new user interface which has been rolled out on both iOS and Android until RE.
-    
-  ![action card](~/assets/images/Cards/actions-taken-on-acv2-mobile.png)
-    
-**Integrated action sheet on Mobile**
-
-**Mobile**
-
-  ![Action card](~/assets/images/Cards/integrated-action-sheet-mobile.png)
-    
 
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
