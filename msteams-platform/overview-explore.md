@@ -9,11 +9,10 @@ ms.date: 11/02/2021
 ---
 # Exploring Teams app building features
 
-With Teams, you can build your app in a feature-rich environment. It lets you extend the Teams capabilities for your app solution.
+With Teams, you can build your app in a feature-rich environment. It lets you extend the Teams capabilities for your app solution. 
 
-Let's learn about some of Teams' features.
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-capabilities.png" alt-text="Illustrates Teams capabilities" border="true":::
 
-:::image type="content" source="../msteams-platform/assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
 ## Teams Features
 
@@ -22,6 +21,9 @@ Let's learn about some of Teams' features.
 |Tabs | Tabs are Teams-aware webpages embedded in Microsoft Teams. They are simple HTML `iframe` tags that point to domains declared in the app manifest. You can added them as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, stage view, and link unfurling |
 | Bots | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive automated tasks performed by the users. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. | Customer service, information about the weather, make dinner reservations, or provide travel information. |
 | Messaging extensions | Messaging extensions allow the users to interact with your web service through buttons and forms in the Microsoft Teams client. They search or initiate actions in an external system. You can send back the result of that interaction to the Microsoft Teams client in the form of a richly formatted card. | Reserve a resource and allow the channel to know the reserved time slot. Search for a work item in Azure DevOps, and share it with the group as an Adaptive Card. Create a bug in your tracking system based on a Teams message, assign that bug to Bob, and send a card to the conversation thread with the bug's details. |
+|Meeting extensions | You can create apps to make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
+| Personal app | A personal app is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them. | OneNote gives you a private workspace within Teams, while Planner offers a bird's eye view of all your tasks, across boards that you or your team have added as channel tabs. |
+| Webhooks and connectors | Communicate with external apps, send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
 |
 
 ### Additional Use Cases

@@ -30,7 +30,7 @@
     href: sbs-gs-nodejs.yml
   - name: Code samples
     href: https://github.com/OfficeDev/Microsoft-Teams-Samples
-- name: Planning your app
+- name: Plan your app
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
