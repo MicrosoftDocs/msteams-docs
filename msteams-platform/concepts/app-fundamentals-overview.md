@@ -145,6 +145,7 @@ These capabilities bring your app solution to life.
 The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution:
 
 - Understand your use cases
+
     You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
 
     - Do you need authentication?
