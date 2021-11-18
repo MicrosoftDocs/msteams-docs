@@ -410,29 +410,37 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards on Mobile
 
- Overflow menu is added to Adaptive Cards, which allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
+Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is secondary set of buttons will be placed inside the overflow menu.
 
- Select **More** to enable another set of buttons on Adaptive Cards as a overflow menu. Primary buttons appears in the Adaptive cards and the secondary buttons in overflow menu.
+**The following image is an example for overflow menu (…)**
 
-**Actions and action set are two types of overflow menus:**
+  ![overflow menu](~/assets/images/Cards/decluttered-image.png)
 
- 1.	**Actions** – The actions are at the end of the Adaptive Cards. Following image is an example for the Action.
+**There are two types of overflow Menu:**
 
-    ![action card](~/assets/images/Cards/actions-card.png)
+* Actions: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
 
- 2.	**Action set** - In Adaptive Cards action set, you can have multiple action sets and for each of an action set there is an overflow menu. Following image is an example for Action set.
+**Following image is an example for actions**
 
-    
-    ![action set card](~/assets/images/Cards\action-set-card-1.png)
+  ![action card](~/assets/images/Cards/actions-card.png)
 
- > [!NOTE]
- > The developers can define up to six buttons (primary) in the adaptive cards and also have a overflow menu both in actions and action set. 
+* Action set is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
 
-**Mobile**
+**Following image is an example for action set**
 
- When a user selects overflow menu, all the buttons that are defined by the developer displays in the Adaptive Cards. There is an integrated action sheet on Mobile, which shows overflow menu the actions only related to the card with message option. Long press on any message on Mobile, it displays the related messages. This option is available only for the Actions.
+  ![action set card](~/assets/images/Cards/action-set-card-1.png)
 
-In an Adaptive Card, Overflow menu, you can use the mode property to add the primary and secondary properties to display the buttons in the card and overflow menu respectively. For information on how to use the property, see the following example:
+What happens when the user selects the overflow menu?
+
+Desktop: on a desktop when you select the overflow menu, whatever you have effectively set as secondary buttons will appear in the display.
+
+Mobile: On a mobile when you select the overflow menu, the adaptive cards display all the buttons that you have defined. There is an integrated sheet that displays an overflow menu with only activities related to the card with message option. Long press on any message on Mobile, brings up a list of related messages. This option is only available for actions.
+
+How to use the property
+
+you can use the mode property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
+
+See the following example, on how to use the `mode`:`secondary` property for actions and action set.
 
 **Actions**
 
