@@ -142,7 +142,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column-end:::
 :::row-end::: 
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -151,8 +151,6 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column span="":::
    :::column-end:::
 :::row-end::: 
-  
-   
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
@@ -169,7 +167,7 @@ For apps that use the Microsoft Azure Bot Service (such as bots and messaging ex
 
 Bots must always ask permission to upload a file and display a confirmation message.
     
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -429,7 +427,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -439,7 +437,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
    :::column-end:::
 :::row-end:::
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -449,7 +447,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
    :::column-end:::
 :::row-end:::     
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -463,7 +461,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * The user must not leave the tab configuration experience inside Teams to create content outside of Teams and then return to Teams to pin it. Tab configuration screen must explain the value of configuration and how to configure. [*Mandatory Fix*]
 
- ::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -476,7 +474,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Tab configuration screen must not embed an entire website. Keep your configuration experience focused. For example, if you're building a project management app that lets users configure a project in a channel, keep the tab configuration screen focused on allowing the user to select a project from your app to configure in the channel. [*Mandatory Fix*]
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -486,7 +484,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
    :::column-end:::
 :::row-end:::  
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -499,7 +497,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Tab configuration screen must not ask users to embed a URL. Asking users to configure a URL during tab setup is a broken UX, user leaves tab configuration screen, acquires URL, returns to the configuration screen and inputs the URL. A preexisting Teams feature already allows users to pin a website link in the channel. If your app asks user to embed a website URL during tab configuration and the app is limited to display the entire website content in the channel tab, your app doesn't offer significant value to the user. [*Mandatory Fix*]
     
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -509,7 +507,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
    :::column-end:::
 :::row-end:::
     
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -525,7 +523,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
       
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -537,7 +535,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Content can be simplified by breaking down across multiple tabs. [*Suggested Fix*]
 
-::row:::
+:::row:::
    :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -549,7 +547,7 @@ If your app includes a tab, ensure it adheres to these guidelines.
 
 * Tabs shouldn't have a duplicate header. Remove the duplicate logo from the iframe since the tab framework already displays the app icon and name. [*Suggested Fix*]
 
- ::row::: 
+ :::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -567,7 +565,7 @@ The following are the navigation guidelines:
 
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -579,7 +577,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
   
     
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -589,7 +587,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::  
    
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -599,7 +597,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::      
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -609,7 +607,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::     
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -621,7 +619,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs with toolbar in left rail must leave 20px spacing from Teams left navigation. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -640,7 +638,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Deep links in tabs must not link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -653,7 +651,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must not allow users to navigate outside Teams for the core app experience. Tabs can redirect outside Teams for non-core workflows. For example, to raise a support ticket. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -663,7 +661,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::   
    
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -679,7 +677,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -689,7 +687,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end::: 
       
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -699,7 +697,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::
     
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -711,7 +709,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Content must not truncate or overlap within the tab.
       
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -728,7 +726,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must be responsive to Teams themes. When a user changes the theme, the app's theme must reflect the selection.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -738,7 +736,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::column-end:::
 :::row-end:::
       
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -751,7 +749,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Tabs must use Teams-styled components such as, Teams fonts, type ramps, color palettes, grid system, motion, tone of voice, and so on, whenever possible. For more information, see [tab design guidelines](/microsoftteams/platform/tabs/design/tabs). [*Suggested Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -772,7 +770,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * If your app requires provision of a personal scope view for the user to enhance efficiency or workplace productivity, use filtered views, deep links to personal apps, or navigate to L2 or L3 views within the configurable tab and keep the landing page contextually the same for all the users.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -785,7 +783,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
 
 * Configurable tabs must have focused functionality.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -818,7 +816,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Listing supported bot commands in your app configurations is highly recommended. These commands display in the compose box when a user tries to message your bot.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -828,7 +826,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::column-end:::
 :::row-end:::
   
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -841,7 +839,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * All commands that your bot supports must work correctly, including generic commands such as **Hi**, **Hello**, and **Help**.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -854,7 +852,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot commands must not lead a user to a dead end, the commands must always provide a way forward.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -873,7 +871,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run. For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
 
- ::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -883,7 +881,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::column-end:::
 :::row-end:::    
     
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -897,7 +895,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bot welcome messages in channels and chats are optional during first run, especially if the bot is available for personal use and performs similar actions. Your bot must not send welcome messages to users individually (it's considered [spamming](#bot-message-spamming)). The message must also mention the person who added the bot.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -907,7 +905,7 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
    :::column-end:::
 :::row-end::: 
      
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -927,7 +925,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
 * **Bot messages in channels and chats**: Don't spam users by creating separate posts. Create a single post with replies in the same thread.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -937,7 +935,7 @@ Bots must not spam users by sending multiple messages in short duration.
    :::column-end:::
 :::row-end::: 
       
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -956,7 +954,7 @@ Bots must not spam users by sending multiple messages in short duration.
   * Use a form (or task module) to collect all inputs from a user at one time. 
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -966,7 +964,7 @@ Bots must not spam users by sending multiple messages in short duration.
    :::column-end:::
 :::row-end:::
     
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -982,7 +980,7 @@ Bots must not spam users by sending multiple messages in short duration.
 
 Bot notifications must include content relevant for the scope you define for the bot (team, chat, or personal).
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -992,7 +990,7 @@ Bot notifications must include content relevant for the scope you define for the
    :::column-end:::
 :::row-end:::
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1025,7 +1023,7 @@ A notification provides value in Teams if:
 
 Apps that provide only notifications with content such as **You have a new notification, click to view**, and require user to navigate outside of Teams for everything else don't provide significant value within Teams.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1035,7 +1033,7 @@ Apps that provide only notifications with content such as **You have a new notif
    :::column-end:::
 :::row-end:::  
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1066,7 +1064,7 @@ Action-based messaging extensions must do the following:
 
 * Allow users to trigger actions on a message without completing intermediate steps, such as sign in.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1076,7 +1074,7 @@ Action-based messaging extensions must do the following:
    :::column-end:::
 :::row-end::: 
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1089,7 +1087,7 @@ Action-based messaging extensions must do the following:
       
 * Pass the message context to the next work state. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1099,7 +1097,7 @@ Action-based messaging extensions must do the following:
    :::column-end:::
 :::row-end::: 
       
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1112,7 +1110,7 @@ Action-based messaging extensions must do the following:
 
 * Incorporate the host app name instead of a generic verb for action commands triggered from a chat message, channel post, or call to action within apps. For example, use **Start a Skype Meeting** for **Start Meeting**, **Upload file to DocuSign** for **Upload file**, and so on. [*Suggested Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1122,7 +1120,7 @@ Action-based messaging extensions must do the following:
    :::column-end:::
 :::row-end:::
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1142,7 +1140,7 @@ Messaging extensions must preview recognized links in the Teams compose box. Don
 
 * Search based messaging extensions must provide text that helps the users to search effectively. [*Mandatory Fix*]
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1155,7 +1153,7 @@ Messaging extensions must preview recognized links in the Teams compose box. Don
 
 * @mention executables must be clear, easy to understand, and readable.
  
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::
@@ -1176,7 +1174,7 @@ To pass validation for a search-based message extension only app, the following 
 1.	Posted card provides adequate details requiring no further user action.
 1.	Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1186,7 +1184,7 @@ To pass validation for a search-based message extension only app, the following 
    :::column-end:::
 :::row-end::: 
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1209,7 +1207,7 @@ A task module must include an icon and the short name of the app it's associated
 
 For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1219,7 +1217,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
    :::column-end:::
 :::row-end:::  
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1272,7 +1270,7 @@ Use the following guidelines for meeting extensions:
 * Apps must only use a dark theme during meetings. For more information, see [Teams design guidelines](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#theming).
 * A tooltip must display the app name when hovering over the app icon during meetings.
 
- ::row::: 
+ :::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1291,7 +1289,7 @@ Use the following guidelines for meeting extensions:
 * Must maintain padding and component sizes.
 * Must have a back button if there's more than one layer of navigation.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1301,7 +1299,7 @@ Use the following guidelines for meeting extensions:
    :::column-end:::
 :::row-end::: 
      
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1322,7 +1320,7 @@ Use the following guidelines for meeting extensions:
 * Must not use task modules.
 * Must align with the center of the meeting stage.
 
-::row::: 
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
@@ -1379,7 +1377,8 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program: 
 
   * **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory (Azure AD) consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified).  
-::row::: 
+
+:::row::: 
     :::column span="":::
    :::column-end:::
    :::column span="3":::     
