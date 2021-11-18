@@ -1,6 +1,6 @@
 ---
 title: Build apps with the Teams Toolkit and Visual Studio
-description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit
+description: Get started building great custom apps directly within Visual Studio with the Microsoft Teams Toolkit. Learn to configure your app in Visual Studio, validate your app, and publish it from Visual Studio and Developer Portal. 
 keywords: teams visual studio toolkit
 ms.localizationpriority: medium
 ms.topic: overview
@@ -81,8 +81,3 @@ In the [Teams Developer Portal](https://dev.teams.microsoft.com/home), you can u
 
 - Your IT admin will review these submissions.
 - You can return to the **Publish** page to check on your submission status and learn if your app was approved or rejected by your IT admin. This is also where you can submit updates to your app or cancel any currently active submissions.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Build and run your first Microsoft Teams app with Blazor](../get-started/first-app-blazor.md)

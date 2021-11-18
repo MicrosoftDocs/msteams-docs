@@ -1,10 +1,11 @@
 ---
 title: Prepare your store submission  
-description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store.
+description: Describes the final steps before submitting your Microsoft Teams app to be listed on the store. Learn to validate your app package, compile testing instructions, and create your store listing details.
 ms.topic: how-to
 ms.localizationpriority: medium
 author: heath-hamilton
 ms.author: surbhigupta
+keywords: submission store distribute validate app package guidelines localize
 ---
 # Prepare your Microsoft Teams store submission
 
@@ -207,3 +208,7 @@ Partner Center supports [localized store listings](/office/dev/store/prepare-loc
 
 > [!div class="nextstepaction"]
 > [Submit your app](/office/dev/store/add-in-submission-guide)
+
+## See also
+
+[Resolve issues if your Microsoft Teams store submission fails](~/concepts/deploy-and-publish/appsource/resolve-submission-issues.md)

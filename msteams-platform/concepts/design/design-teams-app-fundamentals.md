@@ -1,10 +1,11 @@
 ---
 title: Design your app - Understand the design system
-description: Learn about the basics of designing your Microsoft Teams app, including layout, color scheme, and more.
+description: Learn about the basics of designing your Microsoft Teams app, including avatars, layout, icons, color scheme, and more.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.topic: overview
+keywords: layout grid avatars icons segoe ui typography  
 ---
 # Microsoft Teams app design system
 

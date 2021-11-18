@@ -97,3 +97,7 @@ Choose how you plan to distribute your app:
 > [Publish your app to your org](/MicrosoftTeams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/MicrosoftTeams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
 > [Publish your app to the store](~/concepts/deploy-and-publish/appsource/publish.md)
+
+## See also
+
+[Manage your apps with the Developer Portal for Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md)

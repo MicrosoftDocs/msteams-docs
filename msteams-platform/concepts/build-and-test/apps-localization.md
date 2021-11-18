@@ -8,7 +8,7 @@ ms.date: 05/15/2018
 ---
 # Localize your app
 
-You must consider the following factors to localize your Microsoft Teams app:
+Consider the following factors to localize your Microsoft Teams app:
 
 1. [Localize your AppSource listing](#localize-your-appsource-listing).
 1. [Localize strings in your app manifest](#localize-strings-in-your-app-manifest). 
@@ -16,7 +16,7 @@ You must consider the following factors to localize your Microsoft Teams app:
 
 ## Localize your AppSource listing
 
-If you are publishing the app to the store, you must be aware that localizing your AppSource listing is not yet supported. To support localized listings in the app store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. Currently, the default language is English.
+If you're publishing the app to the store, you must be aware that localizing your AppSource listing is not yet supported. To support localized listings in the app store, you can add additional languages to your listing. The default language information you provide in [Partner Center](/office/dev/store/submit-to-appsource-via-partner-center) for your listing appears in the [AppSource website](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams&page=1 "AppSource is one place for all your team needs. bring everything together including chats, meetings, calls, files, and tools to enable more productive teamwork.") listing for your app. Currently, the default language is English.
 
 ### Configure localization
 
@@ -154,3 +154,6 @@ If your provide localized versions of your application, the users respond with t
 |-------------|-------------|------|------|
 | App Localization | Microsoft Teams app localization using bot and tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-localization/nodejs) |
 
+## See also
+
+[Localize JSON schema reference](~/resources/schema/localization-schema.md)
