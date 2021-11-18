@@ -50,7 +50,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
   * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section.
 
  > [!TIP]  
- >  Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ > Your app’s branding on the Microsoft Teams store and Microsoft AppSource including your app name, developer name, app icon, Microsoft AppSource screenshots, video, short description and website either separately or taken together must not impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 ### Suitable for workplace consumption
 
@@ -68,7 +68,7 @@ Your app must enable group collaboration, improve an individual's productivity, 
 [*Mandatory Fix*]
 
 > [!NOTE]  
-> This section is inline with [Microsoft commercial certification policy number 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services). 
+> This section is inline with [Microsoft commercial certification policy number 1140.1.3](/legal/marketplace/certification-policies#114013-other-platforms-and-services).
 
 Apps must focus on the Teams experience and not include the names, icons, or imagery of other similar chat-based collaboration platforms or services within the app content or in the app’s metadata unless the app provides specific interoperability.
 
@@ -81,7 +81,7 @@ App feature names in buttons and other UI text must not duplicate with terminolo
 [*Mandatory Fix*]
 
 > [!NOTE]  
-> This section is inline with [Microsoft commercial certification policy number 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) and provides guidance to developers on authenticating their apps with external services. 
+> This section is inline with [Microsoft commercial certification policy number 1140.1.4](/legal/marketplace/certification-policies#114014-access-to-services) and provides guidance to developers on authenticating their apps with external services.
 
 For more information on how to implement app authentication, see [authentication in Teams](~/concepts/authentication/authentication.md).
 
@@ -92,8 +92,8 @@ For more information on how to implement app authentication, see [authentication
 * **Sign in, sign out, and sign up experiences**:
   * Apps that depend on external accounts or services must provide clear and simple sign in, sign out, and sign up experience.
   * When users sign out, they must sign out only from the app and remain signed in to Teams.
-  * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services. 
-  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup or config page). 
+  * Apps that depend on external accounts or services must provide a way forward for new users to sign up or contact the app publisher to learn more about the services and get access to the services.
+  Way forward must be available in the app’s manifest, AppSource long description, and app first run experience (bot welcome message, tab setup or config page).
   * Apps that require tenant admin to complete one time setup must call out dependency on tenant admin to configure the app (before any other tenant user can install and use the app).  
   Dependency must be called out in the app’s manifest, AppSource long description, all first run experience touchpoints (bot welcome message, tab setup or config page), help text as considered necessary as part of bot response, compose extension, or static tab content.
   
@@ -132,20 +132,21 @@ Apps running on the iOS or Android version of Teams must adhere to the following
       
    :::column-end:::
 :::row-end:::
-:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.
-
 :::row:::
    :::column span="":::
      
    :::column-end:::
-   :::column span="":::  
-    ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
+   :::column span="":::
+    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
    :::column-end:::
    :::column span="":::
-    
+      
    :::column-end:::
 :::row-end:::
-:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
+
+| |![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png) | |
+|----------|-----------|------------|
+| |:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision. | |
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
@@ -198,7 +199,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 Apps must not take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
 
-Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality. 
+Link users within Teams app and not to an external site or app. For scenarios that require external functionality, your app must take explicit user permission to launch the functionality.
 
 Button UI text that launches external functionality must include content to indicate the user is taken out of the Teams instance. For example, include text such as **This way to Contoso.com** or **View in Contoso.com**.
 
@@ -242,7 +243,6 @@ App packages must be correctly formatted and include all required information an
 > * **Emphasis on any considerations** for testers while validating your app submission.  
 > * **Pre-populate the test accounts with dummy data** to aid testing.
 
-
 ### App manifest
 
 [*Mandatory Fix*]
@@ -263,7 +263,7 @@ Icons are one of the main elements people see when browsing the Teams store. You
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background.
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
-  * When a user pins your app's messaging extension. 
+  * When a user pins your app's messaging extension.
 
 * The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon must not have any extra padding around the symbol.
 
@@ -318,7 +318,6 @@ The long description can provide an engaging narrative that highlights your app'
   * **... developed for...**
   * **.. designed for...**
 
-
 **Don'ts:**
 
 [*Mandatory Fix*]
@@ -335,7 +334,6 @@ The long description can provide an engaging narrative that highlights your app'
 * Include links to AppSource.
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
-
 
 ### Screenshots
 
@@ -395,7 +393,9 @@ Your app's support URLs must not require authentication. For example, users must
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
 
-  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+![Test align](~\assets\images\submission\Validation-test-center-align.png)  
+
+![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
 
 ### Localization
@@ -557,7 +557,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     ![Usability Configurable tab personal Info](~/assets/images/submission/validation-usability-configurable-tab-personal-info.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Configurable Tab landing page has personal content such as **My day** and **To-do** that are specific to a particular user and irrelevant to the other members of the channel.
 
-* Configurable tabs must have focused functionality. 
+* Configurable tabs must have focused functionality.
 
     ![Usability Configurable Nested tabs](~/assets/images/submission/validation-usability-configurable-nested-tabs.png)  
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Configurable tab has several nested tabs.
@@ -607,7 +607,6 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 
 * If the app has a complex configuration flow (requires an enterprise license or lacks an intuitive sign up flow), then bots in such apps must always send a welcome message during the first run. For best experience, the welcome message must include the value offered by the bot to users, who installed the bot in channel, how to configure the bot and briefly describe all supported bot commands. You can display the welcome message using an Adaptive Card with buttons for better usability. For more information, see [how to trigger a bot welcome message](~/bots/how-to/conversations/send-proactive-messages.md). For apps without a complex configuration flow, you can choose to trigger a welcome message during the bot first run experience. However, if a welcome message is triggered, it must follow the welcome message guidelines.
-
 
     ![Bot Welcome Message](~/assets/images/submission/validation-bot-welcome-message.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Bot sends FRE welcome message describing supported bot commands.
@@ -674,7 +673,6 @@ For more information about cards, see:
 * [Cards reference](~/task-modules-and-cards/cards/cards-reference.md#types-of-cards)
 
 Bot experience must be fully responsive on mobile. Bot responses must provide a way forward where applicable. Bot musts be responsive and fail with a graceful error message for failures. Bot messages sent in the personal scope to user's base on triggers in a collaborative scope must provide contextual information (including the message’s origin).
-
 
 ### Notification only Bots 
 
@@ -859,7 +857,7 @@ Use the following guidelines for meeting extensions:
   * The final package with all the images put together must not exceed 1920x1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
   * The maximum scene size is 10 MB.
   * The maximum size of each image is 5 MB. A scene is a collection of multiple images. The limit is for each individual image.
-  * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene. 
+  * Select **Transparent** as required. This checkbox is available on the right panel when an image is selected. The overlapping images must be marked as Transparent to indicate that they're overlapping images in the scene.
 
 ## Notifications
 
@@ -890,10 +888,10 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 * Notifications must adhere to the Teams activity feed layout and experience.
 * When selecting a notification, the user must be directed to relevant content within Teams.
 
-## Microsoft 365 App Compliance Program 
+## Microsoft 365 App Compliance Program
 
 > [!NOTE]
-> This section is inline with [Microsoft commercial marketplace policy number 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation). 
+> This section is inline with [Microsoft commercial marketplace policy number 1140.6](/legal/marketplace/certification-policies#11406-publisher-attestation).
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program: 
 
@@ -902,10 +900,10 @@ The Microsoft 365 App Compliance Program is intended to help organizations asses
       ![Publisher Verification](~/assets/images/submission/validation-365-compliance-publisher-verification.png)  
       :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Blue verified badge on AAD consent dialog.
 
-  * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. 
+  * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app.
 
 > [!NOTE] 
-> If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app. 
+> If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
 
 ## Advertising 
 
