@@ -30,7 +30,7 @@ Messaging extension search commands allow users to search external systems and s
 
 After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
-
+:::image type="content" source="images/messaging-extensions-outlook-teams.png" alt-text="Messaging extensions in outlook and Teams":::
 
 ## Next step
 
