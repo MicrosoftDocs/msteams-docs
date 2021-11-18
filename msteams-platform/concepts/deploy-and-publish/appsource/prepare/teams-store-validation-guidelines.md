@@ -472,7 +472,7 @@ The following are the navigation guidelines:
 
 * Tabs must not provide navigation that conflicts with the primary Teams navigation. If you provide a left navigation in your tab, it must not include only icons or icons with stacked text. It must not be a collapsible rail with the option to see icons with stacked text (mimicking the Teams navigation bar). Include icons with inline text or only text or use hamburger menus instead of tab left rail. [*Mandatory Fix*]
 
-Design your app with [basic](../../concepts/design/design-teams-app-basic-ui-components.md) and [advanced](../../concepts/design/design-teams-app-advanced-ui-components.md) Fluent UI components.
+Design your app with [basic](../concepts/design/design-teams-app-basic-ui-components.md) and [advanced](../../concepts/design/design-teams-app-advanced-ui-components.md) Fluent UI components.
 
    ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
@@ -799,7 +799,7 @@ For more information, see [task module design guidelines](/platform/task-modules
 
 Use the following guidelines for meeting extensions:
 
-* Meeting extensibility apps must offer a responsive in-meeting experience and aligned to the Teams meeting experience. In-meeting experience is mandatory, Pre and post-meeting experiences aren't mandatory.
+* Meeting extensibility apps must offer a responsive in-meeting experience and aligned to the Teams meeting experience. In-meeting experience is mandatory, pre and post-meeting experiences aren't mandatory.
 
   * With the pre-meeting app experience, users can find and add meeting apps. Users can also perform pre-meeting tasks, such as developing a poll to survey the meeting participants. If your app provides a pre-meeting experience, it must be relevant to the workflow of the meeting.
 
