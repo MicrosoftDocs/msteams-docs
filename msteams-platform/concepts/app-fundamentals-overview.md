@@ -14,26 +14,28 @@ An app's design, features, and capabilities stem from its purpose. The app user 
 
 The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
 
-## Plan your Teams solution
+The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
-The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution:
+## Understand your use cases
 
-- Understand your use cases
+You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
 
-    You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+- Do you need authentication?
+- What problem is your app going to solve?
+- Who are the end-users of the app?
+- How should the onboarding experience be and what else the app can do?
 
-  - Do you need authentication?
-  - What problem is your app going to solve?
-  - Who are the end-users of the app?
-  - How should the onboarding experience be and what else the app can do?
+## Map your use cases to Teams app capabilities
 
-- Map your use cases to Teams app capabilities
-
-    [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
+[Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
 ## Teams Capabilities
 
-You can extend your Teams app in multiple ways. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md):
+You can extend your Teams app in multiple ways.
+
+:::image type="content" source="../assets/images/overview/teams-capabilities.png" alt-text="Illustrates Teams capabilities" border="true":::
+
+Your Teams app can have [multiple capabilities](../concepts/capabilities-overview.md):
 
 - Tabs – Collaborate conveniently and display web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
 - Bots – A [bot](../bots/what-are-bots.md) will help you turn your words and conversations into action and initiate various workflows right inside Teams.
@@ -43,7 +45,11 @@ You can extend your Teams app in multiple ways. Teams app can have [multiple cap
 - Personal Apps - A [personal app](../concepts/design/personal-apps.md) is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them.
 - Adaptive cards: Use [cards](../task-modules-and-cards/what-are-cards.md), you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-## Teams as a platform
+### Plan responsive tabs for Teams mobile
+
+[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
+
+## Use Teams as a platform
 
 Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
 
@@ -53,9 +59,7 @@ You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Co
 
 Together, these capabilities bring your app solution to life.
 
-## Plan responsive tabs for Teams mobile
 
-[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
 ## Integrate device capabilities
 
