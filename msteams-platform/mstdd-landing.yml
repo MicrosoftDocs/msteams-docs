@@ -14,13 +14,15 @@ landingContent:
       links:
       - text: Personal tabs and messaging extensions run in Outlook and Office (Preview)
         url: ~/m365-apps/overview.md
+      - text: Typeahead search in Adaptive Card
+        url: ~/task-modules-and-cards/cards/dynamic-search.md
       - text: Enable bots to receive all channel messages using resource-specific consent (RSC)
         url: ~/bots/how-to/conversations/channel-messages-with-rsc.md        
       - text: Monetize your Teams app with a transactable SaaS offer
         url: ~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
       - text: Create low-code custom apps
         url: ~/samples/teams-low-code-solutions.md
-
+        
 - title: Tutorials
   linkLists:
     - linkListType: concept
