@@ -39,7 +39,7 @@ When the user selects **Edit** in the preview window, a side panel opens to see 
 
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/browse-before-meeting.png" alt-text="Image shows an example of browsing camera effects before a meeting." border="false":::
 
-### Anatomy: Preview the effect
+### Anatomy: Preview the effect before a meeting
 
 The user can see what the camera effect looks like before applying it.
 
@@ -57,7 +57,7 @@ The user can see what the camera effect looks like before applying it.
 |H|**Buttons**: **Clear** removes all applied effects. **Edit** drills into a side panel view of all your app’s effects.|
 |1|**Camera effects tile row**: Displays effect tiles (specifically camera effects in the second row). The recently used effect goes in the first tile. Suggested filters make up the rest of the row. You’re responsible for designing these tiles for your app.|
 
-### Anatomy: Add the app
+### Anatomy: Add the app before a meeting
 
 If the user hasn't used your app before, they'll have to add it before they can apply the camera effect.
 
@@ -92,27 +92,33 @@ The tile is 74x42 pixels in the quick picker tray and 88x50 pixels in the tabs.
 
 ## Apply a camera effect during a meeting
 
-xx
+During a meeting, the user can quickly select and preview different camera effects (including your app’s). They also can select **More video effects** to browse all available effects from you and other app publishers.
+
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/preview-effect-during-anatomy.png" alt-text="Image shows the design anatomy of previewing a camera effect during a meeting." border="false":::
 
 ### Browse your app's effects during a meeting
 
-xx
+When the user selects **Edit** in the **Private preview** window, they can view all your app's effects in a side tab.
 
-### Anatomy: Preview the effect
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/browse-during-meeting.png" alt-text="Image shows the design anatomy of previewing a camera effect during a meeting." border="false":::
+
+### Anatomy: Preview the effect during a meeting
 
 The user can see what the camera effect looks like before applying it.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/shared-meeting-stage-anatomy.png" alt-text="Image shows the design anatomy of the shared meeting stage." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/preview-effect-during-anatomy.png" alt-text="Image shows the design anatomy of previewing a camera effect before a meeting." border="false":::
 
 |Counter|Description|
 |----------|-----------|
-|1|**App icon**: The highlighted icon indicates the app's in-meeting tab is open.|
-|2|**Share to meeting stage button**: The entry point to share the app to the meeting stage. Displays if you configure your app to use the shared meeting stage.|
-|3|**iframe**: Displays your app content.|
-|4|**Stop sharing button**: Stops sharing the app to the meeting stage. Displays only for the participant who started the share.|
-|5|**Presenter attribution**: Displays the name of the participant who shared the app.|
+|A|**Preview window**: Shows what the user’s video looks like with the effect.|
+|B|**Settings button**: Opens video settings.|
+|C|**Quick picker tray**: Displays recently used and suggested backgrounds and effects. If your app was recently used, it will display here.|
+|D|**More button**: Opens the **Video effects** tab on the side where users can browse all effects you, Microsoft, and other app publishers.|
+|E|**Background tile row**: Displays effect tiles (specifically backgrounds in the first row). The recently used background goes in the first tile. Suggested backgrounds make up the rest of the row.|
+|F|**Buttons**: **Clear** removes all applied effects. **Edit** drills into a side panel view of all your app's effects.|
+|1|**Camera effects tile row**: Displays effect tiles (specifically camera effects in the second row). The recently used effect goes in the first tile. Suggested filters make up the rest of the row. You’re responsible for designing these tiles for your app.|
 
-### Anatomy: Add the app
+### Anatomy: Add the app during a meeting
 
 If the user hasn't used your app before, they'll have to add it before they can apply the camera effect.
 
