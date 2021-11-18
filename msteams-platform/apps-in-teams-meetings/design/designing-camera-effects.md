@@ -33,7 +33,7 @@ While joining a meeting, the user can quickly select and preview different camer
 
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/apply-before-meeting.png" alt-text="Image shows an example of applying a camera effect before a meeting." border="false":::
 
-### Browse your app's effects before a meeting
+### Browse camera effects before a meeting
 
 If they have time before a meeting, the user can select **Edit** in the preview window to browse all available effects from you and other app publishers in a side panel.
 
@@ -96,7 +96,7 @@ During a meeting, the user can quickly select and preview different camera effec
 
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/apply-during-meeting.png" alt-text="Image shows how to add a camera effect during a meeting." border="false":::
 
-### Browse your app's effects during a meeting
+### Browse camera effects during a meeting
 
 When the user selects **Edit** in the **Private preview** window, they can view all your app's effects in a side tab.
 
