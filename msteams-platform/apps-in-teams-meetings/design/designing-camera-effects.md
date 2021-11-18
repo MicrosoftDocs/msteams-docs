@@ -11,9 +11,6 @@ keywords: UI kit camera effects meetings
 
 Your app can include camera effects to make Teams meetings more engaging and fun.
 
-> [!NOTE]
-> Camera effects aren’t the same as virtual backgrounds.
-
 ## Microsoft Teams UI Kit
 
 You can find more comprehensive design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
@@ -25,17 +22,20 @@ You can find more comprehensive design guidelines, including elements that you c
 
 The following images show how users can apply different effects to their Teams meeting video.
 
+> [!NOTE]
+> Camera effects are different than virtual or blurred backgrounds.
+
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/camera-effects-at-glance.png" alt-text="Group of three images showing no effects on, blurred background on only, and blurred background and camera effect on." border="false":::
 
 ## Apply a camera effect before a meeting
 
-While joining a meeting, the user can quickly select and preview different camera effects (including your app's). If they have time, they can select **Edit** to browse all available effects from you and other app publishers.
+While joining a meeting, the user can quickly select and preview different camera effects (including your app's).
 
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/apply-before-meeting.png" alt-text="Image shows an example of applying a camera effect before a meeting." border="false":::
 
 ### Browse your app's effects before a meeting
 
-When the user selects **Edit** in the preview window, a side panel opens to see and choose all the effects provided by your app.
+If they have time before a meeting, the user can select **Edit** in the preview window to browse all available effects from you and other app publishers in a side panel.
 
 :::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/browse-before-meeting.png" alt-text="Image shows an example of browsing camera effects before a meeting." border="false":::
 
@@ -50,7 +50,7 @@ The user can see what the camera effect looks like before applying it.
 |A|**Preview window**: Shows what the user's video looks like with the effect.|
 |B|**Settings button**: Opens device settings.|
 |C|**Quick picker tray**: Displays recently used and suggested backgrounds and effects. If your app was recently used, it will display here.|
-|D|**More button**: Opens the **Video effects** tab on the side where users can browse all effects you, Microsoft, and other app publishers.|
+|D|**More button**: Opens the **Video effects** tab on the side where users can browse all effects from you, Microsoft, and other app publishers.|
 |E|**Video effects button**: Shows or hides the quick picker tray below the preview window.|
 |F|**Background tile row**: Displays effect tiles (specifically backgrounds in the first row). The recently used background goes in the first tile. Suggested backgrounds make up the rest of the row.|
 |G|**Video toggle**: Turns the camera on or off. Users can’t view available effects when their camera is off.|
@@ -92,9 +92,9 @@ The tile is 74x42 pixels in the quick picker tray and 88x50 pixels in the tabs.
 
 ## Apply a camera effect during a meeting
 
-During a meeting, the user can quickly select and preview different camera effects (including your app’s). They also can select **More video effects** to browse all available effects from you and other app publishers.
+During a meeting, the user can quickly select and preview different camera effects (including your app's). They also can select **More video effects** to browse all available effects from you and other app publishers.
 
-:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/preview-effect-during-anatomy.png" alt-text="Image shows the design anatomy of previewing a camera effect during a meeting." border="false":::
+:::image type="content" source="~/assets/images/apps-in-meetings/camera-effects/apply-during-meeting.png" alt-text="Image shows how to add a camera effect during a meeting." border="false":::
 
 ### Browse your app's effects during a meeting
 
@@ -113,7 +113,7 @@ The user can see what the camera effect looks like before applying it.
 |A|**Preview window**: Shows what the user’s video looks like with the effect.|
 |B|**Settings button**: Opens video settings.|
 |C|**Quick picker tray**: Displays recently used and suggested backgrounds and effects. If your app was recently used, it will display here.|
-|D|**More button**: Opens the **Video effects** tab on the side where users can browse all effects you, Microsoft, and other app publishers.|
+|D|**More button**: Opens the **Video effects** tab on the side where users can browse all effects from you, Microsoft, and other app publishers.|
 |E|**Background tile row**: Displays effect tiles (specifically backgrounds in the first row). The recently used background goes in the first tile. Suggested backgrounds make up the rest of the row.|
 |F|**Buttons**: **Clear** removes all applied effects. **Edit** drills into a side panel view of all your app's effects.|
 |1|**Camera effects tile row**: Displays effect tiles (specifically camera effects in the second row). The recently used effect goes in the first tile. Suggested filters make up the rest of the row. You’re responsible for designing these tiles for your app.|
