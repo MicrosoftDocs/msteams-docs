@@ -412,29 +412,77 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
  Overflow menu is added to Adaptive Cards, which allows developers to choose the primary buttons that appear on screen and place the secondary buttons inside the overflow menu. Developers can now have more than six buttons in one action set.
 
- Select More to enable another set of buttons on Adaptive Cards as a overflow menu. Primary buttons are displayed in the Adaptive card and rest of the buttons are in overflow menu.
+ Select **More** to enable another set of buttons on Adaptive Cards as a overflow menu. Primary buttons appears in the Adaptive cards and the secondary buttons in overflow menu.
 
-**Two types of overflow menu:**
- 1.	Actions – The actions are at the end of the card. Following screen is an example for the Action.
+**Actions and action set are two types of overflow menus:**
+
+ 1.	**Actions** – The actions are at the end of the Adaptive Cards. Following image is an example for the Action.
 
     ![action card](~/assets/images/Cards/actions-card.png)
 
- 2.	Action set - Adaptive cards there are buttons at the end of card. You can have multiple action sets and for each of an action set there is an overflow menu. Following screen is and example for Action set
+ 2.	**Action set** - In Adaptive Cards action set, you can have multiple action sets and for each of an action set there is an overflow menu. Following image is an example for Action set.
 
     
-    ![action set card](~/assets/images/Cards/action-set-card.png)
+    ![action set card](~/assets/images/Cards\action-set-card-1.png)
 
  > [!NOTE]
- > The developers can define up to six buttons and then have a overflow both in Actions and Action set 
+ > The developers can define up to six buttons (primary) in the adaptive cards and also have a overflow menu both in actions and action set. 
+
+**Mobile**
+
+ When a user selects overflow menu, all the buttons that are defined by the developer displays in the Adaptive Cards. There is an integrated action sheet on Mobile, which shows overflow menu the actions only related to the card with message option. Long press on any message on Mobile, it displays the related messages. This option is available only for the Actions.
+
+In an Adaptive Card, Overflow menu, you can use the mode property to add the primary and secondary properties to display the buttons in the card and overflow menu respectively. For information on how to use the property, see the following example:
+
+**Actions**
+
+``` json
+{
+    "type": "Action.submit",
+     "title": "Set due date"
+          },
+          {
+            "type": "Action.Openurl",
+            "title": "view",
+            "url":"https://adaptivecards.io"
+              
+              },
+              {
+            "type": "Action.submit",
+            "title": "Delete",
+            "mode":"secondary"
+
+              }
+          ]
+}
+```
+
+**Action set** 
+
+``` json
+{
+    "type": "Action set",
+     "actions": [
+          {
+              "type": "Action.submit",
+              "title": "view",
+              "mode": "secondary"
+              
+            },
+            {
+                "type": "Action.submit",
+                "title": "view",
+                "mode": "secondary"
+            },
+            {
+                "type": "Action.submit",
+                "title": "Delete",
+                "mode": "secondary"
+            }
+     ],
     
- When a user selects overflow menu, all the buttons that are defined by the developer displays. Three is an integrated action sheet on Mobile, which shows overflow menu the actions only related to the card with message option. Long press on any message on Mobile, it displays the related messages. This option is available only for the Actions.
-
- **Schema**
- The developer needs to define the schema details in the Mode property. Follow the steps to define:
-1.	Primary: Add primary in the Mode to display the buttons in the card
-2.	Secondary – Add secondary in the Mode to displays the buttons in overflow menu. 
-
-
+}
+```
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
