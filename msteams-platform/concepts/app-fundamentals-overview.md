@@ -33,127 +33,17 @@ The first step for any app is to understand the user need and problem, determine
 
 ## Teams Capabilities
 
-You can extend your Teams app in multiple ways. To be able to extend your app, you must understand all the core capabilities and the entry points that work in a collaborative space. You can experiment with the extension points for building your apps. Important app project components help you to correctly configure your app page. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md) and [entry points](../concepts/extensibility-points.md).
+You can extend your Teams app in multiple ways. Teams app can have [multiple capabilities](../concepts/capabilities-overview.md):
 
-:::row:::
-   :::column span="":::
-### Personal apps
+- Tabs – Collaborate conveniently and display web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
+- Bots – A [bot](../bots/what-are-bots.md) will help you turn your words and conversations into action and initiate various workflows right inside Teams.
+- Messaging extensions – Make it easier to multitask and quickly share external information in a conversation or contextually act on a message with [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+- Meeting extensions - You can create apps to make meetings more productive with [meeting extensions](../apps-in-teams-meetings/design/designing-apps-in-meetings.md). For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
+- Webhooks and Connectors – Communicate with external apps, send or receive notifications and messages from other apps. [Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
+- Personal Apps - A [personal app](../concepts/design/personal-apps.md) is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them.
+- Adaptive cards: Use [cards](../task-modules-and-cards/what-are-cards.md), you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-A [personal app](../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-
-### Tabs
-
-Display your web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-
-### Bots
-
-Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
-
-   :::column-end:::
-
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-### Messaging extensions
-
-With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-### Meeting extensions
-
-There are a few options for [incorporating your app into the Teams calling experience](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-### Webhooks and connectors
-
-[Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-### Microsoft Graph for Teams
-
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that can help you create or enhance features for your app (such as rich notifications).
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams." border="false":::
-
-   :::column-end:::
-:::row-end:::
-
-### Teams as a platform
+## Teams as a platform
 
 Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
 
@@ -170,6 +60,31 @@ Together, these capabilities bring your app solution to life.
 ## Integrate device capabilities
 
 Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+
+## Government Community Cloud (GCC)
+
+Government Community Cloud is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
+
+The following table includes Teams features and availability for GCC, GCC-High, and DOD:
+
+| Features   | GCC | GCC-High | DOD |
+|-------------|---------|---|---|
+| Teams owned apps as in internally developed apps | ✔️ App is enabled if it has GCC. | ✔️ App is enabled if it has GCC-High. | ✔️ App is enabled if it has DOD. |
+| Microsoft apps | ✔️ Microsoft apps compliant with GCC | ✔️ Microsoft apps compliant with GCC-High | ✔️ Microsoft apps compliant with DOD |
+| 3p or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
+| Bots | ✔️ | ❌ | ❌ |
+| Custom or Lob tab apps |  ✔️ | ✔️ | ✔️ |
+| Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom or Lob bots | ✔️ | ❌ | ❌ |
+| Custom messaging extensions | ❌ | ❌ | ❌ |
+| Custom connectors | ❌ | ❌ | ❌ |
+
+The following list helps to identify the availability of GCC, GCC-High, and DOD for the features:
+
+* For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/meeting-app-extensibility.md).
+* For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
+* For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+* For custom connectors, see [create Office 365 connectors for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 ## Next step
 
