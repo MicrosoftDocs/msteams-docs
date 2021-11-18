@@ -135,10 +135,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
    :::column-end:::
 :::row-end:::
 
+Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
 
-These capabilities bring your app solution to life.
+:::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="false"::: 
 
-:::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="false":::
+You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
+
+Together, these capabilities bring your app solution to life.
 
 ## Plan your Teams solution
 
