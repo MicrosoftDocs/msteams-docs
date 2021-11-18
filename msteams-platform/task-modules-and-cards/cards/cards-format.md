@@ -408,7 +408,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, stage view functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in stage view by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
-**Overflow menu on Adaptive Cards**
+### Overflow menu on Adaptive Cards ###
 
 Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is secondary set of buttons will be placed inside the overflow menu.
 
@@ -418,13 +418,13 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 **There are two types of overflow Menu:**
 
-* Actions: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
+* **Actions**: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
 
 **Following image is an example for actions**
 
    ![action card](~/assets/images/Cards/action-image-revised.png)
 
-* Action set is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
+* **Action set** is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
 
 **Following image is an example for action set**
 
