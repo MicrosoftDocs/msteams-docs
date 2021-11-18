@@ -1,5 +1,5 @@
 ---
-title: Exploring Teams for building apps
+title: Exploring Teams as a platform for building apps
 author: heath-hamilton
 description: Overview of exploring Microsoft Teams features.
 ms.topic: overview
@@ -7,11 +7,11 @@ ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 11/02/2021
 ---
-# Explore Teams app building features
+# Explore Teams as a platform
 
-With Teams, you can build your app in a feature-rich environment. It lets you extend the Teams capabilities for your app solution.
+With Teams, you can build your app in a feature-rich environment. As a platform for build apps, extend the Teams capabilities for your app solution. Choose the optimum features for your users' requirements.
 
-//Add image for Teams features//
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-as-a-platform.png" alt-text="Conceptual representation of Teams as a platform." border="true":::
 
 ## Teams Features
 
@@ -23,13 +23,10 @@ With Teams, you can build your app in a feature-rich environment. It lets you ex
 |Meeting extensions | You can create apps to make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
 | Personal app | A personal app is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them. | OneNote gives you a private workspace within Teams, while Planner offers a bird's eye view of all your tasks, across boards that you or your team have added as channel tabs. |
 | Webhooks and connectors | Communicate with external apps, send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
+| Microsoft Graph | Microsoft Graph is the gateway to data and intelligence in Microsoft 365 and can be incorporated in any kind of Teams app. | Create, manage, find, and archive large number of teams and populate them with users and channels |
+| Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information | Add use case |
+| Task modules | Task modules permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
 |
-
-### Additional Use Cases
-
-Following is a list of use cases where Teams features are useful:
-
-- Add feature-wise use cases
 
 ## App scope
 
