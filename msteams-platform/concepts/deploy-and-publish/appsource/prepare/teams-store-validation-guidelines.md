@@ -136,7 +136,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column span="":::
      
    :::column-end:::
-   :::column span="3":::
+   :::column span="5":::
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
    :::column-end:::
    :::column span="":::
@@ -393,9 +393,7 @@ Your app's support URLs must not require authentication. For example, users must
 
 Support URLs must include your contact details or a way forward for users to raise a support ticket. For example, if your support URL is hosted on GitHub, the GitHub page must be under your ownership and must include your contact details or a way forward for users to raise a support ticket. [*Mandatory Fix*]
 
-![Test align](~\assets\images\submission\Validation-test-center-align.png)  
-
-![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
+  ![Support URL](~/assets/images/submission/validation-supportlinks-authentication.png)  
   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Authentication required to access support link.
 
 ### Localization
@@ -415,8 +413,6 @@ If your app includes a tab, ensure it adheres to these guidelines.
 ### Setup
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
-
-    ![Test2](~\assets\images\submission\validation-test-center-align-2.png)  
 
     ![Create new account](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Way forward link **Create new account** for new users is available.
@@ -453,6 +449,8 @@ If your app includes a tab, ensure it adheres to these guidelines.
 ### Views
 
 * The sign in screen area must not use large logos. [*Mandatory Fix*]
+    ![View large logo](~\assets\images\submission\validation-views-applogin.png)  
+    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Emphasis and focus on app login.
 
 * Content can be simplified by breaking down across multiple tabs. [*Suggested Fix*]
 
@@ -473,7 +471,7 @@ The following are the navigation guidelines:
 Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-components.md) and [advanced](~\concepts\design\design-teams-app-advanced-ui-components.md) Fluent UI components.
 
    ![Left navigation](~/assets/images/submission/validation-navigation-left-navigation.png)  
-   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation.
+   :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Only icons in tab left navigation. Conflicts with teams left navigation.
 
    ![Icon and Text](~/assets/images/submission/validation-navigation-icon-text.png)  
    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Icon and text in tab left navigation mimics Teams navigation.
@@ -482,7 +480,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Collapsible left rail that mimics Teams primary navigation.
 
    ![Static Tab](~/assets/images/submission/validation-navigation-static-tab.png)  
-   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Side navigation pane to assist with complex navigation flows in a Static Tab is allowed. 
+   :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Side navigation pane to assist with complex navigation flows in a **Static Tab** is allowed. 
 
    ![Horizontal Rail](~/assets/images/submission/validation-navigation-horizontal-rail.png)  
    :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Tab uses a horizontal rail for navigation instead of a left rail that conflicts with Teams primary navigation.
