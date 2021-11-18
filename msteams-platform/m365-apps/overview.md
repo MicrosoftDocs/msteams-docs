@@ -7,7 +7,7 @@ ms.topic: overview
 # Extend Teams apps across Microsoft 365
 
 > [!NOTE]
-> Teams developers can try the new functionalities and [provide feedback](/microsoftteams/platform/feedback) using existing applications, in early Developer preview for expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
+> Teams developers can try the new functionalities and [provide feedback](/microsoftteams/platform/feedback) using existing applications in early Developer preview for expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
 
 You can test your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client SDK v2 Preview](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md).
 
@@ -27,8 +27,6 @@ Personal tabs can provide users, access to their application right within the Te
 ## Teams messaging extensions in Outlook
 
 Messaging extension search commands allow users to search external systems and share the results through compose message of Outlook on web and Windows desktop, and Teams.
-
-After sideloading to Teams, your messaging extension appears as one of your installed apps within the Outlook compose message area.
 
 :::image type="content" source="images/messaging-extensions-outlook-teams.png" alt-text="Messaging extensions in outlook and Teams":::
 
