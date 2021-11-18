@@ -20,6 +20,7 @@ Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
 * You initiate an authentication flow from Azure Active Directory (AAD) or other identity provider, and you do not require the user to enter their username again. 
+
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
 > [!IMPORTANT]
@@ -44,8 +45,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * {theme}: The current user interface (UI) theme such as `default`, `dark`, or `contrast`.
 * {groupId}: The ID of the Office 365 group in which the tab resides.
 * {tid}: The AAD tenant ID of the current user.
-* {locale}: The current locale of the user formatted as languageId-countryId. 
-For example, en-us.
+* {locale}: The current locale of the user formatted as languageId-countryId(en-us).
 
 > [!NOTE]
 > The previous `{upn}` placeholder is now deprecated. For backward compatibility, it is currently a synonym for `{loginHint}`.
