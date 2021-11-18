@@ -11,15 +11,16 @@ ms.date: 05/24/2021
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
-Apps are how you extend Teams to fit your needs. Create something brand new for Teams or integrate an existing app.
+Apps are how you extend. Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 > [!div class="nextstepaction"]
 > [Start here](get-started/get-started-overview.md)
 
 ## Why build your apps with Teams?
 
-Building your apps with Teams brings your users the advantages of a collaborative workspace.
-As a platform for building apps, Teams provides you a complete framework for developing an app-from planning and designing your app to distributing it. You can leverage the full spectrum of the Teams platform, apps, and toolkits at every stage of app development.
+A Teams app brings your users the advantages of a collaborative workspace.
+
+As a platform for building apps, Teams offers the full range of apps and toolkits. From planning your app to distributing it, the Teams framework supports you at every stage.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
 
@@ -34,12 +35,12 @@ By building your app with Teams, you can:
 - Integrate your existing apps with Teams.
 - Choose that build environment most suitable for your app, such as JavaScript, C#, SharePoint Framework, and other tools and SDKs.
 - Extend Teams functionality with tabs, bots, webhooks, adaptive cards-using them on their own or in combination to suit your app needs
-- Dive deeper with user authentication, integration with other applications and web apps, utilizing Teams data from Microsoft Graph, and using Developer Portal to manage your app.
-- Utilize a wide library of UI toolkit to design the layout and appearance of your app.
+- Dive deeper with user authentication, integration with other apps, Teams data from Microsoft Graph, and Developer Portal to manage your app.
+- Use the UI toolkit and library to design the app's layout.
 
 ## About Microsoft Teams Developer Documentation
 
-This document is about building apps for Microsoft Teams. These apps extend Microsoft capabilities to suit the requirements of your users. In addition to details about Teams features, it also includes the following:
+This document describes Teams features and how you can use them to build your app's capabilities. It also includes:
 
 - Code samples, snippets, and examples.
 - Step-by-step guides.
@@ -87,7 +88,7 @@ You don't need to be an expert programmer to build a great Teams app. Try one of
 
 ## Get ideas for your app
 
-Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways Teams apps can help your users.
+Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
 > [!div class="nextstepaction"]
 > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
