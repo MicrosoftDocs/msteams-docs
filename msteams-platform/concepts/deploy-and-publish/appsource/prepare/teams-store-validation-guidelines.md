@@ -132,9 +132,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
       Content...
    :::column-end:::
 :::row-end:::
-
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
-
+:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.
 
 :::row:::
    :::column span="":::
@@ -147,9 +145,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
       Content...
    :::column-end:::
 :::row-end:::
-
-|:---------------:|:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.|:---------------:|
-
+:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
 * You can determine whether an account is active indefinitely or for a limited time. When the account expires the app must not show UI, text, or links indicating the need to pay.
@@ -524,7 +520,7 @@ Design your app with [basic](~/concepts/design/design-teams-app-basic-ui-compone
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: The entire website is within the iframe in the configurable tab. Website has header, footer, and native navigational elements that navigate user from the home page.
 
     ![Usability Teams app identical](~/assets/images/submission/validation-usability-teams-app-identical-website.png)  
-    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Teams app identical to the website. All the workflows can be completed within the website, unclear value proposition within Teams. Website pinned to the channel using “+” offers same functionality as Teams app.
+    :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Teams app identical to the website. All the workflows can be completed within the website, unclear value proposition within Teams. Website pinned to the channel using **+** offers same functionality as Teams app.
 
 * Content must not truncate or overlap within the tab.
     ![Usability Content Truncation](~/assets/images/submission/validation-usability-content-truncation.png)  
@@ -777,7 +773,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 A task module must include an icon and the short name of the app it's associated with. Task modules must not embed an entire app and only display the components required to complete a specific action. [*Mandatory Fix*]
 
-For more information, see [task module design guidelines](/platform/task-modules-and-cards/task-modules/design-teams-task-modules).
+For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
    ![Task module Displays Components](~/assets/images/submission/validation-task-module-displays-components.png)  
    :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Task module displays components relevant to the specific action (creation of poll in this example)
