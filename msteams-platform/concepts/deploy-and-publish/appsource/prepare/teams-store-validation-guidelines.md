@@ -123,26 +123,26 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 
 :::row:::
    :::column span="":::
-      Content...
+     
    :::column-end:::
    :::column span="":::
     ![In-app Purchases](~/assets/images/submission/validation-financial-information-in-app-purchase.png)  
    :::column-end:::
    :::column span="":::
-      Content...
+      
    :::column-end:::
 :::row-end:::
 :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.
 
 :::row:::
    :::column span="":::
-      Content...
+     
    :::column-end:::
    :::column span="":::  
     ![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png)  
    :::column-end:::
    :::column span="":::
-      Content...
+    
    :::column-end:::
 :::row-end:::
 :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision.
