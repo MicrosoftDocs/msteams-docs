@@ -19,13 +19,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 ### Personal apps
 
 :::row:::
-   :::column span="1":::
+   :::column span="":::
 
 **Help people focus**: A [personal app](../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
 
    :::column-end:::
 
-   :::column span="3":::
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client." border="false":::
 
@@ -36,13 +36,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 ### Tabs
 
 :::row:::
-   :::column span="1":::
+   :::column span="":::
 
 **Collaborate more conveniently**: Display your web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
 
    :::column-end:::
 
-   :::column span="3":::
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client." border="false":::
 
@@ -53,13 +53,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 ### Bots
 
 :::row:::
-   :::column span="1":::
+   :::column span="":::
 
 **Turn words into actions**: Conversations often result in the need to do something (generate an order, review my code, check ticket status, and so on). A [bot](../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
 
    :::column-end:::
 
-   :::column span="3":::
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client." border="false":::
 
@@ -71,13 +71,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
 :::row:::
 
-   :::column span="1":::
+   :::column span="":::
 
 **Make it easier to multitask**: With [messaging extensions](../messaging-extensions/what-are-messaging-extensions.md), you can quickly share external information in a conversation. You also can act on a message, such as creating a help ticket based on the content of a channel post.
 
    :::column-end:::
 
-   :::column span="3":::
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what messaging extensions look like in the Teams client." border="false":::
 
@@ -88,13 +88,13 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
 
 :::row:::
 
-   :::column span="1":::
+   :::column span="":::
 
 **Create apps for meetings**: There are a few options for [incorporating your app into the Teams calling experience](../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
    :::column-end:::
 
-   :::column span="3":::
+   :::column span="":::
 
 :::image type="content" source="../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client." border="false":::
 
@@ -135,9 +135,11 @@ You can extend your Teams app in multiple ways. To be able to extend your app, y
    :::column-end:::
 :::row-end:::
 
+### Teams as a platform
+
 Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
 
-:::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="false"::: 
+:::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
 You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
 
@@ -151,17 +153,18 @@ The first step for any app is to understand the user need and problem, determine
 
     You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
 
-    - Do you need authentication?
-    - What problem is your app going to solve?
-    - Who are the end-users of the app?
-    - How should the onboarding experience be and what else the app can do?
+  - Do you need authentication?
+  - What problem is your app going to solve?
+  - Who are the end-users of the app?
+  - How should the onboarding experience be and what else the app can do?
 
 - Map your use cases to Teams app capabilities
 
     [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
 
 ## Plan responsive tabs for Teams mobile
-[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different satges and different types of Teams app.
+
+[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
 ## Integrate device capabilities
 
@@ -174,5 +177,5 @@ Microsoft Teams platform is continuously enhancing developer capabilities aligni
 
 ## See also
 
-* [Considerations for Teams integration](../samples/integrating-web-apps.md)
-* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+- [Considerations for Teams integration](../samples/integrating-web-apps.md)
+- [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

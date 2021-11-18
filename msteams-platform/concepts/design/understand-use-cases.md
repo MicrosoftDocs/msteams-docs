@@ -11,7 +11,7 @@ ms.author: anclear
 
 The Microsoft Teams platform offers a large variety of [entry points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
 > [!NOTE]
-> Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need. 
+> Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
 
 :::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
@@ -44,11 +44,11 @@ Knowing the limitations of the apps for data accessibility and data residency re
 * What are the challenges with back end integration of the current app?
 * Who owns the back end data? In-house or third-party.
 * Are there firewalls that impact the functioning of the app?
-* Are there APIs to access the data you need for functioning of your app? 
+* Are there APIs to access the data you need for functioning of your app?
 
 ## Provide authentication
 
-You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as: 
+You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet. So, if you need to secure them start thinking about it now. If you need a solution that requires you to provide guest access for users outside the tenant, access restrictions and permissions need to be placed to protect confidential information. You will need to design apps considering the limitations that come with guest user access. Therefore, ask questions, such as:
 
 * Will the users access different views of data based on their roles?
 * Is there PII involved?
