@@ -37,17 +37,7 @@ The mConnect app by Skooler allows you to deliver virtual learnings through Team
 
 ### Why mConnect and Teams
 
-Watch the following video to understand how mConnect and Teams work better together:
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/nM56R_woMdE]
-
 From inside mConnect, course participants access the full Moodle course experience inside the real-time collaboration and communication provided by Microsoft Teams.
-
-### Get started with mConnect and Teams
-
-Watch the following video to understand how to get started with mConnect and Teams:
-
-> [!VIDEO https://www.youtube-nocookie.com/embed/KOVpQ2s7iA8]
 
 For more information, see [mConnect by Skooler](https://skooler.com/mconnect/how-to/).
 
