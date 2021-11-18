@@ -18,13 +18,14 @@ Apps are how you extend Teams to fit your needs. Create something brand new for 
 
 ## Why build your apps with Teams?
 
-Teams apps are a combination of [capabilities](concepts/capabilities-overview.md). Some apps are simple (send notifications), while others are complex (manage patient records). When planning your app, remember that Teams is a collaboration hub. The best Teams apps help people express themselves and work better together.
+Building your apps with Teams brings your users the advantages of a collaborative workspace.
+As a platform for building apps, Teams provides you a complete framework for developing an app-from planning and designing your app to distributing it. You can leverage the full spectrum of the Teams platform, apps, and toolkits at every stage of app development.
 
-Building your apps with Teams brings your users the advantages of collaborative communication.
+:::image type="content" source="../msteams-platform/assets/images/overview/teams-overview.png" alt-text="Illustration of Teams app building framework" border="true":::
 
-With a Teams app, you can:
+By building your app with Teams, you can:
 
-- Design your app on the basis of purpose, features, complexity, and user interaction.
+- Design your app with Teams UI Toolkit and UI Library.
 - Build personal apps, a shared or collaborative apps, or custom apps.
 - Use the benefits of Teams Toolkit that scaffolds the basic app workspace for you with minimal effort.
 - Try ready made solutions.
