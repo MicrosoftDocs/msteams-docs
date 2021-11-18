@@ -136,7 +136,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
    :::column span="":::
      
    :::column-end:::
-   :::column span="":::
+   :::column span="3":::
     :::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version of the app allows in-app purchase and has a UI that aims to upsell to paid versions.  
    :::column-end:::
    :::column span="":::
@@ -145,7 +145,7 @@ Apps running on the iOS or Android version of Teams must adhere to the following
 :::row-end:::
 
 | |![Online Stores](~/assets/images/submission/validation-financial-information-online-stores.png) | |
-|----------|-----------|------------|
+|----------|:---------------:|------------|
 | |:::image type="icon" source="~/assets/images/submission/validation-incorrect-icon.png"::: Mobile version has links to online stores where users can make a purchase decision. | |
 
 * If your app requires an account, users can sign up for an account at no charge. The use of the term **free** or **free account** is prohibited.
@@ -415,6 +415,8 @@ If your app includes a tab, ensure it adheres to these guidelines.
 ### Setup
 
 * Tab setup **must not dead-end** a new user. Provide a message on how to complete the action or workflow. [*Mandatory Fix*]
+
+    ![Test2](~\assets\images\submission\validation-test-center-align-2.png)  
 
     ![Create new account](~/assets/images/submission/validation-tabs-setup-create-new-account.png)  
     :::image type="icon" source="~/assets/images/submission/validation-correct-icon.png"::: Way forward link **Create new account** for new users is available.
