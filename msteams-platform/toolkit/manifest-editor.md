@@ -13,9 +13,9 @@ A manifest file describes how your app is configured with capabilities, required
 
 After your app is registered to Teams platform, you can view your Teams app via Teams Developer Portal -> Apps.
 
- ![Developer portal](~/assets/images/teams-toolkit-v2/developer-portal.png)
+ ![Developer portal](~/assets/images/tools-and-sdks/developer-portal.png)
 
- ![Developer portal apps](~/assets/images/teams-toolkit-v2/developer-apps-preview.png)
+ ![Developer portal apps](~/assets/images/tools-and-sdks/developer-apps-preview.png)
 
 Your manifest must conform to the schema hosted at https://developer.microsoft.com/json-schemas/teams/v1.10/MicrosoftTeams.schema.json. Previous versions 1.0, 1.1,..., and 1.6 are also supported (using "v1.x" in the URL). For more information on the changes made in each version, see [Manifest schema for Microsoft Teams](../resources/schema/manifest-schema.md).
 The following ways to edit the manifest file:
@@ -29,11 +29,11 @@ The following ways to edit the manifest file:
 
 Edit manifest file through Teams developer portal
 
- ![Developer portal edit manifest](~/assets/images/teams-toolkit-v2/dev-portal-edit-manifest.png)
+ ![Developer portal edit manifest](~/assets/images/tools-and-sdks/dev-portal-edit-manifest.png)
 
 Edit Teams app manifest file within Teams Toolkit
 
- ![Teams Toolkit edit manifest](~/assets/images/teams-toolkit-v2/Teams-toolkit-edit-manifest.png)
+ ![Teams Toolkit edit manifest](~/assets/images/tools-and-sdks/Teams-toolkit-edit-manifest.png)
 
 ## See also
 
