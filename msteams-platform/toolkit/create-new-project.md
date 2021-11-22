@@ -64,11 +64,11 @@ You can create an app with the help of samples for reference:
 1. Go to the **DEVELOPMENT** section in Tree View.
 1. Select **View samples**. 
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels.png" alt-text="view samples text":::
+:::image type="content" source="../assets/images/tools-and-sdks/view-sampels.png" alt-text="view samples text":::
 
 Explore and download samples from **Samples**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/view-sampels_screen.png" alt-text="view samples image":::
+:::image type="content" source="../assets/images/tools-and-sdks/view-sampels_screen.png" alt-text="view samples image":::
 
 The following steps provide alternate way to open sample app:
 
