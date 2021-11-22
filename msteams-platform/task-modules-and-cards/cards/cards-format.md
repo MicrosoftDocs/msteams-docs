@@ -410,17 +410,17 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards 
 
-Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is a secondary that are placed inside the overflow menu.
+Overflow menu is a new feature added to Adaptive Cards. you are allowed to select up to six primary buttons that appears on Adaptive Cards, If there are more than six buttons that can be placed inside the overflow menu which is a secondary option.
 
 **There are two types of overflow menu:**
 
-* **Actions**: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
+* **Actions:** In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
 
 **Following image is an example for actions**
 
    ![action card](~/assets/images/Cards/action-image-revised.png)
 
-* **Action set** is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
+* **Action set:** is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
 
 **Following image is an example for action set**
 
@@ -428,9 +428,9 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 **What happens when the user selects overflow menu?**
 
-**Desktop**: on a desktop when you select the overflow menu, whatever you have effectively set as secondary appears.
+**Desktop**: When you select the overflow menu on a desktop, whatever you have set as secondary appears.
 
-**Following is an example for Desktop Bot-sent card**
+**Following is an example for Desktop**
 
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
@@ -438,9 +438,9 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
-**Mobile**: On a mobile when you select the overflow menu, the adaptive cards display all the buttons that you have defined. On mobile there is an integrated sheet that displays an overflow menu with only activities related to the card with message option. Long press on any message on Mobile, brings up a list of related messages. This option is only available for actions.
+**Mobile**: When you select the overflow menu on mobile, the Adaptive Cards display all the buttons that you have defined. There is an integrated sheet that displays an overflow menu with only card related tasks with a message option. Long press on any message, it brings up a list of related messages. This option is only available for actions.
 
-**Following is an example for Mobile. Bot card and ME card**
+**Following is an example for Mobile.**
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
@@ -448,7 +448,7 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 ### How to configure the property
 
-You can use the `mode` property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
+You can use the `mode` to add primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
 
 See the following example, on how to use the `mode`: `secondary` property for actions and action set.
 
@@ -504,7 +504,7 @@ See the following example, on how to use the `mode`: `secondary` property for ac
      ]
 }
 ```
-**For more information see the “app manifest”.**
+**For more information see the App manifest.**
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
