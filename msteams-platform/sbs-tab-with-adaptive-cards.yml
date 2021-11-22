@@ -207,7 +207,7 @@ items:
 
     **To authorize client applications**
 
-    Add the following IDs as **Authorized client applications** and also select the check box for **Authorized scopes**:      
+    Add the following IDs as **Authorized client applications**, select the check box for **Authorized scopes** and select **Add application**.      
     * 1fec8e78-bce4-4aaf-ab1b-5451cc387264 (Teams mobile or desktop application)            
     * 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 (Teams web application)</br>
 
@@ -216,14 +216,14 @@ items:
     **To add any necessary API permissions for downstream calls**
 
     1. Select **API permissions** from the left pane.
-    1. Add any user delegated permissions that your app requires to downstream APIs, for example, User.Read.</br>
+    1. Add any user **Delegated permissions** that your app requires to downstream APIs, for example, User.Read.</br>
 
         ![API permissions](~/assets/images/adaptive-cards/add-permissions.png)
 
     **To enable implicit grant**
     
     1. Select **Authentication** from the left pane.
-    1. Select the **Access tokens** and **ID tokens** checkboxes.</br>
+    1. Select **Access tokens** and **ID tokens** checkboxes.</br>
 
         ![Authentication Tokens](~/assets/images/adaptive-cards/authentication-tokens.png)
 
@@ -238,7 +238,7 @@ items:
 
     **To set up Bot Service connection**
 
-    1. Go to **Configuration page** > **Add OAuth Connection Settings**.
+    1. Go to **Home** page and select **Configuration** from the left pane.
     1. Select **Add OAuth Connection Settings**.
     1. In **New Connection Setting**, enter the following details:
 
@@ -264,7 +264,7 @@ items:
 
     **To configure and run your bot sample**
 
-    1. Open the repo.
+    1. Go to the repo.
     1. Select **code** and select the dropdown.
     1. Select **Download ZIP**.
 
@@ -302,20 +302,13 @@ items:
 
     1. Go to Teams.
     1. To upload **manifest.zip**, select **Store > Manage your apps > Upload a custom app** and open **manifest.zip**.
-    1. Select **Add** to add the conversation bot to your chat.
+    1. Select **Add** to add the tab to your chat.
 
         ![Tab in Teams app](~/assets/images/adaptive-cards/tab-in-teams.png)
 
-        You can interact with this bot by sending it a message. The Bot exchanges an SSO token and makes a call to the Graph API on your behalf and returns the results. It keeps you signed in unless you send a message to **logout**.
+        You can interact with this tab by signing in.
 
-    1. Send a message to the bot. The conversation bot asks for permissions for the first time.
-
-        (Image to be replaced once I get the output)
-        ![Permissions to bot](~/assets/images/bots/sbsdesktop-mobile-consent-request.png)
-
-    1. Select **Continue** to accept the permissions.
-
-    1. Select **Accept** for **Permissions requested**.
+    1. Send a message to the tab.
 
         (Image to be replaced once I get the output)
         ![Mobile signed in to bot](~/assets/images/bots/sbs-desktop-mobile.png)
