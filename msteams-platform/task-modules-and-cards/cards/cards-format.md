@@ -440,7 +440,7 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 **Mobile**: On a mobile when you select the overflow menu, the adaptive cards display all the buttons that you have defined. On mobile there is an integrated sheet that displays an overflow menu with only activities related to the card with message option. Long press on any message on Mobile, brings up a list of related messages. This option is only available for actions.
 
-**Following is an example for Mobile. Bot card and ME card **
+**Following is an example for Mobile. Bot card and ME card**
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
@@ -448,7 +448,7 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 ### How to configure the property
 
-You can use the mode property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
+You can use the `mode` property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
 
 See the following example, on how to use the `mode`: `secondary` property for actions and action set.
 
