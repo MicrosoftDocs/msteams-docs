@@ -38,7 +38,7 @@ Teams Toolkit helps you to deploy your project code to the provisioned cloud res
 ## Publish Teams apps using Teams Toolkit
 
 You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers.
-Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions. 
+Apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
 ## Add capabilities
 
