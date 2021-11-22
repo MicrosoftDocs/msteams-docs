@@ -21,7 +21,7 @@ Users can add custom app to Teams by uploading an app package in a .zip file dir
 
 It also lets you build an app for internal use only and share it with your team without submitting it to the Teams app catalog in the Teams app store.
 
- ![Publish to individual scope](~/assets/images/teams-toolkit-v2/upload-app.png)
+ ![Publish to individual scope](~/assets/images/tools-and-sdks/upload-app.png)
 
 ## Publish to organization scope
 
@@ -35,7 +35,7 @@ Teams toolkit for Visual Studio Code built on top of the Teams App Submission AP
 
 Here's an example of what this app submission step looks like in Visual Studio Code:
 
- ![App view in Visual Studio Code](~/assets/images/teams-toolkit-v2/app-view-in-visual-vscode.png)
+ ![App view in Visual Studio Code](~/assets/images/tools-and-sdks/app-view-in-visual-vscode.png)
 
 
 Keep in mind that this doesn't publish the app to your organization's app store yet. This step submits the app to the Microsoft Teams admin center where you can approve it for publishing to your organization's app store.
@@ -45,11 +45,11 @@ Keep in mind that this doesn't publish the app to your organization's app store 
 The admin of your Teams tenant can then go to the Manage apps page in the Microsoft Teams admin center (in the left navigation, go to Teams apps > Manage apps), gives you a view into all Teams apps for your organization. The Pending approval widget at the top of the page lets you know when a custom app is submitted for approval.
 In the table, a newly submitted app automatically shows a Publishing status of Submitted and Status of Blocked. You can sort the Publishing status column in descending order to quickly find the app.
 
- ![Admin approval for submitted teams app](~/assets/images/teams-toolkit-v2/admin-approval-for-teams-app.png)
+ ![Admin approval for submitted teams app](~/assets/images/tools-and-sdks/admin-approval-for-teams-app.png)
 
 Click the app name to go to the app details page. On the About tab, you can view details about the app, including description, status, submitter, and app ID.
 
- ![Details about admin approved submitted teams app](~/assets/images/teams-toolkit-v2/about-submitted-app.png)
+ ![Details about admin approved submitted teams app](~/assets/images/tools-and-sdks/about-submitted-app.png)
 
 When you're ready to make the app available to users, publish the app.
 
@@ -73,4 +73,4 @@ When you feel your app is production ready, you can begin the process of getting
 *	Submit your app through Partner Center.
 *	Work with Microsoft directly to resolve the issues and resubmit your app (link to resolve the issues and resubmit your app.).
 
- ![Pre submission steps](~/assets/images/teams-toolkit-v2/pre-submission-steps.png)
+ ![Pre submission steps](~/assets/images/tools-and-sdks/pre-submission-steps.png)
