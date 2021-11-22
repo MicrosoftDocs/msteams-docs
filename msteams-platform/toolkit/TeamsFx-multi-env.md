@@ -2,9 +2,9 @@
 
  Teams Toolkit provides a simple way for developers to create and manage multiple environments, provision and deploy artifacts to the target environment for Teams App.
 
- With multiple environments management, developers can:
+ With multiple environments, developers can:
 
-1. Test before production: It is a common practice to setup multiple environments (e.g., dev, test, staging) before publishing a Teams App to production environment, in modern app development lifecycle.
+1. Test before production: It is a common practice to setup multiple environments (e.g., dev, test, staging) before publishing a Teams App to production environment in modern app development lifecycle.
 
 2. Manage app behaviors in different environments: Developers can set different behaviors for different environments. E.g., developers may want to enable telemetry in production environment but disable it in development environment.
 
@@ -14,19 +14,20 @@ Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=Team
 
 ## Create a new environment
 
-By default, after creating new project, the Teams Toolkit generates:
+After creating new project, Teams Toolkit by default creates:
 
 - One `local` environment to represent the local machine environment configurations.
 - One `dev` environment to represent the remote/cloud environment configurations.
 
 > [!NOTE]
-> Each project can have only one `local` environment, but can create multiple remote environments.
+> Each project can have only one `local` environment but can create multiple remote environments.
 
-To add another remote environment, select the Teams icon in the sidebar, click the Plus button under Environmenmt section, and follow the questions to create.
+To add another remote environment, select the Teams icon in the sidebar, click the Plus button under Environment section, and follow the questions to create.
 
 ![add-env](./images/create-env.png)
 
-If you have more than one existing environments, you will need to select an existing environment to create the environment copy. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
+> [!NOTE]
+> If you have more than one existing environments, you will need to select an existing environment to create the environment. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
 
 ## Select target environment for provision, deploy, publish and preview
 
@@ -36,7 +37,7 @@ With environment concept introduced in Teams Toolkit, for all environment relate
 
 ## Take a tour of project folder structure for multiple environment
 
-After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the business codes, some files are used by Teams Toolkit to maintain the config, state and template of the apps. Following list those files and outlines their relationship with multiple environment. 
+After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the business codes, some files are used by Teams Toolkit to maintain the config, state and template of the apps. Following list those files and outlines their relationship with multiple environments. 
 
 - `.fx/configs`: config files that user can customize for the Teams app.
   - `config.<envName>.json`: per-environment configuration file.
@@ -64,7 +65,7 @@ Following table lists the common scenarios supported for customized provision an
 | Reusing existing AAD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> |
 | Skip adding user when provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> |
 
-- For more detailed info how to customize the provison of Azure resource, you can refer to the [Use Teams Toolkit to provision cloud resources](provision.md).
+- For more detailed info how to customize the provison of Azure resource, you can refer to [Use Teams Toolkit to provision cloud resources](provision.md).
 - For more detailed info how to customize the App mainifest, you can refer to [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md).
 
 Some examples of provision customization:
