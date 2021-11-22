@@ -444,9 +444,9 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
-   ![Mobile-overflow-menu](~/assets/images/8Cards/mobile-2-overflow-menu.png)
+   ![Mobile-overflow-menu](~/assets/images/Cards/mobile-2-overflow-menu.png)
 
-**How to use the property**
+### How to configure the property
 
 You can use the mode property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
 
@@ -505,11 +505,6 @@ See the following example, on how to use the `mode`: `secondary` property for ac
 }
 ```
 **For more information see the “app manifest”.**
-
-
-
-
-
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
