@@ -1,3 +1,13 @@
+---
+title: Manage Multiple Environments in Teams Toolkit
+author: yanliang
+description:  Manage Multiple Environments
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
 # Manage Multiple Environments in Teams Toolkit
 
  Teams Toolkit provides a simple way for developers to easily create and manage multiple environments, and deploy artifacts to a target environment for a Teams App.
@@ -23,10 +33,10 @@ Developer has only one `local` environment, but can create multiple remote envir
 
 To add another remote environment, you can use the `Teams: Create new environment copy` command from the tree view:
 
-![add-env](../images/create-env.png)
+![add-env](./images/create-env.png)
 
 And then input your new environment name:
-![input-env](../images/create-env-input-name.png)
+![input-env](./images/create-env-input-name.png)
 
 If you have more than one existing environments, you will need to select an existing environment to create the environment copy. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
 
@@ -35,6 +45,7 @@ If you have more than one existing environments, you will need to select an exis
 Teams Toolkit allows user to customize an environment for resource provision behavior.
 
 Common scenarios supported for customized provision:
+
 | Scenarios | Where to customize |
 |--|--|
 | Azure Resource Customization | <ul> <li>BICEP files under `templates/azure`.</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> |
@@ -44,7 +55,7 @@ Common scenarios supported for customized provision:
 | Skip adding user when provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> |
 
 - For how to use the environment config file, you can refer to the [environment configuration schema](https://aka.ms/teamsfx-config).
-- For how to use BICEP files in Teams toolkit, you can refer to [official BICEP document](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/) for help.
+- For how to use BICEP files in Teams toolkit, you can refer to [official BICEP document](https://docs.microsoft.com/azure/azure-resource-manager/bicep/) for help.
 
 ### Example 1: customize Teams App name for different environment
 
@@ -173,6 +184,7 @@ Steps to do the customization:
       ...
     }
   }
+
 - Step 3: create a new environment named `staging` if it doesn't exist.
 - Step 4: open config file `.fx/configs/azure.parameters.staging.json`.
 - Step 5: add parameter `simpleAuth_sku` and set the value to `D1`.
@@ -208,7 +220,7 @@ For more details about BICEP template and parameter files, please refer to [this
 
 With multi-environments concept introduced in Teams Toolkit, for all environment related operations, you will need to select a target environment to perform against. The toolkit will prompt and ask for a target environment when needed.
 
-![select-env](../images/select-env.png)
+![select env](./images/select-env.png)
 
 ## Project's Folder Structure
 
@@ -224,14 +236,11 @@ With multi-environments concept introduced in Teams Toolkit, for all environment
   - `appPackage`: app manifest template files.
   - `azure`: BICEP template files.
 
-
 ## See also
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
-
 > [!div class="nextstepaction"]
 > [Add more cloud resources](add-resource.md)
-
 > [!div class="nextstepaction"]
 > [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

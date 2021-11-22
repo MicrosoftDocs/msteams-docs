@@ -1,3 +1,13 @@
+---
+title: Collaborate on TeamsFx Project using Teams Toolkit
+author: yanliang
+description:  Collaborate on TeamsFx Project using Teams Toolkit
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
 # Collaborate on TeamsFx Project using Teams Toolkit
 
 Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and AAD App, which is not easy to do.
@@ -19,30 +29,32 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 ### As a project owner
 
-- In **ENVIRONMENT** section on Teams Toolkit treeview, expand an environment name to find a **Collaborators** node.
+* In **ENVIRONMENT** section on Teams Toolkit treeview, expand an environment name to find a **Collaborators** node.
 
   ![collaborator-node](https://user-images.githubusercontent.com/5545529/137440190-d247dcc2-efec-4050-b1ab-bbfd9ee8d0bf.png)
 
-- Click grant permission button on the right side of Collaborators node and add another M365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug.
+* Click grant permission button on the right side of Collaborators node and add another M365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug.
 
   ![input-collaborator-email](https://user-images.githubusercontent.com/5545529/137440192-6e418e28-70fc-4130-b710-601104cdcffa.png)
 
-- Push project to GitHub.
+* Push project to GitHub.
 
 > [!NOTE]
 > Newly added collaborator will not receive any notification. Project owner needs to notify collaborator.
 
 ### As a project collaborator
 
-- Clone the project from GitHub.
-- Login M365 account 
+* Clone the project from GitHub.
+* Login M365 account
+
 > [!NOTE]
 > Collaborators should log in using the account under the same tenant with project owner).
-- Login Azure account which has contributor permission for all the Azure resources being used in this project.
-- Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
-- Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
 
-### Limitations of Using Collaboration 
+* Login Azure account which has contributor permission for all the Azure resources being used in this project.
+* Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
+* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
+
+### Limitations of Using Collaboration
 
 > [!NOTE]
 > Azure related permissions should be set manually by Azure subscription administrator on Azure portal. Azure account should have contributor role for the subscription at least so that developers can work together to provision and deploy TeamsFx project.
@@ -63,12 +75,9 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 ## See Also
 
-
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
-
 > [!div class="nextstepaction"]
 > [Deploy Teams app to the cloud](deploy.md)
-
 > [!div class="nextstepaction"]
 > [Manage multiple environments](TeamsFx-multi-env.md)

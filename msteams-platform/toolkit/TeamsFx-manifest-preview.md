@@ -1,4 +1,14 @@
-# Preview Teams app Manifest
+---
+title: Preview Teams App Manifest in Teams Toolkit
+author: ningliu
+description:  Preview Teams App Manifest
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
+# Preview Teams App Manifest in Teams Toolkit
 
 After scaffolding, two manifest template files are created under `templates/appPackage` folder.
 
@@ -20,7 +30,7 @@ Teams Toolkit generates preview manifest files under `build/appPackage` folder.
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-### Local debug Teams App
+## Local debug Teams App
 
 To preview manifest file of local Teams App, you need to press `F5` to run local debug first. This step generates default local settings, then the app package and preview manifest are generated in `build/appPackage` folder.
 
@@ -30,9 +40,9 @@ The alternative ways are:
 - Click `Preview manifest file` at the menu bar of `manifest.local.template.json` file
 - Click `Zip Teams metadata package` in tree view and select `local`
 
-![preview-local](../images/preview.png)
+![preview-local](./images/preview.png)
 
-### Remote environment
+## Remote environment
 
 To preview manifest file of remote Teams App, you need to click `Provision in the cloud` in DEVELOPMENT section of Teams Toolkit  tree view, or trigger `Teams: Provision in the cloud` from command palette. This step generates configurations for remote Teams App, then the app package and preview manifest are generated in `build/appPackage` folder.
 
@@ -42,11 +52,11 @@ The alternatives ways are:
 - Click `Preview manifest file` at the menu bar of `manifest.remote.template.json` file
 - Click `Zip Teams metadata package` in tree view and select your environment
 
-![preview-remote](../images/preview-remote.png)
+![preview remote](./images/preview-remote.png)
 
 > If there are more than one environment, you need to select the env you want to preview.
 
-![select-env](../images/select-env.png)
+![select env](./images/select-env.png)
 
 ## Sync local changes to Dev Portal
 

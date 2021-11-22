@@ -4,7 +4,8 @@ author: zhany
 description:  Describes fundamentals of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
-ms.topic: overviewa
+ms.topic: overview
+ms.date: 11/29/2021
 ---
 
 # Teams Toolkit
@@ -39,17 +40,17 @@ Your Teams project can contain either one of the capabilities or all three capab
 
 You can select any capability when you create the Teams Project.
 
-![Select capabilities to Create New Project](../images/create-project-capabilities.png)
+![Select capabilities to Create New Project](./images/create-project-capabilities.png)
 
 Teams Toolkit provides flexibility to add more capabilities in further process of Teams app development.
 
-![add capabilities](../images/add-capabilities.png)
+![add capabilities](./images/add-capabilities.png)
 
 ## Typical User Journey of Teams Toolkit
 
 Teams Toolkit provides features of Teams app development to make it easy to debug, deploy and publish. Teams Toolkit automates manual work and provides great integration of Teams and Azure resources. The following picture shows Teams Toolkit user journey:
 
-![Teams Toolkit User Journey](../images/teams-toolkit-user-journey.png)
+![Teams Toolkit User Journey](./images/teams-toolkit-user-journey.png)
 
 ## Take a Tour of Teams Toolkit for Visual Studio Code
 
@@ -63,13 +64,13 @@ Teams Toolkit provides features of Teams app development to make it easy to debu
 
 * [HELP AND FEEDBACK](#help-and-feedback)
 
-:::image type="content" source="../images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
+:::image type="content" source="./images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
 
 ### ACCOUNTS
 
-Developers must have a Microsoft 365 account before they start to build Teams app. If you do not have, you can get a free Teams developer account by joining the [M365 developer program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+Developers must have a Microsoft 365 account before they start to build Teams app. If you do not have, you can get a free Teams developer account by joining the [M365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 
-![Teams Toolkit Take a Tour - Accounts](../images/teams-toolkit-accounts.png)
+![Teams Toolkit Take a Tour - Accounts](./images/teams-toolkit-accounts.png)
 
 Azure account is commonly used in Teams app development. If you wish to host your Teams app or access resources on Azure, you must have an Azure account. Teams Toolkit support integrated experience to sign in, provision and deployment for Azure resources. You can [create a free Azure account](https://azure.microsoft.com/free/) before you start.
 
@@ -79,7 +80,7 @@ Azure account is commonly used in Teams app development. If you wish to host you
 
 Teams Toolkit helps developers to manage multiple environments. Developers can add environments, config and customize environments. And for each environment, you can choose to add collaborators in that environment.
 
-![Teams Toolkit Take a Tour - Environment](../images/teams-toolkit-env.png)
+![Teams Toolkit Take a Tour - Environment](./images/teams-toolkit-env.png)
 
  More information please refer to [Manage multiple environments](TeamsFx-multi-env.md) and [Collaborate with other developers on Teams project](TeamsFx-collaboration.md).
 
@@ -87,7 +88,7 @@ Teams Toolkit helps developers to manage multiple environments. Developers can a
 
 Teams Toolkit provides convenience for you to create and customize your Teams app project in the `DEVELOPMENT` section, which makes the Teams app development work easily and quickly.  
 
-![Teams Toolkit Take a Tour - Development](../images/teams-toolkit-development.png)
+![Teams Toolkit Take a Tour - Development](./images/teams-toolkit-development.png)
 
 1. `Create a new Teams app` lets you to start Teams app development work with either a ""hello world" template project or a sample project. More information please refer to [Create new Teams project](create-new-project.md)
 1. `View samples` shows a set of Teams sample apps for you to explore, reference and start development work with.
@@ -99,7 +100,7 @@ Teams Toolkit provides convenience for you to create and customize your Teams ap
 
 During or after the development, you should follow the process to do provision, deployment and publish Teams app before it is accessible to your users. There is a set of options in `DEPLOYMENT` section which can help you to accomplish the process.
 
-![Teams Toolkit Take a Tour - Deployment](../images/teams-toolkit-deployment.png)
+![Teams Toolkit Take a Tour - Deployment](./images/teams-toolkit-deployment.png)
 
 1. If you want to host your Teams app on Azure or you need to use Azure resources, `Provision in the cloud` helps you automate the process to create Azure resources. To use it you must have an Azure Subscription which you can use to provision new resources. More information please refer to [Provision cloud resources](provision.md)
 
@@ -117,12 +118,11 @@ During or after the development, you should follow the process to do provision, 
 
 In this section you can easily find the documentation and resources you need. You can select `Report issue on GitHub` in the Teams Toolkit to get quick support from product expert. Browse the issue before you create a new one, or visit [StackOverflow tag `teams-toolkit`](https://stackoverflow.com/questions/tagged/teams-toolkit) to browse and ask questions.
 
-![Teams Toolkit Take a Tour - Help](../images/teams-toolkit-help.png)
+![Teams Toolkit Take a Tour - Help](./images/teams-toolkit-help.png)
 
 ## See also
 
 > [!div class="nextstepaction"]
 > [Create new project use Teams Toolkit](create-new-project.md)
-
 > [!div class="nextstepaction"]
 >[Prepare accounts to build Teams apps](accounts.md)

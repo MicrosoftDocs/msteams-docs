@@ -1,3 +1,13 @@
+---
+title: Customize Teams App Manifest in Teams Toolkit
+author: ningliu
+description:  Customize Teams App Manifest
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
 # Customize Teams App Manifest in Teams Toolkit
 
 There are two manifest template files under `templates/appPackage` folder.
@@ -14,10 +24,10 @@ During provision, Teams Toolkit combines `manifest.remote.template.json` with co
   - Add a placeholder in manifest.remote.template.json with pattern: `{{config.manifest.xx}}`
   - Add a config value in config.{env}.json
 
-        ```
+    ```json
         {
             "manifest": {
                 "KEY": "VALUE"
             }
         }
-        ```
+    ```

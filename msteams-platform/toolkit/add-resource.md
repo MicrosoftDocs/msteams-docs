@@ -1,3 +1,13 @@
+---
+title: Add Resources to Your Teams apps
+author: junjieli
+description:  Describes Add Resources of Teams Toolkit
+ms.author: zhany
+ms.localizationpriority: medium
+ms.topic: overview
+ms.date: 11/29/2021
+---
+
 # Add Cloud Resources to Your Teams App
 
 TeamsFx can help to provision cloud resources for your application hosting. You can also optionally add more cloud resources that fits your development needs.
@@ -15,20 +25,19 @@ TeamsFx can help to provision cloud resources for your application hosting. You 
 1. Open **Visual Studio Code**.
 1. Select **Teams Toolkit** from left panel.
 
-    ![Activate Teams Toolkit](../images/activate-teams-toolkit.png)
+    ![Activate Teams Toolkit](./images/activate-teams-toolkit.png)
 
 1. In the Teams Toolkit side bar panel, select `Add cloud resources` option.
 
-    ![Add cloud resources](../images//add-cloud-resources.png)
+    ![Add cloud resources](./images//add-cloud-resources.png)
 
     You can also open the command palette and enter **Teams: Add cloud resources**. Follow the same process as it’s triggered from Tree View.
 
-    ![Alternate cloud resources](../images//alternate-cloud-resources.png)
-
+    ![Alternate cloud resources](./images//alternate-cloud-resources.png)
 
 1. From the pop-up, select any cloud resources you want to add to your Teams app project.
 
-     ![Select cloud resources](../images//select-cloud-resources.png)
+     ![Select cloud resources](./images//select-cloud-resources.png)
 
 1. Select **OK** and you are done.
 
@@ -63,6 +72,7 @@ Following changes will happen to your project when you add any resources:
 - `.fx/projectSettings.json` is updated to track the resources present in your project.
 
 In the meanwhile, there're some additional changes for each kind of resource:
+
 |Resources Added|What changed|Why these changes are made|
 |---------------|---------------|-----------------------------|
 |Azure Functions|An Azure Functions template code are added into a subfolder with path `yourProjectFolder/api`</br></br>`launch.json` and `task.json` updated under `.vscode` folder.| Include a hello world http trigger template into your project.</br></br> To include necessary scripts for Visual Studio Code is executed when you want to debug your application locally.|
