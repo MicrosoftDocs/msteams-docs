@@ -410,9 +410,9 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards 
 
-Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is secondary set of buttons will be placed inside the overflow menu.
+Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is a secondary that are placed inside the overflow menu.
 
-**There are two types of overflow Menu:**
+**There are two types of overflow menu:**
 
 * **Actions**: In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
 
@@ -428,15 +428,15 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 **What happens when the user selects overflow menu?**
 
-**Desktop**: on a desktop when you select the overflow menu, whatever you have effectively set as secondary buttons will appear in the display.
+**Desktop**: on a desktop when you select the overflow menu, whatever you have effectively set as secondary appears.
 
 **Mobile**: On a mobile when you select the overflow menu, the adaptive cards display all the buttons that you have defined. On mobile there is an integrated sheet that displays an overflow menu with only activities related to the card with message option. Long press on any message on Mobile, brings up a list of related messages. This option is only available for actions.
 
 **How to use the property**
 
-you can use the mode property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
+You can use the mode property to add the primary and secondary properties to display the buttons in the Adaptive Cards and overflow menu respectively.
 
-See the following example, on how to use the **`mode`: `secondary`** property for actions and action set.
+See the following example, on how to use the `mode`: `secondary` property for actions and action set.
 
 **Action**
 
