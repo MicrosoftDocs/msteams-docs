@@ -85,7 +85,7 @@ Developers must have a Microsoft 365 account before they start to build Teams ap
 
 :::image type="content" source="~/assets/images/tools-and-sdks/Teams-Toolkit-Accounts.png" alt-text="Teams Toolkit Take a Tour - Accounts":::
 
-:::image type="content" source="~/assets/images/tools-and-sdks/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/upload-custom-app-closeup.png" alt-text="Illustration showing where in Teams you can upload a custom app.":::
 
 Please contact your tenant administrator to [Prepare your Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md). If you don't get permission from tenant administrator, you can join M365 developer program.
 
