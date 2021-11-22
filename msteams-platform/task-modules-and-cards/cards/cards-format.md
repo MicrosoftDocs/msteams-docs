@@ -432,19 +432,19 @@ Overflow menu is a new feature added to Adaptive Cards, you are allowed to selec
 
 **Following is an example for Desktop Bot-sent card**
 
-  ![action card](~/assets/images/Cards/desktop-overflow-menu.png)
+  ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
 **User sent card**
 
-  ![action card](~/assets/images/Cards/desktop-2-overflow-menu.png)
+  ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
 **Mobile**: On a mobile when you select the overflow menu, the adaptive cards display all the buttons that you have defined. On mobile there is an integrated sheet that displays an overflow menu with only activities related to the card with message option. Long press on any message on Mobile, brings up a list of related messages. This option is only available for actions.
 
 **Following is an example for Mobile. Bot card and ME card **
 
-   ![action card](~/assets/images/Cards/mobile-overflow-menu.png)
+   ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
-   ![action card](~/assets/images/8Cards/mobile-2-overflow-menu.png)
+   ![Mobile-overflow-menu](~/assets/images/8Cards/mobile-2-overflow-menu.png)
 
 **How to use the property**
 
