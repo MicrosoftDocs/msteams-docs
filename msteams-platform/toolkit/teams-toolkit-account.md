@@ -41,7 +41,7 @@ The following steps guide you to sign-in to Microsoft 365 developer program:
 
 The following image depicts Microsoft 365 developer program with valid subscription:
 
-![Microsoft 365 developer program](~/assets/images/teams-toolkit-v2/microsoft365-developer-program.png)
+![Microsoft 365 developer program](~/assets/images/tools-and-sdks/microsoft365-developer-program.png)
 
 You can sign up for developer program with any one of the following account types:
 
@@ -72,7 +72,7 @@ You need sideloading permission for your account before you start any debugging 
 1. Select **Show All**
 1. Select **Teams**
 
-![Custom app uploading](~/assets/images/teams-toolkit-v2/custom-app-uploading.png)
+![Custom app uploading](~/assets/images/tools-and-sdks/custom-app-uploading.png)
 
 > [!Note]
 
@@ -81,7 +81,7 @@ You need sideloading permission for your account before you start any debugging 
 > * Setup policies
 > * Global
 
-![Setup-global-policies](~/assets/images/teams-toolkit-v2/global-setup-policies.png)
+![Setup-global-policies](~/assets/images/tools-and-sdks/global-setup-policies.png)
 
 1. Toggle **Upload custom apps** switch.
 
@@ -90,7 +90,7 @@ You need sideloading permission for your account before you start any debugging 
 Your test tenant permits custom app sideloading.
 
 >[!Note]
-> It can take up to 24 hours for sideloading. In the interim, you can use upload for your tenant to test your app. To upload the .zip package file of the app, see [upload your app in Microsoft Teams](../concepts/deploy-and-publish/apps-upload.md) and ![list of custom apps](~/assets/images/teams-toolkit-v2/list-custom-apps.png)
+> It can take up to 24 hours for sideloading. In the interim, you can use upload for your tenant to test your app. To upload the .zip package file of the app, see [upload your app in Microsoft Teams](../concepts/deploy-and-publish/apps-upload.md) and ![list of custom apps](~/assets/images/tools-and-sdks/list-custom-apps.png)
 
 ## See also
 

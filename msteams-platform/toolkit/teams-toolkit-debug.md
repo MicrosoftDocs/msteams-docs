@@ -11,7 +11,7 @@ ms.topic: About Debug
 
 Teams Toolkit allows you to host your app locally or remotely by launching a Teams app already deployed to a remote cloud. You can switch between **run your app locally** and **launch app remotely** by selecting from the Teams Toolkit Run and Debug dropdown list.
 
- ![Debug using Teams Toolkit](~/assets/images/teams-toolkit-v2/debug-using-teams-toolkit.png)
+ ![Debug using Teams Toolkit](~/assets/images/tools-and-sdks/debug-using-teams-toolkit.png)
 
 Difference between local debugging and remote launch：
 
@@ -30,13 +30,13 @@ Difference between local debugging and remote launch：
 
 The Toolkit prompts you to install a local certificate if required. This certificate allows Teams to load your application from https://localhost. Select **yes** when the following dialog appears:
 
- ![Install certificate](~/assets/images/teams-toolkit-v2/install-certificate.png)
+ ![Install certificate](~/assets/images/tools-and-sdks/install-certificate.png)
 
 Your web browser runs the app. If prompted to open Teams desktop:
 
 1. Select **Cancel** to remain in the browser. If prompted to switch to Teams desktop at other times; select the Teams web app:
 
- ![Use web app](~/assets/images/teams-toolkit-v2/use-web-app.png)
+ ![Use web app](~/assets/images/tools-and-sdks/use-web-app.png)
 
 1. Sign in with your M365 account when prompted.
 1. Select **Add** to install the app onto Teams.
@@ -51,7 +51,7 @@ You can start debugging activities, such as setting breakpoints. The app support
 
 For any Teams app, you can only install an app package with configuration file, called manifest and app icons to Teams client. The rest of the app logics and data storage are hosted elsewhere, such as Azure Web Services. Your app in the cloud or localhost accesses Teams through HTTPS during your development.
 
- ![Teams app in cloud](~/assets/images/teams-toolkit-v2/app-hosting-in-cloud.png)
+ ![Teams app in cloud](~/assets/images/tools-and-sdks/app-hosting-in-cloud.png)
 
 ## To launch your app remotely
 
@@ -63,7 +63,7 @@ For any Teams app, you can only install an app package with configuration file, 
 
 1. From Visual Studio Code, select **Launch Remote …** from the dropdown based on your browser preference.
 
- ![Debug using Teams Toolkit](~/assets/images/teams-toolkit-v2/debug-using-teams-toolkit.png)
+ ![Debug using Teams Toolkit](~/assets/images/tools-and-sdks/debug-using-teams-toolkit.png)
 
 ## See also
 
