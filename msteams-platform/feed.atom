@@ -12,7 +12,7 @@
 		<title type="html"><![CDATA[Hide apps until Admin approves]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization#hide-teams-app-until-admin-approves</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed#hide-teams-app-until-admin-approves"/>
-		<updated>2021-10-05T012:41:01+05:30</updated>
+		<updated>2021-10-05T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2054a9aab3-9fa7-9870-ea07-fd8504e21874%0A*%20Version%20Independent%20ID%3A%2044cad9f8-b5d8-5e2f-4615-0160b73e89f7%0A*%20Content%3A%20%5BCustomize%20your%20Teams%20app%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fenable-app-customization%3Freferrer%3Dwhats.new.rssfeed%23hide-teams-app-until-admin-approves)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -20,7 +20,7 @@
 		<title type="html"><![CDATA[Plan responsive tabs for Teams mobile]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/plan-responsive-tabs-for-teams-mobile</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/plan-responsive-tabs-for-teams-mobile?referrer=whats.new.rssfeed"/>
-		<updated>2021-10-05T012:41:01+05:30</updated>
+		<updated>2021-10-05T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Explore how to plan your responsive web pages on Teams mobile. Understand the key information to plan building apps for Teams mobile.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%205f26123e-5bb1-6930-c02a-38200a9196c9%0A*%20Version%20Independent%20ID%3A%20544936b5-8187-d864-69e8-88e3c62ddf36%0A*%20Content%3A%20%5BPlan%20for%20Teams%20mobile%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**v-abirade**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -28,7 +28,7 @@
 		<title type="html"><![CDATA[Developer Portal General Availability]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
-		<updated>2021-10-04T012:41:01+05:30</updated>
+		<updated>2021-10-04T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Teams App Studio has evolved. Configure, publish, and manage your Teams apps through Developer Portal.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BManage%20your%20apps%20with%20the%20Developer%20Portal%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -36,7 +36,7 @@
 		<title type="html"><![CDATA[Sample code in action]]></title>
 		<id>https://github.com/OfficeDev/microsoft-teams-samples?referrer=whats.new.rssfeed%26#try-it-yourself---experience-the-apps-in-your-microsoft-teams-client</id>
 		<link href="https://github.com/OfficeDev/microsoft-teams-samples?referrer=whats.new.rssfeed%26#try-it-yourself---experience-the-apps-in-your-microsoft-teams-client"/>
-		<updated>2021-09-22T012:41:01+05:30</updated>
+		<updated>2021-09-22T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[We now have samples which are deployed on Microsoft Azure and you can try it yourself by uploading respective app packages.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/discussions">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -44,7 +44,7 @@
 		<title type="html"><![CDATA[AAD Object ID and UPN in user mention]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cconnector-html#aad-object-id-and-upn-in-user-mention</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?referrer=whats.new.rssfeed%26tabs=adaptive-md%2Cconnector-html#aad-object-id-and-upn-in-user-mention"/>
-		<updated>2021-09-22T012:41:01+05:30</updated>
+		<updated>2021-09-22T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Introducing AAD Object ID and UPN in user mention for bots and incoming webhooks.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20001a12ea-30fa-d626-18a9-02a518bfb37f%0A*%20Version%20Independent%20ID%3A%20e5f5f69e-66e9-d1b2-e19a-485d0ffcd6fa%0A*%20Content%3A%20%5BText%20formatting%20in%20cards%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftask-modules-and-cards%2Fcards%2Fcards-format%3Ftabs%3Dadaptive-md%252Cconnector-html%23aad-object-id-and-upn-in-user-mention)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fcards-format.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fcards-format.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
