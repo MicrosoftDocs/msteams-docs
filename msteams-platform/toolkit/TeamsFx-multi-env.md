@@ -23,10 +23,10 @@ Developer has only one `local` environment, but can create multiple remote envir
 
 To add another remote environment, you can use the `Teams: Create new environment copy` command from the tree view:
 
-![add-env](../images/create-env.png)
+![add-env](./images/create-env.png)
 
 And then input your new environment name:
-![input-env](../images/create-env-input-name.png)
+![input-env](./images/create-env-input-name.png)
 
 If you have more than one existing environments, you will need to select an existing environment to create the environment copy. The command will copy file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the existing environment you selected to the new environment being created.
 
