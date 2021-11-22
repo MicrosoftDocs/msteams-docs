@@ -16,9 +16,7 @@ This document guides you on how to add link unfurling to your app manifest using
 > * Currently, link unfurling is not supported on Mobile clients.
 > * The link unfurling result is cached for 30 minutes.
 
-When a URL is pasted in the compose message area, the web service **Unfurls** the URL into a detailed card.
-
- The following image displays link unfurling feature when a link is pasted in messaging extension:
+The Azure DevOps messaging extension uses link unfurling to look for URLs pasted into the compose message area pointing to a work item. In the following image, a user has pasted a URL for a work item in Azure DevOps, which the messaging extension has resolved into a card:
 
 ![Example of link unfurling](~/assets/images/compose-extensions/messagingextensions_linkunfurling.png)
 
@@ -67,9 +65,16 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 ## Handle the `composeExtension/queryLink` invoke
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request.
+After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
- Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+The following card types are supported:
+
+* [Thumbnail card](~/task-modules-and-cards/cards/cards-reference.md#thumbnail-card)
+* [Hero card](~/task-modules-and-cards/cards/cards-reference.md#hero-card)
+* [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
+* [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+
+For more information, see [Action type invoke](/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)
 
 ### Example
 
