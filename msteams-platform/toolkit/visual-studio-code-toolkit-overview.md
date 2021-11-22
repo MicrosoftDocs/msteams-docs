@@ -9,7 +9,7 @@ ms.topic: Teams Toolkit visual studio code overview
 
 # Teams Toolkit fundamentals
 
-Teams Toolkit helps you to create and deploy Teams apps. You can create the apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365. You can experience zero-configuration approach. For more information, see [Teams Toolkit](teams-toolkit-fundamentals.md)
+Teams Toolkit helps you to create and deploy Teams apps. You can create the apps with integrated Identity, access to cloud storage, data from Microsoft Graph, and other services in Azure and Microsoft 365. You can experience zero-configuration approach. For more information, see [Teams Toolkit](teams-toolkit-fundamentals.md).
 
 ## Create a new app
 
@@ -17,11 +17,11 @@ Teams Toolkit helps you to build an app in the following ways:
 
 * Create a new project
 * Create from samples
-For more information, see [Create a new app](create-new-project.md)
+For more information, see [Create a new app](create-new-project.md).
 
 ## Account with valid subscription
 
-Teams toolkit enables you to create new apps with Microsoft 365 account and Azure account only if host your backend resources on Azure. Fore more information on the account details, see [Require accounts with valid subscription to create apps](teams-toolkit-account.md)
+Teams toolkit enables you to create new apps with Microsoft 365 account and Azure account only if host your backend resources on Azure. Fore more information on the account details, see [Require accounts with valid subscription to create apps](teams-toolkit-account.md).
 
 ## Provision in the cloud
 
@@ -29,7 +29,7 @@ Teams Toolkit provides secure environment to place application resources to the 
 
 ## Debug app locally or remotely
 
-Teams Toolkit allows you to host your app locally or remotely by launching a Teams app already deployed to a remote cloud. For more information, see [Debug using Teams Toolkit](teams-toolkit-debug.md)
+Teams Toolkit allows you to host your app locally or remotely by launching a Teams app already deployed to a remote cloud. For more information, see [Debug using Teams Toolkit](teams-toolkit-debug.md).
 
 ## Deploy to the cloud
 
@@ -43,7 +43,6 @@ Apps published to the Teams store also automatically list on Microsoft AppSource
 ## Add capabilities
 
 Teams Toolkit provides bots, tabs, and messaging extensions as capabilities to integrate with the app. The capabilities used to build your Teams app allows you to increase usage scope. For more information on App capabilities, see  [Understand Microsoft Teams app capabilities](../concepts/capabilities-overview.md).
-
 
 ## Add cloud resources
 
