@@ -30,7 +30,7 @@ Each Moodle Course must have at least one **Teacher** and at least one **Student
 
 <summary><b>What should we do to remove the Moodle login page when working from Microsoft Teams? Can we force single sign-on (SSO)?</b></summary>
 
-You have multiple sign-in options from the page. If you prefer that users sign in exclusively using their Microsoft 365 credentials then you will need to enable the “Force redirect” configuration setting for the **auth_oidc plugin**. If this is enabled, the index page will be skipped in favor of the Microsoft sign in page.
+You have multiple sign-in options from the page. If you prefer, users sign-in exclusively using their Microsoft 365 credentials then you will need to enable the “Force redirect” configuration settings for the **auth_oidc plugin**. If this is enabled, the index page will be skipped in favor of the Microsoft sign-in page.
 
  Users wanting to manually sign in to the Moodle portal may do so using this special url: https://{moodle_url}.site/login/index.php?Noredirect=1 
 

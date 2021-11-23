@@ -12,7 +12,7 @@ author: v-rpatkur
 Partner apps for Moodle are examples of complete apps for Microsoft Teams that are currently available in the Microsoft Market. 
 You can locate these apps within the Microsoft Teams App Store, and enjoy their value immediately. Microsoft works closely with partners to certify app quality and to validate all Software as a Service (SaaS) offerings.
 
-**Key benefits of partner apps for Moodle:**
+**Key benefits of partner apps for Moodle include:**
 
 * Extend Teams to fit your needs: Install and engage with apps designed by education focused experts for improved student engagement and collaboration.
 
