@@ -57,7 +57,7 @@ Teams Toolkit provides features of Teams app development to make it easy to debu
 If you did not open any Teams project in VS Code, or you open a Teams
 project which is not created using Teams Toolkit v2.+, you will see the Teams Toolkit UI with limited functionalities like this picture below.
 
-:::image type="content" source="./images/teams-toolkit-beforestart.png" alt-text="Take a tour to Teams Toolkit":::
+:::image type="content" source="./images/teams-toolkit-beforestart.png" alt-text="Before start Teams Toolkit":::
 
 You can click `Quick Start` to explore the Teams Toolkit, or click `Create a new Teams App` to create one Teams project, then you can user more features of Teams Toolkit.
 
