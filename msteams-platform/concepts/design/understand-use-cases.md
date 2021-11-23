@@ -15,15 +15,22 @@ In this collaborative social framework, there is a wide variety of user needs th
 
 If you're going to meet those needs, you first need to understand them.
 
-## Understand the problem
+:::row:::
+    :::column span="":::
+    ## Understand the problem
 
-Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve. 
+    Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve.
+    
+    :::column-end:::
+    :::column span="":::
+    Ask relevant questions:
 
-Before you start building an app, ask relevant questions, such as:
-
-* What are the pros and cons of the current state system used by your users?
-* What are the issues faced by your users that you want to address?
-* What features or capabilities your users like and love in their current way of doing the process?
+    | 1 | What are the pros and cons of the current state system used by your users? |
+    | 2 | What are the issues faced by your users that you want to address? |
+    | 3 | What features or capabilities your users like and love in their current way of doing the process? |
+    |
+    :::column-end:::
+:::row-end:::
 
 ## Understand your user
 

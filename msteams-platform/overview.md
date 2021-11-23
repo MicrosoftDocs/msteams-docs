@@ -61,15 +61,6 @@ Blend the features users love about an existing web app, service, or system with
 > [!div class="nextstepaction"]
 > [Integrate an existing app](samples/integrating-web-apps.md)
 
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
 ## A little code goes a long way
 
 You don't need to be an expert programmer to build a great Teams app. Try one of several low-code solutions.
@@ -77,27 +68,12 @@ You don't need to be an expert programmer to build a great Teams app. Try one of
 > [!div class="nextstepaction"]
 > [Create a low-code app](samples/teams-low-code-solutions.md)
 
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="2":::
-
 ## Get ideas for your app
 
 Looking for app development inspiration? Browse our list of real-world scenarios and industry solutions with high fidelity concept mocks to understand the various ways a Teams app can help your users.
 
 > [!div class="nextstepaction"]
 > [See app scenarios](https://adoption.microsoft.com/extensibility-look-book/scenarios/)
-
-   :::column-end:::
-   :::column span="":::
-
-   :::column-end:::
-:::row-end:::
 
 ## Test your app running across Microsoft 365
 
