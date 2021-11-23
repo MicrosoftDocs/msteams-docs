@@ -301,7 +301,7 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
 
 ## FAQ
 
-### How to trouble-shot
+### How to troubleshooting
 
 If you met errors with Teams Toolkit in Visual Studio Code, you can click the `Get Help` button on the error notification to navigate to related help doc. If you're using TeamsFx CLI, there will be a hyper link at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
