@@ -85,7 +85,7 @@ If you're going to meet those needs, you first need to understand them.
     :::column-end:::
 :::row-end:::
 
-## Consider build and Post-build activities
+## Plan beyond app building
 
 - Decide what goes in Teams
 
