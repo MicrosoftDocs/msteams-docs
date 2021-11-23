@@ -308,7 +308,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 ### Enabling tap action
 
-# [C#](#tab/C#)
+# [C#/.NET](#tab/dotnet)
 
 ```csharp
 protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSelectItemAsync(ITurnContext<IInvokeActivity> turnContext, JObject query, CancellationToken cancellationToken)
@@ -340,7 +340,7 @@ protected override Task<MessagingExtensionResponse> OnTeamsMessagingExtensionSel
 }
 ```
 
-# [Node.js](#tab/Node.js)
+# [TypeScript/Node.js](#tab/typescript)
 
 ```typescript
 async handleTeamsMessagingExtensionSelectItem(context, obj) {
