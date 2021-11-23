@@ -10,9 +10,6 @@ ms.author: anclear
 
 After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received from the user to your queries, and then decide which capability is best suited to build your app.
 
-> [!NOTE]
-> You must have a good understanding of the [entry points and UI elements](../../concepts/extensibility-points.md) available for your app. You must also make sure that you [considered your use cases](../../concepts/design/understand-use-cases.md) carefully.
-
 ## Choose the correct scope for your app
 
 While choosing the app scope, consider the following:
@@ -33,66 +30,61 @@ You can choose between personal scope and team or channel scope for your app dep
   * Could the app’s context change depending on the team in which it is added to? For example, Planner’s tasks are different in different teams. 
   * Is it possible that all members in a persona who need to collaborate are a part of a single team? For example, agents working on a ticket.
 
+## Use Cases and Teams capabilities
+
+The Microsoft Teams platform offers a large variety of capabilities and UI elements your app can take advantage of. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
+
+:::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
+
+Each method of interacting with your users has its strengths and weaknesses.
+
 The following scenarios will guide you in understanding the selection of entry points and UI elements that work well with Teams app capabilities:
 
 > [!NOTE]
-> It is not an exhaustive list, but will help you think through some of the possibilities available to you.
+> It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 
-## Create, share, and collaborate on items in an external system
+| **Create, share, and collaborate on items in an external system** | &nbsp; |
+| --- | --- |
+| Apps to interact with your data | &nbsp; |
+| **If you want to...** | **Try ...** |
+| Search external systems and share the results as an interactive card. | Messaging extensions with search commands |
+| Collect information to insert into a data store or perform advanced searches. | Messaging extensions with action commands |
+| Create embedded web experiences to view, work with and share data. | Tabs |
+| Push data and send data out of the Teams client. | Connectors and webhooks|
+| Interactive modal forms from wherever you need them to collect or display information. | Task modules |
+| **Initiate workflows and processes** | &nbsp; |
+| A quick way to initiate a process or workflow in an external system. | &nbsp; |
+| **If you want to...** | **Try ...** |
+| Trigger from messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
+| Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
+| Interact with your users through text and rich cards. | Conversational bots |
+| A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
+| **Send notifications and alerts** | &nbsp; |
+| Send asynchronous notifications and alerts to your users in Teams. | &nbsp; |
+| **If you want to...** | **Try ...** |
+| Send proactive messages to groups, channels, or individual users. | Conversational bots |
+| Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
+| **Ask questions and get answers** | &nbsp' |
+| Connect with your users and resolve their queries | &nbsp; |
+| Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need. | Conversational bots |
+| Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
+|
 
-Apps for Microsoft Teams is a great way to interact with your data and there are a variety of integration points to choose from.
+## Important considerations
 
-* **Messaging extensions with search commands**: Search external systems and share the results as an interactive card.
-
-* **Messaging extensions with action commands**: Collect information to insert into a data store or perform advanced searches.
-
-* **Tabs**: Create embedded web experiences to view, work with and share data.
-
-* **Connectors and webhooks**: A simple way to push data and send data out of the Teams client.
-
-* **Task modules**: Interactive modal forms from wherever you need them to collect or display information.
-
-## Initiate workflows and processes
-
-Sometimes you just need a quick way to initiate a process or workflow in an external system.
-
-* **Messaging extensions action commands**: Trigger from messages, allowing your users to quickly send the contents of a message to your web services.
-
-* **Task modules**: Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow.
-
-* **Conversational bots**: Interact with your users through text and rich cards.
-
-* **Outgoing webhooks**: A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot.
-
-## Send notifications and alerts
-
-Send asynchronous notifications and alerts to your users in Teams. Use interactive cards to provide quick access to commonly used actions and links to additional information.
-
-* **Conversational bots**: Send proactive messages to groups, channels, or individual users.
-
-* **Connectors and incoming webhooks**: Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page.
-
-## Ask questions and get answers
-
-People have questions and you probably got a lot of the answers stored away somewhere. Unfortunately, it's often quite difficult to connect the two.
-
-* **Conversational bots**: Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need.
-
-* **Tabs**: Embed your existing web portal in Teams or create a Teams-specific version for added functionality.
-
-## Get social
+### Get social
 
 A collaboration platform is inherently a social platform. Let your creative side be free and add some fun into your workplace. All users must be able to send jokes, give kudos, get some memes, toss out some emojis, or anything else that strikes your fancy.
 
-## Think in terms of a single-page app
+### Think in terms of a single-page app
 
 Tabs are embedded web pages. Pretty much anything you can do in a SPA, you can do in a tab in Teams. Just be sure to pay attention to scope. Group and channel tabs are for shared experiences and personal tabs are for personal experiences. The team's list of stuff goes on the channel tab and the list of your stuff goes in the personal tab.
 
-## Initiate small
+### Initiate small
 
 Not sure where to initiate? Feeling a bit overwhelmed with the awesome variety of options available to you? You must choose a core feature of your app and initiate there. After you get a feel for the flow of information through the various contexts in Teams, it is a lot simpler to picture a more complex interaction.
 
-## Put it all together
+### Put it all together
 
 That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. You must not force any functionality into a place it does not belong. Just because you have a good one-to-one conversational bot does not mean you add it to any team. Different extensibility points are good for different things, play to their strengths for creating a successful app.
 
