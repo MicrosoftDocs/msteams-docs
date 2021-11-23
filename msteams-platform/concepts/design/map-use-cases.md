@@ -38,7 +38,7 @@ The Microsoft Teams platform offers a large variety of capabilities and UI eleme
 
 Each method of interacting with your users has its strengths and weaknesses.
 
-User needs vs. Teams capabilities  
+### User needs vs. Teams capabilities  
 
 The following scenarios will guide you in understanding the selection of entry points and UI elements that work well with Teams app capabilities:
 
