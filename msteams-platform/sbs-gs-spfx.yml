@@ -308,9 +308,11 @@ items:
     1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams":::
-
+   
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
+    1. Select **Yes** if you're prompted to load debug scripts.
+    
         Congratulations, your first app is running on Teams!
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-added-local.png" alt-text="Screenshot of the completed app in local environment":::
