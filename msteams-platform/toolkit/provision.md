@@ -140,6 +140,7 @@ Here's a list of predefined parameters available:
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth Server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 
 In the meanwhile, following parameters are available with values populated during provision. If you want to change value of these parameters, you can delete the placeholder and fill your expected value to it directly. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+
 | Parameter name | Default value place holder | Meaning of the place holder |
 | --- | --- | --- |
 | m365ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's AAD app client id created during provision |
