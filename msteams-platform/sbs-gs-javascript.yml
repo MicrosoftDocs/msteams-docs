@@ -646,6 +646,8 @@ items:
 
     1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
+
     1. Be default, the Teams app is created under {home directory}/WebApps (Windows home directory is \user\username). If you want to change the default project location. Select **Change Location** to change the default project path.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/change-location.png" alt-text="Change project location." border="false":::
