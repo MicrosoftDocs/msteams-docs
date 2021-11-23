@@ -91,7 +91,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!div class="nextstepaction"]
 > [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
 
-## See Also
+## See also
 
 * [Incoming call notifications](~/bots/calls-and-meetings/call-notifications.md)
 * [Develop calling and online meeting bots on your local PC](~/bots/calls-and-meetings/debugging-local-testing-calling-meeting-bots.md)

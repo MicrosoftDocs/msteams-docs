@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id/>
 	<title>Microsoft Teams Platform</title>
 	<updated>2021-10-06T20:30:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
@@ -12,7 +11,7 @@
 		<title type="html"><![CDATA[Hide apps until Admin approves]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization#hide-teams-app-until-admin-approves</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed#hide-teams-app-until-admin-approves"/>
-		<updated>2021-10-05T012:41:01+05:30</updated>
+		<updated>2021-10-05T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[To enhance Teams app experience, you can hide an app from users by default until admin allows to unhide the app.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2054a9aab3-9fa7-9870-ea07-fd8504e21874%0A*%20Version%20Independent%20ID%3A%2044cad9f8-b5d8-5e2f-4615-0160b73e89f7%0A*%20Content%3A%20%5BCustomize%20your%20Teams%20app%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fenable-app-customization%3Freferrer%3Dwhats.new.rssfeed%23hide-teams-app-until-admin-approves)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -20,7 +19,7 @@
 		<title type="html"><![CDATA[Plan responsive tabs for Teams mobile]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/plan-responsive-tabs-for-teams-mobile</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/plan-responsive-tabs-for-teams-mobile?referrer=whats.new.rssfeed"/>
-		<updated>2021-10-05T012:41:01+05:30</updated>
+		<updated>2021-10-05T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Explore how to plan your responsive web pages on Teams mobile. Understand the key information to plan building apps for Teams mobile.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%205f26123e-5bb1-6930-c02a-38200a9196c9%0A*%20Version%20Independent%20ID%3A%20544936b5-8187-d864-69e8-88e3c62ddf36%0A*%20Content%3A%20%5BPlan%20for%20Teams%20mobile%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fplan-responsive-tabs-for-teams-mobile.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**v-abirade**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -28,7 +27,7 @@
 		<title type="html"><![CDATA[Developer Portal General Availability]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
-		<updated>2021-10-04T012:41:01+05:30</updated>
+		<updated>2021-10-04T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Teams App Studio has evolved. Configure, publish, and manage your Teams apps through Developer Portal.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BManage%20your%20apps%20with%20the%20Developer%20Portal%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -36,7 +35,7 @@
 		<title type="html"><![CDATA[Sample code in action]]></title>
 		<id>https://github.com/OfficeDev/microsoft-teams-samples?referrer=whats.new.rssfeed%26#try-it-yourself---experience-the-apps-in-your-microsoft-teams-client</id>
 		<link href="https://github.com/OfficeDev/microsoft-teams-samples?referrer=whats.new.rssfeed%26#try-it-yourself---experience-the-apps-in-your-microsoft-teams-client"/>
-		<updated>2021-09-22T012:41:01+05:30</updated>
+		<updated>2021-09-22T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[We now have samples which are deployed on Microsoft Azure and you can try it yourself by uploading respective app packages.</br></br>Would you please provide your <a href="https://github.com/OfficeDev/Microsoft-Teams-Samples/discussions">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -44,7 +43,7 @@
 		<title type="html"><![CDATA[AAD Object ID and UPN in user mention]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?tabs=adaptive-md%2Cconnector-html#aad-object-id-and-upn-in-user-mention</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/cards-format?referrer=whats.new.rssfeed%26tabs=adaptive-md%2Cconnector-html#aad-object-id-and-upn-in-user-mention"/>
-		<updated>2021-09-22T012:41:01+05:30</updated>
+		<updated>2021-09-22T12:41:01+05:30</updated>
 		<summary type="html"><![CDATA[Introducing AAD Object ID and UPN in user mention for bots and incoming webhooks.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20001a12ea-30fa-d626-18a9-02a518bfb37f%0A*%20Version%20Independent%20ID%3A%20e5f5f69e-66e9-d1b2-e19a-485d0ffcd6fa%0A*%20Content%3A%20%5BText%20formatting%20in%20cards%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftask-modules-and-cards%2Fcards%2Fcards-format%3Ftabs%3Dadaptive-md%252Cconnector-html%23aad-object-id-and-upn-in-user-mention)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fcards-format.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftask-modules-and-cards%2Fcards%2Fcards-format.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -60,7 +59,7 @@
 		<title type="html"><![CDATA[Build tabs with Adaptive Cards]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-adaptive-card-tabs?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/build-adaptive-card-tabs?referrer=whats.new.rssfeed"/>
-		<updated>2021-08/12T11:59:01+05:30</updated>
+		<updated>2021-08-12T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Adaptive Card tabs are a new way to build tabs in Teams. You can now render Adaptive Cards to a tab. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203a3a4238-5916-eff7-25cf-bff2362ab246%0A*%20Version%20Independent%20ID%3A%2012048d7d-de6a-43d8-44d5-7ab1be9972a2%0A*%20Content%3A%20%5BBuild%20Adaptive%20Card%20Tabs%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fbuild-adaptive-card-tabs.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40KirtiPereira%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -68,7 +67,7 @@
 		<title type="html"><![CDATA[Tabs will no longer have margins surrounding their experiences]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/resources/removing-tab-margins?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/resources/removing-tab-margins?referrer=whats.new.rssfeed"/>
-		<updated>2021-08/04T11:59:01+05:30</updated>
+		<updated>2021-08-04T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Microsoft Teams enhances your app-building experience by removing margins around all tabs. You can now build apps that look more native to Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20c9e1dcae-86bf-3546-de37-f746f60ddf63%0A*%20Version%20Independent%20ID%3A%202a11fb54-d08d-2e06-14cc-ab3e9a4edaeb%0A*%20Content%3A%20%5BTab%20margin%20changes%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fremoving-tab-margins%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fresources%2Fremoving-tab-margins.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fresources%2Fremoving-tab-margins.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lomeybur**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
 	</entry>
@@ -76,7 +75,7 @@
 		<title type="html"><![CDATA[Meeting app extensibility is available on mobile]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/meeting-app-extensibility?referrer=whats.new.rssfeed%26tabs=mobile</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/apps-in-teams-meetings/meeting-app-extensibility?referrer=whats.new.rssfeed"/>
-		<updated>2021-07/08T11:59:01+05:30</updated>
+		<updated>2021-07-08T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Meeting app extensibility is available on mobile. Mobile clients now support apps during meeting. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2033fae5e3-2d98-381c-1b16-82c0acc6f716%0A*%20Version%20Independent%20ID%3A%206124f090-bdb7-c575-2614-60ec85a947b9%0A*%20Content%3A%20%5BMeeting%20app%20extensibility%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility%3Freferrer%3Dwhats.new.rssfeed%26tabs%3Ddesktop)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fapps-in-teams-meetings%2Fmeeting-app-extensibility.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="updated" term="updated"/>
 	</entry>
@@ -84,7 +83,7 @@
 		<title type="html"><![CDATA[Integrate People Picker capability]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/people-picker-capability?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/people-picker-capability?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/28T11:59:01+05:30</updated>
+		<updated>2021-06-28T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ People Picker is a control to search and select people. This is a native capability available in Teams platform. You can integrate Teams native People Picker input control with your web apps.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%202bafb046-4848-f113-8ea4-6ae1865c26fd%0A*%20Version%20Independent%20ID%3A%20bfae5321-cfaf-591e-d5bd-292d9f206462%0A*%20Content%3A%20%5BIntegrate%20People%20Picker%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fpeople-picker-capability.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.  ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -92,7 +91,7 @@
 		<title type="html"><![CDATA[Send Proactive Messages | Step-by-step Guide]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-send-proactive?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/25T11:59:01+05:30</updated>
+		<updated>2021-06-25T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Introducing a step-by-step guide to help you send a proactive message from a bot. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%204ad9f167-7d29-f933-7b47-60bd744899b1%0A*%20Version%20Independent%20ID%3A%208097fcbd-adcc-ce49-a378-426c65af9296%0A*%20Content%3A%20%5BSend%20proactive%20messages%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fbots%2Fhow-to%2Fconversations%2Fsend-proactive-messages%3Ftabs%3Ddotnet)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsend-proactive-messages.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fbots%2Fhow-to%2Fconversations%2Fsend-proactive-messages.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -100,7 +99,7 @@
 		<title type="html"><![CDATA[Integrage media capabilities]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/mobile-camera-image-permissions?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/device-capabilities/mobile-camera-image-permissions?referrer=whats.new.rssfeed"/>
-		<updated>2021-06/10T11:59:01+05:30</updated>
+		<updated>2021-06-10T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can integrate native device capabilities, such as the camera and microphone with your Teams app. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%208890a6bd-1ca5-ac41-b5af-7087dba699e5%0A*%20Version%20Independent%20ID%3A%20c35acbcc-b3b3-ff59-6623-96ff0c691bf6%0A*%20Content%3A%20%5BIntegrate%20media%20capabilities%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdevice-capabilities%2Fmobile-camera-image-permissions%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmobile-camera-image-permissions.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdevice-capabilities%2Fmobile-camera-image-permissions.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40Rajeshwari-v%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -108,7 +107,7 @@
 		<title type="html"><![CDATA[Reorder static personal tabs]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/create-personal-tab?tabs=nodejs#reorder-static-personal-tabs?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/create-personal-tab?tabs=nodejs#reorder-static-personal-tabs?referrer=whats.new.rssfeed"/>
-		<updated>2021-05/27T11:59:01+05:30</updated>
+		<updated>2021-05-27T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can rearrange all tabs in your personal app. You can move the bot chat tab, which always defaults to the first position, anywhere in the personal app tab header. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2061f5ca59-ab3e-b7ef-d3bc-55a88a362abf%0A*%20Version%20Independent%20ID%3A%206d43a761-19e0-541e-ba06-170099411ac1%0A*%20Content%3A%20%5BCreate%20a%20personal%20tab%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftabs%2Fhow-to%2Fcreate-personal-tab%3Ftabs%3Dnodejs%23reorder-static-personal-tabs%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Ftabs%2Fhow-to%2Fcreate-personal-tab.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40laujan%0A*%20Microsoft%20Alias%3A%20**lajanuar**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -116,7 +115,7 @@
 		<title type="html"><![CDATA[Customize Microsoft Teams app]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/design/enable-app-customization?referrer=whats.new.rssfeed"/>
-		<updated>2021-05/13T11:59:01+05:30</updated>
+		<updated>2021-05-13T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ You can allow customers to customize some aspects of your Microsoft Teams app that are published to the Teams store in the Teams admin center. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2054a9aab3-9fa7-9870-ea07-fd8504e21874%0A*%20Version%20Independent%20ID%3A%2044cad9f8-b5d8-5e2f-4615-0160b73e89f7%0A*%20Content%3A%20%5BEnable%20your%20app%20to%20be%20customized%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdesign%2Fenable-app-customization%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fdesign%2Fenable-app-customization.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>
@@ -124,7 +123,7 @@
 		<title type="html"><![CDATA[Manage your apps with the Developer Portal]]></title>
 		<id>https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed</id>
 		<link href="https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/teams-developer-portal?referrer=whats.new.rssfeed"/>
-		<updated>2021-04/29T11:59:01+05:30</updated>
+		<updated>2021-04-29T11:59:01+05:30</updated>
 		<summary type="html"><![CDATA[ Explore the newly developed tool, Developer Portal for Teams for configuring, distributing, and managing your Microsoft Teams apps. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%207da63b6f-15d7-a6dd-82fc-d183afaeb816%0A*%20Version%20Independent%20ID%3A%2082d1ca83-28dd-220e-ab0c-a4833f8f8143%0A*%20Content%3A%20%5BManage%20your%20apps%20with%20the%20Developer%20Portal%20-%20Teams%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal%3Freferrer%3Dwhats.new.rssfeed)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmaster%2Fmsteams-platform%2Fconcepts%2Fbuild-and-test%2Fteams-developer-portal.md)%0A*%20Product%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us. ]]></summary>
 		<category label="new" term="new"/>
 	</entry>

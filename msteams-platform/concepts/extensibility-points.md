@@ -47,5 +47,5 @@ The following list shows how Teams capabilities are commonly used in personal co
 
 ## See also
 
-[Teams app design guidelines](../concepts/design/design-teams-app-overview.md) <br>
-[Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)
+* [Teams app design guidelines](../concepts/design/design-teams-app-overview.md) <br>
+* [Build your first Microsoft Teams app](../build-your-first-app/build-first-app-overview.md)

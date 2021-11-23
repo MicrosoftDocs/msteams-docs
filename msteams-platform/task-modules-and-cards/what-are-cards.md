@@ -49,8 +49,6 @@ All cards used by Teams are listed in [types of cards](~/task-modules-and-cards/
 
 ## Adaptive Cards
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/J12lKt717Ws]
-
 [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card) are a new cross product specification for cards in Microsoft products including bots, Cortana, Outlook, and Windows. They are the recommended card type for new Teams development. For general information from the Adaptive Cards team, see [Adaptive Cards overview](/adaptive-cards). You can use Adaptive Cards anywhere you use existing hero cards, Office 365 cards, and thumbnail cards.
 
 In addition to Adaptive Cards, Teams supports two other types of cards:
@@ -58,9 +56,11 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 * Connector cards: Used as part of Office 365 Connectors.
 * Simple cards: Used from the Bot Framework, such as the thumbnail and hero cards.
 
-### Adaptive Cards and Incoming Webhooks
+### Type-ahead search in Adaptive Cards  
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/y5pbJI43Zvg]
+Type ahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience. 
+
+### Adaptive Cards and Incoming Webhooks
 
 > [!NOTE]
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.

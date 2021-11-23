@@ -1,7 +1,7 @@
 ---
 title: Meeting apps API references
 author: surbhigupta
-description: Identify meeting apps API references with examples and Code samples
+description: Identify the meeting apps API references with examples and Code samples
 ms.topic: conceptual
 ms.author: lajanuar
 ms.localizationpriority: medium
@@ -471,8 +471,3 @@ protected override async Task OnTeamsMeetingEndAsync(MeetingEndEventDetails meet
 
 * [Teams authentication flow for tabs](../tabs/how-to/authentication/auth-flow-tab.md)
 * [Apps for Teams meetings](teams-apps-in-meetings.md)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Enable and configure your apps for Teams meetings](enable-and-configure-your-app-for-teams-meetings.md)

@@ -65,6 +65,6 @@ Application-hosted media bots require .NET or C# and Windows Server. For more in
 > [!div class="nextstepaction"]
 > [Register a calling bot](~/bots/calls-and-meetings/registering-calling-bot.md)
 
-## See Also
+## See also
 
 [Supported media formats for bots](~/resources/media-formats.md)

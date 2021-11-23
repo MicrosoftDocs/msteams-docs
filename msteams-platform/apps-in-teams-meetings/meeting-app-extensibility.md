@@ -14,8 +14,6 @@ Teams unified meetings apps are based on the following concepts:
 * There are three distinct participant roles in a meeting: organizer, presenter, and attendee. For more information, see [roles in a Teams meeting](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).  
 * There are various [user types](/microsoftteams/non-standard-users#:~:text=An%20anonymous%20user%20is%20a,their%20Microsoft%20or%20organization's%20account.) in a meeting: in-tenant, [guest](/microsoftteams/guest-access), [federated](/microsoftteams/manage-external-access), and anonymous users.
 
-> [!VIDEO https://www.youtube-nocookie.com/embed/rrNpFJbxqrg]
-
 This article covers the information about meeting lifecycle and how to integrate tabs, bots, and messaging extensions. It identifies different participant roles and user types.
 
 ## Meeting lifecycle
@@ -110,11 +108,13 @@ The following image illustrates the in-meeting side panel:
 
 ---
 
-The following table describes the behavior of app when it is approved and not approved:
+The following table describes the behavior of app when it is validated and not validated:
 
-|App capability | App is approved | App isn't approved |
+|App capability | App is validated | App isn't validated |
 |---|---|---|
 | Meeting extensibility | The app will appear in meetings. | The app won't appear in meetings for the mobile clients. |
+
+For more information, see [store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 #### Post-meeting app experience
 

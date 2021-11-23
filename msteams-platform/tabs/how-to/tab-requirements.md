@@ -46,7 +46,6 @@ Teams tabs must adhere to the following prerequisites:
 ## See also
 
 * [Teams tabs](~/tabs/what-are-tabs.md)
-* [Build your first app using React](../../get-started/first-app-react.md)
-* [Build your first app using Blazor](../../get-started/first-app-blazor.md)
+* [Build your first app using JavaScript](../../get-started/first-app-react.md)
 * [Build your first app using SPFx](../../get-started/first-app-spfx.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
