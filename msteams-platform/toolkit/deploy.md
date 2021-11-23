@@ -1,6 +1,6 @@
 ---
 title: Deploy to the cloud
-author: junjie
+author: junjieli
 description:  Deploy to the cloud
 ms.author: zhany
 ms.localizationpriority: medium
@@ -8,12 +8,12 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Deploy Your Teams Aoo to the Cloud Using Teams Toolkit
+# Deploy Your Teams App to the Cloud Using Teams Toolkit
 
 Teams Toolkit helps you to deploy or upload the backend and frontend code in your application to your provisioned cloud resources in Azure.
 
-* The backend Azure functions if configured, can use different kinds of Azure services, including Azure App service and Azure storage.
 * The frontend applications are deployed to an Azure storage account and configured for static web hosting or a SharePoint site.
+* If you configured Azure Functions as backend, the Azure function can be deployed to different kinds of Azure services, including Azure App service and Azure storage.
 
 ## Prerequisite
 
@@ -45,11 +45,15 @@ You can optionally include Azure resources that fit your application needs. The 
 
 > [!div class="nextstepaction"]
 > [Add more cloud resources](add-resource.md)
+
 > [!div class="nextstepaction"]
 > [Add more Teams app capabilities](add-capability.md)
+
 > [!div class="nextstepaction"]
 > [Deploy project code with CI/CD pipelines](use-CICD-template.md)
+
 > [!div class="nextstepaction"]
 > [Manage multiple environments](TeamsFx-multi-env.md)
+
 > [!div class="nextstepaction"]
 > [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

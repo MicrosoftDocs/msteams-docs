@@ -90,3 +90,11 @@ It can take **up to 24 hours** for the **Teams** option to appear. You can [uplo
 It can take up to **24 hours** for the sideloading to be active. In the interim, you can use **upload for <your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](https://docs.microsoft.com/microsoftteams/upload-custom-apps#upload).
 
 For complete information on how these settings interact, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](<https://docs.microsoft.com/microsoftteams/teams-app-setup-policies>.
+
+## See Also
+
+> [!div class="nextstepaction"]
+> [Create new Teams project](create-new-project.md)
+
+> [!div class="nextstepaction"]
+> [Provision cloud resources](provision.md)

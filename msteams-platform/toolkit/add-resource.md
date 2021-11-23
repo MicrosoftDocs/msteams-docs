@@ -29,15 +29,15 @@ TeamsFx can help to provision cloud resources for your application hosting. You 
 
 1. In the Teams Toolkit side bar panel, select `Add cloud resources` option.
 
-    ![Add cloud resources](./images//add-cloud-resources.png)
+    ![Add cloud resources](./images/add-cloud-resources.png)
 
     You can also open the command palette and enter **Teams: Add cloud resources**. Follow the same process as it’s triggered from Tree View.
 
-    ![Alternate cloud resources](./images//alternate-cloud-resources.png)
+    ![Alternate cloud resources](./images/alternate-cloud-resources.png)
 
 1. From the pop-up, select any cloud resources you want to add to your Teams app project.
 
-     ![Select cloud resources](./images//select-cloud-resources.png)
+     ![Select cloud resources](./images/select-cloud-resources.png)
 
 1. Select **OK** and you are done.
 

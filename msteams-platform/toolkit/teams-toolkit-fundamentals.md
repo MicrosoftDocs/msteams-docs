@@ -124,5 +124,6 @@ In this section you can easily find the documentation and resources you need. Yo
 
 > [!div class="nextstepaction"]
 > [Create new project use Teams Toolkit](create-new-project.md)
+
 > [!div class="nextstepaction"]
 >[Prepare accounts to build Teams apps](accounts.md)

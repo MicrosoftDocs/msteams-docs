@@ -111,5 +111,6 @@ Currently there are limitations with TeamsFx when adding more capabilities. The 
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
+
 > [!div class="nextstepaction"]
 > [Create new Teams project](create-new-project.md)

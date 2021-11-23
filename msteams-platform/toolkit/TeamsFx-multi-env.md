@@ -1,6 +1,6 @@
 ---
 title: Manage Multiple Environments in Teams Toolkit
-author: yanliang
+author: yanjiang
 description:  Manage Multiple Environments
 ms.author: zhany
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Manage Multiple Environments in Teams Toolkit
+# Manage multiple environments in Teams Toolkit
 
  Teams Toolkit provides a simple way for developers to create and manage multiple environments, provision and deploy artifacts to the target environment for Teams App.
 
@@ -43,11 +43,11 @@ To add another remote environment, select the Teams icon in the sidebar, click t
 
 With environment concept introduced in Teams Toolkit, for all environment related operations, you can select the target environment to perform the operations against. The toolkit will prompt and ask for a target environment when needed.
 
-![select-env](./images/select-env.png)
+![select environment](./images/select-env.png)
 
 ## Take a tour of project folder structure for multiple environment
 
-After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the business codes, some files are used by Teams Toolkit to maintain the config, state and template of the apps. Following list those files and outlines their relationship with multiple environments. 
+After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the business codes, some files are used by Teams Toolkit to maintain the config, state and template of the apps. Following list those files and outlines their relationship with multiple environments.
 
 - `.fx/configs`: config files that user can customize for the Teams app.
   - `config.<envName>.json`: per-environment configuration file.
@@ -67,6 +67,7 @@ Teams Toolkit allows you to change the config files and template files to custom
 
 Following table lists the common scenarios supported for customized provision and where to customize:
 
+| Scenarios | Where to customize |
 | --- | --- |
 | Customize Azure Resource | <ul> <li>BICEP files under `templates/azure`.</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> |
 | Customize App Manifest | <ul> <li>`templates/manifest.template.json`.</li> <li>`manifest` section in`.fx/config.<envName>.json`.</li>  </ul> |
@@ -77,7 +78,7 @@ Following table lists the common scenarios supported for customized provision an
 - For more detailed info how to customize the provison of Azure resource, you can refer to [Use Teams Toolkit to provision cloud resources](provision.md).
 - For more detailed info how to customize the App mainifest, you can refer to [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md).
 
-Some examples of provision customization
+Some examples of provision customization:
 
 ### Example 1: customize Teams App name for different environment
 
@@ -236,12 +237,15 @@ Steps to do the customization:
 
 After this, the web app for `simpleAuth` will be provisioned as `D1` sku for all environments.
 
-For more details about BICEP template and parameter files, please refer to [this section](./provision.md#customize-azure-resource-being-created).
+For more details about BICEP template and parameter files, please refer to [Provision cloud resources](provision.md)
 
 ## See also
+
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
+
 > [!div class="nextstepaction"]
 > [Add more cloud resources](add-resource.md)
+
 > [!div class="nextstepaction"]
-> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)
+> [Collaboration use Teams Toolkit](TeamsFx-collaboration.md)

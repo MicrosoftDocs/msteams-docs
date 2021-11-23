@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on TeamsFx Project using Teams Toolkit
+# Collaborate on Teams Project using Teams Toolkit
 
 Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and AAD App, which is not easy to do.
 
@@ -29,13 +29,20 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 ### As a project owner
 
-* In **ENVIRONMENT** section on Teams Toolkit treeview, expand an environment name to find a **Collaborators** node.
+> [!NOTE]
+> Before adding collaborators for an environment, project owner needs to [provision](provision.md) project first.
 
-  ![collaborator-node](https://user-images.githubusercontent.com/5545529/137440190-d247dcc2-efec-4050-b1ab-bbfd9ee8d0bf.png)
+* In **ENVIRONMENT** section on Teams Toolkit, mouse over environment name to find **Collaborators** buttons, one is **Add M365 Teams App (with AAD App) Owners** button, the other one is **List M365 Teams App (with AAD App) Owners** button
 
-* Click grant permission button on the right side of Collaborators node and add another M365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug.
+  ![collaboration buttons](./images/collaboration-buttons.png)
 
-  ![input-collaborator-email](https://user-images.githubusercontent.com/5545529/137440192-6e418e28-70fc-4130-b710-601104cdcffa.png)
+* Click **Add M365 Teams App (with AAD App) Owners** button and add another M365 account email address as collaborator. The account to be added **must be on the same tenant as project owner for remote debug**.
+
+  ![input collaborator email](./images/collaboration-add-owner-email.png)
+
+* To view collaborators in current environment, click **List M365 Teams App (with AAD App) Owners** button, then collaborators will be listed in the output channel
+
+  ![collaboration list owners](./images/collaboration-list-owners.png)
 
 * Push project to GitHub.
 
@@ -48,7 +55,7 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 * Login M365 account
 
 > [!NOTE]
-> Collaborators should log in using the account under the same tenant with project owner).
+> Collaborators should log in using the account added by project owner which is **under the same tenant with project owner**.
 
 * Login Azure account which has contributor permission for all the Azure resources being used in this project.
 * Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
@@ -77,7 +84,9 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 > [!div class="nextstepaction"]
 > [Provision cloud resources](provision.md)
+
 > [!div class="nextstepaction"]
 > [Deploy Teams app to the cloud](deploy.md)
+
 > [!div class="nextstepaction"]
 > [Manage multiple environments](TeamsFx-multi-env.md)

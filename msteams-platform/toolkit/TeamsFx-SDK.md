@@ -1,6 +1,6 @@
 ---
 title: TeamsFx SDK
-author: nintan
+author: junjieli
 description:  TeamsFx SDK
 ms.author: zhany
 ms.localizationpriority: medium
@@ -29,7 +29,7 @@ Please check the [README](https://github.com/OfficeDev/TeamsFx/blob/main/package
 
 ### Prerequisites
 
-- Node.js version 10.x.x or higher
+- Node.js version `10.x.x` or higher.
 - A project created by TeamsFx toolkit VS Code extension or Cli tool.
 - If your project has installed `botbuilder` related [packages](https://github.com/Microsoft/botbuilder-js#packages) as dependencies, ensure they are of the same version and the version `>= 4.9.3`. ([Issue - all of the BOTBUILDER packages should be the same version](https://github.com/BotBuilderCommunity/botbuilder-community-js/issues/57#issuecomment-508538548))
 
@@ -100,7 +100,7 @@ const profile = await graphClient.api("/users/{object_id_of_another_people}").ge
 
 ### Credential
 
-There are 3 credential classes that are used to help simplifying authentication. They are located under [credential](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/sdk/src/credential) folder.
+There are 3 credential classes that are used to help simplifying authentication. They are located under [credential](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/credential) folder.
 Credential classes implements `TokenCredential` interface that is broadly used in Azure library APIs. They are designed to provide access token for specific scopes.
 The credential classes represents different identity under certain scenarios.
 
@@ -110,13 +110,13 @@ The credential classes represents different identity under certain scenarios.
 
 ### Bot
 
-Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/sdk/src/bot) folder.
+Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/bot) folder.
 
 `TeamsBotSsoPrompt` has a good integration with Bot framework. It simplifies the authentication process when you develops bot application.
 
 ### Helper Function
 
-TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/sdk/src/credential/core) folder.
+TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](shttps://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) folder.
 
 ### Error Handling
 
@@ -138,7 +138,7 @@ try {
 }
 ```
 
-And if credential instance is used in other library like Microsoft Graph, it's possible that error is catched and transformed.
+And if credential instance is used in other library like Microsoft Graph, it's possible that error is caught and transformed.
 
 ```ts
 try {
@@ -321,8 +321,3 @@ setLogFunction((level: LogLevel, message: string) => {
 ## Next steps
 
 Please take a look at the [Samples](https://github.com/OfficeDev/TeamsFx-Samples) project for detailed examples on how to use this library.
-
-## Related projects
-
-- [Microsoft Teams Toolkit for Visual Studio Code](https://github.com/OfficeDev/TeamsFx/tree/main/packages/vscode-extension)
-- [TeamsFx Cli](https://github.com/OfficeDev/TeamsFx/tree/main/packages/cli)
