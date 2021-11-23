@@ -339,7 +339,11 @@ items:
        **task/submit** request is triggered to your bot with the corresponding data through the Action. 
 
         ![Task Submit card](~/assets/images/adaptive-cards/task-submit.png)
+<<<<<<< Updated upstream
 
+=======
+        
+>>>>>>> Stashed changes
     1. Tab keeps you signed in unless you select **Sign out**.
 
         ![Sign out](~/assets/images/adaptive-cards/sign-out.png)
