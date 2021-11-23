@@ -38,12 +38,15 @@ The Microsoft Teams platform offers a large variety of capabilities and UI eleme
 
 Each method of interacting with your users has its strengths and weaknesses.
 
+User needs vs. Teams capabilities  
+
 The following scenarios will guide you in understanding the selection of entry points and UI elements that work well with Teams app capabilities:
 
 > [!NOTE]
 > It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 
-**Create, share, and collaborate on items in an external system**
+- **Create, share, and collaborate on items in an external system**
+
 Apps to interact with your data
 
 | **If you want to...** | **Try ...** |
@@ -55,7 +58,8 @@ Apps to interact with your data
 | Interactive modal forms from wherever you need them to collect or display information. | Task modules |
 |
 
-**Initiate workflows and processes**
+- **Initiate workflows and processes**
+
 A quick way to initiate a process or workflow in an external system.
 
 | **If you want to...** | **Try ...** |
@@ -66,7 +70,8 @@ A quick way to initiate a process or workflow in an external system.
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
 |
 
-**Send notifications and alerts**
+- **Send notifications and alerts**
+
 Send asynchronous notifications and alerts to your users in Teams.
 
 | **If you want to...** | **Try ...** |
@@ -75,7 +80,8 @@ Send asynchronous notifications and alerts to your users in Teams.
 | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
 |
 
-**Ask questions and get answers**
+- **Ask questions and get answers**
+
 Connect with your users and resolve their queries
 
 | **If you want to...** | **Try ...** |
@@ -86,21 +92,23 @@ Connect with your users and resolve their queries
 
 ## Important considerations
 
-### Get social
+In addition to mapping use cases, think about factors that relate to users friendliness of your app.
 
-A collaboration platform is inherently a social platform. Let your creative side be free and add some fun into your workplace. All users must be able to send jokes, give kudos, get some memes, toss out some emojis, or anything else that strikes your fancy.
+- Get social
 
-### Think in terms of a single-page app
+    A collaboration platform is inherently a social platform. Let your creative side be free and add some fun into your workplace. All users must be able to send jokes, give kudos, get some memes, toss out some emojis, or anything else that strikes your fancy.
 
-Tabs are embedded web pages. Pretty much anything you can do in a SPA, you can do in a tab in Teams. Just be sure to pay attention to scope. Group and channel tabs are for shared experiences and personal tabs are for personal experiences. The team's list of stuff goes on the channel tab and the list of your stuff goes in the personal tab.
+- Think in terms of a single-page app
 
-### Initiate small
+    Tabs are embedded web pages. Pretty much anything you can do in a SPA, you can do in a tab in Teams. Just be sure to pay attention to scope. Group and channel tabs are for shared experiences and personal tabs are for personal experiences. The team's list of stuff goes on the channel tab and the list of your stuff goes in the personal tab.
 
-Not sure where to initiate? Feeling a bit overwhelmed with the awesome variety of options available to you? You must choose a core feature of your app and initiate there. After you get a feel for the flow of information through the various contexts in Teams, it is a lot simpler to picture a more complex interaction.
+- Initiate small
 
-### Put it all together
+    Not sure where to initiate? Feeling a bit overwhelmed with the awesome variety of options available to you? You must choose a core feature of your app and initiate there. After you get a feel for the flow of information through the various contexts in Teams, it is a lot simpler to picture a more complex interaction.
 
-That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. You must not force any functionality into a place it does not belong. Just because you have a good one-to-one conversational bot does not mean you add it to any team. Different extensibility points are good for different things, play to their strengths for creating a successful app.
+- Put it all together
+
+    That being said, the best apps usually combine multiple features, creating an app that engages users in the right context with the right functionality at the right time. You must not force any functionality into a place it does not belong. Just because you have a good one-to-one conversational bot does not mean you add it to any team. Different extensibility points are good for different things, play to their strengths for creating a successful app.
 
 ## See also
 
