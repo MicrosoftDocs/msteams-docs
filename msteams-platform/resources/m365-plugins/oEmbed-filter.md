@@ -13,7 +13,7 @@ The oEmbed filter is a powerful filter that simplifies the inclusion of external
 
 :::image type="content" source="../../assets/images/MoodleInstructions/oEmbed filter.png" alt-text="oEmbed filter page":::
 
-* It reduces the amount of time it takes an instructor to add a video to an HTML page.
+* Reduces the amount of time it takes an instructor to add a video to an HTML page.
 
 * Does not require a technical understanding of how to copy embed code from any of the supported services.
 
