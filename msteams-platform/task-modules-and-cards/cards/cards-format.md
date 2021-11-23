@@ -410,11 +410,11 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards 
 
-Overflow menu is now added to Adaptive Cards. you are allowed to select up to six primary buttons that appears on Adaptive Cards, secondary buttons can be placed inside the overflow menu.
+Overflow menu is added to Adaptive Cards. You are allowed to select up to six primary buttons that appears on Adaptive Cards and secondary buttons can be placed inside the overflow menu.
 
 **There are two types of overflow menu:**
 
-**Actions:** In Actions ,primary set of buttons are on display. secondary buttons are inside the overflow menu.
+**Actions:** In Actions, primary set of buttons are displayed and secondary buttons are inside the overflow menu.
 
    ![action card](~/assets/images/Cards/action-image-revised.png)
 
@@ -422,14 +422,13 @@ Overflow menu is now added to Adaptive Cards. you are allowed to select up to si
 
    ![action set card](~/assets/images/Cards/action-set-image.png)
 
-**Overflow menu on Desktop**: When a user selects the overflow menu on a desktop, the buttons set as secondary appears.
+**Overflow menu on Desktop**: When a user selects the overflow menu on a desktop, the buttons that set as secondary appears.
 
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
-**Overflow menu on Mobile**: When a user selects overflow menu on a mobile,an integrated sheet displays only card related tasks with a message option. 
-Long press on any message, it brings up a list of related messages. This option is only available for actions.
+**Overflow menu on Mobile**: When a user selects overflow menu on mobile, the Adaptive Cards displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message, it brings up a list of related messages and this option is only available for actions.
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
@@ -493,7 +492,8 @@ See the following example, on how to use the `mode`: `secondary` property for ac
      ]
 }
 ```
-**For more information see the App manifest.**
+
+For more information, see [App manifest](~/resources/schema/manifest-schema-dev-preview.md)
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
