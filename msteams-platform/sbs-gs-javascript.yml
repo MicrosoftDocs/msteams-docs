@@ -166,7 +166,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
+    > The Visual Studio Code UI shown may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vsc)
 
@@ -185,27 +185,22 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tab.png" alt-text="Select App Capability" border="false":::
 
-    1. Select **Azure** as the Frontend hosting type.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-hosting.png" alt-text="Select Hosting Type" border="false":::
-
-        If you want to host your app on SharePoint, you can select SharePoint Framework (SPFx) in this option.
-
-    1. Select **OK** to continue. You don't need other cloud resources for this tutorial.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-cloud-resources.png" alt-text="Cloud Resources" border="false":::
+        If you want to host your app on SharePoint, you can select Tab(SPFx) in this option.
 
     1. Select **JavaScript** as the programming language.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-    1. Select a workspace folder for the app. Teams Toolkit creates the app's directory structure in this workspace for your project.
-
     1. Enter `helloworld` as the application name. Ensure that you use only alphanumeric characters. Select **Enter** to continue.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project-name.png" alt-text="Screenshot showing where to enter the app name." border="false":::
 
-        The Teams app is created in a few seconds.
+    1. Be default, the Teams app is created under {home directory}/WebApps (Windows home directory is \user\username). If you want to change the default project location. Select **Change Location** to change the default project path.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/change-location.png" alt-text="Change project location." border="false":::
+
+        The Teams app is created in a few seconds. 
+
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/app-created.png" alt-text="Screenshot showing the app created." border="false":::
 
@@ -230,7 +225,6 @@ items:
 
     1. Select **Create a new Teams app**.
     1. Select the **Tab** capability.
-    1. Select **Azure** frontend hosting.
     1. Don't select any cloud resources.
     1. Select **JavaScript** as the programming language.
     1. Press **Enter** to select the default workspace folder.
@@ -251,9 +245,9 @@ items:
     Among other items in this directory structure, the Toolkit maintains:
 
     - `.fx`: The state for your app in this folder.
-    - `appPackage`: The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
-    - `manifest.source.json`: The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
-    - `settings.json`: The app settings, which you selected during project creation, in `settings.json`.
+    - `templates/appPackage`: The app icons in the `appPackage` folder. The icons are `color.png` and `outline.png`.
+    - `templates/appPackage/manifest.source.json`: The app manifest for publishing to the Developer Portal for Teams in `manifest.source.json`.
+    - `projectSettings.json`: The app settings, which you selected during project creation, in `settings.json`.
     - The code for the Tab capability in the `Tabs` folder. Some of the important files in this folder are:
 
       - `tabs/src/index.jsx` is the front-end app's entry point, where the main `App` component is rendered with `ReactDOM.render()`.
@@ -407,7 +401,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
+    > The Visual Studio Code UI shown may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vscode)
 
@@ -625,7 +619,7 @@ items:
     If the prerequisites are in place, let's begin!
 
     > [!NOTE]
-    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
+    > The Visual Studio Code UI shown may differ depending on your operating system, Toolkit version, and environment.
 
     # [Visual Studio Code](#tab/vsc)
 
