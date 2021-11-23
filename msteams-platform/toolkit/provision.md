@@ -1,8 +1,8 @@
 ---
 title: Use Teams Toolkit to provision cloud resources
-author: junjieli
+author: MuyangAmigo
 description: provision cloud resources
-ms.author: zhany
+ms.author: shenwe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -22,13 +22,13 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
     * Azure with valid subscription
 
 2. [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+1. You should already have a Teams app project opened in VS code.
 
 ## Provision using Teams Toolkit
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI.
 
 * [Provision Azure-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
-* [Provision SharePoint-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 ## What resources will be created
 
@@ -41,59 +41,58 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, the tool wil
 When you create a new project, an ARM template will be generated under your project folder which defines all the Azure resources need to be created. The ARM template will be used to create required Azure resources during provision. When you [adds new capability/resource](./add-resource.md) to an existing project, the ARM template will be updated to reflect the latest change.
 
 > [!NOTE]
-> Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
+>  Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
 
 ### Resources created for Teams Tab Application
 
-|Resources|Purpose of this resource| Additional configuration to this resource |
+|Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
 | Azure Storage | Host your tab app | Enables static web app feature to host your tab app |
-| App Service Plan for Simple Auth | Host the web app of Simple Auth | N/A |
+| App Service Plan for Simple Auth | Host the web app of Simple Auth | |
 | Web App for Simple Auth | Host simple auth server that helps you gain access to other services in your single page application | Added user assigned identity to make it easy to access other Azure resources |
-| User Assigned Identity | Authenticate Azure service to service requests | N/A |
+| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
 
 ### Resources created for Teams Bot or Messaging Extension Application
 
-|Resources|Purpose of this resource| Additional configuration to this resource |
+|Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
-| Azure Active Directory application for bot | Secure the communication between your bot app and Bot Framework | N/A |
 | Azure Bot Service | Registers your app as a bot with the Bot Framework | Connects the bot to Teams |
-| App Service Plan for Bot | Host the web app of Bot | N/A |
+| App Service Plan for Bot | Host the web app of Bot | |
 | Web App for Bot | Host your bot app | Adds user assigned identity to make it easy to access other Azure resources. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
-| User Assigned Identity | Authenticate Azure service to service requests | N/A |
+| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure Functions in the project
 
-|Resources|Purpose of this resource| Additional configuration to this resource |
+|Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
-| App Service Plan for Function App | Host the Function App | N/A |
+| App Service Plan for Function App | Host the Function App | |
 | Function App | Host your Azure Functions APIs | Adds user assigned identity to make it easy to access other Azure resources. <br /> Adds CORS rule to allow requests from your tab app. <br /> Adds authentication setting that only allows requests from your Teams app. <br /> Adds app settings required by [TeamsFx SDK](https://www.npmjs.com/package/@microsoft/teamsfx) |
-| Azure Storage for Function App | Required when creating Function App | N/A |
-| User Assigned Identity | Authenticate Azure service to service requests | N/A |
+| Azure Storage for Function App | Required when creating Function App | |
+| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure SQL in the project
 
-|Resources|Purpose of this resource| Additional configuration to this resource |
+|Resources|Purpose of this resource| Notes |
 |----------|--------------------------------|-----|
 | Azure SQL Server | Host the Azure SQL Database instance | Allows all Azure services to access the server |
 | Azure SQL Database | Store data for your app | Grants user assigned identity read/write permission to the database |
-| User Assigned Identity | Authenticate Azure service to service requests | N/A |
+| User Assigned Identity | Authenticate Azure service to service requests | This is shared across different capabilities and resources |
 
 ### Resources created when including Azure API Management in the project
 
-|Resources|Purpose of this resource| Additional configuration to this resource |
-|----------|--------------------------------|-----|
-| Azure Active Directory application for API Management service | Allows Microsoft Power Platform access APIs managed by API Management service | N/A |
-| API Management Service | Manage your APIs hosted in Function App | N/A |
-| API Management Product | Group your APIs, define terms of use and runtime policies | N/A |
-| API Management OAuth Server | Let Microsoft Power Platform able to access your APIs hosted in Function App | N/A |
-| User Assigned Identity | Authenticate Azure service to service requests | N/A |
+|Resources|Purpose of this resource|
+|----------|--------------------------------|
+| Azure Active Directory application for API Management service | Allows Microsoft Power Platform access APIs managed by API Management service |
+| API Management Service | Manage your APIs hosted in Function App |
+| API Management Product | Group your APIs, define terms of use and runtime policies |
+| API Management OAuth Server | Let Microsoft Power Platform able to access your APIs hosted in Function App |
+| User Assigned Identity | Authenticate Azure service to service requests |
 
 ## Customize resource provision behavior
 
 Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources being created by modifying the ARM template. Visit [bicep document](https://docs.microsoft.com/azure/azure-resource-manager/bicep/) to learn more about how to use bicep to author ARM template. Provision with ARM usually involves changing two sets of files, parameters and templates:
 
-* `azure.parameters.{your_env_name}.json` under `.fx/configs` folder: This is for passing parameters to templates.
+* ARM parameter files (`azure.parameters.{your_env_name}.json`) are located at `.fx/configs` folder, for passing parameters to templates.
 * ARM template files located at `templates/azure`, this folder contains following files:
 
 | File | What does it do | Allow customization |
@@ -122,39 +121,52 @@ Here's a list of predefined parameters available:
 | resourceBaseName | auto generated for each environment | Default name for all resources | 2-20 lowercase letters and numbers |
 | simpleAuthServerFarmsName | ${resourceBaseName}simpleAuth | Name of Simple Auth App Service Plan | 1-40 alphanumerics and hyphens |
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Name of Simple Auth Web App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
-| simpleAuthSku | F1 | SKU of Simple Auth App Service Plan | Please refer Web App's available SKU in your region in [pricing](https://azure.microsoft.com/pricing/details/app-service/windows/#pricing) page |
+| simpleAuthSku | F1 | SKU of Simple Auth App Service Plan |  |
 | frontendHostingStorageName | ${resourceBaseName}tab | Name of Frontend Hosting Storage Account | 3-24 lowercase letters and numbers |
+| frontendHostingStorageSku | Standard_LRS | SKU of Frontend Hosting Storage Account | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku) for available SKUs |
 | functionServerfarmsName | ${resourceBaseName}api | Name of Function App's App Service Plan | 1-40 alphanumerics and hyphens |
+| functionServerfarmsSku | Y1 | SKU of FUnction App's App Service Plan |
 | functionAppName | ${resourceBaseName}api | Name of Function App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
 | functionStorageName | ${resourceBaseName}api | Name of Function App's Storage Account | 3-24 lowercase letters and numbers |
+| functionStorageSku | Standard_LRS | SKU of Function App's Storage Account | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku)  for available SKUs |
 | botServiceName | ${resourceBaseName} | Name of Azure Bot service | 2-64 alphanumerics, underscores, periods, and hyphens <br /> Start with alphanumeric |
+| botServiceSku | F0 | SKU of Azure Bot service | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep#sku) for available SKUs |
 | botDisplayName | ${resourceBaseName} | Display name of your bot | 1-42 characters |
 | botServerfarmsName | ${resourceBaseName}bot | Name of Bot's App Service Plan | 1-40 alphanumerics and hyphens |
 | botWebAppName | ${resourceBaseName}bot | Name of Bot's Web App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
-| botWebAppSKU | F1 | SKU of Bot App Service Plan | Please refer Web App's available SKU in your region in [pricing](https://azure.microsoft.com/pricing/details/app-service/windows/#pricing) page |
+| botWebAppSKU | F1 | SKU of Bot App Service Plan |  |
 | userAssignedIdentityName | ${resourceBaseName} | Name of user assigned identity | 3-128 alphanumerics, hyphens, and underscores <br /> Start with letter or number |
-| azureSqlServerName | ${resourceBaseName} | Name of Azure SQL Server | 1-63 lowercase letters, numbers, and hyphens <br /> Cannot start or end with hyphen |
-| azureSqlDatabaseName | ${resourceBaseName} | Name of Azure SQL Database | 1-128 characters, can't use <>*%&:\/? or control characters <br /> Can't end with period or space |
+| sqlServerName | ${resourceBaseName} | Name of Azure SQL Server | 1-63 lowercase letters, numbers, and hyphens <br /> Cannot start or end with hyphen |
+| sqlDatabaseName | ${resourceBaseName} | Name of Azure SQL Database | 1-128 characters, can't use <>*%&:\/? or control characters <br /> Can't end with period or space |
+| sqlDatabaseSku | Basic | SKU of Azure SQL Database |  |
 | apimServiceName | ${resourceBaseName} | Name of APIM Service | 1-50 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
+| apimServiceSku | Consumption | SKU of APIM Service | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service?tabs=bicep#apimanagementserviceskuproperties) for available SKUs |
 | apimProductName | ${resourceBaseName} | Name of APIM Product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth Server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 
-In the meanwhile, following parameters are available with values populated during provision. If you want to change value of these parameters, you can delete the placeholder and fill your expected value to it directly. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
+In the meanwhile, following parameters are available with values populated during provision. The purpose of these placeholders is to ensure we can create new resources for you when you created a new environment. The actual values are resolved from `.fx/states/state.{env}.json`.
 
-| Parameter name | Default value place holder | Meaning of the place holder |
-| --- | --- | --- |
-| m365ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's AAD app client id created during provision |
-| m365ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's AAD app client secret created during provision |
-| m365TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant id of your app's AAD app |
-| m365OauthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's AAD app |
-| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server admin account you provided during provision |
-| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server admin password you provided during provision |
-| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's AAD app client id created during provision |
-| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's AAD app client secret created during provision |
-| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's AAD app client id created during provision |
-| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's AAD app client secret created during provision |
-| apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account |
-| apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account |
+##### AAD application related parameters
+
+| Parameter name | Default value place holder | Meaning of the place holder | How to customize |
+| --- | --- | --- | --- |
+| m365ClientId | {{state.fx-resource-aad-app-for-teams.clientId}} | Your app's AAD app client id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| m365ClientSecret | {{state.fx-resource-aad-app-for-teams.clientSecret}} | Your app's AAD app client secret created during provision | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| m365TenantId | {{state.fx-resource-aad-app-for-teams.tenantId}} | Tenant id of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| m365OauthAuthorityHost | {{state.fx-resource-aad-app-for-teams.oauthHost}} | OAuth authority host of your app's AAD app | Refer [this section](#use-an-existing-aad-app-for-your-teams-app) to customize the value |
+| botAadAppClientId | {{state.fx-resource-bot.botId}} | Bot's AAD app client id created during provision | Refer [this section](#use-an-existing-aad-app-for-your-bot) to customize the value |
+| botAadAppClientSecret | {{state.fx-resource-bot.botPassword}} | Bot's AAD app client secret created during provision | Refer [this section](#use-an-existing-aad-app-for-your-bot) to customize the value |
+| apimClientId | {{state.fx-resource-apim.apimClientAADClientId}} | APIM's AAD app client id created during provision | Delete the placeholder and fill the actual value |
+| apimClientSecret | {{state.fx-resource-apim.apimClientAADClientSecret}} | APIM's AAD app client secret created during provision | Delete the placeholder and fill the actual value |
+
+##### Azure resource related parameters
+
+| Parameter name | Default value place holder | Meaning of the place holder | How to customize |
+| --- | --- | --- | --- |
+| azureSqlAdmin | {{state.fx-resource-azure-sql.admin}} | Azure SQL Server admin account you provided during provision | Delete the placeholder and fill the actual value |
+| azureSqlAdminPassword | {{state.fx-resource-azure-sql.adminPassword}} | Azure SQL Server admin password you provided during provision | Delete the placeholder and fill the actual value |
+| apimPublisherEmail | {{state.fx-resource-apim.publisherEmail}} | APIM's publisher email, default value is your Azure account | Delete the placeholder and fill the actual value |
+| apimPublisherName | {{state.fx-resource-apim.publisherName}} | APIM's publisher name, default value is your Azure account | Delete the placeholder and fill the actual value |
 
 #### Referencing environment variables in parameter files
 
@@ -201,7 +213,7 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 After added above snippet, add your secret to related environment variable so the tooling can resolve the actual secret during provision.
 
 > [!NOTE]
-> You should not share one AAD app in multiple environments. If you do not have permission to update the AAD app, you will get a warning with instructions about how to manually update the AAD app. Please follow the instructions to update your AAD app after provision.
+>  You should not share one AAD app in multiple environments. If you do not have permission to update the AAD app, you will get a warning with instructions about how to manually update the AAD app. Please follow the instructions to update your AAD app after provision.
 
 #### Use an existing AAD app for your bot
 
@@ -291,8 +303,7 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
 
 ### How to trouble-shot
 
-You can click the `Get Help` button on the error notification in Visual Studio Code to navigate to related help doc for the error you meet. If you're using TeamsFx CLI, there will be a hyper link at the end of error message that points to the help doc.
-All the help document can be found [here](https://github.com/OfficeDev/TeamsFx/tree/dev/docs)
+If you met errors with Teams Toolkit in Visual Studio Code, you can click the `Get Help` button on the error notification to navigate to related help doc. If you're using TeamsFx CLI, there will be a hyper link at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
 ### How can I switch to another Azure subscription when provision
 
@@ -303,6 +314,13 @@ All the help document can be found [here](https://github.com/OfficeDev/TeamsFx/t
 ### How can I change resource group when provision
 
 Before provision, the tool will ask you if you want to create a new resource group or use an existing one. You can provide a new resource group name or choose an existing one in this step.
+
+### How can I provision SharePoint-based app?
+
+You can follow [Provision SharePoint-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4) to provision SharePoint-based app.
+
+> [!NOTE]
+> Please note that currently building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.
 
 ## See Also
 

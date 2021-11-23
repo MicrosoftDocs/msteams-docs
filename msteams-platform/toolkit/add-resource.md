@@ -1,6 +1,6 @@
 ---
 title: Add Resources to Your Teams apps
-author: junjieli
+author: MuyangAmigo
 description:  Describes Add Resources of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
@@ -14,8 +14,8 @@ TeamsFx can help to provision cloud resources for your application hosting. You 
 
 ## Prerequisite
 
-- [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-- You should already have a Teams app project.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* You should already have a Teams app project.
 
 ## Add cloud resources using Teams Toolkit
 

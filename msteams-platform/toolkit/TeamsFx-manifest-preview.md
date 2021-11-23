@@ -1,8 +1,8 @@
 ---
 title: Preview Teams App Manifest in Teams Toolkit
-author: ningliu
+author: zyxiaoyuer
 description:  Preview Teams App Manifest
-ms.author: zhany
+ms.author: nliu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -10,16 +10,21 @@ ms.date: 11/29/2021
 
 # Preview Teams App Manifest in Teams Toolkit
 
-After scaffolding, two manifest template files are created under `templates/appPackage` folder.
+After scaffolding, there will be two manifest template files under `templates/appPackage` folder.
 
-- `manifest.local.template.json` - for local debug Teams App
-- `manifest.remote.template.json` - shared by all remote environments
+- `manifest.local.template.json` - local debug teams app
+- `manifest.remote.template.json` - shared between all remote environments
 
-These template files contain placeholders, and the actual values from Teams Toolkit will be resolved in files under `.fx/configs` and `.fx/states`.
+These template files containing some placeholders, and the actual values from Teams Toolkit will be resolved in files under `.fx/configs` and `.fx/states`.
 
-## Preview manifest with real content
+## Prerequisite
 
-Teams Toolkit generates preview manifest files under `build/appPackage` folder.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* You should already have a Teams app project opened in VS code.
+
+## Preview Manifest
+
+To preview manifest with real content, Teams Toolkit will generate preview manifest files under `build/appPackage` folder.
 
 ```text
 └───build
@@ -30,42 +35,59 @@ Teams Toolkit generates preview manifest files under `build/appPackage` folder.
         └───manifest.local.json  - Previewed manifest of local teams app
 ```
 
-## Local debug Teams App
+### Local Debug teams app
 
-To preview manifest file of local Teams App, you need to press `F5` to run local debug first. This step generates default local settings, then the app package and preview manifest are generated in `build/appPackage` folder.
+To preview manifest file of local teams app, you need to press `F5` to run local debug first. This step will generate default local settings for you, then the app package and preview manifest will be built under `build/appPackage` folder.
 
-The alternative ways are:
+The other ways are:
 
 - Click `Preview` in the codelens of `manifest.local.template.json` file
 - Click `Preview manifest file` at the menu bar of `manifest.local.template.json` file
-- Click `Zip Teams metadata package` in tree view and select `local`
+- Click `Zip Teams metadata package` in Treeview and select `local`
 
-![preview-local](./images/preview.png)
+![preview local](./images/preview.png)
 
-## Remote environment
+### Remote environment
 
-To preview manifest file of remote Teams App, you need to click `Provision in the cloud` in DEVELOPMENT section of Teams Toolkit  tree view, or trigger `Teams: Provision in the cloud` from command palette. This step generates configurations for remote Teams App, then the app package and preview manifest are generated in `build/appPackage` folder.
+To preview manifest file of remote teams app, you need to click `Provision in the cloud` in DEVELOPMENT panel of Teams Toolkit extension Treeview, or trigger `Teams: Provision in the cloud` from command palette first. This step will generate configurations for remote teams app, then the app package and preview manifest will be built under `build/appPackage` folder.
 
-The alternatives ways are:
+The other ways are:
 
 - Click `Preview` in the codelens of `manifest.remote.template.json` file
 - Click `Preview manifest file` at the menu bar of `manifest.remote.template.json` file
-- Click `Zip Teams metadata package` in tree view and select your environment
+- Click `Zip Teams metadata package` in Treeview and select your environment
 
 ![preview remote](./images/preview-remote.png)
 
 > If there are more than one environment, you need to select the env you want to preview.
 
-![select env](./images/select-env.png)
+![select env](../images/select env.png)
 
 ## Sync local changes to Dev Portal
 
-TODO: to complete when feature is ready.
+After previewing the manifest file, you can sync your local changes to Dev Portal by the following ways:
 
-You can sync your local changes to Dev Portal by clicking `Update` at the top of `manifest.{env}.json`
+- Click `Update to Teams platform` at the top left corner of `manifest.{env}.json`
+- Click `Teams: Update manifest to Teams platform` at the menu bar of `manifest.{env}.json`
+- Trigger `Teams: update manifest to Teams platform` from command palette
 
-// Screenshot here
+![update](./images/updatetoteamsplatform.png)
+![update-cmd](./images/update_manifest_cmp.png)
 
-If there are manual updates in Dev Portal, a warning message is sent to let you confirm if you want to overwrite the changes in Dev Portal.
+> [!NOTE]
+> Trigger from editor codelens or title button will update current manifest file to Teams platform. Trigger from command palette will require selecting target environment.
 
-// Screenshot here
+If the manifest file is outdated due to configuration file change or template change, user will be asked to confirm their action:
+![manifest-outdated](./images/manifest_outdated_dialog.png)
+
+- `Preview only`: local manifest file will be overwritten according to current configuration
+- `Preview and update`: local manifest file will be overwritten according to current configuration and also updated to Teams platform at the same time
+- `Cancel`: do nothing
+
+> [!NOTE]
+> The changes will be updated to dev portal. If you have some manual updates in dev portal, it will be overwritten.
+
+## See Also
+
+> [!div class="nextstepaction"]
+> [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md)

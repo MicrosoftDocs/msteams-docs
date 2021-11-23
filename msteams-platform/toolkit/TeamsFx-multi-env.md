@@ -1,8 +1,8 @@
 ---
 title: Manage Multiple Environments in Teams Toolkit
-author: yanjiang
+author: kimizhu
 description:  Manage Multiple Environments
-ms.author: zhany
+ms.author: yanjiang
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -20,7 +20,8 @@ ms.date: 11/29/2021
 
 ## Prerequisites
 
-Install [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0 or higher.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* You should already have a Teams app project opened in VS code.
 
 ## Create a new environment
 
@@ -43,7 +44,7 @@ To add another remote environment, select the Teams icon in the sidebar, click t
 
 With environment concept introduced in Teams Toolkit, for all environment related operations, you can select the target environment to perform the operations against. The toolkit will prompt and ask for a target environment when needed.
 
-![select environment](./images/select-env.png)
+![select env](./images/select-env.png)
 
 ## Take a tour of project folder structure for multiple environment
 
@@ -248,4 +249,4 @@ For more details about BICEP template and parameter files, please refer to [Prov
 > [Add more cloud resources](add-resource.md)
 
 > [!div class="nextstepaction"]
-> [Collaboration use Teams Toolkit](TeamsFx-collaboration.md)
+> [Collaborate with other developers on Teams project](TeamsFx-collaboration.md)

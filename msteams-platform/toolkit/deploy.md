@@ -1,6 +1,6 @@
 ---
 title: Deploy to the cloud
-author: junjieli
+author: MuyangAmigo
 description:  Deploy to the cloud
 ms.author: zhany
 ms.localizationpriority: medium
@@ -8,38 +8,38 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Deploy Your Teams App to the Cloud Using Teams Toolkit
+# Deploy to the cloud
 
 Teams Toolkit helps you to deploy or upload the backend and frontend code in your application to your provisioned cloud resources in Azure.
 
-* The frontend applications are deployed to an Azure storage account and configured for static web hosting or a SharePoint site.
-* If you configured Azure Functions as backend, the Azure function can be deployed to different kinds of Azure services, including Azure App service and Azure storage.
+* The Tab (frontend applications) are deployed to an Azure storage and configured for static web hosting or a SharePoint site.
+* The backend APIs are deployed to Azure Functions.
+* The Bot/Messaging Extension is deployed to Azure App Service.
 
 ## Prerequisite
 
 * [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-
 * Before deploy project code to cloud, you must perform the [Provision cloud resources](provision.md) steps first.
+* You should already have a Teams app project opened in VS code.
 
 ## Deploy Teams apps using Teams Toolkit
 
-In Get Start tutorials, there are step-by-step guides of how to do deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
+In Get Started tutorials, there are step-by-step guides of how to do deploy using Teams Toolkit, following the guidance below to deploy your Teams app.
 
 * [Deploy your app to Azure](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 * [Deploy your app to SharePoint](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
-## Deployment by project type
+## Source Code Location, Build Artifacts and Target Resources for deployment
 
-| Project Type| Resources| Code Location|
-|-------------|----------|---------------|
-|Tabs with React </br> The frontend workload|Azure Storage account|`yourProjectFolder/tabs`|
-|Tabs with SharePoint </br> The frontend workload |SharePoint app catalog|`yourProjectFolder/SPFx`|
-|Bots and messaging extensions </br> The backend workload | Azure web app|`yourProjectFolder/bot` |
+| Teams App Workloads| Source Code | Build Artifacts| Target Resources |
+|-------------|----------|---------------|---------------|
+|Tabs with React </br> The frontend workload| `yourProjectFolder/tabs`| `tabs/build` |Azure Storage |
+|Tabs with SharePoint </br> The frontend workload | `yourProjectFolder/SPFx`| `SPFx/sharepoint/solution` |SharePoint app catalog |
+|APIs on Azure Functions </br> The backend workload | `yourProjectFolder/api`| N/A |Azure Functions |
+|Bots and messaging extensions </br> The backend workload | `yourProjectFolder/bot` | N/A | Azure App Service |
 
-You can optionally include Azure resources that fit your application needs. The corresponding project code is deployed to the resources as follows:
-
-* Azure functions
-* Azure API management
+> [!NOTE]
+> When you include Azure API management resource in your project and trigger deploy, your APIs in Azure Functions will be published to Azure API Management Service.
 
 ## See also
 

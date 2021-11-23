@@ -1,8 +1,8 @@
 ---
 title: Collaborate on TeamsFx Project using Teams Toolkit
-author: yanliang
+author: yanjiang
 description:  Collaborate on TeamsFx Project using Teams Toolkit
-ms.author: zhany
+ms.author: rentu
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -24,6 +24,7 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 * Azure with valid subscription
 
 2. [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+1. You should already have a Teams app project opened in VS code.
 
 ## How to collaborate with other developers
 

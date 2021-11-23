@@ -1,6 +1,6 @@
 ---
 title: Add Capabilities to Your Teams apps
-author: junjieli
+author: MuyangAmigo
 description:  Describes Add Capabilities of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
@@ -20,8 +20,8 @@ You can start to create a Teams app with one of the Teams app capabilities. Duri
 
 ## Prerequisite
 
-- [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
-- You should already have a Teams app project.
+* [Install Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version v3.0.0+.
+* You should already have a Teams app project opened in VS code.
 
 ## Add capabilities using Teams Toolkit
 

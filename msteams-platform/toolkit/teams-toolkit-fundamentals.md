@@ -1,6 +1,6 @@
 ---
 title: Teams Toolkit Fundamentals
-author: zhany
+author: zyxiaoyuer
 description:  Describes fundamentals of Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium
@@ -54,6 +54,19 @@ Teams Toolkit provides features of Teams app development to make it easy to debu
 
 ## Take a Tour of Teams Toolkit for Visual Studio Code
 
+If you did not open any Teams project in VS Code, or you open a Teams
+project which is not created using Teams Toolkit v2.+, you will see the Teams Toolkit UI with limited functionalities like this picture below.
+
+:::image type="content" source="./images/teams-toolkit-beforestart.png" alt-text="Take a tour to Teams Toolkit":::
+
+You can click `Quick Start` to explore the Teams Toolkit, or click `Create a new Teams App` to create one Teams project, then you can user more features of Teams Toolkit.
+
+If you have a Teams Project created by Teams Toolkit v2.+ opened in VS Code, you will see Teams Toolkit UI with more functionalities like this picture below.
+
+:::image type="content" source="./images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
+
+Let's take a tour of what functionalities available in Teams Toolkit.
+
 * [ACCOUNTS](#accounts)
 
 * [ENVIRONMENT](#environment)
@@ -63,8 +76,6 @@ Teams Toolkit provides features of Teams app development to make it easy to debu
 * [DEPLOYMENT](#deployment)
 
 * [HELP AND FEEDBACK](#help-and-feedback)
-
-:::image type="content" source="./images/teams-toolkit-overview.png" alt-text="Take a tour to Teams Toolkit":::
 
 ### ACCOUNTS
 

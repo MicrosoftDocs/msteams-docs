@@ -1,8 +1,8 @@
 ---
 title: CI/CD Support for Teams Application Developers
-author: ruhe
+author: MuyangAmigo
 description:  CICD templates
-ms.author: zhany
+ms.author: ruhe
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021

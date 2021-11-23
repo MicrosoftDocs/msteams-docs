@@ -1,6 +1,6 @@
 ---
 title: Create new Teams project Use Teams Toolkit
-author: zhany
+author: zyxiaoyuer
 description:  Create new Teams project Use Teams Toolkit
 ms.author: zhany
 ms.localizationpriority: medium

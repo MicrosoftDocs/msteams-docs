@@ -1,6 +1,6 @@
 ---
 title: Prepare Accounts to Build Teams Apps
-author: zhany
+author: zyxiaoyuer
 description:  Prepare Accounts to Build Teams Apps
 ms.author: zhany
 ms.localizationpriority: medium
