@@ -26,6 +26,7 @@ If you're going to meet those needs, you first need to understand them.
     Ask relevant questions:
     
     | # | Examples |
+    | --- | --- |
     | 1 | What are the pros and cons of the current state system used by your users? |
     | 2 | What are the issues faced by your users that you want to address? |
     | 3 | What features or capabilities your users like and love in their current way of doing the process? |
