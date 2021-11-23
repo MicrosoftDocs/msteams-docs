@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The SharePoint Framework (SPFx) is a page and web part model. It provides full support for client-side SharePoint development. You can easily integrate your app with SharePoint data and extend Microsoft Teams.
+    The SharePoint Framework (SPFx) is a page and web part model. It provides full support for client-side SharePoint development. You can integrate your app with SharePoint data and extend Microsoft Teams.
 
     Start Microsoft Teams app development with SPFx by building your first app with a tab capability.
 
@@ -138,7 +138,7 @@ items:
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
     > [!IMPORTANT]
-    > Before you start creating the project workspace, please ensure that you're not signed into any Microsoft 365 or Azure account.
+    > Before you start creating the project workspace, ensure that you're not signed into any Microsoft 365 or Azure account.
 
     ## Create your project
 
@@ -323,7 +323,7 @@ items:
     <details>
     <summary>Learn what happens when you use Local Workbench for debugging your app.</summary>
     
-    **Local workbench** is the default option to run and debug an app in Visual Studio Code. For this tutorial, it is recommended that you choose to debug your app with the Teams workbench, however, you can choose the Local workbench to explore web part layouts.
+    **Local workbench** is the default option to run and debug an app in Visual Studio Code. For this tutorial, it's recommended that you choose to debug your app with the Teams workbench, however, you can choose the Local workbench to explore web part layouts.
 
     > [!NOTE]
     > This interface is intended only for exploring how a web part may appear in a mobile or a tablet. You would need to write the code for including them in your app, and then deploy it to view them. 
