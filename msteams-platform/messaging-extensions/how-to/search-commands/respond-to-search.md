@@ -306,7 +306,7 @@ class TeamsMessagingExtensionsSearchBot extends TeamsActivityHandler {
 
 * * *
 
-### Enabling tap action
+### Enable and handle tap actions
 
 # [C#/.NET](#tab/dotnet)
 
