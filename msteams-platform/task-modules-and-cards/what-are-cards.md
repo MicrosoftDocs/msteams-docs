@@ -87,4 +87,4 @@ Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and Use
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
-* [Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)
+* [*Overflow Menu on Adaptive Cards*](~/task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)
