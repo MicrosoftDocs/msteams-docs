@@ -17,6 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
+|11/22/2021|Overflow menu on Adaptive Cards|Build cards and task modules > Build cards >[Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)|
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 | 11/13/2021| Bots can be enabled to receive all channel messages using resource-specific consent (RSC). | • Build bots > Bot conversations > Messages in bot conversations > [Receive all channel messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [Bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [Channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) |
 |
@@ -194,6 +195,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
+|11/22/2021| Overflow menu is a new feature added to Adaptive Cards|Build cards and task modules > Build cards >[Formatting cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards) |
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |
 |10/28/2021|Bots can be enabled to receive all channel messages using resource-specific consent (RSC).| • Build bots > Bot conversations > Messages in bot conversations > [Receive all messages with RSC](~/bots/how-to/conversations/channel-messages-with-rsc.md) </br> • Build bots > Bot conversations > [bot conversation overview](~/bots/how-to/conversations/conversation-basics.md) </br> • Build bots > Bot conversations > [channel and group conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) </br> • App manifest > Public developer preview > [developer preview manifest schema](~/resources/schema/manifest-schema-dev-preview.md) |
 |10/19/2021|Device permissions for the browser.| App fundamentals > Device capabilities > [Device permissions for the browser](concepts/device-capabilities/browser-device-permissions.md) |

@@ -439,6 +439,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`context` |array of enums|6||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[channelTab, privateChatTab, meetingChatTab, meetingDetailsTab]**.|
 |`sharePointPreviewImage`|string|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|array of enums|1||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart` |
+|`mode`||||You can define `mode` to add `primary` and `secondary` properties to display the buttons in the overflow menu on Adaptive Cards.|
 
 ## staticTabs
 

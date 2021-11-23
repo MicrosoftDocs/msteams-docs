@@ -20,6 +20,7 @@ The bots for Teams support the following types of cards:
 - Signin card
 - Thumbnail card
 - Card collections
+- Overflow menu on Adaptive Cards
 
 You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and messaging extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
@@ -68,6 +69,11 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
+## Overflow menu on Adaptive Cards
+
+Overflow menu is a new feature added to Adaptive Cards, you are allowed to select up to six primary buttons that appears on Adaptive Cards, if there are more than six, which is a secondary that are placed inside the overflow menu.
+
+
 ## Support for AAD Object ID and UPN in user mention 
 
 Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
@@ -82,3 +88,4 @@ Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and Use
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
 * [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Overflow menu on Adaptive Cards](~/task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)
