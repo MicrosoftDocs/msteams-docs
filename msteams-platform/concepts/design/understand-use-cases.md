@@ -17,7 +17,7 @@ If you're going to meet those needs, you first need to understand them.
 
 :::row:::
     :::column span="":::
-    ## Understand the problem
+    ### Understand the problem
 
     Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve.
     
@@ -35,7 +35,7 @@ If you're going to meet those needs, you first need to understand them.
 :::row-end:::
 :::row:::
     :::column span="":::
-    ## Understand your user
+    ### Understand your user
 
     Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams.
     :::column-end:::
@@ -55,7 +55,7 @@ If you're going to meet those needs, you first need to understand them.
 :::row-end:::
 :::row:::
     :::column span="":::
-    ## Understand the limitations of the app
+    ### Understand the limitations of the app
 
     Knowing the limitations of the apps for data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture.
     :::column-end:::
@@ -70,7 +70,7 @@ If you're going to meet those needs, you first need to understand them.
 :::row-end:::
 :::row:::
     :::column span="":::
-    ## Provide authentication
+    ### Provide authentication
 
     You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet.
     :::column-end:::
