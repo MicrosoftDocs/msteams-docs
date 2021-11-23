@@ -137,6 +137,9 @@ items:
     1. [How to set up a new project with Teams Toolkit](#create-your-project)
     1. [About the directory structure of your app](#take-a-tour-of-the-source-code)
 
+    > [!IMPORTANT]
+    > Before you start creating the project workspace, please ensure that you're not signed into any Microsoft 365 or Azure account.
+
     ## Create your project
 
     If the prerequisites are in place, let's begin!
