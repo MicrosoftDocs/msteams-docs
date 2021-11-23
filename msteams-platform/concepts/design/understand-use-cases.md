@@ -9,17 +9,25 @@ ms.author: anclear
 
 # Understand your use cases
 
-The Microsoft Teams platform offers a large variety of [entry points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
+Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
+
+//The Microsoft Teams platform offers a large variety of [entry points and UI elements](../../concepts/extensibility-points.md) your app can take advantage of.
 > [!NOTE]
 > Before you start building your use cases, you must have a good understanding of Teams capabilities and what is possible on the Teams platform using them. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
 
 :::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
-Each method of interacting with your users has its strengths and weaknesses. Building an awesome Teams app is all about finding the right combination to meet your user's needs. If you're going to meet those needs, you first need to understand them.
+Each method of interacting with your users has its strengths and weaknesses.//
 
 ## Understand the problem
 
-Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. At its heart, Teams is a collaboration platform, so apps that bridge gaps in achieving effective collaboration are a great fit. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps. In this social platform, there is a wide variety of needs that can be solved with a Teams app. You can solve wide variety of problems, provided you understand which one you're trying to solve. Before you start building an app, ask relevant questions, such as:
+Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is.
+
+At its heart, Teams is a collaboration platform. It is also a social platform, is natively cross-platform, sits at the heart of Office 365, and offers a personal canvas for you to create apps.
+
+In this collaborative social platform, there is a wide variety of needs that can be solved with a Teams app. For instance, apps that bridge gaps in achieving effective collaboration are a great fit.
+
+You can solve wide variety of problems, provided you understand which one you're trying to solve. Before you start building an app, ask relevant questions, such as:
 
 * What are the pros and cons of the current state system used by your users?
 * What are the issues faced by your users that you want to address?
