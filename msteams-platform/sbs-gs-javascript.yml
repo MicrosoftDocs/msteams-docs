@@ -431,7 +431,7 @@ items:
     1. Be default, the Teams app is created under {home directory}/WebApps (Windows home directory is \user\username). If you want to change the default project location. Select **Change Location** to change the default project path.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/change-location.png" alt-text="Change project location." border="false":::
-        
+
         Your Teams app with a Bot capability is created in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/app-created-bot.png" alt-text="Screenshot showing the app created." border="false":::
@@ -644,10 +644,12 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-language.png" alt-text="Screenshot showing how to select the programming language." border="false":::
 
-    1. Select a workspace folder. A folder is created in your workspace folder for the project.
-
     1. Enter a suitable name for your app. Ensure that the app's name is alphanumeric. Select **Enter** to continue.
 
+    1. Be default, the Teams app is created under {home directory}/WebApps (Windows home directory is \user\username). If you want to change the default project location. Select **Change Location** to change the default project path.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/change-location.png" alt-text="Change project location." border="false":::
+        
         Teams Toolkit creates the app in a few seconds.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created.png" alt-text="Screenshot showing the app created." border="false":::
