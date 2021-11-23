@@ -33,6 +33,7 @@ items:
     | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+    | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Visual Studio Code extension that creates a project scaffolding for your app. Use latest version. |
     | **Optional** | &nbsp; | &nbsp; |
     | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
     | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
@@ -145,7 +146,7 @@ items:
     1. Open Visual Studio code.
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
-    1. Select **Create New Project**.
+    1. Select **Create a new Teams app**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
 
@@ -153,13 +154,9 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-new-project-intro.png" alt-text="Wizard start for Create New Project":::
 
-    1. Select **Tab** and select **OK**.
+    1. Deselect **Tab**, select **Tab(SPFx), and select **OK**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project-capabilities.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
-
-    1. Select **SharePoint Framework (SPFx)** as the Frontend hosting type.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/create-project-hosting.png" alt-text="Screenshot showing how to select hosting for your new app.":::
 
     1. Select **React** in the **Framework** section.
 
@@ -225,7 +222,7 @@ items:
     Among other items in this directory, the Teams Toolkit contains:
 
     - `fx`: App's state in the `.fx` directory.  
-    - appPackage: contains the app icons, `color.png` and `outline.png`.
+    - Templates/resources/appPackage: contains the app icons, `color.png` and `outline.png`.
     - `manifest.source.json`: contains the app manifest for publishing to Developer Portal for Teams.
     - `settings.json`: the settings you chose when creating the project.
 
