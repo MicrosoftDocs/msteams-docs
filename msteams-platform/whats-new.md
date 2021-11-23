@@ -17,7 +17,7 @@ Discover Microsoft Teams platform features that are generally available (GA) and
 
 | Date | Update | Find here  |
 | --- | --- | --- |
-|11/22/2021|Overflow menu on Adaptive Cards|Build cards and task modules > Build cards >[Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)|
+|11/22/2021|Overflow menu on Adaptive Cards|Build cards and task modules> Build cards >[Formatting cards in Microsoft Teams](task-modules-and-cards/cards/cards-format.md#overflow-menu-on-adaptive-cards)|
 |11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 | 11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|
 | 11/15/2021 | Personal tabs and messaging extensions run in Outlook and Office (Preview) | [Extend Teams apps across Microsoft 365](~/m365-apps/overview.md) |

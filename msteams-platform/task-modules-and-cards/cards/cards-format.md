@@ -410,37 +410,26 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 ### Overflow menu on Adaptive Cards 
 
-Overflow menu is a new feature added to Adaptive Cards. you are allowed to select up to six primary buttons that appears on Adaptive Cards, If there are more than six buttons that can be placed inside the overflow menu which is a secondary option.
+Overflow menu is now added to Adaptive Cards. you are allowed to select up to six primary buttons that appears on Adaptive Cards, secondary buttons can be placed inside the overflow menu.
 
 **There are two types of overflow menu:**
 
-* **Actions:** In Adaptive Card, overflow menu is placed after primary set of buttons, secondary buttons are inside the overflow menu.
-
-**Following image is an example for actions**
+**Actions:** In Actions ,primary set of buttons are on display. secondary buttons are inside the overflow menu.
 
    ![action card](~/assets/images/Cards/action-image-revised.png)
 
-* **Action set:** is defined as an action inside the action set, where you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
-
-**Following image is an example for action set**
+**Action set:** In Action set, you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
 
    ![action set card](~/assets/images/Cards/action-set-image.png)
 
-**What happens when the user selects overflow menu?**
-
-**Desktop**: When you select the overflow menu on a desktop, whatever you have set as secondary appears.
-
-**Following is an example for Desktop**
+**Overflow menu on Desktop**: When a user selects the overflow menu on a desktop, the buttons set as secondary appears.
 
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
-**User sent card**
-
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
-**Mobile**: When you select the overflow menu on mobile, the Adaptive Cards display all the buttons that you have defined. There is an integrated sheet that displays an overflow menu with only card related tasks with a message option. Long press on any message, it brings up a list of related messages. This option is only available for actions.
-
-**Following is an example for Mobile.**
+**Overflow menu on Mobile**: When a user selects overflow menu on a mobile,an integrated sheet displays only card related tasks with a message option. 
+Long press on any message, it brings up a list of related messages. This option is only available for actions.
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
