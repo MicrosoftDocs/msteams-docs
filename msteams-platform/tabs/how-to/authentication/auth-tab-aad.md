@@ -159,7 +159,7 @@ Sample code showing the tab authentication process using Azure AD:
 
 ## See also
 
-* [Plan user authentication](../../../concepts/design/understand-use-cases.md#provide-authentication)
+* [Plan user authentication](../../../concepts/design/understand-use-cases.md)
 * [Design your tab for Microsoft Teams](~/tabs/design/tabs.md)
 * [Silent authentication](~/tabs/how-to/authentication/auth-silent-aad.md)
 * [Add authentication to your messaging extension](~/messaging-extensions/how-to/add-authentication.md)
