@@ -311,7 +311,7 @@ items:
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
-    1. Select **Yes** if you're prompted to load debug scripts.
+    1. Select **Load debug scripts**, if you're prompted to load debug scripts.
     
         Congratulations, your first app is running on Teams!
 
