@@ -1,10 +1,11 @@
 ---
 title: Overview - Distribute your app
-description: Describes the options for publishing your Microsoft Teams app.
+description: Describes the options for publishing your Microsoft Teams app, uploading your app, and GCC.
 ms.topic: conceptual
 author: KirtiPereira
 ms.author: surbhigupta
 ms.localizationpriority: none
+keywords: deploy publish app upload gcc 
 ---
 
 # Distribute your Microsoft Teams app
@@ -39,11 +40,11 @@ Make your app available to everyone. This kind of distribution requires Microsof
 
 For more information, see [publish to the Teams store](~/concepts/deploy-and-publish/appsource/publish.md).
 
-## See also
-
-* [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Configure app's default install options](~/concepts/deploy-and-publish/add-default-install-scope.md)
+
+## See also
+
+[Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview)

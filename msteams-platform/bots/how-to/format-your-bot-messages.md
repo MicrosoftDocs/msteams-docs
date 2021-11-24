@@ -1,7 +1,7 @@
 ---
 title: Format your bot messages
 author: surbhigupta
-description: Add rich formatting to your bot messages
+description: Add rich formatting to your bot messages, such as strikethrough, ordered and unordered list, hyperlink, image link, and more.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
@@ -58,7 +58,7 @@ Support for text formatting varies by type of message and platform.
 
 ### Text-only messages
 
-The following table provides a list of styles and which of these styles are supported on desktop, iOS, and Android:
+The following table provides a list of styles, which are supported on desktop, iOS, and Android:
 
 | Style                     | Desktop | iOS | Android |
 | ---                       | :---: | :---: | :---: |

@@ -14,6 +14,9 @@ The following image displays the locations from where messaging extensions are i
 
 ![messaging extension invoke locations](~/assets/images/messaging-extension-invoke-locations.png)
 
+> [!NOTE]
+> @mentioning message extensions is no longer supported in the compose box.
+
 ## Scenarios where messaging extensions are used
 
 | Scenario | Example |
@@ -70,15 +73,12 @@ The following images display link unfurling feature when a link is pasted in mes
 | Messaging extension with action-based commands | This sample illustrates how to build an action-based messaging extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/51.teams-messaging-extensions-action) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/51.teams-messaging-extensions-action) |
 | Messaging extension with search-based commands | This sample illustrates how to build a Search-based Messaging Extension. | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/csharp_dotnetcore/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/50.teams-messaging-extensions-search) | [View](https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/python/50.teams-messaging-extension-search) |
 
-## See also
-
-[Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
-
-
 ## Next step
 
 > [!div class="nextstepaction"]
 > [Define action messaging extension command](~/messaging-extensions/how-to/action-commands/define-action-command.md)
 
-> [!div class="nextstepaction"]
-> [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+## See also
+
+* [Define search messaging extension command](~/messaging-extensions/how-to/search-commands/define-search-command.md)
+* [Create a messaging extension](../build-your-first-app/build-messaging-extension.md)
