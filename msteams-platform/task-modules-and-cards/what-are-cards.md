@@ -68,6 +68,13 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
+### Adaptive cards form completion
+
+**Adaptive cards form completion** is a visual informational feedback message when card action completes to a configurable set of card actions.
+User can see two types of feedback messages.
+
+**Error** 
+
 ## Support for AAD Object ID and UPN in user mention 
 
 Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
