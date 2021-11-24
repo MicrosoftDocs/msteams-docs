@@ -67,7 +67,7 @@ Steps to create environment variables in GitHub:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID]https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[/azure/active-directory/fundamentals/active-directory-how-to-find-tenant](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 > Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
 ## Setup CI/CD Pipelines with Azure DevOps
@@ -80,8 +80,7 @@ You can set up automated pipelines in Azure DevOps, and make a reference on the 
 ### Set up CI Pipeline
 
 1. Add [CI Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-ci-template.sh) into your Azure DevOps repository, and do necessary customizations as you may infer from the comments in the script file.
-1. Follow the [steps to create your Azure DevOps Pipeline for CI](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser#create-your-first-pipeline-1).
-
+1. Follow the [steps to create your Azure DevOps Pipeline for CI][/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser#create-your-first-pipeline-1](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser)
 Here is an example of a common CI pipeline scripts:
 
 ```yml
@@ -112,8 +111,8 @@ The potential changes you can make for the script or workflow definition:
 ### Set up CD Pipeline
 
 1. Add [CD Scripts](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd_insider/others-script-cd-template.sh) into your Azure DevOps repository, and do necessary customizations as you may infer from the comments in the script file.
-1. Create your Azure DevOps Pipeline for CD, as you may refer to [this link](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser#create-your-first-pipeline-1). The Pipeline's definition can be referred to the following example definition for CI Pipeline.
-1. Add necessary variables by [Define variables](https://docs.microsoft.com/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch), and make them as secrets if necessary.
+1. Create your Azure DevOps Pipeline for CD, as you may refer to [this link][/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser#create-your-first-pipeline-1](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser). The Pipeline's definition can be referred to the following example definition for CI Pipeline.
+1. Add necessary variables by [Define variables][/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch](/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch), and make them as secrets if necessary.
 
 ```yml
 trigger:
@@ -159,7 +158,7 @@ The potential changes you can make for the script or workflow definition:
 1. Ensure you have a npm build script, or customize the way you build in the automation code.
 1. Ensure you have a npm test script which returns zero for success, and/or change the test commands.
 
-> Note: The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a seperated workflow. Please remember to commit after provisioning (results of provisioning will be deposited inside the `.fx` folder) and upload `.fx/states/{YOUR_ENV_NAME}.userdata` into Azure DevOps [secure files](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops) for future usage.
+> Note: The provision step is not included in the CD template as it's usually executed only once. You can either execute provision Within Teams Toolkit, TeamsFx CLI, or using a seperated workflow. Please remember to commit after provisioning (results of provisioning will be deposited inside the `.fx` folder) and upload `.fx/states/{YOUR_ENV_NAME}.userdata` into Azure DevOps [secure files][/azure/devops/pipelines/library/secure-files?view=azure-devops](/azure/devops/pipelines/library/secure-files?view=azure-devops) for future usage.
 
 ### Environment Variables for Azure DevOps
 
@@ -178,7 +177,7 @@ Steps to create Pipeline variables in Azure DevOps:
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID][/azure/active-directory/fundamentals/active-directory-how-to-find-tenant](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 > Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
 
 ## CI/CD Pipeline Templates in Jenkins
@@ -227,7 +226,7 @@ Please follow [using-credentials](https://www.jenkins.io/doc/book/using/using-cr
 |AZURE_TENANT_ID|To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME|The M365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD|The password of the M365 account.|
-|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
+|M365_TENANT_ID|To identify the tenant in which the Teams App will be created/published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on [how to find your M365 tenant ID][/azure/active-directory/fundamentals/active-directory-how-to-find-tenant](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).|
 > Note: Please refer to the [Configure M365/Azure Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the pipeline.
 
 ## Getting started guide for other platforms
@@ -247,5 +246,5 @@ Please keep in mind that you need to set Azure and M365 credentials in your envi
 ### Reference
 
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
-* [Create your first Azure DevOps Pipeline](https://docs.microsoft.com/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser)
+* [Create your first Azure DevOps Pipeline][/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)
