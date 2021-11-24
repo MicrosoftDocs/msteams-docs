@@ -86,7 +86,7 @@ Complete the following steps to develop an SSO Teams tab:
 
 1. Select **New Registration**. The **Register an application** page appears.
 
-![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
+    ![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
 
 1. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
@@ -94,25 +94,25 @@ Complete the following steps to develop an SSO Teams tab:
         * Leave**Redirect URI** empty.
     1. Select **Register**.
 
-![Register an application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step2.png)
+    ![Register an application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step2.png)
 
 1. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
 
-![Application Id](~/assets/images/authentication/SSOtabsauth/SSO-auth-step3.png)
+    ![Application Id](~/assets/images/authentication/SSOtabsauth/SSO-auth-step3.png)
 
 1. Go to **Manage** and select **Expose an API**.
  
-![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png) 
+    ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png) 
 
 
-> [!NOTE]
-> If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+ > [!NOTE]
+ > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Save and Continue**.
 1. Select **Add a scope**. In the panel that opens, enter **access_as_user** as the **Scope name**.
 
-![Add a Scope](~/assets/images/authentication/SSOtabsauth/SSO-auth-step5.png)
+    ![Add a Scope](~/assets/images/authentication/SSOtabsauth/SSO-auth-step5.png)
 
 1. In the **Who can consent?** box, enter **Admins and users**.
 1. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user` scope:
@@ -122,32 +122,39 @@ Complete the following steps to develop an SSO Teams tab:
     * **User consent description:** Teams can call this app’s APIs with the same rights as you have.
 1. Ensure that **State** is set to **Enabled**.
 
-![State](~/assets/images/authentication/SSOtabsauth/SSO-auth-step6.png)
+    ![State](~/assets/images/authentication/SSOtabsauth/SSO-auth-step6.png)
 
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-![Add a client application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step7.png)
+    ![Add a client application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step7.png)
 
 1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
     * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-![Add application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step8.png)
+    ![Add application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step8.png)
 
-1. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Graph API:
+1. Go to **API Permissions**.
+
+1. Select **Add a permission**.
+
+    ![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
+
+1. Select **Microsoft Graph**.
+
+    ![Microsoft Graph](~/assets/images/authentication/SSOtabsauth/SSO-auth-step10.png)
+1. Select **Delegated permissions**
+
+    ![Delegated Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step11.png)
+
+1. Now, add the following permissions from Graph API:
     * User enabled by default
     * email
     * offline_access
     * OpenId
     * profile
 
-![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
-
-![Microsoft Graph](~/assets/images/authentication/SSOtabsauth/SSO-auth-step10.png)
-
-![Delegated Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step11.png)
-
-![Openid permission](~/assets/images/authentication/SSOtabsauth/SSO-auth-step12.png)
+    ![Openid permission](~/assets/images/authentication/SSOtabsauth/SSO-auth-step12.png)
 
 1. Go to **Authentication**.
     Users must provide consent for the first time when they use an app.
@@ -155,19 +162,19 @@ Complete the following steps to develop an SSO Teams tab:
     > [!IMPORTANT]
     > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
 
-    To enter a redirect URI:
+1. To enter a redirect URI:
     * Select **Add a platform**.
     * Select **web**.
 
-![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
+    ![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
 
-![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+    ![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
 
 Complete the app registration prerequisites to continue with your tab SSO app.
     * Enter the **redirect URI** for your app. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
     * Select configure
 
-![COnfigure]](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
+    ![Configure]](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
 
 
 > [!NOTE]
