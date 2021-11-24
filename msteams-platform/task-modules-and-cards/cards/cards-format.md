@@ -424,15 +424,6 @@ Following are the two types of overflow menu:
 
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that set as secondary appears in Adaptive Card.
 
-# [Mobile](#tab/mobile)
-
-  ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
-
-# [Desktop](#tab/desktop)
-
-  ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
-
----
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
