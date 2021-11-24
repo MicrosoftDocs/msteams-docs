@@ -412,8 +412,6 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 
 Overflow menu is added to Adaptive Cards. You can select up to six primary buttons that appear on the Adaptive Card. Any additional buttons also known as secondary buttons can be placed inside the overflow menu.
 
-(Add an image as discussed)
-
 Following are the two types of overflow menu:
 
 * Actions: In actions, primary set of buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
@@ -422,7 +420,7 @@ Following are the two types of overflow menu:
 
 * Action set: Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
-   ![action set card](~/assets/images/Cards/actionset1.png)
+   ![action set card](~/assets/images/Cards/actionset (002).png)
 
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that set as secondary appears in Adaptive Card.
 
