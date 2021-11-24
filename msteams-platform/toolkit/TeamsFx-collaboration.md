@@ -60,13 +60,12 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 * Login Azure account which has contributor permission for all the Azure resources being used in this project.
 * Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
-* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode).
+* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](sbs-gs-javscript.yml).
 
 ### Limitations of Using Collaboration
 
 > [!NOTE]
 > Azure related permissions should be set manually by Azure subscription administrator on Azure portal. Azure account should have contributor role for the subscription at least so that developers can work together to provision and deploy TeamsFx project.
-
 1. Cannot delete
  You cannot remove collaborators directly from Teams Toolkit extension. If you want to remove collaborators manually, please follow the steps below:
 
