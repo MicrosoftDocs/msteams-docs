@@ -1,7 +1,7 @@
 ---
-title: Receive all channel messages with RSC
+title: Receive all channel messages and group chats with RSC
 author: surbhigupta12
-description: Receive all channel messages with RSC permissions
+description: Receive all channel messages and group chats with RSC permissions
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
@@ -17,7 +17,6 @@ For more information about enabling RSC for your app, see [resource-specific con
 The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
 
 > [!NOTE]
-
 > * Services that need access to all Teams message data must use the Graph APIs that also provide access to archived data in channels and chats.
 > * Bots must use the `ChannelMessage.Read.Group` RSC permission appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
 > * The `ChannelMessage.Read.Group` RSC permission may not be used by bots as a way to extract large amounts of customer data. 
@@ -26,7 +25,7 @@ The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permission is ext
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permission specified in the `webApplicationInfo` property.
 
- ![App Manifest](~/assets/images/bots/manifestimage.png)
+ ![App Manifest](~/assets/images/bots/manifest_image.png)
 
 The following is an example of the `webApplicationInfo` object:
 
@@ -47,11 +46,43 @@ The following codes provide example of the app manifest:
   }
 ```
 
-## Sideload in a team
+## Sideload in a team or group chat
+
+# [Channel messages](#tab/channel)
 
 To sideload in a team to test, whether all channel messages in a team with RSC are received without being @mentioned:
 
 1. Select or create a team.
+1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
+1. Select **Manage team** from the drop-down menu. The details appear.
+
+   ![Managing apps in team](~/bots/how-to/conversations/Media/managingteam.png)
+
+1. Select **Apps**. Multiple apps appear.
+1. Select **Upload a custom app** from the lower right corner.
+
+    ![Uploading custom app](~/bots/how-to/conversations/Media/uploadingcustomapp.png)
+
+1. Select the app package from the **Open** dialog box.
+1. Select **Open**.
+
+    ![Selecting app package](~/bots/how-to/conversations/Media/selectapppackage.png)
+
+1. Select **Add** from the app details pop-up, to add the bot to your selected team.
+
+    ![Adding the bot](~/bots/how-to/conversations/Media/addingbot.png)
+
+1. Select a channel and enter a message in the channel for your bot.
+
+    The bot receives the message without being @mentioned.
+
+    ![Bot receives message](~/bots/how-to/conversations/Media/botreceivingmessage.png)
+
+# [Chat messages](#tab/chat)
+
+To sideload in a group chat to test, whether all chat messages in a group chat with RSC are received without being @mentioned:
+
+1. Select or create a group chat.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage apps** from the drop-down menu. The details appear.
 
@@ -67,15 +98,17 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 
     ![Selecting app package](~/assets/images/bots/Chats_Sideload_App_FilePicker.png)
 
-1. Select **Add** from the app details pop-up, to add the bot to your selected team.
+1. Select **Add** from the app details pop-up, to add the bot to your selected group chat.
 
     ![Adding the bot](~/assets/images/bots/Chats_Install_Dialog.png)
 
-1. Select a channel and enter a message in the channel for your bot.
+1. Enter a message in the group chat for your bot.
 
     The bot receives the message without being @mentioned.
 
     ![Bot receives message](~/assets/images/bots/Bot_ReceiveMessage_NoMention.png)
+
+---
 
 ## Code sample
 
