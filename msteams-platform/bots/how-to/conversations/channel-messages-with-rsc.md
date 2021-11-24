@@ -55,27 +55,27 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage apps** from the drop-down menu. The details appear.
 
-   ![Manage apps in team](~/assets/images/bots/Chats_ManageApps_Entry.png)
+   ![Manage apps in team](~/assets/images/bots/Chats_Manage_Apps_Entry.png)
 
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner.
 
-    ![Uploading custom app](~/assets/images/bots/Chats_ManageApps_Page.png)
+    ![Uploading custom app](~/assets/images/bots/Chats_Manage_Apps_Page.png)
 
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.
 
-    ![Selecting app package](~/assets/images/bots/Chats_SideloadApp_FilePicker.png)
+    ![Selecting app package](~/assets/images/bots/Chats_Sideload_App_FilePicker.png)
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-    ![Adding the bot](~/assets/images/bots/Chats_InstallDialog.png)
+    ![Adding the bot](~/assets/images/bots/Chats_Install_Dialog.png)
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-    ![Bot receives message](~/assets/images/bots/BotReceiveMessage_NoMention.png)
+    ![Bot receives message](~/assets/images/bots/Bot_ReceiveMessage_NoMention.png)
 
 ## Code sample
 
