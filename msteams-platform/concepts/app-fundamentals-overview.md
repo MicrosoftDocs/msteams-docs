@@ -58,9 +58,9 @@ The first step for any app is to understand the user need and problem, determine
     
     Together, these capabilities bring your app solution to life.
 
-    - Integrate device capabilities
+- Integrate device capabilities
 
-    Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+    The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
 
 ## Post-build
 
