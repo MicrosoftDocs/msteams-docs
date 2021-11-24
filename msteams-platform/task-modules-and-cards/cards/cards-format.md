@@ -426,15 +426,13 @@ Following are the two types of overflow menu:
 
 # [Mobile](#tab/mobile)
 
-![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
+  ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
 # [Desktop](#tab/desktop)
 
-![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
+  ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
 
 ---
-
-
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
