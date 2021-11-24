@@ -1,8 +1,8 @@
 ---
-title: Manage Multiple Environments in Teams Toolkit
-author: kimizhu
-description:  Manage Multiple Environments
-ms.author: yanjiang
+title: TeamsFx SDK
+author: MuyangAmigo
+description:  TeamsFx SDK
+ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
