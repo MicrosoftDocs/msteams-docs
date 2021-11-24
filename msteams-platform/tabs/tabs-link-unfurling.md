@@ -38,9 +38,9 @@ When the user enters a URL on the Teams desktop client, the bot is invoked and r
 
 The following images display a stage opened from an Adaptive Card:
 
-![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)
+[![Open a stage from Adaptive Card](~/assets/images/tab-images/open-stage-from-adaptive-card1.png)](~/assets/images/tab-images/open-stage-from-adaptive-card1.png#lightbox)
 
-![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png) 
+[![Open a stage](~/assets/images/tab-images/open-stage-from-adaptive-card2.png)](~/assets/images/tab-images/open-stage-from-adaptive-card2.png#lightbox) 
 
 ### Example
 
