@@ -116,7 +116,7 @@ Bot related classes are stored under [bot](https://github.com/OfficeDev/TeamsFx/
 
 ### Helper Function
 
-TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](shttps://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) folder.
+TeamsFx SDK provides helper functions to ease the configuration for third-party libraries. They are located under [core](https://github.com/OfficeDev/TeamsFx/tree/main/packages/sdk/src/core) folder.
 
 ### Error Handling
 
