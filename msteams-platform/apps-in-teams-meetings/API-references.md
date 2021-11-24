@@ -16,13 +16,13 @@ The meeting extensibilities provide APIs to modify and improve the meeting exper
 * Use APIs to make your app aware of meeting.
 * Select APIs to enhance the meeting experience.
 
-The details of the APIs are as folows: ![details icon](assets/images/apps-in-meetings/meetingexperience.png)
+The details of the APIs are as folows:
 
-<br>
+## <br>
 
 <details>
 
-## <summary><b>GetUserContext</b></summary>
+<summary><b>GetUserContext</b></summary>
 
 This API enables you to get contextual information to display relevant content in a Teams tab. To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
 
@@ -36,9 +36,13 @@ Microsoft Teams Client SDK
 
 <br>
 
+</details>
+
+## <br>
+
 <details>
 
-## <summary><b>GetParticipant</b></summary>
+<summary><b>GetParticipant</b></summary>
 
 > [!NOTE]
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
