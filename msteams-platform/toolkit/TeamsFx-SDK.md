@@ -1,7 +1,7 @@
 ---
 title: TeamsFx SDK
 author: MuyangAmigo
-description:  TeamsFx SDK
+description:  About TeamsFx SDK
 ms.author: nintan
 ms.localizationpriority: medium
 ms.topic: overview

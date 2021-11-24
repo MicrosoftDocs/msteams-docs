@@ -1,10 +1,10 @@
 ---
-title: TeamsFx SDK
+title: TeamsFX multiple environments in Teams Toolkit
 author: MuyangAmigo
-description:  TeamsFx SDK
+description:  About TeamsFX multi environment
 ms.author: nintan
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: overview of multiple environment
 ms.date: 11/29/2021
 ---
 
