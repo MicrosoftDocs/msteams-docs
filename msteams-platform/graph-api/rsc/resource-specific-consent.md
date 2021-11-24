@@ -243,6 +243,8 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 }
 ```
 
+### Example for RSC in a team
+
 ```json
 "webApplicationInfo": {
     "id": "XXxxXXXXX-XxXX-xXXX-XXxx-XXXXXXXxxxXX",
