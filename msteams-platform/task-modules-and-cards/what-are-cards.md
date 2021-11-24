@@ -71,6 +71,7 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 ### Adaptive cards form completion
 
 **Adaptive cards form completion** is a visual informational feedback message that appears when card action completes to a configurable set of card actions.
+Adaptive cards extensions are impacted with this feature
 
 User can see two types of feedback messages.
 
@@ -81,6 +82,11 @@ User can see two types of feedback messages.
 **Success:** When a card action completes, user receives feedback as **Your response was sent to the app** message if the attempt is successful.
 
 ![Success message](~/assets/images/Cards/success-message.png)
+
+**Message as response type in mobile UX**
+Feedback message is shown at the bottom of the adaptive cards. User can click close button or switch chat to dismiss the message. There is no time logic for dismissal.
+
+![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
 
 ## Support for AAD Object ID and UPN in user mention 
 
