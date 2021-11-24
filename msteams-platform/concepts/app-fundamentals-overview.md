@@ -64,8 +64,8 @@ The first step for any app is to understand the user need and problem, determine
 
 ## Post-build
 
-    - Integrate your app with Teams and other apps
-    - Use Developer Portal to configure, manage, and deploy your app
+- Integrate your app with Teams and other apps: Microsoft 365, Microsoft Graph, and more
+- Use Developer Portal to configure, manage, and deploy your app
 
 ## Government Community Cloud (GCC)
 
