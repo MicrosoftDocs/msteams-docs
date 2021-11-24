@@ -416,7 +416,7 @@ Overflow menu is added to Adaptive Cards. You are allowed to select up to six pr
 
 **Actions:** In Actions, primary set of buttons are displayed and secondary buttons are inside the overflow menu.
 
-**Action set:** In Action set, you can perform multiple actions on an Adaptive Card and each action set can have an overflow menu.
+**Action set:** In Action set, you can perform multiple actions on Adaptive Cards and each action set can have an overflow menu.
 
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that set as secondary appears.
 
@@ -424,7 +424,7 @@ Overflow menu is added to Adaptive Cards. You are allowed to select up to six pr
   
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
-**Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Cards displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any messages displays a list of related messages and this option is available only for actions.
+**Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Cards displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
