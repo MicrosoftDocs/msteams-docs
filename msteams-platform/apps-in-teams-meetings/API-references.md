@@ -19,9 +19,7 @@ The meeting extensibilities provide APIs to modify and improve the meeting exper
 The details of the APIs are as folows:
 
 ## <br>
-
 <details>
-
 <summary><b>GetUserContext</b></summary>
 
 This API enables you to get contextual information to display relevant content in a Teams tab. To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
@@ -33,15 +31,10 @@ This API enables you to get contextual information to display relevant content i
 ### **Source**
 
 Microsoft Teams Client SDK
-
 <br>
-
 </details>
-
-## <br>
-
+<br>
 <details>
-
 <summary><b>GetParticipant</b></summary>
 
 > [!NOTE]
