@@ -299,7 +299,7 @@
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
     - name: Typeahead search in Adaptive Card
-      href: task-modules-and-cards/cards/dynamic-search.md  
+      href: task-modules-and-cards/cards/dynamic-search.md?tabs=desktop  
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
