@@ -411,7 +411,7 @@ In the stage view, users can zoom in and zoom out of the image. You can select t
 ### Overflow menu on Adaptive Cards 
 
 > [!NOTE]
-> Overflow menu on Adaptive Cards is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
+> Overflow menu on Adaptive Cards is available in [public developer preview](../../task-modules-and-cards/cards-format.md#overflow-menu-on-adaptive-cards) only.
 
 Overflow menu is added to Adaptive Cards. You can select up to six primary buttons that appear on the Adaptive Card. Any additional buttons also known as secondary buttons are placed inside the overflow menu.
 
@@ -423,7 +423,7 @@ Following are the two types of overflow menu:
 
 * Action set: Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
-  ![action set card](~/assets/images/Cards/actionset(002).png)
+   ![action set card](~/assets/images/Cards/actionset(002).png)
 
 ### How to enable the overflow menu
 
@@ -431,7 +431,8 @@ To specify primary or secondary buttons, configure `mode` to `primary` or `secon
 
 Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
 
-**Action**
+**Actions**
+
 In this example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu. 
 
 ``` json
@@ -457,11 +458,11 @@ In this example, there are two primary actions (by default) and one secondary ac
 }
 ```
 
-(add an image)
+  ![action card](~/assets/images/Cards/action-image-revised.png)
 
 **Action set**
 
-In this example, all the actions are marked as secondary therefore a single overflow menu appears on the card.
+In this example, all the actions are marked as secondary therefore, a single overflow menu appears on the card.
 
 ``` json
 {
@@ -489,20 +490,11 @@ In this example, all the actions are marked as secondary therefore a single over
 }
 ```
 
-(add an image)
+  ![action set card](~/assets/images/Cards/action-set-image.png)
 
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
 
-  ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
-  
-  ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
-
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
-
-   ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
-
-   ![Mobile-overflow-menu](~/assets/images/Cards/mobile-2-overflow-menu.png)
-
 
 # [Markdown format for Office 365 Connector cards](#tab/connector-md)
 
