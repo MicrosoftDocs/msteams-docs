@@ -432,7 +432,7 @@ Following are the two types of overflow menu:
 
 ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
 
-* * *
+---
 
 
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
