@@ -120,7 +120,7 @@ items:
 
         ![Deploy App](~/assets/images/meeting-token-generator/meeting-token-generator-botdeployment.png)
 
-        Your Azure bot is created:
+        Your Azure bot is created.
 
         ![Azure bot resource created](~/assets/images/meeting-token-generator/meeting-token-generator-bot-page.png)
 
@@ -273,7 +273,7 @@ items:
     1. Ensure that **State** is set to **Enabled**.
   
     1. Select **Add scope** to save.
-       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end:</br>
+       The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://ae57****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
         ![Scopes](~/assets/images/meeting-token-generator/meeting-token-generator-scopes.png) 
