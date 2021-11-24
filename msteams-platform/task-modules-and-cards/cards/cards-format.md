@@ -427,9 +427,7 @@ Following are the two types of overflow menu:
 
 ### How to enable the overflow menu
 
-To specify primary or secondary buttons, configure `mode` to `primary` or `secondary`.
-
-Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
+To specify primary or secondary buttons, configure `mode` to `primary` or `secondary`. Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
 
 **Actions**
 
