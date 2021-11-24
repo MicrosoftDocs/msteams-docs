@@ -143,6 +143,7 @@ The `GetParticipant` API returns the following response codes:
 | **200** | The participant information is successfully retrieved.|
 | **401** | The app responds with an invalid token.|
 | **404** | The meeting has either expired or participant cannot be found.|
+
 <br>
 </details>
 <br>
@@ -236,6 +237,7 @@ The `NotificationSignal` API includes the following response codes:
 | **401** | The app responds with an invalid token. |
 | **403** | The app is unable to send the signal. 403 response code can occur because of various reasons, such as the tenant admin disables and blocks the app during live site migration. In this case, the payload contains a detailed error message. |
 | **404** | The meeting chat doesn't exist. |
+
 <br>
 </details>
 <br>
@@ -335,7 +337,6 @@ The JSON response body for Meeting Details API is as follows:
 
 
 ## Bot Framework SDK methods for the APIs
-
 
 |API|Bot Framework SDK method|
 |---|---|
