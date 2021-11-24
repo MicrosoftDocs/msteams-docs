@@ -60,7 +60,7 @@ Teams Toolkit now supports collaboration feature to allow a developer (project o
 
 * Login Azure account which has contributor permission for all the Azure resources being used in this project.
 * Working on project code, then deploy the project to remote when you think it's time to preview your Teams app.
-* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=3).
+* Launch remote to have a preview of the Teams app. Refer to get-start tutorial for details steps to [build and run your Teams app in remote environment](https://docs.microsoft.com/en-us/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode).
 
 ### Limitations of Using Collaboration
 
