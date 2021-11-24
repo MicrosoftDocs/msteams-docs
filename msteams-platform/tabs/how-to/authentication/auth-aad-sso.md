@@ -164,17 +164,19 @@ Complete the following steps to develop an SSO Teams tab:
 
 1. To enter a redirect URI:
     * Select **Add a platform**.
+    
+       ![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
+
     * Select **web**.
+       ![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
 
-    ![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
+1. Select **Configure**.
 
-    ![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+    ![Configure](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
 
 Complete the app registration prerequisites to continue with your tab SSO app.
     * Enter the **redirect URI** for your app. This URI is the same fully qualified domain name that you entered in step 5. It's also followed by the API route where an authentication response is sent. If you're following any of the Teams samples, the URI is `https://subdomain.example.com/auth-end`. For more information, see [OAuth 2.0 authorization code flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow).
     * Select configure
-
-    ![Configure]](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
 
 
 > [!NOTE]
