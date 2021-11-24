@@ -41,7 +41,7 @@ When you trigger provision command in Teams Toolkit or TeamsFx CLI, the tool wil
 When you create a new project, an ARM template will be generated under your project folder which defines all the Azure resources need to be created. The ARM template will be used to create required Azure resources during provision. When you [adds new capability/resource](./add-resource.md) to an existing project, the ARM template will be updated to reflect the latest change.
 
 > [!NOTE]
->  Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
+> Azure services incur costs in your subscription, you can refer to [pricing calculator](https://azure.microsoft.com/pricing/calculator/) to understand an estimate.
 
 ### Resources created for Teams Tab Application
 
@@ -213,7 +213,7 @@ You can add following configuration snippet to `.fx/configs/config.{env}.json` f
 After added above snippet, add your secret to related environment variable so the tooling can resolve the actual secret during provision.
 
 > [!NOTE]
->  You should not share one AAD app in multiple environments. If you do not have permission to update the AAD app, you will get a warning with instructions about how to manually update the AAD app. Please follow the instructions to update your AAD app after provision.
+> You should not share one AAD app in multiple environments. If you do not have permission to update the AAD app, you will get a warning with instructions about how to manually update the AAD app. Please follow the instructions to update your AAD app after provision.
 
 #### Use an existing AAD app for your bot
 
@@ -302,8 +302,6 @@ Consider the scenario, you want to add Azure Storage to your Azure Function back
 ## FAQ
 
 ### How to troubleshooting
-
-
 
 If you met errors with Teams Toolkit in Visual Studio Code, you can click the `Get Help` button on the error notification to navigate to related help doc. If you're using TeamsFx CLI, there will be a hyper link at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
