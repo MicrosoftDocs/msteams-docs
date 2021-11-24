@@ -418,9 +418,11 @@ Following are the two types of overflow menu:
 
 * Actions: In actions, primary set of buttons appear on the Adaptive Card and the secondary buttons are inside the overflow menu.
 
+   ![actions card](~/assets/images/Cards/actions1.png)
+
 * Action set: Action set is a combination of multiple actions in an Adaptive Card. Each action set can have an overflow menu.
 
-(image needs to be added)
+   ![action set card](~/assets/images/Cards/actionset1.png)
 
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that set as secondary appears in Adaptive Card.
 
@@ -432,7 +434,8 @@ Following are the two types of overflow menu:
 
 ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
 
----
+* * *
+
 
   ![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
   
