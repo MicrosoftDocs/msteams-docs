@@ -425,11 +425,11 @@ Following are the two types of overflow menu:
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="~/assets/images/Cards/mobile-overflow-menu.png" alt-text="Mobile view":::
+![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="~/assets/images/Cards/desktop-overflow-menu.png" alt-text="Desktop view":::
+![Desktop](~/assets/images/Cards/desktop-overflow-menu.png)
 
 * * *
 
