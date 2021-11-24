@@ -204,7 +204,7 @@
     href: bots/bot-basics.md
   - name: Authenticate bots
     items: 
-    - name: Overview.md
+    - name: Overview
       href: bots/how-to/authentication/overview.md
     - name: Authentication flow in bots
       href: bots/how-to/authentication/auth-flow-bot.md
