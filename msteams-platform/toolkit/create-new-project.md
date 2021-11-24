@@ -16,10 +16,10 @@ You have two choices to use the Teams Toolkit to start your Teams app building, 
 
 Follow the guidance below to create new Teams app project using Teams Toolkit.
 
-- [Create new Teams Tab app (React)](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
-- [Create new Teams Bot app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
-- [Create new Message Extension app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6)
-- [Create new Teasm Tab app (SharePoint Framework)](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode)
+- [Create new Teams Tab app (React)][h/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=2)
+- [Create new Teams Bot app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=4)
+- [Create new Message Extension app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=6)
+- [Create new Teasm Tab app (SharePoint Framework)][/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode)](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode))
 
 ## Create from samples
 
