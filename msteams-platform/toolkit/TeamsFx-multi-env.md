@@ -31,7 +31,7 @@ After creating new project, Teams Toolkit by default creates:
 - One `dev` environment to represent the remote/cloud environment configurations.
 
 > [!NOTE]
-> Each project can have only one `local` environment but can create multiple remote environments.
+> Each project can have only one `local` environment but multiple remote environments.
 
 To add another remote environment, select the Teams icon in the sidebar, click the Plus button under Environment section, and follow the questions to create.
 
@@ -48,7 +48,7 @@ With environment concept introduced in Teams Toolkit, for all environment relate
 
 ## Take a tour of project folder structure for multiple environment
 
-After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the business codes, some files are used by Teams Toolkit to maintain the config, state and template of the apps. Following list those files and outlines their relationship with multiple environments.
+After creating the project, you can view the project folders and files in the Explorer area of Visual Studio Code. Besides the custom codes, some files are used by Teams Toolkit to maintain the config, state and template of the app. Following list those files and outlines their relationship with multiple environments.
 
 - `.fx/configs`: config files that user can customize for the Teams app.
   - `config.<envName>.json`: per-environment configuration file.
@@ -66,20 +66,20 @@ After creating the project, you can view the project folders and files in the Ex
 
 Teams Toolkit allows you to change the config files and template files to customize the resource provision in each environment.
 
-Following table lists the common scenarios supported for customized provision and where to customize:
+The table below lists the common scenarios supported for customized provision and where to customize:
 
 | Scenarios | Where to customize |
 | --- | --- |
 | Customize Azure Resource | <ul> <li>BICEP files under `templates/azure`.</li> <li>`.fx/azure.parameters.<envName>.json`.</li></ul> |
 | Customize App Manifest | <ul> <li>`templates/manifest.template.json`.</li> <li>`manifest` section in`.fx/config.<envName>.json`.</li>  </ul> |
-| Reusing existing AAD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`.</li> </ul> |
-| Reusing existing AAD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> |
+| Reuse existing AAD app for Teams app | <ul> <li>`auth` section in`.fx/config.<envName>.json`.</li> </ul> |
+| Reuse existing AAD app for bot | <ul> <li>`bot` section in`.fx/config.<envName>.json`.</li> </ul> |
 | Skip adding user when provisioning SQL | <ul> <li>`skipAddingSqlUser` property in`.fx/config.<envName>.json`.</li> </ul> |
 
-- For more detailed info how to customize the provison of Azure resource, you can refer to [Use Teams Toolkit to provision cloud resources](provision.md).
-- For more detailed info how to customize the App mainifest, you can refer to [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md).
+- For more detailed information on how to customize the provision of Azure resource, you can refer to [Use Teams Toolkit to provision cloud resources](provision.md).
+- For more detailed information on how to customize the App manifest, you can refer to [Customize Teams App Manifest in Teams Toolkit](TeamsFx-manifest-customization.md).
 
-Some examples of provision customization:
+Examples of provision customization:
 
 ### Example 1: customize Teams App name for different environment
 
@@ -185,58 +185,9 @@ As the Teams app manifest template is shared across all environments, we can upd
     ...
   }
 
-### Example 4: customize different web app sku for different environment
+### Example 4: customize Azure resources for different environment
 
-In this example, you will learn how to set the sku of simple auth to `D1` for the default environment `dev` and `S1` for the staging environment `staging`.
-
-Steps to do the customization:
-
-- Step 1: open config file `.fx/configs/azure.parameters.dev.json`.
-- Step 2: add parameter `simpleAuth_sku` and set the value to `D1`.
-  
-  Updates to `.fx/configs/azure.parameters.dev.json`:
-
-  ```json
-  {
-    "$schema": https://schema.management.azure.com/schemas/2019-04-01/  deploymentParameters.json#,
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-      ...
-      "simpleAuth_sku": {
-        "value": "D1"
-      }
-      ...
-    }
-  }
-
-- Step 3: create a new environment named `staging` if it doesn't exist.
-- Step 4: open config file `.fx/configs/azure.parameters.staging.json`.
-- Step 5: add parameter `simpleAuth_sku` and set the value to `D1`.
-
-After this is done, the web app for `simpleAuth` will be provisioned as `D1` sku under `dev` environment and `S1` sku under `staging` environment.
-
-All the predefined parameters for `azure.parameters.<env>.json` can be found in `templates/azure/main.bicep`. You can also define new parameter in `templates/azure/main.bicep` and set particular value of the parameter for different environment.
-
-### Example 5: customize web app sku for all environments
-
-In this example, you will learn how to set the sku of simple auth to `D1` for all environments.
-
-The BICEP template is shared across all environments, we can update the sku value in BICEP template directly for our target.
-
-Steps to do the customization:
-
-- Step 1: open BICEP template file `templates/azure/main.bicep`.
-- Step 2: update the value of `simpleAuth_sku` from `F1` to `D1`:
-
-  Updates to `templates/azure/main.bicep`:
-
-  ```bicep
-  ...
-  param simpleAuth_sku string = 'D1'
-  ...
-  ```
-
-After this, the web app for `simpleAuth` will be provisioned as `D1` sku for all environments.
+You can customize Azure resources for each environment, for example specifying Azure Function name, by editing the environment corresponding `.fx/configs/azure.parameters.{env}.json` file. Click [here](provision.md#example-specifying-the-name-of-function-app-instance) to see detail steps.
 
 For more details about BICEP template and parameter files, please refer to [Provision cloud resources](provision.md)
 
