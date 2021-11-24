@@ -16,7 +16,7 @@ The meeting extensibilities provide APIs to modify and improve the meeting exper
 * Use APIs to make your app aware of meeting.
 * Select APIs to enhance the meeting experience.
 
-The details of the APIs are as folows:
+## API reference details
 <br>
 <details>
 <summary><b>GetUserContext</b></summary>
@@ -137,7 +137,7 @@ The JSON response body for `GetParticipant` API is:
 
 The `GetParticipant` API returns the following response codes:
 
-|Response code|Description|
+| Response code | Description |
 |---|---|
 | **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
 | **200** | The participant information is successfully retrieved.|
@@ -230,7 +230,7 @@ POST /v3/conversations/{conversationId}/activities
 
 The `NotificationSignal` API includes the following response codes:
 
-|Response code|Description|
+| Response code | Description |
 |---|---|
 | **201** | The activity with signal is successfully sent. |
 | **401** | The app responds with an invalid token. |
@@ -325,10 +325,17 @@ The JSON response body for Meeting Details API is as follows:
     }
 } 
 ```
+
 <br>
+
 </details>
 
-## Bot Framework SDK methods for the APIs:
+<br>
+
+
+
+## Bot Framework SDK methods for the APIs
+
 
 |API|Bot Framework SDK method|
 |---|---|
