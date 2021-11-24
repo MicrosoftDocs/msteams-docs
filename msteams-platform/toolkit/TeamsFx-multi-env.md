@@ -42,7 +42,7 @@ To add another remote environment, select the Teams icon in the sidebar, click t
 
 ## Select target environment for provision, deploy, publish and preview
 
-With environment concept introduced in Teams Toolkit, for all environment related operations, you can select the target environment to perform the operations against. The toolkit will prompt and ask for a target environment when needed.
+With environment concept introduced in Teams Toolkit, for all environment related operations, you can select the target environment to perform the operations against. The toolkit will prompt and ask for a target environment when you have multiple remote environment.
 
 ![select env](./images/select-env.png)
 
