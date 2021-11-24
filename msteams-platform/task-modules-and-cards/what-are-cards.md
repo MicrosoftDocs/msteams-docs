@@ -70,10 +70,17 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 
 ### Adaptive cards form completion
 
-**Adaptive cards form completion** is a visual informational feedback message when card action completes to a configurable set of card actions.
+**Adaptive cards form completion** is a visual informational feedback message that appears when card action completes to a configurable set of card actions.
+
 User can see two types of feedback messages.
 
-**Error** 
+**Error:** When a card action completes, user receives feedback as **Something went wrong, Try again** message if there is an error in the attempt.
+
+![Error message](~/assets/images/Cards/error-message.png)
+
+**Success:** When a card action completes, user receives feedback as **Your response was sent to the app** message if the attempt is successful.
+
+![Success message](~/assets/images/Cards/success-message.png)
 
 ## Support for AAD Object ID and UPN in user mention 
 
