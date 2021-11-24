@@ -1,14 +1,14 @@
 ---
 title: Integrate location capabilities
 author: Rajeshwari-v
-description: How to use Teams JavaScript client SDK to leverage location capabilities
+description: Learn how to use Teams JavaScript client SDK to leverage location capabilities using Code snippets and samples
 keywords:  location map capabilities native device permissions 
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ---
 
-# Integrate location capabilities 
+# Integrate location capabilities
 
 You can integrate the location capabilities of native device with your Teams app.  
 
@@ -39,7 +39,8 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 ```
 
 > [!NOTE]
-> The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
+> * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).    
+> * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).   
 
 ## Location APIs
 
@@ -97,6 +98,12 @@ You must ensure to handle these errors appropriately in your Teams app. The foll
 | **4000** | INVALID_ARGUMENTS | API is invoked with wrong or insufficient mandatory arguments.|
 | **8000** | USER_ABORT |User cancelled the operation.|
 | **9000** | OLD_PLATFORM | User is on old platform build where implementation of the API is not present. Upgrading the build should resolve the issue.|
+
+### Code sample
+
+|Sample name | Description | C# | Node.js | 
+|----------------|-----------------|--------------|--------------|
+| App check-in current location | Users can check-in the current location and view all the previous location check-ins.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-checkin-location/nodejs) |
 
 ## See also
 

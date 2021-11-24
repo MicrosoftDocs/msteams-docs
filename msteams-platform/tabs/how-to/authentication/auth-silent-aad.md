@@ -1,14 +1,14 @@
 ---
 title: Silent authentication
-description: Describes silent authentication
+description: Describes silent authentication, Single-sign-on, Azure Active Directory for tabs
 ms.topic: conceptual
 ms.localizationpriority: medium
-keywords: teams authentication SSO silent AAD
+keywords: teams authentication SSO silent AAD tab
 ---
 # Silent authentication
 
 > [!NOTE]
-> For authentication to work for your tab on mobile clients, ensure you are using at least 1.4.1 version of the Teams JavaScript SDK.
+> For authentication to work for your tab on mobile clients, ensure that you're using at least 1.4.1 version of the Teams JavaScript SDK.
 
 Silent authentication in Azure Active Directory (AAD) minimizes the number of times a user enters their sign in credentials by silently refreshing the authentication token. For true single sign-on support, see [SSO documentation](~/tabs/how-to/authentication/auth-aad-sso.md).
 
@@ -21,7 +21,7 @@ Even though the ADAL.js library is optimized for AngularJS applications, it also
 
 ## How silent authentication works
 
-The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point your app can show a sign in button if required.
+The ADAL.js library creates a hidden iframe for OAuth 2.0 implicit grant flow. But the library specifies `prompt=none`, so Azure AD never shows the sign in page. If user interaction is required because the user needs to sign in or grant access to the application, AAD immediately returns an error that ADAL.js reports to your app. At this point, your app can show a sign in button if required.
 
 ## How to do silent authentication
 
@@ -121,7 +121,7 @@ if (authContext.isCallback(window.location.hash)) {
 Use the following code to handle sign out flow in AAD Auth:
 
 > [!NOTE]
-> While logout for Teams tab or bot is done, the current session is also cleared.
+> When you logout from Teams tab or bot, the current session is cleared.
 
 ```javascript
 function logout() {
@@ -129,3 +129,6 @@ localStorage.clear();
 window.location.href = "@Url.Action("<<Action Name>>", "<<Controller Name>>")";
 }
 ```
+## See also
+
+[Configure identity providers to use AAD](~/concepts/authentication/configure-identity-provider.md)

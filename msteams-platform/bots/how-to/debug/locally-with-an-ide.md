@@ -1,7 +1,7 @@
 ---
 title: Test and debug your bot locally
 author: surbhigupta
-description: Testing and debugging your bot locally with an IDE
+description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading, outside Teams using Bot emulator, and by talking directly to your bot.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -15,11 +15,8 @@ When testing your bot you need to take into consideration both the contexts you 
 
 The most comprehensive way to test your bot is by creating an app package and uploading it to Teams. This is the only method to test the full functionality available to your bot, across all scopes.
 
-> [!NOTE]
->  App Studio will soon be depricated. Configure, distribute, and manage your Teams apps with the new [Developer Portal](https://dev.teams.microsoft.com/).
-
 There are two methods for uploading your app:
-* Use [Developer Portal](https://dev.teams.microsoft.com/) or [App Studio](~/concepts/build-and-test/app-studio-overview.md).
+* Use [App Studio](~/concepts/build-and-test/app-studio-overview.md).
 * [Create an app package](~/concepts/build-and-test/apps-package.md) manually, and then [upload your app](~/concepts/deploy-and-publish/apps-upload.md).
 
 > [!NOTE]

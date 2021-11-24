@@ -16,6 +16,12 @@ For more information about enabling RSC for your app, see [resource-specific con
 
 The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permission is extended to bots. With user consent, this permission allows graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
 
+> [!NOTE]
+
+> * Services that need access to all Teams message data must use the Graph APIs that also provide access to archived data in channels and chats.
+> * Bots must use the `ChannelMessage.Read.Group` RSC permission appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
+> * The `ChannelMessage.Read.Group` RSC permission may not be used by bots as a way to extract large amounts of customer data. 
+
 ## Update app manifest
 
 For your bot to receive all channel messages, RSC must be configured in the Teams app manifest with the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permission specified in the `webApplicationInfo` property.
@@ -41,7 +47,7 @@ The following codes provide example of the app manifest:
   }
 ```
 
-## Sideload in a team to test
+## Sideload in a team
 
 To sideload in a team to test, whether all channel OR **groupchat** messages in a team with RSC are received without being @mentioned:
 

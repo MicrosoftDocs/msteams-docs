@@ -1,6 +1,6 @@
 ---
 title: User Specific Views
-description: Sample for User Specific Views using Universal Actions
+description: Learn about User Specific Views using Universal Actions with Code Sample 
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -38,7 +38,8 @@ The following code provides an example of Adaptive Cards:
       "title": "Refresh",
       "verb": "editOrResolveView",
       "data": {
-              "refresh info": "<refresh info>"
+            "refresh info": "<refresh info>"
+      }
     },
     "userIds": ["<Megan's user MRI>", "<Alex's user MRI>"]
   },

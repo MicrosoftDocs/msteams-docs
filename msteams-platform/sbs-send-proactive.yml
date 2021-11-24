@@ -123,7 +123,7 @@ items:
 
         ![Install App](~/assets/images/proactive-scenario/install-app.png)   
 
-    1. Select the [http://localhost:3978/api/notify](http://localhost:3978/api/notify) URL to get a proactive hello message in the chat.
+    1. Select the `http://localhost:3978/api/notify` URL to get a proactive hello message in the chat.
 
         ![Proactive message sent](~/assets/images/proactive-scenario/result.png)
 

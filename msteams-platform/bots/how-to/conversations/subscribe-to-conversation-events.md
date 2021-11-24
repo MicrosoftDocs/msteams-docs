@@ -1,10 +1,11 @@
 ---
 title: Conversation events
 author: WashingtonKayaker
-description: How to work with conversation events from your Microsoft Teams bot.
+description: How to work with conversation events from your Microsoft Teams bot, channel event updates, team member events, and message reaction events with Code samples.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: anclear
+keywords: events bot channel message reaction conversation
 ---
 
 # Conversation events in your Teams bot
@@ -224,7 +225,7 @@ async def on_teams_channel_renamed(
 
 ### Channel deleted
 
-The channel deleted event is sent to your bot whenever a channel is deleted in a team where your bot is installed.
+The channel deleted event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
 The following code shows an example of channel deleted event:
 
@@ -308,7 +309,7 @@ async def on_teams_channel_deleted(
 
 ### Channel restored
 
-The channel restored event is sent to your bot whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+The channel restored event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 The following code shows an example of channel restored event:
 
@@ -397,7 +398,7 @@ async def on_teams_channel_restored(
 
 ### Team members added
 
-The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
+The `teamMemberAdded` event is sent to your bot the first time it is added to a conversation. The event is sent to your bot every time a new user is added to a team or group chat where your bot is installed. The user information that is ID, is unique for your bot and can be cached for future use by your service, such as sending a message to a specific user.
 
 The following code shows an example of team members added event:
 
@@ -653,7 +654,7 @@ async def on_teams_members_removed(
 
 ### Team renamed
 
-Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
+Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
 
 The following code shows an example of team renamed event:
 
@@ -733,7 +734,7 @@ async def on_teams_team_renamed(
 
 ### Team deleted
 
-Your bot is notified when the team it is in has been deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
+Your bot is notified when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.
 
 The following code shows an example of team deleted event:
 
@@ -889,7 +890,7 @@ async def on_teams_team_restored(
 
 ### Team archived
 
-The bot receives a notification when the team it is installed in is archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
+The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.
 
 The following code shows an example of team archived event:
 
@@ -970,7 +971,7 @@ async def on_teams_team_archived(
 
 ### Team unarchived
 
-The bot receives a notification when the team it is installed in is unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.
+The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.
 
 The following code shows an example of team unarchived event:
 

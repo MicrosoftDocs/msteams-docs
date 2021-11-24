@@ -220,7 +220,7 @@ After the app has been installed to a resource, you can use [Graph Explorer](htt
 1. In Teams, select **Teams** from the leftmost pane.
 1. Select the team where the app is to be installed.
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; for that team.
-1. Select **Get link to team** from the team drop-down menu.
+1. Select **Get link to team** from the team dropdown menu.
 1. Copy and save the **groupId** value from the **Get a link to the team** pop-up dialog box.
 1. Sign in to **Graph Explorer**.
 1. Make a **GET** call to this endpoint: `https://graph.microsoft.com/beta/teams/{teamGroupId}/permissionGrants`. The `clientAppId` field in the response will map to the `webApplicationInfo.id` specified in the Teams app manifest.
@@ -233,7 +233,7 @@ For more information on how to get details of the apps installed in a specific t
 
 1. Get the chat thread ID from the Teams *web* client.
 1. In the Teams web client, select **Chat** from the leftmost pane.
-1. Select the chat where the app is installed from the drop-down menu.
+1. Select the chat where the app is installed from the dropdown menu.
 1. Copy the web URL and save the chat thread ID from the string.
 
     ![Chat thread ID from web URL](../../assets/images/chat-thread-id.png)
