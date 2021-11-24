@@ -427,9 +427,7 @@ Following are the two types of overflow menu:
 
 ### How to enable the overflow menu
 
-To specify primary or secondary buttons, configure `mode` to `primary` or `secondary`.
-
-Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
+To specify primary or secondary buttons, configure `mode` to `primary` or `secondary`. Following is an example, on how to use the  `mode`: `secondary` property for actions and action set.
 
 **Action**
 In this example, there are two primary actions (by default) and one secondary action. The secondary action creates an overflow menu. 
@@ -497,7 +495,7 @@ In this example, all the actions are marked as secondary therefore a single over
   
   ![desktop-overflow-menu](~/assets/images/Cards/desktop-2-overflow-menu.png)
 
-**Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
+**Overflow menu on mobile**: When a user selects overflow menu on mobile, the buttons that are defined appear on the Adaptive Card. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. If a user performs a long press on any message, a list of related messages appears. This option is available only for actions.
 
    ![Mobile](~/assets/images/Cards/mobile-overflow-menu.png)
 
