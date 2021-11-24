@@ -148,9 +148,100 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
 >
 > [!IMPORTANT]
 > Non-RSC permissions are stored in the Azure portal. Do not add them to the app manifest.
->
 
-### Example for RSC in a team
+> [!NOTE]
+> For version the RSC permissions have two sections as Delegated RSC permissions and Application permission in Authorization section.
+
+### Example for Delegated and Application RSC permissions
+
+```json
+"authorization": {
+    "permissions": {
+        "resourceSpecific": [
+            {
+                "name": "OnlineMeeting.ReadBasic.Chat",
+                "type": "Delegated"
+            }
+            {
+                "name": "OnlineMeeting.ReadBasic.Group",
+                "type": "Application",
+            }
+            {
+                "name": "OnlineMeetingParticipant.Read.Chat",
+                "type": "Application",
+            }
+            {
+                "name": "ChannelMeetingParticipant.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "OnlineMeetingParticipant.Read.Chat",
+                "type": "Delegated",
+            }
+            {
+                "name": "ChannelMeetingParticipant.Read.Group",
+                "type": "Delegated",
+            }
+            {
+                "name": "TeamSettings.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamSettings.ReadWrite.Group",
+                "type": "Application",
+            }
+            {
+                "name": "ChannelSettings.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "ChannelSettings.ReadWrite.Group",
+                "type": "Application",
+            }
+            {
+                "name": "Channel.Create.Group",
+                "type": "Application",
+            }
+            {
+                "name": "Channel.Delete.Group",
+                "type": "Application",
+            }
+            {
+                "name": "ChannelMessage.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsAppInstallation.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsTab.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsTab.Create.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsTab.ReadWrite.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsTab.Delete.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamMember.Read.Group",
+                "type": "Application",
+            }
+            {
+                "name": "TeamsActivity.Send.Group",
+                "type": "Application",
+            }
+        ]    
+    }
+}
+```
 
 ```json
 "webApplicationInfo": {
@@ -170,7 +261,8 @@ The RSC permissions are declared in your app manifest JSON file. Add a [webAppli
         "TeamsTab.ReadWrite.Group",
         "TeamsTab.Delete.Group",
         "TeamMember.Read.Group",
-        "TeamsActivity.Send.Group"
+        "TeamsActivity.Send.Group",
+        
     ]
   }
 ```
