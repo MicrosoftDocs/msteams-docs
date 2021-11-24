@@ -31,25 +31,25 @@ The applications must be registered. The identity providers supporting OAuth 2.0
 
 2. Select **New Registration**.
 
-![New registration](~/assets/images/authentication/Azureadtabsauthentication/AzureAdauthnewregistration.png)
+    ![New registration](~/assets/images/authentication/Azureadtabsauthentication/AzureAdauthnewregistration.png)
 
 3. Provide user-facing display name for this application. The name can be changed later.
 
-![Display name](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthnamedisplay.png)
+    ![Display name](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthnamedisplay.png)
 
 4. Find **Redirect URIs** section for the app.
 
-![Redirect URI](~/assets/images/authentication/Azureadtabsauthentication/AzureaddauthredirectURI.png)
+    ![Redirect URI](~/assets/images/authentication/Azureadtabsauthentication/AzureaddauthredirectURI.png)
 
 5. Select **Add a Redirect URI**, you’ll be directed to Platform Configurations. 
 
 6. Now, select **Add a platform**.
 
-![Platform Configuration](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthaddplatform.png)
+    ![Platform Configuration](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthaddplatform.png)
 
 7. Select **Web** in Configure Platforms.
 
-![Web](~/assets/images/authentication/Azureadtabsauthentication/Azureaddwebinconfigure.png)
+    ![Web](~/assets/images/authentication/Azureadtabsauthentication/Azureaddwebinconfigure.png)
 
 8. Update the URL to authentication endpoint. For example, the redirect URI for TypeScript/Node.js and C# sample apps on GitHub is as follows:
 
@@ -59,7 +59,7 @@ Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicat
 
 9. Select **Configure**. 
 
-![Configure](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthconfigure.png)
+    ![Configure](~/assets/images/authentication/Azureadtabsauthentication/Azureaddauthconfigure.png)
 
 ## Other authentication providers
 
