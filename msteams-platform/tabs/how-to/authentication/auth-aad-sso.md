@@ -8,7 +8,7 @@ keywords: teams authentication SSO AAD single sign-on api
 
 # Single sign-on (SSO) support for tabs
 
-Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in oncem they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
+Users sign in to Microsoft Teams through their work, school, or Microsoft account that is Office 365, Outlook, you can take the advantage by allowing a single sign on to authorize your Teams tab or task module on desktop or mobile clients. If a user sign in once, they don't have to sign in again on another device as they're signed in automatically. Also, your access token is prefetched to improve performance and load times.
 
 > [!NOTE]
 > **Teams mobile client versions supporting SSO**  
@@ -64,7 +64,7 @@ This section describes the tasks involved in creating a Teams tab that uses SSO.
 > * Only user-level Graph API permissions are supported that is, email, profile, offline_access, OpenId. If you must have access to other Graph scopes such as `User.Read` or `Mail.Read`, see [Get an access token with Graph permissions](#get-an-access-token-with-graph-permissions).
 > * It is important that your application's domain name is the same as the domain name you have registered for your AAD application.
 > * Currently multiple domains per app are not supported.
-> * The user must set `accessTokenAcceptedVersion` to `v2` for a new application.
+> * The user must set `accessTokenAcceptedVersion` to `2` for a new application.
 
 **To register your app through the AAD portal**
 
