@@ -14,54 +14,58 @@ An app's design, features, and capabilities stem from its purpose. The app user 
 
 The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
 
+Let's break it down to app building lifecycle:
+
+- Before you build
+- During build
+- Post-build
+
+## Before you build
+
 The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
-## Understand your use cases
+- Understand your use cases
 
-You can recognize user issues and identify the answers to some common problems the users face. You can build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. You learn to understand the user and their problem. Some common questions answered are as follows:
+    You can recognize user issues and identify the answers to some common problems the users face. Build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
 
-- Do you need authentication?
-- What problem is your app going to solve?
-- Who are the end-users of the app?
-- How should the onboarding experience be and what else the app can do?
+- Map your use cases to Teams app capabilities
 
-## Map your use cases to Teams app capabilities
+    [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided.
 
-[Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided. You can also learn how to initiate workflows and send notifications to users. Get additional tips on where to start, how to get social with users, conversational bots, and combining multiple features.
+- App Features and Design
 
-## Teams Capabilities
+    Select your app's scope and features. You can extend your Teams app in multiple ways. Your app scope can be personal or shared space app. You can choose to meet the user needs with one or more [capabilities](../concepts/capabilities-overview.md).
 
-You can extend your Teams app in multiple ways.
+    Use Teams UI Toolkit and UI Library to [design your app's layout](~/concepts/design/design-teams-app-process.md).
 
-:::image type="content" source="../assets/images/overview/teams-capabilities.png" alt-text="Illustrates Teams capabilities" border="true":::
+- Plan responsive tabs for Teams mobile
 
-Your Teams app can have [multiple capabilities](../concepts/capabilities-overview.md):
+    [Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
-- Tabs – Collaborate conveniently and display web-based content in a [tab](../tabs/what-are-tabs.md) where people can discuss and work on it together.
-- Bots – A [bot](../bots/what-are-bots.md) will help you turn your words and conversations into action and initiate various workflows right inside Teams.
-- Messaging extensions – Make it easier to multitask and quickly share external information in a conversation or contextually act on a message with [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-- Meeting extensions - You can create apps to make meetings more productive with [meeting extensions](../apps-in-teams-meetings/design/designing-apps-in-meetings.md). For example, ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting.
-- Webhooks and Connectors – Communicate with external apps, send or receive notifications and messages from other apps. [Incoming webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [outgoing webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), message your web service with an @mention.
-- Personal Apps - A [personal app](../concepts/design/personal-apps.md) is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them.
-- Adaptive cards: Use [cards](../task-modules-and-cards/what-are-cards.md), you can organize information into groups and give users the opportunity to interact with specific parts of the information.
+## During build
 
-### Plan responsive tabs for Teams mobile
+- Teams Toolkit and Other SDKs
 
-[Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
+    Use Teams toolkit to create your app's project workspace and build app capabilities.
 
-## Use Teams as a platform
+- Use Teams as a platform
 
-Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
+    Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
+    
+    :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
+    
+    You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
+    
+    Together, these capabilities bring your app solution to life.
 
-:::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
+    - Integrate device capabilities
 
-You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
+    Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
 
-Together, these capabilities bring your app solution to life.
+## Post-build
 
-## Integrate device capabilities
-
-Microsoft Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+    - Integrate your app with Teams and other apps
+    - Use Developer Portal to configure, manage, and deploy your app
 
 ## Government Community Cloud (GCC)
 
