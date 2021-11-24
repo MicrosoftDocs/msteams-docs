@@ -55,7 +55,8 @@ The applications must be registered. The identity providers supporting OAuth 2.0
 
     Redirect URL: `https://<hostname>/bot-auth/simple-start`
 
-Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`.
+    > [!NOTE]
+    > Replace `<hostname>` with your actual host. This `<hostname>` might be a dedicated hosting site such as Azure, Glitch, or an ngrok tunnel to localhost on your development machine such as `abcd1234.ngrok.io`.
 
 9. Select **Configure**. 
 
