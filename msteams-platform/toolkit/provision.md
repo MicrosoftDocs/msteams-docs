@@ -28,7 +28,7 @@ TeamsFx provides seamless integration with Azure and Microsoft 365 cloud that al
 
 Provision is performed with single command in Teams Toolkit for Visual Studio Code or TeamsFx CLI.
 
-* [Provision Azure-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
+* [Provision Azure-based app][/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8](/microsoftteams/platform/sbs-gs-javascript?tabs=vscode%2Cvsc%2Cviscode%2Cvcode&tutorial-step=8).
 
 ## What resources will be created
 
@@ -90,7 +90,7 @@ When you create a new project, an ARM template will be generated under your proj
 
 ## Customize resource provision behavior
 
-Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources being created by modifying the ARM template. Visit [bicep document](https://docs.microsoft.com/azure/azure-resource-manager/bicep/) to learn more about how to use bicep to author ARM template. Provision with ARM usually involves changing two sets of files, parameters and templates:
+Teams Toolkit enables you to use an infrastructure as code approach to define what Azure resources you want to provision, and how you want to configure them. The tooling uses ARM template to define Azure resources. The ARM template is a set of bicep files that defines the infrastructure and configuration for your project. You can customize Azure resources being created by modifying the ARM template. Visit [bicep document][/azure/azure-resource-manager/bicep/](/azure/azure-resource-manager/bicep/) to learn more about how to use bicep to author ARM template. Provision with ARM usually involves changing two sets of files, parameters and templates:
 
 * ARM parameter files (`azure.parameters.{your_env_name}.json`) are located at `.fx/configs` folder, for passing parameters to templates.
 * ARM template files located at `templates/azure`, this folder contains following files:
@@ -123,14 +123,14 @@ Here's a list of predefined parameters available:
 | simpleAuthWebAppName | ${resourceBaseName}simpleAuth | Name of Simple Auth Web App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
 | simpleAuthSku | F1 | SKU of Simple Auth App Service Plan |  |
 | frontendHostingStorageName | ${resourceBaseName}tab | Name of Frontend Hosting Storage Account | 3-24 lowercase letters and numbers |
-| frontendHostingStorageSku | Standard_LRS | SKU of Frontend Hosting Storage Account | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku) for available SKUs |
+| frontendHostingStorageSku | Standard_LRS | SKU of Frontend Hosting Storage Account | Please refer this [page][/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep) for available SKUs |
 | functionServerfarmsName | ${resourceBaseName}api | Name of Function App's App Service Plan | 1-40 alphanumerics and hyphens |
 | functionServerfarmsSku | Y1 | SKU of FUnction App's App Service Plan |
 | functionAppName | ${resourceBaseName}api | Name of Function App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
 | functionStorageName | ${resourceBaseName}api | Name of Function App's Storage Account | 3-24 lowercase letters and numbers |
-| functionStorageSku | Standard_LRS | SKU of Function App's Storage Account | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku)  for available SKUs |
+| functionStorageSku | Standard_LRS | SKU of Function App's Storage Account | Please refer this [page][/azure/templates/microsoft.storage/storageaccounts?tabs=bicep#sku](/azure/templates/microsoft.storage/storageaccounts?tabs=bicep)  for available SKUs |
 | botServiceName | ${resourceBaseName} | Name of Azure Bot service | 2-64 alphanumerics, underscores, periods, and hyphens <br /> Start with alphanumeric |
-| botServiceSku | F0 | SKU of Azure Bot service | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep#sku) for available SKUs |
+| botServiceSku | F0 | SKU of Azure Bot service | Please refer this [page][/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep#sku](/azure/templates/microsoft.botservice/2021-05-01-preview/botservices?tabs=bicep) for available SKUs |
 | botDisplayName | ${resourceBaseName} | Display name of your bot | 1-42 characters |
 | botServerfarmsName | ${resourceBaseName}bot | Name of Bot's App Service Plan | 1-40 alphanumerics and hyphens |
 | botWebAppName | ${resourceBaseName}bot | Name of Bot's Web App | 2-60 alphanumerics and hyphens <br /> Cannot start or end with hyphen |
@@ -140,7 +140,7 @@ Here's a list of predefined parameters available:
 | sqlDatabaseName | ${resourceBaseName} | Name of Azure SQL Database | 1-128 characters, can't use <>*%&:\/? or control characters <br /> Can't end with period or space |
 | sqlDatabaseSku | Basic | SKU of Azure SQL Database |  |
 | apimServiceName | ${resourceBaseName} | Name of APIM Service | 1-50 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
-| apimServiceSku | Consumption | SKU of APIM Service | Please refer this [page](https://docs.microsoft.com/azure/templates/microsoft.apimanagement/service?tabs=bicep#apimanagementserviceskuproperties) for available SKUs |
+| apimServiceSku | Consumption | SKU of APIM Service | Please refer this [page][/azure/templates/microsoft.apimanagement/service?tabs=bicep#apimanagementserviceskuproperties](/azure/templates/microsoft.apimanagement/service?tabs=bicep) for available SKUs |
 | apimProductName | ${resourceBaseName} | Name of APIM Product | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 | apimOauthServerName | ${resourceBaseName} | Name of APIM OAuth Server | 1-80 alphanumerics and hyphens <br /> Start with letter and end with alphanumeric |
 
@@ -182,10 +182,9 @@ Following example will read the value of `mySelfHostedDbConnectionString` parame
 
 #### Customize ARM template files
 
-If the predefined templates does not meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. This is an advance scenario and requires you have basic knowledge of bicep language which is used to author ARM template. You can get started with bicep at [bicep documentation](https://docs.microsoft.com/azure/azure-resource-manager/bicep/).
-
+If the predefined templates does not meet your application requirement, you can customize the ARM templates under `templates/azure` folder. For example, you can customize the ARM template to create some additional Azure resources for your app. This is an advance scenario and requires you have basic knowledge of bicep language which is used to author ARM template. You can get started with bicep at [bicep documentation][/azure/azure-resource-manager/bicep/](/azure/azure-resource-manager/bicep/)
 > [!NOTE]
-> The ARM template is shared by all environments. You can use [conditional deployment](https://docs.microsoft.com/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior various between environments.
+> The ARM template is shared by all environments. You can use [conditional deployment][/azure/azure-resource-manager/bicep/conditional-resource-deployment](/azure/azure-resource-manager/bicep/conditional-resource-deployment) if the provision behavior various between environments.
 
 To ensure the TeamsFx tooling functions properly, please ensure your customized ARM template satisfies following requirement. If you uses other tooling for further development, you can ignore these requirement.
 
@@ -317,7 +316,7 @@ Before provision, the tool will ask you if you want to create a new resource gro
 
 ### How can I provision SharePoint-based app?
 
-You can follow [Provision SharePoint-based app](https://docs.microsoft.com/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4) to provision SharePoint-based app.
+You can follow [Provision SharePoint-based app][/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4) to provision SharePoint-based app.
 
 > [!NOTE]
 > Please note that currently building Teams App with SharePoint Framework using Teams Toolkit doesn't have direct integration with Azure, contents in this doc does not apply to SPFx based apps.
