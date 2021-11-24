@@ -55,7 +55,7 @@ To sideload in a team to test, whether all channel messages in a team with RSC a
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the left pane. The drop-down menu appears.
 1. Select **Manage apps** from the drop-down menu. The details appear.
 
-   ![Managing apps in team](~/assets/images/bots/Chats_ManageApps_Entry.png)
+   ![Manage apps in team](~/assets/images/bots/Chats_ManageApps_Entry.png)
 
 1. Select **Apps**. Multiple apps appear.
 1. Select **Upload a custom app** from the lower right corner.
