@@ -74,7 +74,7 @@ The following card types are supported:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke)
+For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### Example
 
