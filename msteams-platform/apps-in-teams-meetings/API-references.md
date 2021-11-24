@@ -10,19 +10,152 @@ keywords: teams apps meetings user participant role api usercontext notification
 
 # Meeting apps API references
 
-The meeting extensibilities provide APIs to transform the meeting experience:
+The meeting extensibilities provide APIs to modify and improve the meeting experience:
 
 * Build apps or integrate existing apps within meeting lifecycle.
-* Use the APIs to make your app aware of the meeting.
-* Select the APIs you want to use to enhance the meeting experience.
+* Use APIs to make your app aware of meeting.
+* Select APIs to enhance the meeting experience.
 
-The following table provides a list of APIs:
+The details of the APIs are as folows: ![details icon](assets/images/apps-in-meetings/meetingexperience.png)
 
-|API|Description|Request|Source|
+<br>
+
+<details>
+
+## <summary><b>GetUserContext</b></summary>
+
+This API enables you to get contextual information to display relevant content in a Teams tab. To identify and retrieve contextual information for your tab content, see [get context for your Teams tab](../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). `meetingId` is used by a tab when running in the meeting context and is added for the response payload.
+
+### **Request**
+
+ _**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_
+
+### **Source**
+
+Microsoft Teams Client SDK
+
+<br>
+
+<details>
+
+## <summary><b>GetParticipant</b></summary>
+
+> [!NOTE]
+> * Do not cache participant roles since the meeting organizer can change the roles any time.
+> * Teams does not currently support large distribution lists or roster sizes of more than 350 participants for the `GetParticipant` API.
+
+The `GetParticipant` API allows a bot to fetch participant information by meeting ID and participant ID. The API includes query parameters, examples, and response codes.
+
+### **Request**
+
+ **GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ 
+
+### **Source**
+
+Microsoft Bot Framework SDK
+
+### Query parameters
+
+The `GetParticipant` API includes the following query parameters:
+
+|Value|Type|Required|Description|
 |---|---|----|---|
-|**GetUserContext**| This API enables you to get contextual information to display relevant content in a Teams tab. |_**microsoftTeams.getContext( ( ) => {  /*...*/ } )**_|Microsoft Teams Client SDK|
-|**GetParticipant**| This API enables a bot to fetch participant information by meeting ID and participant ID. |**GET** _**/v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}**_ |Microsoft Bot Framework SDK|
-|**NotificationSignal** | This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
+|**meetingId**| String | Yes | The meeting identifier is available through Bot Invoke and Teams Client SDK.|
+|**participantId**| String | Yes | The participant ID is the user ID. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a participant ID from the Tab SSO. |
+|**tenantId**| String | Yes | The tenant ID is required for the tenant users. It's available in Tab SSO, Bot Invoke, and Teams Client SDK. It's recommended to get a tenant ID from the Tab SSO. | 
+
+### Example
+
+The `GetParticipant` API includes the following examples:
+
+# [C#](#tab/dotnet)
+
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  TeamsMeetingParticipant participant = await TeamsInfo.GetMeetingParticipantAsync(turnContext, "yourMeetingId", "yourParticipantId", "yourParticipantTenantId").ConfigureAwait(false);
+  TeamsChannelAccount member = participant.User;
+  MeetingParticipantInfo meetingInfo = participant.Meeting;
+  ConversationAccount conversation = participant.Conversation;
+
+  await turnContext.SendActivityAsync(MessageFactory.Text($"The participant role is: {meetingInfo.Role}"), cancellationToken);
+}
+
+```
+
+# [JavaScript](#tab/javascript)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onMessage(async (context, next) => {
+            TeamsMeetingParticipant participant = getMeetingParticipant(turnContext, "yourMeetingId", "yourParticipantId", "yourTenantId");
+            let member = participant.user;
+            let meetingInfo = participant.meeting;
+            let conversation = participant.conversation;
+            
+            await context.sendActivity(`The participant role is: '${meetingInfo.role}'`);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```http
+GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
+```
+
+---
+
+The JSON response body for `GetParticipant` API is:
+
+```json
+{
+   "user":{
+      "id":"29:1JKiJGPAX9TTxtGxhVo0wLx_zwzo-gG8Z-X03306vBwi9p-xMTEbDXsT6KH7-0kkTS8cD-2zkrsoV6f5WJ6_aYw",
+      "aadObjectId":"e236c4bf-88b1-4f3a-b1d7-8891dfc332b5",
+      "name":"Bob Young",
+      "givenName":"Bob",
+      "surname":"Young",
+      "email":"Bob.young@microsoft.com",
+      "userPrincipalName":"Bob.young@microsoft.com",
+      "tenantId":"2fe477ab-0efc-4dfd-bde2-484374e2c373",
+      "userRole":"user"
+   },
+   "meeting":{
+      "role ":"Presenter",
+      "inMeeting":true
+   },
+   "conversation":{
+      "id":"<conversation id>",
+      "isGroup":true
+   }
+}
+```
+
+### Response codes
+
+The `GetParticipant` API returns the following response codes:
+
+|Response code|Description|
+|---|---|
+| **403** | Get participant information isn't shared with the app. If the app isn't installed in the meeting, it triggers the most common error response 403. If the tenant admin disables or blocks the app during live site migration, 403 error response is triggered. |
+| **200** | The participant information is successfully retrieved.|
+| **401** | The app responds with an invalid token.|
+| **404** | The meeting has either expired or participant cannot be found.|
+
+<br>
+
+<details>
+
+## <summary><b>NotificationSignal</b></summary>
+
+This API enables you to provide meeting signals that are delivered using the existing conversation notification API for user-bot chat. It allows you to signal based on user action that shows an in-meeting dialog box. |**POST** _**/v3/conversations/{conversationId}/activities**_|Microsoft Bot Framework SDK|
 |**Meeting Details** | This API enables you to get static meeting metadata. |**GET** _**/v1/meetings/{meetingId}**_| Bot SDK |
 
 The following table provides the Bot Framework SDK methods for the APIs:
