@@ -22,7 +22,7 @@ The following image shows Contoso channel tabs:
 
 ![Channel or group tabs](../assets/images/tabs/tabs.png)
 
-There are few prerequisites that you must go through before working on tabs.
+There are few prerequisites that you need to go through before working on tabs.
 
 There are two types of tabs available in Teams, personal and channel or group. [Personal tabs](~/tabs/how-to/create-personal-tab.md), along with personally-scoped bots, are a part of personal apps and are scoped to a single user. They can be pinned to the left navigation bar for easy access. [Channel or group tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content to channels and group chats, and are a great way to create collaborative spaces around dedicated web-based content.
 
