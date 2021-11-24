@@ -7,7 +7,7 @@ ms.topic: overview
 # Extend Teams apps across Microsoft 365
 
 > [!NOTE]
-> This early developer preview is intended to provide Teams developers with existing applications the chance to try the new functionality and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
+> The early developer preview is intended to provide Teams developers with existing applications the chance to try the new functionality and [provide feedback](/microsoftteams/platform/feedback) on this expansion of the Teams developer platform into other high-usage areas of the Microsoft 365 ecosystem.
 
 You can test your Teams apps running in Microsoft Office and Outlook by updating your code to use the new [Microsoft Teams JavaScript client SDK v2 Preview](using-teams-client-sdk-preview.md) and Microsoft Teams [Developer preview manifest](../resources/schema/manifest-schema-dev-preview.md). With this preview, you can:
 
