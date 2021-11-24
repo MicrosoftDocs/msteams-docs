@@ -410,9 +410,9 @@ that you can use to exchange messages with the bot.
 Microsoft Teams is an entirely cloud-based product, it requires all services it accesses to be available from the cloud using HTTPS endpoints. Therefore, to enable the bot (our sample) to work in Teams, you need to either publish the code to the cloud of your choice, or make a locally running instance externally accessible via a **tunneling** tool. We recommend  [ngrok](https://ngrok.com/download), which creates an externally addressable URL for a port you open locally on your machine.
 To set up ngrok in preparation for running your Microsoft Teams app locally, follow these steps:
 
-    This launches ngrok to listen on the port you specify. In return, it gives an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
+This launches ngrok to listen on the port you specify. In return, it gives an externally addressable URL, valid for as long as ngrok is running. The following image is an example:
 
-    ![Teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
+![Teams bot app auth connection string adv1](../../../assets/images/authentication/auth-bot-ngrok-start.PNG).
 
 1. Copy the forwarding HTTPS address. It should be similar to the following: `https://dea822bf.ngrok.io/`.
 1. Append `/api/messages` to obtain `https://dea822bf.ngrok.io/api/messages`. This is the **messages endpoint** for the bot running locally on your machine and reachable over the web in a chat in Microsoft Teams.
