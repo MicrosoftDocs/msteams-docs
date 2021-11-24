@@ -23,8 +23,7 @@ If you wish to host your app related resources or access resources **within Azur
 
 ## Join Microsoft 365 Developer program and create your development environment
 
-If you do not have a Microsoft 365 account, you must sign up for a 
-[Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
+If you do not have a Microsoft 365 account, you must sign up for a [Microsoft 365 developer program](/office/developer-program/office-365-developer-program-get-started) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](https://docs.microsoft.com/office/developer-program/office-365-developer-program-get-started).
 
 To set up a subscription, you must first join the Microsoft 365 Developer Program. Microsoft 365 developer subscription can be used to build your solutions independent of your production environment. The subscription is a Microsoft 365 E5 Developer subscription with 25 user licenses. It lasts for 90 days and is free to use for development purposes (coding solutions) only.
 
@@ -41,8 +40,7 @@ You can sign up for the developer program by using one of the following account 
 
 - **Microsoft account** (created by you for personal use) - Provides access to all consumer-oriented Microsoft products and cloud services, such as Outlook (Hotmail), Messenger, OneDrive, MSN, Xbox Live, or Microsoft 365. Signing up for an Outlook.com mailbox automatically creates a Microsoft account. After a Microsoft account is created, it can be used to access consumer-related Microsoft cloud services or Azure.
 
-- **Work account**(issued by an admin for business use) - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see 
-[Manage your Azure AD directory](https://docs.microsoft.com/azure/active-directory/active-directory-administer).
+- **Work account**(issued by an admin for business use) - Provides access to all small, medium, and enterprise business-level Microsoft cloud services, such as Azure, Microsoft Intune, or Microsoft 365. When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Azure Active Directory to represent your organization. For more information, see [Manage your Azure AD directory](https://docs.microsoft.com/azure/active-directory/active-directory-administer).
 
 - **Visual Studio ID**(created for your Visual Studio Professional or Enterprise subscriptions) - We recommend that you use this option to join the developer program from within the Visual Studio Gallery to get the full benefits as a Visual Studio subscriber.
 
@@ -74,8 +72,7 @@ Without sideloading permission, you won’t be able to do any local/remote debug
 :::image type="content" source="./images/admin-center-teams.png" alt-text="Diagram that shows Teams admin center":::
 
 > [!NOTE]
-It can take **up to 24 hours** for the **Teams** option to appear. You can 
-[upload your custom app to a Teams environment](https://docs.microsoft.com/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
+It can take **up to 24 hours** for the **Teams** option to appear. You can [upload your custom app to a Teams environment](https://docs.microsoft.com/microsoftteams/upload-custom-apps#validate) for testing and validation in that time.
 
 3. Navigate to Teams apps > Setup Policies > Global.
 
@@ -90,12 +87,9 @@ It can take **up to 24 hours** for the **Teams** option to appear. You can
 :::image type="content" source="./images/save-sideload.png" alt-text="Diagram that shows save option":::
 
  Note
-It can take up to **24 hours** for the sideloading to be active. In the interim, you can use **upload for <your tenant>** to test your app. To upload the .zip package file of the app, see 
-[upload custom apps](https://docs.microsoft.com/microsoftteams/upload-custom-apps#upload).
+It can take up to **24 hours** for the sideloading to be active. In the interim, you can use **upload for <your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](https://docs.microsoft.com/microsoftteams/upload-custom-apps#upload).
 
-For complete information on how these settings interact, see 
-[manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and 
-[manage app setup policies in Teams](https://docs.microsoft.com/microsoftteams/teams-app-setup-policies).
+For complete information on how these settings interact, see [manage custom app policies and settings in Teams](https://docs.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](<https://docs.microsoft.com/microsoftteams/teams-app-setup-policies>.
 
 ## See Also
 
