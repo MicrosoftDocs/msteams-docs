@@ -94,7 +94,7 @@ Steps to do the customization:
 
   ```json
   {
-      "$schema": https://aka.ms/teamsfx-env-config-schema,
+      "$schema": "https://aka.ms/teamsfx-env-config-schema",
       "description": "You can customize the TeamsFx config for different environments.   Visit https://aka.ms/teamsfx-env-config to learn more about this.",
       "manifest": {
           "appName": {
@@ -126,7 +126,7 @@ Steps to do the customization:
 
   ```json
   {
-      "$schema": https://aka.ms/teamsfx-env-config-schema,
+      "$schema": "https://aka.ms/teamsfx-env-config-schema",
       "description": "You can customize the TeamsFx config for different environments.   Visit https://aka.ms/teamsfx-env-config to learn more about this.",
       "manifest": {
           ...
@@ -149,7 +149,7 @@ Steps to do the customization:
 
   ```json
   {
-    "$schema": https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json,
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
     "manifestVersion": "1.11",
     "version": "1.0.0",
     ...
@@ -174,7 +174,7 @@ As the Teams app manifest template is shared across all environments, we can upd
 
   ```json
   {
-    "$schema": https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json,
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
     "manifestVersion": "1.11",
     "version": "1.0.0",
     ...
