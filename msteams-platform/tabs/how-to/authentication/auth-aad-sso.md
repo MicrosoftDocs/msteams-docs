@@ -105,8 +105,8 @@ Complete the following steps to develop an SSO Teams tab:
     ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png) 
 
 
- > [!NOTE]
- > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
+   > [!NOTE]
+   > If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 1. Select the **Set** link to generate the Application ID URI in the form of `api://{AppID}`. Insert your fully qualified domain name with a forward slash "/" appended to the end, between the double forward slashes and the GUID. The entire ID must have the form of `api://fully-qualified-domain-name.com/{AppID}`². For example, `api://subdomain.example.com/00000000-0000-0000-0000-000000000000`. The fully qualified domain name is the human readable domain name from which your app is served. If you use tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
 1. Select **Save and Continue**.
@@ -162,15 +162,17 @@ Complete the following steps to develop an SSO Teams tab:
     > [!IMPORTANT]
     > If an app hasn't been granted IT admin consent, users have to provide consent the first time they use an app.
 
-1. To enter a redirect URI:
-    * Select **Add a platform**.
+###### Enter a redirect URI:
+
+1. Select **Add a platform**.
     
-       ![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
+    ![Add a platform for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step13.png)
 
-    * Select **web**.
-       ![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+2. Select **web**.
 
-1. Select **Configure**.
+    ![Web for URI](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+
+3. Select **Configure**.
 
     ![Configure](~/assets/images/authentication/SSOtabsauth/SSO-auth-step15.png)
 
