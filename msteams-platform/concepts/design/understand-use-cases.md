@@ -113,7 +113,7 @@ With [messaging extensions](../../messaging-extensions/what-are-messaging-extens
 
 #### Meeting extensions
 
-There are a few options for [incorporating your app into the Teams calling experience](../../-in-teams-meetings/design/designing-apps-in-meetings.md).
+There are a few options for [incorporating your app into the Teams calling experience](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
    :::column-end:::
 
