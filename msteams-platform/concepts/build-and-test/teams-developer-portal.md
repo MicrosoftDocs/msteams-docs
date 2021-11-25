@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Manage your apps with the Developer Portal for Microsoft Teams
 
-The <a href="https://dev.teams.microsoft.com" target="_blank">Developer Portal for Teams</a> is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
+The [Developer Portal for Teams](https://dev.teams.microsoft.com) is the primary tool for configuring, distributing, and managing your Microsoft Teams apps. With the Developer Portal, you can collaborate with colleagues on your app, set up runtime environments, and much more.
 
 :::image type="content" source="../../assets/images/tdp/tdp_home_1.png" alt-text="Screenshot showing the home page of the Developer Portal for Teams.":::
 
@@ -33,10 +33,10 @@ You can register and configure your Teams app in the Developer Portal.
 
 **To Import an app**
 
-1.	In the Developer Portal, select Apps in the left navigation bar.
-1.	Select Import App.
-1.	Select the app manifest file and click Open.
-1. ****
+1. In the Developer Portal, select Apps in the left navigation bar.
+1. Select Import App.
+1. Select the app manifest file and click Open.
+1. Click **Import**.
     1. If your app package has errors, you can import the app and resolve the errors before you upload or publish the app to Teams.
     1. If you see the following message while uploading the app, click **Import** to add the app package to the Developer Portal.
  
@@ -50,11 +50,11 @@ You can configure environments and global variables to help transition your app 
 
 **To set up an environment**
 
-1.	In the Developer Portal, select **Apps** in the left navigation bar.
-2.	Select the app you’re working on.
-3.	Go to **Environments** page and select **+ Add an environment**.
+1. In the Developer Portal, select **Apps** in the left navigation bar.
+2. Select the app you’re working on.
+3. Go to **Environments** page and select **+ Add an environment**.
     1.	If you’re a first time user, select **Create your first environment**.
-4.	Enter a name and select **Add**.
+4. Enter a name and select **Add**.
 
 If you have multiple environments, you can switch between environments by selecting an environment from the drop-drop list under **Select an environment**.
 
@@ -63,10 +63,10 @@ You can create variables for your environment and also use existing the variable
 
 **To use variables**
 
-1.	In the environment page, select **Add a variable**.
-2.	Enter a variable name.
-    1.	To use existing variable, enter **{{**, a dropdown with all the variables you've created for the chosen environment along with the global variables appears. Select a variable from the list.
-3.	Enter a Value and click **Add**.
+1. In the environment page, select **Add a variable**.
+2. Enter a variable name.
+    1.	To use an existing variable, enter **{{**, a dropdown with all the variables you've created for the chosen environment along with the global variables appears. Select a variable from the list.
+3. Enter a Value and click **Add**.
 
 > [!NOTE]  
 > Before downloading your app package (for example, when getting ready to publish to the Teams store), select the environment you want to use. Your app configurations update automatically.
@@ -80,12 +80,11 @@ You can create global variables to reuse app configuration values across any env
 Each app includes an **Owners** page, where you can share your app registration with colleagues in your org. The **Contributor** role has the same permissions as the **Owner** role except the ability to delete an app.
 You can add owners and contributors to manage who can make changes to your app.
 To add an owner:
-1.	In the app overview, select **Owners**.
-2.	In the title bar, select **Add an owner**.
-3.	Enter a name and select the ID from the drop-down list.
-4.	Under Role, select **Contributor** or **Administrator**.
-5.	Select **Add**.
-
+1. In the app overview, select **Owners**.
+2. In the title bar, select **Add an owner**.
+3. Enter a name and select the ID from the drop-down list.
+4. Under Role, select **Contributor** or **Administrator**.
+5. Select **Add**.
 
 ## App configuration
 
@@ -93,7 +92,17 @@ A Teams app is a web app. Like all web apps, its source code is typically develo
 
 To install and render your app in Teams, you must include a set of configurations that Teams recognizes. This has traditionally been done by crafting an app manifest, a JSON file that contains all the metadata Teams needs to display your app content. The Developer Portal abstracts this process and includes new features and tooling to help you be more successful.
 
-The configure section in the developer Portal allows you to update various attributes related to your app such as Owners, environments, basic information, permissions, domains, and so on. 
+The configure section in the developer Portal allows you to update various attributes related to your app such as:
+* Owners
+* Environments
+* Basic information
+* App features
+* Permissions
+* Admin settings 
+* App package
+* Publish to org
+* Publish to store
+
 For more information, see Introduction to Microsoft Teams Developer Portal - YouTube.
 
 
@@ -109,15 +118,27 @@ The Developer Portal provides options for testing and debugging your app:
 > [!NOTE]  
 > Resolve errors or warnings and read the checklist before you publish the app.
 
-## Distribute your app
+## Publish your app
 
-From the Developer Portal, use the **Distribute** button to download an app package, publish to your org, or publish to the Teams store.
+From the Developer portal, you can publish your app to your org, or to the Teams store.
+
+**To Publish your app to the Org**
+
+1. In the App Overview page, under **Publish**, Select **Publish to Org**.
+1. Select **Publish your App**.
+
+**To publish your app to Store**
+
+1. In the App Overview page, under **Publish**, Select **Publish to Store**.
+1. Select **Publish**.
+
+You can download the app package using **Download app package** button from the publish to Teams Store page. 
 
 For more information, see [distribute your Teams app](~/concepts/deploy-and-publish/apps-publish-overview.md).
 
 ## Analyze your app's usage
 
-On the **Overview** page, under **Analytics**, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
+On the app **Overview** page, under **Analytics**, you can see the total number of active users for your app. These metrics are available for apps published to the Teams store or an org's app catalog through Developer Portal and scoped to the app ID.
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -133,7 +154,20 @@ The Developer Portal also includes tools to help you build some key features of 
 * **Scene studio**: Design [custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor**: Create and preview Adaptive Cards to include with your apps.
 * **Microsoft identity platform management**: Register your apps with Azure Active Directory (Azure AD) to help users sign in and provide access to APIs.
+* **Bot management**: You can add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
+    **To add a bot**
+    1. In the Developer Portal, select **Tools** in the left navigation bar.
+    2. Select **Bot Management**.
+    3. In the bot management page, select **+ New Bot**.
+    4. Enter a name and select **Add**.
+
+    From Developer portal, you can navigate to [Bot framework portal](https://aka.ms/appstudionewbot) and configure your bot to update bot icon and other bot properties.
+
+    > [!NOTE]
+    > A unique ID is generated for your bot.
+
+* **Teams store app validation**: The app validation tool checks your app package against the test cases Microsoft uses when reviewing your app.
 ## See also
 
 [Include a SaaS offer with your Microsoft Teams app](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md)
