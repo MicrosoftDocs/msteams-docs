@@ -23,29 +23,21 @@ Let's break it down to app building lifecycle:
 
 The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
-- Understand your use case and Teams App Features
-
-    Recognize user issues and identify the solutions to some common problems the users face. Build your Teams app by finding the right combination of Teams features to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
+- **Understand your use case and Teams App Features**: Recognize user issues and identify the solutions to some common problems the users face. Build your Teams app by finding the right combination of Teams features to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
 
     Use Teams UI Toolkit and UI Library to [design your app's layout](~/concepts/design/design-teams-app-process.md).
 
-- Map your use cases
-
-    [Map common use cases](../concepts/design/map-use-cases.md) to Teams features based on:
+- **Map your use cases**: [Map common use cases](../concepts/design/map-use-cases.md) to Teams features based on:
 
     - Sharing and collaborating on items in an external system.
     - Initiating workflows and sending notifications to users.
     - Using social platforms, conversational bots, and combining multiple features.
 
-- Plan responsive tabs for Teams mobile
-
-    [Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
+- **Plan responsive tabs for Teams mobile**: [Plan responsive tabs for Teams mobile](../concepts/design/plan-responsive-tabs-for-teams-mobile.md) covers common scenarios and helps with planning apps for Teams mobile. The document guides on how to strategize for apps on mobile. You can also learn about the different stages and different types of Teams app.
 
 ## During build
 
-- Teams Toolkit and Other SDKs
-
-    Use Teams toolkit to create your app's project workspace and build app capabilities.
+- **Teams Toolkit and Other SDKs**: Use Teams toolkit to create your app's project workspace and build app capabilities.
 
     - [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
     - [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
@@ -54,9 +46,7 @@ The first step for any app is to understand the user need and problem, determine
     - [Cards](../task-modules-and-cards/what-are-cards.md#cards)
     - [Task modules](../task-modules-and-cards/what-are-task-modules.md#task-modules)
 
-- Use Teams as a platform
-
-    Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
+- **Use Teams as a platform**: Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
 
@@ -64,14 +54,12 @@ The first step for any app is to understand the user need and problem, determine
 
     Together, these capabilities bring your app solution to life.
 
-- Integrate device capabilities
-
-    The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
+- **Integrate device capabilities**: The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client SDK.
 
 ## Post-build
 
-- Integrate your app with Teams and other apps: Microsoft 365, Microsoft Graph, and more
-- Use Developer Portal to configure, manage, and deploy your app
+- Integrate your app with Teams and other apps, such as [Microsoft 365](../m365-apps/overview.md#extend-teams-apps-across-microsoft-365), [Microsoft Graph](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md#proactive-installation-of-apps-using-graph-api-to-send-messages), and more.
+- Use [Developer Portal](build-and-test/teams-developer-portal.md#manage-your-apps-with-the-developer-portal-for-microsoft-teams) to configure, manage, and deploy your app.
 
 ## Government Community Cloud (GCC)
 
