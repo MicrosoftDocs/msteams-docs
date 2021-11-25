@@ -75,7 +75,7 @@ The following scenarios will guide you in understanding the selection of capabil
     | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
     |
 
-- **Ask questions and get answers**</summary>**
+- **Ask questions and get answers**
 
     Connect with your users and resolve their queries
     
