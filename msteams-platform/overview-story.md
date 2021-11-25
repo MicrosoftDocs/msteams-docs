@@ -26,9 +26,9 @@ Let’s dig deeper into this story and find out.
       :::image type="content" source="../msteams-platform/assets/images/overview/us-1.png" alt-text="Image showing user story 1" border="true":::
    :::column-end:::
    :::column span="":::
-      ### Understand your user
+      #### Understand your user
 
-        Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams. Ask relevant questions, such as:
+        Knowing about your user is helps you to identify how they use Teams. Ask relevant questions, such as:
         - Do the users primarily use mobile clients?
         - Do you expect many guest users to need access your app?
         - How technically sophisticated are your primary users?
@@ -36,11 +36,11 @@ Let’s dig deeper into this story and find out.
 :::row-end:::
 :::row:::
    :::column span="":::
-      ### Understand the problem
+      #### Understand the problem
 
-        Understand the challenges that you want to resolve with your app. Ask relevant questions, such as:
+        Identify the user problem that you want to resolve with your app. Ask relevant questions, such as:
         - What are the pros and cons of the current state system used by your users?
-        - What features or capabilities your users prefer in their current system?
+        - What do your users prefer in their current system?
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
@@ -52,9 +52,9 @@ Let’s dig deeper into this story and find out.
       :::image type="content" source="../msteams-platform/assets/images/overview/us-3.png" alt-text="Image showing user story 3" border="true":::
    :::column-end:::
    :::column span="":::
-      ### List App Requirements and Benefits
+      #### List App Requirements and Benefits
 
-        Remember who your users are and the problem you're trying to solve. Ask relevant questions, such as:
+        Determine your app's features and how you expect it to answer the user's problem. Ask relevant questions, such as:
         - Do the users need current updates regularly without having to check?
         - Do you need to authenticate users?
         - Do you need to help users with other options?
@@ -62,11 +62,11 @@ Let’s dig deeper into this story and find out.
 :::row-end:::
 :::row:::
    :::column span="":::
-      ### User-centric solution
+      #### User-centric solution
 
-        Going through a checklist of similar questions helps you craft the right experience. Ask relevant questions, such as:
+        Craft the right app experience for your users with an app that fits their requirement. Ask relevant questions, such as:
         - Should only registered users receive regular help?
-        - What features or capabilities would be most convenient for user experience?
+        - What features would be most convenient for user experience?
         - Did the app solve the user's problem?
    :::column-end:::
    :::column span="":::

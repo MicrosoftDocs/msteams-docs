@@ -11,10 +11,7 @@ ms.date: 05/24/2021
 
 Microsoft Teams apps bring key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
-Apps are how you extend. Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
-
-> [!div class="nextstepaction"]
-> [Start here](get-started/get-started-overview.md)
+Apps are how you extend Teams capabilities to fit your needs. Create something brand new for Teams or integrate an existing app.
 
 ## Why build your apps with Teams?
 
