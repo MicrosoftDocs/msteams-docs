@@ -81,7 +81,7 @@ You can see two types of messages:
 
 ![Error message](~/assets/images/Cards/error-message.png)
 
-1. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
+2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
 
 ![Success message](~/assets/images/Cards/success-message.png)
 
