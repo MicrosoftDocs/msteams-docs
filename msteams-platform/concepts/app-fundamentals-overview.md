@@ -51,11 +51,11 @@ The first step for any app is to understand the user need and problem, determine
 - Use Teams as a platform
 
     Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.
-    
+
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Conceptual representation of the Teams solution." border="true":::
-    
+
     You could have apps that appear on Teams as Tabs, Bots, Messaging Extensions, Connectors & Webhooks. These are powered at the backend by Azure, Microsoft Graph, SharePoint and Power apps that can help automate day to day tasks and processes.
-    
+
     Together, these capabilities bring your app solution to life.
 
 - Integrate device capabilities

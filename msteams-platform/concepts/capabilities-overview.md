@@ -1,19 +1,24 @@
 ---
-title: Understand app capabilities
+title: Understand app features
 author: heath-hamilton
-description: Description of Teams app capabilities, such as Tabs, Bots, Messaging extensions, and Webhooks and connectors.
+description: Description of Teams app capabilities, such as Tabs, Bots, Messaging extensions, and Webhooks and connectors; app scope, such as personal and shared apps
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: lajanuar
 ms.date: 09/22/2020
-keywords: tabs bots messaging extensions webhooks connectors gcc
+keywords: tabs bots messaging extensions webhooks connectors
 ---
 
-# Understand Microsoft Teams app capabilities
+# Understand Microsoft Teams app features
 
-Extensibility or entry points are different ways in which an app can manifest itself to a user. For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. The various capabilities used to build your Teams app allows you to increase its usage scope.
+There are multiple ways to extend Teams, so every app is unique. A Teams app can manifest itself to a user in different ways. An Teams app features include:
 
-There are multiple ways to extend Teams, so every app is unique. Some only have one capability, such as a webhook, while others have more than one feature to give users various options. For example, your app can display data in a central location, that is, the **tab** and present that same information through a conversational interface, that is, the **bot**.
+- App capabilities
+- App scope
+
+For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. You can only one capability, such as a webhook, while others have more than one feature to give users various options.
+
+These capabilities can exist across different scopes. For example, your app can display data in a central shared location, that is, the tab and present that same information through a personal conversational interface, that is, the bot.
 
 ## App capabilities
 
@@ -139,11 +144,12 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
    :::column-end:::
 :::row-end:::
 
+## Choose the correct scope for your app
 
-## Always consider your user
+You can choose app scope from the following:
 
-As you familiarize yourself with Teams app development, you understand its core fundamentals. You understand that there is more than one way to build certain features. In such scenarios, consider how you can provide a more native experience to your user.
-For example, you can collect user input in a form built as a tab in the app. You can also do this using a task module without switching views and disrupting user's workflow. It is important to choose extension points that provide least deviation from a user's regular workflow.
+- Personal app experience: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+- Shared app experience: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
 ## See also
 
