@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Bots and SDKs
 
-You can create a bot that works in Microsoft Teams with one of the following tools or capabilities:
+A functional bot can be created in Microsoft Teams with one of the following tools or capabilities:
 
 * [Microsoft Bot Framework SDK](#bots-with-the-microsoft-bot-framework)
 * [Power Virtual Agents](#bots-with-power-virtual-agents)
@@ -25,7 +25,7 @@ Your Teams bot consists of the following:
 * Your Teams app package, which connects the Teams client to your web service.
 
 > [!TIP]
-> Use the Developer Portal to register your web service with the Bot Framework and specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
+> Register your web service with the bot frame work through Developer portal to specify your app configurations. For more information, see [manage your apps with the Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create bots using C#, Java, Python, and JavaScript. If you already have a bot that is based on the Bot Framework, you can easily modify it to work in Teams. Use either C# or Node.js to take advantage of our [SDKs](/microsoftteams/platform/#pivot=sdk-tools). These packages extend the basic Bot Builder SDK classes and methods as follows:
 
@@ -34,7 +34,7 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 * Process messaging extension requests.
 
 > [!IMPORTANT]
-> You can develop Teams apps in any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. But you must perform token handling in all cases.
+>Teams apps can be developed by using any web programming technology and call the [Bot Framework REST APIs](/bot-framework/rest-api/bot-framework-rest-overview) directly. Token handling is a must in all cases.
 
 ## Bots with Power Virtual Agents
 
@@ -42,11 +42,11 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 ## Bots with webhooks and connectors
 
-Webhooks and connectors connect your bot to your web services. Using webhooks and connectors, you can create a simple bot for basic interaction, such as creating a workflow or other simple commands. They are available only in the team where you create them and are intended for simple processes specific to your company's workflow. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
+Webhooks and connectors connect bot to your web services and a simple bot for basic interaction can be created such as creating a workflow or other simple commands. They’re available in teams that you form and are designed for simple processes that are unique to your company’s workflow. For more information, see what are webhooks and connectors. For more information, see [what are webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md).
 
 ## Advantages of bots
 
-Bots in Microsoft Teams can be part of a one-to-one conversation, a group chat, or a channel in a team. Each scope provides unique opportunities and challenges for your conversational bot.
+Bots in Microsoft teams can be used in one-to-one conversation, group chats and team channels. Each scope provides your conversational bot unique opportunities and challenges.
 
 | In a channel | In a group chat | In a one-to-one chat |
 | :-- | :-- | :-- |
@@ -67,9 +67,9 @@ Bots work better in a channel in the following cases:
 
 ### In a group chat
 
-Group chats are non-threaded conversations between three or more people. They tend to have fewer members than a channel and are more transient. Similar to a channel, your bot only has access to messages where it is `@mentioned` directly.
+Group chats are non-threaded conversations between three or more people. They have smaller number of members than a channel and are transparent. Similar to a channel, your bot only can see messages where it is `@mentioned`.
 
-In the cases where bots work better in a channel also work better in a group chat.
+Bots work better in a channel and group chat.
 
 ### In a one-to-one chat
 
@@ -82,7 +82,7 @@ Before creating one-to-one chatbots, consider whether a conversation-based inter
 
 ## Disadvantages of bots
 
-An extensive dialog between your bot and the user is a slow and complex way to get a task completed. A bot that supports excessive commands, especially a broad range of commands, is not successful or viewed positively by users.
+An extensive conversation between your bot and the user is time consuming and difficult way to execute a task. A bot that supports a large number of commands, especially a broad range of commands, will not be successful or viewed positively by users.
 
 ### Have multi-turn experiences in chat
 
@@ -106,7 +106,7 @@ As there are only six visible commands in the current bot menu, anything more is
 
 ### Maintain a large knowledge base
 
-One of the disadvantages of bots is that it is difficult to maintain a large retrieval knowledge base with unranked responses. Bots are best suited for short, quick interactions, and not sifting through long lists looking for an answer.
+One of the disadvantages of bots is, maintaining a big retrieval knowledge base with unranked responses is challenging. Bots work best in short and quick interactions rather than searching through extensive lists in search of a solution.
 
 ## Code sample
 
