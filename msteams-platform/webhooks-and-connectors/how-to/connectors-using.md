@@ -13,7 +13,7 @@ You can create actionable messages and send it through Incoming Webhook or Offic
 
 ## Create actionable messages
 
-The actionable messages include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
+The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
 
 The connector cards support the following actions:
 
@@ -21,7 +21,7 @@ The connector cards support the following actions:
 - `HttpPOST`: Sends POST request to a URL.
 - `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
 
-The `ActionCard` action supports three input types:
+The `ActionCard` action supports six input types:
 
 - `TextInput`: A single line or multiline text field with an optional length limit.
 - `DateInput`: A date selector with an optional time selector.
