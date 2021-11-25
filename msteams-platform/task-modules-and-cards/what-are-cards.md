@@ -70,21 +70,21 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 
 ### Adaptive cards form completion
 
-**Adaptive cards form completion** is a visual informational feedback message that appears when card action completes to a configurable set of card actions.
-Adaptive cards extensions are impacted with this feature
+Form completion message is added to the Adaptive Cards. It is a visual informational feedback message that appears when card action completes. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
 
-User can see two types of feedback messages.
+You can see two types of feedback messages.
 
-**Error:** When a card action completes, user receives feedback as **Something went wrong, Try again** message if there is an error in the attempt.
+Error: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
 
 ![Error message](~/assets/images/Cards/error-message.png)
 
-**Success:** When a card action completes, user receives feedback as **Your response was sent to the app** message if the attempt is successful.
+Success: When your response to bot is successfully sent, **Your response was sent to the app** appears.
 
 ![Success message](~/assets/images/Cards/success-message.png)
 
-**Message as response type in mobile UX**
-Feedback message is shown at the bottom of the adaptive cards. User can click close button or switch chat to dismiss the message. There is no time logic for dismissal.
+**Message response in mobile**
+
+The message appears at the bottom of the Adaptive Card. You can select Close or switch chat to dismiss the message.
 
 ![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
 
