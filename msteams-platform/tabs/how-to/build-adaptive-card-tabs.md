@@ -150,7 +150,7 @@ The following code provides examples of `tab/fetch` request and response:
                 },
                 {
                     "card": adaptiveCard2,
-                }
+                },
                 {
                     "card": adaptiveCard3
                 }  
