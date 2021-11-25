@@ -14,19 +14,18 @@ Building an awesome Teams app is all about finding the right combination to meet
 In this collaborative social framework, there is a wide variety of user needs that can be solved with a Teams app. For instance, an app that bridges gaps in achieving effective collaboration are a great fit.
 
 ## Understand your use cases
-If you're going to meet those needs, you first need to understand them.
 
-- Understand the problem: Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve.
+If you're going to meet those needs, you first need to understand them.
 
 - Understand your user: Understand who your user is and you can identify the right distribution model. It helps you to identify how users use Teams.
 
-- Understand the limitations of the app: Knowing the limitations of the apps for data accessibility and data residency requirement will help you design better apps. This is important, as having information on who owns the data and availability of APIs impacts the solution architecture.
+- Understand the problem: Every app has a core problem or a need to solve. Before you start building an app, you need to articulate what that problem is. You can solve wide variety of problems, provided you understand which one you're trying to solve.
 
-- Provide authentication: You must identify early on if you need to protect the services you are exposing and at what level. Remember, the web services exposed in your Teams app are publicly available over the internet.
+- Consider integration: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
 ## Map your use cases to Teams app capabilities
 
-After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received from the user to your queries, and then decide which capability is best suited to build your app.
+After you've identified the user and the problem your app will solve, it is time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
 
 ### Use Cases and Teams capabilities
 
@@ -35,8 +34,6 @@ The Microsoft Teams platform offers a large variety of capabilities and UI eleme
 :::image type="content" source="../../assets/images/overview/teams-apps-capabilities.png" alt-text="Image showing Teams capabilities" border="true":::
 
 Each method of interacting with your users has its strengths and weaknesses.
-
-### User needs vs. Teams capabilities  
 
 Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
 </br>
