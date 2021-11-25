@@ -456,7 +456,7 @@ In this example, there are two primary actions (by default) and one secondary ac
 }
 ```
 
-  ![action card image](~/assets/images/Cards/action-image-revised.png)
+  ![actions card image](~/assets/images/Cards/actions-blurred.png)
 
 **Action set**
 
@@ -487,9 +487,8 @@ In this example, all the actions are marked as secondary therefore, a single ove
      ]
 }
 ```
-
-  ![action set card image](~/assets/images/Cards/action-set-image.png)
-
+  ![actions set card image](~/assets/images/Cards/action-set-blurred.png)
+  
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
 
 **Overflow menu on mobile**: When a user selects overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There is an integrated sheet that displays an overflow menu with card related tasks with a message option. Long press on any message displays a list of related messages and this option is available only for actions.
