@@ -23,12 +23,12 @@ If you're going to meet those needs, you first need to understand them.
 
 - **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 
-## Understand Microsoft Teams app features
+## Microsoft Teams app features
 
 There are multiple ways to extend Teams, so every app is unique. A Teams app can manifest itself to a user in different ways. An Teams app features include:
 
-- App capabilities
-- App scope
+- [App capabilities](#app-capabilities)
+- [App scope](#app-scope)
 
 For example, a user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot. You can only one capability, such as a webhook, while others have more than one feature to give users various options.
 
@@ -158,7 +158,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
    :::column-end:::
 :::row-end:::
 
-## Choose the app scope
+### App scope
 
 You can choose app scope from the following:
 
