@@ -51,7 +51,11 @@ Complete the following steps to develop an SSO Teams bot:
 The steps to register your app through the AAD portal are similar to the [tab SSO flow](../../../tabs/how-to/authentication/auth-aad-sso.md). Complete the following steps to register your app:
 
 1. Register a new application in the [Azure Active Directory – App Registrations](https://go.microsoft.com/fwlink/?linkid=2083908) portal.
+
 2. Select **New Registration**. The **Register an application** page appears.
+
+    ![New registration](~/assets/images/authentication/SSOtabsauth/SSO-auth-step1.png)
+
 3. In the **Register an application** page, enter the following values:
     1. Enter a **Name** for your app.
     2. Choose the **Supported account types**, select single tenant or multitenant account type.
@@ -61,17 +65,33 @@ The steps to register your app through the AAD portal are similar to the [tab SS
         > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
     3. Choose **Register**.
+
+    ![Register an application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step2.png)
+
 4. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
-1. Under **Manage**, select **API permissions**. 
+
+    ![Application Id](~/assets/images/authentication/SSOtabsauth/SSO-auth-step3.png)
+
+5. Under **Manage**, select **API permissions**. 
+
+    ![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
 
    > [!IMPORTANT]
     > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
     > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
 6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
+
 7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
-1. Under **Manage**, select **Expose an API**.
+
+1. Under **Manage**, select **Expose an API**
+
+    ![Expose an API](~/assets/images/authentication/SSOtabsauth/SSO-auth-step4.png)
+
 1. Select **Add a scope**.
+
+    ![Add a Scope](~/assets/images/authentication/SSOtabsauth/SSO-auth-step5.png)
+
 1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
     >[!NOTE]
@@ -86,13 +106,18 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. In the **Who can consent?** box, enter **Admins and users**.
 11. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
-    * **Admin consent display name**: Teams can access the user’s profile.
-    * **Admin consent description**: Teams can call the app’s web APIs as the current user.
-    * **User consent display name**: Teams can access your profile and make requests on your behalf.
-    * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
+    1. Admin consent display name: Teams can access the user’s profile.
+    2. Admin consent description: Teams can call the app’s web APIs as the current user.
+    3. User consent display name: Teams can access your profile and make requests on your behalf.
+    4. User consent description: Teams can call this app’s APIs with the same rights as you have.
 
 12. Ensure that the state is set to **Enabled**.
+
+    ![State](~/assets/images/authentication/SSOtabsauth/SSO-auth-step6.png)
+
 1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+    ![Add a client application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step7.png)
 
 1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
     * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
@@ -104,15 +129,24 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
 1. Select **Add a permission**. 
 
+    ![API Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step9.png)
+
 1. Select **Microsoft Graph**. 
 
+    ![Microsoft Graph](~/assets/images/authentication/SSOtabsauth/SSO-auth-step10.png)
+
 1. Select **Delegated permissions**. 
+
+    ![Delegated Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step11.png)
+
 1. Now, add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
     * email
     * offline_access
     * OpenId
     * profile
+
+    ![Openid permission](~/assets/images/authentication/SSOtabsauth/SSO-auth-step12.png)
 
 1. Select **Update permission**.
 
@@ -138,8 +172,9 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     5. In the **Tenant ID** box, enter *common*.
     6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
     7. Select **Save**.
-
-    ![VuSSOBotConnection setting view](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    8. Select **Apply**.
+   
+    ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 
