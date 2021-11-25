@@ -143,6 +143,7 @@ Complete the following steps to develop an SSO Teams tab:
 1. Select **Microsoft Graph**.
 
     ![Microsoft Graph](~/assets/images/authentication/SSOtabsauth/SSO-auth-step10.png)
+
 1. Select **Delegated permissions**
 
     ![Delegated Permissions](~/assets/images/authentication/SSOtabsauth/SSO-auth-step11.png)
