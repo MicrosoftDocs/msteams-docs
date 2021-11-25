@@ -34,6 +34,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 1. On the **Messaging Extension** page, add the domain that you want to look for in the **Message handlers** section. The following image explains the process:
 
     ![message handlers section in App Studio](~/assets/images/link-unfurling.png)
+
     
 ### Add link unfurling manually
 
@@ -73,7 +74,7 @@ The following card types are supported:
 * [Office 365 Connector card](~/task-modules-and-cards/cards/cards-reference.md#office-365-connector-card)
 * [Adaptive Card](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 
-You can display a preview of an Adaptive Card or Office 365 Connector card in the result list using its preview property. The preview property is not necessary if the results are already Hero or Thumbnail cards. If you use the preview attachment, it must be either a Hero or Thumbnail card. If no preview property is specified, the preview of the card fails and nothing is displayed.
+For more information, see [Action type invoke](~/task-modules-and-cards/cards/cards-actions.md#action-type-invoke).
 
 ### Example
 
