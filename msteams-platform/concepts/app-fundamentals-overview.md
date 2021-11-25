@@ -24,15 +24,11 @@ Let's break it down to app building lifecycle:
 
 The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
-- Understand your use cases
+- Understand and map your use cases
 
-    You can recognize user issues and identify the answers to some common problems the users face. Build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
+    You can recognize user issues and identify the answers to some common problems the users face. Build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. It covers some common scenarios and how to choose your app's capabilities.
 
-- Map your use cases to Teams app capabilities
-
-    [Map your use cases](../concepts/design/map-use-cases.md) covers some common scenarios and how to choose your app's capabilities. Information to share your app and collaborate on items in an external system is provided.
-
-- App Features and Design
+- Teams App Features
 
     Select your app's scope and features. You can extend your Teams app in multiple ways. Your app scope can be personal or shared space app. You can choose to meet the user needs with one or more [capabilities](../concepts/capabilities-overview.md).
 
