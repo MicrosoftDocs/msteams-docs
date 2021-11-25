@@ -115,6 +115,16 @@ The steps to register your app through the AAD portal are similar to the [tab SS
 
     ![State](~/assets/images/authentication/SSOtabsauth/SSO-auth-step6.png)
 
+1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
+
+    ![Add a client application](~/assets/images/authentication/SSOtabsauth/SSO-auth-step7.png)
+
+1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+    ![Client Id](~/assets/images/authentication/Client-Id-sso-bots.png)
+
 1. Go to **API Permissions**.
 
 1. Select **Add a permission**. 
