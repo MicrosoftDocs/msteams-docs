@@ -68,7 +68,7 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
-### Adaptive cards form completion
+### Adaptive Cards form completion
 
 Form completion message is added to the Adaptive Cards. It is a visual informational feedback message that appears when card action completes. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
 
@@ -101,4 +101,4 @@ Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and Use
 
 * [Format cards in Teams](~/task-modules-and-cards/cards/cards-format.md)
 * [Design Adaptive Cards](~/task-modules-and-cards/cards/design-effective-cards.md)
-* [Adaptive cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
+* [Adaptive Cards in bots](../bots/how-to/conversations/conversation-messages.md#adaptive-cards)

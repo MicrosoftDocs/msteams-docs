@@ -602,4 +602,4 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 
 ## See also
 
-[Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)
+* [Respond to search command](~/messaging-extensions/how-to/search-commands/respond-to-search.md)

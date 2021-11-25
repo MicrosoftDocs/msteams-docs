@@ -106,7 +106,7 @@ After identifying the common properties for all cards, you can now work with Ada
 
 ## Adaptive Card
 
-An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07) and [Adaptive Cards form completion](~/task-modules-and-cards/what-are-cards.md).
 
 ### Support for Adaptive Cards
 

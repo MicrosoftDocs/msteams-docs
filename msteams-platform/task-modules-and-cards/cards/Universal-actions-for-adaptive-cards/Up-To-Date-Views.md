@@ -265,3 +265,4 @@ The following code provides an example of Adaptive Cards sent as response of `ad
 
 * [Work with Universal Actions for Adaptive Cards](Work-with-universal-actions-for-adaptive-cards.md)
 * [User Specific Views](User-Specific-Views.md)
+* [Adaptive Cards form completion](~/task-modules-and-cards/what-are-cards.md)
