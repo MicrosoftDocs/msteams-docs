@@ -158,7 +158,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 4. Select **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![Bot Configuration](~~/assets/images/authentication/bot-configuration-SSO.png)
+    ![Bot Configuration](~/assets/images/authentication/bot-configuration-SSO.png)
 
 6. Perform the following steps to complete the **New Connection Setting** form:
 
