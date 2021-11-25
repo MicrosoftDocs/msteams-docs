@@ -75,7 +75,7 @@ The following images display link unfurling feature when a link is pasted in mes
 
 | **Sample name** | **Description** | **C#** | **Nodejs** |
 |------------|-------------|----------------|----------------|
-|Messaging extension action for task scheduling|This sample illustrates how to schedule a task from messaging extension action and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
+|Messaging extension action for task scheduling|This sample illustrates how to schedule a task from messaging extension action command and get a reminder card at a scheduled date and time.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-message-reminder/nodejs)|
 
 ## Next step
 
