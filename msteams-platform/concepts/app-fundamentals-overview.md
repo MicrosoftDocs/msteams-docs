@@ -12,27 +12,30 @@ keywords: entry points extensibility use cases device capability
 
 An app's design, features, and capabilities stem from its purpose. The app user and their need form the basic guideline that determines all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
-The document helps you to understand the user-app communication and figure out the kind of app surfaces you need to use or the APIs your app might require in the process. Get some inspiration to embrace interactivity that can deepen the app experience when you integrate with Teams.
-
+Teams as a platform offers you toolkits, libraries, and apps at every stage of app development.
 Let's break it down to app building lifecycle:
 
-- Before you build
-- During build
-- Post-build
+- [Before you build](#before-you-build)
+- [During build](#during-build)
+- [Post-build](#post-build)
 
 ## Before you build
 
 The first step for any app is to understand the user need and problem, determine how Teams can solve it, and form a solution.
 
-- Understand and map your use cases
+- Understand your use case and Teams App Features
 
-    You can recognize user issues and identify the answers to some common problems the users face. Build your Teams app by finding the right combination to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app. It covers some common scenarios and how to choose your app's capabilities.
-
-- Teams App Features
-
-    Select your app's scope and features. You can extend your Teams app in multiple ways. Your app scope can be personal or shared space app. You can choose to meet the user needs with one or more [capabilities](../concepts/capabilities-overview.md).
+    Recognize user issues and identify the solutions to some common problems the users face. Build your Teams app by finding the right combination of Teams features to meet your user's needs. [Understand use cases](../concepts/design/understand-use-cases.md) to know how an end-user interacts with your app.
 
     Use Teams UI Toolkit and UI Library to [design your app's layout](~/concepts/design/design-teams-app-process.md).
+
+- Map your use cases
+
+    [Map common use cases](../concepts/design/map-use-cases.md) to Teams features based on:
+
+    - Sharing and collaborating on items in an external system.
+    - Initiating workflows and sending notifications to users.
+    - Using social platforms, conversational bots, and combining multiple features.
 
 - Plan responsive tabs for Teams mobile
 
