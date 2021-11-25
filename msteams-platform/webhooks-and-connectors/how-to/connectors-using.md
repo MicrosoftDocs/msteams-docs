@@ -21,7 +21,7 @@ The connector cards support the following actions:
 - `HttpPOST`: Sends POST request to a URL.
 - `OpenUri`: Opens URI in a separate browser or app, optionally targets different URIs based on operating systems.
 
-The `ActionCard` action supports six input types:
+The `ActionCard` action supports three input types:
 
 - `TextInput`: A single line or multiline text field with an optional length limit.
 - `DateInput`: A date selector with an optional time selector.
