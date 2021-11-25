@@ -158,7 +158,7 @@ Complete the following steps to update the Azure portal with the OAuth connectio
 4. Select **Configuration** on the left pane.
 5. Select **Add OAuth Connection Settings**.
 
-    ![SSOBotHandle2 view](~/assets\Contosoairlines123.png)
+    ![Bot Configuration](~~/assets/images/authentication/bot-configuration-SSO.png)
 
 6. Perform the following steps to complete the **New Connection Setting** form:
 
@@ -172,8 +172,9 @@ Complete the following steps to update the Azure portal with the OAuth connectio
     5. In the **Tenant ID** box, enter *common*.
     6. Add all the **Scopes** configured when specifying permissions to downstream APIs for your AAD application. With the Client id and Client secret provided, the token store exchanges the token for a graph token with defined permissions.
     7. Select **Save**.
-
-    ![VuSSOBotConnection setting view](../../../assets/images/bots/bots-vuSSOBotConnection-settings.png)
+    8. Select **Apply**
+  
+   ![Connection setting](~/assets/images/authentication/Bot-connection-setting.png)
 
 ### Update your Teams application manifest for your bot
 
