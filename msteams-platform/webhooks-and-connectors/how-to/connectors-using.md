@@ -13,7 +13,7 @@ You can create actionable messages and send it through Incoming Webhook or Offic
 
 ## Create actionable messages
 
-The actionable messages include three visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
+The actionable messages include six visible buttons on the card. Each button is defined in the `potentialAction` property of the message by using `ActionCard` actions, each with an input type, a text field, a date picker, or a multi-choice list. Each `ActionCard` has an associated action, for example `HttpPOST`.
 
 The connector cards support the following actions:
 
@@ -282,3 +282,4 @@ These limits are in place to reduce spamming a channel by a connector and ensure
 * [Create an Outgoing Webhook](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
 * [Rate limiting for Teams bots messages](~/bots/how-to/rate-limit.md)
 * [Build tabs with Adaptive Cards](~/tabs/how-to/build-adaptive-card-tabs.md)
+* [Format cards in Microsoft Teams](~/task-modules-and-cards/cards/cards-format.md)
