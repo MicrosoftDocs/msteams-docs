@@ -16,7 +16,7 @@ With this preview, you can:
 - Extend existing Teams [personal tabs](/microsoftteams/platform/tabs/how-to/create-personal-tab) to Outlook for desktop and on the web, and also Microsoft Office Home (office.com).
 - Extend existing Teams [search-based messaging extensions](/microsoftteams/platform/messaging-extensions/how-to/search-commands/define-search-command) to Outlook for desktop and on the web.
 
-For feedback and issues, use [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
+For feedback and issues, continue using the relevant [Microsoft Teams developer community channels](/microsoftteams/platform/feedback).
 
 ## Teams personal tabs in Office and Outlook
 
@@ -34,7 +34,7 @@ After sideloading to Teams, your messaging extension appears as one of your inst
 
 :::image type="content" source="images/outlook-office-teams-personal-tab.png" alt-text="Personal tab running in outlook.com":::
 
-## Next steps
+## Next step
 
 Set up your dev environment for extending Teams apps across Microsoft 365:
 
