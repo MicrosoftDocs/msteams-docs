@@ -71,9 +71,7 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 ### Adaptive Cards form completion
 
 > [!NOTE]
-> The latest update on Adaptive Cards form completion will be generally available (GA) by
-
-[Add the date]
+> The latest update on Adaptive Cards form completion will be generally available (GA) by [Add the date].
 
 Form completion message is added to the Adaptive Cards. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
 
