@@ -44,6 +44,13 @@ The first step for any app is to understand the user need and problem, determine
 
     Use Teams toolkit to create your app's project workspace and build app capabilities.
 
+    - [Tabs](../tabs/what-are-tabs.md#microsoft-teams-tabs)
+    - [Bots](../bots/what-are-bots.md#bots-in-microsoft-teams)
+    - [Messaging extensions](../messaging-extensions/what-are-messaging-extensions.md#messaging-extensions)
+    - [Webhooks and connectors](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#webhooks-and-connectors)
+    - [Cards](../task-modules-and-cards/what-are-cards.md#cards)
+    - [Task modules](../task-modules-and-cards/what-are-task-modules.md#task-modules)
+
 - Use Teams as a platform
 
     Teams, as a platform, helps you build a single- or multi-capability app that is backed by the integrated products and services that strengthen the app experience.

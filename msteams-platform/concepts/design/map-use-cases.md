@@ -10,7 +10,7 @@ ms.author: anclear
 
 After you've identified the user and the problem your app will solve, it is time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
 
-### Use Cases and Teams capabilities
+## Use Cases and Teams capabilities
 
 The Microsoft Teams platform offers a large variety of capabilities and UI elements your app can take advantage of. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
 
