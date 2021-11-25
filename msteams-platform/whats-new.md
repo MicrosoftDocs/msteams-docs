@@ -36,7 +36,7 @@ Microsoft Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 11/25/2021| Introduced Adaptive Cards form completion. | Build cards and task modules > Build cards > Overview > [Adaptive Cards form completion](task-modules-and-cards/what-are-cards.md#adaptive-cards-form-completion)|
+| 11/25/2021| Introduced Adaptive Cards form completion. | • Build cards and task modules > Build cards > Overview > [Adaptive Cards form completion](task-modules-and-cards/what-are-cards.md#adaptive-cards-form-completion)|
 | 11/24/2021| Introduced step-by-step guide to generate meeting token. | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting token in Teams](sbs-meeting-token-generator.yml)|
 |11/17/2021| Updated Microsoft Teams store validation guidelines|[Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md)|
 |11/17/2021| Static and dynamic typeahead search for desktop and mobile users.| • Build cards and task modules > Build cards > [Typeahead search in Adaptive Cards](task-modules-and-cards/cards/dynamic-search.md) </br> • Build cards and task modules > Build cards > Overview >  [Type-ahead search in Adaptive Cards](task-modules-and-cards/what-are-cards.md#type-ahead-search-in-adaptive-cards) </br> • Build cards and task modules > Overview > [Cards and task modules](task-modules-and-cards/cards-and-task-modules.md)|

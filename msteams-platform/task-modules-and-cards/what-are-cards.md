@@ -71,7 +71,7 @@ Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible c
 ### Adaptive Cards form completion
 
 > [!NOTE]
-> * The latest update on Adaptive Cards form completion will be generally available (GA) by
+> The latest update on Adaptive Cards form completion will be generally available (GA) by
 
 [Add the date]
 
@@ -79,15 +79,15 @@ Form completion message is added to the Adaptive Cards. This includes the error 
 
 You can see two types of messages:
 
-* **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
+1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
 
 ![Error message](~/assets/images/Cards/error-message.png)
 
-* **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
+1. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
 
 ![Success message](~/assets/images/Cards/success-message.png)
 
-**Message response in mobile**
+**Message response on mobile**
 
 The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
 
