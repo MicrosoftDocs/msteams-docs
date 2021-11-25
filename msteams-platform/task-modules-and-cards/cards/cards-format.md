@@ -487,7 +487,7 @@ In this example, all the actions are marked as secondary therefore, a single ove
      ]
 }
 ```
-  ![actions set card image](~/assets/images/Cards/action-set-blurred.png)
+  ![actions set card](~/assets/images/Cards/action-set-blurred.png)
   
 **Overflow menu on desktop**: When a user selects the overflow menu on a desktop, the buttons that is set as secondary appears in Adaptive Card.
 
