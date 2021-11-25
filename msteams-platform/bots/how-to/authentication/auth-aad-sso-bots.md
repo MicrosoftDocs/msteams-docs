@@ -61,17 +61,18 @@ The steps to register your app through the AAD portal are similar to the [tab SS
         > The users are not asked for consent and are granted access tokens right away, if the AAD app is registered in the same tenant where they are making an authentication request in Teams. However, the users must provide consent to the permissions, if the AAD app is registered in a different tenant.
 
     3. Choose **Register**.
-4. On the overview page, copy and save the **Application (client) ID**. You need it later when updating your Teams application manifest.
-5. Under **Manage**, select **Expose an API**. 
+4. Go to overview page, copy, and save the **Application (client) ID** to update your app manifest later.
+1. Under **Manage**, select **API permissions**. 
 
    > [!IMPORTANT]
     > * If you are building a standalone bot, enter the Application ID URI as `api://botid-{YourBotId}`. Here **YourBotId** is your AAD application ID.
     > * If you are building an app with a bot and a tab, enter the Application ID URI as `api://fully-qualified-domain-name.com/botid-{YourBotId}`.
 
-5. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
-6. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
-7. Select **Add a scope**.
-8. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
+6. Select the permissions that your application needs for the AAD endpoint and, optionally, for Microsoft Graph.
+7. [Grant permissions](/azure/active-directory/develop/v2-permissions-and-consent) for Teams desktop, web, and mobile applications.
+1. Under **Manage**, select **Expose an API**.
+1. Select **Add a scope**.
+1. In the panel that opens, add a client app by entering `access_as_user` as the **Scope name**.
 
     >[!NOTE]
     > The "access_as_user" scope used to add a client app is for "Administrators and users".
@@ -83,18 +84,41 @@ The steps to register your app through the AAD portal are similar to the [tab SS
     > * Multiple domains per app are currently not supported.
     > * Applications that use the `azurewebsites.net` domain are not supported because it is common and may be a security risk.
 
-#### Update the Azure portal with the OAuth connection
+1. In the **Who can consent?** box, enter **Admins and users**.
+11. Enter the details in the boxes for configuring the admin and user consent prompts with values that are appropriate for the `access_as_user`scope.
+    * **Admin consent display name**: Teams can access the user’s profile.
+    * **Admin consent description**: Teams can call the app’s web APIs as the current user.
+    * **User consent display name**: Teams can access your profile and make requests on your behalf.
+    * **User consent description**: Teams can call this app’s APIs with the same rights as you have.
 
-Complete the following steps to update the Azure portal with the OAuth connection:
+12. Ensure that the state is set to **Enabled**.
+1. Select **Add scope** to save the details. The domain part of the **Scope name** displayed must automatically match the **Application ID** URI set in the previous step, with `/access_as_user` appended to the end `api://subdomain.example.com/00000000-0000-0000-0000-000000000000/access_as_user`.
 
-1. In the Azure portal, go to **App registrations**.
+1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. Select **Add a client application**. Enter each of the following client IDs and select the authorized scope you created in the previous step:
+    * `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application.
+    * `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-2. Go to **API Permissions**. Select **Add a permission** > **Microsoft Graph** > **Delegated permissions**, then add the following permissions from Microsoft Graph API:
+    ![Client Id](~/assets/images/authentication/Client-Id-sso-bots.png)
+
+1. Go to **API Permissions**.
+
+1. Select **Add a permission**. 
+
+1. Select **Microsoft Graph**. 
+
+1. Select **Delegated permissions**. 
+1. Now, add the following permissions from Microsoft Graph API:
     * User.Read (enabled by default)
     * email
     * offline_access
     * OpenId
     * profile
+
+1. Select **Update permission**.
+
+#### Update the Azure portal with the OAuth connection
+
+Complete the following steps to update the Azure portal with the OAuth connection:
 
 3. In the Azure portal, go to [**AzureBot**](https://ms.portal.azure.com/#create/Microsoft.AzureBot)
 4. Select **Configuration** on the left pane.
