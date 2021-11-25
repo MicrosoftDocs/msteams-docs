@@ -8,9 +8,9 @@ ms.author: anclear
 ---
 # Map your use cases to Teams app capabilities
 
-After you have identified *who* the user is and *what* problem you will solve, it is time to decide *how* to solve the problem. The *who*, *what*, and *how* completes the process of understanding and mapping your use cases to Teams app capabilities. You need to define the scope of the app based on the responses you have received from the user to your queries, and then decide which capability is best suited to build your app.
+After you've identified the user and the problem your app will solve, it is time to understand and map your use cases to Teams app capabilities. Define the scope of the app and the capability best suited for your app.
 
-## Use Cases and Teams capabilities
+### Use Cases and Teams capabilities
 
 The Microsoft Teams platform offers a large variety of capabilities and UI elements your app can take advantage of. Each feature is a way of interacting with your users in a way that makes the Teams app capability relevant to the user need.
 
@@ -18,57 +18,69 @@ The Microsoft Teams platform offers a large variety of capabilities and UI eleme
 
 Each method of interacting with your users has its strengths and weaknesses.
 
-### User needs vs. Teams capabilities  
+Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
+</br>
+</br>
+<details>
+<summary>Create, share, and collaborate on items in an external system</summary>
 
-The following scenarios will guide you in understanding the selection of entry points and UI elements that work well with Teams app capabilities:
+Apps to interact with your data
 
-> [!NOTE]
-> It isn't an exhaustive list, but will help you think through some of the possibilities available to you.
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Search external systems and share the results as an interactive card. | Messaging extensions with search commands |
+| Collect information to insert into a data store or perform advanced searches. | Messaging extensions with action commands |
+| Create embedded web experiences to view, work with and share data. | Tabs |
+| Push data and send data out of the Teams client. | Connectors and webhooks|
+| Interactive modal forms from wherever you need them to collect or display information. | Task modules |
+|
+</details>
+</br>
+<details>
+<summary>Initiate workflows and processes</summary>
 
-- **Create, share, and collaborate on items in an external system**
+A quick way to initiate a process or workflow in an external system.
 
-    Apps to interact with your data
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Trigger from messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
+| Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
+| Interact with your users through text and rich cards. | Conversational bots |
+| A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
+|
+</details>
+</br>
+<details>
+<summary>Send notifications and alerts</summary>
 
-    | **If you want to...** | **Try ...** |
-    | --- | --- |
-    | Search external systems and share the results as an interactive card. | Messaging extensions with search commands |
-    | Collect information to insert into a data store or perform advanced searches. | Messaging extensions with action commands |
-    | Create embedded web experiences to view, work with and share data. | Tabs |
-    | Push data and send data out of the Teams client. | Connectors and webhooks|
-    | Interactive modal forms from wherever you need them to collect or display information. | Task modules |
-    |
+Send asynchronous notifications and alerts to your users in Teams.
 
-- **Initiate workflows and processes**
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Send proactive messages to groups, channels, or individual users. | Conversational bots |
+| Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
+|
+</details>
+</br>
+<details>
+<summary>Ask questions and get answers</summary>
 
-    A quick way to initiate a process or workflow in an external system.
+Connect with your users and resolve their queries
 
-    | **If you want to...** | **Try ...** |
-    | --- | --- |
-    | Trigger from messages, allowing your users to quickly send the contents of a message to your web services. | Messaging extensions action commands |
-    | Open them from a tab, a bot, or a messaging extension to collect information before initiating a workflow. | Task modules |
-    | Interact with your users through text and rich cards. | Conversational bots |
-    | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
-    |
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need. | Conversational bots |
+| Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
+|
+</details>
 
-- **Send notifications and alerts**
+## Plan beyond app building
 
-    Send asynchronous notifications and alerts to your users in Teams.
-    
-    | **If you want to...** | **Try ...** |
-    | --- | --- |
-    | Send proactive messages to groups, channels, or individual users. | Conversational bots |
-    | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
-    |
+- **Decide what goes in Teams**: Whether you're building a new app or bringing an existing solution into Teams, it's important to decide if you want the entire app to be in the Teams client. If you integrate only a portion of the app, focus on sharing, collaborating, initiating, and monitoring workflows.
 
-- **Ask questions and get answers**
+- **Plan the onboarding experience**: Knowing who your users are, helps you to create the right experience. Craft your onboarding experience with your key users in mind. What happens when a user first configures your tab in a channel? How you introduce your conversational bot when it is installed in a channel with a thousand people, is different when it is installed in a one-to-one chat.
 
-    Connect with your users and resolve their queries
-    
-    | **If you want to...** | **Try ...** |
-    | --- | --- |
-    | Natural language processing, AI, machine learning, and all the buzzwords. Use a bot powered by the intelligent cloud to connect your users to the answers they need. | Conversational bots |
-    | Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
-    |
+- **Plan for the future**: Identify which new features the user will prefer to have in the current solution. If you have a roadmap for new features to add to the app, the design and architecture will be impacted.
 
 ## See also
 

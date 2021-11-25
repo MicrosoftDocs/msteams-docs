@@ -32,10 +32,10 @@
   items:
   - name: Overview
     href: concepts/app-fundamentals-overview.md
-  - name: Understand and map your use cases
+  - name: Understand your use case and Teams features
     href: concepts/design/understand-use-cases.md
-  - name: Teams app capabilities
-    href: concepts/capabilities-overview.md
+  - text: Map your use case to Teams features
+    href: concepts/design/map-use-cases.md
   - name: Plan responsive tabs for Teams mobile
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
   - name: Device capabilities
