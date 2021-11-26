@@ -158,7 +158,7 @@ Team owners manages the meeting app permissions through team settings:
 
 The following image illustrates member permissions setting:
 
-:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Permissions":::
+:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
 
 ## Participant roles in a meeting
 
