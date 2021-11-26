@@ -27,13 +27,13 @@ For your bot to receive all channel messages, RSC must be configured in the Team
 
  ![App Manifest](~/assets/images/bots/manifest_image.png)
 
-The following is an example of the `webApplicationInfo` object:
+The following fields describe the `webApplicationInfo` object:
 
-* **id**: Your Azure Active Directory (AAD) app ID. This can be the same as your bot ID.
-* **resource**: Any string. This field has no operation in RSC, but must be added and have a value to avoid error response.
+* **id**: Your Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
+* **resource**: Any string. The resource field has no operation in RSC, but must be added and have a value to avoid error response.
 * **applicationPermissions**: RSC permissions for your app with `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` must be specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
-The following codes provide example of the app manifest:
+The following code provides an example of the app manifest:
 
 ```json
 "webApplicationInfo": {
