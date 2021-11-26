@@ -106,7 +106,27 @@ After identifying the common properties for all cards, you can now work with Ada
 
 ## Adaptive Card
 
-An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07) and [Adaptive Cards form completion](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-form-completion).
+An Adaptive Card is a customizable card that can contain any combination of text, speech, images, buttons, and input fields. For more information, see [Adaptive Cards](https://github.com/microsoft/AdaptiveCards/releases/tag/2020.07).
+
+### Adaptive Cards form completion
+
+Form completion message is added to the Adaptive Cards. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
+
+You can see two types of messages:
+
+1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
+
+![Error message](~/assets/images/Cards/error-message.png)
+
+2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
+
+![Success message](~/assets/images/Cards/success-message.png)
+
+**Message response on mobile**
+
+The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
+
+![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
 
 ### Support for Adaptive Cards
 

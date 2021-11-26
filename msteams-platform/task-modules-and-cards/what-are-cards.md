@@ -68,29 +68,6 @@ Type ahead search added as an input control in Adaptive Cards enable [dynamic se
 
 Adaptive Cards with Incoming Webhooks enables you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
 
-### Adaptive Cards form completion
-
-> [!NOTE]
-> The latest update on Adaptive Cards form completion will be generally available (GA) by [Add the date].
-
-Form completion message is added to the Adaptive Cards. This includes the error message that appears while sending a response to the Bot. In addition to the error message, the system also shows the success message when you submit a response to the Bot.
-
-You can see two types of messages:
-
-1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
-
-![Error message](~/assets/images/Cards/error-message.png)
-
-2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
-
-![Success message](~/assets/images/Cards/success-message.png)
-
-**Message response on mobile**
-
-The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
-
-![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
-
 ## Support for AAD Object ID and UPN in user mention 
 
 Bots with Adaptive Cards support user mention IDs, such as AAD Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming webhooks start to support user mention in Adaptive Card with the AAD Object ID and UPN.
