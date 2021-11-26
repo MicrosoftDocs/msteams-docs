@@ -145,6 +145,21 @@ To implement messaging extension, start with [build a messaging extension](../me
 
 The Teams unified meetings apps allow you to design your app based on participant roles in a meeting.
 
+## Meeting app permissions
+
+Team owners manages the meeting app permissions through team settings:
+
+* Channel meeting app permissions are different from the team app CRUD model (not the non-channel meeting app CRUD model). If a user adds an app to a team or channel, they are able to use it in the meeting.
+* When team settings are enabled, meeting apps follow the existing permission model for non-channel meetings, where organizers and presenters can add apps but attendees cannot add.
+* If users cannot add meeting apps, the entry points in pre-meeting and in-meeting experiences are removed.
+
+> [!NOTE]
+> By adding the app outside of the meeting interface,Attendee can indirectly add apps to their meetings when the **Allow team members to add and remove apps** setting is enabled.
+
+The following image illustrates member permissions setting:
+
+:::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Permissions":::
+
 ## Participant roles in a meeting
 
 ![Participants in a meeting](../assets/images/apps-in-meetings/participant-roles.png)
