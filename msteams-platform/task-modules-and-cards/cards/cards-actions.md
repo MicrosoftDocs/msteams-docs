@@ -562,4 +562,4 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 * [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md)
-* [Adaptive Cards form completion](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-form-completion)
+* [Adaptive Cards form completion](~/task-modules-and-cards/cards/cards-reference.md#adaptive-cards-form-completion)
