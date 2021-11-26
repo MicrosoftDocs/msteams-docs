@@ -160,7 +160,7 @@ The following image illustrates member permissions setting:
 
 :::image type="content" source="../assets/images/apps-in-meetings/permissions.png" alt-text="Member permissions":::
 
-* Permission to add/remove meeting apps can be configured in the team settings page by default it is enabled.
+* Permission to add/remove meeting apps can be configured in the team settings page, by default it is enabled.
 * If enabled, members can add/remove meeting apps before, during, or after meetings.
 
 :::image type="content" source="../assets/images/apps-in-meetings/permission-for-add-remove-apps-in-meeting.png" alt-text="Add or remove apps in meeting":::
