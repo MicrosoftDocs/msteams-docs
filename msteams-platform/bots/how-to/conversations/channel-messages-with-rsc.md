@@ -8,18 +8,18 @@ ms.localizationpriority: medium
 
 # Receive all channel messages and group chats with RSC
 
-The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios. Bots receive all chat messages via RSC permission. Using RSC, you can  request team owners to consent for a bot to receive user messages across standard channels and **groupchat** without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions under `webApplicationInfo.applicationPermissions` in the manifest of RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
+The resource-specific consent (RSC) permissions model, originally developed for Teams Graph APIs, is now extended to bot scenarios. Bots receive all chat messages via RSC permission. Using RSC, you can request team owners to consent for a bot to receive user messages across standard channels and **groupchat** without being @mentioned. The capability is enabled by specifying the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` permissions under `webApplicationInfo.applicationPermissions` in the manifest of RSC enabled Teams app. After configuration, team owners can grant consent during the app installation process.
 
 For more information about enabling RSC for your app, see [resource-specific consent in Teams](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#update-your-teams-app-manifest).
 
 ## Enable bots to receive all channel and group chat messages
 
-The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permissions are extended to bots. With user consent, the permissions allows graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
+The `ChannelMessage.Read.Group`and `ChatMessage.Read.Chat` RSC permissions are extended to bots. With user consent, the permissions allow graph applications to get all messages in a conversation and bots to receive all channel and **groupchat** messages without being @mentioned.
 
 > [!NOTE]
 > * Services that need access to all Teams message data must use the Graph APIs that also provide access to archived data in channels and chats.
 > * Bots must use the `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions appropriately to build and enhance engaging experience for users in the team or they will not pass the store approval. The app description must include how the bot uses the data it reads.
-> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions may not be used by bots as a way to extract large amounts of customer data. 
+> * The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions may not be used by bots as a way to extract large amounts of customer data.
 
 ## Update app manifest
 
@@ -116,7 +116,7 @@ To sideload in a team to test, whether all **groupchat** messages in a team with
 
 | Sample name | Description | C# |Node.js|
 |-------------|-------------|------|----|
-|Channel messages with RSC permissions|	Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |	[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
+|Channel messages with RSC permissions|Microsoft Teams sample app demonstrating on how a bot can receive all channel messages with RSC without being @mentioned.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/nodejs) |
 
 ## See also
 
