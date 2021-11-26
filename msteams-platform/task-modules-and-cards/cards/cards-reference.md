@@ -116,18 +116,25 @@ You can see two types of messages:
 
 1. **Error**: If there is an error while sending a response to bot, **Something went wrong, Try again** message appears.
 
-![Error message](~/assets/images/Cards/error-message.png)
+  ![Error message](~/assets/images/Cards/error-message.png)
 
 2. **Success**: If your response to bot is successfully sent, **Your response was sent to the app** appears.
 
-![Success message](~/assets/images/Cards/success-message.png)
+  ![Success message](~/assets/images/Cards/success-message.png)
 
 **Message response on mobile**
 
 The message appears at the bottom of the Adaptive Card. You can select **Close** or switch chat to dismiss the message.
 
+# [Mobile](#tab/mobile)
+
 ![Mobile interface](~/assets/images/Cards/mobile-adaptive-cards-form.png)
 
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="~/assets/images/adaptive-cards/universal-bots-incident-management.png" alt-text="User Specific Views":::
+
+* * *
 ### Support for Adaptive Cards
 
 The following table provides the features that support Adaptive Cards:
