@@ -208,7 +208,7 @@ The Developer Portal also includes tools to help you build some key features of 
    :::column span="":::
    :::column-end:::
    :::column span="5":::
-   [![Publish app](~/assets/images/tdp/tdp_tools.png)](~/assets/images/tdp/tdp_tools.png#lightbox) 
+   [![tdp tools](~/assets/images/tdp/tdp_tools.png)](~/assets/images/tdp/tdp_tools.png#lightbox) 
    :::column-end:::
    :::column span="":::
    :::column-end:::
