@@ -16,12 +16,12 @@ After a user submits the task module, your web service receives a `composeExtens
 
 You have the following options to respond:
 
-* No response: Use the submit action to trigger a process in an external system, and not provide any feedback to the user it is useful for long-running processes, and select to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
+* No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It is useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
 * [Another task module](#respond-with-another-task-module): You can respond with an additional task module as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
-* [Request the user to provide additional configuration]~/get-started/first-message-extension.md).
+* [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
 For authentication or configuration, after the user completes the process, the original invoke is resent to your web service. The following table shows which types of responses are available based on the invoke location `commandContext` of the messaging extension: 
 
