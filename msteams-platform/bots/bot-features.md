@@ -56,7 +56,7 @@ Bots in Microsoft teams can be used in one-to-one conversation, group chats and 
 
 ### In a channel
 
-Channels contain threaded conversations between multiple people even up to two thousand. This potentially gives your bot massive reach, but individual interactions must be concise. Traditional multi-turn interactions do not work. Instead, you must look to use interactive cards or task modules, or move the conversation to a one-to-one conversation to collect lots of information. Your bot only has access to messages where it is `@mentioned`. You can retrieve additional messages from the conversation using Microsoft Graph and organization-level permissions.
+Threaded conversation between numerous people, upto two thousand, can be found in channels. This has the ability to broaden your bot’s reach, but individual interactions must be brief. Multi-turn interactions in the traditional sense do not work. Instead, you should consider using interactive cards or task modules, or moving the conversation to a one-to-one setting to collect a large amount of data. Your bot can only see messages in which is `@mentioned`. Using Microsoft graph and organization-level permissions, you can obtain additional messages from the conversation.
 
 Bots work better in a channel in the following cases:
 
