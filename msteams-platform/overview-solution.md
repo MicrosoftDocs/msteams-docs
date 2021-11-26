@@ -19,22 +19,13 @@ Let's collate and map requirements to Teams features:
 
 | User app needs | Check weather | Notification before travel | Registered user |
 | --- |:---:|:---:|:---:|
-| **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
-| - Tab | &nbsp; | &nbsp; | &nbsp; |
-| - Bot | ✔️ | &nbsp; | &nbsp; |
-| - Message extension | &nbsp; | &nbsp; | &nbsp; |
-| - Webhooks and Connectors | &nbsp; | &nbsp; | &nbsp; |
-| - Microsoft Graph |&nbsp; | &nbsp; | ✔️ |
-| **Scope** | &nbsp; | &nbsp; | &nbsp; |
-| - Personal app | &nbsp; | ✔️ | &nbsp; |
-| - Shared app | &nbsp; | &nbsp; | &nbsp; |
-| **Entry point** | &nbsp; | &nbsp; | &nbsp; |
-| - Team | &nbsp; | &nbsp; | &nbsp; |
-| - Channel | &nbsp; | &nbsp; | &nbsp; |
-| - Chat | &nbsp; | ✔️ | &nbsp; |
+| **Capabilities** | Bot | &nbsp; | &nbsp; |
+| **Integraion** | &nbsp; | &nbsp; | Microsoft Graph |
+| **Scope** | &nbsp; | Personal app | &nbsp; |
+| **Entry point** | &nbsp; | Chat | &nbsp; |
 |
 
-**App solution**: A Teams personal bot application that uses authentication features checks all these requirements.
+**App solution**: A Teams personal chat bot application that uses checks and sends weather notification to registered and authenticated users before their travel date checks all these requirements.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/user-story-2.png" alt-text="Image showing user story" border="true":::
 
